@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.StaticWebLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.StaticWebLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.StaticWebLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.StaticWebLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<StaticWebLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<StaticWebLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<StaticWebLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<StaticWebLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -180,13 +180,13 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<StaticWebLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<StaticWebLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<StaticWebLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<StaticWebLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -456,12 +456,12 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<StaticWebLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<StaticWebLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(StaticWebLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(StaticWebLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -618,7 +618,7 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<StaticWebLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<StaticWebLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -629,7 +629,7 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<StaticWebLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<StaticWebLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -639,7 +639,7 @@ public final class StaticWebLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(StaticWebLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(StaticWebLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

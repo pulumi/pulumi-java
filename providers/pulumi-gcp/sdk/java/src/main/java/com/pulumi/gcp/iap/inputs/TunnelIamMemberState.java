@@ -5,7 +5,7 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iap.inputs.TunnelIamMemberConditionGetArgs;
+import com.pulumi.gcp.iap.inputs.TunnelIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class TunnelIamMemberState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<TunnelIamMemberConditionGetArgs> condition;
+    private @Nullable Output<TunnelIamMemberConditionArgs> condition;
 
     /**
      * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TunnelIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<TunnelIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,7 +126,7 @@ public final class TunnelIamMemberState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<TunnelIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TunnelIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -138,7 +138,7 @@ public final class TunnelIamMemberState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder condition(TunnelIamMemberConditionGetArgs condition) {
+        public Builder condition(TunnelIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

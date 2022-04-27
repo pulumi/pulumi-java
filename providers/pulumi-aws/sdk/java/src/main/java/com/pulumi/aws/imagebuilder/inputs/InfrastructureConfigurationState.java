@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingGetArgs;
+import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -129,13 +129,13 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="logging")
-    private @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging;
+    private @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
     /**
      * @return Configuration block with logging settings. Detailed below.
      * 
      */
-    public Optional<Output<InfrastructureConfigurationLoggingGetArgs>> logging() {
+    public Optional<Output<InfrastructureConfigurationLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
 
@@ -461,7 +461,7 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
@@ -472,7 +472,7 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder logging(InfrastructureConfigurationLoggingGetArgs logging) {
+        public Builder logging(InfrastructureConfigurationLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 

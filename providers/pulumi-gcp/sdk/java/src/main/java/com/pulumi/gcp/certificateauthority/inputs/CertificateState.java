@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateRevocationDetailGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateRevocationDetailArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,14 +41,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateDescriptions")
-    private @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
+    private @Nullable Output<List<CertificateCertificateDescriptionArgs>> certificateDescriptions;
 
     /**
      * @return Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
      * this field is present.
      * 
      */
-    public Optional<Output<List<CertificateCertificateDescriptionGetArgs>>> certificateDescriptions() {
+    public Optional<Output<List<CertificateCertificateDescriptionArgs>>> certificateDescriptions() {
         return Optional.ofNullable(this.certificateDescriptions);
     }
 
@@ -81,14 +81,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-    private @Nullable Output<CertificateConfigGetArgs> config;
+    private @Nullable Output<CertificateConfigArgs> config;
 
     /**
      * @return The config used to create a self-signed X.509 certificate or CSR.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CertificateConfigGetArgs>> config() {
+    public Optional<Output<CertificateConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
 
@@ -256,14 +256,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revocationDetails")
-    private @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails;
+    private @Nullable Output<List<CertificateRevocationDetailArgs>> revocationDetails;
 
     /**
      * @return Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
      * this field is present.
      * 
      */
-    public Optional<Output<List<CertificateRevocationDetailGetArgs>>> revocationDetails() {
+    public Optional<Output<List<CertificateRevocationDetailArgs>>> revocationDetails() {
         return Optional.ofNullable(this.revocationDetails);
     }
 
@@ -349,7 +349,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder certificateDescriptions(@Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
+        public Builder certificateDescriptions(@Nullable Output<List<CertificateCertificateDescriptionArgs>> certificateDescriptions) {
             $.certificateDescriptions = certificateDescriptions;
             return this;
         }
@@ -361,7 +361,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder certificateDescriptions(List<CertificateCertificateDescriptionGetArgs> certificateDescriptions) {
+        public Builder certificateDescriptions(List<CertificateCertificateDescriptionArgs> certificateDescriptions) {
             return certificateDescriptions(Output.of(certificateDescriptions));
         }
 
@@ -372,7 +372,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder certificateDescriptions(CertificateCertificateDescriptionGetArgs... certificateDescriptions) {
+        public Builder certificateDescriptions(CertificateCertificateDescriptionArgs... certificateDescriptions) {
             return certificateDescriptions(List.of(certificateDescriptions));
         }
 
@@ -412,7 +412,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(@Nullable Output<CertificateConfigGetArgs> config) {
+        public Builder config(@Nullable Output<CertificateConfigArgs> config) {
             $.config = config;
             return this;
         }
@@ -424,7 +424,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(CertificateConfigGetArgs config) {
+        public Builder config(CertificateConfigArgs config) {
             return config(Output.of(config));
         }
 
@@ -663,7 +663,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder revocationDetails(@Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
+        public Builder revocationDetails(@Nullable Output<List<CertificateRevocationDetailArgs>> revocationDetails) {
             $.revocationDetails = revocationDetails;
             return this;
         }
@@ -675,7 +675,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder revocationDetails(List<CertificateRevocationDetailGetArgs> revocationDetails) {
+        public Builder revocationDetails(List<CertificateRevocationDetailArgs> revocationDetails) {
             return revocationDetails(Output.of(revocationDetails));
         }
 
@@ -686,7 +686,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder revocationDetails(CertificateRevocationDetailGetArgs... revocationDetails) {
+        public Builder revocationDetails(CertificateRevocationDetailArgs... revocationDetails) {
             return revocationDetails(List.of(revocationDetails));
         }
 

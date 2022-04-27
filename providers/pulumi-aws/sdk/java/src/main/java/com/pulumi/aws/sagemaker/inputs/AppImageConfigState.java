@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class AppImageConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kernelGatewayImageConfig")
-    private @Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
+    private @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
     /**
      * @return The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
      * 
      */
-    public Optional<Output<AppImageConfigKernelGatewayImageConfigGetArgs>> kernelGatewayImageConfig() {
+    public Optional<Output<AppImageConfigKernelGatewayImageConfigArgs>> kernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);
     }
 
@@ -168,7 +168,7 @@ public final class AppImageConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             $.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
@@ -179,7 +179,7 @@ public final class AppImageConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfigGetArgs kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
             return kernelGatewayImageConfig(Output.of(kernelGatewayImageConfig));
         }
 

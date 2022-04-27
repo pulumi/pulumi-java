@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.codebuild.inputs;
 
-import com.pulumi.aws.codebuild.inputs.ReportGroupExportConfigGetArgs;
+import com.pulumi.aws.codebuild.inputs.ReportGroupExportConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -68,13 +68,13 @@ public final class ReportGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exportConfig")
-    private @Nullable Output<ReportGroupExportConfigGetArgs> exportConfig;
+    private @Nullable Output<ReportGroupExportConfigArgs> exportConfig;
 
     /**
      * @return Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
      * 
      */
-    public Optional<Output<ReportGroupExportConfigGetArgs>> exportConfig() {
+    public Optional<Output<ReportGroupExportConfigArgs>> exportConfig() {
         return Optional.ofNullable(this.exportConfig);
     }
 
@@ -238,7 +238,7 @@ public final class ReportGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder exportConfig(@Nullable Output<ReportGroupExportConfigGetArgs> exportConfig) {
+        public Builder exportConfig(@Nullable Output<ReportGroupExportConfigArgs> exportConfig) {
             $.exportConfig = exportConfig;
             return this;
         }
@@ -249,7 +249,7 @@ public final class ReportGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder exportConfig(ReportGroupExportConfigGetArgs exportConfig) {
+        public Builder exportConfig(ReportGroupExportConfigArgs exportConfig) {
             return exportConfig(Output.of(exportConfig));
         }
 

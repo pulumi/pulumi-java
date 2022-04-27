@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerAutoHealingPoliciesGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatefulDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerUpdatePolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGroupManagerVersionGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerAutoHealingPoliciesArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatefulDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerUpdatePolicyArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupManagerVersionArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,14 +30,14 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="autoHealingPolicies")
-    private @Nullable Output<InstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
+    private @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
     /**
      * @return The autohealing policies for this managed instance
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Optional<Output<InstanceGroupManagerAutoHealingPoliciesGetArgs>> autoHealingPolicies() {
+    public Optional<Output<InstanceGroupManagerAutoHealingPoliciesArgs>> autoHealingPolicies() {
         return Optional.ofNullable(this.autoHealingPolicies);
     }
 
@@ -134,14 +134,14 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namedPorts")
-    private @Nullable Output<List<InstanceGroupManagerNamedPortGetArgs>> namedPorts;
+    private @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
 
     /**
      * @return The named port configuration. See the section below
      * for details on configuration.
      * 
      */
-    public Optional<Output<List<InstanceGroupManagerNamedPortGetArgs>>> namedPorts() {
+    public Optional<Output<List<InstanceGroupManagerNamedPortArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
 
@@ -189,13 +189,13 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="statefulDisks")
-    private @Nullable Output<List<InstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
+    private @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
     /**
      * @return ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
      * 
      */
-    public Optional<Output<List<InstanceGroupManagerStatefulDiskGetArgs>>> statefulDisks() {
+    public Optional<Output<List<InstanceGroupManagerStatefulDiskArgs>>> statefulDisks() {
         return Optional.ofNullable(this.statefulDisks);
     }
 
@@ -204,13 +204,13 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<InstanceGroupManagerStatusGetArgs>> statuses;
+    private @Nullable Output<List<InstanceGroupManagerStatusArgs>> statuses;
 
     /**
      * @return The status of this managed instance group.
      * 
      */
-    public Optional<Output<List<InstanceGroupManagerStatusGetArgs>>> statuses() {
+    public Optional<Output<List<InstanceGroupManagerStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -253,13 +253,13 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="updatePolicy")
-    private @Nullable Output<InstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
     /**
      * @return The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
      * 
      */
-    public Optional<Output<InstanceGroupManagerUpdatePolicyGetArgs>> updatePolicy() {
+    public Optional<Output<InstanceGroupManagerUpdatePolicyArgs>> updatePolicy() {
         return Optional.ofNullable(this.updatePolicy);
     }
 
@@ -270,7 +270,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="versions")
-    private @Nullable Output<List<InstanceGroupManagerVersionGetArgs>> versions;
+    private @Nullable Output<List<InstanceGroupManagerVersionArgs>> versions;
 
     /**
      * @return Application versions managed by this instance group. Each
@@ -278,7 +278,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceGroupManagerVersionGetArgs>>> versions() {
+    public Optional<Output<List<InstanceGroupManagerVersionArgs>>> versions() {
         return Optional.ofNullable(this.versions);
     }
 
@@ -388,7 +388,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder autoHealingPolicies(@Nullable Output<InstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
             $.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
@@ -400,7 +400,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPoliciesGetArgs autoHealingPolicies) {
+        public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
             return autoHealingPolicies(Output.of(autoHealingPolicies));
         }
 
@@ -528,7 +528,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder namedPorts(@Nullable Output<List<InstanceGroupManagerNamedPortGetArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
@@ -540,7 +540,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder namedPorts(List<InstanceGroupManagerNamedPortGetArgs> namedPorts) {
+        public Builder namedPorts(List<InstanceGroupManagerNamedPortArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
@@ -551,7 +551,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder namedPorts(InstanceGroupManagerNamedPortGetArgs... namedPorts) {
+        public Builder namedPorts(InstanceGroupManagerNamedPortArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 
@@ -614,7 +614,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statefulDisks(@Nullable Output<List<InstanceGroupManagerStatefulDiskGetArgs>> statefulDisks) {
+        public Builder statefulDisks(@Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             $.statefulDisks = statefulDisks;
             return this;
         }
@@ -625,7 +625,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statefulDisks(List<InstanceGroupManagerStatefulDiskGetArgs> statefulDisks) {
+        public Builder statefulDisks(List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
             return statefulDisks(Output.of(statefulDisks));
         }
 
@@ -635,7 +635,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statefulDisks(InstanceGroupManagerStatefulDiskGetArgs... statefulDisks) {
+        public Builder statefulDisks(InstanceGroupManagerStatefulDiskArgs... statefulDisks) {
             return statefulDisks(List.of(statefulDisks));
         }
 
@@ -645,7 +645,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<InstanceGroupManagerStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<InstanceGroupManagerStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -656,7 +656,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statuses(List<InstanceGroupManagerStatusGetArgs> statuses) {
+        public Builder statuses(List<InstanceGroupManagerStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -666,7 +666,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder statuses(InstanceGroupManagerStatusGetArgs... statuses) {
+        public Builder statuses(InstanceGroupManagerStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 
@@ -734,7 +734,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyGetArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             $.updatePolicy = updatePolicy;
             return this;
         }
@@ -745,7 +745,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder updatePolicy(InstanceGroupManagerUpdatePolicyGetArgs updatePolicy) {
+        public Builder updatePolicy(InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             return updatePolicy(Output.of(updatePolicy));
         }
 
@@ -757,7 +757,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder versions(@Nullable Output<List<InstanceGroupManagerVersionGetArgs>> versions) {
+        public Builder versions(@Nullable Output<List<InstanceGroupManagerVersionArgs>> versions) {
             $.versions = versions;
             return this;
         }
@@ -770,7 +770,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder versions(List<InstanceGroupManagerVersionGetArgs> versions) {
+        public Builder versions(List<InstanceGroupManagerVersionArgs> versions) {
             return versions(Output.of(versions));
         }
 
@@ -782,7 +782,7 @@ public final class InstanceGroupManagerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder versions(InstanceGroupManagerVersionGetArgs... versions) {
+        public Builder versions(InstanceGroupManagerVersionArgs... versions) {
             return versions(List.of(versions));
         }
 

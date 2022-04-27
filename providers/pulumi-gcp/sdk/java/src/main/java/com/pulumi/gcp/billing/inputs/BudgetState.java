@@ -5,10 +5,10 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleGetArgs;
-import com.pulumi.gcp.billing.inputs.BudgetAmountGetArgs;
-import com.pulumi.gcp.billing.inputs.BudgetBudgetFilterGetArgs;
-import com.pulumi.gcp.billing.inputs.BudgetThresholdRuleGetArgs;
+import com.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleArgs;
+import com.pulumi.gcp.billing.inputs.BudgetAmountArgs;
+import com.pulumi.gcp.billing.inputs.BudgetBudgetFilterArgs;
+import com.pulumi.gcp.billing.inputs.BudgetThresholdRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allUpdatesRule")
-    private @Nullable Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
+    private @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
     /**
      * @return Defines notifications that are sent on every update to the
@@ -37,7 +37,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BudgetAllUpdatesRuleGetArgs>> allUpdatesRule() {
+    public Optional<Output<BudgetAllUpdatesRuleArgs>> allUpdatesRule() {
         return Optional.ofNullable(this.allUpdatesRule);
     }
 
@@ -47,14 +47,14 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amount")
-    private @Nullable Output<BudgetAmountGetArgs> amount;
+    private @Nullable Output<BudgetAmountArgs> amount;
 
     /**
      * @return The budgeted amount for each usage period.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BudgetAmountGetArgs>> amount() {
+    public Optional<Output<BudgetAmountArgs>> amount() {
         return Optional.ofNullable(this.amount);
     }
 
@@ -80,7 +80,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="budgetFilter")
-    private @Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter;
+    private @Nullable Output<BudgetBudgetFilterArgs> budgetFilter;
 
     /**
      * @return Filters that define which resources are used to compute the actual
@@ -88,7 +88,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BudgetBudgetFilterGetArgs>> budgetFilter() {
+    public Optional<Output<BudgetBudgetFilterArgs>> budgetFilter() {
         return Optional.ofNullable(this.budgetFilter);
     }
 
@@ -132,7 +132,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholdRules")
-    private @Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules;
+    private @Nullable Output<List<BudgetThresholdRuleArgs>> thresholdRules;
 
     /**
      * @return Rules that trigger alerts (notifications of thresholds being
@@ -141,7 +141,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<BudgetThresholdRuleGetArgs>>> thresholdRules() {
+    public Optional<Output<List<BudgetThresholdRuleArgs>>> thresholdRules() {
         return Optional.ofNullable(this.thresholdRules);
     }
 
@@ -184,7 +184,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allUpdatesRule(@Nullable Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule) {
             $.allUpdatesRule = allUpdatesRule;
             return this;
         }
@@ -198,7 +198,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allUpdatesRule(BudgetAllUpdatesRuleGetArgs allUpdatesRule) {
+        public Builder allUpdatesRule(BudgetAllUpdatesRuleArgs allUpdatesRule) {
             return allUpdatesRule(Output.of(allUpdatesRule));
         }
 
@@ -209,7 +209,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder amount(@Nullable Output<BudgetAmountGetArgs> amount) {
+        public Builder amount(@Nullable Output<BudgetAmountArgs> amount) {
             $.amount = amount;
             return this;
         }
@@ -221,7 +221,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder amount(BudgetAmountGetArgs amount) {
+        public Builder amount(BudgetAmountArgs amount) {
             return amount(Output.of(amount));
         }
 
@@ -254,7 +254,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter) {
+        public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterArgs> budgetFilter) {
             $.budgetFilter = budgetFilter;
             return this;
         }
@@ -267,7 +267,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder budgetFilter(BudgetBudgetFilterGetArgs budgetFilter) {
+        public Builder budgetFilter(BudgetBudgetFilterArgs budgetFilter) {
             return budgetFilter(Output.of(budgetFilter));
         }
 
@@ -324,7 +324,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thresholdRules(@Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules) {
+        public Builder thresholdRules(@Nullable Output<List<BudgetThresholdRuleArgs>> thresholdRules) {
             $.thresholdRules = thresholdRules;
             return this;
         }
@@ -338,7 +338,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thresholdRules(List<BudgetThresholdRuleGetArgs> thresholdRules) {
+        public Builder thresholdRules(List<BudgetThresholdRuleArgs> thresholdRules) {
             return thresholdRules(Output.of(thresholdRules));
         }
 
@@ -351,7 +351,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thresholdRules(BudgetThresholdRuleGetArgs... thresholdRules) {
+        public Builder thresholdRules(BudgetThresholdRuleArgs... thresholdRules) {
             return thresholdRules(List.of(thresholdRules));
         }
 

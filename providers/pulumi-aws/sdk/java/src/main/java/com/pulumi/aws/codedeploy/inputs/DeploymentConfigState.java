@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.codedeploy.inputs;
 
-import com.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigGetArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minimumHealthyHosts")
-    private @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
+    private @Nullable Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
 
     /**
      * @return A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    public Optional<Output<DeploymentConfigMinimumHealthyHostsGetArgs>> minimumHealthyHosts() {
+    public Optional<Output<DeploymentConfigMinimumHealthyHostsArgs>> minimumHealthyHosts() {
         return Optional.ofNullable(this.minimumHealthyHosts);
     }
 
@@ -82,13 +82,13 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="trafficRoutingConfig")
-    private @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
+    private @Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
 
     /**
      * @return A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    public Optional<Output<DeploymentConfigTrafficRoutingConfigGetArgs>> trafficRoutingConfig() {
+    public Optional<Output<DeploymentConfigTrafficRoutingConfigArgs>> trafficRoutingConfig() {
         return Optional.ofNullable(this.trafficRoutingConfig);
     }
 
@@ -189,7 +189,7 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts) {
             $.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
@@ -200,7 +200,7 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder minimumHealthyHosts(DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(DeploymentConfigMinimumHealthyHostsArgs minimumHealthyHosts) {
             return minimumHealthyHosts(Output.of(minimumHealthyHosts));
         }
 
@@ -210,7 +210,7 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig) {
             $.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
@@ -221,7 +221,7 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder trafficRoutingConfig(DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(DeploymentConfigTrafficRoutingConfigArgs trafficRoutingConfig) {
             return trafficRoutingConfig(Output.of(trafficRoutingConfig));
         }
 

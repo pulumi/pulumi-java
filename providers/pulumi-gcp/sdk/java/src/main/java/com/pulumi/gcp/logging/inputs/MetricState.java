@@ -5,8 +5,8 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.logging.inputs.MetricBucketOptionsGetArgs;
-import com.pulumi.gcp.logging.inputs.MetricMetricDescriptorGetArgs;
+import com.pulumi.gcp.logging.inputs.MetricBucketOptionsArgs;
+import com.pulumi.gcp.logging.inputs.MetricMetricDescriptorArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketOptions")
-    private @Nullable Output<MetricBucketOptionsGetArgs> bucketOptions;
+    private @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
 
     /**
      * @return The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
@@ -33,7 +33,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MetricBucketOptionsGetArgs>> bucketOptions() {
+    public Optional<Output<MetricBucketOptionsArgs>> bucketOptions() {
         return Optional.ofNullable(this.bucketOptions);
     }
 
@@ -98,14 +98,14 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricDescriptor")
-    private @Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor;
+    private @Nullable Output<MetricMetricDescriptorArgs> metricDescriptor;
 
     /**
      * @return The metric descriptor associated with the logs-based metric.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MetricMetricDescriptorGetArgs>> metricDescriptor() {
+    public Optional<Output<MetricMetricDescriptorArgs>> metricDescriptor() {
         return Optional.ofNullable(this.metricDescriptor);
     }
 
@@ -215,7 +215,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bucketOptions(@Nullable Output<MetricBucketOptionsGetArgs> bucketOptions) {
+        public Builder bucketOptions(@Nullable Output<MetricBucketOptionsArgs> bucketOptions) {
             $.bucketOptions = bucketOptions;
             return this;
         }
@@ -228,7 +228,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bucketOptions(MetricBucketOptionsGetArgs bucketOptions) {
+        public Builder bucketOptions(MetricBucketOptionsArgs bucketOptions) {
             return bucketOptions(Output.of(bucketOptions));
         }
 
@@ -312,7 +312,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metricDescriptor(@Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor) {
+        public Builder metricDescriptor(@Nullable Output<MetricMetricDescriptorArgs> metricDescriptor) {
             $.metricDescriptor = metricDescriptor;
             return this;
         }
@@ -324,7 +324,7 @@ public final class MetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metricDescriptor(MetricMetricDescriptorGetArgs metricDescriptor) {
+        public Builder metricDescriptor(MetricMetricDescriptorArgs metricDescriptor) {
             return metricDescriptor(Output.of(metricDescriptor));
         }
 

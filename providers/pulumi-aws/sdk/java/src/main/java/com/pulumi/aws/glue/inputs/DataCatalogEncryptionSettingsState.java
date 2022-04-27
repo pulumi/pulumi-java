@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs;
+import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class DataCatalogEncryptionSettingsState extends com.pulumi.resourc
      * 
      */
     @Import(name="dataCatalogEncryptionSettings")
-    private @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+    private @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
     /**
      * @return The security configuration to set. see Data Catalog Encryption Settings.
      * 
      */
-    public Optional<Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs>> dataCatalogEncryptionSettings() {
+    public Optional<Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs>> dataCatalogEncryptionSettings() {
         return Optional.ofNullable(this.dataCatalogEncryptionSettings);
     }
 
@@ -98,7 +98,7 @@ public final class DataCatalogEncryptionSettingsState extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder dataCatalogEncryptionSettings(@Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(@Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {
             $.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
             return this;
         }
@@ -109,7 +109,7 @@ public final class DataCatalogEncryptionSettingsState extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs dataCatalogEncryptionSettings) {
             return dataCatalogEncryptionSettings(Output.of(dataCatalogEncryptionSettings));
         }
 

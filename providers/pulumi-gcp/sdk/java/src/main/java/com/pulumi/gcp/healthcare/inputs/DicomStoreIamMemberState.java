@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class DicomStoreIamMemberState extends com.pulumi.resources.Resourc
     public static final DicomStoreIamMemberState Empty = new DicomStoreIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<DicomStoreIamMemberConditionGetArgs> condition;
+    private @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
 
-    public Optional<Output<DicomStoreIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<DicomStoreIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -113,12 +113,12 @@ public final class DicomStoreIamMemberState extends com.pulumi.resources.Resourc
             $ = new DicomStoreIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DicomStoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DicomStoreIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DicomStoreIamMemberConditionGetArgs condition) {
+        public Builder condition(DicomStoreIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

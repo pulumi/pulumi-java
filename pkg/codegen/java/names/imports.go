@@ -48,6 +48,12 @@ func (fqn FQN) Equal(other FQN) bool {
 	return true
 }
 
+// The base name. For example if the current FQN represents
+// java.lang.Boolean, BaseIdent is Boolean.
+func (fqn FQN) BaseIdent() Ident {
+	return fqn.id
+}
+
 type Imports struct {
 	pkg      FQN
 	pubClass Ident

@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ReservationShareSettingsGetArgs;
-import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationGetArgs;
+import com.pulumi.gcp.compute.inputs.ReservationShareSettingsArgs;
+import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -128,14 +128,14 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareSettings")
-    private @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
+    private @Nullable Output<ReservationShareSettingsArgs> shareSettings;
 
     /**
      * @return The share setting for reservations.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ReservationShareSettingsGetArgs>> shareSettings() {
+    public Optional<Output<ReservationShareSettingsArgs>> shareSettings() {
         return Optional.ofNullable(this.shareSettings);
     }
 
@@ -145,14 +145,14 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specificReservation")
-    private @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
+    private @Nullable Output<ReservationSpecificReservationArgs> specificReservation;
 
     /**
      * @return Reservation for instances with specific machine shapes.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ReservationSpecificReservationGetArgs>> specificReservation() {
+    public Optional<Output<ReservationSpecificReservationArgs>> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
 
@@ -386,7 +386,7 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shareSettings(@Nullable Output<ReservationShareSettingsGetArgs> shareSettings) {
+        public Builder shareSettings(@Nullable Output<ReservationShareSettingsArgs> shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
@@ -398,7 +398,7 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shareSettings(ReservationShareSettingsGetArgs shareSettings) {
+        public Builder shareSettings(ReservationShareSettingsArgs shareSettings) {
             return shareSettings(Output.of(shareSettings));
         }
 
@@ -409,7 +409,7 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder specificReservation(@Nullable Output<ReservationSpecificReservationGetArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Output<ReservationSpecificReservationArgs> specificReservation) {
             $.specificReservation = specificReservation;
             return this;
         }
@@ -421,7 +421,7 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder specificReservation(ReservationSpecificReservationGetArgs specificReservation) {
+        public Builder specificReservation(ReservationSpecificReservationArgs specificReservation) {
             return specificReservation(Output.of(specificReservation));
         }
 

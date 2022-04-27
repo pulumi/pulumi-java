@@ -3,16 +3,16 @@
 
 package com.pulumi.aws.codedeploy.inputs;
 
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupAlarmConfigurationGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupAutoRollbackConfigurationGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupBlueGreenDeploymentConfigGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupDeploymentStyleGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagFilterGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEcsServiceGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilterGetArgs;
-import com.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationGetArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupAlarmConfigurationArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupAutoRollbackConfigurationArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupBlueGreenDeploymentConfigArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupDeploymentStyleArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagFilterArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEcsServiceArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilterArgs;
+import com.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -32,13 +32,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="alarmConfiguration")
-    private @Nullable Output<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration;
+    private @Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
 
     /**
      * @return Configuration block of alarms associated with the deployment group (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupAlarmConfigurationGetArgs>> alarmConfiguration() {
+    public Optional<Output<DeploymentGroupAlarmConfigurationArgs>> alarmConfiguration() {
         return Optional.ofNullable(this.alarmConfiguration);
     }
 
@@ -77,13 +77,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="autoRollbackConfiguration")
-    private @Nullable Output<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
+    private @Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
     /**
      * @return Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupAutoRollbackConfigurationGetArgs>> autoRollbackConfiguration() {
+    public Optional<Output<DeploymentGroupAutoRollbackConfigurationArgs>> autoRollbackConfiguration() {
         return Optional.ofNullable(this.autoRollbackConfiguration);
     }
 
@@ -107,13 +107,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="blueGreenDeploymentConfig")
-    private @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig;
+    private @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
 
     /**
      * @return Configuration block of the blue/green deployment options for a deployment group (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs>> blueGreenDeploymentConfig() {
+    public Optional<Output<DeploymentGroupBlueGreenDeploymentConfigArgs>> blueGreenDeploymentConfig() {
         return Optional.ofNullable(this.blueGreenDeploymentConfig);
     }
 
@@ -182,13 +182,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deploymentStyle")
-    private @Nullable Output<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle;
+    private @Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
 
     /**
      * @return Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupDeploymentStyleGetArgs>> deploymentStyle() {
+    public Optional<Output<DeploymentGroupDeploymentStyleArgs>> deploymentStyle() {
         return Optional.ofNullable(this.deploymentStyle);
     }
 
@@ -197,13 +197,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ec2TagFilters")
-    private @Nullable Output<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters;
+    private @Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
 
     /**
      * @return Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    public Optional<Output<List<DeploymentGroupEc2TagFilterGetArgs>>> ec2TagFilters() {
+    public Optional<Output<List<DeploymentGroupEc2TagFilterArgs>>> ec2TagFilters() {
         return Optional.ofNullable(this.ec2TagFilters);
     }
 
@@ -212,13 +212,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ec2TagSets")
-    private @Nullable Output<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets;
+    private @Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
 
     /**
      * @return Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
      * 
      */
-    public Optional<Output<List<DeploymentGroupEc2TagSetGetArgs>>> ec2TagSets() {
+    public Optional<Output<List<DeploymentGroupEc2TagSetArgs>>> ec2TagSets() {
         return Optional.ofNullable(this.ec2TagSets);
     }
 
@@ -227,13 +227,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ecsService")
-    private @Nullable Output<DeploymentGroupEcsServiceGetArgs> ecsService;
+    private @Nullable Output<DeploymentGroupEcsServiceArgs> ecsService;
 
     /**
      * @return Configuration block(s) of the ECS services for a deployment group (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupEcsServiceGetArgs>> ecsService() {
+    public Optional<Output<DeploymentGroupEcsServiceArgs>> ecsService() {
         return Optional.ofNullable(this.ecsService);
     }
 
@@ -242,13 +242,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="loadBalancerInfo")
-    private @Nullable Output<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo;
+    private @Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
 
     /**
      * @return Single configuration block of the load balancer to use in a blue/green deployment (documented below).
      * 
      */
-    public Optional<Output<DeploymentGroupLoadBalancerInfoGetArgs>> loadBalancerInfo() {
+    public Optional<Output<DeploymentGroupLoadBalancerInfoArgs>> loadBalancerInfo() {
         return Optional.ofNullable(this.loadBalancerInfo);
     }
 
@@ -257,13 +257,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="onPremisesInstanceTagFilters")
-    private @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters;
+    private @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
 
     /**
      * @return On premise tag filters associated with the group. See the AWS docs for details.
      * 
      */
-    public Optional<Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>>> onPremisesInstanceTagFilters() {
+    public Optional<Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>>> onPremisesInstanceTagFilters() {
         return Optional.ofNullable(this.onPremisesInstanceTagFilters);
     }
 
@@ -317,13 +317,13 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="triggerConfigurations")
-    private @Nullable Output<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations;
+    private @Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
 
     /**
      * @return Configuration block(s) of the triggers for the deployment group (documented below).
      * 
      */
-    public Optional<Output<List<DeploymentGroupTriggerConfigurationGetArgs>>> triggerConfigurations() {
+    public Optional<Output<List<DeploymentGroupTriggerConfigurationArgs>>> triggerConfigurations() {
         return Optional.ofNullable(this.triggerConfigurations);
     }
 
@@ -376,7 +376,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder alarmConfiguration(@Nullable Output<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration) {
+        public Builder alarmConfiguration(@Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration) {
             $.alarmConfiguration = alarmConfiguration;
             return this;
         }
@@ -387,7 +387,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder alarmConfiguration(DeploymentGroupAlarmConfigurationGetArgs alarmConfiguration) {
+        public Builder alarmConfiguration(DeploymentGroupAlarmConfigurationArgs alarmConfiguration) {
             return alarmConfiguration(Output.of(alarmConfiguration));
         }
 
@@ -439,7 +439,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder autoRollbackConfiguration(@Nullable Output<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration) {
             $.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
@@ -450,7 +450,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder autoRollbackConfiguration(DeploymentGroupAutoRollbackConfigurationGetArgs autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(DeploymentGroupAutoRollbackConfigurationArgs autoRollbackConfiguration) {
             return autoRollbackConfiguration(Output.of(autoRollbackConfiguration));
         }
 
@@ -491,7 +491,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder blueGreenDeploymentConfig(@Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig) {
+        public Builder blueGreenDeploymentConfig(@Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig) {
             $.blueGreenDeploymentConfig = blueGreenDeploymentConfig;
             return this;
         }
@@ -502,7 +502,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder blueGreenDeploymentConfig(DeploymentGroupBlueGreenDeploymentConfigGetArgs blueGreenDeploymentConfig) {
+        public Builder blueGreenDeploymentConfig(DeploymentGroupBlueGreenDeploymentConfigArgs blueGreenDeploymentConfig) {
             return blueGreenDeploymentConfig(Output.of(blueGreenDeploymentConfig));
         }
 
@@ -596,7 +596,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder deploymentStyle(@Nullable Output<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle) {
+        public Builder deploymentStyle(@Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle) {
             $.deploymentStyle = deploymentStyle;
             return this;
         }
@@ -607,7 +607,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder deploymentStyle(DeploymentGroupDeploymentStyleGetArgs deploymentStyle) {
+        public Builder deploymentStyle(DeploymentGroupDeploymentStyleArgs deploymentStyle) {
             return deploymentStyle(Output.of(deploymentStyle));
         }
 
@@ -617,7 +617,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters) {
             $.ec2TagFilters = ec2TagFilters;
             return this;
         }
@@ -628,7 +628,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagFilters(List<DeploymentGroupEc2TagFilterGetArgs> ec2TagFilters) {
+        public Builder ec2TagFilters(List<DeploymentGroupEc2TagFilterArgs> ec2TagFilters) {
             return ec2TagFilters(Output.of(ec2TagFilters));
         }
 
@@ -638,7 +638,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagFilters(DeploymentGroupEc2TagFilterGetArgs... ec2TagFilters) {
+        public Builder ec2TagFilters(DeploymentGroupEc2TagFilterArgs... ec2TagFilters) {
             return ec2TagFilters(List.of(ec2TagFilters));
         }
 
@@ -648,7 +648,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagSets(@Nullable Output<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets) {
+        public Builder ec2TagSets(@Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets) {
             $.ec2TagSets = ec2TagSets;
             return this;
         }
@@ -659,7 +659,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagSets(List<DeploymentGroupEc2TagSetGetArgs> ec2TagSets) {
+        public Builder ec2TagSets(List<DeploymentGroupEc2TagSetArgs> ec2TagSets) {
             return ec2TagSets(Output.of(ec2TagSets));
         }
 
@@ -669,7 +669,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ec2TagSets(DeploymentGroupEc2TagSetGetArgs... ec2TagSets) {
+        public Builder ec2TagSets(DeploymentGroupEc2TagSetArgs... ec2TagSets) {
             return ec2TagSets(List.of(ec2TagSets));
         }
 
@@ -679,7 +679,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ecsService(@Nullable Output<DeploymentGroupEcsServiceGetArgs> ecsService) {
+        public Builder ecsService(@Nullable Output<DeploymentGroupEcsServiceArgs> ecsService) {
             $.ecsService = ecsService;
             return this;
         }
@@ -690,7 +690,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ecsService(DeploymentGroupEcsServiceGetArgs ecsService) {
+        public Builder ecsService(DeploymentGroupEcsServiceArgs ecsService) {
             return ecsService(Output.of(ecsService));
         }
 
@@ -700,7 +700,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder loadBalancerInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo) {
+        public Builder loadBalancerInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo) {
             $.loadBalancerInfo = loadBalancerInfo;
             return this;
         }
@@ -711,7 +711,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder loadBalancerInfo(DeploymentGroupLoadBalancerInfoGetArgs loadBalancerInfo) {
+        public Builder loadBalancerInfo(DeploymentGroupLoadBalancerInfoArgs loadBalancerInfo) {
             return loadBalancerInfo(Output.of(loadBalancerInfo));
         }
 
@@ -721,7 +721,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder onPremisesInstanceTagFilters(@Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(@Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters) {
             $.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
             return this;
         }
@@ -732,7 +732,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder onPremisesInstanceTagFilters(List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs> onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(List<DeploymentGroupOnPremisesInstanceTagFilterArgs> onPremisesInstanceTagFilters) {
             return onPremisesInstanceTagFilters(Output.of(onPremisesInstanceTagFilters));
         }
 
@@ -742,7 +742,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder onPremisesInstanceTagFilters(DeploymentGroupOnPremisesInstanceTagFilterGetArgs... onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(DeploymentGroupOnPremisesInstanceTagFilterArgs... onPremisesInstanceTagFilters) {
             return onPremisesInstanceTagFilters(List.of(onPremisesInstanceTagFilters));
         }
 
@@ -815,7 +815,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder triggerConfigurations(@Nullable Output<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations) {
+        public Builder triggerConfigurations(@Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations) {
             $.triggerConfigurations = triggerConfigurations;
             return this;
         }
@@ -826,7 +826,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder triggerConfigurations(List<DeploymentGroupTriggerConfigurationGetArgs> triggerConfigurations) {
+        public Builder triggerConfigurations(List<DeploymentGroupTriggerConfigurationArgs> triggerConfigurations) {
             return triggerConfigurations(Output.of(triggerConfigurations));
         }
 
@@ -836,7 +836,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder triggerConfigurations(DeploymentGroupTriggerConfigurationGetArgs... triggerConfigurations) {
+        public Builder triggerConfigurations(DeploymentGroupTriggerConfigurationArgs... triggerConfigurations) {
             return triggerConfigurations(List.of(triggerConfigurations));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationGetArgs;
-import com.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationArgs;
+import com.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainNameConfiguration")
-    private @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
+    private @Nullable Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
     /**
      * @return The domain name configuration.
      * 
      */
-    public Optional<Output<DomainNameDomainNameConfigurationGetArgs>> domainNameConfiguration() {
+    public Optional<Output<DomainNameDomainNameConfigurationArgs>> domainNameConfiguration() {
         return Optional.ofNullable(this.domainNameConfiguration);
     }
 
@@ -83,13 +83,13 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mutualTlsAuthentication")
-    private @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+    private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     /**
      * @return The mutual TLS authentication configuration for the domain name.
      * 
      */
-    public Optional<Output<DomainNameMutualTlsAuthenticationGetArgs>> mutualTlsAuthentication() {
+    public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
 
@@ -222,7 +222,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
+        public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
             $.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
@@ -233,7 +233,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainNameConfiguration(DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
+        public Builder domainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
             return domainNameConfiguration(Output.of(domainNameConfiguration));
         }
 
@@ -243,7 +243,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
@@ -254,7 +254,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
 

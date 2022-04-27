@@ -3,57 +3,50 @@
 
 package com.pulumi.aws.config.inputs;
 
-import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
+@CustomType
+public final class DefaultTags {
+    private final @Nullable Map<String,String> tags;
 
-public final class DefaultTags extends com.pulumi.resources.InvokeArgs {
-
-    public static final DefaultTags Empty = new DefaultTags();
-
-    @Import(name="tags")
-    private @Nullable Map<String,String> tags;
-
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    @CustomType.Constructor
+    private DefaultTags(@CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        this.tags = tags;
     }
 
-    private DefaultTags() {}
-
-    private DefaultTags(DefaultTags $) {
-        this.tags = $.tags;
+    public Map<String,String> tags() {
+        return this.tags == null ? Map.of() : this.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
+
     public static Builder builder(DefaultTags defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DefaultTags $;
+        private @Nullable Map<String,String> tags;
 
         public Builder() {
-            $ = new DefaultTags();
+    	      // Empty
         }
 
         public Builder(DefaultTags defaults) {
-            $ = new DefaultTags(Objects.requireNonNull(defaults));
+    	      Objects.requireNonNull(defaults);
+    	      this.tags = defaults.tags;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            this.tags = tags;
             return this;
-        }
-
-        public DefaultTags build() {
-            return $;
+        }        public DefaultTags build() {
+            return new DefaultTags(tags);
         }
     }
-
 }

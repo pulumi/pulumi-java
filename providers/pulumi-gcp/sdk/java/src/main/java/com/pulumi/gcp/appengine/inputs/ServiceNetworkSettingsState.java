@@ -5,7 +5,7 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
+import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="networkSettings")
-    private @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+    private @Nullable Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
 
     /**
      * @return Ingress settings for this service. Will apply to all versions.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ServiceNetworkSettingsNetworkSettingsGetArgs>> networkSettings() {
+    public Optional<Output<ServiceNetworkSettingsNetworkSettingsArgs>> networkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
 
@@ -98,7 +98,7 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder networkSettings(@Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
+        public Builder networkSettings(@Nullable Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings) {
             $.networkSettings = networkSettings;
             return this;
         }
@@ -110,7 +110,7 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
+        public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsArgs networkSettings) {
             return networkSettings(Output.of(networkSettings));
         }
 

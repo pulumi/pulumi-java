@@ -3,16 +3,16 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.EventTargetBatchTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetDeadLetterConfigGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetHttpTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetInputTransformerGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetKinesisTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetRedshiftTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetRetryPolicyGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetBatchTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetDeadLetterConfigArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetHttpTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetInputTransformerArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetKinesisTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetRedshiftTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetRetryPolicyArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -46,13 +46,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="batchTarget")
-    private @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
+    private @Nullable Output<EventTargetBatchTargetArgs> batchTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetBatchTargetGetArgs>> batchTarget() {
+    public Optional<Output<EventTargetBatchTargetArgs>> batchTarget() {
         return Optional.ofNullable(this.batchTarget);
     }
 
@@ -61,13 +61,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterConfig")
-    private @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
+    private @Nullable Output<EventTargetDeadLetterConfigArgs> deadLetterConfig;
 
     /**
      * @return Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetDeadLetterConfigGetArgs>> deadLetterConfig() {
+    public Optional<Output<EventTargetDeadLetterConfigArgs>> deadLetterConfig() {
         return Optional.ofNullable(this.deadLetterConfig);
     }
 
@@ -76,13 +76,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ecsTarget")
-    private @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
+    private @Nullable Output<EventTargetEcsTargetArgs> ecsTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetEcsTargetGetArgs>> ecsTarget() {
+    public Optional<Output<EventTargetEcsTargetArgs>> ecsTarget() {
         return Optional.ofNullable(this.ecsTarget);
     }
 
@@ -106,13 +106,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpTarget")
-    private @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
+    private @Nullable Output<EventTargetHttpTargetArgs> httpTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
      * 
      */
-    public Optional<Output<EventTargetHttpTargetGetArgs>> httpTarget() {
+    public Optional<Output<EventTargetHttpTargetArgs>> httpTarget() {
         return Optional.ofNullable(this.httpTarget);
     }
 
@@ -151,13 +151,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputTransformer")
-    private @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
+    private @Nullable Output<EventTargetInputTransformerArgs> inputTransformer;
 
     /**
      * @return Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
      * 
      */
-    public Optional<Output<EventTargetInputTransformerGetArgs>> inputTransformer() {
+    public Optional<Output<EventTargetInputTransformerArgs>> inputTransformer() {
         return Optional.ofNullable(this.inputTransformer);
     }
 
@@ -166,13 +166,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kinesisTarget")
-    private @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
+    private @Nullable Output<EventTargetKinesisTargetArgs> kinesisTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetKinesisTargetGetArgs>> kinesisTarget() {
+    public Optional<Output<EventTargetKinesisTargetArgs>> kinesisTarget() {
         return Optional.ofNullable(this.kinesisTarget);
     }
 
@@ -181,13 +181,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redshiftTarget")
-    private @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
+    private @Nullable Output<EventTargetRedshiftTargetArgs> redshiftTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetRedshiftTargetGetArgs>> redshiftTarget() {
+    public Optional<Output<EventTargetRedshiftTargetArgs>> redshiftTarget() {
         return Optional.ofNullable(this.redshiftTarget);
     }
 
@@ -196,13 +196,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryPolicy")
-    private @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<EventTargetRetryPolicyArgs> retryPolicy;
 
     /**
      * @return Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetRetryPolicyGetArgs>> retryPolicy() {
+    public Optional<Output<EventTargetRetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
 
@@ -241,13 +241,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runCommandTargets")
-    private @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
+    private @Nullable Output<List<EventTargetRunCommandTargetArgs>> runCommandTargets;
 
     /**
      * @return Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
      * 
      */
-    public Optional<Output<List<EventTargetRunCommandTargetGetArgs>>> runCommandTargets() {
+    public Optional<Output<List<EventTargetRunCommandTargetArgs>>> runCommandTargets() {
         return Optional.ofNullable(this.runCommandTargets);
     }
 
@@ -256,13 +256,13 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqsTarget")
-    private @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
+    private @Nullable Output<EventTargetSqsTargetArgs> sqsTarget;
 
     /**
      * @return Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Optional<Output<EventTargetSqsTargetGetArgs>> sqsTarget() {
+    public Optional<Output<EventTargetSqsTargetArgs>> sqsTarget() {
         return Optional.ofNullable(this.sqsTarget);
     }
 
@@ -348,7 +348,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder batchTarget(@Nullable Output<EventTargetBatchTargetGetArgs> batchTarget) {
+        public Builder batchTarget(@Nullable Output<EventTargetBatchTargetArgs> batchTarget) {
             $.batchTarget = batchTarget;
             return this;
         }
@@ -359,7 +359,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder batchTarget(EventTargetBatchTargetGetArgs batchTarget) {
+        public Builder batchTarget(EventTargetBatchTargetArgs batchTarget) {
             return batchTarget(Output.of(batchTarget));
         }
 
@@ -369,7 +369,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterConfig(@Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable Output<EventTargetDeadLetterConfigArgs> deadLetterConfig) {
             $.deadLetterConfig = deadLetterConfig;
             return this;
         }
@@ -380,7 +380,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterConfig(EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
+        public Builder deadLetterConfig(EventTargetDeadLetterConfigArgs deadLetterConfig) {
             return deadLetterConfig(Output.of(deadLetterConfig));
         }
 
@@ -390,7 +390,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ecsTarget(@Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget) {
+        public Builder ecsTarget(@Nullable Output<EventTargetEcsTargetArgs> ecsTarget) {
             $.ecsTarget = ecsTarget;
             return this;
         }
@@ -401,7 +401,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ecsTarget(EventTargetEcsTargetGetArgs ecsTarget) {
+        public Builder ecsTarget(EventTargetEcsTargetArgs ecsTarget) {
             return ecsTarget(Output.of(ecsTarget));
         }
 
@@ -432,7 +432,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpTarget(@Nullable Output<EventTargetHttpTargetGetArgs> httpTarget) {
+        public Builder httpTarget(@Nullable Output<EventTargetHttpTargetArgs> httpTarget) {
             $.httpTarget = httpTarget;
             return this;
         }
@@ -443,7 +443,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpTarget(EventTargetHttpTargetGetArgs httpTarget) {
+        public Builder httpTarget(EventTargetHttpTargetArgs httpTarget) {
             return httpTarget(Output.of(httpTarget));
         }
 
@@ -495,7 +495,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inputTransformer(@Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer) {
+        public Builder inputTransformer(@Nullable Output<EventTargetInputTransformerArgs> inputTransformer) {
             $.inputTransformer = inputTransformer;
             return this;
         }
@@ -506,7 +506,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inputTransformer(EventTargetInputTransformerGetArgs inputTransformer) {
+        public Builder inputTransformer(EventTargetInputTransformerArgs inputTransformer) {
             return inputTransformer(Output.of(inputTransformer));
         }
 
@@ -516,7 +516,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kinesisTarget(@Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget) {
+        public Builder kinesisTarget(@Nullable Output<EventTargetKinesisTargetArgs> kinesisTarget) {
             $.kinesisTarget = kinesisTarget;
             return this;
         }
@@ -527,7 +527,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kinesisTarget(EventTargetKinesisTargetGetArgs kinesisTarget) {
+        public Builder kinesisTarget(EventTargetKinesisTargetArgs kinesisTarget) {
             return kinesisTarget(Output.of(kinesisTarget));
         }
 
@@ -537,7 +537,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder redshiftTarget(@Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget) {
+        public Builder redshiftTarget(@Nullable Output<EventTargetRedshiftTargetArgs> redshiftTarget) {
             $.redshiftTarget = redshiftTarget;
             return this;
         }
@@ -548,7 +548,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder redshiftTarget(EventTargetRedshiftTargetGetArgs redshiftTarget) {
+        public Builder redshiftTarget(EventTargetRedshiftTargetArgs redshiftTarget) {
             return redshiftTarget(Output.of(redshiftTarget));
         }
 
@@ -558,7 +558,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryPolicy(@Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<EventTargetRetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
@@ -569,7 +569,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryPolicy(EventTargetRetryPolicyGetArgs retryPolicy) {
+        public Builder retryPolicy(EventTargetRetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
@@ -621,7 +621,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runCommandTargets(@Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets) {
+        public Builder runCommandTargets(@Nullable Output<List<EventTargetRunCommandTargetArgs>> runCommandTargets) {
             $.runCommandTargets = runCommandTargets;
             return this;
         }
@@ -632,7 +632,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runCommandTargets(List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
+        public Builder runCommandTargets(List<EventTargetRunCommandTargetArgs> runCommandTargets) {
             return runCommandTargets(Output.of(runCommandTargets));
         }
 
@@ -642,7 +642,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runCommandTargets(EventTargetRunCommandTargetGetArgs... runCommandTargets) {
+        public Builder runCommandTargets(EventTargetRunCommandTargetArgs... runCommandTargets) {
             return runCommandTargets(List.of(runCommandTargets));
         }
 
@@ -652,7 +652,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sqsTarget(@Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget) {
+        public Builder sqsTarget(@Nullable Output<EventTargetSqsTargetArgs> sqsTarget) {
             $.sqsTarget = sqsTarget;
             return this;
         }
@@ -663,7 +663,7 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sqsTarget(EventTargetSqsTargetGetArgs sqsTarget) {
+        public Builder sqsTarget(EventTargetSqsTargetArgs sqsTarget) {
             return sqsTarget(Output.of(sqsTarget));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.FlowLogDestinationOptionsGetArgs;
+import com.pulumi.aws.ec2.inputs.FlowLogDestinationOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -38,13 +38,13 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationOptions")
-    private @Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions;
+    private @Nullable Output<FlowLogDestinationOptionsArgs> destinationOptions;
 
     /**
      * @return Describes the destination options for a flow log. More details below.
      * 
      */
-    public Optional<Output<FlowLogDestinationOptionsGetArgs>> destinationOptions() {
+    public Optional<Output<FlowLogDestinationOptionsArgs>> destinationOptions() {
         return Optional.ofNullable(this.destinationOptions);
     }
 
@@ -306,7 +306,7 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destinationOptions(@Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions) {
+        public Builder destinationOptions(@Nullable Output<FlowLogDestinationOptionsArgs> destinationOptions) {
             $.destinationOptions = destinationOptions;
             return this;
         }
@@ -317,7 +317,7 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destinationOptions(FlowLogDestinationOptionsGetArgs destinationOptions) {
+        public Builder destinationOptions(FlowLogDestinationOptionsArgs destinationOptions) {
             return destinationOptions(Output.of(destinationOptions));
         }
 

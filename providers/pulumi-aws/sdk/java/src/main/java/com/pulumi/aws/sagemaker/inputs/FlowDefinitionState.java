@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceGetArgs;
-import com.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceArgs;
+import com.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -55,13 +55,13 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopActivationConfig")
-    private @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
+    private @Nullable Output<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig;
 
     /**
      * @return An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
      * 
      */
-    public Optional<Output<FlowDefinitionHumanLoopActivationConfigGetArgs>> humanLoopActivationConfig() {
+    public Optional<Output<FlowDefinitionHumanLoopActivationConfigArgs>> humanLoopActivationConfig() {
         return Optional.ofNullable(this.humanLoopActivationConfig);
     }
 
@@ -70,13 +70,13 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopConfig")
-    private @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
+    private @Nullable Output<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig;
 
     /**
      * @return An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
      * 
      */
-    public Optional<Output<FlowDefinitionHumanLoopConfigGetArgs>> humanLoopConfig() {
+    public Optional<Output<FlowDefinitionHumanLoopConfigArgs>> humanLoopConfig() {
         return Optional.ofNullable(this.humanLoopConfig);
     }
 
@@ -85,13 +85,13 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="humanLoopRequestSource")
-    private @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
+    private @Nullable Output<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource;
 
     /**
      * @return Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
      * 
      */
-    public Optional<Output<FlowDefinitionHumanLoopRequestSourceGetArgs>> humanLoopRequestSource() {
+    public Optional<Output<FlowDefinitionHumanLoopRequestSourceArgs>> humanLoopRequestSource() {
         return Optional.ofNullable(this.humanLoopRequestSource);
     }
 
@@ -100,13 +100,13 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="outputConfig")
-    private @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
+    private @Nullable Output<FlowDefinitionOutputConfigArgs> outputConfig;
 
     /**
      * @return An object containing information about where the human review results will be uploaded. See Output Config details below.
      * 
      */
-    public Optional<Output<FlowDefinitionOutputConfigGetArgs>> outputConfig() {
+    public Optional<Output<FlowDefinitionOutputConfigArgs>> outputConfig() {
         return Optional.ofNullable(this.outputConfig);
     }
 
@@ -235,7 +235,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig) {
             $.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
@@ -246,7 +246,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopActivationConfig(FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(FlowDefinitionHumanLoopActivationConfigArgs humanLoopActivationConfig) {
             return humanLoopActivationConfig(Output.of(humanLoopActivationConfig));
         }
 
@@ -256,7 +256,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopConfig(@Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
+        public Builder humanLoopConfig(@Nullable Output<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig) {
             $.humanLoopConfig = humanLoopConfig;
             return this;
         }
@@ -267,7 +267,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
+        public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigArgs humanLoopConfig) {
             return humanLoopConfig(Output.of(humanLoopConfig));
         }
 
@@ -277,7 +277,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource) {
             $.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
@@ -288,7 +288,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder humanLoopRequestSource(FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(FlowDefinitionHumanLoopRequestSourceArgs humanLoopRequestSource) {
             return humanLoopRequestSource(Output.of(humanLoopRequestSource));
         }
 
@@ -298,7 +298,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder outputConfig(@Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Output<FlowDefinitionOutputConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
@@ -309,7 +309,7 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder outputConfig(FlowDefinitionOutputConfigGetArgs outputConfig) {
+        public Builder outputConfig(FlowDefinitionOutputConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }
 

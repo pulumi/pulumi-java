@@ -5,11 +5,11 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigGetArgs;
-import com.pulumi.gcp.notebooks.inputs.InstanceContainerImageGetArgs;
-import com.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityGetArgs;
-import com.pulumi.gcp.notebooks.inputs.InstanceShieldedInstanceConfigGetArgs;
-import com.pulumi.gcp.notebooks.inputs.InstanceVmImageGetArgs;
+import com.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigArgs;
+import com.pulumi.gcp.notebooks.inputs.InstanceContainerImageArgs;
+import com.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityArgs;
+import com.pulumi.gcp.notebooks.inputs.InstanceShieldedInstanceConfigArgs;
+import com.pulumi.gcp.notebooks.inputs.InstanceVmImageArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorConfig")
-    private @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
+    private @Nullable Output<InstanceAcceleratorConfigArgs> acceleratorConfig;
 
     /**
      * @return The hardware accelerator used on this instance. If you use accelerators,
@@ -41,7 +41,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceAcceleratorConfigGetArgs>> acceleratorConfig() {
+    public Optional<Output<InstanceAcceleratorConfigArgs>> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
 
@@ -87,14 +87,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-    private @Nullable Output<InstanceContainerImageGetArgs> containerImage;
+    private @Nullable Output<InstanceContainerImageArgs> containerImage;
 
     /**
      * @return Use a container image to start the notebook instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceContainerImageGetArgs>> containerImage() {
+    public Optional<Output<InstanceContainerImageArgs>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
 
@@ -459,14 +459,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationAffinity")
-    private @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
+    private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
     /**
      * @return Reservation Affinity for consuming Zonal reservation.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceReservationAffinityGetArgs>> reservationAffinity() {
+    public Optional<Output<InstanceReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
 
@@ -521,7 +521,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceConfig")
-    private @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     /**
      * @return A set of Shielded Instance options. Check [Images using supported Shielded VM features]
@@ -529,7 +529,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
+    public Optional<Output<InstanceShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
@@ -601,14 +601,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImage")
-    private @Nullable Output<InstanceVmImageGetArgs> vmImage;
+    private @Nullable Output<InstanceVmImageArgs> vmImage;
 
     /**
      * @return Use a Compute Engine VM image to start the notebook instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceVmImageGetArgs>> vmImage() {
+    public Optional<Output<InstanceVmImageArgs>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
 
@@ -678,7 +678,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder acceleratorConfig(@Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Output<InstanceAcceleratorConfigArgs> acceleratorConfig) {
             $.acceleratorConfig = acceleratorConfig;
             return this;
         }
@@ -692,7 +692,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder acceleratorConfig(InstanceAcceleratorConfigGetArgs acceleratorConfig) {
+        public Builder acceleratorConfig(InstanceAcceleratorConfigArgs acceleratorConfig) {
             return acceleratorConfig(Output.of(acceleratorConfig));
         }
 
@@ -751,7 +751,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containerImage(@Nullable Output<InstanceContainerImageGetArgs> containerImage) {
+        public Builder containerImage(@Nullable Output<InstanceContainerImageArgs> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
@@ -763,7 +763,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containerImage(InstanceContainerImageGetArgs containerImage) {
+        public Builder containerImage(InstanceContainerImageArgs containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
@@ -1269,7 +1269,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
@@ -1281,7 +1281,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationAffinity(InstanceReservationAffinityGetArgs reservationAffinity) {
+        public Builder reservationAffinity(InstanceReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
@@ -1362,7 +1362,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
@@ -1375,7 +1375,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
@@ -1482,7 +1482,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vmImage(@Nullable Output<InstanceVmImageGetArgs> vmImage) {
+        public Builder vmImage(@Nullable Output<InstanceVmImageArgs> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
@@ -1494,7 +1494,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vmImage(InstanceVmImageGetArgs vmImage) {
+        public Builder vmImage(InstanceVmImageArgs vmImage) {
             return vmImage(Output.of(vmImage));
         }
 

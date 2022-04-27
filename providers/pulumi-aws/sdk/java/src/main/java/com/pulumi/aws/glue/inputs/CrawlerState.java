@@ -3,15 +3,15 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.CrawlerCatalogTargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerDeltaTargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerDynamodbTargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerJdbcTargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerLineageConfigurationGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerMongodbTargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerRecrawlPolicyGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerS3TargetGetArgs;
-import com.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyGetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerCatalogTargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerDeltaTargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerDynamodbTargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerJdbcTargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerLineageConfigurationArgs;
+import com.pulumi.aws.glue.inputs.CrawlerMongodbTargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerRecrawlPolicyArgs;
+import com.pulumi.aws.glue.inputs.CrawlerS3TargetArgs;
+import com.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -42,9 +42,9 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="catalogTargets")
-    private @Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
+    private @Nullable Output<List<CrawlerCatalogTargetArgs>> catalogTargets;
 
-    public Optional<Output<List<CrawlerCatalogTargetGetArgs>>> catalogTargets() {
+    public Optional<Output<List<CrawlerCatalogTargetArgs>>> catalogTargets() {
         return Optional.ofNullable(this.catalogTargets);
     }
 
@@ -94,9 +94,9 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="deltaTargets")
-    private @Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
+    private @Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets;
 
-    public Optional<Output<List<CrawlerDeltaTargetGetArgs>>> deltaTargets() {
+    public Optional<Output<List<CrawlerDeltaTargetArgs>>> deltaTargets() {
         return Optional.ofNullable(this.deltaTargets);
     }
 
@@ -120,13 +120,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamodbTargets")
-    private @Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
+    private @Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets;
 
     /**
      * @return List of nested DynamoDB target arguments. See Dynamodb Target below.
      * 
      */
-    public Optional<Output<List<CrawlerDynamodbTargetGetArgs>>> dynamodbTargets() {
+    public Optional<Output<List<CrawlerDynamodbTargetArgs>>> dynamodbTargets() {
         return Optional.ofNullable(this.dynamodbTargets);
     }
 
@@ -135,13 +135,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jdbcTargets")
-    private @Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
+    private @Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets;
 
     /**
      * @return List of nested JBDC target arguments. See JDBC Target below.
      * 
      */
-    public Optional<Output<List<CrawlerJdbcTargetGetArgs>>> jdbcTargets() {
+    public Optional<Output<List<CrawlerJdbcTargetArgs>>> jdbcTargets() {
         return Optional.ofNullable(this.jdbcTargets);
     }
 
@@ -150,13 +150,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lineageConfiguration")
-    private @Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
+    private @Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration;
 
     /**
      * @return Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
      * 
      */
-    public Optional<Output<CrawlerLineageConfigurationGetArgs>> lineageConfiguration() {
+    public Optional<Output<CrawlerLineageConfigurationArgs>> lineageConfiguration() {
         return Optional.ofNullable(this.lineageConfiguration);
     }
 
@@ -165,13 +165,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mongodbTargets")
-    private @Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
+    private @Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets;
 
     /**
      * @return List nested MongoDB target arguments. See MongoDB Target below.
      * 
      */
-    public Optional<Output<List<CrawlerMongodbTargetGetArgs>>> mongodbTargets() {
+    public Optional<Output<List<CrawlerMongodbTargetArgs>>> mongodbTargets() {
         return Optional.ofNullable(this.mongodbTargets);
     }
 
@@ -195,13 +195,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recrawlPolicy")
-    private @Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
+    private @Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy;
 
     /**
      * @return A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
      * 
      */
-    public Optional<Output<CrawlerRecrawlPolicyGetArgs>> recrawlPolicy() {
+    public Optional<Output<CrawlerRecrawlPolicyArgs>> recrawlPolicy() {
         return Optional.ofNullable(this.recrawlPolicy);
     }
 
@@ -225,13 +225,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Targets")
-    private @Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets;
+    private @Nullable Output<List<CrawlerS3TargetArgs>> s3Targets;
 
     /**
      * @return List nested Amazon S3 target arguments. See S3 Target below.
      * 
      */
-    public Optional<Output<List<CrawlerS3TargetGetArgs>>> s3Targets() {
+    public Optional<Output<List<CrawlerS3TargetArgs>>> s3Targets() {
         return Optional.ofNullable(this.s3Targets);
     }
 
@@ -255,13 +255,13 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaChangePolicy")
-    private @Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
+    private @Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy;
 
     /**
      * @return Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
      * 
      */
-    public Optional<Output<CrawlerSchemaChangePolicyGetArgs>> schemaChangePolicy() {
+    public Optional<Output<CrawlerSchemaChangePolicyArgs>> schemaChangePolicy() {
         return Optional.ofNullable(this.schemaChangePolicy);
     }
 
@@ -390,16 +390,16 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
-        public Builder catalogTargets(@Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets) {
+        public Builder catalogTargets(@Nullable Output<List<CrawlerCatalogTargetArgs>> catalogTargets) {
             $.catalogTargets = catalogTargets;
             return this;
         }
 
-        public Builder catalogTargets(List<CrawlerCatalogTargetGetArgs> catalogTargets) {
+        public Builder catalogTargets(List<CrawlerCatalogTargetArgs> catalogTargets) {
             return catalogTargets(Output.of(catalogTargets));
         }
 
-        public Builder catalogTargets(CrawlerCatalogTargetGetArgs... catalogTargets) {
+        public Builder catalogTargets(CrawlerCatalogTargetArgs... catalogTargets) {
             return catalogTargets(List.of(catalogTargets));
         }
 
@@ -476,16 +476,16 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
             return databaseName(Output.of(databaseName));
         }
 
-        public Builder deltaTargets(@Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets) {
+        public Builder deltaTargets(@Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets) {
             $.deltaTargets = deltaTargets;
             return this;
         }
 
-        public Builder deltaTargets(List<CrawlerDeltaTargetGetArgs> deltaTargets) {
+        public Builder deltaTargets(List<CrawlerDeltaTargetArgs> deltaTargets) {
             return deltaTargets(Output.of(deltaTargets));
         }
 
-        public Builder deltaTargets(CrawlerDeltaTargetGetArgs... deltaTargets) {
+        public Builder deltaTargets(CrawlerDeltaTargetArgs... deltaTargets) {
             return deltaTargets(List.of(deltaTargets));
         }
 
@@ -516,7 +516,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
+        public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets) {
             $.dynamodbTargets = dynamodbTargets;
             return this;
         }
@@ -527,7 +527,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dynamodbTargets(List<CrawlerDynamodbTargetGetArgs> dynamodbTargets) {
+        public Builder dynamodbTargets(List<CrawlerDynamodbTargetArgs> dynamodbTargets) {
             return dynamodbTargets(Output.of(dynamodbTargets));
         }
 
@@ -537,7 +537,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dynamodbTargets(CrawlerDynamodbTargetGetArgs... dynamodbTargets) {
+        public Builder dynamodbTargets(CrawlerDynamodbTargetArgs... dynamodbTargets) {
             return dynamodbTargets(List.of(dynamodbTargets));
         }
 
@@ -547,7 +547,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jdbcTargets(@Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
+        public Builder jdbcTargets(@Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets) {
             $.jdbcTargets = jdbcTargets;
             return this;
         }
@@ -558,7 +558,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jdbcTargets(List<CrawlerJdbcTargetGetArgs> jdbcTargets) {
+        public Builder jdbcTargets(List<CrawlerJdbcTargetArgs> jdbcTargets) {
             return jdbcTargets(Output.of(jdbcTargets));
         }
 
@@ -568,7 +568,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jdbcTargets(CrawlerJdbcTargetGetArgs... jdbcTargets) {
+        public Builder jdbcTargets(CrawlerJdbcTargetArgs... jdbcTargets) {
             return jdbcTargets(List.of(jdbcTargets));
         }
 
@@ -578,7 +578,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lineageConfiguration(@Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
+        public Builder lineageConfiguration(@Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration) {
             $.lineageConfiguration = lineageConfiguration;
             return this;
         }
@@ -589,7 +589,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lineageConfiguration(CrawlerLineageConfigurationGetArgs lineageConfiguration) {
+        public Builder lineageConfiguration(CrawlerLineageConfigurationArgs lineageConfiguration) {
             return lineageConfiguration(Output.of(lineageConfiguration));
         }
 
@@ -599,7 +599,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
+        public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets) {
             $.mongodbTargets = mongodbTargets;
             return this;
         }
@@ -610,7 +610,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mongodbTargets(List<CrawlerMongodbTargetGetArgs> mongodbTargets) {
+        public Builder mongodbTargets(List<CrawlerMongodbTargetArgs> mongodbTargets) {
             return mongodbTargets(Output.of(mongodbTargets));
         }
 
@@ -620,7 +620,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mongodbTargets(CrawlerMongodbTargetGetArgs... mongodbTargets) {
+        public Builder mongodbTargets(CrawlerMongodbTargetArgs... mongodbTargets) {
             return mongodbTargets(List.of(mongodbTargets));
         }
 
@@ -651,7 +651,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
+        public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy) {
             $.recrawlPolicy = recrawlPolicy;
             return this;
         }
@@ -662,7 +662,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder recrawlPolicy(CrawlerRecrawlPolicyGetArgs recrawlPolicy) {
+        public Builder recrawlPolicy(CrawlerRecrawlPolicyArgs recrawlPolicy) {
             return recrawlPolicy(Output.of(recrawlPolicy));
         }
 
@@ -693,7 +693,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Targets(@Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets) {
+        public Builder s3Targets(@Nullable Output<List<CrawlerS3TargetArgs>> s3Targets) {
             $.s3Targets = s3Targets;
             return this;
         }
@@ -704,7 +704,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Targets(List<CrawlerS3TargetGetArgs> s3Targets) {
+        public Builder s3Targets(List<CrawlerS3TargetArgs> s3Targets) {
             return s3Targets(Output.of(s3Targets));
         }
 
@@ -714,7 +714,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Targets(CrawlerS3TargetGetArgs... s3Targets) {
+        public Builder s3Targets(CrawlerS3TargetArgs... s3Targets) {
             return s3Targets(List.of(s3Targets));
         }
 
@@ -745,7 +745,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
+        public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy) {
             $.schemaChangePolicy = schemaChangePolicy;
             return this;
         }
@@ -756,7 +756,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemaChangePolicy(CrawlerSchemaChangePolicyGetArgs schemaChangePolicy) {
+        public Builder schemaChangePolicy(CrawlerSchemaChangePolicyArgs schemaChangePolicy) {
             return schemaChangePolicy(Output.of(schemaChangePolicy));
         }
 

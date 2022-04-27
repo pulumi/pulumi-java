@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.transfer.inputs;
 
-import com.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingGetArgs;
-import com.pulumi.aws.transfer.inputs.UserPosixProfileGetArgs;
+import com.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingArgs;
+import com.pulumi.aws.transfer.inputs.UserPosixProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryMappings")
-    private @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
+    private @Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
     /**
      * @return Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
      * 
      */
-    public Optional<Output<List<UserHomeDirectoryMappingGetArgs>>> homeDirectoryMappings() {
+    public Optional<Output<List<UserHomeDirectoryMappingArgs>>> homeDirectoryMappings() {
         return Optional.ofNullable(this.homeDirectoryMappings);
     }
 
@@ -99,13 +99,13 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixProfile")
-    private @Nullable Output<UserPosixProfileGetArgs> posixProfile;
+    private @Nullable Output<UserPosixProfileArgs> posixProfile;
 
     /**
      * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
-    public Optional<Output<UserPosixProfileGetArgs>> posixProfile() {
+    public Optional<Output<UserPosixProfileArgs>> posixProfile() {
         return Optional.ofNullable(this.posixProfile);
     }
 
@@ -266,7 +266,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             $.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
@@ -277,7 +277,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(List<UserHomeDirectoryMappingArgs> homeDirectoryMappings) {
             return homeDirectoryMappings(Output.of(homeDirectoryMappings));
         }
 
@@ -287,7 +287,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(UserHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(UserHomeDirectoryMappingArgs... homeDirectoryMappings) {
             return homeDirectoryMappings(List.of(homeDirectoryMappings));
         }
 
@@ -339,7 +339,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixProfile(@Nullable Output<UserPosixProfileGetArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Output<UserPosixProfileArgs> posixProfile) {
             $.posixProfile = posixProfile;
             return this;
         }
@@ -350,7 +350,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixProfile(UserPosixProfileGetArgs posixProfile) {
+        public Builder posixProfile(UserPosixProfileArgs posixProfile) {
             return posixProfile(Output.of(posixProfile));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetGetArgs;
-import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersGetArgs;
+import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetArgs;
+import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -114,13 +114,13 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="targets")
-    private @Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets;
+    private @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
 
     /**
      * @return The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
      * 
      */
-    public Optional<Output<List<MaintenanceWindowTaskTargetGetArgs>>> targets() {
+    public Optional<Output<List<MaintenanceWindowTaskTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
 
@@ -144,13 +144,13 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="taskInvocationParameters")
-    private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters;
+    private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
 
     /**
      * @return Configuration block with parameters for task execution.
      * 
      */
-    public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs>> taskInvocationParameters() {
+    public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersArgs>> taskInvocationParameters() {
         return Optional.ofNullable(this.taskInvocationParameters);
     }
 
@@ -350,7 +350,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets) {
+        public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
@@ -361,7 +361,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder targets(List<MaintenanceWindowTaskTargetGetArgs> targets) {
+        public Builder targets(List<MaintenanceWindowTaskTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
@@ -371,7 +371,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder targets(MaintenanceWindowTaskTargetGetArgs... targets) {
+        public Builder targets(MaintenanceWindowTaskTargetArgs... targets) {
             return targets(List.of(targets));
         }
 
@@ -402,7 +402,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder taskInvocationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters) {
+        public Builder taskInvocationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters) {
             $.taskInvocationParameters = taskInvocationParameters;
             return this;
         }
@@ -413,7 +413,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParametersGetArgs taskInvocationParameters) {
+        public Builder taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
             return taskInvocationParameters(Output.of(taskInvocationParameters));
         }
 

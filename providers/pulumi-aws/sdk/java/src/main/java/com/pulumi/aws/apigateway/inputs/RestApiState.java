@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationGetArgs;
+import com.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -130,13 +130,13 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointConfiguration")
-    private @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
+    private @Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration;
 
     /**
      * @return Configuration block defining API endpoint configuration including endpoint type. Defined below.
      * 
      */
-    public Optional<Output<RestApiEndpointConfigurationGetArgs>> endpointConfiguration() {
+    public Optional<Output<RestApiEndpointConfigurationArgs>> endpointConfiguration() {
         return Optional.ofNullable(this.endpointConfiguration);
     }
 
@@ -466,7 +466,7 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointConfiguration(@Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration) {
             $.endpointConfiguration = endpointConfiguration;
             return this;
         }
@@ -477,7 +477,7 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointConfiguration(RestApiEndpointConfigurationGetArgs endpointConfiguration) {
+        public Builder endpointConfiguration(RestApiEndpointConfigurationArgs endpointConfiguration) {
             return endpointConfiguration(Output.of(endpointConfiguration));
         }
 

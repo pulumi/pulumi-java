@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyGetArgs;
+import com.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -200,9 +200,9 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="tieringPolicy")
-    private @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
+    private @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
 
-    public Optional<Output<OntapVolumeTieringPolicyGetArgs>> tieringPolicy() {
+    public Optional<Output<OntapVolumeTieringPolicyArgs>> tieringPolicy() {
         return Optional.ofNullable(this.tieringPolicy);
     }
 
@@ -526,12 +526,12 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
             return tagsAll(Output.of(tagsAll));
         }
 
-        public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy) {
+        public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy) {
             $.tieringPolicy = tieringPolicy;
             return this;
         }
 
-        public Builder tieringPolicy(OntapVolumeTieringPolicyGetArgs tieringPolicy) {
+        public Builder tieringPolicy(OntapVolumeTieringPolicyArgs tieringPolicy) {
             return tieringPolicy(Output.of(tieringPolicy));
         }
 

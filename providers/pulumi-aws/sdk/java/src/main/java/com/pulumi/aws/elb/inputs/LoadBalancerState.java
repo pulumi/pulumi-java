@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.elb.inputs;
 
-import com.pulumi.aws.elb.inputs.LoadBalancerAccessLogsGetArgs;
-import com.pulumi.aws.elb.inputs.LoadBalancerHealthCheckGetArgs;
-import com.pulumi.aws.elb.inputs.LoadBalancerListenerGetArgs;
+import com.pulumi.aws.elb.inputs.LoadBalancerAccessLogsArgs;
+import com.pulumi.aws.elb.inputs.LoadBalancerHealthCheckArgs;
+import com.pulumi.aws.elb.inputs.LoadBalancerListenerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -27,13 +27,13 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogs")
-    private @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
+    private @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
     /**
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Optional<Output<LoadBalancerAccessLogsGetArgs>> accessLogs() {
+    public Optional<Output<LoadBalancerAccessLogsArgs>> accessLogs() {
         return Optional.ofNullable(this.accessLogs);
     }
 
@@ -147,13 +147,13 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheck")
-    private @Nullable Output<LoadBalancerHealthCheckGetArgs> healthCheck;
+    private @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck;
 
     /**
      * @return A health_check block. Health Check documented below.
      * 
      */
-    public Optional<Output<LoadBalancerHealthCheckGetArgs>> healthCheck() {
+    public Optional<Output<LoadBalancerHealthCheckArgs>> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
 
@@ -207,13 +207,13 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listeners")
-    private @Nullable Output<List<LoadBalancerListenerGetArgs>> listeners;
+    private @Nullable Output<List<LoadBalancerListenerArgs>> listeners;
 
     /**
      * @return A list of listener blocks. Listeners documented below.
      * 
      */
-    public Optional<Output<List<LoadBalancerListenerGetArgs>>> listeners() {
+    public Optional<Output<List<LoadBalancerListenerArgs>>> listeners() {
         return Optional.ofNullable(this.listeners);
     }
 
@@ -415,7 +415,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs) {
+        public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsArgs> accessLogs) {
             $.accessLogs = accessLogs;
             return this;
         }
@@ -426,7 +426,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogs(LoadBalancerAccessLogsGetArgs accessLogs) {
+        public Builder accessLogs(LoadBalancerAccessLogsArgs accessLogs) {
             return accessLogs(Output.of(accessLogs));
         }
 
@@ -593,7 +593,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheck(@Nullable Output<LoadBalancerHealthCheckGetArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Output<LoadBalancerHealthCheckArgs> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
@@ -604,7 +604,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheck(LoadBalancerHealthCheckGetArgs healthCheck) {
+        public Builder healthCheck(LoadBalancerHealthCheckArgs healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
@@ -687,7 +687,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder listeners(@Nullable Output<List<LoadBalancerListenerGetArgs>> listeners) {
+        public Builder listeners(@Nullable Output<List<LoadBalancerListenerArgs>> listeners) {
             $.listeners = listeners;
             return this;
         }
@@ -698,7 +698,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder listeners(List<LoadBalancerListenerGetArgs> listeners) {
+        public Builder listeners(List<LoadBalancerListenerArgs> listeners) {
             return listeners(Output.of(listeners));
         }
 
@@ -708,7 +708,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder listeners(LoadBalancerListenerGetArgs... listeners) {
+        public Builder listeners(LoadBalancerListenerArgs... listeners) {
             return listeners(List.of(listeners));
         }
 

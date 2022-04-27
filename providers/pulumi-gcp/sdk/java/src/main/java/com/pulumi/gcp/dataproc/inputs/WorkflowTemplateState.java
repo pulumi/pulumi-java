@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobGetArgs;
-import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterGetArgs;
-import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementGetArgs;
+import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobArgs;
+import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterArgs;
+import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,13 +56,13 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="jobs")
-    private @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
+    private @Nullable Output<List<WorkflowTemplateJobArgs>> jobs;
 
     /**
      * @return Required. The Directed Acyclic Graph of Jobs to submit.
      * 
      */
-    public Optional<Output<List<WorkflowTemplateJobGetArgs>>> jobs() {
+    public Optional<Output<List<WorkflowTemplateJobArgs>>> jobs() {
         return Optional.ofNullable(this.jobs);
     }
 
@@ -116,13 +116,13 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
+    private @Nullable Output<List<WorkflowTemplateParameterArgs>> parameters;
 
     /**
      * @return Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    public Optional<Output<List<WorkflowTemplateParameterGetArgs>>> parameters() {
+    public Optional<Output<List<WorkflowTemplateParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -131,13 +131,13 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="placement")
-    private @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
+    private @Nullable Output<WorkflowTemplatePlacementArgs> placement;
 
     /**
      * @return Required. WorkflowTemplate scheduling information.
      * 
      */
-    public Optional<Output<WorkflowTemplatePlacementGetArgs>> placement() {
+    public Optional<Output<WorkflowTemplatePlacementArgs>> placement() {
         return Optional.ofNullable(this.placement);
     }
 
@@ -276,7 +276,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder jobs(@Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs) {
+        public Builder jobs(@Nullable Output<List<WorkflowTemplateJobArgs>> jobs) {
             $.jobs = jobs;
             return this;
         }
@@ -287,7 +287,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder jobs(List<WorkflowTemplateJobGetArgs> jobs) {
+        public Builder jobs(List<WorkflowTemplateJobArgs> jobs) {
             return jobs(Output.of(jobs));
         }
 
@@ -297,7 +297,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder jobs(WorkflowTemplateJobGetArgs... jobs) {
+        public Builder jobs(WorkflowTemplateJobArgs... jobs) {
             return jobs(List.of(jobs));
         }
 
@@ -370,7 +370,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -381,7 +381,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder parameters(List<WorkflowTemplateParameterGetArgs> parameters) {
+        public Builder parameters(List<WorkflowTemplateParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -391,7 +391,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder parameters(WorkflowTemplateParameterGetArgs... parameters) {
+        public Builder parameters(WorkflowTemplateParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
@@ -401,7 +401,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder placement(@Nullable Output<WorkflowTemplatePlacementGetArgs> placement) {
+        public Builder placement(@Nullable Output<WorkflowTemplatePlacementArgs> placement) {
             $.placement = placement;
             return this;
         }
@@ -412,7 +412,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder placement(WorkflowTemplatePlacementGetArgs placement) {
+        public Builder placement(WorkflowTemplatePlacementArgs placement) {
             return placement(Output.of(placement));
         }
 

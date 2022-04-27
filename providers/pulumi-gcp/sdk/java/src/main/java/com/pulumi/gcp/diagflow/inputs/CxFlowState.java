@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerArgs;
+import com.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsArgs;
+import com.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandlers")
-    private @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers;
+    private @Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers;
 
     /**
      * @return A flow&#39;s event handlers serve two purposes:
@@ -68,7 +68,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxFlowEventHandlerGetArgs>>> eventHandlers() {
+    public Optional<Output<List<CxFlowEventHandlerArgs>>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
 
@@ -120,14 +120,14 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluSettings")
-    private @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings;
+    private @Nullable Output<CxFlowNluSettingsArgs> nluSettings;
 
     /**
      * @return NLU related settings of the flow.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CxFlowNluSettingsGetArgs>> nluSettings() {
+    public Optional<Output<CxFlowNluSettingsArgs>> nluSettings() {
         return Optional.ofNullable(this.nluSettings);
     }
 
@@ -176,7 +176,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRoutes")
-    private @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
+    private @Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes;
 
     /**
      * @return A flow&#39;s transition routes serve two purposes:
@@ -184,7 +184,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * They are inherited by every page&#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
-    public Optional<Output<List<CxFlowTransitionRouteGetArgs>>> transitionRoutes() {
+    public Optional<Output<List<CxFlowTransitionRouteArgs>>> transitionRoutes() {
         return Optional.ofNullable(this.transitionRoutes);
     }
 
@@ -272,7 +272,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(@Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
@@ -287,7 +287,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(List<CxFlowEventHandlerGetArgs> eventHandlers) {
+        public Builder eventHandlers(List<CxFlowEventHandlerArgs> eventHandlers) {
             return eventHandlers(Output.of(eventHandlers));
         }
 
@@ -301,7 +301,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(CxFlowEventHandlerGetArgs... eventHandlers) {
+        public Builder eventHandlers(CxFlowEventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
 
@@ -366,7 +366,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nluSettings(@Nullable Output<CxFlowNluSettingsGetArgs> nluSettings) {
+        public Builder nluSettings(@Nullable Output<CxFlowNluSettingsArgs> nluSettings) {
             $.nluSettings = nluSettings;
             return this;
         }
@@ -378,7 +378,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nluSettings(CxFlowNluSettingsGetArgs nluSettings) {
+        public Builder nluSettings(CxFlowNluSettingsArgs nluSettings) {
             return nluSettings(Output.of(nluSettings));
         }
 
@@ -453,7 +453,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(@Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
             $.transitionRoutes = transitionRoutes;
             return this;
         }
@@ -466,7 +466,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(List<CxFlowTransitionRouteGetArgs> transitionRoutes) {
+        public Builder transitionRoutes(List<CxFlowTransitionRouteArgs> transitionRoutes) {
             return transitionRoutes(Output.of(transitionRoutes));
         }
 
@@ -478,7 +478,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(CxFlowTransitionRouteGetArgs... transitionRoutes) {
+        public Builder transitionRoutes(CxFlowTransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
         }
 

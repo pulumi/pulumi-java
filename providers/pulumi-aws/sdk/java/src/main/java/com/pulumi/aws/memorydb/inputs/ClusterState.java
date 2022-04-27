@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.memorydb.inputs;
 
-import com.pulumi.aws.memorydb.inputs.ClusterClusterEndpointGetArgs;
-import com.pulumi.aws.memorydb.inputs.ClusterShardGetArgs;
+import com.pulumi.aws.memorydb.inputs.ClusterClusterEndpointArgs;
+import com.pulumi.aws.memorydb.inputs.ClusterShardArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -69,9 +69,9 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="clusterEndpoints")
-    private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+    private @Nullable Output<List<ClusterClusterEndpointArgs>> clusterEndpoints;
 
-    public Optional<Output<List<ClusterClusterEndpointGetArgs>>> clusterEndpoints() {
+    public Optional<Output<List<ClusterClusterEndpointArgs>>> clusterEndpoints() {
         return Optional.ofNullable(this.clusterEndpoints);
     }
 
@@ -284,13 +284,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shards")
-    private @Nullable Output<List<ClusterShardGetArgs>> shards;
+    private @Nullable Output<List<ClusterShardArgs>> shards;
 
     /**
      * @return Set of shards in this cluster.
      * 
      */
-    public Optional<Output<List<ClusterShardGetArgs>>> shards() {
+    public Optional<Output<List<ClusterShardArgs>>> shards() {
         return Optional.ofNullable(this.shards);
     }
 
@@ -545,16 +545,16 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
 
-        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointArgs>> clusterEndpoints) {
             $.clusterEndpoints = clusterEndpoints;
             return this;
         }
 
-        public Builder clusterEndpoints(List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
+        public Builder clusterEndpoints(List<ClusterClusterEndpointArgs> clusterEndpoints) {
             return clusterEndpoints(Output.of(clusterEndpoints));
         }
 
-        public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
+        public Builder clusterEndpoints(ClusterClusterEndpointArgs... clusterEndpoints) {
             return clusterEndpoints(List.of(clusterEndpoints));
         }
 
@@ -858,7 +858,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shards(@Nullable Output<List<ClusterShardGetArgs>> shards) {
+        public Builder shards(@Nullable Output<List<ClusterShardArgs>> shards) {
             $.shards = shards;
             return this;
         }
@@ -869,7 +869,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shards(List<ClusterShardGetArgs> shards) {
+        public Builder shards(List<ClusterShardArgs> shards) {
             return shards(Output.of(shards));
         }
 
@@ -879,7 +879,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shards(ClusterShardGetArgs... shards) {
+        public Builder shards(ClusterShardArgs... shards) {
             return shards(List.of(shards));
         }
 

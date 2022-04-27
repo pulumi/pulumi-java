@@ -5,7 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxVersionNluSettingGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxVersionNluSettingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -86,13 +86,13 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluSettings")
-    private @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
+    private @Nullable Output<List<CxVersionNluSettingArgs>> nluSettings;
 
     /**
      * @return The NLU settings of the flow at version creation.
      * 
      */
-    public Optional<Output<List<CxVersionNluSettingGetArgs>>> nluSettings() {
+    public Optional<Output<List<CxVersionNluSettingArgs>>> nluSettings() {
         return Optional.ofNullable(this.nluSettings);
     }
 
@@ -254,7 +254,7 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings) {
+        public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingArgs>> nluSettings) {
             $.nluSettings = nluSettings;
             return this;
         }
@@ -265,7 +265,7 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nluSettings(List<CxVersionNluSettingGetArgs> nluSettings) {
+        public Builder nluSettings(List<CxVersionNluSettingArgs> nluSettings) {
             return nluSettings(Output.of(nluSettings));
         }
 
@@ -275,7 +275,7 @@ public final class CxVersionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nluSettings(CxVersionNluSettingGetArgs... nluSettings) {
+        public Builder nluSettings(CxVersionNluSettingArgs... nluSettings) {
             return nluSettings(List.of(nluSettings));
         }
 

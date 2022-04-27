@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.codebuild.inputs;
 
-import com.pulumi.aws.codebuild.inputs.WebhookFilterGroupGetArgs;
+import com.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterGroups")
-    private @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
+    private @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
     /**
      * @return Information about the webhook&#39;s trigger. Filter group blocks are documented below.
      * 
      */
-    public Optional<Output<List<WebhookFilterGroupGetArgs>>> filterGroups() {
+    public Optional<Output<List<WebhookFilterGroupArgs>>> filterGroups() {
         return Optional.ofNullable(this.filterGroups);
     }
 
@@ -200,7 +200,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups) {
+        public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
             $.filterGroups = filterGroups;
             return this;
         }
@@ -211,7 +211,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filterGroups(List<WebhookFilterGroupGetArgs> filterGroups) {
+        public Builder filterGroups(List<WebhookFilterGroupArgs> filterGroups) {
             return filterGroups(Output.of(filterGroups));
         }
 
@@ -221,7 +221,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filterGroups(WebhookFilterGroupGetArgs... filterGroups) {
+        public Builder filterGroups(WebhookFilterGroupArgs... filterGroups) {
             return filterGroups(List.of(filterGroups));
         }
 

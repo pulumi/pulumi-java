@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3control.inputs;
 
-import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsGetArgs;
+import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -28,13 +28,13 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
      * 
      */
     @Import(name="details")
-    private @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
+    private @Nullable Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
     /**
      * @return A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    public Optional<Output<MultiRegionAccessPointPolicyDetailsGetArgs>> details() {
+    public Optional<Output<MultiRegionAccessPointPolicyDetailsArgs>> details() {
         return Optional.ofNullable(this.details);
     }
 
@@ -110,7 +110,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder details(@Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
+        public Builder details(@Nullable Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
             $.details = details;
             return this;
         }
@@ -121,7 +121,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder details(MultiRegionAccessPointPolicyDetailsGetArgs details) {
+        public Builder details(MultiRegionAccessPointPolicyDetailsArgs details) {
             return details(Output.of(details));
         }
 

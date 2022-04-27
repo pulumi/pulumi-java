@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3outposts.inputs;
 
-import com.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
+import com.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<EndpointNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return Set of nested attributes for associated Elastic Network Interfaces (ENIs).
      * 
      */
-    public Optional<Output<List<EndpointNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<EndpointNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -221,7 +221,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -232,7 +232,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<EndpointNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -242,7 +242,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(EndpointNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(EndpointNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 

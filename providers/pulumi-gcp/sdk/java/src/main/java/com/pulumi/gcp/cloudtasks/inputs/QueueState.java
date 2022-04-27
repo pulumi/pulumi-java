@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudtasks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideGetArgs;
-import com.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsGetArgs;
-import com.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigGetArgs;
-import com.pulumi.gcp.cloudtasks.inputs.QueueStackdriverLoggingConfigGetArgs;
+import com.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideArgs;
+import com.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsArgs;
+import com.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigArgs;
+import com.pulumi.gcp.cloudtasks.inputs.QueueStackdriverLoggingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineRoutingOverride")
-    private @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
+    private @Nullable Output<QueueAppEngineRoutingOverrideArgs> appEngineRoutingOverride;
 
     /**
      * @return Overrides for task-level appEngineRouting. These settings apply only
@@ -34,7 +34,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<QueueAppEngineRoutingOverrideGetArgs>> appEngineRoutingOverride() {
+    public Optional<Output<QueueAppEngineRoutingOverrideArgs>> appEngineRoutingOverride() {
         return Optional.ofNullable(this.appEngineRoutingOverride);
     }
 
@@ -97,7 +97,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimits")
-    private @Nullable Output<QueueRateLimitsGetArgs> rateLimits;
+    private @Nullable Output<QueueRateLimitsArgs> rateLimits;
 
     /**
      * @return Rate limits for task dispatches.
@@ -110,7 +110,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      *   Structure is documented below.
      * 
      */
-    public Optional<Output<QueueRateLimitsGetArgs>> rateLimits() {
+    public Optional<Output<QueueRateLimitsArgs>> rateLimits() {
         return Optional.ofNullable(this.rateLimits);
     }
 
@@ -120,14 +120,14 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryConfig")
-    private @Nullable Output<QueueRetryConfigGetArgs> retryConfig;
+    private @Nullable Output<QueueRetryConfigArgs> retryConfig;
 
     /**
      * @return Settings that determine the retry behavior.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<QueueRetryConfigGetArgs>> retryConfig() {
+    public Optional<Output<QueueRetryConfigArgs>> retryConfig() {
         return Optional.ofNullable(this.retryConfig);
     }
 
@@ -137,14 +137,14 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackdriverLoggingConfig")
-    private @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
+    private @Nullable Output<QueueStackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
     /**
      * @return Configuration options for writing logs to Stackdriver Logging.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<QueueStackdriverLoggingConfigGetArgs>> stackdriverLoggingConfig() {
+    public Optional<Output<QueueStackdriverLoggingConfigArgs>> stackdriverLoggingConfig() {
         return Optional.ofNullable(this.stackdriverLoggingConfig);
     }
 
@@ -186,7 +186,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appEngineRoutingOverride(@Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(@Nullable Output<QueueAppEngineRoutingOverrideArgs> appEngineRoutingOverride) {
             $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
@@ -199,7 +199,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appEngineRoutingOverride(QueueAppEngineRoutingOverrideGetArgs appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(QueueAppEngineRoutingOverrideArgs appEngineRoutingOverride) {
             return appEngineRoutingOverride(Output.of(appEngineRoutingOverride));
         }
 
@@ -281,7 +281,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rateLimits(@Nullable Output<QueueRateLimitsGetArgs> rateLimits) {
+        public Builder rateLimits(@Nullable Output<QueueRateLimitsArgs> rateLimits) {
             $.rateLimits = rateLimits;
             return this;
         }
@@ -299,7 +299,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rateLimits(QueueRateLimitsGetArgs rateLimits) {
+        public Builder rateLimits(QueueRateLimitsArgs rateLimits) {
             return rateLimits(Output.of(rateLimits));
         }
 
@@ -310,7 +310,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryConfig(@Nullable Output<QueueRetryConfigGetArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Output<QueueRetryConfigArgs> retryConfig) {
             $.retryConfig = retryConfig;
             return this;
         }
@@ -322,7 +322,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryConfig(QueueRetryConfigGetArgs retryConfig) {
+        public Builder retryConfig(QueueRetryConfigArgs retryConfig) {
             return retryConfig(Output.of(retryConfig));
         }
 
@@ -333,7 +333,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stackdriverLoggingConfig(@Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(@Nullable Output<QueueStackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
             $.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
@@ -345,7 +345,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stackdriverLoggingConfig(QueueStackdriverLoggingConfigGetArgs stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(QueueStackdriverLoggingConfigArgs stackdriverLoggingConfig) {
             return stackdriverLoggingConfig(Output.of(stackdriverLoggingConfig));
         }
 

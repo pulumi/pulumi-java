@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGetArgs;
+import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfig")
-    private @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig;
+    private @Nullable Output<ClusterClusterConfigArgs> clusterConfig;
 
     /**
      * @return Allows you to configure various aspects of the cluster.
      * Structure defined below.
      * 
      */
-    public Optional<Output<ClusterClusterConfigGetArgs>> clusterConfig() {
+    public Optional<Output<ClusterClusterConfigArgs>> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
 
@@ -157,7 +157,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfig(@Nullable Output<ClusterClusterConfigGetArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Output<ClusterClusterConfigArgs> clusterConfig) {
             $.clusterConfig = clusterConfig;
             return this;
         }
@@ -169,7 +169,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfig(ClusterClusterConfigGetArgs clusterConfig) {
+        public Builder clusterConfig(ClusterClusterConfigArgs clusterConfig) {
             return clusterConfig(Output.of(clusterConfig));
         }
 

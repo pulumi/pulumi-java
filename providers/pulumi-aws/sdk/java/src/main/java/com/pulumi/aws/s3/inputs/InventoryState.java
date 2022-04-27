@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.InventoryDestinationGetArgs;
-import com.pulumi.aws.s3.inputs.InventoryFilterGetArgs;
-import com.pulumi.aws.s3.inputs.InventoryScheduleGetArgs;
+import com.pulumi.aws.s3.inputs.InventoryDestinationArgs;
+import com.pulumi.aws.s3.inputs.InventoryFilterArgs;
+import com.pulumi.aws.s3.inputs.InventoryScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-    private @Nullable Output<InventoryDestinationGetArgs> destination;
+    private @Nullable Output<InventoryDestinationArgs> destination;
 
     /**
      * @return Contains information about where to publish the inventory results (documented below).
      * 
      */
-    public Optional<Output<InventoryDestinationGetArgs>> destination() {
+    public Optional<Output<InventoryDestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
 
@@ -70,13 +70,13 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-    private @Nullable Output<InventoryFilterGetArgs> filter;
+    private @Nullable Output<InventoryFilterArgs> filter;
 
     /**
      * @return Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
-    public Optional<Output<InventoryFilterGetArgs>> filter() {
+    public Optional<Output<InventoryFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -130,13 +130,13 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<InventoryScheduleGetArgs> schedule;
+    private @Nullable Output<InventoryScheduleArgs> schedule;
 
     /**
      * @return Specifies the schedule for generating inventory results (documented below).
      * 
      */
-    public Optional<Output<InventoryScheduleGetArgs>> schedule() {
+    public Optional<Output<InventoryScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -198,7 +198,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destination(@Nullable Output<InventoryDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Output<InventoryDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
@@ -209,7 +209,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destination(InventoryDestinationGetArgs destination) {
+        public Builder destination(InventoryDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
@@ -240,7 +240,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<InventoryFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<InventoryFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
@@ -251,7 +251,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filter(InventoryFilterGetArgs filter) {
+        public Builder filter(InventoryFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
@@ -334,7 +334,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<InventoryScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<InventoryScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -345,7 +345,7 @@ public final class InventoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(InventoryScheduleGetArgs schedule) {
+        public Builder schedule(InventoryScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 

@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.dms.inputs;
 
-import com.pulumi.aws.dms.inputs.EndpointElasticsearchSettingsGetArgs;
-import com.pulumi.aws.dms.inputs.EndpointKafkaSettingsGetArgs;
-import com.pulumi.aws.dms.inputs.EndpointKinesisSettingsGetArgs;
-import com.pulumi.aws.dms.inputs.EndpointMongodbSettingsGetArgs;
-import com.pulumi.aws.dms.inputs.EndpointS3SettingsGetArgs;
+import com.pulumi.aws.dms.inputs.EndpointElasticsearchSettingsArgs;
+import com.pulumi.aws.dms.inputs.EndpointKafkaSettingsArgs;
+import com.pulumi.aws.dms.inputs.EndpointKinesisSettingsArgs;
+import com.pulumi.aws.dms.inputs.EndpointMongodbSettingsArgs;
+import com.pulumi.aws.dms.inputs.EndpointS3SettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -57,13 +57,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticsearchSettings")
-    private @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
+    private @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
 
     /**
      * @return Configuration block with Elasticsearch settings. Detailed below.
      * 
      */
-    public Optional<Output<EndpointElasticsearchSettingsGetArgs>> elasticsearchSettings() {
+    public Optional<Output<EndpointElasticsearchSettingsArgs>> elasticsearchSettings() {
         return Optional.ofNullable(this.elasticsearchSettings);
     }
 
@@ -147,13 +147,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaSettings")
-    private @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings;
+    private @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
 
     /**
      * @return Configuration block with Kafka settings. Detailed below.
      * 
      */
-    public Optional<Output<EndpointKafkaSettingsGetArgs>> kafkaSettings() {
+    public Optional<Output<EndpointKafkaSettingsArgs>> kafkaSettings() {
         return Optional.ofNullable(this.kafkaSettings);
     }
 
@@ -162,13 +162,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kinesisSettings")
-    private @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings;
+    private @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
 
     /**
      * @return Configuration block with Kinesis settings. Detailed below.
      * 
      */
-    public Optional<Output<EndpointKinesisSettingsGetArgs>> kinesisSettings() {
+    public Optional<Output<EndpointKinesisSettingsArgs>> kinesisSettings() {
         return Optional.ofNullable(this.kinesisSettings);
     }
 
@@ -192,13 +192,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mongodbSettings")
-    private @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings;
+    private @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
 
     /**
      * @return Configuration block with MongoDB settings. Detailed below.
      * 
      */
-    public Optional<Output<EndpointMongodbSettingsGetArgs>> mongodbSettings() {
+    public Optional<Output<EndpointMongodbSettingsArgs>> mongodbSettings() {
         return Optional.ofNullable(this.mongodbSettings);
     }
 
@@ -237,13 +237,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Settings")
-    private @Nullable Output<EndpointS3SettingsGetArgs> s3Settings;
+    private @Nullable Output<EndpointS3SettingsArgs> s3Settings;
 
     /**
      * @return Configuration block with S3 settings. Detailed below.
      * 
      */
-    public Optional<Output<EndpointS3SettingsGetArgs>> s3Settings() {
+    public Optional<Output<EndpointS3SettingsArgs>> s3Settings() {
         return Optional.ofNullable(this.s3Settings);
     }
 
@@ -461,7 +461,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings) {
+        public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings) {
             $.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
@@ -472,7 +472,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder elasticsearchSettings(EndpointElasticsearchSettingsGetArgs elasticsearchSettings) {
+        public Builder elasticsearchSettings(EndpointElasticsearchSettingsArgs elasticsearchSettings) {
             return elasticsearchSettings(Output.of(elasticsearchSettings));
         }
 
@@ -587,7 +587,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings) {
+        public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings) {
             $.kafkaSettings = kafkaSettings;
             return this;
         }
@@ -598,7 +598,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kafkaSettings(EndpointKafkaSettingsGetArgs kafkaSettings) {
+        public Builder kafkaSettings(EndpointKafkaSettingsArgs kafkaSettings) {
             return kafkaSettings(Output.of(kafkaSettings));
         }
 
@@ -608,7 +608,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings) {
+        public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings) {
             $.kinesisSettings = kinesisSettings;
             return this;
         }
@@ -619,7 +619,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kinesisSettings(EndpointKinesisSettingsGetArgs kinesisSettings) {
+        public Builder kinesisSettings(EndpointKinesisSettingsArgs kinesisSettings) {
             return kinesisSettings(Output.of(kinesisSettings));
         }
 
@@ -650,7 +650,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings) {
+        public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings) {
             $.mongodbSettings = mongodbSettings;
             return this;
         }
@@ -661,7 +661,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mongodbSettings(EndpointMongodbSettingsGetArgs mongodbSettings) {
+        public Builder mongodbSettings(EndpointMongodbSettingsArgs mongodbSettings) {
             return mongodbSettings(Output.of(mongodbSettings));
         }
 
@@ -713,7 +713,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Settings(@Nullable Output<EndpointS3SettingsGetArgs> s3Settings) {
+        public Builder s3Settings(@Nullable Output<EndpointS3SettingsArgs> s3Settings) {
             $.s3Settings = s3Settings;
             return this;
         }
@@ -724,7 +724,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Settings(EndpointS3SettingsGetArgs s3Settings) {
+        public Builder s3Settings(EndpointS3SettingsArgs s3Settings) {
             return s3Settings(Output.of(s3Settings));
         }
 

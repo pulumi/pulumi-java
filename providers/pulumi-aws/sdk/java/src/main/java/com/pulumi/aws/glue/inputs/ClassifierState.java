@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.ClassifierCsvClassifierGetArgs;
-import com.pulumi.aws.glue.inputs.ClassifierGrokClassifierGetArgs;
-import com.pulumi.aws.glue.inputs.ClassifierJsonClassifierGetArgs;
-import com.pulumi.aws.glue.inputs.ClassifierXmlClassifierGetArgs;
+import com.pulumi.aws.glue.inputs.ClassifierCsvClassifierArgs;
+import com.pulumi.aws.glue.inputs.ClassifierGrokClassifierArgs;
+import com.pulumi.aws.glue.inputs.ClassifierJsonClassifierArgs;
+import com.pulumi.aws.glue.inputs.ClassifierXmlClassifierArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,13 +24,13 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="csvClassifier")
-    private @Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier;
+    private @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier;
 
     /**
      * @return A classifier for Csv content. Defined below.
      * 
      */
-    public Optional<Output<ClassifierCsvClassifierGetArgs>> csvClassifier() {
+    public Optional<Output<ClassifierCsvClassifierArgs>> csvClassifier() {
         return Optional.ofNullable(this.csvClassifier);
     }
 
@@ -39,13 +39,13 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grokClassifier")
-    private @Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier;
+    private @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier;
 
     /**
      * @return A classifier that uses grok patterns. Defined below.
      * 
      */
-    public Optional<Output<ClassifierGrokClassifierGetArgs>> grokClassifier() {
+    public Optional<Output<ClassifierGrokClassifierArgs>> grokClassifier() {
         return Optional.ofNullable(this.grokClassifier);
     }
 
@@ -54,13 +54,13 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonClassifier")
-    private @Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier;
+    private @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier;
 
     /**
      * @return A classifier for JSON content. Defined below.
      * 
      */
-    public Optional<Output<ClassifierJsonClassifierGetArgs>> jsonClassifier() {
+    public Optional<Output<ClassifierJsonClassifierArgs>> jsonClassifier() {
         return Optional.ofNullable(this.jsonClassifier);
     }
 
@@ -84,13 +84,13 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xmlClassifier")
-    private @Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier;
+    private @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier;
 
     /**
      * @return A classifier for XML content. Defined below.
      * 
      */
-    public Optional<Output<ClassifierXmlClassifierGetArgs>> xmlClassifier() {
+    public Optional<Output<ClassifierXmlClassifierArgs>> xmlClassifier() {
         return Optional.ofNullable(this.xmlClassifier);
     }
 
@@ -128,7 +128,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder csvClassifier(@Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier) {
+        public Builder csvClassifier(@Nullable Output<ClassifierCsvClassifierArgs> csvClassifier) {
             $.csvClassifier = csvClassifier;
             return this;
         }
@@ -139,7 +139,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder csvClassifier(ClassifierCsvClassifierGetArgs csvClassifier) {
+        public Builder csvClassifier(ClassifierCsvClassifierArgs csvClassifier) {
             return csvClassifier(Output.of(csvClassifier));
         }
 
@@ -149,7 +149,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier) {
+        public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierArgs> grokClassifier) {
             $.grokClassifier = grokClassifier;
             return this;
         }
@@ -160,7 +160,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grokClassifier(ClassifierGrokClassifierGetArgs grokClassifier) {
+        public Builder grokClassifier(ClassifierGrokClassifierArgs grokClassifier) {
             return grokClassifier(Output.of(grokClassifier));
         }
 
@@ -170,7 +170,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier) {
+        public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier) {
             $.jsonClassifier = jsonClassifier;
             return this;
         }
@@ -181,7 +181,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jsonClassifier(ClassifierJsonClassifierGetArgs jsonClassifier) {
+        public Builder jsonClassifier(ClassifierJsonClassifierArgs jsonClassifier) {
             return jsonClassifier(Output.of(jsonClassifier));
         }
 
@@ -212,7 +212,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier) {
+        public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier) {
             $.xmlClassifier = xmlClassifier;
             return this;
         }
@@ -223,7 +223,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder xmlClassifier(ClassifierXmlClassifierGetArgs xmlClassifier) {
+        public Builder xmlClassifier(ClassifierXmlClassifierArgs xmlClassifier) {
             return xmlClassifier(Output.of(xmlClassifier));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.lex.inputs;
 
-import com.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
+import com.pulumi.aws.lex.inputs.BotAliasConversationLogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -81,13 +81,13 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conversationLogs")
-    private @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
+    private @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
 
     /**
      * @return The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    public Optional<Output<BotAliasConversationLogsGetArgs>> conversationLogs() {
+    public Optional<Output<BotAliasConversationLogsArgs>> conversationLogs() {
         return Optional.ofNullable(this.conversationLogs);
     }
 
@@ -273,7 +273,7 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs) {
+        public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsArgs> conversationLogs) {
             $.conversationLogs = conversationLogs;
             return this;
         }
@@ -284,7 +284,7 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conversationLogs(BotAliasConversationLogsGetArgs conversationLogs) {
+        public Builder conversationLogs(BotAliasConversationLogsArgs conversationLogs) {
             return conversationLogs(Output.of(conversationLogs));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpcEndpointServicePrivateDnsNameConfigurationGetArgs;
+import com.pulumi.aws.ec2.inputs.VpcEndpointServicePrivateDnsNameConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -159,13 +159,13 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="privateDnsNameConfigurations")
-    private @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
+    private @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationArgs>> privateDnsNameConfigurations;
 
     /**
      * @return List of objects containing information about the endpoint service private DNS name configuration.
      * 
      */
-    public Optional<Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>>> privateDnsNameConfigurations() {
+    public Optional<Output<List<VpcEndpointServicePrivateDnsNameConfigurationArgs>>> privateDnsNameConfigurations() {
         return Optional.ofNullable(this.privateDnsNameConfigurations);
     }
 
@@ -527,7 +527,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder privateDnsNameConfigurations(@Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations) {
+        public Builder privateDnsNameConfigurations(@Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationArgs>> privateDnsNameConfigurations) {
             $.privateDnsNameConfigurations = privateDnsNameConfigurations;
             return this;
         }
@@ -538,7 +538,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder privateDnsNameConfigurations(List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs> privateDnsNameConfigurations) {
+        public Builder privateDnsNameConfigurations(List<VpcEndpointServicePrivateDnsNameConfigurationArgs> privateDnsNameConfigurations) {
             return privateDnsNameConfigurations(Output.of(privateDnsNameConfigurations));
         }
 
@@ -548,7 +548,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder privateDnsNameConfigurations(VpcEndpointServicePrivateDnsNameConfigurationGetArgs... privateDnsNameConfigurations) {
+        public Builder privateDnsNameConfigurations(VpcEndpointServicePrivateDnsNameConfigurationArgs... privateDnsNameConfigurations) {
             return privateDnsNameConfigurations(List.of(privateDnsNameConfigurations));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cognito.inputs;
 
-import com.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsGetArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -85,13 +85,13 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="analyticsConfiguration")
-    private @Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration;
+    private @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
     /**
      * @return Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolClientAnalyticsConfigurationGetArgs>> analyticsConfiguration() {
+    public Optional<Output<UserPoolClientAnalyticsConfigurationArgs>> analyticsConfiguration() {
         return Optional.ofNullable(this.analyticsConfiguration);
     }
 
@@ -295,13 +295,13 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tokenValidityUnits")
-    private @Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits;
+    private @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
     /**
      * @return Configuration block for units in which the validity times are represented in. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolClientTokenValidityUnitsGetArgs>> tokenValidityUnits() {
+    public Optional<Output<UserPoolClientTokenValidityUnitsArgs>> tokenValidityUnits() {
         return Optional.ofNullable(this.tokenValidityUnits);
     }
 
@@ -489,7 +489,7 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder analyticsConfiguration(@Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration) {
+        public Builder analyticsConfiguration(@Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration) {
             $.analyticsConfiguration = analyticsConfiguration;
             return this;
         }
@@ -500,7 +500,7 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder analyticsConfiguration(UserPoolClientAnalyticsConfigurationGetArgs analyticsConfiguration) {
+        public Builder analyticsConfiguration(UserPoolClientAnalyticsConfigurationArgs analyticsConfiguration) {
             return analyticsConfiguration(Output.of(analyticsConfiguration));
         }
 
@@ -833,7 +833,7 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tokenValidityUnits(@Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits) {
+        public Builder tokenValidityUnits(@Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits) {
             $.tokenValidityUnits = tokenValidityUnits;
             return this;
         }
@@ -844,7 +844,7 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tokenValidityUnits(UserPoolClientTokenValidityUnitsGetArgs tokenValidityUnits) {
+        public Builder tokenValidityUnits(UserPoolClientTokenValidityUnitsArgs tokenValidityUnits) {
             return tokenValidityUnits(Output.of(tokenValidityUnits));
         }
 

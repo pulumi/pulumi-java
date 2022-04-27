@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.ClusterIAMBindingConditionGetArgs;
+import com.pulumi.gcp.dataproc.inputs.ClusterIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,9 +33,9 @@ public final class ClusterIAMBindingState extends com.pulumi.resources.ResourceA
     }
 
     @Import(name="condition")
-    private @Nullable Output<ClusterIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<ClusterIAMBindingConditionArgs> condition;
 
-    public Optional<Output<ClusterIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<ClusterIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -165,12 +165,12 @@ public final class ClusterIAMBindingState extends com.pulumi.resources.ResourceA
             return cluster(Output.of(cluster));
         }
 
-        public Builder condition(@Nullable Output<ClusterIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ClusterIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ClusterIAMBindingConditionGetArgs condition) {
+        public Builder condition(ClusterIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

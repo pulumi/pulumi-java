@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
-import com.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
-import com.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigGetArgs;
-import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineGetArgs;
+import com.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
+import com.pulumi.gcp.notebooks.inputs.RuntimeMetricArgs;
+import com.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
+import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,14 +26,14 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessConfig")
-    private @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
+    private @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
     /**
      * @return The config settings for accessing runtime.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RuntimeAccessConfigGetArgs>> accessConfig() {
+    public Optional<Output<RuntimeAccessConfigArgs>> accessConfig() {
         return Optional.ofNullable(this.accessConfig);
     }
 
@@ -74,13 +74,13 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metrics")
-    private @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
+    private @Nullable Output<List<RuntimeMetricArgs>> metrics;
 
     /**
      * @return Contains Runtime daemon metrics such as Service status and JupyterLab status
      * 
      */
-    public Optional<Output<List<RuntimeMetricGetArgs>>> metrics() {
+    public Optional<Output<List<RuntimeMetricArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
 
@@ -122,14 +122,14 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="softwareConfig")
-    private @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
+    private @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
     /**
      * @return The config settings for software inside the runtime.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RuntimeSoftwareConfigGetArgs>> softwareConfig() {
+    public Optional<Output<RuntimeSoftwareConfigArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
 
@@ -154,14 +154,14 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualMachine")
-    private @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
+    private @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
 
     /**
      * @return Use a Compute Engine VM image to start the managed notebook instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RuntimeVirtualMachineGetArgs>> virtualMachine() {
+    public Optional<Output<RuntimeVirtualMachineArgs>> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
 
@@ -204,7 +204,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessConfig(@Nullable Output<RuntimeAccessConfigGetArgs> accessConfig) {
+        public Builder accessConfig(@Nullable Output<RuntimeAccessConfigArgs> accessConfig) {
             $.accessConfig = accessConfig;
             return this;
         }
@@ -216,7 +216,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessConfig(RuntimeAccessConfigGetArgs accessConfig) {
+        public Builder accessConfig(RuntimeAccessConfigArgs accessConfig) {
             return accessConfig(Output.of(accessConfig));
         }
 
@@ -270,7 +270,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<RuntimeMetricArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
@@ -281,7 +281,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metrics(List<RuntimeMetricGetArgs> metrics) {
+        public Builder metrics(List<RuntimeMetricArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
@@ -291,7 +291,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metrics(RuntimeMetricGetArgs... metrics) {
+        public Builder metrics(RuntimeMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
@@ -346,7 +346,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
@@ -358,7 +358,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder softwareConfig(RuntimeSoftwareConfigGetArgs softwareConfig) {
+        public Builder softwareConfig(RuntimeSoftwareConfigArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
@@ -390,7 +390,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
+        public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineArgs> virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;
         }
@@ -402,7 +402,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder virtualMachine(RuntimeVirtualMachineGetArgs virtualMachine) {
+        public Builder virtualMachine(RuntimeVirtualMachineArgs virtualMachine) {
             return virtualMachine(Output.of(virtualMachine));
         }
 

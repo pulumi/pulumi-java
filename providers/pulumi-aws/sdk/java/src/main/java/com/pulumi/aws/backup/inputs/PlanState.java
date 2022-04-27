@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.backup.inputs;
 
-import com.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingGetArgs;
-import com.pulumi.aws.backup.inputs.PlanRuleGetArgs;
+import com.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingArgs;
+import com.pulumi.aws.backup.inputs.PlanRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,13 +24,13 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedBackupSettings")
-    private @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
+    private @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
 
     /**
      * @return An object that specifies backup options for each resource type.
      * 
      */
-    public Optional<Output<List<PlanAdvancedBackupSettingGetArgs>>> advancedBackupSettings() {
+    public Optional<Output<List<PlanAdvancedBackupSettingArgs>>> advancedBackupSettings() {
         return Optional.ofNullable(this.advancedBackupSettings);
     }
 
@@ -69,13 +69,13 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<PlanRuleGetArgs>> rules;
+    private @Nullable Output<List<PlanRuleArgs>> rules;
 
     /**
      * @return A rule object that specifies a scheduled task that is used to back up a selection of resources.
      * 
      */
-    public Optional<Output<List<PlanRuleGetArgs>>> rules() {
+    public Optional<Output<List<PlanRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -160,7 +160,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedBackupSettings(@Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
             $.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
@@ -171,7 +171,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedBackupSettings(List<PlanAdvancedBackupSettingGetArgs> advancedBackupSettings) {
+        public Builder advancedBackupSettings(List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
             return advancedBackupSettings(Output.of(advancedBackupSettings));
         }
 
@@ -181,7 +181,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedBackupSettings(PlanAdvancedBackupSettingGetArgs... advancedBackupSettings) {
+        public Builder advancedBackupSettings(PlanAdvancedBackupSettingArgs... advancedBackupSettings) {
             return advancedBackupSettings(List.of(advancedBackupSettings));
         }
 
@@ -233,7 +233,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<PlanRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<PlanRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -244,7 +244,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<PlanRuleGetArgs> rules) {
+        public Builder rules(List<PlanRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -254,7 +254,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(PlanRuleGetArgs... rules) {
+        public Builder rules(PlanRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

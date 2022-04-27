@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.kms.inputs;
 
-import com.pulumi.aws.kms.inputs.GrantConstraintGetArgs;
+import com.pulumi.aws.kms.inputs.GrantConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -23,13 +23,13 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="constraints")
-    private @Nullable Output<List<GrantConstraintGetArgs>> constraints;
+    private @Nullable Output<List<GrantConstraintArgs>> constraints;
 
     /**
      * @return A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
      * 
      */
-    public Optional<Output<List<GrantConstraintGetArgs>>> constraints() {
+    public Optional<Output<List<GrantConstraintArgs>>> constraints() {
         return Optional.ofNullable(this.constraints);
     }
 
@@ -209,7 +209,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder constraints(@Nullable Output<List<GrantConstraintGetArgs>> constraints) {
+        public Builder constraints(@Nullable Output<List<GrantConstraintArgs>> constraints) {
             $.constraints = constraints;
             return this;
         }
@@ -220,7 +220,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder constraints(List<GrantConstraintGetArgs> constraints) {
+        public Builder constraints(List<GrantConstraintArgs> constraints) {
             return constraints(Output.of(constraints));
         }
 
@@ -230,7 +230,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder constraints(GrantConstraintGetArgs... constraints) {
+        public Builder constraints(GrantConstraintArgs... constraints) {
             return constraints(List.of(constraints));
         }
 

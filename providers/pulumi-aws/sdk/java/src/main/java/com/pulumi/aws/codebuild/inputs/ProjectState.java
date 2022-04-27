@@ -3,17 +3,17 @@
 
 package com.pulumi.aws.codebuild.inputs;
 
-import com.pulumi.aws.codebuild.inputs.ProjectArtifactsGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectBuildBatchConfigGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectCacheGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectEnvironmentGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectFileSystemLocationGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectSecondaryArtifactGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceVersionGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectSourceGetArgs;
-import com.pulumi.aws.codebuild.inputs.ProjectVpcConfigGetArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectArtifactsArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectBuildBatchConfigArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectCacheArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectEnvironmentArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectFileSystemLocationArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectSecondaryArtifactArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceVersionArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectSourceArgs;
+import com.pulumi.aws.codebuild.inputs.ProjectVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -50,13 +50,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifacts")
-    private @Nullable Output<ProjectArtifactsGetArgs> artifacts;
+    private @Nullable Output<ProjectArtifactsArgs> artifacts;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectArtifactsGetArgs>> artifacts() {
+    public Optional<Output<ProjectArtifactsArgs>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
 
@@ -95,13 +95,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildBatchConfig")
-    private @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
+    private @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
 
     /**
      * @return Defines the batch build options for the project.
      * 
      */
-    public Optional<Output<ProjectBuildBatchConfigGetArgs>> buildBatchConfig() {
+    public Optional<Output<ProjectBuildBatchConfigArgs>> buildBatchConfig() {
         return Optional.ofNullable(this.buildBatchConfig);
     }
 
@@ -125,13 +125,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cache")
-    private @Nullable Output<ProjectCacheGetArgs> cache;
+    private @Nullable Output<ProjectCacheArgs> cache;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectCacheGetArgs>> cache() {
+    public Optional<Output<ProjectCacheArgs>> cache() {
         return Optional.ofNullable(this.cache);
     }
 
@@ -185,13 +185,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-    private @Nullable Output<ProjectEnvironmentGetArgs> environment;
+    private @Nullable Output<ProjectEnvironmentArgs> environment;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectEnvironmentGetArgs>> environment() {
+    public Optional<Output<ProjectEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
 
@@ -200,13 +200,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemLocations")
-    private @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
+    private @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
 
     /**
      * @return A set of file system locations to to mount inside the build. File system locations are documented below.
      * 
      */
-    public Optional<Output<List<ProjectFileSystemLocationGetArgs>>> fileSystemLocations() {
+    public Optional<Output<List<ProjectFileSystemLocationArgs>>> fileSystemLocations() {
         return Optional.ofNullable(this.fileSystemLocations);
     }
 
@@ -215,13 +215,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logsConfig")
-    private @Nullable Output<ProjectLogsConfigGetArgs> logsConfig;
+    private @Nullable Output<ProjectLogsConfigArgs> logsConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectLogsConfigGetArgs>> logsConfig() {
+    public Optional<Output<ProjectLogsConfigArgs>> logsConfig() {
         return Optional.ofNullable(this.logsConfig);
     }
 
@@ -305,13 +305,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryArtifacts")
-    private @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
+    private @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<List<ProjectSecondaryArtifactGetArgs>>> secondaryArtifacts() {
+    public Optional<Output<List<ProjectSecondaryArtifactArgs>>> secondaryArtifacts() {
         return Optional.ofNullable(this.secondaryArtifacts);
     }
 
@@ -320,13 +320,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondarySourceVersions")
-    private @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
+    private @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<List<ProjectSecondarySourceVersionGetArgs>>> secondarySourceVersions() {
+    public Optional<Output<List<ProjectSecondarySourceVersionArgs>>> secondarySourceVersions() {
         return Optional.ofNullable(this.secondarySourceVersions);
     }
 
@@ -335,13 +335,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondarySources")
-    private @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources;
+    private @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<List<ProjectSecondarySourceGetArgs>>> secondarySources() {
+    public Optional<Output<List<ProjectSecondarySourceArgs>>> secondarySources() {
         return Optional.ofNullable(this.secondarySources);
     }
 
@@ -365,13 +365,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-    private @Nullable Output<ProjectSourceGetArgs> source;
+    private @Nullable Output<ProjectSourceArgs> source;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectSourceGetArgs>> source() {
+    public Optional<Output<ProjectSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
 
@@ -425,13 +425,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ProjectVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<ProjectVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -512,7 +512,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifacts(@Nullable Output<ProjectArtifactsGetArgs> artifacts) {
+        public Builder artifacts(@Nullable Output<ProjectArtifactsArgs> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
@@ -523,7 +523,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifacts(ProjectArtifactsGetArgs artifacts) {
+        public Builder artifacts(ProjectArtifactsArgs artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
@@ -575,7 +575,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig) {
+        public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig) {
             $.buildBatchConfig = buildBatchConfig;
             return this;
         }
@@ -586,7 +586,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder buildBatchConfig(ProjectBuildBatchConfigGetArgs buildBatchConfig) {
+        public Builder buildBatchConfig(ProjectBuildBatchConfigArgs buildBatchConfig) {
             return buildBatchConfig(Output.of(buildBatchConfig));
         }
 
@@ -617,7 +617,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cache(@Nullable Output<ProjectCacheGetArgs> cache) {
+        public Builder cache(@Nullable Output<ProjectCacheArgs> cache) {
             $.cache = cache;
             return this;
         }
@@ -628,7 +628,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cache(ProjectCacheGetArgs cache) {
+        public Builder cache(ProjectCacheArgs cache) {
             return cache(Output.of(cache));
         }
 
@@ -701,7 +701,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environment(@Nullable Output<ProjectEnvironmentGetArgs> environment) {
+        public Builder environment(@Nullable Output<ProjectEnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
@@ -712,7 +712,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environment(ProjectEnvironmentGetArgs environment) {
+        public Builder environment(ProjectEnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
@@ -722,7 +722,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations) {
+        public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
             $.fileSystemLocations = fileSystemLocations;
             return this;
         }
@@ -733,7 +733,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemLocations(List<ProjectFileSystemLocationGetArgs> fileSystemLocations) {
+        public Builder fileSystemLocations(List<ProjectFileSystemLocationArgs> fileSystemLocations) {
             return fileSystemLocations(Output.of(fileSystemLocations));
         }
 
@@ -743,7 +743,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemLocations(ProjectFileSystemLocationGetArgs... fileSystemLocations) {
+        public Builder fileSystemLocations(ProjectFileSystemLocationArgs... fileSystemLocations) {
             return fileSystemLocations(List.of(fileSystemLocations));
         }
 
@@ -753,7 +753,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logsConfig(@Nullable Output<ProjectLogsConfigGetArgs> logsConfig) {
+        public Builder logsConfig(@Nullable Output<ProjectLogsConfigArgs> logsConfig) {
             $.logsConfig = logsConfig;
             return this;
         }
@@ -764,7 +764,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logsConfig(ProjectLogsConfigGetArgs logsConfig) {
+        public Builder logsConfig(ProjectLogsConfigArgs logsConfig) {
             return logsConfig(Output.of(logsConfig));
         }
 
@@ -879,7 +879,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts) {
+        public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
             $.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
@@ -890,7 +890,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryArtifacts(List<ProjectSecondaryArtifactGetArgs> secondaryArtifacts) {
+        public Builder secondaryArtifacts(List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
             return secondaryArtifacts(Output.of(secondaryArtifacts));
         }
 
@@ -900,7 +900,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryArtifacts(ProjectSecondaryArtifactGetArgs... secondaryArtifacts) {
+        public Builder secondaryArtifacts(ProjectSecondaryArtifactArgs... secondaryArtifacts) {
             return secondaryArtifacts(List.of(secondaryArtifacts));
         }
 
@@ -910,7 +910,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions) {
+        public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
             $.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
@@ -921,7 +921,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySourceVersions(List<ProjectSecondarySourceVersionGetArgs> secondarySourceVersions) {
+        public Builder secondarySourceVersions(List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
             return secondarySourceVersions(Output.of(secondarySourceVersions));
         }
 
@@ -931,7 +931,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySourceVersions(ProjectSecondarySourceVersionGetArgs... secondarySourceVersions) {
+        public Builder secondarySourceVersions(ProjectSecondarySourceVersionArgs... secondarySourceVersions) {
             return secondarySourceVersions(List.of(secondarySourceVersions));
         }
 
@@ -941,7 +941,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources) {
+        public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources) {
             $.secondarySources = secondarySources;
             return this;
         }
@@ -952,7 +952,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySources(List<ProjectSecondarySourceGetArgs> secondarySources) {
+        public Builder secondarySources(List<ProjectSecondarySourceArgs> secondarySources) {
             return secondarySources(Output.of(secondarySources));
         }
 
@@ -962,7 +962,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondarySources(ProjectSecondarySourceGetArgs... secondarySources) {
+        public Builder secondarySources(ProjectSecondarySourceArgs... secondarySources) {
             return secondarySources(List.of(secondarySources));
         }
 
@@ -993,7 +993,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder source(@Nullable Output<ProjectSourceGetArgs> source) {
+        public Builder source(@Nullable Output<ProjectSourceArgs> source) {
             $.source = source;
             return this;
         }
@@ -1004,7 +1004,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder source(ProjectSourceGetArgs source) {
+        public Builder source(ProjectSourceArgs source) {
             return source(Output.of(source));
         }
 
@@ -1077,7 +1077,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<ProjectVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -1088,7 +1088,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(ProjectVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(ProjectVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

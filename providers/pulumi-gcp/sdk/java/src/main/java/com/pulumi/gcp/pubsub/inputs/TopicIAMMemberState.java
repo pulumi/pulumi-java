@@ -5,7 +5,7 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.TopicIAMMemberConditionGetArgs;
+import com.pulumi.gcp.pubsub.inputs.TopicIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class TopicIAMMemberState extends com.pulumi.resources.ResourceArgs
     public static final TopicIAMMemberState Empty = new TopicIAMMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<TopicIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<TopicIAMMemberConditionArgs> condition;
 
-    public Optional<Output<TopicIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<TopicIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,12 +125,12 @@ public final class TopicIAMMemberState extends com.pulumi.resources.ResourceArgs
             $ = new TopicIAMMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TopicIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TopicIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TopicIAMMemberConditionGetArgs condition) {
+        public Builder condition(TopicIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

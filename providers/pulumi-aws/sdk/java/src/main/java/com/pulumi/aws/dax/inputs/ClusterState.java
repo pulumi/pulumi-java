@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.dax.inputs;
 
-import com.pulumi.aws.dax.inputs.ClusterNodeGetArgs;
-import com.pulumi.aws.dax.inputs.ClusterServerSideEncryptionGetArgs;
+import com.pulumi.aws.dax.inputs.ClusterNodeArgs;
+import com.pulumi.aws.dax.inputs.ClusterServerSideEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -199,7 +199,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodes")
-    private @Nullable Output<List<ClusterNodeGetArgs>> nodes;
+    private @Nullable Output<List<ClusterNodeArgs>> nodes;
 
     /**
      * @return List of node objects including `id`, `address`, `port` and
@@ -207,7 +207,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * `${aws_dax_cluster.test.nodes.0.address}`
      * 
      */
-    public Optional<Output<List<ClusterNodeGetArgs>>> nodes() {
+    public Optional<Output<List<ClusterNodeArgs>>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
 
@@ -303,13 +303,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryption")
-    private @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
+    private @Nullable Output<ClusterServerSideEncryptionArgs> serverSideEncryption;
 
     /**
      * @return Encrypt at rest options
      * 
      */
-    public Optional<Output<ClusterServerSideEncryptionGetArgs>> serverSideEncryption() {
+    public Optional<Output<ClusterServerSideEncryptionArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
 
@@ -654,7 +654,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(@Nullable Output<List<ClusterNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Output<List<ClusterNodeArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
@@ -667,7 +667,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(List<ClusterNodeGetArgs> nodes) {
+        public Builder nodes(List<ClusterNodeArgs> nodes) {
             return nodes(Output.of(nodes));
         }
 
@@ -679,7 +679,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(ClusterNodeGetArgs... nodes) {
+        public Builder nodes(ClusterNodeArgs... nodes) {
             return nodes(List.of(nodes));
         }
 
@@ -817,7 +817,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
@@ -828,7 +828,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(ClusterServerSideEncryptionGetArgs serverSideEncryption) {
+        public Builder serverSideEncryption(ClusterServerSideEncryptionArgs serverSideEncryption) {
             return serverSideEncryption(Output.of(serverSideEncryption));
         }
 

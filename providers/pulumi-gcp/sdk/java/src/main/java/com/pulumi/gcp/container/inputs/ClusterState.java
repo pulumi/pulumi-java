@@ -5,31 +5,31 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.ClusterAddonsConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterAuthenticatorGroupsConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterClusterAutoscalingGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterClusterTelemetryGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterConfidentialNodesGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterDatabaseEncryptionGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterDefaultSnatStatusGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterDnsConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterIdentityServiceConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterIpAllocationPolicyGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterLoggingConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterMasterAuthGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterMonitoringConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterNetworkPolicyGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterNodeConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterNodePoolGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterNotificationConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterPodSecurityPolicyConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterPrivateClusterConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterReleaseChannelGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterVerticalPodAutoscalingGetArgs;
-import com.pulumi.gcp.container.inputs.ClusterWorkloadIdentityConfigGetArgs;
+import com.pulumi.gcp.container.inputs.ClusterAddonsConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterAuthenticatorGroupsConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterClusterAutoscalingArgs;
+import com.pulumi.gcp.container.inputs.ClusterClusterTelemetryArgs;
+import com.pulumi.gcp.container.inputs.ClusterConfidentialNodesArgs;
+import com.pulumi.gcp.container.inputs.ClusterDatabaseEncryptionArgs;
+import com.pulumi.gcp.container.inputs.ClusterDefaultSnatStatusArgs;
+import com.pulumi.gcp.container.inputs.ClusterDnsConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterIdentityServiceConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterIpAllocationPolicyArgs;
+import com.pulumi.gcp.container.inputs.ClusterLoggingConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyArgs;
+import com.pulumi.gcp.container.inputs.ClusterMasterAuthArgs;
+import com.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterMonitoringConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterNetworkPolicyArgs;
+import com.pulumi.gcp.container.inputs.ClusterNodeConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterNodePoolArgs;
+import com.pulumi.gcp.container.inputs.ClusterNotificationConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterPodSecurityPolicyConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterPrivateClusterConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterReleaseChannelArgs;
+import com.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterVerticalPodAutoscalingArgs;
+import com.pulumi.gcp.container.inputs.ClusterWorkloadIdentityConfigArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -50,14 +50,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonsConfig")
-    private @Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig;
+    private @Nullable Output<ClusterAddonsConfigArgs> addonsConfig;
 
     /**
      * @return The configuration for addons supported by GKE.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterAddonsConfigGetArgs>> addonsConfig() {
+    public Optional<Output<ClusterAddonsConfigArgs>> addonsConfig() {
         return Optional.ofNullable(this.addonsConfig);
     }
 
@@ -68,7 +68,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticatorGroupsConfig")
-    private @Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
+    private @Nullable Output<ClusterAuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
     /**
      * @return Configuration for the
@@ -76,7 +76,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterAuthenticatorGroupsConfigGetArgs>> authenticatorGroupsConfig() {
+    public Optional<Output<ClusterAuthenticatorGroupsConfigArgs>> authenticatorGroupsConfig() {
         return Optional.ofNullable(this.authenticatorGroupsConfig);
     }
 
@@ -89,7 +89,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterAutoscaling")
-    private @Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
+    private @Nullable Output<ClusterClusterAutoscalingArgs> clusterAutoscaling;
 
     /**
      * @return Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
@@ -99,7 +99,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * for more details. Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterClusterAutoscalingGetArgs>> clusterAutoscaling() {
+    public Optional<Output<ClusterClusterAutoscalingArgs>> clusterAutoscaling() {
         return Optional.ofNullable(this.clusterAutoscaling);
     }
 
@@ -131,7 +131,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterTelemetry")
-    private @Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry;
+    private @Nullable Output<ClusterClusterTelemetryArgs> clusterTelemetry;
 
     /**
      * @return Configuration for
@@ -139,7 +139,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterClusterTelemetryGetArgs>> clusterTelemetry() {
+    public Optional<Output<ClusterClusterTelemetryArgs>> clusterTelemetry() {
         return Optional.ofNullable(this.clusterTelemetry);
     }
 
@@ -148,13 +148,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confidentialNodes")
-    private @Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes;
+    private @Nullable Output<ClusterConfidentialNodesArgs> confidentialNodes;
 
     /**
      * @return Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
      * 
      */
-    public Optional<Output<ClusterConfidentialNodesGetArgs>> confidentialNodes() {
+    public Optional<Output<ClusterConfidentialNodesArgs>> confidentialNodes() {
         return Optional.ofNullable(this.confidentialNodes);
     }
 
@@ -163,13 +163,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseEncryption")
-    private @Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
+    private @Nullable Output<ClusterDatabaseEncryptionArgs> databaseEncryption;
 
     /**
      * @return Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterDatabaseEncryptionGetArgs>> databaseEncryption() {
+    public Optional<Output<ClusterDatabaseEncryptionArgs>> databaseEncryption() {
         return Optional.ofNullable(this.databaseEncryption);
     }
 
@@ -214,13 +214,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultSnatStatus")
-    private @Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
+    private @Nullable Output<ClusterDefaultSnatStatusArgs> defaultSnatStatus;
 
     /**
      * @return [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
      * 
      */
-    public Optional<Output<ClusterDefaultSnatStatusGetArgs>> defaultSnatStatus() {
+    public Optional<Output<ClusterDefaultSnatStatusArgs>> defaultSnatStatus() {
         return Optional.ofNullable(this.defaultSnatStatus);
     }
 
@@ -244,13 +244,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-    private @Nullable Output<ClusterDnsConfigGetArgs> dnsConfig;
+    private @Nullable Output<ClusterDnsConfigArgs> dnsConfig;
 
     /**
      * @return Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterDnsConfigGetArgs>> dnsConfig() {
+    public Optional<Output<ClusterDnsConfigArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
 
@@ -414,13 +414,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityServiceConfig")
-    private @Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
+    private @Nullable Output<ClusterIdentityServiceConfigArgs> identityServiceConfig;
 
     /**
      * @return . Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterIdentityServiceConfigGetArgs>> identityServiceConfig() {
+    public Optional<Output<ClusterIdentityServiceConfigArgs>> identityServiceConfig() {
         return Optional.ofNullable(this.identityServiceConfig);
     }
 
@@ -457,7 +457,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAllocationPolicy")
-    private @Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
+    private @Nullable Output<ClusterIpAllocationPolicyArgs> ipAllocationPolicy;
 
     /**
      * @return Configuration of cluster IP allocation for
@@ -466,7 +466,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * below.
      * 
      */
-    public Optional<Output<ClusterIpAllocationPolicyGetArgs>> ipAllocationPolicy() {
+    public Optional<Output<ClusterIpAllocationPolicyArgs>> ipAllocationPolicy() {
         return Optional.ofNullable(this.ipAllocationPolicy);
     }
 
@@ -516,14 +516,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfig")
-    private @Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<ClusterLoggingConfigArgs> loggingConfig;
 
     /**
      * @return Logging configuration for the cluster.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterLoggingConfigGetArgs>> loggingConfig() {
+    public Optional<Output<ClusterLoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
 
@@ -552,14 +552,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenancePolicy")
-    private @Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
+    private @Nullable Output<ClusterMaintenancePolicyArgs> maintenancePolicy;
 
     /**
      * @return The maintenance policy to use for the cluster. Structure is
      * documented below.
      * 
      */
-    public Optional<Output<ClusterMaintenancePolicyGetArgs>> maintenancePolicy() {
+    public Optional<Output<ClusterMaintenancePolicyArgs>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
 
@@ -573,7 +573,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterAuth")
-    private @Nullable Output<ClusterMasterAuthGetArgs> masterAuth;
+    private @Nullable Output<ClusterMasterAuthArgs> masterAuth;
 
     /**
      * @return The authentication information for accessing the
@@ -584,7 +584,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterMasterAuthGetArgs>> masterAuth() {
+    public Optional<Output<ClusterMasterAuthArgs>> masterAuth() {
         return Optional.ofNullable(this.masterAuth);
     }
 
@@ -597,7 +597,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterAuthorizedNetworksConfig")
-    private @Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
+    private @Nullable Output<ClusterMasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
     /**
      * @return The desired
@@ -607,7 +607,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterMasterAuthorizedNetworksConfigGetArgs>> masterAuthorizedNetworksConfig() {
+    public Optional<Output<ClusterMasterAuthorizedNetworksConfigArgs>> masterAuthorizedNetworksConfig() {
         return Optional.ofNullable(this.masterAuthorizedNetworksConfig);
     }
 
@@ -667,14 +667,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoringConfig")
-    private @Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig;
+    private @Nullable Output<ClusterMonitoringConfigArgs> monitoringConfig;
 
     /**
      * @return Monitoring configuration for the cluster.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterMonitoringConfigGetArgs>> monitoringConfig() {
+    public Optional<Output<ClusterMonitoringConfigArgs>> monitoringConfig() {
         return Optional.ofNullable(this.monitoringConfig);
     }
 
@@ -748,7 +748,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkPolicy")
-    private @Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy;
+    private @Nullable Output<ClusterNetworkPolicyArgs> networkPolicy;
 
     /**
      * @return Configuration options for the
@@ -756,7 +756,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * feature. Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterNetworkPolicyGetArgs>> networkPolicy() {
+    public Optional<Output<ClusterNetworkPolicyArgs>> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
 
@@ -788,7 +788,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeConfig")
-    private @Nullable Output<ClusterNodeConfigGetArgs> nodeConfig;
+    private @Nullable Output<ClusterNodeConfigArgs> nodeConfig;
 
     /**
      * @return Parameters used in creating the default node pool.
@@ -798,7 +798,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterNodeConfigGetArgs>> nodeConfig() {
+    public Optional<Output<ClusterNodeConfigArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
 
@@ -833,7 +833,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodePools")
-    private @Nullable Output<List<ClusterNodePoolGetArgs>> nodePools;
+    private @Nullable Output<List<ClusterNodePoolArgs>> nodePools;
 
     /**
      * @return List of node pools associated with this cluster.
@@ -844,7 +844,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * gcp.container.NodePool resource instead of this property.
      * 
      */
-    public Optional<Output<List<ClusterNodePoolGetArgs>>> nodePools() {
+    public Optional<Output<List<ClusterNodePoolArgs>>> nodePools() {
         return Optional.ofNullable(this.nodePools);
     }
 
@@ -882,13 +882,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-    private @Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<ClusterNotificationConfigArgs> notificationConfig;
 
     /**
      * @return Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterNotificationConfigGetArgs>> notificationConfig() {
+    public Optional<Output<ClusterNotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
 
@@ -906,7 +906,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podSecurityPolicyConfig")
-    private @Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
+    private @Nullable Output<ClusterPodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
     /**
      * @return ) Configuration for the
@@ -914,7 +914,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterPodSecurityPolicyConfigGetArgs>> podSecurityPolicyConfig() {
+    public Optional<Output<ClusterPodSecurityPolicyConfigArgs>> podSecurityPolicyConfig() {
         return Optional.ofNullable(this.podSecurityPolicyConfig);
     }
 
@@ -924,14 +924,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateClusterConfig")
-    private @Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
+    private @Nullable Output<ClusterPrivateClusterConfigArgs> privateClusterConfig;
 
     /**
      * @return Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
      * clusters with private nodes. Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterPrivateClusterConfigGetArgs>> privateClusterConfig() {
+    public Optional<Output<ClusterPrivateClusterConfigArgs>> privateClusterConfig() {
         return Optional.ofNullable(this.privateClusterConfig);
     }
 
@@ -980,7 +980,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseChannel")
-    private @Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel;
+    private @Nullable Output<ClusterReleaseChannelArgs> releaseChannel;
 
     /**
      * @return Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
@@ -994,7 +994,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * channel. Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterReleaseChannelGetArgs>> releaseChannel() {
+    public Optional<Output<ClusterReleaseChannelArgs>> releaseChannel() {
         return Optional.ofNullable(this.releaseChannel);
     }
 
@@ -1041,7 +1041,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUsageExportConfig")
-    private @Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
+    private @Nullable Output<ClusterResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
     /**
      * @return Configuration for the
@@ -1049,7 +1049,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterResourceUsageExportConfigGetArgs>> resourceUsageExportConfig() {
+    public Optional<Output<ClusterResourceUsageExportConfigArgs>> resourceUsageExportConfig() {
         return Optional.ofNullable(this.resourceUsageExportConfig);
     }
 
@@ -1131,14 +1131,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verticalPodAutoscaling")
-    private @Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
+    private @Nullable Output<ClusterVerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
     /**
      * @return Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterVerticalPodAutoscalingGetArgs>> verticalPodAutoscaling() {
+    public Optional<Output<ClusterVerticalPodAutoscalingArgs>> verticalPodAutoscaling() {
         return Optional.ofNullable(this.verticalPodAutoscaling);
     }
 
@@ -1149,7 +1149,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workloadIdentityConfig")
-    private @Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
+    private @Nullable Output<ClusterWorkloadIdentityConfigArgs> workloadIdentityConfig;
 
     /**
      * @return Workload Identity allows Kubernetes service accounts to act as a user-managed
@@ -1157,7 +1157,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfig() {
+    public Optional<Output<ClusterWorkloadIdentityConfigArgs>> workloadIdentityConfig() {
         return Optional.ofNullable(this.workloadIdentityConfig);
     }
 
@@ -1250,7 +1250,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder addonsConfig(@Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig) {
+        public Builder addonsConfig(@Nullable Output<ClusterAddonsConfigArgs> addonsConfig) {
             $.addonsConfig = addonsConfig;
             return this;
         }
@@ -1262,7 +1262,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder addonsConfig(ClusterAddonsConfigGetArgs addonsConfig) {
+        public Builder addonsConfig(ClusterAddonsConfigArgs addonsConfig) {
             return addonsConfig(Output.of(addonsConfig));
         }
 
@@ -1274,7 +1274,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticatorGroupsConfig(@Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig) {
+        public Builder authenticatorGroupsConfig(@Nullable Output<ClusterAuthenticatorGroupsConfigArgs> authenticatorGroupsConfig) {
             $.authenticatorGroupsConfig = authenticatorGroupsConfig;
             return this;
         }
@@ -1287,7 +1287,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticatorGroupsConfig(ClusterAuthenticatorGroupsConfigGetArgs authenticatorGroupsConfig) {
+        public Builder authenticatorGroupsConfig(ClusterAuthenticatorGroupsConfigArgs authenticatorGroupsConfig) {
             return authenticatorGroupsConfig(Output.of(authenticatorGroupsConfig));
         }
 
@@ -1301,7 +1301,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterAutoscaling(@Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling) {
+        public Builder clusterAutoscaling(@Nullable Output<ClusterClusterAutoscalingArgs> clusterAutoscaling) {
             $.clusterAutoscaling = clusterAutoscaling;
             return this;
         }
@@ -1316,7 +1316,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterAutoscaling(ClusterClusterAutoscalingGetArgs clusterAutoscaling) {
+        public Builder clusterAutoscaling(ClusterClusterAutoscalingArgs clusterAutoscaling) {
             return clusterAutoscaling(Output.of(clusterAutoscaling));
         }
 
@@ -1355,7 +1355,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterTelemetry(@Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry) {
+        public Builder clusterTelemetry(@Nullable Output<ClusterClusterTelemetryArgs> clusterTelemetry) {
             $.clusterTelemetry = clusterTelemetry;
             return this;
         }
@@ -1368,7 +1368,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterTelemetry(ClusterClusterTelemetryGetArgs clusterTelemetry) {
+        public Builder clusterTelemetry(ClusterClusterTelemetryArgs clusterTelemetry) {
             return clusterTelemetry(Output.of(clusterTelemetry));
         }
 
@@ -1378,7 +1378,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confidentialNodes(@Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes) {
+        public Builder confidentialNodes(@Nullable Output<ClusterConfidentialNodesArgs> confidentialNodes) {
             $.confidentialNodes = confidentialNodes;
             return this;
         }
@@ -1389,7 +1389,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confidentialNodes(ClusterConfidentialNodesGetArgs confidentialNodes) {
+        public Builder confidentialNodes(ClusterConfidentialNodesArgs confidentialNodes) {
             return confidentialNodes(Output.of(confidentialNodes));
         }
 
@@ -1399,7 +1399,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder databaseEncryption(@Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption) {
+        public Builder databaseEncryption(@Nullable Output<ClusterDatabaseEncryptionArgs> databaseEncryption) {
             $.databaseEncryption = databaseEncryption;
             return this;
         }
@@ -1410,7 +1410,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder databaseEncryption(ClusterDatabaseEncryptionGetArgs databaseEncryption) {
+        public Builder databaseEncryption(ClusterDatabaseEncryptionArgs databaseEncryption) {
             return databaseEncryption(Output.of(databaseEncryption));
         }
 
@@ -1468,7 +1468,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultSnatStatus(@Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus) {
+        public Builder defaultSnatStatus(@Nullable Output<ClusterDefaultSnatStatusArgs> defaultSnatStatus) {
             $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
@@ -1479,7 +1479,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultSnatStatus(ClusterDefaultSnatStatusGetArgs defaultSnatStatus) {
+        public Builder defaultSnatStatus(ClusterDefaultSnatStatusArgs defaultSnatStatus) {
             return defaultSnatStatus(Output.of(defaultSnatStatus));
         }
 
@@ -1510,7 +1510,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsConfig(@Nullable Output<ClusterDnsConfigGetArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<ClusterDnsConfigArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
@@ -1521,7 +1521,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsConfig(ClusterDnsConfigGetArgs dnsConfig) {
+        public Builder dnsConfig(ClusterDnsConfigArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
@@ -1740,7 +1740,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identityServiceConfig(@Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig) {
+        public Builder identityServiceConfig(@Nullable Output<ClusterIdentityServiceConfigArgs> identityServiceConfig) {
             $.identityServiceConfig = identityServiceConfig;
             return this;
         }
@@ -1751,7 +1751,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identityServiceConfig(ClusterIdentityServiceConfigGetArgs identityServiceConfig) {
+        public Builder identityServiceConfig(ClusterIdentityServiceConfigArgs identityServiceConfig) {
             return identityServiceConfig(Output.of(identityServiceConfig));
         }
 
@@ -1795,7 +1795,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipAllocationPolicy(@Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable Output<ClusterIpAllocationPolicyArgs> ipAllocationPolicy) {
             $.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
@@ -1809,7 +1809,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipAllocationPolicy(ClusterIpAllocationPolicyGetArgs ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(ClusterIpAllocationPolicyArgs ipAllocationPolicy) {
             return ipAllocationPolicy(Output.of(ipAllocationPolicy));
         }
 
@@ -1872,7 +1872,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfig(@Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<ClusterLoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
@@ -1884,7 +1884,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfig(ClusterLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(ClusterLoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
@@ -1920,7 +1920,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenancePolicy(@Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<ClusterMaintenancePolicyArgs> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
@@ -1932,7 +1932,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenancePolicy(ClusterMaintenancePolicyGetArgs maintenancePolicy) {
+        public Builder maintenancePolicy(ClusterMaintenancePolicyArgs maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
@@ -1947,7 +1947,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterAuth(@Nullable Output<ClusterMasterAuthGetArgs> masterAuth) {
+        public Builder masterAuth(@Nullable Output<ClusterMasterAuthArgs> masterAuth) {
             $.masterAuth = masterAuth;
             return this;
         }
@@ -1963,7 +1963,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterAuth(ClusterMasterAuthGetArgs masterAuth) {
+        public Builder masterAuth(ClusterMasterAuthArgs masterAuth) {
             return masterAuth(Output.of(masterAuth));
         }
 
@@ -1977,7 +1977,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterAuthorizedNetworksConfig(@Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(@Nullable Output<ClusterMasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig) {
             $.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
@@ -1992,7 +1992,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterAuthorizedNetworksConfig(ClusterMasterAuthorizedNetworksConfigGetArgs masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(ClusterMasterAuthorizedNetworksConfigArgs masterAuthorizedNetworksConfig) {
             return masterAuthorizedNetworksConfig(Output.of(masterAuthorizedNetworksConfig));
         }
 
@@ -2065,7 +2065,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder monitoringConfig(@Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Output<ClusterMonitoringConfigArgs> monitoringConfig) {
             $.monitoringConfig = monitoringConfig;
             return this;
         }
@@ -2077,7 +2077,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder monitoringConfig(ClusterMonitoringConfigGetArgs monitoringConfig) {
+        public Builder monitoringConfig(ClusterMonitoringConfigArgs monitoringConfig) {
             return monitoringConfig(Output.of(monitoringConfig));
         }
 
@@ -2170,7 +2170,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkPolicy(@Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy) {
+        public Builder networkPolicy(@Nullable Output<ClusterNetworkPolicyArgs> networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
         }
@@ -2183,7 +2183,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkPolicy(ClusterNetworkPolicyGetArgs networkPolicy) {
+        public Builder networkPolicy(ClusterNetworkPolicyArgs networkPolicy) {
             return networkPolicy(Output.of(networkPolicy));
         }
 
@@ -2222,7 +2222,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(@Nullable Output<ClusterNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<ClusterNodeConfigArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
@@ -2237,7 +2237,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(ClusterNodeConfigGetArgs nodeConfig) {
+        public Builder nodeConfig(ClusterNodeConfigArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 
@@ -2292,7 +2292,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodePools(@Nullable Output<List<ClusterNodePoolGetArgs>> nodePools) {
+        public Builder nodePools(@Nullable Output<List<ClusterNodePoolArgs>> nodePools) {
             $.nodePools = nodePools;
             return this;
         }
@@ -2308,7 +2308,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodePools(List<ClusterNodePoolGetArgs> nodePools) {
+        public Builder nodePools(List<ClusterNodePoolArgs> nodePools) {
             return nodePools(Output.of(nodePools));
         }
 
@@ -2323,7 +2323,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodePools(ClusterNodePoolGetArgs... nodePools) {
+        public Builder nodePools(ClusterNodePoolArgs... nodePools) {
             return nodePools(List.of(nodePools));
         }
 
@@ -2368,7 +2368,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(@Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<ClusterNotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
@@ -2379,7 +2379,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(ClusterNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(ClusterNotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
@@ -2400,7 +2400,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder podSecurityPolicyConfig(@Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig) {
+        public Builder podSecurityPolicyConfig(@Nullable Output<ClusterPodSecurityPolicyConfigArgs> podSecurityPolicyConfig) {
             $.podSecurityPolicyConfig = podSecurityPolicyConfig;
             return this;
         }
@@ -2413,7 +2413,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder podSecurityPolicyConfig(ClusterPodSecurityPolicyConfigGetArgs podSecurityPolicyConfig) {
+        public Builder podSecurityPolicyConfig(ClusterPodSecurityPolicyConfigArgs podSecurityPolicyConfig) {
             return podSecurityPolicyConfig(Output.of(podSecurityPolicyConfig));
         }
 
@@ -2424,7 +2424,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder privateClusterConfig(@Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig) {
+        public Builder privateClusterConfig(@Nullable Output<ClusterPrivateClusterConfigArgs> privateClusterConfig) {
             $.privateClusterConfig = privateClusterConfig;
             return this;
         }
@@ -2436,7 +2436,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder privateClusterConfig(ClusterPrivateClusterConfigGetArgs privateClusterConfig) {
+        public Builder privateClusterConfig(ClusterPrivateClusterConfigArgs privateClusterConfig) {
             return privateClusterConfig(Output.of(privateClusterConfig));
         }
 
@@ -2498,7 +2498,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder releaseChannel(@Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel) {
+        public Builder releaseChannel(@Nullable Output<ClusterReleaseChannelArgs> releaseChannel) {
             $.releaseChannel = releaseChannel;
             return this;
         }
@@ -2517,7 +2517,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder releaseChannel(ClusterReleaseChannelGetArgs releaseChannel) {
+        public Builder releaseChannel(ClusterReleaseChannelArgs releaseChannel) {
             return releaseChannel(Output.of(releaseChannel));
         }
 
@@ -2577,7 +2577,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceUsageExportConfig(@Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig) {
+        public Builder resourceUsageExportConfig(@Nullable Output<ClusterResourceUsageExportConfigArgs> resourceUsageExportConfig) {
             $.resourceUsageExportConfig = resourceUsageExportConfig;
             return this;
         }
@@ -2590,7 +2590,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceUsageExportConfig(ClusterResourceUsageExportConfigGetArgs resourceUsageExportConfig) {
+        public Builder resourceUsageExportConfig(ClusterResourceUsageExportConfigArgs resourceUsageExportConfig) {
             return resourceUsageExportConfig(Output.of(resourceUsageExportConfig));
         }
 
@@ -2697,7 +2697,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder verticalPodAutoscaling(@Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling) {
+        public Builder verticalPodAutoscaling(@Nullable Output<ClusterVerticalPodAutoscalingArgs> verticalPodAutoscaling) {
             $.verticalPodAutoscaling = verticalPodAutoscaling;
             return this;
         }
@@ -2709,7 +2709,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder verticalPodAutoscaling(ClusterVerticalPodAutoscalingGetArgs verticalPodAutoscaling) {
+        public Builder verticalPodAutoscaling(ClusterVerticalPodAutoscalingArgs verticalPodAutoscaling) {
             return verticalPodAutoscaling(Output.of(verticalPodAutoscaling));
         }
 
@@ -2721,7 +2721,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfig(@Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
+        public Builder workloadIdentityConfig(@Nullable Output<ClusterWorkloadIdentityConfigArgs> workloadIdentityConfig) {
             $.workloadIdentityConfig = workloadIdentityConfig;
             return this;
         }
@@ -2734,7 +2734,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfig(ClusterWorkloadIdentityConfigGetArgs workloadIdentityConfig) {
+        public Builder workloadIdentityConfig(ClusterWorkloadIdentityConfigArgs workloadIdentityConfig) {
             return workloadIdentityConfig(Output.of(workloadIdentityConfig));
         }
 

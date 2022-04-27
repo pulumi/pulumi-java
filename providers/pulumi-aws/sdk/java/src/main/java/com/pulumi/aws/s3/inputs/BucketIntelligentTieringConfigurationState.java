@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterGetArgs;
-import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringGetArgs;
+import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterArgs;
+import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
      * 
      */
     @Import(name="filter")
-    private @Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
+    private @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
     /**
      * @return A bucket filter. The configuration only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
-    public Optional<Output<BucketIntelligentTieringConfigurationFilterGetArgs>> filter() {
+    public Optional<Output<BucketIntelligentTieringConfigurationFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -83,13 +83,13 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
      * 
      */
     @Import(name="tierings")
-    private @Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
+    private @Nullable Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
 
     /**
      * @return The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).
      * 
      */
-    public Optional<Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>>> tierings() {
+    public Optional<Output<List<BucketIntelligentTieringConfigurationTieringArgs>>> tierings() {
         return Optional.ofNullable(this.tierings);
     }
 
@@ -148,7 +148,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
@@ -159,7 +159,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
          * @return builder
          * 
          */
-        public Builder filter(BucketIntelligentTieringConfigurationFilterGetArgs filter) {
+        public Builder filter(BucketIntelligentTieringConfigurationFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
@@ -211,7 +211,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
          * @return builder
          * 
          */
-        public Builder tierings(@Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
+        public Builder tierings(@Nullable Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
             $.tierings = tierings;
             return this;
         }
@@ -222,7 +222,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
          * @return builder
          * 
          */
-        public Builder tierings(List<BucketIntelligentTieringConfigurationTieringGetArgs> tierings) {
+        public Builder tierings(List<BucketIntelligentTieringConfigurationTieringArgs> tierings) {
             return tierings(Output.of(tierings));
         }
 
@@ -232,7 +232,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
          * @return builder
          * 
          */
-        public Builder tierings(BucketIntelligentTieringConfigurationTieringGetArgs... tierings) {
+        public Builder tierings(BucketIntelligentTieringConfigurationTieringArgs... tierings) {
             return tierings(List.of(tierings));
         }
 

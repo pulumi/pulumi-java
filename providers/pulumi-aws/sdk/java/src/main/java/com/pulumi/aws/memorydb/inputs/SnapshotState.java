@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.memorydb.inputs;
 
-import com.pulumi.aws.memorydb.inputs.SnapshotClusterConfigurationGetArgs;
+import com.pulumi.aws.memorydb.inputs.SnapshotClusterConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfigurations")
-    private @Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations;
+    private @Nullable Output<List<SnapshotClusterConfigurationArgs>> clusterConfigurations;
 
     /**
      * @return The configuration of the cluster from which the snapshot was taken.
      * 
      */
-    public Optional<Output<List<SnapshotClusterConfigurationGetArgs>>> clusterConfigurations() {
+    public Optional<Output<List<SnapshotClusterConfigurationArgs>>> clusterConfigurations() {
         return Optional.ofNullable(this.clusterConfigurations);
     }
 
@@ -212,7 +212,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfigurations(@Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations) {
+        public Builder clusterConfigurations(@Nullable Output<List<SnapshotClusterConfigurationArgs>> clusterConfigurations) {
             $.clusterConfigurations = clusterConfigurations;
             return this;
         }
@@ -223,7 +223,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfigurations(List<SnapshotClusterConfigurationGetArgs> clusterConfigurations) {
+        public Builder clusterConfigurations(List<SnapshotClusterConfigurationArgs> clusterConfigurations) {
             return clusterConfigurations(Output.of(clusterConfigurations));
         }
 
@@ -233,7 +233,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfigurations(SnapshotClusterConfigurationGetArgs... clusterConfigurations) {
+        public Builder clusterConfigurations(SnapshotClusterConfigurationArgs... clusterConfigurations) {
             return clusterConfigurations(List.of(clusterConfigurations));
         }
 

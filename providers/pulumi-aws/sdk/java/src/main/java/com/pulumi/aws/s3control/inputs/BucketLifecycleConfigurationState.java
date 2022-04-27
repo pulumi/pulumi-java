@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3control.inputs;
 
-import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
+import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+    private @Nullable Output<List<BucketLifecycleConfigurationRuleArgs>> rules;
 
     /**
      * @return Configuration block(s) containing lifecycle rules for the bucket.
      * 
      */
-    public Optional<Output<List<BucketLifecycleConfigurationRuleGetArgs>>> rules() {
+    public Optional<Output<List<BucketLifecycleConfigurationRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -99,7 +99,7 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -110,7 +110,7 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder rules(List<BucketLifecycleConfigurationRuleGetArgs> rules) {
+        public Builder rules(List<BucketLifecycleConfigurationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -120,7 +120,7 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder rules(BucketLifecycleConfigurationRuleGetArgs... rules) {
+        public Builder rules(BucketLifecycleConfigurationRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

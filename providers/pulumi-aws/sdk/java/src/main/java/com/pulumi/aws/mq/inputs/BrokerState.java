@@ -3,13 +3,13 @@
 
 package com.pulumi.aws.mq.inputs;
 
-import com.pulumi.aws.mq.inputs.BrokerConfigurationGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerEncryptionOptionsGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerInstanceGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerLdapServerMetadataGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerLogsGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeGetArgs;
-import com.pulumi.aws.mq.inputs.BrokerUserGetArgs;
+import com.pulumi.aws.mq.inputs.BrokerConfigurationArgs;
+import com.pulumi.aws.mq.inputs.BrokerEncryptionOptionsArgs;
+import com.pulumi.aws.mq.inputs.BrokerInstanceArgs;
+import com.pulumi.aws.mq.inputs.BrokerLdapServerMetadataArgs;
+import com.pulumi.aws.mq.inputs.BrokerLogsArgs;
+import com.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeArgs;
+import com.pulumi.aws.mq.inputs.BrokerUserArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -105,13 +105,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-    private @Nullable Output<BrokerConfigurationGetArgs> configuration;
+    private @Nullable Output<BrokerConfigurationArgs> configuration;
 
     /**
      * @return Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
      * 
      */
-    public Optional<Output<BrokerConfigurationGetArgs>> configuration() {
+    public Optional<Output<BrokerConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
 
@@ -135,13 +135,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionOptions")
-    private @Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions;
+    private @Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions;
 
     /**
      * @return Configuration block containing encryption options. Detailed below.
      * 
      */
-    public Optional<Output<BrokerEncryptionOptionsGetArgs>> encryptionOptions() {
+    public Optional<Output<BrokerEncryptionOptionsArgs>> encryptionOptions() {
         return Optional.ofNullable(this.encryptionOptions);
     }
 
@@ -206,7 +206,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instances")
-    private @Nullable Output<List<BrokerInstanceGetArgs>> instances;
+    private @Nullable Output<List<BrokerInstanceArgs>> instances;
 
     /**
      * @return List of information about allocated brokers (both active &amp; standby).
@@ -223,7 +223,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * * `amqps://broker-id.mq.us-west-2.amazonaws.com:5671`
      * 
      */
-    public Optional<Output<List<BrokerInstanceGetArgs>>> instances() {
+    public Optional<Output<List<BrokerInstanceArgs>>> instances() {
         return Optional.ofNullable(this.instances);
     }
 
@@ -232,13 +232,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ldapServerMetadata")
-    private @Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata;
+    private @Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata;
 
     /**
      * @return Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
      * 
      */
-    public Optional<Output<BrokerLdapServerMetadataGetArgs>> ldapServerMetadata() {
+    public Optional<Output<BrokerLdapServerMetadataArgs>> ldapServerMetadata() {
         return Optional.ofNullable(this.ldapServerMetadata);
     }
 
@@ -247,13 +247,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logs")
-    private @Nullable Output<BrokerLogsGetArgs> logs;
+    private @Nullable Output<BrokerLogsArgs> logs;
 
     /**
      * @return Configuration block for the logging configuration of the broker. Detailed below.
      * 
      */
-    public Optional<Output<BrokerLogsGetArgs>> logs() {
+    public Optional<Output<BrokerLogsArgs>> logs() {
         return Optional.ofNullable(this.logs);
     }
 
@@ -262,13 +262,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindowStartTime")
-    private @Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime;
+    private @Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
 
     /**
      * @return Configuration block for the maintenance window start time. Detailed below.
      * 
      */
-    public Optional<Output<BrokerMaintenanceWindowStartTimeGetArgs>> maintenanceWindowStartTime() {
+    public Optional<Output<BrokerMaintenanceWindowStartTimeArgs>> maintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
 
@@ -367,13 +367,13 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="users")
-    private @Nullable Output<List<BrokerUserGetArgs>> users;
+    private @Nullable Output<List<BrokerUserArgs>> users;
 
     /**
      * @return Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
      * 
      */
-    public Optional<Output<List<BrokerUserGetArgs>>> users() {
+    public Optional<Output<List<BrokerUserArgs>>> users() {
         return Optional.ofNullable(this.users);
     }
 
@@ -533,7 +533,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(@Nullable Output<BrokerConfigurationGetArgs> configuration) {
+        public Builder configuration(@Nullable Output<BrokerConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
@@ -544,7 +544,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(BrokerConfigurationGetArgs configuration) {
+        public Builder configuration(BrokerConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
@@ -575,7 +575,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionOptions(@Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions) {
+        public Builder encryptionOptions(@Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions) {
             $.encryptionOptions = encryptionOptions;
             return this;
         }
@@ -586,7 +586,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionOptions(BrokerEncryptionOptionsGetArgs encryptionOptions) {
+        public Builder encryptionOptions(BrokerEncryptionOptionsArgs encryptionOptions) {
             return encryptionOptions(Output.of(encryptionOptions));
         }
 
@@ -670,7 +670,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instances(@Nullable Output<List<BrokerInstanceGetArgs>> instances) {
+        public Builder instances(@Nullable Output<List<BrokerInstanceArgs>> instances) {
             $.instances = instances;
             return this;
         }
@@ -692,7 +692,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instances(List<BrokerInstanceGetArgs> instances) {
+        public Builder instances(List<BrokerInstanceArgs> instances) {
             return instances(Output.of(instances));
         }
 
@@ -713,7 +713,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instances(BrokerInstanceGetArgs... instances) {
+        public Builder instances(BrokerInstanceArgs... instances) {
             return instances(List.of(instances));
         }
 
@@ -723,7 +723,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ldapServerMetadata(@Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata) {
             $.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
@@ -734,7 +734,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ldapServerMetadata(BrokerLdapServerMetadataGetArgs ldapServerMetadata) {
+        public Builder ldapServerMetadata(BrokerLdapServerMetadataArgs ldapServerMetadata) {
             return ldapServerMetadata(Output.of(ldapServerMetadata));
         }
 
@@ -744,7 +744,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logs(@Nullable Output<BrokerLogsGetArgs> logs) {
+        public Builder logs(@Nullable Output<BrokerLogsArgs> logs) {
             $.logs = logs;
             return this;
         }
@@ -755,7 +755,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logs(BrokerLogsGetArgs logs) {
+        public Builder logs(BrokerLogsArgs logs) {
             return logs(Output.of(logs));
         }
 
@@ -765,7 +765,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceWindowStartTime(@Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime) {
             $.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
@@ -776,7 +776,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceWindowStartTime(BrokerMaintenanceWindowStartTimeGetArgs maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(BrokerMaintenanceWindowStartTimeArgs maintenanceWindowStartTime) {
             return maintenanceWindowStartTime(Output.of(maintenanceWindowStartTime));
         }
 
@@ -932,7 +932,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder users(@Nullable Output<List<BrokerUserGetArgs>> users) {
+        public Builder users(@Nullable Output<List<BrokerUserArgs>> users) {
             $.users = users;
             return this;
         }
@@ -943,7 +943,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder users(List<BrokerUserGetArgs> users) {
+        public Builder users(List<BrokerUserArgs> users) {
             return users(Output.of(users));
         }
 
@@ -953,7 +953,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder users(BrokerUserGetArgs... users) {
+        public Builder users(BrokerUserArgs... users) {
             return users(List.of(users));
         }
 

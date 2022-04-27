@@ -5,7 +5,7 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionGetArgs;
+import com.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CryptoKeyIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<CryptoKeyIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -129,7 +129,7 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<CryptoKeyIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -141,7 +141,7 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder condition(CryptoKeyIAMBindingConditionGetArgs condition) {
+        public Builder condition(CryptoKeyIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

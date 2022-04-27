@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.msk.inputs;
 
-import com.pulumi.aws.msk.inputs.ClusterBrokerNodeGroupInfoGetArgs;
-import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationGetArgs;
-import com.pulumi.aws.msk.inputs.ClusterConfigurationInfoGetArgs;
-import com.pulumi.aws.msk.inputs.ClusterEncryptionInfoGetArgs;
-import com.pulumi.aws.msk.inputs.ClusterLoggingInfoGetArgs;
-import com.pulumi.aws.msk.inputs.ClusterOpenMonitoringGetArgs;
+import com.pulumi.aws.msk.inputs.ClusterBrokerNodeGroupInfoArgs;
+import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationArgs;
+import com.pulumi.aws.msk.inputs.ClusterConfigurationInfoArgs;
+import com.pulumi.aws.msk.inputs.ClusterEncryptionInfoArgs;
+import com.pulumi.aws.msk.inputs.ClusterLoggingInfoArgs;
+import com.pulumi.aws.msk.inputs.ClusterOpenMonitoringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -103,13 +103,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brokerNodeGroupInfo")
-    private @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
+    private @Nullable Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
 
     /**
      * @return Configuration block for the broker nodes of the Kafka cluster.
      * 
      */
-    public Optional<Output<ClusterBrokerNodeGroupInfoGetArgs>> brokerNodeGroupInfo() {
+    public Optional<Output<ClusterBrokerNodeGroupInfoArgs>> brokerNodeGroupInfo() {
         return Optional.ofNullable(this.brokerNodeGroupInfo);
     }
 
@@ -118,13 +118,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAuthentication")
-    private @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
+    private @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
 
     /**
      * @return Configuration block for specifying a client authentication. See below.
      * 
      */
-    public Optional<Output<ClusterClientAuthenticationGetArgs>> clientAuthentication() {
+    public Optional<Output<ClusterClientAuthenticationArgs>> clientAuthentication() {
         return Optional.ofNullable(this.clientAuthentication);
     }
 
@@ -148,13 +148,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationInfo")
-    private @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
+    private @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
 
     /**
      * @return Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
      * 
      */
-    public Optional<Output<ClusterConfigurationInfoGetArgs>> configurationInfo() {
+    public Optional<Output<ClusterConfigurationInfoArgs>> configurationInfo() {
         return Optional.ofNullable(this.configurationInfo);
     }
 
@@ -180,13 +180,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionInfo")
-    private @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
+    private @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
 
     /**
      * @return Configuration block for specifying encryption. See below.
      * 
      */
-    public Optional<Output<ClusterEncryptionInfoGetArgs>> encryptionInfo() {
+    public Optional<Output<ClusterEncryptionInfoArgs>> encryptionInfo() {
         return Optional.ofNullable(this.encryptionInfo);
     }
 
@@ -225,13 +225,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingInfo")
-    private @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
+    private @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
 
     /**
      * @return Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
      * 
      */
-    public Optional<Output<ClusterLoggingInfoGetArgs>> loggingInfo() {
+    public Optional<Output<ClusterLoggingInfoArgs>> loggingInfo() {
         return Optional.ofNullable(this.loggingInfo);
     }
 
@@ -255,13 +255,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openMonitoring")
-    private @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
+    private @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
 
     /**
      * @return Configuration block for JMX and Node monitoring for the MSK cluster. See below.
      * 
      */
-    public Optional<Output<ClusterOpenMonitoringGetArgs>> openMonitoring() {
+    public Optional<Output<ClusterOpenMonitoringArgs>> openMonitoring() {
         return Optional.ofNullable(this.openMonitoring);
     }
 
@@ -479,7 +479,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder brokerNodeGroupInfo(@Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(@Nullable Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo) {
             $.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
@@ -490,7 +490,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoArgs brokerNodeGroupInfo) {
             return brokerNodeGroupInfo(Output.of(brokerNodeGroupInfo));
         }
 
@@ -500,7 +500,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication) {
+        public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication) {
             $.clientAuthentication = clientAuthentication;
             return this;
         }
@@ -511,7 +511,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clientAuthentication(ClusterClientAuthenticationGetArgs clientAuthentication) {
+        public Builder clientAuthentication(ClusterClientAuthenticationArgs clientAuthentication) {
             return clientAuthentication(Output.of(clientAuthentication));
         }
 
@@ -542,7 +542,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo) {
+        public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoArgs> configurationInfo) {
             $.configurationInfo = configurationInfo;
             return this;
         }
@@ -553,7 +553,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configurationInfo(ClusterConfigurationInfoGetArgs configurationInfo) {
+        public Builder configurationInfo(ClusterConfigurationInfoArgs configurationInfo) {
             return configurationInfo(Output.of(configurationInfo));
         }
 
@@ -586,7 +586,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo) {
+        public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo) {
             $.encryptionInfo = encryptionInfo;
             return this;
         }
@@ -597,7 +597,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionInfo(ClusterEncryptionInfoGetArgs encryptionInfo) {
+        public Builder encryptionInfo(ClusterEncryptionInfoArgs encryptionInfo) {
             return encryptionInfo(Output.of(encryptionInfo));
         }
 
@@ -649,7 +649,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo) {
+        public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoArgs> loggingInfo) {
             $.loggingInfo = loggingInfo;
             return this;
         }
@@ -660,7 +660,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingInfo(ClusterLoggingInfoGetArgs loggingInfo) {
+        public Builder loggingInfo(ClusterLoggingInfoArgs loggingInfo) {
             return loggingInfo(Output.of(loggingInfo));
         }
 
@@ -691,7 +691,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring) {
+        public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringArgs> openMonitoring) {
             $.openMonitoring = openMonitoring;
             return this;
         }
@@ -702,7 +702,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openMonitoring(ClusterOpenMonitoringGetArgs openMonitoring) {
+        public Builder openMonitoring(ClusterOpenMonitoringArgs openMonitoring) {
             return openMonitoring(Output.of(openMonitoring));
         }
 

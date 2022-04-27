@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.RoutineArgumentGetArgs;
+import com.pulumi.gcp.bigquery.inputs.RoutineArgumentArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +24,14 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-    private @Nullable Output<List<RoutineArgumentGetArgs>> arguments;
+    private @Nullable Output<List<RoutineArgumentArgs>> arguments;
 
     /**
      * @return Input/output argument of a function or a stored procedure.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RoutineArgumentGetArgs>>> arguments() {
+    public Optional<Output<List<RoutineArgumentArgs>>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
 
@@ -308,7 +308,7 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder arguments(@Nullable Output<List<RoutineArgumentGetArgs>> arguments) {
+        public Builder arguments(@Nullable Output<List<RoutineArgumentArgs>> arguments) {
             $.arguments = arguments;
             return this;
         }
@@ -320,7 +320,7 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder arguments(List<RoutineArgumentGetArgs> arguments) {
+        public Builder arguments(List<RoutineArgumentArgs> arguments) {
             return arguments(Output.of(arguments));
         }
 
@@ -331,7 +331,7 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder arguments(RoutineArgumentGetArgs... arguments) {
+        public Builder arguments(RoutineArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
 

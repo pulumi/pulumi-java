@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigtable.inputs.InstanceClusterGetArgs;
+import com.pulumi.gcp.bigtable.inputs.InstanceClusterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusters")
-    private @Nullable Output<List<InstanceClusterGetArgs>> clusters;
+    private @Nullable Output<List<InstanceClusterArgs>> clusters;
 
     /**
      * @return A block of cluster configuration options. This can be specified at least once, and up to 4 times.
      * See structure below.
      * 
      */
-    public Optional<Output<List<InstanceClusterGetArgs>>> clusters() {
+    public Optional<Output<List<InstanceClusterArgs>>> clusters() {
         return Optional.ofNullable(this.clusters);
     }
 
@@ -183,7 +183,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusters(@Nullable Output<List<InstanceClusterGetArgs>> clusters) {
+        public Builder clusters(@Nullable Output<List<InstanceClusterArgs>> clusters) {
             $.clusters = clusters;
             return this;
         }
@@ -195,7 +195,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusters(List<InstanceClusterGetArgs> clusters) {
+        public Builder clusters(List<InstanceClusterArgs> clusters) {
             return clusters(Output.of(clusters));
         }
 
@@ -206,7 +206,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusters(InstanceClusterGetArgs... clusters) {
+        public Builder clusters(InstanceClusterArgs... clusters) {
             return clusters(List.of(clusters));
         }
 

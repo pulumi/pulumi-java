@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.IntegrationResponseParameterGetArgs;
-import com.pulumi.aws.apigatewayv2.inputs.IntegrationTlsConfigGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.IntegrationResponseParameterArgs;
+import com.pulumi.aws.apigatewayv2.inputs.IntegrationTlsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -262,13 +262,13 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseParameters")
-    private @Nullable Output<List<IntegrationResponseParameterGetArgs>> responseParameters;
+    private @Nullable Output<List<IntegrationResponseParameterArgs>> responseParameters;
 
     /**
      * @return Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
      * 
      */
-    public Optional<Output<List<IntegrationResponseParameterGetArgs>>> responseParameters() {
+    public Optional<Output<List<IntegrationResponseParameterArgs>>> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
 
@@ -311,13 +311,13 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tlsConfig")
-    private @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig;
+    private @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
     /**
      * @return The TLS configuration for a private integration. Supported only for HTTP APIs.
      * 
      */
-    public Optional<Output<IntegrationTlsConfigGetArgs>> tlsConfig() {
+    public Optional<Output<IntegrationTlsConfigArgs>> tlsConfig() {
         return Optional.ofNullable(this.tlsConfig);
     }
 
@@ -696,7 +696,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder responseParameters(@Nullable Output<List<IntegrationResponseParameterGetArgs>> responseParameters) {
+        public Builder responseParameters(@Nullable Output<List<IntegrationResponseParameterArgs>> responseParameters) {
             $.responseParameters = responseParameters;
             return this;
         }
@@ -707,7 +707,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder responseParameters(List<IntegrationResponseParameterGetArgs> responseParameters) {
+        public Builder responseParameters(List<IntegrationResponseParameterArgs> responseParameters) {
             return responseParameters(Output.of(responseParameters));
         }
 
@@ -717,7 +717,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder responseParameters(IntegrationResponseParameterGetArgs... responseParameters) {
+        public Builder responseParameters(IntegrationResponseParameterArgs... responseParameters) {
             return responseParameters(List.of(responseParameters));
         }
 
@@ -773,7 +773,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig) {
+        public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigArgs> tlsConfig) {
             $.tlsConfig = tlsConfig;
             return this;
         }
@@ -784,7 +784,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tlsConfig(IntegrationTlsConfigGetArgs tlsConfig) {
+        public Builder tlsConfig(IntegrationTlsConfigArgs tlsConfig) {
             return tlsConfig(Output.of(tlsConfig));
         }
 

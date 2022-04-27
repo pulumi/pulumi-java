@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleGetArgs;
+import com.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xssMatchTuples")
-    private @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
+    private @Nullable Output<List<XssMatchSetXssMatchTupleArgs>> xssMatchTuples;
 
     /**
      * @return The parts of web requests that you want to inspect for cross-site scripting attacks.
      * 
      */
-    public Optional<Output<List<XssMatchSetXssMatchTupleGetArgs>>> xssMatchTuples() {
+    public Optional<Output<List<XssMatchSetXssMatchTupleArgs>>> xssMatchTuples() {
         return Optional.ofNullable(this.xssMatchTuples);
     }
 
@@ -136,7 +136,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
+        public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleArgs>> xssMatchTuples) {
             $.xssMatchTuples = xssMatchTuples;
             return this;
         }
@@ -147,7 +147,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder xssMatchTuples(List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
+        public Builder xssMatchTuples(List<XssMatchSetXssMatchTupleArgs> xssMatchTuples) {
             return xssMatchTuples(Output.of(xssMatchTuples));
         }
 
@@ -157,7 +157,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder xssMatchTuples(XssMatchSetXssMatchTupleGetArgs... xssMatchTuples) {
+        public Builder xssMatchTuples(XssMatchSetXssMatchTupleArgs... xssMatchTuples) {
             return xssMatchTuples(List.of(xssMatchTuples));
         }
 

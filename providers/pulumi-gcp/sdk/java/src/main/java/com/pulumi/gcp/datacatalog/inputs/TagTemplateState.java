@@ -5,7 +5,7 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
+    private @Nullable Output<List<TagTemplateFieldArgs>> fields;
 
     /**
      * @return Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<TagTemplateFieldGetArgs>>> fields() {
+    public Optional<Output<List<TagTemplateFieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -187,7 +187,7 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable Output<List<TagTemplateFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Output<List<TagTemplateFieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
@@ -199,7 +199,7 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(List<TagTemplateFieldGetArgs> fields) {
+        public Builder fields(List<TagTemplateFieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
@@ -210,7 +210,7 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(TagTemplateFieldGetArgs... fields) {
+        public Builder fields(TagTemplateFieldArgs... fields) {
             return fields(List.of(fields));
         }
 

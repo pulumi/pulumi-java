@@ -5,7 +5,7 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionGetArgs;
+import com.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class KeyRingIAMBindingState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<KeyRingIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<KeyRingIAMBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<KeyRingIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<KeyRingIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -131,7 +131,7 @@ public final class KeyRingIAMBindingState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<KeyRingIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<KeyRingIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -143,7 +143,7 @@ public final class KeyRingIAMBindingState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder condition(KeyRingIAMBindingConditionGetArgs condition) {
+        public Builder condition(KeyRingIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.elasticbeanstalk.inputs;
 
-import com.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingGetArgs;
-import com.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingGetArgs;
+import com.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingArgs;
+import com.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allSettings")
-    private @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings;
+    private @Nullable Output<List<EnvironmentAllSettingArgs>> allSettings;
 
     /**
      * @return List of all option settings configured in this Environment. These
@@ -34,7 +34,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * the configuration.
      * 
      */
-    public Optional<Output<List<EnvironmentAllSettingGetArgs>>> allSettings() {
+    public Optional<Output<List<EnvironmentAllSettingArgs>>> allSettings() {
         return Optional.ofNullable(this.allSettings);
     }
 
@@ -261,7 +261,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settings")
-    private @Nullable Output<List<EnvironmentSettingGetArgs>> settings;
+    private @Nullable Output<List<EnvironmentSettingArgs>> settings;
 
     /**
      * @return Option settings to configure the new Environment. These
@@ -269,7 +269,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * below in Option Settings
      * 
      */
-    public Optional<Output<List<EnvironmentSettingGetArgs>>> settings() {
+    public Optional<Output<List<EnvironmentSettingArgs>>> settings() {
         return Optional.ofNullable(this.settings);
     }
 
@@ -462,7 +462,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allSettings(@Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings) {
+        public Builder allSettings(@Nullable Output<List<EnvironmentAllSettingArgs>> allSettings) {
             $.allSettings = allSettings;
             return this;
         }
@@ -475,7 +475,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allSettings(List<EnvironmentAllSettingGetArgs> allSettings) {
+        public Builder allSettings(List<EnvironmentAllSettingArgs> allSettings) {
             return allSettings(Output.of(allSettings));
         }
 
@@ -487,7 +487,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allSettings(EnvironmentAllSettingGetArgs... allSettings) {
+        public Builder allSettings(EnvironmentAllSettingArgs... allSettings) {
             return allSettings(List.of(allSettings));
         }
 
@@ -845,7 +845,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(@Nullable Output<List<EnvironmentSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Output<List<EnvironmentSettingArgs>> settings) {
             $.settings = settings;
             return this;
         }
@@ -858,7 +858,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(List<EnvironmentSettingGetArgs> settings) {
+        public Builder settings(List<EnvironmentSettingArgs> settings) {
             return settings(Output.of(settings));
         }
 
@@ -870,7 +870,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(EnvironmentSettingGetArgs... settings) {
+        public Builder settings(EnvironmentSettingArgs... settings) {
             return settings(List.of(settings));
         }
 

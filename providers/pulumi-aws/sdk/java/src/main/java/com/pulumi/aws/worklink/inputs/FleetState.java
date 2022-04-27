@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.worklink.inputs;
 
-import com.pulumi.aws.worklink.inputs.FleetIdentityProviderGetArgs;
-import com.pulumi.aws.worklink.inputs.FleetNetworkGetArgs;
+import com.pulumi.aws.worklink.inputs.FleetIdentityProviderArgs;
+import com.pulumi.aws.worklink.inputs.FleetNetworkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -113,13 +113,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityProvider")
-    private @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
+    private @Nullable Output<FleetIdentityProviderArgs> identityProvider;
 
     /**
      * @return Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
      * 
      */
-    public Optional<Output<FleetIdentityProviderGetArgs>> identityProvider() {
+    public Optional<Output<FleetIdentityProviderArgs>> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
 
@@ -158,13 +158,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-    private @Nullable Output<FleetNetworkGetArgs> network;
+    private @Nullable Output<FleetNetworkArgs> network;
 
     /**
      * @return Provide this to allow manage the company network configuration for the fleet. Fields documented below.
      * 
      */
-    public Optional<Output<FleetNetworkGetArgs>> network() {
+    public Optional<Output<FleetNetworkArgs>> network() {
         return Optional.ofNullable(this.network);
     }
 
@@ -349,7 +349,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identityProvider(@Nullable Output<FleetIdentityProviderGetArgs> identityProvider) {
+        public Builder identityProvider(@Nullable Output<FleetIdentityProviderArgs> identityProvider) {
             $.identityProvider = identityProvider;
             return this;
         }
@@ -360,7 +360,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identityProvider(FleetIdentityProviderGetArgs identityProvider) {
+        public Builder identityProvider(FleetIdentityProviderArgs identityProvider) {
             return identityProvider(Output.of(identityProvider));
         }
 
@@ -412,7 +412,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder network(@Nullable Output<FleetNetworkGetArgs> network) {
+        public Builder network(@Nullable Output<FleetNetworkArgs> network) {
             $.network = network;
             return this;
         }
@@ -423,7 +423,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder network(FleetNetworkGetArgs network) {
+        public Builder network(FleetNetworkArgs network) {
             return network(Output.of(network));
         }
 

@@ -5,15 +5,15 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.enums.InstanceType;
 import com.pulumi.aws.ec2.enums.Tenancy;
-import com.pulumi.aws.ec2.inputs.InstanceCapacityReservationSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceCreditSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceEbsBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceEnclaveOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceEphemeralBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceLaunchTemplateGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceMetadataOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceNetworkInterfaceGetArgs;
-import com.pulumi.aws.ec2.inputs.InstanceRootBlockDeviceGetArgs;
+import com.pulumi.aws.ec2.inputs.InstanceCapacityReservationSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.InstanceCreditSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.InstanceEbsBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.InstanceEnclaveOptionsArgs;
+import com.pulumi.aws.ec2.inputs.InstanceEphemeralBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.InstanceLaunchTemplateArgs;
+import com.pulumi.aws.ec2.inputs.InstanceMetadataOptionsArgs;
+import com.pulumi.aws.ec2.inputs.InstanceNetworkInterfaceArgs;
+import com.pulumi.aws.ec2.inputs.InstanceRootBlockDeviceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -96,13 +96,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityReservationSpecification")
-    private @Nullable Output<InstanceCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
+    private @Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
     /**
      * @return Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
-    public Optional<Output<InstanceCapacityReservationSpecificationGetArgs>> capacityReservationSpecification() {
+    public Optional<Output<InstanceCapacityReservationSpecificationArgs>> capacityReservationSpecification() {
         return Optional.ofNullable(this.capacityReservationSpecification);
     }
 
@@ -141,13 +141,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creditSpecification")
-    private @Nullable Output<InstanceCreditSpecificationGetArgs> creditSpecification;
+    private @Nullable Output<InstanceCreditSpecificationArgs> creditSpecification;
 
     /**
      * @return Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
      * 
      */
-    public Optional<Output<InstanceCreditSpecificationGetArgs>> creditSpecification() {
+    public Optional<Output<InstanceCreditSpecificationArgs>> creditSpecification() {
         return Optional.ofNullable(this.creditSpecification);
     }
 
@@ -171,13 +171,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-    private @Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
     /**
      * @return One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Optional<Output<List<InstanceEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+    public Optional<Output<List<InstanceEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
 
@@ -201,13 +201,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enclaveOptions")
-    private @Nullable Output<InstanceEnclaveOptionsGetArgs> enclaveOptions;
+    private @Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions;
 
     /**
      * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    public Optional<Output<InstanceEnclaveOptionsGetArgs>> enclaveOptions() {
+    public Optional<Output<InstanceEnclaveOptionsArgs>> enclaveOptions() {
         return Optional.ofNullable(this.enclaveOptions);
     }
 
@@ -216,13 +216,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-    private @Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     /**
      * @return One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Optional<Output<List<InstanceEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+    public Optional<Output<List<InstanceEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
@@ -382,14 +382,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplate")
-    private @Nullable Output<InstanceLaunchTemplateGetArgs> launchTemplate;
+    private @Nullable Output<InstanceLaunchTemplateArgs> launchTemplate;
 
     /**
      * @return Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
      * See Launch Template Specification below for more details.
      * 
      */
-    public Optional<Output<InstanceLaunchTemplateGetArgs>> launchTemplate() {
+    public Optional<Output<InstanceLaunchTemplateArgs>> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
 
@@ -398,13 +398,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataOptions")
-    private @Nullable Output<InstanceMetadataOptionsGetArgs> metadataOptions;
+    private @Nullable Output<InstanceMetadataOptionsArgs> metadataOptions;
 
     /**
      * @return Customize the metadata options of the instance. See Metadata Options below for more details.
      * 
      */
-    public Optional<Output<InstanceMetadataOptionsGetArgs>> metadataOptions() {
+    public Optional<Output<InstanceMetadataOptionsArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
 
@@ -428,13 +428,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
      * 
      */
-    public Optional<Output<List<InstanceNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<InstanceNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -578,13 +578,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootBlockDevice")
-    private @Nullable Output<InstanceRootBlockDeviceGetArgs> rootBlockDevice;
+    private @Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice;
 
     /**
      * @return Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
      * 
      */
-    public Optional<Output<InstanceRootBlockDeviceGetArgs>> rootBlockDevice() {
+    public Optional<Output<InstanceRootBlockDeviceArgs>> rootBlockDevice() {
         return Optional.ofNullable(this.rootBlockDevice);
     }
 
@@ -922,7 +922,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(@Nullable Output<InstanceCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable Output<InstanceCapacityReservationSpecificationArgs> capacityReservationSpecification) {
             $.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
@@ -933,7 +933,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(InstanceCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(InstanceCapacityReservationSpecificationArgs capacityReservationSpecification) {
             return capacityReservationSpecification(Output.of(capacityReservationSpecification));
         }
 
@@ -985,7 +985,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder creditSpecification(@Nullable Output<InstanceCreditSpecificationGetArgs> creditSpecification) {
+        public Builder creditSpecification(@Nullable Output<InstanceCreditSpecificationArgs> creditSpecification) {
             $.creditSpecification = creditSpecification;
             return this;
         }
@@ -996,7 +996,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder creditSpecification(InstanceCreditSpecificationGetArgs creditSpecification) {
+        public Builder creditSpecification(InstanceCreditSpecificationArgs creditSpecification) {
             return creditSpecification(Output.of(creditSpecification));
         }
 
@@ -1027,7 +1027,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
@@ -1038,7 +1038,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
@@ -1048,7 +1048,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(InstanceEbsBlockDeviceGetArgs... ebsBlockDevices) {
+        public Builder ebsBlockDevices(InstanceEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
@@ -1079,7 +1079,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder enclaveOptions(@Nullable Output<InstanceEnclaveOptionsGetArgs> enclaveOptions) {
+        public Builder enclaveOptions(@Nullable Output<InstanceEnclaveOptionsArgs> enclaveOptions) {
             $.enclaveOptions = enclaveOptions;
             return this;
         }
@@ -1090,7 +1090,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder enclaveOptions(InstanceEnclaveOptionsGetArgs enclaveOptions) {
+        public Builder enclaveOptions(InstanceEnclaveOptionsArgs enclaveOptions) {
             return enclaveOptions(Output.of(enclaveOptions));
         }
 
@@ -1100,7 +1100,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
@@ -1111,7 +1111,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
@@ -1121,7 +1121,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
@@ -1372,7 +1372,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(@Nullable Output<InstanceLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<InstanceLaunchTemplateArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
@@ -1384,7 +1384,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(InstanceLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(InstanceLaunchTemplateArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
@@ -1394,7 +1394,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metadataOptions(@Nullable Output<InstanceMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<InstanceMetadataOptionsArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
@@ -1405,7 +1405,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metadataOptions(InstanceMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(InstanceMetadataOptionsArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
@@ -1436,7 +1436,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1447,7 +1447,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<InstanceNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1457,7 +1457,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(InstanceNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(InstanceNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1656,7 +1656,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(@Nullable Output<InstanceRootBlockDeviceGetArgs> rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable Output<InstanceRootBlockDeviceArgs> rootBlockDevice) {
             $.rootBlockDevice = rootBlockDevice;
             return this;
         }
@@ -1667,7 +1667,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(InstanceRootBlockDeviceGetArgs rootBlockDevice) {
+        public Builder rootBlockDevice(InstanceRootBlockDeviceArgs rootBlockDevice) {
             return rootBlockDevice(Output.of(rootBlockDevice));
         }
 

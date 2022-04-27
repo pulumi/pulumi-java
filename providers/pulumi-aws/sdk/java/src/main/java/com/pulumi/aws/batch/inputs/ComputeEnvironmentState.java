@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.batch.inputs;
 
-import com.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesGetArgs;
+import com.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="computeResources")
-    private @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
+    private @Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources;
 
     /**
      * @return Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
      * 
      */
-    public Optional<Output<ComputeEnvironmentComputeResourcesGetArgs>> computeResources() {
+    public Optional<Output<ComputeEnvironmentComputeResourcesArgs>> computeResources() {
         return Optional.ofNullable(this.computeResources);
     }
 
@@ -301,7 +301,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
+        public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources) {
             $.computeResources = computeResources;
             return this;
         }
@@ -312,7 +312,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder computeResources(ComputeEnvironmentComputeResourcesGetArgs computeResources) {
+        public Builder computeResources(ComputeEnvironmentComputeResourcesArgs computeResources) {
             return computeResources(Output.of(computeResources));
         }
 

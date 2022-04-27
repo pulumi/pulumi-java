@@ -5,7 +5,7 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class TaxonomyIamMemberState extends com.pulumi.resources.ResourceA
     public static final TaxonomyIamMemberState Empty = new TaxonomyIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<TaxonomyIamMemberConditionGetArgs> condition;
+    private @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
 
-    public Optional<Output<TaxonomyIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<TaxonomyIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -133,12 +133,12 @@ public final class TaxonomyIamMemberState extends com.pulumi.resources.ResourceA
             $ = new TaxonomyIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TaxonomyIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TaxonomyIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TaxonomyIamMemberConditionGetArgs condition) {
+        public Builder condition(TaxonomyIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

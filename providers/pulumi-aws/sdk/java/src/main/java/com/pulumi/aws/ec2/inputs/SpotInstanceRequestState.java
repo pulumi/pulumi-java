@@ -3,15 +3,15 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestCreditSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEbsBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEnclaveOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEphemeralBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestLaunchTemplateGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestMetadataOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestNetworkInterfaceGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotInstanceRequestRootBlockDeviceGetArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestCreditSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEbsBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEnclaveOptionsArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestEphemeralBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestLaunchTemplateArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestMetadataOptionsArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestNetworkInterfaceArgs;
+import com.pulumi.aws.ec2.inputs.SpotInstanceRequestRootBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -104,13 +104,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="capacityReservationSpecification")
-    private @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
+    private @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
     /**
      * @return Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
-    public Optional<Output<SpotInstanceRequestCapacityReservationSpecificationGetArgs>> capacityReservationSpecification() {
+    public Optional<Output<SpotInstanceRequestCapacityReservationSpecificationArgs>> capacityReservationSpecification() {
         return Optional.ofNullable(this.capacityReservationSpecification);
     }
 
@@ -149,13 +149,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="creditSpecification")
-    private @Nullable Output<SpotInstanceRequestCreditSpecificationGetArgs> creditSpecification;
+    private @Nullable Output<SpotInstanceRequestCreditSpecificationArgs> creditSpecification;
 
     /**
      * @return Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
      * 
      */
-    public Optional<Output<SpotInstanceRequestCreditSpecificationGetArgs>> creditSpecification() {
+    public Optional<Output<SpotInstanceRequestCreditSpecificationArgs>> creditSpecification() {
         return Optional.ofNullable(this.creditSpecification);
     }
 
@@ -179,13 +179,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ebsBlockDevices")
-    private @Nullable Output<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<SpotInstanceRequestEbsBlockDeviceArgs>> ebsBlockDevices;
 
     /**
      * @return One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Optional<Output<List<SpotInstanceRequestEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+    public Optional<Output<List<SpotInstanceRequestEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
 
@@ -209,13 +209,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enclaveOptions")
-    private @Nullable Output<SpotInstanceRequestEnclaveOptionsGetArgs> enclaveOptions;
+    private @Nullable Output<SpotInstanceRequestEnclaveOptionsArgs> enclaveOptions;
 
     /**
      * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    public Optional<Output<SpotInstanceRequestEnclaveOptionsGetArgs>> enclaveOptions() {
+    public Optional<Output<SpotInstanceRequestEnclaveOptionsArgs>> enclaveOptions() {
         return Optional.ofNullable(this.enclaveOptions);
     }
 
@@ -224,13 +224,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ephemeralBlockDevices")
-    private @Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     /**
      * @return One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Optional<Output<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+    public Optional<Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
@@ -437,14 +437,14 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="launchTemplate")
-    private @Nullable Output<SpotInstanceRequestLaunchTemplateGetArgs> launchTemplate;
+    private @Nullable Output<SpotInstanceRequestLaunchTemplateArgs> launchTemplate;
 
     /**
      * @return Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
      * See Launch Template Specification below for more details.
      * 
      */
-    public Optional<Output<SpotInstanceRequestLaunchTemplateGetArgs>> launchTemplate() {
+    public Optional<Output<SpotInstanceRequestLaunchTemplateArgs>> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
 
@@ -453,13 +453,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataOptions")
-    private @Nullable Output<SpotInstanceRequestMetadataOptionsGetArgs> metadataOptions;
+    private @Nullable Output<SpotInstanceRequestMetadataOptionsArgs> metadataOptions;
 
     /**
      * @return Customize the metadata options of the instance. See Metadata Options below for more details.
      * 
      */
-    public Optional<Output<SpotInstanceRequestMetadataOptionsGetArgs>> metadataOptions() {
+    public Optional<Output<SpotInstanceRequestMetadataOptionsArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
 
@@ -483,13 +483,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<SpotInstanceRequestNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<SpotInstanceRequestNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
      * 
      */
-    public Optional<Output<List<SpotInstanceRequestNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<SpotInstanceRequestNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -615,13 +615,13 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="rootBlockDevice")
-    private @Nullable Output<SpotInstanceRequestRootBlockDeviceGetArgs> rootBlockDevice;
+    private @Nullable Output<SpotInstanceRequestRootBlockDeviceArgs> rootBlockDevice;
 
     /**
      * @return Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
      * 
      */
-    public Optional<Output<SpotInstanceRequestRootBlockDeviceGetArgs>> rootBlockDevice() {
+    public Optional<Output<SpotInstanceRequestRootBlockDeviceArgs>> rootBlockDevice() {
         return Optional.ofNullable(this.rootBlockDevice);
     }
 
@@ -1106,7 +1106,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationArgs> capacityReservationSpecification) {
             $.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
@@ -1117,7 +1117,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(SpotInstanceRequestCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(SpotInstanceRequestCapacityReservationSpecificationArgs capacityReservationSpecification) {
             return capacityReservationSpecification(Output.of(capacityReservationSpecification));
         }
 
@@ -1169,7 +1169,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder creditSpecification(@Nullable Output<SpotInstanceRequestCreditSpecificationGetArgs> creditSpecification) {
+        public Builder creditSpecification(@Nullable Output<SpotInstanceRequestCreditSpecificationArgs> creditSpecification) {
             $.creditSpecification = creditSpecification;
             return this;
         }
@@ -1180,7 +1180,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder creditSpecification(SpotInstanceRequestCreditSpecificationGetArgs creditSpecification) {
+        public Builder creditSpecification(SpotInstanceRequestCreditSpecificationArgs creditSpecification) {
             return creditSpecification(Output.of(creditSpecification));
         }
 
@@ -1211,7 +1211,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(@Nullable Output<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<SpotInstanceRequestEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
@@ -1222,7 +1222,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(List<SpotInstanceRequestEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<SpotInstanceRequestEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
@@ -1232,7 +1232,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(SpotInstanceRequestEbsBlockDeviceGetArgs... ebsBlockDevices) {
+        public Builder ebsBlockDevices(SpotInstanceRequestEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
@@ -1263,7 +1263,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder enclaveOptions(@Nullable Output<SpotInstanceRequestEnclaveOptionsGetArgs> enclaveOptions) {
+        public Builder enclaveOptions(@Nullable Output<SpotInstanceRequestEnclaveOptionsArgs> enclaveOptions) {
             $.enclaveOptions = enclaveOptions;
             return this;
         }
@@ -1274,7 +1274,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder enclaveOptions(SpotInstanceRequestEnclaveOptionsGetArgs enclaveOptions) {
+        public Builder enclaveOptions(SpotInstanceRequestEnclaveOptionsArgs enclaveOptions) {
             return enclaveOptions(Output.of(enclaveOptions));
         }
 
@@ -1284,7 +1284,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(@Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
@@ -1295,7 +1295,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(List<SpotInstanceRequestEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<SpotInstanceRequestEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
@@ -1305,7 +1305,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(SpotInstanceRequestEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(SpotInstanceRequestEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
@@ -1597,7 +1597,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder launchTemplate(@Nullable Output<SpotInstanceRequestLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<SpotInstanceRequestLaunchTemplateArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
@@ -1609,7 +1609,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder launchTemplate(SpotInstanceRequestLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(SpotInstanceRequestLaunchTemplateArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
@@ -1619,7 +1619,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder metadataOptions(@Nullable Output<SpotInstanceRequestMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<SpotInstanceRequestMetadataOptionsArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
@@ -1630,7 +1630,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder metadataOptions(SpotInstanceRequestMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(SpotInstanceRequestMetadataOptionsArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
@@ -1661,7 +1661,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<SpotInstanceRequestNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<SpotInstanceRequestNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1672,7 +1672,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<SpotInstanceRequestNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<SpotInstanceRequestNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1682,7 +1682,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder networkInterfaces(SpotInstanceRequestNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(SpotInstanceRequestNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1851,7 +1851,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(@Nullable Output<SpotInstanceRequestRootBlockDeviceGetArgs> rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable Output<SpotInstanceRequestRootBlockDeviceArgs> rootBlockDevice) {
             $.rootBlockDevice = rootBlockDevice;
             return this;
         }
@@ -1862,7 +1862,7 @@ public final class SpotInstanceRequestState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(SpotInstanceRequestRootBlockDeviceGetArgs rootBlockDevice) {
+        public Builder rootBlockDevice(SpotInstanceRequestRootBlockDeviceArgs rootBlockDevice) {
             return rootBlockDevice(Output.of(rootBlockDevice));
         }
 

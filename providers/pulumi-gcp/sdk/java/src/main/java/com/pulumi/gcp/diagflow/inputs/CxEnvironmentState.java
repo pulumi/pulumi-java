@@ -5,7 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -102,14 +102,14 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionConfigs")
-    private @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+    private @Nullable Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
     /**
      * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxEnvironmentVersionConfigGetArgs>>> versionConfigs() {
+    public Optional<Output<List<CxEnvironmentVersionConfigArgs>>> versionConfigs() {
         return Optional.ofNullable(this.versionConfigs);
     }
 
@@ -258,7 +258,7 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
+        public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
             $.versionConfigs = versionConfigs;
             return this;
         }
@@ -270,7 +270,7 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder versionConfigs(List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
+        public Builder versionConfigs(List<CxEnvironmentVersionConfigArgs> versionConfigs) {
             return versionConfigs(Output.of(versionConfigs));
         }
 
@@ -281,7 +281,7 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder versionConfigs(CxEnvironmentVersionConfigGetArgs... versionConfigs) {
+        public Builder versionConfigs(CxEnvironmentVersionConfigArgs... versionConfigs) {
             return versionConfigs(List.of(versionConfigs));
         }
 

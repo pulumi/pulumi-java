@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RouterBgpGetArgs;
+import com.pulumi.gcp.compute.inputs.RouterBgpArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgp")
-    private @Nullable Output<RouterBgpGetArgs> bgp;
+    private @Nullable Output<RouterBgpArgs> bgp;
 
     /**
      * @return BGP information specific to this router.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RouterBgpGetArgs>> bgp() {
+    public Optional<Output<RouterBgpArgs>> bgp() {
         return Optional.ofNullable(this.bgp);
     }
 
@@ -209,7 +209,7 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bgp(@Nullable Output<RouterBgpGetArgs> bgp) {
+        public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
             $.bgp = bgp;
             return this;
         }
@@ -221,7 +221,7 @@ public final class RouterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bgp(RouterBgpGetArgs bgp) {
+        public Builder bgp(RouterBgpArgs bgp) {
             return bgp(Output.of(bgp));
         }
 

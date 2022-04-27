@@ -5,8 +5,8 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.MetastoreServiceMaintenanceWindowGetArgs;
+import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.MetastoreServiceMaintenanceWindowArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -55,14 +55,14 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hiveMetastoreConfig")
-    private @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
+    private @Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
 
     /**
      * @return Configuration information specific to running Hive metastore software as the metastore service.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MetastoreServiceHiveMetastoreConfigGetArgs>> hiveMetastoreConfig() {
+    public Optional<Output<MetastoreServiceHiveMetastoreConfigArgs>> hiveMetastoreConfig() {
         return Optional.ofNullable(this.hiveMetastoreConfig);
     }
 
@@ -105,7 +105,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maintenanceWindow")
-    private @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
+    private @Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
 
     /**
      * @return The one hour maintenance window of the metastore service.
@@ -113,7 +113,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MetastoreServiceMaintenanceWindowGetArgs>> maintenanceWindow() {
+    public Optional<Output<MetastoreServiceMaintenanceWindowArgs>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
 
@@ -333,7 +333,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig) {
             $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
@@ -345,7 +345,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfigGetArgs hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfigArgs hiveMetastoreConfig) {
             return hiveMetastoreConfig(Output.of(hiveMetastoreConfig));
         }
 
@@ -401,7 +401,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
@@ -414,7 +414,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder maintenanceWindow(MetastoreServiceMaintenanceWindowGetArgs maintenanceWindow) {
+        public Builder maintenanceWindow(MetastoreServiceMaintenanceWindowArgs maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 

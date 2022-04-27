@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.SloBasicSliGetArgs;
-import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGetArgs;
-import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGetArgs;
+import com.pulumi.gcp.monitoring.inputs.SloBasicSliArgs;
+import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliArgs;
+import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basicSli")
-    private @Nullable Output<SloBasicSliGetArgs> basicSli;
+    private @Nullable Output<SloBasicSliArgs> basicSli;
 
     /**
      * @return Basic Service-Level Indicator (SLI) on a well-known service type.
@@ -43,7 +43,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SloBasicSliGetArgs>> basicSli() {
+    public Optional<Output<SloBasicSliArgs>> basicSli() {
         return Optional.ofNullable(this.basicSli);
     }
 
@@ -144,7 +144,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestBasedSli")
-    private @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli;
+    private @Nullable Output<SloRequestBasedSliArgs> requestBasedSli;
 
     /**
      * @return A request-based SLI defines a SLI for which atomic units of
@@ -157,7 +157,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SloRequestBasedSliGetArgs>> requestBasedSli() {
+    public Optional<Output<SloRequestBasedSliArgs>> requestBasedSli() {
         return Optional.ofNullable(this.requestBasedSli);
     }
 
@@ -221,7 +221,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsBasedSli")
-    private @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli;
+    private @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli;
 
     /**
      * @return A windows-based SLI defines the criteria for time windows.
@@ -235,7 +235,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SloWindowsBasedSliGetArgs>> windowsBasedSli() {
+    public Optional<Output<SloWindowsBasedSliArgs>> windowsBasedSli() {
         return Optional.ofNullable(this.windowsBasedSli);
     }
 
@@ -285,7 +285,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder basicSli(@Nullable Output<SloBasicSliGetArgs> basicSli) {
+        public Builder basicSli(@Nullable Output<SloBasicSliArgs> basicSli) {
             $.basicSli = basicSli;
             return this;
         }
@@ -302,7 +302,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder basicSli(SloBasicSliGetArgs basicSli) {
+        public Builder basicSli(SloBasicSliArgs basicSli) {
             return basicSli(Output.of(basicSli));
         }
 
@@ -434,7 +434,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli) {
+        public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliArgs> requestBasedSli) {
             $.requestBasedSli = requestBasedSli;
             return this;
         }
@@ -452,7 +452,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder requestBasedSli(SloRequestBasedSliGetArgs requestBasedSli) {
+        public Builder requestBasedSli(SloRequestBasedSliArgs requestBasedSli) {
             return requestBasedSli(Output.of(requestBasedSli));
         }
 
@@ -535,7 +535,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli) {
             $.windowsBasedSli = windowsBasedSli;
             return this;
         }
@@ -554,7 +554,7 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder windowsBasedSli(SloWindowsBasedSliGetArgs windowsBasedSli) {
+        public Builder windowsBasedSli(SloWindowsBasedSliArgs windowsBasedSli) {
             return windowsBasedSli(Output.of(windowsBasedSli));
         }
 

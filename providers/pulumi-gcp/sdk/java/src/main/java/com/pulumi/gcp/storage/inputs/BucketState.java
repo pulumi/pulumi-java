@@ -5,13 +5,13 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.BucketCorGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketEncryptionGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketLoggingGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketRetentionPolicyGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketVersioningGetArgs;
-import com.pulumi.gcp.storage.inputs.BucketWebsiteGetArgs;
+import com.pulumi.gcp.storage.inputs.BucketCorArgs;
+import com.pulumi.gcp.storage.inputs.BucketEncryptionArgs;
+import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleArgs;
+import com.pulumi.gcp.storage.inputs.BucketLoggingArgs;
+import com.pulumi.gcp.storage.inputs.BucketRetentionPolicyArgs;
+import com.pulumi.gcp.storage.inputs.BucketVersioningArgs;
+import com.pulumi.gcp.storage.inputs.BucketWebsiteArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,13 +30,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cors")
-    private @Nullable Output<List<BucketCorGetArgs>> cors;
+    private @Nullable Output<List<BucketCorArgs>> cors;
 
     /**
      * @return The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Optional<Output<List<BucketCorGetArgs>>> cors() {
+    public Optional<Output<List<BucketCorArgs>>> cors() {
         return Optional.ofNullable(this.cors);
     }
 
@@ -52,13 +52,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-    private @Nullable Output<BucketEncryptionGetArgs> encryption;
+    private @Nullable Output<BucketEncryptionArgs> encryption;
 
     /**
      * @return The bucket&#39;s encryption configuration. Structure is documented below.
      * 
      */
-    public Optional<Output<BucketEncryptionGetArgs>> encryption() {
+    public Optional<Output<BucketEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
 
@@ -101,13 +101,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleRules")
-    private @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
+    private @Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules;
 
     /**
      * @return The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Optional<Output<List<BucketLifecycleRuleGetArgs>>> lifecycleRules() {
+    public Optional<Output<List<BucketLifecycleRuleArgs>>> lifecycleRules() {
         return Optional.ofNullable(this.lifecycleRules);
     }
 
@@ -131,13 +131,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logging")
-    private @Nullable Output<BucketLoggingGetArgs> logging;
+    private @Nullable Output<BucketLoggingArgs> logging;
 
     /**
      * @return The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
-    public Optional<Output<BucketLoggingGetArgs>> logging() {
+    public Optional<Output<BucketLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
 
@@ -208,13 +208,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy")
-    private @Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy;
+    private @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
     /**
      * @return Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
-    public Optional<Output<BucketRetentionPolicyGetArgs>> retentionPolicy() {
+    public Optional<Output<BucketRetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
 
@@ -283,13 +283,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versioning")
-    private @Nullable Output<BucketVersioningGetArgs> versioning;
+    private @Nullable Output<BucketVersioningArgs> versioning;
 
     /**
      * @return The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
-    public Optional<Output<BucketVersioningGetArgs>> versioning() {
+    public Optional<Output<BucketVersioningArgs>> versioning() {
         return Optional.ofNullable(this.versioning);
     }
 
@@ -298,13 +298,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="website")
-    private @Nullable Output<BucketWebsiteGetArgs> website;
+    private @Nullable Output<BucketWebsiteArgs> website;
 
     /**
      * @return Configuration if the bucket acts as a website. Structure is documented below.
      * 
      */
-    public Optional<Output<BucketWebsiteGetArgs>> website() {
+    public Optional<Output<BucketWebsiteArgs>> website() {
         return Optional.ofNullable(this.website);
     }
 
@@ -356,7 +356,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cors(@Nullable Output<List<BucketCorGetArgs>> cors) {
+        public Builder cors(@Nullable Output<List<BucketCorArgs>> cors) {
             $.cors = cors;
             return this;
         }
@@ -367,7 +367,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cors(List<BucketCorGetArgs> cors) {
+        public Builder cors(List<BucketCorArgs> cors) {
             return cors(Output.of(cors));
         }
 
@@ -377,7 +377,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cors(BucketCorGetArgs... cors) {
+        public Builder cors(BucketCorArgs... cors) {
             return cors(List.of(cors));
         }
 
@@ -396,7 +396,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryption(@Nullable Output<BucketEncryptionGetArgs> encryption) {
+        public Builder encryption(@Nullable Output<BucketEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
@@ -407,7 +407,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryption(BucketEncryptionGetArgs encryption) {
+        public Builder encryption(BucketEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
@@ -463,7 +463,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules) {
             $.lifecycleRules = lifecycleRules;
             return this;
         }
@@ -474,7 +474,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(List<BucketLifecycleRuleGetArgs> lifecycleRules) {
+        public Builder lifecycleRules(List<BucketLifecycleRuleArgs> lifecycleRules) {
             return lifecycleRules(Output.of(lifecycleRules));
         }
 
@@ -484,7 +484,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(BucketLifecycleRuleGetArgs... lifecycleRules) {
+        public Builder lifecycleRules(BucketLifecycleRuleArgs... lifecycleRules) {
             return lifecycleRules(List.of(lifecycleRules));
         }
 
@@ -515,7 +515,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logging(@Nullable Output<BucketLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Output<BucketLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
@@ -526,7 +526,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logging(BucketLoggingGetArgs logging) {
+        public Builder logging(BucketLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 
@@ -622,7 +622,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
@@ -633,7 +633,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionPolicy(BucketRetentionPolicyGetArgs retentionPolicy) {
+        public Builder retentionPolicy(BucketRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
@@ -727,7 +727,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versioning(@Nullable Output<BucketVersioningGetArgs> versioning) {
+        public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             $.versioning = versioning;
             return this;
         }
@@ -738,7 +738,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versioning(BucketVersioningGetArgs versioning) {
+        public Builder versioning(BucketVersioningArgs versioning) {
             return versioning(Output.of(versioning));
         }
 
@@ -748,7 +748,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder website(@Nullable Output<BucketWebsiteGetArgs> website) {
+        public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             $.website = website;
             return this;
         }
@@ -759,7 +759,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder website(BucketWebsiteGetArgs website) {
+        public Builder website(BucketWebsiteArgs website) {
             return website(Output.of(website));
         }
 

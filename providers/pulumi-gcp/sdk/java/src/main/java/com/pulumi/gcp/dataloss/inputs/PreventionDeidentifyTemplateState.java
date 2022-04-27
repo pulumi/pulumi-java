@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigGetArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
      * 
      */
     @Import(name="deidentifyConfig")
-    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
+    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
     /**
      * @return Configuration of the deidentify template
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs>> deidentifyConfig() {
+    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigArgs>> deidentifyConfig() {
         return Optional.ofNullable(this.deidentifyConfig);
     }
 
@@ -136,7 +136,7 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder deidentifyConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig) {
+        public Builder deidentifyConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
             $.deidentifyConfig = deidentifyConfig;
             return this;
         }
@@ -148,7 +148,7 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigGetArgs deidentifyConfig) {
+        public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
             return deidentifyConfig(Output.of(deidentifyConfig));
         }
 

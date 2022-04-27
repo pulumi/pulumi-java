@@ -3,13 +3,13 @@
 
 package com.pulumi.aws.dynamodb.inputs;
 
-import com.pulumi.aws.dynamodb.inputs.TableAttributeGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TableGlobalSecondaryIndexGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TableLocalSecondaryIndexGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TablePointInTimeRecoveryGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TableReplicaGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionGetArgs;
-import com.pulumi.aws.dynamodb.inputs.TableTtlGetArgs;
+import com.pulumi.aws.dynamodb.inputs.TableAttributeArgs;
+import com.pulumi.aws.dynamodb.inputs.TableGlobalSecondaryIndexArgs;
+import com.pulumi.aws.dynamodb.inputs.TableLocalSecondaryIndexArgs;
+import com.pulumi.aws.dynamodb.inputs.TablePointInTimeRecoveryArgs;
+import com.pulumi.aws.dynamodb.inputs.TableReplicaArgs;
+import com.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionArgs;
+import com.pulumi.aws.dynamodb.inputs.TableTtlArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -46,13 +46,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-    private @Nullable Output<List<TableAttributeGetArgs>> attributes;
+    private @Nullable Output<List<TableAttributeArgs>> attributes;
 
     /**
      * @return List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
      * 
      */
-    public Optional<Output<List<TableAttributeGetArgs>>> attributes() {
+    public Optional<Output<List<TableAttributeArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
 
@@ -78,7 +78,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalSecondaryIndexes")
-    private @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
+    private @Nullable Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
     /**
      * @return Describe a GSI for the table;
@@ -86,7 +86,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * attributes, etc.
      * 
      */
-    public Optional<Output<List<TableGlobalSecondaryIndexGetArgs>>> globalSecondaryIndexes() {
+    public Optional<Output<List<TableGlobalSecondaryIndexArgs>>> globalSecondaryIndexes() {
         return Optional.ofNullable(this.globalSecondaryIndexes);
     }
 
@@ -114,7 +114,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localSecondaryIndexes")
-    private @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
+    private @Nullable Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
     /**
      * @return Describe an LSI on the table;
@@ -122,7 +122,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * definition after you have created the resource.
      * 
      */
-    public Optional<Output<List<TableLocalSecondaryIndexGetArgs>>> localSecondaryIndexes() {
+    public Optional<Output<List<TableLocalSecondaryIndexArgs>>> localSecondaryIndexes() {
         return Optional.ofNullable(this.localSecondaryIndexes);
     }
 
@@ -146,13 +146,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pointInTimeRecovery")
-    private @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
+    private @Nullable Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery;
 
     /**
      * @return Enable point-in-time recovery options.
      * 
      */
-    public Optional<Output<TablePointInTimeRecoveryGetArgs>> pointInTimeRecovery() {
+    public Optional<Output<TablePointInTimeRecoveryArgs>> pointInTimeRecovery() {
         return Optional.ofNullable(this.pointInTimeRecovery);
     }
 
@@ -191,13 +191,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas")
-    private @Nullable Output<List<TableReplicaGetArgs>> replicas;
+    private @Nullable Output<List<TableReplicaArgs>> replicas;
 
     /**
      * @return Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
      * 
      */
-    public Optional<Output<List<TableReplicaGetArgs>>> replicas() {
+    public Optional<Output<List<TableReplicaArgs>>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
 
@@ -251,13 +251,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryption")
-    private @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
+    private @Nullable Output<TableServerSideEncryptionArgs> serverSideEncryption;
 
     /**
      * @return Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
      * 
      */
-    public Optional<Output<TableServerSideEncryptionGetArgs>> serverSideEncryption() {
+    public Optional<Output<TableServerSideEncryptionArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
 
@@ -377,13 +377,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-    private @Nullable Output<TableTtlGetArgs> ttl;
+    private @Nullable Output<TableTtlArgs> ttl;
 
     /**
      * @return Defines ttl, has two properties, and can only be specified once:
      * 
      */
-    public Optional<Output<TableTtlGetArgs>> ttl() {
+    public Optional<Output<TableTtlArgs>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
 
@@ -476,7 +476,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attributes(@Nullable Output<List<TableAttributeGetArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<TableAttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
@@ -487,7 +487,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attributes(List<TableAttributeGetArgs> attributes) {
+        public Builder attributes(List<TableAttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
@@ -497,7 +497,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attributes(TableAttributeGetArgs... attributes) {
+        public Builder attributes(TableAttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
 
@@ -530,7 +530,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
             $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
@@ -543,7 +543,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder globalSecondaryIndexes(List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(List<TableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
             return globalSecondaryIndexes(Output.of(globalSecondaryIndexes));
         }
 
@@ -555,7 +555,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexGetArgs... globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexArgs... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
 
@@ -590,7 +590,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
             $.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
@@ -603,7 +603,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder localSecondaryIndexes(List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(List<TableLocalSecondaryIndexArgs> localSecondaryIndexes) {
             return localSecondaryIndexes(Output.of(localSecondaryIndexes));
         }
 
@@ -615,7 +615,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder localSecondaryIndexes(TableLocalSecondaryIndexGetArgs... localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(TableLocalSecondaryIndexArgs... localSecondaryIndexes) {
             return localSecondaryIndexes(List.of(localSecondaryIndexes));
         }
 
@@ -646,7 +646,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery) {
             $.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
@@ -657,7 +657,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pointInTimeRecovery(TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(TablePointInTimeRecoveryArgs pointInTimeRecovery) {
             return pointInTimeRecovery(Output.of(pointInTimeRecovery));
         }
 
@@ -709,7 +709,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(@Nullable Output<List<TableReplicaGetArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<TableReplicaArgs>> replicas) {
             $.replicas = replicas;
             return this;
         }
@@ -720,7 +720,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(List<TableReplicaGetArgs> replicas) {
+        public Builder replicas(List<TableReplicaArgs> replicas) {
             return replicas(Output.of(replicas));
         }
 
@@ -730,7 +730,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(TableReplicaGetArgs... replicas) {
+        public Builder replicas(TableReplicaArgs... replicas) {
             return replicas(List.of(replicas));
         }
 
@@ -803,7 +803,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
@@ -814,7 +814,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(TableServerSideEncryptionGetArgs serverSideEncryption) {
+        public Builder serverSideEncryption(TableServerSideEncryptionArgs serverSideEncryption) {
             return serverSideEncryption(Output.of(serverSideEncryption));
         }
 
@@ -977,7 +977,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ttl(@Nullable Output<TableTtlGetArgs> ttl) {
+        public Builder ttl(@Nullable Output<TableTtlArgs> ttl) {
             $.ttl = ttl;
             return this;
         }
@@ -988,7 +988,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ttl(TableTtlGetArgs ttl) {
+        public Builder ttl(TableTtlArgs ttl) {
             return ttl(Output.of(ttl));
         }
 

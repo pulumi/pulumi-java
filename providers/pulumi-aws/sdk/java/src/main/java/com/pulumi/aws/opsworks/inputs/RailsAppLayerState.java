@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.RailsAppLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.RailsAppLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.RailsAppLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.RailsAppLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -112,9 +112,9 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<RailsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<RailsAppLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<RailsAppLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -218,13 +218,13 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<RailsAppLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<RailsAppLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<RailsAppLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -602,12 +602,12 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
             return bundlerVersion(Output.of(bundlerVersion));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<RailsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(RailsAppLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(RailsAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -776,7 +776,7 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<RailsAppLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -787,7 +787,7 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<RailsAppLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<RailsAppLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -797,7 +797,7 @@ public final class RailsAppLayerState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsVolumes(RailsAppLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(RailsAppLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

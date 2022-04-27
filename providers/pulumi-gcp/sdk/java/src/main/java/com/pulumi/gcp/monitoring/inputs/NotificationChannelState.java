@@ -5,7 +5,7 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsGetArgs;
+import com.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -133,7 +133,7 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sensitiveLabels")
-    private @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
+    private @Nullable Output<NotificationChannelSensitiveLabelsArgs> sensitiveLabels;
 
     /**
      * @return Different notification type behaviors are configured primarily using the the `labels` field on this
@@ -145,7 +145,7 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NotificationChannelSensitiveLabelsGetArgs>> sensitiveLabels() {
+    public Optional<Output<NotificationChannelSensitiveLabelsArgs>> sensitiveLabels() {
         return Optional.ofNullable(this.sensitiveLabels);
     }
 
@@ -391,7 +391,7 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder sensitiveLabels(@Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels) {
+        public Builder sensitiveLabels(@Nullable Output<NotificationChannelSensitiveLabelsArgs> sensitiveLabels) {
             $.sensitiveLabels = sensitiveLabels;
             return this;
         }
@@ -408,7 +408,7 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder sensitiveLabels(NotificationChannelSensitiveLabelsGetArgs sensitiveLabels) {
+        public Builder sensitiveLabels(NotificationChannelSensitiveLabelsArgs sensitiveLabels) {
             return sensitiveLabels(Output.of(sensitiveLabels));
         }
 

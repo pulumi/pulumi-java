@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryGetArgs;
-import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryGetArgs;
-import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexGetArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,14 +39,14 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dictionary")
-    private @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
+    private @Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary;
 
     /**
      * @return Dictionary which defines the rule.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionStoredInfoTypeDictionaryGetArgs>> dictionary() {
+    public Optional<Output<PreventionStoredInfoTypeDictionaryArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
 
@@ -71,14 +71,14 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="largeCustomDictionary")
-    private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
+    private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
 
     /**
      * @return Dictionary which defines the rule.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs>> largeCustomDictionary() {
+    public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs>> largeCustomDictionary() {
         return Optional.ofNullable(this.largeCustomDictionary);
     }
 
@@ -126,14 +126,14 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="regex")
-    private @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
+    private @Nullable Output<PreventionStoredInfoTypeRegexArgs> regex;
 
     /**
      * @return Regular expression which defines the rule.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionStoredInfoTypeRegexGetArgs>> regex() {
+    public Optional<Output<PreventionStoredInfoTypeRegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
 
@@ -195,7 +195,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
+        public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
@@ -207,7 +207,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder dictionary(PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
+        public Builder dictionary(PreventionStoredInfoTypeDictionaryArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
@@ -239,7 +239,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary) {
             $.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
@@ -251,7 +251,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder largeCustomDictionary(PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
+        public Builder largeCustomDictionary(PreventionStoredInfoTypeLargeCustomDictionaryArgs largeCustomDictionary) {
             return largeCustomDictionary(Output.of(largeCustomDictionary));
         }
 
@@ -312,7 +312,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
+        public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexArgs> regex) {
             $.regex = regex;
             return this;
         }
@@ -324,7 +324,7 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder regex(PreventionStoredInfoTypeRegexGetArgs regex) {
+        public Builder regex(PreventionStoredInfoTypeRegexArgs regex) {
             return regex(Output.of(regex));
         }
 

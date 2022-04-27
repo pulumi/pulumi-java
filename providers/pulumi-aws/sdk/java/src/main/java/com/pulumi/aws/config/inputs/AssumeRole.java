@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.config.inputs;
 
-import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,149 +12,135 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+@CustomType
+public final class AssumeRole {
+    private final @Nullable Integer durationSeconds;
+    private final @Nullable String externalId;
+    private final @Nullable String policy;
+    private final @Nullable List<String> policyArns;
+    private final @Nullable String roleArn;
+    private final @Nullable String sessionName;
+    private final @Nullable Map<String,String> tags;
+    private final @Nullable List<String> transitiveTagKeys;
 
-public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
-
-    public static final AssumeRole Empty = new AssumeRole();
-
-    @Import(name="durationSeconds")
-    private @Nullable Integer durationSeconds;
+    @CustomType.Constructor
+    private AssumeRole(
+        @CustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @CustomType.Parameter("externalId") @Nullable String externalId,
+        @CustomType.Parameter("policy") @Nullable String policy,
+        @CustomType.Parameter("policyArns") @Nullable List<String> policyArns,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("sessionName") @Nullable String sessionName,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("transitiveTagKeys") @Nullable List<String> transitiveTagKeys) {
+        this.durationSeconds = durationSeconds;
+        this.externalId = externalId;
+        this.policy = policy;
+        this.policyArns = policyArns;
+        this.roleArn = roleArn;
+        this.sessionName = sessionName;
+        this.tags = tags;
+        this.transitiveTagKeys = transitiveTagKeys;
+    }
 
     public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
-
-    @Import(name="externalId")
-    private @Nullable String externalId;
-
     public Optional<String> externalId() {
         return Optional.ofNullable(this.externalId);
     }
-
-    @Import(name="policy")
-    private @Nullable String policy;
-
     public Optional<String> policy() {
         return Optional.ofNullable(this.policy);
     }
-
-    @Import(name="policyArns")
-    private @Nullable List<String> policyArns;
-
-    public Optional<List<String>> policyArns() {
-        return Optional.ofNullable(this.policyArns);
+    public List<String> policyArns() {
+        return this.policyArns == null ? List.of() : this.policyArns;
     }
-
-    @Import(name="roleArn")
-    private @Nullable String roleArn;
-
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-
-    @Import(name="sessionName")
-    private @Nullable String sessionName;
-
     public Optional<String> sessionName() {
         return Optional.ofNullable(this.sessionName);
     }
-
-    @Import(name="tags")
-    private @Nullable Map<String,String> tags;
-
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Map<String,String> tags() {
+        return this.tags == null ? Map.of() : this.tags;
     }
-
-    @Import(name="transitiveTagKeys")
-    private @Nullable List<String> transitiveTagKeys;
-
-    public Optional<List<String>> transitiveTagKeys() {
-        return Optional.ofNullable(this.transitiveTagKeys);
-    }
-
-    private AssumeRole() {}
-
-    private AssumeRole(AssumeRole $) {
-        this.durationSeconds = $.durationSeconds;
-        this.externalId = $.externalId;
-        this.policy = $.policy;
-        this.policyArns = $.policyArns;
-        this.roleArn = $.roleArn;
-        this.sessionName = $.sessionName;
-        this.tags = $.tags;
-        this.transitiveTagKeys = $.transitiveTagKeys;
+    public List<String> transitiveTagKeys() {
+        return this.transitiveTagKeys == null ? List.of() : this.transitiveTagKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
+
     public static Builder builder(AssumeRole defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AssumeRole $;
+        private @Nullable Integer durationSeconds;
+        private @Nullable String externalId;
+        private @Nullable String policy;
+        private @Nullable List<String> policyArns;
+        private @Nullable String roleArn;
+        private @Nullable String sessionName;
+        private @Nullable Map<String,String> tags;
+        private @Nullable List<String> transitiveTagKeys;
 
         public Builder() {
-            $ = new AssumeRole();
+    	      // Empty
         }
 
         public Builder(AssumeRole defaults) {
-            $ = new AssumeRole(Objects.requireNonNull(defaults));
+    	      Objects.requireNonNull(defaults);
+    	      this.durationSeconds = defaults.durationSeconds;
+    	      this.externalId = defaults.externalId;
+    	      this.policy = defaults.policy;
+    	      this.policyArns = defaults.policyArns;
+    	      this.roleArn = defaults.roleArn;
+    	      this.sessionName = defaults.sessionName;
+    	      this.tags = defaults.tags;
+    	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            $.durationSeconds = durationSeconds;
+            this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
-            $.externalId = externalId;
+            this.externalId = externalId;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
-            $.policy = policy;
+            this.policy = policy;
             return this;
         }
-
         public Builder policyArns(@Nullable List<String> policyArns) {
-            $.policyArns = policyArns;
+            this.policyArns = policyArns;
             return this;
         }
-
         public Builder policyArns(String... policyArns) {
             return policyArns(List.of(policyArns));
         }
-
         public Builder roleArn(@Nullable String roleArn) {
-            $.roleArn = roleArn;
+            this.roleArn = roleArn;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
-            $.sessionName = sessionName;
+            this.sessionName = sessionName;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            this.tags = tags;
             return this;
         }
-
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
-            $.transitiveTagKeys = transitiveTagKeys;
+            this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-
         public Builder transitiveTagKeys(String... transitiveTagKeys) {
             return transitiveTagKeys(List.of(transitiveTagKeys));
-        }
-
-        public AssumeRole build() {
-            return $;
+        }        public AssumeRole build() {
+            return new AssumeRole(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }
     }
-
 }

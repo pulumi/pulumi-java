@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RouterPeerAdvertisedIpRangeGetArgs;
-import com.pulumi.gcp.compute.inputs.RouterPeerBfdGetArgs;
+import com.pulumi.gcp.compute.inputs.RouterPeerAdvertisedIpRangeArgs;
+import com.pulumi.gcp.compute.inputs.RouterPeerBfdArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -74,7 +74,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedIpRanges")
-    private @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
+    private @Nullable Output<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     /**
      * @return User-specified list of individual IP ranges to advertise in
@@ -85,7 +85,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RouterPeerAdvertisedIpRangeGetArgs>>> advertisedIpRanges() {
+    public Optional<Output<List<RouterPeerAdvertisedIpRangeArgs>>> advertisedIpRanges() {
         return Optional.ofNullable(this.advertisedIpRanges);
     }
 
@@ -114,14 +114,14 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bfd")
-    private @Nullable Output<RouterPeerBfdGetArgs> bfd;
+    private @Nullable Output<RouterPeerBfdArgs> bfd;
 
     /**
      * @return BFD configuration for the BGP peering.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RouterPeerBfdGetArgs>> bfd() {
+    public Optional<Output<RouterPeerBfdArgs>> bfd() {
         return Optional.ofNullable(this.bfd);
     }
 
@@ -426,7 +426,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advertisedIpRanges(@Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Output<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges) {
             $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
@@ -442,7 +442,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advertisedIpRanges(List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
+        public Builder advertisedIpRanges(List<RouterPeerAdvertisedIpRangeArgs> advertisedIpRanges) {
             return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
 
@@ -457,7 +457,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advertisedIpRanges(RouterPeerAdvertisedIpRangeGetArgs... advertisedIpRanges) {
+        public Builder advertisedIpRanges(RouterPeerAdvertisedIpRangeArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
 
@@ -493,7 +493,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bfd(@Nullable Output<RouterPeerBfdGetArgs> bfd) {
+        public Builder bfd(@Nullable Output<RouterPeerBfdArgs> bfd) {
             $.bfd = bfd;
             return this;
         }
@@ -505,7 +505,7 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bfd(RouterPeerBfdGetArgs bfd) {
+        public Builder bfd(RouterPeerBfdArgs bfd) {
             return bfd(Output.of(bfd));
         }
 

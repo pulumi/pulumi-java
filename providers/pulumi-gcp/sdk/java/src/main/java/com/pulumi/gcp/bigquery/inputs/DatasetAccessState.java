@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.DatasetAccessViewGetArgs;
+import com.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,7 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="view")
-    private @Nullable Output<DatasetAccessViewGetArgs> view;
+    private @Nullable Output<DatasetAccessViewArgs> view;
 
     /**
      * @return A view from a different dataset to grant access to. Queries
@@ -193,7 +193,7 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DatasetAccessViewGetArgs>> view() {
+    public Optional<Output<DatasetAccessViewArgs>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -450,7 +450,7 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder view(@Nullable Output<DatasetAccessViewGetArgs> view) {
+        public Builder view(@Nullable Output<DatasetAccessViewArgs> view) {
             $.view = view;
             return this;
         }
@@ -466,7 +466,7 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder view(DatasetAccessViewGetArgs view) {
+        public Builder view(DatasetAccessViewArgs view) {
             return view(Output.of(view));
         }
 

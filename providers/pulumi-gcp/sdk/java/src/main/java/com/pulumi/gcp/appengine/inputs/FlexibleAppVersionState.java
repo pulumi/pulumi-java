@@ -5,18 +5,18 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionApiConfigGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionEndpointsApiServiceGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionEntrypointGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionLivenessCheckGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionManualScalingGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionNetworkGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionReadinessCheckGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesGetArgs;
-import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionVpcAccessConnectorGetArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionApiConfigArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionEndpointsApiServiceArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionEntrypointArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionLivenessCheckArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionManualScalingArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionNetworkArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionReadinessCheckArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesArgs;
+import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionVpcAccessConnectorArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -36,14 +36,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="apiConfig")
-    private @Nullable Output<FlexibleAppVersionApiConfigGetArgs> apiConfig;
+    private @Nullable Output<FlexibleAppVersionApiConfigArgs> apiConfig;
 
     /**
      * @return Serving configuration for Google Cloud Endpoints.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionApiConfigGetArgs>> apiConfig() {
+    public Optional<Output<FlexibleAppVersionApiConfigArgs>> apiConfig() {
         return Optional.ofNullable(this.apiConfig);
     }
 
@@ -53,14 +53,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="automaticScaling")
-    private @Nullable Output<FlexibleAppVersionAutomaticScalingGetArgs> automaticScaling;
+    private @Nullable Output<FlexibleAppVersionAutomaticScalingArgs> automaticScaling;
 
     /**
      * @return Automatic scaling is based on request rate, response latencies, and other application metrics.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionAutomaticScalingGetArgs>> automaticScaling() {
+    public Optional<Output<FlexibleAppVersionAutomaticScalingArgs>> automaticScaling() {
         return Optional.ofNullable(this.automaticScaling);
     }
 
@@ -117,14 +117,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deployment")
-    private @Nullable Output<FlexibleAppVersionDeploymentGetArgs> deployment;
+    private @Nullable Output<FlexibleAppVersionDeploymentArgs> deployment;
 
     /**
      * @return Code and application artifacts that make up this version.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionDeploymentGetArgs>> deployment() {
+    public Optional<Output<FlexibleAppVersionDeploymentArgs>> deployment() {
         return Optional.ofNullable(this.deployment);
     }
 
@@ -134,14 +134,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endpointsApiService")
-    private @Nullable Output<FlexibleAppVersionEndpointsApiServiceGetArgs> endpointsApiService;
+    private @Nullable Output<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService;
 
     /**
      * @return Code and application artifacts that make up this version.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionEndpointsApiServiceGetArgs>> endpointsApiService() {
+    public Optional<Output<FlexibleAppVersionEndpointsApiServiceArgs>> endpointsApiService() {
         return Optional.ofNullable(this.endpointsApiService);
     }
 
@@ -151,14 +151,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entrypoint")
-    private @Nullable Output<FlexibleAppVersionEntrypointGetArgs> entrypoint;
+    private @Nullable Output<FlexibleAppVersionEntrypointArgs> entrypoint;
 
     /**
      * @return The entrypoint for the application.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionEntrypointGetArgs>> entrypoint() {
+    public Optional<Output<FlexibleAppVersionEntrypointArgs>> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
 
@@ -184,7 +184,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="handlers")
-    private @Nullable Output<List<FlexibleAppVersionHandlerGetArgs>> handlers;
+    private @Nullable Output<List<FlexibleAppVersionHandlerArgs>> handlers;
 
     /**
      * @return An ordered list of URL-matching patterns that should be applied to incoming requests.
@@ -192,7 +192,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<FlexibleAppVersionHandlerGetArgs>>> handlers() {
+    public Optional<Output<List<FlexibleAppVersionHandlerArgs>>> handlers() {
         return Optional.ofNullable(this.handlers);
     }
 
@@ -240,14 +240,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="livenessCheck")
-    private @Nullable Output<FlexibleAppVersionLivenessCheckGetArgs> livenessCheck;
+    private @Nullable Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck;
 
     /**
      * @return Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionLivenessCheckGetArgs>> livenessCheck() {
+    public Optional<Output<FlexibleAppVersionLivenessCheckArgs>> livenessCheck() {
         return Optional.ofNullable(this.livenessCheck);
     }
 
@@ -257,14 +257,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="manualScaling")
-    private @Nullable Output<FlexibleAppVersionManualScalingGetArgs> manualScaling;
+    private @Nullable Output<FlexibleAppVersionManualScalingArgs> manualScaling;
 
     /**
      * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionManualScalingGetArgs>> manualScaling() {
+    public Optional<Output<FlexibleAppVersionManualScalingArgs>> manualScaling() {
         return Optional.ofNullable(this.manualScaling);
     }
 
@@ -289,14 +289,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="network")
-    private @Nullable Output<FlexibleAppVersionNetworkGetArgs> network;
+    private @Nullable Output<FlexibleAppVersionNetworkArgs> network;
 
     /**
      * @return Extra network settings
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionNetworkGetArgs>> network() {
+    public Optional<Output<FlexibleAppVersionNetworkArgs>> network() {
         return Optional.ofNullable(this.network);
     }
 
@@ -353,14 +353,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="readinessCheck")
-    private @Nullable Output<FlexibleAppVersionReadinessCheckGetArgs> readinessCheck;
+    private @Nullable Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck;
 
     /**
      * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionReadinessCheckGetArgs>> readinessCheck() {
+    public Optional<Output<FlexibleAppVersionReadinessCheckArgs>> readinessCheck() {
         return Optional.ofNullable(this.readinessCheck);
     }
 
@@ -370,14 +370,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resources")
-    private @Nullable Output<FlexibleAppVersionResourcesGetArgs> resources;
+    private @Nullable Output<FlexibleAppVersionResourcesArgs> resources;
 
     /**
      * @return Machine resources for a version.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionResourcesGetArgs>> resources() {
+    public Optional<Output<FlexibleAppVersionResourcesArgs>> resources() {
         return Optional.ofNullable(this.resources);
     }
 
@@ -502,14 +502,14 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcAccessConnector")
-    private @Nullable Output<FlexibleAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+    private @Nullable Output<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector;
 
     /**
      * @return Enables VPC connectivity for standard apps.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FlexibleAppVersionVpcAccessConnectorGetArgs>> vpcAccessConnector() {
+    public Optional<Output<FlexibleAppVersionVpcAccessConnectorArgs>> vpcAccessConnector() {
         return Optional.ofNullable(this.vpcAccessConnector);
     }
 
@@ -572,7 +572,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder apiConfig(@Nullable Output<FlexibleAppVersionApiConfigGetArgs> apiConfig) {
+        public Builder apiConfig(@Nullable Output<FlexibleAppVersionApiConfigArgs> apiConfig) {
             $.apiConfig = apiConfig;
             return this;
         }
@@ -584,7 +584,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder apiConfig(FlexibleAppVersionApiConfigGetArgs apiConfig) {
+        public Builder apiConfig(FlexibleAppVersionApiConfigArgs apiConfig) {
             return apiConfig(Output.of(apiConfig));
         }
 
@@ -595,7 +595,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder automaticScaling(@Nullable Output<FlexibleAppVersionAutomaticScalingGetArgs> automaticScaling) {
+        public Builder automaticScaling(@Nullable Output<FlexibleAppVersionAutomaticScalingArgs> automaticScaling) {
             $.automaticScaling = automaticScaling;
             return this;
         }
@@ -607,7 +607,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder automaticScaling(FlexibleAppVersionAutomaticScalingGetArgs automaticScaling) {
+        public Builder automaticScaling(FlexibleAppVersionAutomaticScalingArgs automaticScaling) {
             return automaticScaling(Output.of(automaticScaling));
         }
 
@@ -683,7 +683,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder deployment(@Nullable Output<FlexibleAppVersionDeploymentGetArgs> deployment) {
+        public Builder deployment(@Nullable Output<FlexibleAppVersionDeploymentArgs> deployment) {
             $.deployment = deployment;
             return this;
         }
@@ -695,7 +695,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder deployment(FlexibleAppVersionDeploymentGetArgs deployment) {
+        public Builder deployment(FlexibleAppVersionDeploymentArgs deployment) {
             return deployment(Output.of(deployment));
         }
 
@@ -706,7 +706,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder endpointsApiService(@Nullable Output<FlexibleAppVersionEndpointsApiServiceGetArgs> endpointsApiService) {
+        public Builder endpointsApiService(@Nullable Output<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService) {
             $.endpointsApiService = endpointsApiService;
             return this;
         }
@@ -718,7 +718,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder endpointsApiService(FlexibleAppVersionEndpointsApiServiceGetArgs endpointsApiService) {
+        public Builder endpointsApiService(FlexibleAppVersionEndpointsApiServiceArgs endpointsApiService) {
             return endpointsApiService(Output.of(endpointsApiService));
         }
 
@@ -729,7 +729,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder entrypoint(@Nullable Output<FlexibleAppVersionEntrypointGetArgs> entrypoint) {
+        public Builder entrypoint(@Nullable Output<FlexibleAppVersionEntrypointArgs> entrypoint) {
             $.entrypoint = entrypoint;
             return this;
         }
@@ -741,7 +741,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder entrypoint(FlexibleAppVersionEntrypointGetArgs entrypoint) {
+        public Builder entrypoint(FlexibleAppVersionEntrypointArgs entrypoint) {
             return entrypoint(Output.of(entrypoint));
         }
 
@@ -774,7 +774,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(@Nullable Output<List<FlexibleAppVersionHandlerGetArgs>> handlers) {
+        public Builder handlers(@Nullable Output<List<FlexibleAppVersionHandlerArgs>> handlers) {
             $.handlers = handlers;
             return this;
         }
@@ -787,7 +787,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(List<FlexibleAppVersionHandlerGetArgs> handlers) {
+        public Builder handlers(List<FlexibleAppVersionHandlerArgs> handlers) {
             return handlers(Output.of(handlers));
         }
 
@@ -799,7 +799,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(FlexibleAppVersionHandlerGetArgs... handlers) {
+        public Builder handlers(FlexibleAppVersionHandlerArgs... handlers) {
             return handlers(List.of(handlers));
         }
 
@@ -871,7 +871,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder livenessCheck(@Nullable Output<FlexibleAppVersionLivenessCheckGetArgs> livenessCheck) {
+        public Builder livenessCheck(@Nullable Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck) {
             $.livenessCheck = livenessCheck;
             return this;
         }
@@ -883,7 +883,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder livenessCheck(FlexibleAppVersionLivenessCheckGetArgs livenessCheck) {
+        public Builder livenessCheck(FlexibleAppVersionLivenessCheckArgs livenessCheck) {
             return livenessCheck(Output.of(livenessCheck));
         }
 
@@ -894,7 +894,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder manualScaling(@Nullable Output<FlexibleAppVersionManualScalingGetArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Output<FlexibleAppVersionManualScalingArgs> manualScaling) {
             $.manualScaling = manualScaling;
             return this;
         }
@@ -906,7 +906,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder manualScaling(FlexibleAppVersionManualScalingGetArgs manualScaling) {
+        public Builder manualScaling(FlexibleAppVersionManualScalingArgs manualScaling) {
             return manualScaling(Output.of(manualScaling));
         }
 
@@ -938,7 +938,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder network(@Nullable Output<FlexibleAppVersionNetworkGetArgs> network) {
+        public Builder network(@Nullable Output<FlexibleAppVersionNetworkArgs> network) {
             $.network = network;
             return this;
         }
@@ -950,7 +950,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder network(FlexibleAppVersionNetworkGetArgs network) {
+        public Builder network(FlexibleAppVersionNetworkArgs network) {
             return network(Output.of(network));
         }
 
@@ -1026,7 +1026,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder readinessCheck(@Nullable Output<FlexibleAppVersionReadinessCheckGetArgs> readinessCheck) {
+        public Builder readinessCheck(@Nullable Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck) {
             $.readinessCheck = readinessCheck;
             return this;
         }
@@ -1038,7 +1038,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder readinessCheck(FlexibleAppVersionReadinessCheckGetArgs readinessCheck) {
+        public Builder readinessCheck(FlexibleAppVersionReadinessCheckArgs readinessCheck) {
             return readinessCheck(Output.of(readinessCheck));
         }
 
@@ -1049,7 +1049,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder resources(@Nullable Output<FlexibleAppVersionResourcesGetArgs> resources) {
+        public Builder resources(@Nullable Output<FlexibleAppVersionResourcesArgs> resources) {
             $.resources = resources;
             return this;
         }
@@ -1061,7 +1061,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder resources(FlexibleAppVersionResourcesGetArgs resources) {
+        public Builder resources(FlexibleAppVersionResourcesArgs resources) {
             return resources(Output.of(resources));
         }
 
@@ -1229,7 +1229,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder vpcAccessConnector(@Nullable Output<FlexibleAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable Output<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector) {
             $.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
@@ -1241,7 +1241,7 @@ public final class FlexibleAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder vpcAccessConnector(FlexibleAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
+        public Builder vpcAccessConnector(FlexibleAppVersionVpcAccessConnectorArgs vpcAccessConnector) {
             return vpcAccessConnector(Output.of(vpcAccessConnector));
         }
 

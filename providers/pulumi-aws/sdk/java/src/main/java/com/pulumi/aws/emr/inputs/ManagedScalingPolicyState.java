@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.emr.inputs;
 
-import com.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitGetArgs;
+import com.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="computeLimits")
-    private @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+    private @Nullable Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
     /**
      * @return Configuration block with compute limit settings. Described below.
      * 
      */
-    public Optional<Output<List<ManagedScalingPolicyComputeLimitGetArgs>>> computeLimits() {
+    public Optional<Output<List<ManagedScalingPolicyComputeLimitArgs>>> computeLimits() {
         return Optional.ofNullable(this.computeLimits);
     }
 
@@ -99,7 +99,7 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder computeLimits(@Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
+        public Builder computeLimits(@Nullable Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
             $.computeLimits = computeLimits;
             return this;
         }
@@ -110,7 +110,7 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder computeLimits(List<ManagedScalingPolicyComputeLimitGetArgs> computeLimits) {
+        public Builder computeLimits(List<ManagedScalingPolicyComputeLimitArgs> computeLimits) {
             return computeLimits(Output.of(computeLimits));
         }
 
@@ -120,7 +120,7 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder computeLimits(ManagedScalingPolicyComputeLimitGetArgs... computeLimits) {
+        public Builder computeLimits(ManagedScalingPolicyComputeLimitArgs... computeLimits) {
             return computeLimits(List.of(computeLimits));
         }
 

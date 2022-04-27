@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.IpSetIpSetDescriptorGetArgs;
+import com.pulumi.aws.waf.inputs.IpSetIpSetDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipSetDescriptors")
-    private @Nullable Output<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors;
+    private @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
 
     /**
      * @return One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
      * 
      */
-    public Optional<Output<List<IpSetIpSetDescriptorGetArgs>>> ipSetDescriptors() {
+    public Optional<Output<List<IpSetIpSetDescriptorArgs>>> ipSetDescriptors() {
         return Optional.ofNullable(this.ipSetDescriptors);
     }
 
@@ -115,7 +115,7 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
             $.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
@@ -126,7 +126,7 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSetDescriptors(List<IpSetIpSetDescriptorGetArgs> ipSetDescriptors) {
+        public Builder ipSetDescriptors(List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
             return ipSetDescriptors(Output.of(ipSetDescriptors));
         }
 
@@ -136,7 +136,7 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSetDescriptors(IpSetIpSetDescriptorGetArgs... ipSetDescriptors) {
+        public Builder ipSetDescriptors(IpSetIpSetDescriptorArgs... ipSetDescriptors) {
             return ipSetDescriptors(List.of(ipSetDescriptors));
         }
 

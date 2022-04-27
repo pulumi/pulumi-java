@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class LogMetricFilterState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metricTransformation")
-    private @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
+    private @Nullable Output<LogMetricFilterMetricTransformationArgs> metricTransformation;
 
     /**
      * @return A block defining collection of information needed to define how metric data gets emitted. See below.
      * 
      */
-    public Optional<Output<LogMetricFilterMetricTransformationGetArgs>> metricTransformation() {
+    public Optional<Output<LogMetricFilterMetricTransformationArgs>> metricTransformation() {
         return Optional.ofNullable(this.metricTransformation);
     }
 
@@ -132,7 +132,7 @@ public final class LogMetricFilterState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder metricTransformation(@Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
+        public Builder metricTransformation(@Nullable Output<LogMetricFilterMetricTransformationArgs> metricTransformation) {
             $.metricTransformation = metricTransformation;
             return this;
         }
@@ -143,7 +143,7 @@ public final class LogMetricFilterState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder metricTransformation(LogMetricFilterMetricTransformationGetArgs metricTransformation) {
+        public Builder metricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
             return metricTransformation(Output.of(metricTransformation));
         }
 

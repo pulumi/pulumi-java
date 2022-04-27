@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataGetArgs;
-import com.pulumi.gcp.cloudrun.inputs.DomainMappingSpecGetArgs;
-import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusGetArgs;
+import com.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
+import com.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
+import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,14 +40,14 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadata")
-    private @Nullable Output<DomainMappingMetadataGetArgs> metadata;
+    private @Nullable Output<DomainMappingMetadataArgs> metadata;
 
     /**
      * @return Metadata associated with this DomainMapping.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DomainMappingMetadataGetArgs>> metadata() {
+    public Optional<Output<DomainMappingMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
@@ -89,14 +89,14 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<DomainMappingSpecGetArgs> spec;
+    private @Nullable Output<DomainMappingSpecArgs> spec;
 
     /**
      * @return The spec for this DomainMapping.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DomainMappingSpecGetArgs>> spec() {
+    public Optional<Output<DomainMappingSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -105,13 +105,13 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
+    private @Nullable Output<List<DomainMappingStatusArgs>> statuses;
 
     /**
      * @return The current status of the DomainMapping.
      * 
      */
-    public Optional<Output<List<DomainMappingStatusGetArgs>>> statuses() {
+    public Optional<Output<List<DomainMappingStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -172,7 +172,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Output<DomainMappingMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Output<DomainMappingMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
@@ -184,7 +184,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder metadata(DomainMappingMetadataGetArgs metadata) {
+        public Builder metadata(DomainMappingMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
@@ -239,7 +239,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<DomainMappingSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<DomainMappingSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -251,7 +251,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder spec(DomainMappingSpecGetArgs spec) {
+        public Builder spec(DomainMappingSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
@@ -261,7 +261,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<DomainMappingStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<DomainMappingStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -272,7 +272,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder statuses(List<DomainMappingStatusGetArgs> statuses) {
+        public Builder statuses(List<DomainMappingStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -282,7 +282,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder statuses(DomainMappingStatusGetArgs... statuses) {
+        public Builder statuses(DomainMappingStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 

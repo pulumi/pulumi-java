@@ -5,7 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.VolumeLabelGetArgs;
+import com.pulumi.docker.inputs.VolumeLabelArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -54,13 +54,13 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<VolumeLabelGetArgs>> labels;
+    private @Nullable Output<List<VolumeLabelArgs>> labels;
 
     /**
      * @return User-defined key/value metadata
      * 
      */
-    public Optional<Output<List<VolumeLabelGetArgs>>> labels() {
+    public Optional<Output<List<VolumeLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -170,7 +170,7 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<VolumeLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<VolumeLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -181,7 +181,7 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<VolumeLabelGetArgs> labels) {
+        public Builder labels(List<VolumeLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -191,7 +191,7 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(VolumeLabelGetArgs... labels) {
+        public Builder labels(VolumeLabelArgs... labels) {
             return labels(List.of(labels));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.macie.inputs;
 
-import com.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaGetArgs;
+import com.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -68,13 +68,13 @@ public final class FindingsFilterState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="findingCriteria")
-    private @Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria;
+    private @Nullable Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
     /**
      * @return The criteria to use to filter findings.
      * 
      */
-    public Optional<Output<FindingsFilterFindingCriteriaGetArgs>> findingCriteria() {
+    public Optional<Output<FindingsFilterFindingCriteriaArgs>> findingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
 
@@ -238,7 +238,7 @@ public final class FindingsFilterState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder findingCriteria(@Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria) {
+        public Builder findingCriteria(@Nullable Output<FindingsFilterFindingCriteriaArgs> findingCriteria) {
             $.findingCriteria = findingCriteria;
             return this;
         }
@@ -249,7 +249,7 @@ public final class FindingsFilterState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder findingCriteria(FindingsFilterFindingCriteriaGetArgs findingCriteria) {
+        public Builder findingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
             return findingCriteria(Output.of(findingCriteria));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigGetArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,14 +52,14 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
      * 
      */
     @Import(name="inspectConfig")
-    private @Nullable Output<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
     /**
      * @return The core content of the template.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionInspectTemplateInspectConfigGetArgs>> inspectConfig() {
+    public Optional<Output<PreventionInspectTemplateInspectConfigArgs>> inspectConfig() {
         return Optional.ofNullable(this.inspectConfig);
     }
 
@@ -180,7 +180,7 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
@@ -192,7 +192,7 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder inspectConfig(PreventionInspectTemplateInspectConfigGetArgs inspectConfig) {
+        public Builder inspectConfig(PreventionInspectTemplateInspectConfigArgs inspectConfig) {
             return inspectConfig(Output.of(inspectConfig));
         }
 

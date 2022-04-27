@@ -5,7 +5,7 @@ package com.pulumi.gcp.runtimeconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamBindingConditionGetArgs;
+import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ConfigIamBindingState extends com.pulumi.resources.ResourceAr
     public static final ConfigIamBindingState Empty = new ConfigIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<ConfigIamBindingConditionGetArgs> condition;
+    private @Nullable Output<ConfigIamBindingConditionArgs> condition;
 
-    public Optional<Output<ConfigIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<ConfigIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,12 +126,12 @@ public final class ConfigIamBindingState extends com.pulumi.resources.ResourceAr
             $ = new ConfigIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<ConfigIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ConfigIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ConfigIamBindingConditionGetArgs condition) {
+        public Builder condition(ConfigIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

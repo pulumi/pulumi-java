@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.amplify.inputs;
 
-import com.pulumi.aws.amplify.inputs.DomainAssociationSubDomainGetArgs;
+import com.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -83,13 +83,13 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subDomains")
-    private @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
+    private @Nullable Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
     /**
      * @return The setting for the subdomain. Documented below.
      * 
      */
-    public Optional<Output<List<DomainAssociationSubDomainGetArgs>>> subDomains() {
+    public Optional<Output<List<DomainAssociationSubDomainArgs>>> subDomains() {
         return Optional.ofNullable(this.subDomains);
     }
 
@@ -227,7 +227,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains) {
+        public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainArgs>> subDomains) {
             $.subDomains = subDomains;
             return this;
         }
@@ -238,7 +238,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder subDomains(List<DomainAssociationSubDomainGetArgs> subDomains) {
+        public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
             return subDomains(Output.of(subDomains));
         }
 
@@ -248,7 +248,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder subDomains(DomainAssociationSubDomainGetArgs... subDomains) {
+        public Builder subDomains(DomainAssociationSubDomainArgs... subDomains) {
             return subDomains(List.of(subDomains));
         }
 

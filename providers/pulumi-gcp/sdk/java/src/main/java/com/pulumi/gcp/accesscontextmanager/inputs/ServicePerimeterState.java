@@ -5,8 +5,8 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecGetArgs;
-import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusGetArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<ServicePerimeterSpecGetArgs> spec;
+    private @Nullable Output<ServicePerimeterSpecArgs> spec;
 
     /**
      * @return Proposed (or dry run) ServicePerimeter configuration.
@@ -150,7 +150,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ServicePerimeterSpecGetArgs>> spec() {
+    public Optional<Output<ServicePerimeterSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -162,7 +162,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="status")
-    private @Nullable Output<ServicePerimeterStatusGetArgs> status;
+    private @Nullable Output<ServicePerimeterStatusArgs> status;
 
     /**
      * @return ServicePerimeter configuration. Specifies sets of resources,
@@ -171,7 +171,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ServicePerimeterStatusGetArgs>> status() {
+    public Optional<Output<ServicePerimeterStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
 
@@ -422,7 +422,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<ServicePerimeterSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<ServicePerimeterSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -437,7 +437,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder spec(ServicePerimeterSpecGetArgs spec) {
+        public Builder spec(ServicePerimeterSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
@@ -450,7 +450,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder status(@Nullable Output<ServicePerimeterStatusGetArgs> status) {
+        public Builder status(@Nullable Output<ServicePerimeterStatusArgs> status) {
             $.status = status;
             return this;
         }
@@ -464,7 +464,7 @@ public final class ServicePerimeterState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder status(ServicePerimeterStatusGetArgs status) {
+        public Builder status(ServicePerimeterStatusArgs status) {
             return status(Output.of(status));
         }
 

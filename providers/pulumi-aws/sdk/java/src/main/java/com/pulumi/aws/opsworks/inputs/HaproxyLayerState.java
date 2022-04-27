@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.HaproxyLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.HaproxyLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.HaproxyLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.HaproxyLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<HaproxyLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<HaproxyLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<HaproxyLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<HaproxyLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -188,13 +188,13 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<HaproxyLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<HaproxyLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<HaproxyLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<HaproxyLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -560,12 +560,12 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<HaproxyLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<HaproxyLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(HaproxyLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(HaproxyLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -734,7 +734,7 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<HaproxyLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<HaproxyLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -745,7 +745,7 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<HaproxyLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<HaproxyLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -755,7 +755,7 @@ public final class HaproxyLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(HaproxyLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(HaproxyLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

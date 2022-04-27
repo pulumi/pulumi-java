@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsGetArgs;
+import com.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -128,13 +128,13 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="physicalConnectionRequirements")
-    private @Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements;
+    private @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
 
     /**
      * @return A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
      * 
      */
-    public Optional<Output<ConnectionPhysicalConnectionRequirementsGetArgs>> physicalConnectionRequirements() {
+    public Optional<Output<ConnectionPhysicalConnectionRequirementsArgs>> physicalConnectionRequirements() {
         return Optional.ofNullable(this.physicalConnectionRequirements);
     }
 
@@ -364,7 +364,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
             $.physicalConnectionRequirements = physicalConnectionRequirements;
             return this;
         }
@@ -375,7 +375,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder physicalConnectionRequirements(ConnectionPhysicalConnectionRequirementsGetArgs physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
             return physicalConnectionRequirements(Output.of(physicalConnectionRequirements));
         }
 

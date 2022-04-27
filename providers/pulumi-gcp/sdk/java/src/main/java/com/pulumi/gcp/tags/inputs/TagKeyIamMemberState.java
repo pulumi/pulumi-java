@@ -5,7 +5,7 @@ package com.pulumi.gcp.tags.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionGetArgs;
+import com.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class TagKeyIamMemberState extends com.pulumi.resources.ResourceArg
     public static final TagKeyIamMemberState Empty = new TagKeyIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<TagKeyIamMemberConditionGetArgs> condition;
+    private @Nullable Output<TagKeyIamMemberConditionArgs> condition;
 
-    public Optional<Output<TagKeyIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<TagKeyIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -107,12 +107,12 @@ public final class TagKeyIamMemberState extends com.pulumi.resources.ResourceArg
             $ = new TagKeyIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TagKeyIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TagKeyIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TagKeyIamMemberConditionGetArgs condition) {
+        public Builder condition(TagKeyIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionGetArgs;
+import com.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -54,13 +54,13 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatingRegions")
-    private @Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
+    private @Nullable Output<List<VpcIpamOperatingRegionArgs>> operatingRegions;
 
     /**
      * @return Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
      * 
      */
-    public Optional<Output<List<VpcIpamOperatingRegionGetArgs>>> operatingRegions() {
+    public Optional<Output<List<VpcIpamOperatingRegionArgs>>> operatingRegions() {
         return Optional.ofNullable(this.operatingRegions);
     }
 
@@ -220,7 +220,7 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder operatingRegions(@Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
+        public Builder operatingRegions(@Nullable Output<List<VpcIpamOperatingRegionArgs>> operatingRegions) {
             $.operatingRegions = operatingRegions;
             return this;
         }
@@ -231,7 +231,7 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder operatingRegions(List<VpcIpamOperatingRegionGetArgs> operatingRegions) {
+        public Builder operatingRegions(List<VpcIpamOperatingRegionArgs> operatingRegions) {
             return operatingRegions(Output.of(operatingRegions));
         }
 
@@ -241,7 +241,7 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder operatingRegions(VpcIpamOperatingRegionGetArgs... operatingRegions) {
+        public Builder operatingRegions(VpcIpamOperatingRegionArgs... operatingRegions) {
             return operatingRegions(List.of(operatingRegions));
         }
 

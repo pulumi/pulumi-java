@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gitConfig")
-    private @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig;
+    private @Nullable Output<CodeRepositoryGitConfigArgs> gitConfig;
 
     /**
      * @return Specifies details about the repository. see Git Config details below.
      * 
      */
-    public Optional<Output<CodeRepositoryGitConfigGetArgs>> gitConfig() {
+    public Optional<Output<CodeRepositoryGitConfigArgs>> gitConfig() {
         return Optional.ofNullable(this.gitConfig);
     }
 
@@ -168,7 +168,7 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig) {
+        public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigArgs> gitConfig) {
             $.gitConfig = gitConfig;
             return this;
         }
@@ -179,7 +179,7 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder gitConfig(CodeRepositoryGitConfigGetArgs gitConfig) {
+        public Builder gitConfig(CodeRepositoryGitConfigArgs gitConfig) {
             return gitConfig(Output.of(gitConfig));
         }
 

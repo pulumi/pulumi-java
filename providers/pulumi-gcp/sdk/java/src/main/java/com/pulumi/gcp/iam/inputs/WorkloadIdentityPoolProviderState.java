@@ -5,8 +5,8 @@ package com.pulumi.gcp.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsGetArgs;
-import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcGetArgs;
+import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsArgs;
+import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -149,14 +149,14 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
      * 
      */
     @Import(name="aws")
-    private @Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws;
+    private @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws;
 
     /**
      * @return An Amazon Web Services identity provider. Not compatible with the property oidc.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<WorkloadIdentityPoolProviderAwsGetArgs>> aws() {
+    public Optional<Output<WorkloadIdentityPoolProviderAwsArgs>> aws() {
         return Optional.ofNullable(this.aws);
     }
 
@@ -230,14 +230,14 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
      * 
      */
     @Import(name="oidc")
-    private @Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
+    private @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc;
 
     /**
      * @return An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<WorkloadIdentityPoolProviderOidcGetArgs>> oidc() {
+    public Optional<Output<WorkloadIdentityPoolProviderOidcArgs>> oidc() {
         return Optional.ofNullable(this.oidc);
     }
 
@@ -495,7 +495,7 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
+        public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws) {
             $.aws = aws;
             return this;
         }
@@ -507,7 +507,7 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder aws(WorkloadIdentityPoolProviderAwsGetArgs aws) {
+        public Builder aws(WorkloadIdentityPoolProviderAwsArgs aws) {
             return aws(Output.of(aws));
         }
 
@@ -606,7 +606,7 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
+        public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc) {
             $.oidc = oidc;
             return this;
         }
@@ -618,7 +618,7 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder oidc(WorkloadIdentityPoolProviderOidcGetArgs oidc) {
+        public Builder oidc(WorkloadIdentityPoolProviderOidcArgs oidc) {
             return oidc(Output.of(oidc));
         }
 

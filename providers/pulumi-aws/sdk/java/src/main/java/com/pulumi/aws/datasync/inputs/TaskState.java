@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.TaskExcludesGetArgs;
-import com.pulumi.aws.datasync.inputs.TaskOptionsGetArgs;
-import com.pulumi.aws.datasync.inputs.TaskScheduleGetArgs;
+import com.pulumi.aws.datasync.inputs.TaskExcludesArgs;
+import com.pulumi.aws.datasync.inputs.TaskOptionsArgs;
+import com.pulumi.aws.datasync.inputs.TaskScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -69,13 +69,13 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludes")
-    private @Nullable Output<TaskExcludesGetArgs> excludes;
+    private @Nullable Output<TaskExcludesArgs> excludes;
 
     /**
      * @return Filter rules that determines which files to exclude from a task.
      * 
      */
-    public Optional<Output<TaskExcludesGetArgs>> excludes() {
+    public Optional<Output<TaskExcludesArgs>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
 
@@ -99,13 +99,13 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-    private @Nullable Output<TaskOptionsGetArgs> options;
+    private @Nullable Output<TaskOptionsArgs> options;
 
     /**
      * @return Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
      * 
      */
-    public Optional<Output<TaskOptionsGetArgs>> options() {
+    public Optional<Output<TaskOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
 
@@ -114,13 +114,13 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<TaskScheduleGetArgs> schedule;
+    private @Nullable Output<TaskScheduleArgs> schedule;
 
     /**
      * @return Specifies a schedule used to periodically transfer files from a source to a destination location.
      * 
      */
-    public Optional<Output<TaskScheduleGetArgs>> schedule() {
+    public Optional<Output<TaskScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -271,7 +271,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludes(@Nullable Output<TaskExcludesGetArgs> excludes) {
+        public Builder excludes(@Nullable Output<TaskExcludesArgs> excludes) {
             $.excludes = excludes;
             return this;
         }
@@ -282,7 +282,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludes(TaskExcludesGetArgs excludes) {
+        public Builder excludes(TaskExcludesArgs excludes) {
             return excludes(Output.of(excludes));
         }
 
@@ -313,7 +313,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(@Nullable Output<TaskOptionsGetArgs> options) {
+        public Builder options(@Nullable Output<TaskOptionsArgs> options) {
             $.options = options;
             return this;
         }
@@ -324,7 +324,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(TaskOptionsGetArgs options) {
+        public Builder options(TaskOptionsArgs options) {
             return options(Output.of(options));
         }
 
@@ -334,7 +334,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<TaskScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<TaskScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -345,7 +345,7 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(TaskScheduleGetArgs schedule) {
+        public Builder schedule(TaskScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 

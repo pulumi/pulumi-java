@@ -3,13 +3,13 @@
 
 package com.pulumi.aws.lex.inputs;
 
-import com.pulumi.aws.lex.inputs.IntentConclusionStatementGetArgs;
-import com.pulumi.aws.lex.inputs.IntentConfirmationPromptGetArgs;
-import com.pulumi.aws.lex.inputs.IntentDialogCodeHookGetArgs;
-import com.pulumi.aws.lex.inputs.IntentFollowUpPromptGetArgs;
-import com.pulumi.aws.lex.inputs.IntentFulfillmentActivityGetArgs;
-import com.pulumi.aws.lex.inputs.IntentRejectionStatementGetArgs;
-import com.pulumi.aws.lex.inputs.IntentSlotGetArgs;
+import com.pulumi.aws.lex.inputs.IntentConclusionStatementArgs;
+import com.pulumi.aws.lex.inputs.IntentConfirmationPromptArgs;
+import com.pulumi.aws.lex.inputs.IntentDialogCodeHookArgs;
+import com.pulumi.aws.lex.inputs.IntentFollowUpPromptArgs;
+import com.pulumi.aws.lex.inputs.IntentFulfillmentActivityArgs;
+import com.pulumi.aws.lex.inputs.IntentRejectionStatementArgs;
+import com.pulumi.aws.lex.inputs.IntentSlotArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -65,7 +65,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conclusionStatement")
-    private @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement;
+    private @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
 
     /**
      * @return The statement that you want Amazon Lex to convey to the user
@@ -75,7 +75,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
-    public Optional<Output<IntentConclusionStatementGetArgs>> conclusionStatement() {
+    public Optional<Output<IntentConclusionStatementArgs>> conclusionStatement() {
         return Optional.ofNullable(this.conclusionStatement);
     }
 
@@ -86,7 +86,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confirmationPrompt")
-    private @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt;
+    private @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
 
     /**
      * @return Prompts the user to confirm the intent. This question should
@@ -94,7 +94,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * or neither. Attributes are documented under prompt.
      * 
      */
-    public Optional<Output<IntentConfirmationPromptGetArgs>> confirmationPrompt() {
+    public Optional<Output<IntentConfirmationPromptArgs>> confirmationPrompt() {
         return Optional.ofNullable(this.confirmationPrompt);
     }
 
@@ -151,14 +151,14 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dialogCodeHook")
-    private @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook;
+    private @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
 
     /**
      * @return Specifies a Lambda function to invoke for each user input. You can
      * invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
      * 
      */
-    public Optional<Output<IntentDialogCodeHookGetArgs>> dialogCodeHook() {
+    public Optional<Output<IntentDialogCodeHookArgs>> dialogCodeHook() {
         return Optional.ofNullable(this.dialogCodeHook);
     }
 
@@ -170,7 +170,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="followUpPrompt")
-    private @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt;
+    private @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
 
     /**
      * @return Amazon Lex uses this prompt to solicit additional activity after
@@ -179,7 +179,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
      * 
      */
-    public Optional<Output<IntentFollowUpPromptGetArgs>> followUpPrompt() {
+    public Optional<Output<IntentFollowUpPromptArgs>> followUpPrompt() {
         return Optional.ofNullable(this.followUpPrompt);
     }
 
@@ -190,7 +190,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fulfillmentActivity")
-    private @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity;
+    private @Nullable Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
     /**
      * @return Describes how the intent is fulfilled. For example, after a
@@ -198,7 +198,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * places an order with a local pizza store. Attributes are documented under fulfillment_activity.
      * 
      */
-    public Optional<Output<IntentFulfillmentActivityGetArgs>> fulfillmentActivity() {
+    public Optional<Output<IntentFulfillmentActivityArgs>> fulfillmentActivity() {
         return Optional.ofNullable(this.fulfillmentActivity);
     }
 
@@ -260,7 +260,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectionStatement")
-    private @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement;
+    private @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
 
     /**
      * @return If the user answers &#34;no&#34; to the question defined in the prompt field,
@@ -268,7 +268,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * documented below under statement.
      * 
      */
-    public Optional<Output<IntentRejectionStatementGetArgs>> rejectionStatement() {
+    public Optional<Output<IntentRejectionStatementArgs>> rejectionStatement() {
         return Optional.ofNullable(this.rejectionStatement);
     }
 
@@ -297,14 +297,14 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slots")
-    private @Nullable Output<List<IntentSlotGetArgs>> slots;
+    private @Nullable Output<List<IntentSlotArgs>> slots;
 
     /**
      * @return An list of intent slots. At runtime, Amazon Lex elicits required slot values
      * from the user using prompts defined in the slots. Attributes are documented under slot.
      * 
      */
-    public Optional<Output<List<IntentSlotGetArgs>>> slots() {
+    public Optional<Output<List<IntentSlotArgs>>> slots() {
         return Optional.ofNullable(this.slots);
     }
 
@@ -417,7 +417,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement) {
+        public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementArgs> conclusionStatement) {
             $.conclusionStatement = conclusionStatement;
             return this;
         }
@@ -432,7 +432,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conclusionStatement(IntentConclusionStatementGetArgs conclusionStatement) {
+        public Builder conclusionStatement(IntentConclusionStatementArgs conclusionStatement) {
             return conclusionStatement(Output.of(conclusionStatement));
         }
 
@@ -444,7 +444,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt) {
             $.confirmationPrompt = confirmationPrompt;
             return this;
         }
@@ -457,7 +457,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confirmationPrompt(IntentConfirmationPromptGetArgs confirmationPrompt) {
+        public Builder confirmationPrompt(IntentConfirmationPromptArgs confirmationPrompt) {
             return confirmationPrompt(Output.of(confirmationPrompt));
         }
 
@@ -533,7 +533,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook) {
             $.dialogCodeHook = dialogCodeHook;
             return this;
         }
@@ -545,7 +545,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dialogCodeHook(IntentDialogCodeHookGetArgs dialogCodeHook) {
+        public Builder dialogCodeHook(IntentDialogCodeHookArgs dialogCodeHook) {
             return dialogCodeHook(Output.of(dialogCodeHook));
         }
 
@@ -558,7 +558,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt) {
+        public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptArgs> followUpPrompt) {
             $.followUpPrompt = followUpPrompt;
             return this;
         }
@@ -572,7 +572,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder followUpPrompt(IntentFollowUpPromptGetArgs followUpPrompt) {
+        public Builder followUpPrompt(IntentFollowUpPromptArgs followUpPrompt) {
             return followUpPrompt(Output.of(followUpPrompt));
         }
 
@@ -584,7 +584,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fulfillmentActivity(@Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity) {
+        public Builder fulfillmentActivity(@Nullable Output<IntentFulfillmentActivityArgs> fulfillmentActivity) {
             $.fulfillmentActivity = fulfillmentActivity;
             return this;
         }
@@ -597,7 +597,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fulfillmentActivity(IntentFulfillmentActivityGetArgs fulfillmentActivity) {
+        public Builder fulfillmentActivity(IntentFulfillmentActivityArgs fulfillmentActivity) {
             return fulfillmentActivity(Output.of(fulfillmentActivity));
         }
 
@@ -678,7 +678,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement) {
+        public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementArgs> rejectionStatement) {
             $.rejectionStatement = rejectionStatement;
             return this;
         }
@@ -691,7 +691,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rejectionStatement(IntentRejectionStatementGetArgs rejectionStatement) {
+        public Builder rejectionStatement(IntentRejectionStatementArgs rejectionStatement) {
             return rejectionStatement(Output.of(rejectionStatement));
         }
 
@@ -739,7 +739,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder slots(@Nullable Output<List<IntentSlotGetArgs>> slots) {
+        public Builder slots(@Nullable Output<List<IntentSlotArgs>> slots) {
             $.slots = slots;
             return this;
         }
@@ -751,7 +751,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder slots(List<IntentSlotGetArgs> slots) {
+        public Builder slots(List<IntentSlotArgs> slots) {
             return slots(Output.of(slots));
         }
 
@@ -762,7 +762,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder slots(IntentSlotGetArgs... slots) {
+        public Builder slots(IntentSlotArgs... slots) {
             return slots(List.of(slots));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.networkfirewall.inputs;
 
-import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationGetArgs;
+import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="loggingConfiguration")
-    private @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
     /**
      * @return A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
      * 
      */
-    public Optional<Output<LoggingConfigurationLoggingConfigurationGetArgs>> loggingConfiguration() {
+    public Optional<Output<LoggingConfigurationLoggingConfigurationArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
 
@@ -98,7 +98,7 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
@@ -109,7 +109,7 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionGetArgs;
+import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,9 +32,9 @@ public final class AttestorIamMemberState extends com.pulumi.resources.ResourceA
     }
 
     @Import(name="condition")
-    private @Nullable Output<AttestorIamMemberConditionGetArgs> condition;
+    private @Nullable Output<AttestorIamMemberConditionArgs> condition;
 
-    public Optional<Output<AttestorIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<AttestorIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -146,12 +146,12 @@ public final class AttestorIamMemberState extends com.pulumi.resources.ResourceA
             return attestor(Output.of(attestor));
         }
 
-        public Builder condition(@Nullable Output<AttestorIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<AttestorIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(AttestorIamMemberConditionGetArgs condition) {
+        public Builder condition(AttestorIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

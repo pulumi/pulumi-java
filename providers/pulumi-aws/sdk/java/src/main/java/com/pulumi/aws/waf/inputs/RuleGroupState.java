@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.RuleGroupActivatedRuleGetArgs;
+import com.pulumi.aws.waf.inputs.RuleGroupActivatedRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -23,13 +23,13 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activatedRules")
-    private @Nullable Output<List<RuleGroupActivatedRuleGetArgs>> activatedRules;
+    private @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules;
 
     /**
      * @return A list of activated rules, see below
      * 
      */
-    public Optional<Output<List<RuleGroupActivatedRuleGetArgs>>> activatedRules() {
+    public Optional<Output<List<RuleGroupActivatedRuleArgs>>> activatedRules() {
         return Optional.ofNullable(this.activatedRules);
     }
 
@@ -143,7 +143,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder activatedRules(@Nullable Output<List<RuleGroupActivatedRuleGetArgs>> activatedRules) {
+        public Builder activatedRules(@Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules) {
             $.activatedRules = activatedRules;
             return this;
         }
@@ -154,7 +154,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder activatedRules(List<RuleGroupActivatedRuleGetArgs> activatedRules) {
+        public Builder activatedRules(List<RuleGroupActivatedRuleArgs> activatedRules) {
             return activatedRules(Output.of(activatedRules));
         }
 
@@ -164,7 +164,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder activatedRules(RuleGroupActivatedRuleGetArgs... activatedRules) {
+        public Builder activatedRules(RuleGroupActivatedRuleArgs... activatedRules) {
             return activatedRules(List.of(activatedRules));
         }
 

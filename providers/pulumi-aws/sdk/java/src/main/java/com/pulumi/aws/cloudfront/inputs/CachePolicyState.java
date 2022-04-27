@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs;
+import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -112,13 +112,13 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parametersInCacheKeyAndForwardedToOrigin")
-    private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
+    private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     /**
      * @return The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
      */
-    public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs>> parametersInCacheKeyAndForwardedToOrigin() {
+    public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs>> parametersInCacheKeyAndForwardedToOrigin() {
         return Optional.ofNullable(this.parametersInCacheKeyAndForwardedToOrigin);
     }
 
@@ -284,7 +284,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
             $.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
@@ -295,7 +295,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
             return parametersInCacheKeyAndForwardedToOrigin(Output.of(parametersInCacheKeyAndForwardedToOrigin));
         }
 

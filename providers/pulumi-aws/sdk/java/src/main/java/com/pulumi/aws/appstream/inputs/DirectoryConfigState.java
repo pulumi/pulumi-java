@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appstream.inputs;
 
-import com.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsGetArgs;
+import com.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceAccountCredentials")
-    private @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+    private @Nullable Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
     /**
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See `service_account_credentials` below.
      * 
      */
-    public Optional<Output<DirectoryConfigServiceAccountCredentialsGetArgs>> serviceAccountCredentials() {
+    public Optional<Output<DirectoryConfigServiceAccountCredentialsArgs>> serviceAccountCredentials() {
         return Optional.ofNullable(this.serviceAccountCredentials);
     }
 
@@ -183,7 +183,7 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder serviceAccountCredentials(@Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(@Nullable Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
             $.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
@@ -194,7 +194,7 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
             return serviceAccountCredentials(Output.of(serviceAccountCredentials));
         }
 

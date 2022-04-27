@@ -5,10 +5,10 @@ package com.pulumi.gcp.redis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyGetArgs;
-import com.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleGetArgs;
-import com.pulumi.gcp.redis.inputs.InstanceNodeGetArgs;
-import com.pulumi.gcp.redis.inputs.InstanceServerCaCertGetArgs;
+import com.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyArgs;
+import com.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleArgs;
+import com.pulumi.gcp.redis.inputs.InstanceNodeArgs;
+import com.pulumi.gcp.redis.inputs.InstanceServerCaCertArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -230,14 +230,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenancePolicy")
-    private @Nullable Output<InstanceMaintenancePolicyGetArgs> maintenancePolicy;
+    private @Nullable Output<InstanceMaintenancePolicyArgs> maintenancePolicy;
 
     /**
      * @return Maintenance policy for an instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceMaintenancePolicyGetArgs>> maintenancePolicy() {
+    public Optional<Output<InstanceMaintenancePolicyArgs>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
 
@@ -247,14 +247,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceSchedule")
-    private @Nullable Output<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule;
+    private @Nullable Output<InstanceMaintenanceScheduleArgs> maintenanceSchedule;
 
     /**
      * @return Upcoming maintenance schedule.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceMaintenanceScheduleGetArgs>> maintenanceSchedule() {
+    public Optional<Output<InstanceMaintenanceScheduleArgs>> maintenanceSchedule() {
         return Optional.ofNullable(this.maintenanceSchedule);
     }
 
@@ -293,13 +293,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodes")
-    private @Nullable Output<List<InstanceNodeGetArgs>> nodes;
+    private @Nullable Output<List<InstanceNodeArgs>> nodes;
 
     /**
      * @return Output only. Info per node.
      * 
      */
-    public Optional<Output<List<InstanceNodeGetArgs>>> nodes() {
+    public Optional<Output<List<InstanceNodeArgs>>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
 
@@ -513,13 +513,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverCaCerts")
-    private @Nullable Output<List<InstanceServerCaCertGetArgs>> serverCaCerts;
+    private @Nullable Output<List<InstanceServerCaCertArgs>> serverCaCerts;
 
     /**
      * @return List of server CA certificates for the instance.
      * 
      */
-    public Optional<Output<List<InstanceServerCaCertGetArgs>>> serverCaCerts() {
+    public Optional<Output<List<InstanceServerCaCertArgs>>> serverCaCerts() {
         return Optional.ofNullable(this.serverCaCerts);
     }
 
@@ -894,7 +894,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenancePolicy(@Nullable Output<InstanceMaintenancePolicyGetArgs> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<InstanceMaintenancePolicyArgs> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
@@ -906,7 +906,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenancePolicy(InstanceMaintenancePolicyGetArgs maintenancePolicy) {
+        public Builder maintenancePolicy(InstanceMaintenancePolicyArgs maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
@@ -917,7 +917,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceSchedule(@Nullable Output<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule) {
+        public Builder maintenanceSchedule(@Nullable Output<InstanceMaintenanceScheduleArgs> maintenanceSchedule) {
             $.maintenanceSchedule = maintenanceSchedule;
             return this;
         }
@@ -929,7 +929,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceSchedule(InstanceMaintenanceScheduleGetArgs maintenanceSchedule) {
+        public Builder maintenanceSchedule(InstanceMaintenanceScheduleArgs maintenanceSchedule) {
             return maintenanceSchedule(Output.of(maintenanceSchedule));
         }
 
@@ -981,7 +981,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(@Nullable Output<List<InstanceNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Output<List<InstanceNodeArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
@@ -992,7 +992,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(List<InstanceNodeGetArgs> nodes) {
+        public Builder nodes(List<InstanceNodeArgs> nodes) {
             return nodes(Output.of(nodes));
         }
 
@@ -1002,7 +1002,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodes(InstanceNodeGetArgs... nodes) {
+        public Builder nodes(InstanceNodeArgs... nodes) {
             return nodes(List.of(nodes));
         }
 
@@ -1283,7 +1283,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverCaCerts(@Nullable Output<List<InstanceServerCaCertGetArgs>> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable Output<List<InstanceServerCaCertArgs>> serverCaCerts) {
             $.serverCaCerts = serverCaCerts;
             return this;
         }
@@ -1294,7 +1294,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverCaCerts(List<InstanceServerCaCertGetArgs> serverCaCerts) {
+        public Builder serverCaCerts(List<InstanceServerCaCertArgs> serverCaCerts) {
             return serverCaCerts(Output.of(serverCaCerts));
         }
 
@@ -1304,7 +1304,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverCaCerts(InstanceServerCaCertGetArgs... serverCaCerts) {
+        public Builder serverCaCerts(InstanceServerCaCertArgs... serverCaCerts) {
             return serverCaCerts(List.of(serverCaCerts));
         }
 

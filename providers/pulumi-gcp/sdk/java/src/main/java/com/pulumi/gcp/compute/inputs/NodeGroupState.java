@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowGetArgs;
+import com.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyArgs;
+import com.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-    private @Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
+    private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
     /**
      * @return If you use sole-tenant nodes for your workloads, you can use the node
@@ -33,7 +33,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NodeGroupAutoscalingPolicyGetArgs>> autoscalingPolicy() {
+    public Optional<Output<NodeGroupAutoscalingPolicyArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
 
@@ -103,14 +103,14 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-    private @Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
+    private @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
     /**
      * @return contains properties for the timeframe of maintenance
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NodeGroupMaintenanceWindowGetArgs>> maintenanceWindow() {
+    public Optional<Output<NodeGroupMaintenanceWindowArgs>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
 
@@ -249,7 +249,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
@@ -262,7 +262,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
+        public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
@@ -357,7 +357,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
@@ -369,7 +369,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maintenanceWindow(NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
+        public Builder maintenanceWindow(NodeGroupMaintenanceWindowArgs maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 

@@ -3,16 +3,16 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.DistributionCustomErrorResponseGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionLoggingConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionOriginGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionOriginGroupGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionRestrictionsGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerGetArgs;
-import com.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateGetArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionCustomErrorResponseArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionLoggingConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionOriginArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionOriginGroupArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionRestrictionsArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerArgs;
+import com.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -100,13 +100,13 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customErrorResponses")
-    private @Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
+    private @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
     /**
      * @return One or more custom error response elements (multiples allowed).
      * 
      */
-    public Optional<Output<List<DistributionCustomErrorResponseGetArgs>>> customErrorResponses() {
+    public Optional<Output<List<DistributionCustomErrorResponseArgs>>> customErrorResponses() {
         return Optional.ofNullable(this.customErrorResponses);
     }
 
@@ -116,14 +116,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultCacheBehavior")
-    private @Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
+    private @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
     /**
      * @return The default cache behavior for this distribution (maximum
      * one).
      * 
      */
-    public Optional<Output<DistributionDefaultCacheBehaviorGetArgs>> defaultCacheBehavior() {
+    public Optional<Output<DistributionDefaultCacheBehaviorArgs>> defaultCacheBehavior() {
         return Optional.ofNullable(this.defaultCacheBehavior);
     }
 
@@ -285,7 +285,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfig")
-    private @Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<DistributionLoggingConfigArgs> loggingConfig;
 
     /**
      * @return The logging
@@ -293,7 +293,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * to your distribution (maximum one).
      * 
      */
-    public Optional<Output<DistributionLoggingConfigGetArgs>> loggingConfig() {
+    public Optional<Output<DistributionLoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
 
@@ -304,7 +304,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orderedCacheBehaviors")
-    private @Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
+    private @Nullable Output<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors;
 
     /**
      * @return An ordered list of cache behaviors
@@ -312,7 +312,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * in order of precedence. The topmost cache behavior will have precedence 0.
      * 
      */
-    public Optional<Output<List<DistributionOrderedCacheBehaviorGetArgs>>> orderedCacheBehaviors() {
+    public Optional<Output<List<DistributionOrderedCacheBehaviorArgs>>> orderedCacheBehaviors() {
         return Optional.ofNullable(this.orderedCacheBehaviors);
     }
 
@@ -322,14 +322,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originGroups")
-    private @Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups;
+    private @Nullable Output<List<DistributionOriginGroupArgs>> originGroups;
 
     /**
      * @return One or more origin_group for this
      * distribution (multiples allowed).
      * 
      */
-    public Optional<Output<List<DistributionOriginGroupGetArgs>>> originGroups() {
+    public Optional<Output<List<DistributionOriginGroupArgs>>> originGroups() {
         return Optional.ofNullable(this.originGroups);
     }
 
@@ -339,14 +339,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="origins")
-    private @Nullable Output<List<DistributionOriginGetArgs>> origins;
+    private @Nullable Output<List<DistributionOriginArgs>> origins;
 
     /**
      * @return One or more origins for this
      * distribution (multiples allowed).
      * 
      */
-    public Optional<Output<List<DistributionOriginGetArgs>>> origins() {
+    public Optional<Output<List<DistributionOriginArgs>>> origins() {
         return Optional.ofNullable(this.origins);
     }
 
@@ -373,14 +373,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restrictions")
-    private @Nullable Output<DistributionRestrictionsGetArgs> restrictions;
+    private @Nullable Output<DistributionRestrictionsArgs> restrictions;
 
     /**
      * @return The restriction
      * configuration for this distribution (maximum one).
      * 
      */
-    public Optional<Output<DistributionRestrictionsGetArgs>> restrictions() {
+    public Optional<Output<DistributionRestrictionsArgs>> restrictions() {
         return Optional.ofNullable(this.restrictions);
     }
 
@@ -458,14 +458,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustedKeyGroups")
-    private @Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
+    private @Nullable Output<List<DistributionTrustedKeyGroupArgs>> trustedKeyGroups;
 
     /**
      * @return A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    public Optional<Output<List<DistributionTrustedKeyGroupGetArgs>>> trustedKeyGroups() {
+    public Optional<Output<List<DistributionTrustedKeyGroupArgs>>> trustedKeyGroups() {
         return Optional.ofNullable(this.trustedKeyGroups);
     }
 
@@ -475,14 +475,14 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustedSigners")
-    private @Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners;
+    private @Nullable Output<List<DistributionTrustedSignerArgs>> trustedSigners;
 
     /**
      * @return List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    public Optional<Output<List<DistributionTrustedSignerGetArgs>>> trustedSigners() {
+    public Optional<Output<List<DistributionTrustedSignerArgs>>> trustedSigners() {
         return Optional.ofNullable(this.trustedSigners);
     }
 
@@ -493,7 +493,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="viewerCertificate")
-    private @Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate;
+    private @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
 
     /**
      * @return The SSL
@@ -501,7 +501,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
      * one).
      * 
      */
-    public Optional<Output<DistributionViewerCertificateGetArgs>> viewerCertificate() {
+    public Optional<Output<DistributionViewerCertificateArgs>> viewerCertificate() {
         return Optional.ofNullable(this.viewerCertificate);
     }
 
@@ -711,7 +711,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses) {
+        public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses) {
             $.customErrorResponses = customErrorResponses;
             return this;
         }
@@ -722,7 +722,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customErrorResponses(List<DistributionCustomErrorResponseGetArgs> customErrorResponses) {
+        public Builder customErrorResponses(List<DistributionCustomErrorResponseArgs> customErrorResponses) {
             return customErrorResponses(Output.of(customErrorResponses));
         }
 
@@ -732,7 +732,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customErrorResponses(DistributionCustomErrorResponseGetArgs... customErrorResponses) {
+        public Builder customErrorResponses(DistributionCustomErrorResponseArgs... customErrorResponses) {
             return customErrorResponses(List.of(customErrorResponses));
         }
 
@@ -743,7 +743,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior) {
             $.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
@@ -755,7 +755,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultCacheBehavior(DistributionDefaultCacheBehaviorGetArgs defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
             return defaultCacheBehavior(Output.of(defaultCacheBehavior));
         }
 
@@ -972,7 +972,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfig(@Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<DistributionLoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
@@ -985,7 +985,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfig(DistributionLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(DistributionLoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
@@ -997,7 +997,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedCacheBehaviors(@Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(@Nullable Output<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors) {
             $.orderedCacheBehaviors = orderedCacheBehaviors;
             return this;
         }
@@ -1010,7 +1010,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedCacheBehaviors(List<DistributionOrderedCacheBehaviorGetArgs> orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(List<DistributionOrderedCacheBehaviorArgs> orderedCacheBehaviors) {
             return orderedCacheBehaviors(Output.of(orderedCacheBehaviors));
         }
 
@@ -1022,7 +1022,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedCacheBehaviors(DistributionOrderedCacheBehaviorGetArgs... orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(DistributionOrderedCacheBehaviorArgs... orderedCacheBehaviors) {
             return orderedCacheBehaviors(List.of(orderedCacheBehaviors));
         }
 
@@ -1033,7 +1033,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder originGroups(@Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups) {
+        public Builder originGroups(@Nullable Output<List<DistributionOriginGroupArgs>> originGroups) {
             $.originGroups = originGroups;
             return this;
         }
@@ -1045,7 +1045,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder originGroups(List<DistributionOriginGroupGetArgs> originGroups) {
+        public Builder originGroups(List<DistributionOriginGroupArgs> originGroups) {
             return originGroups(Output.of(originGroups));
         }
 
@@ -1056,7 +1056,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder originGroups(DistributionOriginGroupGetArgs... originGroups) {
+        public Builder originGroups(DistributionOriginGroupArgs... originGroups) {
             return originGroups(List.of(originGroups));
         }
 
@@ -1067,7 +1067,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder origins(@Nullable Output<List<DistributionOriginGetArgs>> origins) {
+        public Builder origins(@Nullable Output<List<DistributionOriginArgs>> origins) {
             $.origins = origins;
             return this;
         }
@@ -1079,7 +1079,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder origins(List<DistributionOriginGetArgs> origins) {
+        public Builder origins(List<DistributionOriginArgs> origins) {
             return origins(Output.of(origins));
         }
 
@@ -1090,7 +1090,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder origins(DistributionOriginGetArgs... origins) {
+        public Builder origins(DistributionOriginArgs... origins) {
             return origins(List.of(origins));
         }
 
@@ -1124,7 +1124,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restrictions(@Nullable Output<DistributionRestrictionsGetArgs> restrictions) {
+        public Builder restrictions(@Nullable Output<DistributionRestrictionsArgs> restrictions) {
             $.restrictions = restrictions;
             return this;
         }
@@ -1136,7 +1136,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restrictions(DistributionRestrictionsGetArgs restrictions) {
+        public Builder restrictions(DistributionRestrictionsArgs restrictions) {
             return restrictions(Output.of(restrictions));
         }
 
@@ -1239,7 +1239,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedKeyGroups(@Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable Output<List<DistributionTrustedKeyGroupArgs>> trustedKeyGroups) {
             $.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
@@ -1251,7 +1251,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedKeyGroups(List<DistributionTrustedKeyGroupGetArgs> trustedKeyGroups) {
+        public Builder trustedKeyGroups(List<DistributionTrustedKeyGroupArgs> trustedKeyGroups) {
             return trustedKeyGroups(Output.of(trustedKeyGroups));
         }
 
@@ -1262,7 +1262,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedKeyGroups(DistributionTrustedKeyGroupGetArgs... trustedKeyGroups) {
+        public Builder trustedKeyGroups(DistributionTrustedKeyGroupArgs... trustedKeyGroups) {
             return trustedKeyGroups(List.of(trustedKeyGroups));
         }
 
@@ -1273,7 +1273,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedSigners(@Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners) {
+        public Builder trustedSigners(@Nullable Output<List<DistributionTrustedSignerArgs>> trustedSigners) {
             $.trustedSigners = trustedSigners;
             return this;
         }
@@ -1285,7 +1285,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedSigners(List<DistributionTrustedSignerGetArgs> trustedSigners) {
+        public Builder trustedSigners(List<DistributionTrustedSignerArgs> trustedSigners) {
             return trustedSigners(Output.of(trustedSigners));
         }
 
@@ -1296,7 +1296,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trustedSigners(DistributionTrustedSignerGetArgs... trustedSigners) {
+        public Builder trustedSigners(DistributionTrustedSignerArgs... trustedSigners) {
             return trustedSigners(List.of(trustedSigners));
         }
 
@@ -1308,7 +1308,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate) {
+        public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateArgs> viewerCertificate) {
             $.viewerCertificate = viewerCertificate;
             return this;
         }
@@ -1321,7 +1321,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder viewerCertificate(DistributionViewerCertificateGetArgs viewerCertificate) {
+        public Builder viewerCertificate(DistributionViewerCertificateArgs viewerCertificate) {
             return viewerCertificate(Output.of(viewerCertificate));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpcIpamPoolCidrCidrAuthorizationContextGetArgs;
+import com.pulumi.aws.ec2.inputs.VpcIpamPoolCidrCidrAuthorizationContextArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cidrAuthorizationContext")
-    private @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext;
+    private @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext;
 
     /**
      * @return A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
      * 
      */
-    public Optional<Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs>> cidrAuthorizationContext() {
+    public Optional<Output<VpcIpamPoolCidrCidrAuthorizationContextArgs>> cidrAuthorizationContext() {
         return Optional.ofNullable(this.cidrAuthorizationContext);
     }
 
@@ -114,7 +114,7 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder cidrAuthorizationContext(@Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext) {
+        public Builder cidrAuthorizationContext(@Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext) {
             $.cidrAuthorizationContext = cidrAuthorizationContext;
             return this;
         }
@@ -125,7 +125,7 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder cidrAuthorizationContext(VpcIpamPoolCidrCidrAuthorizationContextGetArgs cidrAuthorizationContext) {
+        public Builder cidrAuthorizationContext(VpcIpamPoolCidrCidrAuthorizationContextArgs cidrAuthorizationContext) {
             return cidrAuthorizationContext(Output.of(cidrAuthorizationContext));
         }
 

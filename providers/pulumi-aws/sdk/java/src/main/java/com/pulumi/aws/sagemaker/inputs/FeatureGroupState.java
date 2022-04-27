@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.FeatureGroupFeatureDefinitionGetArgs;
-import com.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.FeatureGroupFeatureDefinitionArgs;
+import com.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -70,13 +70,13 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureDefinitions")
-    private @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
+    private @Nullable Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
     /**
      * @return A list of Feature names and types. See Feature Definition Below.
      * 
      */
-    public Optional<Output<List<FeatureGroupFeatureDefinitionGetArgs>>> featureDefinitions() {
+    public Optional<Output<List<FeatureGroupFeatureDefinitionArgs>>> featureDefinitions() {
         return Optional.ofNullable(this.featureDefinitions);
     }
 
@@ -100,13 +100,13 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="offlineStoreConfig")
-    private @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
+    private @Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
 
     /**
      * @return The Offline Feature Store Configuration. See Offline Store Config Below.
      * 
      */
-    public Optional<Output<FeatureGroupOfflineStoreConfigGetArgs>> offlineStoreConfig() {
+    public Optional<Output<FeatureGroupOfflineStoreConfigArgs>> offlineStoreConfig() {
         return Optional.ofNullable(this.offlineStoreConfig);
     }
 
@@ -115,13 +115,13 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onlineStoreConfig")
-    private @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
+    private @Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
 
     /**
      * @return The Online Feature Store Configuration. See Online Store Config Below.
      * 
      */
-    public Optional<Output<FeatureGroupOnlineStoreConfigGetArgs>> onlineStoreConfig() {
+    public Optional<Output<FeatureGroupOnlineStoreConfigArgs>> onlineStoreConfig() {
         return Optional.ofNullable(this.onlineStoreConfig);
     }
 
@@ -288,7 +288,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder featureDefinitions(@Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
+        public Builder featureDefinitions(@Nullable Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
             $.featureDefinitions = featureDefinitions;
             return this;
         }
@@ -299,7 +299,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
+        public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
             return featureDefinitions(Output.of(featureDefinitions));
         }
 
@@ -309,7 +309,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder featureDefinitions(FeatureGroupFeatureDefinitionGetArgs... featureDefinitions) {
+        public Builder featureDefinitions(FeatureGroupFeatureDefinitionArgs... featureDefinitions) {
             return featureDefinitions(List.of(featureDefinitions));
         }
 
@@ -340,7 +340,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig) {
             $.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
@@ -351,7 +351,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder offlineStoreConfig(FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
+        public Builder offlineStoreConfig(FeatureGroupOfflineStoreConfigArgs offlineStoreConfig) {
             return offlineStoreConfig(Output.of(offlineStoreConfig));
         }
 
@@ -361,7 +361,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig) {
             $.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
@@ -372,7 +372,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onlineStoreConfig(FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
+        public Builder onlineStoreConfig(FeatureGroupOnlineStoreConfigArgs onlineStoreConfig) {
             return onlineStoreConfig(Output.of(onlineStoreConfig));
         }
 

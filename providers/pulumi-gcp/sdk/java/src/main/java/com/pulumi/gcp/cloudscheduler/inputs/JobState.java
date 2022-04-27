@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudscheduler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetGetArgs;
-import com.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetGetArgs;
-import com.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetGetArgs;
-import com.pulumi.gcp.cloudscheduler.inputs.JobRetryConfigGetArgs;
+import com.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetArgs;
+import com.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetArgs;
+import com.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetArgs;
+import com.pulumi.gcp.cloudscheduler.inputs.JobRetryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineHttpTarget")
-    private @Nullable Output<JobAppEngineHttpTargetGetArgs> appEngineHttpTarget;
+    private @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
     /**
      * @return App Engine HTTP target.
@@ -36,7 +36,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobAppEngineHttpTargetGetArgs>> appEngineHttpTarget() {
+    public Optional<Output<JobAppEngineHttpTargetArgs>> appEngineHttpTarget() {
         return Optional.ofNullable(this.appEngineHttpTarget);
     }
 
@@ -94,7 +94,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpTarget")
-    private @Nullable Output<JobHttpTargetGetArgs> httpTarget;
+    private @Nullable Output<JobHttpTargetArgs> httpTarget;
 
     /**
      * @return HTTP target.
@@ -103,7 +103,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobHttpTargetGetArgs>> httpTarget() {
+    public Optional<Output<JobHttpTargetArgs>> httpTarget() {
         return Optional.ofNullable(this.httpTarget);
     }
 
@@ -147,7 +147,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubTarget")
-    private @Nullable Output<JobPubsubTargetGetArgs> pubsubTarget;
+    private @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
 
     /**
      * @return Pub/Sub target
@@ -156,7 +156,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobPubsubTargetGetArgs>> pubsubTarget() {
+    public Optional<Output<JobPubsubTargetArgs>> pubsubTarget() {
         return Optional.ofNullable(this.pubsubTarget);
     }
 
@@ -183,7 +183,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryConfig")
-    private @Nullable Output<JobRetryConfigGetArgs> retryConfig;
+    private @Nullable Output<JobRetryConfigArgs> retryConfig;
 
     /**
      * @return By default, if a job does not complete successfully,
@@ -192,7 +192,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobRetryConfigGetArgs>> retryConfig() {
+    public Optional<Output<JobRetryConfigArgs>> retryConfig() {
         return Optional.ofNullable(this.retryConfig);
     }
 
@@ -271,7 +271,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appEngineHttpTarget(@Nullable Output<JobAppEngineHttpTargetGetArgs> appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
             $.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
@@ -285,7 +285,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appEngineHttpTarget(JobAppEngineHttpTargetGetArgs appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(JobAppEngineHttpTargetArgs appEngineHttpTarget) {
             return appEngineHttpTarget(Output.of(appEngineHttpTarget));
         }
 
@@ -356,7 +356,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpTarget(@Nullable Output<JobHttpTargetGetArgs> httpTarget) {
+        public Builder httpTarget(@Nullable Output<JobHttpTargetArgs> httpTarget) {
             $.httpTarget = httpTarget;
             return this;
         }
@@ -370,7 +370,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpTarget(JobHttpTargetGetArgs httpTarget) {
+        public Builder httpTarget(JobHttpTargetArgs httpTarget) {
             return httpTarget(Output.of(httpTarget));
         }
 
@@ -427,7 +427,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubTarget(@Nullable Output<JobPubsubTargetGetArgs> pubsubTarget) {
+        public Builder pubsubTarget(@Nullable Output<JobPubsubTargetArgs> pubsubTarget) {
             $.pubsubTarget = pubsubTarget;
             return this;
         }
@@ -441,7 +441,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubTarget(JobPubsubTargetGetArgs pubsubTarget) {
+        public Builder pubsubTarget(JobPubsubTargetArgs pubsubTarget) {
             return pubsubTarget(Output.of(pubsubTarget));
         }
 
@@ -475,7 +475,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryConfig(@Nullable Output<JobRetryConfigGetArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Output<JobRetryConfigArgs> retryConfig) {
             $.retryConfig = retryConfig;
             return this;
         }
@@ -489,7 +489,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryConfig(JobRetryConfigGetArgs retryConfig) {
+        public Builder retryConfig(JobRetryConfigArgs retryConfig) {
             return retryConfig(Output.of(retryConfig));
         }
 

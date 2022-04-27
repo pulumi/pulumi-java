@@ -5,8 +5,8 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.FhirStoreNotificationConfigGetArgs;
-import com.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigGetArgs;
+import com.pulumi.gcp.healthcare.inputs.FhirStoreNotificationConfigArgs;
+import com.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -189,14 +189,14 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-    private @Nullable Output<FhirStoreNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FhirStoreNotificationConfigGetArgs>> notificationConfig() {
+    public Optional<Output<FhirStoreNotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
 
@@ -226,7 +226,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamConfigs")
-    private @Nullable Output<List<FhirStoreStreamConfigGetArgs>> streamConfigs;
+    private @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
 
     /**
      * @return A list of streaming configs that configure the destinations of streaming export for every resource mutation in
@@ -238,7 +238,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<FhirStoreStreamConfigGetArgs>>> streamConfigs() {
+    public Optional<Output<List<FhirStoreStreamConfigArgs>>> streamConfigs() {
         return Optional.ofNullable(this.streamConfigs);
     }
 
@@ -507,7 +507,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
@@ -519,7 +519,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(FhirStoreNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(FhirStoreNotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
@@ -556,7 +556,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigGetArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs) {
             $.streamConfigs = streamConfigs;
             return this;
         }
@@ -573,7 +573,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(List<FhirStoreStreamConfigGetArgs> streamConfigs) {
+        public Builder streamConfigs(List<FhirStoreStreamConfigArgs> streamConfigs) {
             return streamConfigs(Output.of(streamConfigs));
         }
 
@@ -589,7 +589,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(FhirStoreStreamConfigGetArgs... streamConfigs) {
+        public Builder streamConfigs(FhirStoreStreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
         }
 

@@ -4,11 +4,11 @@
 package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.aws.route53.enums.RecordType;
-import com.pulumi.aws.route53.inputs.RecordAliasGetArgs;
-import com.pulumi.aws.route53.inputs.RecordFailoverRoutingPolicyGetArgs;
-import com.pulumi.aws.route53.inputs.RecordGeolocationRoutingPolicyGetArgs;
-import com.pulumi.aws.route53.inputs.RecordLatencyRoutingPolicyGetArgs;
-import com.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyGetArgs;
+import com.pulumi.aws.route53.inputs.RecordAliasArgs;
+import com.pulumi.aws.route53.inputs.RecordFailoverRoutingPolicyArgs;
+import com.pulumi.aws.route53.inputs.RecordGeolocationRoutingPolicyArgs;
+import com.pulumi.aws.route53.inputs.RecordLatencyRoutingPolicyArgs;
+import com.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -31,14 +31,14 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aliases")
-    private @Nullable Output<List<RecordAliasGetArgs>> aliases;
+    private @Nullable Output<List<RecordAliasArgs>> aliases;
 
     /**
      * @return An alias block. Conflicts with `ttl` &amp; `records`.
      * Alias record documented below.
      * 
      */
-    public Optional<Output<List<RecordAliasGetArgs>>> aliases() {
+    public Optional<Output<List<RecordAliasArgs>>> aliases() {
         return Optional.ofNullable(this.aliases);
     }
 
@@ -62,13 +62,13 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failoverRoutingPolicies")
-    private @Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies;
+    private @Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
 
     /**
      * @return A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Optional<Output<List<RecordFailoverRoutingPolicyGetArgs>>> failoverRoutingPolicies() {
+    public Optional<Output<List<RecordFailoverRoutingPolicyArgs>>> failoverRoutingPolicies() {
         return Optional.ofNullable(this.failoverRoutingPolicies);
     }
 
@@ -92,13 +92,13 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="geolocationRoutingPolicies")
-    private @Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies;
+    private @Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
 
     /**
      * @return A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Optional<Output<List<RecordGeolocationRoutingPolicyGetArgs>>> geolocationRoutingPolicies() {
+    public Optional<Output<List<RecordGeolocationRoutingPolicyArgs>>> geolocationRoutingPolicies() {
         return Optional.ofNullable(this.geolocationRoutingPolicies);
     }
 
@@ -122,13 +122,13 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latencyRoutingPolicies")
-    private @Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies;
+    private @Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
 
     /**
      * @return A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Optional<Output<List<RecordLatencyRoutingPolicyGetArgs>>> latencyRoutingPolicies() {
+    public Optional<Output<List<RecordLatencyRoutingPolicyArgs>>> latencyRoutingPolicies() {
         return Optional.ofNullable(this.latencyRoutingPolicies);
     }
 
@@ -227,13 +227,13 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weightedRoutingPolicies")
-    private @Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies;
+    private @Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
 
     /**
      * @return A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Optional<Output<List<RecordWeightedRoutingPolicyGetArgs>>> weightedRoutingPolicies() {
+    public Optional<Output<List<RecordWeightedRoutingPolicyArgs>>> weightedRoutingPolicies() {
         return Optional.ofNullable(this.weightedRoutingPolicies);
     }
 
@@ -297,7 +297,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder aliases(@Nullable Output<List<RecordAliasGetArgs>> aliases) {
+        public Builder aliases(@Nullable Output<List<RecordAliasArgs>> aliases) {
             $.aliases = aliases;
             return this;
         }
@@ -309,7 +309,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder aliases(List<RecordAliasGetArgs> aliases) {
+        public Builder aliases(List<RecordAliasArgs> aliases) {
             return aliases(Output.of(aliases));
         }
 
@@ -320,7 +320,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder aliases(RecordAliasGetArgs... aliases) {
+        public Builder aliases(RecordAliasArgs... aliases) {
             return aliases(List.of(aliases));
         }
 
@@ -351,7 +351,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies) {
+        public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies) {
             $.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
@@ -362,7 +362,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder failoverRoutingPolicies(List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
+        public Builder failoverRoutingPolicies(List<RecordFailoverRoutingPolicyArgs> failoverRoutingPolicies) {
             return failoverRoutingPolicies(Output.of(failoverRoutingPolicies));
         }
 
@@ -372,7 +372,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyGetArgs... failoverRoutingPolicies) {
+        public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyArgs... failoverRoutingPolicies) {
             return failoverRoutingPolicies(List.of(failoverRoutingPolicies));
         }
 
@@ -403,7 +403,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies) {
+        public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies) {
             $.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
@@ -414,7 +414,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geolocationRoutingPolicies(List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
+        public Builder geolocationRoutingPolicies(List<RecordGeolocationRoutingPolicyArgs> geolocationRoutingPolicies) {
             return geolocationRoutingPolicies(Output.of(geolocationRoutingPolicies));
         }
 
@@ -424,7 +424,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyGetArgs... geolocationRoutingPolicies) {
+        public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyArgs... geolocationRoutingPolicies) {
             return geolocationRoutingPolicies(List.of(geolocationRoutingPolicies));
         }
 
@@ -455,7 +455,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies) {
+        public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies) {
             $.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
@@ -466,7 +466,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder latencyRoutingPolicies(List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
+        public Builder latencyRoutingPolicies(List<RecordLatencyRoutingPolicyArgs> latencyRoutingPolicies) {
             return latencyRoutingPolicies(Output.of(latencyRoutingPolicies));
         }
 
@@ -476,7 +476,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyGetArgs... latencyRoutingPolicies) {
+        public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyArgs... latencyRoutingPolicies) {
             return latencyRoutingPolicies(List.of(latencyRoutingPolicies));
         }
 
@@ -642,7 +642,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies) {
+        public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies) {
             $.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
@@ -653,7 +653,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder weightedRoutingPolicies(List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
+        public Builder weightedRoutingPolicies(List<RecordWeightedRoutingPolicyArgs> weightedRoutingPolicies) {
             return weightedRoutingPolicies(Output.of(weightedRoutingPolicies));
         }
 
@@ -663,7 +663,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyGetArgs... weightedRoutingPolicies) {
+        public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyArgs... weightedRoutingPolicies) {
             return weightedRoutingPolicies(List.of(weightedRoutingPolicies));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesGetArgs;
+import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -51,13 +51,13 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionEntities")
-    private @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
+    private @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
     /**
      * @return The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    public Optional<Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs>> encryptionEntities() {
+    public Optional<Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs>> encryptionEntities() {
         return Optional.ofNullable(this.encryptionEntities);
     }
 
@@ -167,7 +167,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder encryptionEntities(@Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities) {
+        public Builder encryptionEntities(@Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
             $.encryptionEntities = encryptionEntities;
             return this;
         }
@@ -178,7 +178,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
+        public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesArgs encryptionEntities) {
             return encryptionEntities(Output.of(encryptionEntities));
         }
 

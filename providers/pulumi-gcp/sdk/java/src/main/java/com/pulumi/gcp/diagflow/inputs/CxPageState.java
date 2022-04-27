@@ -5,10 +5,10 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxPageEventHandlerGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxPageFormGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentArgs;
+import com.pulumi.gcp.diagflow.inputs.CxPageEventHandlerArgs;
+import com.pulumi.gcp.diagflow.inputs.CxPageFormArgs;
+import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entryFulfillment")
-    private @Nullable Output<CxPageEntryFulfillmentGetArgs> entryFulfillment;
+    private @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
 
     /**
      * @return The fulfillment to call when the session is entering the page.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CxPageEntryFulfillmentGetArgs>> entryFulfillment() {
+    public Optional<Output<CxPageEntryFulfillmentArgs>> entryFulfillment() {
         return Optional.ofNullable(this.entryFulfillment);
     }
 
@@ -58,14 +58,14 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandlers")
-    private @Nullable Output<List<CxPageEventHandlerGetArgs>> eventHandlers;
+    private @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
 
     /**
      * @return Handlers associated with the page to handle events such as webhook errors, no match or no input.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxPageEventHandlerGetArgs>>> eventHandlers() {
+    public Optional<Output<List<CxPageEventHandlerArgs>>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
 
@@ -75,14 +75,14 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="form")
-    private @Nullable Output<CxPageFormGetArgs> form;
+    private @Nullable Output<CxPageFormArgs> form;
 
     /**
      * @return The form associated with the page, used for collecting parameters relevant to the page.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CxPageFormGetArgs>> form() {
+    public Optional<Output<CxPageFormArgs>> form() {
         return Optional.ofNullable(this.form);
     }
 
@@ -191,7 +191,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRoutes")
-    private @Nullable Output<List<CxPageTransitionRouteGetArgs>> transitionRoutes;
+    private @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
     /**
      * @return A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
@@ -205,7 +205,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxPageTransitionRouteGetArgs>>> transitionRoutes() {
+    public Optional<Output<List<CxPageTransitionRouteArgs>>> transitionRoutes() {
         return Optional.ofNullable(this.transitionRoutes);
     }
 
@@ -269,7 +269,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entryFulfillment(@Nullable Output<CxPageEntryFulfillmentGetArgs> entryFulfillment) {
+        public Builder entryFulfillment(@Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment) {
             $.entryFulfillment = entryFulfillment;
             return this;
         }
@@ -281,7 +281,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entryFulfillment(CxPageEntryFulfillmentGetArgs entryFulfillment) {
+        public Builder entryFulfillment(CxPageEntryFulfillmentArgs entryFulfillment) {
             return entryFulfillment(Output.of(entryFulfillment));
         }
 
@@ -292,7 +292,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(@Nullable Output<List<CxPageEventHandlerGetArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
@@ -304,7 +304,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(List<CxPageEventHandlerGetArgs> eventHandlers) {
+        public Builder eventHandlers(List<CxPageEventHandlerArgs> eventHandlers) {
             return eventHandlers(Output.of(eventHandlers));
         }
 
@@ -315,7 +315,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventHandlers(CxPageEventHandlerGetArgs... eventHandlers) {
+        public Builder eventHandlers(CxPageEventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
 
@@ -326,7 +326,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder form(@Nullable Output<CxPageFormGetArgs> form) {
+        public Builder form(@Nullable Output<CxPageFormArgs> form) {
             $.form = form;
             return this;
         }
@@ -338,7 +338,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder form(CxPageFormGetArgs form) {
+        public Builder form(CxPageFormArgs form) {
             return form(Output.of(form));
         }
 
@@ -485,7 +485,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(@Nullable Output<List<CxPageTransitionRouteGetArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
             $.transitionRoutes = transitionRoutes;
             return this;
         }
@@ -504,7 +504,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(List<CxPageTransitionRouteGetArgs> transitionRoutes) {
+        public Builder transitionRoutes(List<CxPageTransitionRouteArgs> transitionRoutes) {
             return transitionRoutes(Output.of(transitionRoutes));
         }
 
@@ -522,7 +522,7 @@ public final class CxPageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transitionRoutes(CxPageTransitionRouteGetArgs... transitionRoutes) {
+        public Builder transitionRoutes(CxPageTransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
         }
 

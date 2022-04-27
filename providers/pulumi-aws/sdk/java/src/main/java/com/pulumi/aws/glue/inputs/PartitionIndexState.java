@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexGetArgs;
+import com.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -51,13 +51,13 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="partitionIndex")
-    private @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
+    private @Nullable Output<PartitionIndexPartitionIndexArgs> partitionIndex;
 
     /**
      * @return Configuration block for a partition index. See `partition_index` below.
      * 
      */
-    public Optional<Output<PartitionIndexPartitionIndexGetArgs>> partitionIndex() {
+    public Optional<Output<PartitionIndexPartitionIndexArgs>> partitionIndex() {
         return Optional.ofNullable(this.partitionIndex);
     }
 
@@ -151,7 +151,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder partitionIndex(@Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
+        public Builder partitionIndex(@Nullable Output<PartitionIndexPartitionIndexArgs> partitionIndex) {
             $.partitionIndex = partitionIndex;
             return this;
         }
@@ -162,7 +162,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder partitionIndex(PartitionIndexPartitionIndexGetArgs partitionIndex) {
+        public Builder partitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
             return partitionIndex(Output.of(partitionIndex));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigGetArgs;
-import com.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigGetArgs;
+import com.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigArgs;
+import com.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -71,7 +71,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fleetConfigs")
-    private @Nullable Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
+    private @Nullable Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs;
 
     /**
      * @return The fleet config contains list of fleet specs. In the Single Cloud, there
@@ -79,7 +79,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GameServerConfigFleetConfigGetArgs>>> fleetConfigs() {
+    public Optional<Output<List<GameServerConfigFleetConfigArgs>>> fleetConfigs() {
         return Optional.ofNullable(this.fleetConfigs);
     }
 
@@ -151,14 +151,14 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scalingConfigs")
-    private @Nullable Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
+    private @Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs;
 
     /**
      * @return Optional. This contains the autoscaling settings.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GameServerConfigScalingConfigGetArgs>>> scalingConfigs() {
+    public Optional<Output<List<GameServerConfigScalingConfigArgs>>> scalingConfigs() {
         return Optional.ofNullable(this.scalingConfigs);
     }
 
@@ -265,7 +265,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder fleetConfigs(@Nullable Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs) {
+        public Builder fleetConfigs(@Nullable Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs) {
             $.fleetConfigs = fleetConfigs;
             return this;
         }
@@ -278,7 +278,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder fleetConfigs(List<GameServerConfigFleetConfigGetArgs> fleetConfigs) {
+        public Builder fleetConfigs(List<GameServerConfigFleetConfigArgs> fleetConfigs) {
             return fleetConfigs(Output.of(fleetConfigs));
         }
 
@@ -290,7 +290,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder fleetConfigs(GameServerConfigFleetConfigGetArgs... fleetConfigs) {
+        public Builder fleetConfigs(GameServerConfigFleetConfigArgs... fleetConfigs) {
             return fleetConfigs(List.of(fleetConfigs));
         }
 
@@ -387,7 +387,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder scalingConfigs(@Nullable Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs) {
+        public Builder scalingConfigs(@Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs) {
             $.scalingConfigs = scalingConfigs;
             return this;
         }
@@ -399,7 +399,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder scalingConfigs(List<GameServerConfigScalingConfigGetArgs> scalingConfigs) {
+        public Builder scalingConfigs(List<GameServerConfigScalingConfigArgs> scalingConfigs) {
             return scalingConfigs(Output.of(scalingConfigs));
         }
 
@@ -410,7 +410,7 @@ public final class GameServerConfigState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder scalingConfigs(GameServerConfigScalingConfigGetArgs... scalingConfigs) {
+        public Builder scalingConfigs(GameServerConfigScalingConfigArgs... scalingConfigs) {
             return scalingConfigs(List.of(scalingConfigs));
         }
 

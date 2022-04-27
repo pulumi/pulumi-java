@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorAccountAggregationSourceGetArgs;
-import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorOrganizationAggregationSourceGetArgs;
+import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorAccountAggregationSourceArgs;
+import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -23,13 +23,13 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accountAggregationSource")
-    private @Nullable Output<ConfigurationAggregatorAccountAggregationSourceGetArgs> accountAggregationSource;
+    private @Nullable Output<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSource;
 
     /**
      * @return The account(s) to aggregate config data from as documented below.
      * 
      */
-    public Optional<Output<ConfigurationAggregatorAccountAggregationSourceGetArgs>> accountAggregationSource() {
+    public Optional<Output<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSource() {
         return Optional.ofNullable(this.accountAggregationSource);
     }
 
@@ -68,13 +68,13 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="organizationAggregationSource")
-    private @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceGetArgs> organizationAggregationSource;
+    private @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
     /**
      * @return The organization to aggregate config data from as documented below.
      * 
      */
-    public Optional<Output<ConfigurationAggregatorOrganizationAggregationSourceGetArgs>> organizationAggregationSource() {
+    public Optional<Output<ConfigurationAggregatorOrganizationAggregationSourceArgs>> organizationAggregationSource() {
         return Optional.ofNullable(this.organizationAggregationSource);
     }
 
@@ -143,7 +143,7 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder accountAggregationSource(@Nullable Output<ConfigurationAggregatorAccountAggregationSourceGetArgs> accountAggregationSource) {
+        public Builder accountAggregationSource(@Nullable Output<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSource) {
             $.accountAggregationSource = accountAggregationSource;
             return this;
         }
@@ -154,7 +154,7 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder accountAggregationSource(ConfigurationAggregatorAccountAggregationSourceGetArgs accountAggregationSource) {
+        public Builder accountAggregationSource(ConfigurationAggregatorAccountAggregationSourceArgs accountAggregationSource) {
             return accountAggregationSource(Output.of(accountAggregationSource));
         }
 
@@ -206,7 +206,7 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceGetArgs> organizationAggregationSource) {
+        public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
             $.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
@@ -217,7 +217,7 @@ public final class ConfigurationAggregatorState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder organizationAggregationSource(ConfigurationAggregatorOrganizationAggregationSourceGetArgs organizationAggregationSource) {
+        public Builder organizationAggregationSource(ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
             return organizationAggregationSource(Output.of(organizationAggregationSource));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkservices.inputs.EdgeCacheKeysetPublicKeyGetArgs;
+import com.pulumi.gcp.networkservices.inputs.EdgeCacheKeysetPublicKeyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -93,7 +93,7 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="publicKeys")
-    private @Nullable Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys;
+    private @Nullable Output<List<EdgeCacheKeysetPublicKeyArgs>> publicKeys;
 
     /**
      * @return An ordered list of Ed25519 public keys to use for validating signed requests.
@@ -103,7 +103,7 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<EdgeCacheKeysetPublicKeyGetArgs>>> publicKeys() {
+    public Optional<Output<List<EdgeCacheKeysetPublicKeyArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
 
@@ -235,7 +235,7 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder publicKeys(@Nullable Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<EdgeCacheKeysetPublicKeyArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
@@ -250,7 +250,7 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder publicKeys(List<EdgeCacheKeysetPublicKeyGetArgs> publicKeys) {
+        public Builder publicKeys(List<EdgeCacheKeysetPublicKeyArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
@@ -264,7 +264,7 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder publicKeys(EdgeCacheKeysetPublicKeyGetArgs... publicKeys) {
+        public Builder publicKeys(EdgeCacheKeysetPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
 

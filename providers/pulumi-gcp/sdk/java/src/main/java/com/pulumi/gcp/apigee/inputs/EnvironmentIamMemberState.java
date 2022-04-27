@@ -5,7 +5,7 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionGetArgs;
+import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
     public static final EnvironmentIamMemberState Empty = new EnvironmentIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<EnvironmentIamMemberConditionGetArgs> condition;
+    private @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
 
-    public Optional<Output<EnvironmentIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<EnvironmentIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -115,12 +115,12 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
             $ = new EnvironmentIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<EnvironmentIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EnvironmentIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(EnvironmentIamMemberConditionGetArgs condition) {
+        public Builder condition(EnvironmentIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

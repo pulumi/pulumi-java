@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.codepipeline.inputs;
 
-import com.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationGetArgs;
-import com.pulumi.aws.codepipeline.inputs.WebhookFilterGetArgs;
+import com.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationArgs;
+import com.pulumi.aws.codepipeline.inputs.WebhookFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationConfiguration")
-    private @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
+    private @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
     /**
      * @return An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
      * 
      */
-    public Optional<Output<WebhookAuthenticationConfigurationGetArgs>> authenticationConfiguration() {
+    public Optional<Output<WebhookAuthenticationConfigurationArgs>> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
 
@@ -69,13 +69,13 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable Output<List<WebhookFilterGetArgs>> filters;
+    private @Nullable Output<List<WebhookFilterArgs>> filters;
 
     /**
      * @return One or more `filter` blocks. Filter blocks are documented below.
      * 
      */
-    public Optional<Output<List<WebhookFilterGetArgs>>> filters() {
+    public Optional<Output<List<WebhookFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -250,7 +250,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
@@ -261,7 +261,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationConfiguration(WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
@@ -271,7 +271,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable Output<List<WebhookFilterGetArgs>> filters) {
+        public Builder filters(@Nullable Output<List<WebhookFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -282,7 +282,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<WebhookFilterGetArgs> filters) {
+        public Builder filters(List<WebhookFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -292,7 +292,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filters(WebhookFilterGetArgs... filters) {
+        public Builder filters(WebhookFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

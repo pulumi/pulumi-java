@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigGetArgs;
-import com.pulumi.aws.ec2.inputs.FleetOnDemandOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.FleetSpotOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationGetArgs;
+import com.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigArgs;
+import com.pulumi.aws.ec2.inputs.FleetOnDemandOptionsArgs;
+import com.pulumi.aws.ec2.inputs.FleetSpotOptionsArgs;
+import com.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -41,13 +41,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplateConfig")
-    private @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
+    private @Nullable Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
 
     /**
      * @return Nested argument containing EC2 Launch Template configurations. Defined below.
      * 
      */
-    public Optional<Output<FleetLaunchTemplateConfigGetArgs>> launchTemplateConfig() {
+    public Optional<Output<FleetLaunchTemplateConfigArgs>> launchTemplateConfig() {
         return Optional.ofNullable(this.launchTemplateConfig);
     }
 
@@ -56,13 +56,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onDemandOptions")
-    private @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
+    private @Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions;
 
     /**
      * @return Nested argument containing On-Demand configurations. Defined below.
      * 
      */
-    public Optional<Output<FleetOnDemandOptionsGetArgs>> onDemandOptions() {
+    public Optional<Output<FleetOnDemandOptionsArgs>> onDemandOptions() {
         return Optional.ofNullable(this.onDemandOptions);
     }
 
@@ -86,13 +86,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spotOptions")
-    private @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
+    private @Nullable Output<FleetSpotOptionsArgs> spotOptions;
 
     /**
      * @return Nested argument containing Spot configurations. Defined below.
      * 
      */
-    public Optional<Output<FleetSpotOptionsGetArgs>> spotOptions() {
+    public Optional<Output<FleetSpotOptionsArgs>> spotOptions() {
         return Optional.ofNullable(this.spotOptions);
     }
 
@@ -131,13 +131,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetCapacitySpecification")
-    private @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
+    private @Nullable Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
 
     /**
      * @return Nested argument containing target capacity configurations. Defined below.
      * 
      */
-    public Optional<Output<FleetTargetCapacitySpecificationGetArgs>> targetCapacitySpecification() {
+    public Optional<Output<FleetTargetCapacitySpecificationArgs>> targetCapacitySpecification() {
         return Optional.ofNullable(this.targetCapacitySpecification);
     }
 
@@ -247,7 +247,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplateConfig(@Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig) {
+        public Builder launchTemplateConfig(@Nullable Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
             $.launchTemplateConfig = launchTemplateConfig;
             return this;
         }
@@ -258,7 +258,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplateConfig(FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
+        public Builder launchTemplateConfig(FleetLaunchTemplateConfigArgs launchTemplateConfig) {
             return launchTemplateConfig(Output.of(launchTemplateConfig));
         }
 
@@ -268,7 +268,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions) {
+        public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions) {
             $.onDemandOptions = onDemandOptions;
             return this;
         }
@@ -279,7 +279,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onDemandOptions(FleetOnDemandOptionsGetArgs onDemandOptions) {
+        public Builder onDemandOptions(FleetOnDemandOptionsArgs onDemandOptions) {
             return onDemandOptions(Output.of(onDemandOptions));
         }
 
@@ -310,7 +310,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spotOptions(@Nullable Output<FleetSpotOptionsGetArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Output<FleetSpotOptionsArgs> spotOptions) {
             $.spotOptions = spotOptions;
             return this;
         }
@@ -321,7 +321,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spotOptions(FleetSpotOptionsGetArgs spotOptions) {
+        public Builder spotOptions(FleetSpotOptionsArgs spotOptions) {
             return spotOptions(Output.of(spotOptions));
         }
 
@@ -373,7 +373,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetCapacitySpecification(@Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(@Nullable Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
             $.targetCapacitySpecification = targetCapacitySpecification;
             return this;
         }
@@ -384,7 +384,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationArgs targetCapacitySpecification) {
             return targetCapacitySpecification(Output.of(targetCapacitySpecification));
         }
 

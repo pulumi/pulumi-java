@@ -5,8 +5,8 @@ package com.pulumi.gcp.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelGetArgs;
-import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetGetArgs;
+import com.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelArgs;
+import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -111,14 +111,14 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<DeploymentLabelGetArgs>> labels;
+    private @Nullable Output<List<DeploymentLabelArgs>> labels;
 
     /**
      * @return Key-value pairs to apply to this labels.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<DeploymentLabelGetArgs>>> labels() {
+    public Optional<Output<List<DeploymentLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -222,7 +222,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-    private @Nullable Output<DeploymentTargetGetArgs> target;
+    private @Nullable Output<DeploymentTargetArgs> target;
 
     /**
      * @return Parameters that define your deployment, including the deployment
@@ -230,7 +230,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DeploymentTargetGetArgs>> target() {
+    public Optional<Output<DeploymentTargetArgs>> target() {
         return Optional.ofNullable(this.target);
     }
 
@@ -385,7 +385,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<DeploymentLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<DeploymentLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -397,7 +397,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<DeploymentLabelGetArgs> labels) {
+        public Builder labels(List<DeploymentLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -408,7 +408,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(DeploymentLabelGetArgs... labels) {
+        public Builder labels(DeploymentLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
@@ -543,7 +543,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder target(@Nullable Output<DeploymentTargetGetArgs> target) {
+        public Builder target(@Nullable Output<DeploymentTargetArgs> target) {
             $.target = target;
             return this;
         }
@@ -556,7 +556,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder target(DeploymentTargetGetArgs target) {
+        public Builder target(DeploymentTargetArgs target) {
             return target(Output.of(target));
         }
 

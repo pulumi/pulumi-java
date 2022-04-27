@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigtable.inputs.TableIamBindingConditionGetArgs;
+import com.pulumi.gcp.bigtable.inputs.TableIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TableIamBindingState extends com.pulumi.resources.ResourceArg
     public static final TableIamBindingState Empty = new TableIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<TableIamBindingConditionGetArgs> condition;
+    private @Nullable Output<TableIamBindingConditionArgs> condition;
 
-    public Optional<Output<TableIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<TableIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -142,12 +142,12 @@ public final class TableIamBindingState extends com.pulumi.resources.ResourceArg
             $ = new TableIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TableIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TableIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TableIamBindingConditionGetArgs condition) {
+        public Builder condition(TableIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

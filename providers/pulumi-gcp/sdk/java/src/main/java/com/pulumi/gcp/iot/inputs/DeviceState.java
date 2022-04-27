@@ -5,11 +5,11 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iot.inputs.DeviceConfigGetArgs;
-import com.pulumi.gcp.iot.inputs.DeviceCredentialGetArgs;
-import com.pulumi.gcp.iot.inputs.DeviceGatewayConfigGetArgs;
-import com.pulumi.gcp.iot.inputs.DeviceLastErrorStatusGetArgs;
-import com.pulumi.gcp.iot.inputs.DeviceStateGetArgs;
+import com.pulumi.gcp.iot.inputs.DeviceConfigArgs;
+import com.pulumi.gcp.iot.inputs.DeviceCredentialArgs;
+import com.pulumi.gcp.iot.inputs.DeviceGatewayConfigArgs;
+import com.pulumi.gcp.iot.inputs.DeviceLastErrorStatusArgs;
+import com.pulumi.gcp.iot.inputs.DeviceStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,13 +43,13 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configs")
-    private @Nullable Output<List<DeviceConfigGetArgs>> configs;
+    private @Nullable Output<List<DeviceConfigArgs>> configs;
 
     /**
      * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
      * 
      */
-    public Optional<Output<List<DeviceConfigGetArgs>>> configs() {
+    public Optional<Output<List<DeviceConfigArgs>>> configs() {
         return Optional.ofNullable(this.configs);
     }
 
@@ -59,14 +59,14 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-    private @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
+    private @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
     /**
      * @return The credentials used to authenticate this device.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<DeviceCredentialGetArgs>>> credentials() {
+    public Optional<Output<List<DeviceCredentialArgs>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
 
@@ -76,14 +76,14 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayConfig")
-    private @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
+    private @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
 
     /**
      * @return Gateway-related configuration and state.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DeviceGatewayConfigGetArgs>> gatewayConfig() {
+    public Optional<Output<DeviceGatewayConfigArgs>> gatewayConfig() {
         return Optional.ofNullable(this.gatewayConfig);
     }
 
@@ -122,13 +122,13 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastErrorStatuses")
-    private @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
+    private @Nullable Output<List<DeviceLastErrorStatusArgs>> lastErrorStatuses;
 
     /**
      * @return The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    public Optional<Output<List<DeviceLastErrorStatusGetArgs>>> lastErrorStatuses() {
+    public Optional<Output<List<DeviceLastErrorStatusArgs>>> lastErrorStatuses() {
         return Optional.ofNullable(this.lastErrorStatuses);
     }
 
@@ -276,13 +276,13 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable Output<List<DeviceStateGetArgs>> states;
+    private @Nullable Output<List<DeviceStateArgs>> states;
 
     /**
      * @return The state most recently received from the device.
      * 
      */
-    public Optional<Output<List<DeviceStateGetArgs>>> states() {
+    public Optional<Output<List<DeviceStateArgs>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -353,7 +353,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
+        public Builder configs(@Nullable Output<List<DeviceConfigArgs>> configs) {
             $.configs = configs;
             return this;
         }
@@ -364,7 +364,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configs(List<DeviceConfigGetArgs> configs) {
+        public Builder configs(List<DeviceConfigArgs> configs) {
             return configs(Output.of(configs));
         }
 
@@ -374,7 +374,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configs(DeviceConfigGetArgs... configs) {
+        public Builder configs(DeviceConfigArgs... configs) {
             return configs(List.of(configs));
         }
 
@@ -385,7 +385,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(@Nullable Output<List<DeviceCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
             $.credentials = credentials;
             return this;
         }
@@ -397,7 +397,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(List<DeviceCredentialGetArgs> credentials) {
+        public Builder credentials(List<DeviceCredentialArgs> credentials) {
             return credentials(Output.of(credentials));
         }
 
@@ -408,7 +408,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(DeviceCredentialGetArgs... credentials) {
+        public Builder credentials(DeviceCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
 
@@ -419,7 +419,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigArgs> gatewayConfig) {
             $.gatewayConfig = gatewayConfig;
             return this;
         }
@@ -431,7 +431,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayConfig(DeviceGatewayConfigGetArgs gatewayConfig) {
+        public Builder gatewayConfig(DeviceGatewayConfigArgs gatewayConfig) {
             return gatewayConfig(Output.of(gatewayConfig));
         }
 
@@ -483,7 +483,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
+        public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusArgs>> lastErrorStatuses) {
             $.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
@@ -494,7 +494,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lastErrorStatuses(List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
+        public Builder lastErrorStatuses(List<DeviceLastErrorStatusArgs> lastErrorStatuses) {
             return lastErrorStatuses(Output.of(lastErrorStatuses));
         }
 
@@ -504,7 +504,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lastErrorStatuses(DeviceLastErrorStatusGetArgs... lastErrorStatuses) {
+        public Builder lastErrorStatuses(DeviceLastErrorStatusArgs... lastErrorStatuses) {
             return lastErrorStatuses(List.of(lastErrorStatuses));
         }
 
@@ -707,7 +707,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
+        public Builder states(@Nullable Output<List<DeviceStateArgs>> states) {
             $.states = states;
             return this;
         }
@@ -718,7 +718,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(List<DeviceStateGetArgs> states) {
+        public Builder states(List<DeviceStateArgs> states) {
             return states(Output.of(states));
         }
 
@@ -728,7 +728,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(DeviceStateGetArgs... states) {
+        public Builder states(DeviceStateArgs... states) {
             return states(List.of(states));
         }
 

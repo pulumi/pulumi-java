@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<GatewayRouteSpecGetArgs> spec;
+    private @Nullable Output<GatewayRouteSpecArgs> spec;
 
     /**
      * @return The gateway route specification to apply.
      * 
      */
-    public Optional<Output<GatewayRouteSpecGetArgs>> spec() {
+    public Optional<Output<GatewayRouteSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -369,7 +369,7 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<GatewayRouteSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<GatewayRouteSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -380,7 +380,7 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(GatewayRouteSpecGetArgs spec) {
+        public Builder spec(GatewayRouteSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

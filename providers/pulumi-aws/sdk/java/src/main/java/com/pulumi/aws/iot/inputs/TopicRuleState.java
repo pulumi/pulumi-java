@@ -3,22 +3,22 @@
 
 package com.pulumi.aws.iot.inputs;
 
-import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchAlarmGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchMetricGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleDynamodbGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleDynamodbv2GetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleElasticsearchGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleErrorActionGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleFirehoseGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleIotAnalyticGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleIotEventGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleKinesisGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleLambdaGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleRepublishGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleS3GetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleSnsGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleSqsGetArgs;
-import com.pulumi.aws.iot.inputs.TopicRuleStepFunctionGetArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchAlarmArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchMetricArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleDynamodbArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleDynamodbv2Args;
+import com.pulumi.aws.iot.inputs.TopicRuleElasticsearchArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleErrorActionArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleFirehoseArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleIotAnalyticArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleIotEventArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleKinesisArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleLambdaArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleRepublishArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleS3Args;
+import com.pulumi.aws.iot.inputs.TopicRuleSnsArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleSqsArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleStepFunctionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -50,16 +50,16 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchAlarm")
-    private @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
+    private @Nullable Output<TopicRuleCloudwatchAlarmArgs> cloudwatchAlarm;
 
-    public Optional<Output<TopicRuleCloudwatchAlarmGetArgs>> cloudwatchAlarm() {
+    public Optional<Output<TopicRuleCloudwatchAlarmArgs>> cloudwatchAlarm() {
         return Optional.ofNullable(this.cloudwatchAlarm);
     }
 
     @Import(name="cloudwatchMetric")
-    private @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
+    private @Nullable Output<TopicRuleCloudwatchMetricArgs> cloudwatchMetric;
 
-    public Optional<Output<TopicRuleCloudwatchMetricGetArgs>> cloudwatchMetric() {
+    public Optional<Output<TopicRuleCloudwatchMetricArgs>> cloudwatchMetric() {
         return Optional.ofNullable(this.cloudwatchMetric);
     }
 
@@ -79,23 +79,23 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="dynamodb")
-    private @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb;
+    private @Nullable Output<TopicRuleDynamodbArgs> dynamodb;
 
-    public Optional<Output<TopicRuleDynamodbGetArgs>> dynamodb() {
+    public Optional<Output<TopicRuleDynamodbArgs>> dynamodb() {
         return Optional.ofNullable(this.dynamodb);
     }
 
     @Import(name="dynamodbv2s")
-    private @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
+    private @Nullable Output<List<TopicRuleDynamodbv2Args>> dynamodbv2s;
 
-    public Optional<Output<List<TopicRuleDynamodbv2GetArgs>>> dynamodbv2s() {
+    public Optional<Output<List<TopicRuleDynamodbv2Args>>> dynamodbv2s() {
         return Optional.ofNullable(this.dynamodbv2s);
     }
 
     @Import(name="elasticsearch")
-    private @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch;
+    private @Nullable Output<TopicRuleElasticsearchArgs> elasticsearch;
 
-    public Optional<Output<TopicRuleElasticsearchGetArgs>> elasticsearch() {
+    public Optional<Output<TopicRuleElasticsearchArgs>> elasticsearch() {
         return Optional.ofNullable(this.elasticsearch);
     }
 
@@ -119,48 +119,48 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorAction")
-    private @Nullable Output<TopicRuleErrorActionGetArgs> errorAction;
+    private @Nullable Output<TopicRuleErrorActionArgs> errorAction;
 
     /**
      * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
-    public Optional<Output<TopicRuleErrorActionGetArgs>> errorAction() {
+    public Optional<Output<TopicRuleErrorActionArgs>> errorAction() {
         return Optional.ofNullable(this.errorAction);
     }
 
     @Import(name="firehose")
-    private @Nullable Output<TopicRuleFirehoseGetArgs> firehose;
+    private @Nullable Output<TopicRuleFirehoseArgs> firehose;
 
-    public Optional<Output<TopicRuleFirehoseGetArgs>> firehose() {
+    public Optional<Output<TopicRuleFirehoseArgs>> firehose() {
         return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="iotAnalytics")
-    private @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
+    private @Nullable Output<List<TopicRuleIotAnalyticArgs>> iotAnalytics;
 
-    public Optional<Output<List<TopicRuleIotAnalyticGetArgs>>> iotAnalytics() {
+    public Optional<Output<List<TopicRuleIotAnalyticArgs>>> iotAnalytics() {
         return Optional.ofNullable(this.iotAnalytics);
     }
 
     @Import(name="iotEvents")
-    private @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents;
+    private @Nullable Output<List<TopicRuleIotEventArgs>> iotEvents;
 
-    public Optional<Output<List<TopicRuleIotEventGetArgs>>> iotEvents() {
+    public Optional<Output<List<TopicRuleIotEventArgs>>> iotEvents() {
         return Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="kinesis")
-    private @Nullable Output<TopicRuleKinesisGetArgs> kinesis;
+    private @Nullable Output<TopicRuleKinesisArgs> kinesis;
 
-    public Optional<Output<TopicRuleKinesisGetArgs>> kinesis() {
+    public Optional<Output<TopicRuleKinesisArgs>> kinesis() {
         return Optional.ofNullable(this.kinesis);
     }
 
     @Import(name="lambda")
-    private @Nullable Output<TopicRuleLambdaGetArgs> lambda;
+    private @Nullable Output<TopicRuleLambdaArgs> lambda;
 
-    public Optional<Output<TopicRuleLambdaGetArgs>> lambda() {
+    public Optional<Output<TopicRuleLambdaArgs>> lambda() {
         return Optional.ofNullable(this.lambda);
     }
 
@@ -180,23 +180,23 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="republish")
-    private @Nullable Output<TopicRuleRepublishGetArgs> republish;
+    private @Nullable Output<TopicRuleRepublishArgs> republish;
 
-    public Optional<Output<TopicRuleRepublishGetArgs>> republish() {
+    public Optional<Output<TopicRuleRepublishArgs>> republish() {
         return Optional.ofNullable(this.republish);
     }
 
     @Import(name="s3")
-    private @Nullable Output<TopicRuleS3GetArgs> s3;
+    private @Nullable Output<TopicRuleS3Args> s3;
 
-    public Optional<Output<TopicRuleS3GetArgs>> s3() {
+    public Optional<Output<TopicRuleS3Args>> s3() {
         return Optional.ofNullable(this.s3);
     }
 
     @Import(name="sns")
-    private @Nullable Output<TopicRuleSnsGetArgs> sns;
+    private @Nullable Output<TopicRuleSnsArgs> sns;
 
-    public Optional<Output<TopicRuleSnsGetArgs>> sns() {
+    public Optional<Output<TopicRuleSnsArgs>> sns() {
         return Optional.ofNullable(this.sns);
     }
 
@@ -231,16 +231,16 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="sqs")
-    private @Nullable Output<TopicRuleSqsGetArgs> sqs;
+    private @Nullable Output<TopicRuleSqsArgs> sqs;
 
-    public Optional<Output<TopicRuleSqsGetArgs>> sqs() {
+    public Optional<Output<TopicRuleSqsArgs>> sqs() {
         return Optional.ofNullable(this.sqs);
     }
 
     @Import(name="stepFunctions")
-    private @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
+    private @Nullable Output<List<TopicRuleStepFunctionArgs>> stepFunctions;
 
-    public Optional<Output<List<TopicRuleStepFunctionGetArgs>>> stepFunctions() {
+    public Optional<Output<List<TopicRuleStepFunctionArgs>>> stepFunctions() {
         return Optional.ofNullable(this.stepFunctions);
     }
 
@@ -342,21 +342,21 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
-        public Builder cloudwatchAlarm(@Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable Output<TopicRuleCloudwatchAlarmArgs> cloudwatchAlarm) {
             $.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
 
-        public Builder cloudwatchAlarm(TopicRuleCloudwatchAlarmGetArgs cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(TopicRuleCloudwatchAlarmArgs cloudwatchAlarm) {
             return cloudwatchAlarm(Output.of(cloudwatchAlarm));
         }
 
-        public Builder cloudwatchMetric(@Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable Output<TopicRuleCloudwatchMetricArgs> cloudwatchMetric) {
             $.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
 
-        public Builder cloudwatchMetric(TopicRuleCloudwatchMetricGetArgs cloudwatchMetric) {
+        public Builder cloudwatchMetric(TopicRuleCloudwatchMetricArgs cloudwatchMetric) {
             return cloudwatchMetric(Output.of(cloudwatchMetric));
         }
 
@@ -381,34 +381,34 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
-        public Builder dynamodb(@Nullable Output<TopicRuleDynamodbGetArgs> dynamodb) {
+        public Builder dynamodb(@Nullable Output<TopicRuleDynamodbArgs> dynamodb) {
             $.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder dynamodb(TopicRuleDynamodbGetArgs dynamodb) {
+        public Builder dynamodb(TopicRuleDynamodbArgs dynamodb) {
             return dynamodb(Output.of(dynamodb));
         }
 
-        public Builder dynamodbv2s(@Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s) {
+        public Builder dynamodbv2s(@Nullable Output<List<TopicRuleDynamodbv2Args>> dynamodbv2s) {
             $.dynamodbv2s = dynamodbv2s;
             return this;
         }
 
-        public Builder dynamodbv2s(List<TopicRuleDynamodbv2GetArgs> dynamodbv2s) {
+        public Builder dynamodbv2s(List<TopicRuleDynamodbv2Args> dynamodbv2s) {
             return dynamodbv2s(Output.of(dynamodbv2s));
         }
 
-        public Builder dynamodbv2s(TopicRuleDynamodbv2GetArgs... dynamodbv2s) {
+        public Builder dynamodbv2s(TopicRuleDynamodbv2Args... dynamodbv2s) {
             return dynamodbv2s(List.of(dynamodbv2s));
         }
 
-        public Builder elasticsearch(@Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch) {
+        public Builder elasticsearch(@Nullable Output<TopicRuleElasticsearchArgs> elasticsearch) {
             $.elasticsearch = elasticsearch;
             return this;
         }
 
-        public Builder elasticsearch(TopicRuleElasticsearchGetArgs elasticsearch) {
+        public Builder elasticsearch(TopicRuleElasticsearchArgs elasticsearch) {
             return elasticsearch(Output.of(elasticsearch));
         }
 
@@ -439,7 +439,7 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder errorAction(@Nullable Output<TopicRuleErrorActionGetArgs> errorAction) {
+        public Builder errorAction(@Nullable Output<TopicRuleErrorActionArgs> errorAction) {
             $.errorAction = errorAction;
             return this;
         }
@@ -450,60 +450,60 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder errorAction(TopicRuleErrorActionGetArgs errorAction) {
+        public Builder errorAction(TopicRuleErrorActionArgs errorAction) {
             return errorAction(Output.of(errorAction));
         }
 
-        public Builder firehose(@Nullable Output<TopicRuleFirehoseGetArgs> firehose) {
+        public Builder firehose(@Nullable Output<TopicRuleFirehoseArgs> firehose) {
             $.firehose = firehose;
             return this;
         }
 
-        public Builder firehose(TopicRuleFirehoseGetArgs firehose) {
+        public Builder firehose(TopicRuleFirehoseArgs firehose) {
             return firehose(Output.of(firehose));
         }
 
-        public Builder iotAnalytics(@Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics) {
+        public Builder iotAnalytics(@Nullable Output<List<TopicRuleIotAnalyticArgs>> iotAnalytics) {
             $.iotAnalytics = iotAnalytics;
             return this;
         }
 
-        public Builder iotAnalytics(List<TopicRuleIotAnalyticGetArgs> iotAnalytics) {
+        public Builder iotAnalytics(List<TopicRuleIotAnalyticArgs> iotAnalytics) {
             return iotAnalytics(Output.of(iotAnalytics));
         }
 
-        public Builder iotAnalytics(TopicRuleIotAnalyticGetArgs... iotAnalytics) {
+        public Builder iotAnalytics(TopicRuleIotAnalyticArgs... iotAnalytics) {
             return iotAnalytics(List.of(iotAnalytics));
         }
 
-        public Builder iotEvents(@Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents) {
+        public Builder iotEvents(@Nullable Output<List<TopicRuleIotEventArgs>> iotEvents) {
             $.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder iotEvents(List<TopicRuleIotEventGetArgs> iotEvents) {
+        public Builder iotEvents(List<TopicRuleIotEventArgs> iotEvents) {
             return iotEvents(Output.of(iotEvents));
         }
 
-        public Builder iotEvents(TopicRuleIotEventGetArgs... iotEvents) {
+        public Builder iotEvents(TopicRuleIotEventArgs... iotEvents) {
             return iotEvents(List.of(iotEvents));
         }
 
-        public Builder kinesis(@Nullable Output<TopicRuleKinesisGetArgs> kinesis) {
+        public Builder kinesis(@Nullable Output<TopicRuleKinesisArgs> kinesis) {
             $.kinesis = kinesis;
             return this;
         }
 
-        public Builder kinesis(TopicRuleKinesisGetArgs kinesis) {
+        public Builder kinesis(TopicRuleKinesisArgs kinesis) {
             return kinesis(Output.of(kinesis));
         }
 
-        public Builder lambda(@Nullable Output<TopicRuleLambdaGetArgs> lambda) {
+        public Builder lambda(@Nullable Output<TopicRuleLambdaArgs> lambda) {
             $.lambda = lambda;
             return this;
         }
 
-        public Builder lambda(TopicRuleLambdaGetArgs lambda) {
+        public Builder lambda(TopicRuleLambdaArgs lambda) {
             return lambda(Output.of(lambda));
         }
 
@@ -528,30 +528,30 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
-        public Builder republish(@Nullable Output<TopicRuleRepublishGetArgs> republish) {
+        public Builder republish(@Nullable Output<TopicRuleRepublishArgs> republish) {
             $.republish = republish;
             return this;
         }
 
-        public Builder republish(TopicRuleRepublishGetArgs republish) {
+        public Builder republish(TopicRuleRepublishArgs republish) {
             return republish(Output.of(republish));
         }
 
-        public Builder s3(@Nullable Output<TopicRuleS3GetArgs> s3) {
+        public Builder s3(@Nullable Output<TopicRuleS3Args> s3) {
             $.s3 = s3;
             return this;
         }
 
-        public Builder s3(TopicRuleS3GetArgs s3) {
+        public Builder s3(TopicRuleS3Args s3) {
             return s3(Output.of(s3));
         }
 
-        public Builder sns(@Nullable Output<TopicRuleSnsGetArgs> sns) {
+        public Builder sns(@Nullable Output<TopicRuleSnsArgs> sns) {
             $.sns = sns;
             return this;
         }
 
-        public Builder sns(TopicRuleSnsGetArgs sns) {
+        public Builder sns(TopicRuleSnsArgs sns) {
             return sns(Output.of(sns));
         }
 
@@ -597,25 +597,25 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
             return sqlVersion(Output.of(sqlVersion));
         }
 
-        public Builder sqs(@Nullable Output<TopicRuleSqsGetArgs> sqs) {
+        public Builder sqs(@Nullable Output<TopicRuleSqsArgs> sqs) {
             $.sqs = sqs;
             return this;
         }
 
-        public Builder sqs(TopicRuleSqsGetArgs sqs) {
+        public Builder sqs(TopicRuleSqsArgs sqs) {
             return sqs(Output.of(sqs));
         }
 
-        public Builder stepFunctions(@Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions) {
+        public Builder stepFunctions(@Nullable Output<List<TopicRuleStepFunctionArgs>> stepFunctions) {
             $.stepFunctions = stepFunctions;
             return this;
         }
 
-        public Builder stepFunctions(List<TopicRuleStepFunctionGetArgs> stepFunctions) {
+        public Builder stepFunctions(List<TopicRuleStepFunctionArgs> stepFunctions) {
             return stepFunctions(Output.of(stepFunctions));
         }
 
-        public Builder stepFunctions(TopicRuleStepFunctionGetArgs... stepFunctions) {
+        public Builder stepFunctions(TopicRuleStepFunctionArgs... stepFunctions) {
             return stepFunctions(List.of(stepFunctions));
         }
 

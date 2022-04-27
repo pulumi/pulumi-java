@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ecr.inputs;
 
-import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationGetArgs;
+import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="replicationConfiguration")
-    private @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
+    private @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
     /**
      * @return Replication configuration for a registry. See Replication Configuration.
      * 
      */
-    public Optional<Output<ReplicationConfigurationReplicationConfigurationGetArgs>> replicationConfiguration() {
+    public Optional<Output<ReplicationConfigurationReplicationConfigurationArgs>> replicationConfiguration() {
         return Optional.ofNullable(this.replicationConfiguration);
     }
 
@@ -98,7 +98,7 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
             $.replicationConfiguration = replicationConfiguration;
             return this;
         }
@@ -109,7 +109,7 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder replicationConfiguration(ReplicationConfigurationReplicationConfigurationGetArgs replicationConfiguration) {
+        public Builder replicationConfiguration(ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
             return replicationConfiguration(Output.of(replicationConfiguration));
         }
 

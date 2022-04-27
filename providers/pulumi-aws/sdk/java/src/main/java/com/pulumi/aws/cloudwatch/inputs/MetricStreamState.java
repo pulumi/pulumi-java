@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
-import com.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterArgs;
+import com.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeFilters")
-    private @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
+    private @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters;
 
     /**
      * @return List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
      * 
      */
-    public Optional<Output<List<MetricStreamExcludeFilterGetArgs>>> excludeFilters() {
+    public Optional<Output<List<MetricStreamExcludeFilterArgs>>> excludeFilters() {
         return Optional.ofNullable(this.excludeFilters);
     }
 
@@ -84,13 +84,13 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includeFilters")
-    private @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
+    private @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters;
 
     /**
      * @return List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
      * 
      */
-    public Optional<Output<List<MetricStreamIncludeFilterGetArgs>>> includeFilters() {
+    public Optional<Output<List<MetricStreamIncludeFilterArgs>>> includeFilters() {
         return Optional.ofNullable(this.includeFilters);
     }
 
@@ -290,7 +290,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
+        public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters) {
             $.excludeFilters = excludeFilters;
             return this;
         }
@@ -301,7 +301,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludeFilters(List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
+        public Builder excludeFilters(List<MetricStreamExcludeFilterArgs> excludeFilters) {
             return excludeFilters(Output.of(excludeFilters));
         }
 
@@ -311,7 +311,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludeFilters(MetricStreamExcludeFilterGetArgs... excludeFilters) {
+        public Builder excludeFilters(MetricStreamExcludeFilterArgs... excludeFilters) {
             return excludeFilters(List.of(excludeFilters));
         }
 
@@ -342,7 +342,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
+        public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters) {
             $.includeFilters = includeFilters;
             return this;
         }
@@ -353,7 +353,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder includeFilters(List<MetricStreamIncludeFilterGetArgs> includeFilters) {
+        public Builder includeFilters(List<MetricStreamIncludeFilterArgs> includeFilters) {
             return includeFilters(Output.of(includeFilters));
         }
 
@@ -363,7 +363,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder includeFilters(MetricStreamIncludeFilterGetArgs... includeFilters) {
+        public Builder includeFilters(MetricStreamIncludeFilterArgs... includeFilters) {
             return includeFilters(List.of(includeFilters));
         }
 

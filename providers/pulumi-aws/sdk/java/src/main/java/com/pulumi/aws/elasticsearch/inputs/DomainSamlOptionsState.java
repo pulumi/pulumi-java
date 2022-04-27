@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticsearch.inputs;
 
-import com.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="samlOptions")
-    private @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+    private @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions;
 
     /**
      * @return The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    public Optional<Output<DomainSamlOptionsSamlOptionsGetArgs>> samlOptions() {
+    public Optional<Output<DomainSamlOptionsSamlOptionsArgs>> samlOptions() {
         return Optional.ofNullable(this.samlOptions);
     }
 
@@ -98,7 +98,7 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
+        public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions) {
             $.samlOptions = samlOptions;
             return this;
         }
@@ -109,7 +109,7 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder samlOptions(DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
+        public Builder samlOptions(DomainSamlOptionsSamlOptionsArgs samlOptions) {
             return samlOptions(Output.of(samlOptions));
         }
 

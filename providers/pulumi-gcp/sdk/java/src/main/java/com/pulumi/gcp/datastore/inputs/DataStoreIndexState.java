@@ -5,7 +5,7 @@ package com.pulumi.gcp.datastore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyGetArgs;
+import com.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,14 +89,14 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties")
-    private @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
+    private @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
     /**
      * @return An ordered list of properties to index on.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<DataStoreIndexPropertyGetArgs>>> properties() {
+    public Optional<Output<List<DataStoreIndexPropertyArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
 
@@ -225,7 +225,7 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder properties(@Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties) {
+        public Builder properties(@Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
             $.properties = properties;
             return this;
         }
@@ -237,7 +237,7 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder properties(List<DataStoreIndexPropertyGetArgs> properties) {
+        public Builder properties(List<DataStoreIndexPropertyArgs> properties) {
             return properties(Output.of(properties));
         }
 
@@ -248,7 +248,7 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder properties(DataStoreIndexPropertyGetArgs... properties) {
+        public Builder properties(DataStoreIndexPropertyArgs... properties) {
             return properties(List.of(properties));
         }
 

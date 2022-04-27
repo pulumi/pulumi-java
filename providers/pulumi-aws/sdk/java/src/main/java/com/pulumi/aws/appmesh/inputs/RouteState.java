@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.RouteSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.RouteSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<RouteSpecGetArgs> spec;
+    private @Nullable Output<RouteSpecArgs> spec;
 
     /**
      * @return The route specification to apply.
      * 
      */
-    public Optional<Output<RouteSpecGetArgs>> spec() {
+    public Optional<Output<RouteSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -369,7 +369,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<RouteSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<RouteSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -380,7 +380,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(RouteSpecGetArgs spec) {
+        public Builder spec(RouteSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

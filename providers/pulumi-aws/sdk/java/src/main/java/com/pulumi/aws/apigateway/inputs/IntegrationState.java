@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.IntegrationTlsConfigGetArgs;
+import com.pulumi.aws.apigateway.inputs.IntegrationTlsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -246,13 +246,13 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tlsConfig")
-    private @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig;
+    private @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
     /**
      * @return Configuration block specifying the TLS configuration for an integration. Defined below.
      * 
      */
-    public Optional<Output<IntegrationTlsConfigGetArgs>> tlsConfig() {
+    public Optional<Output<IntegrationTlsConfigArgs>> tlsConfig() {
         return Optional.ofNullable(this.tlsConfig);
     }
 
@@ -652,7 +652,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig) {
+        public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigArgs> tlsConfig) {
             $.tlsConfig = tlsConfig;
             return this;
         }
@@ -663,7 +663,7 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tlsConfig(IntegrationTlsConfigGetArgs tlsConfig) {
+        public Builder tlsConfig(IntegrationTlsConfigArgs tlsConfig) {
             return tlsConfig(Output.of(tlsConfig));
         }
 

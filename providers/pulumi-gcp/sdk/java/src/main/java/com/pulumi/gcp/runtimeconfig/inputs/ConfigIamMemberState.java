@@ -5,7 +5,7 @@ package com.pulumi.gcp.runtimeconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberConditionGetArgs;
+import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class ConfigIamMemberState extends com.pulumi.resources.ResourceArg
     public static final ConfigIamMemberState Empty = new ConfigIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<ConfigIamMemberConditionGetArgs> condition;
+    private @Nullable Output<ConfigIamMemberConditionArgs> condition;
 
-    public Optional<Output<ConfigIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<ConfigIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,12 +125,12 @@ public final class ConfigIamMemberState extends com.pulumi.resources.ResourceArg
             $ = new ConfigIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<ConfigIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ConfigIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ConfigIamMemberConditionGetArgs condition) {
+        public Builder condition(ConfigIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

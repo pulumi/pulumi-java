@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.guardduty.inputs;
 
-import com.pulumi.aws.guardduty.inputs.FilterFindingCriteriaGetArgs;
+import com.pulumi.aws.guardduty.inputs.FilterFindingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -83,13 +83,13 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingCriteria")
-    private @Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria;
+    private @Nullable Output<FilterFindingCriteriaArgs> findingCriteria;
 
     /**
      * @return Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
      * 
      */
-    public Optional<Output<FilterFindingCriteriaGetArgs>> findingCriteria() {
+    public Optional<Output<FilterFindingCriteriaArgs>> findingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
 
@@ -275,7 +275,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder findingCriteria(@Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria) {
+        public Builder findingCriteria(@Nullable Output<FilterFindingCriteriaArgs> findingCriteria) {
             $.findingCriteria = findingCriteria;
             return this;
         }
@@ -286,7 +286,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder findingCriteria(FilterFindingCriteriaGetArgs findingCriteria) {
+        public Builder findingCriteria(FilterFindingCriteriaArgs findingCriteria) {
             return findingCriteria(Output.of(findingCriteria));
         }
 

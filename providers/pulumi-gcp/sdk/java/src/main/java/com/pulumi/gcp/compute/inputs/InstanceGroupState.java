@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceGroupNamedPortGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGroupNamedPortArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -75,14 +75,14 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="namedPorts")
-    private @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
+    private @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
 
     /**
      * @return The named port configuration. See the section below
      * for details on configuration. Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceGroupNamedPortGetArgs>>> namedPorts() {
+    public Optional<Output<List<InstanceGroupNamedPortArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
 
@@ -289,7 +289,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
@@ -301,7 +301,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder namedPorts(List<InstanceGroupNamedPortGetArgs> namedPorts) {
+        public Builder namedPorts(List<InstanceGroupNamedPortArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
@@ -312,7 +312,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder namedPorts(InstanceGroupNamedPortGetArgs... namedPorts) {
+        public Builder namedPorts(InstanceGroupNamedPortArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 

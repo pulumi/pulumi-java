@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGetArgs;
-import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageGetArgs;
-import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGetArgs;
-import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeGetArgs;
+import com.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentArgs;
+import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageArgs;
+import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryArgs;
+import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="assignment")
-    private @Nullable Output<GuestPoliciesAssignmentGetArgs> assignment;
+    private @Nullable Output<GuestPoliciesAssignmentArgs> assignment;
 
     /**
      * @return Specifies the VM instances that are assigned to this policy. This allows you to target sets
@@ -45,7 +45,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    public Optional<Output<GuestPoliciesAssignmentGetArgs>> assignment() {
+    public Optional<Output<GuestPoliciesAssignmentArgs>> assignment() {
         return Optional.ofNullable(this.assignment);
     }
 
@@ -150,7 +150,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="packageRepositories")
-    private @Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
+    private @Nullable Output<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories;
 
     /**
      * @return A list of package repositories to configure on the VM instance.
@@ -159,7 +159,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GuestPoliciesPackageRepositoryGetArgs>>> packageRepositories() {
+    public Optional<Output<List<GuestPoliciesPackageRepositoryArgs>>> packageRepositories() {
         return Optional.ofNullable(this.packageRepositories);
     }
 
@@ -169,14 +169,14 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="packages")
-    private @Nullable Output<List<GuestPoliciesPackageGetArgs>> packages;
+    private @Nullable Output<List<GuestPoliciesPackageArgs>> packages;
 
     /**
      * @return The software packages to be managed by this policy.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GuestPoliciesPackageGetArgs>>> packages() {
+    public Optional<Output<List<GuestPoliciesPackageArgs>>> packages() {
         return Optional.ofNullable(this.packages);
     }
 
@@ -203,14 +203,14 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recipes")
-    private @Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes;
+    private @Nullable Output<List<GuestPoliciesRecipeArgs>> recipes;
 
     /**
      * @return A list of Recipes to install on the VM instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GuestPoliciesRecipeGetArgs>>> recipes() {
+    public Optional<Output<List<GuestPoliciesRecipeArgs>>> recipes() {
         return Optional.ofNullable(this.recipes);
     }
 
@@ -278,7 +278,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder assignment(@Nullable Output<GuestPoliciesAssignmentGetArgs> assignment) {
+        public Builder assignment(@Nullable Output<GuestPoliciesAssignmentArgs> assignment) {
             $.assignment = assignment;
             return this;
         }
@@ -296,7 +296,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder assignment(GuestPoliciesAssignmentGetArgs assignment) {
+        public Builder assignment(GuestPoliciesAssignmentArgs assignment) {
             return assignment(Output.of(assignment));
         }
 
@@ -432,7 +432,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packageRepositories(@Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories) {
+        public Builder packageRepositories(@Nullable Output<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories) {
             $.packageRepositories = packageRepositories;
             return this;
         }
@@ -446,7 +446,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packageRepositories(List<GuestPoliciesPackageRepositoryGetArgs> packageRepositories) {
+        public Builder packageRepositories(List<GuestPoliciesPackageRepositoryArgs> packageRepositories) {
             return packageRepositories(Output.of(packageRepositories));
         }
 
@@ -459,7 +459,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packageRepositories(GuestPoliciesPackageRepositoryGetArgs... packageRepositories) {
+        public Builder packageRepositories(GuestPoliciesPackageRepositoryArgs... packageRepositories) {
             return packageRepositories(List.of(packageRepositories));
         }
 
@@ -470,7 +470,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packages(@Nullable Output<List<GuestPoliciesPackageGetArgs>> packages) {
+        public Builder packages(@Nullable Output<List<GuestPoliciesPackageArgs>> packages) {
             $.packages = packages;
             return this;
         }
@@ -482,7 +482,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packages(List<GuestPoliciesPackageGetArgs> packages) {
+        public Builder packages(List<GuestPoliciesPackageArgs> packages) {
             return packages(Output.of(packages));
         }
 
@@ -493,7 +493,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder packages(GuestPoliciesPackageGetArgs... packages) {
+        public Builder packages(GuestPoliciesPackageArgs... packages) {
             return packages(List.of(packages));
         }
 
@@ -527,7 +527,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder recipes(@Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes) {
+        public Builder recipes(@Nullable Output<List<GuestPoliciesRecipeArgs>> recipes) {
             $.recipes = recipes;
             return this;
         }
@@ -539,7 +539,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder recipes(List<GuestPoliciesRecipeGetArgs> recipes) {
+        public Builder recipes(List<GuestPoliciesRecipeArgs> recipes) {
             return recipes(Output.of(recipes));
         }
 
@@ -550,7 +550,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder recipes(GuestPoliciesRecipeGetArgs... recipes) {
+        public Builder recipes(GuestPoliciesRecipeArgs... recipes) {
             return recipes(List.of(recipes));
         }
 

@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataGetArgs;
-import com.pulumi.gcp.cloudrun.inputs.ServiceStatusGetArgs;
-import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateGetArgs;
-import com.pulumi.gcp.cloudrun.inputs.ServiceTrafficGetArgs;
+import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
+import com.pulumi.gcp.cloudrun.inputs.ServiceStatusArgs;
+import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
+import com.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +66,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-    private @Nullable Output<ServiceMetadataGetArgs> metadata;
+    private @Nullable Output<ServiceMetadataArgs> metadata;
 
     /**
      * @return Metadata associated with this Service, including name, namespace, labels,
@@ -74,7 +74,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ServiceMetadataGetArgs>> metadata() {
+    public Optional<Output<ServiceMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
@@ -115,13 +115,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<ServiceStatusGetArgs>> statuses;
+    private @Nullable Output<List<ServiceStatusArgs>> statuses;
 
     /**
      * @return The current status of the Service.
      * 
      */
-    public Optional<Output<List<ServiceStatusGetArgs>>> statuses() {
+    public Optional<Output<List<ServiceStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -139,7 +139,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-    private @Nullable Output<ServiceTemplateGetArgs> template;
+    private @Nullable Output<ServiceTemplateArgs> template;
 
     /**
      * @return template holds the latest specification for the Revision to
@@ -154,7 +154,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ServiceTemplateGetArgs>> template() {
+    public Optional<Output<ServiceTemplateArgs>> template() {
         return Optional.ofNullable(this.template);
     }
 
@@ -165,7 +165,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffics")
-    private @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
+    private @Nullable Output<List<ServiceTrafficArgs>> traffics;
 
     /**
      * @return Traffic specifies how to distribute traffic over a collection of Knative Revisions
@@ -173,7 +173,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ServiceTrafficGetArgs>>> traffics() {
+    public Optional<Output<List<ServiceTrafficArgs>>> traffics() {
         return Optional.ofNullable(this.traffics);
     }
 
@@ -266,7 +266,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Output<ServiceMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Output<ServiceMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
@@ -279,7 +279,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metadata(ServiceMetadataGetArgs metadata) {
+        public Builder metadata(ServiceMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
@@ -333,7 +333,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<ServiceStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<ServiceStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -344,7 +344,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(List<ServiceStatusGetArgs> statuses) {
+        public Builder statuses(List<ServiceStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -354,7 +354,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(ServiceStatusGetArgs... statuses) {
+        public Builder statuses(ServiceStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 
@@ -373,7 +373,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder template(@Nullable Output<ServiceTemplateGetArgs> template) {
+        public Builder template(@Nullable Output<ServiceTemplateArgs> template) {
             $.template = template;
             return this;
         }
@@ -393,7 +393,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder template(ServiceTemplateGetArgs template) {
+        public Builder template(ServiceTemplateArgs template) {
             return template(Output.of(template));
         }
 
@@ -405,7 +405,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffics(@Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
+        public Builder traffics(@Nullable Output<List<ServiceTrafficArgs>> traffics) {
             $.traffics = traffics;
             return this;
         }
@@ -418,7 +418,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffics(List<ServiceTrafficGetArgs> traffics) {
+        public Builder traffics(List<ServiceTrafficArgs> traffics) {
             return traffics(Output.of(traffics));
         }
 
@@ -430,7 +430,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffics(ServiceTrafficGetArgs... traffics) {
+        public Builder traffics(ServiceTrafficArgs... traffics) {
             return traffics(List.of(traffics));
         }
 

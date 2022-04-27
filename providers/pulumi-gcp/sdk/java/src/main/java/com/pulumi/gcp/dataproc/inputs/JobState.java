@@ -5,16 +5,16 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.JobHadoopConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobHiveConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobPigConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobPlacementGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobPysparkConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobReferenceGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobSchedulingGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobSparkConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobSparksqlConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.JobStatusGetArgs;
+import com.pulumi.gcp.dataproc.inputs.JobHadoopConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobHiveConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobPigConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobPlacementArgs;
+import com.pulumi.gcp.dataproc.inputs.JobPysparkConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobReferenceArgs;
+import com.pulumi.gcp.dataproc.inputs.JobSchedulingArgs;
+import com.pulumi.gcp.dataproc.inputs.JobSparkConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobSparksqlConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.JobStatusArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -82,13 +82,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hadoopConfig")
-    private @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
+    private @Nullable Output<JobHadoopConfigArgs> hadoopConfig;
 
     /**
      * @return The config of Hadoop job
      * 
      */
-    public Optional<Output<JobHadoopConfigGetArgs>> hadoopConfig() {
+    public Optional<Output<JobHadoopConfigArgs>> hadoopConfig() {
         return Optional.ofNullable(this.hadoopConfig);
     }
 
@@ -97,13 +97,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hiveConfig")
-    private @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
+    private @Nullable Output<JobHiveConfigArgs> hiveConfig;
 
     /**
      * @return The config of hive job
      * 
      */
-    public Optional<Output<JobHiveConfigGetArgs>> hiveConfig() {
+    public Optional<Output<JobHiveConfigArgs>> hiveConfig() {
         return Optional.ofNullable(this.hiveConfig);
     }
 
@@ -127,13 +127,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pigConfig")
-    private @Nullable Output<JobPigConfigGetArgs> pigConfig;
+    private @Nullable Output<JobPigConfigArgs> pigConfig;
 
     /**
      * @return The config of pag job.
      * 
      */
-    public Optional<Output<JobPigConfigGetArgs>> pigConfig() {
+    public Optional<Output<JobPigConfigArgs>> pigConfig() {
         return Optional.ofNullable(this.pigConfig);
     }
 
@@ -142,13 +142,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placement")
-    private @Nullable Output<JobPlacementGetArgs> placement;
+    private @Nullable Output<JobPlacementArgs> placement;
 
     /**
      * @return The config of job placement.
      * 
      */
-    public Optional<Output<JobPlacementGetArgs>> placement() {
+    public Optional<Output<JobPlacementArgs>> placement() {
         return Optional.ofNullable(this.placement);
     }
 
@@ -174,13 +174,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pysparkConfig")
-    private @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
+    private @Nullable Output<JobPysparkConfigArgs> pysparkConfig;
 
     /**
      * @return The config of pySpark job.
      * 
      */
-    public Optional<Output<JobPysparkConfigGetArgs>> pysparkConfig() {
+    public Optional<Output<JobPysparkConfigArgs>> pysparkConfig() {
         return Optional.ofNullable(this.pysparkConfig);
     }
 
@@ -189,13 +189,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reference")
-    private @Nullable Output<JobReferenceGetArgs> reference;
+    private @Nullable Output<JobReferenceArgs> reference;
 
     /**
      * @return The reference of the job
      * 
      */
-    public Optional<Output<JobReferenceGetArgs>> reference() {
+    public Optional<Output<JobReferenceArgs>> reference() {
         return Optional.ofNullable(this.reference);
     }
 
@@ -221,13 +221,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-    private @Nullable Output<JobSchedulingGetArgs> scheduling;
+    private @Nullable Output<JobSchedulingArgs> scheduling;
 
     /**
      * @return Optional. Job scheduling configuration.
      * 
      */
-    public Optional<Output<JobSchedulingGetArgs>> scheduling() {
+    public Optional<Output<JobSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
 
@@ -236,13 +236,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkConfig")
-    private @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
+    private @Nullable Output<JobSparkConfigArgs> sparkConfig;
 
     /**
      * @return The config of the Spark job.
      * 
      */
-    public Optional<Output<JobSparkConfigGetArgs>> sparkConfig() {
+    public Optional<Output<JobSparkConfigArgs>> sparkConfig() {
         return Optional.ofNullable(this.sparkConfig);
     }
 
@@ -251,13 +251,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparksqlConfig")
-    private @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
+    private @Nullable Output<JobSparksqlConfigArgs> sparksqlConfig;
 
     /**
      * @return The config of SparkSql job
      * 
      */
-    public Optional<Output<JobSparksqlConfigGetArgs>> sparksqlConfig() {
+    public Optional<Output<JobSparksqlConfigArgs>> sparksqlConfig() {
         return Optional.ofNullable(this.sparksqlConfig);
     }
 
@@ -266,13 +266,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<JobStatusGetArgs>> statuses;
+    private @Nullable Output<List<JobStatusArgs>> statuses;
 
     /**
      * @return The status of the job.
      * 
      */
-    public Optional<Output<List<JobStatusGetArgs>>> statuses() {
+    public Optional<Output<List<JobStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -388,7 +388,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hadoopConfig(@Nullable Output<JobHadoopConfigGetArgs> hadoopConfig) {
+        public Builder hadoopConfig(@Nullable Output<JobHadoopConfigArgs> hadoopConfig) {
             $.hadoopConfig = hadoopConfig;
             return this;
         }
@@ -399,7 +399,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hadoopConfig(JobHadoopConfigGetArgs hadoopConfig) {
+        public Builder hadoopConfig(JobHadoopConfigArgs hadoopConfig) {
             return hadoopConfig(Output.of(hadoopConfig));
         }
 
@@ -409,7 +409,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hiveConfig(@Nullable Output<JobHiveConfigGetArgs> hiveConfig) {
+        public Builder hiveConfig(@Nullable Output<JobHiveConfigArgs> hiveConfig) {
             $.hiveConfig = hiveConfig;
             return this;
         }
@@ -420,7 +420,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hiveConfig(JobHiveConfigGetArgs hiveConfig) {
+        public Builder hiveConfig(JobHiveConfigArgs hiveConfig) {
             return hiveConfig(Output.of(hiveConfig));
         }
 
@@ -451,7 +451,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pigConfig(@Nullable Output<JobPigConfigGetArgs> pigConfig) {
+        public Builder pigConfig(@Nullable Output<JobPigConfigArgs> pigConfig) {
             $.pigConfig = pigConfig;
             return this;
         }
@@ -462,7 +462,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pigConfig(JobPigConfigGetArgs pigConfig) {
+        public Builder pigConfig(JobPigConfigArgs pigConfig) {
             return pigConfig(Output.of(pigConfig));
         }
 
@@ -472,7 +472,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder placement(@Nullable Output<JobPlacementGetArgs> placement) {
+        public Builder placement(@Nullable Output<JobPlacementArgs> placement) {
             $.placement = placement;
             return this;
         }
@@ -483,7 +483,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder placement(JobPlacementGetArgs placement) {
+        public Builder placement(JobPlacementArgs placement) {
             return placement(Output.of(placement));
         }
 
@@ -516,7 +516,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pysparkConfig(@Nullable Output<JobPysparkConfigGetArgs> pysparkConfig) {
+        public Builder pysparkConfig(@Nullable Output<JobPysparkConfigArgs> pysparkConfig) {
             $.pysparkConfig = pysparkConfig;
             return this;
         }
@@ -527,7 +527,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pysparkConfig(JobPysparkConfigGetArgs pysparkConfig) {
+        public Builder pysparkConfig(JobPysparkConfigArgs pysparkConfig) {
             return pysparkConfig(Output.of(pysparkConfig));
         }
 
@@ -537,7 +537,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reference(@Nullable Output<JobReferenceGetArgs> reference) {
+        public Builder reference(@Nullable Output<JobReferenceArgs> reference) {
             $.reference = reference;
             return this;
         }
@@ -548,7 +548,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reference(JobReferenceGetArgs reference) {
+        public Builder reference(JobReferenceArgs reference) {
             return reference(Output.of(reference));
         }
 
@@ -581,7 +581,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scheduling(@Nullable Output<JobSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
@@ -592,7 +592,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scheduling(JobSchedulingGetArgs scheduling) {
+        public Builder scheduling(JobSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
@@ -602,7 +602,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sparkConfig(@Nullable Output<JobSparkConfigGetArgs> sparkConfig) {
+        public Builder sparkConfig(@Nullable Output<JobSparkConfigArgs> sparkConfig) {
             $.sparkConfig = sparkConfig;
             return this;
         }
@@ -613,7 +613,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sparkConfig(JobSparkConfigGetArgs sparkConfig) {
+        public Builder sparkConfig(JobSparkConfigArgs sparkConfig) {
             return sparkConfig(Output.of(sparkConfig));
         }
 
@@ -623,7 +623,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigArgs> sparksqlConfig) {
             $.sparksqlConfig = sparksqlConfig;
             return this;
         }
@@ -634,7 +634,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sparksqlConfig(JobSparksqlConfigGetArgs sparksqlConfig) {
+        public Builder sparksqlConfig(JobSparksqlConfigArgs sparksqlConfig) {
             return sparksqlConfig(Output.of(sparksqlConfig));
         }
 
@@ -644,7 +644,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<JobStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -655,7 +655,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(List<JobStatusGetArgs> statuses) {
+        public Builder statuses(List<JobStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -665,7 +665,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(JobStatusGetArgs... statuses) {
+        public Builder statuses(JobStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 

@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmGetArgs;
-import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicySecondaryWorkerConfigGetArgs;
-import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyWorkerConfigGetArgs;
+import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmArgs;
+import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicySecondaryWorkerConfigArgs;
+import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyWorkerConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,14 +24,14 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="basicAlgorithm")
-    private @Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
+    private @Nullable Output<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm;
 
     /**
      * @return Basic algorithm for autoscaling.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AutoscalingPolicyBasicAlgorithmGetArgs>> basicAlgorithm() {
+    public Optional<Output<AutoscalingPolicyBasicAlgorithmArgs>> basicAlgorithm() {
         return Optional.ofNullable(this.basicAlgorithm);
     }
 
@@ -109,14 +109,14 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="secondaryWorkerConfig")
-    private @Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
+    private @Nullable Output<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
     /**
      * @return Describes how the autoscaler will operate for secondary workers.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AutoscalingPolicySecondaryWorkerConfigGetArgs>> secondaryWorkerConfig() {
+    public Optional<Output<AutoscalingPolicySecondaryWorkerConfigArgs>> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
 
@@ -126,14 +126,14 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="workerConfig")
-    private @Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
+    private @Nullable Output<AutoscalingPolicyWorkerConfigArgs> workerConfig;
 
     /**
      * @return Describes how the autoscaler will operate for primary workers.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AutoscalingPolicyWorkerConfigGetArgs>> workerConfig() {
+    public Optional<Output<AutoscalingPolicyWorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
 
@@ -174,7 +174,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder basicAlgorithm(@Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable Output<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm) {
             $.basicAlgorithm = basicAlgorithm;
             return this;
         }
@@ -186,7 +186,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder basicAlgorithm(AutoscalingPolicyBasicAlgorithmGetArgs basicAlgorithm) {
+        public Builder basicAlgorithm(AutoscalingPolicyBasicAlgorithmArgs basicAlgorithm) {
             return basicAlgorithm(Output.of(basicAlgorithm));
         }
 
@@ -289,7 +289,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder secondaryWorkerConfig(@Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Output<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig) {
             $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
@@ -301,7 +301,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder secondaryWorkerConfig(AutoscalingPolicySecondaryWorkerConfigGetArgs secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(AutoscalingPolicySecondaryWorkerConfigArgs secondaryWorkerConfig) {
             return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
 
@@ -312,7 +312,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder workerConfig(@Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<AutoscalingPolicyWorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
@@ -324,7 +324,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder workerConfig(AutoscalingPolicyWorkerConfigGetArgs workerConfig) {
+        public Builder workerConfig(AutoscalingPolicyWorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }
 

@@ -5,18 +5,18 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAdvancedMachineFeaturesGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAttachedDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateBootDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateConfidentialInstanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateGuestAcceleratorGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkPerformanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateReservationAffinityGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateSchedulingGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateScratchDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateServiceAccountGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromTemplateShieldedInstanceConfigGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAdvancedMachineFeaturesArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAttachedDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateBootDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateConfidentialInstanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateGuestAcceleratorArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkPerformanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateReservationAffinityArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateSchedulingArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateScratchDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateServiceAccountArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromTemplateShieldedInstanceConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,13 +35,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="advancedMachineFeatures")
-    private @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
+    private @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     /**
      * @return Controls for advanced machine-related behavior features.
      * 
      */
-    public Optional<Output<InstanceFromTemplateAdvancedMachineFeaturesGetArgs>> advancedMachineFeatures() {
+    public Optional<Output<InstanceFromTemplateAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
@@ -67,13 +67,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="attachedDisks")
-    private @Nullable Output<List<InstanceFromTemplateAttachedDiskGetArgs>> attachedDisks;
+    private @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks;
 
     /**
      * @return List of disks attached to the instance
      * 
      */
-    public Optional<Output<List<InstanceFromTemplateAttachedDiskGetArgs>>> attachedDisks() {
+    public Optional<Output<List<InstanceFromTemplateAttachedDiskArgs>>> attachedDisks() {
         return Optional.ofNullable(this.attachedDisks);
     }
 
@@ -82,13 +82,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bootDisk")
-    private @Nullable Output<InstanceFromTemplateBootDiskGetArgs> bootDisk;
+    private @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk;
 
     /**
      * @return The boot disk for the instance.
      * 
      */
-    public Optional<Output<InstanceFromTemplateBootDiskGetArgs>> bootDisk() {
+    public Optional<Output<InstanceFromTemplateBootDiskArgs>> bootDisk() {
         return Optional.ofNullable(this.bootDisk);
     }
 
@@ -113,14 +113,14 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="confidentialInstanceConfig")
-    private @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
+    private @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     /**
      * @return The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
      * to create.
      * 
      */
-    public Optional<Output<InstanceFromTemplateConfidentialInstanceConfigGetArgs>> confidentialInstanceConfig() {
+    public Optional<Output<InstanceFromTemplateConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
@@ -219,13 +219,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="guestAccelerators")
-    private @Nullable Output<List<InstanceFromTemplateGuestAcceleratorGetArgs>> guestAccelerators;
+    private @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators;
 
     /**
      * @return List of the type and count of accelerator cards attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromTemplateGuestAcceleratorGetArgs>>> guestAccelerators() {
+    public Optional<Output<List<InstanceFromTemplateGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
 
@@ -390,13 +390,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<InstanceFromTemplateNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return The networks attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromTemplateNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<InstanceFromTemplateNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -406,14 +406,14 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="networkPerformanceConfig")
-    private @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
+    private @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     /**
      * @return Configures network performance settings for the instance. If not specified, the instance will be created with its
      * default network performance configuration.
      * 
      */
-    public Optional<Output<InstanceFromTemplateNetworkPerformanceConfigGetArgs>> networkPerformanceConfig() {
+    public Optional<Output<InstanceFromTemplateNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
 
@@ -439,13 +439,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="reservationAffinity")
-    private @Nullable Output<InstanceFromTemplateReservationAffinityGetArgs> reservationAffinity;
+    private @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity;
 
     /**
      * @return Specifies the reservations that this instance can consume from.
      * 
      */
-    public Optional<Output<InstanceFromTemplateReservationAffinityGetArgs>> reservationAffinity() {
+    public Optional<Output<InstanceFromTemplateReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
 
@@ -471,13 +471,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scheduling")
-    private @Nullable Output<InstanceFromTemplateSchedulingGetArgs> scheduling;
+    private @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling;
 
     /**
      * @return The scheduling strategy being used by the instance.
      * 
      */
-    public Optional<Output<InstanceFromTemplateSchedulingGetArgs>> scheduling() {
+    public Optional<Output<InstanceFromTemplateSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
 
@@ -486,13 +486,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scratchDisks")
-    private @Nullable Output<List<InstanceFromTemplateScratchDiskGetArgs>> scratchDisks;
+    private @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks;
 
     /**
      * @return The scratch disks attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromTemplateScratchDiskGetArgs>>> scratchDisks() {
+    public Optional<Output<List<InstanceFromTemplateScratchDiskArgs>>> scratchDisks() {
         return Optional.ofNullable(this.scratchDisks);
     }
 
@@ -516,13 +516,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceAccount")
-    private @Nullable Output<InstanceFromTemplateServiceAccountGetArgs> serviceAccount;
+    private @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount;
 
     /**
      * @return The service account to attach to the instance.
      * 
      */
-    public Optional<Output<InstanceFromTemplateServiceAccountGetArgs>> serviceAccount() {
+    public Optional<Output<InstanceFromTemplateServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
 
@@ -531,13 +531,13 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="shieldedInstanceConfig")
-    private @Nullable Output<InstanceFromTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     /**
      * @return The shielded vm config being used by the instance.
      * 
      */
-    public Optional<Output<InstanceFromTemplateShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
+    public Optional<Output<InstanceFromTemplateShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
@@ -671,7 +671,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(@Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
@@ -682,7 +682,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(InstanceFromTemplateAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(InstanceFromTemplateAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
@@ -715,7 +715,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attachedDisks(@Nullable Output<List<InstanceFromTemplateAttachedDiskGetArgs>> attachedDisks) {
+        public Builder attachedDisks(@Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks) {
             $.attachedDisks = attachedDisks;
             return this;
         }
@@ -726,7 +726,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attachedDisks(List<InstanceFromTemplateAttachedDiskGetArgs> attachedDisks) {
+        public Builder attachedDisks(List<InstanceFromTemplateAttachedDiskArgs> attachedDisks) {
             return attachedDisks(Output.of(attachedDisks));
         }
 
@@ -736,7 +736,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attachedDisks(InstanceFromTemplateAttachedDiskGetArgs... attachedDisks) {
+        public Builder attachedDisks(InstanceFromTemplateAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
 
@@ -746,7 +746,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder bootDisk(@Nullable Output<InstanceFromTemplateBootDiskGetArgs> bootDisk) {
+        public Builder bootDisk(@Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk) {
             $.bootDisk = bootDisk;
             return this;
         }
@@ -757,7 +757,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder bootDisk(InstanceFromTemplateBootDiskGetArgs bootDisk) {
+        public Builder bootDisk(InstanceFromTemplateBootDiskArgs bootDisk) {
             return bootDisk(Output.of(bootDisk));
         }
 
@@ -789,7 +789,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
@@ -801,7 +801,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(InstanceFromTemplateConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(InstanceFromTemplateConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
@@ -937,7 +937,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder guestAccelerators(@Nullable Output<List<InstanceFromTemplateGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
@@ -948,7 +948,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder guestAccelerators(List<InstanceFromTemplateGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(List<InstanceFromTemplateGuestAcceleratorArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
@@ -958,7 +958,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder guestAccelerators(InstanceFromTemplateGuestAcceleratorGetArgs... guestAccelerators) {
+        public Builder guestAccelerators(InstanceFromTemplateGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
@@ -1184,7 +1184,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<InstanceFromTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1195,7 +1195,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<InstanceFromTemplateNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<InstanceFromTemplateNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1205,7 +1205,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder networkInterfaces(InstanceFromTemplateNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(InstanceFromTemplateNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1216,7 +1216,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(@Nullable Output<InstanceFromTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
@@ -1228,7 +1228,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(InstanceFromTemplateNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(InstanceFromTemplateNetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
@@ -1261,7 +1261,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder reservationAffinity(@Nullable Output<InstanceFromTemplateReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
@@ -1272,7 +1272,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder reservationAffinity(InstanceFromTemplateReservationAffinityGetArgs reservationAffinity) {
+        public Builder reservationAffinity(InstanceFromTemplateReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
@@ -1305,7 +1305,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder scheduling(@Nullable Output<InstanceFromTemplateSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
@@ -1316,7 +1316,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder scheduling(InstanceFromTemplateSchedulingGetArgs scheduling) {
+        public Builder scheduling(InstanceFromTemplateSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
@@ -1326,7 +1326,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder scratchDisks(@Nullable Output<List<InstanceFromTemplateScratchDiskGetArgs>> scratchDisks) {
+        public Builder scratchDisks(@Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks) {
             $.scratchDisks = scratchDisks;
             return this;
         }
@@ -1337,7 +1337,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder scratchDisks(List<InstanceFromTemplateScratchDiskGetArgs> scratchDisks) {
+        public Builder scratchDisks(List<InstanceFromTemplateScratchDiskArgs> scratchDisks) {
             return scratchDisks(Output.of(scratchDisks));
         }
 
@@ -1347,7 +1347,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder scratchDisks(InstanceFromTemplateScratchDiskGetArgs... scratchDisks) {
+        public Builder scratchDisks(InstanceFromTemplateScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
 
@@ -1378,7 +1378,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder serviceAccount(@Nullable Output<InstanceFromTemplateServiceAccountGetArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
@@ -1389,7 +1389,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder serviceAccount(InstanceFromTemplateServiceAccountGetArgs serviceAccount) {
+        public Builder serviceAccount(InstanceFromTemplateServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
@@ -1399,7 +1399,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
@@ -1410,7 +1410,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(InstanceFromTemplateShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(InstanceFromTemplateShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 

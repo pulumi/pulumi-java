@@ -5,7 +5,6 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.example.inputs.Foo;
 import com.pulumi.example.inputs.FooArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,23 +35,23 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="bar")
-    private @Nullable Foo bar;
+    private @Nullable FooArgs bar;
 
-    public Optional<Foo> bar() {
+    public Optional<FooArgs> bar() {
         return Optional.ofNullable(this.bar);
     }
 
     @Import(name="baz")
-    private @Nullable List<Foo> baz;
+    private @Nullable List<FooArgs> baz;
 
-    public Optional<List<Foo>> baz() {
+    public Optional<List<FooArgs>> baz() {
         return Optional.ofNullable(this.baz);
     }
 
     @Import(name="bazMap")
-    private @Nullable Map<String,Foo> bazMap;
+    private @Nullable Map<String,FooArgs> bazMap;
 
-    public Optional<Map<String,Foo>> bazMap() {
+    public Optional<Map<String,FooArgs>> bazMap() {
         return Optional.ofNullable(this.bazMap);
     }
 
@@ -134,21 +133,21 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder bar(@Nullable Foo bar) {
+        public Builder bar(@Nullable FooArgs bar) {
             $.bar = bar;
             return this;
         }
 
-        public Builder baz(@Nullable List<Foo> baz) {
+        public Builder baz(@Nullable List<FooArgs> baz) {
             $.baz = baz;
             return this;
         }
 
-        public Builder baz(Foo... baz) {
+        public Builder baz(FooArgs... baz) {
             return baz(List.of(baz));
         }
 
-        public Builder bazMap(@Nullable Map<String,Foo> bazMap) {
+        public Builder bazMap(@Nullable Map<String,FooArgs> bazMap) {
             $.bazMap = bazMap;
             return this;
         }

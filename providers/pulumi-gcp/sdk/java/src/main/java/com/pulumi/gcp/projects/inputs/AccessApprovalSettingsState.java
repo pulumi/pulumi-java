@@ -5,7 +5,7 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
+import com.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +44,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enrolledServices")
-    private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+    private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     /**
      * @return A list of Google Cloud Services for which the given resource has Access Approval enrolled.
@@ -54,7 +54,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>>> enrolledServices() {
+    public Optional<Output<List<AccessApprovalSettingsEnrolledServiceArgs>>> enrolledServices() {
         return Optional.ofNullable(this.enrolledServices);
     }
 
@@ -196,7 +196,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
+        public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             $.enrolledServices = enrolledServices;
             return this;
         }
@@ -211,7 +211,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
+        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             return enrolledServices(Output.of(enrolledServices));
         }
 
@@ -225,7 +225,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
+        public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
 

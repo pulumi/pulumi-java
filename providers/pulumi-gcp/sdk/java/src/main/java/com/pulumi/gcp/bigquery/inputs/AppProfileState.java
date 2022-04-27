@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingGetArgs;
+import com.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -136,14 +136,14 @@ public final class AppProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleClusterRouting")
-    private @Nullable Output<AppProfileSingleClusterRoutingGetArgs> singleClusterRouting;
+    private @Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
 
     /**
      * @return Use a single-cluster routing policy.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AppProfileSingleClusterRoutingGetArgs>> singleClusterRouting() {
+    public Optional<Output<AppProfileSingleClusterRoutingArgs>> singleClusterRouting() {
         return Optional.ofNullable(this.singleClusterRouting);
     }
 
@@ -340,7 +340,7 @@ public final class AppProfileState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder singleClusterRouting(@Nullable Output<AppProfileSingleClusterRoutingGetArgs> singleClusterRouting) {
+        public Builder singleClusterRouting(@Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting) {
             $.singleClusterRouting = singleClusterRouting;
             return this;
         }
@@ -352,7 +352,7 @@ public final class AppProfileState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder singleClusterRouting(AppProfileSingleClusterRoutingGetArgs singleClusterRouting) {
+        public Builder singleClusterRouting(AppProfileSingleClusterRoutingArgs singleClusterRouting) {
             return singleClusterRouting(Output.of(singleClusterRouting));
         }
 

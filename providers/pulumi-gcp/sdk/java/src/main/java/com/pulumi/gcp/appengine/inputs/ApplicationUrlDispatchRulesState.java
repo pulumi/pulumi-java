@@ -5,7 +5,7 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleGetArgs;
+import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
      * 
      */
     @Import(name="dispatchRules")
-    private @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
+    private @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
     /**
      * @return Rules to match an HTTP request and dispatch that request to a service.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>>> dispatchRules() {
+    public Optional<Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>>> dispatchRules() {
         return Optional.ofNullable(this.dispatchRules);
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder dispatchRules(@Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules) {
+        public Builder dispatchRules(@Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
             $.dispatchRules = dispatchRules;
             return this;
         }
@@ -95,7 +95,7 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleGetArgs> dispatchRules) {
+        public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
             return dispatchRules(Output.of(dispatchRules));
         }
 
@@ -106,7 +106,7 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleGetArgs... dispatchRules) {
+        public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleArgs... dispatchRules) {
             return dispatchRules(List.of(dispatchRules));
         }
 

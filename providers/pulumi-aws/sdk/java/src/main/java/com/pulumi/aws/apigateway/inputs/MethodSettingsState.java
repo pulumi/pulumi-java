@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.MethodSettingsSettingsGetArgs;
+import com.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -51,13 +51,13 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="settings")
-    private @Nullable Output<MethodSettingsSettingsGetArgs> settings;
+    private @Nullable Output<MethodSettingsSettingsArgs> settings;
 
     /**
      * @return The settings block, see below.
      * 
      */
-    public Optional<Output<MethodSettingsSettingsGetArgs>> settings() {
+    public Optional<Output<MethodSettingsSettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
 
@@ -151,7 +151,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder settings(@Nullable Output<MethodSettingsSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Output<MethodSettingsSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
@@ -162,7 +162,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder settings(MethodSettingsSettingsGetArgs settings) {
+        public Builder settings(MethodSettingsSettingsArgs settings) {
             return settings(Output.of(settings));
         }
 

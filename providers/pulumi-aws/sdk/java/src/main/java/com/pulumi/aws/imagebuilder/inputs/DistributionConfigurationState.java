@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionGetArgs;
+import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -83,13 +83,13 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="distributions")
-    private @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
+    private @Nullable Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
     /**
      * @return One or more configuration blocks with distribution settings. Detailed below.
      * 
      */
-    public Optional<Output<List<DistributionConfigurationDistributionGetArgs>>> distributions() {
+    public Optional<Output<List<DistributionConfigurationDistributionArgs>>> distributions() {
         return Optional.ofNullable(this.distributions);
     }
 
@@ -259,7 +259,7 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
+        public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionArgs>> distributions) {
             $.distributions = distributions;
             return this;
         }
@@ -270,7 +270,7 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder distributions(List<DistributionConfigurationDistributionGetArgs> distributions) {
+        public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
             return distributions(Output.of(distributions));
         }
 
@@ -280,7 +280,7 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder distributions(DistributionConfigurationDistributionGetArgs... distributions) {
+        public Builder distributions(DistributionConfigurationDistributionArgs... distributions) {
             return distributions(List.of(distributions));
         }
 

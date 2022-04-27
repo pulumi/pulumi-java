@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.redshift.inputs;
 
-import com.pulumi.aws.redshift.inputs.ClusterClusterNodeGetArgs;
-import com.pulumi.aws.redshift.inputs.ClusterLoggingGetArgs;
-import com.pulumi.aws.redshift.inputs.ClusterSnapshotCopyGetArgs;
+import com.pulumi.aws.redshift.inputs.ClusterClusterNodeArgs;
+import com.pulumi.aws.redshift.inputs.ClusterLoggingArgs;
+import com.pulumi.aws.redshift.inputs.ClusterSnapshotCopyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -104,13 +104,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterNodes")
-    private @Nullable Output<List<ClusterClusterNodeGetArgs>> clusterNodes;
+    private @Nullable Output<List<ClusterClusterNodeArgs>> clusterNodes;
 
     /**
      * @return The nodes in the cluster. Cluster node blocks are documented below
      * 
      */
-    public Optional<Output<List<ClusterClusterNodeGetArgs>>> clusterNodes() {
+    public Optional<Output<List<ClusterClusterNodeArgs>>> clusterNodes() {
         return Optional.ofNullable(this.clusterNodes);
     }
 
@@ -363,13 +363,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logging")
-    private @Nullable Output<ClusterLoggingGetArgs> logging;
+    private @Nullable Output<ClusterLoggingArgs> logging;
 
     /**
      * @return Logging, documented below.
      * 
      */
-    public Optional<Output<ClusterLoggingGetArgs>> logging() {
+    public Optional<Output<ClusterLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
 
@@ -536,13 +536,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotCopy")
-    private @Nullable Output<ClusterSnapshotCopyGetArgs> snapshotCopy;
+    private @Nullable Output<ClusterSnapshotCopyArgs> snapshotCopy;
 
     /**
      * @return Configuration of automatic copy of snapshots from one region to another. Documented below.
      * 
      */
-    public Optional<Output<ClusterSnapshotCopyGetArgs>> snapshotCopy() {
+    public Optional<Output<ClusterSnapshotCopyArgs>> snapshotCopy() {
         return Optional.ofNullable(this.snapshotCopy);
     }
 
@@ -780,7 +780,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterNodes(@Nullable Output<List<ClusterClusterNodeGetArgs>> clusterNodes) {
+        public Builder clusterNodes(@Nullable Output<List<ClusterClusterNodeArgs>> clusterNodes) {
             $.clusterNodes = clusterNodes;
             return this;
         }
@@ -791,7 +791,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterNodes(List<ClusterClusterNodeGetArgs> clusterNodes) {
+        public Builder clusterNodes(List<ClusterClusterNodeArgs> clusterNodes) {
             return clusterNodes(Output.of(clusterNodes));
         }
 
@@ -801,7 +801,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterNodes(ClusterClusterNodeGetArgs... clusterNodes) {
+        public Builder clusterNodes(ClusterClusterNodeArgs... clusterNodes) {
             return clusterNodes(List.of(clusterNodes));
         }
 
@@ -1171,7 +1171,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logging(@Nullable Output<ClusterLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Output<ClusterLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
@@ -1182,7 +1182,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logging(ClusterLoggingGetArgs logging) {
+        public Builder logging(ClusterLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 
@@ -1410,7 +1410,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snapshotCopy(@Nullable Output<ClusterSnapshotCopyGetArgs> snapshotCopy) {
+        public Builder snapshotCopy(@Nullable Output<ClusterSnapshotCopyArgs> snapshotCopy) {
             $.snapshotCopy = snapshotCopy;
             return this;
         }
@@ -1421,7 +1421,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snapshotCopy(ClusterSnapshotCopyGetArgs snapshotCopy) {
+        public Builder snapshotCopy(ClusterSnapshotCopyArgs snapshotCopy) {
             return snapshotCopy(Output.of(snapshotCopy));
         }
 

@@ -3,17 +3,17 @@
 
 package com.pulumi.aws.elasticsearch.inputs;
 
-import com.pulumi.aws.elasticsearch.inputs.DomainAdvancedSecurityOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainClusterConfigGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainCognitoOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainDomainEndpointOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainEbsOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainEncryptAtRestGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainLogPublishingOptionGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainNodeToNodeEncryptionGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainSnapshotOptionsGetArgs;
-import com.pulumi.aws.elasticsearch.inputs.DomainVpcOptionsGetArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainAdvancedSecurityOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainClusterConfigArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainCognitoOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainDomainEndpointOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainEbsOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainEncryptAtRestArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainLogPublishingOptionArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainNodeToNodeEncryptionArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainSnapshotOptionsArgs;
+import com.pulumi.aws.elasticsearch.inputs.DomainVpcOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -55,13 +55,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedSecurityOptions")
-    private @Nullable Output<DomainAdvancedSecurityOptionsGetArgs> advancedSecurityOptions;
+    private @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
     /**
      * @return Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
      * 
      */
-    public Optional<Output<DomainAdvancedSecurityOptionsGetArgs>> advancedSecurityOptions() {
+    public Optional<Output<DomainAdvancedSecurityOptionsArgs>> advancedSecurityOptions() {
         return Optional.ofNullable(this.advancedSecurityOptions);
     }
 
@@ -85,13 +85,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoTuneOptions")
-    private @Nullable Output<DomainAutoTuneOptionsGetArgs> autoTuneOptions;
+    private @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
     /**
      * @return Configuration block for the Auto-Tune options of the domain. Detailed below.
      * 
      */
-    public Optional<Output<DomainAutoTuneOptionsGetArgs>> autoTuneOptions() {
+    public Optional<Output<DomainAutoTuneOptionsArgs>> autoTuneOptions() {
         return Optional.ofNullable(this.autoTuneOptions);
     }
 
@@ -100,13 +100,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfig")
-    private @Nullable Output<DomainClusterConfigGetArgs> clusterConfig;
+    private @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
     /**
      * @return Configuration block for the cluster of the domain. Detailed below.
      * 
      */
-    public Optional<Output<DomainClusterConfigGetArgs>> clusterConfig() {
+    public Optional<Output<DomainClusterConfigArgs>> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
 
@@ -115,13 +115,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoOptions")
-    private @Nullable Output<DomainCognitoOptionsGetArgs> cognitoOptions;
+    private @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
     /**
      * @return Configuration block for authenticating Kibana with Cognito. Detailed below.
      * 
      */
-    public Optional<Output<DomainCognitoOptionsGetArgs>> cognitoOptions() {
+    public Optional<Output<DomainCognitoOptionsArgs>> cognitoOptions() {
         return Optional.ofNullable(this.cognitoOptions);
     }
 
@@ -130,13 +130,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainEndpointOptions")
-    private @Nullable Output<DomainDomainEndpointOptionsGetArgs> domainEndpointOptions;
+    private @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
     /**
      * @return Configuration block for domain endpoint HTTP(S) related options. Detailed below.
      * 
      */
-    public Optional<Output<DomainDomainEndpointOptionsGetArgs>> domainEndpointOptions() {
+    public Optional<Output<DomainDomainEndpointOptionsArgs>> domainEndpointOptions() {
         return Optional.ofNullable(this.domainEndpointOptions);
     }
 
@@ -175,13 +175,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsOptions")
-    private @Nullable Output<DomainEbsOptionsGetArgs> ebsOptions;
+    private @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
 
     /**
      * @return Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
      * 
      */
-    public Optional<Output<DomainEbsOptionsGetArgs>> ebsOptions() {
+    public Optional<Output<DomainEbsOptionsArgs>> ebsOptions() {
         return Optional.ofNullable(this.ebsOptions);
     }
 
@@ -205,13 +205,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptAtRest")
-    private @Nullable Output<DomainEncryptAtRestGetArgs> encryptAtRest;
+    private @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
 
     /**
      * @return Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
      * 
      */
-    public Optional<Output<DomainEncryptAtRestGetArgs>> encryptAtRest() {
+    public Optional<Output<DomainEncryptAtRestArgs>> encryptAtRest() {
         return Optional.ofNullable(this.encryptAtRest);
     }
 
@@ -250,13 +250,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logPublishingOptions")
-    private @Nullable Output<List<DomainLogPublishingOptionGetArgs>> logPublishingOptions;
+    private @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
     /**
      * @return Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
      * 
      */
-    public Optional<Output<List<DomainLogPublishingOptionGetArgs>>> logPublishingOptions() {
+    public Optional<Output<List<DomainLogPublishingOptionArgs>>> logPublishingOptions() {
         return Optional.ofNullable(this.logPublishingOptions);
     }
 
@@ -265,13 +265,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeToNodeEncryption")
-    private @Nullable Output<DomainNodeToNodeEncryptionGetArgs> nodeToNodeEncryption;
+    private @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
     /**
      * @return Configuration block for node-to-node encryption options. Detailed below.
      * 
      */
-    public Optional<Output<DomainNodeToNodeEncryptionGetArgs>> nodeToNodeEncryption() {
+    public Optional<Output<DomainNodeToNodeEncryptionArgs>> nodeToNodeEncryption() {
         return Optional.ofNullable(this.nodeToNodeEncryption);
     }
 
@@ -280,13 +280,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotOptions")
-    private @Nullable Output<DomainSnapshotOptionsGetArgs> snapshotOptions;
+    private @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
     /**
      * @return Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
      * 
      */
-    public Optional<Output<DomainSnapshotOptionsGetArgs>> snapshotOptions() {
+    public Optional<Output<DomainSnapshotOptionsArgs>> snapshotOptions() {
         return Optional.ofNullable(this.snapshotOptions);
     }
 
@@ -317,13 +317,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcOptions")
-    private @Nullable Output<DomainVpcOptionsGetArgs> vpcOptions;
+    private @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
 
     /**
      * @return Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
      * 
      */
-    public Optional<Output<DomainVpcOptionsGetArgs>> vpcOptions() {
+    public Optional<Output<DomainVpcOptionsArgs>> vpcOptions() {
         return Optional.ofNullable(this.vpcOptions);
     }
 
@@ -407,7 +407,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsGetArgs> advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
             $.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
@@ -418,7 +418,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedSecurityOptions(DomainAdvancedSecurityOptionsGetArgs advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
             return advancedSecurityOptions(Output.of(advancedSecurityOptions));
         }
 
@@ -449,7 +449,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsGetArgs> autoTuneOptions) {
+        public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions) {
             $.autoTuneOptions = autoTuneOptions;
             return this;
         }
@@ -460,7 +460,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoTuneOptions(DomainAutoTuneOptionsGetArgs autoTuneOptions) {
+        public Builder autoTuneOptions(DomainAutoTuneOptionsArgs autoTuneOptions) {
             return autoTuneOptions(Output.of(autoTuneOptions));
         }
 
@@ -470,7 +470,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfig(@Nullable Output<DomainClusterConfigGetArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Output<DomainClusterConfigArgs> clusterConfig) {
             $.clusterConfig = clusterConfig;
             return this;
         }
@@ -481,7 +481,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterConfig(DomainClusterConfigGetArgs clusterConfig) {
+        public Builder clusterConfig(DomainClusterConfigArgs clusterConfig) {
             return clusterConfig(Output.of(clusterConfig));
         }
 
@@ -491,7 +491,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsGetArgs> cognitoOptions) {
+        public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsArgs> cognitoOptions) {
             $.cognitoOptions = cognitoOptions;
             return this;
         }
@@ -502,7 +502,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoOptions(DomainCognitoOptionsGetArgs cognitoOptions) {
+        public Builder cognitoOptions(DomainCognitoOptionsArgs cognitoOptions) {
             return cognitoOptions(Output.of(cognitoOptions));
         }
 
@@ -512,7 +512,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsGetArgs> domainEndpointOptions) {
+        public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
             $.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
@@ -523,7 +523,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainEndpointOptions(DomainDomainEndpointOptionsGetArgs domainEndpointOptions) {
+        public Builder domainEndpointOptions(DomainDomainEndpointOptionsArgs domainEndpointOptions) {
             return domainEndpointOptions(Output.of(domainEndpointOptions));
         }
 
@@ -575,7 +575,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsOptions(@Nullable Output<DomainEbsOptionsGetArgs> ebsOptions) {
+        public Builder ebsOptions(@Nullable Output<DomainEbsOptionsArgs> ebsOptions) {
             $.ebsOptions = ebsOptions;
             return this;
         }
@@ -586,7 +586,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsOptions(DomainEbsOptionsGetArgs ebsOptions) {
+        public Builder ebsOptions(DomainEbsOptionsArgs ebsOptions) {
             return ebsOptions(Output.of(ebsOptions));
         }
 
@@ -617,7 +617,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestGetArgs> encryptAtRest) {
+        public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestArgs> encryptAtRest) {
             $.encryptAtRest = encryptAtRest;
             return this;
         }
@@ -628,7 +628,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptAtRest(DomainEncryptAtRestGetArgs encryptAtRest) {
+        public Builder encryptAtRest(DomainEncryptAtRestArgs encryptAtRest) {
             return encryptAtRest(Output.of(encryptAtRest));
         }
 
@@ -680,7 +680,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionGetArgs>> logPublishingOptions) {
+        public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
             $.logPublishingOptions = logPublishingOptions;
             return this;
         }
@@ -691,7 +691,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logPublishingOptions(List<DomainLogPublishingOptionGetArgs> logPublishingOptions) {
+        public Builder logPublishingOptions(List<DomainLogPublishingOptionArgs> logPublishingOptions) {
             return logPublishingOptions(Output.of(logPublishingOptions));
         }
 
@@ -701,7 +701,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logPublishingOptions(DomainLogPublishingOptionGetArgs... logPublishingOptions) {
+        public Builder logPublishingOptions(DomainLogPublishingOptionArgs... logPublishingOptions) {
             return logPublishingOptions(List.of(logPublishingOptions));
         }
 
@@ -711,7 +711,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionGetArgs> nodeToNodeEncryption) {
+        public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
             $.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
@@ -722,7 +722,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeToNodeEncryption(DomainNodeToNodeEncryptionGetArgs nodeToNodeEncryption) {
+        public Builder nodeToNodeEncryption(DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
             return nodeToNodeEncryption(Output.of(nodeToNodeEncryption));
         }
 
@@ -732,7 +732,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsGetArgs> snapshotOptions) {
+        public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions) {
             $.snapshotOptions = snapshotOptions;
             return this;
         }
@@ -743,7 +743,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snapshotOptions(DomainSnapshotOptionsGetArgs snapshotOptions) {
+        public Builder snapshotOptions(DomainSnapshotOptionsArgs snapshotOptions) {
             return snapshotOptions(Output.of(snapshotOptions));
         }
 
@@ -783,7 +783,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcOptions(@Nullable Output<DomainVpcOptionsGetArgs> vpcOptions) {
+        public Builder vpcOptions(@Nullable Output<DomainVpcOptionsArgs> vpcOptions) {
             $.vpcOptions = vpcOptions;
             return this;
         }
@@ -794,7 +794,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcOptions(DomainVpcOptionsGetArgs vpcOptions) {
+        public Builder vpcOptions(DomainVpcOptionsArgs vpcOptions) {
             return vpcOptions(Output.of(vpcOptions));
         }
 

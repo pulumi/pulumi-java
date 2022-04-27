@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.workspaces.inputs;
 
-import com.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsGetArgs;
-import com.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesGetArgs;
-import com.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesGetArgs;
+import com.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsArgs;
+import com.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesArgs;
+import com.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -160,13 +160,13 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfServicePermissions")
-    private @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
+    private @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions;
 
     /**
      * @return Permissions to enable or disable self-service capabilities. Defined below.
      * 
      */
-    public Optional<Output<DirectorySelfServicePermissionsGetArgs>> selfServicePermissions() {
+    public Optional<Output<DirectorySelfServicePermissionsArgs>> selfServicePermissions() {
         return Optional.ofNullable(this.selfServicePermissions);
     }
 
@@ -220,13 +220,13 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceAccessProperties")
-    private @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
+    private @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
 
     /**
      * @return Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
      * 
      */
-    public Optional<Output<DirectoryWorkspaceAccessPropertiesGetArgs>> workspaceAccessProperties() {
+    public Optional<Output<DirectoryWorkspaceAccessPropertiesArgs>> workspaceAccessProperties() {
         return Optional.ofNullable(this.workspaceAccessProperties);
     }
 
@@ -235,13 +235,13 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceCreationProperties")
-    private @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
+    private @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
     /**
      * @return Default properties that are used for creating WorkSpaces. Defined below.
      * 
      */
-    public Optional<Output<DirectoryWorkspaceCreationPropertiesGetArgs>> workspaceCreationProperties() {
+    public Optional<Output<DirectoryWorkspaceCreationPropertiesArgs>> workspaceCreationProperties() {
         return Optional.ofNullable(this.workspaceCreationProperties);
     }
 
@@ -514,7 +514,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
             $.selfServicePermissions = selfServicePermissions;
             return this;
         }
@@ -525,7 +525,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder selfServicePermissions(DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
+        public Builder selfServicePermissions(DirectorySelfServicePermissionsArgs selfServicePermissions) {
             return selfServicePermissions(Output.of(selfServicePermissions));
         }
 
@@ -608,7 +608,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
             $.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
@@ -619,7 +619,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceAccessProperties(DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
             return workspaceAccessProperties(Output.of(workspaceAccessProperties));
         }
 
@@ -629,7 +629,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
             $.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
@@ -640,7 +640,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceCreationProperties(DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
             return workspaceCreationProperties(Output.of(workspaceCreationProperties));
         }
 

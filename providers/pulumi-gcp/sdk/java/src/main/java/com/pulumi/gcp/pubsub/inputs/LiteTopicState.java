@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigGetArgs;
-import com.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigGetArgs;
-import com.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigGetArgs;
+import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigArgs;
+import com.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigArgs;
+import com.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,14 +39,14 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionConfig")
-    private @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig;
+    private @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig;
 
     /**
      * @return The settings for this topic&#39;s partitions.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<LiteTopicPartitionConfigGetArgs>> partitionConfig() {
+    public Optional<Output<LiteTopicPartitionConfigArgs>> partitionConfig() {
         return Optional.ofNullable(this.partitionConfig);
     }
 
@@ -88,14 +88,14 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationConfig")
-    private @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig;
+    private @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig;
 
     /**
      * @return The settings for this topic&#39;s Reservation usage.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<LiteTopicReservationConfigGetArgs>> reservationConfig() {
+    public Optional<Output<LiteTopicReservationConfigArgs>> reservationConfig() {
         return Optional.ofNullable(this.reservationConfig);
     }
 
@@ -105,14 +105,14 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionConfig")
-    private @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig;
+    private @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig;
 
     /**
      * @return The settings for a topic&#39;s message retention.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<LiteTopicRetentionConfigGetArgs>> retentionConfig() {
+    public Optional<Output<LiteTopicRetentionConfigArgs>> retentionConfig() {
         return Optional.ofNullable(this.retentionConfig);
     }
 
@@ -189,7 +189,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig) {
+        public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig) {
             $.partitionConfig = partitionConfig;
             return this;
         }
@@ -201,7 +201,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionConfig(LiteTopicPartitionConfigGetArgs partitionConfig) {
+        public Builder partitionConfig(LiteTopicPartitionConfigArgs partitionConfig) {
             return partitionConfig(Output.of(partitionConfig));
         }
 
@@ -256,7 +256,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig) {
+        public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigArgs> reservationConfig) {
             $.reservationConfig = reservationConfig;
             return this;
         }
@@ -268,7 +268,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationConfig(LiteTopicReservationConfigGetArgs reservationConfig) {
+        public Builder reservationConfig(LiteTopicReservationConfigArgs reservationConfig) {
             return reservationConfig(Output.of(reservationConfig));
         }
 
@@ -279,7 +279,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig) {
+        public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig) {
             $.retentionConfig = retentionConfig;
             return this;
         }
@@ -291,7 +291,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionConfig(LiteTopicRetentionConfigGetArgs retentionConfig) {
+        public Builder retentionConfig(LiteTopicRetentionConfigArgs retentionConfig) {
             return retentionConfig(Output.of(retentionConfig));
         }
 

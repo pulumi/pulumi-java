@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -150,13 +150,13 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestParameters")
-    private @Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters;
+    private @Nullable Output<List<RouteRequestParameterArgs>> requestParameters;
 
     /**
      * @return The request parameters for the route. Supported only for WebSocket APIs.
      * 
      */
-    public Optional<Output<List<RouteRequestParameterGetArgs>>> requestParameters() {
+    public Optional<Output<List<RouteRequestParameterArgs>>> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
 
@@ -430,7 +430,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder requestParameters(@Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters) {
+        public Builder requestParameters(@Nullable Output<List<RouteRequestParameterArgs>> requestParameters) {
             $.requestParameters = requestParameters;
             return this;
         }
@@ -441,7 +441,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder requestParameters(List<RouteRequestParameterGetArgs> requestParameters) {
+        public Builder requestParameters(List<RouteRequestParameterArgs> requestParameters) {
             return requestParameters(Output.of(requestParameters));
         }
 
@@ -451,7 +451,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder requestParameters(RouteRequestParameterGetArgs... requestParameters) {
+        public Builder requestParameters(RouteRequestParameterArgs... requestParameters) {
             return requestParameters(List.of(requestParameters));
         }
 

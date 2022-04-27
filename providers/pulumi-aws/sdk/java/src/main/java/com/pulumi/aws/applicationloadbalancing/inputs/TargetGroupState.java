@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.applicationloadbalancing.inputs;
 
-import com.pulumi.aws.applicationloadbalancing.inputs.TargetGroupHealthCheckGetArgs;
-import com.pulumi.aws.applicationloadbalancing.inputs.TargetGroupStickinessGetArgs;
+import com.pulumi.aws.applicationloadbalancing.inputs.TargetGroupHealthCheckArgs;
+import com.pulumi.aws.applicationloadbalancing.inputs.TargetGroupStickinessArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -85,13 +85,13 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheck")
-    private @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck;
+    private @Nullable Output<TargetGroupHealthCheckArgs> healthCheck;
 
     /**
      * @return Health Check configuration block. Detailed below.
      * 
      */
-    public Optional<Output<TargetGroupHealthCheckGetArgs>> healthCheck() {
+    public Optional<Output<TargetGroupHealthCheckArgs>> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
 
@@ -250,13 +250,13 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stickiness")
-    private @Nullable Output<TargetGroupStickinessGetArgs> stickiness;
+    private @Nullable Output<TargetGroupStickinessArgs> stickiness;
 
     /**
      * @return Stickiness configuration block. Detailed below.
      * 
      */
-    public Optional<Output<TargetGroupStickinessGetArgs>> stickiness() {
+    public Optional<Output<TargetGroupStickinessArgs>> stickiness() {
         return Optional.ofNullable(this.stickiness);
     }
 
@@ -453,7 +453,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheck(@Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Output<TargetGroupHealthCheckArgs> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
@@ -464,7 +464,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheck(TargetGroupHealthCheckGetArgs healthCheck) {
+        public Builder healthCheck(TargetGroupHealthCheckArgs healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
@@ -684,7 +684,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stickiness(@Nullable Output<TargetGroupStickinessGetArgs> stickiness) {
+        public Builder stickiness(@Nullable Output<TargetGroupStickinessArgs> stickiness) {
             $.stickiness = stickiness;
             return this;
         }
@@ -695,7 +695,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stickiness(TargetGroupStickinessGetArgs stickiness) {
+        public Builder stickiness(TargetGroupStickinessArgs stickiness) {
             return stickiness(Output.of(stickiness));
         }
 

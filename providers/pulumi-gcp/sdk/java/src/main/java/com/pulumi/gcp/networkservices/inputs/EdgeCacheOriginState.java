@@ -5,7 +5,7 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutGetArgs;
+import com.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -237,14 +237,14 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeout")
-    private @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout;
+    private @Nullable Output<EdgeCacheOriginTimeoutArgs> timeout;
 
     /**
      * @return The connection and HTTP timeout configuration for this origin.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EdgeCacheOriginTimeoutGetArgs>> timeout() {
+    public Optional<Output<EdgeCacheOriginTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 
@@ -583,7 +583,7 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder timeout(@Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout) {
+        public Builder timeout(@Nullable Output<EdgeCacheOriginTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
@@ -595,7 +595,7 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder timeout(EdgeCacheOriginTimeoutGetArgs timeout) {
+        public Builder timeout(EdgeCacheOriginTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }
 

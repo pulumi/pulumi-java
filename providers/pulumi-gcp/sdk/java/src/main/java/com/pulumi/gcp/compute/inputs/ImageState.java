@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ImageGuestOsFeatureGetArgs;
-import com.pulumi.gcp.compute.inputs.ImageRawDiskGetArgs;
+import com.pulumi.gcp.compute.inputs.ImageGuestOsFeatureArgs;
+import com.pulumi.gcp.compute.inputs.ImageRawDiskArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -112,7 +112,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestOsFeatures")
-    private @Nullable Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures;
+    private @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
 
     /**
      * @return A list of features to enable on the guest operating system.
@@ -120,7 +120,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ImageGuestOsFeatureGetArgs>>> guestOsFeatures() {
+    public Optional<Output<List<ImageGuestOsFeatureArgs>>> guestOsFeatures() {
         return Optional.ofNullable(this.guestOsFeatures);
     }
 
@@ -219,14 +219,14 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawDisk")
-    private @Nullable Output<ImageRawDiskGetArgs> rawDisk;
+    private @Nullable Output<ImageRawDiskArgs> rawDisk;
 
     /**
      * @return The parameters of the raw disk image.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ImageRawDiskGetArgs>> rawDisk() {
+    public Optional<Output<ImageRawDiskArgs>> rawDisk() {
         return Optional.ofNullable(this.rawDisk);
     }
 
@@ -478,7 +478,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestOsFeatures(@Nullable Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
@@ -491,7 +491,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestOsFeatures(List<ImageGuestOsFeatureGetArgs> guestOsFeatures) {
+        public Builder guestOsFeatures(List<ImageGuestOsFeatureArgs> guestOsFeatures) {
             return guestOsFeatures(Output.of(guestOsFeatures));
         }
 
@@ -503,7 +503,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestOsFeatures(ImageGuestOsFeatureGetArgs... guestOsFeatures) {
+        public Builder guestOsFeatures(ImageGuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
@@ -643,7 +643,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rawDisk(@Nullable Output<ImageRawDiskGetArgs> rawDisk) {
+        public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
             $.rawDisk = rawDisk;
             return this;
         }
@@ -655,7 +655,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rawDisk(ImageRawDiskGetArgs rawDisk) {
+        public Builder rawDisk(ImageRawDiskArgs rawDisk) {
             return rawDisk(Output.of(rawDisk));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.spanner.inputs.DatabaseIAMBindingConditionGetArgs;
+import com.pulumi.gcp.spanner.inputs.DatabaseIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DatabaseIAMBindingState extends com.pulumi.resources.Resource
     public static final DatabaseIAMBindingState Empty = new DatabaseIAMBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<DatabaseIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<DatabaseIAMBindingConditionArgs> condition;
 
-    public Optional<Output<DatabaseIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<DatabaseIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -142,12 +142,12 @@ public final class DatabaseIAMBindingState extends com.pulumi.resources.Resource
             $ = new DatabaseIAMBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DatabaseIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DatabaseIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DatabaseIAMBindingConditionGetArgs condition) {
+        public Builder condition(DatabaseIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

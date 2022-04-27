@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.AssociationOutputLocationGetArgs;
-import com.pulumi.aws.ssm.inputs.AssociationTargetGetArgs;
+import com.pulumi.aws.ssm.inputs.AssociationOutputLocationArgs;
+import com.pulumi.aws.ssm.inputs.AssociationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -175,13 +175,13 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputLocation")
-    private @Nullable Output<AssociationOutputLocationGetArgs> outputLocation;
+    private @Nullable Output<AssociationOutputLocationArgs> outputLocation;
 
     /**
      * @return An output location block. Output Location is documented below.
      * 
      */
-    public Optional<Output<AssociationOutputLocationGetArgs>> outputLocation() {
+    public Optional<Output<AssociationOutputLocationArgs>> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
 
@@ -220,13 +220,13 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targets")
-    private @Nullable Output<List<AssociationTargetGetArgs>> targets;
+    private @Nullable Output<List<AssociationTargetArgs>> targets;
 
     /**
      * @return A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
      * 
      */
-    public Optional<Output<List<AssociationTargetGetArgs>>> targets() {
+    public Optional<Output<List<AssociationTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
 
@@ -483,7 +483,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputLocation(@Nullable Output<AssociationOutputLocationGetArgs> outputLocation) {
+        public Builder outputLocation(@Nullable Output<AssociationOutputLocationArgs> outputLocation) {
             $.outputLocation = outputLocation;
             return this;
         }
@@ -494,7 +494,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputLocation(AssociationOutputLocationGetArgs outputLocation) {
+        public Builder outputLocation(AssociationOutputLocationArgs outputLocation) {
             return outputLocation(Output.of(outputLocation));
         }
 
@@ -546,7 +546,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targets(@Nullable Output<List<AssociationTargetGetArgs>> targets) {
+        public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
@@ -557,7 +557,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targets(List<AssociationTargetGetArgs> targets) {
+        public Builder targets(List<AssociationTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
@@ -567,7 +567,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targets(AssociationTargetGetArgs... targets) {
+        public Builder targets(AssociationTargetArgs... targets) {
             return targets(List.of(targets));
         }
 

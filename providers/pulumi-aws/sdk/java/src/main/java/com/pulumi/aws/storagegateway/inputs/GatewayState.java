@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.storagegateway.inputs;
 
-import com.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceGetArgs;
-import com.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsGetArgs;
+import com.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceArgs;
+import com.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -176,13 +176,13 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayNetworkInterfaces")
-    private @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
+    private @Nullable Output<List<GatewayGatewayNetworkInterfaceArgs>> gatewayNetworkInterfaces;
 
     /**
      * @return An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
      * 
      */
-    public Optional<Output<List<GatewayGatewayNetworkInterfaceGetArgs>>> gatewayNetworkInterfaces() {
+    public Optional<Output<List<GatewayGatewayNetworkInterfaceArgs>>> gatewayNetworkInterfaces() {
         return Optional.ofNullable(this.gatewayNetworkInterfaces);
     }
 
@@ -266,13 +266,13 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbActiveDirectorySettings")
-    private @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
+    private @Nullable Output<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings;
 
     /**
      * @return Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
      * 
      */
-    public Optional<Output<GatewaySmbActiveDirectorySettingsGetArgs>> smbActiveDirectorySettings() {
+    public Optional<Output<GatewaySmbActiveDirectorySettingsArgs>> smbActiveDirectorySettings() {
         return Optional.ofNullable(this.smbActiveDirectorySettings);
     }
 
@@ -628,7 +628,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
+        public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceArgs>> gatewayNetworkInterfaces) {
             $.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
             return this;
         }
@@ -639,7 +639,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayNetworkInterfaces(List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
+        public Builder gatewayNetworkInterfaces(List<GatewayGatewayNetworkInterfaceArgs> gatewayNetworkInterfaces) {
             return gatewayNetworkInterfaces(Output.of(gatewayNetworkInterfaces));
         }
 
@@ -649,7 +649,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceGetArgs... gatewayNetworkInterfaces) {
+        public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceArgs... gatewayNetworkInterfaces) {
             return gatewayNetworkInterfaces(List.of(gatewayNetworkInterfaces));
         }
 
@@ -764,7 +764,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
+        public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings) {
             $.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
@@ -775,7 +775,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder smbActiveDirectorySettings(GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
+        public Builder smbActiveDirectorySettings(GatewaySmbActiveDirectorySettingsArgs smbActiveDirectorySettings) {
             return smbActiveDirectorySettings(Output.of(smbActiveDirectorySettings));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.IamMemberConditionGetArgs;
+import com.pulumi.gcp.bigquery.inputs.IamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class IamMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<IamMemberConditionGetArgs> condition;
+    private @Nullable Output<IamMemberConditionArgs> condition;
 
     /**
      * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<IamMemberConditionGetArgs>> condition() {
+    public Optional<Output<IamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -142,7 +142,7 @@ public final class IamMemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<IamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -154,7 +154,7 @@ public final class IamMemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(IamMemberConditionGetArgs condition) {
+        public Builder condition(IamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

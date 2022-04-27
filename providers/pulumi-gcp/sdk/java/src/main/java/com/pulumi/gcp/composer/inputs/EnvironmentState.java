@@ -5,7 +5,7 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.composer.inputs.EnvironmentConfigGetArgs;
+import com.pulumi.gcp.composer.inputs.EnvironmentConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,13 +22,13 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-    private @Nullable Output<EnvironmentConfigGetArgs> config;
+    private @Nullable Output<EnvironmentConfigArgs> config;
 
     /**
      * @return Configuration parameters for this environment.
      * 
      */
-    public Optional<Output<EnvironmentConfigGetArgs>> config() {
+    public Optional<Output<EnvironmentConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
 
@@ -134,7 +134,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(@Nullable Output<EnvironmentConfigGetArgs> config) {
+        public Builder config(@Nullable Output<EnvironmentConfigArgs> config) {
             $.config = config;
             return this;
         }
@@ -145,7 +145,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(EnvironmentConfigGetArgs config) {
+        public Builder config(EnvironmentConfigArgs config) {
             return config(Output.of(config));
         }
 

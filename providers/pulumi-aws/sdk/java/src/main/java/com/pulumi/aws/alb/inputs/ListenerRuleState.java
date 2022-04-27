@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.alb.inputs;
 
-import com.pulumi.aws.alb.inputs.ListenerRuleActionGetArgs;
-import com.pulumi.aws.alb.inputs.ListenerRuleConditionGetArgs;
+import com.pulumi.aws.alb.inputs.ListenerRuleActionArgs;
+import com.pulumi.aws.alb.inputs.ListenerRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -25,13 +25,13 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-    private @Nullable Output<List<ListenerRuleActionGetArgs>> actions;
+    private @Nullable Output<List<ListenerRuleActionArgs>> actions;
 
     /**
      * @return An Action block. Action blocks are documented below.
      * 
      */
-    public Optional<Output<List<ListenerRuleActionGetArgs>>> actions() {
+    public Optional<Output<List<ListenerRuleActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
 
@@ -55,13 +55,13 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-    private @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions;
+    private @Nullable Output<List<ListenerRuleConditionArgs>> conditions;
 
     /**
      * @return A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
      * 
      */
-    public Optional<Output<List<ListenerRuleConditionGetArgs>>> conditions() {
+    public Optional<Output<List<ListenerRuleConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
 
@@ -161,7 +161,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(@Nullable Output<List<ListenerRuleActionGetArgs>> actions) {
+        public Builder actions(@Nullable Output<List<ListenerRuleActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
@@ -172,7 +172,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(List<ListenerRuleActionGetArgs> actions) {
+        public Builder actions(List<ListenerRuleActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
@@ -182,7 +182,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(ListenerRuleActionGetArgs... actions) {
+        public Builder actions(ListenerRuleActionArgs... actions) {
             return actions(List.of(actions));
         }
 
@@ -213,7 +213,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(@Nullable Output<List<ListenerRuleConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ListenerRuleConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
@@ -224,7 +224,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(List<ListenerRuleConditionGetArgs> conditions) {
+        public Builder conditions(List<ListenerRuleConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
@@ -234,7 +234,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(ListenerRuleConditionGetArgs... conditions) {
+        public Builder conditions(ListenerRuleConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 

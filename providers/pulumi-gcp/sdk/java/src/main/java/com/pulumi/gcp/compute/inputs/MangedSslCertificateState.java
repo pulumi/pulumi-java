@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.MangedSslCertificateManagedGetArgs;
+import com.pulumi.gcp.compute.inputs.MangedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -84,14 +84,14 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="managed")
-    private @Nullable Output<MangedSslCertificateManagedGetArgs> managed;
+    private @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
     /**
      * @return Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
      * of &#39;MANAGED&#39; in &#39;type&#39;).
      * 
      */
-    public Optional<Output<MangedSslCertificateManagedGetArgs>> managed() {
+    public Optional<Output<MangedSslCertificateManagedArgs>> managed() {
         return Optional.ofNullable(this.managed);
     }
 
@@ -288,7 +288,7 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder managed(@Nullable Output<MangedSslCertificateManagedGetArgs> managed) {
+        public Builder managed(@Nullable Output<MangedSslCertificateManagedArgs> managed) {
             $.managed = managed;
             return this;
         }
@@ -300,7 +300,7 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder managed(MangedSslCertificateManagedGetArgs managed) {
+        public Builder managed(MangedSslCertificateManagedArgs managed) {
             return managed(Output.of(managed));
         }
 

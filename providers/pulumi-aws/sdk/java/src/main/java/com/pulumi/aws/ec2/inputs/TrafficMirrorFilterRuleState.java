@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleDestinationPortRangeGetArgs;
-import com.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleSourcePortRangeGetArgs;
+import com.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs;
+import com.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleSourcePortRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -68,13 +68,13 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="destinationPortRange")
-    private @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange;
+    private @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
 
     /**
      * @return Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    public Optional<Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs>> destinationPortRange() {
+    public Optional<Output<TrafficMirrorFilterRuleDestinationPortRangeArgs>> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
 
@@ -143,13 +143,13 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourcePortRange")
-    private @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange;
+    private @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
 
     /**
      * @return Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    public Optional<Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs>> sourcePortRange() {
+    public Optional<Output<TrafficMirrorFilterRuleSourcePortRangeArgs>> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
 
@@ -286,7 +286,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder destinationPortRange(@Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange) {
             $.destinationPortRange = destinationPortRange;
             return this;
         }
@@ -297,7 +297,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder destinationPortRange(TrafficMirrorFilterRuleDestinationPortRangeGetArgs destinationPortRange) {
+        public Builder destinationPortRange(TrafficMirrorFilterRuleDestinationPortRangeArgs destinationPortRange) {
             return destinationPortRange(Output.of(destinationPortRange));
         }
 
@@ -391,7 +391,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder sourcePortRange(@Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange) {
             $.sourcePortRange = sourcePortRange;
             return this;
         }
@@ -402,7 +402,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder sourcePortRange(TrafficMirrorFilterRuleSourcePortRangeGetArgs sourcePortRange) {
+        public Builder sourcePortRange(TrafficMirrorFilterRuleSourcePortRangeArgs sourcePortRange) {
             return sourcePortRange(Output.of(sourcePortRange));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.athena.inputs;
 
-import com.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationGetArgs;
+import com.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -37,13 +37,13 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfiguration")
-    private @Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
      * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
      * 
      */
-    public Optional<Output<DatabaseEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+    public Optional<Output<DatabaseEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
 
@@ -131,7 +131,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(@Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
@@ -142,7 +142,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(DatabaseEncryptionConfigurationGetArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(DatabaseEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 

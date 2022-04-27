@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.eks.inputs;
 
-import com.pulumi.aws.eks.inputs.ClusterCertificateAuthorityGetArgs;
-import com.pulumi.aws.eks.inputs.ClusterEncryptionConfigGetArgs;
-import com.pulumi.aws.eks.inputs.ClusterIdentityGetArgs;
-import com.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigGetArgs;
-import com.pulumi.aws.eks.inputs.ClusterVpcConfigGetArgs;
+import com.pulumi.aws.eks.inputs.ClusterCertificateAuthorityArgs;
+import com.pulumi.aws.eks.inputs.ClusterEncryptionConfigArgs;
+import com.pulumi.aws.eks.inputs.ClusterIdentityArgs;
+import com.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigArgs;
+import com.pulumi.aws.eks.inputs.ClusterVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -42,13 +42,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateAuthority")
-    private @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
+    private @Nullable Output<ClusterCertificateAuthorityArgs> certificateAuthority;
 
     /**
      * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
-    public Optional<Output<ClusterCertificateAuthorityGetArgs>> certificateAuthority() {
+    public Optional<Output<ClusterCertificateAuthorityArgs>> certificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
 
@@ -87,13 +87,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-    private @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
+    private @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
 
     /**
      * @return Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
      * 
      */
-    public Optional<Output<ClusterEncryptionConfigGetArgs>> encryptionConfig() {
+    public Optional<Output<ClusterEncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
 
@@ -117,13 +117,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identities")
-    private @Nullable Output<List<ClusterIdentityGetArgs>> identities;
+    private @Nullable Output<List<ClusterIdentityArgs>> identities;
 
     /**
      * @return Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
      * 
      */
-    public Optional<Output<List<ClusterIdentityGetArgs>>> identities() {
+    public Optional<Output<List<ClusterIdentityArgs>>> identities() {
         return Optional.ofNullable(this.identities);
     }
 
@@ -132,13 +132,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubernetesNetworkConfig")
-    private @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
+    private @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
     /**
      * @return Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Optional<Output<ClusterKubernetesNetworkConfigGetArgs>> kubernetesNetworkConfig() {
+    public Optional<Output<ClusterKubernetesNetworkConfigArgs>> kubernetesNetworkConfig() {
         return Optional.ofNullable(this.kubernetesNetworkConfig);
     }
 
@@ -252,13 +252,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ClusterVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
      * 
      */
-    public Optional<Output<ClusterVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<ClusterVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -328,7 +328,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder certificateAuthority(@Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Output<ClusterCertificateAuthorityArgs> certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;
         }
@@ -339,7 +339,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder certificateAuthority(ClusterCertificateAuthorityGetArgs certificateAuthority) {
+        public Builder certificateAuthority(ClusterCertificateAuthorityArgs certificateAuthority) {
             return certificateAuthority(Output.of(certificateAuthority));
         }
 
@@ -401,7 +401,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
@@ -412,7 +412,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfig(ClusterEncryptionConfigGetArgs encryptionConfig) {
+        public Builder encryptionConfig(ClusterEncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
@@ -443,7 +443,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identities(@Nullable Output<List<ClusterIdentityGetArgs>> identities) {
+        public Builder identities(@Nullable Output<List<ClusterIdentityArgs>> identities) {
             $.identities = identities;
             return this;
         }
@@ -454,7 +454,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identities(List<ClusterIdentityGetArgs> identities) {
+        public Builder identities(List<ClusterIdentityArgs> identities) {
             return identities(Output.of(identities));
         }
 
@@ -464,7 +464,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder identities(ClusterIdentityGetArgs... identities) {
+        public Builder identities(ClusterIdentityArgs... identities) {
             return identities(List.of(identities));
         }
 
@@ -474,7 +474,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
             $.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
@@ -485,7 +485,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kubernetesNetworkConfig(ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
             return kubernetesNetworkConfig(Output.of(kubernetesNetworkConfig));
         }
 
@@ -642,7 +642,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<ClusterVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ClusterVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -653,7 +653,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(ClusterVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(ClusterVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.spanner.inputs.InstanceIAMMemberConditionGetArgs;
+import com.pulumi.gcp.spanner.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
     public static final InstanceIAMMemberState Empty = new InstanceIAMMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
-    public Optional<Output<InstanceIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<InstanceIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,12 +125,12 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
             $ = new InstanceIAMMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<InstanceIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(InstanceIAMMemberConditionGetArgs condition) {
+        public Builder condition(InstanceIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

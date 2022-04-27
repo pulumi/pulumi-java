@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.GlobalClusterGlobalClusterMemberGetArgs;
+import com.pulumi.aws.rds.inputs.GlobalClusterGlobalClusterMemberArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -130,13 +130,13 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalClusterMembers")
-    private @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
+    private @Nullable Output<List<GlobalClusterGlobalClusterMemberArgs>> globalClusterMembers;
 
     /**
      * @return Set of objects containing Global Cluster members.
      * 
      */
-    public Optional<Output<List<GlobalClusterGlobalClusterMemberGetArgs>>> globalClusterMembers() {
+    public Optional<Output<List<GlobalClusterGlobalClusterMemberArgs>>> globalClusterMembers() {
         return Optional.ofNullable(this.globalClusterMembers);
     }
 
@@ -374,7 +374,7 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
+        public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberArgs>> globalClusterMembers) {
             $.globalClusterMembers = globalClusterMembers;
             return this;
         }
@@ -385,7 +385,7 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalClusterMembers(List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
+        public Builder globalClusterMembers(List<GlobalClusterGlobalClusterMemberArgs> globalClusterMembers) {
             return globalClusterMembers(Output.of(globalClusterMembers));
         }
 
@@ -395,7 +395,7 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalClusterMembers(GlobalClusterGlobalClusterMemberGetArgs... globalClusterMembers) {
+        public Builder globalClusterMembers(GlobalClusterGlobalClusterMemberArgs... globalClusterMembers) {
             return globalClusterMembers(List.of(globalClusterMembers));
         }
 

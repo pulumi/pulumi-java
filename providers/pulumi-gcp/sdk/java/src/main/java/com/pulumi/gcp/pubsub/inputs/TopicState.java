@@ -5,8 +5,8 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.TopicMessageStoragePolicyGetArgs;
-import com.pulumi.gcp.pubsub.inputs.TopicSchemaSettingsGetArgs;
+import com.pulumi.gcp.pubsub.inputs.TopicMessageStoragePolicyArgs;
+import com.pulumi.gcp.pubsub.inputs.TopicSchemaSettingsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -91,7 +91,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageStoragePolicy")
-    private @Nullable Output<TopicMessageStoragePolicyGetArgs> messageStoragePolicy;
+    private @Nullable Output<TopicMessageStoragePolicyArgs> messageStoragePolicy;
 
     /**
      * @return Policy constraining the set of Google Cloud Platform regions where
@@ -100,7 +100,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TopicMessageStoragePolicyGetArgs>> messageStoragePolicy() {
+    public Optional<Output<TopicMessageStoragePolicyArgs>> messageStoragePolicy() {
         return Optional.ofNullable(this.messageStoragePolicy);
     }
 
@@ -142,14 +142,14 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaSettings")
-    private @Nullable Output<TopicSchemaSettingsGetArgs> schemaSettings;
+    private @Nullable Output<TopicSchemaSettingsArgs> schemaSettings;
 
     /**
      * @return Settings for validating messages published against a schema.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TopicSchemaSettingsGetArgs>> schemaSettings() {
+    public Optional<Output<TopicSchemaSettingsArgs>> schemaSettings() {
         return Optional.ofNullable(this.schemaSettings);
     }
 
@@ -275,7 +275,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder messageStoragePolicy(@Nullable Output<TopicMessageStoragePolicyGetArgs> messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable Output<TopicMessageStoragePolicyArgs> messageStoragePolicy) {
             $.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
@@ -289,7 +289,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder messageStoragePolicy(TopicMessageStoragePolicyGetArgs messageStoragePolicy) {
+        public Builder messageStoragePolicy(TopicMessageStoragePolicyArgs messageStoragePolicy) {
             return messageStoragePolicy(Output.of(messageStoragePolicy));
         }
 
@@ -344,7 +344,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemaSettings(@Nullable Output<TopicSchemaSettingsGetArgs> schemaSettings) {
+        public Builder schemaSettings(@Nullable Output<TopicSchemaSettingsArgs> schemaSettings) {
             $.schemaSettings = schemaSettings;
             return this;
         }
@@ -356,7 +356,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemaSettings(TopicSchemaSettingsGetArgs schemaSettings) {
+        public Builder schemaSettings(TopicSchemaSettingsArgs schemaSettings) {
             return schemaSettings(Output.of(schemaSettings));
         }
 

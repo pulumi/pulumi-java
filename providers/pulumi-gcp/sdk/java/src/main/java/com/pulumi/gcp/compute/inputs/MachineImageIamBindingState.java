@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.MachineImageIamBindingConditionGetArgs;
+import com.pulumi.gcp.compute.inputs.MachineImageIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class MachineImageIamBindingState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<MachineImageIamBindingConditionGetArgs> condition;
+    private @Nullable Output<MachineImageIamBindingConditionArgs> condition;
 
     /**
      * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MachineImageIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<MachineImageIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -143,7 +143,7 @@ public final class MachineImageIamBindingState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<MachineImageIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<MachineImageIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -155,7 +155,7 @@ public final class MachineImageIamBindingState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder condition(MachineImageIamBindingConditionGetArgs condition) {
+        public Builder condition(MachineImageIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

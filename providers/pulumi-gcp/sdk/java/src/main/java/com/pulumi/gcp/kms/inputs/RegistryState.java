@@ -5,8 +5,8 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.kms.inputs.RegistryCredentialGetArgs;
-import com.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemGetArgs;
+import com.pulumi.gcp.kms.inputs.RegistryCredentialArgs;
+import com.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,13 +25,13 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-    private @Nullable Output<List<RegistryCredentialGetArgs>> credentials;
+    private @Nullable Output<List<RegistryCredentialArgs>> credentials;
 
     /**
      * @return List of public key certificates to authenticate devices.
      * 
      */
-    public Optional<Output<List<RegistryCredentialGetArgs>>> credentials() {
+    public Optional<Output<List<RegistryCredentialArgs>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
 
@@ -40,13 +40,13 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventNotificationConfigs")
-    private @Nullable Output<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs;
+    private @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
 
     /**
      * @return List of configurations for event notifications, such as PubSub topics to publish device events to.
      * 
      */
-    public Optional<Output<List<RegistryEventNotificationConfigItemGetArgs>>> eventNotificationConfigs() {
+    public Optional<Output<List<RegistryEventNotificationConfigItemArgs>>> eventNotificationConfigs() {
         return Optional.ofNullable(this.eventNotificationConfigs);
     }
 
@@ -191,7 +191,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(@Nullable Output<List<RegistryCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<RegistryCredentialArgs>> credentials) {
             $.credentials = credentials;
             return this;
         }
@@ -202,7 +202,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(List<RegistryCredentialGetArgs> credentials) {
+        public Builder credentials(List<RegistryCredentialArgs> credentials) {
             return credentials(Output.of(credentials));
         }
 
@@ -212,7 +212,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(RegistryCredentialGetArgs... credentials) {
+        public Builder credentials(RegistryCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
 
@@ -222,7 +222,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventNotificationConfigs(@Nullable Output<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs) {
             $.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
@@ -233,7 +233,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventNotificationConfigs(List<RegistryEventNotificationConfigItemGetArgs> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(List<RegistryEventNotificationConfigItemArgs> eventNotificationConfigs) {
             return eventNotificationConfigs(Output.of(eventNotificationConfigs));
         }
 
@@ -243,7 +243,7 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventNotificationConfigs(RegistryEventNotificationConfigItemGetArgs... eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(RegistryEventNotificationConfigItemArgs... eventNotificationConfigs) {
             return eventNotificationConfigs(List.of(eventNotificationConfigs));
         }
 

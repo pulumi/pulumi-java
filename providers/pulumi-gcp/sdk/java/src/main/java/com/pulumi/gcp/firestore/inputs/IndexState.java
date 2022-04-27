@@ -5,7 +5,7 @@ package com.pulumi.gcp.firestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.firestore.inputs.IndexFieldGetArgs;
+import com.pulumi.gcp.firestore.inputs.IndexFieldArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable Output<List<IndexFieldGetArgs>> fields;
+    private @Nullable Output<List<IndexFieldArgs>> fields;
 
     /**
      * @return The fields supported by this index. The last field entry is always for
@@ -70,7 +70,7 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<IndexFieldGetArgs>>> fields() {
+    public Optional<Output<List<IndexFieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -210,7 +210,7 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable Output<List<IndexFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Output<List<IndexFieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
@@ -227,7 +227,7 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(List<IndexFieldGetArgs> fields) {
+        public Builder fields(List<IndexFieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
@@ -243,7 +243,7 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fields(IndexFieldGetArgs... fields) {
+        public Builder fields(IndexFieldArgs... fields) {
             return fields(List.of(fields));
         }
 

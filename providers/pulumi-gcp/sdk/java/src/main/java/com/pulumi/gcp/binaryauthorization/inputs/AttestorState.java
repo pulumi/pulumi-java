@@ -5,7 +5,7 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteGetArgs;
+import com.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestationAuthorityNote")
-    private @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
+    private @Nullable Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
 
     /**
      * @return A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AttestorAttestationAuthorityNoteGetArgs>> attestationAuthorityNote() {
+    public Optional<Output<AttestorAttestationAuthorityNoteArgs>> attestationAuthorityNote() {
         return Optional.ofNullable(this.attestationAuthorityNote);
     }
 
@@ -116,7 +116,7 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestationAuthorityNote(@Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote) {
+        public Builder attestationAuthorityNote(@Nullable Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote) {
             $.attestationAuthorityNote = attestationAuthorityNote;
             return this;
         }
@@ -128,7 +128,7 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestationAuthorityNote(AttestorAttestationAuthorityNoteGetArgs attestationAuthorityNote) {
+        public Builder attestationAuthorityNote(AttestorAttestationAuthorityNoteArgs attestationAuthorityNote) {
             return attestationAuthorityNote(Output.of(attestationAuthorityNote));
         }
 

@@ -5,9 +5,9 @@ package com.pulumi.gcp.assuredworkloads.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsGetArgs;
-import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceGetArgs;
-import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingGetArgs;
+import com.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
+import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceArgs;
+import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -85,13 +85,13 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsSettings")
-    private @Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings;
+    private @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
     /**
      * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    public Optional<Output<WorkloadKmsSettingsGetArgs>> kmsSettings() {
+    public Optional<Output<WorkloadKmsSettingsArgs>> kmsSettings() {
         return Optional.ofNullable(this.kmsSettings);
     }
 
@@ -175,13 +175,13 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSettings")
-    private @Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings;
+    private @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
     /**
      * @return Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    public Optional<Output<List<WorkloadResourceSettingGetArgs>>> resourceSettings() {
+    public Optional<Output<List<WorkloadResourceSettingArgs>>> resourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
 
@@ -191,14 +191,14 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-    private @Nullable Output<List<WorkloadResourceGetArgs>> resources;
+    private @Nullable Output<List<WorkloadResourceArgs>> resources;
 
     /**
      * @return Output only. The resources associated with this workload. These resources will be created when creating the workload. If
      * any of the projects already exist, the workload creation will fail. Always read only.
      * 
      */
-    public Optional<Output<List<WorkloadResourceGetArgs>>> resources() {
+    public Optional<Output<List<WorkloadResourceArgs>>> resources() {
         return Optional.ofNullable(this.resources);
     }
 
@@ -327,7 +327,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsArgs> kmsSettings) {
             $.kmsSettings = kmsSettings;
             return this;
         }
@@ -338,7 +338,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kmsSettings(WorkloadKmsSettingsGetArgs kmsSettings) {
+        public Builder kmsSettings(WorkloadKmsSettingsArgs kmsSettings) {
             return kmsSettings(Output.of(kmsSettings));
         }
 
@@ -453,7 +453,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
             $.resourceSettings = resourceSettings;
             return this;
         }
@@ -464,7 +464,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceSettings(List<WorkloadResourceSettingGetArgs> resourceSettings) {
+        public Builder resourceSettings(List<WorkloadResourceSettingArgs> resourceSettings) {
             return resourceSettings(Output.of(resourceSettings));
         }
 
@@ -474,7 +474,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceSettings(WorkloadResourceSettingGetArgs... resourceSettings) {
+        public Builder resourceSettings(WorkloadResourceSettingArgs... resourceSettings) {
             return resourceSettings(List.of(resourceSettings));
         }
 
@@ -485,7 +485,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(@Nullable Output<List<WorkloadResourceGetArgs>> resources) {
+        public Builder resources(@Nullable Output<List<WorkloadResourceArgs>> resources) {
             $.resources = resources;
             return this;
         }
@@ -497,7 +497,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(List<WorkloadResourceGetArgs> resources) {
+        public Builder resources(List<WorkloadResourceArgs> resources) {
             return resources(Output.of(resources));
         }
 
@@ -508,7 +508,7 @@ public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(WorkloadResourceGetArgs... resources) {
+        public Builder resources(WorkloadResourceArgs... resources) {
             return resources(List.of(resources));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsGetArgs;
-import com.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyGetArgs;
+import com.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsArgs;
+import com.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -69,13 +69,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultUserSettings")
-    private @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
+    private @Nullable Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
 
     /**
      * @return The default user settings. See Default User Settings below.
      * 
      */
-    public Optional<Output<DomainDefaultUserSettingsGetArgs>> defaultUserSettings() {
+    public Optional<Output<DomainDefaultUserSettingsArgs>> defaultUserSettings() {
         return Optional.ofNullable(this.defaultUserSettings);
     }
 
@@ -129,13 +129,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy")
-    private @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
+    private @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
 
     /**
      * @return The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    public Optional<Output<DomainRetentionPolicyGetArgs>> retentionPolicy() {
+    public Optional<Output<DomainRetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
 
@@ -335,7 +335,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUserSettings(@Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(@Nullable Output<DomainDefaultUserSettingsArgs> defaultUserSettings) {
             $.defaultUserSettings = defaultUserSettings;
             return this;
         }
@@ -346,7 +346,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUserSettings(DomainDefaultUserSettingsGetArgs defaultUserSettings) {
+        public Builder defaultUserSettings(DomainDefaultUserSettingsArgs defaultUserSettings) {
             return defaultUserSettings(Output.of(defaultUserSettings));
         }
 
@@ -419,7 +419,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
@@ -430,7 +430,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionPolicy(DomainRetentionPolicyGetArgs retentionPolicy) {
+        public Builder retentionPolicy(DomainRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 

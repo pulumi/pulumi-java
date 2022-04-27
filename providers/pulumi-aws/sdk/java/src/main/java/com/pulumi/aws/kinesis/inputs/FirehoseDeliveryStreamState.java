@@ -3,14 +3,14 @@
 
 package com.pulumi.aws.kinesis.inputs;
 
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionGetArgs;
-import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationGetArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamKinesisSourceConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionArgs;
+import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -66,13 +66,13 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="elasticsearchConfiguration")
-    private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
 
     /**
      * @return Configuration options if elasticsearch is the destination. More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs>> elasticsearchConfiguration() {
+    public Optional<Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs>> elasticsearchConfiguration() {
         return Optional.ofNullable(this.elasticsearchConfiguration);
     }
 
@@ -81,13 +81,13 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="extendedS3Configuration")
-    private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
+    private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
 
     /**
      * @return Enhanced configuration options for the s3 destination. More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs>> extendedS3Configuration() {
+    public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs>> extendedS3Configuration() {
         return Optional.ofNullable(this.extendedS3Configuration);
     }
 
@@ -96,13 +96,13 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="httpEndpointConfiguration")
-    private @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
 
     /**
      * @return Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs>> httpEndpointConfiguration() {
+    public Optional<Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs>> httpEndpointConfiguration() {
         return Optional.ofNullable(this.httpEndpointConfiguration);
     }
 
@@ -111,13 +111,13 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="kinesisSourceConfiguration")
-    private @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
 
     /**
      * @return Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs>> kinesisSourceConfiguration() {
+    public Optional<Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs>> kinesisSourceConfiguration() {
         return Optional.ofNullable(this.kinesisSourceConfiguration);
     }
 
@@ -145,7 +145,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="redshiftConfiguration")
-    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
 
     /**
      * @return Configuration options if redshift is the destination.
@@ -153,7 +153,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * `s3_configuration` block. More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs>> redshiftConfiguration() {
+    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationArgs>> redshiftConfiguration() {
         return Optional.ofNullable(this.redshiftConfiguration);
     }
 
@@ -163,14 +163,14 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="s3Configuration")
-    private @Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
+    private @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
 
     /**
      * @return Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
      * is redshift). More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamS3ConfigurationGetArgs>> s3Configuration() {
+    public Optional<Output<FirehoseDeliveryStreamS3ConfigurationArgs>> s3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }
 
@@ -180,14 +180,14 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serverSideEncryption")
-    private @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
+    private @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
 
     /**
      * @return Encrypt at rest options.
      * Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs>> serverSideEncryption() {
+    public Optional<Output<FirehoseDeliveryStreamServerSideEncryptionArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
 
@@ -196,13 +196,13 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="splunkConfiguration")
-    private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
 
     /**
      * @return Configuration options if splunk is the destination. More details are given below.
      * 
      */
-    public Optional<Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs>> splunkConfiguration() {
+    public Optional<Output<FirehoseDeliveryStreamSplunkConfigurationArgs>> splunkConfiguration() {
         return Optional.ofNullable(this.splunkConfiguration);
     }
 
@@ -346,7 +346,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder elasticsearchConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration) {
+        public Builder elasticsearchConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration) {
             $.elasticsearchConfiguration = elasticsearchConfiguration;
             return this;
         }
@@ -357,7 +357,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder elasticsearchConfiguration(FirehoseDeliveryStreamElasticsearchConfigurationGetArgs elasticsearchConfiguration) {
+        public Builder elasticsearchConfiguration(FirehoseDeliveryStreamElasticsearchConfigurationArgs elasticsearchConfiguration) {
             return elasticsearchConfiguration(Output.of(elasticsearchConfiguration));
         }
 
@@ -367,7 +367,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder extendedS3Configuration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration) {
+        public Builder extendedS3Configuration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration) {
             $.extendedS3Configuration = extendedS3Configuration;
             return this;
         }
@@ -378,7 +378,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder extendedS3Configuration(FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extendedS3Configuration) {
+        public Builder extendedS3Configuration(FirehoseDeliveryStreamExtendedS3ConfigurationArgs extendedS3Configuration) {
             return extendedS3Configuration(Output.of(extendedS3Configuration));
         }
 
@@ -388,7 +388,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder httpEndpointConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration) {
+        public Builder httpEndpointConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration) {
             $.httpEndpointConfiguration = httpEndpointConfiguration;
             return this;
         }
@@ -399,7 +399,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder httpEndpointConfiguration(FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs httpEndpointConfiguration) {
+        public Builder httpEndpointConfiguration(FirehoseDeliveryStreamHttpEndpointConfigurationArgs httpEndpointConfiguration) {
             return httpEndpointConfiguration(Output.of(httpEndpointConfiguration));
         }
 
@@ -409,7 +409,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder kinesisSourceConfiguration(@Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration) {
+        public Builder kinesisSourceConfiguration(@Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration) {
             $.kinesisSourceConfiguration = kinesisSourceConfiguration;
             return this;
         }
@@ -420,7 +420,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder kinesisSourceConfiguration(FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs kinesisSourceConfiguration) {
+        public Builder kinesisSourceConfiguration(FirehoseDeliveryStreamKinesisSourceConfigurationArgs kinesisSourceConfiguration) {
             return kinesisSourceConfiguration(Output.of(kinesisSourceConfiguration));
         }
 
@@ -455,7 +455,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder redshiftConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration) {
+        public Builder redshiftConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration) {
             $.redshiftConfiguration = redshiftConfiguration;
             return this;
         }
@@ -468,7 +468,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder redshiftConfiguration(FirehoseDeliveryStreamRedshiftConfigurationGetArgs redshiftConfiguration) {
+        public Builder redshiftConfiguration(FirehoseDeliveryStreamRedshiftConfigurationArgs redshiftConfiguration) {
             return redshiftConfiguration(Output.of(redshiftConfiguration));
         }
 
@@ -479,7 +479,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder s3Configuration(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration) {
+        public Builder s3Configuration(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration) {
             $.s3Configuration = s3Configuration;
             return this;
         }
@@ -491,7 +491,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder s3Configuration(FirehoseDeliveryStreamS3ConfigurationGetArgs s3Configuration) {
+        public Builder s3Configuration(FirehoseDeliveryStreamS3ConfigurationArgs s3Configuration) {
             return s3Configuration(Output.of(s3Configuration));
         }
 
@@ -502,7 +502,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(@Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
@@ -514,7 +514,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder serverSideEncryption(FirehoseDeliveryStreamServerSideEncryptionGetArgs serverSideEncryption) {
+        public Builder serverSideEncryption(FirehoseDeliveryStreamServerSideEncryptionArgs serverSideEncryption) {
             return serverSideEncryption(Output.of(serverSideEncryption));
         }
 
@@ -524,7 +524,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder splunkConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration) {
+        public Builder splunkConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration) {
             $.splunkConfiguration = splunkConfiguration;
             return this;
         }
@@ -535,7 +535,7 @@ public final class FirehoseDeliveryStreamState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder splunkConfiguration(FirehoseDeliveryStreamSplunkConfigurationGetArgs splunkConfiguration) {
+        public Builder splunkConfiguration(FirehoseDeliveryStreamSplunkConfigurationArgs splunkConfiguration) {
             return splunkConfiguration(Output.of(splunkConfiguration));
         }
 

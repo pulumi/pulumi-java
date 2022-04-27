@@ -3,22 +3,22 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateCapacityReservationSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateCpuOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateCreditSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateElasticGpuSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateElasticInferenceAcceleratorGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateEnclaveOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateHibernationOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateIamInstanceProfileGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateLicenseSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateMetadataOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateMonitoringGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateNetworkInterfaceGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplatePlacementGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationGetArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateCapacityReservationSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateCpuOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateCreditSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateElasticGpuSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateElasticInferenceAcceleratorArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateEnclaveOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateHibernationOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateIamInstanceProfileArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateLicenseSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateMetadataOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateMonitoringArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateNetworkInterfaceArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplatePlacementArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -56,14 +56,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="blockDeviceMappings")
-    private @Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
+    private @Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings;
 
     /**
      * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
      * See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<LaunchTemplateBlockDeviceMappingGetArgs>>> blockDeviceMappings() {
+    public Optional<Output<List<LaunchTemplateBlockDeviceMappingArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
 
@@ -72,13 +72,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="capacityReservationSpecification")
-    private @Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
+    private @Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
     /**
      * @return Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateCapacityReservationSpecificationGetArgs>> capacityReservationSpecification() {
+    public Optional<Output<LaunchTemplateCapacityReservationSpecificationArgs>> capacityReservationSpecification() {
         return Optional.ofNullable(this.capacityReservationSpecification);
     }
 
@@ -87,13 +87,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cpuOptions")
-    private @Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
+    private @Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions;
 
     /**
      * @return The CPU options for the instance. See CPU Options below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateCpuOptionsGetArgs>> cpuOptions() {
+    public Optional<Output<LaunchTemplateCpuOptionsArgs>> cpuOptions() {
         return Optional.ofNullable(this.cpuOptions);
     }
 
@@ -103,14 +103,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="creditSpecification")
-    private @Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
+    private @Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification;
 
     /**
      * @return Customize the credit specification of the instance. See Credit
      * Specification below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateCreditSpecificationGetArgs>> creditSpecification() {
+    public Optional<Output<LaunchTemplateCreditSpecificationArgs>> creditSpecification() {
         return Optional.ofNullable(this.creditSpecification);
     }
 
@@ -182,14 +182,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="elasticGpuSpecifications")
-    private @Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
+    private @Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications;
 
     /**
      * @return The elastic GPU to attach to the instance. See Elastic GPU
      * below for more details.
      * 
      */
-    public Optional<Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>>> elasticGpuSpecifications() {
+    public Optional<Output<List<LaunchTemplateElasticGpuSpecificationArgs>>> elasticGpuSpecifications() {
         return Optional.ofNullable(this.elasticGpuSpecifications);
     }
 
@@ -198,13 +198,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="elasticInferenceAccelerator")
-    private @Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
+    private @Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator;
 
     /**
      * @return Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateElasticInferenceAcceleratorGetArgs>> elasticInferenceAccelerator() {
+    public Optional<Output<LaunchTemplateElasticInferenceAcceleratorArgs>> elasticInferenceAccelerator() {
         return Optional.ofNullable(this.elasticInferenceAccelerator);
     }
 
@@ -213,13 +213,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enclaveOptions")
-    private @Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
+    private @Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions;
 
     /**
      * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateEnclaveOptionsGetArgs>> enclaveOptions() {
+    public Optional<Output<LaunchTemplateEnclaveOptionsArgs>> enclaveOptions() {
         return Optional.ofNullable(this.enclaveOptions);
     }
 
@@ -228,13 +228,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="hibernationOptions")
-    private @Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
+    private @Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions;
 
     /**
      * @return The hibernation options for the instance. See Hibernation Options below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateHibernationOptionsGetArgs>> hibernationOptions() {
+    public Optional<Output<LaunchTemplateHibernationOptionsArgs>> hibernationOptions() {
         return Optional.ofNullable(this.hibernationOptions);
     }
 
@@ -244,14 +244,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="iamInstanceProfile")
-    private @Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
+    private @Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile;
 
     /**
      * @return The IAM Instance Profile to launch the instance with. See Instance Profile
      * below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateIamInstanceProfileGetArgs>> iamInstanceProfile() {
+    public Optional<Output<LaunchTemplateIamInstanceProfileArgs>> iamInstanceProfile() {
         return Optional.ofNullable(this.iamInstanceProfile);
     }
 
@@ -293,14 +293,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceMarketOptions")
-    private @Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
+    private @Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions;
 
     /**
      * @return The market (purchasing) option for the instance. See Market Options
      * below for details.
      * 
      */
-    public Optional<Output<LaunchTemplateInstanceMarketOptionsGetArgs>> instanceMarketOptions() {
+    public Optional<Output<LaunchTemplateInstanceMarketOptionsArgs>> instanceMarketOptions() {
         return Optional.ofNullable(this.instanceMarketOptions);
     }
 
@@ -369,13 +369,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="licenseSpecifications")
-    private @Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
+    private @Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications;
 
     /**
      * @return A list of license specifications to associate with. See License Specification below for more details.
      * 
      */
-    public Optional<Output<List<LaunchTemplateLicenseSpecificationGetArgs>>> licenseSpecifications() {
+    public Optional<Output<List<LaunchTemplateLicenseSpecificationArgs>>> licenseSpecifications() {
         return Optional.ofNullable(this.licenseSpecifications);
     }
 
@@ -384,13 +384,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadataOptions")
-    private @Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
+    private @Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions;
 
     /**
      * @return Customize the metadata options for the instance. See Metadata Options below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateMetadataOptionsGetArgs>> metadataOptions() {
+    public Optional<Output<LaunchTemplateMetadataOptionsArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
 
@@ -399,13 +399,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monitoring")
-    private @Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring;
+    private @Nullable Output<LaunchTemplateMonitoringArgs> monitoring;
 
     /**
      * @return The monitoring option for the instance. See Monitoring below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplateMonitoringGetArgs>> monitoring() {
+    public Optional<Output<LaunchTemplateMonitoringArgs>> monitoring() {
         return Optional.ofNullable(this.monitoring);
     }
 
@@ -445,14 +445,14 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return Customize network interfaces to be attached at instance boot time. See Network
      * Interfaces below for more details.
      * 
      */
-    public Optional<Output<List<LaunchTemplateNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<LaunchTemplateNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -461,13 +461,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="placement")
-    private @Nullable Output<LaunchTemplatePlacementGetArgs> placement;
+    private @Nullable Output<LaunchTemplatePlacementArgs> placement;
 
     /**
      * @return The placement of the instance. See Placement below for more details.
      * 
      */
-    public Optional<Output<LaunchTemplatePlacementGetArgs>> placement() {
+    public Optional<Output<LaunchTemplatePlacementArgs>> placement() {
         return Optional.ofNullable(this.placement);
     }
 
@@ -508,13 +508,13 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagSpecifications")
-    private @Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
+    private @Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications;
 
     /**
      * @return The tags to apply to the resources during launch. See Tag Specifications below for more details.
      * 
      */
-    public Optional<Output<List<LaunchTemplateTagSpecificationGetArgs>>> tagSpecifications() {
+    public Optional<Output<List<LaunchTemplateTagSpecificationArgs>>> tagSpecifications() {
         return Optional.ofNullable(this.tagSpecifications);
     }
 
@@ -680,7 +680,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(@Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
@@ -692,7 +692,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(List<LaunchTemplateBlockDeviceMappingGetArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(List<LaunchTemplateBlockDeviceMappingArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
@@ -703,7 +703,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(LaunchTemplateBlockDeviceMappingGetArgs... blockDeviceMappings) {
+        public Builder blockDeviceMappings(LaunchTemplateBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
@@ -713,7 +713,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(@Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification) {
             $.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
@@ -724,7 +724,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder capacityReservationSpecification(LaunchTemplateCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(LaunchTemplateCapacityReservationSpecificationArgs capacityReservationSpecification) {
             return capacityReservationSpecification(Output.of(capacityReservationSpecification));
         }
 
@@ -734,7 +734,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder cpuOptions(@Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions) {
+        public Builder cpuOptions(@Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions) {
             $.cpuOptions = cpuOptions;
             return this;
         }
@@ -745,7 +745,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder cpuOptions(LaunchTemplateCpuOptionsGetArgs cpuOptions) {
+        public Builder cpuOptions(LaunchTemplateCpuOptionsArgs cpuOptions) {
             return cpuOptions(Output.of(cpuOptions));
         }
 
@@ -756,7 +756,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder creditSpecification(@Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification) {
+        public Builder creditSpecification(@Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification) {
             $.creditSpecification = creditSpecification;
             return this;
         }
@@ -768,7 +768,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder creditSpecification(LaunchTemplateCreditSpecificationGetArgs creditSpecification) {
+        public Builder creditSpecification(LaunchTemplateCreditSpecificationArgs creditSpecification) {
             return creditSpecification(Output.of(creditSpecification));
         }
 
@@ -865,7 +865,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder elasticGpuSpecifications(@Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(@Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications) {
             $.elasticGpuSpecifications = elasticGpuSpecifications;
             return this;
         }
@@ -877,7 +877,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder elasticGpuSpecifications(List<LaunchTemplateElasticGpuSpecificationGetArgs> elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(List<LaunchTemplateElasticGpuSpecificationArgs> elasticGpuSpecifications) {
             return elasticGpuSpecifications(Output.of(elasticGpuSpecifications));
         }
 
@@ -888,7 +888,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder elasticGpuSpecifications(LaunchTemplateElasticGpuSpecificationGetArgs... elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(LaunchTemplateElasticGpuSpecificationArgs... elasticGpuSpecifications) {
             return elasticGpuSpecifications(List.of(elasticGpuSpecifications));
         }
 
@@ -898,7 +898,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder elasticInferenceAccelerator(@Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator) {
+        public Builder elasticInferenceAccelerator(@Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator) {
             $.elasticInferenceAccelerator = elasticInferenceAccelerator;
             return this;
         }
@@ -909,7 +909,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder elasticInferenceAccelerator(LaunchTemplateElasticInferenceAcceleratorGetArgs elasticInferenceAccelerator) {
+        public Builder elasticInferenceAccelerator(LaunchTemplateElasticInferenceAcceleratorArgs elasticInferenceAccelerator) {
             return elasticInferenceAccelerator(Output.of(elasticInferenceAccelerator));
         }
 
@@ -919,7 +919,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder enclaveOptions(@Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions) {
+        public Builder enclaveOptions(@Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions) {
             $.enclaveOptions = enclaveOptions;
             return this;
         }
@@ -930,7 +930,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder enclaveOptions(LaunchTemplateEnclaveOptionsGetArgs enclaveOptions) {
+        public Builder enclaveOptions(LaunchTemplateEnclaveOptionsArgs enclaveOptions) {
             return enclaveOptions(Output.of(enclaveOptions));
         }
 
@@ -940,7 +940,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder hibernationOptions(@Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions) {
+        public Builder hibernationOptions(@Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions) {
             $.hibernationOptions = hibernationOptions;
             return this;
         }
@@ -951,7 +951,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder hibernationOptions(LaunchTemplateHibernationOptionsGetArgs hibernationOptions) {
+        public Builder hibernationOptions(LaunchTemplateHibernationOptionsArgs hibernationOptions) {
             return hibernationOptions(Output.of(hibernationOptions));
         }
 
@@ -962,7 +962,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder iamInstanceProfile(@Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile) {
             $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
@@ -974,7 +974,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder iamInstanceProfile(LaunchTemplateIamInstanceProfileGetArgs iamInstanceProfile) {
+        public Builder iamInstanceProfile(LaunchTemplateIamInstanceProfileArgs iamInstanceProfile) {
             return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
 
@@ -1029,7 +1029,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder instanceMarketOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions) {
+        public Builder instanceMarketOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions) {
             $.instanceMarketOptions = instanceMarketOptions;
             return this;
         }
@@ -1041,7 +1041,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder instanceMarketOptions(LaunchTemplateInstanceMarketOptionsGetArgs instanceMarketOptions) {
+        public Builder instanceMarketOptions(LaunchTemplateInstanceMarketOptionsArgs instanceMarketOptions) {
             return instanceMarketOptions(Output.of(instanceMarketOptions));
         }
 
@@ -1135,7 +1135,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder licenseSpecifications(@Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications) {
+        public Builder licenseSpecifications(@Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications) {
             $.licenseSpecifications = licenseSpecifications;
             return this;
         }
@@ -1146,7 +1146,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder licenseSpecifications(List<LaunchTemplateLicenseSpecificationGetArgs> licenseSpecifications) {
+        public Builder licenseSpecifications(List<LaunchTemplateLicenseSpecificationArgs> licenseSpecifications) {
             return licenseSpecifications(Output.of(licenseSpecifications));
         }
 
@@ -1156,7 +1156,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder licenseSpecifications(LaunchTemplateLicenseSpecificationGetArgs... licenseSpecifications) {
+        public Builder licenseSpecifications(LaunchTemplateLicenseSpecificationArgs... licenseSpecifications) {
             return licenseSpecifications(List.of(licenseSpecifications));
         }
 
@@ -1166,7 +1166,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder metadataOptions(@Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
@@ -1177,7 +1177,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder metadataOptions(LaunchTemplateMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(LaunchTemplateMetadataOptionsArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
@@ -1187,7 +1187,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder monitoring(@Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring) {
+        public Builder monitoring(@Nullable Output<LaunchTemplateMonitoringArgs> monitoring) {
             $.monitoring = monitoring;
             return this;
         }
@@ -1198,7 +1198,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder monitoring(LaunchTemplateMonitoringGetArgs monitoring) {
+        public Builder monitoring(LaunchTemplateMonitoringArgs monitoring) {
             return monitoring(Output.of(monitoring));
         }
 
@@ -1251,7 +1251,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1263,7 +1263,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<LaunchTemplateNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<LaunchTemplateNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1274,7 +1274,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder networkInterfaces(LaunchTemplateNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(LaunchTemplateNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1284,7 +1284,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder placement(@Nullable Output<LaunchTemplatePlacementGetArgs> placement) {
+        public Builder placement(@Nullable Output<LaunchTemplatePlacementArgs> placement) {
             $.placement = placement;
             return this;
         }
@@ -1295,7 +1295,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder placement(LaunchTemplatePlacementGetArgs placement) {
+        public Builder placement(LaunchTemplatePlacementArgs placement) {
             return placement(Output.of(placement));
         }
 
@@ -1360,7 +1360,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tagSpecifications(@Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications) {
             $.tagSpecifications = tagSpecifications;
             return this;
         }
@@ -1371,7 +1371,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tagSpecifications(List<LaunchTemplateTagSpecificationGetArgs> tagSpecifications) {
+        public Builder tagSpecifications(List<LaunchTemplateTagSpecificationArgs> tagSpecifications) {
             return tagSpecifications(Output.of(tagSpecifications));
         }
 
@@ -1381,7 +1381,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tagSpecifications(LaunchTemplateTagSpecificationGetArgs... tagSpecifications) {
+        public Builder tagSpecifications(LaunchTemplateTagSpecificationArgs... tagSpecifications) {
             return tagSpecifications(List.of(tagSpecifications));
         }
 

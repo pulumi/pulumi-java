@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.JobIAMMemberConditionGetArgs;
+import com.pulumi.gcp.dataproc.inputs.JobIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class JobIAMMemberState extends com.pulumi.resources.ResourceArgs {
     public static final JobIAMMemberState Empty = new JobIAMMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<JobIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<JobIAMMemberConditionArgs> condition;
 
-    public Optional<Output<JobIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<JobIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -135,12 +135,12 @@ public final class JobIAMMemberState extends com.pulumi.resources.ResourceArgs {
             $ = new JobIAMMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<JobIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<JobIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(JobIAMMemberConditionGetArgs condition) {
+        public Builder condition(JobIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

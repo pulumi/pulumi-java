@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authParameters")
-    private @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
+    private @Nullable Output<EventConnectionAuthParametersArgs> authParameters;
 
     /**
      * @return Parameters used for authorization. A maximum of 1 are allowed. Documented below.
      * 
      */
-    public Optional<Output<EventConnectionAuthParametersGetArgs>> authParameters() {
+    public Optional<Output<EventConnectionAuthParametersArgs>> authParameters() {
         return Optional.ofNullable(this.authParameters);
     }
 
@@ -162,7 +162,7 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder authParameters(@Nullable Output<EventConnectionAuthParametersGetArgs> authParameters) {
+        public Builder authParameters(@Nullable Output<EventConnectionAuthParametersArgs> authParameters) {
             $.authParameters = authParameters;
             return this;
         }
@@ -173,7 +173,7 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder authParameters(EventConnectionAuthParametersGetArgs authParameters) {
+        public Builder authParameters(EventConnectionAuthParametersArgs authParameters) {
             return authParameters(Output.of(authParameters));
         }
 

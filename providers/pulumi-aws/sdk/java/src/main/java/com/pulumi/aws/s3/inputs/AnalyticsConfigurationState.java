@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterGetArgs;
-import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisGetArgs;
+import com.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterArgs;
+import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filter")
-    private @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
+    private @Nullable Output<AnalyticsConfigurationFilterArgs> filter;
 
     /**
      * @return Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Optional<Output<AnalyticsConfigurationFilterGetArgs>> filter() {
+    public Optional<Output<AnalyticsConfigurationFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -67,13 +67,13 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storageClassAnalysis")
-    private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
+    private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
     /**
      * @return Configuration for the analytics data export (documented below).
      * 
      */
-    public Optional<Output<AnalyticsConfigurationStorageClassAnalysisGetArgs>> storageClassAnalysis() {
+    public Optional<Output<AnalyticsConfigurationStorageClassAnalysisArgs>> storageClassAnalysis() {
         return Optional.ofNullable(this.storageClassAnalysis);
     }
 
@@ -131,7 +131,7 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<AnalyticsConfigurationFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<AnalyticsConfigurationFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
@@ -142,7 +142,7 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder filter(AnalyticsConfigurationFilterGetArgs filter) {
+        public Builder filter(AnalyticsConfigurationFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
@@ -173,7 +173,7 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
+        public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
             $.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
@@ -184,7 +184,7 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder storageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
+        public Builder storageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisArgs storageClassAnalysis) {
             return storageClassAnalysis(Output.of(storageClassAnalysis));
         }
 
