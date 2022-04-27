@@ -332,12 +332,18 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 	}
 	className := mod.typeName(t)
 	if !foreign && mod.classQueue != nil {
+		// Generate class only if it's for the current package.
+		// This way, classes for foreign packages are not generated.
 		mod.classQueue.ensureGenerated(classQueueEntry{
 			packageName: packageName,
 			className:   className,
 			schemaType:  t,
 			input:       input,
 		})
+	} else {
+		fmt.Printf("INFO: skipping class: %s.%s from foreign package %s\n",
+			packageName, className, mod.pkg.Name,
+		)
 	}
 	fqn := packageName.Dot(className)
 	return TypeShape{Type: fqn}
@@ -2155,12 +2161,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				parent := getMod(parentName, p)
 				parent.children = append(parent.children, mod)
 			}
-
-			// Save the module only if it's for the current package.
-			// This way, modules for external packages are not saved.
-			if p == pkg {
-				modules[modName] = mod
-			}
+			modules[modName] = mod
 		}
 		return mod
 	}
