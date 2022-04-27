@@ -3,7 +3,7 @@
 
 package com.pulumi.awsx.ecs;
 
-import com.pulumi.awsx.awsx.inputs.DefaultRoleWithPolicy;
+import com.pulumi.awsx.awsx.inputs.DefaultRoleWithPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -39,14 +39,14 @@ public final class EC2TaskDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="executionRole")
-    private @Nullable DefaultRoleWithPolicy executionRole;
+    private @Nullable DefaultRoleWithPolicyArgs executionRole;
 
     /**
      * @return The execution role that the Amazon ECS container agent and the Docker daemon can assume.
      * Will be created automatically if not defined.
      * 
      */
-    public Optional<DefaultRoleWithPolicy> executionRole() {
+    public Optional<DefaultRoleWithPolicyArgs> executionRole() {
         return Optional.ofNullable(this.executionRole);
     }
 
@@ -155,14 +155,14 @@ public final class EC2TaskDefinitionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="taskRole")
-    private @Nullable DefaultRoleWithPolicy taskRole;
+    private @Nullable DefaultRoleWithPolicyArgs taskRole;
 
     /**
      * @return IAM role that allows your Amazon ECS container task to make calls to other AWS services.
      * Will be created automatically if not defined.
      * 
      */
-    public Optional<DefaultRoleWithPolicy> taskRole() {
+    public Optional<DefaultRoleWithPolicyArgs> taskRole() {
         return Optional.ofNullable(this.taskRole);
     }
 
@@ -227,7 +227,7 @@ public final class EC2TaskDefinitionArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder executionRole(@Nullable DefaultRoleWithPolicy executionRole) {
+        public Builder executionRole(@Nullable DefaultRoleWithPolicyArgs executionRole) {
             $.executionRole = executionRole;
             return this;
         }
@@ -376,7 +376,7 @@ public final class EC2TaskDefinitionArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder taskRole(@Nullable DefaultRoleWithPolicy taskRole) {
+        public Builder taskRole(@Nullable DefaultRoleWithPolicyArgs taskRole) {
             $.taskRole = taskRole;
             return this;
         }

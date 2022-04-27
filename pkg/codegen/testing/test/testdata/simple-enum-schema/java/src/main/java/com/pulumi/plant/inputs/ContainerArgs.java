@@ -120,7 +120,9 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ContainerArgs build() {
-            $.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output().arg($.brightness).def(ContainerBrightness.One).getNullable();
+            $.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output()
+                .arg($.brightness)
+                .def(com.pulumi.plant.tree_v1.enums.ContainerBrightness.One).getNullable();
             $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
             return $;
         }

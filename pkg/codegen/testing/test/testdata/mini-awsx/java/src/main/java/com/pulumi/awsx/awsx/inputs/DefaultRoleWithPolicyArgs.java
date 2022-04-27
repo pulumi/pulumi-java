@@ -3,7 +3,7 @@
 
 package com.pulumi.awsx.awsx.inputs;
 
-import com.pulumi.awsx.awsx.inputs.RoleWithPolicy;
+import com.pulumi.awsx.awsx.inputs.RoleWithPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -26,13 +26,13 @@ public final class DefaultRoleWithPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="args")
-    private @Nullable RoleWithPolicy args;
+    private @Nullable RoleWithPolicyArgs args;
 
     /**
      * @return Args to use when creating the role and policies. Can&#39;t be specified if `roleArn` is used.
      * 
      */
-    public Optional<RoleWithPolicy> args() {
+    public Optional<RoleWithPolicyArgs> args() {
         return Optional.ofNullable(this.args);
     }
 
@@ -98,7 +98,7 @@ public final class DefaultRoleWithPolicyArgs extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder args(@Nullable RoleWithPolicy args) {
+        public Builder args(@Nullable RoleWithPolicyArgs args) {
             $.args = args;
             return this;
         }
