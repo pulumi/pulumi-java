@@ -5,7 +5,7 @@ package com.pulumi.gcp.ml.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.ml.inputs.EngineModelDefaultVersionGetArgs;
+import com.pulumi.gcp.ml.inputs.EngineModelDefaultVersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class EngineModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultVersion")
-    private @Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion;
+    private @Nullable Output<EngineModelDefaultVersionArgs> defaultVersion;
 
     /**
      * @return The default version of the model. This version will be used to handle
@@ -33,7 +33,7 @@ public final class EngineModelState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EngineModelDefaultVersionGetArgs>> defaultVersion() {
+    public Optional<Output<EngineModelDefaultVersionArgs>> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
 
@@ -185,7 +185,7 @@ public final class EngineModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultVersion(@Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion) {
+        public Builder defaultVersion(@Nullable Output<EngineModelDefaultVersionArgs> defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
@@ -198,7 +198,7 @@ public final class EngineModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultVersion(EngineModelDefaultVersionGetArgs defaultVersion) {
+        public Builder defaultVersion(EngineModelDefaultVersionArgs defaultVersion) {
             return defaultVersion(Output.of(defaultVersion));
         }
 

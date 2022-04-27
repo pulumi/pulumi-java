@@ -5,8 +5,8 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeGetArgs;
-import com.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionGetArgs;
+import com.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeArgs;
+import com.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,13 +53,13 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAge")
-    private @Nullable Output<GCPolicyMaxAgeGetArgs> maxAge;
+    private @Nullable Output<GCPolicyMaxAgeArgs> maxAge;
 
     /**
      * @return GC policy that applies to all cells older than the given age.
      * 
      */
-    public Optional<Output<GCPolicyMaxAgeGetArgs>> maxAge() {
+    public Optional<Output<GCPolicyMaxAgeArgs>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
 
@@ -68,13 +68,13 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxVersions")
-    private @Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions;
+    private @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions;
 
     /**
      * @return GC policy that applies to all versions of a cell except for the most recent.
      * 
      */
-    public Optional<Output<List<GCPolicyMaxVersionGetArgs>>> maxVersions() {
+    public Optional<Output<List<GCPolicyMaxVersionArgs>>> maxVersions() {
         return Optional.ofNullable(this.maxVersions);
     }
 
@@ -201,7 +201,7 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxAge(@Nullable Output<GCPolicyMaxAgeGetArgs> maxAge) {
+        public Builder maxAge(@Nullable Output<GCPolicyMaxAgeArgs> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
@@ -212,7 +212,7 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxAge(GCPolicyMaxAgeGetArgs maxAge) {
+        public Builder maxAge(GCPolicyMaxAgeArgs maxAge) {
             return maxAge(Output.of(maxAge));
         }
 
@@ -222,7 +222,7 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
+        public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions) {
             $.maxVersions = maxVersions;
             return this;
         }
@@ -233,7 +233,7 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxVersions(List<GCPolicyMaxVersionGetArgs> maxVersions) {
+        public Builder maxVersions(List<GCPolicyMaxVersionArgs> maxVersions) {
             return maxVersions(Output.of(maxVersions));
         }
 
@@ -243,7 +243,7 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxVersions(GCPolicyMaxVersionGetArgs... maxVersions) {
+        public Builder maxVersions(GCPolicyMaxVersionArgs... maxVersions) {
             return maxVersions(List.of(maxVersions));
         }
 

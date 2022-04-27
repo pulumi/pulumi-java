@@ -5,15 +5,15 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceBackendGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceCircuitBreakersGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceConnectionTrackingPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceConsistentHashGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceFailoverPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceIapGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceLogConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceBackendArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceCircuitBreakersArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceConnectionTrackingPolicyArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceConsistentHashArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceFailoverPolicyArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceIapArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceLogConfigArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,14 +56,14 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="backends")
-    private @Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends;
+    private @Nullable Output<List<RegionBackendServiceBackendArgs>> backends;
 
     /**
      * @return The set of backends that serve this RegionBackendService.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RegionBackendServiceBackendGetArgs>>> backends() {
+    public Optional<Output<List<RegionBackendServiceBackendArgs>>> backends() {
         return Optional.ofNullable(this.backends);
     }
 
@@ -73,14 +73,14 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cdnPolicy")
-    private @Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
+    private @Nullable Output<RegionBackendServiceCdnPolicyArgs> cdnPolicy;
 
     /**
      * @return Cloud CDN configuration for this BackendService.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceCdnPolicyGetArgs>> cdnPolicy() {
+    public Optional<Output<RegionBackendServiceCdnPolicyArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
 
@@ -92,7 +92,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="circuitBreakers")
-    private @Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
+    private @Nullable Output<RegionBackendServiceCircuitBreakersArgs> circuitBreakers;
 
     /**
      * @return Settings controlling the volume of connections to a backend service. This field
@@ -101,7 +101,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceCircuitBreakersGetArgs>> circuitBreakers() {
+    public Optional<Output<RegionBackendServiceCircuitBreakersArgs>> circuitBreakers() {
         return Optional.ofNullable(this.circuitBreakers);
     }
 
@@ -130,7 +130,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionTrackingPolicy")
-    private @Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
+    private @Nullable Output<RegionBackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
 
     /**
      * @return Connection Tracking configuration for this BackendService.
@@ -139,7 +139,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceConnectionTrackingPolicyGetArgs>> connectionTrackingPolicy() {
+    public Optional<Output<RegionBackendServiceConnectionTrackingPolicyArgs>> connectionTrackingPolicy() {
         return Optional.ofNullable(this.connectionTrackingPolicy);
     }
 
@@ -154,7 +154,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="consistentHash")
-    private @Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash;
+    private @Nullable Output<RegionBackendServiceConsistentHashArgs> consistentHash;
 
     /**
      * @return Consistent Hash-based load balancing can be used to provide soft session
@@ -166,7 +166,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * This field only applies when all of the following are true -
      * 
      */
-    public Optional<Output<RegionBackendServiceConsistentHashGetArgs>> consistentHash() {
+    public Optional<Output<RegionBackendServiceConsistentHashArgs>> consistentHash() {
         return Optional.ofNullable(this.consistentHash);
     }
 
@@ -223,14 +223,14 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="failoverPolicy")
-    private @Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
+    private @Nullable Output<RegionBackendServiceFailoverPolicyArgs> failoverPolicy;
 
     /**
      * @return Policy for failovers.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceFailoverPolicyGetArgs>> failoverPolicy() {
+    public Optional<Output<RegionBackendServiceFailoverPolicyArgs>> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }
 
@@ -278,14 +278,14 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="iap")
-    private @Nullable Output<RegionBackendServiceIapGetArgs> iap;
+    private @Nullable Output<RegionBackendServiceIapArgs> iap;
 
     /**
      * @return Settings for enabling Cloud Identity Aware Proxy
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceIapGetArgs>> iap() {
+    public Optional<Output<RegionBackendServiceIapArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
 
@@ -374,7 +374,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig;
+    private @Nullable Output<RegionBackendServiceLogConfigArgs> logConfig;
 
     /**
      * @return This field denotes the logging options for the load balancer traffic served by this backend service.
@@ -382,7 +382,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceLogConfigGetArgs>> logConfig() {
+    public Optional<Output<RegionBackendServiceLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -426,7 +426,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="outlierDetection")
-    private @Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
+    private @Nullable Output<RegionBackendServiceOutlierDetectionArgs> outlierDetection;
 
     /**
      * @return Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -435,7 +435,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionBackendServiceOutlierDetectionGetArgs>> outlierDetection() {
+    public Optional<Output<RegionBackendServiceOutlierDetectionArgs>> outlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
 
@@ -658,7 +658,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder backends(@Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends) {
+        public Builder backends(@Nullable Output<List<RegionBackendServiceBackendArgs>> backends) {
             $.backends = backends;
             return this;
         }
@@ -670,7 +670,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder backends(List<RegionBackendServiceBackendGetArgs> backends) {
+        public Builder backends(List<RegionBackendServiceBackendArgs> backends) {
             return backends(Output.of(backends));
         }
 
@@ -681,7 +681,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder backends(RegionBackendServiceBackendGetArgs... backends) {
+        public Builder backends(RegionBackendServiceBackendArgs... backends) {
             return backends(List.of(backends));
         }
 
@@ -692,7 +692,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder cdnPolicy(@Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Output<RegionBackendServiceCdnPolicyArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
@@ -704,7 +704,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder cdnPolicy(RegionBackendServiceCdnPolicyGetArgs cdnPolicy) {
+        public Builder cdnPolicy(RegionBackendServiceCdnPolicyArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 
@@ -717,7 +717,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder circuitBreakers(@Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers) {
+        public Builder circuitBreakers(@Nullable Output<RegionBackendServiceCircuitBreakersArgs> circuitBreakers) {
             $.circuitBreakers = circuitBreakers;
             return this;
         }
@@ -731,7 +731,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder circuitBreakers(RegionBackendServiceCircuitBreakersGetArgs circuitBreakers) {
+        public Builder circuitBreakers(RegionBackendServiceCircuitBreakersArgs circuitBreakers) {
             return circuitBreakers(Output.of(circuitBreakers));
         }
 
@@ -767,7 +767,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder connectionTrackingPolicy(@Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy) {
+        public Builder connectionTrackingPolicy(@Nullable Output<RegionBackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy) {
             $.connectionTrackingPolicy = connectionTrackingPolicy;
             return this;
         }
@@ -781,7 +781,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder connectionTrackingPolicy(RegionBackendServiceConnectionTrackingPolicyGetArgs connectionTrackingPolicy) {
+        public Builder connectionTrackingPolicy(RegionBackendServiceConnectionTrackingPolicyArgs connectionTrackingPolicy) {
             return connectionTrackingPolicy(Output.of(connectionTrackingPolicy));
         }
 
@@ -797,7 +797,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder consistentHash(@Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash) {
+        public Builder consistentHash(@Nullable Output<RegionBackendServiceConsistentHashArgs> consistentHash) {
             $.consistentHash = consistentHash;
             return this;
         }
@@ -814,7 +814,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder consistentHash(RegionBackendServiceConsistentHashGetArgs consistentHash) {
+        public Builder consistentHash(RegionBackendServiceConsistentHashArgs consistentHash) {
             return consistentHash(Output.of(consistentHash));
         }
 
@@ -890,7 +890,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder failoverPolicy(@Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy) {
+        public Builder failoverPolicy(@Nullable Output<RegionBackendServiceFailoverPolicyArgs> failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;
         }
@@ -902,7 +902,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder failoverPolicy(RegionBackendServiceFailoverPolicyGetArgs failoverPolicy) {
+        public Builder failoverPolicy(RegionBackendServiceFailoverPolicyArgs failoverPolicy) {
             return failoverPolicy(Output.of(failoverPolicy));
         }
 
@@ -963,7 +963,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder iap(@Nullable Output<RegionBackendServiceIapGetArgs> iap) {
+        public Builder iap(@Nullable Output<RegionBackendServiceIapArgs> iap) {
             $.iap = iap;
             return this;
         }
@@ -975,7 +975,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder iap(RegionBackendServiceIapGetArgs iap) {
+        public Builder iap(RegionBackendServiceIapArgs iap) {
             return iap(Output.of(iap));
         }
 
@@ -1077,7 +1077,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<RegionBackendServiceLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -1090,7 +1090,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder logConfig(RegionBackendServiceLogConfigGetArgs logConfig) {
+        public Builder logConfig(RegionBackendServiceLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -1147,7 +1147,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder outlierDetection(@Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection) {
+        public Builder outlierDetection(@Nullable Output<RegionBackendServiceOutlierDetectionArgs> outlierDetection) {
             $.outlierDetection = outlierDetection;
             return this;
         }
@@ -1161,7 +1161,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder outlierDetection(RegionBackendServiceOutlierDetectionGetArgs outlierDetection) {
+        public Builder outlierDetection(RegionBackendServiceOutlierDetectionArgs outlierDetection) {
             return outlierDetection(Output.of(outlierDetection));
         }
 

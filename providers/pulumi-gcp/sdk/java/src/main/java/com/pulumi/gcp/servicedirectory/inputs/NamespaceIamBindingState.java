@@ -5,7 +5,7 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingConditionGetArgs;
+import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class NamespaceIamBindingState extends com.pulumi.resources.Resourc
     public static final NamespaceIamBindingState Empty = new NamespaceIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<NamespaceIamBindingConditionGetArgs> condition;
+    private @Nullable Output<NamespaceIamBindingConditionArgs> condition;
 
-    public Optional<Output<NamespaceIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<NamespaceIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -108,12 +108,12 @@ public final class NamespaceIamBindingState extends com.pulumi.resources.Resourc
             $ = new NamespaceIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<NamespaceIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<NamespaceIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(NamespaceIamBindingConditionGetArgs condition) {
+        public Builder condition(NamespaceIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

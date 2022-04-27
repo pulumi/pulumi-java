@@ -5,7 +5,7 @@ package com.pulumi.gcp.vpcaccess.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.vpcaccess.inputs.ConnectorSubnetGetArgs;
+import com.pulumi.gcp.vpcaccess.inputs.ConnectorSubnetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -207,14 +207,14 @@ public final class ConnectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnet")
-    private @Nullable Output<ConnectorSubnetGetArgs> subnet;
+    private @Nullable Output<ConnectorSubnetArgs> subnet;
 
     /**
      * @return The subnet in which to house the connector
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ConnectorSubnetGetArgs>> subnet() {
+    public Optional<Output<ConnectorSubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 
@@ -517,7 +517,7 @@ public final class ConnectorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnet(@Nullable Output<ConnectorSubnetGetArgs> subnet) {
+        public Builder subnet(@Nullable Output<ConnectorSubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
@@ -529,7 +529,7 @@ public final class ConnectorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnet(ConnectorSubnetGetArgs subnet) {
+        public Builder subnet(ConnectorSubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }
 

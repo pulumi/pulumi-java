@@ -5,7 +5,7 @@ package com.pulumi.gcp.sourcerepo.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigGetArgs;
+import com.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +59,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubConfigs")
-    private @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
+    private @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
 
     /**
      * @return How this repository publishes a change in the repository through Cloud Pub/Sub.
@@ -67,7 +67,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RepositoryPubsubConfigGetArgs>>> pubsubConfigs() {
+    public Optional<Output<List<RepositoryPubsubConfigArgs>>> pubsubConfigs() {
         return Optional.ofNullable(this.pubsubConfigs);
     }
 
@@ -183,7 +183,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs) {
             $.pubsubConfigs = pubsubConfigs;
             return this;
         }
@@ -196,7 +196,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubConfigs(List<RepositoryPubsubConfigGetArgs> pubsubConfigs) {
+        public Builder pubsubConfigs(List<RepositoryPubsubConfigArgs> pubsubConfigs) {
             return pubsubConfigs(Output.of(pubsubConfigs));
         }
 
@@ -208,7 +208,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubConfigs(RepositoryPubsubConfigGetArgs... pubsubConfigs) {
+        public Builder pubsubConfigs(RepositoryPubsubConfigArgs... pubsubConfigs) {
             return pubsubConfigs(List.of(pubsubConfigs));
         }
 

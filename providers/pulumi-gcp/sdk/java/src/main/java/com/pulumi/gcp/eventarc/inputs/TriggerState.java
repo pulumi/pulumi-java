@@ -5,9 +5,9 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.eventarc.inputs.TriggerDestinationGetArgs;
-import com.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaGetArgs;
-import com.pulumi.gcp.eventarc.inputs.TriggerTransportGetArgs;
+import com.pulumi.gcp.eventarc.inputs.TriggerDestinationArgs;
+import com.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaArgs;
+import com.pulumi.gcp.eventarc.inputs.TriggerTransportArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,13 +40,13 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-    private @Nullable Output<TriggerDestinationGetArgs> destination;
+    private @Nullable Output<TriggerDestinationArgs> destination;
 
     /**
      * @return Required. Destination specifies where the events should be sent to.
      * 
      */
-    public Optional<Output<TriggerDestinationGetArgs>> destination() {
+    public Optional<Output<TriggerDestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
 
@@ -102,13 +102,13 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchingCriterias")
-    private @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias;
+    private @Nullable Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
 
     /**
      * @return Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
      * 
      */
-    public Optional<Output<List<TriggerMatchingCriteriaGetArgs>>> matchingCriterias() {
+    public Optional<Output<List<TriggerMatchingCriteriaArgs>>> matchingCriterias() {
         return Optional.ofNullable(this.matchingCriterias);
     }
 
@@ -162,13 +162,13 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transports")
-    private @Nullable Output<List<TriggerTransportGetArgs>> transports;
+    private @Nullable Output<List<TriggerTransportArgs>> transports;
 
     /**
      * @return Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
-    public Optional<Output<List<TriggerTransportGetArgs>>> transports() {
+    public Optional<Output<List<TriggerTransportArgs>>> transports() {
         return Optional.ofNullable(this.transports);
     }
 
@@ -266,7 +266,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destination(@Nullable Output<TriggerDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Output<TriggerDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
@@ -277,7 +277,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder destination(TriggerDestinationGetArgs destination) {
+        public Builder destination(TriggerDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
@@ -352,7 +352,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder matchingCriterias(@Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias) {
+        public Builder matchingCriterias(@Nullable Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
             $.matchingCriterias = matchingCriterias;
             return this;
         }
@@ -363,7 +363,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder matchingCriterias(List<TriggerMatchingCriteriaGetArgs> matchingCriterias) {
+        public Builder matchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
             return matchingCriterias(Output.of(matchingCriterias));
         }
 
@@ -373,7 +373,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder matchingCriterias(TriggerMatchingCriteriaGetArgs... matchingCriterias) {
+        public Builder matchingCriterias(TriggerMatchingCriteriaArgs... matchingCriterias) {
             return matchingCriterias(List.of(matchingCriterias));
         }
 
@@ -446,7 +446,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transports(@Nullable Output<List<TriggerTransportGetArgs>> transports) {
+        public Builder transports(@Nullable Output<List<TriggerTransportArgs>> transports) {
             $.transports = transports;
             return this;
         }
@@ -457,7 +457,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transports(List<TriggerTransportGetArgs> transports) {
+        public Builder transports(List<TriggerTransportArgs> transports) {
             return transports(Output.of(transports));
         }
 
@@ -467,7 +467,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transports(TriggerTransportGetArgs... transports) {
+        public Builder transports(TriggerTransportArgs... transports) {
             return transports(List.of(transports));
         }
 

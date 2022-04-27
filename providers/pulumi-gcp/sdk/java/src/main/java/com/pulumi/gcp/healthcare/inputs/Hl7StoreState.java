@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigGetArgs;
-import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsGetArgs;
-import com.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigGetArgs;
+import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigArgs;
+import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsArgs;
+import com.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -95,7 +95,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
     @Import(name="notificationConfig")
-    private @Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig;
 
     /**
      * @return -
@@ -108,7 +108,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
-    public Optional<Output<Hl7StoreNotificationConfigGetArgs>> notificationConfig() {
+    public Optional<Output<Hl7StoreNotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
 
@@ -120,7 +120,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfigs")
-    private @Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs;
+    private @Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs;
 
     /**
      * @return A list of notification configs. Each configuration uses a filter to determine whether to publish a
@@ -129,7 +129,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<Hl7StoreNotificationConfigsGetArgs>>> notificationConfigs() {
+    public Optional<Output<List<Hl7StoreNotificationConfigsArgs>>> notificationConfigs() {
         return Optional.ofNullable(this.notificationConfigs);
     }
 
@@ -139,14 +139,14 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parserConfig")
-    private @Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig;
+    private @Nullable Output<Hl7StoreParserConfigArgs> parserConfig;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<Hl7StoreParserConfigGetArgs>> parserConfig() {
+    public Optional<Output<Hl7StoreParserConfigArgs>> parserConfig() {
         return Optional.ofNullable(this.parserConfig);
     }
 
@@ -289,7 +289,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * 
          */
         @Deprecated /* This field has been replaced by notificationConfigs */
-        public Builder notificationConfig(@Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
@@ -307,7 +307,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * 
          */
         @Deprecated /* This field has been replaced by notificationConfigs */
-        public Builder notificationConfig(Hl7StoreNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(Hl7StoreNotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
@@ -320,7 +320,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfigs(@Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs) {
             $.notificationConfigs = notificationConfigs;
             return this;
         }
@@ -334,7 +334,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfigs(List<Hl7StoreNotificationConfigsGetArgs> notificationConfigs) {
+        public Builder notificationConfigs(List<Hl7StoreNotificationConfigsArgs> notificationConfigs) {
             return notificationConfigs(Output.of(notificationConfigs));
         }
 
@@ -347,7 +347,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfigs(Hl7StoreNotificationConfigsGetArgs... notificationConfigs) {
+        public Builder notificationConfigs(Hl7StoreNotificationConfigsArgs... notificationConfigs) {
             return notificationConfigs(List.of(notificationConfigs));
         }
 
@@ -358,7 +358,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parserConfig(@Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig) {
+        public Builder parserConfig(@Nullable Output<Hl7StoreParserConfigArgs> parserConfig) {
             $.parserConfig = parserConfig;
             return this;
         }
@@ -370,7 +370,7 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parserConfig(Hl7StoreParserConfigGetArgs parserConfig) {
+        public Builder parserConfig(Hl7StoreParserConfigArgs parserConfig) {
             return parserConfig(Output.of(parserConfig));
         }
 

@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.PacketMirroringCollectorIlbGetArgs;
-import com.pulumi.gcp.compute.inputs.PacketMirroringFilterGetArgs;
-import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesGetArgs;
-import com.pulumi.gcp.compute.inputs.PacketMirroringNetworkGetArgs;
+import com.pulumi.gcp.compute.inputs.PacketMirroringCollectorIlbArgs;
+import com.pulumi.gcp.compute.inputs.PacketMirroringFilterArgs;
+import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesArgs;
+import com.pulumi.gcp.compute.inputs.PacketMirroringNetworkArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="collectorIlb")
-    private @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
+    private @Nullable Output<PacketMirroringCollectorIlbArgs> collectorIlb;
 
     /**
      * @return The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
@@ -39,7 +39,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PacketMirroringCollectorIlbGetArgs>> collectorIlb() {
+    public Optional<Output<PacketMirroringCollectorIlbArgs>> collectorIlb() {
         return Optional.ofNullable(this.collectorIlb);
     }
 
@@ -64,14 +64,14 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filter")
-    private @Nullable Output<PacketMirroringFilterGetArgs> filter;
+    private @Nullable Output<PacketMirroringFilterArgs> filter;
 
     /**
      * @return A filter for mirrored traffic.  If unset, all traffic is mirrored.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PacketMirroringFilterGetArgs>> filter() {
+    public Optional<Output<PacketMirroringFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -81,14 +81,14 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mirroredResources")
-    private @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
+    private @Nullable Output<PacketMirroringMirroredResourcesArgs> mirroredResources;
 
     /**
      * @return A means of specifying which resources to mirror.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PacketMirroringMirroredResourcesGetArgs>> mirroredResources() {
+    public Optional<Output<PacketMirroringMirroredResourcesArgs>> mirroredResources() {
         return Optional.ofNullable(this.mirroredResources);
     }
 
@@ -115,7 +115,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="network")
-    private @Nullable Output<PacketMirroringNetworkGetArgs> network;
+    private @Nullable Output<PacketMirroringNetworkArgs> network;
 
     /**
      * @return Specifies the mirrored VPC network. Only packets in this network
@@ -124,7 +124,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PacketMirroringNetworkGetArgs>> network() {
+    public Optional<Output<PacketMirroringNetworkArgs>> network() {
         return Optional.ofNullable(this.network);
     }
 
@@ -223,7 +223,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder collectorIlb(@Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb) {
+        public Builder collectorIlb(@Nullable Output<PacketMirroringCollectorIlbArgs> collectorIlb) {
             $.collectorIlb = collectorIlb;
             return this;
         }
@@ -238,7 +238,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder collectorIlb(PacketMirroringCollectorIlbGetArgs collectorIlb) {
+        public Builder collectorIlb(PacketMirroringCollectorIlbArgs collectorIlb) {
             return collectorIlb(Output.of(collectorIlb));
         }
 
@@ -270,7 +270,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<PacketMirroringFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<PacketMirroringFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
@@ -282,7 +282,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder filter(PacketMirroringFilterGetArgs filter) {
+        public Builder filter(PacketMirroringFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
@@ -293,7 +293,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources) {
+        public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourcesArgs> mirroredResources) {
             $.mirroredResources = mirroredResources;
             return this;
         }
@@ -305,7 +305,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder mirroredResources(PacketMirroringMirroredResourcesGetArgs mirroredResources) {
+        public Builder mirroredResources(PacketMirroringMirroredResourcesArgs mirroredResources) {
             return mirroredResources(Output.of(mirroredResources));
         }
 
@@ -339,7 +339,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder network(@Nullable Output<PacketMirroringNetworkGetArgs> network) {
+        public Builder network(@Nullable Output<PacketMirroringNetworkArgs> network) {
             $.network = network;
             return this;
         }
@@ -353,7 +353,7 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder network(PacketMirroringNetworkGetArgs network) {
+        public Builder network(PacketMirroringNetworkArgs network) {
             return network(Output.of(network));
         }
 

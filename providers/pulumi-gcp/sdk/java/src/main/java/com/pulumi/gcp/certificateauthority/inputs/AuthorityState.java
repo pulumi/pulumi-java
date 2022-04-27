@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlArgs;
+import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigArgs;
+import com.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,13 +26,13 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessUrls")
-    private @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
+    private @Nullable Output<List<AuthorityAccessUrlArgs>> accessUrls;
 
     /**
      * @return URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
      */
-    public Optional<Output<List<AuthorityAccessUrlGetArgs>>> accessUrls() {
+    public Optional<Output<List<AuthorityAccessUrlArgs>>> accessUrls() {
         return Optional.ofNullable(this.accessUrls);
     }
 
@@ -57,14 +57,14 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-    private @Nullable Output<AuthorityConfigGetArgs> config;
+    private @Nullable Output<AuthorityConfigArgs> config;
 
     /**
      * @return The config used to create a self-signed X.509 certificate or CSR.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AuthorityConfigGetArgs>> config() {
+    public Optional<Output<AuthorityConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
 
@@ -133,7 +133,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keySpec")
-    private @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
+    private @Nullable Output<AuthorityKeySpecArgs> keySpec;
 
     /**
      * @return Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
@@ -142,7 +142,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AuthorityKeySpecGetArgs>> keySpec() {
+    public Optional<Output<AuthorityKeySpecArgs>> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
 
@@ -370,7 +370,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessUrls(@Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls) {
+        public Builder accessUrls(@Nullable Output<List<AuthorityAccessUrlArgs>> accessUrls) {
             $.accessUrls = accessUrls;
             return this;
         }
@@ -381,7 +381,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessUrls(List<AuthorityAccessUrlGetArgs> accessUrls) {
+        public Builder accessUrls(List<AuthorityAccessUrlArgs> accessUrls) {
             return accessUrls(Output.of(accessUrls));
         }
 
@@ -391,7 +391,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessUrls(AuthorityAccessUrlGetArgs... accessUrls) {
+        public Builder accessUrls(AuthorityAccessUrlArgs... accessUrls) {
             return accessUrls(List.of(accessUrls));
         }
 
@@ -423,7 +423,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(@Nullable Output<AuthorityConfigGetArgs> config) {
+        public Builder config(@Nullable Output<AuthorityConfigArgs> config) {
             $.config = config;
             return this;
         }
@@ -435,7 +435,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(AuthorityConfigGetArgs config) {
+        public Builder config(AuthorityConfigArgs config) {
             return config(Output.of(config));
         }
 
@@ -523,7 +523,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder keySpec(@Nullable Output<AuthorityKeySpecGetArgs> keySpec) {
+        public Builder keySpec(@Nullable Output<AuthorityKeySpecArgs> keySpec) {
             $.keySpec = keySpec;
             return this;
         }
@@ -537,7 +537,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder keySpec(AuthorityKeySpecGetArgs keySpec) {
+        public Builder keySpec(AuthorityKeySpecArgs keySpec) {
             return keySpec(Output.of(keySpec));
         }
 

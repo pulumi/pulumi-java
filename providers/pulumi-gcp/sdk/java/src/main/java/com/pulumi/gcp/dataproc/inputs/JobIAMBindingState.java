@@ -5,7 +5,7 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataproc.inputs.JobIAMBindingConditionGetArgs;
+import com.pulumi.gcp.dataproc.inputs.JobIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class JobIAMBindingState extends com.pulumi.resources.ResourceArgs 
     public static final JobIAMBindingState Empty = new JobIAMBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<JobIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<JobIAMBindingConditionArgs> condition;
 
-    public Optional<Output<JobIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<JobIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -136,12 +136,12 @@ public final class JobIAMBindingState extends com.pulumi.resources.ResourceArgs 
             $ = new JobIAMBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<JobIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<JobIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(JobIAMBindingConditionGetArgs condition) {
+        public Builder condition(JobIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

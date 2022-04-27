@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchGetArgs;
+import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -93,14 +93,14 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="match")
-    private @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
+    private @Nullable Output<OrganizationSecurityPolicyRuleMatchArgs> match;
 
     /**
      * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<OrganizationSecurityPolicyRuleMatchGetArgs>> match() {
+    public Optional<Output<OrganizationSecurityPolicyRuleMatchArgs>> match() {
         return Optional.ofNullable(this.match);
     }
 
@@ -323,7 +323,7 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder match(@Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
+        public Builder match(@Nullable Output<OrganizationSecurityPolicyRuleMatchArgs> match) {
             $.match = match;
             return this;
         }
@@ -335,7 +335,7 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder match(OrganizationSecurityPolicyRuleMatchGetArgs match) {
+        public Builder match(OrganizationSecurityPolicyRuleMatchArgs match) {
             return match(Output.of(match));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigGetArgs;
-import com.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigGetArgs;
+import com.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigArgs;
+import com.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -88,14 +88,14 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-    private @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DicomStoreNotificationConfigGetArgs>> notificationConfig() {
+    public Optional<Output<DicomStoreNotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
 
@@ -121,7 +121,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamConfigs")
-    private @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+    private @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
     /**
      * @return To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
@@ -129,7 +129,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<DicomStoreStreamConfigGetArgs>>> streamConfigs() {
+    public Optional<Output<List<DicomStoreStreamConfigArgs>>> streamConfigs() {
         return Optional.ofNullable(this.streamConfigs);
     }
 
@@ -250,7 +250,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
@@ -262,7 +262,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfig(DicomStoreNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(DicomStoreNotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
@@ -295,7 +295,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
             $.streamConfigs = streamConfigs;
             return this;
         }
@@ -308,7 +308,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(List<DicomStoreStreamConfigGetArgs> streamConfigs) {
+        public Builder streamConfigs(List<DicomStoreStreamConfigArgs> streamConfigs) {
             return streamConfigs(Output.of(streamConfigs));
         }
 
@@ -320,7 +320,7 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamConfigs(DicomStoreStreamConfigGetArgs... streamConfigs) {
+        public Builder streamConfigs(DicomStoreStreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
         }
 

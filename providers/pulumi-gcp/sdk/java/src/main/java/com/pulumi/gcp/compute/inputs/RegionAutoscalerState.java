@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class RegionAutoscalerState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="autoscalingPolicy")
-    private @Nullable Output<RegionAutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
+    private @Nullable Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy;
 
     /**
      * @return The configuration parameters for the autoscaling algorithm. You can
@@ -37,7 +37,7 @@ public final class RegionAutoscalerState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionAutoscalerAutoscalingPolicyGetArgs>> autoscalingPolicy() {
+    public Optional<Output<RegionAutoscalerAutoscalingPolicyArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
 
@@ -194,7 +194,7 @@ public final class RegionAutoscalerState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(@Nullable Output<RegionAutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
@@ -210,7 +210,7 @@ public final class RegionAutoscalerState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(RegionAutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
+        public Builder autoscalingPolicy(RegionAutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 

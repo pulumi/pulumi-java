@@ -5,7 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.IntentFollowupIntentInfoGetArgs;
+import com.pulumi.gcp.diagflow.inputs.IntentFollowupIntentInfoArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -95,14 +95,14 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="followupIntentInfos")
-    private @Nullable Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos;
+    private @Nullable Output<List<IntentFollowupIntentInfoArgs>> followupIntentInfos;
 
     /**
      * @return Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
      * in the output.
      * 
      */
-    public Optional<Output<List<IntentFollowupIntentInfoGetArgs>>> followupIntentInfos() {
+    public Optional<Output<List<IntentFollowupIntentInfoArgs>>> followupIntentInfos() {
         return Optional.ofNullable(this.followupIntentInfos);
     }
 
@@ -445,7 +445,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder followupIntentInfos(@Nullable Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos) {
+        public Builder followupIntentInfos(@Nullable Output<List<IntentFollowupIntentInfoArgs>> followupIntentInfos) {
             $.followupIntentInfos = followupIntentInfos;
             return this;
         }
@@ -457,7 +457,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder followupIntentInfos(List<IntentFollowupIntentInfoGetArgs> followupIntentInfos) {
+        public Builder followupIntentInfos(List<IntentFollowupIntentInfoArgs> followupIntentInfos) {
             return followupIntentInfos(Output.of(followupIntentInfos));
         }
 
@@ -468,7 +468,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder followupIntentInfos(IntentFollowupIntentInfoGetArgs... followupIntentInfos) {
+        public Builder followupIntentInfos(IntentFollowupIntentInfoArgs... followupIntentInfos) {
             return followupIntentInfos(List.of(followupIntentInfos));
         }
 

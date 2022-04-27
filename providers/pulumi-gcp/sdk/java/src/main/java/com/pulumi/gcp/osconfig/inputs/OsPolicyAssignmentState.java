@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterGetArgs;
-import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyGetArgs;
-import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutGetArgs;
+import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterArgs;
+import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyArgs;
+import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -89,13 +89,13 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceFilter")
-    private @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
+    private @Nullable Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     /**
      * @return Required. Filter to select VMs.
      * 
      */
-    public Optional<Output<OsPolicyAssignmentInstanceFilterGetArgs>> instanceFilter() {
+    public Optional<Output<OsPolicyAssignmentInstanceFilterArgs>> instanceFilter() {
         return Optional.ofNullable(this.instanceFilter);
     }
 
@@ -134,13 +134,13 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="osPolicies")
-    private @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
+    private @Nullable Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
     /**
      * @return Required. List of OS policies to be applied to the VMs.
      * 
      */
-    public Optional<Output<List<OsPolicyAssignmentOsPolicyGetArgs>>> osPolicies() {
+    public Optional<Output<List<OsPolicyAssignmentOsPolicyArgs>>> osPolicies() {
         return Optional.ofNullable(this.osPolicies);
     }
 
@@ -213,13 +213,13 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rollout")
-    private @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
+    private @Nullable Output<OsPolicyAssignmentRolloutArgs> rollout;
 
     /**
      * @return Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    public Optional<Output<OsPolicyAssignmentRolloutGetArgs>> rollout() {
+    public Optional<Output<OsPolicyAssignmentRolloutArgs>> rollout() {
         return Optional.ofNullable(this.rollout);
     }
 
@@ -387,7 +387,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
+        public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
@@ -398,7 +398,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder instanceFilter(OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
+        public Builder instanceFilter(OsPolicyAssignmentInstanceFilterArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
@@ -450,7 +450,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
+        public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
             $.osPolicies = osPolicies;
             return this;
         }
@@ -461,7 +461,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder osPolicies(List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
+        public Builder osPolicies(List<OsPolicyAssignmentOsPolicyArgs> osPolicies) {
             return osPolicies(Output.of(osPolicies));
         }
 
@@ -471,7 +471,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder osPolicies(OsPolicyAssignmentOsPolicyGetArgs... osPolicies) {
+        public Builder osPolicies(OsPolicyAssignmentOsPolicyArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
 
@@ -569,7 +569,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
+        public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
@@ -580,7 +580,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder rollout(OsPolicyAssignmentRolloutGetArgs rollout) {
+        public Builder rollout(OsPolicyAssignmentRolloutArgs rollout) {
             return rollout(Output.of(rollout));
         }
 

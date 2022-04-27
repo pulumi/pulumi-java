@@ -5,7 +5,7 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.BucketIAMBindingConditionGetArgs;
+import com.pulumi.gcp.storage.inputs.BucketIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,14 +38,14 @@ public final class BucketIAMBindingState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<BucketIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<BucketIAMBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BucketIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<BucketIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -174,7 +174,7 @@ public final class BucketIAMBindingState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<BucketIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<BucketIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -186,7 +186,7 @@ public final class BucketIAMBindingState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder condition(BucketIAMBindingConditionGetArgs condition) {
+        public Builder condition(BucketIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionUrlMapDefaultUrlRedirectGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionUrlMapHostRuleGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionUrlMapTestGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionUrlMapDefaultUrlRedirectArgs;
+import com.pulumi.gcp.compute.inputs.RegionUrlMapHostRuleArgs;
+import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherArgs;
+import com.pulumi.gcp.compute.inputs.RegionUrlMapTestArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,7 +63,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultUrlRedirect")
-    private @Nullable Output<RegionUrlMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+    private @Nullable Output<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     /**
      * @return When none of the specified hostRules match, the request is redirected to a URL specified
@@ -72,7 +72,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionUrlMapDefaultUrlRedirectGetArgs>> defaultUrlRedirect() {
+    public Optional<Output<RegionUrlMapDefaultUrlRedirectArgs>> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
 
@@ -112,14 +112,14 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostRules")
-    private @Nullable Output<List<RegionUrlMapHostRuleGetArgs>> hostRules;
+    private @Nullable Output<List<RegionUrlMapHostRuleArgs>> hostRules;
 
     /**
      * @return The list of HostRules to use against the URL.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RegionUrlMapHostRuleGetArgs>>> hostRules() {
+    public Optional<Output<List<RegionUrlMapHostRuleArgs>>> hostRules() {
         return Optional.ofNullable(this.hostRules);
     }
 
@@ -161,14 +161,14 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathMatchers")
-    private @Nullable Output<List<RegionUrlMapPathMatcherGetArgs>> pathMatchers;
+    private @Nullable Output<List<RegionUrlMapPathMatcherArgs>> pathMatchers;
 
     /**
      * @return The name of the PathMatcher to use to match the path portion of
      * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
-    public Optional<Output<List<RegionUrlMapPathMatcherGetArgs>>> pathMatchers() {
+    public Optional<Output<List<RegionUrlMapPathMatcherArgs>>> pathMatchers() {
         return Optional.ofNullable(this.pathMatchers);
     }
 
@@ -228,7 +228,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tests")
-    private @Nullable Output<List<RegionUrlMapTestGetArgs>> tests;
+    private @Nullable Output<List<RegionUrlMapTestArgs>> tests;
 
     /**
      * @return The list of expected URL mappings. Requests to update this UrlMap will
@@ -236,7 +236,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RegionUrlMapTestGetArgs>>> tests() {
+    public Optional<Output<List<RegionUrlMapTestArgs>>> tests() {
         return Optional.ofNullable(this.tests);
     }
 
@@ -331,7 +331,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
@@ -345,7 +345,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUrlRedirect(RegionUrlMapDefaultUrlRedirectGetArgs defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(RegionUrlMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             return defaultUrlRedirect(Output.of(defaultUrlRedirect));
         }
 
@@ -398,7 +398,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(@Nullable Output<List<RegionUrlMapHostRuleGetArgs>> hostRules) {
+        public Builder hostRules(@Nullable Output<List<RegionUrlMapHostRuleArgs>> hostRules) {
             $.hostRules = hostRules;
             return this;
         }
@@ -410,7 +410,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(List<RegionUrlMapHostRuleGetArgs> hostRules) {
+        public Builder hostRules(List<RegionUrlMapHostRuleArgs> hostRules) {
             return hostRules(Output.of(hostRules));
         }
 
@@ -421,7 +421,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(RegionUrlMapHostRuleGetArgs... hostRules) {
+        public Builder hostRules(RegionUrlMapHostRuleArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
 
@@ -476,7 +476,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(@Nullable Output<List<RegionUrlMapPathMatcherGetArgs>> pathMatchers) {
+        public Builder pathMatchers(@Nullable Output<List<RegionUrlMapPathMatcherArgs>> pathMatchers) {
             $.pathMatchers = pathMatchers;
             return this;
         }
@@ -488,7 +488,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(List<RegionUrlMapPathMatcherGetArgs> pathMatchers) {
+        public Builder pathMatchers(List<RegionUrlMapPathMatcherArgs> pathMatchers) {
             return pathMatchers(Output.of(pathMatchers));
         }
 
@@ -499,7 +499,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(RegionUrlMapPathMatcherGetArgs... pathMatchers) {
+        public Builder pathMatchers(RegionUrlMapPathMatcherArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }
 
@@ -578,7 +578,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(@Nullable Output<List<RegionUrlMapTestGetArgs>> tests) {
+        public Builder tests(@Nullable Output<List<RegionUrlMapTestArgs>> tests) {
             $.tests = tests;
             return this;
         }
@@ -591,7 +591,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(List<RegionUrlMapTestGetArgs> tests) {
+        public Builder tests(List<RegionUrlMapTestArgs> tests) {
             return tests(Output.of(tests));
         }
 
@@ -603,7 +603,7 @@ public final class RegionUrlMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(RegionUrlMapTestGetArgs... tests) {
+        public Builder tests(RegionUrlMapTestArgs... tests) {
             return tests(List.of(tests));
         }
 

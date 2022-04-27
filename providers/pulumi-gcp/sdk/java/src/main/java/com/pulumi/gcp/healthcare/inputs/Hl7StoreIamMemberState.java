@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     public static final Hl7StoreIamMemberState Empty = new Hl7StoreIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition;
+    private @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
 
-    public Optional<Output<Hl7StoreIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<Hl7StoreIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -113,12 +113,12 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
             $ = new Hl7StoreIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<Hl7StoreIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(Hl7StoreIamMemberConditionGetArgs condition) {
+        public Builder condition(Hl7StoreIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

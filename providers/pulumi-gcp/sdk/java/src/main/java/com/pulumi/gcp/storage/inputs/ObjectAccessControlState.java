@@ -5,7 +5,7 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.ObjectAccessControlProjectTeamGetArgs;
+import com.pulumi.gcp.storage.inputs.ObjectAccessControlProjectTeamArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -144,13 +144,13 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="projectTeams")
-    private @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
+    private @Nullable Output<List<ObjectAccessControlProjectTeamArgs>> projectTeams;
 
     /**
      * @return The project team associated with the entity
      * 
      */
-    public Optional<Output<List<ObjectAccessControlProjectTeamGetArgs>>> projectTeams() {
+    public Optional<Output<List<ObjectAccessControlProjectTeamArgs>>> projectTeams() {
         return Optional.ofNullable(this.projectTeams);
     }
 
@@ -372,7 +372,7 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder projectTeams(@Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams) {
+        public Builder projectTeams(@Nullable Output<List<ObjectAccessControlProjectTeamArgs>> projectTeams) {
             $.projectTeams = projectTeams;
             return this;
         }
@@ -383,7 +383,7 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder projectTeams(List<ObjectAccessControlProjectTeamGetArgs> projectTeams) {
+        public Builder projectTeams(List<ObjectAccessControlProjectTeamArgs> projectTeams) {
             return projectTeams(Output.of(projectTeams));
         }
 
@@ -393,7 +393,7 @@ public final class ObjectAccessControlState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder projectTeams(ObjectAccessControlProjectTeamGetArgs... projectTeams) {
+        public Builder projectTeams(ObjectAccessControlProjectTeamArgs... projectTeams) {
             return projectTeams(List.of(projectTeams));
         }
 

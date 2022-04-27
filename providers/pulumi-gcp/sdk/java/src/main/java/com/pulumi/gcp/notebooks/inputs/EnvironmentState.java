@@ -5,8 +5,8 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageGetArgs;
-import com.pulumi.gcp.notebooks.inputs.EnvironmentVmImageGetArgs;
+import com.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageArgs;
+import com.pulumi.gcp.notebooks.inputs.EnvironmentVmImageArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-    private @Nullable Output<EnvironmentContainerImageGetArgs> containerImage;
+    private @Nullable Output<EnvironmentContainerImageArgs> containerImage;
 
     /**
      * @return Use a container image to start the notebook instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EnvironmentContainerImageGetArgs>> containerImage() {
+    public Optional<Output<EnvironmentContainerImageArgs>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
 
@@ -151,14 +151,14 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImage")
-    private @Nullable Output<EnvironmentVmImageGetArgs> vmImage;
+    private @Nullable Output<EnvironmentVmImageArgs> vmImage;
 
     /**
      * @return Use a Compute Engine VM image to start the notebook instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EnvironmentVmImageGetArgs>> vmImage() {
+    public Optional<Output<EnvironmentVmImageArgs>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
 
@@ -201,7 +201,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containerImage(@Nullable Output<EnvironmentContainerImageGetArgs> containerImage) {
+        public Builder containerImage(@Nullable Output<EnvironmentContainerImageArgs> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
@@ -213,7 +213,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containerImage(EnvironmentContainerImageGetArgs containerImage) {
+        public Builder containerImage(EnvironmentContainerImageArgs containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
@@ -377,7 +377,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vmImage(@Nullable Output<EnvironmentVmImageGetArgs> vmImage) {
+        public Builder vmImage(@Nullable Output<EnvironmentVmImageArgs> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
@@ -389,7 +389,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vmImage(EnvironmentVmImageGetArgs vmImage) {
+        public Builder vmImage(EnvironmentVmImageArgs vmImage) {
             return vmImage(Output.of(vmImage));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGetArgs;
+import com.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="connectionInfo")
-    private @Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo;
+    private @Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo;
 
     /**
      * @return Game server cluster connection information. This information is used to
@@ -47,7 +47,7 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    public Optional<Output<GameServerClusterConnectionInfoGetArgs>> connectionInfo() {
+    public Optional<Output<GameServerClusterConnectionInfoArgs>> connectionInfo() {
         return Optional.ofNullable(this.connectionInfo);
     }
 
@@ -209,7 +209,7 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder connectionInfo(@Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo) {
+        public Builder connectionInfo(@Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
@@ -222,7 +222,7 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder connectionInfo(GameServerClusterConnectionInfoGetArgs connectionInfo) {
+        public Builder connectionInfo(GameServerClusterConnectionInfoArgs connectionInfo) {
             return connectionInfo(Output.of(connectionInfo));
         }
 

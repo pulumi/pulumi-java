@@ -5,7 +5,7 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.spanner.inputs.InstanceIAMBindingConditionGetArgs;
+import com.pulumi.gcp.spanner.inputs.InstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
     public static final InstanceIAMBindingState Empty = new InstanceIAMBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<InstanceIAMBindingConditionArgs> condition;
 
-    public Optional<Output<InstanceIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<InstanceIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,12 +126,12 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
             $ = new InstanceIAMBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<InstanceIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(InstanceIAMBindingConditionGetArgs condition) {
+        public Builder condition(InstanceIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

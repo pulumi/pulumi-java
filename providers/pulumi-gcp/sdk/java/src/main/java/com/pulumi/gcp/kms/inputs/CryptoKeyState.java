@@ -5,7 +5,7 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateGetArgs;
+import com.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -164,14 +164,14 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionTemplate")
-    private @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
+    private @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
     /**
      * @return A template describing settings for new crypto key versions.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CryptoKeyVersionTemplateGetArgs>> versionTemplate() {
+    public Optional<Output<CryptoKeyVersionTemplateArgs>> versionTemplate() {
         return Optional.ofNullable(this.versionTemplate);
     }
 
@@ -402,7 +402,7 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
+        public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
             $.versionTemplate = versionTemplate;
             return this;
         }
@@ -414,7 +414,7 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versionTemplate(CryptoKeyVersionTemplateGetArgs versionTemplate) {
+        public Builder versionTemplate(CryptoKeyVersionTemplateArgs versionTemplate) {
             return versionTemplate(Output.of(versionTemplate));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.kms.inputs.KeyRingImportJobAttestationGetArgs;
-import com.pulumi.gcp.kms.inputs.KeyRingImportJobPublicKeyGetArgs;
+import com.pulumi.gcp.kms.inputs.KeyRingImportJobAttestationArgs;
+import com.pulumi.gcp.kms.inputs.KeyRingImportJobPublicKeyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="attestations")
-    private @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations;
+    private @Nullable Output<List<KeyRingImportJobAttestationArgs>> attestations;
 
     /**
      * @return Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
@@ -33,7 +33,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * ImportMethod is one with a protection level of HSM.
      * 
      */
-    public Optional<Output<List<KeyRingImportJobAttestationGetArgs>>> attestations() {
+    public Optional<Output<List<KeyRingImportJobAttestationArgs>>> attestations() {
         return Optional.ofNullable(this.attestations);
     }
 
@@ -140,13 +140,13 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicKeys")
-    private @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
+    private @Nullable Output<List<KeyRingImportJobPublicKeyArgs>> publicKeys;
 
     /**
      * @return The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
      * 
      */
-    public Optional<Output<List<KeyRingImportJobPublicKeyGetArgs>>> publicKeys() {
+    public Optional<Output<List<KeyRingImportJobPublicKeyArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
 
@@ -205,7 +205,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attestations(@Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations) {
+        public Builder attestations(@Nullable Output<List<KeyRingImportJobAttestationArgs>> attestations) {
             $.attestations = attestations;
             return this;
         }
@@ -218,7 +218,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attestations(List<KeyRingImportJobAttestationGetArgs> attestations) {
+        public Builder attestations(List<KeyRingImportJobAttestationArgs> attestations) {
             return attestations(Output.of(attestations));
         }
 
@@ -230,7 +230,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attestations(KeyRingImportJobAttestationGetArgs... attestations) {
+        public Builder attestations(KeyRingImportJobAttestationArgs... attestations) {
             return attestations(List.of(attestations));
         }
 
@@ -374,7 +374,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder publicKeys(@Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<KeyRingImportJobPublicKeyArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
@@ -385,7 +385,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder publicKeys(List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
+        public Builder publicKeys(List<KeyRingImportJobPublicKeyArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
@@ -395,7 +395,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder publicKeys(KeyRingImportJobPublicKeyGetArgs... publicKeys) {
+        public Builder publicKeys(KeyRingImportJobPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
 

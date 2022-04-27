@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RouterNatLogConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.RouterNatSubnetworkGetArgs;
+import com.pulumi.gcp.compute.inputs.RouterNatLogConfigArgs;
+import com.pulumi.gcp.compute.inputs.RouterNatSubnetworkArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -75,14 +75,14 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<RouterNatLogConfigGetArgs> logConfig;
+    private @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
     /**
      * @return Configuration for logging on NAT
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RouterNatLogConfigGetArgs>> logConfig() {
+    public Optional<Output<RouterNatLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -243,7 +243,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetworks")
-    private @Nullable Output<List<RouterNatSubnetworkGetArgs>> subnetworks;
+    private @Nullable Output<List<RouterNatSubnetworkArgs>> subnetworks;
 
     /**
      * @return One or more subnetwork NAT configurations. Only used if
@@ -251,7 +251,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RouterNatSubnetworkGetArgs>>> subnetworks() {
+    public Optional<Output<List<RouterNatSubnetworkArgs>>> subnetworks() {
         return Optional.ofNullable(this.subnetworks);
     }
 
@@ -428,7 +428,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<RouterNatLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<RouterNatLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -440,7 +440,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(RouterNatLogConfigGetArgs logConfig) {
+        public Builder logConfig(RouterNatLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -661,7 +661,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetworks(@Nullable Output<List<RouterNatSubnetworkGetArgs>> subnetworks) {
+        public Builder subnetworks(@Nullable Output<List<RouterNatSubnetworkArgs>> subnetworks) {
             $.subnetworks = subnetworks;
             return this;
         }
@@ -674,7 +674,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetworks(List<RouterNatSubnetworkGetArgs> subnetworks) {
+        public Builder subnetworks(List<RouterNatSubnetworkArgs> subnetworks) {
             return subnetworks(Output.of(subnetworks));
         }
 
@@ -686,7 +686,7 @@ public final class RouterNatState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetworks(RouterNatSubnetworkGetArgs... subnetworks) {
+        public Builder subnetworks(RouterNatSubnetworkArgs... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.orgpolicy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.orgpolicy.inputs.PolicySpecGetArgs;
+import com.pulumi.gcp.orgpolicy.inputs.PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,13 +51,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<PolicySpecGetArgs> spec;
+    private @Nullable Output<PolicySpecArgs> spec;
 
     /**
      * @return Basic information about the Organization Policy.
      * 
      */
-    public Optional<Output<PolicySpecGetArgs>> spec() {
+    public Optional<Output<PolicySpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -135,7 +135,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<PolicySpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<PolicySpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -146,7 +146,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(PolicySpecGetArgs spec) {
+        public Builder spec(PolicySpecArgs spec) {
             return spec(Output.of(spec));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuancePolicy")
-    private @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
+    private @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
 
     /**
      * @return The IssuancePolicy to control how Certificates will be issued from this CaPool.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CaPoolIssuancePolicyGetArgs>> issuancePolicy() {
+    public Optional<Output<CaPoolIssuancePolicyArgs>> issuancePolicy() {
         return Optional.ofNullable(this.issuancePolicy);
     }
 
@@ -107,14 +107,14 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishingOptions")
-    private @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
+    private @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
 
     /**
      * @return The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CaPoolPublishingOptionsGetArgs>> publishingOptions() {
+    public Optional<Output<CaPoolPublishingOptionsArgs>> publishingOptions() {
         return Optional.ofNullable(this.publishingOptions);
     }
 
@@ -172,7 +172,7 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy) {
+        public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy) {
             $.issuancePolicy = issuancePolicy;
             return this;
         }
@@ -184,7 +184,7 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder issuancePolicy(CaPoolIssuancePolicyGetArgs issuancePolicy) {
+        public Builder issuancePolicy(CaPoolIssuancePolicyArgs issuancePolicy) {
             return issuancePolicy(Output.of(issuancePolicy));
         }
 
@@ -285,7 +285,7 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions) {
+        public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions) {
             $.publishingOptions = publishingOptions;
             return this;
         }
@@ -297,7 +297,7 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder publishingOptions(CaPoolPublishingOptionsGetArgs publishingOptions) {
+        public Builder publishingOptions(CaPoolPublishingOptionsArgs publishingOptions) {
             return publishingOptions(Output.of(publishingOptions));
         }
 

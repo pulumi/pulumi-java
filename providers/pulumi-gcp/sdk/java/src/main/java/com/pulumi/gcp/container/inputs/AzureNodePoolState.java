@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingGetArgs;
-import com.pulumi.gcp.container.inputs.AzureNodePoolConfigGetArgs;
-import com.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintGetArgs;
+import com.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingArgs;
+import com.pulumi.gcp.container.inputs.AzureNodePoolConfigArgs;
+import com.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -40,13 +40,13 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoscaling")
-    private @Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling;
+    private @Nullable Output<AzureNodePoolAutoscalingArgs> autoscaling;
 
     /**
      * @return Required. Autoscaler configuration for this node pool.
      * 
      */
-    public Optional<Output<AzureNodePoolAutoscalingGetArgs>> autoscaling() {
+    public Optional<Output<AzureNodePoolAutoscalingArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
 
@@ -85,13 +85,13 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="config")
-    private @Nullable Output<AzureNodePoolConfigGetArgs> config;
+    private @Nullable Output<AzureNodePoolConfigArgs> config;
 
     /**
      * @return Required. The node configuration of the node pool.
      * 
      */
-    public Optional<Output<AzureNodePoolConfigGetArgs>> config() {
+    public Optional<Output<AzureNodePoolConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
 
@@ -147,13 +147,13 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxPodsConstraint")
-    private @Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
+    private @Nullable Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     /**
      * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    public Optional<Output<AzureNodePoolMaxPodsConstraintGetArgs>> maxPodsConstraint() {
+    public Optional<Output<AzureNodePoolMaxPodsConstraintArgs>> maxPodsConstraint() {
         return Optional.ofNullable(this.maxPodsConstraint);
     }
 
@@ -346,7 +346,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder autoscaling(@Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<AzureNodePoolAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
@@ -357,7 +357,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder autoscaling(AzureNodePoolAutoscalingGetArgs autoscaling) {
+        public Builder autoscaling(AzureNodePoolAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
@@ -409,7 +409,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder config(@Nullable Output<AzureNodePoolConfigGetArgs> config) {
+        public Builder config(@Nullable Output<AzureNodePoolConfigArgs> config) {
             $.config = config;
             return this;
         }
@@ -420,7 +420,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder config(AzureNodePoolConfigGetArgs config) {
+        public Builder config(AzureNodePoolConfigArgs config) {
             return config(Output.of(config));
         }
 
@@ -495,7 +495,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder maxPodsConstraint(@Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
@@ -506,7 +506,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
+        public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
             return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
 

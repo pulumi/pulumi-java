@@ -5,7 +5,7 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitGetArgs;
+import com.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -70,14 +70,14 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="split")
-    private @Nullable Output<EngineSplitTrafficSplitGetArgs> split;
+    private @Nullable Output<EngineSplitTrafficSplitArgs> split;
 
     /**
      * @return Mapping that defines fractional HTTP traffic diversion to different versions within the service.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EngineSplitTrafficSplitGetArgs>> split() {
+    public Optional<Output<EngineSplitTrafficSplitArgs>> split() {
         return Optional.ofNullable(this.split);
     }
 
@@ -180,7 +180,7 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder split(@Nullable Output<EngineSplitTrafficSplitGetArgs> split) {
+        public Builder split(@Nullable Output<EngineSplitTrafficSplitArgs> split) {
             $.split = split;
             return this;
         }
@@ -192,7 +192,7 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder split(EngineSplitTrafficSplitGetArgs split) {
+        public Builder split(EngineSplitTrafficSplitArgs split) {
             return split(Output.of(split));
         }
 

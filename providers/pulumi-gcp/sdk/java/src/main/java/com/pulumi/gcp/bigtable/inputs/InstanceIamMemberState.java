@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigtable.inputs.InstanceIamMemberConditionGetArgs;
+import com.pulumi.gcp.bigtable.inputs.InstanceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class InstanceIamMemberState extends com.pulumi.resources.ResourceA
     public static final InstanceIamMemberState Empty = new InstanceIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<InstanceIamMemberConditionGetArgs> condition;
+    private @Nullable Output<InstanceIamMemberConditionArgs> condition;
 
-    public Optional<Output<InstanceIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<InstanceIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,12 +125,12 @@ public final class InstanceIamMemberState extends com.pulumi.resources.ResourceA
             $ = new InstanceIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<InstanceIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(InstanceIamMemberConditionGetArgs condition) {
+        public Builder condition(InstanceIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

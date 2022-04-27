@@ -5,7 +5,7 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterGetArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,14 +40,14 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="servicePerimeters")
-    private @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
+    private @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
     /**
      * @return The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ServicePerimetersServicePerimeterGetArgs>>> servicePerimeters() {
+    public Optional<Output<List<ServicePerimetersServicePerimeterArgs>>> servicePerimeters() {
         return Optional.ofNullable(this.servicePerimeters);
     }
 
@@ -106,7 +106,7 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
+        public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters) {
             $.servicePerimeters = servicePerimeters;
             return this;
         }
@@ -118,7 +118,7 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder servicePerimeters(List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
+        public Builder servicePerimeters(List<ServicePerimetersServicePerimeterArgs> servicePerimeters) {
             return servicePerimeters(Output.of(servicePerimeters));
         }
 
@@ -129,7 +129,7 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder servicePerimeters(ServicePerimetersServicePerimeterGetArgs... servicePerimeters) {
+        public Builder servicePerimeters(ServicePerimetersServicePerimeterArgs... servicePerimeters) {
             return servicePerimeters(List.of(servicePerimeters));
         }
 

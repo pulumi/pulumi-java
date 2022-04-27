@@ -5,9 +5,9 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyGetArgs;
-import com.pulumi.gcp.organizations.inputs.PolicyListPolicyGetArgs;
-import com.pulumi.gcp.organizations.inputs.PolicyRestorePolicyGetArgs;
+import com.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyArgs;
+import com.pulumi.gcp.organizations.inputs.PolicyListPolicyArgs;
+import com.pulumi.gcp.organizations.inputs.PolicyRestorePolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="booleanPolicy")
-    private @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
+    private @Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy;
 
     /**
      * @return A boolean policy is a constraint that is either enforced or not. Structure is documented
      * below.
      * 
      */
-    public Optional<Output<PolicyBooleanPolicyGetArgs>> booleanPolicy() {
+    public Optional<Output<PolicyBooleanPolicyArgs>> booleanPolicy() {
         return Optional.ofNullable(this.booleanPolicy);
     }
 
@@ -71,13 +71,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listPolicy")
-    private @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
+    private @Nullable Output<PolicyListPolicyArgs> listPolicy;
 
     /**
      * @return A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    public Optional<Output<PolicyListPolicyGetArgs>> listPolicy() {
+    public Optional<Output<PolicyListPolicyArgs>> listPolicy() {
         return Optional.ofNullable(this.listPolicy);
     }
 
@@ -101,13 +101,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restorePolicy")
-    private @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
+    private @Nullable Output<PolicyRestorePolicyArgs> restorePolicy;
 
     /**
      * @return A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    public Optional<Output<PolicyRestorePolicyGetArgs>> restorePolicy() {
+    public Optional<Output<PolicyRestorePolicyArgs>> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
 
@@ -179,7 +179,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder booleanPolicy(@Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy) {
             $.booleanPolicy = booleanPolicy;
             return this;
         }
@@ -191,7 +191,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder booleanPolicy(PolicyBooleanPolicyGetArgs booleanPolicy) {
+        public Builder booleanPolicy(PolicyBooleanPolicyArgs booleanPolicy) {
             return booleanPolicy(Output.of(booleanPolicy));
         }
 
@@ -243,7 +243,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder listPolicy(@Nullable Output<PolicyListPolicyGetArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Output<PolicyListPolicyArgs> listPolicy) {
             $.listPolicy = listPolicy;
             return this;
         }
@@ -254,7 +254,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder listPolicy(PolicyListPolicyGetArgs listPolicy) {
+        public Builder listPolicy(PolicyListPolicyArgs listPolicy) {
             return listPolicy(Output.of(listPolicy));
         }
 
@@ -285,7 +285,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restorePolicy(@Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Output<PolicyRestorePolicyArgs> restorePolicy) {
             $.restorePolicy = restorePolicy;
             return this;
         }
@@ -296,7 +296,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restorePolicy(PolicyRestorePolicyGetArgs restorePolicy) {
+        public Builder restorePolicy(PolicyRestorePolicyArgs restorePolicy) {
             return restorePolicy(Output.of(restorePolicy));
         }
 

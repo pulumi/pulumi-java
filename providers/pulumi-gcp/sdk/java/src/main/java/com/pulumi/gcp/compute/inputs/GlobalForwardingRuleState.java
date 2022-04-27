@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterGetArgs;
+import com.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -200,7 +200,7 @@ public final class GlobalForwardingRuleState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metadataFilters")
-    private @Nullable Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters;
+    private @Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
 
     /**
      * @return Opaque filter criteria used by Loadbalancer to restrict routing
@@ -220,7 +220,7 @@ public final class GlobalForwardingRuleState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GlobalForwardingRuleMetadataFilterGetArgs>>> metadataFilters() {
+    public Optional<Output<List<GlobalForwardingRuleMetadataFilterArgs>>> metadataFilters() {
         return Optional.ofNullable(this.metadataFilters);
     }
 
@@ -628,7 +628,7 @@ public final class GlobalForwardingRuleState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder metadataFilters(@Nullable Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters) {
+        public Builder metadataFilters(@Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters) {
             $.metadataFilters = metadataFilters;
             return this;
         }
@@ -653,7 +653,7 @@ public final class GlobalForwardingRuleState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder metadataFilters(List<GlobalForwardingRuleMetadataFilterGetArgs> metadataFilters) {
+        public Builder metadataFilters(List<GlobalForwardingRuleMetadataFilterArgs> metadataFilters) {
             return metadataFilters(Output.of(metadataFilters));
         }
 
@@ -677,7 +677,7 @@ public final class GlobalForwardingRuleState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder metadataFilters(GlobalForwardingRuleMetadataFilterGetArgs... metadataFilters) {
+        public Builder metadataFilters(GlobalForwardingRuleMetadataFilterArgs... metadataFilters) {
             return metadataFilters(List.of(metadataFilters));
         }
 

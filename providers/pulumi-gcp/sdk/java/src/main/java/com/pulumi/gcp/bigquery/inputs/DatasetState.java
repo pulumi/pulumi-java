@@ -5,8 +5,8 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.DatasetAccessGetArgs;
-import com.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationGetArgs;
+import com.pulumi.gcp.bigquery.inputs.DatasetAccessArgs;
+import com.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,14 +27,14 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accesses")
-    private @Nullable Output<List<DatasetAccessGetArgs>> accesses;
+    private @Nullable Output<List<DatasetAccessArgs>> accesses;
 
     /**
      * @return An array of objects that define dataset access for one or more entities.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<DatasetAccessGetArgs>>> accesses() {
+    public Optional<Output<List<DatasetAccessArgs>>> accesses() {
         return Optional.ofNullable(this.accesses);
     }
 
@@ -76,7 +76,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultEncryptionConfiguration")
-    private @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
+    private @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     /**
      * @return The default encryption key for all tables in the dataset. Once this property is set,
@@ -85,7 +85,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DatasetDefaultEncryptionConfigurationGetArgs>> defaultEncryptionConfiguration() {
+    public Optional<Output<DatasetDefaultEncryptionConfigurationArgs>> defaultEncryptionConfiguration() {
         return Optional.ofNullable(this.defaultEncryptionConfiguration);
     }
 
@@ -313,7 +313,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accesses(@Nullable Output<List<DatasetAccessGetArgs>> accesses) {
+        public Builder accesses(@Nullable Output<List<DatasetAccessArgs>> accesses) {
             $.accesses = accesses;
             return this;
         }
@@ -325,7 +325,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accesses(List<DatasetAccessGetArgs> accesses) {
+        public Builder accesses(List<DatasetAccessArgs> accesses) {
             return accesses(Output.of(accesses));
         }
 
@@ -336,7 +336,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accesses(DatasetAccessGetArgs... accesses) {
+        public Builder accesses(DatasetAccessArgs... accesses) {
             return accesses(List.of(accesses));
         }
 
@@ -391,7 +391,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration) {
             $.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
@@ -405,7 +405,7 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultEncryptionConfiguration(DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(DatasetDefaultEncryptionConfigurationArgs defaultEncryptionConfiguration) {
             return defaultEncryptionConfiguration(Output.of(defaultEncryptionConfiguration));
         }
 

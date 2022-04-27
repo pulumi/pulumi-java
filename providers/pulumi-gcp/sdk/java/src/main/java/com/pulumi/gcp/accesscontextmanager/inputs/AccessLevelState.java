@@ -5,8 +5,8 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicGetArgs;
-import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomGetArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basic")
-    private @Nullable Output<AccessLevelBasicGetArgs> basic;
+    private @Nullable Output<AccessLevelBasicArgs> basic;
 
     /**
      * @return A set of predefined conditions for the access level and a combining function.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AccessLevelBasicGetArgs>> basic() {
+    public Optional<Output<AccessLevelBasicArgs>> basic() {
         return Optional.ofNullable(this.basic);
     }
 
@@ -41,7 +41,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="custom")
-    private @Nullable Output<AccessLevelCustomGetArgs> custom;
+    private @Nullable Output<AccessLevelCustomArgs> custom;
 
     /**
      * @return Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
@@ -49,7 +49,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AccessLevelCustomGetArgs>> custom() {
+    public Optional<Output<AccessLevelCustomArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
 
@@ -155,7 +155,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder basic(@Nullable Output<AccessLevelBasicGetArgs> basic) {
+        public Builder basic(@Nullable Output<AccessLevelBasicArgs> basic) {
             $.basic = basic;
             return this;
         }
@@ -167,7 +167,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder basic(AccessLevelBasicGetArgs basic) {
+        public Builder basic(AccessLevelBasicArgs basic) {
             return basic(Output.of(basic));
         }
 
@@ -179,7 +179,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder custom(@Nullable Output<AccessLevelCustomGetArgs> custom) {
+        public Builder custom(@Nullable Output<AccessLevelCustomArgs> custom) {
             $.custom = custom;
             return this;
         }
@@ -192,7 +192,7 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder custom(AccessLevelCustomGetArgs custom) {
+        public Builder custom(AccessLevelCustomArgs custom) {
             return custom(Output.of(custom));
         }
 

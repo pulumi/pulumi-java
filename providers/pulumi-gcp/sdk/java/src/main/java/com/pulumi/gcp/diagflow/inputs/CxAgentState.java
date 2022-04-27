@@ -5,7 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxAgentSpeechToTextSettingsGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxAgentSpeechToTextSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -184,14 +184,14 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="speechToTextSettings")
-    private @Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
+    private @Nullable Output<CxAgentSpeechToTextSettingsArgs> speechToTextSettings;
 
     /**
      * @return Settings related to speech recognition.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CxAgentSpeechToTextSettingsGetArgs>> speechToTextSettings() {
+    public Optional<Output<CxAgentSpeechToTextSettingsArgs>> speechToTextSettings() {
         return Optional.ofNullable(this.speechToTextSettings);
     }
 
@@ -510,7 +510,7 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder speechToTextSettings(@Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings) {
+        public Builder speechToTextSettings(@Nullable Output<CxAgentSpeechToTextSettingsArgs> speechToTextSettings) {
             $.speechToTextSettings = speechToTextSettings;
             return this;
         }
@@ -522,7 +522,7 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder speechToTextSettings(CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
+        public Builder speechToTextSettings(CxAgentSpeechToTextSettingsArgs speechToTextSettings) {
             return speechToTextSettings(Output.of(speechToTextSettings));
         }
 

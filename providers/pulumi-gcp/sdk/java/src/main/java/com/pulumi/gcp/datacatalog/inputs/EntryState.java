@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryDateShardedSpecGetArgs;
-import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecGetArgs;
-import com.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryDateShardedSpecArgs;
+import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecArgs;
+import com.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryDateShardedSpecs")
-    private @Nullable Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
+    private @Nullable Output<List<EntryBigqueryDateShardedSpecArgs>> bigqueryDateShardedSpecs;
 
     /**
      * @return Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
      * https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    public Optional<Output<List<EntryBigqueryDateShardedSpecGetArgs>>> bigqueryDateShardedSpecs() {
+    public Optional<Output<List<EntryBigqueryDateShardedSpecArgs>>> bigqueryDateShardedSpecs() {
         return Optional.ofNullable(this.bigqueryDateShardedSpecs);
     }
 
@@ -41,13 +41,13 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryTableSpecs")
-    private @Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
+    private @Nullable Output<List<EntryBigqueryTableSpecArgs>> bigqueryTableSpecs;
 
     /**
      * @return Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
      * 
      */
-    public Optional<Output<List<EntryBigqueryTableSpecGetArgs>>> bigqueryTableSpecs() {
+    public Optional<Output<List<EntryBigqueryTableSpecArgs>>> bigqueryTableSpecs() {
         return Optional.ofNullable(this.bigqueryTableSpecs);
     }
 
@@ -119,14 +119,14 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsFilesetSpec")
-    private @Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
+    private @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
 
     /**
      * @return Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EntryGcsFilesetSpecGetArgs>> gcsFilesetSpec() {
+    public Optional<Output<EntryGcsFilesetSpecArgs>> gcsFilesetSpec() {
         return Optional.ofNullable(this.gcsFilesetSpec);
     }
 
@@ -315,7 +315,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryDateShardedSpecs(@Nullable Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs) {
+        public Builder bigqueryDateShardedSpecs(@Nullable Output<List<EntryBigqueryDateShardedSpecArgs>> bigqueryDateShardedSpecs) {
             $.bigqueryDateShardedSpecs = bigqueryDateShardedSpecs;
             return this;
         }
@@ -327,7 +327,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryDateShardedSpecs(List<EntryBigqueryDateShardedSpecGetArgs> bigqueryDateShardedSpecs) {
+        public Builder bigqueryDateShardedSpecs(List<EntryBigqueryDateShardedSpecArgs> bigqueryDateShardedSpecs) {
             return bigqueryDateShardedSpecs(Output.of(bigqueryDateShardedSpecs));
         }
 
@@ -338,7 +338,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryDateShardedSpecs(EntryBigqueryDateShardedSpecGetArgs... bigqueryDateShardedSpecs) {
+        public Builder bigqueryDateShardedSpecs(EntryBigqueryDateShardedSpecArgs... bigqueryDateShardedSpecs) {
             return bigqueryDateShardedSpecs(List.of(bigqueryDateShardedSpecs));
         }
 
@@ -348,7 +348,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryTableSpecs(@Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs) {
+        public Builder bigqueryTableSpecs(@Nullable Output<List<EntryBigqueryTableSpecArgs>> bigqueryTableSpecs) {
             $.bigqueryTableSpecs = bigqueryTableSpecs;
             return this;
         }
@@ -359,7 +359,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryTableSpecs(List<EntryBigqueryTableSpecGetArgs> bigqueryTableSpecs) {
+        public Builder bigqueryTableSpecs(List<EntryBigqueryTableSpecArgs> bigqueryTableSpecs) {
             return bigqueryTableSpecs(Output.of(bigqueryTableSpecs));
         }
 
@@ -369,7 +369,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryTableSpecs(EntryBigqueryTableSpecGetArgs... bigqueryTableSpecs) {
+        public Builder bigqueryTableSpecs(EntryBigqueryTableSpecArgs... bigqueryTableSpecs) {
             return bigqueryTableSpecs(List.of(bigqueryTableSpecs));
         }
 
@@ -466,7 +466,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gcsFilesetSpec(@Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec) {
             $.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
@@ -478,7 +478,7 @@ public final class EntryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gcsFilesetSpec(EntryGcsFilesetSpecGetArgs gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(EntryGcsFilesetSpecArgs gcsFilesetSpec) {
             return gcsFilesetSpec(Output.of(gcsFilesetSpec));
         }
 

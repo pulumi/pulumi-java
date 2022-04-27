@@ -5,7 +5,7 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigGetArgs;
+import com.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,13 +22,13 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="auditLogConfigs")
-    private @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+    private @Nullable Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     /**
      * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    public Optional<Output<List<IAMAuditConfigAuditLogConfigGetArgs>>> auditLogConfigs() {
+    public Optional<Output<List<IAMAuditConfigAuditLogConfigArgs>>> auditLogConfigs() {
         return Optional.ofNullable(this.auditLogConfigs);
     }
 
@@ -112,7 +112,7 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(@Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
@@ -123,7 +123,7 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+        public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
@@ -133,7 +133,7 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
+        public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 

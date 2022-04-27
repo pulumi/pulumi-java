@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineArgs;
+import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionArgs;
+import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="appEngine")
-    private @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
+    private @Nullable Output<RegionNetworkEndpointGroupAppEngineArgs> appEngine;
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
@@ -33,7 +33,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionNetworkEndpointGroupAppEngineGetArgs>> appEngine() {
+    public Optional<Output<RegionNetworkEndpointGroupAppEngineArgs>> appEngine() {
         return Optional.ofNullable(this.appEngine);
     }
 
@@ -44,7 +44,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudFunction")
-    private @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
+    private @Nullable Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
@@ -52,7 +52,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionNetworkEndpointGroupCloudFunctionGetArgs>> cloudFunction() {
+    public Optional<Output<RegionNetworkEndpointGroupCloudFunctionArgs>> cloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
 
@@ -63,7 +63,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudRun")
-    private @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
+    private @Nullable Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun;
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
@@ -71,7 +71,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionNetworkEndpointGroupCloudRunGetArgs>> cloudRun() {
+    public Optional<Output<RegionNetworkEndpointGroupCloudRunArgs>> cloudRun() {
         return Optional.ofNullable(this.cloudRun);
     }
 
@@ -225,7 +225,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder appEngine(@Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine) {
+        public Builder appEngine(@Nullable Output<RegionNetworkEndpointGroupAppEngineArgs> appEngine) {
             $.appEngine = appEngine;
             return this;
         }
@@ -238,7 +238,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder appEngine(RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
+        public Builder appEngine(RegionNetworkEndpointGroupAppEngineArgs appEngine) {
             return appEngine(Output.of(appEngine));
         }
 
@@ -250,7 +250,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
+        public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
             $.cloudFunction = cloudFunction;
             return this;
         }
@@ -263,7 +263,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder cloudFunction(RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
+        public Builder cloudFunction(RegionNetworkEndpointGroupCloudFunctionArgs cloudFunction) {
             return cloudFunction(Output.of(cloudFunction));
         }
 
@@ -275,7 +275,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun) {
             $.cloudRun = cloudRun;
             return this;
         }
@@ -288,7 +288,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder cloudRun(RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
+        public Builder cloudRun(RegionNetworkEndpointGroupCloudRunArgs cloudRun) {
             return cloudRun(Output.of(cloudRun));
         }
 

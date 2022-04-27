@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.HaVpnGatewayVpnInterfaceGetArgs;
+import com.pulumi.gcp.compute.inputs.HaVpnGatewayVpnInterfaceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -127,14 +127,14 @@ public final class HaVpnGatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnInterfaces")
-    private @Nullable Output<List<HaVpnGatewayVpnInterfaceGetArgs>> vpnInterfaces;
+    private @Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces;
 
     /**
      * @return A list of interfaces on this VPN gateway.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<HaVpnGatewayVpnInterfaceGetArgs>>> vpnInterfaces() {
+    public Optional<Output<List<HaVpnGatewayVpnInterfaceArgs>>> vpnInterfaces() {
         return Optional.ofNullable(this.vpnInterfaces);
     }
 
@@ -315,7 +315,7 @@ public final class HaVpnGatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpnInterfaces(@Nullable Output<List<HaVpnGatewayVpnInterfaceGetArgs>> vpnInterfaces) {
+        public Builder vpnInterfaces(@Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces) {
             $.vpnInterfaces = vpnInterfaces;
             return this;
         }
@@ -327,7 +327,7 @@ public final class HaVpnGatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpnInterfaces(List<HaVpnGatewayVpnInterfaceGetArgs> vpnInterfaces) {
+        public Builder vpnInterfaces(List<HaVpnGatewayVpnInterfaceArgs> vpnInterfaces) {
             return vpnInterfaces(Output.of(vpnInterfaces));
         }
 
@@ -338,7 +338,7 @@ public final class HaVpnGatewayState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpnInterfaces(HaVpnGatewayVpnInterfaceGetArgs... vpnInterfaces) {
+        public Builder vpnInterfaces(HaVpnGatewayVpnInterfaceArgs... vpnInterfaces) {
             return vpnInterfaces(List.of(vpnInterfaces));
         }
 

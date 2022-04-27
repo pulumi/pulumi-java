@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyGetArgs;
+import com.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cdnPolicy")
-    private @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy;
+    private @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
     /**
      * @return Cloud CDN configuration for this Backend Bucket.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendBucketCdnPolicyGetArgs>> cdnPolicy() {
+    public Optional<Output<BackendBucketCdnPolicyArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
 
@@ -231,7 +231,7 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
@@ -243,7 +243,7 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder cdnPolicy(BackendBucketCdnPolicyGetArgs cdnPolicy) {
+        public Builder cdnPolicy(BackendBucketCdnPolicyArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 

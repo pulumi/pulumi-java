@@ -5,7 +5,7 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyGetArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="devicePolicy")
-    private @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy;
+    private @Nullable Output<AccessLevelConditionDevicePolicyArgs> devicePolicy;
 
     /**
      * @return Device specific restrictions, all restrictions must hold for
@@ -50,7 +50,7 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AccessLevelConditionDevicePolicyGetArgs>> devicePolicy() {
+    public Optional<Output<AccessLevelConditionDevicePolicyArgs>> devicePolicy() {
         return Optional.ofNullable(this.devicePolicy);
     }
 
@@ -235,7 +235,7 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder devicePolicy(@Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy) {
+        public Builder devicePolicy(@Nullable Output<AccessLevelConditionDevicePolicyArgs> devicePolicy) {
             $.devicePolicy = devicePolicy;
             return this;
         }
@@ -249,7 +249,7 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder devicePolicy(AccessLevelConditionDevicePolicyGetArgs devicePolicy) {
+        public Builder devicePolicy(AccessLevelConditionDevicePolicyArgs devicePolicy) {
             return devicePolicy(Output.of(devicePolicy));
         }
 

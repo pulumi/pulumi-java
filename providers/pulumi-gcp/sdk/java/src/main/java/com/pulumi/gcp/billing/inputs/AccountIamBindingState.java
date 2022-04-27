@@ -5,7 +5,7 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.billing.inputs.AccountIamBindingConditionGetArgs;
+import com.pulumi.gcp.billing.inputs.AccountIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
     }
 
     @Import(name="condition")
-    private @Nullable Output<AccountIamBindingConditionGetArgs> condition;
+    private @Nullable Output<AccountIamBindingConditionArgs> condition;
 
-    public Optional<Output<AccountIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<AccountIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -89,12 +89,12 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
             return billingAccountId(Output.of(billingAccountId));
         }
 
-        public Builder condition(@Nullable Output<AccountIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<AccountIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(AccountIamBindingConditionGetArgs condition) {
+        public Builder condition(AccountIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

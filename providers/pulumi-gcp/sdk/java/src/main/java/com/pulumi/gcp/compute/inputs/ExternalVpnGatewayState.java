@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ExternalVpnGatewayInterfaceGetArgs;
+import com.pulumi.gcp.compute.inputs.ExternalVpnGatewayInterfaceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,14 +38,14 @@ public final class ExternalVpnGatewayState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="interfaces")
-    private @Nullable Output<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces;
+    private @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
     /**
      * @return A list of interfaces on this external VPN gateway.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ExternalVpnGatewayInterfaceGetArgs>>> interfaces() {
+    public Optional<Output<List<ExternalVpnGatewayInterfaceArgs>>> interfaces() {
         return Optional.ofNullable(this.interfaces);
     }
 
@@ -182,7 +182,7 @@ public final class ExternalVpnGatewayState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder interfaces(@Nullable Output<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces) {
+        public Builder interfaces(@Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
             $.interfaces = interfaces;
             return this;
         }
@@ -194,7 +194,7 @@ public final class ExternalVpnGatewayState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder interfaces(List<ExternalVpnGatewayInterfaceGetArgs> interfaces) {
+        public Builder interfaces(List<ExternalVpnGatewayInterfaceArgs> interfaces) {
             return interfaces(Output.of(interfaces));
         }
 
@@ -205,7 +205,7 @@ public final class ExternalVpnGatewayState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder interfaces(ExternalVpnGatewayInterfaceGetArgs... interfaces) {
+        public Builder interfaces(ExternalVpnGatewayInterfaceArgs... interfaces) {
             return interfaces(List.of(interfaces));
         }
 

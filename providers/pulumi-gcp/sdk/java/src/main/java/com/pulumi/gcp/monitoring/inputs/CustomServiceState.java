@@ -5,7 +5,7 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryGetArgs;
+import com.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,14 +86,14 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="telemetry")
-    private @Nullable Output<CustomServiceTelemetryGetArgs> telemetry;
+    private @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
     /**
      * @return Configuration for how to query telemetry on a Service.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<CustomServiceTelemetryGetArgs>> telemetry() {
+    public Optional<Output<CustomServiceTelemetryArgs>> telemetry() {
         return Optional.ofNullable(this.telemetry);
     }
 
@@ -220,7 +220,7 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder telemetry(@Nullable Output<CustomServiceTelemetryGetArgs> telemetry) {
+        public Builder telemetry(@Nullable Output<CustomServiceTelemetryArgs> telemetry) {
             $.telemetry = telemetry;
             return this;
         }
@@ -232,7 +232,7 @@ public final class CustomServiceState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder telemetry(CustomServiceTelemetryGetArgs telemetry) {
+        public Builder telemetry(CustomServiceTelemetryArgs telemetry) {
             return telemetry(Output.of(telemetry));
         }
 

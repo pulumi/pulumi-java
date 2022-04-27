@@ -5,7 +5,7 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionGetArgs;
+import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class TunnelInstanceIAMBindingState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<TunnelInstanceIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TunnelInstanceIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<TunnelInstanceIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -151,7 +151,7 @@ public final class TunnelInstanceIAMBindingState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<TunnelInstanceIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -163,7 +163,7 @@ public final class TunnelInstanceIAMBindingState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder condition(TunnelInstanceIAMBindingConditionGetArgs condition) {
+        public Builder condition(TunnelInstanceIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

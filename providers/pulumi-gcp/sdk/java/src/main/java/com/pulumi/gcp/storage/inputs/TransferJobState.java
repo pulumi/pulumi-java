@@ -5,8 +5,8 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.TransferJobScheduleGetArgs;
-import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecGetArgs;
+import com.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
+import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -114,13 +114,13 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<TransferJobScheduleGetArgs> schedule;
+    private @Nullable Output<TransferJobScheduleArgs> schedule;
 
     /**
      * @return Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    public Optional<Output<TransferJobScheduleGetArgs>> schedule() {
+    public Optional<Output<TransferJobScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -144,13 +144,13 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferSpec")
-    private @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec;
+    private @Nullable Output<TransferJobTransferSpecArgs> transferSpec;
 
     /**
      * @return Transfer specification. Structure documented below.
      * 
      */
-    public Optional<Output<TransferJobTransferSpecGetArgs>> transferSpec() {
+    public Optional<Output<TransferJobTransferSpecArgs>> transferSpec() {
         return Optional.ofNullable(this.transferSpec);
     }
 
@@ -320,7 +320,7 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<TransferJobScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -331,7 +331,7 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(TransferJobScheduleGetArgs schedule) {
+        public Builder schedule(TransferJobScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
@@ -362,7 +362,7 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transferSpec(@Nullable Output<TransferJobTransferSpecGetArgs> transferSpec) {
+        public Builder transferSpec(@Nullable Output<TransferJobTransferSpecArgs> transferSpec) {
             $.transferSpec = transferSpec;
             return this;
         }
@@ -373,7 +373,7 @@ public final class TransferJobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder transferSpec(TransferJobTransferSpecGetArgs transferSpec) {
+        public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
             return transferSpec(Output.of(transferSpec));
         }
 

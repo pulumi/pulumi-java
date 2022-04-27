@@ -5,7 +5,7 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionGetArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SubscriptionIAMBindingState extends com.pulumi.resources.Reso
     public static final SubscriptionIAMBindingState Empty = new SubscriptionIAMBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<SubscriptionIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<SubscriptionIAMBindingConditionArgs> condition;
 
-    public Optional<Output<SubscriptionIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<SubscriptionIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,12 +126,12 @@ public final class SubscriptionIAMBindingState extends com.pulumi.resources.Reso
             $ = new SubscriptionIAMBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<SubscriptionIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<SubscriptionIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(SubscriptionIAMBindingConditionGetArgs condition) {
+        public Builder condition(SubscriptionIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

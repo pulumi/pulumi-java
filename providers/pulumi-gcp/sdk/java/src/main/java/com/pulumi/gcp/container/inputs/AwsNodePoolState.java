@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingGetArgs;
-import com.pulumi.gcp.container.inputs.AwsNodePoolConfigGetArgs;
-import com.pulumi.gcp.container.inputs.AwsNodePoolMaxPodsConstraintGetArgs;
+import com.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingArgs;
+import com.pulumi.gcp.container.inputs.AwsNodePoolConfigArgs;
+import com.pulumi.gcp.container.inputs.AwsNodePoolMaxPodsConstraintArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -40,13 +40,13 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaling")
-    private @Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling;
+    private @Nullable Output<AwsNodePoolAutoscalingArgs> autoscaling;
 
     /**
      * @return Required. Autoscaler configuration for this node pool.
      * 
      */
-    public Optional<Output<AwsNodePoolAutoscalingGetArgs>> autoscaling() {
+    public Optional<Output<AwsNodePoolAutoscalingArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
 
@@ -70,13 +70,13 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-    private @Nullable Output<AwsNodePoolConfigGetArgs> config;
+    private @Nullable Output<AwsNodePoolConfigArgs> config;
 
     /**
      * @return Required. The configuration of the node pool.
      * 
      */
-    public Optional<Output<AwsNodePoolConfigGetArgs>> config() {
+    public Optional<Output<AwsNodePoolConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
 
@@ -132,13 +132,13 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPodsConstraint")
-    private @Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
+    private @Nullable Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     /**
      * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    public Optional<Output<AwsNodePoolMaxPodsConstraintGetArgs>> maxPodsConstraint() {
+    public Optional<Output<AwsNodePoolMaxPodsConstraintArgs>> maxPodsConstraint() {
         return Optional.ofNullable(this.maxPodsConstraint);
     }
 
@@ -330,7 +330,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscaling(@Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<AwsNodePoolAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
@@ -341,7 +341,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscaling(AwsNodePoolAutoscalingGetArgs autoscaling) {
+        public Builder autoscaling(AwsNodePoolAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
@@ -372,7 +372,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(@Nullable Output<AwsNodePoolConfigGetArgs> config) {
+        public Builder config(@Nullable Output<AwsNodePoolConfigArgs> config) {
             $.config = config;
             return this;
         }
@@ -383,7 +383,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder config(AwsNodePoolConfigGetArgs config) {
+        public Builder config(AwsNodePoolConfigArgs config) {
             return config(Output.of(config));
         }
 
@@ -458,7 +458,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxPodsConstraint(@Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
@@ -469,7 +469,7 @@ public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder maxPodsConstraint(AwsNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
+        public Builder maxPodsConstraint(AwsNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
             return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
 

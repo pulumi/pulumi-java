@@ -5,7 +5,7 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.secretmanager.inputs.SecretIamBindingConditionGetArgs;
+import com.pulumi.gcp.secretmanager.inputs.SecretIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SecretIamBindingState extends com.pulumi.resources.ResourceAr
     public static final SecretIamBindingState Empty = new SecretIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<SecretIamBindingConditionGetArgs> condition;
+    private @Nullable Output<SecretIamBindingConditionArgs> condition;
 
-    public Optional<Output<SecretIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<SecretIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -118,12 +118,12 @@ public final class SecretIamBindingState extends com.pulumi.resources.ResourceAr
             $ = new SecretIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<SecretIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<SecretIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(SecretIamBindingConditionGetArgs condition) {
+        public Builder condition(SecretIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.DatasetIamBindingConditionGetArgs;
+import com.pulumi.gcp.bigquery.inputs.DatasetIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DatasetIamBindingState extends com.pulumi.resources.ResourceA
     public static final DatasetIamBindingState Empty = new DatasetIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<DatasetIamBindingConditionGetArgs> condition;
+    private @Nullable Output<DatasetIamBindingConditionArgs> condition;
 
-    public Optional<Output<DatasetIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<DatasetIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,12 +126,12 @@ public final class DatasetIamBindingState extends com.pulumi.resources.ResourceA
             $ = new DatasetIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DatasetIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DatasetIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DatasetIamBindingConditionGetArgs condition) {
+        public Builder condition(DatasetIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

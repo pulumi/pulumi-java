@@ -5,8 +5,8 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxIntentParameterGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxIntentParameterArgs;
+import com.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -129,14 +129,14 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<CxIntentParameterGetArgs>> parameters;
+    private @Nullable Output<List<CxIntentParameterArgs>> parameters;
 
     /**
      * @return The collection of parameters associated with the intent.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxIntentParameterGetArgs>>> parameters() {
+    public Optional<Output<List<CxIntentParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -182,14 +182,14 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trainingPhrases")
-    private @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
+    private @Nullable Output<List<CxIntentTrainingPhraseArgs>> trainingPhrases;
 
     /**
      * @return The collection of training phrases the agent is trained on to identify the intent.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxIntentTrainingPhraseGetArgs>>> trainingPhrases() {
+    public Optional<Output<List<CxIntentTrainingPhraseArgs>>> trainingPhrases() {
         return Optional.ofNullable(this.trainingPhrases);
     }
 
@@ -371,7 +371,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<CxIntentParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<CxIntentParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -383,7 +383,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(List<CxIntentParameterGetArgs> parameters) {
+        public Builder parameters(List<CxIntentParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -394,7 +394,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(CxIntentParameterGetArgs... parameters) {
+        public Builder parameters(CxIntentParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
@@ -453,7 +453,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trainingPhrases(@Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable Output<List<CxIntentTrainingPhraseArgs>> trainingPhrases) {
             $.trainingPhrases = trainingPhrases;
             return this;
         }
@@ -465,7 +465,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trainingPhrases(List<CxIntentTrainingPhraseGetArgs> trainingPhrases) {
+        public Builder trainingPhrases(List<CxIntentTrainingPhraseArgs> trainingPhrases) {
             return trainingPhrases(Output.of(trainingPhrases));
         }
 
@@ -476,7 +476,7 @@ public final class CxIntentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder trainingPhrases(CxIntentTrainingPhraseGetArgs... trainingPhrases) {
+        public Builder trainingPhrases(CxIntentTrainingPhraseArgs... trainingPhrases) {
             return trainingPhrases(List.of(trainingPhrases));
         }
 

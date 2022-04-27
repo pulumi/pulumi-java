@@ -5,9 +5,9 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternGetArgs;
-import com.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleGetArgs;
-import com.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleGetArgs;
+import com.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternArgs;
+import com.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleArgs;
+import com.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="admissionWhitelistPatterns")
-    private @Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
+    private @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
 
     /**
      * @return A whitelist of image patterns to exclude from admission rules. If an
@@ -36,7 +36,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<PolicyAdmissionWhitelistPatternGetArgs>>> admissionWhitelistPatterns() {
+    public Optional<Output<List<PolicyAdmissionWhitelistPatternArgs>>> admissionWhitelistPatterns() {
         return Optional.ofNullable(this.admissionWhitelistPatterns);
     }
 
@@ -49,7 +49,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterAdmissionRules")
-    private @Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
+    private @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
 
     /**
      * @return Per-cluster admission rules. An admission rule specifies either that
@@ -59,7 +59,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * admission rule per cluster spec.
      * 
      */
-    public Optional<Output<List<PolicyClusterAdmissionRuleGetArgs>>> clusterAdmissionRules() {
+    public Optional<Output<List<PolicyClusterAdmissionRuleArgs>>> clusterAdmissionRules() {
         return Optional.ofNullable(this.clusterAdmissionRules);
     }
 
@@ -70,7 +70,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAdmissionRule")
-    private @Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
+    private @Nullable Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
 
     /**
      * @return Default admission rule for a cluster without a per-cluster admission
@@ -78,7 +78,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PolicyDefaultAdmissionRuleGetArgs>> defaultAdmissionRule() {
+    public Optional<Output<PolicyDefaultAdmissionRuleArgs>> defaultAdmissionRule() {
         return Optional.ofNullable(this.defaultAdmissionRule);
     }
 
@@ -173,7 +173,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder admissionWhitelistPatterns(@Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(@Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns) {
             $.admissionWhitelistPatterns = admissionWhitelistPatterns;
             return this;
         }
@@ -187,7 +187,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder admissionWhitelistPatterns(List<PolicyAdmissionWhitelistPatternGetArgs> admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
             return admissionWhitelistPatterns(Output.of(admissionWhitelistPatterns));
         }
 
@@ -200,7 +200,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder admissionWhitelistPatterns(PolicyAdmissionWhitelistPatternGetArgs... admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(PolicyAdmissionWhitelistPatternArgs... admissionWhitelistPatterns) {
             return admissionWhitelistPatterns(List.of(admissionWhitelistPatterns));
         }
 
@@ -214,7 +214,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterAdmissionRules(@Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(@Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules) {
             $.clusterAdmissionRules = clusterAdmissionRules;
             return this;
         }
@@ -229,7 +229,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterAdmissionRules(List<PolicyClusterAdmissionRuleGetArgs> clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
             return clusterAdmissionRules(Output.of(clusterAdmissionRules));
         }
 
@@ -243,7 +243,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterAdmissionRules(PolicyClusterAdmissionRuleGetArgs... clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(PolicyClusterAdmissionRuleArgs... clusterAdmissionRules) {
             return clusterAdmissionRules(List.of(clusterAdmissionRules));
         }
 
@@ -255,7 +255,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAdmissionRule(@Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule) {
+        public Builder defaultAdmissionRule(@Nullable Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule) {
             $.defaultAdmissionRule = defaultAdmissionRule;
             return this;
         }
@@ -268,7 +268,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAdmissionRule(PolicyDefaultAdmissionRuleGetArgs defaultAdmissionRule) {
+        public Builder defaultAdmissionRule(PolicyDefaultAdmissionRuleArgs defaultAdmissionRule) {
             return defaultAdmissionRule(Output.of(defaultAdmissionRule));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.servicedirectory.inputs.ServiceIamBindingConditionGetArgs;
+import com.pulumi.gcp.servicedirectory.inputs.ServiceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ServiceIamBindingState extends com.pulumi.resources.ResourceA
     public static final ServiceIamBindingState Empty = new ServiceIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<ServiceIamBindingConditionGetArgs> condition;
+    private @Nullable Output<ServiceIamBindingConditionArgs> condition;
 
-    public Optional<Output<ServiceIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<ServiceIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -108,12 +108,12 @@ public final class ServiceIamBindingState extends com.pulumi.resources.ResourceA
             $ = new ServiceIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<ServiceIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ServiceIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ServiceIamBindingConditionGetArgs condition) {
+        public Builder condition(ServiceIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

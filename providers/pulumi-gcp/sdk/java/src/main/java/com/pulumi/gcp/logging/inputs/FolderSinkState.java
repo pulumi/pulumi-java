@@ -5,8 +5,8 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsGetArgs;
-import com.pulumi.gcp.logging.inputs.FolderSinkExclusionGetArgs;
+import com.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsArgs;
+import com.pulumi.gcp.logging.inputs.FolderSinkExclusionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,13 +24,13 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryOptions")
-    private @Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
+    private @Nullable Output<FolderSinkBigqueryOptionsArgs> bigqueryOptions;
 
     /**
      * @return Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    public Optional<Output<FolderSinkBigqueryOptionsGetArgs>> bigqueryOptions() {
+    public Optional<Output<FolderSinkBigqueryOptionsArgs>> bigqueryOptions() {
         return Optional.ofNullable(this.bigqueryOptions);
     }
 
@@ -90,13 +90,13 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exclusions")
-    private @Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions;
+    private @Nullable Output<List<FolderSinkExclusionArgs>> exclusions;
 
     /**
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Optional<Output<List<FolderSinkExclusionGetArgs>>> exclusions() {
+    public Optional<Output<List<FolderSinkExclusionArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
 
@@ -222,7 +222,7 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(@Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<FolderSinkBigqueryOptionsArgs> bigqueryOptions) {
             $.bigqueryOptions = bigqueryOptions;
             return this;
         }
@@ -233,7 +233,7 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(FolderSinkBigqueryOptionsGetArgs bigqueryOptions) {
+        public Builder bigqueryOptions(FolderSinkBigqueryOptionsArgs bigqueryOptions) {
             return bigqueryOptions(Output.of(bigqueryOptions));
         }
 
@@ -312,7 +312,7 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder exclusions(@Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<FolderSinkExclusionArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
@@ -323,7 +323,7 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder exclusions(List<FolderSinkExclusionGetArgs> exclusions) {
+        public Builder exclusions(List<FolderSinkExclusionArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
@@ -333,7 +333,7 @@ public final class FolderSinkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder exclusions(FolderSinkExclusionGetArgs... exclusions) {
+        public Builder exclusions(FolderSinkExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 

@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionGetArgs;
-import com.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectGetArgs;
-import com.pulumi.gcp.compute.inputs.URLMapHeaderActionGetArgs;
-import com.pulumi.gcp.compute.inputs.URLMapHostRuleGetArgs;
-import com.pulumi.gcp.compute.inputs.URLMapPathMatcherGetArgs;
-import com.pulumi.gcp.compute.inputs.URLMapTestGetArgs;
+import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionArgs;
+import com.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectArgs;
+import com.pulumi.gcp.compute.inputs.URLMapHeaderActionArgs;
+import com.pulumi.gcp.compute.inputs.URLMapHostRuleArgs;
+import com.pulumi.gcp.compute.inputs.URLMapPathMatcherArgs;
+import com.pulumi.gcp.compute.inputs.URLMapTestArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +48,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultRouteAction")
-    private @Nullable Output<URLMapDefaultRouteActionGetArgs> defaultRouteAction;
+    private @Nullable Output<URLMapDefaultRouteActionArgs> defaultRouteAction;
 
     /**
      * @return defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
@@ -59,7 +59,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<URLMapDefaultRouteActionGetArgs>> defaultRouteAction() {
+    public Optional<Output<URLMapDefaultRouteActionArgs>> defaultRouteAction() {
         return Optional.ofNullable(this.defaultRouteAction);
     }
 
@@ -86,7 +86,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultUrlRedirect")
-    private @Nullable Output<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+    private @Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     /**
      * @return When none of the specified hostRules match, the request is redirected to a URL specified
@@ -95,7 +95,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<URLMapDefaultUrlRedirectGetArgs>> defaultUrlRedirect() {
+    public Optional<Output<URLMapDefaultUrlRedirectArgs>> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
 
@@ -138,7 +138,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headerAction")
-    private @Nullable Output<URLMapHeaderActionGetArgs> headerAction;
+    private @Nullable Output<URLMapHeaderActionArgs> headerAction;
 
     /**
      * @return Specifies changes to request and response headers that need to take effect for
@@ -148,7 +148,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<URLMapHeaderActionGetArgs>> headerAction() {
+    public Optional<Output<URLMapHeaderActionArgs>> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
 
@@ -158,14 +158,14 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostRules")
-    private @Nullable Output<List<URLMapHostRuleGetArgs>> hostRules;
+    private @Nullable Output<List<URLMapHostRuleArgs>> hostRules;
 
     /**
      * @return The list of HostRules to use against the URL.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<URLMapHostRuleGetArgs>>> hostRules() {
+    public Optional<Output<List<URLMapHostRuleArgs>>> hostRules() {
         return Optional.ofNullable(this.hostRules);
     }
 
@@ -207,14 +207,14 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathMatchers")
-    private @Nullable Output<List<URLMapPathMatcherGetArgs>> pathMatchers;
+    private @Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers;
 
     /**
      * @return The name of the PathMatcher to use to match the path portion of the URL if the
      * hostRule matches the URL&#39;s host portion.
      * 
      */
-    public Optional<Output<List<URLMapPathMatcherGetArgs>>> pathMatchers() {
+    public Optional<Output<List<URLMapPathMatcherArgs>>> pathMatchers() {
         return Optional.ofNullable(this.pathMatchers);
     }
 
@@ -258,7 +258,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tests")
-    private @Nullable Output<List<URLMapTestGetArgs>> tests;
+    private @Nullable Output<List<URLMapTestArgs>> tests;
 
     /**
      * @return The list of expected URL mapping tests. Request to update this UrlMap will
@@ -267,7 +267,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<URLMapTestGetArgs>>> tests() {
+    public Optional<Output<List<URLMapTestArgs>>> tests() {
         return Optional.ofNullable(this.tests);
     }
 
@@ -340,7 +340,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultRouteAction(@Nullable Output<URLMapDefaultRouteActionGetArgs> defaultRouteAction) {
+        public Builder defaultRouteAction(@Nullable Output<URLMapDefaultRouteActionArgs> defaultRouteAction) {
             $.defaultRouteAction = defaultRouteAction;
             return this;
         }
@@ -356,7 +356,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultRouteAction(URLMapDefaultRouteActionGetArgs defaultRouteAction) {
+        public Builder defaultRouteAction(URLMapDefaultRouteActionArgs defaultRouteAction) {
             return defaultRouteAction(Output.of(defaultRouteAction));
         }
 
@@ -390,7 +390,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUrlRedirect(@Nullable Output<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
@@ -404,7 +404,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultUrlRedirect(URLMapDefaultUrlRedirectGetArgs defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(URLMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             return defaultUrlRedirect(Output.of(defaultUrlRedirect));
         }
 
@@ -460,7 +460,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder headerAction(@Nullable Output<URLMapHeaderActionGetArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<URLMapHeaderActionArgs> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
@@ -475,7 +475,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder headerAction(URLMapHeaderActionGetArgs headerAction) {
+        public Builder headerAction(URLMapHeaderActionArgs headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
@@ -486,7 +486,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(@Nullable Output<List<URLMapHostRuleGetArgs>> hostRules) {
+        public Builder hostRules(@Nullable Output<List<URLMapHostRuleArgs>> hostRules) {
             $.hostRules = hostRules;
             return this;
         }
@@ -498,7 +498,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(List<URLMapHostRuleGetArgs> hostRules) {
+        public Builder hostRules(List<URLMapHostRuleArgs> hostRules) {
             return hostRules(Output.of(hostRules));
         }
 
@@ -509,7 +509,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hostRules(URLMapHostRuleGetArgs... hostRules) {
+        public Builder hostRules(URLMapHostRuleArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
 
@@ -564,7 +564,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(@Nullable Output<List<URLMapPathMatcherGetArgs>> pathMatchers) {
+        public Builder pathMatchers(@Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers) {
             $.pathMatchers = pathMatchers;
             return this;
         }
@@ -576,7 +576,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(List<URLMapPathMatcherGetArgs> pathMatchers) {
+        public Builder pathMatchers(List<URLMapPathMatcherArgs> pathMatchers) {
             return pathMatchers(Output.of(pathMatchers));
         }
 
@@ -587,7 +587,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pathMatchers(URLMapPathMatcherGetArgs... pathMatchers) {
+        public Builder pathMatchers(URLMapPathMatcherArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }
 
@@ -644,7 +644,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(@Nullable Output<List<URLMapTestGetArgs>> tests) {
+        public Builder tests(@Nullable Output<List<URLMapTestArgs>> tests) {
             $.tests = tests;
             return this;
         }
@@ -658,7 +658,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(List<URLMapTestGetArgs> tests) {
+        public Builder tests(List<URLMapTestArgs> tests) {
             return tests(Output.of(tests));
         }
 
@@ -671,7 +671,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tests(URLMapTestGetArgs... tests) {
+        public Builder tests(URLMapTestArgs... tests) {
             return tests(List.of(tests));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkconnectivity.inputs.HubRoutingVpcGetArgs;
+import com.pulumi.gcp.networkconnectivity.inputs.HubRoutingVpcArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -100,7 +100,7 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingVpcs")
-    private @Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs;
+    private @Nullable Output<List<HubRoutingVpcArgs>> routingVpcs;
 
     /**
      * @return The VPC network associated with this hub&#39;s spokes. All of the VPN tunnels, VLAN attachments, and router appliance
@@ -108,7 +108,7 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
      * Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
-    public Optional<Output<List<HubRoutingVpcGetArgs>>> routingVpcs() {
+    public Optional<Output<List<HubRoutingVpcArgs>>> routingVpcs() {
         return Optional.ofNullable(this.routingVpcs);
     }
 
@@ -304,7 +304,7 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingVpcs(@Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs) {
+        public Builder routingVpcs(@Nullable Output<List<HubRoutingVpcArgs>> routingVpcs) {
             $.routingVpcs = routingVpcs;
             return this;
         }
@@ -317,7 +317,7 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingVpcs(List<HubRoutingVpcGetArgs> routingVpcs) {
+        public Builder routingVpcs(List<HubRoutingVpcArgs> routingVpcs) {
             return routingVpcs(Output.of(routingVpcs));
         }
 
@@ -329,7 +329,7 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingVpcs(HubRoutingVpcGetArgs... routingVpcs) {
+        public Builder routingVpcs(HubRoutingVpcArgs... routingVpcs) {
             return routingVpcs(List.of(routingVpcs));
         }
 
