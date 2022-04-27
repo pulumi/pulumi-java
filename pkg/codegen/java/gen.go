@@ -1700,14 +1700,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 	return nil
 }
 
-func visitObjectTypes(properties []*schema.Property, visitor func(*schema.ObjectType)) {
-	codegen.VisitTypeClosure(properties, func(t schema.Type) {
-		if o, ok := t.(*schema.ObjectType); ok {
-			visitor(o)
-		}
-	})
-}
-
 type qualifier int
 
 const (
