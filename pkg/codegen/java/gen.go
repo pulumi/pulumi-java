@@ -307,7 +307,7 @@ func (mod *modContext) typeStringRecHelper(
 	}
 }
 
-func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier string, input bool) TypeShape {
+func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier qualifier, input bool) TypeShape {
 	namingCtx := mod
 	// TODO is this branch exercised? Is there an issue with classQueue?
 	if t.Package != mod.pkg {
@@ -1745,9 +1745,9 @@ func (mod *modContext) genType(
 	obj *schema.ObjectType,
 	input bool,
 ) error {
-	propertyTypeQualifier := "outputs"
+	propertyTypeQualifier := outputsQualifier
 	if input {
-		propertyTypeQualifier = "inputs"
+		propertyTypeQualifier = inputsQualifier
 	}
 
 	pt := &plainType{
