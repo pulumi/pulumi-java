@@ -5,7 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.RegistryImageBuildGetArgs;
+import com.pulumi.docker.inputs.RegistryImageBuildArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,13 +22,13 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="build")
-    private @Nullable Output<RegistryImageBuildGetArgs> build;
+    private @Nullable Output<RegistryImageBuildArgs> build;
 
     /**
      * @return Definition for building the image
      * 
      */
-    public Optional<Output<RegistryImageBuildGetArgs>> build() {
+    public Optional<Output<RegistryImageBuildArgs>> build() {
         return Optional.ofNullable(this.build);
     }
 
@@ -128,7 +128,7 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder build(@Nullable Output<RegistryImageBuildGetArgs> build) {
+        public Builder build(@Nullable Output<RegistryImageBuildArgs> build) {
             $.build = build;
             return this;
         }
@@ -139,7 +139,7 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder build(RegistryImageBuildGetArgs build) {
+        public Builder build(RegistryImageBuildArgs build) {
             return build(Output.of(build));
         }
 
