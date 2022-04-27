@@ -126,6 +126,27 @@ func (id Ident) makeValid() string {
 	return name
 }
 
+func (id Ident) Args() Ident {
+	if strings.HasSuffix(id.String(), "Args") {
+		return id
+	}
+	return id + "Args"
+}
+
+func (id Ident) State() Ident {
+	if strings.HasSuffix(id.String(), "State") {
+		return id
+	}
+	return id + "State"
+}
+
+func (id Ident) Result() Ident {
+	if strings.HasSuffix(id.String(), "Result") {
+		return id
+	}
+	return id + "Result"
+}
+
 func (id Ident) FQN() FQN {
 	return FQN{[]Ident{}, id}
 }

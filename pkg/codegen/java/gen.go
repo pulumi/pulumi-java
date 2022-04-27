@@ -73,7 +73,7 @@ func tokenToFunctionName(tok string) string {
 }
 
 func tokenToFunctionResultClassName(tok string) names.Ident {
-	return names.Ident(fmt.Sprintf("%sResult", tokenToName(tok)))
+	return names.Ident(tokenToName(tok)).Result()
 }
 
 func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
@@ -89,12 +89,12 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	return qualifier.append(pkg)
 }
 
-func (mod *modContext) typeName(t *schema.ObjectType) string {
+func (mod *modContext) typeName(t *schema.ObjectType) names.Ident {
 	name := tokenToName(t.Token)
 	if t.IsInputShape() {
-		return name + "Args"
+		return names.Ident(name).Args()
 	}
-	return name
+	return names.Ident(name)
 }
 
 // Computes the TypeShape (Java type representation, possibly
@@ -330,7 +330,7 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 	if err != nil {
 		panic(err)
 	}
-	className := names.Ident(mod.typeName(t))
+	className := mod.typeName(t)
 	if !foreign && mod.classQueue != nil {
 		mod.classQueue.ensureGenerated(classQueueEntry{
 			packageName: packageName,
@@ -1499,7 +1499,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		resultClass := tokenToFunctionResultClassName(fun.Token)
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
-		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
+		argsClass := names.Ident(tokenToName(fun.Token)).Args()
 		argsFQN := inputsPkg.Dot(argsClass)
 
 		var argsType string
@@ -1964,11 +1964,11 @@ func (mod *modContext) gen(fs fs) error {
 		}
 
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
-		argsClassName := names.Ident(resourceName(r) + "Args")
+		argsClassName := names.Ident(resourceName(r)).Args()
 		argsFQN := javaPkg.Dot(argsClassName)
 
 		var stateFQN names.FQN
-		stateClassName := names.Ident(resourceName(r) + "State")
+		stateClassName := names.Ident(resourceName(r)).State()
 		if r.StateInputs != nil {
 			stateFQN = inputsPkg.Dot(stateClassName)
 		}
