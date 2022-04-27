@@ -1740,7 +1740,7 @@ func (mod *modContext) genType(
 	ctx *classFileContext,
 	obj *schema.ObjectType,
 	propertyTypeQualifier qualifier,
-	input, state bool,
+	input bool,
 ) error {
 	pt := &plainType{
 		mod:                   mod,
@@ -2039,7 +2039,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 			plainTypeClassName = names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(inputsPkg, plainTypeClassName, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, inputsQualifier, true, false)
+				return mod.genType(ctx, t, inputsQualifier, true)
 			}); err != nil {
 				return err
 			}
@@ -2052,7 +2052,7 @@ func (mod *modContext) gen(fs fs) error {
 			// can be accommodated.
 			if !inputsPkg.Dot(plainTypeClassName).Equal(inputsPkg.Dot(className)) {
 				if err := addClass(inputsPkg, className, func(ctx *classFileContext) error {
-					return mod.genType(ctx, t, inputsQualifier, true, false)
+					return mod.genType(ctx, t, inputsQualifier, true)
 				}); err != nil {
 					return err
 				}
@@ -2061,7 +2061,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).stateType {
 			className := names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, inputsQualifier, true, true)
+				return mod.genType(ctx, t, inputsQualifier, true)
 			}); err != nil {
 				return err
 			}
@@ -2069,7 +2069,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).outputType {
 			className := names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, outputsQualifier, false, false)
+				return mod.genType(ctx, t, outputsQualifier, false)
 			}); err != nil {
 				return err
 			}
