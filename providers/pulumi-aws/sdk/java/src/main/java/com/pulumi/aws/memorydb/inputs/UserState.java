@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.memorydb.inputs;
 
-import com.pulumi.aws.memorydb.inputs.UserAuthenticationModeGetArgs;
+import com.pulumi.aws.memorydb.inputs.UserAuthenticationModeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationMode")
-    private @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
+    private @Nullable Output<UserAuthenticationModeArgs> authenticationMode;
 
     /**
      * @return Denotes the user&#39;s authentication properties. Detailed below.
      * 
      */
-    public Optional<Output<UserAuthenticationModeGetArgs>> authenticationMode() {
+    public Optional<Output<UserAuthenticationModeArgs>> authenticationMode() {
         return Optional.ofNullable(this.authenticationMode);
     }
 
@@ -202,7 +202,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationMode(@Nullable Output<UserAuthenticationModeGetArgs> authenticationMode) {
+        public Builder authenticationMode(@Nullable Output<UserAuthenticationModeArgs> authenticationMode) {
             $.authenticationMode = authenticationMode;
             return this;
         }
@@ -213,7 +213,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationMode(UserAuthenticationModeGetArgs authenticationMode) {
+        public Builder authenticationMode(UserAuthenticationModeArgs authenticationMode) {
             return authenticationMode(Output.of(authenticationMode));
         }
 

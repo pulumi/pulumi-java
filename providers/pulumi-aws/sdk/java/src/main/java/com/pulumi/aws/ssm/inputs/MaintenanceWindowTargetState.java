@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetGetArgs;
+import com.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -83,14 +83,14 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targets")
-    private @Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets;
+    private @Nullable Output<List<MaintenanceWindowTargetTargetArgs>> targets;
 
     /**
      * @return The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
      * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
      * 
      */
-    public Optional<Output<List<MaintenanceWindowTargetTargetGetArgs>>> targets() {
+    public Optional<Output<List<MaintenanceWindowTargetTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
 
@@ -229,7 +229,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder targets(@Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
+        public Builder targets(@Nullable Output<List<MaintenanceWindowTargetTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
@@ -241,7 +241,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder targets(List<MaintenanceWindowTargetTargetGetArgs> targets) {
+        public Builder targets(List<MaintenanceWindowTargetTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
@@ -252,7 +252,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder targets(MaintenanceWindowTargetTargetGetArgs... targets) {
+        public Builder targets(MaintenanceWindowTargetTargetArgs... targets) {
             return targets(List.of(targets));
         }
 

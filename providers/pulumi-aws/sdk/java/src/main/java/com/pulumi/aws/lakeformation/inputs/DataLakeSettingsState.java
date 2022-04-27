@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.lakeformation.inputs;
 
-import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs;
-import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateTableDefaultPermissionGetArgs;
+import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateDatabaseDefaultPermissionArgs;
+import com.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateTableDefaultPermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -53,13 +53,13 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createDatabaseDefaultPermissions")
-    private @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
+    private @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>> createDatabaseDefaultPermissions;
 
     /**
      * @return Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
      * 
      */
-    public Optional<Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>>> createDatabaseDefaultPermissions() {
+    public Optional<Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>>> createDatabaseDefaultPermissions() {
         return Optional.ofNullable(this.createDatabaseDefaultPermissions);
     }
 
@@ -68,13 +68,13 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createTableDefaultPermissions")
-    private @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
+    private @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>> createTableDefaultPermissions;
 
     /**
      * @return Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
      * 
      */
-    public Optional<Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>>> createTableDefaultPermissions() {
+    public Optional<Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>>> createTableDefaultPermissions() {
         return Optional.ofNullable(this.createTableDefaultPermissions);
     }
 
@@ -179,7 +179,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createDatabaseDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions) {
+        public Builder createDatabaseDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>> createDatabaseDefaultPermissions) {
             $.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
             return this;
         }
@@ -190,7 +190,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createDatabaseDefaultPermissions(List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs> createDatabaseDefaultPermissions) {
+        public Builder createDatabaseDefaultPermissions(List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs> createDatabaseDefaultPermissions) {
             return createDatabaseDefaultPermissions(Output.of(createDatabaseDefaultPermissions));
         }
 
@@ -200,7 +200,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createDatabaseDefaultPermissions(DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs... createDatabaseDefaultPermissions) {
+        public Builder createDatabaseDefaultPermissions(DataLakeSettingsCreateDatabaseDefaultPermissionArgs... createDatabaseDefaultPermissions) {
             return createDatabaseDefaultPermissions(List.of(createDatabaseDefaultPermissions));
         }
 
@@ -210,7 +210,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createTableDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions) {
+        public Builder createTableDefaultPermissions(@Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>> createTableDefaultPermissions) {
             $.createTableDefaultPermissions = createTableDefaultPermissions;
             return this;
         }
@@ -221,7 +221,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createTableDefaultPermissions(List<DataLakeSettingsCreateTableDefaultPermissionGetArgs> createTableDefaultPermissions) {
+        public Builder createTableDefaultPermissions(List<DataLakeSettingsCreateTableDefaultPermissionArgs> createTableDefaultPermissions) {
             return createTableDefaultPermissions(Output.of(createTableDefaultPermissions));
         }
 
@@ -231,7 +231,7 @@ public final class DataLakeSettingsState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder createTableDefaultPermissions(DataLakeSettingsCreateTableDefaultPermissionGetArgs... createTableDefaultPermissions) {
+        public Builder createTableDefaultPermissions(DataLakeSettingsCreateTableDefaultPermissionArgs... createTableDefaultPermissions) {
             return createTableDefaultPermissions(List.of(createTableDefaultPermissions));
         }
 

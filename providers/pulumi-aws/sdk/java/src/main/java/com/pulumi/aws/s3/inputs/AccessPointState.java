@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationGetArgs;
-import com.pulumi.aws.s3.inputs.AccessPointVpcConfigurationGetArgs;
+import com.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationArgs;
+import com.pulumi.aws.s3.inputs.AccessPointVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -176,13 +176,13 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicAccessBlockConfiguration")
-    private @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
+    private @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     /**
      * @return Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
      * 
      */
-    public Optional<Output<AccessPointPublicAccessBlockConfigurationGetArgs>> publicAccessBlockConfiguration() {
+    public Optional<Output<AccessPointPublicAccessBlockConfigurationArgs>> publicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
 
@@ -191,13 +191,13 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration")
-    private @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
+    private @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     /**
      * @return Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
      * 
      */
-    public Optional<Output<AccessPointVpcConfigurationGetArgs>> vpcConfiguration() {
+    public Optional<Output<AccessPointVpcConfigurationArgs>> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 
@@ -454,7 +454,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
@@ -465,7 +465,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder publicAccessBlockConfiguration(AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
 
@@ -475,7 +475,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
             $.vpcConfiguration = vpcConfiguration;
             return this;
         }
@@ -486,7 +486,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfiguration(AccessPointVpcConfigurationGetArgs vpcConfiguration) {
+        public Builder vpcConfiguration(AccessPointVpcConfigurationArgs vpcConfiguration) {
             return vpcConfiguration(Output.of(vpcConfiguration));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.AccountThrottleSettingsGetArgs;
+import com.pulumi.aws.apigateway.inputs.AccountThrottleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttleSettings")
-    private @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
+    private @Nullable Output<AccountThrottleSettingsArgs> throttleSettings;
 
     /**
      * @return Account-Level throttle settings. See exported fields below.
      * 
      */
-    public Optional<Output<AccountThrottleSettingsGetArgs>> throttleSettings() {
+    public Optional<Output<AccountThrottleSettingsArgs>> throttleSettings() {
         return Optional.ofNullable(this.throttleSettings);
     }
 
@@ -98,7 +98,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(@Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Output<AccountThrottleSettingsArgs> throttleSettings) {
             $.throttleSettings = throttleSettings;
             return this;
         }
@@ -109,7 +109,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(AccountThrottleSettingsGetArgs throttleSettings) {
+        public Builder throttleSettings(AccountThrottleSettingsArgs throttleSettings) {
             return throttleSettings(Output.of(throttleSettings));
         }
 

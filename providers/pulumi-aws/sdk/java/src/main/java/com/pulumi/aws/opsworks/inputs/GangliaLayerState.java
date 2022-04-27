@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.GangliaLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.GangliaLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.GangliaLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.GangliaLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<GangliaLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<GangliaLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<GangliaLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -188,13 +188,13 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<GangliaLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<GangliaLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<GangliaLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -512,12 +512,12 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<GangliaLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(GangliaLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(GangliaLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -686,7 +686,7 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<GangliaLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -697,7 +697,7 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<GangliaLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<GangliaLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -707,7 +707,7 @@ public final class GangliaLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(GangliaLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(GangliaLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

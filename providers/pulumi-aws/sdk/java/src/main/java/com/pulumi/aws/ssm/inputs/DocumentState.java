@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
-import com.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
+import com.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceArgs;
+import com.pulumi.aws.ssm.inputs.DocumentParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -31,13 +31,13 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachmentsSources")
-    private @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
+    private @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachmentsSources;
 
     /**
      * @return One or more configuration blocks describing attachments sources to a version of a document. Defined below.
      * 
      */
-    public Optional<Output<List<DocumentAttachmentsSourceGetArgs>>> attachmentsSources() {
+    public Optional<Output<List<DocumentAttachmentsSourceArgs>>> attachmentsSources() {
         return Optional.ofNullable(this.attachmentsSources);
     }
 
@@ -226,13 +226,13 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<DocumentParameterGetArgs>> parameters;
+    private @Nullable Output<List<DocumentParameterArgs>> parameters;
 
     /**
      * @return The parameters that are available to this document.
      * 
      */
-    public Optional<Output<List<DocumentParameterGetArgs>>> parameters() {
+    public Optional<Output<List<DocumentParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -417,7 +417,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceArgs>> attachmentsSources) {
             $.attachmentsSources = attachmentsSources;
             return this;
         }
@@ -428,7 +428,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachmentsSources(List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
+        public Builder attachmentsSources(List<DocumentAttachmentsSourceArgs> attachmentsSources) {
             return attachmentsSources(Output.of(attachmentsSources));
         }
 
@@ -438,7 +438,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachmentsSources(DocumentAttachmentsSourceGetArgs... attachmentsSources) {
+        public Builder attachmentsSources(DocumentAttachmentsSourceArgs... attachmentsSources) {
             return attachmentsSources(List.of(attachmentsSources));
         }
 
@@ -700,7 +700,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<DocumentParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<DocumentParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -711,7 +711,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(List<DocumentParameterGetArgs> parameters) {
+        public Builder parameters(List<DocumentParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -721,7 +721,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(DocumentParameterGetArgs... parameters) {
+        public Builder parameters(DocumentParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 

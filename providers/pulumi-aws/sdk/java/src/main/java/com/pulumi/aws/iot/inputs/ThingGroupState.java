@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.iot.inputs;
 
-import com.pulumi.aws.iot.inputs.ThingGroupMetadataGetArgs;
-import com.pulumi.aws.iot.inputs.ThingGroupPropertiesGetArgs;
+import com.pulumi.aws.iot.inputs.ThingGroupMetadataArgs;
+import com.pulumi.aws.iot.inputs.ThingGroupPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -36,9 +36,9 @@ public final class ThingGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="metadatas")
-    private @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas;
+    private @Nullable Output<List<ThingGroupMetadataArgs>> metadatas;
 
-    public Optional<Output<List<ThingGroupMetadataGetArgs>>> metadatas() {
+    public Optional<Output<List<ThingGroupMetadataArgs>>> metadatas() {
         return Optional.ofNullable(this.metadatas);
     }
 
@@ -77,13 +77,13 @@ public final class ThingGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-    private @Nullable Output<ThingGroupPropertiesGetArgs> properties;
+    private @Nullable Output<ThingGroupPropertiesArgs> properties;
 
     /**
      * @return The Thing Group properties. Defined below.
      * 
      */
-    public Optional<Output<ThingGroupPropertiesGetArgs>> properties() {
+    public Optional<Output<ThingGroupPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
 
@@ -176,16 +176,16 @@ public final class ThingGroupState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
-        public Builder metadatas(@Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas) {
+        public Builder metadatas(@Nullable Output<List<ThingGroupMetadataArgs>> metadatas) {
             $.metadatas = metadatas;
             return this;
         }
 
-        public Builder metadatas(List<ThingGroupMetadataGetArgs> metadatas) {
+        public Builder metadatas(List<ThingGroupMetadataArgs> metadatas) {
             return metadatas(Output.of(metadatas));
         }
 
-        public Builder metadatas(ThingGroupMetadataGetArgs... metadatas) {
+        public Builder metadatas(ThingGroupMetadataArgs... metadatas) {
             return metadatas(List.of(metadatas));
         }
 
@@ -237,7 +237,7 @@ public final class ThingGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder properties(@Nullable Output<ThingGroupPropertiesGetArgs> properties) {
+        public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
@@ -248,7 +248,7 @@ public final class ThingGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder properties(ThingGroupPropertiesGetArgs properties) {
+        public Builder properties(ThingGroupPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 

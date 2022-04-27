@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.appsync.inputs;
 
-import com.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.DataSourceElasticsearchConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.DataSourceHttpConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.DataSourceLambdaConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigGetArgs;
+import com.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigArgs;
+import com.pulumi.aws.appsync.inputs.DataSourceElasticsearchConfigArgs;
+import com.pulumi.aws.appsync.inputs.DataSourceHttpConfigArgs;
+import com.pulumi.aws.appsync.inputs.DataSourceLambdaConfigArgs;
+import com.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -70,13 +70,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamodbConfig")
-    private @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
+    private @Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig;
 
     /**
      * @return DynamoDB settings. See below
      * 
      */
-    public Optional<Output<DataSourceDynamodbConfigGetArgs>> dynamodbConfig() {
+    public Optional<Output<DataSourceDynamodbConfigArgs>> dynamodbConfig() {
         return Optional.ofNullable(this.dynamodbConfig);
     }
 
@@ -85,13 +85,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticsearchConfig")
-    private @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
+    private @Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig;
 
     /**
      * @return Amazon Elasticsearch settings. See below
      * 
      */
-    public Optional<Output<DataSourceElasticsearchConfigGetArgs>> elasticsearchConfig() {
+    public Optional<Output<DataSourceElasticsearchConfigArgs>> elasticsearchConfig() {
         return Optional.ofNullable(this.elasticsearchConfig);
     }
 
@@ -100,13 +100,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpConfig")
-    private @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
+    private @Nullable Output<DataSourceHttpConfigArgs> httpConfig;
 
     /**
      * @return HTTP settings. See below
      * 
      */
-    public Optional<Output<DataSourceHttpConfigGetArgs>> httpConfig() {
+    public Optional<Output<DataSourceHttpConfigArgs>> httpConfig() {
         return Optional.ofNullable(this.httpConfig);
     }
 
@@ -115,13 +115,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaConfig")
-    private @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
+    private @Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig;
 
     /**
      * @return AWS Lambda settings. See below
      * 
      */
-    public Optional<Output<DataSourceLambdaConfigGetArgs>> lambdaConfig() {
+    public Optional<Output<DataSourceLambdaConfigArgs>> lambdaConfig() {
         return Optional.ofNullable(this.lambdaConfig);
     }
 
@@ -145,13 +145,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationalDatabaseConfig")
-    private @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
+    private @Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig;
 
     /**
      * @return AWS RDS settings. See Relational Database Config
      * 
      */
-    public Optional<Output<DataSourceRelationalDatabaseConfigGetArgs>> relationalDatabaseConfig() {
+    public Optional<Output<DataSourceRelationalDatabaseConfigArgs>> relationalDatabaseConfig() {
         return Optional.ofNullable(this.relationalDatabaseConfig);
     }
 
@@ -288,7 +288,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
+        public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig) {
             $.dynamodbConfig = dynamodbConfig;
             return this;
         }
@@ -299,7 +299,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dynamodbConfig(DataSourceDynamodbConfigGetArgs dynamodbConfig) {
+        public Builder dynamodbConfig(DataSourceDynamodbConfigArgs dynamodbConfig) {
             return dynamodbConfig(Output.of(dynamodbConfig));
         }
 
@@ -309,7 +309,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
+        public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig) {
             $.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
@@ -320,7 +320,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder elasticsearchConfig(DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
+        public Builder elasticsearchConfig(DataSourceElasticsearchConfigArgs elasticsearchConfig) {
             return elasticsearchConfig(Output.of(elasticsearchConfig));
         }
 
@@ -330,7 +330,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpConfig(@Nullable Output<DataSourceHttpConfigGetArgs> httpConfig) {
+        public Builder httpConfig(@Nullable Output<DataSourceHttpConfigArgs> httpConfig) {
             $.httpConfig = httpConfig;
             return this;
         }
@@ -341,7 +341,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder httpConfig(DataSourceHttpConfigGetArgs httpConfig) {
+        public Builder httpConfig(DataSourceHttpConfigArgs httpConfig) {
             return httpConfig(Output.of(httpConfig));
         }
 
@@ -351,7 +351,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig) {
+        public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig) {
             $.lambdaConfig = lambdaConfig;
             return this;
         }
@@ -362,7 +362,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaConfig(DataSourceLambdaConfigGetArgs lambdaConfig) {
+        public Builder lambdaConfig(DataSourceLambdaConfigArgs lambdaConfig) {
             return lambdaConfig(Output.of(lambdaConfig));
         }
 
@@ -393,7 +393,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
+        public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig) {
             $.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
@@ -404,7 +404,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder relationalDatabaseConfig(DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
+        public Builder relationalDatabaseConfig(DataSourceRelationalDatabaseConfigArgs relationalDatabaseConfig) {
             return relationalDatabaseConfig(Output.of(relationalDatabaseConfig));
         }
 

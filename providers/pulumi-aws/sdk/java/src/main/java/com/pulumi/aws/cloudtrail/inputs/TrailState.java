@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.cloudtrail.inputs;
 
-import com.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorGetArgs;
-import com.pulumi.aws.cloudtrail.inputs.TrailEventSelectorGetArgs;
-import com.pulumi.aws.cloudtrail.inputs.TrailInsightSelectorGetArgs;
+import com.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorArgs;
+import com.pulumi.aws.cloudtrail.inputs.TrailEventSelectorArgs;
+import com.pulumi.aws.cloudtrail.inputs.TrailInsightSelectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -26,13 +26,13 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedEventSelectors")
-    private @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
+    private @Nullable Output<List<TrailAdvancedEventSelectorArgs>> advancedEventSelectors;
 
     /**
      * @return Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
      * 
      */
-    public Optional<Output<List<TrailAdvancedEventSelectorGetArgs>>> advancedEventSelectors() {
+    public Optional<Output<List<TrailAdvancedEventSelectorArgs>>> advancedEventSelectors() {
         return Optional.ofNullable(this.advancedEventSelectors);
     }
 
@@ -116,13 +116,13 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSelectors")
-    private @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors;
+    private @Nullable Output<List<TrailEventSelectorArgs>> eventSelectors;
 
     /**
      * @return Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
      * 
      */
-    public Optional<Output<List<TrailEventSelectorGetArgs>>> eventSelectors() {
+    public Optional<Output<List<TrailEventSelectorArgs>>> eventSelectors() {
         return Optional.ofNullable(this.eventSelectors);
     }
 
@@ -161,13 +161,13 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insightSelectors")
-    private @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors;
+    private @Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors;
 
     /**
      * @return Configuration block for identifying unusual operational activity. See details below.
      * 
      */
-    public Optional<Output<List<TrailInsightSelectorGetArgs>>> insightSelectors() {
+    public Optional<Output<List<TrailInsightSelectorArgs>>> insightSelectors() {
         return Optional.ofNullable(this.insightSelectors);
     }
 
@@ -354,7 +354,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedEventSelectors(@Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors) {
+        public Builder advancedEventSelectors(@Nullable Output<List<TrailAdvancedEventSelectorArgs>> advancedEventSelectors) {
             $.advancedEventSelectors = advancedEventSelectors;
             return this;
         }
@@ -365,7 +365,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedEventSelectors(List<TrailAdvancedEventSelectorGetArgs> advancedEventSelectors) {
+        public Builder advancedEventSelectors(List<TrailAdvancedEventSelectorArgs> advancedEventSelectors) {
             return advancedEventSelectors(Output.of(advancedEventSelectors));
         }
 
@@ -375,7 +375,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedEventSelectors(TrailAdvancedEventSelectorGetArgs... advancedEventSelectors) {
+        public Builder advancedEventSelectors(TrailAdvancedEventSelectorArgs... advancedEventSelectors) {
             return advancedEventSelectors(List.of(advancedEventSelectors));
         }
 
@@ -490,7 +490,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors) {
+        public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorArgs>> eventSelectors) {
             $.eventSelectors = eventSelectors;
             return this;
         }
@@ -501,7 +501,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventSelectors(List<TrailEventSelectorGetArgs> eventSelectors) {
+        public Builder eventSelectors(List<TrailEventSelectorArgs> eventSelectors) {
             return eventSelectors(Output.of(eventSelectors));
         }
 
@@ -511,7 +511,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventSelectors(TrailEventSelectorGetArgs... eventSelectors) {
+        public Builder eventSelectors(TrailEventSelectorArgs... eventSelectors) {
             return eventSelectors(List.of(eventSelectors));
         }
 
@@ -563,7 +563,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors) {
+        public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors) {
             $.insightSelectors = insightSelectors;
             return this;
         }
@@ -574,7 +574,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder insightSelectors(List<TrailInsightSelectorGetArgs> insightSelectors) {
+        public Builder insightSelectors(List<TrailInsightSelectorArgs> insightSelectors) {
             return insightSelectors(Output.of(insightSelectors));
         }
 
@@ -584,7 +584,7 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder insightSelectors(TrailInsightSelectorGetArgs... insightSelectors) {
+        public Builder insightSelectors(TrailInsightSelectorArgs... insightSelectors) {
             return insightSelectors(List.of(insightSelectors));
         }
 

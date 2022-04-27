@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
-import com.pulumi.aws.connect.inputs.HoursOfOperationConfigGetArgs;
+import com.pulumi.aws.connect.inputs.HoursOfOperationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -23,13 +23,13 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="configs")
-    private @Nullable Output<List<HoursOfOperationConfigGetArgs>> configs;
+    private @Nullable Output<List<HoursOfOperationConfigArgs>> configs;
 
     /**
      * @return One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
-    public Optional<Output<List<HoursOfOperationConfigGetArgs>>> configs() {
+    public Optional<Output<List<HoursOfOperationConfigArgs>>> configs() {
         return Optional.ofNullable(this.configs);
     }
 
@@ -191,7 +191,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder configs(@Nullable Output<List<HoursOfOperationConfigGetArgs>> configs) {
+        public Builder configs(@Nullable Output<List<HoursOfOperationConfigArgs>> configs) {
             $.configs = configs;
             return this;
         }
@@ -202,7 +202,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder configs(List<HoursOfOperationConfigGetArgs> configs) {
+        public Builder configs(List<HoursOfOperationConfigArgs> configs) {
             return configs(Output.of(configs));
         }
 
@@ -212,7 +212,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder configs(HoursOfOperationConfigGetArgs... configs) {
+        public Builder configs(HoursOfOperationConfigArgs... configs) {
             return configs(List.of(configs));
         }
 

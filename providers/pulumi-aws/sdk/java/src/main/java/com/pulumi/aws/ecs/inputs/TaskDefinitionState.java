@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.TaskDefinitionEphemeralStorageGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskDefinitionInferenceAcceleratorGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskDefinitionPlacementConstraintGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskDefinitionProxyConfigurationGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskDefinitionVolumeGetArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionEphemeralStorageArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionInferenceAcceleratorArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionPlacementConstraintArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionProxyConfigurationArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
+import com.pulumi.aws.ecs.inputs.TaskDefinitionVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -75,13 +75,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ephemeralStorage")
-    private @Nullable Output<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage;
+    private @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
     /**
      * @return The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
      * 
      */
-    public Optional<Output<TaskDefinitionEphemeralStorageGetArgs>> ephemeralStorage() {
+    public Optional<Output<TaskDefinitionEphemeralStorageArgs>> ephemeralStorage() {
         return Optional.ofNullable(this.ephemeralStorage);
     }
 
@@ -120,13 +120,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="inferenceAccelerators")
-    private @Nullable Output<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators;
+    private @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
     /**
      * @return Configuration block(s) with Inference Accelerators settings. Detailed below.
      * 
      */
-    public Optional<Output<List<TaskDefinitionInferenceAcceleratorGetArgs>>> inferenceAccelerators() {
+    public Optional<Output<List<TaskDefinitionInferenceAcceleratorArgs>>> inferenceAccelerators() {
         return Optional.ofNullable(this.inferenceAccelerators);
     }
 
@@ -195,13 +195,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="placementConstraints")
-    private @Nullable Output<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints;
+    private @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
     /**
      * @return Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
      * 
      */
-    public Optional<Output<List<TaskDefinitionPlacementConstraintGetArgs>>> placementConstraints() {
+    public Optional<Output<List<TaskDefinitionPlacementConstraintArgs>>> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
 
@@ -210,13 +210,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="proxyConfiguration")
-    private @Nullable Output<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration;
+    private @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
     /**
      * @return Configuration block for the App Mesh proxy. Detailed below.
      * 
      */
-    public Optional<Output<TaskDefinitionProxyConfigurationGetArgs>> proxyConfiguration() {
+    public Optional<Output<TaskDefinitionProxyConfigurationArgs>> proxyConfiguration() {
         return Optional.ofNullable(this.proxyConfiguration);
     }
 
@@ -255,13 +255,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="runtimePlatform")
-    private @Nullable Output<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform;
+    private @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
     /**
      * @return Configuration block for runtime_platform that containers in your task may use.
      * 
      */
-    public Optional<Output<TaskDefinitionRuntimePlatformGetArgs>> runtimePlatform() {
+    public Optional<Output<TaskDefinitionRuntimePlatformArgs>> runtimePlatform() {
         return Optional.ofNullable(this.runtimePlatform);
     }
 
@@ -322,13 +322,13 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="volumes")
-    private @Nullable Output<List<TaskDefinitionVolumeGetArgs>> volumes;
+    private @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
     /**
      * @return Configuration block for volumes that containers in your task may use. Detailed below.
      * 
      */
-    public Optional<Output<List<TaskDefinitionVolumeGetArgs>>> volumes() {
+    public Optional<Output<List<TaskDefinitionVolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
 
@@ -445,7 +445,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage) {
+        public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage) {
             $.ephemeralStorage = ephemeralStorage;
             return this;
         }
@@ -456,7 +456,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ephemeralStorage(TaskDefinitionEphemeralStorageGetArgs ephemeralStorage) {
+        public Builder ephemeralStorage(TaskDefinitionEphemeralStorageArgs ephemeralStorage) {
             return ephemeralStorage(Output.of(ephemeralStorage));
         }
 
@@ -508,7 +508,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators) {
+        public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators) {
             $.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
@@ -519,7 +519,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder inferenceAccelerators(List<TaskDefinitionInferenceAcceleratorGetArgs> inferenceAccelerators) {
+        public Builder inferenceAccelerators(List<TaskDefinitionInferenceAcceleratorArgs> inferenceAccelerators) {
             return inferenceAccelerators(Output.of(inferenceAccelerators));
         }
 
@@ -529,7 +529,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorGetArgs... inferenceAccelerators) {
+        public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorArgs... inferenceAccelerators) {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
 
@@ -623,7 +623,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints) {
             $.placementConstraints = placementConstraints;
             return this;
         }
@@ -634,7 +634,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder placementConstraints(List<TaskDefinitionPlacementConstraintGetArgs> placementConstraints) {
+        public Builder placementConstraints(List<TaskDefinitionPlacementConstraintArgs> placementConstraints) {
             return placementConstraints(Output.of(placementConstraints));
         }
 
@@ -644,7 +644,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder placementConstraints(TaskDefinitionPlacementConstraintGetArgs... placementConstraints) {
+        public Builder placementConstraints(TaskDefinitionPlacementConstraintArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
 
@@ -654,7 +654,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration) {
+        public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration) {
             $.proxyConfiguration = proxyConfiguration;
             return this;
         }
@@ -665,7 +665,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder proxyConfiguration(TaskDefinitionProxyConfigurationGetArgs proxyConfiguration) {
+        public Builder proxyConfiguration(TaskDefinitionProxyConfigurationArgs proxyConfiguration) {
             return proxyConfiguration(Output.of(proxyConfiguration));
         }
 
@@ -727,7 +727,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform) {
+        public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform) {
             $.runtimePlatform = runtimePlatform;
             return this;
         }
@@ -738,7 +738,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder runtimePlatform(TaskDefinitionRuntimePlatformGetArgs runtimePlatform) {
+        public Builder runtimePlatform(TaskDefinitionRuntimePlatformArgs runtimePlatform) {
             return runtimePlatform(Output.of(runtimePlatform));
         }
 
@@ -820,7 +820,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
@@ -831,7 +831,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder volumes(List<TaskDefinitionVolumeGetArgs> volumes) {
+        public Builder volumes(List<TaskDefinitionVolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
@@ -841,7 +841,7 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder volumes(TaskDefinitionVolumeGetArgs... volumes) {
+        public Builder volumes(TaskDefinitionVolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.autoscalingplans.inputs;
 
-import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceGetArgs;
-import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionGetArgs;
+import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceArgs;
+import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -24,13 +24,13 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationSource")
-    private @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
+    private @Nullable Output<ScalingPlanApplicationSourceArgs> applicationSource;
 
     /**
      * @return A CloudFormation stack or set of tags. You can create one scaling plan per application source.
      * 
      */
-    public Optional<Output<ScalingPlanApplicationSourceGetArgs>> applicationSource() {
+    public Optional<Output<ScalingPlanApplicationSourceArgs>> applicationSource() {
         return Optional.ofNullable(this.applicationSource);
     }
 
@@ -54,13 +54,13 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingInstructions")
-    private @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
+    private @Nullable Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
 
     /**
      * @return The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
      * 
      */
-    public Optional<Output<List<ScalingPlanScalingInstructionGetArgs>>> scalingInstructions() {
+    public Optional<Output<List<ScalingPlanScalingInstructionArgs>>> scalingInstructions() {
         return Optional.ofNullable(this.scalingInstructions);
     }
 
@@ -112,7 +112,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationSource(@Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource) {
+        public Builder applicationSource(@Nullable Output<ScalingPlanApplicationSourceArgs> applicationSource) {
             $.applicationSource = applicationSource;
             return this;
         }
@@ -123,7 +123,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationSource(ScalingPlanApplicationSourceGetArgs applicationSource) {
+        public Builder applicationSource(ScalingPlanApplicationSourceArgs applicationSource) {
             return applicationSource(Output.of(applicationSource));
         }
 
@@ -154,7 +154,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingInstructions(@Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
+        public Builder scalingInstructions(@Nullable Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions) {
             $.scalingInstructions = scalingInstructions;
             return this;
         }
@@ -165,7 +165,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingInstructions(List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
+        public Builder scalingInstructions(List<ScalingPlanScalingInstructionArgs> scalingInstructions) {
             return scalingInstructions(Output.of(scalingInstructions));
         }
 
@@ -175,7 +175,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingInstructions(ScalingPlanScalingInstructionGetArgs... scalingInstructions) {
+        public Builder scalingInstructions(ScalingPlanScalingInstructionArgs... scalingInstructions) {
             return scalingInstructions(List.of(scalingInstructions));
         }
 

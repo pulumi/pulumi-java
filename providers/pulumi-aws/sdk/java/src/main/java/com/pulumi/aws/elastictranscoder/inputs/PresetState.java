@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.elastictranscoder.inputs;
 
-import com.pulumi.aws.elastictranscoder.inputs.PresetAudioCodecOptionsGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PresetAudioGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PresetThumbnailsGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PresetVideoGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkGetArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PresetAudioArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PresetAudioCodecOptionsArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PresetThumbnailsArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PresetVideoArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -42,13 +42,13 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audio")
-    private @Nullable Output<PresetAudioGetArgs> audio;
+    private @Nullable Output<PresetAudioArgs> audio;
 
     /**
      * @return Audio parameters object (documented below).
      * 
      */
-    public Optional<Output<PresetAudioGetArgs>> audio() {
+    public Optional<Output<PresetAudioArgs>> audio() {
         return Optional.ofNullable(this.audio);
     }
 
@@ -57,13 +57,13 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audioCodecOptions")
-    private @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
+    private @Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions;
 
     /**
      * @return Codec options for the audio parameters (documented below)
      * 
      */
-    public Optional<Output<PresetAudioCodecOptionsGetArgs>> audioCodecOptions() {
+    public Optional<Output<PresetAudioCodecOptionsArgs>> audioCodecOptions() {
         return Optional.ofNullable(this.audioCodecOptions);
     }
 
@@ -117,13 +117,13 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnails")
-    private @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
+    private @Nullable Output<PresetThumbnailsArgs> thumbnails;
 
     /**
      * @return Thumbnail parameters object (documented below)
      * 
      */
-    public Optional<Output<PresetThumbnailsGetArgs>> thumbnails() {
+    public Optional<Output<PresetThumbnailsArgs>> thumbnails() {
         return Optional.ofNullable(this.thumbnails);
     }
 
@@ -139,13 +139,13 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="video")
-    private @Nullable Output<PresetVideoGetArgs> video;
+    private @Nullable Output<PresetVideoArgs> video;
 
     /**
      * @return Video parameters object (documented below)
      * 
      */
-    public Optional<Output<PresetVideoGetArgs>> video() {
+    public Optional<Output<PresetVideoArgs>> video() {
         return Optional.ofNullable(this.video);
     }
 
@@ -169,13 +169,13 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="videoWatermarks")
-    private @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
+    private @Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks;
 
     /**
      * @return Watermark parameters for the video parameters (documented below)
      * 
      */
-    public Optional<Output<List<PresetVideoWatermarkGetArgs>>> videoWatermarks() {
+    public Optional<Output<List<PresetVideoWatermarkArgs>>> videoWatermarks() {
         return Optional.ofNullable(this.videoWatermarks);
     }
 
@@ -240,7 +240,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder audio(@Nullable Output<PresetAudioGetArgs> audio) {
+        public Builder audio(@Nullable Output<PresetAudioArgs> audio) {
             $.audio = audio;
             return this;
         }
@@ -251,7 +251,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder audio(PresetAudioGetArgs audio) {
+        public Builder audio(PresetAudioArgs audio) {
             return audio(Output.of(audio));
         }
 
@@ -261,7 +261,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions) {
+        public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions) {
             $.audioCodecOptions = audioCodecOptions;
             return this;
         }
@@ -272,7 +272,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder audioCodecOptions(PresetAudioCodecOptionsGetArgs audioCodecOptions) {
+        public Builder audioCodecOptions(PresetAudioCodecOptionsArgs audioCodecOptions) {
             return audioCodecOptions(Output.of(audioCodecOptions));
         }
 
@@ -345,7 +345,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnails(@Nullable Output<PresetThumbnailsGetArgs> thumbnails) {
+        public Builder thumbnails(@Nullable Output<PresetThumbnailsArgs> thumbnails) {
             $.thumbnails = thumbnails;
             return this;
         }
@@ -356,7 +356,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnails(PresetThumbnailsGetArgs thumbnails) {
+        public Builder thumbnails(PresetThumbnailsArgs thumbnails) {
             return thumbnails(Output.of(thumbnails));
         }
 
@@ -375,7 +375,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder video(@Nullable Output<PresetVideoGetArgs> video) {
+        public Builder video(@Nullable Output<PresetVideoArgs> video) {
             $.video = video;
             return this;
         }
@@ -386,7 +386,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder video(PresetVideoGetArgs video) {
+        public Builder video(PresetVideoArgs video) {
             return video(Output.of(video));
         }
 
@@ -417,7 +417,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks) {
+        public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks) {
             $.videoWatermarks = videoWatermarks;
             return this;
         }
@@ -428,7 +428,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder videoWatermarks(List<PresetVideoWatermarkGetArgs> videoWatermarks) {
+        public Builder videoWatermarks(List<PresetVideoWatermarkArgs> videoWatermarks) {
             return videoWatermarks(Output.of(videoWatermarks));
         }
 
@@ -438,7 +438,7 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder videoWatermarks(PresetVideoWatermarkGetArgs... videoWatermarks) {
+        public Builder videoWatermarks(PresetVideoWatermarkArgs... videoWatermarks) {
             return videoWatermarks(List.of(videoWatermarks));
         }
 

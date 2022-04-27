@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.devicefarm.inputs;
 
-import com.pulumi.aws.devicefarm.inputs.TestGridProjectVpcConfigGetArgs;
+import com.pulumi.aws.devicefarm.inputs.TestGridProjectVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -97,13 +97,13 @@ public final class TestGridProjectState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<TestGridProjectVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig;
 
     /**
      * @return The VPC security groups and subnets that are attached to a project. See VPC Config below.
      * 
      */
-    public Optional<Output<TestGridProjectVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<TestGridProjectVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -247,7 +247,7 @@ public final class TestGridProjectState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<TestGridProjectVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -258,7 +258,7 @@ public final class TestGridProjectState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder vpcConfig(TestGridProjectVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(TestGridProjectVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.macie2.inputs;
 
-import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionGetArgs;
-import com.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyGetArgs;
-import com.pulumi.aws.macie2.inputs.ClassificationJobUserPausedDetailGetArgs;
+import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionArgs;
+import com.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyArgs;
+import com.pulumi.aws.macie2.inputs.ClassificationJobUserPausedDetailArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -153,13 +153,13 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="s3JobDefinition")
-    private @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
+    private @Nullable Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
 
     /**
      * @return The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
      * 
      */
-    public Optional<Output<ClassificationJobS3JobDefinitionGetArgs>> s3JobDefinition() {
+    public Optional<Output<ClassificationJobS3JobDefinitionArgs>> s3JobDefinition() {
         return Optional.ofNullable(this.s3JobDefinition);
     }
 
@@ -183,13 +183,13 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scheduleFrequency")
-    private @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
+    private @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
 
     /**
      * @return The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
-    public Optional<Output<ClassificationJobScheduleFrequencyGetArgs>> scheduleFrequency() {
+    public Optional<Output<ClassificationJobScheduleFrequencyArgs>> scheduleFrequency() {
         return Optional.ofNullable(this.scheduleFrequency);
     }
 
@@ -220,13 +220,13 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userPausedDetails")
-    private @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
+    private @Nullable Output<List<ClassificationJobUserPausedDetailArgs>> userPausedDetails;
 
     /**
      * @return If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
      * 
      */
-    public Optional<Output<List<ClassificationJobUserPausedDetailGetArgs>>> userPausedDetails() {
+    public Optional<Output<List<ClassificationJobUserPausedDetailArgs>>> userPausedDetails() {
         return Optional.ofNullable(this.userPausedDetails);
     }
 
@@ -459,7 +459,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder s3JobDefinition(@Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
+        public Builder s3JobDefinition(@Nullable Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
             $.s3JobDefinition = s3JobDefinition;
             return this;
         }
@@ -470,7 +470,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder s3JobDefinition(ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
+        public Builder s3JobDefinition(ClassificationJobS3JobDefinitionArgs s3JobDefinition) {
             return s3JobDefinition(Output.of(s3JobDefinition));
         }
 
@@ -501,7 +501,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
             $.scheduleFrequency = scheduleFrequency;
             return this;
         }
@@ -512,7 +512,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder scheduleFrequency(ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
+        public Builder scheduleFrequency(ClassificationJobScheduleFrequencyArgs scheduleFrequency) {
             return scheduleFrequency(Output.of(scheduleFrequency));
         }
 
@@ -552,7 +552,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder userPausedDetails(@Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
+        public Builder userPausedDetails(@Nullable Output<List<ClassificationJobUserPausedDetailArgs>> userPausedDetails) {
             $.userPausedDetails = userPausedDetails;
             return this;
         }
@@ -563,7 +563,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder userPausedDetails(List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
+        public Builder userPausedDetails(List<ClassificationJobUserPausedDetailArgs> userPausedDetails) {
             return userPausedDetails(Output.of(userPausedDetails));
         }
 
@@ -573,7 +573,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder userPausedDetails(ClassificationJobUserPausedDetailGetArgs... userPausedDetails) {
+        public Builder userPausedDetails(ClassificationJobUserPausedDetailArgs... userPausedDetails) {
             return userPausedDetails(List.of(userPausedDetails));
         }
 

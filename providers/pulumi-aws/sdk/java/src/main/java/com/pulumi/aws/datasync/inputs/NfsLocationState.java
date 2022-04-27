@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.NfsLocationMountOptionsGetArgs;
-import com.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigGetArgs;
+import com.pulumi.aws.datasync.inputs.NfsLocationMountOptionsArgs;
+import com.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountOptions")
-    private @Nullable Output<NfsLocationMountOptionsGetArgs> mountOptions;
+    private @Nullable Output<NfsLocationMountOptionsArgs> mountOptions;
 
     /**
      * @return Configuration block containing mount options used by DataSync to access the NFS Server.
      * 
      */
-    public Optional<Output<NfsLocationMountOptionsGetArgs>> mountOptions() {
+    public Optional<Output<NfsLocationMountOptionsArgs>> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
 
@@ -53,13 +53,13 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onPremConfig")
-    private @Nullable Output<NfsLocationOnPremConfigGetArgs> onPremConfig;
+    private @Nullable Output<NfsLocationOnPremConfigArgs> onPremConfig;
 
     /**
      * @return Configuration block containing information for connecting to the NFS File System.
      * 
      */
-    public Optional<Output<NfsLocationOnPremConfigGetArgs>> onPremConfig() {
+    public Optional<Output<NfsLocationOnPremConfigArgs>> onPremConfig() {
         return Optional.ofNullable(this.onPremConfig);
     }
 
@@ -188,7 +188,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mountOptions(@Nullable Output<NfsLocationMountOptionsGetArgs> mountOptions) {
+        public Builder mountOptions(@Nullable Output<NfsLocationMountOptionsArgs> mountOptions) {
             $.mountOptions = mountOptions;
             return this;
         }
@@ -199,7 +199,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mountOptions(NfsLocationMountOptionsGetArgs mountOptions) {
+        public Builder mountOptions(NfsLocationMountOptionsArgs mountOptions) {
             return mountOptions(Output.of(mountOptions));
         }
 
@@ -209,7 +209,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onPremConfig(@Nullable Output<NfsLocationOnPremConfigGetArgs> onPremConfig) {
+        public Builder onPremConfig(@Nullable Output<NfsLocationOnPremConfigArgs> onPremConfig) {
             $.onPremConfig = onPremConfig;
             return this;
         }
@@ -220,7 +220,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder onPremConfig(NfsLocationOnPremConfigGetArgs onPremConfig) {
+        public Builder onPremConfig(NfsLocationOnPremConfigArgs onPremConfig) {
             return onPremConfig(Output.of(onPremConfig));
         }
 

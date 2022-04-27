@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.lex.inputs;
 
-import com.pulumi.aws.lex.inputs.BotAbortStatementGetArgs;
-import com.pulumi.aws.lex.inputs.BotClarificationPromptGetArgs;
-import com.pulumi.aws.lex.inputs.BotIntentGetArgs;
+import com.pulumi.aws.lex.inputs.BotAbortStatementArgs;
+import com.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
+import com.pulumi.aws.lex.inputs.BotIntentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -27,13 +27,13 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="abortStatement")
-    private @Nullable Output<BotAbortStatementGetArgs> abortStatement;
+    private @Nullable Output<BotAbortStatementArgs> abortStatement;
 
     /**
      * @return The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
      * 
      */
-    public Optional<Output<BotAbortStatementGetArgs>> abortStatement() {
+    public Optional<Output<BotAbortStatementArgs>> abortStatement() {
         return Optional.ofNullable(this.abortStatement);
     }
 
@@ -81,13 +81,13 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clarificationPrompt")
-    private @Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt;
+    private @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
 
     /**
      * @return The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
      * 
      */
-    public Optional<Output<BotClarificationPromptGetArgs>> clarificationPrompt() {
+    public Optional<Output<BotClarificationPromptArgs>> clarificationPrompt() {
         return Optional.ofNullable(this.clarificationPrompt);
     }
 
@@ -201,13 +201,13 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intents")
-    private @Nullable Output<List<BotIntentGetArgs>> intents;
+    private @Nullable Output<List<BotIntentArgs>> intents;
 
     /**
      * @return A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
      * 
      */
-    public Optional<Output<List<BotIntentGetArgs>>> intents() {
+    public Optional<Output<List<BotIntentArgs>>> intents() {
         return Optional.ofNullable(this.intents);
     }
 
@@ -387,7 +387,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder abortStatement(@Nullable Output<BotAbortStatementGetArgs> abortStatement) {
+        public Builder abortStatement(@Nullable Output<BotAbortStatementArgs> abortStatement) {
             $.abortStatement = abortStatement;
             return this;
         }
@@ -398,7 +398,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder abortStatement(BotAbortStatementGetArgs abortStatement) {
+        public Builder abortStatement(BotAbortStatementArgs abortStatement) {
             return abortStatement(Output.of(abortStatement));
         }
 
@@ -461,7 +461,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt) {
+        public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptArgs> clarificationPrompt) {
             $.clarificationPrompt = clarificationPrompt;
             return this;
         }
@@ -472,7 +472,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clarificationPrompt(BotClarificationPromptGetArgs clarificationPrompt) {
+        public Builder clarificationPrompt(BotClarificationPromptArgs clarificationPrompt) {
             return clarificationPrompt(Output.of(clarificationPrompt));
         }
 
@@ -629,7 +629,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder intents(@Nullable Output<List<BotIntentGetArgs>> intents) {
+        public Builder intents(@Nullable Output<List<BotIntentArgs>> intents) {
             $.intents = intents;
             return this;
         }
@@ -640,7 +640,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder intents(List<BotIntentGetArgs> intents) {
+        public Builder intents(List<BotIntentArgs> intents) {
             return intents(Output.of(intents));
         }
 
@@ -650,7 +650,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder intents(BotIntentGetArgs... intents) {
+        public Builder intents(BotIntentArgs... intents) {
             return intents(List.of(intents));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.GeoMatchSetGeoMatchConstraintGetArgs;
+import com.pulumi.aws.waf.inputs.GeoMatchSetGeoMatchConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="geoMatchConstraints")
-    private @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
+    private @Nullable Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
 
     /**
      * @return The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
      * 
      */
-    public Optional<Output<List<GeoMatchSetGeoMatchConstraintGetArgs>>> geoMatchConstraints() {
+    public Optional<Output<List<GeoMatchSetGeoMatchConstraintArgs>>> geoMatchConstraints() {
         return Optional.ofNullable(this.geoMatchConstraints);
     }
 
@@ -115,7 +115,7 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geoMatchConstraints(@Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints) {
+        public Builder geoMatchConstraints(@Nullable Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints) {
             $.geoMatchConstraints = geoMatchConstraints;
             return this;
         }
@@ -126,7 +126,7 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geoMatchConstraints(List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
+        public Builder geoMatchConstraints(List<GeoMatchSetGeoMatchConstraintArgs> geoMatchConstraints) {
             return geoMatchConstraints(Output.of(geoMatchConstraints));
         }
 
@@ -136,7 +136,7 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintGetArgs... geoMatchConstraints) {
+        public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintArgs... geoMatchConstraints) {
             return geoMatchConstraints(List.of(geoMatchConstraints));
         }
 

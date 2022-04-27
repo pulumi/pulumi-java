@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.ManagedPrefixListEntryGetArgs;
+import com.pulumi.aws.ec2.inputs.ManagedPrefixListEntryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -54,13 +54,13 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="entries")
-    private @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
+    private @Nullable Output<List<ManagedPrefixListEntryArgs>> entries;
 
     /**
      * @return Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
      * 
      */
-    public Optional<Output<List<ManagedPrefixListEntryGetArgs>>> entries() {
+    public Optional<Output<List<ManagedPrefixListEntryArgs>>> entries() {
         return Optional.ofNullable(this.entries);
     }
 
@@ -226,7 +226,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder entries(@Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries) {
+        public Builder entries(@Nullable Output<List<ManagedPrefixListEntryArgs>> entries) {
             $.entries = entries;
             return this;
         }
@@ -237,7 +237,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder entries(List<ManagedPrefixListEntryGetArgs> entries) {
+        public Builder entries(List<ManagedPrefixListEntryArgs> entries) {
             return entries(Output.of(entries));
         }
 
@@ -247,7 +247,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder entries(ManagedPrefixListEntryGetArgs... entries) {
+        public Builder entries(ManagedPrefixListEntryArgs... entries) {
             return entries(List.of(entries));
         }
 

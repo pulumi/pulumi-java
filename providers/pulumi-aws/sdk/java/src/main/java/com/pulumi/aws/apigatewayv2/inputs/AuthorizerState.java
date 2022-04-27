@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -167,14 +167,14 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jwtConfiguration")
-    private @Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
+    private @Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration;
 
     /**
      * @return The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
      * Supported only for HTTP APIs.
      * 
      */
-    public Optional<Output<AuthorizerJwtConfigurationGetArgs>> jwtConfiguration() {
+    public Optional<Output<AuthorizerJwtConfigurationArgs>> jwtConfiguration() {
         return Optional.ofNullable(this.jwtConfiguration);
     }
 
@@ -435,7 +435,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jwtConfiguration(@Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration) {
+        public Builder jwtConfiguration(@Nullable Output<AuthorizerJwtConfigurationArgs> jwtConfiguration) {
             $.jwtConfiguration = jwtConfiguration;
             return this;
         }
@@ -447,7 +447,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder jwtConfiguration(AuthorizerJwtConfigurationGetArgs jwtConfiguration) {
+        public Builder jwtConfiguration(AuthorizerJwtConfigurationArgs jwtConfiguration) {
             return jwtConfiguration(Output.of(jwtConfiguration));
         }
 

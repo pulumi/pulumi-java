@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesGetArgs;
+import com.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -81,13 +81,13 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snapshotDeliveryProperties")
-    private @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties;
+    private @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
 
     /**
      * @return Options for how AWS Config delivers configuration snapshots. See below
      * 
      */
-    public Optional<Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs>> snapshotDeliveryProperties() {
+    public Optional<Output<DeliveryChannelSnapshotDeliveryPropertiesArgs>> snapshotDeliveryProperties() {
         return Optional.ofNullable(this.snapshotDeliveryProperties);
     }
 
@@ -225,7 +225,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder snapshotDeliveryProperties(@Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties) {
+        public Builder snapshotDeliveryProperties(@Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
             $.snapshotDeliveryProperties = snapshotDeliveryProperties;
             return this;
         }
@@ -236,7 +236,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder snapshotDeliveryProperties(DeliveryChannelSnapshotDeliveryPropertiesGetArgs snapshotDeliveryProperties) {
+        public Builder snapshotDeliveryProperties(DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
             return snapshotDeliveryProperties(Output.of(snapshotDeliveryProperties));
         }
 

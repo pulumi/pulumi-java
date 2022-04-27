@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.networkfirewall.inputs;
 
-import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyGetArgs;
+import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class FirewallPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="firewallPolicy")
-    private @Nullable Output<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy;
+    private @Nullable Output<FirewallPolicyFirewallPolicyArgs> firewallPolicy;
 
     /**
      * @return A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
      * 
      */
-    public Optional<Output<FirewallPolicyFirewallPolicyGetArgs>> firewallPolicy() {
+    public Optional<Output<FirewallPolicyFirewallPolicyArgs>> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
 
@@ -200,7 +200,7 @@ public final class FirewallPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder firewallPolicy(@Nullable Output<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Output<FirewallPolicyFirewallPolicyArgs> firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
@@ -211,7 +211,7 @@ public final class FirewallPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder firewallPolicy(FirewallPolicyFirewallPolicyGetArgs firewallPolicy) {
+        public Builder firewallPolicy(FirewallPolicyFirewallPolicyArgs firewallPolicy) {
             return firewallPolicy(Output.of(firewallPolicy));
         }
 

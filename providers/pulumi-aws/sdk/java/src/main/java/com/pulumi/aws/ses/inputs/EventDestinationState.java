@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.ses.inputs;
 
-import com.pulumi.aws.ses.inputs.EventDestinationCloudwatchDestinationGetArgs;
-import com.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationGetArgs;
-import com.pulumi.aws.ses.inputs.EventDestinationSnsDestinationGetArgs;
+import com.pulumi.aws.ses.inputs.EventDestinationCloudwatchDestinationArgs;
+import com.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationArgs;
+import com.pulumi.aws.ses.inputs.EventDestinationSnsDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cloudwatchDestinations")
-    private @Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations;
+    private @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
 
     /**
      * @return CloudWatch destination for the events
      * 
      */
-    public Optional<Output<List<EventDestinationCloudwatchDestinationGetArgs>>> cloudwatchDestinations() {
+    public Optional<Output<List<EventDestinationCloudwatchDestinationArgs>>> cloudwatchDestinations() {
         return Optional.ofNullable(this.cloudwatchDestinations);
     }
 
@@ -85,13 +85,13 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kinesisDestination")
-    private @Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination;
+    private @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
 
     /**
      * @return Send the events to a kinesis firehose destination
      * 
      */
-    public Optional<Output<EventDestinationKinesisDestinationGetArgs>> kinesisDestination() {
+    public Optional<Output<EventDestinationKinesisDestinationArgs>> kinesisDestination() {
         return Optional.ofNullable(this.kinesisDestination);
     }
 
@@ -130,13 +130,13 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="snsDestination")
-    private @Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination;
+    private @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
 
     /**
      * @return Send the events to an SNS Topic destination
      * 
      */
-    public Optional<Output<EventDestinationSnsDestinationGetArgs>> snsDestination() {
+    public Optional<Output<EventDestinationSnsDestinationArgs>> snsDestination() {
         return Optional.ofNullable(this.snsDestination);
     }
 
@@ -198,7 +198,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations) {
             $.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
@@ -209,7 +209,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder cloudwatchDestinations(List<EventDestinationCloudwatchDestinationGetArgs> cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(List<EventDestinationCloudwatchDestinationArgs> cloudwatchDestinations) {
             return cloudwatchDestinations(Output.of(cloudwatchDestinations));
         }
 
@@ -219,7 +219,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationGetArgs... cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationArgs... cloudwatchDestinations) {
             return cloudwatchDestinations(List.of(cloudwatchDestinations));
         }
 
@@ -271,7 +271,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination) {
+        public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination) {
             $.kinesisDestination = kinesisDestination;
             return this;
         }
@@ -282,7 +282,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder kinesisDestination(EventDestinationKinesisDestinationGetArgs kinesisDestination) {
+        public Builder kinesisDestination(EventDestinationKinesisDestinationArgs kinesisDestination) {
             return kinesisDestination(Output.of(kinesisDestination));
         }
 
@@ -344,7 +344,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination) {
+        public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
             $.snsDestination = snsDestination;
             return this;
         }
@@ -355,7 +355,7 @@ public final class EventDestinationState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder snsDestination(EventDestinationSnsDestinationGetArgs snsDestination) {
+        public Builder snsDestination(EventDestinationSnsDestinationArgs snsDestination) {
             return snsDestination(Output.of(snsDestination));
         }
 

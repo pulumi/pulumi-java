@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationGetArgs;
-import com.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleGetArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -159,13 +159,13 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageTestsConfiguration")
-    private @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
+    private @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
     /**
      * @return Configuration block with image tests configuration. Detailed below.
      * 
      */
-    public Optional<Output<ImagePipelineImageTestsConfigurationGetArgs>> imageTestsConfiguration() {
+    public Optional<Output<ImagePipelineImageTestsConfigurationArgs>> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
 
@@ -219,13 +219,13 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
+    private @Nullable Output<ImagePipelineScheduleArgs> schedule;
 
     /**
      * @return Configuration block with schedule settings. Detailed below.
      * 
      */
-    public Optional<Output<ImagePipelineScheduleGetArgs>> schedule() {
+    public Optional<Output<ImagePipelineScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -509,7 +509,7 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration) {
             $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
@@ -520,7 +520,7 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder imageTestsConfiguration(ImagePipelineImageTestsConfigurationGetArgs imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(ImagePipelineImageTestsConfigurationArgs imageTestsConfiguration) {
             return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
 
@@ -593,7 +593,7 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<ImagePipelineScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<ImagePipelineScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -604,7 +604,7 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder schedule(ImagePipelineScheduleGetArgs schedule) {
+        public Builder schedule(ImagePipelineScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 

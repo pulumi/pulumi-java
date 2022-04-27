@@ -5,12 +5,12 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.asset.Archive;
 import com.pulumi.aws.lambda.enums.Runtime;
-import com.pulumi.aws.lambda.inputs.FunctionDeadLetterConfigGetArgs;
-import com.pulumi.aws.lambda.inputs.FunctionEnvironmentGetArgs;
-import com.pulumi.aws.lambda.inputs.FunctionFileSystemConfigGetArgs;
-import com.pulumi.aws.lambda.inputs.FunctionImageConfigGetArgs;
-import com.pulumi.aws.lambda.inputs.FunctionTracingConfigGetArgs;
-import com.pulumi.aws.lambda.inputs.FunctionVpcConfigGetArgs;
+import com.pulumi.aws.lambda.inputs.FunctionDeadLetterConfigArgs;
+import com.pulumi.aws.lambda.inputs.FunctionEnvironmentArgs;
+import com.pulumi.aws.lambda.inputs.FunctionFileSystemConfigArgs;
+import com.pulumi.aws.lambda.inputs.FunctionImageConfigArgs;
+import com.pulumi.aws.lambda.inputs.FunctionTracingConfigArgs;
+import com.pulumi.aws.lambda.inputs.FunctionVpcConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -93,13 +93,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterConfig")
-    private @Nullable Output<FunctionDeadLetterConfigGetArgs> deadLetterConfig;
+    private @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionDeadLetterConfigGetArgs>> deadLetterConfig() {
+    public Optional<Output<FunctionDeadLetterConfigArgs>> deadLetterConfig() {
         return Optional.ofNullable(this.deadLetterConfig);
     }
 
@@ -123,13 +123,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-    private @Nullable Output<FunctionEnvironmentGetArgs> environment;
+    private @Nullable Output<FunctionEnvironmentArgs> environment;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionEnvironmentGetArgs>> environment() {
+    public Optional<Output<FunctionEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
 
@@ -138,13 +138,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemConfig")
-    private @Nullable Output<FunctionFileSystemConfigGetArgs> fileSystemConfig;
+    private @Nullable Output<FunctionFileSystemConfigArgs> fileSystemConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionFileSystemConfigGetArgs>> fileSystemConfig() {
+    public Optional<Output<FunctionFileSystemConfigArgs>> fileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
 
@@ -168,13 +168,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageConfig")
-    private @Nullable Output<FunctionImageConfigGetArgs> imageConfig;
+    private @Nullable Output<FunctionImageConfigArgs> imageConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionImageConfigGetArgs>> imageConfig() {
+    public Optional<Output<FunctionImageConfigArgs>> imageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
 
@@ -528,13 +528,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tracingConfig")
-    private @Nullable Output<FunctionTracingConfigGetArgs> tracingConfig;
+    private @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionTracingConfigGetArgs>> tracingConfig() {
+    public Optional<Output<FunctionTracingConfigArgs>> tracingConfig() {
         return Optional.ofNullable(this.tracingConfig);
     }
 
@@ -560,13 +560,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<FunctionVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<FunctionVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<FunctionVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -729,7 +729,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigGetArgs> deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             $.deadLetterConfig = deadLetterConfig;
             return this;
         }
@@ -740,7 +740,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterConfig(FunctionDeadLetterConfigGetArgs deadLetterConfig) {
+        public Builder deadLetterConfig(FunctionDeadLetterConfigArgs deadLetterConfig) {
             return deadLetterConfig(Output.of(deadLetterConfig));
         }
 
@@ -771,7 +771,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environment(@Nullable Output<FunctionEnvironmentGetArgs> environment) {
+        public Builder environment(@Nullable Output<FunctionEnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
@@ -782,7 +782,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environment(FunctionEnvironmentGetArgs environment) {
+        public Builder environment(FunctionEnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
@@ -792,7 +792,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemConfig(@Nullable Output<FunctionFileSystemConfigGetArgs> fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable Output<FunctionFileSystemConfigArgs> fileSystemConfig) {
             $.fileSystemConfig = fileSystemConfig;
             return this;
         }
@@ -803,7 +803,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemConfig(FunctionFileSystemConfigGetArgs fileSystemConfig) {
+        public Builder fileSystemConfig(FunctionFileSystemConfigArgs fileSystemConfig) {
             return fileSystemConfig(Output.of(fileSystemConfig));
         }
 
@@ -834,7 +834,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageConfig(@Nullable Output<FunctionImageConfigGetArgs> imageConfig) {
+        public Builder imageConfig(@Nullable Output<FunctionImageConfigArgs> imageConfig) {
             $.imageConfig = imageConfig;
             return this;
         }
@@ -845,7 +845,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageConfig(FunctionImageConfigGetArgs imageConfig) {
+        public Builder imageConfig(FunctionImageConfigArgs imageConfig) {
             return imageConfig(Output.of(imageConfig));
         }
 
@@ -1368,7 +1368,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tracingConfig(@Nullable Output<FunctionTracingConfigGetArgs> tracingConfig) {
+        public Builder tracingConfig(@Nullable Output<FunctionTracingConfigArgs> tracingConfig) {
             $.tracingConfig = tracingConfig;
             return this;
         }
@@ -1379,7 +1379,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tracingConfig(FunctionTracingConfigGetArgs tracingConfig) {
+        public Builder tracingConfig(FunctionTracingConfigArgs tracingConfig) {
             return tracingConfig(Output.of(tracingConfig));
         }
 
@@ -1412,7 +1412,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<FunctionVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -1423,7 +1423,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(FunctionVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(FunctionVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

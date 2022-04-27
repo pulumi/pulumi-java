@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.WebAclDefaultActionGetArgs;
-import com.pulumi.aws.waf.inputs.WebAclLoggingConfigurationGetArgs;
-import com.pulumi.aws.waf.inputs.WebAclRuleGetArgs;
+import com.pulumi.aws.waf.inputs.WebAclDefaultActionArgs;
+import com.pulumi.aws.waf.inputs.WebAclLoggingConfigurationArgs;
+import com.pulumi.aws.waf.inputs.WebAclRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -40,13 +40,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAction")
-    private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
+    private @Nullable Output<WebAclDefaultActionArgs> defaultAction;
 
     /**
      * @return Configuration block with action that you want AWS WAF to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
-    public Optional<Output<WebAclDefaultActionGetArgs>> defaultAction() {
+    public Optional<Output<WebAclDefaultActionArgs>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
 
@@ -55,13 +55,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfiguration")
-    private @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<WebAclLoggingConfigurationArgs> loggingConfiguration;
 
     /**
      * @return Configuration block to enable WAF logging. Detailed below.
      * 
      */
-    public Optional<Output<WebAclLoggingConfigurationGetArgs>> loggingConfiguration() {
+    public Optional<Output<WebAclLoggingConfigurationArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
 
@@ -100,13 +100,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<WebAclRuleGetArgs>> rules;
+    private @Nullable Output<List<WebAclRuleArgs>> rules;
 
     /**
      * @return Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
      * 
      */
-    public Optional<Output<List<WebAclRuleGetArgs>>> rules() {
+    public Optional<Output<List<WebAclRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -198,7 +198,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
+        public Builder defaultAction(@Nullable Output<WebAclDefaultActionArgs> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
@@ -209,7 +209,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAction(WebAclDefaultActionGetArgs defaultAction) {
+        public Builder defaultAction(WebAclDefaultActionArgs defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
@@ -219,7 +219,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
@@ -230,7 +230,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(WebAclLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(WebAclLoggingConfigurationArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }
 
@@ -282,7 +282,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<WebAclRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -293,7 +293,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<WebAclRuleGetArgs> rules) {
+        public Builder rules(List<WebAclRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -303,7 +303,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(WebAclRuleGetArgs... rules) {
+        public Builder rules(WebAclRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

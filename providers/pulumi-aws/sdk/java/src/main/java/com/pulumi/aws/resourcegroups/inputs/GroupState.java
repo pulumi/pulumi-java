@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.resourcegroups.inputs;
 
-import com.pulumi.aws.resourcegroups.inputs.GroupResourceQueryGetArgs;
+import com.pulumi.aws.resourcegroups.inputs.GroupResourceQueryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceQuery")
-    private @Nullable Output<GroupResourceQueryGetArgs> resourceQuery;
+    private @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
     /**
      * @return A `resource_query` block. Resource queries are documented below.
      * 
      */
-    public Optional<Output<GroupResourceQueryGetArgs>> resourceQuery() {
+    public Optional<Output<GroupResourceQueryArgs>> resourceQuery() {
         return Optional.ofNullable(this.resourceQuery);
     }
 
@@ -205,7 +205,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceQuery(@Nullable Output<GroupResourceQueryGetArgs> resourceQuery) {
+        public Builder resourceQuery(@Nullable Output<GroupResourceQueryArgs> resourceQuery) {
             $.resourceQuery = resourceQuery;
             return this;
         }
@@ -216,7 +216,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceQuery(GroupResourceQueryGetArgs resourceQuery) {
+        public Builder resourceQuery(GroupResourceQueryArgs resourceQuery) {
             return resourceQuery(Output.of(resourceQuery));
         }
 

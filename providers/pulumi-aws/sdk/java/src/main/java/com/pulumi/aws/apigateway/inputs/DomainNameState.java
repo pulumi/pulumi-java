@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationGetArgs;
-import com.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationGetArgs;
+import com.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationArgs;
+import com.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -193,13 +193,13 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointConfiguration")
-    private @Nullable Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration;
+    private @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
     /**
      * @return Configuration block defining API endpoint information including type. Defined below.
      * 
      */
-    public Optional<Output<DomainNameEndpointConfigurationGetArgs>> endpointConfiguration() {
+    public Optional<Output<DomainNameEndpointConfigurationArgs>> endpointConfiguration() {
         return Optional.ofNullable(this.endpointConfiguration);
     }
 
@@ -208,13 +208,13 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mutualTlsAuthentication")
-    private @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+    private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     /**
      * @return The mutual TLS authentication configuration for the domain name. Defined below.
      * 
      */
-    public Optional<Output<DomainNameMutualTlsAuthenticationGetArgs>> mutualTlsAuthentication() {
+    public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
 
@@ -603,7 +603,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
             $.endpointConfiguration = endpointConfiguration;
             return this;
         }
@@ -614,7 +614,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointConfiguration(DomainNameEndpointConfigurationGetArgs endpointConfiguration) {
+        public Builder endpointConfiguration(DomainNameEndpointConfigurationArgs endpointConfiguration) {
             return endpointConfiguration(Output.of(endpointConfiguration));
         }
 
@@ -624,7 +624,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
@@ -635,7 +635,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
 

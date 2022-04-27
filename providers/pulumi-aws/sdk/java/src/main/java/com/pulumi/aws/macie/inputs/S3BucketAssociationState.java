@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.macie.inputs;
 
-import com.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeGetArgs;
+import com.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="classificationType")
-    private @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType;
+    private @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
 
     /**
      * @return The configuration of how Amazon Macie classifies the S3 objects.
      * 
      */
-    public Optional<Output<S3BucketAssociationClassificationTypeGetArgs>> classificationType() {
+    public Optional<Output<S3BucketAssociationClassificationTypeArgs>> classificationType() {
         return Optional.ofNullable(this.classificationType);
     }
 
@@ -130,7 +130,7 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType) {
+        public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType) {
             $.classificationType = classificationType;
             return this;
         }
@@ -141,7 +141,7 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder classificationType(S3BucketAssociationClassificationTypeGetArgs classificationType) {
+        public Builder classificationType(S3BucketAssociationClassificationTypeArgs classificationType) {
             return classificationType(Output.of(classificationType));
         }
 

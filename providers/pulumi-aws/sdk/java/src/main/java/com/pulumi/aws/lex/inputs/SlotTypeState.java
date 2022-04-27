@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.lex.inputs;
 
-import com.pulumi.aws.lex.inputs.SlotTypeEnumerationValueGetArgs;
+import com.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -90,7 +90,7 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enumerationValues")
-    private @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
+    private @Nullable Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
     /**
      * @return A list of EnumerationValue objects that defines the values that
@@ -99,7 +99,7 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * documented under enumeration_value.
      * 
      */
-    public Optional<Output<List<SlotTypeEnumerationValueGetArgs>>> enumerationValues() {
+    public Optional<Output<List<SlotTypeEnumerationValueArgs>>> enumerationValues() {
         return Optional.ofNullable(this.enumerationValues);
     }
 
@@ -298,7 +298,7 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder enumerationValues(@Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
+        public Builder enumerationValues(@Nullable Output<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
             $.enumerationValues = enumerationValues;
             return this;
         }
@@ -312,7 +312,7 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder enumerationValues(List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
+        public Builder enumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
             return enumerationValues(Output.of(enumerationValues));
         }
 
@@ -325,7 +325,7 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder enumerationValues(SlotTypeEnumerationValueGetArgs... enumerationValues) {
+        public Builder enumerationValues(SlotTypeEnumerationValueArgs... enumerationValues) {
             return enumerationValues(List.of(enumerationValues));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsGetArgs;
-import com.pulumi.aws.cfg.inputs.RemediationConfigurationParameterGetArgs;
+import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
+import com.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -70,13 +70,13 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="executionControls")
-    private @Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls;
+    private @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
 
     /**
      * @return Configuration block for execution controls. See below.
      * 
      */
-    public Optional<Output<RemediationConfigurationExecutionControlsGetArgs>> executionControls() {
+    public Optional<Output<RemediationConfigurationExecutionControlsArgs>> executionControls() {
         return Optional.ofNullable(this.executionControls);
     }
 
@@ -100,13 +100,13 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters;
+    private @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
 
     /**
      * @return Can be specified multiple times for each parameter. Each parameter block supports arguments below.
      * 
      */
-    public Optional<Output<List<RemediationConfigurationParameterGetArgs>>> parameters() {
+    public Optional<Output<List<RemediationConfigurationParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -288,7 +288,7 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls) {
+        public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls) {
             $.executionControls = executionControls;
             return this;
         }
@@ -299,7 +299,7 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder executionControls(RemediationConfigurationExecutionControlsGetArgs executionControls) {
+        public Builder executionControls(RemediationConfigurationExecutionControlsArgs executionControls) {
             return executionControls(Output.of(executionControls));
         }
 
@@ -330,7 +330,7 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -341,7 +341,7 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder parameters(List<RemediationConfigurationParameterGetArgs> parameters) {
+        public Builder parameters(List<RemediationConfigurationParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -351,7 +351,7 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder parameters(RemediationConfigurationParameterGetArgs... parameters) {
+        public Builder parameters(RemediationConfigurationParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 

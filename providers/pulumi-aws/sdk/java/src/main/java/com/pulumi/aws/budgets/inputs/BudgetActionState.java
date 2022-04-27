@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.budgets.inputs;
 
-import com.pulumi.aws.budgets.inputs.BudgetActionActionThresholdGetArgs;
-import com.pulumi.aws.budgets.inputs.BudgetActionDefinitionGetArgs;
-import com.pulumi.aws.budgets.inputs.BudgetActionSubscriberGetArgs;
+import com.pulumi.aws.budgets.inputs.BudgetActionActionThresholdArgs;
+import com.pulumi.aws.budgets.inputs.BudgetActionDefinitionArgs;
+import com.pulumi.aws.budgets.inputs.BudgetActionSubscriberArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionThreshold")
-    private @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
+    private @Nullable Output<BudgetActionActionThresholdArgs> actionThreshold;
 
     /**
      * @return The trigger threshold of the action. See Action Threshold.
      * 
      */
-    public Optional<Output<BudgetActionActionThresholdGetArgs>> actionThreshold() {
+    public Optional<Output<BudgetActionActionThresholdArgs>> actionThreshold() {
         return Optional.ofNullable(this.actionThreshold);
     }
 
@@ -129,13 +129,13 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition")
-    private @Nullable Output<BudgetActionDefinitionGetArgs> definition;
+    private @Nullable Output<BudgetActionDefinitionArgs> definition;
 
     /**
      * @return Specifies all of the type-specific parameters. See Definition.
      * 
      */
-    public Optional<Output<BudgetActionDefinitionGetArgs>> definition() {
+    public Optional<Output<BudgetActionDefinitionArgs>> definition() {
         return Optional.ofNullable(this.definition);
     }
 
@@ -189,13 +189,13 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscribers")
-    private @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
+    private @Nullable Output<List<BudgetActionSubscriberArgs>> subscribers;
 
     /**
      * @return A list of subscribers. See Subscriber.
      * 
      */
-    public Optional<Output<List<BudgetActionSubscriberGetArgs>>> subscribers() {
+    public Optional<Output<List<BudgetActionSubscriberArgs>>> subscribers() {
         return Optional.ofNullable(this.subscribers);
     }
 
@@ -282,7 +282,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actionThreshold(@Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold) {
+        public Builder actionThreshold(@Nullable Output<BudgetActionActionThresholdArgs> actionThreshold) {
             $.actionThreshold = actionThreshold;
             return this;
         }
@@ -293,7 +293,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actionThreshold(BudgetActionActionThresholdGetArgs actionThreshold) {
+        public Builder actionThreshold(BudgetActionActionThresholdArgs actionThreshold) {
             return actionThreshold(Output.of(actionThreshold));
         }
 
@@ -387,7 +387,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder definition(@Nullable Output<BudgetActionDefinitionGetArgs> definition) {
+        public Builder definition(@Nullable Output<BudgetActionDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
@@ -398,7 +398,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder definition(BudgetActionDefinitionGetArgs definition) {
+        public Builder definition(BudgetActionDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
@@ -471,7 +471,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subscribers(@Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers) {
+        public Builder subscribers(@Nullable Output<List<BudgetActionSubscriberArgs>> subscribers) {
             $.subscribers = subscribers;
             return this;
         }
@@ -482,7 +482,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subscribers(List<BudgetActionSubscriberGetArgs> subscribers) {
+        public Builder subscribers(List<BudgetActionSubscriberArgs> subscribers) {
             return subscribers(Output.of(subscribers));
         }
 
@@ -492,7 +492,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subscribers(BudgetActionSubscriberGetArgs... subscribers) {
+        public Builder subscribers(BudgetActionSubscriberArgs... subscribers) {
             return subscribers(List.of(subscribers));
         }
 

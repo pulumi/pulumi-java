@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.emr.inputs;
 
-import com.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigGetArgs;
-import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsGetArgs;
+import com.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigArgs;
+import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -39,13 +39,13 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceTypeConfigs")
-    private @Nullable Output<List<InstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
+    private @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
     /**
      * @return Configuration block for instance fleet
      * 
      */
-    public Optional<Output<List<InstanceFleetInstanceTypeConfigGetArgs>>> instanceTypeConfigs() {
+    public Optional<Output<List<InstanceFleetInstanceTypeConfigArgs>>> instanceTypeConfigs() {
         return Optional.ofNullable(this.instanceTypeConfigs);
     }
 
@@ -54,13 +54,13 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="launchSpecifications")
-    private @Nullable Output<InstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
+    private @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
     /**
      * @return Configuration block for launch specification
      * 
      */
-    public Optional<Output<InstanceFleetLaunchSpecificationsGetArgs>> launchSpecifications() {
+    public Optional<Output<InstanceFleetLaunchSpecificationsArgs>> launchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
 
@@ -181,7 +181,7 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder instanceTypeConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs) {
             $.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
@@ -192,7 +192,7 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder instanceTypeConfigs(List<InstanceFleetInstanceTypeConfigGetArgs> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
             return instanceTypeConfigs(Output.of(instanceTypeConfigs));
         }
 
@@ -202,7 +202,7 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigGetArgs... instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigArgs... instanceTypeConfigs) {
             return instanceTypeConfigs(List.of(instanceTypeConfigs));
         }
 
@@ -212,7 +212,7 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder launchSpecifications(@Nullable Output<InstanceFleetLaunchSpecificationsGetArgs> launchSpecifications) {
+        public Builder launchSpecifications(@Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications) {
             $.launchSpecifications = launchSpecifications;
             return this;
         }
@@ -223,7 +223,7 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder launchSpecifications(InstanceFleetLaunchSpecificationsGetArgs launchSpecifications) {
+        public Builder launchSpecifications(InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
             return launchSpecifications(Output.of(launchSpecifications));
         }
 

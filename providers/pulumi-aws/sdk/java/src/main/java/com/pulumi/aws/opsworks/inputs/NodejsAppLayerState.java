@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.NodejsAppLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.NodejsAppLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.NodejsAppLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.NodejsAppLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<NodejsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<NodejsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<NodejsAppLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<NodejsAppLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -188,13 +188,13 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<NodejsAppLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<NodejsAppLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<NodejsAppLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<NodejsAppLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -480,12 +480,12 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<NodejsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<NodejsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(NodejsAppLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(NodejsAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -654,7 +654,7 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<NodejsAppLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<NodejsAppLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -665,7 +665,7 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<NodejsAppLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<NodejsAppLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -675,7 +675,7 @@ public final class NodejsAppLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(NodejsAppLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(NodejsAppLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

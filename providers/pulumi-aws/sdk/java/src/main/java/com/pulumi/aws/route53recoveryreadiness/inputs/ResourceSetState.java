@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53recoveryreadiness.inputs;
 
-import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceGetArgs;
+import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-    private @Nullable Output<List<ResourceSetResourceGetArgs>> resources;
+    private @Nullable Output<List<ResourceSetResourceArgs>> resources;
 
     /**
      * @return List of resources to add to this resource set. See below.
      * 
      */
-    public Optional<Output<List<ResourceSetResourceGetArgs>>> resources() {
+    public Optional<Output<List<ResourceSetResourceArgs>>> resources() {
         return Optional.ofNullable(this.resources);
     }
 
@@ -206,7 +206,7 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(@Nullable Output<List<ResourceSetResourceGetArgs>> resources) {
+        public Builder resources(@Nullable Output<List<ResourceSetResourceArgs>> resources) {
             $.resources = resources;
             return this;
         }
@@ -217,7 +217,7 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(List<ResourceSetResourceGetArgs> resources) {
+        public Builder resources(List<ResourceSetResourceArgs> resources) {
             return resources(Output.of(resources));
         }
 
@@ -227,7 +227,7 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(ResourceSetResourceGetArgs... resources) {
+        public Builder resources(ResourceSetResourceArgs... resources) {
             return resources(List.of(resources));
         }
 

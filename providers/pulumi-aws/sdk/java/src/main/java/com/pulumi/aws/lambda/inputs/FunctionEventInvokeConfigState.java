@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.lambda.inputs;
 
-import com.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigGetArgs;
+import com.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -22,13 +22,13 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinationConfig")
-    private @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
+    private @Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
 
     /**
      * @return Configuration block with destination configuration. See below for details.
      * 
      */
-    public Optional<Output<FunctionEventInvokeConfigDestinationConfigGetArgs>> destinationConfig() {
+    public Optional<Output<FunctionEventInvokeConfigDestinationConfigArgs>> destinationConfig() {
         return Optional.ofNullable(this.destinationConfig);
     }
 
@@ -126,7 +126,7 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder destinationConfig(@Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig) {
+        public Builder destinationConfig(@Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig) {
             $.destinationConfig = destinationConfig;
             return this;
         }
@@ -137,7 +137,7 @@ public final class FunctionEventInvokeConfigState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder destinationConfig(FunctionEventInvokeConfigDestinationConfigGetArgs destinationConfig) {
+        public Builder destinationConfig(FunctionEventInvokeConfigDestinationConfigArgs destinationConfig) {
             return destinationConfig(Output.of(destinationConfig));
         }
 

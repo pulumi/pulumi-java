@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafregional.inputs;
 
-import com.pulumi.aws.wafregional.inputs.RulePredicateGetArgs;
+import com.pulumi.aws.wafregional.inputs.RulePredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predicates")
-    private @Nullable Output<List<RulePredicateGetArgs>> predicates;
+    private @Nullable Output<List<RulePredicateArgs>> predicates;
 
     /**
      * @return The objects to include in a rule (documented below).
      * 
      */
-    public Optional<Output<List<RulePredicateGetArgs>>> predicates() {
+    public Optional<Output<List<RulePredicateArgs>>> predicates() {
         return Optional.ofNullable(this.predicates);
     }
 
@@ -206,7 +206,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predicates(@Nullable Output<List<RulePredicateGetArgs>> predicates) {
+        public Builder predicates(@Nullable Output<List<RulePredicateArgs>> predicates) {
             $.predicates = predicates;
             return this;
         }
@@ -217,7 +217,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predicates(List<RulePredicateGetArgs> predicates) {
+        public Builder predicates(List<RulePredicateArgs> predicates) {
             return predicates(Output.of(predicates));
         }
 
@@ -227,7 +227,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predicates(RulePredicateGetArgs... predicates) {
+        public Builder predicates(RulePredicateArgs... predicates) {
             return predicates(List.of(predicates));
         }
 

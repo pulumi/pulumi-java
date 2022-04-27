@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.networkfirewall.inputs;
 
-import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupGetArgs;
+import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -83,13 +83,13 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleGroup")
-    private @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup;
+    private @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup;
 
     /**
      * @return A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
      * 
      */
-    public Optional<Output<RuleGroupRuleGroupGetArgs>> ruleGroup() {
+    public Optional<Output<RuleGroupRuleGroupArgs>> ruleGroup() {
         return Optional.ofNullable(this.ruleGroup);
     }
 
@@ -291,7 +291,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup) {
+        public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupArgs> ruleGroup) {
             $.ruleGroup = ruleGroup;
             return this;
         }
@@ -302,7 +302,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ruleGroup(RuleGroupRuleGroupGetArgs ruleGroup) {
+        public Builder ruleGroup(RuleGroupRuleGroupArgs ruleGroup) {
             return ruleGroup(Output.of(ruleGroup));
         }
 

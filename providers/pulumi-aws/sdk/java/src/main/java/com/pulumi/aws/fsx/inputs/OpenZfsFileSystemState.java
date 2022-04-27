@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemDiskIopsConfigurationGetArgs;
-import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationGetArgs;
+import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemDiskIopsConfigurationArgs;
+import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -131,13 +131,13 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskIopsConfiguration")
-    private @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
+    private @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
 
     /**
      * @return The SSD IOPS configuration for the Amazon FSx for OpenZFS file system. See Disk Iops Configuration Below.
      * 
      */
-    public Optional<Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs>> diskIopsConfiguration() {
+    public Optional<Output<OpenZfsFileSystemDiskIopsConfigurationArgs>> diskIopsConfiguration() {
         return Optional.ofNullable(this.diskIopsConfiguration);
     }
 
@@ -206,13 +206,13 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rootVolumeConfiguration")
-    private @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration;
+    private @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration;
 
     /**
      * @return The configuration for the root volume of the file system. All other volumes are children or the root volume. See Root Volume Configuration Below.
      * 
      */
-    public Optional<Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs>> rootVolumeConfiguration() {
+    public Optional<Output<OpenZfsFileSystemRootVolumeConfigurationArgs>> rootVolumeConfiguration() {
         return Optional.ofNullable(this.rootVolumeConfiguration);
     }
 
@@ -565,7 +565,7 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder diskIopsConfiguration(@Nullable Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             $.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
@@ -576,7 +576,7 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder diskIopsConfiguration(OpenZfsFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(OpenZfsFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
             return diskIopsConfiguration(Output.of(diskIopsConfiguration));
         }
 
@@ -680,7 +680,7 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder rootVolumeConfiguration(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration) {
+        public Builder rootVolumeConfiguration(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration) {
             $.rootVolumeConfiguration = rootVolumeConfiguration;
             return this;
         }
@@ -691,7 +691,7 @@ public final class OpenZfsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder rootVolumeConfiguration(OpenZfsFileSystemRootVolumeConfigurationGetArgs rootVolumeConfiguration) {
+        public Builder rootVolumeConfiguration(OpenZfsFileSystemRootVolumeConfigurationArgs rootVolumeConfiguration) {
             return rootVolumeConfiguration(Output.of(rootVolumeConfiguration));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafregional.inputs;
 
-import com.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintGetArgs;
+import com.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -44,13 +44,13 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sizeConstraints")
-    private @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+    private @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
     /**
      * @return Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    public Optional<Output<List<SizeConstraintSetSizeConstraintGetArgs>>> sizeConstraints() {
+    public Optional<Output<List<SizeConstraintSetSizeConstraintArgs>>> sizeConstraints() {
         return Optional.ofNullable(this.sizeConstraints);
     }
 
@@ -116,7 +116,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
+        public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
             $.sizeConstraints = sizeConstraints;
             return this;
         }
@@ -127,7 +127,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder sizeConstraints(List<SizeConstraintSetSizeConstraintGetArgs> sizeConstraints) {
+        public Builder sizeConstraints(List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
             return sizeConstraints(Output.of(sizeConstraints));
         }
 
@@ -137,7 +137,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder sizeConstraints(SizeConstraintSetSizeConstraintGetArgs... sizeConstraints) {
+        public Builder sizeConstraints(SizeConstraintSetSizeConstraintArgs... sizeConstraints) {
             return sizeConstraints(List.of(sizeConstraints));
         }
 

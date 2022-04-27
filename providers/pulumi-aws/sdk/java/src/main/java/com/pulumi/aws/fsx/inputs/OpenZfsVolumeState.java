@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsGetArgs;
-import com.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotGetArgs;
-import com.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaGetArgs;
+import com.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsArgs;
+import com.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotArgs;
+import com.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -87,13 +87,13 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="nfsExports")
-    private @Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
+    private @Nullable Output<OpenZfsVolumeNfsExportsArgs> nfsExports;
 
     /**
      * @return NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
      */
-    public Optional<Output<OpenZfsVolumeNfsExportsGetArgs>> nfsExports() {
+    public Optional<Output<OpenZfsVolumeNfsExportsArgs>> nfsExports() {
         return Optional.ofNullable(this.nfsExports);
     }
 
@@ -102,13 +102,13 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="originSnapshot")
-    private @Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
+    private @Nullable Output<OpenZfsVolumeOriginSnapshotArgs> originSnapshot;
 
     /**
      * @return The ARN of the source snapshot to create the volume from.
      * 
      */
-    public Optional<Output<OpenZfsVolumeOriginSnapshotGetArgs>> originSnapshot() {
+    public Optional<Output<OpenZfsVolumeOriginSnapshotArgs>> originSnapshot() {
         return Optional.ofNullable(this.originSnapshot);
     }
 
@@ -207,13 +207,13 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userAndGroupQuotas")
-    private @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
+    private @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
     /**
      * @return - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
      * 
      */
-    public Optional<Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>>> userAndGroupQuotas() {
+    public Optional<Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>>> userAndGroupQuotas() {
         return Optional.ofNullable(this.userAndGroupQuotas);
     }
 
@@ -351,7 +351,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder nfsExports(@Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
+        public Builder nfsExports(@Nullable Output<OpenZfsVolumeNfsExportsArgs> nfsExports) {
             $.nfsExports = nfsExports;
             return this;
         }
@@ -362,7 +362,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder nfsExports(OpenZfsVolumeNfsExportsGetArgs nfsExports) {
+        public Builder nfsExports(OpenZfsVolumeNfsExportsArgs nfsExports) {
             return nfsExports(Output.of(nfsExports));
         }
 
@@ -372,7 +372,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder originSnapshot(@Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
+        public Builder originSnapshot(@Nullable Output<OpenZfsVolumeOriginSnapshotArgs> originSnapshot) {
             $.originSnapshot = originSnapshot;
             return this;
         }
@@ -383,7 +383,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder originSnapshot(OpenZfsVolumeOriginSnapshotGetArgs originSnapshot) {
+        public Builder originSnapshot(OpenZfsVolumeOriginSnapshotArgs originSnapshot) {
             return originSnapshot(Output.of(originSnapshot));
         }
 
@@ -519,7 +519,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas) {
             $.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
@@ -530,7 +530,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder userAndGroupQuotas(List<OpenZfsVolumeUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(List<OpenZfsVolumeUserAndGroupQuotaArgs> userAndGroupQuotas) {
             return userAndGroupQuotas(Output.of(userAndGroupQuotas));
         }
 
@@ -540,7 +540,7 @@ public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder userAndGroupQuotas(OpenZfsVolumeUserAndGroupQuotaGetArgs... userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(OpenZfsVolumeUserAndGroupQuotaArgs... userAndGroupQuotas) {
             return userAndGroupQuotas(List.of(userAndGroupQuotas));
         }
 

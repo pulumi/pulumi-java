@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsGetArgs;
-import com.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsGetArgs;
-import com.pulumi.aws.apigatewayv2.inputs.StageRouteSettingGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsArgs;
+import com.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsArgs;
+import com.pulumi.aws.apigatewayv2.inputs.StageRouteSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -27,14 +27,14 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogSettings")
-    private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
+    private @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
     /**
      * @return Settings for logging access in this stage.
      * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
      * 
      */
-    public Optional<Output<StageAccessLogSettingsGetArgs>> accessLogSettings() {
+    public Optional<Output<StageAccessLogSettingsArgs>> accessLogSettings() {
         return Optional.ofNullable(this.accessLogSettings);
     }
 
@@ -105,13 +105,13 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultRouteSettings")
-    private @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
+    private @Nullable Output<StageDefaultRouteSettingsArgs> defaultRouteSettings;
 
     /**
      * @return The default route settings for the stage.
      * 
      */
-    public Optional<Output<StageDefaultRouteSettingsGetArgs>> defaultRouteSettings() {
+    public Optional<Output<StageDefaultRouteSettingsArgs>> defaultRouteSettings() {
         return Optional.ofNullable(this.defaultRouteSettings);
     }
 
@@ -201,13 +201,13 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeSettings")
-    private @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings;
+    private @Nullable Output<List<StageRouteSettingArgs>> routeSettings;
 
     /**
      * @return Route settings for the stage.
      * 
      */
-    public Optional<Output<List<StageRouteSettingGetArgs>>> routeSettings() {
+    public Optional<Output<List<StageRouteSettingArgs>>> routeSettings() {
         return Optional.ofNullable(this.routeSettings);
     }
 
@@ -301,7 +301,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsArgs> accessLogSettings) {
             $.accessLogSettings = accessLogSettings;
             return this;
         }
@@ -313,7 +313,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogSettings(StageAccessLogSettingsGetArgs accessLogSettings) {
+        public Builder accessLogSettings(StageAccessLogSettingsArgs accessLogSettings) {
             return accessLogSettings(Output.of(accessLogSettings));
         }
 
@@ -409,7 +409,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultRouteSettings(@Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable Output<StageDefaultRouteSettingsArgs> defaultRouteSettings) {
             $.defaultRouteSettings = defaultRouteSettings;
             return this;
         }
@@ -420,7 +420,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultRouteSettings(StageDefaultRouteSettingsGetArgs defaultRouteSettings) {
+        public Builder defaultRouteSettings(StageDefaultRouteSettingsArgs defaultRouteSettings) {
             return defaultRouteSettings(Output.of(defaultRouteSettings));
         }
 
@@ -541,7 +541,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routeSettings(@Nullable Output<List<StageRouteSettingGetArgs>> routeSettings) {
+        public Builder routeSettings(@Nullable Output<List<StageRouteSettingArgs>> routeSettings) {
             $.routeSettings = routeSettings;
             return this;
         }
@@ -552,7 +552,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routeSettings(List<StageRouteSettingGetArgs> routeSettings) {
+        public Builder routeSettings(List<StageRouteSettingArgs> routeSettings) {
             return routeSettings(Output.of(routeSettings));
         }
 
@@ -562,7 +562,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routeSettings(StageRouteSettingGetArgs... routeSettings) {
+        public Builder routeSettings(StageRouteSettingArgs... routeSettings) {
             return routeSettings(List.of(routeSettings));
         }
 

@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.mwaa.inputs;
 
-import com.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedGetArgs;
-import com.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationGetArgs;
-import com.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationGetArgs;
+import com.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedArgs;
+import com.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationArgs;
+import com.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -144,9 +144,9 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="lastUpdateds")
-    private @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
+    private @Nullable Output<List<EnvironmentLastUpdatedArgs>> lastUpdateds;
 
-    public Optional<Output<List<EnvironmentLastUpdatedGetArgs>>> lastUpdateds() {
+    public Optional<Output<List<EnvironmentLastUpdatedArgs>>> lastUpdateds() {
         return Optional.ofNullable(this.lastUpdateds);
     }
 
@@ -155,13 +155,13 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfiguration")
-    private @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
 
     /**
      * @return The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
      * 
      */
-    public Optional<Output<EnvironmentLoggingConfigurationGetArgs>> loggingConfiguration() {
+    public Optional<Output<EnvironmentLoggingConfigurationArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
 
@@ -215,13 +215,13 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-    private @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
+    private @Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration;
 
     /**
      * @return Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
      * 
      */
-    public Optional<Output<EnvironmentNetworkConfigurationGetArgs>> networkConfiguration() {
+    public Optional<Output<EnvironmentNetworkConfigurationArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
 
@@ -624,16 +624,16 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
             return kmsKey(Output.of(kmsKey));
         }
 
-        public Builder lastUpdateds(@Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds) {
+        public Builder lastUpdateds(@Nullable Output<List<EnvironmentLastUpdatedArgs>> lastUpdateds) {
             $.lastUpdateds = lastUpdateds;
             return this;
         }
 
-        public Builder lastUpdateds(List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
+        public Builder lastUpdateds(List<EnvironmentLastUpdatedArgs> lastUpdateds) {
             return lastUpdateds(Output.of(lastUpdateds));
         }
 
-        public Builder lastUpdateds(EnvironmentLastUpdatedGetArgs... lastUpdateds) {
+        public Builder lastUpdateds(EnvironmentLastUpdatedArgs... lastUpdateds) {
             return lastUpdateds(List.of(lastUpdateds));
         }
 
@@ -643,7 +643,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(@Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
@@ -654,7 +654,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(EnvironmentLoggingConfigurationArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }
 
@@ -727,7 +727,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
@@ -738,7 +738,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(EnvironmentNetworkConfigurationArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 

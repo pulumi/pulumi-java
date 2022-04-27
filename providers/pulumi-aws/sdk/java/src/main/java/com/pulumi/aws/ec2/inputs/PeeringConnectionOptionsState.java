@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterGetArgs;
-import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterGetArgs;
+import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterArgs;
+import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accepter")
-    private @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
+    private @Nullable Output<PeeringConnectionOptionsAccepterArgs> accepter;
 
     /**
      * @return An optional configuration block that allows for [VPC Peering Connection]
@@ -32,7 +32,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * the peering connection (a maximum of one).
      * 
      */
-    public Optional<Output<PeeringConnectionOptionsAccepterGetArgs>> accepter() {
+    public Optional<Output<PeeringConnectionOptionsAccepterArgs>> accepter() {
         return Optional.ofNullable(this.accepter);
     }
 
@@ -43,7 +43,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="requester")
-    private @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
+    private @Nullable Output<PeeringConnectionOptionsRequesterArgs> requester;
 
     /**
      * @return A optional configuration block that allows for [VPC Peering Connection]
@@ -51,7 +51,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * the peering connection (a maximum of one).
      * 
      */
-    public Optional<Output<PeeringConnectionOptionsRequesterGetArgs>> requester() {
+    public Optional<Output<PeeringConnectionOptionsRequesterArgs>> requester() {
         return Optional.ofNullable(this.requester);
     }
 
@@ -104,7 +104,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder accepter(@Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter) {
+        public Builder accepter(@Nullable Output<PeeringConnectionOptionsAccepterArgs> accepter) {
             $.accepter = accepter;
             return this;
         }
@@ -117,7 +117,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder accepter(PeeringConnectionOptionsAccepterGetArgs accepter) {
+        public Builder accepter(PeeringConnectionOptionsAccepterArgs accepter) {
             return accepter(Output.of(accepter));
         }
 
@@ -129,7 +129,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder requester(@Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester) {
+        public Builder requester(@Nullable Output<PeeringConnectionOptionsRequesterArgs> requester) {
             $.requester = requester;
             return this;
         }
@@ -142,7 +142,7 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder requester(PeeringConnectionOptionsRequesterGetArgs requester) {
+        public Builder requester(PeeringConnectionOptionsRequesterArgs requester) {
             return requester(Output.of(requester));
         }
 

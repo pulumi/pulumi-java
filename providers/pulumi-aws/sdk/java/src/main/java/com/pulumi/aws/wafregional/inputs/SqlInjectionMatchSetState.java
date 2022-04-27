@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafregional.inputs;
 
-import com.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs;
+import com.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sqlInjectionMatchTuples")
-    private @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples;
+    private @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
 
     /**
      * @return The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
      * 
      */
-    public Optional<Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>>> sqlInjectionMatchTuples() {
+    public Optional<Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>>> sqlInjectionMatchTuples() {
         return Optional.ofNullable(this.sqlInjectionMatchTuples);
     }
 
@@ -99,7 +99,7 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples) {
+        public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
             $.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
             return this;
         }
@@ -110,7 +110,7 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder sqlInjectionMatchTuples(List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs> sqlInjectionMatchTuples) {
+        public Builder sqlInjectionMatchTuples(List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs> sqlInjectionMatchTuples) {
             return sqlInjectionMatchTuples(Output.of(sqlInjectionMatchTuples));
         }
 
@@ -120,7 +120,7 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs... sqlInjectionMatchTuples) {
+        public Builder sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTupleArgs... sqlInjectionMatchTuples) {
             return sqlInjectionMatchTuples(List.of(sqlInjectionMatchTuples));
         }
 

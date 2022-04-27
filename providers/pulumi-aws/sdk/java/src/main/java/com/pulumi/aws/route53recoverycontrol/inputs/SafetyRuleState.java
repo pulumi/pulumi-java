@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53recoverycontrol.inputs;
 
-import com.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigGetArgs;
+import com.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -98,13 +98,13 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleConfig")
-    private @Nullable Output<SafetyRuleRuleConfigGetArgs> ruleConfig;
+    private @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
     /**
      * @return Configuration block for safety rule criteria. See below.
      * 
      */
-    public Optional<Output<SafetyRuleRuleConfigGetArgs>> ruleConfig() {
+    public Optional<Output<SafetyRuleRuleConfigArgs>> ruleConfig() {
         return Optional.ofNullable(this.ruleConfig);
     }
 
@@ -316,7 +316,7 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigGetArgs> ruleConfig) {
+        public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig) {
             $.ruleConfig = ruleConfig;
             return this;
         }
@@ -327,7 +327,7 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ruleConfig(SafetyRuleRuleConfigGetArgs ruleConfig) {
+        public Builder ruleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
             return ruleConfig(Output.of(ruleConfig));
         }
 

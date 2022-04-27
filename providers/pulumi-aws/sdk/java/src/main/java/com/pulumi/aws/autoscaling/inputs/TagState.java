@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.autoscaling.inputs;
 
-import com.pulumi.aws.autoscaling.inputs.TagTagGetArgs;
+import com.pulumi.aws.autoscaling.inputs.TagTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-    private @Nullable Output<TagTagGetArgs> tag;
+    private @Nullable Output<TagTagArgs> tag;
 
     /**
      * @return The tag to create. The `tag` block is documented below.
      * 
      */
-    public Optional<Output<TagTagGetArgs>> tag() {
+    public Optional<Output<TagTagArgs>> tag() {
         return Optional.ofNullable(this.tag);
     }
 
@@ -98,7 +98,7 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tag(@Nullable Output<TagTagGetArgs> tag) {
+        public Builder tag(@Nullable Output<TagTagArgs> tag) {
             $.tag = tag;
             return this;
         }
@@ -109,7 +109,7 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tag(TagTagGetArgs tag) {
+        public Builder tag(TagTagArgs tag) {
             return tag(Output.of(tag));
         }
 

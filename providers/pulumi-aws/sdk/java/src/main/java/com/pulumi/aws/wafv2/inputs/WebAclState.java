@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import com.pulumi.aws.wafv2.inputs.WebAclCustomResponseBodyGetArgs;
-import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionGetArgs;
-import com.pulumi.aws.wafv2.inputs.WebAclRuleGetArgs;
-import com.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigGetArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclCustomResponseBodyArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclRuleArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -57,13 +57,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customResponseBodies")
-    private @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
+    private @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
 
     /**
      * @return Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    public Optional<Output<List<WebAclCustomResponseBodyGetArgs>>> customResponseBodies() {
+    public Optional<Output<List<WebAclCustomResponseBodyArgs>>> customResponseBodies() {
         return Optional.ofNullable(this.customResponseBodies);
     }
 
@@ -72,13 +72,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAction")
-    private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
+    private @Nullable Output<WebAclDefaultActionArgs> defaultAction;
 
     /**
      * @return The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
-    public Optional<Output<WebAclDefaultActionGetArgs>> defaultAction() {
+    public Optional<Output<WebAclDefaultActionArgs>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
 
@@ -124,13 +124,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<WebAclRuleGetArgs>> rules;
+    private @Nullable Output<List<WebAclRuleArgs>> rules;
 
     /**
      * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    public Optional<Output<List<WebAclRuleGetArgs>>> rules() {
+    public Optional<Output<List<WebAclRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -184,13 +184,13 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibilityConfig")
-    private @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig;
+    private @Nullable Output<WebAclVisibilityConfigArgs> visibilityConfig;
 
     /**
      * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    public Optional<Output<WebAclVisibilityConfigGetArgs>> visibilityConfig() {
+    public Optional<Output<WebAclVisibilityConfigArgs>> visibilityConfig() {
         return Optional.ofNullable(this.visibilityConfig);
     }
 
@@ -277,7 +277,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(@Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies) {
+        public Builder customResponseBodies(@Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies) {
             $.customResponseBodies = customResponseBodies;
             return this;
         }
@@ -288,7 +288,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(List<WebAclCustomResponseBodyGetArgs> customResponseBodies) {
+        public Builder customResponseBodies(List<WebAclCustomResponseBodyArgs> customResponseBodies) {
             return customResponseBodies(Output.of(customResponseBodies));
         }
 
@@ -298,7 +298,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(WebAclCustomResponseBodyGetArgs... customResponseBodies) {
+        public Builder customResponseBodies(WebAclCustomResponseBodyArgs... customResponseBodies) {
             return customResponseBodies(List.of(customResponseBodies));
         }
 
@@ -308,7 +308,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
+        public Builder defaultAction(@Nullable Output<WebAclDefaultActionArgs> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
@@ -319,7 +319,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultAction(WebAclDefaultActionGetArgs defaultAction) {
+        public Builder defaultAction(WebAclDefaultActionArgs defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
@@ -380,7 +380,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<WebAclRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -391,7 +391,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<WebAclRuleGetArgs> rules) {
+        public Builder rules(List<WebAclRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -401,7 +401,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(WebAclRuleGetArgs... rules) {
+        public Builder rules(WebAclRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
@@ -474,7 +474,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder visibilityConfig(@Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig) {
+        public Builder visibilityConfig(@Nullable Output<WebAclVisibilityConfigArgs> visibilityConfig) {
             $.visibilityConfig = visibilityConfig;
             return this;
         }
@@ -485,7 +485,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder visibilityConfig(WebAclVisibilityConfigGetArgs visibilityConfig) {
+        public Builder visibilityConfig(WebAclVisibilityConfigArgs visibilityConfig) {
             return visibilityConfig(Output.of(visibilityConfig));
         }
 

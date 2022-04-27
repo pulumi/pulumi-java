@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigGetArgs;
+import com.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2Config")
-    private @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
+    private @Nullable Output<EfsLocationEc2ConfigArgs> ec2Config;
 
     /**
      * @return Configuration block containing EC2 configurations for connecting to the EFS File System.
      * 
      */
-    public Optional<Output<EfsLocationEc2ConfigGetArgs>> ec2Config() {
+    public Optional<Output<EfsLocationEc2ConfigArgs>> ec2Config() {
         return Optional.ofNullable(this.ec2Config);
     }
 
@@ -171,7 +171,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2Config(@Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config) {
+        public Builder ec2Config(@Nullable Output<EfsLocationEc2ConfigArgs> ec2Config) {
             $.ec2Config = ec2Config;
             return this;
         }
@@ -182,7 +182,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2Config(EfsLocationEc2ConfigGetArgs ec2Config) {
+        public Builder ec2Config(EfsLocationEc2ConfigArgs ec2Config) {
             return ec2Config(Output.of(ec2Config));
         }
 

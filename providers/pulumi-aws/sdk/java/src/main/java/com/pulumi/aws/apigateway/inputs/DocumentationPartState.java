@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.DocumentationPartLocationGetArgs;
+import com.pulumi.aws.apigateway.inputs.DocumentationPartLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -21,13 +21,13 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-    private @Nullable Output<DocumentationPartLocationGetArgs> location;
+    private @Nullable Output<DocumentationPartLocationArgs> location;
 
     /**
      * @return The location of the targeted API entity of the to-be-created documentation part. See below.
      * 
      */
-    public Optional<Output<DocumentationPartLocationGetArgs>> location() {
+    public Optional<Output<DocumentationPartLocationArgs>> location() {
         return Optional.ofNullable(this.location);
     }
 
@@ -93,7 +93,7 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder location(@Nullable Output<DocumentationPartLocationGetArgs> location) {
+        public Builder location(@Nullable Output<DocumentationPartLocationArgs> location) {
             $.location = location;
             return this;
         }
@@ -104,7 +104,7 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder location(DocumentationPartLocationGetArgs location) {
+        public Builder location(DocumentationPartLocationArgs location) {
             return location(Output.of(location));
         }
 

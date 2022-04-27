@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.eks.inputs;
 
-import com.pulumi.aws.eks.inputs.FargateProfileSelectorGetArgs;
+import com.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -83,13 +83,13 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selectors")
-    private @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
+    private @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
 
     /**
      * @return Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
      * 
      */
-    public Optional<Output<List<FargateProfileSelectorGetArgs>>> selectors() {
+    public Optional<Output<List<FargateProfileSelectorArgs>>> selectors() {
         return Optional.ofNullable(this.selectors);
     }
 
@@ -275,7 +275,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder selectors(@Nullable Output<List<FargateProfileSelectorGetArgs>> selectors) {
+        public Builder selectors(@Nullable Output<List<FargateProfileSelectorArgs>> selectors) {
             $.selectors = selectors;
             return this;
         }
@@ -286,7 +286,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder selectors(List<FargateProfileSelectorGetArgs> selectors) {
+        public Builder selectors(List<FargateProfileSelectorArgs> selectors) {
             return selectors(Output.of(selectors));
         }
 
@@ -296,7 +296,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder selectors(FargateProfileSelectorGetArgs... selectors) {
+        public Builder selectors(FargateProfileSelectorArgs... selectors) {
             return selectors(List.of(selectors));
         }
 

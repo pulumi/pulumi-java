@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.lakeformation.inputs;
 
-import com.pulumi.aws.lakeformation.inputs.PermissionsDataLocationGetArgs;
-import com.pulumi.aws.lakeformation.inputs.PermissionsDatabaseGetArgs;
-import com.pulumi.aws.lakeformation.inputs.PermissionsTableGetArgs;
-import com.pulumi.aws.lakeformation.inputs.PermissionsTableWithColumnsGetArgs;
+import com.pulumi.aws.lakeformation.inputs.PermissionsDataLocationArgs;
+import com.pulumi.aws.lakeformation.inputs.PermissionsDatabaseArgs;
+import com.pulumi.aws.lakeformation.inputs.PermissionsTableArgs;
+import com.pulumi.aws.lakeformation.inputs.PermissionsTableWithColumnsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -56,13 +56,13 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataLocation")
-    private @Nullable Output<PermissionsDataLocationGetArgs> dataLocation;
+    private @Nullable Output<PermissionsDataLocationArgs> dataLocation;
 
     /**
      * @return Configuration block for a data location resource. Detailed below.
      * 
      */
-    public Optional<Output<PermissionsDataLocationGetArgs>> dataLocation() {
+    public Optional<Output<PermissionsDataLocationArgs>> dataLocation() {
         return Optional.ofNullable(this.dataLocation);
     }
 
@@ -71,13 +71,13 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-    private @Nullable Output<PermissionsDatabaseGetArgs> database;
+    private @Nullable Output<PermissionsDatabaseArgs> database;
 
     /**
      * @return Configuration block for a database resource. Detailed below.
      * 
      */
-    public Optional<Output<PermissionsDatabaseGetArgs>> database() {
+    public Optional<Output<PermissionsDatabaseArgs>> database() {
         return Optional.ofNullable(this.database);
     }
 
@@ -131,13 +131,13 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="table")
-    private @Nullable Output<PermissionsTableGetArgs> table;
+    private @Nullable Output<PermissionsTableArgs> table;
 
     /**
      * @return Configuration block for a table resource. Detailed below.
      * 
      */
-    public Optional<Output<PermissionsTableGetArgs>> table() {
+    public Optional<Output<PermissionsTableArgs>> table() {
         return Optional.ofNullable(this.table);
     }
 
@@ -146,13 +146,13 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableWithColumns")
-    private @Nullable Output<PermissionsTableWithColumnsGetArgs> tableWithColumns;
+    private @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
     /**
      * @return Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    public Optional<Output<PermissionsTableWithColumnsGetArgs>> tableWithColumns() {
+    public Optional<Output<PermissionsTableWithColumnsArgs>> tableWithColumns() {
         return Optional.ofNullable(this.tableWithColumns);
     }
 
@@ -236,7 +236,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dataLocation(@Nullable Output<PermissionsDataLocationGetArgs> dataLocation) {
+        public Builder dataLocation(@Nullable Output<PermissionsDataLocationArgs> dataLocation) {
             $.dataLocation = dataLocation;
             return this;
         }
@@ -247,7 +247,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dataLocation(PermissionsDataLocationGetArgs dataLocation) {
+        public Builder dataLocation(PermissionsDataLocationArgs dataLocation) {
             return dataLocation(Output.of(dataLocation));
         }
 
@@ -257,7 +257,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder database(@Nullable Output<PermissionsDatabaseGetArgs> database) {
+        public Builder database(@Nullable Output<PermissionsDatabaseArgs> database) {
             $.database = database;
             return this;
         }
@@ -268,7 +268,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder database(PermissionsDatabaseGetArgs database) {
+        public Builder database(PermissionsDatabaseArgs database) {
             return database(Output.of(database));
         }
 
@@ -361,7 +361,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder table(@Nullable Output<PermissionsTableGetArgs> table) {
+        public Builder table(@Nullable Output<PermissionsTableArgs> table) {
             $.table = table;
             return this;
         }
@@ -372,7 +372,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder table(PermissionsTableGetArgs table) {
+        public Builder table(PermissionsTableArgs table) {
             return table(Output.of(table));
         }
 
@@ -382,7 +382,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tableWithColumns(@Nullable Output<PermissionsTableWithColumnsGetArgs> tableWithColumns) {
+        public Builder tableWithColumns(@Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns) {
             $.tableWithColumns = tableWithColumns;
             return this;
         }
@@ -393,7 +393,7 @@ public final class PermissionsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tableWithColumns(PermissionsTableWithColumnsGetArgs tableWithColumns) {
+        public Builder tableWithColumns(PermissionsTableWithColumnsArgs tableWithColumns) {
             return tableWithColumns(Output.of(tableWithColumns));
         }
 

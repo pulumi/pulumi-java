@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.securityhub.inputs;
 
-import com.pulumi.aws.securityhub.inputs.InsightFiltersGetArgs;
+import com.pulumi.aws.securityhub.inputs.InsightFiltersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable Output<InsightFiltersGetArgs> filters;
+    private @Nullable Output<InsightFiltersArgs> filters;
 
     /**
      * @return A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.
      * 
      */
-    public Optional<Output<InsightFiltersGetArgs>> filters() {
+    public Optional<Output<InsightFiltersArgs>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -130,7 +130,7 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable Output<InsightFiltersGetArgs> filters) {
+        public Builder filters(@Nullable Output<InsightFiltersArgs> filters) {
             $.filters = filters;
             return this;
         }
@@ -141,7 +141,7 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filters(InsightFiltersGetArgs filters) {
+        public Builder filters(InsightFiltersArgs filters) {
             return filters(Output.of(filters));
         }
 

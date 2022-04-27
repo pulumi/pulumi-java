@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.UsagePlanApiStageGetArgs;
-import com.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsGetArgs;
-import com.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsGetArgs;
+import com.pulumi.aws.apigateway.inputs.UsagePlanApiStageArgs;
+import com.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
+import com.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -25,13 +25,13 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiStages")
-    private @Nullable Output<List<UsagePlanApiStageGetArgs>> apiStages;
+    private @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
     /**
      * @return The associated API stages of the usage plan.
      * 
      */
-    public Optional<Output<List<UsagePlanApiStageGetArgs>>> apiStages() {
+    public Optional<Output<List<UsagePlanApiStageArgs>>> apiStages() {
         return Optional.ofNullable(this.apiStages);
     }
 
@@ -100,13 +100,13 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quotaSettings")
-    private @Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings;
+    private @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
     /**
      * @return The quota settings of the usage plan.
      * 
      */
-    public Optional<Output<UsagePlanQuotaSettingsGetArgs>> quotaSettings() {
+    public Optional<Output<UsagePlanQuotaSettingsArgs>> quotaSettings() {
         return Optional.ofNullable(this.quotaSettings);
     }
 
@@ -145,13 +145,13 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttleSettings")
-    private @Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings;
+    private @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
     /**
      * @return The throttling limits of the usage plan.
      * 
      */
-    public Optional<Output<UsagePlanThrottleSettingsGetArgs>> throttleSettings() {
+    public Optional<Output<UsagePlanThrottleSettingsArgs>> throttleSettings() {
         return Optional.ofNullable(this.throttleSettings);
     }
 
@@ -193,7 +193,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apiStages(@Nullable Output<List<UsagePlanApiStageGetArgs>> apiStages) {
+        public Builder apiStages(@Nullable Output<List<UsagePlanApiStageArgs>> apiStages) {
             $.apiStages = apiStages;
             return this;
         }
@@ -204,7 +204,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apiStages(List<UsagePlanApiStageGetArgs> apiStages) {
+        public Builder apiStages(List<UsagePlanApiStageArgs> apiStages) {
             return apiStages(Output.of(apiStages));
         }
 
@@ -214,7 +214,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apiStages(UsagePlanApiStageGetArgs... apiStages) {
+        public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
             return apiStages(List.of(apiStages));
         }
 
@@ -308,7 +308,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings) {
+        public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings) {
             $.quotaSettings = quotaSettings;
             return this;
         }
@@ -319,7 +319,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quotaSettings(UsagePlanQuotaSettingsGetArgs quotaSettings) {
+        public Builder quotaSettings(UsagePlanQuotaSettingsArgs quotaSettings) {
             return quotaSettings(Output.of(quotaSettings));
         }
 
@@ -371,7 +371,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
             $.throttleSettings = throttleSettings;
             return this;
         }
@@ -382,7 +382,7 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(UsagePlanThrottleSettingsGetArgs throttleSettings) {
+        public Builder throttleSettings(UsagePlanThrottleSettingsArgs throttleSettings) {
             return throttleSettings(Output.of(throttleSettings));
         }
 

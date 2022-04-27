@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.TriggerActionGetArgs;
-import com.pulumi.aws.glue.inputs.TriggerPredicateGetArgs;
+import com.pulumi.aws.glue.inputs.TriggerActionArgs;
+import com.pulumi.aws.glue.inputs.TriggerPredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -25,13 +25,13 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-    private @Nullable Output<List<TriggerActionGetArgs>> actions;
+    private @Nullable Output<List<TriggerActionArgs>> actions;
 
     /**
      * @return List of actions initiated by this trigger when it fires. See Actions Below.
      * 
      */
-    public Optional<Output<List<TriggerActionGetArgs>>> actions() {
+    public Optional<Output<List<TriggerActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
 
@@ -100,13 +100,13 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predicate")
-    private @Nullable Output<TriggerPredicateGetArgs> predicate;
+    private @Nullable Output<TriggerPredicateArgs> predicate;
 
     /**
      * @return A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    public Optional<Output<TriggerPredicateGetArgs>> predicate() {
+    public Optional<Output<TriggerPredicateArgs>> predicate() {
         return Optional.ofNullable(this.predicate);
     }
 
@@ -257,7 +257,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(@Nullable Output<List<TriggerActionGetArgs>> actions) {
+        public Builder actions(@Nullable Output<List<TriggerActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
@@ -268,7 +268,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(List<TriggerActionGetArgs> actions) {
+        public Builder actions(List<TriggerActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
@@ -278,7 +278,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder actions(TriggerActionGetArgs... actions) {
+        public Builder actions(TriggerActionArgs... actions) {
             return actions(List.of(actions));
         }
 
@@ -372,7 +372,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predicate(@Nullable Output<TriggerPredicateGetArgs> predicate) {
+        public Builder predicate(@Nullable Output<TriggerPredicateArgs> predicate) {
             $.predicate = predicate;
             return this;
         }
@@ -383,7 +383,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predicate(TriggerPredicateGetArgs predicate) {
+        public Builder predicate(TriggerPredicateArgs predicate) {
             return predicate(Output.of(predicate));
         }
 

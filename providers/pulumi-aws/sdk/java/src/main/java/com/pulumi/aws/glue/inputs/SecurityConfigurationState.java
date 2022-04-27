@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationGetArgs;
+import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -21,13 +21,13 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="encryptionConfiguration")
-    private @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
      * @return Configuration block containing encryption configuration. Detailed below.
      * 
      */
-    public Optional<Output<SecurityConfigurationEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+    public Optional<Output<SecurityConfigurationEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
 
@@ -77,7 +77,7 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(@Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
@@ -88,7 +88,7 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 

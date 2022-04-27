@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.devicefarm.inputs;
 
-import com.pulumi.aws.devicefarm.inputs.DevicePoolRuleGetArgs;
+import com.pulumi.aws.devicefarm.inputs.DevicePoolRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -99,13 +99,13 @@ public final class DevicePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<DevicePoolRuleGetArgs>> rules;
+    private @Nullable Output<List<DevicePoolRuleArgs>> rules;
 
     /**
      * @return The device pool&#39;s rules. See Rule.
      * 
      */
-    public Optional<Output<List<DevicePoolRuleGetArgs>>> rules() {
+    public Optional<Output<List<DevicePoolRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -289,7 +289,7 @@ public final class DevicePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<DevicePoolRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<DevicePoolRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -300,7 +300,7 @@ public final class DevicePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<DevicePoolRuleGetArgs> rules) {
+        public Builder rules(List<DevicePoolRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -310,7 +310,7 @@ public final class DevicePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(DevicePoolRuleGetArgs... rules) {
+        public Builder rules(DevicePoolRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

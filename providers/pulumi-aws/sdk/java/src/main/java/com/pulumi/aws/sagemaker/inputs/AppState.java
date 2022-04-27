@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
+import com.pulumi.aws.sagemaker.inputs.AppResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSpec")
-    private @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
+    private @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
     /**
      * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
      * 
      */
-    public Optional<Output<AppResourceSpecGetArgs>> resourceSpec() {
+    public Optional<Output<AppResourceSpecArgs>> resourceSpec() {
         return Optional.ofNullable(this.resourceSpec);
     }
 
@@ -258,7 +258,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
+        public Builder resourceSpec(@Nullable Output<AppResourceSpecArgs> resourceSpec) {
             $.resourceSpec = resourceSpec;
             return this;
         }
@@ -269,7 +269,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceSpec(AppResourceSpecGetArgs resourceSpec) {
+        public Builder resourceSpec(AppResourceSpecArgs resourceSpec) {
             return resourceSpec(Output.of(resourceSpec));
         }
 

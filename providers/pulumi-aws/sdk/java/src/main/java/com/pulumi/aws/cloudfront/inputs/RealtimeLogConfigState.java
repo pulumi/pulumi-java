@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointGetArgs;
+import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -38,13 +38,13 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endpoint")
-    private @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
+    private @Nullable Output<RealtimeLogConfigEndpointArgs> endpoint;
 
     /**
      * @return The Amazon Kinesis data streams where real-time log data is sent.
      * 
      */
-    public Optional<Output<RealtimeLogConfigEndpointGetArgs>> endpoint() {
+    public Optional<Output<RealtimeLogConfigEndpointArgs>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
 
@@ -148,7 +148,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint) {
+        public Builder endpoint(@Nullable Output<RealtimeLogConfigEndpointArgs> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
@@ -159,7 +159,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder endpoint(RealtimeLogConfigEndpointGetArgs endpoint) {
+        public Builder endpoint(RealtimeLogConfigEndpointArgs endpoint) {
             return endpoint(Output.of(endpoint));
         }
 

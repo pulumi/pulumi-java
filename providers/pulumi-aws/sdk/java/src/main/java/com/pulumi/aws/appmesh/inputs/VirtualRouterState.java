@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.VirtualRouterSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.VirtualRouterSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class VirtualRouterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<VirtualRouterSpecGetArgs> spec;
+    private @Nullable Output<VirtualRouterSpecArgs> spec;
 
     /**
      * @return The virtual router specification to apply.
      * 
      */
-    public Optional<Output<VirtualRouterSpecGetArgs>> spec() {
+    public Optional<Output<VirtualRouterSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -353,7 +353,7 @@ public final class VirtualRouterState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<VirtualRouterSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<VirtualRouterSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -364,7 +364,7 @@ public final class VirtualRouterState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder spec(VirtualRouterSpecGetArgs spec) {
+        public Builder spec(VirtualRouterSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

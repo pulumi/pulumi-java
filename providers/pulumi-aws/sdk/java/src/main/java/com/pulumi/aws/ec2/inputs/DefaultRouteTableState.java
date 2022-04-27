@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.DefaultRouteTableRouteGetArgs;
+import com.pulumi.aws.ec2.inputs.DefaultRouteTableRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -83,13 +83,13 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="routes")
-    private @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes;
+    private @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
 
     /**
      * @return Set of objects. Detailed below
      * 
      */
-    public Optional<Output<List<DefaultRouteTableRouteGetArgs>>> routes() {
+    public Optional<Output<List<DefaultRouteTableRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
 
@@ -269,7 +269,7 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder routes(@Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Output<List<DefaultRouteTableRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
@@ -280,7 +280,7 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder routes(List<DefaultRouteTableRouteGetArgs> routes) {
+        public Builder routes(List<DefaultRouteTableRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
@@ -290,7 +290,7 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder routes(DefaultRouteTableRouteGetArgs... routes) {
+        public Builder routes(DefaultRouteTableRouteArgs... routes) {
             return routes(List.of(routes));
         }
 

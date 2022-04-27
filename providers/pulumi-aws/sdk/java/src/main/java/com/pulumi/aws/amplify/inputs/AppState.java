@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.amplify.inputs;
 
-import com.pulumi.aws.amplify.inputs.AppAutoBranchCreationConfigGetArgs;
-import com.pulumi.aws.amplify.inputs.AppCustomRuleGetArgs;
-import com.pulumi.aws.amplify.inputs.AppProductionBranchGetArgs;
+import com.pulumi.aws.amplify.inputs.AppAutoBranchCreationConfigArgs;
+import com.pulumi.aws.amplify.inputs.AppCustomRuleArgs;
+import com.pulumi.aws.amplify.inputs.AppProductionBranchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -56,13 +56,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoBranchCreationConfig")
-    private @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
+    private @Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
 
     /**
      * @return The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
      * 
      */
-    public Optional<Output<AppAutoBranchCreationConfigGetArgs>> autoBranchCreationConfig() {
+    public Optional<Output<AppAutoBranchCreationConfigArgs>> autoBranchCreationConfig() {
         return Optional.ofNullable(this.autoBranchCreationConfig);
     }
 
@@ -116,13 +116,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customRules")
-    private @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
+    private @Nullable Output<List<AppCustomRuleArgs>> customRules;
 
     /**
      * @return The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
      * 
      */
-    public Optional<Output<List<AppCustomRuleGetArgs>>> customRules() {
+    public Optional<Output<List<AppCustomRuleArgs>>> customRules() {
         return Optional.ofNullable(this.customRules);
     }
 
@@ -296,13 +296,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productionBranches")
-    private @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
+    private @Nullable Output<List<AppProductionBranchArgs>> productionBranches;
 
     /**
      * @return Describes the information about a production branch for an Amplify app. A `production_branch` block is documented below.
      * 
      */
-    public Optional<Output<List<AppProductionBranchGetArgs>>> productionBranches() {
+    public Optional<Output<List<AppProductionBranchArgs>>> productionBranches() {
         return Optional.ofNullable(this.productionBranches);
     }
 
@@ -444,7 +444,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig) {
+        public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig) {
             $.autoBranchCreationConfig = autoBranchCreationConfig;
             return this;
         }
@@ -455,7 +455,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoBranchCreationConfig(AppAutoBranchCreationConfigGetArgs autoBranchCreationConfig) {
+        public Builder autoBranchCreationConfig(AppAutoBranchCreationConfigArgs autoBranchCreationConfig) {
             return autoBranchCreationConfig(Output.of(autoBranchCreationConfig));
         }
 
@@ -538,7 +538,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customRules(@Nullable Output<List<AppCustomRuleGetArgs>> customRules) {
+        public Builder customRules(@Nullable Output<List<AppCustomRuleArgs>> customRules) {
             $.customRules = customRules;
             return this;
         }
@@ -549,7 +549,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customRules(List<AppCustomRuleGetArgs> customRules) {
+        public Builder customRules(List<AppCustomRuleArgs> customRules) {
             return customRules(Output.of(customRules));
         }
 
@@ -559,7 +559,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customRules(AppCustomRuleGetArgs... customRules) {
+        public Builder customRules(AppCustomRuleArgs... customRules) {
             return customRules(List.of(customRules));
         }
 
@@ -800,7 +800,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder productionBranches(@Nullable Output<List<AppProductionBranchGetArgs>> productionBranches) {
+        public Builder productionBranches(@Nullable Output<List<AppProductionBranchArgs>> productionBranches) {
             $.productionBranches = productionBranches;
             return this;
         }
@@ -811,7 +811,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder productionBranches(List<AppProductionBranchGetArgs> productionBranches) {
+        public Builder productionBranches(List<AppProductionBranchArgs> productionBranches) {
             return productionBranches(Output.of(productionBranches));
         }
 
@@ -821,7 +821,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder productionBranches(AppProductionBranchGetArgs... productionBranches) {
+        public Builder productionBranches(AppProductionBranchArgs... productionBranches) {
             return productionBranches(List.of(productionBranches));
         }
 

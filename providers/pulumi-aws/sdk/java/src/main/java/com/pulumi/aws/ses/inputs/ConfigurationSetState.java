@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ses.inputs;
 
-import com.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsGetArgs;
+import com.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -37,13 +37,13 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deliveryOptions")
-    private @Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions;
+    private @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ConfigurationSetDeliveryOptionsGetArgs>> deliveryOptions() {
+    public Optional<Output<ConfigurationSetDeliveryOptionsArgs>> deliveryOptions() {
         return Optional.ofNullable(this.deliveryOptions);
     }
 
@@ -163,7 +163,7 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deliveryOptions(@Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions) {
+        public Builder deliveryOptions(@Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions) {
             $.deliveryOptions = deliveryOptions;
             return this;
         }
@@ -174,7 +174,7 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deliveryOptions(ConfigurationSetDeliveryOptionsGetArgs deliveryOptions) {
+        public Builder deliveryOptions(ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
             return deliveryOptions(Output.of(deliveryOptions));
         }
 

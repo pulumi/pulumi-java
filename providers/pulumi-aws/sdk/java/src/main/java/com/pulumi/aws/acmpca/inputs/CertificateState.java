@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.acmpca.inputs;
 
-import com.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
+import com.pulumi.aws.acmpca.inputs.CertificateValidityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -126,13 +126,13 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validity")
-    private @Nullable Output<CertificateValidityGetArgs> validity;
+    private @Nullable Output<CertificateValidityArgs> validity;
 
     /**
      * @return Configures end of the validity period for the certificate. See validity block below.
      * 
      */
-    public Optional<Output<CertificateValidityGetArgs>> validity() {
+    public Optional<Output<CertificateValidityArgs>> validity() {
         return Optional.ofNullable(this.validity);
     }
 
@@ -320,7 +320,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder validity(@Nullable Output<CertificateValidityGetArgs> validity) {
+        public Builder validity(@Nullable Output<CertificateValidityArgs> validity) {
             $.validity = validity;
             return this;
         }
@@ -331,7 +331,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder validity(CertificateValidityGetArgs validity) {
+        public Builder validity(CertificateValidityArgs validity) {
             return validity(Output.of(validity));
         }
 

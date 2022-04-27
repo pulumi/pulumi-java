@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ecr.inputs;
 
-import com.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationGetArgs;
-import com.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationGetArgs;
+import com.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationArgs;
+import com.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -39,13 +39,13 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfigurations")
-    private @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
+    private @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
     /**
      * @return Encryption configuration for the repository. See below for schema.
      * 
      */
-    public Optional<Output<List<RepositoryEncryptionConfigurationGetArgs>>> encryptionConfigurations() {
+    public Optional<Output<List<RepositoryEncryptionConfigurationArgs>>> encryptionConfigurations() {
         return Optional.ofNullable(this.encryptionConfigurations);
     }
 
@@ -54,13 +54,13 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageScanningConfiguration")
-    private @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
+    private @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     /**
      * @return Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
      * 
      */
-    public Optional<Output<RepositoryImageScanningConfigurationGetArgs>> imageScanningConfiguration() {
+    public Optional<Output<RepositoryImageScanningConfigurationArgs>> imageScanningConfiguration() {
         return Optional.ofNullable(this.imageScanningConfiguration);
     }
 
@@ -213,7 +213,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations) {
             $.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
@@ -224,7 +224,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfigurations(List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
+        public Builder encryptionConfigurations(List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
             return encryptionConfigurations(Output.of(encryptionConfigurations));
         }
 
@@ -234,7 +234,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfigurations(RepositoryEncryptionConfigurationGetArgs... encryptionConfigurations) {
+        public Builder encryptionConfigurations(RepositoryEncryptionConfigurationArgs... encryptionConfigurations) {
             return encryptionConfigurations(List.of(encryptionConfigurations));
         }
 
@@ -244,7 +244,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             $.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
@@ -255,7 +255,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageScanningConfiguration(RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
             return imageScanningConfiguration(Output.of(imageScanningConfiguration));
         }
 

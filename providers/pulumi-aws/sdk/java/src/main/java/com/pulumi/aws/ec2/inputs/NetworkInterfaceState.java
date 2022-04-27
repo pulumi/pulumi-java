@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentGetArgs;
+import com.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="attachments")
-    private @Nullable Output<List<NetworkInterfaceAttachmentGetArgs>> attachments;
+    private @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
 
     /**
      * @return Configuration block to define the attachment of the ENI. See below.
      * 
      */
-    public Optional<Output<List<NetworkInterfaceAttachmentGetArgs>>> attachments() {
+    public Optional<Output<List<NetworkInterfaceAttachmentArgs>>> attachments() {
         return Optional.ofNullable(this.attachments);
     }
 
@@ -454,7 +454,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attachments(@Nullable Output<List<NetworkInterfaceAttachmentGetArgs>> attachments) {
+        public Builder attachments(@Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments) {
             $.attachments = attachments;
             return this;
         }
@@ -465,7 +465,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attachments(List<NetworkInterfaceAttachmentGetArgs> attachments) {
+        public Builder attachments(List<NetworkInterfaceAttachmentArgs> attachments) {
             return attachments(Output.of(attachments));
         }
 
@@ -475,7 +475,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder attachments(NetworkInterfaceAttachmentGetArgs... attachments) {
+        public Builder attachments(NetworkInterfaceAttachmentArgs... attachments) {
             return attachments(List.of(attachments));
         }
 

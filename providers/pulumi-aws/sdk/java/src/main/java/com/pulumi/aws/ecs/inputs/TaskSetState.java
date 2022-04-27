@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.TaskSetCapacityProviderStrategyGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskSetLoadBalancerGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskSetNetworkConfigurationGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskSetScaleGetArgs;
-import com.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesGetArgs;
+import com.pulumi.aws.ecs.inputs.TaskSetCapacityProviderStrategyArgs;
+import com.pulumi.aws.ecs.inputs.TaskSetLoadBalancerArgs;
+import com.pulumi.aws.ecs.inputs.TaskSetNetworkConfigurationArgs;
+import com.pulumi.aws.ecs.inputs.TaskSetScaleArgs;
+import com.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -43,13 +43,13 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityProviderStrategies")
-    private @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+    private @Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies;
 
     /**
      * @return The capacity provider strategy to use for the service. Can be one or more.  Defined below.
      * 
      */
-    public Optional<Output<List<TaskSetCapacityProviderStrategyGetArgs>>> capacityProviderStrategies() {
+    public Optional<Output<List<TaskSetCapacityProviderStrategyArgs>>> capacityProviderStrategies() {
         return Optional.ofNullable(this.capacityProviderStrategies);
     }
 
@@ -110,13 +110,13 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancers")
-    private @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
+    private @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
     /**
      * @return Details on load balancers that are used with a task set. Detailed below.
      * 
      */
-    public Optional<Output<List<TaskSetLoadBalancerGetArgs>>> loadBalancers() {
+    public Optional<Output<List<TaskSetLoadBalancerArgs>>> loadBalancers() {
         return Optional.ofNullable(this.loadBalancers);
     }
 
@@ -125,13 +125,13 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-    private @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
+    private @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
     /**
      * @return The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
      * 
      */
-    public Optional<Output<TaskSetNetworkConfigurationGetArgs>> networkConfiguration() {
+    public Optional<Output<TaskSetNetworkConfigurationArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
 
@@ -155,13 +155,13 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale")
-    private @Nullable Output<TaskSetScaleGetArgs> scale;
+    private @Nullable Output<TaskSetScaleArgs> scale;
 
     /**
      * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set. Detailed below.
      * 
      */
-    public Optional<Output<TaskSetScaleGetArgs>> scale() {
+    public Optional<Output<TaskSetScaleArgs>> scale() {
         return Optional.ofNullable(this.scale);
     }
 
@@ -185,13 +185,13 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRegistries")
-    private @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
+    private @Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries;
 
     /**
      * @return The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
      * 
      */
-    public Optional<Output<TaskSetServiceRegistriesGetArgs>> serviceRegistries() {
+    public Optional<Output<TaskSetServiceRegistriesArgs>> serviceRegistries() {
         return Optional.ofNullable(this.serviceRegistries);
     }
 
@@ -377,7 +377,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyArgs>> capacityProviderStrategies) {
             $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
@@ -388,7 +388,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(List<TaskSetCapacityProviderStrategyArgs> capacityProviderStrategies) {
             return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
 
@@ -398,7 +398,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(TaskSetCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(TaskSetCapacityProviderStrategyArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
 
@@ -480,7 +480,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers) {
             $.loadBalancers = loadBalancers;
             return this;
         }
@@ -491,7 +491,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(List<TaskSetLoadBalancerGetArgs> loadBalancers) {
+        public Builder loadBalancers(List<TaskSetLoadBalancerArgs> loadBalancers) {
             return loadBalancers(Output.of(loadBalancers));
         }
 
@@ -501,7 +501,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(TaskSetLoadBalancerGetArgs... loadBalancers) {
+        public Builder loadBalancers(TaskSetLoadBalancerArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
 
@@ -511,7 +511,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
@@ -522,7 +522,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(TaskSetNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(TaskSetNetworkConfigurationArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
@@ -553,7 +553,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scale(@Nullable Output<TaskSetScaleGetArgs> scale) {
+        public Builder scale(@Nullable Output<TaskSetScaleArgs> scale) {
             $.scale = scale;
             return this;
         }
@@ -564,7 +564,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scale(TaskSetScaleGetArgs scale) {
+        public Builder scale(TaskSetScaleArgs scale) {
             return scale(Output.of(scale));
         }
 
@@ -595,7 +595,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesArgs> serviceRegistries) {
             $.serviceRegistries = serviceRegistries;
             return this;
         }
@@ -606,7 +606,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceRegistries(TaskSetServiceRegistriesGetArgs serviceRegistries) {
+        public Builder serviceRegistries(TaskSetServiceRegistriesArgs serviceRegistries) {
             return serviceRegistries(Output.of(serviceRegistries));
         }
 

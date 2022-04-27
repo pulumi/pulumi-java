@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.globalaccelerator.inputs;
 
-import com.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeGetArgs;
+import com.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portRanges")
-    private @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
+    private @Nullable Output<List<ListenerPortRangeArgs>> portRanges;
 
     /**
      * @return The list of port ranges for the connections from clients to the accelerator. Fields documented below.
      * 
      */
-    public Optional<Output<List<ListenerPortRangeGetArgs>>> portRanges() {
+    public Optional<Output<List<ListenerPortRangeArgs>>> portRanges() {
         return Optional.ofNullable(this.portRanges);
     }
 
@@ -152,7 +152,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder portRanges(@Nullable Output<List<ListenerPortRangeGetArgs>> portRanges) {
+        public Builder portRanges(@Nullable Output<List<ListenerPortRangeArgs>> portRanges) {
             $.portRanges = portRanges;
             return this;
         }
@@ -163,7 +163,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder portRanges(List<ListenerPortRangeGetArgs> portRanges) {
+        public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
             return portRanges(Output.of(portRanges));
         }
 
@@ -173,7 +173,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder portRanges(ListenerPortRangeGetArgs... portRanges) {
+        public Builder portRanges(ListenerPortRangeArgs... portRanges) {
             return portRanges(List.of(portRanges));
         }
 

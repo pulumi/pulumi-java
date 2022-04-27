@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.quicksight.inputs;
 
-import com.pulumi.aws.quicksight.inputs.DataSourceCredentialsGetArgs;
-import com.pulumi.aws.quicksight.inputs.DataSourceParametersGetArgs;
-import com.pulumi.aws.quicksight.inputs.DataSourcePermissionGetArgs;
-import com.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesGetArgs;
-import com.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesGetArgs;
+import com.pulumi.aws.quicksight.inputs.DataSourceCredentialsArgs;
+import com.pulumi.aws.quicksight.inputs.DataSourceParametersArgs;
+import com.pulumi.aws.quicksight.inputs.DataSourcePermissionArgs;
+import com.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesArgs;
+import com.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -57,13 +57,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-    private @Nullable Output<DataSourceCredentialsGetArgs> credentials;
+    private @Nullable Output<DataSourceCredentialsArgs> credentials;
 
     /**
      * @return The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
      * 
      */
-    public Optional<Output<DataSourceCredentialsGetArgs>> credentials() {
+    public Optional<Output<DataSourceCredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
 
@@ -102,13 +102,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<DataSourceParametersGetArgs> parameters;
+    private @Nullable Output<DataSourceParametersArgs> parameters;
 
     /**
      * @return The parameters used to connect to this data source (exactly one).
      * 
      */
-    public Optional<Output<DataSourceParametersGetArgs>> parameters() {
+    public Optional<Output<DataSourceParametersArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -117,13 +117,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-    private @Nullable Output<List<DataSourcePermissionGetArgs>> permissions;
+    private @Nullable Output<List<DataSourcePermissionArgs>> permissions;
 
     /**
      * @return A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
      * 
      */
-    public Optional<Output<List<DataSourcePermissionGetArgs>>> permissions() {
+    public Optional<Output<List<DataSourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
 
@@ -132,13 +132,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslProperties")
-    private @Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties;
+    private @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
 
     /**
      * @return Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
      * 
      */
-    public Optional<Output<DataSourceSslPropertiesGetArgs>> sslProperties() {
+    public Optional<Output<DataSourceSslPropertiesArgs>> sslProperties() {
         return Optional.ofNullable(this.sslProperties);
     }
 
@@ -192,13 +192,13 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConnectionProperties")
-    private @Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
+    private @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
 
     /**
      * @return Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
      * 
      */
-    public Optional<Output<DataSourceVpcConnectionPropertiesGetArgs>> vpcConnectionProperties() {
+    public Optional<Output<DataSourceVpcConnectionPropertiesArgs>> vpcConnectionProperties() {
         return Optional.ofNullable(this.vpcConnectionProperties);
     }
 
@@ -285,7 +285,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(@Nullable Output<DataSourceCredentialsGetArgs> credentials) {
+        public Builder credentials(@Nullable Output<DataSourceCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
@@ -296,7 +296,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder credentials(DataSourceCredentialsGetArgs credentials) {
+        public Builder credentials(DataSourceCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
@@ -348,7 +348,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<DataSourceParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Output<DataSourceParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -359,7 +359,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(DataSourceParametersGetArgs parameters) {
+        public Builder parameters(DataSourceParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -369,7 +369,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder permissions(@Nullable Output<List<DataSourcePermissionGetArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<DataSourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -380,7 +380,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder permissions(List<DataSourcePermissionGetArgs> permissions) {
+        public Builder permissions(List<DataSourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
@@ -390,7 +390,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder permissions(DataSourcePermissionGetArgs... permissions) {
+        public Builder permissions(DataSourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
 
@@ -400,7 +400,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties) {
+        public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesArgs> sslProperties) {
             $.sslProperties = sslProperties;
             return this;
         }
@@ -411,7 +411,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sslProperties(DataSourceSslPropertiesGetArgs sslProperties) {
+        public Builder sslProperties(DataSourceSslPropertiesArgs sslProperties) {
             return sslProperties(Output.of(sslProperties));
         }
 
@@ -484,7 +484,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
             $.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
@@ -495,7 +495,7 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConnectionProperties(DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
             return vpcConnectionProperties(Output.of(vpcConnectionProperties));
         }
 

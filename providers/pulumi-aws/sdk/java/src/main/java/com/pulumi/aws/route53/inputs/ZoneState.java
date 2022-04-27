@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53.inputs;
 
-import com.pulumi.aws.route53.inputs.ZoneVpcGetArgs;
+import com.pulumi.aws.route53.inputs.ZoneVpcArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -147,13 +147,13 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcs")
-    private @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
+    private @Nullable Output<List<ZoneVpcArgs>> vpcs;
 
     /**
      * @return Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
      * 
      */
-    public Optional<Output<List<ZoneVpcGetArgs>>> vpcs() {
+    public Optional<Output<List<ZoneVpcArgs>>> vpcs() {
         return Optional.ofNullable(this.vpcs);
     }
 
@@ -392,7 +392,7 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcs(@Nullable Output<List<ZoneVpcGetArgs>> vpcs) {
+        public Builder vpcs(@Nullable Output<List<ZoneVpcArgs>> vpcs) {
             $.vpcs = vpcs;
             return this;
         }
@@ -403,7 +403,7 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcs(List<ZoneVpcGetArgs> vpcs) {
+        public Builder vpcs(List<ZoneVpcArgs> vpcs) {
             return vpcs(Output.of(vpcs));
         }
 
@@ -413,7 +413,7 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcs(ZoneVpcGetArgs... vpcs) {
+        public Builder vpcs(ZoneVpcArgs... vpcs) {
             return vpcs(List.of(vpcs));
         }
 

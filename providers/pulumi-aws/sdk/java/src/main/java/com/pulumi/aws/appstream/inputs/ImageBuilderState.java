@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.appstream.inputs;
 
-import com.pulumi.aws.appstream.inputs.ImageBuilderAccessEndpointGetArgs;
-import com.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoGetArgs;
-import com.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigGetArgs;
+import com.pulumi.aws.appstream.inputs.ImageBuilderAccessEndpointArgs;
+import com.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoArgs;
+import com.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -26,13 +26,13 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessEndpoints")
-    private @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
+    private @Nullable Output<List<ImageBuilderAccessEndpointArgs>> accessEndpoints;
 
     /**
      * @return Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
      * 
      */
-    public Optional<Output<List<ImageBuilderAccessEndpointGetArgs>>> accessEndpoints() {
+    public Optional<Output<List<ImageBuilderAccessEndpointArgs>>> accessEndpoints() {
         return Optional.ofNullable(this.accessEndpoints);
     }
 
@@ -116,13 +116,13 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainJoinInfo")
-    private @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
+    private @Nullable Output<ImageBuilderDomainJoinInfoArgs> domainJoinInfo;
 
     /**
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
      * 
      */
-    public Optional<Output<ImageBuilderDomainJoinInfoGetArgs>> domainJoinInfo() {
+    public Optional<Output<ImageBuilderDomainJoinInfoArgs>> domainJoinInfo() {
         return Optional.ofNullable(this.domainJoinInfo);
     }
 
@@ -266,13 +266,13 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ImageBuilderVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    public Optional<Output<ImageBuilderVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<ImageBuilderVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -322,7 +322,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessEndpoints(@Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable Output<List<ImageBuilderAccessEndpointArgs>> accessEndpoints) {
             $.accessEndpoints = accessEndpoints;
             return this;
         }
@@ -333,7 +333,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessEndpoints(List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
+        public Builder accessEndpoints(List<ImageBuilderAccessEndpointArgs> accessEndpoints) {
             return accessEndpoints(Output.of(accessEndpoints));
         }
 
@@ -343,7 +343,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessEndpoints(ImageBuilderAccessEndpointGetArgs... accessEndpoints) {
+        public Builder accessEndpoints(ImageBuilderAccessEndpointArgs... accessEndpoints) {
             return accessEndpoints(List.of(accessEndpoints));
         }
 
@@ -458,7 +458,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoArgs> domainJoinInfo) {
             $.domainJoinInfo = domainJoinInfo;
             return this;
         }
@@ -469,7 +469,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainJoinInfo(ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
+        public Builder domainJoinInfo(ImageBuilderDomainJoinInfoArgs domainJoinInfo) {
             return domainJoinInfo(Output.of(domainJoinInfo));
         }
 
@@ -668,7 +668,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -679,7 +679,7 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(ImageBuilderVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(ImageBuilderVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.ModelContainerGetArgs;
-import com.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerGetArgs;
-import com.pulumi.aws.sagemaker.inputs.ModelVpcConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.ModelContainerArgs;
+import com.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerArgs;
+import com.pulumi.aws.sagemaker.inputs.ModelVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -42,13 +42,13 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers")
-    private @Nullable Output<List<ModelContainerGetArgs>> containers;
+    private @Nullable Output<List<ModelContainerArgs>> containers;
 
     /**
      * @return Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
      * 
      */
-    public Optional<Output<List<ModelContainerGetArgs>>> containers() {
+    public Optional<Output<List<ModelContainerArgs>>> containers() {
         return Optional.ofNullable(this.containers);
     }
 
@@ -87,13 +87,13 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inferenceExecutionConfig")
-    private @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
+    private @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
 
     /**
      * @return Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
      * 
      */
-    public Optional<Output<ModelInferenceExecutionConfigGetArgs>> inferenceExecutionConfig() {
+    public Optional<Output<ModelInferenceExecutionConfigArgs>> inferenceExecutionConfig() {
         return Optional.ofNullable(this.inferenceExecutionConfig);
     }
 
@@ -117,13 +117,13 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryContainer")
-    private @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer;
+    private @Nullable Output<ModelPrimaryContainerArgs> primaryContainer;
 
     /**
      * @return The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
      * 
      */
-    public Optional<Output<ModelPrimaryContainerGetArgs>> primaryContainer() {
+    public Optional<Output<ModelPrimaryContainerArgs>> primaryContainer() {
         return Optional.ofNullable(this.primaryContainer);
     }
 
@@ -162,13 +162,13 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<ModelVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ModelVpcConfigArgs> vpcConfig;
 
     /**
      * @return Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
      * 
      */
-    public Optional<Output<ModelVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<ModelVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -232,7 +232,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containers(@Nullable Output<List<ModelContainerGetArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ModelContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
@@ -243,7 +243,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containers(List<ModelContainerGetArgs> containers) {
+        public Builder containers(List<ModelContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
@@ -253,7 +253,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder containers(ModelContainerGetArgs... containers) {
+        public Builder containers(ModelContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
@@ -305,7 +305,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inferenceExecutionConfig(@Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig) {
+        public Builder inferenceExecutionConfig(@Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
             $.inferenceExecutionConfig = inferenceExecutionConfig;
             return this;
         }
@@ -316,7 +316,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inferenceExecutionConfig(ModelInferenceExecutionConfigGetArgs inferenceExecutionConfig) {
+        public Builder inferenceExecutionConfig(ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
             return inferenceExecutionConfig(Output.of(inferenceExecutionConfig));
         }
 
@@ -347,7 +347,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer) {
+        public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerArgs> primaryContainer) {
             $.primaryContainer = primaryContainer;
             return this;
         }
@@ -358,7 +358,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder primaryContainer(ModelPrimaryContainerGetArgs primaryContainer) {
+        public Builder primaryContainer(ModelPrimaryContainerArgs primaryContainer) {
             return primaryContainer(Output.of(primaryContainer));
         }
 
@@ -410,7 +410,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<ModelVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ModelVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -421,7 +421,7 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(ModelVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(ModelVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

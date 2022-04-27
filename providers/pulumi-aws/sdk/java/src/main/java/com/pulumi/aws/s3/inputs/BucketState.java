@@ -4,15 +4,15 @@
 package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.aws.s3.enums.CannedAcl;
-import com.pulumi.aws.s3.inputs.BucketCorsRuleGetArgs;
-import com.pulumi.aws.s3.inputs.BucketGrantGetArgs;
-import com.pulumi.aws.s3.inputs.BucketLifecycleRuleGetArgs;
-import com.pulumi.aws.s3.inputs.BucketLoggingGetArgs;
-import com.pulumi.aws.s3.inputs.BucketObjectLockConfigurationGetArgs;
-import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationGetArgs;
-import com.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationGetArgs;
-import com.pulumi.aws.s3.inputs.BucketVersioningGetArgs;
-import com.pulumi.aws.s3.inputs.BucketWebsiteGetArgs;
+import com.pulumi.aws.s3.inputs.BucketCorsRuleArgs;
+import com.pulumi.aws.s3.inputs.BucketGrantArgs;
+import com.pulumi.aws.s3.inputs.BucketLifecycleRuleArgs;
+import com.pulumi.aws.s3.inputs.BucketLoggingArgs;
+import com.pulumi.aws.s3.inputs.BucketObjectLockConfigurationArgs;
+import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationArgs;
+import com.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationArgs;
+import com.pulumi.aws.s3.inputs.BucketVersioningArgs;
+import com.pulumi.aws.s3.inputs.BucketWebsiteArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -139,13 +139,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsRules")
-    private @Nullable Output<List<BucketCorsRuleGetArgs>> corsRules;
+    private @Nullable Output<List<BucketCorsRuleArgs>> corsRules;
 
     /**
      * @return A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
      * 
      */
-    public Optional<Output<List<BucketCorsRuleGetArgs>>> corsRules() {
+    public Optional<Output<List<BucketCorsRuleArgs>>> corsRules() {
         return Optional.ofNullable(this.corsRules);
     }
 
@@ -169,13 +169,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grants")
-    private @Nullable Output<List<BucketGrantGetArgs>> grants;
+    private @Nullable Output<List<BucketGrantArgs>> grants;
 
     /**
      * @return An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
      * 
      */
-    public Optional<Output<List<BucketGrantGetArgs>>> grants() {
+    public Optional<Output<List<BucketGrantArgs>>> grants() {
         return Optional.ofNullable(this.grants);
     }
 
@@ -199,13 +199,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleRules")
-    private @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
+    private @Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules;
 
     /**
      * @return A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
      * 
      */
-    public Optional<Output<List<BucketLifecycleRuleGetArgs>>> lifecycleRules() {
+    public Optional<Output<List<BucketLifecycleRuleArgs>>> lifecycleRules() {
         return Optional.ofNullable(this.lifecycleRules);
     }
 
@@ -214,13 +214,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggings")
-    private @Nullable Output<List<BucketLoggingGetArgs>> loggings;
+    private @Nullable Output<List<BucketLoggingArgs>> loggings;
 
     /**
      * @return A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
      * 
      */
-    public Optional<Output<List<BucketLoggingGetArgs>>> loggings() {
+    public Optional<Output<List<BucketLoggingArgs>>> loggings() {
         return Optional.ofNullable(this.loggings);
     }
 
@@ -229,13 +229,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockConfiguration")
-    private @Nullable Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration;
+    private @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
     /**
      * @return A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
      * 
      */
-    public Optional<Output<BucketObjectLockConfigurationGetArgs>> objectLockConfiguration() {
+    public Optional<Output<BucketObjectLockConfigurationArgs>> objectLockConfiguration() {
         return Optional.ofNullable(this.objectLockConfiguration);
     }
 
@@ -274,13 +274,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicationConfiguration")
-    private @Nullable Output<BucketReplicationConfigurationGetArgs> replicationConfiguration;
+    private @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
 
     /**
      * @return A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
      * 
      */
-    public Optional<Output<BucketReplicationConfigurationGetArgs>> replicationConfiguration() {
+    public Optional<Output<BucketReplicationConfigurationArgs>> replicationConfiguration() {
         return Optional.ofNullable(this.replicationConfiguration);
     }
 
@@ -310,13 +310,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryptionConfiguration")
-    private @Nullable Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration;
+    private @Nullable Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     /**
      * @return A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
      * 
      */
-    public Optional<Output<BucketServerSideEncryptionConfigurationGetArgs>> serverSideEncryptionConfiguration() {
+    public Optional<Output<BucketServerSideEncryptionConfigurationArgs>> serverSideEncryptionConfiguration() {
         return Optional.ofNullable(this.serverSideEncryptionConfiguration);
     }
 
@@ -355,13 +355,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versioning")
-    private @Nullable Output<BucketVersioningGetArgs> versioning;
+    private @Nullable Output<BucketVersioningArgs> versioning;
 
     /**
      * @return A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
      * 
      */
-    public Optional<Output<BucketVersioningGetArgs>> versioning() {
+    public Optional<Output<BucketVersioningArgs>> versioning() {
         return Optional.ofNullable(this.versioning);
     }
 
@@ -370,13 +370,13 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="website")
-    private @Nullable Output<BucketWebsiteGetArgs> website;
+    private @Nullable Output<BucketWebsiteArgs> website;
 
     /**
      * @return A website object (documented below).
      * 
      */
-    public Optional<Output<BucketWebsiteGetArgs>> website() {
+    public Optional<Output<BucketWebsiteArgs>> website() {
         return Optional.ofNullable(this.website);
     }
 
@@ -631,7 +631,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder corsRules(@Nullable Output<List<BucketCorsRuleGetArgs>> corsRules) {
+        public Builder corsRules(@Nullable Output<List<BucketCorsRuleArgs>> corsRules) {
             $.corsRules = corsRules;
             return this;
         }
@@ -642,7 +642,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder corsRules(List<BucketCorsRuleGetArgs> corsRules) {
+        public Builder corsRules(List<BucketCorsRuleArgs> corsRules) {
             return corsRules(Output.of(corsRules));
         }
 
@@ -652,7 +652,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder corsRules(BucketCorsRuleGetArgs... corsRules) {
+        public Builder corsRules(BucketCorsRuleArgs... corsRules) {
             return corsRules(List.of(corsRules));
         }
 
@@ -683,7 +683,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(@Nullable Output<List<BucketGrantGetArgs>> grants) {
+        public Builder grants(@Nullable Output<List<BucketGrantArgs>> grants) {
             $.grants = grants;
             return this;
         }
@@ -694,7 +694,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(List<BucketGrantGetArgs> grants) {
+        public Builder grants(List<BucketGrantArgs> grants) {
             return grants(Output.of(grants));
         }
 
@@ -704,7 +704,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(BucketGrantGetArgs... grants) {
+        public Builder grants(BucketGrantArgs... grants) {
             return grants(List.of(grants));
         }
 
@@ -735,7 +735,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules) {
             $.lifecycleRules = lifecycleRules;
             return this;
         }
@@ -746,7 +746,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(List<BucketLifecycleRuleGetArgs> lifecycleRules) {
+        public Builder lifecycleRules(List<BucketLifecycleRuleArgs> lifecycleRules) {
             return lifecycleRules(Output.of(lifecycleRules));
         }
 
@@ -756,7 +756,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleRules(BucketLifecycleRuleGetArgs... lifecycleRules) {
+        public Builder lifecycleRules(BucketLifecycleRuleArgs... lifecycleRules) {
             return lifecycleRules(List.of(lifecycleRules));
         }
 
@@ -766,7 +766,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggings(@Nullable Output<List<BucketLoggingGetArgs>> loggings) {
+        public Builder loggings(@Nullable Output<List<BucketLoggingArgs>> loggings) {
             $.loggings = loggings;
             return this;
         }
@@ -777,7 +777,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggings(List<BucketLoggingGetArgs> loggings) {
+        public Builder loggings(List<BucketLoggingArgs> loggings) {
             return loggings(Output.of(loggings));
         }
 
@@ -787,7 +787,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggings(BucketLoggingGetArgs... loggings) {
+        public Builder loggings(BucketLoggingArgs... loggings) {
             return loggings(List.of(loggings));
         }
 
@@ -797,7 +797,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
             $.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
@@ -808,7 +808,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder objectLockConfiguration(BucketObjectLockConfigurationGetArgs objectLockConfiguration) {
+        public Builder objectLockConfiguration(BucketObjectLockConfigurationArgs objectLockConfiguration) {
             return objectLockConfiguration(Output.of(objectLockConfiguration));
         }
 
@@ -860,7 +860,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationGetArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration) {
             $.replicationConfiguration = replicationConfiguration;
             return this;
         }
@@ -871,7 +871,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicationConfiguration(BucketReplicationConfigurationGetArgs replicationConfiguration) {
+        public Builder replicationConfiguration(BucketReplicationConfigurationArgs replicationConfiguration) {
             return replicationConfiguration(Output.of(replicationConfiguration));
         }
 
@@ -908,7 +908,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryptionConfiguration(@Nullable Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
@@ -919,7 +919,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionConfigurationGetArgs serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
 
@@ -971,7 +971,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versioning(@Nullable Output<BucketVersioningGetArgs> versioning) {
+        public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             $.versioning = versioning;
             return this;
         }
@@ -982,7 +982,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder versioning(BucketVersioningGetArgs versioning) {
+        public Builder versioning(BucketVersioningArgs versioning) {
             return versioning(Output.of(versioning));
         }
 
@@ -992,7 +992,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder website(@Nullable Output<BucketWebsiteGetArgs> website) {
+        public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             $.website = website;
             return this;
         }
@@ -1003,7 +1003,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder website(BucketWebsiteGetArgs website) {
+        public Builder website(BucketWebsiteArgs website) {
             return website(Output.of(website));
         }
 

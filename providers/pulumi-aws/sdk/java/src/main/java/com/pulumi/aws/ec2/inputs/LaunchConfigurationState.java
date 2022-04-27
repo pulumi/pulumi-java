@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.LaunchConfigurationEbsBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchConfigurationEphemeralBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchConfigurationMetadataOptionsGetArgs;
-import com.pulumi.aws.ec2.inputs.LaunchConfigurationRootBlockDeviceGetArgs;
+import com.pulumi.aws.ec2.inputs.LaunchConfigurationEbsBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.LaunchConfigurationEphemeralBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.LaunchConfigurationMetadataOptionsArgs;
+import com.pulumi.aws.ec2.inputs.LaunchConfigurationRootBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -57,14 +57,14 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ebsBlockDevices")
-    private @Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices;
 
     /**
      * @return Additional EBS block devices to attach to the
      * instance.  See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+    public Optional<Output<List<LaunchConfigurationEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
 
@@ -104,14 +104,14 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ephemeralBlockDevices")
-    private @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     /**
      * @return Customize Ephemeral (also known as
      * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+    public Optional<Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
@@ -182,13 +182,13 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataOptions")
-    private @Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions;
+    private @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
     /**
      * @return The metadata options for the instance.
      * 
      */
-    public Optional<Output<LaunchConfigurationMetadataOptionsGetArgs>> metadataOptions() {
+    public Optional<Output<LaunchConfigurationMetadataOptionsArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
 
@@ -251,14 +251,14 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="rootBlockDevice")
-    private @Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice;
+    private @Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice;
 
     /**
      * @return Customize details about the root block
      * device of the instance. See Block Devices below for details.
      * 
      */
-    public Optional<Output<LaunchConfigurationRootBlockDeviceGetArgs>> rootBlockDevice() {
+    public Optional<Output<LaunchConfigurationRootBlockDeviceArgs>> rootBlockDevice() {
         return Optional.ofNullable(this.rootBlockDevice);
     }
 
@@ -445,7 +445,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(@Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
@@ -457,7 +457,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(List<LaunchConfigurationEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<LaunchConfigurationEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
@@ -468,7 +468,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(LaunchConfigurationEbsBlockDeviceGetArgs... ebsBlockDevices) {
+        public Builder ebsBlockDevices(LaunchConfigurationEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
@@ -521,7 +521,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(@Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
@@ -533,7 +533,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(List<LaunchConfigurationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<LaunchConfigurationEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
@@ -544,7 +544,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(LaunchConfigurationEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(LaunchConfigurationEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
@@ -640,7 +640,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
@@ -651,7 +651,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder metadataOptions(LaunchConfigurationMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(LaunchConfigurationMetadataOptionsArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
@@ -733,7 +733,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(@Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice) {
             $.rootBlockDevice = rootBlockDevice;
             return this;
         }
@@ -745,7 +745,7 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder rootBlockDevice(LaunchConfigurationRootBlockDeviceGetArgs rootBlockDevice) {
+        public Builder rootBlockDevice(LaunchConfigurationRootBlockDeviceArgs rootBlockDevice) {
             return rootBlockDevice(Output.of(rootBlockDevice));
         }
 

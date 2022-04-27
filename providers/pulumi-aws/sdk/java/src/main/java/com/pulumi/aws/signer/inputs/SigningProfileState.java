@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.signer.inputs;
 
-import com.pulumi.aws.signer.inputs.SigningProfileRevocationRecordGetArgs;
-import com.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodGetArgs;
+import com.pulumi.aws.signer.inputs.SigningProfileRevocationRecordArgs;
+import com.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -99,13 +99,13 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="revocationRecords")
-    private @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
+    private @Nullable Output<List<SigningProfileRevocationRecordArgs>> revocationRecords;
 
     /**
      * @return Revocation information for a signing profile.
      * 
      */
-    public Optional<Output<List<SigningProfileRevocationRecordGetArgs>>> revocationRecords() {
+    public Optional<Output<List<SigningProfileRevocationRecordArgs>>> revocationRecords() {
         return Optional.ofNullable(this.revocationRecords);
     }
 
@@ -114,13 +114,13 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="signatureValidityPeriod")
-    private @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
+    private @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
     /**
      * @return The validity period for a signing job.
      * 
      */
-    public Optional<Output<SigningProfileSignatureValidityPeriodGetArgs>> signatureValidityPeriod() {
+    public Optional<Output<SigningProfileSignatureValidityPeriodArgs>> signatureValidityPeriod() {
         return Optional.ofNullable(this.signatureValidityPeriod);
     }
 
@@ -345,7 +345,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
+        public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordArgs>> revocationRecords) {
             $.revocationRecords = revocationRecords;
             return this;
         }
@@ -356,7 +356,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder revocationRecords(List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
+        public Builder revocationRecords(List<SigningProfileRevocationRecordArgs> revocationRecords) {
             return revocationRecords(Output.of(revocationRecords));
         }
 
@@ -366,7 +366,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder revocationRecords(SigningProfileRevocationRecordGetArgs... revocationRecords) {
+        public Builder revocationRecords(SigningProfileRevocationRecordArgs... revocationRecords) {
             return revocationRecords(List.of(revocationRecords));
         }
 
@@ -376,7 +376,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             $.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
@@ -387,7 +387,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder signatureValidityPeriod(SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             return signatureValidityPeriod(Output.of(signatureValidityPeriod));
         }
 

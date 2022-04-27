@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.globalaccelerator.inputs;
 
-import com.pulumi.aws.globalaccelerator.inputs.EndpointGroupEndpointConfigurationGetArgs;
-import com.pulumi.aws.globalaccelerator.inputs.EndpointGroupPortOverrideGetArgs;
+import com.pulumi.aws.globalaccelerator.inputs.EndpointGroupEndpointConfigurationArgs;
+import com.pulumi.aws.globalaccelerator.inputs.EndpointGroupPortOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Double;
@@ -40,13 +40,13 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpointConfigurations")
-    private @Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations;
+    private @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
     /**
      * @return The list of endpoint objects. Fields documented below.
      * 
      */
-    public Optional<Output<List<EndpointGroupEndpointConfigurationGetArgs>>> endpointConfigurations() {
+    public Optional<Output<List<EndpointGroupEndpointConfigurationArgs>>> endpointConfigurations() {
         return Optional.ofNullable(this.endpointConfigurations);
     }
 
@@ -147,13 +147,13 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="portOverrides")
-    private @Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides;
+    private @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
 
     /**
      * @return Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
      * 
      */
-    public Optional<Output<List<EndpointGroupPortOverrideGetArgs>>> portOverrides() {
+    public Optional<Output<List<EndpointGroupPortOverrideArgs>>> portOverrides() {
         return Optional.ofNullable(this.portOverrides);
     }
 
@@ -248,7 +248,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations) {
+        public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations) {
             $.endpointConfigurations = endpointConfigurations;
             return this;
         }
@@ -259,7 +259,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder endpointConfigurations(List<EndpointGroupEndpointConfigurationGetArgs> endpointConfigurations) {
+        public Builder endpointConfigurations(List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
             return endpointConfigurations(Output.of(endpointConfigurations));
         }
 
@@ -269,7 +269,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder endpointConfigurations(EndpointGroupEndpointConfigurationGetArgs... endpointConfigurations) {
+        public Builder endpointConfigurations(EndpointGroupEndpointConfigurationArgs... endpointConfigurations) {
             return endpointConfigurations(List.of(endpointConfigurations));
         }
 
@@ -407,7 +407,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder portOverrides(@Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides) {
+        public Builder portOverrides(@Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides) {
             $.portOverrides = portOverrides;
             return this;
         }
@@ -418,7 +418,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder portOverrides(List<EndpointGroupPortOverrideGetArgs> portOverrides) {
+        public Builder portOverrides(List<EndpointGroupPortOverrideArgs> portOverrides) {
             return portOverrides(Output.of(portOverrides));
         }
 
@@ -428,7 +428,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder portOverrides(EndpointGroupPortOverrideGetArgs... portOverrides) {
+        public Builder portOverrides(EndpointGroupPortOverrideArgs... portOverrides) {
             return portOverrides(List.of(portOverrides));
         }
 

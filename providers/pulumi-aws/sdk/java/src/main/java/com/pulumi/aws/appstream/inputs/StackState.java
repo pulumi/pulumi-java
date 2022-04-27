@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.appstream.inputs;
 
-import com.pulumi.aws.appstream.inputs.StackAccessEndpointGetArgs;
-import com.pulumi.aws.appstream.inputs.StackApplicationSettingsGetArgs;
-import com.pulumi.aws.appstream.inputs.StackStorageConnectorGetArgs;
-import com.pulumi.aws.appstream.inputs.StackUserSettingGetArgs;
+import com.pulumi.aws.appstream.inputs.StackAccessEndpointArgs;
+import com.pulumi.aws.appstream.inputs.StackApplicationSettingsArgs;
+import com.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
+import com.pulumi.aws.appstream.inputs.StackUserSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     public static final StackState Empty = new StackState();
 
     @Import(name="accessEndpoints")
-    private @Nullable Output<List<StackAccessEndpointGetArgs>> accessEndpoints;
+    private @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
-    public Optional<Output<List<StackAccessEndpointGetArgs>>> accessEndpoints() {
+    public Optional<Output<List<StackAccessEndpointArgs>>> accessEndpoints() {
         return Optional.ofNullable(this.accessEndpoints);
     }
 
@@ -33,13 +33,13 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationSettings")
-    private @Nullable Output<StackApplicationSettingsGetArgs> applicationSettings;
+    private @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
     /**
      * @return Settings for application settings persistence.
      * 
      */
-    public Optional<Output<StackApplicationSettingsGetArgs>> applicationSettings() {
+    public Optional<Output<StackApplicationSettingsArgs>> applicationSettings() {
         return Optional.ofNullable(this.applicationSettings);
     }
 
@@ -168,13 +168,13 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageConnectors")
-    private @Nullable Output<List<StackStorageConnectorGetArgs>> storageConnectors;
+    private @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
     /**
      * @return Configuration block for the storage connectors to enable. See below.
      * 
      */
-    public Optional<Output<List<StackStorageConnectorGetArgs>>> storageConnectors() {
+    public Optional<Output<List<StackStorageConnectorArgs>>> storageConnectors() {
         return Optional.ofNullable(this.storageConnectors);
     }
 
@@ -197,13 +197,13 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSettings")
-    private @Nullable Output<List<StackUserSettingGetArgs>> userSettings;
+    private @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
     /**
      * @return Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
      * 
      */
-    public Optional<Output<List<StackUserSettingGetArgs>>> userSettings() {
+    public Optional<Output<List<StackUserSettingArgs>>> userSettings() {
         return Optional.ofNullable(this.userSettings);
     }
 
@@ -244,16 +244,16 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             $ = new StackState(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessEndpoints(@Nullable Output<List<StackAccessEndpointGetArgs>> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints) {
             $.accessEndpoints = accessEndpoints;
             return this;
         }
 
-        public Builder accessEndpoints(List<StackAccessEndpointGetArgs> accessEndpoints) {
+        public Builder accessEndpoints(List<StackAccessEndpointArgs> accessEndpoints) {
             return accessEndpoints(Output.of(accessEndpoints));
         }
 
-        public Builder accessEndpoints(StackAccessEndpointGetArgs... accessEndpoints) {
+        public Builder accessEndpoints(StackAccessEndpointArgs... accessEndpoints) {
             return accessEndpoints(List.of(accessEndpoints));
         }
 
@@ -263,7 +263,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationSettings(@Nullable Output<StackApplicationSettingsGetArgs> applicationSettings) {
+        public Builder applicationSettings(@Nullable Output<StackApplicationSettingsArgs> applicationSettings) {
             $.applicationSettings = applicationSettings;
             return this;
         }
@@ -274,7 +274,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationSettings(StackApplicationSettingsGetArgs applicationSettings) {
+        public Builder applicationSettings(StackApplicationSettingsArgs applicationSettings) {
             return applicationSettings(Output.of(applicationSettings));
         }
 
@@ -462,7 +462,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorGetArgs>> storageConnectors) {
+        public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorArgs>> storageConnectors) {
             $.storageConnectors = storageConnectors;
             return this;
         }
@@ -473,7 +473,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageConnectors(List<StackStorageConnectorGetArgs> storageConnectors) {
+        public Builder storageConnectors(List<StackStorageConnectorArgs> storageConnectors) {
             return storageConnectors(Output.of(storageConnectors));
         }
 
@@ -483,7 +483,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageConnectors(StackStorageConnectorGetArgs... storageConnectors) {
+        public Builder storageConnectors(StackStorageConnectorArgs... storageConnectors) {
             return storageConnectors(List.of(storageConnectors));
         }
 
@@ -511,7 +511,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userSettings(@Nullable Output<List<StackUserSettingGetArgs>> userSettings) {
+        public Builder userSettings(@Nullable Output<List<StackUserSettingArgs>> userSettings) {
             $.userSettings = userSettings;
             return this;
         }
@@ -522,7 +522,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userSettings(List<StackUserSettingGetArgs> userSettings) {
+        public Builder userSettings(List<StackUserSettingArgs> userSettings) {
             return userSettings(Output.of(userSettings));
         }
 
@@ -532,7 +532,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userSettings(StackUserSettingGetArgs... userSettings) {
+        public Builder userSettings(StackUserSettingArgs... userSettings) {
             return userSettings(List.of(userSettings));
         }
 

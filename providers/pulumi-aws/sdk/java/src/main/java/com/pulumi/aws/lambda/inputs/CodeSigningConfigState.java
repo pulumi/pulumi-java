@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.lambda.inputs;
 
-import com.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersGetArgs;
-import com.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesGetArgs;
+import com.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
+import com.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -22,13 +22,13 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowedPublishers")
-    private @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
+    private @Nullable Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     /**
      * @return A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
      * 
      */
-    public Optional<Output<CodeSigningConfigAllowedPublishersGetArgs>> allowedPublishers() {
+    public Optional<Output<CodeSigningConfigAllowedPublishersArgs>> allowedPublishers() {
         return Optional.ofNullable(this.allowedPublishers);
     }
 
@@ -97,13 +97,13 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policies")
-    private @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
+    private @Nullable Output<CodeSigningConfigPoliciesArgs> policies;
 
     /**
      * @return A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
      * 
      */
-    public Optional<Output<CodeSigningConfigPoliciesGetArgs>> policies() {
+    public Optional<Output<CodeSigningConfigPoliciesArgs>> policies() {
         return Optional.ofNullable(this.policies);
     }
 
@@ -142,7 +142,7 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder allowedPublishers(@Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers) {
+        public Builder allowedPublishers(@Nullable Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
             $.allowedPublishers = allowedPublishers;
             return this;
         }
@@ -153,7 +153,7 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder allowedPublishers(CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
+        public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
             return allowedPublishers(Output.of(allowedPublishers));
         }
 
@@ -247,7 +247,7 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder policies(@Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
+        public Builder policies(@Nullable Output<CodeSigningConfigPoliciesArgs> policies) {
             $.policies = policies;
             return this;
         }
@@ -258,7 +258,7 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder policies(CodeSigningConfigPoliciesGetArgs policies) {
+        public Builder policies(CodeSigningConfigPoliciesArgs policies) {
             return policies(Output.of(policies));
         }
 

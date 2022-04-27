@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cognito.inputs;
 
-import com.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingGetArgs;
+import com.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="roleMappings")
-    private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings;
+    private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
     /**
      * @return A List of Role Mapping.
      * 
      */
-    public Optional<Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>>> roleMappings() {
+    public Optional<Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>>> roleMappings() {
         return Optional.ofNullable(this.roleMappings);
     }
 
@@ -116,7 +116,7 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings) {
+        public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings) {
             $.roleMappings = roleMappings;
             return this;
         }
@@ -127,7 +127,7 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder roleMappings(List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
+        public Builder roleMappings(List<IdentityPoolRoleAttachmentRoleMappingArgs> roleMappings) {
             return roleMappings(Output.of(roleMappings));
         }
 
@@ -137,7 +137,7 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingGetArgs... roleMappings) {
+        public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingArgs... roleMappings) {
             return roleMappings(List.of(roleMappings));
         }
 

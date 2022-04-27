@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.guardduty.inputs;
 
-import com.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesGetArgs;
+import com.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -37,13 +37,13 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="datasources")
-    private @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
+    private @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
 
     /**
      * @return Configuration for the collected datasources.
      * 
      */
-    public Optional<Output<OrganizationConfigurationDatasourcesGetArgs>> datasources() {
+    public Optional<Output<OrganizationConfigurationDatasourcesArgs>> datasources() {
         return Optional.ofNullable(this.datasources);
     }
 
@@ -115,7 +115,7 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources) {
+        public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources) {
             $.datasources = datasources;
             return this;
         }
@@ -126,7 +126,7 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder datasources(OrganizationConfigurationDatasourcesGetArgs datasources) {
+        public Builder datasources(OrganizationConfigurationDatasourcesArgs datasources) {
             return datasources(Output.of(datasources));
         }
 

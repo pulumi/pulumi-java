@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs;
+import com.pulumi.aws.ecs.inputs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="defaultCapacityProviderStrategies")
-    private @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
+    private @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     /**
      * @return Set of capacity provider strategies to use by default for the cluster. Detailed below.
      * 
      */
-    public Optional<Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>>> defaultCapacityProviderStrategies() {
+    public Optional<Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>>> defaultCapacityProviderStrategies() {
         return Optional.ofNullable(this.defaultCapacityProviderStrategies);
     }
 
@@ -146,7 +146,7 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies) {
             $.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
@@ -157,7 +157,7 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs> defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(Output.of(defaultCapacityProviderStrategies));
         }
 
@@ -167,7 +167,7 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs... defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs... defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
         }
 

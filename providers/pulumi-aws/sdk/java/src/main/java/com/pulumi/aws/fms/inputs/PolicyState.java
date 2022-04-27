@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.fms.inputs;
 
-import com.pulumi.aws.fms.inputs.PolicyExcludeMapGetArgs;
-import com.pulumi.aws.fms.inputs.PolicyIncludeMapGetArgs;
-import com.pulumi.aws.fms.inputs.PolicySecurityServicePolicyDataGetArgs;
+import com.pulumi.aws.fms.inputs.PolicyExcludeMapArgs;
+import com.pulumi.aws.fms.inputs.PolicyIncludeMapArgs;
+import com.pulumi.aws.fms.inputs.PolicySecurityServicePolicyDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -48,13 +48,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeMap")
-    private @Nullable Output<PolicyExcludeMapGetArgs> excludeMap;
+    private @Nullable Output<PolicyExcludeMapArgs> excludeMap;
 
     /**
      * @return A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
-    public Optional<Output<PolicyExcludeMapGetArgs>> excludeMap() {
+    public Optional<Output<PolicyExcludeMapArgs>> excludeMap() {
         return Optional.ofNullable(this.excludeMap);
     }
 
@@ -78,13 +78,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includeMap")
-    private @Nullable Output<PolicyIncludeMapGetArgs> includeMap;
+    private @Nullable Output<PolicyIncludeMapArgs> includeMap;
 
     /**
      * @return A map of lists of accounts and OU&#39;s to include in the policy.
      * 
      */
-    public Optional<Output<PolicyIncludeMapGetArgs>> includeMap() {
+    public Optional<Output<PolicyIncludeMapArgs>> includeMap() {
         return Optional.ofNullable(this.includeMap);
     }
 
@@ -183,13 +183,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityServicePolicyData")
-    private @Nullable Output<PolicySecurityServicePolicyDataGetArgs> securityServicePolicyData;
+    private @Nullable Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
 
     /**
      * @return The objects to include in Security Service Policy Data. Documented below.
      * 
      */
-    public Optional<Output<PolicySecurityServicePolicyDataGetArgs>> securityServicePolicyData() {
+    public Optional<Output<PolicySecurityServicePolicyDataArgs>> securityServicePolicyData() {
         return Optional.ofNullable(this.securityServicePolicyData);
     }
 
@@ -264,7 +264,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludeMap(@Nullable Output<PolicyExcludeMapGetArgs> excludeMap) {
+        public Builder excludeMap(@Nullable Output<PolicyExcludeMapArgs> excludeMap) {
             $.excludeMap = excludeMap;
             return this;
         }
@@ -275,7 +275,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludeMap(PolicyExcludeMapGetArgs excludeMap) {
+        public Builder excludeMap(PolicyExcludeMapArgs excludeMap) {
             return excludeMap(Output.of(excludeMap));
         }
 
@@ -306,7 +306,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder includeMap(@Nullable Output<PolicyIncludeMapGetArgs> includeMap) {
+        public Builder includeMap(@Nullable Output<PolicyIncludeMapArgs> includeMap) {
             $.includeMap = includeMap;
             return this;
         }
@@ -317,7 +317,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder includeMap(PolicyIncludeMapGetArgs includeMap) {
+        public Builder includeMap(PolicyIncludeMapArgs includeMap) {
             return includeMap(Output.of(includeMap));
         }
 
@@ -463,7 +463,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder securityServicePolicyData(@Nullable Output<PolicySecurityServicePolicyDataGetArgs> securityServicePolicyData) {
+        public Builder securityServicePolicyData(@Nullable Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData) {
             $.securityServicePolicyData = securityServicePolicyData;
             return this;
         }
@@ -474,7 +474,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder securityServicePolicyData(PolicySecurityServicePolicyDataGetArgs securityServicePolicyData) {
+        public Builder securityServicePolicyData(PolicySecurityServicePolicyDataArgs securityServicePolicyData) {
             return securityServicePolicyData(Output.of(securityServicePolicyData));
         }
 

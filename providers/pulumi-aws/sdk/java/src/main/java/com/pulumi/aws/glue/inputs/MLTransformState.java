@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.MLTransformInputRecordTableGetArgs;
-import com.pulumi.aws.glue.inputs.MLTransformParametersGetArgs;
-import com.pulumi.aws.glue.inputs.MLTransformSchemaGetArgs;
+import com.pulumi.aws.glue.inputs.MLTransformInputRecordTableArgs;
+import com.pulumi.aws.glue.inputs.MLTransformParametersArgs;
+import com.pulumi.aws.glue.inputs.MLTransformSchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Double;
@@ -72,13 +72,13 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputRecordTables")
-    private @Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
+    private @Nullable Output<List<MLTransformInputRecordTableArgs>> inputRecordTables;
 
     /**
      * @return A list of AWS Glue table definitions used by the transform. see Input Record Tables.
      * 
      */
-    public Optional<Output<List<MLTransformInputRecordTableGetArgs>>> inputRecordTables() {
+    public Optional<Output<List<MLTransformInputRecordTableArgs>>> inputRecordTables() {
         return Optional.ofNullable(this.inputRecordTables);
     }
 
@@ -162,13 +162,13 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<MLTransformParametersGetArgs> parameters;
+    private @Nullable Output<MLTransformParametersArgs> parameters;
 
     /**
      * @return The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
      * 
      */
-    public Optional<Output<MLTransformParametersGetArgs>> parameters() {
+    public Optional<Output<MLTransformParametersArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -192,13 +192,13 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemas")
-    private @Nullable Output<List<MLTransformSchemaGetArgs>> schemas;
+    private @Nullable Output<List<MLTransformSchemaArgs>> schemas;
 
     /**
      * @return The object that represents the schema that this transform accepts. see Schema.
      * 
      */
-    public Optional<Output<List<MLTransformSchemaGetArgs>>> schemas() {
+    public Optional<Output<List<MLTransformSchemaArgs>>> schemas() {
         return Optional.ofNullable(this.schemas);
     }
 
@@ -370,7 +370,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inputRecordTables(@Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
+        public Builder inputRecordTables(@Nullable Output<List<MLTransformInputRecordTableArgs>> inputRecordTables) {
             $.inputRecordTables = inputRecordTables;
             return this;
         }
@@ -381,7 +381,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inputRecordTables(List<MLTransformInputRecordTableGetArgs> inputRecordTables) {
+        public Builder inputRecordTables(List<MLTransformInputRecordTableArgs> inputRecordTables) {
             return inputRecordTables(Output.of(inputRecordTables));
         }
 
@@ -391,7 +391,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inputRecordTables(MLTransformInputRecordTableGetArgs... inputRecordTables) {
+        public Builder inputRecordTables(MLTransformInputRecordTableArgs... inputRecordTables) {
             return inputRecordTables(List.of(inputRecordTables));
         }
 
@@ -506,7 +506,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<MLTransformParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Output<MLTransformParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -517,7 +517,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder parameters(MLTransformParametersGetArgs parameters) {
+        public Builder parameters(MLTransformParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -548,7 +548,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(@Nullable Output<List<MLTransformSchemaGetArgs>> schemas) {
+        public Builder schemas(@Nullable Output<List<MLTransformSchemaArgs>> schemas) {
             $.schemas = schemas;
             return this;
         }
@@ -559,7 +559,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(List<MLTransformSchemaGetArgs> schemas) {
+        public Builder schemas(List<MLTransformSchemaArgs> schemas) {
             return schemas(Output.of(schemas));
         }
 
@@ -569,7 +569,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(MLTransformSchemaGetArgs... schemas) {
+        public Builder schemas(MLTransformSchemaArgs... schemas) {
             return schemas(List.of(schemas));
         }
 

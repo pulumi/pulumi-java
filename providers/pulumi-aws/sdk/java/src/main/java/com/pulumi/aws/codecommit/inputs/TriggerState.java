@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.codecommit.inputs;
 
-import com.pulumi.aws.codecommit.inputs.TriggerTriggerGetArgs;
+import com.pulumi.aws.codecommit.inputs.TriggerTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -48,9 +48,9 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="triggers")
-    private @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
+    private @Nullable Output<List<TriggerTriggerArgs>> triggers;
 
-    public Optional<Output<List<TriggerTriggerGetArgs>>> triggers() {
+    public Optional<Output<List<TriggerTriggerArgs>>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
 
@@ -122,16 +122,16 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
             return repositoryName(Output.of(repositoryName));
         }
 
-        public Builder triggers(@Nullable Output<List<TriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Output<List<TriggerTriggerArgs>> triggers) {
             $.triggers = triggers;
             return this;
         }
 
-        public Builder triggers(List<TriggerTriggerGetArgs> triggers) {
+        public Builder triggers(List<TriggerTriggerArgs> triggers) {
             return triggers(Output.of(triggers));
         }
 
-        public Builder triggers(TriggerTriggerGetArgs... triggers) {
+        public Builder triggers(TriggerTriggerArgs... triggers) {
             return triggers(List.of(triggers));
         }
 

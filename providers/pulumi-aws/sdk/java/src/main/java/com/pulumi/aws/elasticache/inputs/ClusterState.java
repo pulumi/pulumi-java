@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticache.inputs;
 
-import com.pulumi.aws.elasticache.inputs.ClusterCacheNodeGetArgs;
+import com.pulumi.aws.elasticache.inputs.ClusterCacheNodeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -85,13 +85,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheNodes")
-    private @Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes;
+    private @Nullable Output<List<ClusterCacheNodeArgs>> cacheNodes;
 
     /**
      * @return List of node objects including `id`, `address`, `port` and `availability_zone`.
      * 
      */
-    public Optional<Output<List<ClusterCacheNodeGetArgs>>> cacheNodes() {
+    public Optional<Output<List<ClusterCacheNodeArgs>>> cacheNodes() {
         return Optional.ofNullable(this.cacheNodes);
     }
 
@@ -597,7 +597,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheNodes(@Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes) {
+        public Builder cacheNodes(@Nullable Output<List<ClusterCacheNodeArgs>> cacheNodes) {
             $.cacheNodes = cacheNodes;
             return this;
         }
@@ -608,7 +608,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheNodes(List<ClusterCacheNodeGetArgs> cacheNodes) {
+        public Builder cacheNodes(List<ClusterCacheNodeArgs> cacheNodes) {
             return cacheNodes(Output.of(cacheNodes));
         }
 
@@ -618,7 +618,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheNodes(ClusterCacheNodeGetArgs... cacheNodes) {
+        public Builder cacheNodes(ClusterCacheNodeArgs... cacheNodes) {
             return cacheNodes(List.of(cacheNodes));
         }
 

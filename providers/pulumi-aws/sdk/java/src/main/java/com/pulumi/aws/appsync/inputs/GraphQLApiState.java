@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.appsync.inputs;
 
-import com.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderGetArgs;
-import com.pulumi.aws.appsync.inputs.GraphQLApiLambdaAuthorizerConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.GraphQLApiLogConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigGetArgs;
+import com.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderArgs;
+import com.pulumi.aws.appsync.inputs.GraphQLApiLambdaAuthorizerConfigArgs;
+import com.pulumi.aws.appsync.inputs.GraphQLApiLogConfigArgs;
+import com.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigArgs;
+import com.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -28,13 +28,13 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalAuthenticationProviders")
-    private @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
+    private @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders;
 
     /**
      * @return One or more additional authentication providers for the GraphqlApi. Defined below.
      * 
      */
-    public Optional<Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>>> additionalAuthenticationProviders() {
+    public Optional<Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>>> additionalAuthenticationProviders() {
         return Optional.ofNullable(this.additionalAuthenticationProviders);
     }
 
@@ -73,13 +73,13 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaAuthorizerConfig")
-    private @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
+    private @Nullable Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
     /**
      * @return Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    public Optional<Output<GraphQLApiLambdaAuthorizerConfigGetArgs>> lambdaAuthorizerConfig() {
+    public Optional<Output<GraphQLApiLambdaAuthorizerConfigArgs>> lambdaAuthorizerConfig() {
         return Optional.ofNullable(this.lambdaAuthorizerConfig);
     }
 
@@ -88,13 +88,13 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
+    private @Nullable Output<GraphQLApiLogConfigArgs> logConfig;
 
     /**
      * @return Nested argument containing logging configuration. Defined below.
      * 
      */
-    public Optional<Output<GraphQLApiLogConfigGetArgs>> logConfig() {
+    public Optional<Output<GraphQLApiLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -118,13 +118,13 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openidConnectConfig")
-    private @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
+    private @Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig;
 
     /**
      * @return Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    public Optional<Output<GraphQLApiOpenidConnectConfigGetArgs>> openidConnectConfig() {
+    public Optional<Output<GraphQLApiOpenidConnectConfigArgs>> openidConnectConfig() {
         return Optional.ofNullable(this.openidConnectConfig);
     }
 
@@ -193,13 +193,13 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPoolConfig")
-    private @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
+    private @Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig;
 
     /**
      * @return The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    public Optional<Output<GraphQLApiUserPoolConfigGetArgs>> userPoolConfig() {
+    public Optional<Output<GraphQLApiUserPoolConfigArgs>> userPoolConfig() {
         return Optional.ofNullable(this.userPoolConfig);
     }
 
@@ -260,7 +260,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticationProviders(@Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders) {
+        public Builder additionalAuthenticationProviders(@Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders) {
             $.additionalAuthenticationProviders = additionalAuthenticationProviders;
             return this;
         }
@@ -271,7 +271,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticationProviders(List<GraphQLApiAdditionalAuthenticationProviderGetArgs> additionalAuthenticationProviders) {
+        public Builder additionalAuthenticationProviders(List<GraphQLApiAdditionalAuthenticationProviderArgs> additionalAuthenticationProviders) {
             return additionalAuthenticationProviders(Output.of(additionalAuthenticationProviders));
         }
 
@@ -281,7 +281,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProviderGetArgs... additionalAuthenticationProviders) {
+        public Builder additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProviderArgs... additionalAuthenticationProviders) {
             return additionalAuthenticationProviders(List.of(additionalAuthenticationProviders));
         }
 
@@ -333,7 +333,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig) {
             $.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
@@ -344,7 +344,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaAuthorizerConfig(GraphQLApiLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(GraphQLApiLambdaAuthorizerConfigArgs lambdaAuthorizerConfig) {
             return lambdaAuthorizerConfig(Output.of(lambdaAuthorizerConfig));
         }
 
@@ -354,7 +354,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<GraphQLApiLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<GraphQLApiLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -365,7 +365,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(GraphQLApiLogConfigGetArgs logConfig) {
+        public Builder logConfig(GraphQLApiLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -396,7 +396,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openidConnectConfig(@Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig) {
             $.openidConnectConfig = openidConnectConfig;
             return this;
         }
@@ -407,7 +407,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openidConnectConfig(GraphQLApiOpenidConnectConfigGetArgs openidConnectConfig) {
+        public Builder openidConnectConfig(GraphQLApiOpenidConnectConfigArgs openidConnectConfig) {
             return openidConnectConfig(Output.of(openidConnectConfig));
         }
 
@@ -501,7 +501,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userPoolConfig(@Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig) {
+        public Builder userPoolConfig(@Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig) {
             $.userPoolConfig = userPoolConfig;
             return this;
         }
@@ -512,7 +512,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userPoolConfig(GraphQLApiUserPoolConfigGetArgs userPoolConfig) {
+        public Builder userPoolConfig(GraphQLApiUserPoolConfigArgs userPoolConfig) {
             return userPoolConfig(Output.of(userPoolConfig));
         }
 

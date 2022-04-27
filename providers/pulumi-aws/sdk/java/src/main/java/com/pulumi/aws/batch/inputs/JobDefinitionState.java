@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.batch.inputs;
 
-import com.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyGetArgs;
-import com.pulumi.aws.batch.inputs.JobDefinitionTimeoutGetArgs;
+import com.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyArgs;
+import com.pulumi.aws.batch.inputs.JobDefinitionTimeoutArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -119,14 +119,14 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="retryStrategy")
-    private @Nullable Output<JobDefinitionRetryStrategyGetArgs> retryStrategy;
+    private @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
 
     /**
      * @return Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
      * Maximum number of `retry_strategy` is `1`.  Defined below.
      * 
      */
-    public Optional<Output<JobDefinitionRetryStrategyGetArgs>> retryStrategy() {
+    public Optional<Output<JobDefinitionRetryStrategyArgs>> retryStrategy() {
         return Optional.ofNullable(this.retryStrategy);
     }
 
@@ -180,13 +180,13 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeout")
-    private @Nullable Output<JobDefinitionTimeoutGetArgs> timeout;
+    private @Nullable Output<JobDefinitionTimeoutArgs> timeout;
 
     /**
      * @return Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
      * 
      */
-    public Optional<Output<JobDefinitionTimeoutGetArgs>> timeout() {
+    public Optional<Output<JobDefinitionTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 
@@ -385,7 +385,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyGetArgs> retryStrategy) {
+        public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy) {
             $.retryStrategy = retryStrategy;
             return this;
         }
@@ -397,7 +397,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder retryStrategy(JobDefinitionRetryStrategyGetArgs retryStrategy) {
+        public Builder retryStrategy(JobDefinitionRetryStrategyArgs retryStrategy) {
             return retryStrategy(Output.of(retryStrategy));
         }
 
@@ -470,7 +470,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder timeout(@Nullable Output<JobDefinitionTimeoutGetArgs> timeout) {
+        public Builder timeout(@Nullable Output<JobDefinitionTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
@@ -481,7 +481,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder timeout(JobDefinitionTimeoutGetArgs timeout) {
+        public Builder timeout(JobDefinitionTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }
 

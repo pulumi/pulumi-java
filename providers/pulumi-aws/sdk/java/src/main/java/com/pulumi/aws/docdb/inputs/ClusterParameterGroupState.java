@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.docdb.inputs;
 
-import com.pulumi.aws.docdb.inputs.ClusterParameterGroupParameterGetArgs;
+import com.pulumi.aws.docdb.inputs.ClusterParameterGroupParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -98,13 +98,13 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<ClusterParameterGroupParameterGetArgs>> parameters;
+    private @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
 
     /**
      * @return A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
      * 
      */
-    public Optional<Output<List<ClusterParameterGroupParameterGetArgs>>> parameters() {
+    public Optional<Output<List<ClusterParameterGroupParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -280,7 +280,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -291,7 +291,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(List<ClusterParameterGroupParameterGetArgs> parameters) {
+        public Builder parameters(List<ClusterParameterGroupParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -301,7 +301,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(ClusterParameterGroupParameterGetArgs... parameters) {
+        public Builder parameters(ClusterParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
