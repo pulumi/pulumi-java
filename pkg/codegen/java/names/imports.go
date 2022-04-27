@@ -48,7 +48,9 @@ func (fqn FQN) Equal(other FQN) bool {
 	return true
 }
 
-func (fqn FQN) BaseName() Ident {
+// The base name. For example if the current FQN represents
+// java.lang.Boolean, BaseIdent is Boolean.
+func (fqn FQN) BaseIdent() Ident {
 	return fqn.id
 }
 

@@ -264,7 +264,7 @@ func (dg *defaultsGen) enumReference(
 	dv *schema.DefaultValue) (string, error) {
 
 	enumFQN := dg.mod.typeStringForEnumType(enumType).Type
-	enumName := enumFQN.BaseName().String()
+	enumName := enumFQN.BaseIdent().String()
 
 	for _, e := range enumType.Elements {
 		if e.Value != dv.Value {
