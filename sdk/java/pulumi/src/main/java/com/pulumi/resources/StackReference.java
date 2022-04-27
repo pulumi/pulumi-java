@@ -109,6 +109,17 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
      */
+    public Output<?> getOutput(String name) {
+        return this.getOutput(Output.of(name));
+    }
+
+    /**
+     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
+     * <p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return An {@link Output} containing the requested value.
+     */
     public Output<?> getOutput(Output<String> name) {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
@@ -117,6 +128,17 @@ public class StackReference extends CustomResource {
                 v -> Maps.tryGetValue(v.t2, v.t1).orElse(null));
 
         return Internal.of(value).withIsSecret(isSecretOutputName(name));
+    }
+
+    /**
+     * Fetches the value of the named stack output, or throws an error if the output was not found.
+     * <p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return An {@link Output} containing the requested value.
+     */
+    public Output<?> requireOutput(String name) {
+        return this.requireOutput(Output.of(name));
     }
 
     /**
@@ -144,6 +166,20 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
      */
+    public CompletableFuture<?> getValueAsync(String name) {
+        return this.getValueAsync(Output.of(name));
+    }
+
+    /**
+     * Fetches the value of the named stack output. May return null if the value is
+     * not known for some reason.
+     * <p>
+     * This operation is not supported (and will throw) for secret outputs.
+     * </p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return The value of the referenced stack output.
+     */
     public CompletableFuture<?> getValueAsync(Output<String> name) {
         return Internal.of(this.getOutput(name)).getDataAsync()
                 .thenApply(data -> {
@@ -153,6 +189,19 @@ public class StackReference extends CustomResource {
                     }
                     return data.getValueNullable();
                 });
+    }
+
+    /**
+     * Fetches the value promptly of the named stack output. Throws an error if the stack output is not found.
+     * <p>
+     * This operation is not supported (and will throw) for secret outputs.
+     * </p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return The value of the referenced stack output.
+     */
+    public CompletableFuture<?> requireValueAsync(String name) {
+        return this.requireValueAsync(Output.of(name));
     }
 
     /**
