@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"io/ioutil"
 
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
@@ -40,4 +41,12 @@ func genClassFile(
 		buf.String())
 
 	return code, err
+}
+
+// Constructs a context with no-op writer, and throw-away import tracking.
+func newPseudoClassFileContext() *classFileContext {
+	pkg := names.Ident("com").FQN().Dot(names.Ident("example"))
+	className := names.Ident("Pseudo")
+	imports := names.NewImports(pkg, className)
+	return &classFileContext{ioutil.Discard, imports, pkg, className}
 }
