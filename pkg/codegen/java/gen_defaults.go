@@ -263,12 +263,9 @@ func (dg *defaultsGen) enumReference(
 	enumType *schema.EnumType,
 	dv *schema.DefaultValue) (string, error) {
 
-	pkg, err := parsePackageName(dg.mod.packageName)
-	if err != nil {
-		return "", err
-	}
-	enumName := tokenToName(enumType.Token)
-	enumFQN := pkg.Dot(names.Ident("enums")).Dot(names.Ident(enumName))
+	enumFQN := dg.mod.typeStringForEnumType(enumType).Type
+	enumName := enumFQN.BaseName().String()
+
 	for _, e := range enumType.Elements {
 		if e.Value != dv.Value {
 			continue

@@ -48,6 +48,10 @@ func (fqn FQN) Equal(other FQN) bool {
 	return true
 }
 
+func (fqn FQN) BaseName() Ident {
+	return fqn.id
+}
+
 type Imports struct {
 	pkg      FQN
 	pubClass Ident
