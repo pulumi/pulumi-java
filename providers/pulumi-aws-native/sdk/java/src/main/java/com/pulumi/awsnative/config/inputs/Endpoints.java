@@ -3,27 +3,1131 @@
 
 package com.pulumi.awsnative.config.inputs;
 
-import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-
-/**
- * The configuration for for customizing service endpoints.
- * 
- */
-public final class Endpoints extends com.pulumi.resources.InvokeArgs {
-
-    public static final Endpoints Empty = new Endpoints();
-
+@CustomType
+public final class Endpoints {
     /**
-     * Override the default endpoint for AWS Access Analyzer
+     * @return Override the default endpoint for AWS Access Analyzer
      * 
      */
-    @Import(name="accessanalyzer")
-    private @Nullable String accessanalyzer;
+    private final @Nullable String accessanalyzer;
+    /**
+     * @return Override the default endpoint for AWS Certificate Manager
+     * 
+     */
+    private final @Nullable String acm;
+    /**
+     * @return Override the default endpoint for AWS Certificate Manager Private Certificate Authority
+     * 
+     */
+    private final @Nullable String acmpca;
+    /**
+     * @return Override the default endpoint for AWS Amplify Console
+     * 
+     */
+    private final @Nullable String amplify;
+    /**
+     * @return Override the default endpoint for AWS AppConfig
+     * 
+     */
+    private final @Nullable String appconfig;
+    /**
+     * @return Override the default endpoint for AWS Application Auto Scaling
+     * 
+     */
+    private final @Nullable String applicationautoscaling;
+    /**
+     * @return Override the default endpoint for AWS CloudWatch Application Insights
+     * 
+     */
+    private final @Nullable String applicationinsights;
+    /**
+     * @return Override the default endpoint for AWS App Mesh
+     * 
+     */
+    private final @Nullable String appmesh;
+    /**
+     * @return Override the default endpoint for AWS App Runner
+     * 
+     */
+    private final @Nullable String apprunner;
+    /**
+     * @return Override the default endpoint for AWS AppStream 2.0
+     * 
+     */
+    private final @Nullable String appstream;
+    /**
+     * @return Override the default endpoint for AWS AppSync
+     * 
+     */
+    private final @Nullable String appsync;
+    /**
+     * @return Override the default endpoint for AWS Athena
+     * 
+     */
+    private final @Nullable String athena;
+    /**
+     * @return Override the default endpoint for AWS Audit Manager
+     * 
+     */
+    private final @Nullable String auditmanager;
+    /**
+     * @return Override the default endpoint for AWS Auto Scaling
+     * 
+     */
+    private final @Nullable String autoscaling;
+    /**
+     * @return Override the default endpoint for AWS Backup
+     * 
+     */
+    private final @Nullable String backup;
+    /**
+     * @return Override the default endpoint for AWS Batch
+     * 
+     */
+    private final @Nullable String batch;
+    /**
+     * @return Override the default endpoint for AWS Budgets
+     * 
+     */
+    private final @Nullable String budgets;
+    /**
+     * @return Override the default endpoint for Amazon Chime
+     * 
+     */
+    private final @Nullable String chime;
+    /**
+     * @return Override the default endpoint for AWS Cloud9
+     * 
+     */
+    private final @Nullable String cloud9;
+    /**
+     * @return Override the default endpoint for AWS CloudFormation
+     * 
+     */
+    private final @Nullable String cloudformation;
+    /**
+     * @return Override the default endpoint for AWS CloudFront
+     * 
+     */
+    private final @Nullable String cloudfront;
+    /**
+     * @return Override the default endpoint for AWS CloudHSM
+     * 
+     */
+    private final @Nullable String cloudhsm;
+    /**
+     * @return Override the default endpoint for AWS CloudSearch
+     * 
+     */
+    private final @Nullable String cloudsearch;
+    /**
+     * @return Override the default endpoint for AWS CloudTrail
+     * 
+     */
+    private final @Nullable String cloudtrail;
+    /**
+     * @return Override the default endpoint for AWS CloudWatch
+     * 
+     */
+    private final @Nullable String cloudwatch;
+    /**
+     * @return Override the default endpoint for AWS CloudWatch Events
+     * 
+     */
+    private final @Nullable String cloudwatchevents;
+    /**
+     * @return Override the default endpoint for AWS CloudWatch Logs
+     * 
+     */
+    private final @Nullable String cloudwatchlogs;
+    /**
+     * @return Override the default endpoint for AWS CodeArtifact
+     * 
+     */
+    private final @Nullable String codeartifact;
+    /**
+     * @return Override the default endpoint for AWS CodeBuild
+     * 
+     */
+    private final @Nullable String codebuild;
+    /**
+     * @return Override the default endpoint for AWS CodeCommit
+     * 
+     */
+    private final @Nullable String codecommit;
+    /**
+     * @return Override the default endpoint for AWS CodeDeploy
+     * 
+     */
+    private final @Nullable String codedeploy;
+    /**
+     * @return Override the default endpoint for AWS CodePipeline
+     * 
+     */
+    private final @Nullable String codepipeline;
+    /**
+     * @return Override the default endpoint for AWS CodeStart Connections
+     * 
+     */
+    private final @Nullable String codestarconnections;
+    /**
+     * @return Override the default endpoint for Amazon Cognito
+     * 
+     */
+    private final @Nullable String cognitoidentity;
+    /**
+     * @return Override the default endpoint for AWS Config
+     * 
+     */
+    private final @Nullable String configservice;
+    /**
+     * @return Override the default endpoint for Amazon Connect
+     * 
+     */
+    private final @Nullable String connect;
+    /**
+     * @return Override the default endpoint for AWS Cost and Usage Reports
+     * 
+     */
+    private final @Nullable String cur;
+    /**
+     * @return Override the default endpoint for AWS Data Exchange
+     * 
+     */
+    private final @Nullable String dataexchange;
+    /**
+     * @return Override the default endpoint for AWS Data Pipeline
+     * 
+     */
+    private final @Nullable String datapipeline;
+    /**
+     * @return Override the default endpoint for AWS DataSync
+     * 
+     */
+    private final @Nullable String datasync;
+    /**
+     * @return Override the default endpoint for AWS DynamoDB Accelerator
+     * 
+     */
+    private final @Nullable String dax;
+    /**
+     * @return Override the default endpoint for AWS Detective
+     * 
+     */
+    private final @Nullable String detective;
+    /**
+     * @return Override the default endpoint for AWS Device Farm
+     * 
+     */
+    private final @Nullable String devicefarm;
+    /**
+     * @return Override the default endpoint for AWS Direct Connect
+     * 
+     */
+    private final @Nullable String directconnect;
+    /**
+     * @return Override the default endpoint for AWS Data Lifecycle Manager
+     * 
+     */
+    private final @Nullable String dlm;
+    /**
+     * @return Override the default endpoint for AWS Database Migration Service
+     * 
+     */
+    private final @Nullable String dms;
+    /**
+     * @return Override the default endpoint for AWS DocumentDB
+     * 
+     */
+    private final @Nullable String docdb;
+    /**
+     * @return Override the default endpoint for AWS Directory Service
+     * 
+     */
+    private final @Nullable String ds;
+    /**
+     * @return Override the default endpoint for AWS DynamoDB
+     * 
+     */
+    private final @Nullable String dynamodb;
+    /**
+     * @return Override the default endpoint for AWS Elastic Compute Cloud (EC2)
+     * 
+     */
+    private final @Nullable String ec2;
+    /**
+     * @return Override the default endpoint for AWS Elastic Container Registry (ECR)
+     * 
+     */
+    private final @Nullable String ecr;
+    /**
+     * @return Override the default endpoint for AWS Elastic Container Registry (ECR) Public
+     * 
+     */
+    private final @Nullable String ecrpublic;
+    /**
+     * @return Override the default endpoint for AWS Elastic Container Service (ECS)
+     * 
+     */
+    private final @Nullable String ecs;
+    /**
+     * @return Override the default endpoint for AWS Elastic File System (EFS)
+     * 
+     */
+    private final @Nullable String efs;
+    /**
+     * @return Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
+     * 
+     */
+    private final @Nullable String eks;
+    /**
+     * @return Override the default endpoint for AWS ElastiCache
+     * 
+     */
+    private final @Nullable String elasticache;
+    /**
+     * @return Override the default endpoint for AWS Elastic Beanstalk
+     * 
+     */
+    private final @Nullable String elasticbeanstalk;
+    /**
+     * @return Override the default endpoint for AWS Elastic Transcoder
+     * 
+     */
+    private final @Nullable String elastictranscoder;
+    /**
+     * @return Override the default endpoint for AWS Elastic Load Balancing
+     * 
+     */
+    private final @Nullable String elb;
+    /**
+     * @return Override the default endpoint for AWS Elastic Load Balancing V2
+     * 
+     */
+    private final @Nullable String elbv2;
+    /**
+     * @return Override the default endpoint for AWS EMR
+     * 
+     */
+    private final @Nullable String emr;
+    /**
+     * @return Override the default endpoint for AWS EMR on EKS
+     * 
+     */
+    private final @Nullable String emrcontainers;
+    /**
+     * @return Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
+     * 
+     */
+    private final @Nullable String es;
+    /**
+     * @return Override the default endpoint for AWS Kinesis Data Firehose
+     * 
+     */
+    private final @Nullable String firehose;
+    /**
+     * @return Override the default endpoint for AWS Firewall Manager
+     * 
+     */
+    private final @Nullable String fms;
+    /**
+     * @return Override the default endpoint for Amazon Forecast
+     * 
+     */
+    private final @Nullable String forecast;
+    /**
+     * @return Override the default endpoint for AWS FSx
+     * 
+     */
+    private final @Nullable String fsx;
+    /**
+     * @return Override the default endpoint for AWS GameLift
+     * 
+     */
+    private final @Nullable String gamelift;
+    /**
+     * @return Override the default endpoint for Amazon S3 Glacier
+     * 
+     */
+    private final @Nullable String glacier;
+    /**
+     * @return Override the default endpoint for AWS Global Accelerator
+     * 
+     */
+    private final @Nullable String globalaccelerator;
+    /**
+     * @return Override the default endpoint for AWS Glue
+     * 
+     */
+    private final @Nullable String glue;
+    /**
+     * @return Override the default endpoint for AWS IoT Greengrass
+     * 
+     */
+    private final @Nullable String greengrass;
+    /**
+     * @return Override the default endpoint for AWS GuardDuty
+     * 
+     */
+    private final @Nullable String guardduty;
+    /**
+     * @return Override the default endpoint for AWS Identity and Access Management
+     * 
+     */
+    private final @Nullable String iam;
+    /**
+     * @return Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
+     * 
+     */
+    private final @Nullable String identitystore;
+    /**
+     * @return Override the default endpoint for AWS Image Builder
+     * 
+     */
+    private final @Nullable String imagebuilder;
+    /**
+     * @return Override the default endpoint for Amazon Inspector
+     * 
+     */
+    private final @Nullable String inspector;
+    /**
+     * @return Override the default endpoint for AWS IoT
+     * 
+     */
+    private final @Nullable String iot;
+    /**
+     * @return Override the default endpoint for AWS IoT Analytics
+     * 
+     */
+    private final @Nullable String iotanalytics;
+    /**
+     * @return Override the default endpoint for AWS IoT Events
+     * 
+     */
+    private final @Nullable String iotevents;
+    /**
+     * @return Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
+     * 
+     */
+    private final @Nullable String kafka;
+    /**
+     * @return Override the default endpoint for Amazon Kinesis
+     * 
+     */
+    private final @Nullable String kinesis;
+    /**
+     * @return Override the default endpoint for Amazon Kinesis Data Analytics
+     * 
+     */
+    private final @Nullable String kinesisanalytics;
+    /**
+     * @return Override the default endpoint for Amazon Kinesis Data Analytics V2
+     * 
+     */
+    private final @Nullable String kinesisanalyticsv2;
+    /**
+     * @return Override the default endpoint for Amazon Kinesis Video Streams
+     * 
+     */
+    private final @Nullable String kinesisvideo;
+    /**
+     * @return Override the default endpoint for AWS Key Management Service
+     * 
+     */
+    private final @Nullable String kms;
+    /**
+     * @return Override the default endpoint for AWS Lake Formation
+     * 
+     */
+    private final @Nullable String lakeformation;
+    /**
+     * @return Override the default endpoint for AWS Lambda
+     * 
+     */
+    private final @Nullable String lambda;
+    /**
+     * @return Override the default endpoint for Amazon Lex
+     * 
+     */
+    private final @Nullable String lexmodels;
+    /**
+     * @return Override the default endpoint for AWS License Manager
+     * 
+     */
+    private final @Nullable String licensemanager;
+    /**
+     * @return Override the default endpoint for Amazon Lightsail
+     * 
+     */
+    private final @Nullable String lightsail;
+    /**
+     * @return Override the default endpoint for Amazon Location
+     * 
+     */
+    private final @Nullable String location;
+    /**
+     * @return Override the default endpoint for Amazon Macie
+     * 
+     */
+    private final @Nullable String macie;
+    /**
+     * @return Override the default endpoint for Amazon Macie V2
+     * 
+     */
+    private final @Nullable String macie2;
+    /**
+     * @return Override the default endpoint for Amazon Managed Blockchain
+     * 
+     */
+    private final @Nullable String managedblockchain;
+    /**
+     * @return Override the default endpoint for AWS Marketplace Catalog
+     * 
+     */
+    private final @Nullable String marketplacecatalog;
+    /**
+     * @return Override the default endpoint for AWS MediaConnect
+     * 
+     */
+    private final @Nullable String mediaconnect;
+    /**
+     * @return Override the default endpoint for AWS MediaConvert
+     * 
+     */
+    private final @Nullable String mediaconvert;
+    /**
+     * @return Override the default endpoint for AWS MediaLive
+     * 
+     */
+    private final @Nullable String medialive;
+    /**
+     * @return Override the default endpoint for AWS MediaPackage
+     * 
+     */
+    private final @Nullable String mediapackage;
+    /**
+     * @return Override the default endpoint for AWS Elemental MediaStore container
+     * 
+     */
+    private final @Nullable String mediastore;
+    /**
+     * @return Override the default endpoint for AWS Elemental MediaStore asset
+     * 
+     */
+    private final @Nullable String mediastoredata;
+    /**
+     * @return Override the default endpoint for AWS MemoryDB for Redis
+     * 
+     */
+    private final @Nullable String memorydb;
+    /**
+     * @return Override the default endpoint for Amazon MQ
+     * 
+     */
+    private final @Nullable String mq;
+    /**
+     * @return Override the default endpoint for Amazon Managed Workflows for Apache Airflow
+     * 
+     */
+    private final @Nullable String mwaa;
+    /**
+     * @return Override the default endpoint for Amazon Neptune
+     * 
+     */
+    private final @Nullable String neptune;
+    /**
+     * @return Override the default endpoint for AWS Network Firewall
+     * 
+     */
+    private final @Nullable String networkfirewall;
+    /**
+     * @return Override the default endpoint for AWS Network Manager
+     * 
+     */
+    private final @Nullable String networkmanager;
+    /**
+     * @return Override the default endpoint for AWS OpsWorks
+     * 
+     */
+    private final @Nullable String opsworks;
+    /**
+     * @return Override the default endpoint for AWS Organizations
+     * 
+     */
+    private final @Nullable String organizations;
+    /**
+     * @return Override the default endpoint for AWS Outposts
+     * 
+     */
+    private final @Nullable String outposts;
+    /**
+     * @return Override the default endpoint for Amazon Personalize
+     * 
+     */
+    private final @Nullable String personalize;
+    /**
+     * @return Override the default endpoint for Amazon Pinpoint
+     * 
+     */
+    private final @Nullable String pinpoint;
+    /**
+     * @return Override the default endpoint for Amazon Web Services Price List Service
+     * 
+     */
+    private final @Nullable String pricing;
+    /**
+     * @return Override the default endpoint for Amazon QLDB
+     * 
+     */
+    private final @Nullable String qldb;
+    /**
+     * @return Override the default endpoint for Amazon QuickSight
+     * 
+     */
+    private final @Nullable String quicksight;
+    /**
+     * @return Override the default endpoint for AWS Resource Access Manager
+     * 
+     */
+    private final @Nullable String ram;
+    /**
+     * @return Override the default endpoint for Amazon Relational Database Service
+     * 
+     */
+    private final @Nullable String rds;
+    /**
+     * @return Override the default endpoint for Amazon Redshift
+     * 
+     */
+    private final @Nullable String redshift;
+    /**
+     * @return Override the default endpoint for AWS Resource Groups
+     * 
+     */
+    private final @Nullable String resourcegroups;
+    /**
+     * @return Override the default endpoint for AWS Resource Groups Tagging API
+     * 
+     */
+    private final @Nullable String resourcegroupstaggingapi;
+    /**
+     * @return Override the default endpoint for Amazon Route 53
+     * 
+     */
+    private final @Nullable String route53;
+    /**
+     * @return Override the default endpoint for Amazon Route 53 Domains
+     * 
+     */
+    private final @Nullable String route53domains;
+    /**
+     * @return Override the default endpoint for Amazon Route 53 Recovery Control
+     * 
+     */
+    private final @Nullable String route53recoverycontrolconfig;
+    /**
+     * @return Override the default endpoint for Amazon Route 53 Recovery Readiness
+     * 
+     */
+    private final @Nullable String route53recoveryreadiness;
+    /**
+     * @return Override the default endpoint for Amazon Route 53 Resolver
+     * 
+     */
+    private final @Nullable String route53resolver;
+    /**
+     * @return Override the default endpoint for Amazon Simple Storage Service (S3)
+     * 
+     */
+    private final @Nullable String s3;
+    /**
+     * @return Override the default endpoint for Amazon Simple Storage Service (S3) Control
+     * 
+     */
+    private final @Nullable String s3control;
+    /**
+     * @return Override the default endpoint for Amazon S3 on Outposts
+     * 
+     */
+    private final @Nullable String s3outposts;
+    /**
+     * @return Override the default endpoint for AWS SageMaker
+     * 
+     */
+    private final @Nullable String sagemaker;
+    /**
+     * @return Override the default endpoint for Amazon EventBridge Schema Registry
+     * 
+     */
+    private final @Nullable String schemas;
+    /**
+     * @return Override the default endpoint for Amazon SimpleDB
+     * 
+     */
+    private final @Nullable String sdb;
+    /**
+     * @return Override the default endpoint for AWS Secrets Manager
+     * 
+     */
+    private final @Nullable String secretsmanager;
+    /**
+     * @return Override the default endpoint for AWS Security Hub
+     * 
+     */
+    private final @Nullable String securityhub;
+    /**
+     * @return Override the default endpoint for AWS Serverless Application Repository
+     * 
+     */
+    private final @Nullable String serverlessrepo;
+    /**
+     * @return Override the default endpoint for AWS Service Catalog
+     * 
+     */
+    private final @Nullable String servicecatalog;
+    /**
+     * @return Override the default endpoint for AWS Cloud Map
+     * 
+     */
+    private final @Nullable String servicediscovery;
+    /**
+     * @return Override the default endpoint for AWS Service Quotas
+     * 
+     */
+    private final @Nullable String servicequotas;
+    /**
+     * @return Override the default endpoint for Amazon Simple Email Service (SES)
+     * 
+     */
+    private final @Nullable String ses;
+    /**
+     * @return Override the default endpoint for AWS Shield Advanced API
+     * 
+     */
+    private final @Nullable String shield;
+    /**
+     * @return Override the default endpoint for AWS Signer
+     * 
+     */
+    private final @Nullable String signer;
+    /**
+     * @return Override the default endpoint for Amazon Simple Notification Service (SNS)
+     * 
+     */
+    private final @Nullable String sns;
+    /**
+     * @return Override the default endpoint for Amazon Simple Queue Service (SQS)
+     * 
+     */
+    private final @Nullable String sqs;
+    /**
+     * @return Override the default endpoint for AWS Systems Manager
+     * 
+     */
+    private final @Nullable String ssm;
+    /**
+     * @return Override the default endpoint for AWS Single Sign On (SSO)
+     * 
+     */
+    private final @Nullable String ssoadmin;
+    /**
+     * @return Override the default endpoint for AWS Step Functions
+     * 
+     */
+    private final @Nullable String stepfunctions;
+    /**
+     * @return Override the default endpoint for AWS Storage Gateway
+     * 
+     */
+    private final @Nullable String storagegateway;
+    /**
+     * @return Override the default endpoint for AWS Security Token Service (STS)
+     * 
+     */
+    private final @Nullable String sts;
+    /**
+     * @return Override the default endpoint for Amazon Simple Workflow Service (SWF)
+     * 
+     */
+    private final @Nullable String swf;
+    /**
+     * @return Override the default endpoint for Amazon CloudWatch Synthetics
+     * 
+     */
+    private final @Nullable String synthetics;
+    /**
+     * @return Override the default endpoint for Amazon Timestream
+     * 
+     */
+    private final @Nullable String timestreamwrite;
+    /**
+     * @return Override the default endpoint for AWS Transfer Family
+     * 
+     */
+    private final @Nullable String transfer;
+    /**
+     * @return Override the default endpoint for AWS WAF Classic
+     * 
+     */
+    private final @Nullable String waf;
+    /**
+     * @return Override the default endpoint for AWS WAF Regional Classic
+     * 
+     */
+    private final @Nullable String wafregional;
+    /**
+     * @return Override the default endpoint for AWS WAF V2
+     * 
+     */
+    private final @Nullable String wafv2;
+    /**
+     * @return Override the default endpoint for Amazon WorkLink
+     * 
+     */
+    private final @Nullable String worklink;
+    /**
+     * @return Override the default endpoint for Amazon WorkMail
+     * 
+     */
+    private final @Nullable String workmail;
+    /**
+     * @return Override the default endpoint for Amazon WorkSpaces
+     * 
+     */
+    private final @Nullable String workspaces;
+    /**
+     * @return Override the default endpoint for AWS X-Ray
+     * 
+     */
+    private final @Nullable String xray;
+
+    @CustomType.Constructor
+    private Endpoints(
+        @CustomType.Parameter("accessanalyzer") @Nullable String accessanalyzer,
+        @CustomType.Parameter("acm") @Nullable String acm,
+        @CustomType.Parameter("acmpca") @Nullable String acmpca,
+        @CustomType.Parameter("amplify") @Nullable String amplify,
+        @CustomType.Parameter("appconfig") @Nullable String appconfig,
+        @CustomType.Parameter("applicationautoscaling") @Nullable String applicationautoscaling,
+        @CustomType.Parameter("applicationinsights") @Nullable String applicationinsights,
+        @CustomType.Parameter("appmesh") @Nullable String appmesh,
+        @CustomType.Parameter("apprunner") @Nullable String apprunner,
+        @CustomType.Parameter("appstream") @Nullable String appstream,
+        @CustomType.Parameter("appsync") @Nullable String appsync,
+        @CustomType.Parameter("athena") @Nullable String athena,
+        @CustomType.Parameter("auditmanager") @Nullable String auditmanager,
+        @CustomType.Parameter("autoscaling") @Nullable String autoscaling,
+        @CustomType.Parameter("backup") @Nullable String backup,
+        @CustomType.Parameter("batch") @Nullable String batch,
+        @CustomType.Parameter("budgets") @Nullable String budgets,
+        @CustomType.Parameter("chime") @Nullable String chime,
+        @CustomType.Parameter("cloud9") @Nullable String cloud9,
+        @CustomType.Parameter("cloudformation") @Nullable String cloudformation,
+        @CustomType.Parameter("cloudfront") @Nullable String cloudfront,
+        @CustomType.Parameter("cloudhsm") @Nullable String cloudhsm,
+        @CustomType.Parameter("cloudsearch") @Nullable String cloudsearch,
+        @CustomType.Parameter("cloudtrail") @Nullable String cloudtrail,
+        @CustomType.Parameter("cloudwatch") @Nullable String cloudwatch,
+        @CustomType.Parameter("cloudwatchevents") @Nullable String cloudwatchevents,
+        @CustomType.Parameter("cloudwatchlogs") @Nullable String cloudwatchlogs,
+        @CustomType.Parameter("codeartifact") @Nullable String codeartifact,
+        @CustomType.Parameter("codebuild") @Nullable String codebuild,
+        @CustomType.Parameter("codecommit") @Nullable String codecommit,
+        @CustomType.Parameter("codedeploy") @Nullable String codedeploy,
+        @CustomType.Parameter("codepipeline") @Nullable String codepipeline,
+        @CustomType.Parameter("codestarconnections") @Nullable String codestarconnections,
+        @CustomType.Parameter("cognitoidentity") @Nullable String cognitoidentity,
+        @CustomType.Parameter("configservice") @Nullable String configservice,
+        @CustomType.Parameter("connect") @Nullable String connect,
+        @CustomType.Parameter("cur") @Nullable String cur,
+        @CustomType.Parameter("dataexchange") @Nullable String dataexchange,
+        @CustomType.Parameter("datapipeline") @Nullable String datapipeline,
+        @CustomType.Parameter("datasync") @Nullable String datasync,
+        @CustomType.Parameter("dax") @Nullable String dax,
+        @CustomType.Parameter("detective") @Nullable String detective,
+        @CustomType.Parameter("devicefarm") @Nullable String devicefarm,
+        @CustomType.Parameter("directconnect") @Nullable String directconnect,
+        @CustomType.Parameter("dlm") @Nullable String dlm,
+        @CustomType.Parameter("dms") @Nullable String dms,
+        @CustomType.Parameter("docdb") @Nullable String docdb,
+        @CustomType.Parameter("ds") @Nullable String ds,
+        @CustomType.Parameter("dynamodb") @Nullable String dynamodb,
+        @CustomType.Parameter("ec2") @Nullable String ec2,
+        @CustomType.Parameter("ecr") @Nullable String ecr,
+        @CustomType.Parameter("ecrpublic") @Nullable String ecrpublic,
+        @CustomType.Parameter("ecs") @Nullable String ecs,
+        @CustomType.Parameter("efs") @Nullable String efs,
+        @CustomType.Parameter("eks") @Nullable String eks,
+        @CustomType.Parameter("elasticache") @Nullable String elasticache,
+        @CustomType.Parameter("elasticbeanstalk") @Nullable String elasticbeanstalk,
+        @CustomType.Parameter("elastictranscoder") @Nullable String elastictranscoder,
+        @CustomType.Parameter("elb") @Nullable String elb,
+        @CustomType.Parameter("elbv2") @Nullable String elbv2,
+        @CustomType.Parameter("emr") @Nullable String emr,
+        @CustomType.Parameter("emrcontainers") @Nullable String emrcontainers,
+        @CustomType.Parameter("es") @Nullable String es,
+        @CustomType.Parameter("firehose") @Nullable String firehose,
+        @CustomType.Parameter("fms") @Nullable String fms,
+        @CustomType.Parameter("forecast") @Nullable String forecast,
+        @CustomType.Parameter("fsx") @Nullable String fsx,
+        @CustomType.Parameter("gamelift") @Nullable String gamelift,
+        @CustomType.Parameter("glacier") @Nullable String glacier,
+        @CustomType.Parameter("globalaccelerator") @Nullable String globalaccelerator,
+        @CustomType.Parameter("glue") @Nullable String glue,
+        @CustomType.Parameter("greengrass") @Nullable String greengrass,
+        @CustomType.Parameter("guardduty") @Nullable String guardduty,
+        @CustomType.Parameter("iam") @Nullable String iam,
+        @CustomType.Parameter("identitystore") @Nullable String identitystore,
+        @CustomType.Parameter("imagebuilder") @Nullable String imagebuilder,
+        @CustomType.Parameter("inspector") @Nullable String inspector,
+        @CustomType.Parameter("iot") @Nullable String iot,
+        @CustomType.Parameter("iotanalytics") @Nullable String iotanalytics,
+        @CustomType.Parameter("iotevents") @Nullable String iotevents,
+        @CustomType.Parameter("kafka") @Nullable String kafka,
+        @CustomType.Parameter("kinesis") @Nullable String kinesis,
+        @CustomType.Parameter("kinesisanalytics") @Nullable String kinesisanalytics,
+        @CustomType.Parameter("kinesisanalyticsv2") @Nullable String kinesisanalyticsv2,
+        @CustomType.Parameter("kinesisvideo") @Nullable String kinesisvideo,
+        @CustomType.Parameter("kms") @Nullable String kms,
+        @CustomType.Parameter("lakeformation") @Nullable String lakeformation,
+        @CustomType.Parameter("lambda") @Nullable String lambda,
+        @CustomType.Parameter("lexmodels") @Nullable String lexmodels,
+        @CustomType.Parameter("licensemanager") @Nullable String licensemanager,
+        @CustomType.Parameter("lightsail") @Nullable String lightsail,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("macie") @Nullable String macie,
+        @CustomType.Parameter("macie2") @Nullable String macie2,
+        @CustomType.Parameter("managedblockchain") @Nullable String managedblockchain,
+        @CustomType.Parameter("marketplacecatalog") @Nullable String marketplacecatalog,
+        @CustomType.Parameter("mediaconnect") @Nullable String mediaconnect,
+        @CustomType.Parameter("mediaconvert") @Nullable String mediaconvert,
+        @CustomType.Parameter("medialive") @Nullable String medialive,
+        @CustomType.Parameter("mediapackage") @Nullable String mediapackage,
+        @CustomType.Parameter("mediastore") @Nullable String mediastore,
+        @CustomType.Parameter("mediastoredata") @Nullable String mediastoredata,
+        @CustomType.Parameter("memorydb") @Nullable String memorydb,
+        @CustomType.Parameter("mq") @Nullable String mq,
+        @CustomType.Parameter("mwaa") @Nullable String mwaa,
+        @CustomType.Parameter("neptune") @Nullable String neptune,
+        @CustomType.Parameter("networkfirewall") @Nullable String networkfirewall,
+        @CustomType.Parameter("networkmanager") @Nullable String networkmanager,
+        @CustomType.Parameter("opsworks") @Nullable String opsworks,
+        @CustomType.Parameter("organizations") @Nullable String organizations,
+        @CustomType.Parameter("outposts") @Nullable String outposts,
+        @CustomType.Parameter("personalize") @Nullable String personalize,
+        @CustomType.Parameter("pinpoint") @Nullable String pinpoint,
+        @CustomType.Parameter("pricing") @Nullable String pricing,
+        @CustomType.Parameter("qldb") @Nullable String qldb,
+        @CustomType.Parameter("quicksight") @Nullable String quicksight,
+        @CustomType.Parameter("ram") @Nullable String ram,
+        @CustomType.Parameter("rds") @Nullable String rds,
+        @CustomType.Parameter("redshift") @Nullable String redshift,
+        @CustomType.Parameter("resourcegroups") @Nullable String resourcegroups,
+        @CustomType.Parameter("resourcegroupstaggingapi") @Nullable String resourcegroupstaggingapi,
+        @CustomType.Parameter("route53") @Nullable String route53,
+        @CustomType.Parameter("route53domains") @Nullable String route53domains,
+        @CustomType.Parameter("route53recoverycontrolconfig") @Nullable String route53recoverycontrolconfig,
+        @CustomType.Parameter("route53recoveryreadiness") @Nullable String route53recoveryreadiness,
+        @CustomType.Parameter("route53resolver") @Nullable String route53resolver,
+        @CustomType.Parameter("s3") @Nullable String s3,
+        @CustomType.Parameter("s3control") @Nullable String s3control,
+        @CustomType.Parameter("s3outposts") @Nullable String s3outposts,
+        @CustomType.Parameter("sagemaker") @Nullable String sagemaker,
+        @CustomType.Parameter("schemas") @Nullable String schemas,
+        @CustomType.Parameter("sdb") @Nullable String sdb,
+        @CustomType.Parameter("secretsmanager") @Nullable String secretsmanager,
+        @CustomType.Parameter("securityhub") @Nullable String securityhub,
+        @CustomType.Parameter("serverlessrepo") @Nullable String serverlessrepo,
+        @CustomType.Parameter("servicecatalog") @Nullable String servicecatalog,
+        @CustomType.Parameter("servicediscovery") @Nullable String servicediscovery,
+        @CustomType.Parameter("servicequotas") @Nullable String servicequotas,
+        @CustomType.Parameter("ses") @Nullable String ses,
+        @CustomType.Parameter("shield") @Nullable String shield,
+        @CustomType.Parameter("signer") @Nullable String signer,
+        @CustomType.Parameter("sns") @Nullable String sns,
+        @CustomType.Parameter("sqs") @Nullable String sqs,
+        @CustomType.Parameter("ssm") @Nullable String ssm,
+        @CustomType.Parameter("ssoadmin") @Nullable String ssoadmin,
+        @CustomType.Parameter("stepfunctions") @Nullable String stepfunctions,
+        @CustomType.Parameter("storagegateway") @Nullable String storagegateway,
+        @CustomType.Parameter("sts") @Nullable String sts,
+        @CustomType.Parameter("swf") @Nullable String swf,
+        @CustomType.Parameter("synthetics") @Nullable String synthetics,
+        @CustomType.Parameter("timestreamwrite") @Nullable String timestreamwrite,
+        @CustomType.Parameter("transfer") @Nullable String transfer,
+        @CustomType.Parameter("waf") @Nullable String waf,
+        @CustomType.Parameter("wafregional") @Nullable String wafregional,
+        @CustomType.Parameter("wafv2") @Nullable String wafv2,
+        @CustomType.Parameter("worklink") @Nullable String worklink,
+        @CustomType.Parameter("workmail") @Nullable String workmail,
+        @CustomType.Parameter("workspaces") @Nullable String workspaces,
+        @CustomType.Parameter("xray") @Nullable String xray) {
+        this.accessanalyzer = accessanalyzer;
+        this.acm = acm;
+        this.acmpca = acmpca;
+        this.amplify = amplify;
+        this.appconfig = appconfig;
+        this.applicationautoscaling = applicationautoscaling;
+        this.applicationinsights = applicationinsights;
+        this.appmesh = appmesh;
+        this.apprunner = apprunner;
+        this.appstream = appstream;
+        this.appsync = appsync;
+        this.athena = athena;
+        this.auditmanager = auditmanager;
+        this.autoscaling = autoscaling;
+        this.backup = backup;
+        this.batch = batch;
+        this.budgets = budgets;
+        this.chime = chime;
+        this.cloud9 = cloud9;
+        this.cloudformation = cloudformation;
+        this.cloudfront = cloudfront;
+        this.cloudhsm = cloudhsm;
+        this.cloudsearch = cloudsearch;
+        this.cloudtrail = cloudtrail;
+        this.cloudwatch = cloudwatch;
+        this.cloudwatchevents = cloudwatchevents;
+        this.cloudwatchlogs = cloudwatchlogs;
+        this.codeartifact = codeartifact;
+        this.codebuild = codebuild;
+        this.codecommit = codecommit;
+        this.codedeploy = codedeploy;
+        this.codepipeline = codepipeline;
+        this.codestarconnections = codestarconnections;
+        this.cognitoidentity = cognitoidentity;
+        this.configservice = configservice;
+        this.connect = connect;
+        this.cur = cur;
+        this.dataexchange = dataexchange;
+        this.datapipeline = datapipeline;
+        this.datasync = datasync;
+        this.dax = dax;
+        this.detective = detective;
+        this.devicefarm = devicefarm;
+        this.directconnect = directconnect;
+        this.dlm = dlm;
+        this.dms = dms;
+        this.docdb = docdb;
+        this.ds = ds;
+        this.dynamodb = dynamodb;
+        this.ec2 = ec2;
+        this.ecr = ecr;
+        this.ecrpublic = ecrpublic;
+        this.ecs = ecs;
+        this.efs = efs;
+        this.eks = eks;
+        this.elasticache = elasticache;
+        this.elasticbeanstalk = elasticbeanstalk;
+        this.elastictranscoder = elastictranscoder;
+        this.elb = elb;
+        this.elbv2 = elbv2;
+        this.emr = emr;
+        this.emrcontainers = emrcontainers;
+        this.es = es;
+        this.firehose = firehose;
+        this.fms = fms;
+        this.forecast = forecast;
+        this.fsx = fsx;
+        this.gamelift = gamelift;
+        this.glacier = glacier;
+        this.globalaccelerator = globalaccelerator;
+        this.glue = glue;
+        this.greengrass = greengrass;
+        this.guardduty = guardduty;
+        this.iam = iam;
+        this.identitystore = identitystore;
+        this.imagebuilder = imagebuilder;
+        this.inspector = inspector;
+        this.iot = iot;
+        this.iotanalytics = iotanalytics;
+        this.iotevents = iotevents;
+        this.kafka = kafka;
+        this.kinesis = kinesis;
+        this.kinesisanalytics = kinesisanalytics;
+        this.kinesisanalyticsv2 = kinesisanalyticsv2;
+        this.kinesisvideo = kinesisvideo;
+        this.kms = kms;
+        this.lakeformation = lakeformation;
+        this.lambda = lambda;
+        this.lexmodels = lexmodels;
+        this.licensemanager = licensemanager;
+        this.lightsail = lightsail;
+        this.location = location;
+        this.macie = macie;
+        this.macie2 = macie2;
+        this.managedblockchain = managedblockchain;
+        this.marketplacecatalog = marketplacecatalog;
+        this.mediaconnect = mediaconnect;
+        this.mediaconvert = mediaconvert;
+        this.medialive = medialive;
+        this.mediapackage = mediapackage;
+        this.mediastore = mediastore;
+        this.mediastoredata = mediastoredata;
+        this.memorydb = memorydb;
+        this.mq = mq;
+        this.mwaa = mwaa;
+        this.neptune = neptune;
+        this.networkfirewall = networkfirewall;
+        this.networkmanager = networkmanager;
+        this.opsworks = opsworks;
+        this.organizations = organizations;
+        this.outposts = outposts;
+        this.personalize = personalize;
+        this.pinpoint = pinpoint;
+        this.pricing = pricing;
+        this.qldb = qldb;
+        this.quicksight = quicksight;
+        this.ram = ram;
+        this.rds = rds;
+        this.redshift = redshift;
+        this.resourcegroups = resourcegroups;
+        this.resourcegroupstaggingapi = resourcegroupstaggingapi;
+        this.route53 = route53;
+        this.route53domains = route53domains;
+        this.route53recoverycontrolconfig = route53recoverycontrolconfig;
+        this.route53recoveryreadiness = route53recoveryreadiness;
+        this.route53resolver = route53resolver;
+        this.s3 = s3;
+        this.s3control = s3control;
+        this.s3outposts = s3outposts;
+        this.sagemaker = sagemaker;
+        this.schemas = schemas;
+        this.sdb = sdb;
+        this.secretsmanager = secretsmanager;
+        this.securityhub = securityhub;
+        this.serverlessrepo = serverlessrepo;
+        this.servicecatalog = servicecatalog;
+        this.servicediscovery = servicediscovery;
+        this.servicequotas = servicequotas;
+        this.ses = ses;
+        this.shield = shield;
+        this.signer = signer;
+        this.sns = sns;
+        this.sqs = sqs;
+        this.ssm = ssm;
+        this.ssoadmin = ssoadmin;
+        this.stepfunctions = stepfunctions;
+        this.storagegateway = storagegateway;
+        this.sts = sts;
+        this.swf = swf;
+        this.synthetics = synthetics;
+        this.timestreamwrite = timestreamwrite;
+        this.transfer = transfer;
+        this.waf = waf;
+        this.wafregional = wafregional;
+        this.wafv2 = wafv2;
+        this.worklink = worklink;
+        this.workmail = workmail;
+        this.workspaces = workspaces;
+        this.xray = xray;
+    }
 
     /**
      * @return Override the default endpoint for AWS Access Analyzer
@@ -32,14 +1136,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> accessanalyzer() {
         return Optional.ofNullable(this.accessanalyzer);
     }
-
-    /**
-     * Override the default endpoint for AWS Certificate Manager
-     * 
-     */
-    @Import(name="acm")
-    private @Nullable String acm;
-
     /**
      * @return Override the default endpoint for AWS Certificate Manager
      * 
@@ -47,14 +1143,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> acm() {
         return Optional.ofNullable(this.acm);
     }
-
-    /**
-     * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
-     * 
-     */
-    @Import(name="acmpca")
-    private @Nullable String acmpca;
-
     /**
      * @return Override the default endpoint for AWS Certificate Manager Private Certificate Authority
      * 
@@ -62,14 +1150,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> acmpca() {
         return Optional.ofNullable(this.acmpca);
     }
-
-    /**
-     * Override the default endpoint for AWS Amplify Console
-     * 
-     */
-    @Import(name="amplify")
-    private @Nullable String amplify;
-
     /**
      * @return Override the default endpoint for AWS Amplify Console
      * 
@@ -77,14 +1157,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> amplify() {
         return Optional.ofNullable(this.amplify);
     }
-
-    /**
-     * Override the default endpoint for AWS AppConfig
-     * 
-     */
-    @Import(name="appconfig")
-    private @Nullable String appconfig;
-
     /**
      * @return Override the default endpoint for AWS AppConfig
      * 
@@ -92,14 +1164,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> appconfig() {
         return Optional.ofNullable(this.appconfig);
     }
-
-    /**
-     * Override the default endpoint for AWS Application Auto Scaling
-     * 
-     */
-    @Import(name="applicationautoscaling")
-    private @Nullable String applicationautoscaling;
-
     /**
      * @return Override the default endpoint for AWS Application Auto Scaling
      * 
@@ -107,14 +1171,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> applicationautoscaling() {
         return Optional.ofNullable(this.applicationautoscaling);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudWatch Application Insights
-     * 
-     */
-    @Import(name="applicationinsights")
-    private @Nullable String applicationinsights;
-
     /**
      * @return Override the default endpoint for AWS CloudWatch Application Insights
      * 
@@ -122,14 +1178,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> applicationinsights() {
         return Optional.ofNullable(this.applicationinsights);
     }
-
-    /**
-     * Override the default endpoint for AWS App Mesh
-     * 
-     */
-    @Import(name="appmesh")
-    private @Nullable String appmesh;
-
     /**
      * @return Override the default endpoint for AWS App Mesh
      * 
@@ -137,14 +1185,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> appmesh() {
         return Optional.ofNullable(this.appmesh);
     }
-
-    /**
-     * Override the default endpoint for AWS App Runner
-     * 
-     */
-    @Import(name="apprunner")
-    private @Nullable String apprunner;
-
     /**
      * @return Override the default endpoint for AWS App Runner
      * 
@@ -152,14 +1192,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> apprunner() {
         return Optional.ofNullable(this.apprunner);
     }
-
-    /**
-     * Override the default endpoint for AWS AppStream 2.0
-     * 
-     */
-    @Import(name="appstream")
-    private @Nullable String appstream;
-
     /**
      * @return Override the default endpoint for AWS AppStream 2.0
      * 
@@ -167,14 +1199,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> appstream() {
         return Optional.ofNullable(this.appstream);
     }
-
-    /**
-     * Override the default endpoint for AWS AppSync
-     * 
-     */
-    @Import(name="appsync")
-    private @Nullable String appsync;
-
     /**
      * @return Override the default endpoint for AWS AppSync
      * 
@@ -182,14 +1206,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> appsync() {
         return Optional.ofNullable(this.appsync);
     }
-
-    /**
-     * Override the default endpoint for AWS Athena
-     * 
-     */
-    @Import(name="athena")
-    private @Nullable String athena;
-
     /**
      * @return Override the default endpoint for AWS Athena
      * 
@@ -197,14 +1213,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> athena() {
         return Optional.ofNullable(this.athena);
     }
-
-    /**
-     * Override the default endpoint for AWS Audit Manager
-     * 
-     */
-    @Import(name="auditmanager")
-    private @Nullable String auditmanager;
-
     /**
      * @return Override the default endpoint for AWS Audit Manager
      * 
@@ -212,14 +1220,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> auditmanager() {
         return Optional.ofNullable(this.auditmanager);
     }
-
-    /**
-     * Override the default endpoint for AWS Auto Scaling
-     * 
-     */
-    @Import(name="autoscaling")
-    private @Nullable String autoscaling;
-
     /**
      * @return Override the default endpoint for AWS Auto Scaling
      * 
@@ -227,14 +1227,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
-
-    /**
-     * Override the default endpoint for AWS Backup
-     * 
-     */
-    @Import(name="backup")
-    private @Nullable String backup;
-
     /**
      * @return Override the default endpoint for AWS Backup
      * 
@@ -242,14 +1234,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> backup() {
         return Optional.ofNullable(this.backup);
     }
-
-    /**
-     * Override the default endpoint for AWS Batch
-     * 
-     */
-    @Import(name="batch")
-    private @Nullable String batch;
-
     /**
      * @return Override the default endpoint for AWS Batch
      * 
@@ -257,14 +1241,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> batch() {
         return Optional.ofNullable(this.batch);
     }
-
-    /**
-     * Override the default endpoint for AWS Budgets
-     * 
-     */
-    @Import(name="budgets")
-    private @Nullable String budgets;
-
     /**
      * @return Override the default endpoint for AWS Budgets
      * 
@@ -272,14 +1248,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> budgets() {
         return Optional.ofNullable(this.budgets);
     }
-
-    /**
-     * Override the default endpoint for Amazon Chime
-     * 
-     */
-    @Import(name="chime")
-    private @Nullable String chime;
-
     /**
      * @return Override the default endpoint for Amazon Chime
      * 
@@ -287,14 +1255,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> chime() {
         return Optional.ofNullable(this.chime);
     }
-
-    /**
-     * Override the default endpoint for AWS Cloud9
-     * 
-     */
-    @Import(name="cloud9")
-    private @Nullable String cloud9;
-
     /**
      * @return Override the default endpoint for AWS Cloud9
      * 
@@ -302,14 +1262,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloud9() {
         return Optional.ofNullable(this.cloud9);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudFormation
-     * 
-     */
-    @Import(name="cloudformation")
-    private @Nullable String cloudformation;
-
     /**
      * @return Override the default endpoint for AWS CloudFormation
      * 
@@ -317,14 +1269,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudformation() {
         return Optional.ofNullable(this.cloudformation);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudFront
-     * 
-     */
-    @Import(name="cloudfront")
-    private @Nullable String cloudfront;
-
     /**
      * @return Override the default endpoint for AWS CloudFront
      * 
@@ -332,14 +1276,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudfront() {
         return Optional.ofNullable(this.cloudfront);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudHSM
-     * 
-     */
-    @Import(name="cloudhsm")
-    private @Nullable String cloudhsm;
-
     /**
      * @return Override the default endpoint for AWS CloudHSM
      * 
@@ -347,14 +1283,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudhsm() {
         return Optional.ofNullable(this.cloudhsm);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudSearch
-     * 
-     */
-    @Import(name="cloudsearch")
-    private @Nullable String cloudsearch;
-
     /**
      * @return Override the default endpoint for AWS CloudSearch
      * 
@@ -362,14 +1290,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudsearch() {
         return Optional.ofNullable(this.cloudsearch);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudTrail
-     * 
-     */
-    @Import(name="cloudtrail")
-    private @Nullable String cloudtrail;
-
     /**
      * @return Override the default endpoint for AWS CloudTrail
      * 
@@ -377,14 +1297,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudtrail() {
         return Optional.ofNullable(this.cloudtrail);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudWatch
-     * 
-     */
-    @Import(name="cloudwatch")
-    private @Nullable String cloudwatch;
-
     /**
      * @return Override the default endpoint for AWS CloudWatch
      * 
@@ -392,14 +1304,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudwatch() {
         return Optional.ofNullable(this.cloudwatch);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudWatch Events
-     * 
-     */
-    @Import(name="cloudwatchevents")
-    private @Nullable String cloudwatchevents;
-
     /**
      * @return Override the default endpoint for AWS CloudWatch Events
      * 
@@ -407,14 +1311,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudwatchevents() {
         return Optional.ofNullable(this.cloudwatchevents);
     }
-
-    /**
-     * Override the default endpoint for AWS CloudWatch Logs
-     * 
-     */
-    @Import(name="cloudwatchlogs")
-    private @Nullable String cloudwatchlogs;
-
     /**
      * @return Override the default endpoint for AWS CloudWatch Logs
      * 
@@ -422,14 +1318,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cloudwatchlogs() {
         return Optional.ofNullable(this.cloudwatchlogs);
     }
-
-    /**
-     * Override the default endpoint for AWS CodeArtifact
-     * 
-     */
-    @Import(name="codeartifact")
-    private @Nullable String codeartifact;
-
     /**
      * @return Override the default endpoint for AWS CodeArtifact
      * 
@@ -437,14 +1325,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codeartifact() {
         return Optional.ofNullable(this.codeartifact);
     }
-
-    /**
-     * Override the default endpoint for AWS CodeBuild
-     * 
-     */
-    @Import(name="codebuild")
-    private @Nullable String codebuild;
-
     /**
      * @return Override the default endpoint for AWS CodeBuild
      * 
@@ -452,14 +1332,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codebuild() {
         return Optional.ofNullable(this.codebuild);
     }
-
-    /**
-     * Override the default endpoint for AWS CodeCommit
-     * 
-     */
-    @Import(name="codecommit")
-    private @Nullable String codecommit;
-
     /**
      * @return Override the default endpoint for AWS CodeCommit
      * 
@@ -467,14 +1339,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codecommit() {
         return Optional.ofNullable(this.codecommit);
     }
-
-    /**
-     * Override the default endpoint for AWS CodeDeploy
-     * 
-     */
-    @Import(name="codedeploy")
-    private @Nullable String codedeploy;
-
     /**
      * @return Override the default endpoint for AWS CodeDeploy
      * 
@@ -482,14 +1346,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codedeploy() {
         return Optional.ofNullable(this.codedeploy);
     }
-
-    /**
-     * Override the default endpoint for AWS CodePipeline
-     * 
-     */
-    @Import(name="codepipeline")
-    private @Nullable String codepipeline;
-
     /**
      * @return Override the default endpoint for AWS CodePipeline
      * 
@@ -497,14 +1353,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codepipeline() {
         return Optional.ofNullable(this.codepipeline);
     }
-
-    /**
-     * Override the default endpoint for AWS CodeStart Connections
-     * 
-     */
-    @Import(name="codestarconnections")
-    private @Nullable String codestarconnections;
-
     /**
      * @return Override the default endpoint for AWS CodeStart Connections
      * 
@@ -512,14 +1360,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> codestarconnections() {
         return Optional.ofNullable(this.codestarconnections);
     }
-
-    /**
-     * Override the default endpoint for Amazon Cognito
-     * 
-     */
-    @Import(name="cognitoidentity")
-    private @Nullable String cognitoidentity;
-
     /**
      * @return Override the default endpoint for Amazon Cognito
      * 
@@ -527,14 +1367,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cognitoidentity() {
         return Optional.ofNullable(this.cognitoidentity);
     }
-
-    /**
-     * Override the default endpoint for AWS Config
-     * 
-     */
-    @Import(name="configservice")
-    private @Nullable String configservice;
-
     /**
      * @return Override the default endpoint for AWS Config
      * 
@@ -542,14 +1374,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> configservice() {
         return Optional.ofNullable(this.configservice);
     }
-
-    /**
-     * Override the default endpoint for Amazon Connect
-     * 
-     */
-    @Import(name="connect")
-    private @Nullable String connect;
-
     /**
      * @return Override the default endpoint for Amazon Connect
      * 
@@ -557,14 +1381,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> connect() {
         return Optional.ofNullable(this.connect);
     }
-
-    /**
-     * Override the default endpoint for AWS Cost and Usage Reports
-     * 
-     */
-    @Import(name="cur")
-    private @Nullable String cur;
-
     /**
      * @return Override the default endpoint for AWS Cost and Usage Reports
      * 
@@ -572,14 +1388,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> cur() {
         return Optional.ofNullable(this.cur);
     }
-
-    /**
-     * Override the default endpoint for AWS Data Exchange
-     * 
-     */
-    @Import(name="dataexchange")
-    private @Nullable String dataexchange;
-
     /**
      * @return Override the default endpoint for AWS Data Exchange
      * 
@@ -587,14 +1395,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> dataexchange() {
         return Optional.ofNullable(this.dataexchange);
     }
-
-    /**
-     * Override the default endpoint for AWS Data Pipeline
-     * 
-     */
-    @Import(name="datapipeline")
-    private @Nullable String datapipeline;
-
     /**
      * @return Override the default endpoint for AWS Data Pipeline
      * 
@@ -602,14 +1402,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> datapipeline() {
         return Optional.ofNullable(this.datapipeline);
     }
-
-    /**
-     * Override the default endpoint for AWS DataSync
-     * 
-     */
-    @Import(name="datasync")
-    private @Nullable String datasync;
-
     /**
      * @return Override the default endpoint for AWS DataSync
      * 
@@ -617,14 +1409,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> datasync() {
         return Optional.ofNullable(this.datasync);
     }
-
-    /**
-     * Override the default endpoint for AWS DynamoDB Accelerator
-     * 
-     */
-    @Import(name="dax")
-    private @Nullable String dax;
-
     /**
      * @return Override the default endpoint for AWS DynamoDB Accelerator
      * 
@@ -632,14 +1416,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> dax() {
         return Optional.ofNullable(this.dax);
     }
-
-    /**
-     * Override the default endpoint for AWS Detective
-     * 
-     */
-    @Import(name="detective")
-    private @Nullable String detective;
-
     /**
      * @return Override the default endpoint for AWS Detective
      * 
@@ -647,14 +1423,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> detective() {
         return Optional.ofNullable(this.detective);
     }
-
-    /**
-     * Override the default endpoint for AWS Device Farm
-     * 
-     */
-    @Import(name="devicefarm")
-    private @Nullable String devicefarm;
-
     /**
      * @return Override the default endpoint for AWS Device Farm
      * 
@@ -662,14 +1430,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> devicefarm() {
         return Optional.ofNullable(this.devicefarm);
     }
-
-    /**
-     * Override the default endpoint for AWS Direct Connect
-     * 
-     */
-    @Import(name="directconnect")
-    private @Nullable String directconnect;
-
     /**
      * @return Override the default endpoint for AWS Direct Connect
      * 
@@ -677,14 +1437,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> directconnect() {
         return Optional.ofNullable(this.directconnect);
     }
-
-    /**
-     * Override the default endpoint for AWS Data Lifecycle Manager
-     * 
-     */
-    @Import(name="dlm")
-    private @Nullable String dlm;
-
     /**
      * @return Override the default endpoint for AWS Data Lifecycle Manager
      * 
@@ -692,14 +1444,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> dlm() {
         return Optional.ofNullable(this.dlm);
     }
-
-    /**
-     * Override the default endpoint for AWS Database Migration Service
-     * 
-     */
-    @Import(name="dms")
-    private @Nullable String dms;
-
     /**
      * @return Override the default endpoint for AWS Database Migration Service
      * 
@@ -707,14 +1451,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> dms() {
         return Optional.ofNullable(this.dms);
     }
-
-    /**
-     * Override the default endpoint for AWS DocumentDB
-     * 
-     */
-    @Import(name="docdb")
-    private @Nullable String docdb;
-
     /**
      * @return Override the default endpoint for AWS DocumentDB
      * 
@@ -722,14 +1458,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> docdb() {
         return Optional.ofNullable(this.docdb);
     }
-
-    /**
-     * Override the default endpoint for AWS Directory Service
-     * 
-     */
-    @Import(name="ds")
-    private @Nullable String ds;
-
     /**
      * @return Override the default endpoint for AWS Directory Service
      * 
@@ -737,14 +1465,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ds() {
         return Optional.ofNullable(this.ds);
     }
-
-    /**
-     * Override the default endpoint for AWS DynamoDB
-     * 
-     */
-    @Import(name="dynamodb")
-    private @Nullable String dynamodb;
-
     /**
      * @return Override the default endpoint for AWS DynamoDB
      * 
@@ -752,14 +1472,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> dynamodb() {
         return Optional.ofNullable(this.dynamodb);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
-     * 
-     */
-    @Import(name="ec2")
-    private @Nullable String ec2;
-
     /**
      * @return Override the default endpoint for AWS Elastic Compute Cloud (EC2)
      * 
@@ -767,14 +1479,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ec2() {
         return Optional.ofNullable(this.ec2);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR)
-     * 
-     */
-    @Import(name="ecr")
-    private @Nullable String ecr;
-
     /**
      * @return Override the default endpoint for AWS Elastic Container Registry (ECR)
      * 
@@ -782,14 +1486,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ecr() {
         return Optional.ofNullable(this.ecr);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
-     * 
-     */
-    @Import(name="ecrpublic")
-    private @Nullable String ecrpublic;
-
     /**
      * @return Override the default endpoint for AWS Elastic Container Registry (ECR) Public
      * 
@@ -797,14 +1493,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ecrpublic() {
         return Optional.ofNullable(this.ecrpublic);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Container Service (ECS)
-     * 
-     */
-    @Import(name="ecs")
-    private @Nullable String ecs;
-
     /**
      * @return Override the default endpoint for AWS Elastic Container Service (ECS)
      * 
@@ -812,14 +1500,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ecs() {
         return Optional.ofNullable(this.ecs);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic File System (EFS)
-     * 
-     */
-    @Import(name="efs")
-    private @Nullable String efs;
-
     /**
      * @return Override the default endpoint for AWS Elastic File System (EFS)
      * 
@@ -827,14 +1507,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> efs() {
         return Optional.ofNullable(this.efs);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
-     * 
-     */
-    @Import(name="eks")
-    private @Nullable String eks;
-
     /**
      * @return Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
      * 
@@ -842,14 +1514,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> eks() {
         return Optional.ofNullable(this.eks);
     }
-
-    /**
-     * Override the default endpoint for AWS ElastiCache
-     * 
-     */
-    @Import(name="elasticache")
-    private @Nullable String elasticache;
-
     /**
      * @return Override the default endpoint for AWS ElastiCache
      * 
@@ -857,14 +1521,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> elasticache() {
         return Optional.ofNullable(this.elasticache);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Beanstalk
-     * 
-     */
-    @Import(name="elasticbeanstalk")
-    private @Nullable String elasticbeanstalk;
-
     /**
      * @return Override the default endpoint for AWS Elastic Beanstalk
      * 
@@ -872,14 +1528,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> elasticbeanstalk() {
         return Optional.ofNullable(this.elasticbeanstalk);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Transcoder
-     * 
-     */
-    @Import(name="elastictranscoder")
-    private @Nullable String elastictranscoder;
-
     /**
      * @return Override the default endpoint for AWS Elastic Transcoder
      * 
@@ -887,14 +1535,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> elastictranscoder() {
         return Optional.ofNullable(this.elastictranscoder);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Load Balancing
-     * 
-     */
-    @Import(name="elb")
-    private @Nullable String elb;
-
     /**
      * @return Override the default endpoint for AWS Elastic Load Balancing
      * 
@@ -902,14 +1542,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> elb() {
         return Optional.ofNullable(this.elb);
     }
-
-    /**
-     * Override the default endpoint for AWS Elastic Load Balancing V2
-     * 
-     */
-    @Import(name="elbv2")
-    private @Nullable String elbv2;
-
     /**
      * @return Override the default endpoint for AWS Elastic Load Balancing V2
      * 
@@ -917,14 +1549,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> elbv2() {
         return Optional.ofNullable(this.elbv2);
     }
-
-    /**
-     * Override the default endpoint for AWS EMR
-     * 
-     */
-    @Import(name="emr")
-    private @Nullable String emr;
-
     /**
      * @return Override the default endpoint for AWS EMR
      * 
@@ -932,14 +1556,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> emr() {
         return Optional.ofNullable(this.emr);
     }
-
-    /**
-     * Override the default endpoint for AWS EMR on EKS
-     * 
-     */
-    @Import(name="emrcontainers")
-    private @Nullable String emrcontainers;
-
     /**
      * @return Override the default endpoint for AWS EMR on EKS
      * 
@@ -947,14 +1563,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> emrcontainers() {
         return Optional.ofNullable(this.emrcontainers);
     }
-
-    /**
-     * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
-     * 
-     */
-    @Import(name="es")
-    private @Nullable String es;
-
     /**
      * @return Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
      * 
@@ -962,14 +1570,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> es() {
         return Optional.ofNullable(this.es);
     }
-
-    /**
-     * Override the default endpoint for AWS Kinesis Data Firehose
-     * 
-     */
-    @Import(name="firehose")
-    private @Nullable String firehose;
-
     /**
      * @return Override the default endpoint for AWS Kinesis Data Firehose
      * 
@@ -977,14 +1577,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> firehose() {
         return Optional.ofNullable(this.firehose);
     }
-
-    /**
-     * Override the default endpoint for AWS Firewall Manager
-     * 
-     */
-    @Import(name="fms")
-    private @Nullable String fms;
-
     /**
      * @return Override the default endpoint for AWS Firewall Manager
      * 
@@ -992,14 +1584,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> fms() {
         return Optional.ofNullable(this.fms);
     }
-
-    /**
-     * Override the default endpoint for Amazon Forecast
-     * 
-     */
-    @Import(name="forecast")
-    private @Nullable String forecast;
-
     /**
      * @return Override the default endpoint for Amazon Forecast
      * 
@@ -1007,14 +1591,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> forecast() {
         return Optional.ofNullable(this.forecast);
     }
-
-    /**
-     * Override the default endpoint for AWS FSx
-     * 
-     */
-    @Import(name="fsx")
-    private @Nullable String fsx;
-
     /**
      * @return Override the default endpoint for AWS FSx
      * 
@@ -1022,14 +1598,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> fsx() {
         return Optional.ofNullable(this.fsx);
     }
-
-    /**
-     * Override the default endpoint for AWS GameLift
-     * 
-     */
-    @Import(name="gamelift")
-    private @Nullable String gamelift;
-
     /**
      * @return Override the default endpoint for AWS GameLift
      * 
@@ -1037,14 +1605,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> gamelift() {
         return Optional.ofNullable(this.gamelift);
     }
-
-    /**
-     * Override the default endpoint for Amazon S3 Glacier
-     * 
-     */
-    @Import(name="glacier")
-    private @Nullable String glacier;
-
     /**
      * @return Override the default endpoint for Amazon S3 Glacier
      * 
@@ -1052,14 +1612,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> glacier() {
         return Optional.ofNullable(this.glacier);
     }
-
-    /**
-     * Override the default endpoint for AWS Global Accelerator
-     * 
-     */
-    @Import(name="globalaccelerator")
-    private @Nullable String globalaccelerator;
-
     /**
      * @return Override the default endpoint for AWS Global Accelerator
      * 
@@ -1067,14 +1619,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> globalaccelerator() {
         return Optional.ofNullable(this.globalaccelerator);
     }
-
-    /**
-     * Override the default endpoint for AWS Glue
-     * 
-     */
-    @Import(name="glue")
-    private @Nullable String glue;
-
     /**
      * @return Override the default endpoint for AWS Glue
      * 
@@ -1082,14 +1626,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> glue() {
         return Optional.ofNullable(this.glue);
     }
-
-    /**
-     * Override the default endpoint for AWS IoT Greengrass
-     * 
-     */
-    @Import(name="greengrass")
-    private @Nullable String greengrass;
-
     /**
      * @return Override the default endpoint for AWS IoT Greengrass
      * 
@@ -1097,14 +1633,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> greengrass() {
         return Optional.ofNullable(this.greengrass);
     }
-
-    /**
-     * Override the default endpoint for AWS GuardDuty
-     * 
-     */
-    @Import(name="guardduty")
-    private @Nullable String guardduty;
-
     /**
      * @return Override the default endpoint for AWS GuardDuty
      * 
@@ -1112,14 +1640,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> guardduty() {
         return Optional.ofNullable(this.guardduty);
     }
-
-    /**
-     * Override the default endpoint for AWS Identity and Access Management
-     * 
-     */
-    @Import(name="iam")
-    private @Nullable String iam;
-
     /**
      * @return Override the default endpoint for AWS Identity and Access Management
      * 
@@ -1127,14 +1647,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> iam() {
         return Optional.ofNullable(this.iam);
     }
-
-    /**
-     * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
-     * 
-     */
-    @Import(name="identitystore")
-    private @Nullable String identitystore;
-
     /**
      * @return Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
      * 
@@ -1142,14 +1654,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> identitystore() {
         return Optional.ofNullable(this.identitystore);
     }
-
-    /**
-     * Override the default endpoint for AWS Image Builder
-     * 
-     */
-    @Import(name="imagebuilder")
-    private @Nullable String imagebuilder;
-
     /**
      * @return Override the default endpoint for AWS Image Builder
      * 
@@ -1157,14 +1661,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> imagebuilder() {
         return Optional.ofNullable(this.imagebuilder);
     }
-
-    /**
-     * Override the default endpoint for Amazon Inspector
-     * 
-     */
-    @Import(name="inspector")
-    private @Nullable String inspector;
-
     /**
      * @return Override the default endpoint for Amazon Inspector
      * 
@@ -1172,14 +1668,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> inspector() {
         return Optional.ofNullable(this.inspector);
     }
-
-    /**
-     * Override the default endpoint for AWS IoT
-     * 
-     */
-    @Import(name="iot")
-    private @Nullable String iot;
-
     /**
      * @return Override the default endpoint for AWS IoT
      * 
@@ -1187,14 +1675,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> iot() {
         return Optional.ofNullable(this.iot);
     }
-
-    /**
-     * Override the default endpoint for AWS IoT Analytics
-     * 
-     */
-    @Import(name="iotanalytics")
-    private @Nullable String iotanalytics;
-
     /**
      * @return Override the default endpoint for AWS IoT Analytics
      * 
@@ -1202,14 +1682,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> iotanalytics() {
         return Optional.ofNullable(this.iotanalytics);
     }
-
-    /**
-     * Override the default endpoint for AWS IoT Events
-     * 
-     */
-    @Import(name="iotevents")
-    private @Nullable String iotevents;
-
     /**
      * @return Override the default endpoint for AWS IoT Events
      * 
@@ -1217,14 +1689,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> iotevents() {
         return Optional.ofNullable(this.iotevents);
     }
-
-    /**
-     * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
-     * 
-     */
-    @Import(name="kafka")
-    private @Nullable String kafka;
-
     /**
      * @return Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
      * 
@@ -1232,14 +1696,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kafka() {
         return Optional.ofNullable(this.kafka);
     }
-
-    /**
-     * Override the default endpoint for Amazon Kinesis
-     * 
-     */
-    @Import(name="kinesis")
-    private @Nullable String kinesis;
-
     /**
      * @return Override the default endpoint for Amazon Kinesis
      * 
@@ -1247,14 +1703,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kinesis() {
         return Optional.ofNullable(this.kinesis);
     }
-
-    /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics
-     * 
-     */
-    @Import(name="kinesisanalytics")
-    private @Nullable String kinesisanalytics;
-
     /**
      * @return Override the default endpoint for Amazon Kinesis Data Analytics
      * 
@@ -1262,14 +1710,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kinesisanalytics() {
         return Optional.ofNullable(this.kinesisanalytics);
     }
-
-    /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics V2
-     * 
-     */
-    @Import(name="kinesisanalyticsv2")
-    private @Nullable String kinesisanalyticsv2;
-
     /**
      * @return Override the default endpoint for Amazon Kinesis Data Analytics V2
      * 
@@ -1277,14 +1717,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kinesisanalyticsv2() {
         return Optional.ofNullable(this.kinesisanalyticsv2);
     }
-
-    /**
-     * Override the default endpoint for Amazon Kinesis Video Streams
-     * 
-     */
-    @Import(name="kinesisvideo")
-    private @Nullable String kinesisvideo;
-
     /**
      * @return Override the default endpoint for Amazon Kinesis Video Streams
      * 
@@ -1292,14 +1724,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kinesisvideo() {
         return Optional.ofNullable(this.kinesisvideo);
     }
-
-    /**
-     * Override the default endpoint for AWS Key Management Service
-     * 
-     */
-    @Import(name="kms")
-    private @Nullable String kms;
-
     /**
      * @return Override the default endpoint for AWS Key Management Service
      * 
@@ -1307,14 +1731,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> kms() {
         return Optional.ofNullable(this.kms);
     }
-
-    /**
-     * Override the default endpoint for AWS Lake Formation
-     * 
-     */
-    @Import(name="lakeformation")
-    private @Nullable String lakeformation;
-
     /**
      * @return Override the default endpoint for AWS Lake Formation
      * 
@@ -1322,14 +1738,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> lakeformation() {
         return Optional.ofNullable(this.lakeformation);
     }
-
-    /**
-     * Override the default endpoint for AWS Lambda
-     * 
-     */
-    @Import(name="lambda")
-    private @Nullable String lambda;
-
     /**
      * @return Override the default endpoint for AWS Lambda
      * 
@@ -1337,14 +1745,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> lambda() {
         return Optional.ofNullable(this.lambda);
     }
-
-    /**
-     * Override the default endpoint for Amazon Lex
-     * 
-     */
-    @Import(name="lexmodels")
-    private @Nullable String lexmodels;
-
     /**
      * @return Override the default endpoint for Amazon Lex
      * 
@@ -1352,14 +1752,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> lexmodels() {
         return Optional.ofNullable(this.lexmodels);
     }
-
-    /**
-     * Override the default endpoint for AWS License Manager
-     * 
-     */
-    @Import(name="licensemanager")
-    private @Nullable String licensemanager;
-
     /**
      * @return Override the default endpoint for AWS License Manager
      * 
@@ -1367,14 +1759,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> licensemanager() {
         return Optional.ofNullable(this.licensemanager);
     }
-
-    /**
-     * Override the default endpoint for Amazon Lightsail
-     * 
-     */
-    @Import(name="lightsail")
-    private @Nullable String lightsail;
-
     /**
      * @return Override the default endpoint for Amazon Lightsail
      * 
@@ -1382,14 +1766,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> lightsail() {
         return Optional.ofNullable(this.lightsail);
     }
-
-    /**
-     * Override the default endpoint for Amazon Location
-     * 
-     */
-    @Import(name="location")
-    private @Nullable String location;
-
     /**
      * @return Override the default endpoint for Amazon Location
      * 
@@ -1397,14 +1773,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-
-    /**
-     * Override the default endpoint for Amazon Macie
-     * 
-     */
-    @Import(name="macie")
-    private @Nullable String macie;
-
     /**
      * @return Override the default endpoint for Amazon Macie
      * 
@@ -1412,14 +1780,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> macie() {
         return Optional.ofNullable(this.macie);
     }
-
-    /**
-     * Override the default endpoint for Amazon Macie V2
-     * 
-     */
-    @Import(name="macie2")
-    private @Nullable String macie2;
-
     /**
      * @return Override the default endpoint for Amazon Macie V2
      * 
@@ -1427,14 +1787,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> macie2() {
         return Optional.ofNullable(this.macie2);
     }
-
-    /**
-     * Override the default endpoint for Amazon Managed Blockchain
-     * 
-     */
-    @Import(name="managedblockchain")
-    private @Nullable String managedblockchain;
-
     /**
      * @return Override the default endpoint for Amazon Managed Blockchain
      * 
@@ -1442,14 +1794,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> managedblockchain() {
         return Optional.ofNullable(this.managedblockchain);
     }
-
-    /**
-     * Override the default endpoint for AWS Marketplace Catalog
-     * 
-     */
-    @Import(name="marketplacecatalog")
-    private @Nullable String marketplacecatalog;
-
     /**
      * @return Override the default endpoint for AWS Marketplace Catalog
      * 
@@ -1457,14 +1801,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> marketplacecatalog() {
         return Optional.ofNullable(this.marketplacecatalog);
     }
-
-    /**
-     * Override the default endpoint for AWS MediaConnect
-     * 
-     */
-    @Import(name="mediaconnect")
-    private @Nullable String mediaconnect;
-
     /**
      * @return Override the default endpoint for AWS MediaConnect
      * 
@@ -1472,14 +1808,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mediaconnect() {
         return Optional.ofNullable(this.mediaconnect);
     }
-
-    /**
-     * Override the default endpoint for AWS MediaConvert
-     * 
-     */
-    @Import(name="mediaconvert")
-    private @Nullable String mediaconvert;
-
     /**
      * @return Override the default endpoint for AWS MediaConvert
      * 
@@ -1487,14 +1815,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mediaconvert() {
         return Optional.ofNullable(this.mediaconvert);
     }
-
-    /**
-     * Override the default endpoint for AWS MediaLive
-     * 
-     */
-    @Import(name="medialive")
-    private @Nullable String medialive;
-
     /**
      * @return Override the default endpoint for AWS MediaLive
      * 
@@ -1502,14 +1822,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> medialive() {
         return Optional.ofNullable(this.medialive);
     }
-
-    /**
-     * Override the default endpoint for AWS MediaPackage
-     * 
-     */
-    @Import(name="mediapackage")
-    private @Nullable String mediapackage;
-
     /**
      * @return Override the default endpoint for AWS MediaPackage
      * 
@@ -1517,14 +1829,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mediapackage() {
         return Optional.ofNullable(this.mediapackage);
     }
-
-    /**
-     * Override the default endpoint for AWS Elemental MediaStore container
-     * 
-     */
-    @Import(name="mediastore")
-    private @Nullable String mediastore;
-
     /**
      * @return Override the default endpoint for AWS Elemental MediaStore container
      * 
@@ -1532,14 +1836,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mediastore() {
         return Optional.ofNullable(this.mediastore);
     }
-
-    /**
-     * Override the default endpoint for AWS Elemental MediaStore asset
-     * 
-     */
-    @Import(name="mediastoredata")
-    private @Nullable String mediastoredata;
-
     /**
      * @return Override the default endpoint for AWS Elemental MediaStore asset
      * 
@@ -1547,14 +1843,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mediastoredata() {
         return Optional.ofNullable(this.mediastoredata);
     }
-
-    /**
-     * Override the default endpoint for AWS MemoryDB for Redis
-     * 
-     */
-    @Import(name="memorydb")
-    private @Nullable String memorydb;
-
     /**
      * @return Override the default endpoint for AWS MemoryDB for Redis
      * 
@@ -1562,14 +1850,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> memorydb() {
         return Optional.ofNullable(this.memorydb);
     }
-
-    /**
-     * Override the default endpoint for Amazon MQ
-     * 
-     */
-    @Import(name="mq")
-    private @Nullable String mq;
-
     /**
      * @return Override the default endpoint for Amazon MQ
      * 
@@ -1577,14 +1857,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mq() {
         return Optional.ofNullable(this.mq);
     }
-
-    /**
-     * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
-     * 
-     */
-    @Import(name="mwaa")
-    private @Nullable String mwaa;
-
     /**
      * @return Override the default endpoint for Amazon Managed Workflows for Apache Airflow
      * 
@@ -1592,14 +1864,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> mwaa() {
         return Optional.ofNullable(this.mwaa);
     }
-
-    /**
-     * Override the default endpoint for Amazon Neptune
-     * 
-     */
-    @Import(name="neptune")
-    private @Nullable String neptune;
-
     /**
      * @return Override the default endpoint for Amazon Neptune
      * 
@@ -1607,14 +1871,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> neptune() {
         return Optional.ofNullable(this.neptune);
     }
-
-    /**
-     * Override the default endpoint for AWS Network Firewall
-     * 
-     */
-    @Import(name="networkfirewall")
-    private @Nullable String networkfirewall;
-
     /**
      * @return Override the default endpoint for AWS Network Firewall
      * 
@@ -1622,14 +1878,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> networkfirewall() {
         return Optional.ofNullable(this.networkfirewall);
     }
-
-    /**
-     * Override the default endpoint for AWS Network Manager
-     * 
-     */
-    @Import(name="networkmanager")
-    private @Nullable String networkmanager;
-
     /**
      * @return Override the default endpoint for AWS Network Manager
      * 
@@ -1637,14 +1885,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> networkmanager() {
         return Optional.ofNullable(this.networkmanager);
     }
-
-    /**
-     * Override the default endpoint for AWS OpsWorks
-     * 
-     */
-    @Import(name="opsworks")
-    private @Nullable String opsworks;
-
     /**
      * @return Override the default endpoint for AWS OpsWorks
      * 
@@ -1652,14 +1892,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> opsworks() {
         return Optional.ofNullable(this.opsworks);
     }
-
-    /**
-     * Override the default endpoint for AWS Organizations
-     * 
-     */
-    @Import(name="organizations")
-    private @Nullable String organizations;
-
     /**
      * @return Override the default endpoint for AWS Organizations
      * 
@@ -1667,14 +1899,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> organizations() {
         return Optional.ofNullable(this.organizations);
     }
-
-    /**
-     * Override the default endpoint for AWS Outposts
-     * 
-     */
-    @Import(name="outposts")
-    private @Nullable String outposts;
-
     /**
      * @return Override the default endpoint for AWS Outposts
      * 
@@ -1682,14 +1906,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> outposts() {
         return Optional.ofNullable(this.outposts);
     }
-
-    /**
-     * Override the default endpoint for Amazon Personalize
-     * 
-     */
-    @Import(name="personalize")
-    private @Nullable String personalize;
-
     /**
      * @return Override the default endpoint for Amazon Personalize
      * 
@@ -1697,14 +1913,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> personalize() {
         return Optional.ofNullable(this.personalize);
     }
-
-    /**
-     * Override the default endpoint for Amazon Pinpoint
-     * 
-     */
-    @Import(name="pinpoint")
-    private @Nullable String pinpoint;
-
     /**
      * @return Override the default endpoint for Amazon Pinpoint
      * 
@@ -1712,14 +1920,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> pinpoint() {
         return Optional.ofNullable(this.pinpoint);
     }
-
-    /**
-     * Override the default endpoint for Amazon Web Services Price List Service
-     * 
-     */
-    @Import(name="pricing")
-    private @Nullable String pricing;
-
     /**
      * @return Override the default endpoint for Amazon Web Services Price List Service
      * 
@@ -1727,14 +1927,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> pricing() {
         return Optional.ofNullable(this.pricing);
     }
-
-    /**
-     * Override the default endpoint for Amazon QLDB
-     * 
-     */
-    @Import(name="qldb")
-    private @Nullable String qldb;
-
     /**
      * @return Override the default endpoint for Amazon QLDB
      * 
@@ -1742,14 +1934,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> qldb() {
         return Optional.ofNullable(this.qldb);
     }
-
-    /**
-     * Override the default endpoint for Amazon QuickSight
-     * 
-     */
-    @Import(name="quicksight")
-    private @Nullable String quicksight;
-
     /**
      * @return Override the default endpoint for Amazon QuickSight
      * 
@@ -1757,14 +1941,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> quicksight() {
         return Optional.ofNullable(this.quicksight);
     }
-
-    /**
-     * Override the default endpoint for AWS Resource Access Manager
-     * 
-     */
-    @Import(name="ram")
-    private @Nullable String ram;
-
     /**
      * @return Override the default endpoint for AWS Resource Access Manager
      * 
@@ -1772,14 +1948,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ram() {
         return Optional.ofNullable(this.ram);
     }
-
-    /**
-     * Override the default endpoint for Amazon Relational Database Service
-     * 
-     */
-    @Import(name="rds")
-    private @Nullable String rds;
-
     /**
      * @return Override the default endpoint for Amazon Relational Database Service
      * 
@@ -1787,14 +1955,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> rds() {
         return Optional.ofNullable(this.rds);
     }
-
-    /**
-     * Override the default endpoint for Amazon Redshift
-     * 
-     */
-    @Import(name="redshift")
-    private @Nullable String redshift;
-
     /**
      * @return Override the default endpoint for Amazon Redshift
      * 
@@ -1802,14 +1962,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> redshift() {
         return Optional.ofNullable(this.redshift);
     }
-
-    /**
-     * Override the default endpoint for AWS Resource Groups
-     * 
-     */
-    @Import(name="resourcegroups")
-    private @Nullable String resourcegroups;
-
     /**
      * @return Override the default endpoint for AWS Resource Groups
      * 
@@ -1817,14 +1969,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> resourcegroups() {
         return Optional.ofNullable(this.resourcegroups);
     }
-
-    /**
-     * Override the default endpoint for AWS Resource Groups Tagging API
-     * 
-     */
-    @Import(name="resourcegroupstaggingapi")
-    private @Nullable String resourcegroupstaggingapi;
-
     /**
      * @return Override the default endpoint for AWS Resource Groups Tagging API
      * 
@@ -1832,14 +1976,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> resourcegroupstaggingapi() {
         return Optional.ofNullable(this.resourcegroupstaggingapi);
     }
-
-    /**
-     * Override the default endpoint for Amazon Route 53
-     * 
-     */
-    @Import(name="route53")
-    private @Nullable String route53;
-
     /**
      * @return Override the default endpoint for Amazon Route 53
      * 
@@ -1847,14 +1983,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> route53() {
         return Optional.ofNullable(this.route53);
     }
-
-    /**
-     * Override the default endpoint for Amazon Route 53 Domains
-     * 
-     */
-    @Import(name="route53domains")
-    private @Nullable String route53domains;
-
     /**
      * @return Override the default endpoint for Amazon Route 53 Domains
      * 
@@ -1862,14 +1990,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> route53domains() {
         return Optional.ofNullable(this.route53domains);
     }
-
-    /**
-     * Override the default endpoint for Amazon Route 53 Recovery Control
-     * 
-     */
-    @Import(name="route53recoverycontrolconfig")
-    private @Nullable String route53recoverycontrolconfig;
-
     /**
      * @return Override the default endpoint for Amazon Route 53 Recovery Control
      * 
@@ -1877,14 +1997,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> route53recoverycontrolconfig() {
         return Optional.ofNullable(this.route53recoverycontrolconfig);
     }
-
-    /**
-     * Override the default endpoint for Amazon Route 53 Recovery Readiness
-     * 
-     */
-    @Import(name="route53recoveryreadiness")
-    private @Nullable String route53recoveryreadiness;
-
     /**
      * @return Override the default endpoint for Amazon Route 53 Recovery Readiness
      * 
@@ -1892,14 +2004,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> route53recoveryreadiness() {
         return Optional.ofNullable(this.route53recoveryreadiness);
     }
-
-    /**
-     * Override the default endpoint for Amazon Route 53 Resolver
-     * 
-     */
-    @Import(name="route53resolver")
-    private @Nullable String route53resolver;
-
     /**
      * @return Override the default endpoint for Amazon Route 53 Resolver
      * 
@@ -1907,14 +2011,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> route53resolver() {
         return Optional.ofNullable(this.route53resolver);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3)
-     * 
-     */
-    @Import(name="s3")
-    private @Nullable String s3;
-
     /**
      * @return Override the default endpoint for Amazon Simple Storage Service (S3)
      * 
@@ -1922,14 +2018,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> s3() {
         return Optional.ofNullable(this.s3);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3) Control
-     * 
-     */
-    @Import(name="s3control")
-    private @Nullable String s3control;
-
     /**
      * @return Override the default endpoint for Amazon Simple Storage Service (S3) Control
      * 
@@ -1937,14 +2025,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> s3control() {
         return Optional.ofNullable(this.s3control);
     }
-
-    /**
-     * Override the default endpoint for Amazon S3 on Outposts
-     * 
-     */
-    @Import(name="s3outposts")
-    private @Nullable String s3outposts;
-
     /**
      * @return Override the default endpoint for Amazon S3 on Outposts
      * 
@@ -1952,14 +2032,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> s3outposts() {
         return Optional.ofNullable(this.s3outposts);
     }
-
-    /**
-     * Override the default endpoint for AWS SageMaker
-     * 
-     */
-    @Import(name="sagemaker")
-    private @Nullable String sagemaker;
-
     /**
      * @return Override the default endpoint for AWS SageMaker
      * 
@@ -1967,14 +2039,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> sagemaker() {
         return Optional.ofNullable(this.sagemaker);
     }
-
-    /**
-     * Override the default endpoint for Amazon EventBridge Schema Registry
-     * 
-     */
-    @Import(name="schemas")
-    private @Nullable String schemas;
-
     /**
      * @return Override the default endpoint for Amazon EventBridge Schema Registry
      * 
@@ -1982,14 +2046,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> schemas() {
         return Optional.ofNullable(this.schemas);
     }
-
-    /**
-     * Override the default endpoint for Amazon SimpleDB
-     * 
-     */
-    @Import(name="sdb")
-    private @Nullable String sdb;
-
     /**
      * @return Override the default endpoint for Amazon SimpleDB
      * 
@@ -1997,14 +2053,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> sdb() {
         return Optional.ofNullable(this.sdb);
     }
-
-    /**
-     * Override the default endpoint for AWS Secrets Manager
-     * 
-     */
-    @Import(name="secretsmanager")
-    private @Nullable String secretsmanager;
-
     /**
      * @return Override the default endpoint for AWS Secrets Manager
      * 
@@ -2012,14 +2060,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> secretsmanager() {
         return Optional.ofNullable(this.secretsmanager);
     }
-
-    /**
-     * Override the default endpoint for AWS Security Hub
-     * 
-     */
-    @Import(name="securityhub")
-    private @Nullable String securityhub;
-
     /**
      * @return Override the default endpoint for AWS Security Hub
      * 
@@ -2027,14 +2067,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> securityhub() {
         return Optional.ofNullable(this.securityhub);
     }
-
-    /**
-     * Override the default endpoint for AWS Serverless Application Repository
-     * 
-     */
-    @Import(name="serverlessrepo")
-    private @Nullable String serverlessrepo;
-
     /**
      * @return Override the default endpoint for AWS Serverless Application Repository
      * 
@@ -2042,14 +2074,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> serverlessrepo() {
         return Optional.ofNullable(this.serverlessrepo);
     }
-
-    /**
-     * Override the default endpoint for AWS Service Catalog
-     * 
-     */
-    @Import(name="servicecatalog")
-    private @Nullable String servicecatalog;
-
     /**
      * @return Override the default endpoint for AWS Service Catalog
      * 
@@ -2057,14 +2081,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> servicecatalog() {
         return Optional.ofNullable(this.servicecatalog);
     }
-
-    /**
-     * Override the default endpoint for AWS Cloud Map
-     * 
-     */
-    @Import(name="servicediscovery")
-    private @Nullable String servicediscovery;
-
     /**
      * @return Override the default endpoint for AWS Cloud Map
      * 
@@ -2072,14 +2088,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> servicediscovery() {
         return Optional.ofNullable(this.servicediscovery);
     }
-
-    /**
-     * Override the default endpoint for AWS Service Quotas
-     * 
-     */
-    @Import(name="servicequotas")
-    private @Nullable String servicequotas;
-
     /**
      * @return Override the default endpoint for AWS Service Quotas
      * 
@@ -2087,14 +2095,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> servicequotas() {
         return Optional.ofNullable(this.servicequotas);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Email Service (SES)
-     * 
-     */
-    @Import(name="ses")
-    private @Nullable String ses;
-
     /**
      * @return Override the default endpoint for Amazon Simple Email Service (SES)
      * 
@@ -2102,14 +2102,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ses() {
         return Optional.ofNullable(this.ses);
     }
-
-    /**
-     * Override the default endpoint for AWS Shield Advanced API
-     * 
-     */
-    @Import(name="shield")
-    private @Nullable String shield;
-
     /**
      * @return Override the default endpoint for AWS Shield Advanced API
      * 
@@ -2117,14 +2109,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> shield() {
         return Optional.ofNullable(this.shield);
     }
-
-    /**
-     * Override the default endpoint for AWS Signer
-     * 
-     */
-    @Import(name="signer")
-    private @Nullable String signer;
-
     /**
      * @return Override the default endpoint for AWS Signer
      * 
@@ -2132,14 +2116,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> signer() {
         return Optional.ofNullable(this.signer);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Notification Service (SNS)
-     * 
-     */
-    @Import(name="sns")
-    private @Nullable String sns;
-
     /**
      * @return Override the default endpoint for Amazon Simple Notification Service (SNS)
      * 
@@ -2147,14 +2123,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> sns() {
         return Optional.ofNullable(this.sns);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Queue Service (SQS)
-     * 
-     */
-    @Import(name="sqs")
-    private @Nullable String sqs;
-
     /**
      * @return Override the default endpoint for Amazon Simple Queue Service (SQS)
      * 
@@ -2162,14 +2130,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> sqs() {
         return Optional.ofNullable(this.sqs);
     }
-
-    /**
-     * Override the default endpoint for AWS Systems Manager
-     * 
-     */
-    @Import(name="ssm")
-    private @Nullable String ssm;
-
     /**
      * @return Override the default endpoint for AWS Systems Manager
      * 
@@ -2177,14 +2137,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ssm() {
         return Optional.ofNullable(this.ssm);
     }
-
-    /**
-     * Override the default endpoint for AWS Single Sign On (SSO)
-     * 
-     */
-    @Import(name="ssoadmin")
-    private @Nullable String ssoadmin;
-
     /**
      * @return Override the default endpoint for AWS Single Sign On (SSO)
      * 
@@ -2192,14 +2144,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> ssoadmin() {
         return Optional.ofNullable(this.ssoadmin);
     }
-
-    /**
-     * Override the default endpoint for AWS Step Functions
-     * 
-     */
-    @Import(name="stepfunctions")
-    private @Nullable String stepfunctions;
-
     /**
      * @return Override the default endpoint for AWS Step Functions
      * 
@@ -2207,14 +2151,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> stepfunctions() {
         return Optional.ofNullable(this.stepfunctions);
     }
-
-    /**
-     * Override the default endpoint for AWS Storage Gateway
-     * 
-     */
-    @Import(name="storagegateway")
-    private @Nullable String storagegateway;
-
     /**
      * @return Override the default endpoint for AWS Storage Gateway
      * 
@@ -2222,14 +2158,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> storagegateway() {
         return Optional.ofNullable(this.storagegateway);
     }
-
-    /**
-     * Override the default endpoint for AWS Security Token Service (STS)
-     * 
-     */
-    @Import(name="sts")
-    private @Nullable String sts;
-
     /**
      * @return Override the default endpoint for AWS Security Token Service (STS)
      * 
@@ -2237,14 +2165,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> sts() {
         return Optional.ofNullable(this.sts);
     }
-
-    /**
-     * Override the default endpoint for Amazon Simple Workflow Service (SWF)
-     * 
-     */
-    @Import(name="swf")
-    private @Nullable String swf;
-
     /**
      * @return Override the default endpoint for Amazon Simple Workflow Service (SWF)
      * 
@@ -2252,14 +2172,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> swf() {
         return Optional.ofNullable(this.swf);
     }
-
-    /**
-     * Override the default endpoint for Amazon CloudWatch Synthetics
-     * 
-     */
-    @Import(name="synthetics")
-    private @Nullable String synthetics;
-
     /**
      * @return Override the default endpoint for Amazon CloudWatch Synthetics
      * 
@@ -2267,14 +2179,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> synthetics() {
         return Optional.ofNullable(this.synthetics);
     }
-
-    /**
-     * Override the default endpoint for Amazon Timestream
-     * 
-     */
-    @Import(name="timestreamwrite")
-    private @Nullable String timestreamwrite;
-
     /**
      * @return Override the default endpoint for Amazon Timestream
      * 
@@ -2282,14 +2186,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> timestreamwrite() {
         return Optional.ofNullable(this.timestreamwrite);
     }
-
-    /**
-     * Override the default endpoint for AWS Transfer Family
-     * 
-     */
-    @Import(name="transfer")
-    private @Nullable String transfer;
-
     /**
      * @return Override the default endpoint for AWS Transfer Family
      * 
@@ -2297,14 +2193,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> transfer() {
         return Optional.ofNullable(this.transfer);
     }
-
-    /**
-     * Override the default endpoint for AWS WAF Classic
-     * 
-     */
-    @Import(name="waf")
-    private @Nullable String waf;
-
     /**
      * @return Override the default endpoint for AWS WAF Classic
      * 
@@ -2312,14 +2200,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> waf() {
         return Optional.ofNullable(this.waf);
     }
-
-    /**
-     * Override the default endpoint for AWS WAF Regional Classic
-     * 
-     */
-    @Import(name="wafregional")
-    private @Nullable String wafregional;
-
     /**
      * @return Override the default endpoint for AWS WAF Regional Classic
      * 
@@ -2327,14 +2207,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> wafregional() {
         return Optional.ofNullable(this.wafregional);
     }
-
-    /**
-     * Override the default endpoint for AWS WAF V2
-     * 
-     */
-    @Import(name="wafv2")
-    private @Nullable String wafv2;
-
     /**
      * @return Override the default endpoint for AWS WAF V2
      * 
@@ -2342,14 +2214,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> wafv2() {
         return Optional.ofNullable(this.wafv2);
     }
-
-    /**
-     * Override the default endpoint for Amazon WorkLink
-     * 
-     */
-    @Import(name="worklink")
-    private @Nullable String worklink;
-
     /**
      * @return Override the default endpoint for Amazon WorkLink
      * 
@@ -2357,14 +2221,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> worklink() {
         return Optional.ofNullable(this.worklink);
     }
-
-    /**
-     * Override the default endpoint for Amazon WorkMail
-     * 
-     */
-    @Import(name="workmail")
-    private @Nullable String workmail;
-
     /**
      * @return Override the default endpoint for Amazon WorkMail
      * 
@@ -2372,14 +2228,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> workmail() {
         return Optional.ofNullable(this.workmail);
     }
-
-    /**
-     * Override the default endpoint for Amazon WorkSpaces
-     * 
-     */
-    @Import(name="workspaces")
-    private @Nullable String workspaces;
-
     /**
      * @return Override the default endpoint for Amazon WorkSpaces
      * 
@@ -2387,14 +2235,6 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
     public Optional<String> workspaces() {
         return Optional.ofNullable(this.workspaces);
     }
-
-    /**
-     * Override the default endpoint for AWS X-Ray
-     * 
-     */
-    @Import(name="xray")
-    private @Nullable String xray;
-
     /**
      * @return Override the default endpoint for AWS X-Ray
      * 
@@ -2403,1940 +2243,979 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.xray);
     }
 
-    private Endpoints() {}
-
-    private Endpoints(Endpoints $) {
-        this.accessanalyzer = $.accessanalyzer;
-        this.acm = $.acm;
-        this.acmpca = $.acmpca;
-        this.amplify = $.amplify;
-        this.appconfig = $.appconfig;
-        this.applicationautoscaling = $.applicationautoscaling;
-        this.applicationinsights = $.applicationinsights;
-        this.appmesh = $.appmesh;
-        this.apprunner = $.apprunner;
-        this.appstream = $.appstream;
-        this.appsync = $.appsync;
-        this.athena = $.athena;
-        this.auditmanager = $.auditmanager;
-        this.autoscaling = $.autoscaling;
-        this.backup = $.backup;
-        this.batch = $.batch;
-        this.budgets = $.budgets;
-        this.chime = $.chime;
-        this.cloud9 = $.cloud9;
-        this.cloudformation = $.cloudformation;
-        this.cloudfront = $.cloudfront;
-        this.cloudhsm = $.cloudhsm;
-        this.cloudsearch = $.cloudsearch;
-        this.cloudtrail = $.cloudtrail;
-        this.cloudwatch = $.cloudwatch;
-        this.cloudwatchevents = $.cloudwatchevents;
-        this.cloudwatchlogs = $.cloudwatchlogs;
-        this.codeartifact = $.codeartifact;
-        this.codebuild = $.codebuild;
-        this.codecommit = $.codecommit;
-        this.codedeploy = $.codedeploy;
-        this.codepipeline = $.codepipeline;
-        this.codestarconnections = $.codestarconnections;
-        this.cognitoidentity = $.cognitoidentity;
-        this.configservice = $.configservice;
-        this.connect = $.connect;
-        this.cur = $.cur;
-        this.dataexchange = $.dataexchange;
-        this.datapipeline = $.datapipeline;
-        this.datasync = $.datasync;
-        this.dax = $.dax;
-        this.detective = $.detective;
-        this.devicefarm = $.devicefarm;
-        this.directconnect = $.directconnect;
-        this.dlm = $.dlm;
-        this.dms = $.dms;
-        this.docdb = $.docdb;
-        this.ds = $.ds;
-        this.dynamodb = $.dynamodb;
-        this.ec2 = $.ec2;
-        this.ecr = $.ecr;
-        this.ecrpublic = $.ecrpublic;
-        this.ecs = $.ecs;
-        this.efs = $.efs;
-        this.eks = $.eks;
-        this.elasticache = $.elasticache;
-        this.elasticbeanstalk = $.elasticbeanstalk;
-        this.elastictranscoder = $.elastictranscoder;
-        this.elb = $.elb;
-        this.elbv2 = $.elbv2;
-        this.emr = $.emr;
-        this.emrcontainers = $.emrcontainers;
-        this.es = $.es;
-        this.firehose = $.firehose;
-        this.fms = $.fms;
-        this.forecast = $.forecast;
-        this.fsx = $.fsx;
-        this.gamelift = $.gamelift;
-        this.glacier = $.glacier;
-        this.globalaccelerator = $.globalaccelerator;
-        this.glue = $.glue;
-        this.greengrass = $.greengrass;
-        this.guardduty = $.guardduty;
-        this.iam = $.iam;
-        this.identitystore = $.identitystore;
-        this.imagebuilder = $.imagebuilder;
-        this.inspector = $.inspector;
-        this.iot = $.iot;
-        this.iotanalytics = $.iotanalytics;
-        this.iotevents = $.iotevents;
-        this.kafka = $.kafka;
-        this.kinesis = $.kinesis;
-        this.kinesisanalytics = $.kinesisanalytics;
-        this.kinesisanalyticsv2 = $.kinesisanalyticsv2;
-        this.kinesisvideo = $.kinesisvideo;
-        this.kms = $.kms;
-        this.lakeformation = $.lakeformation;
-        this.lambda = $.lambda;
-        this.lexmodels = $.lexmodels;
-        this.licensemanager = $.licensemanager;
-        this.lightsail = $.lightsail;
-        this.location = $.location;
-        this.macie = $.macie;
-        this.macie2 = $.macie2;
-        this.managedblockchain = $.managedblockchain;
-        this.marketplacecatalog = $.marketplacecatalog;
-        this.mediaconnect = $.mediaconnect;
-        this.mediaconvert = $.mediaconvert;
-        this.medialive = $.medialive;
-        this.mediapackage = $.mediapackage;
-        this.mediastore = $.mediastore;
-        this.mediastoredata = $.mediastoredata;
-        this.memorydb = $.memorydb;
-        this.mq = $.mq;
-        this.mwaa = $.mwaa;
-        this.neptune = $.neptune;
-        this.networkfirewall = $.networkfirewall;
-        this.networkmanager = $.networkmanager;
-        this.opsworks = $.opsworks;
-        this.organizations = $.organizations;
-        this.outposts = $.outposts;
-        this.personalize = $.personalize;
-        this.pinpoint = $.pinpoint;
-        this.pricing = $.pricing;
-        this.qldb = $.qldb;
-        this.quicksight = $.quicksight;
-        this.ram = $.ram;
-        this.rds = $.rds;
-        this.redshift = $.redshift;
-        this.resourcegroups = $.resourcegroups;
-        this.resourcegroupstaggingapi = $.resourcegroupstaggingapi;
-        this.route53 = $.route53;
-        this.route53domains = $.route53domains;
-        this.route53recoverycontrolconfig = $.route53recoverycontrolconfig;
-        this.route53recoveryreadiness = $.route53recoveryreadiness;
-        this.route53resolver = $.route53resolver;
-        this.s3 = $.s3;
-        this.s3control = $.s3control;
-        this.s3outposts = $.s3outposts;
-        this.sagemaker = $.sagemaker;
-        this.schemas = $.schemas;
-        this.sdb = $.sdb;
-        this.secretsmanager = $.secretsmanager;
-        this.securityhub = $.securityhub;
-        this.serverlessrepo = $.serverlessrepo;
-        this.servicecatalog = $.servicecatalog;
-        this.servicediscovery = $.servicediscovery;
-        this.servicequotas = $.servicequotas;
-        this.ses = $.ses;
-        this.shield = $.shield;
-        this.signer = $.signer;
-        this.sns = $.sns;
-        this.sqs = $.sqs;
-        this.ssm = $.ssm;
-        this.ssoadmin = $.ssoadmin;
-        this.stepfunctions = $.stepfunctions;
-        this.storagegateway = $.storagegateway;
-        this.sts = $.sts;
-        this.swf = $.swf;
-        this.synthetics = $.synthetics;
-        this.timestreamwrite = $.timestreamwrite;
-        this.transfer = $.transfer;
-        this.waf = $.waf;
-        this.wafregional = $.wafregional;
-        this.wafv2 = $.wafv2;
-        this.worklink = $.worklink;
-        this.workmail = $.workmail;
-        this.workspaces = $.workspaces;
-        this.xray = $.xray;
-    }
-
     public static Builder builder() {
         return new Builder();
     }
+
     public static Builder builder(Endpoints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Endpoints $;
+        private @Nullable String accessanalyzer;
+        private @Nullable String acm;
+        private @Nullable String acmpca;
+        private @Nullable String amplify;
+        private @Nullable String appconfig;
+        private @Nullable String applicationautoscaling;
+        private @Nullable String applicationinsights;
+        private @Nullable String appmesh;
+        private @Nullable String apprunner;
+        private @Nullable String appstream;
+        private @Nullable String appsync;
+        private @Nullable String athena;
+        private @Nullable String auditmanager;
+        private @Nullable String autoscaling;
+        private @Nullable String backup;
+        private @Nullable String batch;
+        private @Nullable String budgets;
+        private @Nullable String chime;
+        private @Nullable String cloud9;
+        private @Nullable String cloudformation;
+        private @Nullable String cloudfront;
+        private @Nullable String cloudhsm;
+        private @Nullable String cloudsearch;
+        private @Nullable String cloudtrail;
+        private @Nullable String cloudwatch;
+        private @Nullable String cloudwatchevents;
+        private @Nullable String cloudwatchlogs;
+        private @Nullable String codeartifact;
+        private @Nullable String codebuild;
+        private @Nullable String codecommit;
+        private @Nullable String codedeploy;
+        private @Nullable String codepipeline;
+        private @Nullable String codestarconnections;
+        private @Nullable String cognitoidentity;
+        private @Nullable String configservice;
+        private @Nullable String connect;
+        private @Nullable String cur;
+        private @Nullable String dataexchange;
+        private @Nullable String datapipeline;
+        private @Nullable String datasync;
+        private @Nullable String dax;
+        private @Nullable String detective;
+        private @Nullable String devicefarm;
+        private @Nullable String directconnect;
+        private @Nullable String dlm;
+        private @Nullable String dms;
+        private @Nullable String docdb;
+        private @Nullable String ds;
+        private @Nullable String dynamodb;
+        private @Nullable String ec2;
+        private @Nullable String ecr;
+        private @Nullable String ecrpublic;
+        private @Nullable String ecs;
+        private @Nullable String efs;
+        private @Nullable String eks;
+        private @Nullable String elasticache;
+        private @Nullable String elasticbeanstalk;
+        private @Nullable String elastictranscoder;
+        private @Nullable String elb;
+        private @Nullable String elbv2;
+        private @Nullable String emr;
+        private @Nullable String emrcontainers;
+        private @Nullable String es;
+        private @Nullable String firehose;
+        private @Nullable String fms;
+        private @Nullable String forecast;
+        private @Nullable String fsx;
+        private @Nullable String gamelift;
+        private @Nullable String glacier;
+        private @Nullable String globalaccelerator;
+        private @Nullable String glue;
+        private @Nullable String greengrass;
+        private @Nullable String guardduty;
+        private @Nullable String iam;
+        private @Nullable String identitystore;
+        private @Nullable String imagebuilder;
+        private @Nullable String inspector;
+        private @Nullable String iot;
+        private @Nullable String iotanalytics;
+        private @Nullable String iotevents;
+        private @Nullable String kafka;
+        private @Nullable String kinesis;
+        private @Nullable String kinesisanalytics;
+        private @Nullable String kinesisanalyticsv2;
+        private @Nullable String kinesisvideo;
+        private @Nullable String kms;
+        private @Nullable String lakeformation;
+        private @Nullable String lambda;
+        private @Nullable String lexmodels;
+        private @Nullable String licensemanager;
+        private @Nullable String lightsail;
+        private @Nullable String location;
+        private @Nullable String macie;
+        private @Nullable String macie2;
+        private @Nullable String managedblockchain;
+        private @Nullable String marketplacecatalog;
+        private @Nullable String mediaconnect;
+        private @Nullable String mediaconvert;
+        private @Nullable String medialive;
+        private @Nullable String mediapackage;
+        private @Nullable String mediastore;
+        private @Nullable String mediastoredata;
+        private @Nullable String memorydb;
+        private @Nullable String mq;
+        private @Nullable String mwaa;
+        private @Nullable String neptune;
+        private @Nullable String networkfirewall;
+        private @Nullable String networkmanager;
+        private @Nullable String opsworks;
+        private @Nullable String organizations;
+        private @Nullable String outposts;
+        private @Nullable String personalize;
+        private @Nullable String pinpoint;
+        private @Nullable String pricing;
+        private @Nullable String qldb;
+        private @Nullable String quicksight;
+        private @Nullable String ram;
+        private @Nullable String rds;
+        private @Nullable String redshift;
+        private @Nullable String resourcegroups;
+        private @Nullable String resourcegroupstaggingapi;
+        private @Nullable String route53;
+        private @Nullable String route53domains;
+        private @Nullable String route53recoverycontrolconfig;
+        private @Nullable String route53recoveryreadiness;
+        private @Nullable String route53resolver;
+        private @Nullable String s3;
+        private @Nullable String s3control;
+        private @Nullable String s3outposts;
+        private @Nullable String sagemaker;
+        private @Nullable String schemas;
+        private @Nullable String sdb;
+        private @Nullable String secretsmanager;
+        private @Nullable String securityhub;
+        private @Nullable String serverlessrepo;
+        private @Nullable String servicecatalog;
+        private @Nullable String servicediscovery;
+        private @Nullable String servicequotas;
+        private @Nullable String ses;
+        private @Nullable String shield;
+        private @Nullable String signer;
+        private @Nullable String sns;
+        private @Nullable String sqs;
+        private @Nullable String ssm;
+        private @Nullable String ssoadmin;
+        private @Nullable String stepfunctions;
+        private @Nullable String storagegateway;
+        private @Nullable String sts;
+        private @Nullable String swf;
+        private @Nullable String synthetics;
+        private @Nullable String timestreamwrite;
+        private @Nullable String transfer;
+        private @Nullable String waf;
+        private @Nullable String wafregional;
+        private @Nullable String wafv2;
+        private @Nullable String worklink;
+        private @Nullable String workmail;
+        private @Nullable String workspaces;
+        private @Nullable String xray;
 
         public Builder() {
-            $ = new Endpoints();
+    	      // Empty
         }
 
         public Builder(Endpoints defaults) {
-            $ = new Endpoints(Objects.requireNonNull(defaults));
+    	      Objects.requireNonNull(defaults);
+    	      this.accessanalyzer = defaults.accessanalyzer;
+    	      this.acm = defaults.acm;
+    	      this.acmpca = defaults.acmpca;
+    	      this.amplify = defaults.amplify;
+    	      this.appconfig = defaults.appconfig;
+    	      this.applicationautoscaling = defaults.applicationautoscaling;
+    	      this.applicationinsights = defaults.applicationinsights;
+    	      this.appmesh = defaults.appmesh;
+    	      this.apprunner = defaults.apprunner;
+    	      this.appstream = defaults.appstream;
+    	      this.appsync = defaults.appsync;
+    	      this.athena = defaults.athena;
+    	      this.auditmanager = defaults.auditmanager;
+    	      this.autoscaling = defaults.autoscaling;
+    	      this.backup = defaults.backup;
+    	      this.batch = defaults.batch;
+    	      this.budgets = defaults.budgets;
+    	      this.chime = defaults.chime;
+    	      this.cloud9 = defaults.cloud9;
+    	      this.cloudformation = defaults.cloudformation;
+    	      this.cloudfront = defaults.cloudfront;
+    	      this.cloudhsm = defaults.cloudhsm;
+    	      this.cloudsearch = defaults.cloudsearch;
+    	      this.cloudtrail = defaults.cloudtrail;
+    	      this.cloudwatch = defaults.cloudwatch;
+    	      this.cloudwatchevents = defaults.cloudwatchevents;
+    	      this.cloudwatchlogs = defaults.cloudwatchlogs;
+    	      this.codeartifact = defaults.codeartifact;
+    	      this.codebuild = defaults.codebuild;
+    	      this.codecommit = defaults.codecommit;
+    	      this.codedeploy = defaults.codedeploy;
+    	      this.codepipeline = defaults.codepipeline;
+    	      this.codestarconnections = defaults.codestarconnections;
+    	      this.cognitoidentity = defaults.cognitoidentity;
+    	      this.configservice = defaults.configservice;
+    	      this.connect = defaults.connect;
+    	      this.cur = defaults.cur;
+    	      this.dataexchange = defaults.dataexchange;
+    	      this.datapipeline = defaults.datapipeline;
+    	      this.datasync = defaults.datasync;
+    	      this.dax = defaults.dax;
+    	      this.detective = defaults.detective;
+    	      this.devicefarm = defaults.devicefarm;
+    	      this.directconnect = defaults.directconnect;
+    	      this.dlm = defaults.dlm;
+    	      this.dms = defaults.dms;
+    	      this.docdb = defaults.docdb;
+    	      this.ds = defaults.ds;
+    	      this.dynamodb = defaults.dynamodb;
+    	      this.ec2 = defaults.ec2;
+    	      this.ecr = defaults.ecr;
+    	      this.ecrpublic = defaults.ecrpublic;
+    	      this.ecs = defaults.ecs;
+    	      this.efs = defaults.efs;
+    	      this.eks = defaults.eks;
+    	      this.elasticache = defaults.elasticache;
+    	      this.elasticbeanstalk = defaults.elasticbeanstalk;
+    	      this.elastictranscoder = defaults.elastictranscoder;
+    	      this.elb = defaults.elb;
+    	      this.elbv2 = defaults.elbv2;
+    	      this.emr = defaults.emr;
+    	      this.emrcontainers = defaults.emrcontainers;
+    	      this.es = defaults.es;
+    	      this.firehose = defaults.firehose;
+    	      this.fms = defaults.fms;
+    	      this.forecast = defaults.forecast;
+    	      this.fsx = defaults.fsx;
+    	      this.gamelift = defaults.gamelift;
+    	      this.glacier = defaults.glacier;
+    	      this.globalaccelerator = defaults.globalaccelerator;
+    	      this.glue = defaults.glue;
+    	      this.greengrass = defaults.greengrass;
+    	      this.guardduty = defaults.guardduty;
+    	      this.iam = defaults.iam;
+    	      this.identitystore = defaults.identitystore;
+    	      this.imagebuilder = defaults.imagebuilder;
+    	      this.inspector = defaults.inspector;
+    	      this.iot = defaults.iot;
+    	      this.iotanalytics = defaults.iotanalytics;
+    	      this.iotevents = defaults.iotevents;
+    	      this.kafka = defaults.kafka;
+    	      this.kinesis = defaults.kinesis;
+    	      this.kinesisanalytics = defaults.kinesisanalytics;
+    	      this.kinesisanalyticsv2 = defaults.kinesisanalyticsv2;
+    	      this.kinesisvideo = defaults.kinesisvideo;
+    	      this.kms = defaults.kms;
+    	      this.lakeformation = defaults.lakeformation;
+    	      this.lambda = defaults.lambda;
+    	      this.lexmodels = defaults.lexmodels;
+    	      this.licensemanager = defaults.licensemanager;
+    	      this.lightsail = defaults.lightsail;
+    	      this.location = defaults.location;
+    	      this.macie = defaults.macie;
+    	      this.macie2 = defaults.macie2;
+    	      this.managedblockchain = defaults.managedblockchain;
+    	      this.marketplacecatalog = defaults.marketplacecatalog;
+    	      this.mediaconnect = defaults.mediaconnect;
+    	      this.mediaconvert = defaults.mediaconvert;
+    	      this.medialive = defaults.medialive;
+    	      this.mediapackage = defaults.mediapackage;
+    	      this.mediastore = defaults.mediastore;
+    	      this.mediastoredata = defaults.mediastoredata;
+    	      this.memorydb = defaults.memorydb;
+    	      this.mq = defaults.mq;
+    	      this.mwaa = defaults.mwaa;
+    	      this.neptune = defaults.neptune;
+    	      this.networkfirewall = defaults.networkfirewall;
+    	      this.networkmanager = defaults.networkmanager;
+    	      this.opsworks = defaults.opsworks;
+    	      this.organizations = defaults.organizations;
+    	      this.outposts = defaults.outposts;
+    	      this.personalize = defaults.personalize;
+    	      this.pinpoint = defaults.pinpoint;
+    	      this.pricing = defaults.pricing;
+    	      this.qldb = defaults.qldb;
+    	      this.quicksight = defaults.quicksight;
+    	      this.ram = defaults.ram;
+    	      this.rds = defaults.rds;
+    	      this.redshift = defaults.redshift;
+    	      this.resourcegroups = defaults.resourcegroups;
+    	      this.resourcegroupstaggingapi = defaults.resourcegroupstaggingapi;
+    	      this.route53 = defaults.route53;
+    	      this.route53domains = defaults.route53domains;
+    	      this.route53recoverycontrolconfig = defaults.route53recoverycontrolconfig;
+    	      this.route53recoveryreadiness = defaults.route53recoveryreadiness;
+    	      this.route53resolver = defaults.route53resolver;
+    	      this.s3 = defaults.s3;
+    	      this.s3control = defaults.s3control;
+    	      this.s3outposts = defaults.s3outposts;
+    	      this.sagemaker = defaults.sagemaker;
+    	      this.schemas = defaults.schemas;
+    	      this.sdb = defaults.sdb;
+    	      this.secretsmanager = defaults.secretsmanager;
+    	      this.securityhub = defaults.securityhub;
+    	      this.serverlessrepo = defaults.serverlessrepo;
+    	      this.servicecatalog = defaults.servicecatalog;
+    	      this.servicediscovery = defaults.servicediscovery;
+    	      this.servicequotas = defaults.servicequotas;
+    	      this.ses = defaults.ses;
+    	      this.shield = defaults.shield;
+    	      this.signer = defaults.signer;
+    	      this.sns = defaults.sns;
+    	      this.sqs = defaults.sqs;
+    	      this.ssm = defaults.ssm;
+    	      this.ssoadmin = defaults.ssoadmin;
+    	      this.stepfunctions = defaults.stepfunctions;
+    	      this.storagegateway = defaults.storagegateway;
+    	      this.sts = defaults.sts;
+    	      this.swf = defaults.swf;
+    	      this.synthetics = defaults.synthetics;
+    	      this.timestreamwrite = defaults.timestreamwrite;
+    	      this.transfer = defaults.transfer;
+    	      this.waf = defaults.waf;
+    	      this.wafregional = defaults.wafregional;
+    	      this.wafv2 = defaults.wafv2;
+    	      this.worklink = defaults.worklink;
+    	      this.workmail = defaults.workmail;
+    	      this.workspaces = defaults.workspaces;
+    	      this.xray = defaults.xray;
         }
 
-        /**
-         * @param accessanalyzer Override the default endpoint for AWS Access Analyzer
-         * 
-         * @return builder
-         * 
-         */
         public Builder accessanalyzer(@Nullable String accessanalyzer) {
-            $.accessanalyzer = accessanalyzer;
+            this.accessanalyzer = accessanalyzer;
             return this;
         }
-
-        /**
-         * @param acm Override the default endpoint for AWS Certificate Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder acm(@Nullable String acm) {
-            $.acm = acm;
+            this.acm = acm;
             return this;
         }
-
-        /**
-         * @param acmpca Override the default endpoint for AWS Certificate Manager Private Certificate Authority
-         * 
-         * @return builder
-         * 
-         */
         public Builder acmpca(@Nullable String acmpca) {
-            $.acmpca = acmpca;
+            this.acmpca = acmpca;
             return this;
         }
-
-        /**
-         * @param amplify Override the default endpoint for AWS Amplify Console
-         * 
-         * @return builder
-         * 
-         */
         public Builder amplify(@Nullable String amplify) {
-            $.amplify = amplify;
+            this.amplify = amplify;
             return this;
         }
-
-        /**
-         * @param appconfig Override the default endpoint for AWS AppConfig
-         * 
-         * @return builder
-         * 
-         */
         public Builder appconfig(@Nullable String appconfig) {
-            $.appconfig = appconfig;
+            this.appconfig = appconfig;
             return this;
         }
-
-        /**
-         * @param applicationautoscaling Override the default endpoint for AWS Application Auto Scaling
-         * 
-         * @return builder
-         * 
-         */
         public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
-            $.applicationautoscaling = applicationautoscaling;
+            this.applicationautoscaling = applicationautoscaling;
             return this;
         }
-
-        /**
-         * @param applicationinsights Override the default endpoint for AWS CloudWatch Application Insights
-         * 
-         * @return builder
-         * 
-         */
         public Builder applicationinsights(@Nullable String applicationinsights) {
-            $.applicationinsights = applicationinsights;
+            this.applicationinsights = applicationinsights;
             return this;
         }
-
-        /**
-         * @param appmesh Override the default endpoint for AWS App Mesh
-         * 
-         * @return builder
-         * 
-         */
         public Builder appmesh(@Nullable String appmesh) {
-            $.appmesh = appmesh;
+            this.appmesh = appmesh;
             return this;
         }
-
-        /**
-         * @param apprunner Override the default endpoint for AWS App Runner
-         * 
-         * @return builder
-         * 
-         */
         public Builder apprunner(@Nullable String apprunner) {
-            $.apprunner = apprunner;
+            this.apprunner = apprunner;
             return this;
         }
-
-        /**
-         * @param appstream Override the default endpoint for AWS AppStream 2.0
-         * 
-         * @return builder
-         * 
-         */
         public Builder appstream(@Nullable String appstream) {
-            $.appstream = appstream;
+            this.appstream = appstream;
             return this;
         }
-
-        /**
-         * @param appsync Override the default endpoint for AWS AppSync
-         * 
-         * @return builder
-         * 
-         */
         public Builder appsync(@Nullable String appsync) {
-            $.appsync = appsync;
+            this.appsync = appsync;
             return this;
         }
-
-        /**
-         * @param athena Override the default endpoint for AWS Athena
-         * 
-         * @return builder
-         * 
-         */
         public Builder athena(@Nullable String athena) {
-            $.athena = athena;
+            this.athena = athena;
             return this;
         }
-
-        /**
-         * @param auditmanager Override the default endpoint for AWS Audit Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder auditmanager(@Nullable String auditmanager) {
-            $.auditmanager = auditmanager;
+            this.auditmanager = auditmanager;
             return this;
         }
-
-        /**
-         * @param autoscaling Override the default endpoint for AWS Auto Scaling
-         * 
-         * @return builder
-         * 
-         */
         public Builder autoscaling(@Nullable String autoscaling) {
-            $.autoscaling = autoscaling;
+            this.autoscaling = autoscaling;
             return this;
         }
-
-        /**
-         * @param backup Override the default endpoint for AWS Backup
-         * 
-         * @return builder
-         * 
-         */
         public Builder backup(@Nullable String backup) {
-            $.backup = backup;
+            this.backup = backup;
             return this;
         }
-
-        /**
-         * @param batch Override the default endpoint for AWS Batch
-         * 
-         * @return builder
-         * 
-         */
         public Builder batch(@Nullable String batch) {
-            $.batch = batch;
+            this.batch = batch;
             return this;
         }
-
-        /**
-         * @param budgets Override the default endpoint for AWS Budgets
-         * 
-         * @return builder
-         * 
-         */
         public Builder budgets(@Nullable String budgets) {
-            $.budgets = budgets;
+            this.budgets = budgets;
             return this;
         }
-
-        /**
-         * @param chime Override the default endpoint for Amazon Chime
-         * 
-         * @return builder
-         * 
-         */
         public Builder chime(@Nullable String chime) {
-            $.chime = chime;
+            this.chime = chime;
             return this;
         }
-
-        /**
-         * @param cloud9 Override the default endpoint for AWS Cloud9
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloud9(@Nullable String cloud9) {
-            $.cloud9 = cloud9;
+            this.cloud9 = cloud9;
             return this;
         }
-
-        /**
-         * @param cloudformation Override the default endpoint for AWS CloudFormation
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudformation(@Nullable String cloudformation) {
-            $.cloudformation = cloudformation;
+            this.cloudformation = cloudformation;
             return this;
         }
-
-        /**
-         * @param cloudfront Override the default endpoint for AWS CloudFront
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudfront(@Nullable String cloudfront) {
-            $.cloudfront = cloudfront;
+            this.cloudfront = cloudfront;
             return this;
         }
-
-        /**
-         * @param cloudhsm Override the default endpoint for AWS CloudHSM
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudhsm(@Nullable String cloudhsm) {
-            $.cloudhsm = cloudhsm;
+            this.cloudhsm = cloudhsm;
             return this;
         }
-
-        /**
-         * @param cloudsearch Override the default endpoint for AWS CloudSearch
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudsearch(@Nullable String cloudsearch) {
-            $.cloudsearch = cloudsearch;
+            this.cloudsearch = cloudsearch;
             return this;
         }
-
-        /**
-         * @param cloudtrail Override the default endpoint for AWS CloudTrail
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudtrail(@Nullable String cloudtrail) {
-            $.cloudtrail = cloudtrail;
+            this.cloudtrail = cloudtrail;
             return this;
         }
-
-        /**
-         * @param cloudwatch Override the default endpoint for AWS CloudWatch
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudwatch(@Nullable String cloudwatch) {
-            $.cloudwatch = cloudwatch;
+            this.cloudwatch = cloudwatch;
             return this;
         }
-
-        /**
-         * @param cloudwatchevents Override the default endpoint for AWS CloudWatch Events
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
-            $.cloudwatchevents = cloudwatchevents;
+            this.cloudwatchevents = cloudwatchevents;
             return this;
         }
-
-        /**
-         * @param cloudwatchlogs Override the default endpoint for AWS CloudWatch Logs
-         * 
-         * @return builder
-         * 
-         */
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
-            $.cloudwatchlogs = cloudwatchlogs;
+            this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
-
-        /**
-         * @param codeartifact Override the default endpoint for AWS CodeArtifact
-         * 
-         * @return builder
-         * 
-         */
         public Builder codeartifact(@Nullable String codeartifact) {
-            $.codeartifact = codeartifact;
+            this.codeartifact = codeartifact;
             return this;
         }
-
-        /**
-         * @param codebuild Override the default endpoint for AWS CodeBuild
-         * 
-         * @return builder
-         * 
-         */
         public Builder codebuild(@Nullable String codebuild) {
-            $.codebuild = codebuild;
+            this.codebuild = codebuild;
             return this;
         }
-
-        /**
-         * @param codecommit Override the default endpoint for AWS CodeCommit
-         * 
-         * @return builder
-         * 
-         */
         public Builder codecommit(@Nullable String codecommit) {
-            $.codecommit = codecommit;
+            this.codecommit = codecommit;
             return this;
         }
-
-        /**
-         * @param codedeploy Override the default endpoint for AWS CodeDeploy
-         * 
-         * @return builder
-         * 
-         */
         public Builder codedeploy(@Nullable String codedeploy) {
-            $.codedeploy = codedeploy;
+            this.codedeploy = codedeploy;
             return this;
         }
-
-        /**
-         * @param codepipeline Override the default endpoint for AWS CodePipeline
-         * 
-         * @return builder
-         * 
-         */
         public Builder codepipeline(@Nullable String codepipeline) {
-            $.codepipeline = codepipeline;
+            this.codepipeline = codepipeline;
             return this;
         }
-
-        /**
-         * @param codestarconnections Override the default endpoint for AWS CodeStart Connections
-         * 
-         * @return builder
-         * 
-         */
         public Builder codestarconnections(@Nullable String codestarconnections) {
-            $.codestarconnections = codestarconnections;
+            this.codestarconnections = codestarconnections;
             return this;
         }
-
-        /**
-         * @param cognitoidentity Override the default endpoint for Amazon Cognito
-         * 
-         * @return builder
-         * 
-         */
         public Builder cognitoidentity(@Nullable String cognitoidentity) {
-            $.cognitoidentity = cognitoidentity;
+            this.cognitoidentity = cognitoidentity;
             return this;
         }
-
-        /**
-         * @param configservice Override the default endpoint for AWS Config
-         * 
-         * @return builder
-         * 
-         */
         public Builder configservice(@Nullable String configservice) {
-            $.configservice = configservice;
+            this.configservice = configservice;
             return this;
         }
-
-        /**
-         * @param connect Override the default endpoint for Amazon Connect
-         * 
-         * @return builder
-         * 
-         */
         public Builder connect(@Nullable String connect) {
-            $.connect = connect;
+            this.connect = connect;
             return this;
         }
-
-        /**
-         * @param cur Override the default endpoint for AWS Cost and Usage Reports
-         * 
-         * @return builder
-         * 
-         */
         public Builder cur(@Nullable String cur) {
-            $.cur = cur;
+            this.cur = cur;
             return this;
         }
-
-        /**
-         * @param dataexchange Override the default endpoint for AWS Data Exchange
-         * 
-         * @return builder
-         * 
-         */
         public Builder dataexchange(@Nullable String dataexchange) {
-            $.dataexchange = dataexchange;
+            this.dataexchange = dataexchange;
             return this;
         }
-
-        /**
-         * @param datapipeline Override the default endpoint for AWS Data Pipeline
-         * 
-         * @return builder
-         * 
-         */
         public Builder datapipeline(@Nullable String datapipeline) {
-            $.datapipeline = datapipeline;
+            this.datapipeline = datapipeline;
             return this;
         }
-
-        /**
-         * @param datasync Override the default endpoint for AWS DataSync
-         * 
-         * @return builder
-         * 
-         */
         public Builder datasync(@Nullable String datasync) {
-            $.datasync = datasync;
+            this.datasync = datasync;
             return this;
         }
-
-        /**
-         * @param dax Override the default endpoint for AWS DynamoDB Accelerator
-         * 
-         * @return builder
-         * 
-         */
         public Builder dax(@Nullable String dax) {
-            $.dax = dax;
+            this.dax = dax;
             return this;
         }
-
-        /**
-         * @param detective Override the default endpoint for AWS Detective
-         * 
-         * @return builder
-         * 
-         */
         public Builder detective(@Nullable String detective) {
-            $.detective = detective;
+            this.detective = detective;
             return this;
         }
-
-        /**
-         * @param devicefarm Override the default endpoint for AWS Device Farm
-         * 
-         * @return builder
-         * 
-         */
         public Builder devicefarm(@Nullable String devicefarm) {
-            $.devicefarm = devicefarm;
+            this.devicefarm = devicefarm;
             return this;
         }
-
-        /**
-         * @param directconnect Override the default endpoint for AWS Direct Connect
-         * 
-         * @return builder
-         * 
-         */
         public Builder directconnect(@Nullable String directconnect) {
-            $.directconnect = directconnect;
+            this.directconnect = directconnect;
             return this;
         }
-
-        /**
-         * @param dlm Override the default endpoint for AWS Data Lifecycle Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder dlm(@Nullable String dlm) {
-            $.dlm = dlm;
+            this.dlm = dlm;
             return this;
         }
-
-        /**
-         * @param dms Override the default endpoint for AWS Database Migration Service
-         * 
-         * @return builder
-         * 
-         */
         public Builder dms(@Nullable String dms) {
-            $.dms = dms;
+            this.dms = dms;
             return this;
         }
-
-        /**
-         * @param docdb Override the default endpoint for AWS DocumentDB
-         * 
-         * @return builder
-         * 
-         */
         public Builder docdb(@Nullable String docdb) {
-            $.docdb = docdb;
+            this.docdb = docdb;
             return this;
         }
-
-        /**
-         * @param ds Override the default endpoint for AWS Directory Service
-         * 
-         * @return builder
-         * 
-         */
         public Builder ds(@Nullable String ds) {
-            $.ds = ds;
+            this.ds = ds;
             return this;
         }
-
-        /**
-         * @param dynamodb Override the default endpoint for AWS DynamoDB
-         * 
-         * @return builder
-         * 
-         */
         public Builder dynamodb(@Nullable String dynamodb) {
-            $.dynamodb = dynamodb;
+            this.dynamodb = dynamodb;
             return this;
         }
-
-        /**
-         * @param ec2 Override the default endpoint for AWS Elastic Compute Cloud (EC2)
-         * 
-         * @return builder
-         * 
-         */
         public Builder ec2(@Nullable String ec2) {
-            $.ec2 = ec2;
+            this.ec2 = ec2;
             return this;
         }
-
-        /**
-         * @param ecr Override the default endpoint for AWS Elastic Container Registry (ECR)
-         * 
-         * @return builder
-         * 
-         */
         public Builder ecr(@Nullable String ecr) {
-            $.ecr = ecr;
+            this.ecr = ecr;
             return this;
         }
-
-        /**
-         * @param ecrpublic Override the default endpoint for AWS Elastic Container Registry (ECR) Public
-         * 
-         * @return builder
-         * 
-         */
         public Builder ecrpublic(@Nullable String ecrpublic) {
-            $.ecrpublic = ecrpublic;
+            this.ecrpublic = ecrpublic;
             return this;
         }
-
-        /**
-         * @param ecs Override the default endpoint for AWS Elastic Container Service (ECS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder ecs(@Nullable String ecs) {
-            $.ecs = ecs;
+            this.ecs = ecs;
             return this;
         }
-
-        /**
-         * @param efs Override the default endpoint for AWS Elastic File System (EFS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder efs(@Nullable String efs) {
-            $.efs = efs;
+            this.efs = efs;
             return this;
         }
-
-        /**
-         * @param eks Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder eks(@Nullable String eks) {
-            $.eks = eks;
+            this.eks = eks;
             return this;
         }
-
-        /**
-         * @param elasticache Override the default endpoint for AWS ElastiCache
-         * 
-         * @return builder
-         * 
-         */
         public Builder elasticache(@Nullable String elasticache) {
-            $.elasticache = elasticache;
+            this.elasticache = elasticache;
             return this;
         }
-
-        /**
-         * @param elasticbeanstalk Override the default endpoint for AWS Elastic Beanstalk
-         * 
-         * @return builder
-         * 
-         */
         public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
-            $.elasticbeanstalk = elasticbeanstalk;
+            this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
-
-        /**
-         * @param elastictranscoder Override the default endpoint for AWS Elastic Transcoder
-         * 
-         * @return builder
-         * 
-         */
         public Builder elastictranscoder(@Nullable String elastictranscoder) {
-            $.elastictranscoder = elastictranscoder;
+            this.elastictranscoder = elastictranscoder;
             return this;
         }
-
-        /**
-         * @param elb Override the default endpoint for AWS Elastic Load Balancing
-         * 
-         * @return builder
-         * 
-         */
         public Builder elb(@Nullable String elb) {
-            $.elb = elb;
+            this.elb = elb;
             return this;
         }
-
-        /**
-         * @param elbv2 Override the default endpoint for AWS Elastic Load Balancing V2
-         * 
-         * @return builder
-         * 
-         */
         public Builder elbv2(@Nullable String elbv2) {
-            $.elbv2 = elbv2;
+            this.elbv2 = elbv2;
             return this;
         }
-
-        /**
-         * @param emr Override the default endpoint for AWS EMR
-         * 
-         * @return builder
-         * 
-         */
         public Builder emr(@Nullable String emr) {
-            $.emr = emr;
+            this.emr = emr;
             return this;
         }
-
-        /**
-         * @param emrcontainers Override the default endpoint for AWS EMR on EKS
-         * 
-         * @return builder
-         * 
-         */
         public Builder emrcontainers(@Nullable String emrcontainers) {
-            $.emrcontainers = emrcontainers;
+            this.emrcontainers = emrcontainers;
             return this;
         }
-
-        /**
-         * @param es Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
-         * 
-         * @return builder
-         * 
-         */
         public Builder es(@Nullable String es) {
-            $.es = es;
+            this.es = es;
             return this;
         }
-
-        /**
-         * @param firehose Override the default endpoint for AWS Kinesis Data Firehose
-         * 
-         * @return builder
-         * 
-         */
         public Builder firehose(@Nullable String firehose) {
-            $.firehose = firehose;
+            this.firehose = firehose;
             return this;
         }
-
-        /**
-         * @param fms Override the default endpoint for AWS Firewall Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder fms(@Nullable String fms) {
-            $.fms = fms;
+            this.fms = fms;
             return this;
         }
-
-        /**
-         * @param forecast Override the default endpoint for Amazon Forecast
-         * 
-         * @return builder
-         * 
-         */
         public Builder forecast(@Nullable String forecast) {
-            $.forecast = forecast;
+            this.forecast = forecast;
             return this;
         }
-
-        /**
-         * @param fsx Override the default endpoint for AWS FSx
-         * 
-         * @return builder
-         * 
-         */
         public Builder fsx(@Nullable String fsx) {
-            $.fsx = fsx;
+            this.fsx = fsx;
             return this;
         }
-
-        /**
-         * @param gamelift Override the default endpoint for AWS GameLift
-         * 
-         * @return builder
-         * 
-         */
         public Builder gamelift(@Nullable String gamelift) {
-            $.gamelift = gamelift;
+            this.gamelift = gamelift;
             return this;
         }
-
-        /**
-         * @param glacier Override the default endpoint for Amazon S3 Glacier
-         * 
-         * @return builder
-         * 
-         */
         public Builder glacier(@Nullable String glacier) {
-            $.glacier = glacier;
+            this.glacier = glacier;
             return this;
         }
-
-        /**
-         * @param globalaccelerator Override the default endpoint for AWS Global Accelerator
-         * 
-         * @return builder
-         * 
-         */
         public Builder globalaccelerator(@Nullable String globalaccelerator) {
-            $.globalaccelerator = globalaccelerator;
+            this.globalaccelerator = globalaccelerator;
             return this;
         }
-
-        /**
-         * @param glue Override the default endpoint for AWS Glue
-         * 
-         * @return builder
-         * 
-         */
         public Builder glue(@Nullable String glue) {
-            $.glue = glue;
+            this.glue = glue;
             return this;
         }
-
-        /**
-         * @param greengrass Override the default endpoint for AWS IoT Greengrass
-         * 
-         * @return builder
-         * 
-         */
         public Builder greengrass(@Nullable String greengrass) {
-            $.greengrass = greengrass;
+            this.greengrass = greengrass;
             return this;
         }
-
-        /**
-         * @param guardduty Override the default endpoint for AWS GuardDuty
-         * 
-         * @return builder
-         * 
-         */
         public Builder guardduty(@Nullable String guardduty) {
-            $.guardduty = guardduty;
+            this.guardduty = guardduty;
             return this;
         }
-
-        /**
-         * @param iam Override the default endpoint for AWS Identity and Access Management
-         * 
-         * @return builder
-         * 
-         */
         public Builder iam(@Nullable String iam) {
-            $.iam = iam;
+            this.iam = iam;
             return this;
         }
-
-        /**
-         * @param identitystore Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
-         * 
-         * @return builder
-         * 
-         */
         public Builder identitystore(@Nullable String identitystore) {
-            $.identitystore = identitystore;
+            this.identitystore = identitystore;
             return this;
         }
-
-        /**
-         * @param imagebuilder Override the default endpoint for AWS Image Builder
-         * 
-         * @return builder
-         * 
-         */
         public Builder imagebuilder(@Nullable String imagebuilder) {
-            $.imagebuilder = imagebuilder;
+            this.imagebuilder = imagebuilder;
             return this;
         }
-
-        /**
-         * @param inspector Override the default endpoint for Amazon Inspector
-         * 
-         * @return builder
-         * 
-         */
         public Builder inspector(@Nullable String inspector) {
-            $.inspector = inspector;
+            this.inspector = inspector;
             return this;
         }
-
-        /**
-         * @param iot Override the default endpoint for AWS IoT
-         * 
-         * @return builder
-         * 
-         */
         public Builder iot(@Nullable String iot) {
-            $.iot = iot;
+            this.iot = iot;
             return this;
         }
-
-        /**
-         * @param iotanalytics Override the default endpoint for AWS IoT Analytics
-         * 
-         * @return builder
-         * 
-         */
         public Builder iotanalytics(@Nullable String iotanalytics) {
-            $.iotanalytics = iotanalytics;
+            this.iotanalytics = iotanalytics;
             return this;
         }
-
-        /**
-         * @param iotevents Override the default endpoint for AWS IoT Events
-         * 
-         * @return builder
-         * 
-         */
         public Builder iotevents(@Nullable String iotevents) {
-            $.iotevents = iotevents;
+            this.iotevents = iotevents;
             return this;
         }
-
-        /**
-         * @param kafka Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
-         * 
-         * @return builder
-         * 
-         */
         public Builder kafka(@Nullable String kafka) {
-            $.kafka = kafka;
+            this.kafka = kafka;
             return this;
         }
-
-        /**
-         * @param kinesis Override the default endpoint for Amazon Kinesis
-         * 
-         * @return builder
-         * 
-         */
         public Builder kinesis(@Nullable String kinesis) {
-            $.kinesis = kinesis;
+            this.kinesis = kinesis;
             return this;
         }
-
-        /**
-         * @param kinesisanalytics Override the default endpoint for Amazon Kinesis Data Analytics
-         * 
-         * @return builder
-         * 
-         */
         public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
-            $.kinesisanalytics = kinesisanalytics;
+            this.kinesisanalytics = kinesisanalytics;
             return this;
         }
-
-        /**
-         * @param kinesisanalyticsv2 Override the default endpoint for Amazon Kinesis Data Analytics V2
-         * 
-         * @return builder
-         * 
-         */
         public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
-            $.kinesisanalyticsv2 = kinesisanalyticsv2;
+            this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
-
-        /**
-         * @param kinesisvideo Override the default endpoint for Amazon Kinesis Video Streams
-         * 
-         * @return builder
-         * 
-         */
         public Builder kinesisvideo(@Nullable String kinesisvideo) {
-            $.kinesisvideo = kinesisvideo;
+            this.kinesisvideo = kinesisvideo;
             return this;
         }
-
-        /**
-         * @param kms Override the default endpoint for AWS Key Management Service
-         * 
-         * @return builder
-         * 
-         */
         public Builder kms(@Nullable String kms) {
-            $.kms = kms;
+            this.kms = kms;
             return this;
         }
-
-        /**
-         * @param lakeformation Override the default endpoint for AWS Lake Formation
-         * 
-         * @return builder
-         * 
-         */
         public Builder lakeformation(@Nullable String lakeformation) {
-            $.lakeformation = lakeformation;
+            this.lakeformation = lakeformation;
             return this;
         }
-
-        /**
-         * @param lambda Override the default endpoint for AWS Lambda
-         * 
-         * @return builder
-         * 
-         */
         public Builder lambda(@Nullable String lambda) {
-            $.lambda = lambda;
+            this.lambda = lambda;
             return this;
         }
-
-        /**
-         * @param lexmodels Override the default endpoint for Amazon Lex
-         * 
-         * @return builder
-         * 
-         */
         public Builder lexmodels(@Nullable String lexmodels) {
-            $.lexmodels = lexmodels;
+            this.lexmodels = lexmodels;
             return this;
         }
-
-        /**
-         * @param licensemanager Override the default endpoint for AWS License Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder licensemanager(@Nullable String licensemanager) {
-            $.licensemanager = licensemanager;
+            this.licensemanager = licensemanager;
             return this;
         }
-
-        /**
-         * @param lightsail Override the default endpoint for Amazon Lightsail
-         * 
-         * @return builder
-         * 
-         */
         public Builder lightsail(@Nullable String lightsail) {
-            $.lightsail = lightsail;
+            this.lightsail = lightsail;
             return this;
         }
-
-        /**
-         * @param location Override the default endpoint for Amazon Location
-         * 
-         * @return builder
-         * 
-         */
         public Builder location(@Nullable String location) {
-            $.location = location;
+            this.location = location;
             return this;
         }
-
-        /**
-         * @param macie Override the default endpoint for Amazon Macie
-         * 
-         * @return builder
-         * 
-         */
         public Builder macie(@Nullable String macie) {
-            $.macie = macie;
+            this.macie = macie;
             return this;
         }
-
-        /**
-         * @param macie2 Override the default endpoint for Amazon Macie V2
-         * 
-         * @return builder
-         * 
-         */
         public Builder macie2(@Nullable String macie2) {
-            $.macie2 = macie2;
+            this.macie2 = macie2;
             return this;
         }
-
-        /**
-         * @param managedblockchain Override the default endpoint for Amazon Managed Blockchain
-         * 
-         * @return builder
-         * 
-         */
         public Builder managedblockchain(@Nullable String managedblockchain) {
-            $.managedblockchain = managedblockchain;
+            this.managedblockchain = managedblockchain;
             return this;
         }
-
-        /**
-         * @param marketplacecatalog Override the default endpoint for AWS Marketplace Catalog
-         * 
-         * @return builder
-         * 
-         */
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
-            $.marketplacecatalog = marketplacecatalog;
+            this.marketplacecatalog = marketplacecatalog;
             return this;
         }
-
-        /**
-         * @param mediaconnect Override the default endpoint for AWS MediaConnect
-         * 
-         * @return builder
-         * 
-         */
         public Builder mediaconnect(@Nullable String mediaconnect) {
-            $.mediaconnect = mediaconnect;
+            this.mediaconnect = mediaconnect;
             return this;
         }
-
-        /**
-         * @param mediaconvert Override the default endpoint for AWS MediaConvert
-         * 
-         * @return builder
-         * 
-         */
         public Builder mediaconvert(@Nullable String mediaconvert) {
-            $.mediaconvert = mediaconvert;
+            this.mediaconvert = mediaconvert;
             return this;
         }
-
-        /**
-         * @param medialive Override the default endpoint for AWS MediaLive
-         * 
-         * @return builder
-         * 
-         */
         public Builder medialive(@Nullable String medialive) {
-            $.medialive = medialive;
+            this.medialive = medialive;
             return this;
         }
-
-        /**
-         * @param mediapackage Override the default endpoint for AWS MediaPackage
-         * 
-         * @return builder
-         * 
-         */
         public Builder mediapackage(@Nullable String mediapackage) {
-            $.mediapackage = mediapackage;
+            this.mediapackage = mediapackage;
             return this;
         }
-
-        /**
-         * @param mediastore Override the default endpoint for AWS Elemental MediaStore container
-         * 
-         * @return builder
-         * 
-         */
         public Builder mediastore(@Nullable String mediastore) {
-            $.mediastore = mediastore;
+            this.mediastore = mediastore;
             return this;
         }
-
-        /**
-         * @param mediastoredata Override the default endpoint for AWS Elemental MediaStore asset
-         * 
-         * @return builder
-         * 
-         */
         public Builder mediastoredata(@Nullable String mediastoredata) {
-            $.mediastoredata = mediastoredata;
+            this.mediastoredata = mediastoredata;
             return this;
         }
-
-        /**
-         * @param memorydb Override the default endpoint for AWS MemoryDB for Redis
-         * 
-         * @return builder
-         * 
-         */
         public Builder memorydb(@Nullable String memorydb) {
-            $.memorydb = memorydb;
+            this.memorydb = memorydb;
             return this;
         }
-
-        /**
-         * @param mq Override the default endpoint for Amazon MQ
-         * 
-         * @return builder
-         * 
-         */
         public Builder mq(@Nullable String mq) {
-            $.mq = mq;
+            this.mq = mq;
             return this;
         }
-
-        /**
-         * @param mwaa Override the default endpoint for Amazon Managed Workflows for Apache Airflow
-         * 
-         * @return builder
-         * 
-         */
         public Builder mwaa(@Nullable String mwaa) {
-            $.mwaa = mwaa;
+            this.mwaa = mwaa;
             return this;
         }
-
-        /**
-         * @param neptune Override the default endpoint for Amazon Neptune
-         * 
-         * @return builder
-         * 
-         */
         public Builder neptune(@Nullable String neptune) {
-            $.neptune = neptune;
+            this.neptune = neptune;
             return this;
         }
-
-        /**
-         * @param networkfirewall Override the default endpoint for AWS Network Firewall
-         * 
-         * @return builder
-         * 
-         */
         public Builder networkfirewall(@Nullable String networkfirewall) {
-            $.networkfirewall = networkfirewall;
+            this.networkfirewall = networkfirewall;
             return this;
         }
-
-        /**
-         * @param networkmanager Override the default endpoint for AWS Network Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder networkmanager(@Nullable String networkmanager) {
-            $.networkmanager = networkmanager;
+            this.networkmanager = networkmanager;
             return this;
         }
-
-        /**
-         * @param opsworks Override the default endpoint for AWS OpsWorks
-         * 
-         * @return builder
-         * 
-         */
         public Builder opsworks(@Nullable String opsworks) {
-            $.opsworks = opsworks;
+            this.opsworks = opsworks;
             return this;
         }
-
-        /**
-         * @param organizations Override the default endpoint for AWS Organizations
-         * 
-         * @return builder
-         * 
-         */
         public Builder organizations(@Nullable String organizations) {
-            $.organizations = organizations;
+            this.organizations = organizations;
             return this;
         }
-
-        /**
-         * @param outposts Override the default endpoint for AWS Outposts
-         * 
-         * @return builder
-         * 
-         */
         public Builder outposts(@Nullable String outposts) {
-            $.outposts = outposts;
+            this.outposts = outposts;
             return this;
         }
-
-        /**
-         * @param personalize Override the default endpoint for Amazon Personalize
-         * 
-         * @return builder
-         * 
-         */
         public Builder personalize(@Nullable String personalize) {
-            $.personalize = personalize;
+            this.personalize = personalize;
             return this;
         }
-
-        /**
-         * @param pinpoint Override the default endpoint for Amazon Pinpoint
-         * 
-         * @return builder
-         * 
-         */
         public Builder pinpoint(@Nullable String pinpoint) {
-            $.pinpoint = pinpoint;
+            this.pinpoint = pinpoint;
             return this;
         }
-
-        /**
-         * @param pricing Override the default endpoint for Amazon Web Services Price List Service
-         * 
-         * @return builder
-         * 
-         */
         public Builder pricing(@Nullable String pricing) {
-            $.pricing = pricing;
+            this.pricing = pricing;
             return this;
         }
-
-        /**
-         * @param qldb Override the default endpoint for Amazon QLDB
-         * 
-         * @return builder
-         * 
-         */
         public Builder qldb(@Nullable String qldb) {
-            $.qldb = qldb;
+            this.qldb = qldb;
             return this;
         }
-
-        /**
-         * @param quicksight Override the default endpoint for Amazon QuickSight
-         * 
-         * @return builder
-         * 
-         */
         public Builder quicksight(@Nullable String quicksight) {
-            $.quicksight = quicksight;
+            this.quicksight = quicksight;
             return this;
         }
-
-        /**
-         * @param ram Override the default endpoint for AWS Resource Access Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder ram(@Nullable String ram) {
-            $.ram = ram;
+            this.ram = ram;
             return this;
         }
-
-        /**
-         * @param rds Override the default endpoint for Amazon Relational Database Service
-         * 
-         * @return builder
-         * 
-         */
         public Builder rds(@Nullable String rds) {
-            $.rds = rds;
+            this.rds = rds;
             return this;
         }
-
-        /**
-         * @param redshift Override the default endpoint for Amazon Redshift
-         * 
-         * @return builder
-         * 
-         */
         public Builder redshift(@Nullable String redshift) {
-            $.redshift = redshift;
+            this.redshift = redshift;
             return this;
         }
-
-        /**
-         * @param resourcegroups Override the default endpoint for AWS Resource Groups
-         * 
-         * @return builder
-         * 
-         */
         public Builder resourcegroups(@Nullable String resourcegroups) {
-            $.resourcegroups = resourcegroups;
+            this.resourcegroups = resourcegroups;
             return this;
         }
-
-        /**
-         * @param resourcegroupstaggingapi Override the default endpoint for AWS Resource Groups Tagging API
-         * 
-         * @return builder
-         * 
-         */
         public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
-            $.resourcegroupstaggingapi = resourcegroupstaggingapi;
+            this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
-
-        /**
-         * @param route53 Override the default endpoint for Amazon Route 53
-         * 
-         * @return builder
-         * 
-         */
         public Builder route53(@Nullable String route53) {
-            $.route53 = route53;
+            this.route53 = route53;
             return this;
         }
-
-        /**
-         * @param route53domains Override the default endpoint for Amazon Route 53 Domains
-         * 
-         * @return builder
-         * 
-         */
         public Builder route53domains(@Nullable String route53domains) {
-            $.route53domains = route53domains;
+            this.route53domains = route53domains;
             return this;
         }
-
-        /**
-         * @param route53recoverycontrolconfig Override the default endpoint for Amazon Route 53 Recovery Control
-         * 
-         * @return builder
-         * 
-         */
         public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
-            $.route53recoverycontrolconfig = route53recoverycontrolconfig;
+            this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
-
-        /**
-         * @param route53recoveryreadiness Override the default endpoint for Amazon Route 53 Recovery Readiness
-         * 
-         * @return builder
-         * 
-         */
         public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
-            $.route53recoveryreadiness = route53recoveryreadiness;
+            this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
-
-        /**
-         * @param route53resolver Override the default endpoint for Amazon Route 53 Resolver
-         * 
-         * @return builder
-         * 
-         */
         public Builder route53resolver(@Nullable String route53resolver) {
-            $.route53resolver = route53resolver;
+            this.route53resolver = route53resolver;
             return this;
         }
-
-        /**
-         * @param s3 Override the default endpoint for Amazon Simple Storage Service (S3)
-         * 
-         * @return builder
-         * 
-         */
         public Builder s3(@Nullable String s3) {
-            $.s3 = s3;
+            this.s3 = s3;
             return this;
         }
-
-        /**
-         * @param s3control Override the default endpoint for Amazon Simple Storage Service (S3) Control
-         * 
-         * @return builder
-         * 
-         */
         public Builder s3control(@Nullable String s3control) {
-            $.s3control = s3control;
+            this.s3control = s3control;
             return this;
         }
-
-        /**
-         * @param s3outposts Override the default endpoint for Amazon S3 on Outposts
-         * 
-         * @return builder
-         * 
-         */
         public Builder s3outposts(@Nullable String s3outposts) {
-            $.s3outposts = s3outposts;
+            this.s3outposts = s3outposts;
             return this;
         }
-
-        /**
-         * @param sagemaker Override the default endpoint for AWS SageMaker
-         * 
-         * @return builder
-         * 
-         */
         public Builder sagemaker(@Nullable String sagemaker) {
-            $.sagemaker = sagemaker;
+            this.sagemaker = sagemaker;
             return this;
         }
-
-        /**
-         * @param schemas Override the default endpoint for Amazon EventBridge Schema Registry
-         * 
-         * @return builder
-         * 
-         */
         public Builder schemas(@Nullable String schemas) {
-            $.schemas = schemas;
+            this.schemas = schemas;
             return this;
         }
-
-        /**
-         * @param sdb Override the default endpoint for Amazon SimpleDB
-         * 
-         * @return builder
-         * 
-         */
         public Builder sdb(@Nullable String sdb) {
-            $.sdb = sdb;
+            this.sdb = sdb;
             return this;
         }
-
-        /**
-         * @param secretsmanager Override the default endpoint for AWS Secrets Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder secretsmanager(@Nullable String secretsmanager) {
-            $.secretsmanager = secretsmanager;
+            this.secretsmanager = secretsmanager;
             return this;
         }
-
-        /**
-         * @param securityhub Override the default endpoint for AWS Security Hub
-         * 
-         * @return builder
-         * 
-         */
         public Builder securityhub(@Nullable String securityhub) {
-            $.securityhub = securityhub;
+            this.securityhub = securityhub;
             return this;
         }
-
-        /**
-         * @param serverlessrepo Override the default endpoint for AWS Serverless Application Repository
-         * 
-         * @return builder
-         * 
-         */
         public Builder serverlessrepo(@Nullable String serverlessrepo) {
-            $.serverlessrepo = serverlessrepo;
+            this.serverlessrepo = serverlessrepo;
             return this;
         }
-
-        /**
-         * @param servicecatalog Override the default endpoint for AWS Service Catalog
-         * 
-         * @return builder
-         * 
-         */
         public Builder servicecatalog(@Nullable String servicecatalog) {
-            $.servicecatalog = servicecatalog;
+            this.servicecatalog = servicecatalog;
             return this;
         }
-
-        /**
-         * @param servicediscovery Override the default endpoint for AWS Cloud Map
-         * 
-         * @return builder
-         * 
-         */
         public Builder servicediscovery(@Nullable String servicediscovery) {
-            $.servicediscovery = servicediscovery;
+            this.servicediscovery = servicediscovery;
             return this;
         }
-
-        /**
-         * @param servicequotas Override the default endpoint for AWS Service Quotas
-         * 
-         * @return builder
-         * 
-         */
         public Builder servicequotas(@Nullable String servicequotas) {
-            $.servicequotas = servicequotas;
+            this.servicequotas = servicequotas;
             return this;
         }
-
-        /**
-         * @param ses Override the default endpoint for Amazon Simple Email Service (SES)
-         * 
-         * @return builder
-         * 
-         */
         public Builder ses(@Nullable String ses) {
-            $.ses = ses;
+            this.ses = ses;
             return this;
         }
-
-        /**
-         * @param shield Override the default endpoint for AWS Shield Advanced API
-         * 
-         * @return builder
-         * 
-         */
         public Builder shield(@Nullable String shield) {
-            $.shield = shield;
+            this.shield = shield;
             return this;
         }
-
-        /**
-         * @param signer Override the default endpoint for AWS Signer
-         * 
-         * @return builder
-         * 
-         */
         public Builder signer(@Nullable String signer) {
-            $.signer = signer;
+            this.signer = signer;
             return this;
         }
-
-        /**
-         * @param sns Override the default endpoint for Amazon Simple Notification Service (SNS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder sns(@Nullable String sns) {
-            $.sns = sns;
+            this.sns = sns;
             return this;
         }
-
-        /**
-         * @param sqs Override the default endpoint for Amazon Simple Queue Service (SQS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder sqs(@Nullable String sqs) {
-            $.sqs = sqs;
+            this.sqs = sqs;
             return this;
         }
-
-        /**
-         * @param ssm Override the default endpoint for AWS Systems Manager
-         * 
-         * @return builder
-         * 
-         */
         public Builder ssm(@Nullable String ssm) {
-            $.ssm = ssm;
+            this.ssm = ssm;
             return this;
         }
-
-        /**
-         * @param ssoadmin Override the default endpoint for AWS Single Sign On (SSO)
-         * 
-         * @return builder
-         * 
-         */
         public Builder ssoadmin(@Nullable String ssoadmin) {
-            $.ssoadmin = ssoadmin;
+            this.ssoadmin = ssoadmin;
             return this;
         }
-
-        /**
-         * @param stepfunctions Override the default endpoint for AWS Step Functions
-         * 
-         * @return builder
-         * 
-         */
         public Builder stepfunctions(@Nullable String stepfunctions) {
-            $.stepfunctions = stepfunctions;
+            this.stepfunctions = stepfunctions;
             return this;
         }
-
-        /**
-         * @param storagegateway Override the default endpoint for AWS Storage Gateway
-         * 
-         * @return builder
-         * 
-         */
         public Builder storagegateway(@Nullable String storagegateway) {
-            $.storagegateway = storagegateway;
+            this.storagegateway = storagegateway;
             return this;
         }
-
-        /**
-         * @param sts Override the default endpoint for AWS Security Token Service (STS)
-         * 
-         * @return builder
-         * 
-         */
         public Builder sts(@Nullable String sts) {
-            $.sts = sts;
+            this.sts = sts;
             return this;
         }
-
-        /**
-         * @param swf Override the default endpoint for Amazon Simple Workflow Service (SWF)
-         * 
-         * @return builder
-         * 
-         */
         public Builder swf(@Nullable String swf) {
-            $.swf = swf;
+            this.swf = swf;
             return this;
         }
-
-        /**
-         * @param synthetics Override the default endpoint for Amazon CloudWatch Synthetics
-         * 
-         * @return builder
-         * 
-         */
         public Builder synthetics(@Nullable String synthetics) {
-            $.synthetics = synthetics;
+            this.synthetics = synthetics;
             return this;
         }
-
-        /**
-         * @param timestreamwrite Override the default endpoint for Amazon Timestream
-         * 
-         * @return builder
-         * 
-         */
         public Builder timestreamwrite(@Nullable String timestreamwrite) {
-            $.timestreamwrite = timestreamwrite;
+            this.timestreamwrite = timestreamwrite;
             return this;
         }
-
-        /**
-         * @param transfer Override the default endpoint for AWS Transfer Family
-         * 
-         * @return builder
-         * 
-         */
         public Builder transfer(@Nullable String transfer) {
-            $.transfer = transfer;
+            this.transfer = transfer;
             return this;
         }
-
-        /**
-         * @param waf Override the default endpoint for AWS WAF Classic
-         * 
-         * @return builder
-         * 
-         */
         public Builder waf(@Nullable String waf) {
-            $.waf = waf;
+            this.waf = waf;
             return this;
         }
-
-        /**
-         * @param wafregional Override the default endpoint for AWS WAF Regional Classic
-         * 
-         * @return builder
-         * 
-         */
         public Builder wafregional(@Nullable String wafregional) {
-            $.wafregional = wafregional;
+            this.wafregional = wafregional;
             return this;
         }
-
-        /**
-         * @param wafv2 Override the default endpoint for AWS WAF V2
-         * 
-         * @return builder
-         * 
-         */
         public Builder wafv2(@Nullable String wafv2) {
-            $.wafv2 = wafv2;
+            this.wafv2 = wafv2;
             return this;
         }
-
-        /**
-         * @param worklink Override the default endpoint for Amazon WorkLink
-         * 
-         * @return builder
-         * 
-         */
         public Builder worklink(@Nullable String worklink) {
-            $.worklink = worklink;
+            this.worklink = worklink;
             return this;
         }
-
-        /**
-         * @param workmail Override the default endpoint for Amazon WorkMail
-         * 
-         * @return builder
-         * 
-         */
         public Builder workmail(@Nullable String workmail) {
-            $.workmail = workmail;
+            this.workmail = workmail;
             return this;
         }
-
-        /**
-         * @param workspaces Override the default endpoint for Amazon WorkSpaces
-         * 
-         * @return builder
-         * 
-         */
         public Builder workspaces(@Nullable String workspaces) {
-            $.workspaces = workspaces;
+            this.workspaces = workspaces;
             return this;
         }
-
-        /**
-         * @param xray Override the default endpoint for AWS X-Ray
-         * 
-         * @return builder
-         * 
-         */
         public Builder xray(@Nullable String xray) {
-            $.xray = xray;
+            this.xray = xray;
             return this;
-        }
-
-        public Endpoints build() {
-            return $;
+        }        public Endpoints build() {
+            return new Endpoints(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);
         }
     }
-
 }

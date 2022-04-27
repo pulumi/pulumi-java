@@ -3,75 +3,58 @@
 
 package com.pulumi.awsnative.config.inputs;
 
-import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
-
-/**
- * The configuration with resource tag settings to apply across all resources handled by this provider. This is designed to replace redundant per-resource `tags` configurations. Provider tags can be overridden with new values, but not excluded from specific resources. To override provider tag values, use the `tags` argument within a resource to configure new tag values for matching keys.
- * 
- */
-public final class DefaultTags extends com.pulumi.resources.InvokeArgs {
-
-    public static final DefaultTags Empty = new DefaultTags();
-
+@CustomType
+public final class DefaultTags {
     /**
-     * A group of tags to set across all resources.
+     * @return A group of tags to set across all resources.
      * 
      */
-    @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private final @Nullable Map<String,String> tags;
+
+    @CustomType.Constructor
+    private DefaultTags(@CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        this.tags = tags;
+    }
 
     /**
      * @return A group of tags to set across all resources.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
-    }
-
-    private DefaultTags() {}
-
-    private DefaultTags(DefaultTags $) {
-        this.tags = $.tags;
+    public Map<String,String> tags() {
+        return this.tags == null ? Map.of() : this.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
+
     public static Builder builder(DefaultTags defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DefaultTags $;
+        private @Nullable Map<String,String> tags;
 
         public Builder() {
-            $ = new DefaultTags();
+    	      // Empty
         }
 
         public Builder(DefaultTags defaults) {
-            $ = new DefaultTags(Objects.requireNonNull(defaults));
+    	      Objects.requireNonNull(defaults);
+    	      this.tags = defaults.tags;
         }
 
-        /**
-         * @param tags A group of tags to set across all resources.
-         * 
-         * @return builder
-         * 
-         */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            this.tags = tags;
             return this;
-        }
-
-        public DefaultTags build() {
-            return $;
+        }        public DefaultTags build() {
+            return new DefaultTags(tags);
         }
     }
-
 }
