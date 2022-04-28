@@ -7,17 +7,24 @@ import java.util.function.Function;
 
 /**
  * Pulumi program entrypoint.
+ * Possible exit codes:
+ * <ul>
+ *     <li>0 - Process Exited Successfully</li>
+ *     <li>1 - Process Exited Before Logging User Actionable Message</li>
+ *     <li>32 - Process Exited After Logging User Actionable Message</li>
+ * </ul>
  */
 public interface Pulumi {
 
     /**
      * Run a Pulumi stack callback and wait for result.
+     * <br>
+     * In case of an error terminates the process with {@link System#exit(int)}
      * @param stack the stack to run in Pulumi runtime
-     * @return exit code from Pulumi runtime after running the stack
      * @see #runAsync(Function)
      */
-    static Integer run(Function<Context, Exports> stack) {
-        return runAsync(stack).join();
+    static void run(Function<Context, Exports> stack) {
+        System.exit(runAsync(stack).join());
     }
 
     /**
