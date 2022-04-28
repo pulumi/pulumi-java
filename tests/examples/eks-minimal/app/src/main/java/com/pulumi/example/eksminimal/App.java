@@ -15,8 +15,7 @@ import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(App::stack);
-        System.exit(exitCode);
+        Pulumi.run(App::stack);
     }
 
     private static Exports stack(Context ctx) {

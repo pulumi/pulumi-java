@@ -20,7 +20,7 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(ctx -> {
+        Pulumi.run(ctx -> {
             var randomPassword = new RandomPassword("my-password",
                     RandomPasswordArgs.builder().length(16)
                             .special(true)
@@ -70,6 +70,5 @@ public class App {
             return ctx.exports();
 
         });
-        System.exit(exitCode);
     }
 }
