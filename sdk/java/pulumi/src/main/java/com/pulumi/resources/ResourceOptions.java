@@ -38,6 +38,9 @@ public abstract class ResourceOptions {
     protected String urn;
     @Nullable
     protected List<String> replaceOnChanges;
+    protected boolean retainOnDelete;
+    @Nullable
+    protected String pluginDownloadURL;
 
     protected ResourceOptions() { /* empty */ }
 
@@ -53,7 +56,9 @@ public abstract class ResourceOptions {
             @Nullable List<ResourceTransformation> resourceTransformations,
             @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
-            @Nullable List<String> replaceOnChanges
+            @Nullable List<String> replaceOnChanges,
+            boolean retainOnDelete,
+            @Nullable String pluginDownloadURL
     ) {
         this.id = id;
         this.parent = parent;
@@ -66,6 +71,9 @@ public abstract class ResourceOptions {
         this.resourceTransformations = resourceTransformations;
         this.aliases = aliases;
         this.urn = urn;
+        this.replaceOnChanges = replaceOnChanges;
+        this.retainOnDelete = retainOnDelete;
+        this.pluginDownloadURL = pluginDownloadURL;
     }
 
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
@@ -163,6 +171,16 @@ public abstract class ResourceOptions {
 
         public B replaceOnChanges(@Nullable List<String> replaceOnChanges) {
             options.replaceOnChanges = replaceOnChanges;
+            return (B) this;
+        }
+
+        public B retainOnDelete(boolean retainOnDelete) {
+            options.retainOnDelete = retainOnDelete;
+            return (B) this;
+        }
+
+        public B pluginDownloadURL(@Nullable String pluginDownloadURL) {
+            options.pluginDownloadURL = pluginDownloadURL;
             return (B) this;
         }
     }
@@ -263,6 +281,22 @@ public abstract class ResourceOptions {
         return this.replaceOnChanges == null ? List.of() : List.copyOf(this.replaceOnChanges);
     }
 
+    /**
+     * If set to True, the providers Delete method will not be called for this resource.
+     */
+    public boolean isRetainOnDelete() {
+        return this.retainOnDelete;
+    }
+
+    /**
+     * An optional URL, corresponding to the url from which the provider plugin that should be
+     * used when operating on this resource is downloaded from. This URL overrides the download URL
+     * inferred from the current package and should rarely be used.
+     */
+    public Optional<String> getPluginDownloadURL() {
+        return Optional.ofNullable(this.pluginDownloadURL);
+    }
+
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
         return mergeSharedOptions(options1, options2, null);
     }
@@ -283,6 +317,8 @@ public abstract class ResourceOptions {
         options1.resourceTransformations = mergeNullableList(options1.resourceTransformations, options2.resourceTransformations);
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
+        options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
+        options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
 
         options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
 

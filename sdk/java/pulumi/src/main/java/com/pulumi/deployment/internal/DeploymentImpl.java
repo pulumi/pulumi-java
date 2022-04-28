@@ -1397,11 +1397,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .setCustom(custom)
                     .setProtect(options.isProtect())
                     .setVersion(options.getVersion().orElse(""))
+                    .setPluginDownloadURL(options.getPluginDownloadURL().orElse(""))
                     .setImportId(customOpts ? ((CustomResourceOptions) options).getImportId().orElse("") : "")
                     .setAcceptSecrets(true)
                     .setAcceptResources(!DeploymentState.DisableResourceReferences)
                     .setDeleteBeforeReplace(customOpts && ((CustomResourceOptions) options).getDeleteBeforeReplace())
-                    .setDeleteBeforeReplaceDefined(true) // FIXME: WTF is an undefined boolean?!
+                    .setDeleteBeforeReplaceDefined(true)
                     .setCustomTimeouts(
                             RegisterResourceRequest.CustomTimeouts.newBuilder()
                                     .setCreate(customTimeoutToGolangString.apply(CustomTimeouts::getCreate))
@@ -1409,7 +1410,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .setUpdate(customTimeoutToGolangString.apply(CustomTimeouts::getUpdate))
                                     .build()
                     )
-                    .setRemote(remote);
+                    .setRemote(remote)
+                    .setRetainOnDelete(options.isRetainOnDelete());
 
             if (customOpts) {
                 request.addAllAdditionalSecretOutputs(((CustomResourceOptions) options).getAdditionalSecretOutputs());
