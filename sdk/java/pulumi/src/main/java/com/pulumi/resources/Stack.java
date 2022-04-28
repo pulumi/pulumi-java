@@ -84,6 +84,8 @@ public class Stack extends ComponentResource {
                 null,
                 null,
                 null,
+                false,
+                null,
                 null
         );
     }
