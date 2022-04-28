@@ -13,8 +13,8 @@ import (
 )
 
 func TestGetLanguageTypeString(t *testing.T) {
-	schemaJson := "../testing/test/testdata/mini-awsclassic/schema.json"
-	pkg, err := readPackage(schemaJson)
+	schemaJSON := "../testing/test/testdata/mini-awsclassic/schema.json"
+	pkg, err := readPackage(schemaJSON)
 	assert.NoError(t, err)
 	dlh := DocLanguageHelper{}
 	for _, input := range []bool{false, true} {
@@ -27,8 +27,8 @@ func TestGetLanguageTypeString(t *testing.T) {
 	}
 }
 
-func readPackage(schemaJson string) (*schema.Package, error) {
-	f, err := os.Open(schemaJson)
+func readPackage(schemaJSON string) (*schema.Package, error) {
+	f, err := os.Open(schemaJSON)
 	if err != nil {
 		return nil, err
 	}
