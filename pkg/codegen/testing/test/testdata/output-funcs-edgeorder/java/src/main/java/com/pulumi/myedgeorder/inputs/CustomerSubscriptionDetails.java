@@ -5,6 +5,8 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.annotations.Import;
 import com.pulumi.myedgeorder.inputs.CustomerSubscriptionRegisteredFeatures;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +18,7 @@ import javax.annotation.Nullable;
  * Holds Customer subscription details. Clients can display available products to unregistered customers by explicitly passing subscription details
  * 
  */
-public final class CustomerSubscriptionDetails extends com.pulumi.resources.InvokeArgs {
+public final class CustomerSubscriptionDetails extends InvokeArgs {
 
     public static final CustomerSubscriptionDetails Empty = new CustomerSubscriptionDetails();
 

@@ -3,10 +3,10 @@
 
 package com.pulumi.example;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class CatArgs extends com.pulumi.resources.ResourceArgs {
+public final class CatArgs extends ResourceArgs {
 
     public static final CatArgs Empty = new CatArgs();
 

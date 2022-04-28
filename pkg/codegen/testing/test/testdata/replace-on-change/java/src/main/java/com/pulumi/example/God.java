@@ -10,11 +10,13 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.Dog;
 import com.pulumi.example.GodArgs;
 import com.pulumi.example.Utilities;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::God")
-public class God extends com.pulumi.resources.CustomResource {
+public class God extends CustomResource {
     @Export(name="backwards", type=Dog.class, parameters={})
     private Output</* @Nullable */ Dog> backwards;
 
@@ -43,19 +45,19 @@ public class God extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public God(String name, @Nullable GodArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public God(String name, @Nullable GodArgs args, @Nullable CustomResourceOptions options) {
         super("example::God", name, args == null ? GodArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private God(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private God(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("example::God", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -66,7 +68,7 @@ public class God extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static God get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static God get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new God(name, id, options);
     }
 }

@@ -14,12 +14,14 @@ import com.pulumi.plant.tree_v1.enums.Diameter;
 import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
 import com.pulumi.plant.tree_v1.inputs.RubberTreeState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
-public class RubberTree extends com.pulumi.resources.CustomResource {
+public class RubberTree extends CustomResource {
     @Export(name="container", type=Container.class, parameters={})
     private Output</* @Nullable */ Container> container;
 
@@ -72,19 +74,19 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RubberTree(String name, RubberTreeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RubberTree(String name, RubberTreeArgs args, @Nullable CustomResourceOptions options) {
         super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable CustomResourceOptions options) {
         super("plant:tree/v1:RubberTree", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -96,7 +98,7 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RubberTree get(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RubberTree get(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable CustomResourceOptions options) {
         return new RubberTree(name, id, state, options);
     }
 }

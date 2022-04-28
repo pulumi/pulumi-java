@@ -6,12 +6,13 @@ package com.pulumi.foobar.submodule1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.foobar.inputs.TopLevelArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModuleResourceArgs extends ResourceArgs {
 
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 

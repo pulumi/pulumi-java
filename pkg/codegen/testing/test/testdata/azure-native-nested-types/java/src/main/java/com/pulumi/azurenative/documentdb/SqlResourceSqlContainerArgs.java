@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.documentdb;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class SqlResourceSqlContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlResourceSqlContainerArgs extends ResourceArgs {
 
     public static final SqlResourceSqlContainerArgs Empty = new SqlResourceSqlContainerArgs();
 

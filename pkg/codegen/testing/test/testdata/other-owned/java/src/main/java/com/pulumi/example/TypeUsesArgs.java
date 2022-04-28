@@ -8,12 +8,13 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.example.inputs.ObjectArgs;
 import com.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
 import com.pulumi.example.inputs.SomeOtherObjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TypeUsesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TypeUsesArgs extends ResourceArgs {
 
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 

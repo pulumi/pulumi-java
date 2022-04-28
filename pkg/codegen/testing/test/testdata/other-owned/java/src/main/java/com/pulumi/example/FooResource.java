@@ -10,11 +10,14 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.FooResourceArgs;
 import com.pulumi.example.Resource;
 import com.pulumi.example.Utilities;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foo::FooResource")
-public class FooResource extends com.pulumi.resources.ComponentResource {
+public class FooResource extends ComponentResource {
     @Export(name="foo", type=Resource.class, parameters={})
     private Output</* @Nullable */ Resource> foo;
 
@@ -43,15 +46,15 @@ public class FooResource extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FooResource(String name, @Nullable FooResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public FooResource(String name, @Nullable FooResourceArgs args, @Nullable ComponentResourceOptions options) {
         super("foo::FooResource", name, args == null ? FooResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

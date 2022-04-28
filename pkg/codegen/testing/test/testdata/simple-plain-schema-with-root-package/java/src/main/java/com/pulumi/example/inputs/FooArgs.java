@@ -4,6 +4,7 @@
 package com.pulumi.example.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FooArgs extends com.pulumi.resources.ResourceArgs {
+public final class FooArgs extends ResourceArgs {
 
     public static final FooArgs Empty = new FooArgs();
 

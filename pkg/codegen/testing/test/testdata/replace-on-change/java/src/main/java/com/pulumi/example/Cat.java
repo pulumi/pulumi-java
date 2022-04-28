@@ -11,6 +11,8 @@ import com.pulumi.example.CatArgs;
 import com.pulumi.example.God;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.outputs.Toy;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Cat")
-public class Cat extends com.pulumi.resources.CustomResource {
+public class Cat extends CustomResource {
     @Export(name="foes", type=Map.class, parameters={String.class, Toy.class})
     private Output</* @Nullable */ Map<String,Toy>> foes;
 
@@ -71,22 +73,22 @@ public class Cat extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cat(String name, @Nullable CatArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Cat(String name, @Nullable CatArgs args, @Nullable CustomResourceOptions options) {
         super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Cat(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Cat(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("example::Cat", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
                 "name"
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -97,7 +99,7 @@ public class Cat extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cat get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Cat get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Cat(name, id, options);
     }
 }

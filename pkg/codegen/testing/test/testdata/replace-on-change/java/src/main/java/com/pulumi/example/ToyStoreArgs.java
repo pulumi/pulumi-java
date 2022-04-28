@@ -3,10 +3,10 @@
 
 package com.pulumi.example;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ToyStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToyStoreArgs extends ResourceArgs {
 
     public static final ToyStoreArgs Empty = new ToyStoreArgs();
 

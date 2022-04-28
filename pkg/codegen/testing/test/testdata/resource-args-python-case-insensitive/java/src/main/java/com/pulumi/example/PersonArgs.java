@@ -6,6 +6,7 @@ package com.pulumi.example;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.example.inputs.PetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PersonArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersonArgs extends ResourceArgs {
 
     public static final PersonArgs Empty = new PersonArgs();
 

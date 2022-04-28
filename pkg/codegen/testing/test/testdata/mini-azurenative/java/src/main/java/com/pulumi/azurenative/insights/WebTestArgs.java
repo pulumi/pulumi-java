@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.WebTestKind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebTestArgs extends ResourceArgs {
 
     public static final WebTestArgs Empty = new WebTestArgs();
 

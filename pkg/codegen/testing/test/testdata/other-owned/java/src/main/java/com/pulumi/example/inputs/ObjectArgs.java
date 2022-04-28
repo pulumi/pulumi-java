@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.example.Resource;
 import com.pulumi.example.inputs.ConfigMapArgs;
 import com.pulumi.example.inputs.SomeOtherObjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectArgs extends ResourceArgs {
 
     public static final ObjectArgs Empty = new ObjectArgs();
 

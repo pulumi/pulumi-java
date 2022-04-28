@@ -3,10 +3,10 @@
 
 package com.pulumi.example;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class NoRecursiveArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoRecursiveArgs extends ResourceArgs {
 
     public static final NoRecursiveArgs Empty = new NoRecursiveArgs();
 

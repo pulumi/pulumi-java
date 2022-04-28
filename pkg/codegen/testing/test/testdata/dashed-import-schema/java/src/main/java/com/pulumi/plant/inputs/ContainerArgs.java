@@ -10,13 +10,14 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.plant.enums.ContainerBrightness;
 import com.pulumi.plant.enums.ContainerColor;
 import com.pulumi.plant.enums.ContainerSize;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerArgs extends ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.annotations.Import;
 import com.pulumi.mypkg.inputs.GetAmiIdsFilter;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAmiIdsArgs extends InvokeArgs {
 
     public static final GetAmiIdsArgs Empty = new GetAmiIdsArgs();
 

@@ -12,13 +12,14 @@ import com.pulumi.plant.tree_v1.enums.Diameter;
 import com.pulumi.plant.tree_v1.enums.Farm;
 import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RubberTreeArgs extends com.pulumi.resources.ResourceArgs {
+public final class RubberTreeArgs extends ResourceArgs {
 
     public static final RubberTreeArgs Empty = new RubberTreeArgs();
 

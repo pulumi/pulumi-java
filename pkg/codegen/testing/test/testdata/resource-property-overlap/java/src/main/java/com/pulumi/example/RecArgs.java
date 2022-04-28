@@ -3,10 +3,10 @@
 
 package com.pulumi.example;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class RecArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecArgs extends ResourceArgs {
 
     public static final RecArgs Empty = new RecArgs();
 

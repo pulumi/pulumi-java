@@ -10,6 +10,9 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.ComponentArgs;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.outputs.Foo;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
-public class Component extends com.pulumi.resources.ComponentResource {
+public class Component extends ComponentResource {
     @Export(name="a", type=Boolean.class, parameters={})
     private Output<Boolean> a;
 
@@ -95,15 +98,15 @@ public class Component extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Component(String name, ComponentArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public Component(String name, ComponentArgs args, @Nullable ComponentResourceOptions options) {
         super("example::Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }
