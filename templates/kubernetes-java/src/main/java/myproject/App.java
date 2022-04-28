@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(ctx -> {
+        Pulumi.run(ctx -> {
             var labels = Map.of("app", "nginx");
 
             var deployment = new Deployment("nginx", DeploymentArgs.builder()
@@ -48,6 +48,5 @@ public class App {
             ctx.export("name", name);
             return ctx.exports();
         });
-        System.exit(exitCode);
     }
 }

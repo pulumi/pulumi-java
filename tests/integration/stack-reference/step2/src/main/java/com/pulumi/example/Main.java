@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(ctx -> {
+        Pulumi.run(ctx -> {
             ctx.log().info("step2");
             var isLocal = ctx.config().getBoolean("local").orElse(false);
             final String slug;
@@ -35,6 +35,5 @@ public class Main {
             ctx.export("gotExpectedError", Output.of(gotExpectedError));
             return ctx.exports();
         });
-        System.exit(exitCode);
     }
 }

@@ -34,8 +34,7 @@ import com.pulumi.core.Output;
 public class Main {
 
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(Main::stack);
-        System.exit(exitCode);
+        Pulumi.run(Main::stack);
     }
 
     private static Exports stack(Context ctx) {
