@@ -331,7 +331,7 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 		panic(err)
 	}
 	className := names.Ident(mod.typeName(t))
-	if !foreign {
+	if !foreign && mod.classQueue != nil {
 		mod.classQueue.ensureGenerated(classQueueEntry{
 			packageName: packageName,
 			className:   className,
