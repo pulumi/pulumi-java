@@ -21,7 +21,7 @@ class ResourceOptionsTest {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
                         null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null
+                        null, null, null, null, null, null, null, false, null
                 )),
                 arguments(new TestResourceOptions(
                                 null,
@@ -35,6 +35,8 @@ class ResourceOptionsTest {
                                 null,
                                 null,
                                 null,
+                                null,
+                                false,
                                 null
                         ),
                         new TestResourceOptions(
@@ -49,7 +51,9 @@ class ResourceOptionsTest {
                                 List.of(),
                                 List.of(),
                                 "urn",
-                                List.of()
+                                List.of(),
+                                true,
+                                "url"
                         ),
                         new TestResourceOptions(
                                 Output.of("id"),
@@ -63,7 +67,9 @@ class ResourceOptionsTest {
                                 List.of(),
                                 List.of(),
                                 "urn",
-                                List.of()
+                                List.of(),
+                                true,
+                                "url"
                         )
                 ) // TODO: more test cases
         );
@@ -108,9 +114,13 @@ class ResourceOptionsTest {
                 @Nullable List<ResourceTransformation> resourceTransformations,
                 @Nullable List<Output<Alias>> aliases,
                 @Nullable String urn,
-                @Nullable List<String> replaceOnChanges
+                @Nullable List<String> replaceOnChanges,
+                boolean retainOnDelete,
+                @Nullable String pluginDownloadURL
         ) {
-            super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts, resourceTransformations, aliases, urn, replaceOnChanges);
+            super(id, parent, dependsOn, protect, ignoreChanges,
+                    version, provider, customTimeouts, resourceTransformations,
+                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL);
         }
     }
 
