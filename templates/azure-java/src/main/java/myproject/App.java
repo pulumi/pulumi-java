@@ -15,7 +15,7 @@ import com.pulumi.deployment.InvokeOptions;
 
 public class App {
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(ctx -> {
+        Pulumi.run(ctx -> {
             var resourceGroup = new ResourceGroup("resourceGroup");
             var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
                     .resourceGroupName(resourceGroup.name())
@@ -32,7 +32,6 @@ public class App {
             ctx.export("primaryStorageKey", primaryStorageKey);
             return ctx.exports();
         });
-        System.exit(exitCode);
     }
 
     private static Output<String> getStorageAccountPrimaryKey(Output<String> resourceGroupName,
