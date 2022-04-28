@@ -52,6 +52,10 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             super(options);
         }
 
+        public Builder provider(ProviderResource... providers) {
+            return this.provider(List.of(providers));
+        }
+
         public Builder provider(@Nullable List<ProviderResource> providers) {
             options.providers = providers;
             return this;

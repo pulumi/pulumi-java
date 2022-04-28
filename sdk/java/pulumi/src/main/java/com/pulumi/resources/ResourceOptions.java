@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static com.pulumi.resources.Resources.mergeNullableList;
 
@@ -141,6 +142,13 @@ public abstract class ResourceOptions {
         public B resourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
             options.resourceTransformations = resourceTransformations;
             return (B) this;
+        }
+
+        public B aliases(Alias... aliases) {
+            return this.aliases(List.of(aliases)
+                .stream()
+                .map(alias -> Output.of(alias))
+                .collect(Collectors.toList()));
         }
 
         public B aliases(Output<Alias>... aliases) {
