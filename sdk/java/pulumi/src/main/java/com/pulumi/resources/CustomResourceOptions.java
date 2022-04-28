@@ -8,7 +8,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-import static com.pulumi.resources.Resources.*;
+import static com.pulumi.resources.Resources.copyNullable;
+import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.Resources.mergeNullableList;
 
 /**
  * A bag of optional settings that control a @see {@link ComponentResource} behavior.
@@ -40,10 +42,12 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             boolean deleteBeforeReplace,
             @Nullable List<String> additionalSecretOutputs,
             @Nullable String importId,
-            @Nullable List<String> replaceOnChanges
+            @Nullable List<String> replaceOnChanges,
+            boolean retainOnDelete,
+            @Nullable String pluginDownloadURL
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
-                resourceTransformations, aliases, urn, replaceOnChanges);
+                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL);
         this.deleteBeforeReplace = deleteBeforeReplace;
         this.additionalSecretOutputs = additionalSecretOutputs;
         this.importId = importId;
@@ -123,7 +127,9 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
                 this.deleteBeforeReplace,
                 copyNullableList(this.additionalSecretOutputs),
                 this.importId,
-                copyNullableList(this.replaceOnChanges)
+                copyNullableList(this.replaceOnChanges),
+                this.retainOnDelete,
+                this.pluginDownloadURL
         );
     }
 

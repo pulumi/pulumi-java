@@ -8,7 +8,9 @@ import com.pulumi.core.internal.Objects;
 import javax.annotation.Nullable;
 import java.util.List;
 
-import static com.pulumi.resources.Resources.*;
+import static com.pulumi.resources.Resources.copyNullable;
+import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.Resources.mergeNullableList;
 
 /**
  * A bag of optional settings that control a @see {@link ComponentResource} behavior.
@@ -34,10 +36,12 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges,
+            boolean retainOnDelete,
+            @Nullable String pluginDownloadURL,
             @Nullable List<ProviderResource> providers
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
-                resourceTransformations, aliases, urn, replaceOnChanges);
+                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
@@ -84,6 +88,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
                 copyNullableList(this.aliases),
                 this.urn,
                 copyNullableList(this.replaceOnChanges),
+                this.retainOnDelete,
+                this.pluginDownloadURL,
                 copyNullableList(this.providers) // TODO: should we also invoke copy() on the items?
         );
     }
