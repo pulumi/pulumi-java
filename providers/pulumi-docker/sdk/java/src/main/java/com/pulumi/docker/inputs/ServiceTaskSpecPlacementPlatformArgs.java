@@ -5,11 +5,12 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ServiceTaskSpecPlacementPlatformArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTaskSpecPlacementPlatformArgs extends ResourceArgs {
 
     public static final ServiceTaskSpecPlacementPlatformArgs Empty = new ServiceTaskSpecPlacementPlatformArgs();
 

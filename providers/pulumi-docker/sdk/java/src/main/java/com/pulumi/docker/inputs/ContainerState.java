@@ -17,6 +17,7 @@ import com.pulumi.docker.inputs.ContainerPortArgs;
 import com.pulumi.docker.inputs.ContainerUlimitArgs;
 import com.pulumi.docker.inputs.ContainerUploadArgs;
 import com.pulumi.docker.inputs.ContainerVolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,7 +29,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContainerState extends com.pulumi.resources.ResourceArgs {
+public final class ContainerState extends ResourceArgs {
 
     public static final ContainerState Empty = new ContainerState();
 

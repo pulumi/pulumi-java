@@ -11,6 +11,8 @@ import com.pulumi.docker.PluginArgs;
 import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.PluginState;
 import com.pulumi.docker.outputs.PluginGrantPermission;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/plugin:Plugin")
-public class Plugin extends com.pulumi.resources.CustomResource {
+public class Plugin extends CustomResource {
     /**
      * Docker Plugin alias
      * 
@@ -226,19 +228,19 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Plugin(String name, @Nullable PluginArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Plugin(String name, @Nullable PluginArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/plugin:Plugin", name, args == null ? PluginArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Plugin(String name, Output<String> id, @Nullable PluginState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Plugin(String name, Output<String> id, @Nullable PluginState state, @Nullable CustomResourceOptions options) {
         super("docker:index/plugin:Plugin", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -250,7 +252,7 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Plugin get(String name, Output<String> id, @Nullable PluginState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Plugin get(String name, Output<String> id, @Nullable PluginState state, @Nullable CustomResourceOptions options) {
         return new Plugin(name, id, state, options);
     }
 }

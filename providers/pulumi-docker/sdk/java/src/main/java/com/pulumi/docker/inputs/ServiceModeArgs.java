@@ -6,13 +6,14 @@ package com.pulumi.docker.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.docker.inputs.ServiceModeReplicatedArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceModeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceModeArgs extends ResourceArgs {
 
     public static final ServiceModeArgs Empty = new ServiceModeArgs();
 

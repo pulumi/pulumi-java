@@ -13,6 +13,7 @@ import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecLabelArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecSecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTaskSpecContainerSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTaskSpecContainerSpecArgs extends ResourceArgs {
 
     public static final ServiceTaskSpecContainerSpecArgs Empty = new ServiceTaskSpecContainerSpecArgs();
 

@@ -22,6 +22,8 @@ import com.pulumi.docker.outputs.ContainerPort;
 import com.pulumi.docker.outputs.ContainerUlimit;
 import com.pulumi.docker.outputs.ContainerUpload;
 import com.pulumi.docker.outputs.ContainerVolume;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -60,7 +62,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/container:Container")
-public class Container extends com.pulumi.resources.CustomResource {
+public class Container extends CustomResource {
     /**
      * If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
      * 
@@ -1031,19 +1033,19 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Container(String name, ContainerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Container(String name, ContainerArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/container:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Container(String name, Output<String> id, @Nullable ContainerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Container(String name, Output<String> id, @Nullable ContainerState state, @Nullable CustomResourceOptions options) {
         super("docker:index/container:Container", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -1055,7 +1057,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Container get(String name, Output<String> id, @Nullable ContainerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Container get(String name, Output<String> id, @Nullable ContainerState state, @Nullable CustomResourceOptions options) {
         return new Container(name, id, state, options);
     }
 }

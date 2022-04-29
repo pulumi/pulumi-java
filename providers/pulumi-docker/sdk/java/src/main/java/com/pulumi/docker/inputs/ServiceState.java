@@ -13,6 +13,7 @@ import com.pulumi.docker.inputs.ServiceModeArgs;
 import com.pulumi.docker.inputs.ServiceRollbackConfigArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecArgs;
 import com.pulumi.docker.inputs.ServiceUpdateConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceState extends com.pulumi.resources.ResourceArgs {
+public final class ServiceState extends ResourceArgs {
 
     public static final ServiceState Empty = new ServiceState();
 

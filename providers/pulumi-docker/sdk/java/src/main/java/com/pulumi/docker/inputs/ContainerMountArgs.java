@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.docker.inputs.ContainerMountBindOptionsArgs;
 import com.pulumi.docker.inputs.ContainerMountTmpfsOptionsArgs;
 import com.pulumi.docker.inputs.ContainerMountVolumeOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContainerMountArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerMountArgs extends ResourceArgs {
 
     public static final ContainerMountArgs Empty = new ContainerMountArgs();
 

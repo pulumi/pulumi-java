@@ -12,6 +12,8 @@ import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.NetworkState;
 import com.pulumi.docker.outputs.NetworkIpamConfig;
 import com.pulumi.docker.outputs.NetworkLabel;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -79,7 +81,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/network:Network")
-public class Network extends com.pulumi.resources.CustomResource {
+public class Network extends CustomResource {
     /**
      * Enable manual container attachment to the network.
      * 
@@ -274,19 +276,19 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Network(String name, @Nullable NetworkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Network(String name, @Nullable NetworkArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/network:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Network(String name, Output<String> id, @Nullable NetworkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Network(String name, Output<String> id, @Nullable NetworkState state, @Nullable CustomResourceOptions options) {
         super("docker:index/network:Network", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -298,7 +300,7 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Network get(String name, Output<String> id, @Nullable NetworkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Network get(String name, Output<String> id, @Nullable NetworkState state, @Nullable CustomResourceOptions options) {
         return new Network(name, id, state, options);
     }
 }

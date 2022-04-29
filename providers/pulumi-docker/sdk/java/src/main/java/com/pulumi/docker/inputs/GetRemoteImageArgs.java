@@ -4,11 +4,12 @@
 package com.pulumi.docker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetRemoteImageArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetRemoteImageArgs extends InvokeArgs {
 
     public static final GetRemoteImageArgs Empty = new GetRemoteImageArgs();
 

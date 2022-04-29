@@ -5,6 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerPortArgs extends ResourceArgs {
 
     public static final ContainerPortArgs Empty = new ContainerPortArgs();
 

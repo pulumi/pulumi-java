@@ -6,6 +6,7 @@ package com.pulumi.docker;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.docker.inputs.PluginGrantPermissionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PluginArgs extends com.pulumi.resources.ResourceArgs {
+public final class PluginArgs extends ResourceArgs {
 
     public static final PluginArgs Empty = new PluginArgs();
 

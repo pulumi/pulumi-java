@@ -11,6 +11,8 @@ import com.pulumi.docker.Utilities;
 import com.pulumi.docker.VolumeArgs;
 import com.pulumi.docker.inputs.VolumeState;
 import com.pulumi.docker.outputs.VolumeLabel;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -57,7 +59,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/volume:Volume")
-public class Volume extends com.pulumi.resources.CustomResource {
+public class Volume extends CustomResource {
     /**
      * Driver type for the volume. Defaults to `local`.
      * 
@@ -150,19 +152,19 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Volume(String name, @Nullable VolumeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Volume(String name, @Nullable VolumeArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/volume:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Volume(String name, Output<String> id, @Nullable VolumeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Volume(String name, Output<String> id, @Nullable VolumeState state, @Nullable CustomResourceOptions options) {
         super("docker:index/volume:Volume", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -174,7 +176,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Volume get(String name, Output<String> id, @Nullable VolumeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Volume get(String name, Output<String> id, @Nullable VolumeState state, @Nullable CustomResourceOptions options) {
         return new Volume(name, id, state, options);
     }
 }

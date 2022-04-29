@@ -10,6 +10,7 @@ import com.pulumi.docker.inputs.ServiceTaskSpecLogDriverArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecPlacementArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecResourcesArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecRestartPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTaskSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTaskSpecArgs extends ResourceArgs {
 
     public static final ServiceTaskSpecArgs Empty = new ServiceTaskSpecArgs();
 

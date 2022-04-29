@@ -4,13 +4,14 @@
 package com.pulumi.docker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPluginArgs extends InvokeArgs {
 
     public static final GetPluginArgs Empty = new GetPluginArgs();
 

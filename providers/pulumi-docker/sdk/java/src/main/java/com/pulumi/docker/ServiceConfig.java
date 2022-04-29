@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.ServiceConfigArgs;
 import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.ServiceConfigState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/serviceConfig:ServiceConfig")
-public class ServiceConfig extends com.pulumi.resources.CustomResource {
+public class ServiceConfig extends CustomResource {
     /**
      * Base64-url-safe-encoded config data
      * 
@@ -81,19 +83,19 @@ public class ServiceConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceConfig(String name, ServiceConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceConfig(String name, ServiceConfigArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/serviceConfig:ServiceConfig", name, args == null ? ServiceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceConfig(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceConfig(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable CustomResourceOptions options) {
         super("docker:index/serviceConfig:ServiceConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class ServiceConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceConfig get(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceConfig get(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable CustomResourceOptions options) {
         return new ServiceConfig(name, id, state, options);
     }
 }

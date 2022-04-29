@@ -11,6 +11,8 @@ import com.pulumi.docker.RemoteImageArgs;
 import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.RemoteImageState;
 import com.pulumi.docker.outputs.RemoteImageBuild;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -64,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/remoteImage:RemoteImage")
-public class RemoteImage extends com.pulumi.resources.CustomResource {
+public class RemoteImage extends CustomResource {
     /**
      * Configuration to build an image. Please see [docker build command
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
@@ -225,19 +227,19 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RemoteImage(String name, RemoteImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RemoteImage(String name, RemoteImageArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/remoteImage:RemoteImage", name, args == null ? RemoteImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RemoteImage(String name, Output<String> id, @Nullable RemoteImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RemoteImage(String name, Output<String> id, @Nullable RemoteImageState state, @Nullable CustomResourceOptions options) {
         super("docker:index/remoteImage:RemoteImage", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -249,7 +251,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RemoteImage get(String name, Output<String> id, @Nullable RemoteImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RemoteImage get(String name, Output<String> id, @Nullable RemoteImageState state, @Nullable CustomResourceOptions options) {
         return new RemoteImage(name, id, state, options);
     }
 }

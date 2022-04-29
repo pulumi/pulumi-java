@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountBindOptionsArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTaskSpecContainerSpecMountArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTaskSpecContainerSpecMountArgs extends ResourceArgs {
 
     public static final ServiceTaskSpecContainerSpecMountArgs Empty = new ServiceTaskSpecContainerSpecMountArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.docker.SecretArgs;
 import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.SecretState;
 import com.pulumi.docker.outputs.SecretLabel;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="docker:index/secret:Secret")
-public class Secret extends com.pulumi.resources.CustomResource {
+public class Secret extends CustomResource {
     /**
      * Base64-url-safe-encoded secret data
      * 
@@ -88,19 +90,19 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Secret(String name, SecretArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Secret(String name, SecretArgs args, @Nullable CustomResourceOptions options) {
         super("docker:index/secret:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Secret(String name, Output<String> id, @Nullable SecretState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Secret(String name, Output<String> id, @Nullable SecretState state, @Nullable CustomResourceOptions options) {
         super("docker:index/secret:Secret", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -112,7 +114,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Secret get(String name, Output<String> id, @Nullable SecretState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Secret get(String name, Output<String> id, @Nullable SecretState state, @Nullable CustomResourceOptions options) {
         return new Secret(name, id, state, options);
     }
 }

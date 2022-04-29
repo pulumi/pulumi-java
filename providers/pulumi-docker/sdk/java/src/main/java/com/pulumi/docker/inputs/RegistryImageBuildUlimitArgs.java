@@ -5,12 +5,13 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RegistryImageBuildUlimitArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistryImageBuildUlimitArgs extends ResourceArgs {
 
     public static final RegistryImageBuildUlimitArgs Empty = new RegistryImageBuildUlimitArgs();
 
