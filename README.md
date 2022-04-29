@@ -1,3 +1,55 @@
+**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language.
+
+Simply write Java code in your favorite editor and Pulumi
+automatically provisions and manages your AWS, Azure, Google Cloud
+Platform, and/or Kubernetes resources, using an infrastructure-as-code
+approach. Use standard language features like loops, functions,
+classes, and IDE features like refactorig and package management that
+you already know and love.
+
+For example, create three web servers:
+
+```java
+package myinfra;
+
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.enums.InstanceType;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+
+import java.util.List;
+
+public final class Infra {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            final var sg = new SecurityGroup("web-sg", SecurityGroupArgs.builder()
+                    .ingress(SecurityGroupIngressArgs.builder()
+                            .protocol("tcp")
+                            .fromPort(80)
+                            .toPort(80)
+                            .cidrBlocks("0.0.0.0/0")
+                            .build())
+                    .build());
+            for (var i = 0; i < 3; i++) {
+                new Instance(String.format("web-%d", i), InstanceArgs.builder()
+                        .ami("ami-7172b611")
+                        .instanceType(InstanceType.T2_Micro)
+                        .securityGroups(sg.name().applyValue(List::of))
+                        .userData(String.join("\n",
+                                "#!/bin/bash",
+                                "echo \"Hello, World!\" > index.html",
+                                "nohup python -m SimpleHTTPServer 80 &"))
+                        .build());
+            }
+        });
+    }
+}
+```
+
+
 ## Welcome
 
 * **[Get Started with Pulumi using Java](#getting-started)**: Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java
