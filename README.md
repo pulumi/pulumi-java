@@ -1,4 +1,5 @@
-**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language.
+**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language. Java support is currently in **Public Preview**.
+
 
 Simply write Java code in your favorite editor and Pulumi
 automatically provisions and manages your AWS, Azure, Google Cloud
