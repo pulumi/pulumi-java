@@ -68,6 +68,10 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             return this;
         }
 
+        public Builder additionalSecretOutputs(String... additionalSecretOutputs) {
+            return this.additionalSecretOutputs(List.of(additionalSecretOutputs));
+        }
+
         public Builder additionalSecretOutputs(@Nullable List<String> additionalSecretOutputs) {
             options.additionalSecretOutputs = additionalSecretOutputs;
             return this;
