@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec&#39;s podSelector. The traffic must match both ports and to. This type is beta-level in 1.8
  * 
  */
-public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyEgressRuleArgs extends ResourceArgs {
 
     public static final NetworkPolicyEgressRuleArgs Empty = new NetworkPolicyEgressRuleArgs();
 

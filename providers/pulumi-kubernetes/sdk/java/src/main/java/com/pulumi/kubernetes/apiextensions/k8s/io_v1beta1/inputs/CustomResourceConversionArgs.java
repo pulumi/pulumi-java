@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * CustomResourceConversion describes how to convert different versions of a CR.
  * 
  */
-public final class CustomResourceConversionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceConversionArgs extends ResourceArgs {
 
     public static final CustomResourceConversionArgs Empty = new CustomResourceConversionArgs();
 

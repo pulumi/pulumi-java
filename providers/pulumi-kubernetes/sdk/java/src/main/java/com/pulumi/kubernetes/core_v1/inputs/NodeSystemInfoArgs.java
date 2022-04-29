@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
  * 
  */
-public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSystemInfoArgs extends ResourceArgs {
 
     public static final NodeSystemInfoArgs Empty = new NodeSystemInfoArgs();
 

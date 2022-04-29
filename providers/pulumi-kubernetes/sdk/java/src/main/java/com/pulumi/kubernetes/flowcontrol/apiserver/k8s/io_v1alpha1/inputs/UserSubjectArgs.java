@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * UserSubject holds detailed information for user-kind subject.
  * 
  */
-public final class UserSubjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserSubjectArgs extends ResourceArgs {
 
     public static final UserSubjectArgs Empty = new UserSubjectArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ReplicaSetSpec is the specification of a ReplicaSet.
  * 
  */
-public final class ReplicaSetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicaSetSpecArgs extends ResourceArgs {
 
     public static final ReplicaSetSpecArgs Empty = new ReplicaSetSpecArgs();
 

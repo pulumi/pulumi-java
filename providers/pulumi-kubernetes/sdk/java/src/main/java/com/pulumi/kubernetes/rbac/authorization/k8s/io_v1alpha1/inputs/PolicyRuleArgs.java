@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.
  * 
  */
-public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyRuleArgs extends ResourceArgs {
 
     public static final PolicyRuleArgs Empty = new PolicyRuleArgs();
 

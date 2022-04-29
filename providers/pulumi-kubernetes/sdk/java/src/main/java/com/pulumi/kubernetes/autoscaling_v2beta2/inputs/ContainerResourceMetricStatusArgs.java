@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * ContainerResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing a single container in each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the &#34;pods&#34; source.
  * 
  */
-public final class ContainerResourceMetricStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerResourceMetricStatusArgs extends ResourceArgs {
 
     public static final ContainerResourceMetricStatusArgs Empty = new ContainerResourceMetricStatusArgs();
 

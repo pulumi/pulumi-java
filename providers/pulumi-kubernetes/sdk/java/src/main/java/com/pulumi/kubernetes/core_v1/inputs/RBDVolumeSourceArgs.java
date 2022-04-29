@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class RBDVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RBDVolumeSourceArgs extends ResourceArgs {
 
     public static final RBDVolumeSourceArgs Empty = new RBDVolumeSourceArgs();
 

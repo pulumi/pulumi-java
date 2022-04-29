@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time.
  * 
  */
-public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSeriesArgs extends ResourceArgs {
 
     public static final EventSeriesArgs Empty = new EventSeriesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
  * 
  */
-public final class VolumeAttachmentSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeAttachmentSourceArgs extends ResourceArgs {
 
     public static final VolumeAttachmentSourceArgs Empty = new VolumeAttachmentSourceArgs();
 

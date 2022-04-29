@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 import com.google.gson.JsonElement;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ManagedFieldsEntry is a workflow-id, a FieldSet and the group version of the resource that the fieldset applies to.
  * 
  */
-public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedFieldsEntryArgs extends ResourceArgs {
 
     public static final ManagedFieldsEntryArgs Empty = new ManagedFieldsEntryArgs();
 

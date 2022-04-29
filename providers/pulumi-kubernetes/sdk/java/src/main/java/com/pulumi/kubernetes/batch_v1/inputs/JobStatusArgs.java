@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.batch_v1.inputs.JobConditionArgs;
 import com.pulumi.kubernetes.batch_v1.inputs.UncountedTerminatedPodsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * JobStatus represents the current state of a Job.
  * 
  */
-public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobStatusArgs extends ResourceArgs {
 
     public static final JobStatusArgs Empty = new JobStatusArgs();
 

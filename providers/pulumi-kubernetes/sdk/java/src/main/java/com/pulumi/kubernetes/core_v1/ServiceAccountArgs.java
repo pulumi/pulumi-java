@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccountArgs extends ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 

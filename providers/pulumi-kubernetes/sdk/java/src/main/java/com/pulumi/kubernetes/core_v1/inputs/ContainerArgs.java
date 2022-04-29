@@ -14,6 +14,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecurityContextArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeDeviceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeMountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * A single application container that you want to run within a pod.
  * 
  */
-public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerArgs extends ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 

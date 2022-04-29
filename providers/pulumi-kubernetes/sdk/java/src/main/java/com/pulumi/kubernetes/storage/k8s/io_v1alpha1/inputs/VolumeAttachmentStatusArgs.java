@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeErrorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * VolumeAttachmentStatus is the status of a VolumeAttachment request.
  * 
  */
-public final class VolumeAttachmentStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeAttachmentStatusArgs extends ResourceArgs {
 
     public static final VolumeAttachmentStatusArgs Empty = new VolumeAttachmentStatusArgs();
 

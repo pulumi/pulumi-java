@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SecretKeySelector selects a key of a Secret.
  * 
  */
-public final class SecretKeySelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretKeySelectorArgs extends ResourceArgs {
 
     public static final SecretKeySelectorArgs Empty = new SecretKeySelectorArgs();
 

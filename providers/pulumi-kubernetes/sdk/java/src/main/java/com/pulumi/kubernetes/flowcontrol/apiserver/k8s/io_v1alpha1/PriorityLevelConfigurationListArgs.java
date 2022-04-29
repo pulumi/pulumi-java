@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PriorityLevelConfigurationListArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationListArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationListArgs Empty = new PriorityLevelConfigurationListArgs();
 

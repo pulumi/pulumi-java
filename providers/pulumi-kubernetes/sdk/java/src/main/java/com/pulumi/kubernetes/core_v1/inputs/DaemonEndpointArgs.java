@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * DaemonEndpoint contains information about a single Daemon endpoint.
  * 
  */
-public final class DaemonEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class DaemonEndpointArgs extends ResourceArgs {
 
     public static final DaemonEndpointArgs Empty = new DaemonEndpointArgs();
 

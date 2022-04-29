@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.HorizontalPodAutoscalerBehaviorArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * HorizontalPodAutoscalerSpec describes the desired functionality of the HorizontalPodAutoscaler.
  * 
  */
-public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerSpecArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerSpecArgs Empty = new HorizontalPodAutoscalerSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.batch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * UncountedTerminatedPods holds UIDs of Pods that have terminated but haven&#39;t been accounted in Job status counters.
  * 
  */
-public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UncountedTerminatedPodsArgs extends ResourceArgs {
 
     public static final UncountedTerminatedPodsArgs Empty = new UncountedTerminatedPodsArgs();
 

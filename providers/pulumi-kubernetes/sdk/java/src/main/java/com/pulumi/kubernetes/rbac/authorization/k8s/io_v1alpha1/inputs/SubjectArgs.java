@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.
  * 
  */
-public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectArgs extends ResourceArgs {
 
     public static final SubjectArgs Empty = new SubjectArgs();
 

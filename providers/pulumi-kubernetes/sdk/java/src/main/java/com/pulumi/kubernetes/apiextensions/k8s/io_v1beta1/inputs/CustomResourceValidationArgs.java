@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.JSONSchemaPropsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * CustomResourceValidation is a list of validation methods for CustomResources.
  * 
  */
-public final class CustomResourceValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceValidationArgs extends ResourceArgs {
 
     public static final CustomResourceValidationArgs Empty = new CustomResourceValidationArgs();
 

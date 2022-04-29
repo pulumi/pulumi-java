@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * This information is immutable after the request is created. Only the Request and Usages fields can be set on creation, other fields are derived by Kubernetes and cannot be modified by users.
  * 
  */
-public final class CertificateSigningRequestSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateSigningRequestSpecArgs extends ResourceArgs {
 
     public static final CertificateSigningRequestSpecArgs Empty = new CertificateSigningRequestSpecArgs();
 

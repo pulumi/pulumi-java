@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * volumeDevice describes a mapping of a raw block device within a container.
  * 
  */
-public final class VolumeDeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeDeviceArgs extends ResourceArgs {
 
     public static final VolumeDeviceArgs Empty = new VolumeDeviceArgs();
 

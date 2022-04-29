@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ISCSIPersistentVolumeSourceArgs extends ResourceArgs {
 
     public static final ISCSIPersistentVolumeSourceArgs Empty = new ISCSIPersistentVolumeSourceArgs();
 

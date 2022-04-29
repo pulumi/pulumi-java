@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.
  * 
  */
-public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatusCauseArgs extends ResourceArgs {
 
     public static final StatusCauseArgs Empty = new StatusCauseArgs();
 

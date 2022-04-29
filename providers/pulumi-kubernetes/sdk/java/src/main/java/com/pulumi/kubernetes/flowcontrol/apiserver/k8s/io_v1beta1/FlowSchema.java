@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.FlowSchemaArgs
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.FlowSchemaSpec;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.FlowSchemaStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:flowcontrol.apiserver.k8s.io/v1beta1:FlowSchema")
-public class FlowSchema extends com.pulumi.resources.CustomResource {
+public class FlowSchema extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -116,11 +118,11 @@ public class FlowSchema extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FlowSchema(String name, @Nullable FlowSchemaArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FlowSchema(String name, @Nullable FlowSchemaArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:flowcontrol.apiserver.k8s.io/v1beta1:FlowSchema", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FlowSchema(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FlowSchema(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:flowcontrol.apiserver.k8s.io/v1beta1:FlowSchema", name, null, makeResourceOptions(options, id));
     }
 
@@ -132,15 +134,15 @@ public class FlowSchema extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:FlowSchema").build()),
                 Output.of(Alias.builder().type("kubernetes:flowcontrol.apiserver.k8s.io/v1beta2:FlowSchema").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -151,7 +153,7 @@ public class FlowSchema extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FlowSchema get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FlowSchema get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FlowSchema(name, id, options);
     }
 }

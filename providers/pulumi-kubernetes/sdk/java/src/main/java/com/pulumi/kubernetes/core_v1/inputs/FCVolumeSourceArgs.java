@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class FCVolumeSourceArgs extends ResourceArgs {
 
     public static final FCVolumeSourceArgs Empty = new FCVolumeSourceArgs();
 

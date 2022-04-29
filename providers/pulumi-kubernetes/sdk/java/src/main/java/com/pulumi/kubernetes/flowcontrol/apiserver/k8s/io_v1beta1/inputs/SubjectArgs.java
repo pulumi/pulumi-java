@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.GroupSubjectArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.ServiceAccountSubjectArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.UserSubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.
  * 
  */
-public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectArgs extends ResourceArgs {
 
     public static final SubjectArgs Empty = new SubjectArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.policy_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PodDisruptionBudgetStatus represents information about the status of a PodDisruptionBudget. Status may trail the actual state of a system.
  * 
  */
-public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodDisruptionBudgetStatusArgs extends ResourceArgs {
 
     public static final PodDisruptionBudgetStatusArgs Empty = new PodDisruptionBudgetStatusArgs();
 

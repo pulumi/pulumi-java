@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.
  * 
  */
-public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListMetaArgs extends ResourceArgs {
 
     public static final ListMetaArgs Empty = new ListMetaArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.CrossVersionObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
  * 
  */
-public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectMetricSourceArgs extends ResourceArgs {
 
     public static final ObjectMetricSourceArgs Empty = new ObjectMetricSourceArgs();
 

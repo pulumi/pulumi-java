@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes
  * 
  */
-public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistentVolumeClaimSpecArgs extends ResourceArgs {
 
     public static final PersistentVolumeClaimSpecArgs Empty = new PersistentVolumeClaimSpecArgs();
 

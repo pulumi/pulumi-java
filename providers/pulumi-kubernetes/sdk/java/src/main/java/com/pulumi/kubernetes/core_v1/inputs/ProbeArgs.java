@@ -9,6 +9,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.GRPCActionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TCPSocketActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
  * 
  */
-public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProbeArgs extends ResourceArgs {
 
     public static final ProbeArgs Empty = new ProbeArgs();
 

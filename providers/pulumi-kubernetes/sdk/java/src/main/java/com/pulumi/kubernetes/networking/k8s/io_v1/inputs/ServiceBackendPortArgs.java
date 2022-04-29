@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ServiceBackendPort is the service port being referenced.
  * 
  */
-public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceBackendPortArgs extends ResourceArgs {
 
     public static final ServiceBackendPortArgs Empty = new ServiceBackendPortArgs();
 

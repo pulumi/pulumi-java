@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Options for tuning the Kubernetes client used by a Provider.
  * 
  */
-public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubeClientSettingsArgs extends ResourceArgs {
 
     public static final KubeClientSettingsArgs Empty = new KubeClientSettingsArgs();
 

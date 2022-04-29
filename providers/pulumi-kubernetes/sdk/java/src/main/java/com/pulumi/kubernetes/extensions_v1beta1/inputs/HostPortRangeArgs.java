@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * HostPortRange defines a range of host ports that will be enabled by a policy for pods to use.  It requires both the start and end to be defined. Deprecated: use HostPortRange from policy API Group instead.
  * 
  */
-public final class HostPortRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostPortRangeArgs extends ResourceArgs {
 
     public static final HostPortRangeArgs Empty = new HostPortRangeArgs();
 

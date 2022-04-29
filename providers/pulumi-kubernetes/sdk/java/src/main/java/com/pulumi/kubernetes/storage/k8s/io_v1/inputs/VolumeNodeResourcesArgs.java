@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * VolumeNodeResources is a set of resource limits for scheduling of volumes.
  * 
  */
-public final class VolumeNodeResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeNodeResourcesArgs extends ResourceArgs {
 
     public static final VolumeNodeResourcesArgs Empty = new VolumeNodeResourcesArgs();
 

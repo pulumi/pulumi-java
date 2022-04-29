@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.EndpointAddressArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EndpointPortArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  *     b: [ 10.10.1.1:309, 10.10.2.2:309 ]
  * 
  */
-public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointSubsetArgs extends ResourceArgs {
 
     public static final EndpointSubsetArgs Empty = new EndpointSubsetArgs();
 

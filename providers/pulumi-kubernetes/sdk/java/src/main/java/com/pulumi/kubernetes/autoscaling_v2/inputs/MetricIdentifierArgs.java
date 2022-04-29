@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MetricIdentifier defines the name and optionally selector for a metric
  * 
  */
-public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricIdentifierArgs extends ResourceArgs {
 
     public static final MetricIdentifierArgs Empty = new MetricIdentifierArgs();
 

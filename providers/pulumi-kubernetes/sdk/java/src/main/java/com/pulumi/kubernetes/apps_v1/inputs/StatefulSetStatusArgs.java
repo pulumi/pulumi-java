@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1.inputs.StatefulSetConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * StatefulSetStatus represents the current state of a StatefulSet.
  * 
  */
-public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatefulSetStatusArgs extends ResourceArgs {
 
     public static final StatefulSetStatusArgs Empty = new StatefulSetStatusArgs();
 

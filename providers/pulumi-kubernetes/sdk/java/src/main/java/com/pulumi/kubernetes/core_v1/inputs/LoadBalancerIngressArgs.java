@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PortStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.
  * 
  */
-public final class LoadBalancerIngressArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerIngressArgs extends ResourceArgs {
 
     public static final LoadBalancerIngressArgs Empty = new LoadBalancerIngressArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * HTTPHeader describes a custom header to be used in HTTP probes
  * 
  */
-public final class HTTPHeaderArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPHeaderArgs extends ResourceArgs {
 
     public static final HTTPHeaderArgs Empty = new HTTPHeaderArgs();
 

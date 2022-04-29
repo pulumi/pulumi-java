@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointConditionsArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointHintsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Endpoint represents a single logical &#34;backend&#34; implementing a service.
  * 
  */
-public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointArgs extends ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 

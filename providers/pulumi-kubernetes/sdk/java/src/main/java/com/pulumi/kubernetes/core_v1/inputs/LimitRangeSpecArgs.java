@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LimitRangeItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * LimitRangeSpec defines a min/max usage limit for resources that match on kind.
  * 
  */
-public final class LimitRangeSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class LimitRangeSpecArgs extends ResourceArgs {
 
     public static final LimitRangeSpecArgs Empty = new LimitRangeSpecArgs();
 

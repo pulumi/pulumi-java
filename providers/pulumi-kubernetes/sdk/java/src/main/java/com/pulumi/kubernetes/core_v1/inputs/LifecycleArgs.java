@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LifecycleHandlerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Lifecycle describes actions that the management system should take in response to container lifecycle events. For the PostStart and PreStop lifecycle handlers, management of the container blocks until the action is complete, unless the container process fails, in which case the handler is aborted.
  * 
  */
-public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecycleArgs extends ResourceArgs {
 
     public static final LifecycleArgs Empty = new LifecycleArgs();
 

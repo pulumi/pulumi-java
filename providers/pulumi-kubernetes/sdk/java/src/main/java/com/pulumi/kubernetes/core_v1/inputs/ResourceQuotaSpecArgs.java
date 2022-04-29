@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ScopeSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * ResourceQuotaSpec defines the desired hard limits to enforce for Quota.
  * 
  */
-public final class ResourceQuotaSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceQuotaSpecArgs extends ResourceArgs {
 
     public static final ResourceQuotaSpecArgs Empty = new ResourceQuotaSpecArgs();
 

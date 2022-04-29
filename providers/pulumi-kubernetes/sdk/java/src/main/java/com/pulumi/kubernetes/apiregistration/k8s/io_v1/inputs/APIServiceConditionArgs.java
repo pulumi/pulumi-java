@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * APIServiceCondition describes the state of an APIService at a particular point
  * 
  */
-public final class APIServiceConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class APIServiceConditionArgs extends ResourceArgs {
 
     public static final APIServiceConditionArgs Empty = new APIServiceConditionArgs();
 

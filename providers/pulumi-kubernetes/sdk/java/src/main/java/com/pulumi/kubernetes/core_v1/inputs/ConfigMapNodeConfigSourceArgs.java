@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
  * 
  */
-public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigMapNodeConfigSourceArgs extends ResourceArgs {
 
     public static final ConfigMapNodeConfigSourceArgs Empty = new ConfigMapNodeConfigSourceArgs();
 

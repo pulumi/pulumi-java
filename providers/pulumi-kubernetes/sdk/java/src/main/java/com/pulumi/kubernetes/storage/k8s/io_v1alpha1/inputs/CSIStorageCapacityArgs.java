@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * They are consumed by the kube-scheduler if the CSIStorageCapacity beta feature gate is enabled there and a CSI driver opts into capacity-aware scheduling with CSIDriver.StorageCapacity.
  * 
  */
-public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSIStorageCapacityArgs extends ResourceArgs {
 
     public static final CSIStorageCapacityArgs Empty = new CSIStorageCapacityArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
  * 
  */
-public final class HostPathVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostPathVolumeSourceArgs extends ResourceArgs {
 
     public static final HostPathVolumeSourceArgs Empty = new HostPathVolumeSourceArgs();
 

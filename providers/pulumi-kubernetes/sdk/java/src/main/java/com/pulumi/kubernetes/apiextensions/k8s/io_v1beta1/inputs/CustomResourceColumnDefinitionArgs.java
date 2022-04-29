@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * CustomResourceColumnDefinition specifies a column for server side printing.
  * 
  */
-public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceColumnDefinitionArgs extends ResourceArgs {
 
     public static final CustomResourceColumnDefinitionArgs Empty = new CustomResourceColumnDefinitionArgs();
 

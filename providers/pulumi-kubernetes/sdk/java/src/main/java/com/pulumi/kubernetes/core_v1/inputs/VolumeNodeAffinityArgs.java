@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
  * 
  */
-public final class VolumeNodeAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeNodeAffinityArgs extends ResourceArgs {
 
     public static final VolumeNodeAffinityArgs Empty = new VolumeNodeAffinityArgs();
 

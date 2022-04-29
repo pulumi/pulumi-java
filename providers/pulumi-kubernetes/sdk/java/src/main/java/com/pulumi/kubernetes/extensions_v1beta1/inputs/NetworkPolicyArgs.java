@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicySpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking/v1/NetworkPolicy. NetworkPolicy describes what network traffic is allowed for a set of Pods
  * 
  */
-public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyArgs extends ResourceArgs {
 
     public static final NetworkPolicyArgs Empty = new NetworkPolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * PersistentVolumeClaimStatus is the current status of a persistent volume claim.
  * 
  */
-public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistentVolumeClaimStatusArgs extends ResourceArgs {
 
     public static final PersistentVolumeClaimStatusArgs Empty = new PersistentVolumeClaimStatusArgs();
 

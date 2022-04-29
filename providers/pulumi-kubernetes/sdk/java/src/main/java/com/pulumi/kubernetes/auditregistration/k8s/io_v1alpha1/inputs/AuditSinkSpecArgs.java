@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.PolicyArgs;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * AuditSinkSpec holds the spec for the audit sink
  * 
  */
-public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuditSinkSpecArgs extends ResourceArgs {
 
     public static final AuditSinkSpecArgs Empty = new AuditSinkSpecArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.core_v1.outputs.TopologySelectorTerm;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import com.pulumi.kubernetes.storage.k8s.io_v1.StorageClassArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +28,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:storage.k8s.io/v1:StorageClass")
-public class StorageClass extends com.pulumi.resources.CustomResource {
+public class StorageClass extends CustomResource {
     /**
      * AllowVolumeExpansion shows whether the storage class allow volume expand
      * 
@@ -189,11 +191,11 @@ public class StorageClass extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public StorageClass(String name, StorageClassArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public StorageClass(String name, StorageClassArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:storage.k8s.io/v1:StorageClass", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private StorageClass(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private StorageClass(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:storage.k8s.io/v1:StorageClass", name, null, makeResourceOptions(options, id));
     }
 
@@ -205,14 +207,14 @@ public class StorageClass extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:storage.k8s.io/v1beta1:StorageClass").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -223,7 +225,7 @@ public class StorageClass extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StorageClass get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static StorageClass get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new StorageClass(name, id, options);
     }
 }

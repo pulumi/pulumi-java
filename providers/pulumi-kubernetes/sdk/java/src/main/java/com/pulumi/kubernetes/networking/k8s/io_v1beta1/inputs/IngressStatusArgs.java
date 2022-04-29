@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * IngressStatus describe the current state of the Ingress.
  * 
  */
-public final class IngressStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressStatusArgs extends ResourceArgs {
 
     public static final IngressStatusArgs Empty = new IngressStatusArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * ContainerStatus contains details for the current status of this container.
  * 
  */
-public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerStatusArgs extends ResourceArgs {
 
     public static final ContainerStatusArgs Empty = new ContainerStatusArgs();
 

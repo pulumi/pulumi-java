@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodDNSConfigOptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
  * 
  */
-public final class PodDNSConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodDNSConfigArgs extends ResourceArgs {
 
     public static final PodDNSConfigArgs Empty = new PodDNSConfigArgs();
 

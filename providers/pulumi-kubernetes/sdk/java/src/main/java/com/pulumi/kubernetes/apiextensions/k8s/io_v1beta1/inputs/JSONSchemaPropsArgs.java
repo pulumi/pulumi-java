@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.ExternalDocumentationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).
  * 
  */
-public final class JSONSchemaPropsArgs extends com.pulumi.resources.ResourceArgs {
+public final class JSONSchemaPropsArgs extends ResourceArgs {
 
     public static final JSONSchemaPropsArgs Empty = new JSONSchemaPropsArgs();
 

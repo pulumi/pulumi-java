@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A topology selector term represents the result of label queries. A null or empty topology selector term matches no objects. The requirements of them are ANDed. It provides a subset of functionality as NodeSelectorTerm. This is an alpha feature and may change in the future.
  * 
  */
-public final class TopologySelectorTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopologySelectorTermArgs extends ResourceArgs {
 
     public static final TopologySelectorTermArgs Empty = new TopologySelectorTermArgs();
 

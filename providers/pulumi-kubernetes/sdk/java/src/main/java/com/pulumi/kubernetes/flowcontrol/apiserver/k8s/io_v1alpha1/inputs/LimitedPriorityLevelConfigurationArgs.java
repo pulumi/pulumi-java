@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.LimitResponseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  *  * What should be done with requests that exceed the limit?
  * 
  */
-public final class LimitedPriorityLevelConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LimitedPriorityLevelConfigurationArgs extends ResourceArgs {
 
     public static final LimitedPriorityLevelConfigurationArgs Empty = new LimitedPriorityLevelConfigurationArgs();
 

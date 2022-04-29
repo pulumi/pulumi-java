@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
  * 
  */
-public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretReferenceArgs extends ResourceArgs {
 
     public static final SecretReferenceArgs Empty = new SecretReferenceArgs();
 

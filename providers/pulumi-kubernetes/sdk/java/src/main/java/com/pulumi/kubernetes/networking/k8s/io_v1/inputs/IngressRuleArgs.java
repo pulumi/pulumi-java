@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.HTTPIngressRuleValueArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.
  * 
  */
-public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressRuleArgs extends ResourceArgs {
 
     public static final IngressRuleArgs Empty = new IngressRuleArgs();
 

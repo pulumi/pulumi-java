@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * current status of a horizontal pod autoscaler
  * 
  */
-public final class HorizontalPodAutoscalerStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerStatusArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerStatusArgs Empty = new HorizontalPodAutoscalerStatusArgs();
 

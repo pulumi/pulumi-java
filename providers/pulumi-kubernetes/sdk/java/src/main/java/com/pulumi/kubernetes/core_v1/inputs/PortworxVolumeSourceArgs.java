@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PortworxVolumeSource represents a Portworx volume resource.
  * 
  */
-public final class PortworxVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PortworxVolumeSourceArgs extends ResourceArgs {
 
     public static final PortworxVolumeSourceArgs Empty = new PortworxVolumeSourceArgs();
 

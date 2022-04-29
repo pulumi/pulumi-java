@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The node this Taint is attached to has the &#34;effect&#34; on any pod that does not tolerate the Taint.
  * 
  */
-public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaintArgs extends ResourceArgs {
 
     public static final TaintArgs Empty = new TaintArgs();
 

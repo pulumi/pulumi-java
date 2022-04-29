@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * AllowedHostPath defines the host volume conditions that will be enabled by a policy for pods to use. It requires the path prefix to be defined. Deprecated: use AllowedHostPath from policy API Group instead.
  * 
  */
-public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedHostPathArgs extends ResourceArgs {
 
     public static final AllowedHostPathArgs Empty = new AllowedHostPathArgs();
 

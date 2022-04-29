@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateRunningArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateTerminatedArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateWaitingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.
  * 
  */
-public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerStateArgs extends ResourceArgs {
 
     public static final ContainerStateArgs Empty = new ContainerStateArgs();
 

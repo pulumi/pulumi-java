@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
  * 
  */
-public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitRepoVolumeSourceArgs extends ResourceArgs {
 
     public static final GitRepoVolumeSourceArgs Empty = new GitRepoVolumeSourceArgs();
 

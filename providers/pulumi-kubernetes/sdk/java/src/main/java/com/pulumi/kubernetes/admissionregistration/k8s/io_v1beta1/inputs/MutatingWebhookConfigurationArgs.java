@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.MutatingWebhookArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object. Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.k8s.io/v1 MutatingWebhookConfiguration instead.
  * 
  */
-public final class MutatingWebhookConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MutatingWebhookConfigurationArgs extends ResourceArgs {
 
     public static final MutatingWebhookConfigurationArgs Empty = new MutatingWebhookConfigurationArgs();
 

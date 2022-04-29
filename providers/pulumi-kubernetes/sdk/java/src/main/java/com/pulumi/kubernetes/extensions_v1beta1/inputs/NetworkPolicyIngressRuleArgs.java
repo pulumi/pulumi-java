@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPeerArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPortArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of NetworkPolicyIngressRule is deprecated by networking/v1/NetworkPolicyIngressRule. This NetworkPolicyIngressRule matches traffic if and only if the traffic matches both ports AND from.
  * 
  */
-public final class NetworkPolicyIngressRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyIngressRuleArgs extends ResourceArgs {
 
     public static final NetworkPolicyIngressRuleArgs Empty = new NetworkPolicyIngressRuleArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ServicePort contains information on service&#39;s port.
  * 
  */
-public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicePortArgs extends ResourceArgs {
 
     public static final ServicePortArgs Empty = new ServicePortArgs();
 

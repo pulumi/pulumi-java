@@ -11,6 +11,8 @@ import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.core_v1.PersistentVolumeListArgs;
 import com.pulumi.kubernetes.core_v1.outputs.PersistentVolume;
 import com.pulumi.kubernetes.meta_v1.outputs.ListMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:core/v1:PersistentVolumeList")
-public class PersistentVolumeList extends com.pulumi.resources.CustomResource {
+public class PersistentVolumeList extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -100,11 +102,11 @@ public class PersistentVolumeList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PersistentVolumeList(String name, PersistentVolumeListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PersistentVolumeList(String name, PersistentVolumeListArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:PersistentVolumeList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PersistentVolumeList(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PersistentVolumeList(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:PersistentVolumeList", name, null, makeResourceOptions(options, id));
     }
 
@@ -116,11 +118,11 @@ public class PersistentVolumeList extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -131,7 +133,7 @@ public class PersistentVolumeList extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PersistentVolumeList get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PersistentVolumeList get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PersistentVolumeList(name, id, options);
     }
 }

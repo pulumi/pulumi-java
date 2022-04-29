@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CinderVolumeSourceArgs extends ResourceArgs {
 
     public static final CinderVolumeSourceArgs Empty = new CinderVolumeSourceArgs();
 

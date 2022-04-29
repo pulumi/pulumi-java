@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerIngressArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * LoadBalancerStatus represents the status of a load-balancer.
  * 
  */
-public final class LoadBalancerStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerStatusArgs extends ResourceArgs {
 
     public static final LoadBalancerStatusArgs Empty = new LoadBalancerStatusArgs();
 

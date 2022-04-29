@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ExternalMetricSourceArgs
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ObjectMetricSourceArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.PodsMetricSourceArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ResourceMetricSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * MetricSpec specifies how to scale based on a single metric (only `type` and one other matching field should be set at once).
  * 
  */
-public final class MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricSpecArgs extends ResourceArgs {
 
     public static final MetricSpecArgs Empty = new MetricSpecArgs();
 

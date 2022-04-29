@@ -12,6 +12,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.apps_v1beta2.ControllerRevisionArgs;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* apps/v1beta2/ControllerRevision is deprecated by apps/v1/ControllerRevision and not supported by Kubernetes v1.16+ clusters. */
 @ResourceType(type="kubernetes:apps/v1beta2:ControllerRevision")
-public class ControllerRevision extends com.pulumi.resources.CustomResource {
+public class ControllerRevision extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -120,11 +122,11 @@ public class ControllerRevision extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ControllerRevision(String name, ControllerRevisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ControllerRevision(String name, ControllerRevisionArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:apps/v1beta2:ControllerRevision", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ControllerRevision(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ControllerRevision(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:apps/v1beta2:ControllerRevision", name, null, makeResourceOptions(options, id));
     }
 
@@ -136,15 +138,15 @@ public class ControllerRevision extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:apps/v1:ControllerRevision").build()),
                 Output.of(Alias.builder().type("kubernetes:apps/v1beta1:ControllerRevision").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -155,7 +157,7 @@ public class ControllerRevision extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ControllerRevision get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ControllerRevision get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ControllerRevision(name, id, options);
     }
 }

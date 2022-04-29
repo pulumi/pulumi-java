@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.HTTPIngressPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * HTTPIngressRuleValue is a list of http selectors pointing to backends. In the example: http://&lt;host&gt;/&lt;path&gt;?&lt;searchpart&gt; -&gt; backend where where parts of the url correspond to RFC 3986, this resource will be used to match against everything after the last &#39;/&#39; and before the first &#39;?&#39; or &#39;#&#39;.
  * 
  */
-public final class HTTPIngressRuleValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPIngressRuleValueArgs extends ResourceArgs {
 
     public static final HTTPIngressRuleValueArgs Empty = new HTTPIngressRuleValueArgs();
 

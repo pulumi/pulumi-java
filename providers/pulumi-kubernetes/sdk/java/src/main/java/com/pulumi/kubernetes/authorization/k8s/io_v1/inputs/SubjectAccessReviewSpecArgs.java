@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
  * 
  */
-public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectAccessReviewSpecArgs extends ResourceArgs {
 
     public static final SubjectAccessReviewSpecArgs Empty = new SubjectAccessReviewSpecArgs();
 

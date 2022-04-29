@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.Endpoint;
 import com.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.EndpointPort;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:discovery.k8s.io/v1beta1:EndpointSlice")
-public class EndpointSlice extends com.pulumi.resources.CustomResource {
+public class EndpointSlice extends CustomResource {
     /**
      * addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
      * 
@@ -130,11 +132,11 @@ public class EndpointSlice extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EndpointSlice(String name, EndpointSliceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EndpointSlice(String name, EndpointSliceArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:discovery.k8s.io/v1beta1:EndpointSlice", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EndpointSlice(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EndpointSlice(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:discovery.k8s.io/v1beta1:EndpointSlice", name, null, makeResourceOptions(options, id));
     }
 
@@ -146,14 +148,14 @@ public class EndpointSlice extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:discovery.k8s.io/v1:EndpointSlice").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -164,7 +166,7 @@ public class EndpointSlice extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EndpointSlice get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EndpointSlice get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new EndpointSlice(name, id, options);
     }
 }

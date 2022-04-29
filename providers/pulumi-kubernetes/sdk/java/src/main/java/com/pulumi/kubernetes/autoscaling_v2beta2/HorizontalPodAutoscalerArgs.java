@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.HorizontalPodAutoscalerSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HorizontalPodAutoscalerArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerArgs Empty = new HorizontalPodAutoscalerArgs();
 

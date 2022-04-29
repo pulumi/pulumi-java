@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ExternalMetricStatusArgs
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ObjectMetricStatusArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.PodsMetricStatusArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta1.inputs.ResourceMetricStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * MetricStatus describes the last-read state of a single metric.
  * 
  */
-public final class MetricStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricStatusArgs extends ResourceArgs {
 
     public static final MetricStatusArgs Empty = new MetricStatusArgs();
 

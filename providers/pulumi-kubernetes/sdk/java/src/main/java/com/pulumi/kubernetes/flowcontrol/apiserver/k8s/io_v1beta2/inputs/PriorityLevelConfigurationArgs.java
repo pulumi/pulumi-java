@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationSpecArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PriorityLevelConfiguration represents the configuration of a priority level.
  * 
  */
-public final class PriorityLevelConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationArgs Empty = new PriorityLevelConfigurationArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.APIServiceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class APIServiceListArgs extends com.pulumi.resources.ResourceArgs {
+public final class APIServiceListArgs extends ResourceArgs {
 
     public static final APIServiceListArgs Empty = new APIServiceListArgs();
 

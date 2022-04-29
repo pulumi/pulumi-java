@@ -9,6 +9,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ConfigMapProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecretProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ServiceAccountTokenProjectionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Projection that may be projected along with other supported volume types
  * 
  */
-public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeProjectionArgs extends ResourceArgs {
 
     public static final VolumeProjectionArgs Empty = new VolumeProjectionArgs();
 

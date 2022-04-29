@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.DeploymentConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DeploymentStatus is the most recently observed status of the Deployment.
  * 
  */
-public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentStatusArgs extends ResourceArgs {
 
     public static final DeploymentStatusArgs Empty = new DeploymentStatusArgs();
 

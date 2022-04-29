@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.authentication.k8s.io_v1.inputs.BoundObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * TokenRequestSpec contains client provided parameters of a token request.
  * 
  */
-public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenRequestSpecArgs extends ResourceArgs {
 
     public static final TokenRequestSpecArgs Empty = new TokenRequestSpecArgs();
 

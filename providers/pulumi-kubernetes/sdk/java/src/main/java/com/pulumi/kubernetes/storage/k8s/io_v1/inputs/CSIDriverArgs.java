@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSIDriverSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * CSIDriver captures information about a Container Storage Interface (CSI) volume driver deployed on the cluster. Kubernetes attach detach controller uses this object to determine whether attach is required. Kubelet uses this object to determine whether pod information needs to be passed on mount. CSIDriver objects are non-namespaced.
  * 
  */
-public final class CSIDriverArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSIDriverArgs extends ResourceArgs {
 
     public static final CSIDriverArgs Empty = new CSIDriverArgs();
 

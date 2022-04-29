@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MetricTarget defines the target value, average value, or average utilization of a specific metric
  * 
  */
-public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricTargetArgs extends ResourceArgs {
 
     public static final MetricTargetArgs Empty = new MetricTargetArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.core_v1.inputs.EventSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.events.k8s.io_v1beta1.inputs.EventSeriesArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
  * 
  */
-public final class EventArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventArgs extends ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 

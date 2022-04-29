@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.ManagedFieldsEntryArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.OwnerReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
  * 
  */
-public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectMetaArgs extends ResourceArgs {
 
     public static final ObjectMetaArgs Empty = new ObjectMetaArgs();
 

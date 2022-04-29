@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MetricValueStatus holds the current value for a metric
  * 
  */
-public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricValueStatusArgs extends ResourceArgs {
 
     public static final MetricValueStatusArgs Empty = new MetricValueStatusArgs();
 

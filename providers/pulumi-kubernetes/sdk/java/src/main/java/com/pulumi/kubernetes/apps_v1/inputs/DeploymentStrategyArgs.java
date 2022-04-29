@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1.inputs.RollingUpdateDeploymentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DeploymentStrategy describes how to replace existing pods with new ones.
  * 
  */
-public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentStrategyArgs extends ResourceArgs {
 
     public static final DeploymentStrategyArgs Empty = new DeploymentStrategyArgs();
 

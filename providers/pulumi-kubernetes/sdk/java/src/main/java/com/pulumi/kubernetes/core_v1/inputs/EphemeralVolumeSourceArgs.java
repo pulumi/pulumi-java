@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimTemplateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an ephemeral volume that is handled by a normal storage driver.
  * 
  */
-public final class EphemeralVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EphemeralVolumeSourceArgs extends ResourceArgs {
 
     public static final EphemeralVolumeSourceArgs Empty = new EphemeralVolumeSourceArgs();
 

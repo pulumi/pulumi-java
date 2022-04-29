@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.authorization.k8s.io_v1.LocalSubjectAccessReviewArg
 import com.pulumi.kubernetes.authorization.k8s.io_v1.outputs.SubjectAccessReviewSpec;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.outputs.SubjectAccessReviewStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:authorization.k8s.io/v1:LocalSubjectAccessReview")
-public class LocalSubjectAccessReview extends com.pulumi.resources.CustomResource {
+public class LocalSubjectAccessReview extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -116,11 +118,11 @@ public class LocalSubjectAccessReview extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LocalSubjectAccessReview(String name, LocalSubjectAccessReviewArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LocalSubjectAccessReview(String name, LocalSubjectAccessReviewArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:authorization.k8s.io/v1:LocalSubjectAccessReview", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LocalSubjectAccessReview(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LocalSubjectAccessReview(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:authorization.k8s.io/v1:LocalSubjectAccessReview", name, null, makeResourceOptions(options, id));
     }
 
@@ -132,14 +134,14 @@ public class LocalSubjectAccessReview extends com.pulumi.resources.CustomResourc
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:authorization.k8s.io/v1beta1:LocalSubjectAccessReview").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -150,7 +152,7 @@ public class LocalSubjectAccessReview extends com.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocalSubjectAccessReview get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LocalSubjectAccessReview get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new LocalSubjectAccessReview(name, id, options);
     }
 }

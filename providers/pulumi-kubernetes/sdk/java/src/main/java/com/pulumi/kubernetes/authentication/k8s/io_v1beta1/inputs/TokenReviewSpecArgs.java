@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.authentication.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * TokenReviewSpec is a description of the token authentication request.
  * 
  */
-public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenReviewSpecArgs extends ResourceArgs {
 
     public static final TokenReviewSpecArgs Empty = new TokenReviewSpecArgs();
 

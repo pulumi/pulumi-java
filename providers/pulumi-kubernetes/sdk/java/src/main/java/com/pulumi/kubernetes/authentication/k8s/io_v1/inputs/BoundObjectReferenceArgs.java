@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * BoundObjectReference is a reference to an object that a token is bound to.
  * 
  */
-public final class BoundObjectReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BoundObjectReferenceArgs extends ResourceArgs {
 
     public static final BoundObjectReferenceArgs Empty = new BoundObjectReferenceArgs();
 

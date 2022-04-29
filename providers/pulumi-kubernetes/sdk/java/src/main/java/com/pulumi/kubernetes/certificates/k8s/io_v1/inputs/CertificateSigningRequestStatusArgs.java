@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * CertificateSigningRequestStatus contains conditions used to indicate approved/denied/failed status of the request, and the issued certificate.
  * 
  */
-public final class CertificateSigningRequestStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateSigningRequestStatusArgs extends ResourceArgs {
 
     public static final CertificateSigningRequestStatusArgs Empty = new CertificateSigningRequestStatusArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ServiceReference holds a reference to Service.legacy.k8s.io
  * 
  */
-public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceReferenceArgs extends ResourceArgs {
 
     public static final ServiceReferenceArgs Empty = new ServiceReferenceArgs();
 

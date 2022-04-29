@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceQuotaSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceQuotaStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * ResourceQuota sets aggregate quota restrictions enforced per namespace
  * 
  */
-public final class ResourceQuotaArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceQuotaArgs extends ResourceArgs {
 
     public static final ResourceQuotaArgs Empty = new ResourceQuotaArgs();
 

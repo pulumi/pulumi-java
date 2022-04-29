@@ -9,13 +9,14 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.OverheadArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.SchedulingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeClassArgs extends ResourceArgs {
 
     public static final RuntimeClassArgs Empty = new RuntimeClassArgs();
 

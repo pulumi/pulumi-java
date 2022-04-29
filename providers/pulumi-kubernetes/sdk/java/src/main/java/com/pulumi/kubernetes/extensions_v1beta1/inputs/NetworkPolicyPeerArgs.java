@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IPBlockArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of NetworkPolicyPeer is deprecated by networking/v1/NetworkPolicyPeer.
  * 
  */
-public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyPeerArgs extends ResourceArgs {
 
     public static final NetworkPolicyPeerArgs Empty = new NetworkPolicyPeerArgs();
 

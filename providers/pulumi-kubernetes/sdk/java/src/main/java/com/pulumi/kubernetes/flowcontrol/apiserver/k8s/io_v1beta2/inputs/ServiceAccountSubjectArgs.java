@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * ServiceAccountSubject holds detailed information for service-account-kind subject.
  * 
  */
-public final class ServiceAccountSubjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccountSubjectArgs extends ResourceArgs {
 
     public static final ServiceAccountSubjectArgs Empty = new ServiceAccountSubjectArgs();
 

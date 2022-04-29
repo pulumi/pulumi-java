@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PreferredSchedulingTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Node affinity is a group of node affinity scheduling rules.
  * 
  */
-public final class NodeAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeAffinityArgs extends ResourceArgs {
 
     public static final NodeAffinityArgs Empty = new NodeAffinityArgs();
 

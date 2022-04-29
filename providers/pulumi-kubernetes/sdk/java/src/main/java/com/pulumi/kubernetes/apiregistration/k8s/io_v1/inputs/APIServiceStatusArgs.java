@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs.APIServiceConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * APIServiceStatus contains derived information about an API server
  * 
  */
-public final class APIServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class APIServiceStatusArgs extends ResourceArgs {
 
     public static final APIServiceStatusArgs Empty = new APIServiceStatusArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ServiceAccountTokenProjection represents a projected service account token volume. This projection can be used to insert a service account token into the pods runtime filesystem for use against APIs (Kubernetes API Server or otherwise).
  * 
  */
-public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccountTokenProjectionArgs extends ResourceArgs {
 
     public static final ServiceAccountTokenProjectionArgs Empty = new ServiceAccountTokenProjectionArgs();
 

@@ -17,6 +17,7 @@ import com.pulumi.kubernetes.core_v1.inputs.PodSecurityContextArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TopologySpreadConstraintArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ import javax.annotation.Nullable;
  * PodSpec is a description of a pod.
  * 
  */
-public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodSpecArgs extends ResourceArgs {
 
     public static final PodSpecArgs Empty = new PodSpecArgs();
 

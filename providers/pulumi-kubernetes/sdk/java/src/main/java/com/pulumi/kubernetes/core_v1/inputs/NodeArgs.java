@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NodeStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd).
  * 
  */
-public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeArgs extends ResourceArgs {
 
     public static final NodeArgs Empty = new NodeArgs();
 

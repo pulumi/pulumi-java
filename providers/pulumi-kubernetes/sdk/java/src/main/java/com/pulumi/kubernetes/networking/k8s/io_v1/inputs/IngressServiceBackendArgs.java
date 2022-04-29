@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.ServiceBackendPortArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * IngressServiceBackend references a Kubernetes Service as a Backend.
  * 
  */
-public final class IngressServiceBackendArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressServiceBackendArgs extends ResourceArgs {
 
     public static final IngressServiceBackendArgs Empty = new IngressServiceBackendArgs();
 

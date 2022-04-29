@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IPBlockArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combinations of fields are allowed
  * 
  */
-public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyPeerArgs extends ResourceArgs {
 
     public static final NetworkPolicyPeerArgs Empty = new NetworkPolicyPeerArgs();
 

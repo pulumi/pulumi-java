@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a certain point.
  * 
  */
-public final class HorizontalPodAutoscalerConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerConditionArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerConditionArgs Empty = new HorizontalPodAutoscalerConditionArgs();
 

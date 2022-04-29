@@ -8,6 +8,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.helm.sh_v3.inputs.RepositoryOptsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReleaseArgs extends ResourceArgs {
 
     public static final ReleaseArgs Empty = new ReleaseArgs();
 

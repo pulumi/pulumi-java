@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.core_v1.inputs.EventSeriesArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EventSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventArgs extends ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 

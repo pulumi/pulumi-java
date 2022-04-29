@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * SeccompProfile defines a pod/container&#39;s seccomp profile settings. Only one profile source may be set.
  * 
  */
-public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class SeccompProfileArgs extends ResourceArgs {
 
     public static final SeccompProfileArgs Empty = new SeccompProfileArgs();
 

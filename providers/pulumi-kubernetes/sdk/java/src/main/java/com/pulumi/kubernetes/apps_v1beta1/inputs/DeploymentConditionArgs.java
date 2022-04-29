@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * DeploymentCondition describes the state of a deployment at a certain point.
  * 
  */
-public final class DeploymentConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentConditionArgs extends ResourceArgs {
 
     public static final DeploymentConditionArgs Empty = new DeploymentConditionArgs();
 

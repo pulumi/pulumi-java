@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.DaemonSetSpecArgs;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.DaemonSetStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * DaemonSet represents the configuration of a daemon set.
  * 
  */
-public final class DaemonSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DaemonSetArgs extends ResourceArgs {
 
     public static final DaemonSetArgs Empty = new DaemonSetArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import com.pulumi.kubernetes.core_v1.inputs.WeightedPodAffinityTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Pod affinity is a group of inter pod affinity scheduling rules.
  * 
  */
-public final class PodAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodAffinityArgs extends ResourceArgs {
 
     public static final PodAffinityArgs Empty = new PodAffinityArgs();
 

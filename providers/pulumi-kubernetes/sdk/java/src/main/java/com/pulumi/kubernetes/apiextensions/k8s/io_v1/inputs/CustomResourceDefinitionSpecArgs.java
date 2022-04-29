@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceConversionArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionVersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * CustomResourceDefinitionSpec describes how a user wants their resource to appear
  * 
  */
-public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceDefinitionSpecArgs extends ResourceArgs {
 
     public static final CustomResourceDefinitionSpecArgs Empty = new CustomResourceDefinitionSpecArgs();
 

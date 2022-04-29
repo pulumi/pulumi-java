@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * JobTemplateSpec describes the data a Job should have when created from a template
  * 
  */
-public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobTemplateSpecArgs extends ResourceArgs {
 
     public static final JobTemplateSpecArgs Empty = new JobTemplateSpecArgs();
 

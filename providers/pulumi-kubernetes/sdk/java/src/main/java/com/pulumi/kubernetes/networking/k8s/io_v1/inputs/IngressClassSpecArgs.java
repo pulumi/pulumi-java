@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressClassParametersReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * IngressClassSpec provides information about the class of an Ingress.
  * 
  */
-public final class IngressClassSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressClassSpecArgs extends ResourceArgs {
 
     public static final IngressClassSpecArgs Empty = new IngressClassSpecArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.HPAScalingPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * HPAScalingRules configures the scaling behavior for one direction. These Rules are applied after calculating DesiredReplicas from metrics for the HPA. They can limit the scaling velocity by specifying scaling policies. They can prevent flapping by specifying the stabilization window, so that the number of replicas is not set instantly, instead, the safest value from the stabilization window is chosen.
  * 
  */
-public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs {
+public final class HPAScalingRulesArgs extends ResourceArgs {
 
     public static final HPAScalingRulesArgs Empty = new HPAScalingRulesArgs();
 

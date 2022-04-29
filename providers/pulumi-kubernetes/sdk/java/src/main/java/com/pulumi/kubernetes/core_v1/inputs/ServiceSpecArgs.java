@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import com.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SessionAffinityConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * ServiceSpec describes the attributes that a user creates on a service.
  * 
  */
-public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSpecArgs extends ResourceArgs {
 
     public static final ServiceSpecArgs Empty = new ServiceSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents an empty directory for a pod. Empty directory volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class EmptyDirVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EmptyDirVolumeSourceArgs extends ResourceArgs {
 
     public static final EmptyDirVolumeSourceArgs Empty = new EmptyDirVolumeSourceArgs();
 

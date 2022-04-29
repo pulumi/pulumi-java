@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods matched by a NetworkPolicySpec&#39;s podSelector. The traffic must match both ports and from.
  * 
  */
-public final class NetworkPolicyIngressRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyIngressRuleArgs extends ResourceArgs {
 
     public static final NetworkPolicyIngressRuleArgs Empty = new NetworkPolicyIngressRuleArgs();
 

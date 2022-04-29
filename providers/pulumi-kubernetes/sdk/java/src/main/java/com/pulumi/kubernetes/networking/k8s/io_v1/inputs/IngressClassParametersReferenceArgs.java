@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * IngressClassParametersReference identifies an API object. This can be used to specify a cluster or namespace-scoped resource.
  * 
  */
-public final class IngressClassParametersReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressClassParametersReferenceArgs extends ResourceArgs {
 
     public static final IngressClassParametersReferenceArgs Empty = new IngressClassParametersReferenceArgs();
 

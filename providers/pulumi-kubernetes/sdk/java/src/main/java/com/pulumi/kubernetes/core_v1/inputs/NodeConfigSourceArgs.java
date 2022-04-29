@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ConfigMapNodeConfigSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil. This API is deprecated since 1.22
  * 
  */
-public final class NodeConfigSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeConfigSourceArgs extends ResourceArgs {
 
     public static final NodeConfigSourceArgs Empty = new NodeConfigSourceArgs();
 

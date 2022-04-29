@@ -7,6 +7,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * IngressBackend describes all endpoints for a given service and port.
  * 
  */
-public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressBackendArgs extends ResourceArgs {
 
     public static final IngressBackendArgs Empty = new IngressBackendArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateDaemonSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
  * 
  */
-public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DaemonSetUpdateStrategyArgs extends ResourceArgs {
 
     public static final DaemonSetUpdateStrategyArgs Empty = new DaemonSetUpdateStrategyArgs();
 

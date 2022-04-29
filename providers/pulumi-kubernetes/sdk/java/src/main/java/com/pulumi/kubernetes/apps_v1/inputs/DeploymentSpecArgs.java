@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1.inputs.DeploymentStrategyArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * DeploymentSpec is the specification of the desired behavior of the Deployment.
  * 
  */
-public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentSpecArgs extends ResourceArgs {
 
     public static final DeploymentSpecArgs Empty = new DeploymentSpecArgs();
 

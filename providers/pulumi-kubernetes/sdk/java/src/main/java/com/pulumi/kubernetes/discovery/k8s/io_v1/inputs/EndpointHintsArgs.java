@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.ForZoneArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EndpointHints provides hints describing how an endpoint should be consumed.
  * 
  */
-public final class EndpointHintsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointHintsArgs extends ResourceArgs {
 
     public static final EndpointHintsArgs Empty = new EndpointHintsArgs();
 

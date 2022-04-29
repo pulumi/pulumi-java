@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeAffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodAntiAffinityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Affinity is a group of affinity scheduling rules.
  * 
  */
-public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class AffinityArgs extends ResourceArgs {
 
     public static final AffinityArgs Empty = new AffinityArgs();
 

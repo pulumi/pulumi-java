@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateSigningRequestListArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateSigningRequestListArgs extends ResourceArgs {
 
     public static final CertificateSigningRequestListArgs Empty = new CertificateSigningRequestListArgs();
 

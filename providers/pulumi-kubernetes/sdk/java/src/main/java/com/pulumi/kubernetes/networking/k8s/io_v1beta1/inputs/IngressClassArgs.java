@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressClassSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be used to indicate that an IngressClass should be considered default. When a single IngressClass resource has this annotation set to true, new Ingress resources without a class specified will be assigned this default class.
  * 
  */
-public final class IngressClassArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressClassArgs extends ResourceArgs {
 
     public static final IngressClassArgs Empty = new IngressClassArgs();
 

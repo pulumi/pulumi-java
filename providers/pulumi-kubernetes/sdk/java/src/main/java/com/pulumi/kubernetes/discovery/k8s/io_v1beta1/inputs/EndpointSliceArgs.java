@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointPortArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * EndpointSlice represents a subset of the endpoints that implement a service. For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints.
  * 
  */
-public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointSliceArgs extends ResourceArgs {
 
     public static final EndpointSliceArgs Empty = new EndpointSliceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * FlowSchemaCondition describes conditions for a FlowSchema.
  * 
  */
-public final class FlowSchemaConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSchemaConditionArgs extends ResourceArgs {
 
     public static final FlowSchemaConditionArgs Empty = new FlowSchemaConditionArgs();
 

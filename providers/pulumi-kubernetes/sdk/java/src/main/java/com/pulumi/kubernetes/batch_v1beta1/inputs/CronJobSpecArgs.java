@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.batch_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.batch_v1beta1.inputs.JobTemplateSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * CronJobSpec describes how the job execution will look like and when it will actually run.
  * 
  */
-public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CronJobSpecArgs extends ResourceArgs {
 
     public static final CronJobSpecArgs Empty = new CronJobSpecArgs();
 

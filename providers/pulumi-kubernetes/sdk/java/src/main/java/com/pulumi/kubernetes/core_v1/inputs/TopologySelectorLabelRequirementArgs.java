@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.
  * 
  */
-public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopologySelectorLabelRequirementArgs extends ResourceArgs {
 
     public static final TopologySelectorLabelRequirementArgs Empty = new TopologySelectorLabelRequirementArgs();
 

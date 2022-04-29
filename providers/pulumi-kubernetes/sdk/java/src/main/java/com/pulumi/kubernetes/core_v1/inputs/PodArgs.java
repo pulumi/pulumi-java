@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +35,7 @@ import javax.annotation.Nullable;
  * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  */
-public final class PodArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodArgs extends ResourceArgs {
 
     public static final PodArgs Empty = new PodArgs();
 

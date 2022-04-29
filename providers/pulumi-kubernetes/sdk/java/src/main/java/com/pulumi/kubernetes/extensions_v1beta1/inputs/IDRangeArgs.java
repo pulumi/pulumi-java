@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * IDRange provides a min/max of an allowed range of IDs. Deprecated: use IDRange from policy API Group instead.
  * 
  */
-public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class IDRangeArgs extends ResourceArgs {
 
     public static final IDRangeArgs Empty = new IDRangeArgs();
 

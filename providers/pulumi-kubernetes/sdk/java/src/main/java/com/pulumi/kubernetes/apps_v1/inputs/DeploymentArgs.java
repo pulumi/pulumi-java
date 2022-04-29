@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
 import com.pulumi.kubernetes.apps_v1.inputs.DeploymentStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +42,7 @@ import javax.annotation.Nullable;
  * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  */
-public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentArgs extends ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 

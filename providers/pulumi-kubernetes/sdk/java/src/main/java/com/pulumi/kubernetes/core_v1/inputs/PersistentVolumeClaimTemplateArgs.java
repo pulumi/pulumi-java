@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.
  * 
  */
-public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistentVolumeClaimTemplateArgs extends ResourceArgs {
 
     public static final PersistentVolumeClaimTemplateArgs Empty = new PersistentVolumeClaimTemplateArgs();
 

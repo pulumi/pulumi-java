@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.QueuingConfigurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * LimitResponse defines how to handle requests that can not be executed right now.
  * 
  */
-public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
+public final class LimitResponseArgs extends ResourceArgs {
 
     public static final LimitResponseArgs Empty = new LimitResponseArgs();
 

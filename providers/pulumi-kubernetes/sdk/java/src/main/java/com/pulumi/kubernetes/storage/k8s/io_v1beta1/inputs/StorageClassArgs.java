@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.TopologySelectorTermArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
  * 
  */
-public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageClassArgs extends ResourceArgs {
 
     public static final StorageClassArgs Empty = new StorageClassArgs();
 

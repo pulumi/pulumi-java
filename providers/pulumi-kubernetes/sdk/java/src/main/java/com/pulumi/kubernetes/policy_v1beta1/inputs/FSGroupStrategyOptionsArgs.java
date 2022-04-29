@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.IDRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
  * 
  */
-public final class FSGroupStrategyOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FSGroupStrategyOptionsArgs extends ResourceArgs {
 
     public static final FSGroupStrategyOptionsArgs Empty = new FSGroupStrategyOptionsArgs();
 

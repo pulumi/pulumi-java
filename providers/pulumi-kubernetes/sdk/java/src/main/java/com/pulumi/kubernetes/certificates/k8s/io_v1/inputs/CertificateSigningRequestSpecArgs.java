@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * CertificateSigningRequestSpec contains the certificate request.
  * 
  */
-public final class CertificateSigningRequestSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateSigningRequestSpecArgs extends ResourceArgs {
 
     public static final CertificateSigningRequestSpecArgs Empty = new CertificateSigningRequestSpecArgs();
 

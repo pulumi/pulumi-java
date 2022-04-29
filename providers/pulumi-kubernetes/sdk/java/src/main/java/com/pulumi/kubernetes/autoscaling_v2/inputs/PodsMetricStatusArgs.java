@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).
  * 
  */
-public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodsMetricStatusArgs extends ResourceArgs {
 
     public static final PodsMetricStatusArgs Empty = new PodsMetricStatusArgs();
 

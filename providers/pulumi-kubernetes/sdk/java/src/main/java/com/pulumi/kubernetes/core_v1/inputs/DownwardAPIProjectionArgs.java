@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.
  * 
  */
-public final class DownwardAPIProjectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DownwardAPIProjectionArgs extends ResourceArgs {
 
     public static final DownwardAPIProjectionArgs Empty = new DownwardAPIProjectionArgs();
 

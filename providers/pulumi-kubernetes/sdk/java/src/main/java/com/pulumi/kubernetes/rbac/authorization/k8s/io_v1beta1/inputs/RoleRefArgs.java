@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * RoleRef contains information that points to the role being used
  * 
  */
-public final class RoleRefArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoleRefArgs extends ResourceArgs {
 
     public static final RoleRefArgs Empty = new RoleRefArgs();
 

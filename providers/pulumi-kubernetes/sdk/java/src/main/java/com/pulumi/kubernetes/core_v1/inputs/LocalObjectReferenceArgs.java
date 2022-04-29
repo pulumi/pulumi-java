@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
  * 
  */
-public final class LocalObjectReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalObjectReferenceArgs extends ResourceArgs {
 
     public static final LocalObjectReferenceArgs Empty = new LocalObjectReferenceArgs();
 

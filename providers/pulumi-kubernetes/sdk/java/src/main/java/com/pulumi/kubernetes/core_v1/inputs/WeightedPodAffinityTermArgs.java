@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)
  * 
  */
-public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeightedPodAffinityTermArgs extends ResourceArgs {
 
     public static final WeightedPodAffinityTermArgs Empty = new WeightedPodAffinityTermArgs();
 

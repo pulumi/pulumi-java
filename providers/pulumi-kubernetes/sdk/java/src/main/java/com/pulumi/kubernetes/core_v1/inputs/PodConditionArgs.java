@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * PodCondition contains details for the current condition of this pod.
  * 
  */
-public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodConditionArgs extends ResourceArgs {
 
     public static final PodConditionArgs Empty = new PodConditionArgs();
 

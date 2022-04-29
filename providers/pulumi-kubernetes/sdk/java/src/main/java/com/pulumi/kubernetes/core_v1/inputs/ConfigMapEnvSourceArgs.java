@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The contents of the target ConfigMap&#39;s Data field will represent the key-value pairs as environment variables.
  * 
  */
-public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigMapEnvSourceArgs extends ResourceArgs {
 
     public static final ConfigMapEnvSourceArgs Empty = new ConfigMapEnvSourceArgs();
 

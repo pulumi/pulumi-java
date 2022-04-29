@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
  * 
  */
-public final class NodeSelectorRequirementArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSelectorRequirementArgs extends ResourceArgs {
 
     public static final NodeSelectorRequirementArgs Empty = new NodeSelectorRequirementArgs();
 

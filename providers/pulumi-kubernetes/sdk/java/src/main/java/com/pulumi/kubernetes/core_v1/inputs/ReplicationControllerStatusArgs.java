@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ReplicationControllerConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ReplicationControllerStatus represents the current status of a replication controller.
  * 
  */
-public final class ReplicationControllerStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationControllerStatusArgs extends ResourceArgs {
 
     public static final ReplicationControllerStatusArgs Empty = new ReplicationControllerStatusArgs();
 

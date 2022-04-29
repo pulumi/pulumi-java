@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyEgressRuleArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyIngressRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * NetworkPolicySpec provides the specification of a NetworkPolicy
  * 
  */
-public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicySpecArgs extends ResourceArgs {
 
     public static final NetworkPolicySpecArgs Empty = new NetworkPolicySpecArgs();
 

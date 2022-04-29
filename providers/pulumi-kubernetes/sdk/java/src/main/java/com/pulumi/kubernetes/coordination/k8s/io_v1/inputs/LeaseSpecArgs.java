@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.coordination.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * LeaseSpec is a specification of a Lease.
  * 
  */
-public final class LeaseSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class LeaseSpecArgs extends ResourceArgs {
 
     public static final LeaseSpecArgs Empty = new LeaseSpecArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.PodSecurityPolicySpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container. Deprecated in 1.21.
  * 
  */
-public final class PodSecurityPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodSecurityPolicyArgs extends ResourceArgs {
 
     public static final PodSecurityPolicyArgs Empty = new PodSecurityPolicyArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceColumnDefinitionArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourcesArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceValidationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * CustomResourceDefinitionVersion describes a version for CRD.
  * 
  */
-public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceDefinitionVersionArgs extends ResourceArgs {
 
     public static final CustomResourceDefinitionVersionArgs Empty = new CustomResourceDefinitionVersionArgs();
 

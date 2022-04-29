@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestSpecArgs;
 import com.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * This API can be used to request client certificates to authenticate to kube-apiserver (with the &#34;kubernetes.io/kube-apiserver-client&#34; signerName), or to obtain certificates from custom non-Kubernetes signers.
  * 
  */
-public final class CertificateSigningRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateSigningRequestArgs extends ResourceArgs {
 
     public static final CertificateSigningRequestArgs Empty = new CertificateSigningRequestArgs();
 

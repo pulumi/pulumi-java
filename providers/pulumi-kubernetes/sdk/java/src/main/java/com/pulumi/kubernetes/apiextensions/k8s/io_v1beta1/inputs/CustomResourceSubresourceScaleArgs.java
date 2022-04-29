@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * CustomResourceSubresourceScale defines how to serve the scale subresource for CustomResources.
  * 
  */
-public final class CustomResourceSubresourceScaleArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomResourceSubresourceScaleArgs extends ResourceArgs {
 
     public static final CustomResourceSubresourceScaleArgs Empty = new CustomResourceSubresourceScaleArgs();
 

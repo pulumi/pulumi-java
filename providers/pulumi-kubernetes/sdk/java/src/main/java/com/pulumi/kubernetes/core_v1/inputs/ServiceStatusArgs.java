@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ServiceStatus represents the current status of a service.
  * 
  */
-public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceStatusArgs extends ResourceArgs {
 
     public static final ServiceStatusArgs Empty = new ServiceStatusArgs();
 

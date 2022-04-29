@@ -12,6 +12,7 @@ import com.pulumi.kubernetes.core_v1.inputs.NodeConditionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NodeConfigStatusArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NodeDaemonEndpointsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSystemInfoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * NodeStatus is information about the current status of a node.
  * 
  */
-public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeStatusArgs extends ResourceArgs {
 
     public static final NodeStatusArgs Empty = new NodeStatusArgs();
 

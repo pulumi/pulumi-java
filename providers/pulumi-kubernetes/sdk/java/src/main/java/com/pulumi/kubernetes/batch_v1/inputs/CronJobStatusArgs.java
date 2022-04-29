@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.batch_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * CronJobStatus represents the current state of a cron job.
  * 
  */
-public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class CronJobStatusArgs extends ResourceArgs {
 
     public static final CronJobStatusArgs Empty = new CronJobStatusArgs();
 

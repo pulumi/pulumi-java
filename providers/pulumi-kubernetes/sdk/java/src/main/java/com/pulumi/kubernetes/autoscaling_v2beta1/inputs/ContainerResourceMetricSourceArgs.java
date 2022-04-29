@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ContainerResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  The values will be averaged together before being compared to the target.  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the &#34;pods&#34; source.  Only one &#34;target&#34; type should be set.
  * 
  */
-public final class ContainerResourceMetricSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerResourceMetricSourceArgs extends ResourceArgs {
 
     public static final ContainerResourceMetricSourceArgs Empty = new ContainerResourceMetricSourceArgs();
 

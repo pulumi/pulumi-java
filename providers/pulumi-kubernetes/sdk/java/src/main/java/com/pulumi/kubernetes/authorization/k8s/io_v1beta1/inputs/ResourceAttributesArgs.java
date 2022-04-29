@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
  * 
  */
-public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceAttributesArgs extends ResourceArgs {
 
     public static final ResourceAttributesArgs Empty = new ResourceAttributesArgs();
 

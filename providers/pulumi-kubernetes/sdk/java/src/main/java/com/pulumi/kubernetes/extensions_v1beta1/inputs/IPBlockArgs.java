@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of IPBlock is deprecated by networking/v1/IPBlock. IPBlock describes a particular CIDR (Ex. &#34;192.168.1.1/24&#34;) that is allowed to the pods matched by a NetworkPolicySpec&#39;s podSelector. The except entry describes CIDRs that should not be included within this rule.
  * 
  */
-public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
+public final class IPBlockArgs extends ResourceArgs {
 
     public static final IPBlockArgs Empty = new IPBlockArgs();
 

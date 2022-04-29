@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressBackendArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are forwarded to the backend.
  * 
  */
-public final class HTTPIngressPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPIngressPathArgs extends ResourceArgs {
 
     public static final HTTPIngressPathArgs Empty = new HTTPIngressPathArgs();
 

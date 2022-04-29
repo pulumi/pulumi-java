@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
  * 
  */
-public final class NonResourceAttributesArgs extends com.pulumi.resources.ResourceArgs {
+public final class NonResourceAttributesArgs extends ResourceArgs {
 
     public static final NonResourceAttributesArgs Empty = new NonResourceAttributesArgs();
 

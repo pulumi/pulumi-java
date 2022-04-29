@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.storage.k8s.io_v1.inputs.VolumeNodeResourcesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * CSINodeDriver holds information about the specification of one CSI driver installed on a node
  * 
  */
-public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSINodeDriverArgs extends ResourceArgs {
 
     public static final CSINodeDriverArgs Empty = new CSINodeDriverArgs();
 

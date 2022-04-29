@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * DEPRECATED.
  * 
  */
-public final class RollbackConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RollbackConfigArgs extends ResourceArgs {
 
     public static final RollbackConfigArgs Empty = new RollbackConfigArgs();
 

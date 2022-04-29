@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.LimitedPriorityLevelConfigurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PriorityLevelConfigurationSpec specifies the configuration of a priority level.
  * 
  */
-public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationSpecArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationSpecArgs Empty = new PriorityLevelConfigurationSpecArgs();
 

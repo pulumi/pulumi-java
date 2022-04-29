@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.StatusCauseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
  * 
  */
-public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatusDetailsArgs extends ResourceArgs {
 
     public static final StatusDetailsArgs Empty = new StatusDetailsArgs();
 

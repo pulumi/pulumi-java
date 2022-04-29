@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SELinuxStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy API Group instead.
  * 
  */
-public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SELinuxStrategyOptionsArgs extends ResourceArgs {
 
     public static final SELinuxStrategyOptionsArgs Empty = new SELinuxStrategyOptionsArgs();
 

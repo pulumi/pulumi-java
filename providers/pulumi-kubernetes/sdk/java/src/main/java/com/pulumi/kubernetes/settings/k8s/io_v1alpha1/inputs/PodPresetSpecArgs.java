@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeMountArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * PodPresetSpec is a description of a pod preset.
  * 
  */
-public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodPresetSpecArgs extends ResourceArgs {
 
     public static final PodPresetSpecArgs Empty = new PodPresetSpecArgs();
 

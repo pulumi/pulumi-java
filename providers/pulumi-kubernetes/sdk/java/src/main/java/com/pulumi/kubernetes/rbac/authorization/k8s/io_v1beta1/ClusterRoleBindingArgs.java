@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.RoleRefArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.SubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterRoleBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterRoleBindingArgs extends ResourceArgs {
 
     public static final ClusterRoleBindingArgs Empty = new ClusterRoleBindingArgs();
 

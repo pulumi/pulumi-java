@@ -12,6 +12,8 @@ import com.pulumi.kubernetes.core_v1.ServiceAccountArgs;
 import com.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import com.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:core/v1:ServiceAccount")
-public class ServiceAccount extends com.pulumi.resources.CustomResource {
+public class ServiceAccount extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -130,11 +132,11 @@ public class ServiceAccount extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceAccount(String name, @Nullable ServiceAccountArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceAccount(String name, @Nullable ServiceAccountArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:ServiceAccount", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceAccount(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceAccount(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:ServiceAccount", name, null, makeResourceOptions(options, id));
     }
 
@@ -146,11 +148,11 @@ public class ServiceAccount extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -161,7 +163,7 @@ public class ServiceAccount extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceAccount get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceAccount get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ServiceAccount(name, id, options);
     }
 }

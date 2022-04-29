@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs.ServiceReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * APIServiceSpec contains information for locating and communicating with a server. Only https is supported, though you are able to disable certificate verification.
  * 
  */
-public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class APIServiceSpecArgs extends ResourceArgs {
 
     public static final APIServiceSpecArgs Empty = new APIServiceSpecArgs();
 

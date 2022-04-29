@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IngressBackendArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IngressRuleArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IngressTLSArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * IngressSpec describes the Ingress the user wishes to exist.
  * 
  */
-public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressSpecArgs extends ResourceArgs {
 
     public static final IngressSpecArgs Empty = new IngressSpecArgs();
 

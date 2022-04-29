@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import com.pulumi.kubernetes.core_v1.inputs.WeightedPodAffinityTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Pod anti affinity is a group of inter pod anti affinity scheduling rules.
  * 
  */
-public final class PodAntiAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodAntiAffinityArgs extends ResourceArgs {
 
     public static final PodAntiAffinityArgs Empty = new PodAntiAffinityArgs();
 

@@ -15,6 +15,7 @@ import com.pulumi.kubernetes.policy_v1beta1.inputs.RunAsUserStrategyOptionsArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.RuntimeClassStrategyOptionsArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.SELinuxStrategyOptionsArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.SupplementalGroupsStrategyOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * PodSecurityPolicySpec defines the policy enforced.
  * 
  */
-public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodSecurityPolicySpecArgs extends ResourceArgs {
 
     public static final PodSecurityPolicySpecArgs Empty = new PodSecurityPolicySpecArgs();
 

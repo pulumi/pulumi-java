@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * ForZone provides information about which zones should consume this endpoint.
  * 
  */
-public final class ForZoneArgs extends com.pulumi.resources.ResourceArgs {
+public final class ForZoneArgs extends ResourceArgs {
 
     public static final ForZoneArgs Empty = new ForZoneArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.DaemonSetUpdateStrategyArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * DaemonSetSpec is the specification of a daemon set.
  * 
  */
-public final class DaemonSetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class DaemonSetSpecArgs extends ResourceArgs {
 
     public static final DaemonSetSpecArgs Empty = new DaemonSetSpecArgs();
 

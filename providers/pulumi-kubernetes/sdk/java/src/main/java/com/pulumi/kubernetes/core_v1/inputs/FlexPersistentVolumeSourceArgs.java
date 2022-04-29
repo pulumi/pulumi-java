@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
  * 
  */
-public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexPersistentVolumeSourceArgs extends ResourceArgs {
 
     public static final FlexPersistentVolumeSourceArgs Empty = new FlexPersistentVolumeSourceArgs();
 

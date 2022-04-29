@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

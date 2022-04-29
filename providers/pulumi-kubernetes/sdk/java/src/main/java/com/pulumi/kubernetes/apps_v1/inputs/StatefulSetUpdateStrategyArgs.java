@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1.inputs.RollingUpdateStatefulSetStrategyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
  * 
  */
-public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatefulSetUpdateStrategyArgs extends ResourceArgs {
 
     public static final StatefulSetUpdateStrategyArgs Empty = new StatefulSetUpdateStrategyArgs();
 

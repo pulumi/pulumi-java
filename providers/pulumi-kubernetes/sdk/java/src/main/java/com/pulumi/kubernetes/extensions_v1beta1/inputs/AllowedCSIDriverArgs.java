@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * AllowedCSIDriver represents a single inline CSI Driver that is allowed to be used.
  * 
  */
-public final class AllowedCSIDriverArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedCSIDriverArgs extends ResourceArgs {
 
     public static final AllowedCSIDriverArgs Empty = new AllowedCSIDriverArgs();
 

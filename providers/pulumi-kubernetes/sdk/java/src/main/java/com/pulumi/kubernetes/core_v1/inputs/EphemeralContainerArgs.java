@@ -14,6 +14,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecurityContextArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeDeviceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeMountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  * This is a beta feature available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
  * 
  */
-public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class EphemeralContainerArgs extends ResourceArgs {
 
     public static final EphemeralContainerArgs Empty = new EphemeralContainerArgs();
 

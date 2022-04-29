@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.FlowDistinguisherMethodArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.PolicyRulesWithSubjectsArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.PriorityLevelConfigurationReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * FlowSchemaSpec describes how the FlowSchema&#39;s specification looks like.
  * 
  */
-public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSchemaSpecArgs extends ResourceArgs {
 
     public static final FlowSchemaSpecArgs Empty = new FlowSchemaSpecArgs();
 

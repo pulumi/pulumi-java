@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.
  * 
  */
-public final class GCEPersistentDiskVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GCEPersistentDiskVolumeSourceArgs extends ResourceArgs {
 
     public static final GCEPersistentDiskVolumeSourceArgs Empty = new GCEPersistentDiskVolumeSourceArgs();
 

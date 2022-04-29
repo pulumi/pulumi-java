@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.ValidatingWebhookArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ValidatingWebhookConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidatingWebhookConfigurationArgs extends ResourceArgs {
 
     public static final ValidatingWebhookConfigurationArgs Empty = new ValidatingWebhookConfigurationArgs();
 

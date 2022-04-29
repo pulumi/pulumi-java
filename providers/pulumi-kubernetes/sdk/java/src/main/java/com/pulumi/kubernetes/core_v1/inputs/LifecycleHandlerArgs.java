@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TCPSocketActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * LifecycleHandler defines a specific action that should be taken in a lifecycle hook. One and only one of the fields, except TCPSocket must be specified.
  * 
  */
-public final class LifecycleHandlerArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecycleHandlerArgs extends ResourceArgs {
 
     public static final LifecycleHandlerArgs Empty = new LifecycleHandlerArgs();
 

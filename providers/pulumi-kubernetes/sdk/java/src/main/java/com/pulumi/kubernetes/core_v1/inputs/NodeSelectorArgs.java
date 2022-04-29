@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
  * 
  */
-public final class NodeSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSelectorArgs extends ResourceArgs {
 
     public static final NodeSelectorArgs Empty = new NodeSelectorArgs();
 

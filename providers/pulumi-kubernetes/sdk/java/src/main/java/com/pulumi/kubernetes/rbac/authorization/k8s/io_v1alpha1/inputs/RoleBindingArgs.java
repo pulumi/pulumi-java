@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs.RoleRefArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs.SubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
  * 
  */
-public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoleBindingArgs extends ResourceArgs {
 
     public static final RoleBindingArgs Empty = new RoleBindingArgs();
 

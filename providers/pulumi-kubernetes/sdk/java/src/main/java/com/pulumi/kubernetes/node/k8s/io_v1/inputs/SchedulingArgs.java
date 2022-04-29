@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.node.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Scheduling specifies the scheduling constraints for nodes supporting a RuntimeClass.
  * 
  */
-public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingArgs extends ResourceArgs {
 
     public static final SchedulingArgs Empty = new SchedulingArgs();
 

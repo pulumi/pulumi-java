@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * DownwardAPIVolumeFile represents information to create the file containing the pod field
  * 
  */
-public final class DownwardAPIVolumeFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class DownwardAPIVolumeFileArgs extends ResourceArgs {
 
     public static final DownwardAPIVolumeFileArgs Empty = new DownwardAPIVolumeFileArgs();
 

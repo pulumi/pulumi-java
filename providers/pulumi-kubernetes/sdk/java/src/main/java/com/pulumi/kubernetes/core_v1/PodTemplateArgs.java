@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PodTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodTemplateArgs extends ResourceArgs {
 
     public static final PodTemplateArgs Empty = new PodTemplateArgs();
 

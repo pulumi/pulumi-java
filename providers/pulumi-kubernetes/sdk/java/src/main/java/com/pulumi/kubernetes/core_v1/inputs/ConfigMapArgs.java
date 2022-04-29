@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * ConfigMap holds configuration data for pods to consume.
  * 
  */
-public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigMapArgs extends ResourceArgs {
 
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 

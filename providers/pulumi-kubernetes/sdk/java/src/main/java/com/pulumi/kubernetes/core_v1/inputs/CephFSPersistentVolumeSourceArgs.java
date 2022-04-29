@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
  * 
  */
-public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CephFSPersistentVolumeSourceArgs extends ResourceArgs {
 
     public static final CephFSPersistentVolumeSourceArgs Empty = new CephFSPersistentVolumeSourceArgs();
 

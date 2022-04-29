@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ReplicationControllerSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ReplicationControllerStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * ReplicationController represents the configuration of a replication controller.
  * 
  */
-public final class ReplicationControllerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationControllerArgs extends ResourceArgs {
 
     public static final ReplicationControllerArgs Empty = new ReplicationControllerArgs();
 

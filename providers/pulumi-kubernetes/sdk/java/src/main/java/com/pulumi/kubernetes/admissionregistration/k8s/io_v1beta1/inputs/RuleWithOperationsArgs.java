@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure that all the tuple expansions are valid.
  * 
  */
-public final class RuleWithOperationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleWithOperationsArgs extends ResourceArgs {
 
     public static final RuleWithOperationsArgs Empty = new RuleWithOperationsArgs();
 

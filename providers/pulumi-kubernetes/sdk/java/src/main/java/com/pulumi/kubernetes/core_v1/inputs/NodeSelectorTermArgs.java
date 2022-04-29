@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
  * 
  */
-public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSelectorTermArgs extends ResourceArgs {
 
     public static final NodeSelectorTermArgs Empty = new NodeSelectorTermArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * JobSpec describes how the job execution will look like.
  * 
  */
-public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobSpecArgs extends ResourceArgs {
 
     public static final JobSpecArgs Empty = new JobSpecArgs();
 

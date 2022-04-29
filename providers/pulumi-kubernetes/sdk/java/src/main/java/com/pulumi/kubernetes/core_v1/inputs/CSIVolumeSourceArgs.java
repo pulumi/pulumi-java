@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a source location of a volume to mount, managed by an external CSI driver
  * 
  */
-public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSIVolumeSourceArgs extends ResourceArgs {
 
     public static final CSIVolumeSourceArgs Empty = new CSIVolumeSourceArgs();
 

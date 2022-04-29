@@ -7,6 +7,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.HTTPHeaderArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * HTTPGetAction describes an action based on HTTP Get requests.
  * 
  */
-public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPGetActionArgs extends ResourceArgs {
 
     public static final HTTPGetActionArgs Empty = new HTTPGetActionArgs();
 

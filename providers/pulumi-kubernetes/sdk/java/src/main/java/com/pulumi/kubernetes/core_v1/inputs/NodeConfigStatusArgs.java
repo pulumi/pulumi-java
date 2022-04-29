@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.
  * 
  */
-public final class NodeConfigStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeConfigStatusArgs extends ResourceArgs {
 
     public static final NodeConfigStatusArgs Empty = new NodeConfigStatusArgs();
 

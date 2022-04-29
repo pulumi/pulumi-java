@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets
  * 
  */
-public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccountArgs extends ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 

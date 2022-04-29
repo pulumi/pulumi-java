@@ -12,6 +12,8 @@ import com.pulumi.kubernetes.core_v1.PersistentVolumeClaimArgs;
 import com.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimSpec;
 import com.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:core/v1:PersistentVolumeClaim")
-public class PersistentVolumeClaim extends com.pulumi.resources.CustomResource {
+public class PersistentVolumeClaim extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -114,11 +116,11 @@ public class PersistentVolumeClaim extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PersistentVolumeClaim(String name, @Nullable PersistentVolumeClaimArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PersistentVolumeClaim(String name, @Nullable PersistentVolumeClaimArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:PersistentVolumeClaim", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PersistentVolumeClaim(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PersistentVolumeClaim(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:core/v1:PersistentVolumeClaim", name, null, makeResourceOptions(options, id));
     }
 
@@ -130,11 +132,11 @@ public class PersistentVolumeClaim extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -145,7 +147,7 @@ public class PersistentVolumeClaim extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PersistentVolumeClaim get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PersistentVolumeClaim get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PersistentVolumeClaim(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * CrossVersionObjectReference contains enough information to let you identify the referred resource.
  * 
  */
-public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CrossVersionObjectReferenceArgs extends ResourceArgs {
 
     public static final CrossVersionObjectReferenceArgs Empty = new CrossVersionObjectReferenceArgs();
 

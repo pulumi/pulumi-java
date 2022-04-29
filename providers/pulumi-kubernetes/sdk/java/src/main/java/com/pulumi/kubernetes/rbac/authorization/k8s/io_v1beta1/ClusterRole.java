@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.ClusterRoleArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.outputs.AggregationRule;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.outputs.PolicyRule;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:rbac.authorization.k8s.io/v1beta1:ClusterRole")
-public class ClusterRole extends com.pulumi.resources.CustomResource {
+public class ClusterRole extends CustomResource {
     /**
      * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
      * 
@@ -116,11 +118,11 @@ public class ClusterRole extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClusterRole(String name, @Nullable ClusterRoleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ClusterRole(String name, @Nullable ClusterRoleArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:rbac.authorization.k8s.io/v1beta1:ClusterRole", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ClusterRole(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ClusterRole(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:rbac.authorization.k8s.io/v1beta1:ClusterRole", name, null, makeResourceOptions(options, id));
     }
 
@@ -132,15 +134,15 @@ public class ClusterRole extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:rbac.authorization.k8s.io/v1:ClusterRole").build()),
                 Output.of(Alias.builder().type("kubernetes:rbac.authorization.k8s.io/v1alpha1:ClusterRole").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -151,7 +153,7 @@ public class ClusterRole extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClusterRole get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClusterRole get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ClusterRole(name, id, options);
     }
 }

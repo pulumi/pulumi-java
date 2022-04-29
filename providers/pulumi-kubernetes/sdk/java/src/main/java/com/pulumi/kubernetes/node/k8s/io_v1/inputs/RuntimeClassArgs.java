@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1.inputs.OverheadArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1.inputs.SchedulingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://kubernetes.io/docs/concepts/containers/runtime-class/
  * 
  */
-public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeClassArgs extends ResourceArgs {
 
     public static final RuntimeClassArgs Empty = new RuntimeClassArgs();
 

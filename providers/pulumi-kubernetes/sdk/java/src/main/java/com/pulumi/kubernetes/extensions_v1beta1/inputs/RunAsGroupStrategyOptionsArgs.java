@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.IDRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use RunAsGroupStrategyOptions from policy API Group instead.
  * 
  */
-public final class RunAsGroupStrategyOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RunAsGroupStrategyOptionsArgs extends ResourceArgs {
 
     public static final RunAsGroupStrategyOptionsArgs Empty = new RunAsGroupStrategyOptionsArgs();
 

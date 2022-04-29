@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TaintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * NodeSpec describes the attributes that a node is created with.
  * 
  */
-public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSpecArgs extends ResourceArgs {
 
     public static final NodeSpecArgs Empty = new NodeSpecArgs();
 

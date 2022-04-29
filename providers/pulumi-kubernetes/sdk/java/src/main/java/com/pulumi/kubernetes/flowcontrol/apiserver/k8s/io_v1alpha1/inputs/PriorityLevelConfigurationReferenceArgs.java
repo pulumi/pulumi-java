@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * PriorityLevelConfigurationReference contains information that points to the &#34;request-priority&#34; being used.
  * 
  */
-public final class PriorityLevelConfigurationReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationReferenceArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationReferenceArgs Empty = new PriorityLevelConfigurationReferenceArgs();
 

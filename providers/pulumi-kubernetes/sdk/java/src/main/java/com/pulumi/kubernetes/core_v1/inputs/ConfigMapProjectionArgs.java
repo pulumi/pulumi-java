@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.KeyToPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The contents of the target ConfigMap&#39;s Data field will be presented in a projected volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. Note that this is identical to a configmap volume source without the default mode.
  * 
  */
-public final class ConfigMapProjectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigMapProjectionArgs extends ResourceArgs {
 
     public static final ConfigMapProjectionArgs Empty = new ConfigMapProjectionArgs();
 

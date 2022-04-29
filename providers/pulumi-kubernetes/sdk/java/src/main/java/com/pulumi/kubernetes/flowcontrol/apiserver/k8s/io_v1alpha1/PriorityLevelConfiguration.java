@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.PriorityLevel
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.PriorityLevelConfigurationSpec;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.PriorityLevelConfigurationStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfiguration")
-public class PriorityLevelConfiguration extends com.pulumi.resources.CustomResource {
+public class PriorityLevelConfiguration extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -116,11 +118,11 @@ public class PriorityLevelConfiguration extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PriorityLevelConfiguration(String name, @Nullable PriorityLevelConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PriorityLevelConfiguration(String name, @Nullable PriorityLevelConfigurationArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfiguration", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PriorityLevelConfiguration(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PriorityLevelConfiguration(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfiguration", name, null, makeResourceOptions(options, id));
     }
 
@@ -132,15 +134,15 @@ public class PriorityLevelConfiguration extends com.pulumi.resources.CustomResou
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:flowcontrol.apiserver.k8s.io/v1beta1:PriorityLevelConfiguration").build()),
                 Output.of(Alias.builder().type("kubernetes:flowcontrol.apiserver.k8s.io/v1beta2:PriorityLevelConfiguration").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -151,7 +153,7 @@ public class PriorityLevelConfiguration extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PriorityLevelConfiguration get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PriorityLevelConfiguration get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PriorityLevelConfiguration(name, id, options);
     }
 }

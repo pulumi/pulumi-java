@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeAttachmentSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * VolumeAttachmentSpec is the specification of a VolumeAttachment request.
  * 
  */
-public final class VolumeAttachmentSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeAttachmentSpecArgs extends ResourceArgs {
 
     public static final VolumeAttachmentSpecArgs Empty = new VolumeAttachmentSpecArgs();
 

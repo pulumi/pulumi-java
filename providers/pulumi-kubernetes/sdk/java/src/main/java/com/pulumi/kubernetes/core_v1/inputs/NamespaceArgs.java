@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NamespaceSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NamespaceStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Namespace provides a scope for Names. Use of multiple namespaces is optional.
  * 
  */
-public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NamespaceArgs extends ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 

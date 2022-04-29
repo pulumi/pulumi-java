@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * NonResourcePolicyRule is a predicate that matches non-resource requests according to their verb and the target non-resource URL. A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.
  * 
  */
-public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class NonResourcePolicyRuleArgs extends ResourceArgs {
 
     public static final NonResourcePolicyRuleArgs Empty = new NonResourcePolicyRuleArgs();
 

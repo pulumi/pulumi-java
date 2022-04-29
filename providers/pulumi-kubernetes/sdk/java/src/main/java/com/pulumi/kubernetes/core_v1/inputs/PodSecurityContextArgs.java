@@ -9,6 +9,7 @@ import com.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SeccompProfileArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SysctlArgs;
 import com.pulumi.kubernetes.core_v1.inputs.WindowsSecurityContextOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
  * 
  */
-public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodSecurityContextArgs extends ResourceArgs {
 
     public static final PodSecurityContextArgs Empty = new PodSecurityContextArgs();
 

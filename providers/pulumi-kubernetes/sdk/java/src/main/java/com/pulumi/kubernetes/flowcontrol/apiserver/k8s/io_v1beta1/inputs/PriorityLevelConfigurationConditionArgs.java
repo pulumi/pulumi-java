@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * PriorityLevelConfigurationCondition defines the condition of priority level.
  * 
  */
-public final class PriorityLevelConfigurationConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationConditionArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationConditionArgs Empty = new PriorityLevelConfigurationConditionArgs();
 

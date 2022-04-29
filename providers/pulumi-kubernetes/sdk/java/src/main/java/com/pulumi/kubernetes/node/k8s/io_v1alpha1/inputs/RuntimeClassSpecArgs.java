@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.OverheadArgs;
 import com.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.SchedulingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * RuntimeClassSpec is a specification of a RuntimeClass. It contains parameters that are required to describe the RuntimeClass to the Container Runtime Interface (CRI) implementation, as well as any other components that need to understand how the pod will be run. The RuntimeClassSpec is immutable.
  * 
  */
-public final class RuntimeClassSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeClassSpecArgs extends ResourceArgs {
 
     public static final RuntimeClassSpecArgs Empty = new RuntimeClassSpecArgs();
 

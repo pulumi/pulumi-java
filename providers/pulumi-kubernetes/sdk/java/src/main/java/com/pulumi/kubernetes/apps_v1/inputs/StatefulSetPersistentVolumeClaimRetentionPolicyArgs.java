@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * StatefulSetPersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates.
  * 
  */
-public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends ResourceArgs {
 
     public static final StatefulSetPersistentVolumeClaimRetentionPolicyArgs Empty = new StatefulSetPersistentVolumeClaimRetentionPolicyArgs();
 

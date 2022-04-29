@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents storage that is managed by an external CSI volume driver (Beta feature)
  * 
  */
-public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSIPersistentVolumeSourceArgs extends ResourceArgs {
 
     public static final CSIPersistentVolumeSourceArgs Empty = new CSIPersistentVolumeSourceArgs();
 

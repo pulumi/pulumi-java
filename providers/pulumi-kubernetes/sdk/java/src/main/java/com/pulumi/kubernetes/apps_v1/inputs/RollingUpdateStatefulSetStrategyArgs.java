@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
  * 
  */
-public final class RollingUpdateStatefulSetStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RollingUpdateStatefulSetStrategyArgs extends ResourceArgs {
 
     public static final RollingUpdateStatefulSetStrategyArgs Empty = new RollingUpdateStatefulSetStrategyArgs();
 

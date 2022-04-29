@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
  * 
  */
-public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NFSVolumeSourceArgs extends ResourceArgs {
 
     public static final NFSVolumeSourceArgs Empty = new NFSVolumeSourceArgs();
 

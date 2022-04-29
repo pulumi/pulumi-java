@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyEgressRuleArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyIngressRuleArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of NetworkPolicySpec is deprecated by networking/v1/NetworkPolicySpec.
  * 
  */
-public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicySpecArgs extends ResourceArgs {
 
     public static final NetworkPolicySpecArgs Empty = new NetworkPolicySpecArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * ReplicationControllerSpec is the specification of a replication controller.
  * 
  */
-public final class ReplicationControllerSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationControllerSpecArgs extends ResourceArgs {
 
     public static final ReplicationControllerSpecArgs Empty = new ReplicationControllerSpecArgs();
 

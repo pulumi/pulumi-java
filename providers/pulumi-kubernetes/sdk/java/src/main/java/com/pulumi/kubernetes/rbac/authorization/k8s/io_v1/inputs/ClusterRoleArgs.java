@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.AggregationRuleArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.PolicyRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
  * 
  */
-public final class ClusterRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterRoleArgs extends ResourceArgs {
 
     public static final ClusterRoleArgs Empty = new ClusterRoleArgs();
 

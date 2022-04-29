@@ -34,6 +34,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ScaleIOVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecretVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.StorageOSVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VsphereVirtualDiskVolumeSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,7 +45,7 @@ import javax.annotation.Nullable;
  * Volume represents a named volume in a pod that may be accessed by any container in the pod.
  * 
  */
-public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeArgs extends ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.EndpointSubsetArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  *  ]
  * 
  */
-public final class EndpointsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointsArgs extends ResourceArgs {
 
     public static final EndpointsArgs Empty = new EndpointsArgs();
 

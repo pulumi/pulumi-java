@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStatusArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodConditionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodIPArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PodStatus represents information about the status of a pod. Status may trail the actual state of a system, especially if the node that hosts the pod cannot contact the control plane.
  * 
  */
-public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodStatusArgs extends ResourceArgs {
 
     public static final PodStatusArgs Empty = new PodStatusArgs();
 

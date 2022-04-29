@@ -12,6 +12,8 @@ import com.pulumi.kubernetes.authentication.k8s.io_v1.TokenRequestArgs;
 import com.pulumi.kubernetes.authentication.k8s.io_v1.outputs.TokenRequestSpec;
 import com.pulumi.kubernetes.authentication.k8s.io_v1.outputs.TokenRequestStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:authentication.k8s.io/v1:TokenRequest")
-public class TokenRequest extends com.pulumi.resources.CustomResource {
+public class TokenRequest extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -114,11 +116,11 @@ public class TokenRequest extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TokenRequest(String name, TokenRequestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TokenRequest(String name, TokenRequestArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:authentication.k8s.io/v1:TokenRequest", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TokenRequest(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TokenRequest(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:authentication.k8s.io/v1:TokenRequest", name, null, makeResourceOptions(options, id));
     }
 
@@ -130,11 +132,11 @@ public class TokenRequest extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -145,7 +147,7 @@ public class TokenRequest extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TokenRequest get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TokenRequest get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new TokenRequest(name, id, options);
     }
 }

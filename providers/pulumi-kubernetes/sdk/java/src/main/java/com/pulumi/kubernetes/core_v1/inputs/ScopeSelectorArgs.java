@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.ScopedResourceSelectorRequirementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
  * 
  */
-public final class ScopeSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeSelectorArgs extends ResourceArgs {
 
     public static final ScopeSelectorArgs Empty = new ScopeSelectorArgs();
 

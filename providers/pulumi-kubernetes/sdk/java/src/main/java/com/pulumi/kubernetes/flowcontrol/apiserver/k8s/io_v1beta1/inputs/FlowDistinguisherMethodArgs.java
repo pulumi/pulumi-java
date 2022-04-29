@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * FlowDistinguisherMethod specifies the method of a flow distinguisher.
  * 
  */
-public final class FlowDistinguisherMethodArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowDistinguisherMethodArgs extends ResourceArgs {
 
     public static final FlowDistinguisherMethodArgs Empty = new FlowDistinguisherMethodArgs();
 

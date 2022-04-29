@@ -14,6 +14,8 @@ import com.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import com.pulumi.kubernetes.events.k8s.io_v1beta1.EventArgs;
 import com.pulumi.kubernetes.events.k8s.io_v1beta1.outputs.EventSeries;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="kubernetes:events.k8s.io/v1beta1:Event")
-public class Event extends com.pulumi.resources.CustomResource {
+public class Event extends CustomResource {
     /**
      * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
      * 
@@ -286,11 +288,11 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Event(String name, EventArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Event(String name, EventArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:events.k8s.io/v1beta1:Event", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Event(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Event(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:events.k8s.io/v1beta1:Event", name, null, makeResourceOptions(options, id));
     }
 
@@ -302,15 +304,15 @@ public class Event extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:core/v1:Event").build()),
                 Output.of(Alias.builder().type("kubernetes:events.k8s.io/v1:Event").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -321,7 +323,7 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Event get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Event get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Event(name, id, options);
     }
 }

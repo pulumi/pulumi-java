@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ResourceQuotaStatus defines the enforced hard limits and observed use.
  * 
  */
-public final class ResourceQuotaStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceQuotaStatusArgs extends ResourceArgs {
 
     public static final ResourceQuotaStatusArgs Empty = new ResourceQuotaStatusArgs();
 

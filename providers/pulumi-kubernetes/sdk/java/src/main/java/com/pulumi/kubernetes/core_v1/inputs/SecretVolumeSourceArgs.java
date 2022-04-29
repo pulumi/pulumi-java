@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.KeyToPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The contents of the target Secret&#39;s Data field will be presented in a volume as files using the keys in the Data field as the file names. Secret volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretVolumeSourceArgs extends ResourceArgs {
 
     public static final SecretVolumeSourceArgs Empty = new SecretVolumeSourceArgs();
 

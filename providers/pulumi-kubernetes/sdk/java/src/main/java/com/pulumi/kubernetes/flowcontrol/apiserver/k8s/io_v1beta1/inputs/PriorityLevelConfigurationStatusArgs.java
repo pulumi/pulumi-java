@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.PriorityLevelConfigurationConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PriorityLevelConfigurationStatus represents the current state of a &#34;request-priority&#34;.
  * 
  */
-public final class PriorityLevelConfigurationStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class PriorityLevelConfigurationStatusArgs extends ResourceArgs {
 
     public static final PriorityLevelConfigurationStatusArgs Empty = new PriorityLevelConfigurationStatusArgs();
 

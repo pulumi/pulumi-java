@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.RuleWithOperationsArgs;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * MutatingWebhook describes an admission webhook and the resources and operations it applies to.
  * 
  */
-public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs {
+public final class MutatingWebhookArgs extends ResourceArgs {
 
     public static final MutatingWebhookArgs Empty = new MutatingWebhookArgs();
 

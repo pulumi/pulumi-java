@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.storage.k8s.io_v1.inputs.TokenRequestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * CSIDriverSpec is the specification of a CSIDriver.
  * 
  */
-public final class CSIDriverSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CSIDriverSpecArgs extends ResourceArgs {
 
     public static final CSIDriverSpecArgs Empty = new CSIDriverSpecArgs();
 

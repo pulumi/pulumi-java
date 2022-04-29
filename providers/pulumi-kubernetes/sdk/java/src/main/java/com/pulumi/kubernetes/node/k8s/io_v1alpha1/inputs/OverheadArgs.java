@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Overhead structure represents the resource overhead associated with running a pod.
  * 
  */
-public final class OverheadArgs extends com.pulumi.resources.ResourceArgs {
+public final class OverheadArgs extends ResourceArgs {
 
     public static final OverheadArgs Empty = new OverheadArgs();
 

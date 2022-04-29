@@ -29,6 +29,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ScaleIOPersistentVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.StorageOSPersistentVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeNodeAffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VsphereVirtualDiskVolumeSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ import javax.annotation.Nullable;
  * PersistentVolumeSpec is the specification of a persistent volume.
  * 
  */
-public final class PersistentVolumeSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistentVolumeSpecArgs extends ResourceArgs {
 
     public static final PersistentVolumeSpecArgs Empty = new PersistentVolumeSpecArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
  * 
  */
-public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectMetricStatusArgs extends ResourceArgs {
 
     public static final ObjectMetricStatusArgs Empty = new ObjectMetricStatusArgs();
 

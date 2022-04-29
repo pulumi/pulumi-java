@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DownwardAPIVolumeSource represents a volume containing downward API info. Downward API volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DownwardAPIVolumeSourceArgs extends ResourceArgs {
 
     public static final DownwardAPIVolumeSourceArgs Empty = new DownwardAPIVolumeSourceArgs();
 

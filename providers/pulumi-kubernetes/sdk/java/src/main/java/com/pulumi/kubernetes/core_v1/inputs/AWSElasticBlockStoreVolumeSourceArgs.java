@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
  * 
  */
-public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AWSElasticBlockStoreVolumeSourceArgs extends ResourceArgs {
 
     public static final AWSElasticBlockStoreVolumeSourceArgs Empty = new AWSElasticBlockStoreVolumeSourceArgs();
 

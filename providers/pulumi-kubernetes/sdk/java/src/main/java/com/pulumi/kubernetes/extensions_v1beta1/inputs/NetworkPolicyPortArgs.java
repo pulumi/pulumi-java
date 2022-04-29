@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DEPRECATED 1.9 - This group version of NetworkPolicyPort is deprecated by networking/v1/NetworkPolicyPort.
  * 
  */
-public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyPortArgs extends ResourceArgs {
 
     public static final NetworkPolicyPortArgs Empty = new NetworkPolicyPortArgs();
 

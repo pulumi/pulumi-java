@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.autoscaling_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * specification of a horizontal pod autoscaler.
  * 
  */
-public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerSpecArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerSpecArgs Empty = new HorizontalPodAutoscalerSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * EndpointConditions represents the current condition of an endpoint.
  * 
  */
-public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointConditionsArgs extends ResourceArgs {
 
     public static final EndpointConditionsArgs Empty = new EndpointConditionsArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.FlowSchemaSpecArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.FlowSchemaStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a &#34;flow distinguisher&#34;.
  * 
  */
-public final class FlowSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSchemaArgs extends ResourceArgs {
 
     public static final FlowSchemaArgs Empty = new FlowSchemaArgs();
 

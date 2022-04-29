@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
  * 
  */
-public final class AggregationRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AggregationRuleArgs extends ResourceArgs {
 
     public static final AggregationRuleArgs Empty = new AggregationRuleArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it&#39;s a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).
  * 
  */
-public final class PreferredSchedulingTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreferredSchedulingTermArgs extends ResourceArgs {
 
     public static final PreferredSchedulingTermArgs Empty = new PreferredSchedulingTermArgs();
 

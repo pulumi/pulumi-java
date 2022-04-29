@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v1.inputs.HorizontalPodAutoscalerSpecArgs;
 import com.pulumi.kubernetes.autoscaling_v1.inputs.HorizontalPodAutoscalerStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * configuration of a horizontal pod autoscaler.
  * 
  */
-public final class HorizontalPodAutoscalerArgs extends com.pulumi.resources.ResourceArgs {
+public final class HorizontalPodAutoscalerArgs extends ResourceArgs {
 
     public static final HorizontalPodAutoscalerArgs Empty = new HorizontalPodAutoscalerArgs();
 

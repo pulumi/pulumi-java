@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod&#39;s hosts file.
  * 
  */
-public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostAliasArgs extends ResourceArgs {
 
     public static final HostAliasArgs Empty = new HostAliasArgs();
 

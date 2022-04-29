@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.apps_v1.inputs.StatefulSetUpdateStrategyArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * A StatefulSetSpec is the specification of a StatefulSet.
  * 
  */
-public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatefulSetSpecArgs extends ResourceArgs {
 
     public static final StatefulSetSpecArgs Empty = new StatefulSetSpecArgs();
 

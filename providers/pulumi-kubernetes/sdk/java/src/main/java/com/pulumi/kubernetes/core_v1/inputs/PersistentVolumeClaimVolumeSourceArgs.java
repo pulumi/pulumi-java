@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PersistentVolumeClaimVolumeSource references the user&#39;s PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).
  * 
  */
-public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistentVolumeClaimVolumeSourceArgs extends ResourceArgs {
 
     public static final PersistentVolumeClaimVolumeSourceArgs Empty = new PersistentVolumeClaimVolumeSourceArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PodTemplateSpec describes the data a pod should have when created from a template
  * 
  */
-public final class PodTemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodTemplateSpecArgs extends ResourceArgs {
 
     public static final PodTemplateSpecArgs Empty = new PodTemplateSpecArgs();
 

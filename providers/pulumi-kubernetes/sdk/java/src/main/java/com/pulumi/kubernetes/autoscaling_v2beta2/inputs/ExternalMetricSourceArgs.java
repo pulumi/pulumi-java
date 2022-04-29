@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).
  * 
  */
-public final class ExternalMetricSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExternalMetricSourceArgs extends ResourceArgs {
 
     public static final ExternalMetricSourceArgs Empty = new ExternalMetricSourceArgs();
 

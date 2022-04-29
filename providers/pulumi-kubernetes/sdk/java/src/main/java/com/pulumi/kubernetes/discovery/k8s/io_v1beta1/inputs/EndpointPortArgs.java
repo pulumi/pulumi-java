@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EndpointPort represents a Port used by an EndpointSlice
  * 
  */
-public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointPortArgs extends ResourceArgs {
 
     public static final EndpointPortArgs Empty = new EndpointPortArgs();
 

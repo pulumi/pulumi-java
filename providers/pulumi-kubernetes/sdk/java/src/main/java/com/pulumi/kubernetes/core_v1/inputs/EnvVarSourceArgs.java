@@ -9,6 +9,7 @@ import com.pulumi.kubernetes.core_v1.inputs.ConfigMapKeySelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecretKeySelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * EnvVarSource represents a source for the value of an EnvVar.
  * 
  */
-public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvVarSourceArgs extends ResourceArgs {
 
     public static final EnvVarSourceArgs Empty = new EnvVarSourceArgs();
 

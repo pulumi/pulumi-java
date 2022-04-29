@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.apps_v1.inputs.ReplicaSetConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ReplicaSetStatus represents the current status of a ReplicaSet.
  * 
  */
-public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicaSetStatusArgs extends ResourceArgs {
 
     public static final ReplicaSetStatusArgs Empty = new ReplicaSetStatusArgs();
 

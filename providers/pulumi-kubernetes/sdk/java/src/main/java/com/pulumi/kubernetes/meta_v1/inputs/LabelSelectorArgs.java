@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorRequirementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
  * 
  */
-public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelSelectorArgs extends ResourceArgs {
 
     public static final LabelSelectorArgs Empty = new LabelSelectorArgs();
 

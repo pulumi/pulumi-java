@@ -13,6 +13,8 @@ import com.pulumi.kubernetes.extensions_v1beta1.IngressArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.outputs.IngressSpec;
 import com.pulumi.kubernetes.extensions_v1beta1.outputs.IngressStatus;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* extensions/v1beta1/Ingress is deprecated by networking.k8s.io/v1beta1/Ingress and not supported by Kubernetes v1.20+ clusters. */
 @ResourceType(type="kubernetes:extensions/v1beta1:Ingress")
-public class Ingress extends com.pulumi.resources.CustomResource {
+public class Ingress extends CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
@@ -134,11 +136,11 @@ public class Ingress extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ingress(String name, @Nullable IngressArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Ingress(String name, @Nullable IngressArgs args, @Nullable CustomResourceOptions options) {
         super("kubernetes:extensions/v1beta1:Ingress", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Ingress(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Ingress(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("kubernetes:extensions/v1beta1:Ingress", name, null, makeResourceOptions(options, id));
     }
 
@@ -150,15 +152,15 @@ public class Ingress extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("kubernetes:networking.k8s.io/v1:Ingress").build()),
                 Output.of(Alias.builder().type("kubernetes:networking.k8s.io/v1beta1:Ingress").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class Ingress extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ingress get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ingress get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Ingress(name, id, options);
     }
 }

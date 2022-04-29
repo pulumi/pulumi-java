@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * RuntimeClassStrategyOptions define the strategy that will dictate the allowable RuntimeClasses for a pod.
  * 
  */
-public final class RuntimeClassStrategyOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeClassStrategyOptionsArgs extends ResourceArgs {
 
     public static final RuntimeClassStrategyOptionsArgs Empty = new RuntimeClassStrategyOptionsArgs();
 

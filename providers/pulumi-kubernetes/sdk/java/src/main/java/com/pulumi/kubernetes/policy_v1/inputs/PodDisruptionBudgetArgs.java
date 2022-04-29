@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.policy_v1.inputs.PodDisruptionBudgetSpecArgs;
 import com.pulumi.kubernetes.policy_v1.inputs.PodDisruptionBudgetStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
  * 
  */
-public final class PodDisruptionBudgetArgs extends com.pulumi.resources.ResourceArgs {
+public final class PodDisruptionBudgetArgs extends ResourceArgs {
 
     public static final PodDisruptionBudgetArgs Empty = new PodDisruptionBudgetArgs();
 

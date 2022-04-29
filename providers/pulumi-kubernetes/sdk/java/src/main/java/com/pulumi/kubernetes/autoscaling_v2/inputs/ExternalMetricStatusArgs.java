@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
  * 
  */
-public final class ExternalMetricStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExternalMetricStatusArgs extends ResourceArgs {
 
     public static final ExternalMetricStatusArgs Empty = new ExternalMetricStatusArgs();
 

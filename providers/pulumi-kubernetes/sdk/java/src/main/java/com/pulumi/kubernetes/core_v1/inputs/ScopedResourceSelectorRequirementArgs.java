@@ -5,6 +5,7 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.
  * 
  */
-public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopedResourceSelectorRequirementArgs extends ResourceArgs {
 
     public static final ScopedResourceSelectorRequirementArgs Empty = new ScopedResourceSelectorRequirementArgs();
 
