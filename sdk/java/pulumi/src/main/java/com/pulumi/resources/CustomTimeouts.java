@@ -1,6 +1,7 @@
 package com.pulumi.resources;
 
 import com.pulumi.core.internal.Copyable;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import java.time.Duration;
@@ -18,6 +19,11 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
     @Nullable
     private final Duration delete;
 
+    /**
+     * @param create the optional create timeout
+     * @param update the optional update timeout
+     * @param delete the optional delete timeout
+     */
     public CustomTimeouts(@Nullable Duration create, @Nullable Duration update, @Nullable Duration delete) {
         this.create = create;
         this.update = update;
@@ -25,24 +31,29 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
     }
 
     /**
-     * The optional create timeout
+     * @return the optional create timeout
      */
     public Optional<Duration> getCreate() {
         return Optional.ofNullable(create);
     }
 
     /**
-     * The optional update timeout.
+     * @return the optional update timeout
      */
     public Optional<Duration> getUpdate() {
         return Optional.ofNullable(update);
     }
 
-    /* The optional delete timeout. */
+    /**
+     * @return the optional delete timeout
+     */
     public Optional<Duration> getDelete() {
         return Optional.ofNullable(delete);
     }
 
+    /**
+     * @return a copy of {@code this} {@link CustomTimeouts} instance
+     */
     @Override
     public CustomTimeouts copy() {
         return new CustomTimeouts(this.create, this.update, this.delete);
@@ -63,6 +74,7 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         return Objects.hash(create, update, delete);
     }
 
+    @InternalUse
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public static String golangString(Optional<Duration> duration) {
         if (duration.isEmpty()) {
@@ -78,5 +90,65 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         // Simply put, we simply convert our duration to the number of nanoseconds corresponding to it.
         // We also append "ns" to it, for the Golang parser.
         return duration.get().toNanos() + "ns";
+    }
+
+    /**
+     * @return a {@link CustomTimeouts} builder
+     */
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    /**
+     * The {@link CustomTimeouts} builder
+     */
+    public static final class Builder {
+        @Nullable
+        private Duration create;
+        @Nullable
+        private Duration update;
+        @Nullable
+        private Duration delete;
+
+        public Builder() {
+            // Empty
+        }
+
+        /**
+         * @param create the optional create timeout
+         * @return the {@link CustomTimeouts} builder
+         * @see CustomTimeouts#create
+         */
+        public Builder create(Duration create) {
+            this.create = create;
+            return this;
+        }
+
+        /**
+         * @param update the optional update timeout
+         * @return the {@link CustomTimeouts} builder
+         * @see CustomTimeouts#update
+         */
+        public Builder update(Duration update) {
+            this.update = update;
+            return this;
+        }
+
+        /**
+         * @param delete the optional delete timeout
+         * @return the {@link CustomTimeouts} builder
+         * @see CustomTimeouts#delete
+         */
+        public Builder delete(Duration delete) {
+            this.delete = delete;
+            return this;
+        }
+
+        /**
+         * @return a {@link CustomTimeouts} instance initialized using the {@link Builder}
+         */
+        public CustomTimeouts build() {
+            return new CustomTimeouts(this.create, this.update, this.delete);
+        }
     }
 }
