@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.random.RandomPasswordArgs;
 import com.pulumi.random.Utilities;
 import com.pulumi.random.inputs.RandomPasswordState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="random:index/randomPassword:RandomPassword")
-public class RandomPassword extends com.pulumi.resources.CustomResource {
+public class RandomPassword extends CustomResource {
     /**
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
@@ -226,19 +228,19 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RandomPassword(String name, RandomPasswordArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RandomPassword(String name, RandomPasswordArgs args, @Nullable CustomResourceOptions options) {
         super("random:index/randomPassword:RandomPassword", name, args == null ? RandomPasswordArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RandomPassword(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RandomPassword(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable CustomResourceOptions options) {
         super("random:index/randomPassword:RandomPassword", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -250,7 +252,7 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RandomPassword get(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RandomPassword get(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable CustomResourceOptions options) {
         return new RandomPassword(name, id, state, options);
     }
 }

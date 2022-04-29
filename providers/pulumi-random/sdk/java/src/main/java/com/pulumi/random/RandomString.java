@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.random.RandomStringArgs;
 import com.pulumi.random.Utilities;
 import com.pulumi.random.inputs.RandomStringState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="random:index/randomString:RandomString")
-public class RandomString extends com.pulumi.resources.CustomResource {
+public class RandomString extends CustomResource {
     /**
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
@@ -228,19 +230,19 @@ public class RandomString extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RandomString(String name, RandomStringArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RandomString(String name, RandomStringArgs args, @Nullable CustomResourceOptions options) {
         super("random:index/randomString:RandomString", name, args == null ? RandomStringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RandomString(String name, Output<String> id, @Nullable RandomStringState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RandomString(String name, Output<String> id, @Nullable RandomStringState state, @Nullable CustomResourceOptions options) {
         super("random:index/randomString:RandomString", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -252,7 +254,7 @@ public class RandomString extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RandomString get(String name, Output<String> id, @Nullable RandomStringState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RandomString get(String name, Output<String> id, @Nullable RandomStringState state, @Nullable CustomResourceOptions options) {
         return new RandomString(name, id, state, options);
     }
 }

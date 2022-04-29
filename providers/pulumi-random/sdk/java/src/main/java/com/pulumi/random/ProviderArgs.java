@@ -3,10 +3,10 @@
 
 package com.pulumi.random;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderArgs extends ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 

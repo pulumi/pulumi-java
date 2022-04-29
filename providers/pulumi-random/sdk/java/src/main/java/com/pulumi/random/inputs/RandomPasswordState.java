@@ -5,6 +5,7 @@ package com.pulumi.random.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RandomPasswordState extends com.pulumi.resources.ResourceArgs {
+public final class RandomPasswordState extends ResourceArgs {
 
     public static final RandomPasswordState Empty = new RandomPasswordState();
 

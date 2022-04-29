@@ -5,6 +5,7 @@ package com.pulumi.random;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
+public final class RandomUuidArgs extends ResourceArgs {
 
     public static final RandomUuidArgs Empty = new RandomUuidArgs();
 
