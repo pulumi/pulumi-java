@@ -5,6 +5,7 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  * - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
  * 
  */
-public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubeconfigOptionsArgs extends ResourceArgs {
 
     public static final KubeconfigOptionsArgs Empty = new KubeconfigOptionsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents a Kubernetes `taint` to apply to all Nodes in a NodeGroup. See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/.
  * 
  */
-public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaintArgs extends ResourceArgs {
 
     public static final TaintArgs Empty = new TaintArgs();
 

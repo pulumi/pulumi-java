@@ -11,6 +11,9 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.eks.NodeGroupSecurityGroupArgs;
 import com.pulumi.eks.Utilities;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import javax.annotation.Nullable;
 
 /**
@@ -18,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="eks:index:NodeGroupSecurityGroup")
-public class NodeGroupSecurityGroup extends com.pulumi.resources.ComponentResource {
+public class NodeGroupSecurityGroup extends ComponentResource {
     /**
      * The security group for node groups with the default ingress &amp; egress rules required to connect and work with the EKS cluster security group.
      * 
@@ -69,15 +72,15 @@ public class NodeGroupSecurityGroup extends com.pulumi.resources.ComponentResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NodeGroupSecurityGroup(String name, NodeGroupSecurityGroupArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public NodeGroupSecurityGroup(String name, NodeGroupSecurityGroupArgs args, @Nullable ComponentResourceOptions options) {
         super("eks:index:NodeGroupSecurityGroup", name, args == null ? NodeGroupSecurityGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

@@ -9,6 +9,7 @@ import com.pulumi.aws.iam.InstanceProfile;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.eks.inputs.TaintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Describes the configuration options accepted by a cluster to create its own node groups.
  * 
  */
-public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterNodeGroupOptionsArgs extends ResourceArgs {
 
     public static final ClusterNodeGroupOptionsArgs Empty = new ClusterNodeGroupOptionsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the configuration options available for the Amazon VPC CNI plugin for Kubernetes.
  * 
  */
-public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpcCniOptionsArgs extends ResourceArgs {
 
     public static final VpcCniOptionsArgs Empty = new VpcCniOptionsArgs();
 

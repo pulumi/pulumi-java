@@ -17,6 +17,7 @@ import com.pulumi.eks.inputs.RoleMappingArgs;
 import com.pulumi.eks.inputs.StorageClassArgs;
 import com.pulumi.eks.inputs.UserMappingArgs;
 import com.pulumi.eks.inputs.VpcCniOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterArgs extends ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 

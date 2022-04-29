@@ -15,6 +15,9 @@ import com.pulumi.eks.ClusterArgs;
 import com.pulumi.eks.Utilities;
 import com.pulumi.eks.outputs.CoreData;
 import com.pulumi.eks.outputs.NodeGroupData;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +28,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="eks:index:Cluster")
-public class Cluster extends com.pulumi.resources.ComponentResource {
+public class Cluster extends ComponentResource {
     /**
      * The AWS resource provider.
      * 
@@ -188,15 +191,15 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cluster(String name, @Nullable ClusterArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public Cluster(String name, @Nullable ClusterArgs args, @Nullable ComponentResourceOptions options) {
         super("eks:index:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

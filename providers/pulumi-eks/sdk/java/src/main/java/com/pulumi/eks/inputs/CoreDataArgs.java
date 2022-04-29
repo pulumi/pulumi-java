@@ -16,6 +16,7 @@ import com.pulumi.eks.VpcCni;
 import com.pulumi.eks.inputs.ClusterNodeGroupOptionsArgs;
 import com.pulumi.kubernetes.core_v1.ConfigMap;
 import com.pulumi.kubernetes.storage.k8s.io_v1.StorageClass;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * Defines the core set of data associated with an EKS cluster, including the network in which it runs.
  * 
  */
-public final class CoreDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class CoreDataArgs extends ResourceArgs {
 
     public static final CoreDataArgs Empty = new CoreDataArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.aws.eks.Cluster;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeGroupSecurityGroupArgs extends ResourceArgs {
 
     public static final NodeGroupSecurityGroupArgs Empty = new NodeGroupSecurityGroupArgs();
 

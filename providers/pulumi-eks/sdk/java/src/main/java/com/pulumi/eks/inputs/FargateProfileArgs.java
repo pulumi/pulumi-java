@@ -6,6 +6,7 @@ package com.pulumi.eks.inputs;
 import com.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines how Kubernetes pods are executed in Fargate. See aws.eks.FargateProfileArgs for reference.
  * 
  */
-public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class FargateProfileArgs extends ResourceArgs {
 
     public static final FargateProfileArgs Empty = new FargateProfileArgs();
 

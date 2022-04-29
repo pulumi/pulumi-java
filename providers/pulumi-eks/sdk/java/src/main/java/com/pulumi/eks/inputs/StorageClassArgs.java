@@ -6,6 +6,7 @@ package com.pulumi.eks.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * StorageClass describes the inputs to a single Kubernetes StorageClass provisioned by AWS. Any number of storage classes can be added to a cluster at creation time. One of these storage classes may be configured the default storage class for the cluster.
  * 
  */
-public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageClassArgs extends ResourceArgs {
 
     public static final StorageClassArgs Empty = new StorageClassArgs();
 
