@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs extends ResourceArgs {
 
     public static final WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs Empty = new WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs();
 

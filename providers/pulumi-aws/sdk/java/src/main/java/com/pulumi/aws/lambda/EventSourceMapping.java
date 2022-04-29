@@ -14,6 +14,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:lambda/eventSourceMapping:EventSourceMapping")
-public class EventSourceMapping extends com.pulumi.resources.CustomResource {
+public class EventSourceMapping extends CustomResource {
     /**
      * The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
      * * `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
@@ -370,19 +372,19 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EventSourceMapping(String name, EventSourceMappingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EventSourceMapping(String name, EventSourceMappingArgs args, @Nullable CustomResourceOptions options) {
         super("aws:lambda/eventSourceMapping:EventSourceMapping", name, args == null ? EventSourceMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EventSourceMapping(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EventSourceMapping(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable CustomResourceOptions options) {
         super("aws:lambda/eventSourceMapping:EventSourceMapping", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -394,7 +396,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventSourceMapping get(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EventSourceMapping get(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable CustomResourceOptions options) {
         return new EventSourceMapping(name, id, state, options);
     }
 }

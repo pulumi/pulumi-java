@@ -5,6 +5,7 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EndpointConfigurationProductionVariantArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointConfigurationProductionVariantArgs extends ResourceArgs {
 
     public static final EndpointConfigurationProductionVariantArgs Empty = new EndpointConfigurationProductionVariantArgs();
 

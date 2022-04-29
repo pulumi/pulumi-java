@@ -7,6 +7,7 @@ import com.pulumi.aws.ec2.enums.ProtocolType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceArgs {
+public final class SecurityGroupRuleState extends ResourceArgs {
 
     public static final SecurityGroupRuleState Empty = new SecurityGroupRuleState();
 

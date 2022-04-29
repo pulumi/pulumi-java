@@ -6,6 +6,7 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.InstanceGroupEbsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupState extends ResourceArgs {
 
     public static final InstanceGroupState Empty = new InstanceGroupState();
 

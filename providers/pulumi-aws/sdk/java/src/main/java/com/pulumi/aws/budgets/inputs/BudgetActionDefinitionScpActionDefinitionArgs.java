@@ -5,12 +5,13 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class BudgetActionDefinitionScpActionDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetActionDefinitionScpActionDefinitionArgs extends ResourceArgs {
 
     public static final BudgetActionDefinitionScpActionDefinitionArgs Empty = new BudgetActionDefinitionScpActionDefinitionArgs();
 

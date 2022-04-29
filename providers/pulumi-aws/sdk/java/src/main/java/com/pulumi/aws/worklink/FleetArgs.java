@@ -7,6 +7,7 @@ import com.pulumi.aws.worklink.inputs.FleetIdentityProviderArgs;
 import com.pulumi.aws.worklink.inputs.FleetNetworkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetArgs extends ResourceArgs {
 
     public static final FleetArgs Empty = new FleetArgs();
 

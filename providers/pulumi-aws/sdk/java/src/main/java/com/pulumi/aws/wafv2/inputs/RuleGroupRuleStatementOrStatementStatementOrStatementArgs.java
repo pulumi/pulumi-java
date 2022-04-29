@@ -6,11 +6,12 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class RuleGroupRuleStatementOrStatementStatementOrStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleStatementOrStatementStatementOrStatementArgs extends ResourceArgs {
 
     public static final RuleGroupRuleStatementOrStatementStatementOrStatementArgs Empty = new RuleGroupRuleStatementOrStatementStatementOrStatementArgs();
 

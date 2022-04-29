@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/vpcIpv6CidrBlockAssociation:VpcIpv6CidrBlockAssociation")
-public class VpcIpv6CidrBlockAssociation extends com.pulumi.resources.CustomResource {
+public class VpcIpv6CidrBlockAssociation extends CustomResource {
     /**
      * The IPv6 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv6_netmask_length`. This parameter is required if `ipv6_netmask_length` is not set and he IPAM pool does not have `allocation_default_netmask` set.
      * 
@@ -111,19 +113,19 @@ public class VpcIpv6CidrBlockAssociation extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpcIpv6CidrBlockAssociation(String name, VpcIpv6CidrBlockAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VpcIpv6CidrBlockAssociation(String name, VpcIpv6CidrBlockAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcIpv6CidrBlockAssociation:VpcIpv6CidrBlockAssociation", name, args == null ? VpcIpv6CidrBlockAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VpcIpv6CidrBlockAssociation(String name, Output<String> id, @Nullable VpcIpv6CidrBlockAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VpcIpv6CidrBlockAssociation(String name, Output<String> id, @Nullable VpcIpv6CidrBlockAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcIpv6CidrBlockAssociation:VpcIpv6CidrBlockAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class VpcIpv6CidrBlockAssociation extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcIpv6CidrBlockAssociation get(String name, Output<String> id, @Nullable VpcIpv6CidrBlockAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpcIpv6CidrBlockAssociation get(String name, Output<String> id, @Nullable VpcIpv6CidrBlockAssociationState state, @Nullable CustomResourceOptions options) {
         return new VpcIpv6CidrBlockAssociation(name, id, state, options);
     }
 }

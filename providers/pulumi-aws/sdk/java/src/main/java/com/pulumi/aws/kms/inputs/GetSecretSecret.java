@@ -4,6 +4,8 @@
 package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetSecretSecret extends com.pulumi.resources.InvokeArgs {
+public final class GetSecretSecret extends InvokeArgs {
 
     public static final GetSecretSecret Empty = new GetSecretSecret();
 

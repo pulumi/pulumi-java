@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:iam/accountPasswordPolicy:AccountPasswordPolicy")
-public class AccountPasswordPolicy extends com.pulumi.resources.CustomResource {
+public class AccountPasswordPolicy extends CustomResource {
     /**
      * Whether to allow users to change their own password
      * 
@@ -197,19 +199,19 @@ public class AccountPasswordPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AccountPasswordPolicy(String name, @Nullable AccountPasswordPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AccountPasswordPolicy(String name, @Nullable AccountPasswordPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, args == null ? AccountPasswordPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AccountPasswordPolicy(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AccountPasswordPolicy(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -221,7 +223,7 @@ public class AccountPasswordPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccountPasswordPolicy get(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AccountPasswordPolicy get(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable CustomResourceOptions options) {
         return new AccountPasswordPolicy(name, id, state, options);
     }
 }

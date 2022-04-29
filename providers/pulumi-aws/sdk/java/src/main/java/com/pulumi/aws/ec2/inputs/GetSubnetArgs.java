@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetSubnetFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSubnetArgs extends InvokeArgs {
 
     public static final GetSubnetArgs Empty = new GetSubnetArgs();
 

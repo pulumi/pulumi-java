@@ -5,11 +5,12 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class VirtualNodeSpecListenerConnectionPoolTcpArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerConnectionPoolTcpArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerConnectionPoolTcpArgs Empty = new VirtualNodeSpecListenerConnectionPoolTcpArgs();
 

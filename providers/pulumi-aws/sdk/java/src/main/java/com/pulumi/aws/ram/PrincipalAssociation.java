@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ram/principalAssociation:PrincipalAssociation")
-public class PrincipalAssociation extends com.pulumi.resources.CustomResource {
+public class PrincipalAssociation extends CustomResource {
     /**
      * The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.
      * 
@@ -89,19 +91,19 @@ public class PrincipalAssociation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PrincipalAssociation(String name, PrincipalAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PrincipalAssociation(String name, PrincipalAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ram/principalAssociation:PrincipalAssociation", name, args == null ? PrincipalAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PrincipalAssociation(String name, Output<String> id, @Nullable PrincipalAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PrincipalAssociation(String name, Output<String> id, @Nullable PrincipalAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:ram/principalAssociation:PrincipalAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -113,7 +115,7 @@ public class PrincipalAssociation extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrincipalAssociation get(String name, Output<String> id, @Nullable PrincipalAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PrincipalAssociation get(String name, Output<String> id, @Nullable PrincipalAssociationState state, @Nullable CustomResourceOptions options) {
         return new PrincipalAssociation(name, id, state, options);
     }
 }

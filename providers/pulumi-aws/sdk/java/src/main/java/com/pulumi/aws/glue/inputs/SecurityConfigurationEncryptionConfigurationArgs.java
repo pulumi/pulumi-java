@@ -8,10 +8,11 @@ import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJo
 import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class SecurityConfigurationEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityConfigurationEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final SecurityConfigurationEncryptionConfigurationArgs Empty = new SecurityConfigurationEncryptionConfigurationArgs();
 

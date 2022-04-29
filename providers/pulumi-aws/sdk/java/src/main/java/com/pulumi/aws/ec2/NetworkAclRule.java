@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/networkAclRule:NetworkAclRule")
-public class NetworkAclRule extends com.pulumi.resources.CustomResource {
+public class NetworkAclRule extends CustomResource {
     /**
      * The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
      * 
@@ -220,19 +222,19 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NetworkAclRule(String name, NetworkAclRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NetworkAclRule(String name, NetworkAclRuleArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/networkAclRule:NetworkAclRule", name, args == null ? NetworkAclRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private NetworkAclRule(String name, Output<String> id, @Nullable NetworkAclRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private NetworkAclRule(String name, Output<String> id, @Nullable NetworkAclRuleState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/networkAclRule:NetworkAclRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -244,7 +246,7 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkAclRule get(String name, Output<String> id, @Nullable NetworkAclRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkAclRule get(String name, Output<String> id, @Nullable NetworkAclRuleState state, @Nullable CustomResourceOptions options) {
         return new NetworkAclRule(name, id, state, options);
     }
 }

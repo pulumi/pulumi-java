@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ses/identityNotificationTopic:IdentityNotificationTopic")
-public class IdentityNotificationTopic extends com.pulumi.resources.CustomResource {
+public class IdentityNotificationTopic extends CustomResource {
     /**
      * The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
      * 
@@ -109,19 +111,19 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IdentityNotificationTopic(String name, IdentityNotificationTopicArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IdentityNotificationTopic(String name, IdentityNotificationTopicArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IdentityNotificationTopic(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IdentityNotificationTopic(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable CustomResourceOptions options) {
         super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityNotificationTopic get(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityNotificationTopic get(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable CustomResourceOptions options) {
         return new IdentityNotificationTopic(name, id, state, options);
     }
 }

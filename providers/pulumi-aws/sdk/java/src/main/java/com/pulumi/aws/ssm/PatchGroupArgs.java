@@ -5,11 +5,12 @@ package com.pulumi.aws.ssm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchGroupArgs extends ResourceArgs {
 
     public static final PatchGroupArgs Empty = new PatchGroupArgs();
 

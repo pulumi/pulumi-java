@@ -6,11 +6,12 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementArgs extends ResourceArgs {
 
     public static final WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementArgs Empty = new WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementArgs();
 

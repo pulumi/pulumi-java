@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment")
-public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resources.CustomResource {
+public class NetworkInterfaceSecurityGroupAttachment extends CustomResource {
     /**
      * The ID of the network interface to attach to.
      * 
@@ -80,19 +82,19 @@ public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NetworkInterfaceSecurityGroupAttachment(String name, NetworkInterfaceSecurityGroupAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NetworkInterfaceSecurityGroupAttachment(String name, NetworkInterfaceSecurityGroupAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment", name, args == null ? NetworkInterfaceSecurityGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private NetworkInterfaceSecurityGroupAttachment(String name, Output<String> id, @Nullable NetworkInterfaceSecurityGroupAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private NetworkInterfaceSecurityGroupAttachment(String name, Output<String> id, @Nullable NetworkInterfaceSecurityGroupAttachmentState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -104,7 +106,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkInterfaceSecurityGroupAttachment get(String name, Output<String> id, @Nullable NetworkInterfaceSecurityGroupAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkInterfaceSecurityGroupAttachment get(String name, Output<String> id, @Nullable NetworkInterfaceSecurityGroupAttachmentState state, @Nullable CustomResourceOptions options) {
         return new NetworkInterfaceSecurityGroupAttachment(name, id, state, options);
     }
 }

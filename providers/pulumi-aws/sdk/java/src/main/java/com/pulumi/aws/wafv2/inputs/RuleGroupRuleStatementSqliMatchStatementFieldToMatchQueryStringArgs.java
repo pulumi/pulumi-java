@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs extends ResourceArgs {
 
     public static final RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs Empty = new RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs();
 

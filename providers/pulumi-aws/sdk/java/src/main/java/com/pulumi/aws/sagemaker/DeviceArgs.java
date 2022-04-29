@@ -6,11 +6,12 @@ package com.pulumi.aws.sagemaker;
 import com.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceArgs extends ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 

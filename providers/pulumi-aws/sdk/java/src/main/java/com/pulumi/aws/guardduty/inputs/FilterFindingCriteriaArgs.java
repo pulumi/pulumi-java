@@ -6,11 +6,12 @@ package com.pulumi.aws.guardduty.inputs;
 import com.pulumi.aws.guardduty.inputs.FilterFindingCriteriaCriterionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class FilterFindingCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterFindingCriteriaArgs extends ResourceArgs {
 
     public static final FilterFindingCriteriaArgs Empty = new FilterFindingCriteriaArgs();
 

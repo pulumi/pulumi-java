@@ -5,11 +5,12 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class OrganizationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationConfigurationArgs extends ResourceArgs {
 
     public static final OrganizationConfigurationArgs Empty = new OrganizationConfigurationArgs();
 

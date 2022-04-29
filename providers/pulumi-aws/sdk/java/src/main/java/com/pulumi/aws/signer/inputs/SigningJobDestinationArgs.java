@@ -6,10 +6,11 @@ package com.pulumi.aws.signer.inputs;
 import com.pulumi.aws.signer.inputs.SigningJobDestinationS3Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class SigningJobDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SigningJobDestinationArgs extends ResourceArgs {
 
     public static final SigningJobDestinationArgs Empty = new SigningJobDestinationArgs();
 

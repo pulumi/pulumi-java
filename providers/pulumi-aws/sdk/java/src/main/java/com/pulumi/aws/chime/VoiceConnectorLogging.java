@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:chime/voiceConnectorLogging:VoiceConnectorLogging")
-public class VoiceConnectorLogging extends com.pulumi.resources.CustomResource {
+public class VoiceConnectorLogging extends CustomResource {
     /**
      * When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
      * 
@@ -81,19 +83,19 @@ public class VoiceConnectorLogging extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VoiceConnectorLogging(String name, VoiceConnectorLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VoiceConnectorLogging(String name, VoiceConnectorLoggingArgs args, @Nullable CustomResourceOptions options) {
         super("aws:chime/voiceConnectorLogging:VoiceConnectorLogging", name, args == null ? VoiceConnectorLoggingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VoiceConnectorLogging(String name, Output<String> id, @Nullable VoiceConnectorLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VoiceConnectorLogging(String name, Output<String> id, @Nullable VoiceConnectorLoggingState state, @Nullable CustomResourceOptions options) {
         super("aws:chime/voiceConnectorLogging:VoiceConnectorLogging", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class VoiceConnectorLogging extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VoiceConnectorLogging get(String name, Output<String> id, @Nullable VoiceConnectorLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VoiceConnectorLogging get(String name, Output<String> id, @Nullable VoiceConnectorLoggingState state, @Nullable CustomResourceOptions options) {
         return new VoiceConnectorLogging(name, id, state, options);
     }
 }

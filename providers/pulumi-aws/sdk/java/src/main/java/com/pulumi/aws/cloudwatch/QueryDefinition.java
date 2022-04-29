@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cloudwatch/queryDefinition:QueryDefinition")
-public class QueryDefinition extends com.pulumi.resources.CustomResource {
+public class QueryDefinition extends CustomResource {
     /**
      * Specific log groups to use with the query.
      * 
@@ -109,19 +111,19 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public QueryDefinition(String name, QueryDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public QueryDefinition(String name, QueryDefinitionArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cloudwatch/queryDefinition:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private QueryDefinition(String name, Output<String> id, @Nullable QueryDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private QueryDefinition(String name, Output<String> id, @Nullable QueryDefinitionState state, @Nullable CustomResourceOptions options) {
         super("aws:cloudwatch/queryDefinition:QueryDefinition", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QueryDefinition get(String name, Output<String> id, @Nullable QueryDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static QueryDefinition get(String name, Output<String> id, @Nullable QueryDefinitionState state, @Nullable CustomResourceOptions options) {
         return new QueryDefinition(name, id, state, options);
     }
 }

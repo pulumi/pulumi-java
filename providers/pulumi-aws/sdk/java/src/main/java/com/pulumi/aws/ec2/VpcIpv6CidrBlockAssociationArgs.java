@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VpcIpv6CidrBlockAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpcIpv6CidrBlockAssociationArgs extends ResourceArgs {
 
     public static final VpcIpv6CidrBlockAssociationArgs Empty = new VpcIpv6CidrBlockAssociationArgs();
 

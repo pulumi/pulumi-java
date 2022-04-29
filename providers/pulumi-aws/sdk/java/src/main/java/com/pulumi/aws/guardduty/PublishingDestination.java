@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:guardduty/publishingDestination:PublishingDestination")
-public class PublishingDestination extends com.pulumi.resources.CustomResource {
+public class PublishingDestination extends CustomResource {
     /**
      * The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
      * 
@@ -108,19 +110,19 @@ public class PublishingDestination extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PublishingDestination(String name, PublishingDestinationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PublishingDestination(String name, PublishingDestinationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:guardduty/publishingDestination:PublishingDestination", name, args == null ? PublishingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PublishingDestination(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PublishingDestination(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable CustomResourceOptions options) {
         super("aws:guardduty/publishingDestination:PublishingDestination", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -132,7 +134,7 @@ public class PublishingDestination extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PublishingDestination get(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PublishingDestination get(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable CustomResourceOptions options) {
         return new PublishingDestination(name, id, state, options);
     }
 }

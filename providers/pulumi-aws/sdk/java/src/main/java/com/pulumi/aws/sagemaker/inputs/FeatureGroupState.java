@@ -8,6 +8,7 @@ import com.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigArgs;
 import com.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
+public final class FeatureGroupState extends ResourceArgs {
 
     public static final FeatureGroupState Empty = new FeatureGroupState();
 

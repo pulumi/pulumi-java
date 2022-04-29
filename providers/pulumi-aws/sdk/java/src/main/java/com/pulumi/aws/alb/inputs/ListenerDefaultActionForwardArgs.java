@@ -7,13 +7,14 @@ import com.pulumi.aws.alb.inputs.ListenerDefaultActionForwardStickinessArgs;
 import com.pulumi.aws.alb.inputs.ListenerDefaultActionForwardTargetGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListenerDefaultActionForwardArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerDefaultActionForwardArgs extends ResourceArgs {
 
     public static final ListenerDefaultActionForwardArgs Empty = new ListenerDefaultActionForwardArgs();
 

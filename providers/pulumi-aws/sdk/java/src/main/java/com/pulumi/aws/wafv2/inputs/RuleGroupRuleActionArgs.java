@@ -8,12 +8,13 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockArgs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRuleActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleActionArgs extends ResourceArgs {
 
     public static final RuleGroupRuleActionArgs Empty = new RuleGroupRuleActionArgs();
 

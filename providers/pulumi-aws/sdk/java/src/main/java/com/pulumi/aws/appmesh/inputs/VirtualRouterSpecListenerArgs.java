@@ -6,10 +6,11 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerPortMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class VirtualRouterSpecListenerArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualRouterSpecListenerArgs extends ResourceArgs {
 
     public static final VirtualRouterSpecListenerArgs Empty = new VirtualRouterSpecListenerArgs();
 

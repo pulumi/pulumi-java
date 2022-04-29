@@ -6,6 +6,7 @@ package com.pulumi.aws.athena;
 import com.pulumi.aws.athena.inputs.WorkgroupConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkgroupArgs extends ResourceArgs {
 
     public static final WorkgroupArgs Empty = new WorkgroupArgs();
 

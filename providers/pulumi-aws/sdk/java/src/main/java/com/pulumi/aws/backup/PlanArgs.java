@@ -7,6 +7,7 @@ import com.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingArgs;
 import com.pulumi.aws.backup.inputs.PlanRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlanArgs extends ResourceArgs {
 
     public static final PlanArgs Empty = new PlanArgs();
 

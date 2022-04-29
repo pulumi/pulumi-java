@@ -5,11 +5,12 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class CatalogDatabaseTargetDatabaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class CatalogDatabaseTargetDatabaseArgs extends ResourceArgs {
 
     public static final CatalogDatabaseTargetDatabaseArgs Empty = new CatalogDatabaseTargetDatabaseArgs();
 

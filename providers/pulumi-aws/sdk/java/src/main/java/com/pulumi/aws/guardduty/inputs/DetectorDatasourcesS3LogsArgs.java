@@ -5,11 +5,12 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class DetectorDatasourcesS3LogsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorDatasourcesS3LogsArgs extends ResourceArgs {
 
     public static final DetectorDatasourcesS3LogsArgs Empty = new DetectorDatasourcesS3LogsArgs();
 

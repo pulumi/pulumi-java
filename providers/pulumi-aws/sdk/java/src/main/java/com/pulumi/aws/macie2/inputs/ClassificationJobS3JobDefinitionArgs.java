@@ -7,13 +7,14 @@ import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefini
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassificationJobS3JobDefinitionArgs extends ResourceArgs {
 
     public static final ClassificationJobS3JobDefinitionArgs Empty = new ClassificationJobS3JobDefinitionArgs();
 

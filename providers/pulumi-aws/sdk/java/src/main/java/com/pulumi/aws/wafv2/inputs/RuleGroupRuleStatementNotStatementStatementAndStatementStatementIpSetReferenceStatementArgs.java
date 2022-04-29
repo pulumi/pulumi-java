@@ -6,13 +6,14 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs extends ResourceArgs {
 
     public static final RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs Empty = new RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs();
 

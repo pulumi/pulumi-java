@@ -6,12 +6,13 @@ package com.pulumi.aws.emr;
 import com.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ManagedScalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedScalingPolicyArgs extends ResourceArgs {
 
     public static final ManagedScalingPolicyArgs Empty = new ManagedScalingPolicyArgs();
 

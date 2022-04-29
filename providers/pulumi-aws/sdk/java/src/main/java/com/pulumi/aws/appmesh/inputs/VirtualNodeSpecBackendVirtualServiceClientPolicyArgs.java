@@ -6,12 +6,13 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNodeSpecBackendVirtualServiceClientPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecBackendVirtualServiceClientPolicyArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecBackendVirtualServiceClientPolicyArgs Empty = new VirtualNodeSpecBackendVirtualServiceClientPolicyArgs();
 

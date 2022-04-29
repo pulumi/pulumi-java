@@ -7,6 +7,7 @@ import com.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterArgs;
 import com.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricStreamArgs extends ResourceArgs {
 
     public static final MetricStreamArgs Empty = new MetricStreamArgs();
 

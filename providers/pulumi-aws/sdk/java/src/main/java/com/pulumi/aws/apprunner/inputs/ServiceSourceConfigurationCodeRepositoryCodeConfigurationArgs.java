@@ -6,13 +6,14 @@ package com.pulumi.aws.apprunner.inputs;
 import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs extends ResourceArgs {
 
     public static final ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs Empty = new ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs();
 

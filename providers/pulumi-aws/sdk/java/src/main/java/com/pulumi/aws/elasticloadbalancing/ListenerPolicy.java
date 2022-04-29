@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* aws.elasticloadbalancing.ListenerPolicy has been deprecated in favor of aws.elb.ListenerPolicy */
 @ResourceType(type="aws:elasticloadbalancing/listenerPolicy:ListenerPolicy")
-public class ListenerPolicy extends com.pulumi.resources.CustomResource {
+public class ListenerPolicy extends CustomResource {
     /**
      * The load balancer to attach the policy to.
      * 
@@ -92,19 +94,19 @@ public class ListenerPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ListenerPolicy(String name, ListenerPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ListenerPolicy(String name, ListenerPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:elasticloadbalancing/listenerPolicy:ListenerPolicy", name, args == null ? ListenerPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ListenerPolicy(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ListenerPolicy(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:elasticloadbalancing/listenerPolicy:ListenerPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -116,7 +118,7 @@ public class ListenerPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ListenerPolicy get(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ListenerPolicy get(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable CustomResourceOptions options) {
         return new ListenerPolicy(name, id, state, options);
     }
 }

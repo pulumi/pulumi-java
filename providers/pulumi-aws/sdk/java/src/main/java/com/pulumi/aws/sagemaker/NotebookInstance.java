@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:sagemaker/notebookInstance:NotebookInstance")
-public class NotebookInstance extends com.pulumi.resources.CustomResource {
+public class NotebookInstance extends CustomResource {
     /**
      * An array of up to three Git repositories to associate with the notebook instance.
      * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
@@ -309,19 +311,19 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NotebookInstance(String name, NotebookInstanceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NotebookInstance(String name, NotebookInstanceArgs args, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/notebookInstance:NotebookInstance", name, args == null ? NotebookInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private NotebookInstance(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private NotebookInstance(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/notebookInstance:NotebookInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -333,7 +335,7 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotebookInstance get(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NotebookInstance get(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable CustomResourceOptions options) {
         return new NotebookInstance(name, id, state, options);
     }
 }

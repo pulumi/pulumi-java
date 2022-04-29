@@ -5,11 +5,12 @@ package com.pulumi.aws.dlm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs extends ResourceArgs {
 
     public static final LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs Empty = new LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs();
 

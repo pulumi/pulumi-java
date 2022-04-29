@@ -7,12 +7,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGrpcIdleArgs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerTimeoutGrpcArgs Empty = new VirtualNodeSpecListenerTimeoutGrpcArgs();
 

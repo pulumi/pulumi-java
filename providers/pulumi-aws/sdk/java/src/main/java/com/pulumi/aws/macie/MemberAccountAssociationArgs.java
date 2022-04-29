@@ -5,11 +5,12 @@ package com.pulumi.aws.macie;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MemberAccountAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MemberAccountAssociationArgs extends ResourceArgs {
 
     public static final MemberAccountAssociationArgs Empty = new MemberAccountAssociationArgs();
 

@@ -5,11 +5,12 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs extends ResourceArgs {
 
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs();
 

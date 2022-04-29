@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:servicecatalog/serviceAction:ServiceAction")
-public class ServiceAction extends com.pulumi.resources.CustomResource {
+public class ServiceAction extends CustomResource {
     /**
      * Language code. Valid values are `en` (English), `jp` (Japanese), and `zh` (Chinese). Default is `en`.
      * 
@@ -109,19 +111,19 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceAction(String name, ServiceActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceAction(String name, ServiceActionArgs args, @Nullable CustomResourceOptions options) {
         super("aws:servicecatalog/serviceAction:ServiceAction", name, args == null ? ServiceActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceAction(String name, Output<String> id, @Nullable ServiceActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceAction(String name, Output<String> id, @Nullable ServiceActionState state, @Nullable CustomResourceOptions options) {
         super("aws:servicecatalog/serviceAction:ServiceAction", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceAction get(String name, Output<String> id, @Nullable ServiceActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceAction get(String name, Output<String> id, @Nullable ServiceActionState state, @Nullable CustomResourceOptions options) {
         return new ServiceAction(name, id, state, options);
     }
 }

@@ -9,6 +9,7 @@ import com.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceArgs;
 import com.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs {
+public final class FlowDefinitionState extends ResourceArgs {
 
     public static final FlowDefinitionState Empty = new FlowDefinitionState();
 

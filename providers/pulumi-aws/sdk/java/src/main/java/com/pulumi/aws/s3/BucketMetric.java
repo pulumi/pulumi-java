@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:s3/bucketMetric:BucketMetric")
-public class BucketMetric extends com.pulumi.resources.CustomResource {
+public class BucketMetric extends CustomResource {
     /**
      * The name of the bucket to put metric configuration.
      * 
@@ -95,19 +97,19 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BucketMetric(String name, BucketMetricArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BucketMetric(String name, BucketMetricArgs args, @Nullable CustomResourceOptions options) {
         super("aws:s3/bucketMetric:BucketMetric", name, args == null ? BucketMetricArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BucketMetric(String name, Output<String> id, @Nullable BucketMetricState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BucketMetric(String name, Output<String> id, @Nullable BucketMetricState state, @Nullable CustomResourceOptions options) {
         super("aws:s3/bucketMetric:BucketMetric", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -119,7 +121,7 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketMetric get(String name, Output<String> id, @Nullable BucketMetricState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BucketMetric get(String name, Output<String> id, @Nullable BucketMetricState state, @Nullable CustomResourceOptions options) {
         return new BucketMetric(name, id, state, options);
     }
 }

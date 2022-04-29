@@ -7,6 +7,7 @@ import com.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressArgs;
 import com.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DefaultNetworkAclArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultNetworkAclArgs extends ResourceArgs {
 
     public static final DefaultNetworkAclArgs Empty = new DefaultNetworkAclArgs();
 

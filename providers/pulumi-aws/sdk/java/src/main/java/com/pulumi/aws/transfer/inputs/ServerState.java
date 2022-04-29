@@ -6,6 +6,7 @@ package com.pulumi.aws.transfer.inputs;
 import com.pulumi.aws.transfer.inputs.ServerEndpointDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServerState extends com.pulumi.resources.ResourceArgs {
+public final class ServerState extends ResourceArgs {
 
     public static final ServerState Empty = new ServerState();
 

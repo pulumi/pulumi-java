@@ -16,12 +16,13 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementOrStat
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAclRuleStatementOrStatementStatementOrStatementStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleStatementOrStatementStatementOrStatementStatementArgs extends ResourceArgs {
 
     public static final WebAclRuleStatementOrStatementStatementOrStatementStatementArgs Empty = new WebAclRuleStatementOrStatementStatementOrStatementStatementArgs();
 

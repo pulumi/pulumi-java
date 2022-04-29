@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class WebAclRuleOverrideActionNoneArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleOverrideActionNoneArgs extends ResourceArgs {
 
     public static final WebAclRuleOverrideActionNoneArgs Empty = new WebAclRuleOverrideActionNoneArgs();
 

@@ -5,11 +5,12 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TopicRuleCloudwatchAlarmArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleCloudwatchAlarmArgs extends ResourceArgs {
 
     public static final TopicRuleCloudwatchAlarmArgs Empty = new TopicRuleCloudwatchAlarmArgs();
 

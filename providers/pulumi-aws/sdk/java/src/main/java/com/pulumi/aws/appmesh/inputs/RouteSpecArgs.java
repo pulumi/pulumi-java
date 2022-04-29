@@ -9,13 +9,14 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteSpecArgs extends ResourceArgs {
 
     public static final RouteSpecArgs Empty = new RouteSpecArgs();
 

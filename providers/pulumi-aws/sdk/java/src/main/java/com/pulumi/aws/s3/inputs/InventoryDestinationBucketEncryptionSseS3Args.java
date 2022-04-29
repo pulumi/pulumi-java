@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.s3.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class InventoryDestinationBucketEncryptionSseS3Args extends com.pulumi.resources.ResourceArgs {
+public final class InventoryDestinationBucketEncryptionSseS3Args extends ResourceArgs {
 
     public static final InventoryDestinationBucketEncryptionSseS3Args Empty = new InventoryDestinationBucketEncryptionSseS3Args();
 

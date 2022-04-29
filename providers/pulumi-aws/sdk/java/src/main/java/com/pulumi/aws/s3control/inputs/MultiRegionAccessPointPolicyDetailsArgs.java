@@ -5,11 +5,12 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MultiRegionAccessPointPolicyDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MultiRegionAccessPointPolicyDetailsArgs extends ResourceArgs {
 
     public static final MultiRegionAccessPointPolicyDetailsArgs Empty = new MultiRegionAccessPointPolicyDetailsArgs();
 

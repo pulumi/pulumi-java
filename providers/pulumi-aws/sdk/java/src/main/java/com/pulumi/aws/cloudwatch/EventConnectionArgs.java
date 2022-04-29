@@ -6,13 +6,14 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventConnectionArgs extends ResourceArgs {
 
     public static final EventConnectionArgs Empty = new EventConnectionArgs();
 

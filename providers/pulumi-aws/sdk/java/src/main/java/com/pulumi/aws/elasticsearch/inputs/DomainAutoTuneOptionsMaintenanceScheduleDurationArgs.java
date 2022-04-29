@@ -5,12 +5,13 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DomainAutoTuneOptionsMaintenanceScheduleDurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainAutoTuneOptionsMaintenanceScheduleDurationArgs extends ResourceArgs {
 
     public static final DomainAutoTuneOptionsMaintenanceScheduleDurationArgs Empty = new DomainAutoTuneOptionsMaintenanceScheduleDurationArgs();
 

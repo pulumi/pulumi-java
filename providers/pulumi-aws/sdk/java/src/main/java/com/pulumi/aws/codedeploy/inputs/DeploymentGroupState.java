@@ -15,6 +15,7 @@ import com.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilt
 import com.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeploymentGroupState extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentGroupState extends ResourceArgs {
 
     public static final DeploymentGroupState Empty = new DeploymentGroupState();
 

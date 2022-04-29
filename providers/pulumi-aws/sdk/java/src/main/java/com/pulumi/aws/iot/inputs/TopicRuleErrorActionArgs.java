@@ -20,12 +20,13 @@ import com.pulumi.aws.iot.inputs.TopicRuleErrorActionSqsArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionStepFunctionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRuleErrorActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleErrorActionArgs extends ResourceArgs {
 
     public static final TopicRuleErrorActionArgs Empty = new TopicRuleErrorActionArgs();
 

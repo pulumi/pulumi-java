@@ -9,6 +9,7 @@ import com.pulumi.aws.ec2.enums.Tenancy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CapacityReservationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CapacityReservationArgs extends ResourceArgs {
 
     public static final CapacityReservationArgs Empty = new CapacityReservationArgs();
 

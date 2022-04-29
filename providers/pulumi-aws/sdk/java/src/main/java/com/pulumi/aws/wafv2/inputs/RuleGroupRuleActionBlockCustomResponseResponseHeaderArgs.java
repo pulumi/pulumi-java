@@ -5,11 +5,12 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs extends ResourceArgs {
 
     public static final RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs Empty = new RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs();
 

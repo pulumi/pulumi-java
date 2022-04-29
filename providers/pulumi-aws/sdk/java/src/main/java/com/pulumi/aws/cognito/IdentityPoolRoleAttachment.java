@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment")
-public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResource {
+public class IdentityPoolRoleAttachment extends CustomResource {
     /**
      * An identity pool ID in the format REGION:GUID.
      * 
@@ -97,19 +99,19 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IdentityPoolRoleAttachment(String name, IdentityPoolRoleAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IdentityPoolRoleAttachment(String name, IdentityPoolRoleAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment", name, args == null ? IdentityPoolRoleAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IdentityPoolRoleAttachment(String name, Output<String> id, @Nullable IdentityPoolRoleAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IdentityPoolRoleAttachment(String name, Output<String> id, @Nullable IdentityPoolRoleAttachmentState state, @Nullable CustomResourceOptions options) {
         super("aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -121,7 +123,7 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityPoolRoleAttachment get(String name, Output<String> id, @Nullable IdentityPoolRoleAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityPoolRoleAttachment get(String name, Output<String> id, @Nullable IdentityPoolRoleAttachmentState state, @Nullable CustomResourceOptions options) {
         return new IdentityPoolRoleAttachment(name, id, state, options);
     }
 }

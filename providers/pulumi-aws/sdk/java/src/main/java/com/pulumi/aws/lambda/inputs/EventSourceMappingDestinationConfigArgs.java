@@ -6,12 +6,13 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigOnFailureArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventSourceMappingDestinationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingDestinationConfigArgs extends ResourceArgs {
 
     public static final EventSourceMappingDestinationConfigArgs Empty = new EventSourceMappingDestinationConfigArgs();
 

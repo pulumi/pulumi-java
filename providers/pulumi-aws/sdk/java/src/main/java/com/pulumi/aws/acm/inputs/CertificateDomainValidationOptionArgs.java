@@ -5,13 +5,14 @@ package com.pulumi.aws.acm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateDomainValidationOptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateDomainValidationOptionArgs extends ResourceArgs {
 
     public static final CertificateDomainValidationOptionArgs Empty = new CertificateDomainValidationOptionArgs();
 

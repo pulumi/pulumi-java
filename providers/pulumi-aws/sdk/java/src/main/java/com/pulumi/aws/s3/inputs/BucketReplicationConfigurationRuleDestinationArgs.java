@@ -8,13 +8,14 @@ import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationMet
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketReplicationConfigurationRuleDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationConfigurationRuleDestinationArgs extends ResourceArgs {
 
     public static final BucketReplicationConfigurationRuleDestinationArgs Empty = new BucketReplicationConfigurationRuleDestinationArgs();
 

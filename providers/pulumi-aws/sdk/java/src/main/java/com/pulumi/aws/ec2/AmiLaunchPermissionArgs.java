@@ -5,11 +5,12 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AmiLaunchPermissionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmiLaunchPermissionArgs extends ResourceArgs {
 
     public static final AmiLaunchPermissionArgs Empty = new AmiLaunchPermissionArgs();
 

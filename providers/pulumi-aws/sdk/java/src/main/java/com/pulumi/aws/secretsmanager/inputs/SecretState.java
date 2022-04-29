@@ -7,6 +7,7 @@ import com.pulumi.aws.secretsmanager.inputs.SecretReplicaArgs;
 import com.pulumi.aws.secretsmanager.inputs.SecretRotationRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecretState extends com.pulumi.resources.ResourceArgs {
+public final class SecretState extends ResourceArgs {
 
     public static final SecretState Empty = new SecretState();
 

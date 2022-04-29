@@ -5,11 +5,12 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileArgs Empty = new VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileArgs();
 

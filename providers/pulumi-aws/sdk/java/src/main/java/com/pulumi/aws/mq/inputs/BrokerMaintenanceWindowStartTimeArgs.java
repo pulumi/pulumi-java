@@ -5,11 +5,12 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class BrokerMaintenanceWindowStartTimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BrokerMaintenanceWindowStartTimeArgs extends ResourceArgs {
 
     public static final BrokerMaintenanceWindowStartTimeArgs Empty = new BrokerMaintenanceWindowStartTimeArgs();
 

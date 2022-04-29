@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.securityhub;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountArgs extends ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 

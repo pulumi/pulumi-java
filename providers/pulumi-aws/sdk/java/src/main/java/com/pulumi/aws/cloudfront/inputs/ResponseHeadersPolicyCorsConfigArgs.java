@@ -9,6 +9,7 @@ import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessCon
 import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResponseHeadersPolicyCorsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponseHeadersPolicyCorsConfigArgs extends ResourceArgs {
 
     public static final ResponseHeadersPolicyCorsConfigArgs Empty = new ResponseHeadersPolicyCorsConfigArgs();
 

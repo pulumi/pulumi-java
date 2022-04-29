@@ -5,6 +5,7 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs extends ResourceArgs {
 
     public static final DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs Empty = new DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs();
 

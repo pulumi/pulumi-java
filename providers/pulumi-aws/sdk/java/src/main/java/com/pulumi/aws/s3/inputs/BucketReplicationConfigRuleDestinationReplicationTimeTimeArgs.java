@@ -5,11 +5,12 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs extends ResourceArgs {
 
     public static final BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs Empty = new BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs();
 

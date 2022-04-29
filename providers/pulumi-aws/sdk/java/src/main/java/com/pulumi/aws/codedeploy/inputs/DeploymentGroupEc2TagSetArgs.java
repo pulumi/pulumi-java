@@ -6,13 +6,14 @@ package com.pulumi.aws.codedeploy.inputs;
 import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeploymentGroupEc2TagSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentGroupEc2TagSetArgs extends ResourceArgs {
 
     public static final DeploymentGroupEc2TagSetArgs Empty = new DeploymentGroupEc2TagSetArgs();
 

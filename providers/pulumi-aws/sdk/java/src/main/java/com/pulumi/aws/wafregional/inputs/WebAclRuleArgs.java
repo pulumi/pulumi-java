@@ -7,6 +7,7 @@ import com.pulumi.aws.wafregional.inputs.WebAclRuleActionArgs;
 import com.pulumi.aws.wafregional.inputs.WebAclRuleOverrideActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleArgs extends ResourceArgs {
 
     public static final WebAclRuleArgs Empty = new WebAclRuleArgs();
 

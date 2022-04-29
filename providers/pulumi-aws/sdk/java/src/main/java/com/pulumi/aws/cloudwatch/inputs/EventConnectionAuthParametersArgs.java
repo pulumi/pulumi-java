@@ -9,12 +9,13 @@ import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationH
 import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventConnectionAuthParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventConnectionAuthParametersArgs extends ResourceArgs {
 
     public static final EventConnectionAuthParametersArgs Empty = new EventConnectionAuthParametersArgs();
 

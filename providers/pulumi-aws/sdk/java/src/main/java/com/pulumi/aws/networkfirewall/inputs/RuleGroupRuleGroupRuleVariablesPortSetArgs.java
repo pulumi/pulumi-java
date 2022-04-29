@@ -6,11 +6,12 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends ResourceArgs {
 
     public static final RuleGroupRuleGroupRuleVariablesPortSetArgs Empty = new RuleGroupRuleGroupRuleVariablesPortSetArgs();
 

@@ -19,6 +19,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -55,7 +57,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/spotInstanceRequest:SpotInstanceRequest")
-public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
+public class SpotInstanceRequest extends CustomResource {
     /**
      * AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
      * 
@@ -906,19 +908,19 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SpotInstanceRequest(String name, @Nullable SpotInstanceRequestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SpotInstanceRequest(String name, @Nullable SpotInstanceRequestArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/spotInstanceRequest:SpotInstanceRequest", name, args == null ? SpotInstanceRequestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SpotInstanceRequest(String name, Output<String> id, @Nullable SpotInstanceRequestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SpotInstanceRequest(String name, Output<String> id, @Nullable SpotInstanceRequestState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/spotInstanceRequest:SpotInstanceRequest", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -930,7 +932,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SpotInstanceRequest get(String name, Output<String> id, @Nullable SpotInstanceRequestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SpotInstanceRequest get(String name, Output<String> id, @Nullable SpotInstanceRequestState state, @Nullable CustomResourceOptions options) {
         return new SpotInstanceRequest(name, id, state, options);
     }
 }

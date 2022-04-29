@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cloudwatch/logResourcePolicy:LogResourcePolicy")
-public class LogResourcePolicy extends com.pulumi.resources.CustomResource {
+public class LogResourcePolicy extends CustomResource {
     /**
      * Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
      * 
@@ -79,19 +81,19 @@ public class LogResourcePolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LogResourcePolicy(String name, LogResourcePolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LogResourcePolicy(String name, LogResourcePolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cloudwatch/logResourcePolicy:LogResourcePolicy", name, args == null ? LogResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LogResourcePolicy(String name, Output<String> id, @Nullable LogResourcePolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LogResourcePolicy(String name, Output<String> id, @Nullable LogResourcePolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:cloudwatch/logResourcePolicy:LogResourcePolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -103,7 +105,7 @@ public class LogResourcePolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LogResourcePolicy get(String name, Output<String> id, @Nullable LogResourcePolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LogResourcePolicy get(String name, Output<String> id, @Nullable LogResourcePolicyState state, @Nullable CustomResourceOptions options) {
         return new LogResourcePolicy(name, id, state, options);
     }
 }

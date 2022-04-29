@@ -4,6 +4,7 @@
 package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetVaultArgs extends InvokeArgs {
 
     public static final GetVaultArgs Empty = new GetVaultArgs();
 

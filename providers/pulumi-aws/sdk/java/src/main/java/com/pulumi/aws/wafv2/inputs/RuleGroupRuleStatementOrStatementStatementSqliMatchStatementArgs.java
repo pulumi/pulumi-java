@@ -7,13 +7,14 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementSql
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs extends ResourceArgs {
 
     public static final RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs Empty = new RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs();
 

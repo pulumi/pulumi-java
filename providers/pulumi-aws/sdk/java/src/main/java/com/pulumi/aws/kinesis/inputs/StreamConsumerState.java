@@ -5,13 +5,14 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs {
+public final class StreamConsumerState extends ResourceArgs {
 
     public static final StreamConsumerState Empty = new StreamConsumerState();
 

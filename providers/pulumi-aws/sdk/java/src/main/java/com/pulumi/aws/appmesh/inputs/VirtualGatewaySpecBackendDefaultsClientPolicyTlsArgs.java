@@ -7,6 +7,7 @@ import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPoli
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends ResourceArgs {
 
     public static final VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs Empty = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs();
 

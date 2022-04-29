@@ -6,6 +6,7 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RestApiArgs extends com.pulumi.resources.ResourceArgs {
+public final class RestApiArgs extends ResourceArgs {
 
     public static final RestApiArgs Empty = new RestApiArgs();
 

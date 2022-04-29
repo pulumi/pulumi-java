@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:wafregional/geoMatchSet:GeoMatchSet")
-public class GeoMatchSet extends com.pulumi.resources.CustomResource {
+public class GeoMatchSet extends CustomResource {
     /**
      * The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
      * 
@@ -82,19 +84,19 @@ public class GeoMatchSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GeoMatchSet(String name, @Nullable GeoMatchSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GeoMatchSet(String name, @Nullable GeoMatchSetArgs args, @Nullable CustomResourceOptions options) {
         super("aws:wafregional/geoMatchSet:GeoMatchSet", name, args == null ? GeoMatchSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GeoMatchSet(String name, Output<String> id, @Nullable GeoMatchSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GeoMatchSet(String name, Output<String> id, @Nullable GeoMatchSetState state, @Nullable CustomResourceOptions options) {
         super("aws:wafregional/geoMatchSet:GeoMatchSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class GeoMatchSet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GeoMatchSet get(String name, Output<String> id, @Nullable GeoMatchSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GeoMatchSet get(String name, Output<String> id, @Nullable GeoMatchSetState state, @Nullable CustomResourceOptions options) {
         return new GeoMatchSet(name, id, state, options);
     }
 }

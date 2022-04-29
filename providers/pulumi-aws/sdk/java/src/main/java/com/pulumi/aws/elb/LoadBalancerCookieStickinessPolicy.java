@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy")
-public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.CustomResource {
+public class LoadBalancerCookieStickinessPolicy extends CustomResource {
     /**
      * The time period after which
      * the session cookie should be considered stale, expressed in seconds.
@@ -111,22 +113,22 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LoadBalancerCookieStickinessPolicy(String name, LoadBalancerCookieStickinessPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LoadBalancerCookieStickinessPolicy(String name, LoadBalancerCookieStickinessPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy", name, args == null ? LoadBalancerCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LoadBalancerCookieStickinessPolicy(String name, Output<String> id, @Nullable LoadBalancerCookieStickinessPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancerCookieStickinessPolicy(String name, Output<String> id, @Nullable LoadBalancerCookieStickinessPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("aws:elasticloadbalancing/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -138,7 +140,7 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancerCookieStickinessPolicy get(String name, Output<String> id, @Nullable LoadBalancerCookieStickinessPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancerCookieStickinessPolicy get(String name, Output<String> id, @Nullable LoadBalancerCookieStickinessPolicyState state, @Nullable CustomResourceOptions options) {
         return new LoadBalancerCookieStickinessPolicy(name, id, state, options);
     }
 }

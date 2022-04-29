@@ -6,6 +6,7 @@ package com.pulumi.aws.storagegateway.inputs;
 import com.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
+public final class SmbFileShareState extends ResourceArgs {
 
     public static final SmbFileShareState Empty = new SmbFileShareState();
 

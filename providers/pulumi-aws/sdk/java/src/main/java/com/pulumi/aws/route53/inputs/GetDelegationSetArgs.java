@@ -4,11 +4,12 @@
 package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDelegationSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDelegationSetArgs extends InvokeArgs {
 
     public static final GetDelegationSetArgs Empty = new GetDelegationSetArgs();
 

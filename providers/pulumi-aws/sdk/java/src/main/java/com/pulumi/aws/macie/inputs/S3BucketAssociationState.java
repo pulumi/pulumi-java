@@ -6,13 +6,14 @@ package com.pulumi.aws.macie.inputs;
 import com.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class S3BucketAssociationState extends com.pulumi.resources.ResourceArgs {
+public final class S3BucketAssociationState extends ResourceArgs {
 
     public static final S3BucketAssociationState Empty = new S3BucketAssociationState();
 

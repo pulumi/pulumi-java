@@ -6,13 +6,14 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigCookiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OriginRequestPolicyCookiesConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginRequestPolicyCookiesConfigArgs extends ResourceArgs {
 
     public static final OriginRequestPolicyCookiesConfigArgs Empty = new OriginRequestPolicyCookiesConfigArgs();
 

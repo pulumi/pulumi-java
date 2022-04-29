@@ -6,6 +6,7 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.GetScriptDagEdge;
 import com.pulumi.aws.glue.inputs.GetScriptDagNode;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetScriptArgs extends InvokeArgs {
 
     public static final GetScriptArgs Empty = new GetScriptArgs();
 

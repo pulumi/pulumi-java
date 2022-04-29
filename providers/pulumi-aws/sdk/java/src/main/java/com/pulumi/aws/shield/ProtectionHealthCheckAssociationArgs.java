@@ -5,11 +5,12 @@ package com.pulumi.aws.shield;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ProtectionHealthCheckAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProtectionHealthCheckAssociationArgs extends ResourceArgs {
 
     public static final ProtectionHealthCheckAssociationArgs Empty = new ProtectionHealthCheckAssociationArgs();
 

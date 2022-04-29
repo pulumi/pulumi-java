@@ -6,6 +6,7 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.OrganizationConformancePackInputParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationConformancePackState extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationConformancePackState extends ResourceArgs {
 
     public static final OrganizationConformancePackState Empty = new OrganizationConformancePackState();
 

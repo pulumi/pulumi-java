@@ -5,11 +5,12 @@ package com.pulumi.aws.wafregional.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WebAclDefaultActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclDefaultActionArgs extends ResourceArgs {
 
     public static final WebAclDefaultActionArgs Empty = new WebAclDefaultActionArgs();
 

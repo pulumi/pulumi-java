@@ -7,6 +7,7 @@ import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterArgs;
 import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionRequesterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VpcPeeringConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpcPeeringConnectionArgs extends ResourceArgs {
 
     public static final VpcPeeringConnectionArgs Empty = new VpcPeeringConnectionArgs();
 

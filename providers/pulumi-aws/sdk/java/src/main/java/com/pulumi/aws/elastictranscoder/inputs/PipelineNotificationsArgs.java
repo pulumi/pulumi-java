@@ -5,13 +5,14 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PipelineNotificationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineNotificationsArgs extends ResourceArgs {
 
     public static final PipelineNotificationsArgs Empty = new PipelineNotificationsArgs();
 

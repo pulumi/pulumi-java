@@ -9,6 +9,7 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementArgs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleArgs extends ResourceArgs {
 
     public static final RuleGroupRuleArgs Empty = new RuleGroupRuleArgs();
 

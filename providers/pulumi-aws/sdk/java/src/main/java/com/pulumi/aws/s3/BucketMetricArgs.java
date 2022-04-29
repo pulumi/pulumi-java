@@ -6,13 +6,14 @@ package com.pulumi.aws.s3;
 import com.pulumi.aws.s3.inputs.BucketMetricFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketMetricArgs extends ResourceArgs {
 
     public static final BucketMetricArgs Empty = new BucketMetricArgs();
 

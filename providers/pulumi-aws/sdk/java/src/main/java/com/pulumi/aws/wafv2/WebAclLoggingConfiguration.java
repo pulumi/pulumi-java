@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration")
-public class WebAclLoggingConfiguration extends com.pulumi.resources.CustomResource {
+public class WebAclLoggingConfiguration extends CustomResource {
     /**
      * The Amazon Kinesis Data Firehose, Cloudwatch Log log group, or S3 bucket Amazon Resource Names (ARNs) that you want to associate with the web ACL.
      * 
@@ -115,19 +117,19 @@ public class WebAclLoggingConfiguration extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebAclLoggingConfiguration(String name, WebAclLoggingConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebAclLoggingConfiguration(String name, WebAclLoggingConfigurationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, args == null ? WebAclLoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebAclLoggingConfiguration(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebAclLoggingConfiguration(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable CustomResourceOptions options) {
         super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -139,7 +141,7 @@ public class WebAclLoggingConfiguration extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAclLoggingConfiguration get(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebAclLoggingConfiguration get(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable CustomResourceOptions options) {
         return new WebAclLoggingConfiguration(name, id, state, options);
     }
 }

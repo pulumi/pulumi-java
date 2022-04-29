@@ -5,11 +5,12 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class ServiceDeploymentCircuitBreakerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceDeploymentCircuitBreakerArgs extends ResourceArgs {
 
     public static final ServiceDeploymentCircuitBreakerArgs Empty = new ServiceDeploymentCircuitBreakerArgs();
 

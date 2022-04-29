@@ -5,11 +5,12 @@ package com.pulumi.aws.ram;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ResourceShareAccepterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceShareAccepterArgs extends ResourceArgs {
 
     public static final ResourceShareAccepterArgs Empty = new ResourceShareAccepterArgs();
 

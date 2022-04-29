@@ -5,11 +5,12 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ProjectEnvironmentRegistryCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectEnvironmentRegistryCredentialArgs extends ResourceArgs {
 
     public static final ProjectEnvironmentRegistryCredentialArgs Empty = new ProjectEnvironmentRegistryCredentialArgs();
 

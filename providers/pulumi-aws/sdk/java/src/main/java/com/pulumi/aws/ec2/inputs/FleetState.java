@@ -9,6 +9,7 @@ import com.pulumi.aws.ec2.inputs.FleetSpotOptionsArgs;
 import com.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FleetState extends com.pulumi.resources.ResourceArgs {
+public final class FleetState extends ResourceArgs {
 
     public static final FleetState Empty = new FleetState();
 

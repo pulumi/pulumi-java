@@ -5,11 +5,12 @@ package com.pulumi.aws.ebs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DefaultKmsKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultKmsKeyArgs extends ResourceArgs {
 
     public static final DefaultKmsKeyArgs Empty = new DefaultKmsKeyArgs();
 

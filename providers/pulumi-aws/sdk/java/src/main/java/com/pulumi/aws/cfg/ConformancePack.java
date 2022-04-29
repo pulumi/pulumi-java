@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cfg/conformancePack:ConformancePack")
-public class ConformancePack extends com.pulumi.resources.CustomResource {
+public class ConformancePack extends CustomResource {
     /**
      * Amazon Resource Name (ARN) of the conformance pack.
      * 
@@ -158,19 +160,19 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConformancePack(String name, @Nullable ConformancePackArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConformancePack(String name, @Nullable ConformancePackArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cfg/conformancePack:ConformancePack", name, args == null ? ConformancePackArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConformancePack(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConformancePack(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable CustomResourceOptions options) {
         super("aws:cfg/conformancePack:ConformancePack", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -182,7 +184,7 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConformancePack get(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConformancePack get(String name, Output<String> id, @Nullable ConformancePackState state, @Nullable CustomResourceOptions options) {
         return new ConformancePack(name, id, state, options);
     }
 }

@@ -5,12 +5,13 @@ package com.pulumi.aws.autoscaling;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationArgs extends ResourceArgs {
 
     public static final NotificationArgs Empty = new NotificationArgs();
 

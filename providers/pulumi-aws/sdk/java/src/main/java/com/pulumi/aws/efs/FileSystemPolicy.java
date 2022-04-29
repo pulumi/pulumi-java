@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:efs/fileSystemPolicy:FileSystemPolicy")
-public class FileSystemPolicy extends com.pulumi.resources.CustomResource {
+public class FileSystemPolicy extends CustomResource {
     /**
      * A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
      * 
@@ -95,19 +97,19 @@ public class FileSystemPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FileSystemPolicy(String name, FileSystemPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FileSystemPolicy(String name, FileSystemPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, args == null ? FileSystemPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FileSystemPolicy(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FileSystemPolicy(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -119,7 +121,7 @@ public class FileSystemPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileSystemPolicy get(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FileSystemPolicy get(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable CustomResourceOptions options) {
         return new FileSystemPolicy(name, id, state, options);
     }
 }

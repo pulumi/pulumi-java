@@ -5,11 +5,12 @@ package com.pulumi.aws.mediastore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ContainerPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerPolicyArgs extends ResourceArgs {
 
     public static final ContainerPolicyArgs Empty = new ContainerPolicyArgs();
 

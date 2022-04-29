@@ -6,6 +6,7 @@ package com.pulumi.aws.workspaces;
 import com.pulumi.aws.workspaces.inputs.IpGroupRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class IpGroupArgs extends ResourceArgs {
 
     public static final IpGroupArgs Empty = new IpGroupArgs();
 

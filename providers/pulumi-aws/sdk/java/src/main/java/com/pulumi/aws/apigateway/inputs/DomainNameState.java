@@ -7,6 +7,7 @@ import com.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationArgs;
 import com.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
+public final class DomainNameState extends ResourceArgs {
 
     public static final DomainNameState Empty = new DomainNameState();
 

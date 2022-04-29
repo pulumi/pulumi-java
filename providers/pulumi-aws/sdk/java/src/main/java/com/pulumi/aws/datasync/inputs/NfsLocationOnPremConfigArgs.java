@@ -5,12 +5,13 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class NfsLocationOnPremConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NfsLocationOnPremConfigArgs extends ResourceArgs {
 
     public static final NfsLocationOnPremConfigArgs Empty = new NfsLocationOnPremConfigArgs();
 

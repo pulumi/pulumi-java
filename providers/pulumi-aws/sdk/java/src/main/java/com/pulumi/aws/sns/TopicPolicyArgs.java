@@ -5,11 +5,12 @@ package com.pulumi.aws.sns;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicPolicyArgs extends ResourceArgs {
 
     public static final TopicPolicyArgs Empty = new TopicPolicyArgs();
 

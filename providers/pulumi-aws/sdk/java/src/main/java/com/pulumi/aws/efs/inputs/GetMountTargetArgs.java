@@ -4,13 +4,14 @@
 package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetMountTargetArgs extends InvokeArgs {
 
     public static final GetMountTargetArgs Empty = new GetMountTargetArgs();
 

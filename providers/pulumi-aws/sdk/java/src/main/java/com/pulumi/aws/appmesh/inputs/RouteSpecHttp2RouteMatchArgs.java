@@ -6,6 +6,7 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteSpecHttp2RouteMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteSpecHttp2RouteMatchArgs extends ResourceArgs {
 
     public static final RouteSpecHttp2RouteMatchArgs Empty = new RouteSpecHttp2RouteMatchArgs();
 

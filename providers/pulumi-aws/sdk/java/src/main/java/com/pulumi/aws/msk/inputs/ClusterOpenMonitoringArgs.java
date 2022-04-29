@@ -6,10 +6,11 @@ package com.pulumi.aws.msk.inputs;
 import com.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ClusterOpenMonitoringArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterOpenMonitoringArgs extends ResourceArgs {
 
     public static final ClusterOpenMonitoringArgs Empty = new ClusterOpenMonitoringArgs();
 

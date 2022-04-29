@@ -6,13 +6,14 @@ package com.pulumi.aws.mediapackage.inputs;
 import com.pulumi.aws.mediapackage.inputs.ChannelHlsIngestIngestEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ChannelHlsIngestArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChannelHlsIngestArgs extends ResourceArgs {
 
     public static final ChannelHlsIngestArgs Empty = new ChannelHlsIngestArgs();
 

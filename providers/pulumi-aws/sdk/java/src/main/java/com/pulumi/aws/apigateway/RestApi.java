@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:apigateway/restApi:RestApi")
-public class RestApi extends com.pulumi.resources.CustomResource {
+public class RestApi extends CustomResource {
     /**
      * Source of the API key for requests. Valid values are `HEADER` (default) and `AUTHORIZER`. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-api-key-source` extension](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-api-key-source.html). If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
@@ -287,19 +289,19 @@ public class RestApi extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RestApi(String name, @Nullable RestApiArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RestApi(String name, @Nullable RestApiArgs args, @Nullable CustomResourceOptions options) {
         super("aws:apigateway/restApi:RestApi", name, args == null ? RestApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RestApi(String name, Output<String> id, @Nullable RestApiState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RestApi(String name, Output<String> id, @Nullable RestApiState state, @Nullable CustomResourceOptions options) {
         super("aws:apigateway/restApi:RestApi", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -311,7 +313,7 @@ public class RestApi extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RestApi get(String name, Output<String> id, @Nullable RestApiState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RestApi get(String name, Output<String> id, @Nullable RestApiState state, @Nullable CustomResourceOptions options) {
         return new RestApi(name, id, state, options);
     }
 }

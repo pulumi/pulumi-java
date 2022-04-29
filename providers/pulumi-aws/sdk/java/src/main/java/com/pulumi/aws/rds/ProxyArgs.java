@@ -6,6 +6,7 @@ package com.pulumi.aws.rds;
 import com.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProxyArgs extends ResourceArgs {
 
     public static final ProxyArgs Empty = new ProxyArgs();
 

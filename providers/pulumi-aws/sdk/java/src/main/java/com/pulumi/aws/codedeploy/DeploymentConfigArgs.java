@@ -7,13 +7,14 @@ import com.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsArgs;
 import com.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentConfigArgs extends ResourceArgs {
 
     public static final DeploymentConfigArgs Empty = new DeploymentConfigArgs();
 

@@ -6,11 +6,12 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebAclRuleStatementOrStatementStatementAndStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleStatementOrStatementStatementAndStatementArgs extends ResourceArgs {
 
     public static final WebAclRuleStatementOrStatementStatementAndStatementArgs Empty = new WebAclRuleStatementOrStatementStatementAndStatementArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LaunchTemplateCapacityReservationSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchTemplateCapacityReservationSpecificationArgs extends ResourceArgs {
 
     public static final LaunchTemplateCapacityReservationSpecificationArgs Empty = new LaunchTemplateCapacityReservationSpecificationArgs();
 

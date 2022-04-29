@@ -5,11 +5,13 @@ package com.pulumi.aws.acmpca.inputs;
 
 import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfigurationCrlConfiguration;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class GetCertificateAuthorityRevocationConfiguration extends com.pulumi.resources.InvokeArgs {
+public final class GetCertificateAuthorityRevocationConfiguration extends InvokeArgs {
 
     public static final GetCertificateAuthorityRevocationConfiguration Empty = new GetCertificateAuthorityRevocationConfiguration();
 

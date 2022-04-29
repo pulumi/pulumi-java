@@ -5,12 +5,13 @@ package com.pulumi.aws.elb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerHealthCheckArgs extends ResourceArgs {
 
     public static final LoadBalancerHealthCheckArgs Empty = new LoadBalancerHealthCheckArgs();
 

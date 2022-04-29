@@ -6,12 +6,13 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebAclLoggingConfigurationLoggingFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclLoggingConfigurationLoggingFilterArgs extends ResourceArgs {
 
     public static final WebAclLoggingConfigurationLoggingFilterArgs Empty = new WebAclLoggingConfigurationLoggingFilterArgs();
 

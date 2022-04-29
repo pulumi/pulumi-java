@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:appconfig/deploymentStrategy:DeploymentStrategy")
-public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
+public class DeploymentStrategy extends CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the AppConfig Deployment Strategy.
      * 
@@ -195,19 +197,19 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DeploymentStrategy(String name, DeploymentStrategyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DeploymentStrategy(String name, DeploymentStrategyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, args == null ? DeploymentStrategyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DeploymentStrategy(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DeploymentStrategy(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable CustomResourceOptions options) {
         super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -219,7 +221,7 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeploymentStrategy get(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DeploymentStrategy get(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable CustomResourceOptions options) {
         return new DeploymentStrategy(name, id, state, options);
     }
 }

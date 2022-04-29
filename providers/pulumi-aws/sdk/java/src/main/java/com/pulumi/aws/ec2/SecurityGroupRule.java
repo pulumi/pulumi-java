@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -80,7 +82,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/securityGroupRule:SecurityGroupRule")
-public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
+public class SecurityGroupRule extends CustomResource {
     /**
      * List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
      * 
@@ -259,19 +261,19 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecurityGroupRule(String name, SecurityGroupRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SecurityGroupRule(String name, SecurityGroupRuleArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/securityGroupRule:SecurityGroupRule", name, args == null ? SecurityGroupRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SecurityGroupRule(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SecurityGroupRule(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/securityGroupRule:SecurityGroupRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -283,7 +285,7 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityGroupRule get(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityGroupRule get(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable CustomResourceOptions options) {
         return new SecurityGroupRule(name, id, state, options);
     }
 }

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:iot/thingGroupMembership:ThingGroupMembership")
-public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
+public class ThingGroupMembership extends CustomResource {
     /**
      * Override dynamic thing groups with static thing groups when 10-group limit is reached. If a thing belongs to 10 thing groups, and one or more of those groups are dynamic thing groups, adding a thing to a static group removes the thing from the last dynamic group.
      * 
@@ -95,19 +97,19 @@ public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ThingGroupMembership(String name, ThingGroupMembershipArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ThingGroupMembership(String name, ThingGroupMembershipArgs args, @Nullable CustomResourceOptions options) {
         super("aws:iot/thingGroupMembership:ThingGroupMembership", name, args == null ? ThingGroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ThingGroupMembership(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ThingGroupMembership(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable CustomResourceOptions options) {
         super("aws:iot/thingGroupMembership:ThingGroupMembership", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -119,7 +121,7 @@ public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ThingGroupMembership get(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ThingGroupMembership get(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable CustomResourceOptions options) {
         return new ThingGroupMembership(name, id, state, options);
     }
 }

@@ -6,11 +6,12 @@ package com.pulumi.aws.fsx.inputs;
 import com.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsClientConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class OpenZfsVolumeNfsExportsArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenZfsVolumeNfsExportsArgs extends ResourceArgs {
 
     public static final OpenZfsVolumeNfsExportsArgs Empty = new OpenZfsVolumeNfsExportsArgs();
 

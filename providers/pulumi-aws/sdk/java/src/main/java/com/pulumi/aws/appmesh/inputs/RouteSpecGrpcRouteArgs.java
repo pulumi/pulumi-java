@@ -9,12 +9,13 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteSpecGrpcRouteArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteSpecGrpcRouteArgs extends ResourceArgs {
 
     public static final RouteSpecGrpcRouteArgs Empty = new RouteSpecGrpcRouteArgs();
 

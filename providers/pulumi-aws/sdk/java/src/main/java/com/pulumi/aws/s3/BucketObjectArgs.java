@@ -6,6 +6,7 @@ package com.pulumi.aws.s3;
 import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketObjectArgs extends ResourceArgs {
 
     public static final BucketObjectArgs Empty = new BucketObjectArgs();
 

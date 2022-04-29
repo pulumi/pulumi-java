@@ -5,11 +5,12 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class S3LocationS3ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class S3LocationS3ConfigArgs extends ResourceArgs {
 
     public static final S3LocationS3ConfigArgs Empty = new S3LocationS3ConfigArgs();
 

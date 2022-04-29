@@ -12,12 +12,13 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementXs
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchUriPathArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs extends ResourceArgs {
 
     public static final RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs Empty = new RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs();
 

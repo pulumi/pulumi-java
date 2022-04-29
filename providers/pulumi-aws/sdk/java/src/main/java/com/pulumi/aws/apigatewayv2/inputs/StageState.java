@@ -8,6 +8,7 @@ import com.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsArgs;
 import com.pulumi.aws.apigatewayv2.inputs.StageRouteSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StageState extends com.pulumi.resources.ResourceArgs {
+public final class StageState extends ResourceArgs {
 
     public static final StageState Empty = new StageState();
 

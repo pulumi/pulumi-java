@@ -7,6 +7,7 @@ import com.pulumi.aws.glue.inputs.MLTransformInputRecordTableArgs;
 import com.pulumi.aws.glue.inputs.MLTransformParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MLTransformArgs extends com.pulumi.resources.ResourceArgs {
+public final class MLTransformArgs extends ResourceArgs {
 
     public static final MLTransformArgs Empty = new MLTransformArgs();
 

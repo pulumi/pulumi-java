@@ -5,12 +5,13 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.aws.emr.inputs.GetReleaseLabelsFilters;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetReleaseLabelsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetReleaseLabelsArgs extends InvokeArgs {
 
     public static final GetReleaseLabelsArgs Empty = new GetReleaseLabelsArgs();
 

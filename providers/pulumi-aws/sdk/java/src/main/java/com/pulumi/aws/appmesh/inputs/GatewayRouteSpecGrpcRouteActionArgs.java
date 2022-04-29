@@ -6,10 +6,11 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class GatewayRouteSpecGrpcRouteActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayRouteSpecGrpcRouteActionArgs extends ResourceArgs {
 
     public static final GatewayRouteSpecGrpcRouteActionArgs Empty = new GatewayRouteSpecGrpcRouteActionArgs();
 

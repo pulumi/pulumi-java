@@ -6,6 +6,7 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ObjectLambdaAccessPointConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectLambdaAccessPointConfigurationArgs extends ResourceArgs {
 
     public static final ObjectLambdaAccessPointConfigurationArgs Empty = new ObjectLambdaAccessPointConfigurationArgs();
 

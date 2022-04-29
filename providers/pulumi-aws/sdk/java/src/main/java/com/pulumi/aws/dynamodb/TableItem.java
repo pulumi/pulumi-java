@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:dynamodb/tableItem:TableItem")
-public class TableItem extends com.pulumi.resources.CustomResource {
+public class TableItem extends CustomResource {
     /**
      * Hash key to use for lookups and identification of the item
      * 
@@ -109,19 +111,19 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TableItem(String name, TableItemArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TableItem(String name, TableItemArgs args, @Nullable CustomResourceOptions options) {
         super("aws:dynamodb/tableItem:TableItem", name, args == null ? TableItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TableItem(String name, Output<String> id, @Nullable TableItemState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TableItem(String name, Output<String> id, @Nullable TableItemState state, @Nullable CustomResourceOptions options) {
         super("aws:dynamodb/tableItem:TableItem", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TableItem get(String name, Output<String> id, @Nullable TableItemState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TableItem get(String name, Output<String> id, @Nullable TableItemState state, @Nullable CustomResourceOptions options) {
         return new TableItem(name, id, state, options);
     }
 }

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission")
-public class SnapshotCreateVolumePermission extends com.pulumi.resources.CustomResource {
+public class SnapshotCreateVolumePermission extends CustomResource {
     /**
      * An AWS Account ID to add create volume permissions
      * 
@@ -71,19 +73,19 @@ public class SnapshotCreateVolumePermission extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SnapshotCreateVolumePermission(String name, SnapshotCreateVolumePermissionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SnapshotCreateVolumePermission(String name, SnapshotCreateVolumePermissionArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission", name, args == null ? SnapshotCreateVolumePermissionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SnapshotCreateVolumePermission(String name, Output<String> id, @Nullable SnapshotCreateVolumePermissionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SnapshotCreateVolumePermission(String name, Output<String> id, @Nullable SnapshotCreateVolumePermissionState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -95,7 +97,7 @@ public class SnapshotCreateVolumePermission extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SnapshotCreateVolumePermission get(String name, Output<String> id, @Nullable SnapshotCreateVolumePermissionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SnapshotCreateVolumePermission get(String name, Output<String> id, @Nullable SnapshotCreateVolumePermissionState state, @Nullable CustomResourceOptions options) {
         return new SnapshotCreateVolumePermission(name, id, state, options);
     }
 }

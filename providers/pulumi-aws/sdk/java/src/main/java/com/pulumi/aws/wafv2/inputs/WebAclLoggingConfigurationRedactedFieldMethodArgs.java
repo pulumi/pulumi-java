@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class WebAclLoggingConfigurationRedactedFieldMethodArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclLoggingConfigurationRedactedFieldMethodArgs extends ResourceArgs {
 
     public static final WebAclLoggingConfigurationRedactedFieldMethodArgs Empty = new WebAclLoggingConfigurationRedactedFieldMethodArgs();
 

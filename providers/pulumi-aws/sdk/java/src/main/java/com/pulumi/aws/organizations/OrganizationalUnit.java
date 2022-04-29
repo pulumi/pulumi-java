@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:organizations/organizationalUnit:OrganizationalUnit")
-public class OrganizationalUnit extends com.pulumi.resources.CustomResource {
+public class OrganizationalUnit extends CustomResource {
     /**
      * List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
      * 
@@ -139,19 +141,19 @@ public class OrganizationalUnit extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OrganizationalUnit(String name, OrganizationalUnitArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OrganizationalUnit(String name, OrganizationalUnitArgs args, @Nullable CustomResourceOptions options) {
         super("aws:organizations/organizationalUnit:OrganizationalUnit", name, args == null ? OrganizationalUnitArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OrganizationalUnit(String name, Output<String> id, @Nullable OrganizationalUnitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationalUnit(String name, Output<String> id, @Nullable OrganizationalUnitState state, @Nullable CustomResourceOptions options) {
         super("aws:organizations/organizationalUnit:OrganizationalUnit", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -163,7 +165,7 @@ public class OrganizationalUnit extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationalUnit get(String name, Output<String> id, @Nullable OrganizationalUnitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationalUnit get(String name, Output<String> id, @Nullable OrganizationalUnitState state, @Nullable CustomResourceOptions options) {
         return new OrganizationalUnit(name, id, state, options);
     }
 }

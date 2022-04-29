@@ -8,6 +8,7 @@ import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfiguration
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends ResourceArgs {
 
     public static final FirehoseDeliveryStreamRedshiftConfigurationArgs Empty = new FirehoseDeliveryStreamRedshiftConfigurationArgs();
 

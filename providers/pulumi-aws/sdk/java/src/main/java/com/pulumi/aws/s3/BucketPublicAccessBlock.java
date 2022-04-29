@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock")
-public class BucketPublicAccessBlock extends com.pulumi.resources.CustomResource {
+public class BucketPublicAccessBlock extends CustomResource {
     /**
      * Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
      * * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
@@ -133,19 +135,19 @@ public class BucketPublicAccessBlock extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BucketPublicAccessBlock(String name, BucketPublicAccessBlockArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BucketPublicAccessBlock(String name, BucketPublicAccessBlockArgs args, @Nullable CustomResourceOptions options) {
         super("aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock", name, args == null ? BucketPublicAccessBlockArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BucketPublicAccessBlock(String name, Output<String> id, @Nullable BucketPublicAccessBlockState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BucketPublicAccessBlock(String name, Output<String> id, @Nullable BucketPublicAccessBlockState state, @Nullable CustomResourceOptions options) {
         super("aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -157,7 +159,7 @@ public class BucketPublicAccessBlock extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketPublicAccessBlock get(String name, Output<String> id, @Nullable BucketPublicAccessBlockState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BucketPublicAccessBlock get(String name, Output<String> id, @Nullable BucketPublicAccessBlockState state, @Nullable CustomResourceOptions options) {
         return new BucketPublicAccessBlock(name, id, state, options);
     }
 }

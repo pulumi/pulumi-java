@@ -5,13 +5,14 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends ResourceArgs {
 
     public static final BucketLifecycleRuleNoncurrentVersionExpirationArgs Empty = new BucketLifecycleRuleNoncurrentVersionExpirationArgs();
 

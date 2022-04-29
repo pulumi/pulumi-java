@@ -5,11 +5,12 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class VirtualNodeSpecListenerTlsValidationTrustSdsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerTlsValidationTrustSdsArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerTlsValidationTrustSdsArgs Empty = new VirtualNodeSpecListenerTlsValidationTrustSdsArgs();
 

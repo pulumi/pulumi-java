@@ -5,13 +5,14 @@ package com.pulumi.aws.inputs;
 
 import com.pulumi.aws.inputs.GetAutoscalingGroupsFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAutoscalingGroupsArgs extends InvokeArgs {
 
     public static final GetAutoscalingGroupsArgs Empty = new GetAutoscalingGroupsArgs();
 

@@ -5,13 +5,14 @@ package com.pulumi.aws.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CanaryArtifactConfigS3EncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CanaryArtifactConfigS3EncryptionArgs extends ResourceArgs {
 
     public static final CanaryArtifactConfigS3EncryptionArgs Empty = new CanaryArtifactConfigS3EncryptionArgs();
 

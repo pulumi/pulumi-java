@@ -5,13 +5,14 @@ package com.pulumi.aws.xray;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionConfigArgs extends ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 

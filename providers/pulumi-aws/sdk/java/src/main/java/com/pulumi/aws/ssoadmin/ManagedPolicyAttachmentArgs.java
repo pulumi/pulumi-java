@@ -5,11 +5,12 @@ package com.pulumi.aws.ssoadmin;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ManagedPolicyAttachmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedPolicyAttachmentArgs extends ResourceArgs {
 
     public static final ManagedPolicyAttachmentArgs Empty = new ManagedPolicyAttachmentArgs();
 

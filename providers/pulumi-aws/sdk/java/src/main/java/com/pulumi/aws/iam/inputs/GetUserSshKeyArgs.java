@@ -4,11 +4,12 @@
 package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetUserSshKeyArgs extends InvokeArgs {
 
     public static final GetUserSshKeyArgs Empty = new GetUserSshKeyArgs();
 

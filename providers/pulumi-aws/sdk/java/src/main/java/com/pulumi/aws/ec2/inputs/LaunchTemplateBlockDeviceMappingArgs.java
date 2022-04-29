@@ -6,13 +6,14 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingEbsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LaunchTemplateBlockDeviceMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchTemplateBlockDeviceMappingArgs extends ResourceArgs {
 
     public static final LaunchTemplateBlockDeviceMappingArgs Empty = new LaunchTemplateBlockDeviceMappingArgs();
 

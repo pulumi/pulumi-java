@@ -6,11 +6,12 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs extends ResourceArgs {
 
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs();
 

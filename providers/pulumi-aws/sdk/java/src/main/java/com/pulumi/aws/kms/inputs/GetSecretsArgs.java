@@ -5,11 +5,12 @@ package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.aws.kms.inputs.GetSecretsSecret;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSecretsArgs extends InvokeArgs {
 
     public static final GetSecretsArgs Empty = new GetSecretsArgs();
 

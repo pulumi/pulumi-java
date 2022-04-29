@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -49,7 +51,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig")
-public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResource {
+public class FunctionEventInvokeConfig extends CustomResource {
     /**
      * Configuration block with destination configuration. See below for details.
      * 
@@ -142,19 +144,19 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FunctionEventInvokeConfig(String name, FunctionEventInvokeConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FunctionEventInvokeConfig(String name, FunctionEventInvokeConfigArgs args, @Nullable CustomResourceOptions options) {
         super("aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig", name, args == null ? FunctionEventInvokeConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FunctionEventInvokeConfig(String name, Output<String> id, @Nullable FunctionEventInvokeConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FunctionEventInvokeConfig(String name, Output<String> id, @Nullable FunctionEventInvokeConfigState state, @Nullable CustomResourceOptions options) {
         super("aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -166,7 +168,7 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FunctionEventInvokeConfig get(String name, Output<String> id, @Nullable FunctionEventInvokeConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FunctionEventInvokeConfig get(String name, Output<String> id, @Nullable FunctionEventInvokeConfigState state, @Nullable CustomResourceOptions options) {
         return new FunctionEventInvokeConfig(name, id, state, options);
     }
 }

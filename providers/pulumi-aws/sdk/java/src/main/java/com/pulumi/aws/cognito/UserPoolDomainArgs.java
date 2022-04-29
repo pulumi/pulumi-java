@@ -5,13 +5,14 @@ package com.pulumi.aws.cognito;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPoolDomainArgs extends ResourceArgs {
 
     public static final UserPoolDomainArgs Empty = new UserPoolDomainArgs();
 

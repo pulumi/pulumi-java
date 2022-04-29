@@ -6,12 +6,13 @@ package com.pulumi.aws.timestreamwrite.inputs;
 import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs extends ResourceArgs {
 
     public static final TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs Empty = new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs();
 

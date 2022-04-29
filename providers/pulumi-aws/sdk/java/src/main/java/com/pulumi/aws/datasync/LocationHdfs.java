@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:datasync/locationHdfs:LocationHdfs")
-public class LocationHdfs extends com.pulumi.resources.CustomResource {
+public class LocationHdfs extends CustomResource {
     /**
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
@@ -275,19 +277,19 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LocationHdfs(String name, LocationHdfsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LocationHdfs(String name, LocationHdfsArgs args, @Nullable CustomResourceOptions options) {
         super("aws:datasync/locationHdfs:LocationHdfs", name, args == null ? LocationHdfsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LocationHdfs(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LocationHdfs(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable CustomResourceOptions options) {
         super("aws:datasync/locationHdfs:LocationHdfs", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -299,7 +301,7 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationHdfs get(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LocationHdfs get(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable CustomResourceOptions options) {
         return new LocationHdfs(name, id, state, options);
     }
 }

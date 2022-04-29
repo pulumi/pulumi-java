@@ -5,6 +5,7 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class CrawlerDynamodbTargetArgs extends ResourceArgs {
 
     public static final CrawlerDynamodbTargetArgs Empty = new CrawlerDynamodbTargetArgs();
 

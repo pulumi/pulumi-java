@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:route53/resolverFirewallConfig:ResolverFirewallConfig")
-public class ResolverFirewallConfig extends com.pulumi.resources.CustomResource {
+public class ResolverFirewallConfig extends CustomResource {
     /**
      * Determines how Route 53 Resolver handles queries during failures, for example when all traffic that is sent to DNS Firewall fails to receive a reply. By default, fail open is disabled, which means the failure mode is closed. This approach favors security over availability. DNS Firewall blocks queries that it is unable to evaluate properly. If you enable this option, the failure mode is open. This approach favors availability over security. DNS Firewall allows queries to proceed if it is unable to properly evaluate them. Valid values: `ENABLED`, `DISABLED`.
      * 
@@ -93,19 +95,19 @@ public class ResolverFirewallConfig extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ResolverFirewallConfig(String name, ResolverFirewallConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ResolverFirewallConfig(String name, ResolverFirewallConfigArgs args, @Nullable CustomResourceOptions options) {
         super("aws:route53/resolverFirewallConfig:ResolverFirewallConfig", name, args == null ? ResolverFirewallConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ResolverFirewallConfig(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ResolverFirewallConfig(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable CustomResourceOptions options) {
         super("aws:route53/resolverFirewallConfig:ResolverFirewallConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -117,7 +119,7 @@ public class ResolverFirewallConfig extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverFirewallConfig get(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverFirewallConfig get(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable CustomResourceOptions options) {
         return new ResolverFirewallConfig(name, id, state, options);
     }
 }

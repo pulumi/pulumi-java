@@ -5,13 +5,14 @@ package com.pulumi.aws.amp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertManagerDefinitionState extends com.pulumi.resources.ResourceArgs {
+public final class AlertManagerDefinitionState extends ResourceArgs {
 
     public static final AlertManagerDefinitionState Empty = new AlertManagerDefinitionState();
 

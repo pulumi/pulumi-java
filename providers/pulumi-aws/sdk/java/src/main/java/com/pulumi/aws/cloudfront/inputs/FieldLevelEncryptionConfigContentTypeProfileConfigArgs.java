@@ -6,11 +6,12 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extends ResourceArgs {
 
     public static final FieldLevelEncryptionConfigContentTypeProfileConfigArgs Empty = new FieldLevelEncryptionConfigContentTypeProfileConfigArgs();
 

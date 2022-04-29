@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
+public final class VpcIpamScopeState extends ResourceArgs {
 
     public static final VpcIpamScopeState Empty = new VpcIpamScopeState();
 

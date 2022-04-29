@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation")
-public class VpcIpv4CidrBlockAssociation extends com.pulumi.resources.CustomResource {
+public class VpcIpv4CidrBlockAssociation extends CustomResource {
     /**
      * The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
      * 
@@ -112,19 +114,19 @@ public class VpcIpv4CidrBlockAssociation extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpcIpv4CidrBlockAssociation(String name, VpcIpv4CidrBlockAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VpcIpv4CidrBlockAssociation(String name, VpcIpv4CidrBlockAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation", name, args == null ? VpcIpv4CidrBlockAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VpcIpv4CidrBlockAssociation(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VpcIpv4CidrBlockAssociation(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -136,7 +138,7 @@ public class VpcIpv4CidrBlockAssociation extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcIpv4CidrBlockAssociation get(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpcIpv4CidrBlockAssociation get(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable CustomResourceOptions options) {
         return new VpcIpv4CidrBlockAssociation(name, id, state, options);
     }
 }

@@ -21,6 +21,7 @@ import com.pulumi.aws.iot.inputs.TopicRuleSqsArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleStepFunctionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleArgs extends ResourceArgs {
 
     public static final TopicRuleArgs Empty = new TopicRuleArgs();
 

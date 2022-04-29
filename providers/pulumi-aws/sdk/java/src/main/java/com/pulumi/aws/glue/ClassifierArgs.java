@@ -9,13 +9,14 @@ import com.pulumi.aws.glue.inputs.ClassifierJsonClassifierArgs;
 import com.pulumi.aws.glue.inputs.ClassifierXmlClassifierArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassifierArgs extends ResourceArgs {
 
     public static final ClassifierArgs Empty = new ClassifierArgs();
 

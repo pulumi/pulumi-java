@@ -8,12 +8,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyT
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs Empty = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs();
 

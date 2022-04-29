@@ -4,6 +4,8 @@
 package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -11,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetPermissionsTable extends com.pulumi.resources.InvokeArgs {
+public final class GetPermissionsTable extends InvokeArgs {
 
     public static final GetPermissionsTable Empty = new GetPermissionsTable();
 

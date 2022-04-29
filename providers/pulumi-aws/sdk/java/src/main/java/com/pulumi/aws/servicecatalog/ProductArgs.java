@@ -6,6 +6,7 @@ package com.pulumi.aws.servicecatalog;
 import com.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProductArgs extends ResourceArgs {
 
     public static final ProductArgs Empty = new ProductArgs();
 

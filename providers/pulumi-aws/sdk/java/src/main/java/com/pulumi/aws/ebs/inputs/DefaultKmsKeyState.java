@@ -5,13 +5,14 @@ package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DefaultKmsKeyState extends com.pulumi.resources.ResourceArgs {
+public final class DefaultKmsKeyState extends ResourceArgs {
 
     public static final DefaultKmsKeyState Empty = new DefaultKmsKeyState();
 

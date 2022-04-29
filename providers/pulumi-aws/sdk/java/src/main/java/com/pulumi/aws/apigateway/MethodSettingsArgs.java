@@ -6,11 +6,12 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MethodSettingsArgs extends ResourceArgs {
 
     public static final MethodSettingsArgs Empty = new MethodSettingsArgs();
 

@@ -5,12 +5,13 @@ package com.pulumi.aws.lambda;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ProvisionedConcurrencyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProvisionedConcurrencyConfigArgs extends ResourceArgs {
 
     public static final ProvisionedConcurrencyConfigArgs Empty = new ProvisionedConcurrencyConfigArgs();
 

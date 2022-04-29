@@ -7,6 +7,7 @@ import com.pulumi.aws.opsworks.inputs.MemcachedLayerCloudwatchConfigurationArgs;
 import com.pulumi.aws.opsworks.inputs.MemcachedLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MemcachedLayerArgs extends com.pulumi.resources.ResourceArgs {
+public final class MemcachedLayerArgs extends ResourceArgs {
 
     public static final MemcachedLayerArgs Empty = new MemcachedLayerArgs();
 

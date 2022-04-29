@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceEphemeralBlockDeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceEphemeralBlockDeviceArgs extends ResourceArgs {
 
     public static final InstanceEphemeralBlockDeviceArgs Empty = new InstanceEphemeralBlockDeviceArgs();
 

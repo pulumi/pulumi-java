@@ -6,11 +6,12 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends ResourceArgs {
 
     public static final FirewallPolicyFirewallPolicyStatelessCustomActionArgs Empty = new FirewallPolicyFirewallPolicyStatelessCustomActionArgs();
 

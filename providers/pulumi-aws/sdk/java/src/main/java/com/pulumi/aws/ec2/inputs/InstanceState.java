@@ -17,6 +17,7 @@ import com.pulumi.aws.ec2.inputs.InstanceRootBlockDeviceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceState extends com.pulumi.resources.ResourceArgs {
+public final class InstanceState extends ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 

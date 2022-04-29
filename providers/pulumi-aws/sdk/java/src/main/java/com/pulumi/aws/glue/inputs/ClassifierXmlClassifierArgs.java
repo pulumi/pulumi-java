@@ -5,11 +5,12 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ClassifierXmlClassifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassifierXmlClassifierArgs extends ResourceArgs {
 
     public static final ClassifierXmlClassifierArgs Empty = new ClassifierXmlClassifierArgs();
 

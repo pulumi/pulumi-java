@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:storagegateway/cache:Cache")
-public class Cache extends com.pulumi.resources.CustomResource {
+public class Cache extends CustomResource {
     /**
      * Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
@@ -81,19 +83,19 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cache(String name, CacheArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Cache(String name, CacheArgs args, @Nullable CustomResourceOptions options) {
         super("aws:storagegateway/cache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Cache(String name, Output<String> id, @Nullable CacheState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Cache(String name, Output<String> id, @Nullable CacheState state, @Nullable CustomResourceOptions options) {
         super("aws:storagegateway/cache:Cache", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cache get(String name, Output<String> id, @Nullable CacheState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Cache get(String name, Output<String> id, @Nullable CacheState state, @Nullable CustomResourceOptions options) {
         return new Cache(name, id, state, options);
     }
 }

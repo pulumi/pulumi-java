@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:chime/voiceConnectorGroup:VoiceConnectorGroup")
-public class VoiceConnectorGroup extends com.pulumi.resources.CustomResource {
+public class VoiceConnectorGroup extends CustomResource {
     /**
      * The Amazon Chime Voice Connectors to route inbound calls to.
      * 
@@ -84,19 +86,19 @@ public class VoiceConnectorGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VoiceConnectorGroup(String name, @Nullable VoiceConnectorGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VoiceConnectorGroup(String name, @Nullable VoiceConnectorGroupArgs args, @Nullable CustomResourceOptions options) {
         super("aws:chime/voiceConnectorGroup:VoiceConnectorGroup", name, args == null ? VoiceConnectorGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VoiceConnectorGroup(String name, Output<String> id, @Nullable VoiceConnectorGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VoiceConnectorGroup(String name, Output<String> id, @Nullable VoiceConnectorGroupState state, @Nullable CustomResourceOptions options) {
         super("aws:chime/voiceConnectorGroup:VoiceConnectorGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -108,7 +110,7 @@ public class VoiceConnectorGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VoiceConnectorGroup get(String name, Output<String> id, @Nullable VoiceConnectorGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VoiceConnectorGroup get(String name, Output<String> id, @Nullable VoiceConnectorGroupState state, @Nullable CustomResourceOptions options) {
         return new VoiceConnectorGroup(name, id, state, options);
     }
 }

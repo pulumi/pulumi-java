@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetVpnAttachmentArgs extends InvokeArgs {
 
     public static final GetVpnAttachmentArgs Empty = new GetVpnAttachmentArgs();
 

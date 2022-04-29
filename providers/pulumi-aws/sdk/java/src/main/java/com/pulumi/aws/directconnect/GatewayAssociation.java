@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:directconnect/gatewayAssociation:GatewayAssociation")
-public class GatewayAssociation extends com.pulumi.resources.CustomResource {
+public class GatewayAssociation extends CustomResource {
     /**
      * VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
@@ -187,19 +189,19 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GatewayAssociation(String name, GatewayAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GatewayAssociation(String name, GatewayAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/gatewayAssociation:GatewayAssociation", name, args == null ? GatewayAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GatewayAssociation(String name, Output<String> id, @Nullable GatewayAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GatewayAssociation(String name, Output<String> id, @Nullable GatewayAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/gatewayAssociation:GatewayAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -211,7 +213,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayAssociation get(String name, Output<String> id, @Nullable GatewayAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayAssociation get(String name, Output<String> id, @Nullable GatewayAssociationState state, @Nullable CustomResourceOptions options) {
         return new GatewayAssociation(name, id, state, options);
     }
 }

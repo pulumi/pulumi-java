@@ -7,6 +7,7 @@ import com.pulumi.aws.ec2.inputs.AmiCopyEbsBlockDeviceArgs;
 import com.pulumi.aws.ec2.inputs.AmiCopyEphemeralBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmiCopyArgs extends ResourceArgs {
 
     public static final AmiCopyArgs Empty = new AmiCopyArgs();
 

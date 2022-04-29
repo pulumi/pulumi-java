@@ -6,6 +6,7 @@ package com.pulumi.aws.devicefarm.inputs;
 import com.pulumi.aws.devicefarm.inputs.DevicePoolRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DevicePoolState extends com.pulumi.resources.ResourceArgs {
+public final class DevicePoolState extends ResourceArgs {
 
     public static final DevicePoolState Empty = new DevicePoolState();
 

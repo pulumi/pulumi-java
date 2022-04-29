@@ -8,6 +8,7 @@ import com.pulumi.aws.ec2.inputs.GetInstanceTypeGpus;
 import com.pulumi.aws.ec2.inputs.GetInstanceTypeInferenceAccelerator;
 import com.pulumi.aws.ec2.inputs.GetInstanceTypeInstanceDisk;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetInstanceTypeArgs extends InvokeArgs {
 
     public static final GetInstanceTypeArgs Empty = new GetInstanceTypeArgs();
 

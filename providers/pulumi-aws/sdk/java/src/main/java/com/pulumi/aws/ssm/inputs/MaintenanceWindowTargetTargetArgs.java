@@ -5,12 +5,13 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class MaintenanceWindowTargetTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class MaintenanceWindowTargetTargetArgs extends ResourceArgs {
 
     public static final MaintenanceWindowTargetTargetArgs Empty = new MaintenanceWindowTargetTargetArgs();
 

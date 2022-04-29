@@ -6,6 +6,7 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends ResourceArgs {
 
     public static final TaskDefinitionVolumeEfsVolumeConfigurationArgs Empty = new TaskDefinitionVolumeEfsVolumeConfigurationArgs();
 

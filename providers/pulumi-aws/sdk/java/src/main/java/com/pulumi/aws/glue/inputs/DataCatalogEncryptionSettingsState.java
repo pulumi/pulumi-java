@@ -6,13 +6,14 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataCatalogEncryptionSettingsState extends com.pulumi.resources.ResourceArgs {
+public final class DataCatalogEncryptionSettingsState extends ResourceArgs {
 
     public static final DataCatalogEncryptionSettingsState Empty = new DataCatalogEncryptionSettingsState();
 

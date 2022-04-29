@@ -6,6 +6,7 @@ package com.pulumi.aws.storagegateway.inputs;
 import com.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FileSystemAssociationState extends com.pulumi.resources.ResourceArgs {
+public final class FileSystemAssociationState extends ResourceArgs {
 
     public static final FileSystemAssociationState Empty = new FileSystemAssociationState();
 

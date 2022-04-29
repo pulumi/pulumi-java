@@ -5,11 +5,12 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DataSourceParametersRdsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceParametersRdsArgs extends ResourceArgs {
 
     public static final DataSourceParametersRdsArgs Empty = new DataSourceParametersRdsArgs();
 

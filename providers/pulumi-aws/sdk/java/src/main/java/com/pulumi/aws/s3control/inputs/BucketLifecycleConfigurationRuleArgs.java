@@ -8,13 +8,14 @@ import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleExpiratio
 import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleConfigurationRuleArgs extends ResourceArgs {
 
     public static final BucketLifecycleConfigurationRuleArgs Empty = new BucketLifecycleConfigurationRuleArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:iam/userPolicy:UserPolicy")
-public class UserPolicy extends com.pulumi.resources.CustomResource {
+public class UserPolicy extends CustomResource {
     /**
      * The name of the policy. If omitted, this provider will assign a random, unique name.
      * 
@@ -108,19 +110,19 @@ public class UserPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public UserPolicy(String name, UserPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public UserPolicy(String name, UserPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:iam/userPolicy:UserPolicy", name, args == null ? UserPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private UserPolicy(String name, Output<String> id, @Nullable UserPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private UserPolicy(String name, Output<String> id, @Nullable UserPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:iam/userPolicy:UserPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -132,7 +134,7 @@ public class UserPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserPolicy get(String name, Output<String> id, @Nullable UserPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static UserPolicy get(String name, Output<String> id, @Nullable UserPolicyState state, @Nullable CustomResourceOptions options) {
         return new UserPolicy(name, id, state, options);
     }
 }

@@ -6,11 +6,12 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SqlInjectionMatchSetSqlInjectionMatchTupleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlInjectionMatchSetSqlInjectionMatchTupleArgs extends ResourceArgs {
 
     public static final SqlInjectionMatchSetSqlInjectionMatchTupleArgs Empty = new SqlInjectionMatchSetSqlInjectionMatchTupleArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:opsworks/javaAppLayer:JavaAppLayer")
-public class JavaAppLayer extends com.pulumi.resources.CustomResource {
+public class JavaAppLayer extends CustomResource {
     /**
      * Keyword for the application container to use. Defaults to &#34;tomcat&#34;.
      * 
@@ -408,19 +410,19 @@ public class JavaAppLayer extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public JavaAppLayer(String name, JavaAppLayerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public JavaAppLayer(String name, JavaAppLayerArgs args, @Nullable CustomResourceOptions options) {
         super("aws:opsworks/javaAppLayer:JavaAppLayer", name, args == null ? JavaAppLayerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private JavaAppLayer(String name, Output<String> id, @Nullable JavaAppLayerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private JavaAppLayer(String name, Output<String> id, @Nullable JavaAppLayerState state, @Nullable CustomResourceOptions options) {
         super("aws:opsworks/javaAppLayer:JavaAppLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -432,7 +434,7 @@ public class JavaAppLayer extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JavaAppLayer get(String name, Output<String> id, @Nullable JavaAppLayerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static JavaAppLayer get(String name, Output<String> id, @Nullable JavaAppLayerState state, @Nullable CustomResourceOptions options) {
         return new JavaAppLayer(name, id, state, options);
     }
 }

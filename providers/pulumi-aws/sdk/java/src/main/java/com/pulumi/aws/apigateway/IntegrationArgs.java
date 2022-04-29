@@ -6,6 +6,7 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.apigateway.inputs.IntegrationTlsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationArgs extends ResourceArgs {
 
     public static final IntegrationArgs Empty = new IntegrationArgs();
 

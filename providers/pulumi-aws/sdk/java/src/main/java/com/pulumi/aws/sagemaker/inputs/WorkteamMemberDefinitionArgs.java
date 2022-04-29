@@ -7,12 +7,13 @@ import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionCognitoMemberDefi
 import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionOidcMemberDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkteamMemberDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkteamMemberDefinitionArgs extends ResourceArgs {
 
     public static final WorkteamMemberDefinitionArgs Empty = new WorkteamMemberDefinitionArgs();
 

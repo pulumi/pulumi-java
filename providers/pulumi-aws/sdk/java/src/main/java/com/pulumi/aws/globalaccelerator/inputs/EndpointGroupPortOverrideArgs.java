@@ -5,11 +5,12 @@ package com.pulumi.aws.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class EndpointGroupPortOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointGroupPortOverrideArgs extends ResourceArgs {
 
     public static final EndpointGroupPortOverrideArgs Empty = new EndpointGroupPortOverrideArgs();
 

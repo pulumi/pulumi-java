@@ -5,6 +5,7 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs extends ResourceArgs {
 
     public static final FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs Empty = new FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationSubject
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNodeSpecListenerTlsValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerTlsValidationArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerTlsValidationArgs Empty = new VirtualNodeSpecListenerTlsValidationArgs();
 

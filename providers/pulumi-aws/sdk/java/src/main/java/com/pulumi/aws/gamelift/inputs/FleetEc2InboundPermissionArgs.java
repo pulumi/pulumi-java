@@ -5,12 +5,13 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FleetEc2InboundPermissionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetEc2InboundPermissionArgs extends ResourceArgs {
 
     public static final FleetEc2InboundPermissionArgs Empty = new FleetEc2InboundPermissionArgs();
 

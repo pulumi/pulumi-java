@@ -5,13 +5,14 @@ package com.pulumi.aws.ecs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccountSettingDefaultArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountSettingDefaultArgs extends ResourceArgs {
 
     public static final AccountSettingDefaultArgs Empty = new AccountSettingDefaultArgs();
 

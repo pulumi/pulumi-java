@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cognito/identityProvider:IdentityProvider")
-public class IdentityProvider extends com.pulumi.resources.CustomResource {
+public class IdentityProvider extends CustomResource {
     /**
      * The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
      * 
@@ -138,19 +140,19 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IdentityProvider(String name, IdentityProviderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IdentityProvider(String name, IdentityProviderArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cognito/identityProvider:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IdentityProvider(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IdentityProvider(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable CustomResourceOptions options) {
         super("aws:cognito/identityProvider:IdentityProvider", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -162,7 +164,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityProvider get(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityProvider get(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable CustomResourceOptions options) {
         return new IdentityProvider(name, id, state, options);
     }
 }

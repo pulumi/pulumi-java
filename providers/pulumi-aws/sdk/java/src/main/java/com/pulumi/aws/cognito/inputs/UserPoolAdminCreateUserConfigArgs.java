@@ -6,13 +6,14 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UserPoolAdminCreateUserConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPoolAdminCreateUserConfigArgs extends ResourceArgs {
 
     public static final UserPoolAdminCreateUserConfigArgs Empty = new UserPoolAdminCreateUserConfigArgs();
 

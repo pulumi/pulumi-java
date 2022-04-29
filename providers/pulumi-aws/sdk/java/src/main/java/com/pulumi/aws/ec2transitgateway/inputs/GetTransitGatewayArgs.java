@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetTransitGatewayArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTransitGatewayArgs extends InvokeArgs {
 
     public static final GetTransitGatewayArgs Empty = new GetTransitGatewayArgs();
 

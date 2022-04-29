@@ -5,11 +5,12 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs extends ResourceArgs {
 
     public static final DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs Empty = new DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation")
-public class LocalGatewayRouteTableVpcAssociation extends com.pulumi.resources.CustomResource {
+public class LocalGatewayRouteTableVpcAssociation extends CustomResource {
     @Export(name="localGatewayId", type=String.class, parameters={})
     private Output<String> localGatewayId;
 
@@ -115,19 +117,19 @@ public class LocalGatewayRouteTableVpcAssociation extends com.pulumi.resources.C
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LocalGatewayRouteTableVpcAssociation(String name, LocalGatewayRouteTableVpcAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LocalGatewayRouteTableVpcAssociation(String name, LocalGatewayRouteTableVpcAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation", name, args == null ? LocalGatewayRouteTableVpcAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LocalGatewayRouteTableVpcAssociation(String name, Output<String> id, @Nullable LocalGatewayRouteTableVpcAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LocalGatewayRouteTableVpcAssociation(String name, Output<String> id, @Nullable LocalGatewayRouteTableVpcAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -139,7 +141,7 @@ public class LocalGatewayRouteTableVpcAssociation extends com.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocalGatewayRouteTableVpcAssociation get(String name, Output<String> id, @Nullable LocalGatewayRouteTableVpcAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LocalGatewayRouteTableVpcAssociation get(String name, Output<String> id, @Nullable LocalGatewayRouteTableVpcAssociationState state, @Nullable CustomResourceOptions options) {
         return new LocalGatewayRouteTableVpcAssociation(name, id, state, options);
     }
 }

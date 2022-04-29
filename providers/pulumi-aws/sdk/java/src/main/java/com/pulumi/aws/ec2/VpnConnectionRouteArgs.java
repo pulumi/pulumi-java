@@ -5,11 +5,12 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpnConnectionRouteArgs extends ResourceArgs {
 
     public static final VpnConnectionRouteArgs Empty = new VpnConnectionRouteArgs();
 

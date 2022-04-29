@@ -7,6 +7,7 @@ import com.pulumi.aws.opsworks.inputs.JavaAppLayerCloudwatchConfigurationArgs;
 import com.pulumi.aws.opsworks.inputs.JavaAppLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JavaAppLayerArgs extends com.pulumi.resources.ResourceArgs {
+public final class JavaAppLayerArgs extends ResourceArgs {
 
     public static final JavaAppLayerArgs Empty = new JavaAppLayerArgs();
 

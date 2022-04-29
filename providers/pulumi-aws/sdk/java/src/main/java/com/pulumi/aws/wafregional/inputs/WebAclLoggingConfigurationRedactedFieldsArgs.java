@@ -6,11 +6,12 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebAclLoggingConfigurationRedactedFieldsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclLoggingConfigurationRedactedFieldsArgs extends ResourceArgs {
 
     public static final WebAclLoggingConfigurationRedactedFieldsArgs Empty = new WebAclLoggingConfigurationRedactedFieldsArgs();
 

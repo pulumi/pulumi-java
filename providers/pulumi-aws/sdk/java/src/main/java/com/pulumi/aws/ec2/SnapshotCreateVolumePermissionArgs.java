@@ -5,11 +5,12 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SnapshotCreateVolumePermissionArgs extends ResourceArgs {
 
     public static final SnapshotCreateVolumePermissionArgs Empty = new SnapshotCreateVolumePermissionArgs();
 

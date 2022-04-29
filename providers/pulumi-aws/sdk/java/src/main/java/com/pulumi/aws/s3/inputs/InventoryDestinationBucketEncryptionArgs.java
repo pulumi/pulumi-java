@@ -7,12 +7,13 @@ import com.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseKmsArgs;
 import com.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseS3Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InventoryDestinationBucketEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class InventoryDestinationBucketEncryptionArgs extends ResourceArgs {
 
     public static final InventoryDestinationBucketEncryptionArgs Empty = new InventoryDestinationBucketEncryptionArgs();
 

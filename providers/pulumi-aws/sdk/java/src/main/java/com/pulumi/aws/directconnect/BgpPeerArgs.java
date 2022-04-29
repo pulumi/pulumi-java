@@ -5,6 +5,7 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BgpPeerArgs extends ResourceArgs {
 
     public static final BgpPeerArgs Empty = new BgpPeerArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.aws.route53.inputs;
 import com.pulumi.aws.route53.inputs.ResolverRuleTargetIpArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
+public final class ResolverRuleState extends ResourceArgs {
 
     public static final ResolverRuleState Empty = new ResolverRuleState();
 

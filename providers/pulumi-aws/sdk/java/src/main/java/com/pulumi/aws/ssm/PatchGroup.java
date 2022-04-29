@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ssm/patchGroup:PatchGroup")
-public class PatchGroup extends com.pulumi.resources.CustomResource {
+public class PatchGroup extends CustomResource {
     /**
      * The ID of the patch baseline to register the patch group with.
      * 
@@ -71,19 +73,19 @@ public class PatchGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PatchGroup(String name, PatchGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PatchGroup(String name, PatchGroupArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ssm/patchGroup:PatchGroup", name, args == null ? PatchGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PatchGroup(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PatchGroup(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable CustomResourceOptions options) {
         super("aws:ssm/patchGroup:PatchGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -95,7 +97,7 @@ public class PatchGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchGroup get(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PatchGroup get(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable CustomResourceOptions options) {
         return new PatchGroup(name, id, state, options);
     }
 }

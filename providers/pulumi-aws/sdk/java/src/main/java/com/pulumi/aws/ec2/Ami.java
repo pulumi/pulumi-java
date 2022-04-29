@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/ami:Ami")
-public class Ami extends com.pulumi.resources.CustomResource {
+public class Ami extends CustomResource {
     /**
      * Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
@@ -422,19 +424,19 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ami(String name, @Nullable AmiArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Ami(String name, @Nullable AmiArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/ami:Ami", name, args == null ? AmiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Ami(String name, Output<String> id, @Nullable AmiState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Ami(String name, Output<String> id, @Nullable AmiState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/ami:Ami", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -446,7 +448,7 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ami get(String name, Output<String> id, @Nullable AmiState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ami get(String name, Output<String> id, @Nullable AmiState state, @Nullable CustomResourceOptions options) {
         return new Ami(name, id, state, options);
     }
 }

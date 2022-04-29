@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs {
+public final class TransitGatewayState extends ResourceArgs {
 
     public static final TransitGatewayState Empty = new TransitGatewayState();
 

@@ -6,12 +6,13 @@ package com.pulumi.aws.s3;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class BucketReplicationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationConfigArgs extends ResourceArgs {
 
     public static final BucketReplicationConfigArgs Empty = new BucketReplicationConfigArgs();
 

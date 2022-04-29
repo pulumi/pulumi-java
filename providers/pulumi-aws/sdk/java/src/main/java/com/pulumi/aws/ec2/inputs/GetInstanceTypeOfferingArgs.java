@@ -5,6 +5,7 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetInstanceTypeOfferingArgs extends InvokeArgs {
 
     public static final GetInstanceTypeOfferingArgs Empty = new GetInstanceTypeOfferingArgs();
 

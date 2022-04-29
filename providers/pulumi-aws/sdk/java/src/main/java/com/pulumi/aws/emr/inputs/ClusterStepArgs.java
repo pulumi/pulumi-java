@@ -6,11 +6,12 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.ClusterStepHadoopJarStepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ClusterStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterStepArgs extends ResourceArgs {
 
     public static final ClusterStepArgs Empty = new ClusterStepArgs();
 

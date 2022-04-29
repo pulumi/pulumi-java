@@ -5,6 +5,7 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterLoggingInfoBrokerLogsS3Args extends com.pulumi.resources.ResourceArgs {
+public final class ClusterLoggingInfoBrokerLogsS3Args extends ResourceArgs {
 
     public static final ClusterLoggingInfoBrokerLogsS3Args Empty = new ClusterLoggingInfoBrokerLogsS3Args();
 

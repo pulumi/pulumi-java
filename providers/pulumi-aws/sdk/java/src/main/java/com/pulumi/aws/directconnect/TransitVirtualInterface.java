@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:directconnect/transitVirtualInterface:TransitVirtualInterface")
-public class TransitVirtualInterface extends com.pulumi.resources.CustomResource {
+public class TransitVirtualInterface extends CustomResource {
     /**
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
@@ -280,19 +282,19 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransitVirtualInterface(String name, TransitVirtualInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransitVirtualInterface(String name, TransitVirtualInterfaceArgs args, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/transitVirtualInterface:TransitVirtualInterface", name, args == null ? TransitVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TransitVirtualInterface(String name, Output<String> id, @Nullable TransitVirtualInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TransitVirtualInterface(String name, Output<String> id, @Nullable TransitVirtualInterfaceState state, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/transitVirtualInterface:TransitVirtualInterface", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -304,7 +306,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransitVirtualInterface get(String name, Output<String> id, @Nullable TransitVirtualInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransitVirtualInterface get(String name, Output<String> id, @Nullable TransitVirtualInterfaceState state, @Nullable CustomResourceOptions options) {
         return new TransitVirtualInterface(name, id, state, options);
     }
 }

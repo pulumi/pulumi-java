@@ -7,12 +7,13 @@ import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAclDefaultActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclDefaultActionArgs extends ResourceArgs {
 
     public static final WebAclDefaultActionArgs Empty = new WebAclDefaultActionArgs();
 

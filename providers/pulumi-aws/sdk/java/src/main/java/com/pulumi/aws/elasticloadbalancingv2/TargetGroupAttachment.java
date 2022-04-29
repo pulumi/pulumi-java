@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* aws.elasticloadbalancingv2.TargetGroupAttachment has been deprecated in favor of aws.lb.TargetGroupAttachment */
 @ResourceType(type="aws:elasticloadbalancingv2/targetGroupAttachment:TargetGroupAttachment")
-public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
+public class TargetGroupAttachment extends CustomResource {
     /**
      * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to &#39;all&#39;.
      * 
@@ -112,19 +114,19 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TargetGroupAttachment(String name, TargetGroupAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TargetGroupAttachment(String name, TargetGroupAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("aws:elasticloadbalancingv2/targetGroupAttachment:TargetGroupAttachment", name, args == null ? TargetGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TargetGroupAttachment(String name, Output<String> id, @Nullable TargetGroupAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TargetGroupAttachment(String name, Output<String> id, @Nullable TargetGroupAttachmentState state, @Nullable CustomResourceOptions options) {
         super("aws:elasticloadbalancingv2/targetGroupAttachment:TargetGroupAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -136,7 +138,7 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TargetGroupAttachment get(String name, Output<String> id, @Nullable TargetGroupAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TargetGroupAttachment get(String name, Output<String> id, @Nullable TargetGroupAttachmentState state, @Nullable CustomResourceOptions options) {
         return new TargetGroupAttachment(name, id, state, options);
     }
 }

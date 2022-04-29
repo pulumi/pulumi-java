@@ -5,6 +5,7 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BrokerEncryptionOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BrokerEncryptionOptionsArgs extends ResourceArgs {
 
     public static final BrokerEncryptionOptionsArgs Empty = new BrokerEncryptionOptionsArgs();
 

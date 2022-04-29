@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:glacier/vaultLock:VaultLock")
-public class VaultLock extends com.pulumi.resources.CustomResource {
+public class VaultLock extends CustomResource {
     /**
      * Boolean whether to permanently apply this Glacier Lock Policy. Once completed, this cannot be undone. If set to `false`, the Glacier Lock Policy remains in a testing mode for 24 hours. After that time, the Glacier Lock Policy is automatically removed by Glacier and the this provider resource will show as needing recreation. Changing this from `false` to `true` will show as resource recreation, which is expected. Changing this from `true` to `false` is not possible unless the Glacier Vault is recreated at the same time.
      * 
@@ -113,19 +115,19 @@ public class VaultLock extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VaultLock(String name, VaultLockArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VaultLock(String name, VaultLockArgs args, @Nullable CustomResourceOptions options) {
         super("aws:glacier/vaultLock:VaultLock", name, args == null ? VaultLockArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VaultLock(String name, Output<String> id, @Nullable VaultLockState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VaultLock(String name, Output<String> id, @Nullable VaultLockState state, @Nullable CustomResourceOptions options) {
         super("aws:glacier/vaultLock:VaultLock", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -137,7 +139,7 @@ public class VaultLock extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VaultLock get(String name, Output<String> id, @Nullable VaultLockState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VaultLock get(String name, Output<String> id, @Nullable VaultLockState state, @Nullable CustomResourceOptions options) {
         return new VaultLock(name, id, state, options);
     }
 }

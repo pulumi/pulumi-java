@@ -7,12 +7,13 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutIdleArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutPerRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteSpecGrpcRouteTimeoutArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteSpecGrpcRouteTimeoutArgs extends ResourceArgs {
 
     public static final RouteSpecGrpcRouteTimeoutArgs Empty = new RouteSpecGrpcRouteTimeoutArgs();
 

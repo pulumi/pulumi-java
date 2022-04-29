@@ -6,6 +6,7 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs extends ResourceArgs {
 
     public static final FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs Empty = new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs();
 

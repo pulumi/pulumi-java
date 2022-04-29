@@ -5,11 +5,12 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyAttachmentArgs extends ResourceArgs {
 
     public static final PolicyAttachmentArgs Empty = new PolicyAttachmentArgs();
 

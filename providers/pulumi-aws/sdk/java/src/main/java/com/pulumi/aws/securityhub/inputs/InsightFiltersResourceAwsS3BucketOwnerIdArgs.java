@@ -5,11 +5,12 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class InsightFiltersResourceAwsS3BucketOwnerIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersResourceAwsS3BucketOwnerIdArgs extends ResourceArgs {
 
     public static final InsightFiltersResourceAwsS3BucketOwnerIdArgs Empty = new InsightFiltersResourceAwsS3BucketOwnerIdArgs();
 

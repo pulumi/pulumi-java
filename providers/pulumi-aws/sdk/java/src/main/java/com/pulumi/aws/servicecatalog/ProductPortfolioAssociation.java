@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation")
-public class ProductPortfolioAssociation extends com.pulumi.resources.CustomResource {
+public class ProductPortfolioAssociation extends CustomResource {
     /**
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
@@ -108,19 +110,19 @@ public class ProductPortfolioAssociation extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProductPortfolioAssociation(String name, ProductPortfolioAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProductPortfolioAssociation(String name, ProductPortfolioAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation", name, args == null ? ProductPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProductPortfolioAssociation(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProductPortfolioAssociation(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -132,7 +134,7 @@ public class ProductPortfolioAssociation extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProductPortfolioAssociation get(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProductPortfolioAssociation get(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable CustomResourceOptions options) {
         return new ProductPortfolioAssociation(name, id, state, options);
     }
 }

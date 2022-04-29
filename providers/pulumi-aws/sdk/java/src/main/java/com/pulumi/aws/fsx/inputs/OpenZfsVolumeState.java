@@ -8,6 +8,7 @@ import com.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotArgs;
 import com.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OpenZfsVolumeState extends com.pulumi.resources.ResourceArgs {
+public final class OpenZfsVolumeState extends ResourceArgs {
 
     public static final OpenZfsVolumeState Empty = new OpenZfsVolumeState();
 

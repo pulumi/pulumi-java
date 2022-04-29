@@ -5,13 +5,14 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetInfrastructureConfigurationsArgs extends InvokeArgs {
 
     public static final GetInfrastructureConfigurationsArgs Empty = new GetInfrastructureConfigurationsArgs();
 

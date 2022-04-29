@@ -8,13 +8,14 @@ import com.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigArgs;
 import com.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkforceArgs extends ResourceArgs {
 
     public static final WorkforceArgs Empty = new WorkforceArgs();
 

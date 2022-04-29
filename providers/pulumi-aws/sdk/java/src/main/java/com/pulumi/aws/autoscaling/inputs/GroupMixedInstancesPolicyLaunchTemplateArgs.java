@@ -7,13 +7,14 @@ import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplate
 import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends ResourceArgs {
 
     public static final GroupMixedInstancesPolicyLaunchTemplateArgs Empty = new GroupMixedInstancesPolicyLaunchTemplateArgs();
 

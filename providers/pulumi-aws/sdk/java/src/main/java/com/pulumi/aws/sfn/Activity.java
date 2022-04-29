@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:sfn/activity:Activity")
-public class Activity extends com.pulumi.resources.CustomResource {
+public class Activity extends CustomResource {
     /**
      * The date the activity was created.
      * 
@@ -109,19 +111,19 @@ public class Activity extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Activity(String name, @Nullable ActivityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Activity(String name, @Nullable ActivityArgs args, @Nullable CustomResourceOptions options) {
         super("aws:sfn/activity:Activity", name, args == null ? ActivityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Activity(String name, Output<String> id, @Nullable ActivityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Activity(String name, Output<String> id, @Nullable ActivityState state, @Nullable CustomResourceOptions options) {
         super("aws:sfn/activity:Activity", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class Activity extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Activity get(String name, Output<String> id, @Nullable ActivityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Activity get(String name, Output<String> id, @Nullable ActivityState state, @Nullable CustomResourceOptions options) {
         return new Activity(name, id, state, options);
     }
 }

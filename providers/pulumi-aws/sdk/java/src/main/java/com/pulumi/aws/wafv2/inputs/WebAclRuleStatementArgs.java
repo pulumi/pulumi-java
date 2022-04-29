@@ -19,12 +19,13 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementSqliMatchStatementArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAclRuleStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAclRuleStatementArgs extends ResourceArgs {
 
     public static final WebAclRuleStatementArgs Empty = new WebAclRuleStatementArgs();
 

@@ -5,11 +5,12 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ReceiptRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReceiptRuleSetArgs extends ResourceArgs {
 
     public static final ReceiptRuleSetArgs Empty = new ReceiptRuleSetArgs();
 

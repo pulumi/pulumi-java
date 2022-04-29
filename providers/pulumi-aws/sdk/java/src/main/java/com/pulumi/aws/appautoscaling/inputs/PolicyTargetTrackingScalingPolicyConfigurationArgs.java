@@ -7,6 +7,7 @@ import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyCon
 import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PolicyTargetTrackingScalingPolicyConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyTargetTrackingScalingPolicyConfigurationArgs extends ResourceArgs {
 
     public static final PolicyTargetTrackingScalingPolicyConfigurationArgs Empty = new PolicyTargetTrackingScalingPolicyConfigurationArgs();
 

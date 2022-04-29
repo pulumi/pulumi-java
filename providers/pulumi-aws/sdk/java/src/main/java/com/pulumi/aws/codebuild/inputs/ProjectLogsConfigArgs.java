@@ -7,12 +7,13 @@ import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigCloudwatchLogsArgs;
 import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigS3LogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProjectLogsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectLogsConfigArgs extends ResourceArgs {
 
     public static final ProjectLogsConfigArgs Empty = new ProjectLogsConfigArgs();
 

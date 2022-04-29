@@ -7,13 +7,14 @@ import com.pulumi.aws.lb.inputs.ListenerRuleActionForwardStickinessArgs;
 import com.pulumi.aws.lb.inputs.ListenerRuleActionForwardTargetGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListenerRuleActionForwardArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerRuleActionForwardArgs extends ResourceArgs {
 
     public static final ListenerRuleActionForwardArgs Empty = new ListenerRuleActionForwardArgs();
 

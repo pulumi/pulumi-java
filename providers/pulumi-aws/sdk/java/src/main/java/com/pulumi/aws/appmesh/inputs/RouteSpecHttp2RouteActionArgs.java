@@ -6,11 +6,12 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteActionWeightedTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class RouteSpecHttp2RouteActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteSpecHttp2RouteActionArgs extends ResourceArgs {
 
     public static final RouteSpecHttp2RouteActionArgs Empty = new RouteSpecHttp2RouteActionArgs();
 

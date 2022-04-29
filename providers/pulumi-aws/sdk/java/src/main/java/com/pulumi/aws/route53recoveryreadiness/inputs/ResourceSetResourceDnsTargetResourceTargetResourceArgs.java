@@ -7,12 +7,13 @@ import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTarg
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extends ResourceArgs {
 
     public static final ResourceSetResourceDnsTargetResourceTargetResourceArgs Empty = new ResourceSetResourceDnsTargetResourceTargetResourceArgs();
 

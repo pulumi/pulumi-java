@@ -7,12 +7,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2IdleArgs
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNodeSpecListenerTimeoutHttp2Args extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerTimeoutHttp2Args extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerTimeoutHttp2Args Empty = new VirtualNodeSpecListenerTimeoutHttp2Args();
 

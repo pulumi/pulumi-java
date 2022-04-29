@@ -8,6 +8,7 @@ import com.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
 import com.pulumi.aws.lex.inputs.BotIntentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BotState extends com.pulumi.resources.ResourceArgs {
+public final class BotState extends ResourceArgs {
 
     public static final BotState Empty = new BotState();
 

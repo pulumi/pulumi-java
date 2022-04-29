@@ -5,12 +5,13 @@ package com.pulumi.aws.macie2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ClassificationJobS3JobDefinitionBucketDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassificationJobS3JobDefinitionBucketDefinitionArgs extends ResourceArgs {
 
     public static final ClassificationJobS3JobDefinitionBucketDefinitionArgs Empty = new ClassificationJobS3JobDefinitionBucketDefinitionArgs();
 

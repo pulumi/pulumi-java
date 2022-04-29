@@ -7,6 +7,7 @@ import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemDiskIopsConfigurationArgs;
 import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OpenZfsFileSystemArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenZfsFileSystemArgs extends ResourceArgs {
 
     public static final OpenZfsFileSystemArgs Empty = new OpenZfsFileSystemArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ses/receiptFilter:ReceiptFilter")
-public class ReceiptFilter extends com.pulumi.resources.CustomResource {
+public class ReceiptFilter extends CustomResource {
     /**
      * The SES receipt filter ARN.
      * 
@@ -107,19 +109,19 @@ public class ReceiptFilter extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ReceiptFilter(String name, ReceiptFilterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ReceiptFilter(String name, ReceiptFilterArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ses/receiptFilter:ReceiptFilter", name, args == null ? ReceiptFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ReceiptFilter(String name, Output<String> id, @Nullable ReceiptFilterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ReceiptFilter(String name, Output<String> id, @Nullable ReceiptFilterState state, @Nullable CustomResourceOptions options) {
         super("aws:ses/receiptFilter:ReceiptFilter", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -131,7 +133,7 @@ public class ReceiptFilter extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReceiptFilter get(String name, Output<String> id, @Nullable ReceiptFilterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ReceiptFilter get(String name, Output<String> id, @Nullable ReceiptFilterState state, @Nullable CustomResourceOptions options) {
         return new ReceiptFilter(name, id, state, options);
     }
 }

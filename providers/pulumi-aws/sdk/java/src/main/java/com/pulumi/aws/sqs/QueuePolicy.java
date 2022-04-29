@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:sqs/queuePolicy:QueuePolicy")
-public class QueuePolicy extends com.pulumi.resources.CustomResource {
+public class QueuePolicy extends CustomResource {
     /**
      * The JSON policy for the SQS queue.
      * 
@@ -80,19 +82,19 @@ public class QueuePolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public QueuePolicy(String name, QueuePolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public QueuePolicy(String name, QueuePolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:sqs/queuePolicy:QueuePolicy", name, args == null ? QueuePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private QueuePolicy(String name, Output<String> id, @Nullable QueuePolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private QueuePolicy(String name, Output<String> id, @Nullable QueuePolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:sqs/queuePolicy:QueuePolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -104,7 +106,7 @@ public class QueuePolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QueuePolicy get(String name, Output<String> id, @Nullable QueuePolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static QueuePolicy get(String name, Output<String> id, @Nullable QueuePolicyState state, @Nullable CustomResourceOptions options) {
         return new QueuePolicy(name, id, state, options);
     }
 }

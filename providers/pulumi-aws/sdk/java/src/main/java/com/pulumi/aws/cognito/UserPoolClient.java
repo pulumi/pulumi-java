@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:cognito/userPoolClient:UserPoolClient")
-public class UserPoolClient extends com.pulumi.resources.CustomResource {
+public class UserPoolClient extends CustomResource {
     /**
      * Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
@@ -351,19 +353,19 @@ public class UserPoolClient extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public UserPoolClient(String name, UserPoolClientArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public UserPoolClient(String name, UserPoolClientArgs args, @Nullable CustomResourceOptions options) {
         super("aws:cognito/userPoolClient:UserPoolClient", name, args == null ? UserPoolClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private UserPoolClient(String name, Output<String> id, @Nullable UserPoolClientState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private UserPoolClient(String name, Output<String> id, @Nullable UserPoolClientState state, @Nullable CustomResourceOptions options) {
         super("aws:cognito/userPoolClient:UserPoolClient", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -375,7 +377,7 @@ public class UserPoolClient extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserPoolClient get(String name, Output<String> id, @Nullable UserPoolClientState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static UserPoolClient get(String name, Output<String> id, @Nullable UserPoolClientState state, @Nullable CustomResourceOptions options) {
         return new UserPoolClient(name, id, state, options);
     }
 }

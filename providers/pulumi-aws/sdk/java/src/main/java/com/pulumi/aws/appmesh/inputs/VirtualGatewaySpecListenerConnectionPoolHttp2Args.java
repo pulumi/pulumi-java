@@ -5,11 +5,12 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class VirtualGatewaySpecListenerConnectionPoolHttp2Args extends com.pulumi.resources.ResourceArgs {
+public final class VirtualGatewaySpecListenerConnectionPoolHttp2Args extends ResourceArgs {
 
     public static final VirtualGatewaySpecListenerConnectionPoolHttp2Args Empty = new VirtualGatewaySpecListenerConnectionPoolHttp2Args();
 

@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/managedPrefixList:ManagedPrefixList")
-public class ManagedPrefixList extends com.pulumi.resources.CustomResource {
+public class ManagedPrefixList extends CustomResource {
     /**
      * Address family (`IPv4` or `IPv6`) of this prefix list.
      * 
@@ -170,19 +172,19 @@ public class ManagedPrefixList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagedPrefixList(String name, ManagedPrefixListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ManagedPrefixList(String name, ManagedPrefixListArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/managedPrefixList:ManagedPrefixList", name, args == null ? ManagedPrefixListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ManagedPrefixList(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ManagedPrefixList(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/managedPrefixList:ManagedPrefixList", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -194,7 +196,7 @@ public class ManagedPrefixList extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedPrefixList get(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedPrefixList get(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable CustomResourceOptions options) {
         return new ManagedPrefixList(name, id, state, options);
     }
 }

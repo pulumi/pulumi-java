@@ -15,6 +15,7 @@ import com.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetArgs;
 import com.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
+public final class EventTargetState extends ResourceArgs {
 
     public static final EventTargetState Empty = new EventTargetState();
 

@@ -6,11 +6,12 @@ package com.pulumi.aws.connect;
 import com.pulumi.aws.connect.inputs.BotAssociationLexBotArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class BotAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAssociationArgs extends ResourceArgs {
 
     public static final BotAssociationArgs Empty = new BotAssociationArgs();
 

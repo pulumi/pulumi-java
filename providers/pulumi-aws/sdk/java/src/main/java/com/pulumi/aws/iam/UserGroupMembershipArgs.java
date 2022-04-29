@@ -5,12 +5,13 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class UserGroupMembershipArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserGroupMembershipArgs extends ResourceArgs {
 
     public static final UserGroupMembershipArgs Empty = new UserGroupMembershipArgs();
 

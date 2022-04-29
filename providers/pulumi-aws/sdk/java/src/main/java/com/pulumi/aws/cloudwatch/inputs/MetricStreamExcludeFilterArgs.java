@@ -5,11 +5,12 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MetricStreamExcludeFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricStreamExcludeFilterArgs extends ResourceArgs {
 
     public static final MetricStreamExcludeFilterArgs Empty = new MetricStreamExcludeFilterArgs();
 

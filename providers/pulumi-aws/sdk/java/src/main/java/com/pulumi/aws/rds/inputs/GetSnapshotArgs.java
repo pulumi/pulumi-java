@@ -4,6 +4,7 @@
 package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSnapshotArgs extends InvokeArgs {
 
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 

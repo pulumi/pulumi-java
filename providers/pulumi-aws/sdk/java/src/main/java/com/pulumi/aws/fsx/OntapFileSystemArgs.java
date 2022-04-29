@@ -6,6 +6,7 @@ package com.pulumi.aws.fsx;
 import com.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OntapFileSystemArgs extends com.pulumi.resources.ResourceArgs {
+public final class OntapFileSystemArgs extends ResourceArgs {
 
     public static final OntapFileSystemArgs Empty = new OntapFileSystemArgs();
 

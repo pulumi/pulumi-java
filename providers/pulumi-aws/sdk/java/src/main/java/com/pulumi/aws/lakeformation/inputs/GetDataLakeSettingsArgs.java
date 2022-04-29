@@ -4,13 +4,14 @@
 package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDataLakeSettingsArgs extends InvokeArgs {
 
     public static final GetDataLakeSettingsArgs Empty = new GetDataLakeSettingsArgs();
 

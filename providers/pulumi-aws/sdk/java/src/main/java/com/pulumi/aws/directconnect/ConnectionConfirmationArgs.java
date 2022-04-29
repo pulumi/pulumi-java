@@ -5,11 +5,12 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ConnectionConfirmationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionConfirmationArgs extends ResourceArgs {
 
     public static final ConnectionConfirmationArgs Empty = new ConnectionConfirmationArgs();
 

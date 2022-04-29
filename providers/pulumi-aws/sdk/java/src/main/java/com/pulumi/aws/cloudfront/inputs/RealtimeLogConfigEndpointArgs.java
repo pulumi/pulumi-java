@@ -6,11 +6,12 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointKinesisStreamConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class RealtimeLogConfigEndpointArgs extends ResourceArgs {
 
     public static final RealtimeLogConfigEndpointArgs Empty = new RealtimeLogConfigEndpointArgs();
 

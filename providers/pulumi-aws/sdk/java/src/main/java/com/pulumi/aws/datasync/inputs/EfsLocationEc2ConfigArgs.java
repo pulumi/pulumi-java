@@ -5,12 +5,13 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class EfsLocationEc2ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EfsLocationEc2ConfigArgs extends ResourceArgs {
 
     public static final EfsLocationEc2ConfigArgs Empty = new EfsLocationEc2ConfigArgs();
 

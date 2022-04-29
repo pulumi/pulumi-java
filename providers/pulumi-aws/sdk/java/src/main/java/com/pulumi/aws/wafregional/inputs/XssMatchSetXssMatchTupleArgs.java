@@ -6,11 +6,12 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.XssMatchSetXssMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class XssMatchSetXssMatchTupleArgs extends com.pulumi.resources.ResourceArgs {
+public final class XssMatchSetXssMatchTupleArgs extends ResourceArgs {
 
     public static final XssMatchSetXssMatchTupleArgs Empty = new XssMatchSetXssMatchTupleArgs();
 

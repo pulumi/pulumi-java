@@ -6,6 +6,7 @@ package com.pulumi.aws.networkfirewall;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupArgs extends ResourceArgs {
 
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 

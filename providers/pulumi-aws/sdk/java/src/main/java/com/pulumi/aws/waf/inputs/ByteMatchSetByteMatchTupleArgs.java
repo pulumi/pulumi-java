@@ -6,13 +6,14 @@ package com.pulumi.aws.waf.inputs;
 import com.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ByteMatchSetByteMatchTupleArgs extends ResourceArgs {
 
     public static final ByteMatchSetByteMatchTupleArgs Empty = new ByteMatchSetByteMatchTupleArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.aws.guardduty;
 import com.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationConfigurationArgs extends ResourceArgs {
 
     public static final OrganizationConfigurationArgs Empty = new OrganizationConfigurationArgs();
 

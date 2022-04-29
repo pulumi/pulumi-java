@@ -8,13 +8,14 @@ import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryA
 import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationImageRepositoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSourceConfigurationArgs extends ResourceArgs {
 
     public static final ServiceSourceConfigurationArgs Empty = new ServiceSourceConfigurationArgs();
 

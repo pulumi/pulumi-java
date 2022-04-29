@@ -6,6 +6,7 @@ package com.pulumi.aws.cloudformation;
 import com.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackSetArgs extends ResourceArgs {
 
     public static final StackSetArgs Empty = new StackSetArgs();
 

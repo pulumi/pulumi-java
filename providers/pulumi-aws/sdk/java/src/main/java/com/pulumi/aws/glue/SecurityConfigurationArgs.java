@@ -6,13 +6,14 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityConfigurationArgs extends ResourceArgs {
 
     public static final SecurityConfigurationArgs Empty = new SecurityConfigurationArgs();
 

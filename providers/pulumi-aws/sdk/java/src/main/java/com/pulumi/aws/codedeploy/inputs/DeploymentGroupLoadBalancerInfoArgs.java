@@ -8,13 +8,14 @@ import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGro
 import com.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeploymentGroupLoadBalancerInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentGroupLoadBalancerInfoArgs extends ResourceArgs {
 
     public static final DeploymentGroupLoadBalancerInfoArgs Empty = new DeploymentGroupLoadBalancerInfoArgs();
 

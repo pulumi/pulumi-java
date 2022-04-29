@@ -14,6 +14,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="aws:lakeformation/permissions:Permissions")
-public class Permissions extends com.pulumi.resources.CustomResource {
+public class Permissions extends CustomResource {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
@@ -170,19 +172,19 @@ public class Permissions extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Permissions(String name, PermissionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Permissions(String name, PermissionsArgs args, @Nullable CustomResourceOptions options) {
         super("aws:lakeformation/permissions:Permissions", name, args == null ? PermissionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Permissions(String name, Output<String> id, @Nullable PermissionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Permissions(String name, Output<String> id, @Nullable PermissionsState state, @Nullable CustomResourceOptions options) {
         super("aws:lakeformation/permissions:Permissions", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -194,7 +196,7 @@ public class Permissions extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Permissions get(String name, Output<String> id, @Nullable PermissionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Permissions get(String name, Output<String> id, @Nullable PermissionsState state, @Nullable CustomResourceOptions options) {
         return new Permissions(name, id, state, options);
     }
 }

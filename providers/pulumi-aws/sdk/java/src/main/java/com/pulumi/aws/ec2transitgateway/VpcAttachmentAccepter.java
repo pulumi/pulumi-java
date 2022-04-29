@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter")
-public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
+public class VpcAttachmentAccepter extends CustomResource {
     /**
      * Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
      * 
@@ -229,19 +231,19 @@ public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VpcAttachmentAccepter(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VpcAttachmentAccepter(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -253,7 +255,7 @@ public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcAttachmentAccepter get(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpcAttachmentAccepter get(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable CustomResourceOptions options) {
         return new VpcAttachmentAccepter(name, id, state, options);
     }
 }

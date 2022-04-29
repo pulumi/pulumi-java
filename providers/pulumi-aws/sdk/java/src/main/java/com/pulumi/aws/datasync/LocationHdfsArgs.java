@@ -7,6 +7,7 @@ import com.pulumi.aws.datasync.inputs.LocationHdfsNameNodeArgs;
 import com.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationHdfsArgs extends ResourceArgs {
 
     public static final LocationHdfsArgs Empty = new LocationHdfsArgs();
 

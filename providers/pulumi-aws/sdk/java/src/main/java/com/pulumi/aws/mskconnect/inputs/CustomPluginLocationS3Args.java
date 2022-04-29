@@ -5,13 +5,14 @@ package com.pulumi.aws.mskconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CustomPluginLocationS3Args extends com.pulumi.resources.ResourceArgs {
+public final class CustomPluginLocationS3Args extends ResourceArgs {
 
     public static final CustomPluginLocationS3Args Empty = new CustomPluginLocationS3Args();
 

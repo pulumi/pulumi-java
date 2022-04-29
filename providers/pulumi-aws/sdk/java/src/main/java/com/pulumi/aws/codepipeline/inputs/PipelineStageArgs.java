@@ -6,12 +6,13 @@ package com.pulumi.aws.codepipeline.inputs;
 import com.pulumi.aws.codepipeline.inputs.PipelineStageActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class PipelineStageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineStageArgs extends ResourceArgs {
 
     public static final PipelineStageArgs Empty = new PipelineStageArgs();
 

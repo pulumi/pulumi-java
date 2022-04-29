@@ -7,6 +7,7 @@ import com.pulumi.aws.ebs.inputs.SnapshotImportClientDataArgs;
 import com.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SnapshotImportArgs extends com.pulumi.resources.ResourceArgs {
+public final class SnapshotImportArgs extends ResourceArgs {
 
     public static final SnapshotImportArgs Empty = new SnapshotImportArgs();
 

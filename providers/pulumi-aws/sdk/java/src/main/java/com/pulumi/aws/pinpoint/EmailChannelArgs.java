@@ -5,6 +5,7 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class EmailChannelArgs extends ResourceArgs {
 
     public static final EmailChannelArgs Empty = new EmailChannelArgs();
 

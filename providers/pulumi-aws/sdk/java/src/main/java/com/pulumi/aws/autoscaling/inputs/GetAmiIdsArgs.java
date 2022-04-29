@@ -5,13 +5,14 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.aws.autoscaling.inputs.GetAmiIdsFilter;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAmiIdsArgs extends InvokeArgs {
 
     public static final GetAmiIdsArgs Empty = new GetAmiIdsArgs();
 

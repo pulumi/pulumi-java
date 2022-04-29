@@ -6,13 +6,14 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends ResourceArgs {
 
     public static final InsightFiltersThreatIntelIndicatorLastObservedAtArgs Empty = new InsightFiltersThreatIntelIndicatorLastObservedAtArgs();
 

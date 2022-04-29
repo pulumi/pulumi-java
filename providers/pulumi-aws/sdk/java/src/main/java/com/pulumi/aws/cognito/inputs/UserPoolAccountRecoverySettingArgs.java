@@ -6,11 +6,12 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class UserPoolAccountRecoverySettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPoolAccountRecoverySettingArgs extends ResourceArgs {
 
     public static final UserPoolAccountRecoverySettingArgs Empty = new UserPoolAccountRecoverySettingArgs();
 

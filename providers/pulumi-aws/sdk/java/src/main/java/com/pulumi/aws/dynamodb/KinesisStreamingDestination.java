@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination")
-public class KinesisStreamingDestination extends com.pulumi.resources.CustomResource {
+public class KinesisStreamingDestination extends CustomResource {
     /**
      * The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.
      * 
@@ -81,19 +83,19 @@ public class KinesisStreamingDestination extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private KinesisStreamingDestination(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private KinesisStreamingDestination(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable CustomResourceOptions options) {
         super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class KinesisStreamingDestination extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KinesisStreamingDestination get(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static KinesisStreamingDestination get(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable CustomResourceOptions options) {
         return new KinesisStreamingDestination(name, id, state, options);
     }
 }

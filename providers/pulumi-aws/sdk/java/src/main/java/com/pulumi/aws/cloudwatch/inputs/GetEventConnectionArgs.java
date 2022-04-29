@@ -4,11 +4,12 @@
 package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetEventConnectionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetEventConnectionArgs extends InvokeArgs {
 
     public static final GetEventConnectionArgs Empty = new GetEventConnectionArgs();
 

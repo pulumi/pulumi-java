@@ -5,13 +5,14 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StudioSessionMappingState extends com.pulumi.resources.ResourceArgs {
+public final class StudioSessionMappingState extends ResourceArgs {
 
     public static final StudioSessionMappingState Empty = new StudioSessionMappingState();
 

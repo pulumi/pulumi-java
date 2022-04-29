@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy")
-public class RepositoryPermissionsPolicy extends com.pulumi.resources.CustomResource {
+public class RepositoryPermissionsPolicy extends CustomResource {
     /**
      * The name of the domain on which to set the resource policy.
      * 
@@ -135,19 +137,19 @@ public class RepositoryPermissionsPolicy extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RepositoryPermissionsPolicy(String name, RepositoryPermissionsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RepositoryPermissionsPolicy(String name, RepositoryPermissionsPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy", name, args == null ? RepositoryPermissionsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RepositoryPermissionsPolicy(String name, Output<String> id, @Nullable RepositoryPermissionsPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RepositoryPermissionsPolicy(String name, Output<String> id, @Nullable RepositoryPermissionsPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -159,7 +161,7 @@ public class RepositoryPermissionsPolicy extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RepositoryPermissionsPolicy get(String name, Output<String> id, @Nullable RepositoryPermissionsPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RepositoryPermissionsPolicy get(String name, Output<String> id, @Nullable RepositoryPermissionsPolicyState state, @Nullable CustomResourceOptions options) {
         return new RepositoryPermissionsPolicy(name, id, state, options);
     }
 }

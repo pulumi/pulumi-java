@@ -6,13 +6,14 @@ package com.pulumi.aws.dlm.inputs;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
 
-public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecyclePolicyPolicyDetailsArgs extends ResourceArgs {
 
     public static final LifecyclePolicyPolicyDetailsArgs Empty = new LifecyclePolicyPolicyDetailsArgs();
 

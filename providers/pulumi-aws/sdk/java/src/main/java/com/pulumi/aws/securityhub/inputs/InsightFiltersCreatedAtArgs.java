@@ -6,13 +6,14 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersCreatedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InsightFiltersCreatedAtArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersCreatedAtArgs extends ResourceArgs {
 
     public static final InsightFiltersCreatedAtArgs Empty = new InsightFiltersCreatedAtArgs();
 

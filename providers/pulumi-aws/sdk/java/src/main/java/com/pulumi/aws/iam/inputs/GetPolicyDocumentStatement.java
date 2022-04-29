@@ -7,6 +7,8 @@ import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatementCondition;
 import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatementNotPrincipal;
 import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatementPrincipal;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetPolicyDocumentStatement extends com.pulumi.resources.InvokeArgs {
+public final class GetPolicyDocumentStatement extends InvokeArgs {
 
     public static final GetPolicyDocumentStatement Empty = new GetPolicyDocumentStatement();
 

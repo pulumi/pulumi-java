@@ -7,6 +7,7 @@ import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesAr
 import com.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableState extends com.pulumi.resources.ResourceArgs {
+public final class TableState extends ResourceArgs {
 
     public static final TableState Empty = new TableState();
 

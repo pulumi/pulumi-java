@@ -8,6 +8,7 @@ import com.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationArgs;
 import com.pulumi.aws.ses.inputs.EventDestinationSnsDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventDestinationState extends com.pulumi.resources.ResourceArgs {
+public final class EventDestinationState extends ResourceArgs {
 
     public static final EventDestinationState Empty = new EventDestinationState();
 

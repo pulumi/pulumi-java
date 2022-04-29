@@ -5,11 +5,12 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class InsightFiltersResourceAwsEc2InstanceVpcIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersResourceAwsEc2InstanceVpcIdArgs extends ResourceArgs {
 
     public static final InsightFiltersResourceAwsEc2InstanceVpcIdArgs Empty = new InsightFiltersResourceAwsEc2InstanceVpcIdArgs();
 

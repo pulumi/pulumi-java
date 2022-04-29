@@ -6,10 +6,11 @@ package com.pulumi.aws.msk.inputs;
 import com.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ClusterLoggingInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterLoggingInfoArgs extends ResourceArgs {
 
     public static final ClusterLoggingInfoArgs Empty = new ClusterLoggingInfoArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
 import com.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketNotificationState extends com.pulumi.resources.ResourceArgs {
+public final class BucketNotificationState extends ResourceArgs {
 
     public static final BucketNotificationState Empty = new BucketNotificationState();
 

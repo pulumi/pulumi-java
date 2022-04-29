@@ -7,12 +7,13 @@ import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslArgs;
 import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterClientAuthenticationArgs extends ResourceArgs {
 
     public static final ClusterClientAuthenticationArgs Empty = new ClusterClientAuthenticationArgs();
 

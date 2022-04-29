@@ -5,11 +5,12 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RecordFailoverRoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecordFailoverRoutingPolicyArgs extends ResourceArgs {
 
     public static final RecordFailoverRoutingPolicyArgs Empty = new RecordFailoverRoutingPolicyArgs();
 

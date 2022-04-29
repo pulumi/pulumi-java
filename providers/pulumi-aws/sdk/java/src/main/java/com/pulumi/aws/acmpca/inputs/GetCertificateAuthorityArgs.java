@@ -5,6 +5,7 @@ package com.pulumi.aws.acmpca.inputs;
 
 import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfiguration;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetCertificateAuthorityArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetCertificateAuthorityArgs extends InvokeArgs {
 
     public static final GetCertificateAuthorityArgs Empty = new GetCertificateAuthorityArgs();
 

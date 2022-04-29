@@ -8,12 +8,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateFil
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateSdsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualGatewaySpecListenerTlsCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualGatewaySpecListenerTlsCertificateArgs extends ResourceArgs {
 
     public static final VirtualGatewaySpecListenerTlsCertificateArgs Empty = new VirtualGatewaySpecListenerTlsCertificateArgs();
 

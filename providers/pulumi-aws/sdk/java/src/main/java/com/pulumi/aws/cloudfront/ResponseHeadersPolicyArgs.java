@@ -8,13 +8,14 @@ import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfig
 import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResponseHeadersPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponseHeadersPolicyArgs extends ResourceArgs {
 
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 

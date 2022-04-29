@@ -5,6 +5,7 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApnsChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApnsChannelArgs extends ResourceArgs {
 
     public static final ApnsChannelArgs Empty = new ApnsChannelArgs();
 

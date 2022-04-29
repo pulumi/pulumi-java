@@ -5,12 +5,13 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ClusterConfigurationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterConfigurationInfoArgs extends ResourceArgs {
 
     public static final ClusterConfigurationInfoArgs Empty = new ClusterConfigurationInfoArgs();
 

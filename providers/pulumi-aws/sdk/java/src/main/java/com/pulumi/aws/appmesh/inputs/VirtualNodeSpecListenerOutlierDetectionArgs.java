@@ -7,11 +7,12 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBase
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerOutlierDetectionArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerOutlierDetectionArgs Empty = new VirtualNodeSpecListenerOutlierDetectionArgs();
 

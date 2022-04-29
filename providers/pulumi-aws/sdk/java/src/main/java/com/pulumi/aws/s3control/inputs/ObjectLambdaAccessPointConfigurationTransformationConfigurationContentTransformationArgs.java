@@ -6,10 +6,11 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs extends ResourceArgs {
 
     public static final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs Empty = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs();
 

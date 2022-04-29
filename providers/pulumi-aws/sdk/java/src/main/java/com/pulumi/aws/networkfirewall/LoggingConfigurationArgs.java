@@ -6,11 +6,12 @@ package com.pulumi.aws.networkfirewall;
 import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class LoggingConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationArgs extends ResourceArgs {
 
     public static final LoggingConfigurationArgs Empty = new LoggingConfigurationArgs();
 

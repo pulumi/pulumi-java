@@ -7,13 +7,14 @@ import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterArgs;
 import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OntapFileSystemEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class OntapFileSystemEndpointArgs extends ResourceArgs {
 
     public static final OntapFileSystemEndpointArgs Empty = new OntapFileSystemEndpointArgs();
 

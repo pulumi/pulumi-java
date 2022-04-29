@@ -6,13 +6,14 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs extends ResourceArgs {
 
     public static final AnalyticsConfigurationStorageClassAnalysisDataExportArgs Empty = new AnalyticsConfigurationStorageClassAnalysisDataExportArgs();
 

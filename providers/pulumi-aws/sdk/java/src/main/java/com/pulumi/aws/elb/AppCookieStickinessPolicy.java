@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy")
-public class AppCookieStickinessPolicy extends com.pulumi.resources.CustomResource {
+public class AppCookieStickinessPolicy extends CustomResource {
     /**
      * The application cookie whose lifetime the ELB&#39;s cookie should follow.
      * 
@@ -116,22 +118,22 @@ public class AppCookieStickinessPolicy extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppCookieStickinessPolicy(String name, AppCookieStickinessPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppCookieStickinessPolicy(String name, AppCookieStickinessPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, args == null ? AppCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppCookieStickinessPolicy(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppCookieStickinessPolicy(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable CustomResourceOptions options) {
         super("aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("aws:elasticloadbalancing/appCookieStickinessPolicy:AppCookieStickinessPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -143,7 +145,7 @@ public class AppCookieStickinessPolicy extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppCookieStickinessPolicy get(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppCookieStickinessPolicy get(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable CustomResourceOptions options) {
         return new AppCookieStickinessPolicy(name, id, state, options);
     }
 }

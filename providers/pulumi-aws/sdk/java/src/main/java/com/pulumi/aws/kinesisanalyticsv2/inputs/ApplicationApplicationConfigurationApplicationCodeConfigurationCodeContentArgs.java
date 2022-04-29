@@ -6,13 +6,14 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs extends ResourceArgs {
 
     public static final ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs Empty = new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs();
 

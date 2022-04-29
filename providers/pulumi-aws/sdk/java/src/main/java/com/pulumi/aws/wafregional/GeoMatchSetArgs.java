@@ -6,6 +6,7 @@ package com.pulumi.aws.wafregional;
 import com.pulumi.aws.wafregional.inputs.GeoMatchSetGeoMatchConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GeoMatchSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class GeoMatchSetArgs extends ResourceArgs {
 
     public static final GeoMatchSetArgs Empty = new GeoMatchSetArgs();
 

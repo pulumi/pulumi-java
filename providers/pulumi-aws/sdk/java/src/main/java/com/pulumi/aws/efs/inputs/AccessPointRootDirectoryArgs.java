@@ -6,13 +6,14 @@ package com.pulumi.aws.efs.inputs;
 import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryCreationInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPointRootDirectoryArgs extends ResourceArgs {
 
     public static final AccessPointRootDirectoryArgs Empty = new AccessPointRootDirectoryArgs();
 

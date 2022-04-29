@@ -5,6 +5,7 @@ package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterCacheNodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterCacheNodeArgs extends ResourceArgs {
 
     public static final ClusterCacheNodeArgs Empty = new ClusterCacheNodeArgs();
 

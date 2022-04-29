@@ -6,13 +6,14 @@ package com.pulumi.aws.servicecatalog;
 import com.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceActionArgs extends ResourceArgs {
 
     public static final ServiceActionArgs Empty = new ServiceActionArgs();
 

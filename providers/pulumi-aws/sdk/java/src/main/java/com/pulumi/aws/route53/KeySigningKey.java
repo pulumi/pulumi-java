@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:route53/keySigningKey:KeySigningKey")
-public class KeySigningKey extends com.pulumi.resources.CustomResource {
+public class KeySigningKey extends CustomResource {
     /**
      * A string used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.3](https://tools.ietf.org/html/rfc8624#section-3.3).
      * 
@@ -249,19 +251,19 @@ public class KeySigningKey extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:route53/keySigningKey:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private KeySigningKey(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private KeySigningKey(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable CustomResourceOptions options) {
         super("aws:route53/keySigningKey:KeySigningKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -273,7 +275,7 @@ public class KeySigningKey extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KeySigningKey get(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static KeySigningKey get(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable CustomResourceOptions options) {
         return new KeySigningKey(name, id, state, options);
     }
 }

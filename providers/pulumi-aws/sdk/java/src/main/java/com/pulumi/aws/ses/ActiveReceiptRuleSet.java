@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet")
-public class ActiveReceiptRuleSet extends com.pulumi.resources.CustomResource {
+public class ActiveReceiptRuleSet extends CustomResource {
     /**
      * The SES receipt rule set ARN.
      * 
@@ -71,19 +73,19 @@ public class ActiveReceiptRuleSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ActiveReceiptRuleSet(String name, ActiveReceiptRuleSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ActiveReceiptRuleSet(String name, ActiveReceiptRuleSetArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet", name, args == null ? ActiveReceiptRuleSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ActiveReceiptRuleSet(String name, Output<String> id, @Nullable ActiveReceiptRuleSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ActiveReceiptRuleSet(String name, Output<String> id, @Nullable ActiveReceiptRuleSetState state, @Nullable CustomResourceOptions options) {
         super("aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -95,7 +97,7 @@ public class ActiveReceiptRuleSet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ActiveReceiptRuleSet get(String name, Output<String> id, @Nullable ActiveReceiptRuleSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ActiveReceiptRuleSet get(String name, Output<String> id, @Nullable ActiveReceiptRuleSetState state, @Nullable CustomResourceOptions options) {
         return new ActiveReceiptRuleSet(name, id, state, options);
     }
 }

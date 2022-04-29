@@ -5,6 +5,7 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobQueueState extends com.pulumi.resources.ResourceArgs {
+public final class JobQueueState extends ResourceArgs {
 
     public static final JobQueueState Empty = new JobQueueState();
 

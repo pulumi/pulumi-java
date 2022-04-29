@@ -6,6 +6,7 @@ package com.pulumi.aws.workspaces.inputs;
 import com.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceState extends ResourceArgs {
 
     public static final WorkspaceState Empty = new WorkspaceState();
 

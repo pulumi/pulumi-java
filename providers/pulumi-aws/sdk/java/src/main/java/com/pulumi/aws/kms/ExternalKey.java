@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:kms/externalKey:ExternalKey")
-public class ExternalKey extends com.pulumi.resources.CustomResource {
+public class ExternalKey extends CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the key.
      * 
@@ -251,19 +253,19 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ExternalKey(String name, @Nullable ExternalKeyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ExternalKey(String name, @Nullable ExternalKeyArgs args, @Nullable CustomResourceOptions options) {
         super("aws:kms/externalKey:ExternalKey", name, args == null ? ExternalKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ExternalKey(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ExternalKey(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable CustomResourceOptions options) {
         super("aws:kms/externalKey:ExternalKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -275,7 +277,7 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExternalKey get(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ExternalKey get(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable CustomResourceOptions options) {
         return new ExternalKey(name, id, state, options);
     }
 }

@@ -6,11 +6,12 @@ package com.pulumi.aws.cloudfront;
 import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MonitoringSubscriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringSubscriptionArgs extends ResourceArgs {
 
     public static final MonitoringSubscriptionArgs Empty = new MonitoringSubscriptionArgs();
 

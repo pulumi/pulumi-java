@@ -6,6 +6,7 @@ package com.pulumi.aws.route53recoveryreadiness.inputs;
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceSetResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetResourceArgs extends ResourceArgs {
 
     public static final ResourceSetResourceArgs Empty = new ResourceSetResourceArgs();
 

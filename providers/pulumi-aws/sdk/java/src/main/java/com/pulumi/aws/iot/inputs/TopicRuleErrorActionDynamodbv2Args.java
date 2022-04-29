@@ -6,13 +6,14 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbv2PutItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRuleErrorActionDynamodbv2Args extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleErrorActionDynamodbv2Args extends ResourceArgs {
 
     public static final TopicRuleErrorActionDynamodbv2Args Empty = new TopicRuleErrorActionDynamodbv2Args();
 

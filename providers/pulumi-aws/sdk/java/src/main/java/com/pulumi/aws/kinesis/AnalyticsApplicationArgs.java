@@ -9,6 +9,7 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AnalyticsApplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalyticsApplicationArgs extends ResourceArgs {
 
     public static final AnalyticsApplicationArgs Empty = new AnalyticsApplicationArgs();
 

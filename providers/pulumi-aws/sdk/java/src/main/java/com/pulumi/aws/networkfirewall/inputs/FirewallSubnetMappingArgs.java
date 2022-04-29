@@ -5,11 +5,12 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FirewallSubnetMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallSubnetMappingArgs extends ResourceArgs {
 
     public static final FirewallSubnetMappingArgs Empty = new FirewallSubnetMappingArgs();
 

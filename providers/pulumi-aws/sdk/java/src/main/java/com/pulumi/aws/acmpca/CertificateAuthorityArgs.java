@@ -7,6 +7,7 @@ import com.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConf
 import com.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateAuthorityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityArgs extends ResourceArgs {
 
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.aws.glue.inputs.JobExecutionPropertyArgs;
 import com.pulumi.aws.glue.inputs.JobNotificationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobState extends com.pulumi.resources.ResourceArgs {
+public final class JobState extends ResourceArgs {
 
     public static final JobState Empty = new JobState();
 

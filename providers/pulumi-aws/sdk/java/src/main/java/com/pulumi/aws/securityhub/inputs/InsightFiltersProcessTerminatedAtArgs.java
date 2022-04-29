@@ -6,13 +6,14 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersProcessTerminatedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InsightFiltersProcessTerminatedAtArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersProcessTerminatedAtArgs extends ResourceArgs {
 
     public static final InsightFiltersProcessTerminatedAtArgs Empty = new InsightFiltersProcessTerminatedAtArgs();
 

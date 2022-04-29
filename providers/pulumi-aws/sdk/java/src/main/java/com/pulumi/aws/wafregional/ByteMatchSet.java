@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:wafregional/byteMatchSet:ByteMatchSet")
-public class ByteMatchSet extends com.pulumi.resources.CustomResource {
+public class ByteMatchSet extends CustomResource {
     /**
      * Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
      * 
@@ -82,19 +84,19 @@ public class ByteMatchSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ByteMatchSet(String name, @Nullable ByteMatchSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ByteMatchSet(String name, @Nullable ByteMatchSetArgs args, @Nullable CustomResourceOptions options) {
         super("aws:wafregional/byteMatchSet:ByteMatchSet", name, args == null ? ByteMatchSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ByteMatchSet(String name, Output<String> id, @Nullable ByteMatchSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ByteMatchSet(String name, Output<String> id, @Nullable ByteMatchSetState state, @Nullable CustomResourceOptions options) {
         super("aws:wafregional/byteMatchSet:ByteMatchSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class ByteMatchSet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ByteMatchSet get(String name, Output<String> id, @Nullable ByteMatchSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ByteMatchSet get(String name, Output<String> id, @Nullable ByteMatchSetState state, @Nullable CustomResourceOptions options) {
         return new ByteMatchSet(name, id, state, options);
     }
 }

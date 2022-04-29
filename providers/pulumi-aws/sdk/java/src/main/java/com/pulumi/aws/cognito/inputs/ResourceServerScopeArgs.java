@@ -5,11 +5,12 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ResourceServerScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceServerScopeArgs extends ResourceArgs {
 
     public static final ResourceServerScopeArgs Empty = new ResourceServerScopeArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.aws.licensemanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LicenseConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LicenseConfigurationArgs extends ResourceArgs {
 
     public static final LicenseConfigurationArgs Empty = new LicenseConfigurationArgs();
 

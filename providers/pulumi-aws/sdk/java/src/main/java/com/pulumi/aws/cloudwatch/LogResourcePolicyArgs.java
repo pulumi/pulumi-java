@@ -5,11 +5,12 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class LogResourcePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogResourcePolicyArgs extends ResourceArgs {
 
     public static final LogResourcePolicyArgs Empty = new LogResourcePolicyArgs();
 

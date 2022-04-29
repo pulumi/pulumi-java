@@ -6,13 +6,14 @@ package com.pulumi.aws.macie2.inputs;
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClassificationJobS3JobDefinitionScopingIncludesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassificationJobS3JobDefinitionScopingIncludesArgs extends ResourceArgs {
 
     public static final ClassificationJobS3JobDefinitionScopingIncludesArgs Empty = new ClassificationJobS3JobDefinitionScopingIncludesArgs();
 

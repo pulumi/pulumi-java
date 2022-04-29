@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation")
-public class WebsiteCertificateAuthorityAssociation extends com.pulumi.resources.CustomResource {
+public class WebsiteCertificateAuthorityAssociation extends CustomResource {
     /**
      * The root certificate of the Certificate Authority.
      * 
@@ -106,19 +108,19 @@ public class WebsiteCertificateAuthorityAssociation extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebsiteCertificateAuthorityAssociation(String name, WebsiteCertificateAuthorityAssociationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebsiteCertificateAuthorityAssociation(String name, WebsiteCertificateAuthorityAssociationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation", name, args == null ? WebsiteCertificateAuthorityAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebsiteCertificateAuthorityAssociation(String name, Output<String> id, @Nullable WebsiteCertificateAuthorityAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebsiteCertificateAuthorityAssociation(String name, Output<String> id, @Nullable WebsiteCertificateAuthorityAssociationState state, @Nullable CustomResourceOptions options) {
         super("aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -130,7 +132,7 @@ public class WebsiteCertificateAuthorityAssociation extends com.pulumi.resources
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebsiteCertificateAuthorityAssociation get(String name, Output<String> id, @Nullable WebsiteCertificateAuthorityAssociationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebsiteCertificateAuthorityAssociation get(String name, Output<String> id, @Nullable WebsiteCertificateAuthorityAssociationState state, @Nullable CustomResourceOptions options) {
         return new WebsiteCertificateAuthorityAssociation(name, id, state, options);
     }
 }

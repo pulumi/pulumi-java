@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification")
-public class VpcEndpointConnectionNotification extends com.pulumi.resources.CustomResource {
+public class VpcEndpointConnectionNotification extends CustomResource {
     /**
      * One or more endpoint [events](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters) for which to receive notifications.
      * 
@@ -138,19 +140,19 @@ public class VpcEndpointConnectionNotification extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpcEndpointConnectionNotification(String name, VpcEndpointConnectionNotificationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VpcEndpointConnectionNotification(String name, VpcEndpointConnectionNotificationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification", name, args == null ? VpcEndpointConnectionNotificationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VpcEndpointConnectionNotification(String name, Output<String> id, @Nullable VpcEndpointConnectionNotificationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VpcEndpointConnectionNotification(String name, Output<String> id, @Nullable VpcEndpointConnectionNotificationState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -162,7 +164,7 @@ public class VpcEndpointConnectionNotification extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcEndpointConnectionNotification get(String name, Output<String> id, @Nullable VpcEndpointConnectionNotificationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpcEndpointConnectionNotification get(String name, Output<String> id, @Nullable VpcEndpointConnectionNotificationState state, @Nullable CustomResourceOptions options) {
         return new VpcEndpointConnectionNotification(name, id, state, options);
     }
 }

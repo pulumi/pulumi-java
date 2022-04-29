@@ -4,12 +4,14 @@
 package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class GetSnapshotIdsFilter extends com.pulumi.resources.InvokeArgs {
+public final class GetSnapshotIdsFilter extends InvokeArgs {
 
     public static final GetSnapshotIdsFilter Empty = new GetSnapshotIdsFilter();
 

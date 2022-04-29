@@ -5,6 +5,7 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
+public final class TapePoolState extends ResourceArgs {
 
     public static final TapePoolState Empty = new TapePoolState();
 

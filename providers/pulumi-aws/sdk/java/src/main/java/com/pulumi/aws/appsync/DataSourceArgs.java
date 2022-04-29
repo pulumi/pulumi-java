@@ -10,13 +10,14 @@ import com.pulumi.aws.appsync.inputs.DataSourceLambdaConfigArgs;
 import com.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceArgs extends ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorAccountAggregationSource
 import com.pulumi.aws.cfg.inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigurationAggregatorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationAggregatorArgs extends ResourceArgs {
 
     public static final ConfigurationAggregatorArgs Empty = new ConfigurationAggregatorArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceArgs;
 import com.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GatewayState extends com.pulumi.resources.ResourceArgs {
+public final class GatewayState extends ResourceArgs {
 
     public static final GatewayState Empty = new GatewayState();
 

@@ -6,12 +6,13 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RemediationConfigurationExecutionControlsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RemediationConfigurationExecutionControlsArgs extends ResourceArgs {
 
     public static final RemediationConfigurationExecutionControlsArgs Empty = new RemediationConfigurationExecutionControlsArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeArgs;
 import com.pulumi.aws.mq.inputs.BrokerUserArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BrokerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BrokerArgs extends ResourceArgs {
 
     public static final BrokerArgs Empty = new BrokerArgs();
 

@@ -5,13 +5,14 @@ package com.pulumi.aws.ssoadmin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedPolicyAttachmentState extends com.pulumi.resources.ResourceArgs {
+public final class ManagedPolicyAttachmentState extends ResourceArgs {
 
     public static final ManagedPolicyAttachmentState Empty = new ManagedPolicyAttachmentState();
 

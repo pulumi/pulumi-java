@@ -4,11 +4,12 @@
 package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetReplicationGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetReplicationGroupArgs extends InvokeArgs {
 
     public static final GetReplicationGroupArgs Empty = new GetReplicationGroupArgs();
 

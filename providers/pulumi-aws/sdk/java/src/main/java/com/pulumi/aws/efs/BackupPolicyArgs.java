@@ -6,11 +6,12 @@ package com.pulumi.aws.efs;
 import com.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupPolicyArgs extends ResourceArgs {
 
     public static final BackupPolicyArgs Empty = new BackupPolicyArgs();
 

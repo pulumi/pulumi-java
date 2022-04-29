@@ -7,6 +7,7 @@ import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
 import com.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RemediationConfigurationState extends com.pulumi.resources.ResourceArgs {
+public final class RemediationConfigurationState extends ResourceArgs {
 
     public static final RemediationConfigurationState Empty = new RemediationConfigurationState();
 

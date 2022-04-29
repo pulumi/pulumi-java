@@ -6,13 +6,14 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.EventPermissionConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventPermissionArgs extends ResourceArgs {
 
     public static final EventPermissionArgs Empty = new EventPermissionArgs();
 

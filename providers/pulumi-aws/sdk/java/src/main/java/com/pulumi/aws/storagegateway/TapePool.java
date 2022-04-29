@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:storagegateway/tapePool:TapePool")
-public class TapePool extends com.pulumi.resources.CustomResource {
+public class TapePool extends CustomResource {
     /**
      * Volume Amazon Resource Name (ARN), e.g. `aws_storagegateway_tape_pool.example arn:aws:storagegateway:us-east-1:123456789012:tapepool/pool-12345678`.
      * 
@@ -152,19 +154,19 @@ public class TapePool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TapePool(String name, TapePoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TapePool(String name, TapePoolArgs args, @Nullable CustomResourceOptions options) {
         super("aws:storagegateway/tapePool:TapePool", name, args == null ? TapePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TapePool(String name, Output<String> id, @Nullable TapePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TapePool(String name, Output<String> id, @Nullable TapePoolState state, @Nullable CustomResourceOptions options) {
         super("aws:storagegateway/tapePool:TapePool", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -176,7 +178,7 @@ public class TapePool extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TapePool get(String name, Output<String> id, @Nullable TapePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TapePool get(String name, Output<String> id, @Nullable TapePoolState state, @Nullable CustomResourceOptions options) {
         return new TapePool(name, id, state, options);
     }
 }

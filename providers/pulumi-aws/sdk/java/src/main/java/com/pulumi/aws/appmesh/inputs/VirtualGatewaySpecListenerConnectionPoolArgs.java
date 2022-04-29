@@ -8,12 +8,13 @@ import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHtt
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHttpArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualGatewaySpecListenerConnectionPoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualGatewaySpecListenerConnectionPoolArgs extends ResourceArgs {
 
     public static final VirtualGatewaySpecListenerConnectionPoolArgs Empty = new VirtualGatewaySpecListenerConnectionPoolArgs();
 

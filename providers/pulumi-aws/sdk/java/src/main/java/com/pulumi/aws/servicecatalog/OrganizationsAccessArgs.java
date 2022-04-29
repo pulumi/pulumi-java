@@ -5,11 +5,12 @@ package com.pulumi.aws.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class OrganizationsAccessArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationsAccessArgs extends ResourceArgs {
 
     public static final OrganizationsAccessArgs Empty = new OrganizationsAccessArgs();
 

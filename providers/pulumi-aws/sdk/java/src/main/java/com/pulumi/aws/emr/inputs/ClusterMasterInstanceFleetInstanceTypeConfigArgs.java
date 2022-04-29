@@ -7,6 +7,7 @@ import com.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigCon
 import com.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends ResourceArgs {
 
     public static final ClusterMasterInstanceFleetInstanceTypeConfigArgs Empty = new ClusterMasterInstanceFleetInstanceTypeConfigArgs();
 

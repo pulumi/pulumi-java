@@ -6,10 +6,11 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs extends ResourceArgs {
 
     public static final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs Empty = new VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs();
 

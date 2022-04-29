@@ -6,11 +6,12 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.MLTransformParametersFindMatchesParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MLTransformParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class MLTransformParametersArgs extends ResourceArgs {
 
     public static final MLTransformParametersArgs Empty = new MLTransformParametersArgs();
 

@@ -15,6 +15,7 @@ import com.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerArgs;
 import com.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionState extends com.pulumi.resources.ResourceArgs {
+public final class DistributionState extends ResourceArgs {
 
     public static final DistributionState Empty = new DistributionState();
 

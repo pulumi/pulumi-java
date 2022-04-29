@@ -17,6 +17,7 @@ import com.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationArgs;
 import com.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
+public final class UserPoolState extends ResourceArgs {
 
     public static final UserPoolState Empty = new UserPoolState();
 

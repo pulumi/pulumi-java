@@ -6,6 +6,7 @@ package com.pulumi.aws.ssm.inputs;
 import com.pulumi.aws.ssm.inputs.PatchBaselineApprovalRulePatchFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchBaselineApprovalRuleArgs extends ResourceArgs {
 
     public static final PatchBaselineApprovalRuleArgs Empty = new PatchBaselineApprovalRuleArgs();
 

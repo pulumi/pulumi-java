@@ -5,12 +5,13 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DataSourceParametersMysqlArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceParametersMysqlArgs extends ResourceArgs {
 
     public static final DataSourceParametersMysqlArgs Empty = new DataSourceParametersMysqlArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:sagemaker/humanTaskUI:HumanTaskUI")
-public class HumanTaskUI extends com.pulumi.resources.CustomResource {
+public class HumanTaskUI extends CustomResource {
     /**
      * The Amazon Resource Name (ARN) assigned by AWS to this Human Task UI.
      * 
@@ -124,19 +126,19 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public HumanTaskUI(String name, HumanTaskUIArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public HumanTaskUI(String name, HumanTaskUIArgs args, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/humanTaskUI:HumanTaskUI", name, args == null ? HumanTaskUIArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private HumanTaskUI(String name, Output<String> id, @Nullable HumanTaskUIState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private HumanTaskUI(String name, Output<String> id, @Nullable HumanTaskUIState state, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/humanTaskUI:HumanTaskUI", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -148,7 +150,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HumanTaskUI get(String name, Output<String> id, @Nullable HumanTaskUIState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static HumanTaskUI get(String name, Output<String> id, @Nullable HumanTaskUIState state, @Nullable CustomResourceOptions options) {
         return new HumanTaskUI(name, id, state, options);
     }
 }

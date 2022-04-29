@@ -6,10 +6,11 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class BucketServerSideEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketServerSideEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final BucketServerSideEncryptionConfigurationArgs Empty = new BucketServerSideEncryptionConfigurationArgs();
 

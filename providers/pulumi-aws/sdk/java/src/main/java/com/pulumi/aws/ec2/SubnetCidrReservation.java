@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:ec2/subnetCidrReservation:SubnetCidrReservation")
-public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
+public class SubnetCidrReservation extends CustomResource {
     /**
      * The CIDR block for the reservation.
      * 
@@ -122,19 +124,19 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SubnetCidrReservation(String name, SubnetCidrReservationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SubnetCidrReservation(String name, SubnetCidrReservationArgs args, @Nullable CustomResourceOptions options) {
         super("aws:ec2/subnetCidrReservation:SubnetCidrReservation", name, args == null ? SubnetCidrReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SubnetCidrReservation(String name, Output<String> id, @Nullable SubnetCidrReservationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SubnetCidrReservation(String name, Output<String> id, @Nullable SubnetCidrReservationState state, @Nullable CustomResourceOptions options) {
         super("aws:ec2/subnetCidrReservation:SubnetCidrReservation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -146,7 +148,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubnetCidrReservation get(String name, Output<String> id, @Nullable SubnetCidrReservationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SubnetCidrReservation get(String name, Output<String> id, @Nullable SubnetCidrReservationState state, @Nullable CustomResourceOptions options) {
         return new SubnetCidrReservation(name, id, state, options);
     }
 }

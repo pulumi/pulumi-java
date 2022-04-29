@@ -6,11 +6,12 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs extends ResourceArgs {
 
     public static final TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs Empty = new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.aws.cloudfront.inputs.DistributionOriginGroupFailoverCriteriaA
 import com.pulumi.aws.cloudfront.inputs.DistributionOriginGroupMemberArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class DistributionOriginGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionOriginGroupArgs extends ResourceArgs {
 
     public static final DistributionOriginGroupArgs Empty = new DistributionOriginGroupArgs();
 

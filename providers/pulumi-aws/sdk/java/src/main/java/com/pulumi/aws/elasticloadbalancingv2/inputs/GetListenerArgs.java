@@ -4,6 +4,7 @@
 package com.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetListenerArgs extends InvokeArgs {
 
     public static final GetListenerArgs Empty = new GetListenerArgs();
 

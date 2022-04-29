@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.securityhub.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class AccountState extends com.pulumi.resources.ResourceArgs {
+public final class AccountState extends ResourceArgs {
 
     public static final AccountState Empty = new AccountState();
 

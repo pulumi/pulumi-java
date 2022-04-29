@@ -6,6 +6,7 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs extends ResourceArgs {
 
     public static final FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs Empty = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs();
 

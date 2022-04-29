@@ -6,13 +6,14 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersResourceContainerLaunchedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InsightFiltersResourceContainerLaunchedAtArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightFiltersResourceContainerLaunchedAtArgs extends ResourceArgs {
 
     public static final InsightFiltersResourceContainerLaunchedAtArgs Empty = new InsightFiltersResourceContainerLaunchedAtArgs();
 

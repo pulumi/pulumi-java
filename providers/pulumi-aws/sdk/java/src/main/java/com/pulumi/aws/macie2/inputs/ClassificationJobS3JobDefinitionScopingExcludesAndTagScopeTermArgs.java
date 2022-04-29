@@ -6,6 +6,7 @@ package com.pulumi.aws.macie2.inputs;
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs extends ResourceArgs {
 
     public static final ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs Empty = new ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs();
 

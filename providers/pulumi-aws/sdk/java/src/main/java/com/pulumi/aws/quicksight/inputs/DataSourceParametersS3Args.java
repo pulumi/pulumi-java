@@ -6,10 +6,11 @@ package com.pulumi.aws.quicksight.inputs;
 import com.pulumi.aws.quicksight.inputs.DataSourceParametersS3ManifestFileLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class DataSourceParametersS3Args extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceParametersS3Args extends ResourceArgs {
 
     public static final DataSourceParametersS3Args Empty = new DataSourceParametersS3Args();
 

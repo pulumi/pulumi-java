@@ -4,11 +4,12 @@
 package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLambdaFunctionAssociationArgs extends InvokeArgs {
 
     public static final GetLambdaFunctionAssociationArgs Empty = new GetLambdaFunctionAssociationArgs();
 

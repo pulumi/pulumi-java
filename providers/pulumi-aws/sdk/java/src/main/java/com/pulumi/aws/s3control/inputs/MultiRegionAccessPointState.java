@@ -6,13 +6,14 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MultiRegionAccessPointState extends com.pulumi.resources.ResourceArgs {
+public final class MultiRegionAccessPointState extends ResourceArgs {
 
     public static final MultiRegionAccessPointState Empty = new MultiRegionAccessPointState();
 

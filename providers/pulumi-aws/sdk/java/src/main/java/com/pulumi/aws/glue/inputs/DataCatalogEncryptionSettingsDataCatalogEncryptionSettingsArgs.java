@@ -7,10 +7,11 @@ import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryp
 import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs extends ResourceArgs {
 
     public static final DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs Empty = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs();
 

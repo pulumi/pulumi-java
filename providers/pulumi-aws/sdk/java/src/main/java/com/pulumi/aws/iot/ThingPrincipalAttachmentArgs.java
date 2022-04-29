@@ -5,11 +5,12 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThingPrincipalAttachmentArgs extends ResourceArgs {
 
     public static final ThingPrincipalAttachmentArgs Empty = new ThingPrincipalAttachmentArgs();
 

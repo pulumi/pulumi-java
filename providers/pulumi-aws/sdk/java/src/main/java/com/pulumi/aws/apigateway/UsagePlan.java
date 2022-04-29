@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:apigateway/usagePlan:UsagePlan")
-public class UsagePlan extends com.pulumi.resources.CustomResource {
+public class UsagePlan extends CustomResource {
     /**
      * The associated API stages of the usage plan.
      * 
@@ -183,19 +185,19 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public UsagePlan(String name, @Nullable UsagePlanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public UsagePlan(String name, @Nullable UsagePlanArgs args, @Nullable CustomResourceOptions options) {
         super("aws:apigateway/usagePlan:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private UsagePlan(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private UsagePlan(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable CustomResourceOptions options) {
         super("aws:apigateway/usagePlan:UsagePlan", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -207,7 +209,7 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UsagePlan get(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static UsagePlan get(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable CustomResourceOptions options) {
         return new UsagePlan(name, id, state, options);
     }
 }

@@ -10,6 +10,7 @@ import com.pulumi.aws.elastictranscoder.inputs.PresetVideoArgs;
 import com.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class PresetArgs extends ResourceArgs {
 
     public static final PresetArgs Empty = new PresetArgs();
 

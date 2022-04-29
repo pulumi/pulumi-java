@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:datapipeline/pipelineDefinition:PipelineDefinition")
-public class PipelineDefinition extends com.pulumi.resources.CustomResource {
+public class PipelineDefinition extends CustomResource {
     /**
      * Configuration block for the parameter objects used in the pipeline definition. See below
      * 
@@ -112,19 +114,19 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PipelineDefinition(String name, PipelineDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PipelineDefinition(String name, PipelineDefinitionArgs args, @Nullable CustomResourceOptions options) {
         super("aws:datapipeline/pipelineDefinition:PipelineDefinition", name, args == null ? PipelineDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PipelineDefinition(String name, Output<String> id, @Nullable PipelineDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PipelineDefinition(String name, Output<String> id, @Nullable PipelineDefinitionState state, @Nullable CustomResourceOptions options) {
         super("aws:datapipeline/pipelineDefinition:PipelineDefinition", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -136,7 +138,7 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PipelineDefinition get(String name, Output<String> id, @Nullable PipelineDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PipelineDefinition get(String name, Output<String> id, @Nullable PipelineDefinitionState state, @Nullable CustomResourceOptions options) {
         return new PipelineDefinition(name, id, state, options);
     }
 }

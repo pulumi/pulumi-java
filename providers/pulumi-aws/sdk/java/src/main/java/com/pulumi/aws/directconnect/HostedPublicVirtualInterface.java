@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:directconnect/hostedPublicVirtualInterface:HostedPublicVirtualInterface")
-public class HostedPublicVirtualInterface extends com.pulumi.resources.CustomResource {
+public class HostedPublicVirtualInterface extends CustomResource {
     /**
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
@@ -228,19 +230,19 @@ public class HostedPublicVirtualInterface extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public HostedPublicVirtualInterface(String name, HostedPublicVirtualInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public HostedPublicVirtualInterface(String name, HostedPublicVirtualInterfaceArgs args, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/hostedPublicVirtualInterface:HostedPublicVirtualInterface", name, args == null ? HostedPublicVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private HostedPublicVirtualInterface(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private HostedPublicVirtualInterface(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceState state, @Nullable CustomResourceOptions options) {
         super("aws:directconnect/hostedPublicVirtualInterface:HostedPublicVirtualInterface", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -252,7 +254,7 @@ public class HostedPublicVirtualInterface extends com.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HostedPublicVirtualInterface get(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static HostedPublicVirtualInterface get(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceState state, @Nullable CustomResourceOptions options) {
         return new HostedPublicVirtualInterface(name, id, state, options);
     }
 }

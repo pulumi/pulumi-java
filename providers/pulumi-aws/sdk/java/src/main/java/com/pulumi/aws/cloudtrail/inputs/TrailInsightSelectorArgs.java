@@ -5,11 +5,12 @@ package com.pulumi.aws.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TrailInsightSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrailInsightSelectorArgs extends ResourceArgs {
 
     public static final TrailInsightSelectorArgs Empty = new TrailInsightSelectorArgs();
 

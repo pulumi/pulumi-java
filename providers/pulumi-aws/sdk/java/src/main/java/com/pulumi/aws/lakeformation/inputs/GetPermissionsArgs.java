@@ -8,6 +8,7 @@ import com.pulumi.aws.lakeformation.inputs.GetPermissionsDatabase;
 import com.pulumi.aws.lakeformation.inputs.GetPermissionsTable;
 import com.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumns;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPermissionsArgs extends InvokeArgs {
 
     public static final GetPermissionsArgs Empty = new GetPermissionsArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:codebuild/sourceCredential:SourceCredential")
-public class SourceCredential extends com.pulumi.resources.CustomResource {
+public class SourceCredential extends CustomResource {
     /**
      * The ARN of Source Credential.
      * 
@@ -125,19 +127,19 @@ public class SourceCredential extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SourceCredential(String name, SourceCredentialArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SourceCredential(String name, SourceCredentialArgs args, @Nullable CustomResourceOptions options) {
         super("aws:codebuild/sourceCredential:SourceCredential", name, args == null ? SourceCredentialArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SourceCredential(String name, Output<String> id, @Nullable SourceCredentialState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SourceCredential(String name, Output<String> id, @Nullable SourceCredentialState state, @Nullable CustomResourceOptions options) {
         super("aws:codebuild/sourceCredential:SourceCredential", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -149,7 +151,7 @@ public class SourceCredential extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SourceCredential get(String name, Output<String> id, @Nullable SourceCredentialState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SourceCredential get(String name, Output<String> id, @Nullable SourceCredentialState state, @Nullable CustomResourceOptions options) {
         return new SourceCredential(name, id, state, options);
     }
 }

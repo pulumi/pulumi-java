@@ -7,13 +7,14 @@ import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryC
 import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceSourceConfigurationCodeRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSourceConfigurationCodeRepositoryArgs extends ResourceArgs {
 
     public static final ServiceSourceConfigurationCodeRepositoryArgs Empty = new ServiceSourceConfigurationCodeRepositoryArgs();
 

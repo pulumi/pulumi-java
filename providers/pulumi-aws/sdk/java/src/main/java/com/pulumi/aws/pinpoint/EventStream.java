@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:pinpoint/eventStream:EventStream")
-public class EventStream extends com.pulumi.resources.CustomResource {
+public class EventStream extends CustomResource {
     /**
      * The application ID.
      * 
@@ -93,19 +95,19 @@ public class EventStream extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EventStream(String name, EventStreamArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EventStream(String name, EventStreamArgs args, @Nullable CustomResourceOptions options) {
         super("aws:pinpoint/eventStream:EventStream", name, args == null ? EventStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EventStream(String name, Output<String> id, @Nullable EventStreamState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EventStream(String name, Output<String> id, @Nullable EventStreamState state, @Nullable CustomResourceOptions options) {
         super("aws:pinpoint/eventStream:EventStream", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -117,7 +119,7 @@ public class EventStream extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventStream get(String name, Output<String> id, @Nullable EventStreamState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EventStream get(String name, Output<String> id, @Nullable EventStreamState state, @Nullable CustomResourceOptions options) {
         return new EventStream(name, id, state, options);
     }
 }

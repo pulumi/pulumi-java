@@ -6,10 +6,11 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.DistributionRestrictionsGeoRestrictionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class DistributionRestrictionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionRestrictionsArgs extends ResourceArgs {
 
     public static final DistributionRestrictionsArgs Empty = new DistributionRestrictionsArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.aws.s3control;
 import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleConfigurationArgs extends ResourceArgs {
 
     public static final BucketLifecycleConfigurationArgs Empty = new BucketLifecycleConfigurationArgs();
 

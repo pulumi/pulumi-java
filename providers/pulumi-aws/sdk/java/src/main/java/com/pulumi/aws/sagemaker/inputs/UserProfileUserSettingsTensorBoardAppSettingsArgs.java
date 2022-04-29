@@ -6,10 +6,11 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends ResourceArgs {
 
     public static final UserProfileUserSettingsTensorBoardAppSettingsArgs Empty = new UserProfileUserSettingsTensorBoardAppSettingsArgs();
 

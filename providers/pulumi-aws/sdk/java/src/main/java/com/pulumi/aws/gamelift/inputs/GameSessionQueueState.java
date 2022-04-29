@@ -6,6 +6,7 @@ package com.pulumi.aws.gamelift.inputs;
 import com.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GameSessionQueueState extends com.pulumi.resources.ResourceArgs {
+public final class GameSessionQueueState extends ResourceArgs {
 
     public static final GameSessionQueueState Empty = new GameSessionQueueState();
 

@@ -6,10 +6,11 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class InfrastructureConfigurationLoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class InfrastructureConfigurationLoggingArgs extends ResourceArgs {
 
     public static final InfrastructureConfigurationLoggingArgs Empty = new InfrastructureConfigurationLoggingArgs();
 

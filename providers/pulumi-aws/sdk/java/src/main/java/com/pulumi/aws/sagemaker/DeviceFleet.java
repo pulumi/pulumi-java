@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:sagemaker/deviceFleet:DeviceFleet")
-public class DeviceFleet extends com.pulumi.resources.CustomResource {
+public class DeviceFleet extends CustomResource {
     /**
      * The Amazon Resource Name (ARN) assigned by AWS to this Device Fleet.
      * 
@@ -173,19 +175,19 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DeviceFleet(String name, DeviceFleetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DeviceFleet(String name, DeviceFleetArgs args, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/deviceFleet:DeviceFleet", name, args == null ? DeviceFleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DeviceFleet(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DeviceFleet(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable CustomResourceOptions options) {
         super("aws:sagemaker/deviceFleet:DeviceFleet", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -197,7 +199,7 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeviceFleet get(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DeviceFleet get(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable CustomResourceOptions options) {
         return new DeviceFleet(name, id, state, options);
     }
 }

@@ -6,13 +6,14 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntentFulfillmentActivityArgs extends ResourceArgs {
 
     public static final IntentFulfillmentActivityArgs Empty = new IntentFulfillmentActivityArgs();
 

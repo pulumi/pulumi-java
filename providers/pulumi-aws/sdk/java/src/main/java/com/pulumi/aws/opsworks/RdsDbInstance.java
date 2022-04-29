@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:opsworks/rdsDbInstance:RdsDbInstance")
-public class RdsDbInstance extends com.pulumi.resources.CustomResource {
+public class RdsDbInstance extends CustomResource {
     /**
      * A db password
      * 
@@ -99,19 +101,19 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RdsDbInstance(String name, RdsDbInstanceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RdsDbInstance(String name, RdsDbInstanceArgs args, @Nullable CustomResourceOptions options) {
         super("aws:opsworks/rdsDbInstance:RdsDbInstance", name, args == null ? RdsDbInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RdsDbInstance(String name, Output<String> id, @Nullable RdsDbInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RdsDbInstance(String name, Output<String> id, @Nullable RdsDbInstanceState state, @Nullable CustomResourceOptions options) {
         super("aws:opsworks/rdsDbInstance:RdsDbInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -123,7 +125,7 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RdsDbInstance get(String name, Output<String> id, @Nullable RdsDbInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RdsDbInstance get(String name, Output<String> id, @Nullable RdsDbInstanceState state, @Nullable CustomResourceOptions options) {
         return new RdsDbInstance(name, id, state, options);
     }
 }

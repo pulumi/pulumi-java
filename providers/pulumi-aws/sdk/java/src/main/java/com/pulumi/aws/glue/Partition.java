@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws:glue/partition:Partition")
-public class Partition extends com.pulumi.resources.CustomResource {
+public class Partition extends CustomResource {
     /**
      * ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
      * 
@@ -173,19 +175,19 @@ public class Partition extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Partition(String name, PartitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Partition(String name, PartitionArgs args, @Nullable CustomResourceOptions options) {
         super("aws:glue/partition:Partition", name, args == null ? PartitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Partition(String name, Output<String> id, @Nullable PartitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Partition(String name, Output<String> id, @Nullable PartitionState state, @Nullable CustomResourceOptions options) {
         super("aws:glue/partition:Partition", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -197,7 +199,7 @@ public class Partition extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Partition get(String name, Output<String> id, @Nullable PartitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Partition get(String name, Output<String> id, @Nullable PartitionState state, @Nullable CustomResourceOptions options) {
         return new Partition(name, id, state, options);
     }
 }

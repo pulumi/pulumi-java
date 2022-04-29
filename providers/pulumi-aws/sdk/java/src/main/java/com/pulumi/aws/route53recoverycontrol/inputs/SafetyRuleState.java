@@ -6,6 +6,7 @@ package com.pulumi.aws.route53recoverycontrol.inputs;
 import com.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
+public final class SafetyRuleState extends ResourceArgs {
 
     public static final SafetyRuleState Empty = new SafetyRuleState();
 

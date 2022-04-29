@@ -6,13 +6,14 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallFirewallStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallFirewallStatusArgs extends ResourceArgs {
 
     public static final FirewallFirewallStatusArgs Empty = new FirewallFirewallStatusArgs();
 
