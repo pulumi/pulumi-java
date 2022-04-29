@@ -52,7 +52,7 @@ public final class Infra {
 
 ## Welcome
 
-* **[Get Started with Pulumi using Java](#getting-started)**: Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java
+* **[Get Started with Pulumi using Java](#getting-started)**: Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java.
 
 * **[Examples](https://github.com/pulumi/examples)**: Browse Java examples across many clouds and scenarios including containers, serverless, and infrastructure.
 
@@ -115,6 +115,32 @@ resources in a Pulumi Java, and deploy them to AWS, in minutes:
 To learn more, head over to [pulumi.com](https://pulumi.com/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-home) for much more information, including
 [tutorials](https://www.pulumi.com/docs/reference/tutorials/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-tutorials), [examples](https://github.com/pulumi/examples), and
 details of the core Pulumi CLI and [programming model concepts](https://www.pulumi.com/docs/reference/concepts/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-concepts).
+
+
+## Requirements
+
+JDK 11 or higher is required.
+
+Apache Maven is the recommended build tool. Gradle Build Tool is also
+supported. Pulumi will recognize Maven and Gradle programs and
+automatically recompile them without any further configuration. The
+supported versions are:
+
+- Apache Maven 3.8.4
+- Gradle Build Tool 7.4
+
+Other build tools are supported via the `runtime.options.binary`
+configuration option that can point to a pre-built jar in
+`Pulumi.yaml`:
+
+```
+name: myproject
+runtime:
+  name: java
+  options:
+    binary: target/myproject-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
 
 
 ## Contributing
