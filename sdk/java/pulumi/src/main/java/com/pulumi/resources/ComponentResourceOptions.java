@@ -22,7 +22,9 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     @Nullable
     private List<ProviderResource> providers;
 
-    protected ComponentResourceOptions() { /* empty */ }
+    private ComponentResourceOptions() {
+        // Empty
+    }
 
     public ComponentResourceOptions(
             @Nullable Output<String> id,
@@ -50,17 +52,28 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
         return new Builder(new ComponentResourceOptions());
     }
 
+    /**
+     * The {@link ComponentResourceOptions} builder.
+     */
     public static final class Builder extends ResourceOptions.Builder<ComponentResourceOptions, Builder> {
 
         private Builder(ComponentResourceOptions options) {
             super(options);
         }
 
-        public Builder provider(ProviderResource... providers) {
-            return this.provider(List.of(providers));
+        /**
+         * @param providers optional list of providers to use for child resources
+         * @return the {@link Builder}
+         */
+        public Builder providers(ProviderResource... providers) {
+            return this.providers(List.of(providers));
         }
 
-        public Builder provider(@Nullable List<ProviderResource> providers) {
+        /**
+         * @param providers optional list of providers to use for child resources
+         * @return the {@link Builder}
+         */
+        public Builder providers(@Nullable List<ProviderResource> providers) {
             options.providers = providers;
             return this;
         }
@@ -71,9 +84,9 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     }
 
     /**
-     * An optional set of providers to use for child resources.
+     * An optional list of providers to use for child resources.
      *
-     * @return set of providers or empty
+     * @return list of providers or empty
      */
     public List<ProviderResource> getProviders() {
         return providers == null ? List.of() : List.copyOf(providers);

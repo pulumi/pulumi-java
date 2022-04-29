@@ -2,14 +2,16 @@ package com.pulumi.resources;
 
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.pulumi.resources.Resources.mergeNullableList;
+import static java.util.stream.Collectors.toList;
 
 /**
  * ResourceOptions is a bag of optional settings that control a resource's behavior.
@@ -87,16 +89,19 @@ public abstract class ResourceOptions {
 
         public B id(@Nullable Output<String> id) {
             options.id = id;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B id(@Nullable String id) {
             options.id = Output.ofNullable(id);
+            //noinspection unchecked
             return (B) this;
         }
 
         public B parent(@Nullable Resource parent) {
             options.parent = parent;
+            //noinspection unchecked
             return (B) this;
         }
 
@@ -106,16 +111,19 @@ public abstract class ResourceOptions {
 
         public B dependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B dependsOn(@Nullable List<Resource> dependsOn) {
             options.dependsOn = Output.ofNullable(dependsOn);
+            //noinspection unchecked
             return (B) this;
         }
 
         public B protect(boolean protect) {
             options.protect = protect;
+            //noinspection unchecked
             return (B) this;
         }
 
@@ -125,21 +133,25 @@ public abstract class ResourceOptions {
 
         public B ignoreChanges(@Nullable List<String> ignoreChanges) {
             options.ignoreChanges = ignoreChanges;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B version(@Nullable String version) {
             options.version = version;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B provider(@Nullable ProviderResource provider) {
             options.provider = provider;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B customTimeouts(@Nullable CustomTimeouts customTimeouts) {
             options.customTimeouts = customTimeouts;
+            //noinspection unchecked
             return (B) this;
         }
 
@@ -149,27 +161,30 @@ public abstract class ResourceOptions {
 
         public B resourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
             options.resourceTransformations = resourceTransformations;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B aliases(Alias... aliases) {
-            return this.aliases(List.of(aliases)
-                .stream()
-                .map(alias -> Output.of(alias))
-                .collect(Collectors.toList()));
+            return this.aliases(Stream.of(aliases)
+                    .map(Output::of)
+                    .collect(toList()));
         }
 
-        public B aliases(Output<Alias>... aliases) {
+        @SafeVarargs
+        public final B aliases(Output<Alias>... aliases) {
             return this.aliases(List.of(aliases));
         }
 
         public B aliases(@Nullable List<Output<Alias>> aliases) {
             options.aliases = aliases;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B urn(@Nullable String urn) {
             options.urn = urn;
+            //noinspection unchecked
             return (B) this;
         }
 
@@ -179,15 +194,18 @@ public abstract class ResourceOptions {
 
         public B replaceOnChanges(@Nullable List<String> replaceOnChanges) {
             options.replaceOnChanges = replaceOnChanges;
+            //noinspection unchecked
             return (B) this;
         }
 
         public B retainOnDelete(boolean retainOnDelete) {
+            //noinspection unchecked
             options.retainOnDelete = retainOnDelete;
             return (B) this;
         }
 
         public B pluginDownloadURL(@Nullable String pluginDownloadURL) {
+            //noinspection unchecked
             options.pluginDownloadURL = pluginDownloadURL;
             return (B) this;
         }
@@ -250,7 +268,7 @@ public abstract class ResourceOptions {
     }
 
     /**
-     * An optional CustomTimeouts configuration block.
+     * An optional CustomTimeouts configuration.
      */
     public Optional<CustomTimeouts> getCustomTimeouts() {
         return Optional.ofNullable(customTimeouts);
@@ -258,8 +276,8 @@ public abstract class ResourceOptions {
 
     /**
      * Optional list of transformations to apply to this resource during construction.
-     * The transformations are applied in order, and are applied prior to transformation applied to
-     * parents walking from the resource up to the stack.
+     * The transformations are applied in order, and are applied prior to transformation
+     * applied to parent walking from the resource up to the stack.
      */
     public List<ResourceTransformation> getResourceTransformations() {
         return this.resourceTransformations == null ? List.of() : List.copyOf(this.resourceTransformations);
@@ -305,10 +323,12 @@ public abstract class ResourceOptions {
         return Optional.ofNullable(this.pluginDownloadURL);
     }
 
+    @InternalUse
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
         return mergeSharedOptions(options1, options2, null);
     }
 
+    @InternalUse
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Output<String> id) {
         Objects.requireNonNull(options1);
         Objects.requireNonNull(options2);
@@ -325,6 +345,8 @@ public abstract class ResourceOptions {
         options1.resourceTransformations = mergeNullableList(options1.resourceTransformations, options2.resourceTransformations);
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
+        options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
+        options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
         options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
         options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
 
