@@ -13,6 +13,8 @@ import com.pulumi.gcp.pubsub.inputs.LiteTopicState;
 import com.pulumi.gcp.pubsub.outputs.LiteTopicPartitionConfig;
 import com.pulumi.gcp.pubsub.outputs.LiteTopicReservationConfig;
 import com.pulumi.gcp.pubsub.outputs.LiteTopicRetentionConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:pubsub/liteTopic:LiteTopic")
-public class LiteTopic extends com.pulumi.resources.CustomResource {
+public class LiteTopic extends CustomResource {
     /**
      * Name of the topic.
      * 
@@ -179,19 +181,19 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LiteTopic(String name, @Nullable LiteTopicArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LiteTopic(String name, @Nullable LiteTopicArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LiteTopic(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LiteTopic(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/liteTopic:LiteTopic", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -203,7 +205,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiteTopic get(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LiteTopic get(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable CustomResourceOptions options) {
         return new LiteTopic(name, id, state, options);
     }
 }

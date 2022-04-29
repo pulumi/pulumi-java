@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleUrlRedirectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapPathMatcherPathRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherPathRuleArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherPathRuleArgs Empty = new URLMapPathMatcherPathRuleArgs();
 

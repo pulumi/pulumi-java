@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.TaxonomyIamPolicyArgs;
 import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:datacatalog/taxonomyIamPolicy:TaxonomyIamPolicy")
-public class TaxonomyIamPolicy extends com.pulumi.resources.CustomResource {
+public class TaxonomyIamPolicy extends CustomResource {
     /**
      * (Computed) The etag of the IAM policy.
      * 
@@ -145,19 +147,19 @@ public class TaxonomyIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TaxonomyIamPolicy(String name, TaxonomyIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TaxonomyIamPolicy(String name, TaxonomyIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/taxonomyIamPolicy:TaxonomyIamPolicy", name, args == null ? TaxonomyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TaxonomyIamPolicy(String name, Output<String> id, @Nullable TaxonomyIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TaxonomyIamPolicy(String name, Output<String> id, @Nullable TaxonomyIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/taxonomyIamPolicy:TaxonomyIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class TaxonomyIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TaxonomyIamPolicy get(String name, Output<String> id, @Nullable TaxonomyIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TaxonomyIamPolicy get(String name, Output<String> id, @Nullable TaxonomyIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new TaxonomyIamPolicy(name, id, state, options);
     }
 }

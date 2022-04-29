@@ -5,11 +5,12 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class FolderSinkBigqueryOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FolderSinkBigqueryOptionsArgs extends ResourceArgs {
 
     public static final FolderSinkBigqueryOptionsArgs Empty = new FolderSinkBigqueryOptionsArgs();
 

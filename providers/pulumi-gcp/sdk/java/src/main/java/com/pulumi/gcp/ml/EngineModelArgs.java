@@ -6,6 +6,7 @@ package com.pulumi.gcp.ml;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.ml.inputs.EngineModelDefaultVersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EngineModelArgs extends com.pulumi.resources.ResourceArgs {
+public final class EngineModelArgs extends ResourceArgs {
 
     public static final EngineModelArgs Empty = new EngineModelArgs();
 

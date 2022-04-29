@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.RegionSslCertificateArgs;
 import com.pulumi.gcp.compute.inputs.RegionSslCertificateState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -53,7 +55,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionSslCertificate:RegionSslCertificate")
-public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
+public class RegionSslCertificate extends CustomResource {
     /**
      * The certificate in PEM format.
      * The certificate chain must be no greater than 5 certs long.
@@ -242,19 +244,19 @@ public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionSslCertificate(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionSslCertificate(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -266,7 +268,7 @@ public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionSslCertificate get(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionSslCertificate get(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable CustomResourceOptions options) {
         return new RegionSslCertificate(name, id, state, options);
     }
 }

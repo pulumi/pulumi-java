@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.RegionDiskIamBindingArgs;
 import com.pulumi.gcp.compute.inputs.RegionDiskIamBindingState;
 import com.pulumi.gcp.compute.outputs.RegionDiskIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionDiskIamBinding:RegionDiskIamBinding")
-public class RegionDiskIamBinding extends com.pulumi.resources.CustomResource {
+public class RegionDiskIamBinding extends CustomResource {
     @Export(name="condition", type=RegionDiskIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ RegionDiskIamBindingCondition> condition;
 
@@ -162,19 +164,19 @@ public class RegionDiskIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionDiskIamBinding(String name, RegionDiskIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionDiskIamBinding(String name, RegionDiskIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionDiskIamBinding:RegionDiskIamBinding", name, args == null ? RegionDiskIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionDiskIamBinding(String name, Output<String> id, @Nullable RegionDiskIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionDiskIamBinding(String name, Output<String> id, @Nullable RegionDiskIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionDiskIamBinding:RegionDiskIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -186,7 +188,7 @@ public class RegionDiskIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionDiskIamBinding get(String name, Output<String> id, @Nullable RegionDiskIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionDiskIamBinding get(String name, Output<String> id, @Nullable RegionDiskIamBindingState state, @Nullable CustomResourceOptions options) {
         return new RegionDiskIamBinding(name, id, state, options);
     }
 }

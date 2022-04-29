@@ -12,13 +12,14 @@ import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteAction
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends ResourceArgs {
 
     public static final RegionUrlMapPathMatcherRouteRuleRouteActionArgs Empty = new RegionUrlMapPathMatcherRouteRuleRouteActionArgs();
 

@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttpsHealthCheckArgs;
 import com.pulumi.gcp.compute.inputs.RegionHealthCheckLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.RegionHealthCheckSslHealthCheckArgs;
 import com.pulumi.gcp.compute.inputs.RegionHealthCheckTcpHealthCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionHealthCheckArgs extends ResourceArgs {
 
     public static final RegionHealthCheckArgs Empty = new RegionHealthCheckArgs();
 

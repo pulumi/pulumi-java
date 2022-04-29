@@ -5,12 +5,13 @@ package com.pulumi.gcp.resourcemanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class LienArgs extends com.pulumi.resources.ResourceArgs {
+public final class LienArgs extends ResourceArgs {
 
     public static final LienArgs Empty = new LienArgs();
 

@@ -6,10 +6,11 @@ package com.pulumi.gcp.container.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.ClusterNotificationConfigPubsubArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ClusterNotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterNotificationConfigArgs extends ResourceArgs {
 
     public static final ClusterNotificationConfigArgs Empty = new ClusterNotificationConfigArgs();
 

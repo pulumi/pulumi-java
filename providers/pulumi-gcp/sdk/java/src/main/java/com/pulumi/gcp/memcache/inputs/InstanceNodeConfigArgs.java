@@ -5,11 +5,12 @@ package com.pulumi.gcp.memcache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class InstanceNodeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceNodeConfigArgs extends ResourceArgs {
 
     public static final InstanceNodeConfigArgs Empty = new InstanceNodeConfigArgs();
 

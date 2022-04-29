@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestPoliciesRecipeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestPoliciesRecipeArgs extends ResourceArgs {
 
     public static final GuestPoliciesRecipeArgs Empty = new GuestPoliciesRecipeArgs();
 

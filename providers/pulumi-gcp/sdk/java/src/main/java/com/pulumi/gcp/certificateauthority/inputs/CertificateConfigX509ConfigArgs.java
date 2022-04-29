@@ -9,6 +9,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigAdd
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigCaOptionsArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigPolicyIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateConfigX509ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateConfigX509ConfigArgs extends ResourceArgs {
 
     public static final CertificateConfigX509ConfigArgs Empty = new CertificateConfigX509ConfigArgs();
 

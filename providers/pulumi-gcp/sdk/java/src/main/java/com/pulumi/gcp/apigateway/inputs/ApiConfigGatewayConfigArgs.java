@@ -6,10 +6,11 @@ package com.pulumi.gcp.apigateway.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigBackendConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ApiConfigGatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiConfigGatewayConfigArgs extends ResourceArgs {
 
     public static final ApiConfigGatewayConfigArgs Empty = new ApiConfigGatewayConfigArgs();
 

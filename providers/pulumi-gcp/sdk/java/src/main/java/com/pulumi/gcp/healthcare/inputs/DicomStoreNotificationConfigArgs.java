@@ -5,11 +5,12 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DicomStoreNotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DicomStoreNotificationConfigArgs extends ResourceArgs {
 
     public static final DicomStoreNotificationConfigArgs Empty = new DicomStoreNotificationConfigArgs();
 

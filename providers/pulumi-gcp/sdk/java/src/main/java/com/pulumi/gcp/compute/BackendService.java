@@ -18,6 +18,8 @@ import com.pulumi.gcp.compute.outputs.BackendServiceIap;
 import com.pulumi.gcp.compute.outputs.BackendServiceLogConfig;
 import com.pulumi.gcp.compute.outputs.BackendServiceOutlierDetection;
 import com.pulumi.gcp.compute.outputs.BackendServiceSecuritySettings;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/backendService:BackendService")
-public class BackendService extends com.pulumi.resources.CustomResource {
+public class BackendService extends CustomResource {
     /**
      * Lifetime of cookies in seconds if session_affinity is
      * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -596,19 +598,19 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BackendService(String name, @Nullable BackendServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BackendService(String name, @Nullable BackendServiceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/backendService:BackendService", name, args == null ? BackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BackendService(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BackendService(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/backendService:BackendService", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -620,7 +622,7 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BackendService get(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BackendService get(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable CustomResourceOptions options) {
         return new BackendService(name, id, state, options);
     }
 }

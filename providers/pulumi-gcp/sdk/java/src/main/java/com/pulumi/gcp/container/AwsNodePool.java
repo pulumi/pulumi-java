@@ -13,6 +13,8 @@ import com.pulumi.gcp.container.inputs.AwsNodePoolState;
 import com.pulumi.gcp.container.outputs.AwsNodePoolAutoscaling;
 import com.pulumi.gcp.container.outputs.AwsNodePoolConfig;
 import com.pulumi.gcp.container.outputs.AwsNodePoolMaxPodsConstraint;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:container/awsNodePool:AwsNodePool")
-public class AwsNodePool extends com.pulumi.resources.CustomResource {
+public class AwsNodePool extends CustomResource {
     /**
      * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
@@ -295,19 +297,19 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AwsNodePool(String name, AwsNodePoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AwsNodePool(String name, AwsNodePoolArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:container/awsNodePool:AwsNodePool", name, args == null ? AwsNodePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AwsNodePool(String name, Output<String> id, @Nullable AwsNodePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AwsNodePool(String name, Output<String> id, @Nullable AwsNodePoolState state, @Nullable CustomResourceOptions options) {
         super("gcp:container/awsNodePool:AwsNodePool", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -319,7 +321,7 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AwsNodePool get(String name, Output<String> id, @Nullable AwsNodePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AwsNodePool get(String name, Output<String> id, @Nullable AwsNodePoolState state, @Nullable CustomResourceOptions options) {
         return new AwsNodePool(name, id, state, options);
     }
 }

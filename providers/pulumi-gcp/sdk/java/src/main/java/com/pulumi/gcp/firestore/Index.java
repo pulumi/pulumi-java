@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.firestore.IndexArgs;
 import com.pulumi.gcp.firestore.inputs.IndexState;
 import com.pulumi.gcp.firestore.outputs.IndexField;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:firestore/index:Index")
-public class Index extends com.pulumi.resources.CustomResource {
+public class Index extends CustomResource {
     /**
      * The collection being indexed.
      * 
@@ -172,19 +174,19 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Index(String name, IndexArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Index(String name, IndexArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:firestore/index:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Index(String name, Output<String> id, @Nullable IndexState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Index(String name, Output<String> id, @Nullable IndexState state, @Nullable CustomResourceOptions options) {
         super("gcp:firestore/index:Index", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -196,7 +198,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Index get(String name, Output<String> id, @Nullable IndexState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Index get(String name, Output<String> id, @Nullable IndexState state, @Nullable CustomResourceOptions options) {
         return new Index(name, id, state, options);
     }
 }

@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.servicedirectory.NamespaceArgs;
 import com.pulumi.gcp.servicedirectory.inputs.NamespaceState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:servicedirectory/namespace:Namespace")
-public class Namespace extends com.pulumi.resources.CustomResource {
+public class Namespace extends CustomResource {
     /**
      * Resource labels associated with this Namespace. No more than 64 user
      * labels can be associated with a given resource. Label keys and values can
@@ -150,19 +152,19 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Namespace(String name, NamespaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Namespace(String name, NamespaceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:servicedirectory/namespace:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Namespace(String name, Output<String> id, @Nullable NamespaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Namespace(String name, Output<String> id, @Nullable NamespaceState state, @Nullable CustomResourceOptions options) {
         super("gcp:servicedirectory/namespace:Namespace", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -174,7 +176,7 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Namespace get(String name, Output<String> id, @Nullable NamespaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Namespace get(String name, Output<String> id, @Nullable NamespaceState state, @Nullable CustomResourceOptions options) {
         return new Namespace(name, id, state, options);
     }
 }

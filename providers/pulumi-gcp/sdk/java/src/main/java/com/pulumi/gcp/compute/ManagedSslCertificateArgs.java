@@ -6,6 +6,7 @@ package com.pulumi.gcp.compute;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedSslCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedSslCertificateArgs extends ResourceArgs {
 
     public static final ManagedSslCertificateArgs Empty = new ManagedSslCertificateArgs();
 

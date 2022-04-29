@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.InterconnectAttachmentArgs;
 import com.pulumi.gcp.compute.inputs.InterconnectAttachmentState;
 import com.pulumi.gcp.compute.outputs.InterconnectAttachmentPrivateInterconnectInfo;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/interconnectAttachment:InterconnectAttachment")
-public class InterconnectAttachment extends com.pulumi.resources.CustomResource {
+public class InterconnectAttachment extends CustomResource {
     /**
      * Whether the VLAN attachment is enabled or disabled.  When using
      * PARTNER type this will Pre-Activate the interconnect attachment
@@ -531,19 +533,19 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InterconnectAttachment(String name, InterconnectAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InterconnectAttachment(String name, InterconnectAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/interconnectAttachment:InterconnectAttachment", name, args == null ? InterconnectAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InterconnectAttachment(String name, Output<String> id, @Nullable InterconnectAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InterconnectAttachment(String name, Output<String> id, @Nullable InterconnectAttachmentState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/interconnectAttachment:InterconnectAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -555,7 +557,7 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InterconnectAttachment get(String name, Output<String> id, @Nullable InterconnectAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InterconnectAttachment get(String name, Output<String> id, @Nullable InterconnectAttachmentState state, @Nullable CustomResourceOptions options) {
         return new InterconnectAttachment(name, id, state, options);
     }
 }

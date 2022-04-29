@@ -13,6 +13,8 @@ import com.pulumi.gcp.binaryauthorization.inputs.PolicyState;
 import com.pulumi.gcp.binaryauthorization.outputs.PolicyAdmissionWhitelistPattern;
 import com.pulumi.gcp.binaryauthorization.outputs.PolicyClusterAdmissionRule;
 import com.pulumi.gcp.binaryauthorization.outputs.PolicyDefaultAdmissionRule;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:binaryauthorization/policy:Policy")
-public class Policy extends com.pulumi.resources.CustomResource {
+public class Policy extends CustomResource {
     /**
      * A whitelist of image patterns to exclude from admission rules. If an
      * image&#39;s name matches a whitelist pattern, the image&#39;s admission
@@ -176,19 +178,19 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Policy(String name, PolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Policy(String name, PolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:binaryauthorization/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:binaryauthorization/policy:Policy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -200,7 +202,7 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Policy get(String name, Output<String> id, @Nullable PolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Policy get(String name, Output<String> id, @Nullable PolicyState state, @Nullable CustomResourceOptions options) {
         return new Policy(name, id, state, options);
     }
 }

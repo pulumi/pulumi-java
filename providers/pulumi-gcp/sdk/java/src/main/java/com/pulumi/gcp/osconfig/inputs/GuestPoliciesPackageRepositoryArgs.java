@@ -9,12 +9,13 @@ import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryAptArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGooArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryYumArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryZypperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestPoliciesPackageRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestPoliciesPackageRepositoryArgs extends ResourceArgs {
 
     public static final GuestPoliciesPackageRepositoryArgs Empty = new GuestPoliciesPackageRepositoryArgs();
 

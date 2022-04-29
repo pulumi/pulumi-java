@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.kms.inputs.KeyRingImportJobAttestationArgs;
 import com.pulumi.gcp.kms.inputs.KeyRingImportJobPublicKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class KeyRingImportJobState extends com.pulumi.resources.ResourceArgs {
+public final class KeyRingImportJobState extends ResourceArgs {
 
     public static final KeyRingImportJobState Empty = new KeyRingImportJobState();
 

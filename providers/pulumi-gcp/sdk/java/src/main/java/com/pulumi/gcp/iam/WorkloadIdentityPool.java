@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iam.WorkloadIdentityPoolArgs;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iam/workloadIdentityPool:WorkloadIdentityPool")
-public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
+public class WorkloadIdentityPool extends CustomResource {
     /**
      * A description of the pool. Cannot exceed 256 characters.
      * 
@@ -186,19 +188,19 @@ public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WorkloadIdentityPool(String name, WorkloadIdentityPoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WorkloadIdentityPool(String name, WorkloadIdentityPoolArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iam/workloadIdentityPool:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WorkloadIdentityPool(String name, Output<String> id, @Nullable WorkloadIdentityPoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WorkloadIdentityPool(String name, Output<String> id, @Nullable WorkloadIdentityPoolState state, @Nullable CustomResourceOptions options) {
         super("gcp:iam/workloadIdentityPool:WorkloadIdentityPool", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -210,7 +212,7 @@ public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkloadIdentityPool get(String name, Output<String> id, @Nullable WorkloadIdentityPoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WorkloadIdentityPool get(String name, Output<String> id, @Nullable WorkloadIdentityPoolState state, @Nullable CustomResourceOptions options) {
         return new WorkloadIdentityPool(name, id, state, options);
     }
 }

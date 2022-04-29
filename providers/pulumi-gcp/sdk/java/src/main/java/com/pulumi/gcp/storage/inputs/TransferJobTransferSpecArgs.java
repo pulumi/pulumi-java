@@ -12,12 +12,13 @@ import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecGcsDataSourceArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecHttpDataSourceArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecObjectConditionsArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecTransferOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransferJobTransferSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferJobTransferSpecArgs extends ResourceArgs {
 
     public static final TransferJobTransferSpecArgs Empty = new TransferJobTransferSpecArgs();
 

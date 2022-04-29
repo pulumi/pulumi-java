@@ -11,6 +11,7 @@ import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsInsightsConfigArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsIpConfigurationArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsLocationPreferenceArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsMaintenanceWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatabaseInstanceSettingsArgs extends ResourceArgs {
 
     public static final DatabaseInstanceSettingsArgs Empty = new DatabaseInstanceSettingsArgs();
 

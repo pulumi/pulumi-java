@@ -9,6 +9,7 @@ import com.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatabaseInstanceArgs extends ResourceArgs {
 
     public static final DatabaseInstanceArgs Empty = new DatabaseInstanceArgs();
 

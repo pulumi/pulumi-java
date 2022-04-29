@@ -5,11 +5,12 @@ package com.pulumi.gcp.cloudtasks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class QueueStackdriverLoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueueStackdriverLoggingConfigArgs extends ResourceArgs {
 
     public static final QueueStackdriverLoggingConfigArgs Empty = new QueueStackdriverLoggingConfigArgs();
 

@@ -6,11 +6,12 @@ package com.pulumi.gcp.bigquery.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ConnectionCloudSqlArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionCloudSqlArgs extends ResourceArgs {
 
     public static final ConnectionCloudSqlArgs Empty = new ConnectionCloudSqlArgs();
 

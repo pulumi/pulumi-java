@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleArgs();
 

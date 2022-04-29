@@ -12,6 +12,8 @@ import com.pulumi.gcp.apigateway.ApiConfigArgs;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigState;
 import com.pulumi.gcp.apigateway.outputs.ApiConfigGatewayConfig;
 import com.pulumi.gcp.apigateway.outputs.ApiConfigOpenapiDocument;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:apigateway/apiConfig:ApiConfig")
-public class ApiConfig extends com.pulumi.resources.CustomResource {
+public class ApiConfig extends CustomResource {
     /**
      * The API to attach the config to.
      * 
@@ -220,19 +222,19 @@ public class ApiConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApiConfig(String name, ApiConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ApiConfig(String name, ApiConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:apigateway/apiConfig:ApiConfig", name, args == null ? ApiConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ApiConfig(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ApiConfig(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:apigateway/apiConfig:ApiConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -244,7 +246,7 @@ public class ApiConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiConfig get(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApiConfig get(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable CustomResourceOptions options) {
         return new ApiConfig(name, id, state, options);
     }
 }

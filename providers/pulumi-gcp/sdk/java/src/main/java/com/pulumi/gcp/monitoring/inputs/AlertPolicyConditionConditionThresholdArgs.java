@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdTriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertPolicyConditionConditionThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertPolicyConditionConditionThresholdArgs extends ResourceArgs {
 
     public static final AlertPolicyConditionConditionThresholdArgs Empty = new AlertPolicyConditionConditionThresholdArgs();
 

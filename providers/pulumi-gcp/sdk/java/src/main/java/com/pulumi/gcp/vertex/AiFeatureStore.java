@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.vertex.AiFeatureStoreArgs;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreState;
 import com.pulumi.gcp.vertex.outputs.AiFeatureStoreOnlineServingConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:vertex/aiFeatureStore:AiFeatureStore")
-public class AiFeatureStore extends com.pulumi.resources.CustomResource {
+public class AiFeatureStore extends CustomResource {
     /**
      * The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
@@ -197,19 +199,19 @@ public class AiFeatureStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AiFeatureStore(String name, @Nullable AiFeatureStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AiFeatureStore(String name, @Nullable AiFeatureStoreArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiFeatureStore:AiFeatureStore", name, args == null ? AiFeatureStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AiFeatureStore(String name, Output<String> id, @Nullable AiFeatureStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AiFeatureStore(String name, Output<String> id, @Nullable AiFeatureStoreState state, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiFeatureStore:AiFeatureStore", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -221,7 +223,7 @@ public class AiFeatureStore extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiFeatureStore get(String name, Output<String> id, @Nullable AiFeatureStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AiFeatureStore get(String name, Output<String> id, @Nullable AiFeatureStoreState state, @Nullable CustomResourceOptions options) {
         return new AiFeatureStore(name, id, state, options);
     }
 }

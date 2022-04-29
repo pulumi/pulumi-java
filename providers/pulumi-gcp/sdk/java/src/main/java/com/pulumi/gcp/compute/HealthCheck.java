@@ -17,6 +17,8 @@ import com.pulumi.gcp.compute.outputs.HealthCheckHttpsHealthCheck;
 import com.pulumi.gcp.compute.outputs.HealthCheckLogConfig;
 import com.pulumi.gcp.compute.outputs.HealthCheckSslHealthCheck;
 import com.pulumi.gcp.compute.outputs.HealthCheckTcpHealthCheck;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -65,7 +67,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/healthCheck:HealthCheck")
-public class HealthCheck extends com.pulumi.resources.CustomResource {
+public class HealthCheck extends CustomResource {
     /**
      * How often (in seconds) to send a health check. The default value is 5
      * seconds.
@@ -366,19 +368,19 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public HealthCheck(String name, @Nullable HealthCheckArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public HealthCheck(String name, @Nullable HealthCheckArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/healthCheck:HealthCheck", name, args == null ? HealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private HealthCheck(String name, Output<String> id, @Nullable HealthCheckState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private HealthCheck(String name, Output<String> id, @Nullable HealthCheckState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/healthCheck:HealthCheck", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -390,7 +392,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HealthCheck get(String name, Output<String> id, @Nullable HealthCheckState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static HealthCheck get(String name, Output<String> id, @Nullable HealthCheckState state, @Nullable CustomResourceOptions options) {
         return new HealthCheck(name, id, state, options);
     }
 }

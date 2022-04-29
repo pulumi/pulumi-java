@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.spanner.DatabaseIAMMemberArgs;
 import com.pulumi.gcp.spanner.inputs.DatabaseIAMMemberState;
 import com.pulumi.gcp.spanner.outputs.DatabaseIAMMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +63,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:spanner/databaseIAMMember:DatabaseIAMMember")
-public class DatabaseIAMMember extends com.pulumi.resources.CustomResource {
+public class DatabaseIAMMember extends CustomResource {
     @Export(name="condition", type=DatabaseIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMMemberCondition> condition;
 
@@ -172,19 +174,19 @@ public class DatabaseIAMMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatabaseIAMMember(String name, DatabaseIAMMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatabaseIAMMember(String name, DatabaseIAMMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/databaseIAMMember:DatabaseIAMMember", name, args == null ? DatabaseIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatabaseIAMMember(String name, Output<String> id, @Nullable DatabaseIAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatabaseIAMMember(String name, Output<String> id, @Nullable DatabaseIAMMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/databaseIAMMember:DatabaseIAMMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -196,7 +198,7 @@ public class DatabaseIAMMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatabaseIAMMember get(String name, Output<String> id, @Nullable DatabaseIAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatabaseIAMMember get(String name, Output<String> id, @Nullable DatabaseIAMMemberState state, @Nullable CustomResourceOptions options) {
         return new DatabaseIAMMember(name, id, state, options);
     }
 }

@@ -13,6 +13,8 @@ import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeState;
 import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionary;
 import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionary;
 import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeRegex;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType")
-public class PreventionStoredInfoType extends com.pulumi.resources.CustomResource {
+public class PreventionStoredInfoType extends CustomResource {
     /**
      * A description of the info type.
      * 
@@ -177,19 +179,19 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PreventionStoredInfoType(String name, PreventionStoredInfoTypeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PreventionStoredInfoType(String name, PreventionStoredInfoTypeArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType", name, args == null ? PreventionStoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PreventionStoredInfoType(String name, Output<String> id, @Nullable PreventionStoredInfoTypeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PreventionStoredInfoType(String name, Output<String> id, @Nullable PreventionStoredInfoTypeState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -201,7 +203,7 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PreventionStoredInfoType get(String name, Output<String> id, @Nullable PreventionStoredInfoTypeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PreventionStoredInfoType get(String name, Output<String> id, @Nullable PreventionStoredInfoTypeState state, @Nullable CustomResourceOptions options) {
         return new PreventionStoredInfoType(name, id, state, options);
     }
 }

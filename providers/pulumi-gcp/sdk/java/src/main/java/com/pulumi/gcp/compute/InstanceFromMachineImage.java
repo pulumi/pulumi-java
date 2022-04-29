@@ -22,6 +22,8 @@ import com.pulumi.gcp.compute.outputs.InstanceFromMachineImageScheduling;
 import com.pulumi.gcp.compute.outputs.InstanceFromMachineImageScratchDisk;
 import com.pulumi.gcp.compute.outputs.InstanceFromMachineImageServiceAccount;
 import com.pulumi.gcp.compute.outputs.InstanceFromMachineImageShieldedInstanceConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/instanceFromMachineImage:InstanceFromMachineImage")
-public class InstanceFromMachineImage extends com.pulumi.resources.CustomResource {
+public class InstanceFromMachineImage extends CustomResource {
     /**
      * Controls for advanced machine-related behavior features.
      * 
@@ -603,19 +605,19 @@ public class InstanceFromMachineImage extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceFromMachineImage(String name, InstanceFromMachineImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceFromMachineImage(String name, InstanceFromMachineImageArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceFromMachineImage:InstanceFromMachineImage", name, args == null ? InstanceFromMachineImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceFromMachineImage(String name, Output<String> id, @Nullable InstanceFromMachineImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceFromMachineImage(String name, Output<String> id, @Nullable InstanceFromMachineImageState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceFromMachineImage:InstanceFromMachineImage", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -627,7 +629,7 @@ public class InstanceFromMachineImage extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceFromMachineImage get(String name, Output<String> id, @Nullable InstanceFromMachineImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceFromMachineImage get(String name, Output<String> id, @Nullable InstanceFromMachineImageState state, @Nullable CustomResourceOptions options) {
         return new InstanceFromMachineImage(name, id, state, options);
     }
 }

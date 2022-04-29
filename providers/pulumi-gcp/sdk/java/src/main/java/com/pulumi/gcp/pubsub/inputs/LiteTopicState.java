@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigArgs;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigArgs;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
+public final class LiteTopicState extends ResourceArgs {
 
     public static final LiteTopicState Empty = new LiteTopicState();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterExclusionLabelArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInclusionLabelArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInventoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentInstanceFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentInstanceFilterArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentInstanceFilterArgs Empty = new OsPolicyAssignmentInstanceFilterArgs();
 

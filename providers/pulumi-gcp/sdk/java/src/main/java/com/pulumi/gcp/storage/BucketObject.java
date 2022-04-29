@@ -12,6 +12,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.storage.BucketObjectArgs;
 import com.pulumi.gcp.storage.inputs.BucketObjectState;
 import com.pulumi.gcp.storage.outputs.BucketObjectCustomerEncryption;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:storage/bucketObject:BucketObject")
-public class BucketObject extends com.pulumi.resources.CustomResource {
+public class BucketObject extends CustomResource {
     /**
      * The name of the containing bucket.
      * 
@@ -361,19 +363,19 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BucketObject(String name, BucketObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BucketObject(String name, BucketObjectArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:storage/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BucketObject(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BucketObject(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable CustomResourceOptions options) {
         super("gcp:storage/bucketObject:BucketObject", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -385,7 +387,7 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketObject get(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BucketObject get(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable CustomResourceOptions options) {
         return new BucketObject(name, id, state, options);
     }
 }

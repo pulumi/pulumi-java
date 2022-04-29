@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.tags.TagValueIamBindingArgs;
 import com.pulumi.gcp.tags.inputs.TagValueIamBindingState;
 import com.pulumi.gcp.tags.outputs.TagValueIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:tags/tagValueIamBinding:TagValueIamBinding")
-public class TagValueIamBinding extends com.pulumi.resources.CustomResource {
+public class TagValueIamBinding extends CustomResource {
     @Export(name="condition", type=TagValueIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagValueIamBindingCondition> condition;
 
@@ -140,19 +142,19 @@ public class TagValueIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TagValueIamBinding(String name, TagValueIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TagValueIamBinding(String name, TagValueIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:tags/tagValueIamBinding:TagValueIamBinding", name, args == null ? TagValueIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TagValueIamBinding(String name, Output<String> id, @Nullable TagValueIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TagValueIamBinding(String name, Output<String> id, @Nullable TagValueIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:tags/tagValueIamBinding:TagValueIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -164,7 +166,7 @@ public class TagValueIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagValueIamBinding get(String name, Output<String> id, @Nullable TagValueIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TagValueIamBinding get(String name, Output<String> id, @Nullable TagValueIamBindingState state, @Nullable CustomResourceOptions options) {
         return new TagValueIamBinding(name, id, state, options);
     }
 }

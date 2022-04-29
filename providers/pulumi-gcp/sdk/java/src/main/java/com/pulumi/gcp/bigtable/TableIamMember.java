@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigtable.TableIamMemberArgs;
 import com.pulumi.gcp.bigtable.inputs.TableIamMemberState;
 import com.pulumi.gcp.bigtable.outputs.TableIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +56,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigtable/tableIamMember:TableIamMember")
-public class TableIamMember extends com.pulumi.resources.CustomResource {
+public class TableIamMember extends CustomResource {
     @Export(name="condition", type=TableIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TableIamMemberCondition> condition;
 
@@ -165,19 +167,19 @@ public class TableIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TableIamMember(String name, TableIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TableIamMember(String name, TableIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/tableIamMember:TableIamMember", name, args == null ? TableIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TableIamMember(String name, Output<String> id, @Nullable TableIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TableIamMember(String name, Output<String> id, @Nullable TableIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/tableIamMember:TableIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -189,7 +191,7 @@ public class TableIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TableIamMember get(String name, Output<String> id, @Nullable TableIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TableIamMember get(String name, Output<String> id, @Nullable TableIamMemberState state, @Nullable CustomResourceOptions options) {
         return new TableIamMember(name, id, state, options);
     }
 }

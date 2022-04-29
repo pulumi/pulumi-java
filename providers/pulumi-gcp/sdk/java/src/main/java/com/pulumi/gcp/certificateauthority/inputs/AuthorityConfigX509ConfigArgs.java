@@ -9,6 +9,7 @@ import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAddit
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigCaOptionsArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigPolicyIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthorityConfigX509ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityConfigX509ConfigArgs extends ResourceArgs {
 
     public static final AuthorityConfigX509ConfigArgs Empty = new AuthorityConfigX509ConfigArgs();
 

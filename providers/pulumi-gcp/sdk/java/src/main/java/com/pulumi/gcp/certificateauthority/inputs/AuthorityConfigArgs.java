@@ -7,10 +7,11 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class AuthorityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityConfigArgs extends ResourceArgs {
 
     public static final AuthorityConfigArgs Empty = new AuthorityConfigArgs();
 

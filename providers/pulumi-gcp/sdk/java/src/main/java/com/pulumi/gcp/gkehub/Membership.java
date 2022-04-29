@@ -12,6 +12,8 @@ import com.pulumi.gcp.gkehub.MembershipArgs;
 import com.pulumi.gcp.gkehub.inputs.MembershipState;
 import com.pulumi.gcp.gkehub.outputs.MembershipAuthority;
 import com.pulumi.gcp.gkehub.outputs.MembershipEndpoint;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:gkehub/membership:Membership")
-public class Membership extends com.pulumi.resources.CustomResource {
+public class Membership extends CustomResource {
     /**
      * Authority encodes how Google will recognize identities from this Membership.
      * See the workload identity documentation for more details:
@@ -173,19 +175,19 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Membership(String name, MembershipArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Membership(String name, MembershipArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:gkehub/membership:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Membership(String name, Output<String> id, @Nullable MembershipState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Membership(String name, Output<String> id, @Nullable MembershipState state, @Nullable CustomResourceOptions options) {
         super("gcp:gkehub/membership:Membership", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -197,7 +199,7 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Membership get(String name, Output<String> id, @Nullable MembershipState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Membership get(String name, Output<String> id, @Nullable MembershipState state, @Nullable CustomResourceOptions options) {
         return new Membership(name, id, state, options);
     }
 }

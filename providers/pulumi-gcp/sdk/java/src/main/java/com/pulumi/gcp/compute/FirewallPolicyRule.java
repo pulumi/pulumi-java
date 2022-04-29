@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.FirewallPolicyRuleArgs;
 import com.pulumi.gcp.compute.inputs.FirewallPolicyRuleState;
 import com.pulumi.gcp.compute.outputs.FirewallPolicyRuleMatch;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/firewallPolicyRule:FirewallPolicyRule")
-public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
+public class FirewallPolicyRule extends CustomResource {
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
      * 
@@ -230,19 +232,19 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FirewallPolicyRule(String name, FirewallPolicyRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FirewallPolicyRule(String name, FirewallPolicyRuleArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/firewallPolicyRule:FirewallPolicyRule", name, args == null ? FirewallPolicyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FirewallPolicyRule(String name, Output<String> id, @Nullable FirewallPolicyRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FirewallPolicyRule(String name, Output<String> id, @Nullable FirewallPolicyRuleState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/firewallPolicyRule:FirewallPolicyRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -254,7 +256,7 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirewallPolicyRule get(String name, Output<String> id, @Nullable FirewallPolicyRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FirewallPolicyRule get(String name, Output<String> id, @Nullable FirewallPolicyRuleState state, @Nullable CustomResourceOptions options) {
         return new FirewallPolicyRule(name, id, state, options);
     }
 }

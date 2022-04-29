@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusVersionTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerStatusArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerStatusArgs Empty = new InstanceGroupManagerStatusArgs();
 

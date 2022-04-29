@@ -7,10 +7,11 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionArgs;
 import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class BucketLifecycleRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleRuleArgs extends ResourceArgs {
 
     public static final BucketLifecycleRuleArgs Empty = new BucketLifecycleRuleArgs();
 

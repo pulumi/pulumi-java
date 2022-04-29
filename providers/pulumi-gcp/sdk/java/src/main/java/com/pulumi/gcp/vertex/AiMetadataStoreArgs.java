@@ -6,13 +6,14 @@ package com.pulumi.gcp.vertex;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class AiMetadataStoreArgs extends ResourceArgs {
 
     public static final AiMetadataStoreArgs Empty = new AiMetadataStoreArgs();
 

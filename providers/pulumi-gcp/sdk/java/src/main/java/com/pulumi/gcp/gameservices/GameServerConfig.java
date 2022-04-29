@@ -12,6 +12,8 @@ import com.pulumi.gcp.gameservices.GameServerConfigArgs;
 import com.pulumi.gcp.gameservices.inputs.GameServerConfigState;
 import com.pulumi.gcp.gameservices.outputs.GameServerConfigFleetConfig;
 import com.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:gameservices/gameServerConfig:GameServerConfig")
-public class GameServerConfig extends com.pulumi.resources.CustomResource {
+public class GameServerConfig extends CustomResource {
     /**
      * A unique id for the deployment config.
      * 
@@ -204,19 +206,19 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GameServerConfig(String name, GameServerConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GameServerConfig(String name, GameServerConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerConfig:GameServerConfig", name, args == null ? GameServerConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GameServerConfig(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GameServerConfig(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerConfig:GameServerConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -228,7 +230,7 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerConfig get(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerConfig get(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable CustomResourceOptions options) {
         return new GameServerConfig(name, id, state, options);
     }
 }

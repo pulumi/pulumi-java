@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs {
+public final class SloWindowsBasedSliArgs extends ResourceArgs {
 
     public static final SloWindowsBasedSliArgs Empty = new SloWindowsBasedSliArgs();
 

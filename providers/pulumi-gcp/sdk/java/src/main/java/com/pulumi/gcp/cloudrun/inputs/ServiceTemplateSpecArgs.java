@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTemplateSpecArgs extends ResourceArgs {
 
     public static final ServiceTemplateSpecArgs Empty = new ServiceTemplateSpecArgs();
 

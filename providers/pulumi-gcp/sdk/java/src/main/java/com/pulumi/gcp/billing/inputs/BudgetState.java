@@ -9,6 +9,7 @@ import com.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleArgs;
 import com.pulumi.gcp.billing.inputs.BudgetAmountArgs;
 import com.pulumi.gcp.billing.inputs.BudgetBudgetFilterArgs;
 import com.pulumi.gcp.billing.inputs.BudgetThresholdRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BudgetState extends com.pulumi.resources.ResourceArgs {
+public final class BudgetState extends ResourceArgs {
 
     public static final BudgetState Empty = new BudgetState();
 

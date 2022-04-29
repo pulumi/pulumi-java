@@ -6,13 +6,14 @@ package com.pulumi.gcp.healthcare;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsentStoreIamMemberArgs extends ResourceArgs {
 
     public static final ConsentStoreIamMemberArgs Empty = new ConsentStoreIamMemberArgs();
 

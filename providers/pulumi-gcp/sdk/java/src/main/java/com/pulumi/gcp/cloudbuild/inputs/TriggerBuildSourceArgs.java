@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerBuildSourceArgs extends ResourceArgs {
 
     public static final TriggerBuildSourceArgs Empty = new TriggerBuildSourceArgs();
 

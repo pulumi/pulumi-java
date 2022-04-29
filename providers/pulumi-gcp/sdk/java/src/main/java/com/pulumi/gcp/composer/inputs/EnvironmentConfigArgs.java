@@ -15,6 +15,7 @@ import com.pulumi.gcp.composer.inputs.EnvironmentConfigSoftwareConfigArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerConfigArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentConfigArgs extends ResourceArgs {
 
     public static final EnvironmentConfigArgs Empty = new EnvironmentConfigArgs();
 

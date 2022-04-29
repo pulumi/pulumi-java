@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.notebooks.LocationArgs;
 import com.pulumi.gcp.notebooks.inputs.LocationState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:notebooks/location:Location")
-public class Location extends com.pulumi.resources.CustomResource {
+public class Location extends CustomResource {
     /**
      * Name of the Location resource.
      * 
@@ -101,19 +103,19 @@ public class Location extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Location(String name, @Nullable LocationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Location(String name, @Nullable LocationArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:notebooks/location:Location", name, args == null ? LocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Location(String name, Output<String> id, @Nullable LocationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Location(String name, Output<String> id, @Nullable LocationState state, @Nullable CustomResourceOptions options) {
         super("gcp:notebooks/location:Location", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -125,7 +127,7 @@ public class Location extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Location get(String name, Output<String> id, @Nullable LocationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Location get(String name, Output<String> id, @Nullable LocationState state, @Nullable CustomResourceOptions options) {
         return new Location(name, id, state, options);
     }
 }

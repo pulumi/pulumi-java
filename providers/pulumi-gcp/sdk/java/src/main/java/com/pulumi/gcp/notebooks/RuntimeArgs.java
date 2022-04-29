@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeArgs extends ResourceArgs {
 
     public static final RuntimeArgs Empty = new RuntimeArgs();
 

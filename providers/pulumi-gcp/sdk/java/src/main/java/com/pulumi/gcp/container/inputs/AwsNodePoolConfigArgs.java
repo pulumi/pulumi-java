@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.inputs.AwsNodePoolConfigConfigEncryptionArgs;
 import com.pulumi.gcp.container.inputs.AwsNodePoolConfigRootVolumeArgs;
 import com.pulumi.gcp.container.inputs.AwsNodePoolConfigSshConfigArgs;
 import com.pulumi.gcp.container.inputs.AwsNodePoolConfigTaintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsNodePoolConfigArgs extends ResourceArgs {
 
     public static final AwsNodePoolConfigArgs Empty = new AwsNodePoolConfigArgs();
 

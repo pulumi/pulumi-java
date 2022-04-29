@@ -6,13 +6,14 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs Empty = new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs();
 

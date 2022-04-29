@@ -12,13 +12,14 @@ import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupRes
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.gcp.dataflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

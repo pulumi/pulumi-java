@@ -13,6 +13,8 @@ import com.pulumi.gcp.certificateauthority.inputs.AuthorityState;
 import com.pulumi.gcp.certificateauthority.outputs.AuthorityAccessUrl;
 import com.pulumi.gcp.certificateauthority.outputs.AuthorityConfig;
 import com.pulumi.gcp.certificateauthority.outputs.AuthorityKeySpec;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:certificateauthority/authority:Authority")
-public class Authority extends com.pulumi.resources.CustomResource {
+public class Authority extends CustomResource {
     /**
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
@@ -359,19 +361,19 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Authority(String name, AuthorityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Authority(String name, AuthorityArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:certificateauthority/authority:Authority", name, args == null ? AuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Authority(String name, Output<String> id, @Nullable AuthorityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Authority(String name, Output<String> id, @Nullable AuthorityState state, @Nullable CustomResourceOptions options) {
         super("gcp:certificateauthority/authority:Authority", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -383,7 +385,7 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Authority get(String name, Output<String> id, @Nullable AuthorityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Authority get(String name, Output<String> id, @Nullable AuthorityState state, @Nullable CustomResourceOptions options) {
         return new Authority(name, id, state, options);
     }
 }

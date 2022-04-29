@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.appengine.EngineSplitTrafficArgs;
 import com.pulumi.gcp.appengine.inputs.EngineSplitTrafficState;
 import com.pulumi.gcp.appengine.outputs.EngineSplitTrafficSplit;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:appengine/engineSplitTraffic:EngineSplitTraffic")
-public class EngineSplitTraffic extends com.pulumi.resources.CustomResource {
+public class EngineSplitTraffic extends CustomResource {
     /**
      * If set to true traffic will be migrated to this version.
      * 
@@ -126,19 +128,19 @@ public class EngineSplitTraffic extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EngineSplitTraffic(String name, EngineSplitTrafficArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EngineSplitTraffic(String name, EngineSplitTrafficArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, args == null ? EngineSplitTrafficArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EngineSplitTraffic(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EngineSplitTraffic(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -150,7 +152,7 @@ public class EngineSplitTraffic extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EngineSplitTraffic get(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EngineSplitTraffic get(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable CustomResourceOptions options) {
         return new EngineSplitTraffic(name, id, state, options);
     }
 }

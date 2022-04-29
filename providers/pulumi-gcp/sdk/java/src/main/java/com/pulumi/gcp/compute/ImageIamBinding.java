@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.ImageIamBindingArgs;
 import com.pulumi.gcp.compute.inputs.ImageIamBindingState;
 import com.pulumi.gcp.compute.outputs.ImageIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/imageIamBinding:ImageIamBinding")
-public class ImageIamBinding extends com.pulumi.resources.CustomResource {
+public class ImageIamBinding extends CustomResource {
     /**
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -170,19 +172,19 @@ public class ImageIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ImageIamBinding(String name, ImageIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ImageIamBinding(String name, ImageIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/imageIamBinding:ImageIamBinding", name, args == null ? ImageIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ImageIamBinding(String name, Output<String> id, @Nullable ImageIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ImageIamBinding(String name, Output<String> id, @Nullable ImageIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/imageIamBinding:ImageIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -194,7 +196,7 @@ public class ImageIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImageIamBinding get(String name, Output<String> id, @Nullable ImageIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ImageIamBinding get(String name, Output<String> id, @Nullable ImageIamBindingState state, @Nullable CustomResourceOptions options) {
         return new ImageIamBinding(name, id, state, options);
     }
 }

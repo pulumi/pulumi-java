@@ -11,12 +11,14 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.organizations.IAMMemberArgs;
 import com.pulumi.gcp.organizations.inputs.IAMMemberState;
 import com.pulumi.gcp.organizations.outputs.IAMMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:organizations/iAMMember:IAMMember")
-public class IAMMember extends com.pulumi.resources.CustomResource {
+public class IAMMember extends CustomResource {
     @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
@@ -77,19 +79,19 @@ public class IAMMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IAMMember(String name, IAMMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IAMMember(String name, IAMMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/iAMMember:IAMMember", name, args == null ? IAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IAMMember(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IAMMember(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/iAMMember:IAMMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -101,7 +103,7 @@ public class IAMMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMMember get(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IAMMember get(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable CustomResourceOptions options) {
         return new IAMMember(name, id, state, options);
     }
 }

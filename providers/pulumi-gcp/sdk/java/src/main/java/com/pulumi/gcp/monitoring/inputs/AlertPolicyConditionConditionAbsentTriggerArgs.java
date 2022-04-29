@@ -5,6 +5,7 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertPolicyConditionConditionAbsentTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertPolicyConditionConditionAbsentTriggerArgs extends ResourceArgs {
 
     public static final AlertPolicyConditionConditionAbsentTriggerArgs Empty = new AlertPolicyConditionConditionAbsentTriggerArgs();
 

@@ -17,6 +17,7 @@ import com.pulumi.gcp.compute.inputs.InstanceSchedulingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceScratchDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceServiceAccountArgs;
 import com.pulumi.gcp.compute.inputs.InstanceShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

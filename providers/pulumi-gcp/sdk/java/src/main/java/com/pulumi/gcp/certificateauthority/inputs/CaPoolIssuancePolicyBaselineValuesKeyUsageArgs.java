@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends ResourceArgs {
 
     public static final CaPoolIssuancePolicyBaselineValuesKeyUsageArgs Empty = new CaPoolIssuancePolicyBaselineValuesKeyUsageArgs();
 

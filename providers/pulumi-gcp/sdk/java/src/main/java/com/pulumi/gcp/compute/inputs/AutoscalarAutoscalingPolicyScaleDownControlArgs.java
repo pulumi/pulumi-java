@@ -6,13 +6,14 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends ResourceArgs {
 
     public static final AutoscalarAutoscalingPolicyScaleDownControlArgs Empty = new AutoscalarAutoscalingPolicyScaleDownControlArgs();
 

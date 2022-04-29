@@ -30,6 +30,7 @@ import com.pulumi.gcp.container.inputs.ClusterReleaseChannelArgs;
 import com.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterVerticalPodAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.ClusterWorkloadIdentityConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterArgs extends ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 

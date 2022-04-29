@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.BackendServiceIapArgs;
 import com.pulumi.gcp.compute.inputs.BackendServiceLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.BackendServiceOutlierDetectionArgs;
 import com.pulumi.gcp.compute.inputs.BackendServiceSecuritySettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceArgs extends ResourceArgs {
 
     public static final BackendServiceArgs Empty = new BackendServiceArgs();
 

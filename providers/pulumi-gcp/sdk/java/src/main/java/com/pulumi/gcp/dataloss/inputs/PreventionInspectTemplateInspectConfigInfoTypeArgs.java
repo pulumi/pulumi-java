@@ -5,11 +5,12 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class PreventionInspectTemplateInspectConfigInfoTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigInfoTypeArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigInfoTypeArgs Empty = new PreventionInspectTemplateInspectConfigInfoTypeArgs();
 

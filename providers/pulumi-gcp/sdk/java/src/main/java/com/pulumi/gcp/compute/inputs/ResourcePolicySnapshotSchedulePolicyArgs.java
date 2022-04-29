@@ -8,12 +8,13 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyArgs();
 

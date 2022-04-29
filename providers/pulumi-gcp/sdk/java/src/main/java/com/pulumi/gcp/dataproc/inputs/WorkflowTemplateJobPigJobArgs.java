@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPigJobLoggingConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPigJobQueryListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplateJobPigJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplateJobPigJobArgs extends ResourceArgs {
 
     public static final WorkflowTemplateJobPigJobArgs Empty = new WorkflowTemplateJobPigJobArgs();
 

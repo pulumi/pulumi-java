@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.WebTypeComputeIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeComputeIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebTypeComputeIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -62,7 +64,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/webTypeComputeIamMember:WebTypeComputeIamMember")
-public class WebTypeComputeIamMember extends com.pulumi.resources.CustomResource {
+public class WebTypeComputeIamMember extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -155,19 +157,19 @@ public class WebTypeComputeIamMember extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebTypeComputeIamMember(String name, WebTypeComputeIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebTypeComputeIamMember(String name, WebTypeComputeIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamMember:WebTypeComputeIamMember", name, args == null ? WebTypeComputeIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebTypeComputeIamMember(String name, Output<String> id, @Nullable WebTypeComputeIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebTypeComputeIamMember(String name, Output<String> id, @Nullable WebTypeComputeIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamMember:WebTypeComputeIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class WebTypeComputeIamMember extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTypeComputeIamMember get(String name, Output<String> id, @Nullable WebTypeComputeIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebTypeComputeIamMember get(String name, Output<String> id, @Nullable WebTypeComputeIamMemberState state, @Nullable CustomResourceOptions options) {
         return new WebTypeComputeIamMember(name, id, state, options);
     }
 }

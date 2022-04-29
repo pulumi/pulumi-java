@@ -6,13 +6,14 @@ package com.pulumi.gcp.pubsub;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LiteSubscriptionArgs extends ResourceArgs {
 
     public static final LiteSubscriptionArgs Empty = new LiteSubscriptionArgs();
 

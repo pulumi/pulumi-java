@@ -7,6 +7,7 @@ import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
+public final class BucketObjectState extends ResourceArgs {
 
     public static final BucketObjectState Empty = new BucketObjectState();
 

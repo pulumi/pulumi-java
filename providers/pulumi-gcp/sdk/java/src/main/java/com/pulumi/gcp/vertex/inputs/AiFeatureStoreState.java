@@ -6,6 +6,7 @@ package com.pulumi.gcp.vertex.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs {
+public final class AiFeatureStoreState extends ResourceArgs {
 
     public static final AiFeatureStoreState Empty = new AiFeatureStoreState();
 

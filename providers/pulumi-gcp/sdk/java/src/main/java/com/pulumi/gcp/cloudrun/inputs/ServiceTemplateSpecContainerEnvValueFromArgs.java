@@ -6,10 +6,11 @@ package com.pulumi.gcp.cloudrun.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ServiceTemplateSpecContainerEnvValueFromArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTemplateSpecContainerEnvValueFromArgs extends ResourceArgs {
 
     public static final ServiceTemplateSpecContainerEnvValueFromArgs Empty = new ServiceTemplateSpecContainerEnvValueFromArgs();
 

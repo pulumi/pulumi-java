@@ -12,6 +12,8 @@ import com.pulumi.gcp.logging.FolderSinkArgs;
 import com.pulumi.gcp.logging.inputs.FolderSinkState;
 import com.pulumi.gcp.logging.outputs.FolderSinkBigqueryOptions;
 import com.pulumi.gcp.logging.outputs.FolderSinkExclusion;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:logging/folderSink:FolderSink")
-public class FolderSink extends com.pulumi.resources.CustomResource {
+public class FolderSink extends CustomResource {
     /**
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
@@ -213,19 +215,19 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FolderSink(String name, FolderSinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FolderSink(String name, FolderSinkArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:logging/folderSink:FolderSink", name, args == null ? FolderSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FolderSink(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FolderSink(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable CustomResourceOptions options) {
         super("gcp:logging/folderSink:FolderSink", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -237,7 +239,7 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FolderSink get(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FolderSink get(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable CustomResourceOptions options) {
         return new FolderSink(name, id, state, options);
     }
 }

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
 import com.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate")
-public class PreventionInspectTemplate extends com.pulumi.resources.CustomResource {
+public class PreventionInspectTemplate extends CustomResource {
     /**
      * A description of the inspect template.
      * 
@@ -145,19 +147,19 @@ public class PreventionInspectTemplate extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PreventionInspectTemplate(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PreventionInspectTemplate(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class PreventionInspectTemplate extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PreventionInspectTemplate get(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PreventionInspectTemplate get(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable CustomResourceOptions options) {
         return new PreventionInspectTemplate(name, id, state, options);
     }
 }

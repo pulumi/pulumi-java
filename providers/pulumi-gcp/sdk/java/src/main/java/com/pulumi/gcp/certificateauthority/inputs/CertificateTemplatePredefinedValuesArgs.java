@@ -9,6 +9,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedV
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesCaOptionsArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesPolicyIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateTemplatePredefinedValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateTemplatePredefinedValuesArgs extends ResourceArgs {
 
     public static final CertificateTemplatePredefinedValuesArgs Empty = new CertificateTemplatePredefinedValuesArgs();
 

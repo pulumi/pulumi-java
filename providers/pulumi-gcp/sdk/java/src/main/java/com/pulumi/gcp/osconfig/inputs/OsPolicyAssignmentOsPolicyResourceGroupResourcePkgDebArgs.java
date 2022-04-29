@@ -6,13 +6,14 @@ package com.pulumi.gcp.osconfig.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs();
 

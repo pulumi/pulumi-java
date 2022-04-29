@@ -9,13 +9,14 @@ import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupRes
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceArgs();
 

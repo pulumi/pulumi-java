@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.logging.BillingAccountBucketConfigArgs;
 import com.pulumi.gcp.logging.inputs.BillingAccountBucketConfigState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig")
-public class BillingAccountBucketConfig extends com.pulumi.resources.CustomResource {
+public class BillingAccountBucketConfig extends CustomResource {
     /**
      * The parent resource that contains the logging bucket.
      * 
@@ -155,19 +157,19 @@ public class BillingAccountBucketConfig extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BillingAccountBucketConfig(String name, BillingAccountBucketConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BillingAccountBucketConfig(String name, BillingAccountBucketConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, args == null ? BillingAccountBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BillingAccountBucketConfig(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BillingAccountBucketConfig(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class BillingAccountBucketConfig extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BillingAccountBucketConfig get(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BillingAccountBucketConfig get(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable CustomResourceOptions options) {
         return new BillingAccountBucketConfig(name, id, state, options);
     }
 }

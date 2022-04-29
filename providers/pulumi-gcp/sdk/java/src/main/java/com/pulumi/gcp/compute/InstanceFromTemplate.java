@@ -22,6 +22,8 @@ import com.pulumi.gcp.compute.outputs.InstanceFromTemplateScheduling;
 import com.pulumi.gcp.compute.outputs.InstanceFromTemplateScratchDisk;
 import com.pulumi.gcp.compute.outputs.InstanceFromTemplateServiceAccount;
 import com.pulumi.gcp.compute.outputs.InstanceFromTemplateShieldedInstanceConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/instanceFromTemplate:InstanceFromTemplate")
-public class InstanceFromTemplate extends com.pulumi.resources.CustomResource {
+public class InstanceFromTemplate extends CustomResource {
     /**
      * Controls for advanced machine-related behavior features.
      * 
@@ -607,19 +609,19 @@ public class InstanceFromTemplate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceFromTemplate(String name, InstanceFromTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceFromTemplate(String name, InstanceFromTemplateArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceFromTemplate:InstanceFromTemplate", name, args == null ? InstanceFromTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceFromTemplate(String name, Output<String> id, @Nullable InstanceFromTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceFromTemplate(String name, Output<String> id, @Nullable InstanceFromTemplateState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceFromTemplate:InstanceFromTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -631,7 +633,7 @@ public class InstanceFromTemplate extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceFromTemplate get(String name, Output<String> id, @Nullable InstanceFromTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceFromTemplate get(String name, Output<String> id, @Nullable InstanceFromTemplateState state, @Nullable CustomResourceOptions options) {
         return new InstanceFromTemplate(name, id, state, options);
     }
 }

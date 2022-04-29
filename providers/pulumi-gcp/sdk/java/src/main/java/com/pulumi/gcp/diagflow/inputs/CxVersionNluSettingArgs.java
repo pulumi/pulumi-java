@@ -5,6 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CxVersionNluSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class CxVersionNluSettingArgs extends ResourceArgs {
 
     public static final CxVersionNluSettingArgs Empty = new CxVersionNluSettingArgs();
 

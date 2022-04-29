@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationArgs;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityScanConfigState extends com.pulumi.resources.ResourceArgs {
+public final class SecurityScanConfigState extends ResourceArgs {
 
     public static final SecurityScanConfigState Empty = new SecurityScanConfigState();
 

@@ -9,6 +9,7 @@ import com.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import com.pulumi.gcp.bigquery.inputs.JobExtractArgs;
 import com.pulumi.gcp.bigquery.inputs.JobLoadArgs;
 import com.pulumi.gcp.bigquery.inputs.JobQueryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

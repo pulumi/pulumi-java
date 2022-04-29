@@ -12,13 +12,14 @@ import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigWindowsUpdateArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigYumArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigZypperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchDeploymentPatchConfigArgs extends ResourceArgs {
 
     public static final PatchDeploymentPatchConfigArgs Empty = new PatchDeploymentPatchConfigArgs();
 

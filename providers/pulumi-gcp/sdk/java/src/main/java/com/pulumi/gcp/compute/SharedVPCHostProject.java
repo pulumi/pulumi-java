@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.SharedVPCHostProjectArgs;
 import com.pulumi.gcp.compute.inputs.SharedVPCHostProjectState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/sharedVPCHostProject:SharedVPCHostProject")
-public class SharedVPCHostProject extends com.pulumi.resources.CustomResource {
+public class SharedVPCHostProject extends CustomResource {
     /**
      * The ID of the project that will serve as a Shared VPC host project
      * 
@@ -71,19 +73,19 @@ public class SharedVPCHostProject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SharedVPCHostProject(String name, SharedVPCHostProjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SharedVPCHostProject(String name, SharedVPCHostProjectArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/sharedVPCHostProject:SharedVPCHostProject", name, args == null ? SharedVPCHostProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SharedVPCHostProject(String name, Output<String> id, @Nullable SharedVPCHostProjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SharedVPCHostProject(String name, Output<String> id, @Nullable SharedVPCHostProjectState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/sharedVPCHostProject:SharedVPCHostProject", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -95,7 +97,7 @@ public class SharedVPCHostProject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SharedVPCHostProject get(String name, Output<String> id, @Nullable SharedVPCHostProjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SharedVPCHostProject get(String name, Output<String> id, @Nullable SharedVPCHostProjectState state, @Nullable CustomResourceOptions options) {
         return new SharedVPCHostProject(name, id, state, options);
     }
 }

@@ -6,13 +6,14 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AttestorIamMemberState extends com.pulumi.resources.ResourceArgs {
+public final class AttestorIamMemberState extends ResourceArgs {
 
     public static final AttestorIamMemberState Empty = new AttestorIamMemberState();
 

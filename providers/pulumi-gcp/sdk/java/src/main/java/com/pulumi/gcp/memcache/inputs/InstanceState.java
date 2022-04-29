@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeArgs;
 import com.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersArgs;
 import com.pulumi.gcp.memcache.inputs.InstanceNodeConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceState extends com.pulumi.resources.ResourceArgs {
+public final class InstanceState extends ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 

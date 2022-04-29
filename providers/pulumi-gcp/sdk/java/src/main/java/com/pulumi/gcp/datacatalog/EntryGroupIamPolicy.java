@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.EntryGroupIamPolicyArgs;
 import com.pulumi.gcp.datacatalog.inputs.EntryGroupIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:datacatalog/entryGroupIamPolicy:EntryGroupIamPolicy")
-public class EntryGroupIamPolicy extends com.pulumi.resources.CustomResource {
+public class EntryGroupIamPolicy extends CustomResource {
     /**
      * Used to find the parent resource to bind the IAM policy to
      * 
@@ -145,19 +147,19 @@ public class EntryGroupIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EntryGroupIamPolicy(String name, EntryGroupIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EntryGroupIamPolicy(String name, EntryGroupIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/entryGroupIamPolicy:EntryGroupIamPolicy", name, args == null ? EntryGroupIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EntryGroupIamPolicy(String name, Output<String> id, @Nullable EntryGroupIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EntryGroupIamPolicy(String name, Output<String> id, @Nullable EntryGroupIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/entryGroupIamPolicy:EntryGroupIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class EntryGroupIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EntryGroupIamPolicy get(String name, Output<String> id, @Nullable EntryGroupIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EntryGroupIamPolicy get(String name, Output<String> id, @Nullable EntryGroupIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new EntryGroupIamPolicy(name, id, state, options);
     }
 }

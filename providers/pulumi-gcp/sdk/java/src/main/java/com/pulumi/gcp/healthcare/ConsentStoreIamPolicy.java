@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.healthcare.ConsentStoreIamPolicyArgs;
 import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/consentStoreIamPolicy:ConsentStoreIamPolicy")
-public class ConsentStoreIamPolicy extends com.pulumi.resources.CustomResource {
+public class ConsentStoreIamPolicy extends CustomResource {
     /**
      * Used to find the parent resource to bind the IAM policy to
      * 
@@ -141,19 +143,19 @@ public class ConsentStoreIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConsentStoreIamPolicy(String name, ConsentStoreIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConsentStoreIamPolicy(String name, ConsentStoreIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/consentStoreIamPolicy:ConsentStoreIamPolicy", name, args == null ? ConsentStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConsentStoreIamPolicy(String name, Output<String> id, @Nullable ConsentStoreIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConsentStoreIamPolicy(String name, Output<String> id, @Nullable ConsentStoreIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/consentStoreIamPolicy:ConsentStoreIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -165,7 +167,7 @@ public class ConsentStoreIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConsentStoreIamPolicy get(String name, Output<String> id, @Nullable ConsentStoreIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConsentStoreIamPolicy get(String name, Output<String> id, @Nullable ConsentStoreIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new ConsentStoreIamPolicy(name, id, state, options);
     }
 }

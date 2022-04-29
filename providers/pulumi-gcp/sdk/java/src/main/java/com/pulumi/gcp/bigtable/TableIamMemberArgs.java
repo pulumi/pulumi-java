@@ -6,13 +6,14 @@ package com.pulumi.gcp.bigtable;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigtable.inputs.TableIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableIamMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableIamMemberArgs extends ResourceArgs {
 
     public static final TableIamMemberArgs Empty = new TableIamMemberArgs();
 

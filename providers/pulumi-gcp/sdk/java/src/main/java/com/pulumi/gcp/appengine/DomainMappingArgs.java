@@ -6,13 +6,14 @@ package com.pulumi.gcp.appengine;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainMappingArgs extends ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 

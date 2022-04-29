@@ -10,6 +10,7 @@ import com.pulumi.gcp.iot.inputs.DeviceCredentialArgs;
 import com.pulumi.gcp.iot.inputs.DeviceGatewayConfigArgs;
 import com.pulumi.gcp.iot.inputs.DeviceLastErrorStatusArgs;
 import com.pulumi.gcp.iot.inputs.DeviceStateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeviceState extends com.pulumi.resources.ResourceArgs {
+public final class DeviceState extends ResourceArgs {
 
     public static final DeviceState Empty = new DeviceState();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.container.AzureClientArgs;
 import com.pulumi.gcp.container.inputs.AzureClientState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:container/azureClient:AzureClient")
-public class AzureClient extends com.pulumi.resources.CustomResource {
+public class AzureClient extends CustomResource {
     /**
      * Required. The Azure Active Directory Application ID.
      * 
@@ -173,19 +175,19 @@ public class AzureClient extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AzureClient(String name, AzureClientArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AzureClient(String name, AzureClientArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureClient:AzureClient", name, args == null ? AzureClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AzureClient(String name, Output<String> id, @Nullable AzureClientState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AzureClient(String name, Output<String> id, @Nullable AzureClientState state, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureClient:AzureClient", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -197,7 +199,7 @@ public class AzureClient extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AzureClient get(String name, Output<String> id, @Nullable AzureClientState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AzureClient get(String name, Output<String> id, @Nullable AzureClientState state, @Nullable CustomResourceOptions options) {
         return new AzureClient(name, id, state, options);
     }
 }

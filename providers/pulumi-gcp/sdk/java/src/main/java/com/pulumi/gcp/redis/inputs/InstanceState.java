@@ -9,6 +9,7 @@ import com.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyArgs;
 import com.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleArgs;
 import com.pulumi.gcp.redis.inputs.InstanceNodeArgs;
 import com.pulumi.gcp.redis.inputs.InstanceServerCaCertArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceState extends com.pulumi.resources.ResourceArgs {
+public final class InstanceState extends ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 

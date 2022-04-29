@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.accesscontextmanager.AccessLevelConditionArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionState;
 import com.pulumi.gcp.accesscontextmanager.outputs.AccessLevelConditionDevicePolicy;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition")
-public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
+public class AccessLevelCondition extends CustomResource {
     /**
      * The name of the Access Level to add this condition to.
      * 
@@ -220,19 +222,19 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AccessLevelCondition(String name, AccessLevelConditionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AccessLevelCondition(String name, AccessLevelConditionArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, args == null ? AccessLevelConditionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AccessLevelCondition(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AccessLevelCondition(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -244,7 +246,7 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessLevelCondition get(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AccessLevelCondition get(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable CustomResourceOptions options) {
         return new AccessLevelCondition(name, id, state, options);
     }
 }

@@ -9,13 +9,14 @@ import com.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueStackdriverLoggingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class QueueState extends com.pulumi.resources.ResourceArgs {
+public final class QueueState extends ResourceArgs {
 
     public static final QueueState Empty = new QueueState();
 

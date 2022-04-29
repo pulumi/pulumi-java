@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dns.RecordSetArgs;
 import com.pulumi.gcp.dns.inputs.RecordSetState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dns/recordSet:RecordSet")
-public class RecordSet extends com.pulumi.resources.CustomResource {
+public class RecordSet extends CustomResource {
     /**
      * The name of the zone in which this record set will
      * reside.
@@ -154,19 +156,19 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RecordSet(String name, RecordSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RecordSet(String name, RecordSetArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dns/recordSet:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RecordSet(String name, Output<String> id, @Nullable RecordSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RecordSet(String name, Output<String> id, @Nullable RecordSetState state, @Nullable CustomResourceOptions options) {
         super("gcp:dns/recordSet:RecordSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -178,7 +180,7 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RecordSet get(String name, Output<String> id, @Nullable RecordSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RecordSet get(String name, Output<String> id, @Nullable RecordSetState state, @Nullable CustomResourceOptions options) {
         return new RecordSet(name, id, state, options);
     }
 }

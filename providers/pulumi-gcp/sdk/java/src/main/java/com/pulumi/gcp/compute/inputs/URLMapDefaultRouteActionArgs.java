@@ -12,13 +12,14 @@ import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionRetryPolicyArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionTimeoutArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionUrlRewriteArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapDefaultRouteActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapDefaultRouteActionArgs extends ResourceArgs {
 
     public static final URLMapDefaultRouteActionArgs Empty = new URLMapDefaultRouteActionArgs();
 

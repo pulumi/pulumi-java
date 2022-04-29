@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.accesscontextmanager.GcpUserAccessBindingArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.GcpUserAccessBindingState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding")
-public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
+public class GcpUserAccessBinding extends CustomResource {
     /**
      * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
      * 
@@ -115,19 +117,19 @@ public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GcpUserAccessBinding(String name, GcpUserAccessBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GcpUserAccessBinding(String name, GcpUserAccessBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, args == null ? GcpUserAccessBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GcpUserAccessBinding(String name, Output<String> id, @Nullable GcpUserAccessBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GcpUserAccessBinding(String name, Output<String> id, @Nullable GcpUserAccessBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -139,7 +141,7 @@ public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GcpUserAccessBinding get(String name, Output<String> id, @Nullable GcpUserAccessBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GcpUserAccessBinding get(String name, Output<String> id, @Nullable GcpUserAccessBindingState state, @Nullable CustomResourceOptions options) {
         return new GcpUserAccessBinding(name, id, state, options);
     }
 }

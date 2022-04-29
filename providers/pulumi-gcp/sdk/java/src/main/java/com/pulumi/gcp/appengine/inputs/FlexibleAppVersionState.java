@@ -17,6 +17,7 @@ import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionNetworkArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionReadinessCheckArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionVpcAccessConnectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionState extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionState extends ResourceArgs {
 
     public static final FlexibleAppVersionState Empty = new FlexibleAppVersionState();
 

@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.inputs.AwsClusterAuthorizationArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterFleetArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterNetworkingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AwsClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsClusterArgs extends ResourceArgs {
 
     public static final AwsClusterArgs Empty = new AwsClusterArgs();
 

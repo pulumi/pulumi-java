@@ -13,6 +13,7 @@ import com.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionLibraryArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionManualScalingArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionVpcAccessConnectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StandardAppVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class StandardAppVersionArgs extends ResourceArgs {
 
     public static final StandardAppVersionArgs Empty = new StandardAppVersionArgs();
 

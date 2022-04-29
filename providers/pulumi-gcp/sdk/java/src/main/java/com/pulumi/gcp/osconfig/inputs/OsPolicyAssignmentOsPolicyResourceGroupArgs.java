@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupArgs();
 

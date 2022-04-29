@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.logging.OrganizationBucketConfigArgs;
 import com.pulumi.gcp.logging.inputs.OrganizationBucketConfigState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:logging/organizationBucketConfig:OrganizationBucketConfig")
-public class OrganizationBucketConfig extends com.pulumi.resources.CustomResource {
+public class OrganizationBucketConfig extends CustomResource {
     /**
      * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
@@ -155,19 +157,19 @@ public class OrganizationBucketConfig extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OrganizationBucketConfig(String name, OrganizationBucketConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OrganizationBucketConfig(String name, OrganizationBucketConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:logging/organizationBucketConfig:OrganizationBucketConfig", name, args == null ? OrganizationBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OrganizationBucketConfig(String name, Output<String> id, @Nullable OrganizationBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationBucketConfig(String name, Output<String> id, @Nullable OrganizationBucketConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:logging/organizationBucketConfig:OrganizationBucketConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class OrganizationBucketConfig extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationBucketConfig get(String name, Output<String> id, @Nullable OrganizationBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationBucketConfig get(String name, Output<String> id, @Nullable OrganizationBucketConfigState state, @Nullable CustomResourceOptions options) {
         return new OrganizationBucketConfig(name, id, state, options);
     }
 }

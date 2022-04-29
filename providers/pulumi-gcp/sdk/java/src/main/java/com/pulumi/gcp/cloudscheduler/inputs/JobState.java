@@ -9,13 +9,14 @@ import com.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetArgs;
 import com.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetArgs;
 import com.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetArgs;
 import com.pulumi.gcp.cloudscheduler.inputs.JobRetryConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobState extends com.pulumi.resources.ResourceArgs {
+public final class JobState extends ResourceArgs {
 
     public static final JobState Empty = new JobState();
 

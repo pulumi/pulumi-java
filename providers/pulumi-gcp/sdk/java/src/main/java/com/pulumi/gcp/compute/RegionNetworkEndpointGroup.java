@@ -13,6 +13,8 @@ import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupState;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupAppEngine;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudFunction;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudRun;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup")
-public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResource {
+public class RegionNetworkEndpointGroup extends CustomResource {
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
      * Only one of cloud_run, app_engine or cloud_function may be set.
@@ -231,19 +233,19 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionNetworkEndpointGroup(String name, RegionNetworkEndpointGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionNetworkEndpointGroup(String name, RegionNetworkEndpointGroupArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup", name, args == null ? RegionNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionNetworkEndpointGroup(String name, Output<String> id, @Nullable RegionNetworkEndpointGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionNetworkEndpointGroup(String name, Output<String> id, @Nullable RegionNetworkEndpointGroupState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -255,7 +257,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionNetworkEndpointGroup get(String name, Output<String> id, @Nullable RegionNetworkEndpointGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionNetworkEndpointGroup get(String name, Output<String> id, @Nullable RegionNetworkEndpointGroupState state, @Nullable CustomResourceOptions options) {
         return new RegionNetworkEndpointGroup(name, id, state, options);
     }
 }

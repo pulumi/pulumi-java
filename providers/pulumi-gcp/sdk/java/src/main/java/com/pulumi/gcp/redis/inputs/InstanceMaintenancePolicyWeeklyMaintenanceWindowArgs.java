@@ -6,13 +6,14 @@ package com.pulumi.gcp.redis.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends ResourceArgs {
 
     public static final InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs Empty = new InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs();
 

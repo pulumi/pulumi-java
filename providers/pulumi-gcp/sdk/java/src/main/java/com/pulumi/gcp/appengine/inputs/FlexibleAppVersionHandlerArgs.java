@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerScriptArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerStaticFilesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionHandlerArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionHandlerArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionHandlerArgs Empty = new FlexibleAppVersionHandlerArgs();
 

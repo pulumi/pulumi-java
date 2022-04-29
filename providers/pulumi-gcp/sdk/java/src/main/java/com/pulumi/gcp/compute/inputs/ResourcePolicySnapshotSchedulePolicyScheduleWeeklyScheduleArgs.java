@@ -6,11 +6,12 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs();
 

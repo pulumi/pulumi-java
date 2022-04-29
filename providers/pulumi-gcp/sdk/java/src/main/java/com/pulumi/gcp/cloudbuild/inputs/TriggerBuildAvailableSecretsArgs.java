@@ -6,11 +6,12 @@ package com.pulumi.gcp.cloudbuild.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsSecretManagerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class TriggerBuildAvailableSecretsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerBuildAvailableSecretsArgs extends ResourceArgs {
 
     public static final TriggerBuildAvailableSecretsArgs Empty = new TriggerBuildAvailableSecretsArgs();
 

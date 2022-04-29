@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.DiskIamBindingArgs;
 import com.pulumi.gcp.compute.inputs.DiskIamBindingState;
 import com.pulumi.gcp.compute.outputs.DiskIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/diskIamBinding:DiskIamBinding")
-public class DiskIamBinding extends com.pulumi.resources.CustomResource {
+public class DiskIamBinding extends CustomResource {
     @Export(name="condition", type=DiskIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DiskIamBindingCondition> condition;
 
@@ -174,19 +176,19 @@ public class DiskIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DiskIamBinding(String name, DiskIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DiskIamBinding(String name, DiskIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskIamBinding:DiskIamBinding", name, args == null ? DiskIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DiskIamBinding(String name, Output<String> id, @Nullable DiskIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DiskIamBinding(String name, Output<String> id, @Nullable DiskIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskIamBinding:DiskIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -198,7 +200,7 @@ public class DiskIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DiskIamBinding get(String name, Output<String> id, @Nullable DiskIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DiskIamBinding get(String name, Output<String> id, @Nullable DiskIamBindingState state, @Nullable CustomResourceOptions options) {
         return new DiskIamBinding(name, id, state, options);
     }
 }

@@ -12,6 +12,8 @@ import com.pulumi.gcp.iam.WorkloadIdentityPoolProviderArgs;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderState;
 import com.pulumi.gcp.iam.outputs.WorkloadIdentityPoolProviderAws;
 import com.pulumi.gcp.iam.outputs.WorkloadIdentityPoolProviderOidc;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iam/workloadIdentityPoolProvider:WorkloadIdentityPoolProvider")
-public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomResource {
+public class WorkloadIdentityPoolProvider extends CustomResource {
     /**
      * [A Common Expression Language](https://opensource.google/projects/cel) expression, in
      * plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -356,19 +358,19 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WorkloadIdentityPoolProvider(String name, WorkloadIdentityPoolProviderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WorkloadIdentityPoolProvider(String name, WorkloadIdentityPoolProviderArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iam/workloadIdentityPoolProvider:WorkloadIdentityPoolProvider", name, args == null ? WorkloadIdentityPoolProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WorkloadIdentityPoolProvider(String name, Output<String> id, @Nullable WorkloadIdentityPoolProviderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WorkloadIdentityPoolProvider(String name, Output<String> id, @Nullable WorkloadIdentityPoolProviderState state, @Nullable CustomResourceOptions options) {
         super("gcp:iam/workloadIdentityPoolProvider:WorkloadIdentityPoolProvider", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -380,7 +382,7 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkloadIdentityPoolProvider get(String name, Output<String> id, @Nullable WorkloadIdentityPoolProviderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WorkloadIdentityPoolProvider get(String name, Output<String> id, @Nullable WorkloadIdentityPoolProviderState state, @Nullable CustomResourceOptions options) {
         return new WorkloadIdentityPoolProvider(name, id, state, options);
     }
 }

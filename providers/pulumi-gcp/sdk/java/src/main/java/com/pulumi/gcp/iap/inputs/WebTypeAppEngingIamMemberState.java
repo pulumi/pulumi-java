@@ -6,13 +6,14 @@ package com.pulumi.gcp.iap.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebTypeAppEngingIamMemberState extends com.pulumi.resources.ResourceArgs {
+public final class WebTypeAppEngingIamMemberState extends ResourceArgs {
 
     public static final WebTypeAppEngingIamMemberState Empty = new WebTypeAppEngingIamMemberState();
 

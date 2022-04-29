@@ -5,11 +5,12 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs extends ResourceArgs {
 
     public static final ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs Empty = new ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs();
 

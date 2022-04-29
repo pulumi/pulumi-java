@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.inputs.AzureClusterAuthorizationArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterFleetArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterNetworkingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureClusterArgs extends ResourceArgs {
 
     public static final AzureClusterArgs Empty = new AzureClusterArgs();
 

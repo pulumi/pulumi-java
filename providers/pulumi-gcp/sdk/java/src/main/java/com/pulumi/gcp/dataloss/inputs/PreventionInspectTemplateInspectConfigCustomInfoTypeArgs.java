@@ -9,13 +9,14 @@ import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCust
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigCustomInfoTypeArgs Empty = new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.vertex.AiMetadataStoreArgs;
 import com.pulumi.gcp.vertex.outputs.AiMetadataStoreEncryptionSpec;
 import com.pulumi.gcp.vertex.outputs.AiMetadataStoreState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:vertex/aiMetadataStore:AiMetadataStore")
-public class AiMetadataStore extends com.pulumi.resources.CustomResource {
+public class AiMetadataStore extends CustomResource {
     /**
      * The timestamp of when the MetadataStore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
@@ -182,19 +184,19 @@ public class AiMetadataStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AiMetadataStore(String name, @Nullable AiMetadataStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AiMetadataStore(String name, @Nullable AiMetadataStoreArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiMetadataStore:AiMetadataStore", name, args == null ? AiMetadataStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AiMetadataStore(String name, Output<String> id, @Nullable com.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AiMetadataStore(String name, Output<String> id, @Nullable com.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiMetadataStore:AiMetadataStore", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -206,7 +208,7 @@ public class AiMetadataStore extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiMetadataStore get(String name, Output<String> id, @Nullable com.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AiMetadataStore get(String name, Output<String> id, @Nullable com.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable CustomResourceOptions options) {
         return new AiMetadataStore(name, id, state, options);
     }
 }

@@ -13,6 +13,8 @@ import com.pulumi.gcp.datacatalog.inputs.EntryState;
 import com.pulumi.gcp.datacatalog.outputs.EntryBigqueryDateShardedSpec;
 import com.pulumi.gcp.datacatalog.outputs.EntryBigqueryTableSpec;
 import com.pulumi.gcp.datacatalog.outputs.EntryGcsFilesetSpec;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:datacatalog/entry:Entry")
-public class Entry extends com.pulumi.resources.CustomResource {
+public class Entry extends CustomResource {
     /**
      * Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
      * https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -305,19 +307,19 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Entry(String name, EntryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Entry(String name, EntryArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/entry:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Entry(String name, Output<String> id, @Nullable EntryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Entry(String name, Output<String> id, @Nullable EntryState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/entry:Entry", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -329,7 +331,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Entry get(String name, Output<String> id, @Nullable EntryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Entry get(String name, Output<String> id, @Nullable EntryState state, @Nullable CustomResourceOptions options) {
         return new Entry(name, id, state, options);
     }
 }

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.GlobalForwardingRuleArgs;
 import com.pulumi.gcp.compute.inputs.GlobalForwardingRuleState;
 import com.pulumi.gcp.compute.outputs.GlobalForwardingRuleMetadataFilter;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/globalForwardingRule:GlobalForwardingRule")
-public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
+public class GlobalForwardingRule extends CustomResource {
     /**
      * An optional description of this resource. Provide this property when
      * you create the resource.
@@ -403,19 +405,19 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GlobalForwardingRule(String name, GlobalForwardingRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GlobalForwardingRule(String name, GlobalForwardingRuleArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalForwardingRule:GlobalForwardingRule", name, args == null ? GlobalForwardingRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GlobalForwardingRule(String name, Output<String> id, @Nullable GlobalForwardingRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GlobalForwardingRule(String name, Output<String> id, @Nullable GlobalForwardingRuleState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalForwardingRule:GlobalForwardingRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -427,7 +429,7 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GlobalForwardingRule get(String name, Output<String> id, @Nullable GlobalForwardingRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GlobalForwardingRule get(String name, Output<String> id, @Nullable GlobalForwardingRuleState state, @Nullable CustomResourceOptions options) {
         return new GlobalForwardingRule(name, id, state, options);
     }
 }

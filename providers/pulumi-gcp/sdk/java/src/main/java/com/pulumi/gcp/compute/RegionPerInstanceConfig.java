@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.RegionPerInstanceConfigArgs;
 import com.pulumi.gcp.compute.inputs.RegionPerInstanceConfigState;
 import com.pulumi.gcp.compute.outputs.RegionPerInstanceConfigPreservedState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -51,7 +53,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig")
-public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource {
+public class RegionPerInstanceConfig extends CustomResource {
     /**
      * The minimal action to perform on the instance during an update.
      * Default is `NONE`. Possible values are:
@@ -214,19 +216,19 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionPerInstanceConfig(String name, RegionPerInstanceConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionPerInstanceConfig(String name, RegionPerInstanceConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, args == null ? RegionPerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionPerInstanceConfig(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionPerInstanceConfig(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -238,7 +240,7 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionPerInstanceConfig get(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionPerInstanceConfig get(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable CustomResourceOptions options) {
         return new RegionPerInstanceConfig(name, id, state, options);
     }
 }

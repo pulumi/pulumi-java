@@ -8,12 +8,13 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnvironmentConfigWorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentConfigWorkloadsConfigArgs extends ResourceArgs {
 
     public static final EnvironmentConfigWorkloadsConfigArgs Empty = new EnvironmentConfigWorkloadsConfigArgs();
 

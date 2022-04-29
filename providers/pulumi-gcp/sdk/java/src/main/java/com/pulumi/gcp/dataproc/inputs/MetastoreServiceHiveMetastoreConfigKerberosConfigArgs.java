@@ -6,11 +6,12 @@ package com.pulumi.gcp.dataproc.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends ResourceArgs {
 
     public static final MetastoreServiceHiveMetastoreConfigKerberosConfigArgs Empty = new MetastoreServiceHiveMetastoreConfigKerberosConfigArgs();
 

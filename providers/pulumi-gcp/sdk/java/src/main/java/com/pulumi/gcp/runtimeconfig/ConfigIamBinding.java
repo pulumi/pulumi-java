@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.runtimeconfig.ConfigIamBindingArgs;
 import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamBindingState;
 import com.pulumi.gcp.runtimeconfig.outputs.ConfigIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:runtimeconfig/configIamBinding:ConfigIamBinding")
-public class ConfigIamBinding extends com.pulumi.resources.CustomResource {
+public class ConfigIamBinding extends CustomResource {
     @Export(name="condition", type=ConfigIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ConfigIamBindingCondition> condition;
 
@@ -140,19 +142,19 @@ public class ConfigIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConfigIamBinding(String name, ConfigIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConfigIamBinding(String name, ConfigIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:runtimeconfig/configIamBinding:ConfigIamBinding", name, args == null ? ConfigIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConfigIamBinding(String name, Output<String> id, @Nullable ConfigIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConfigIamBinding(String name, Output<String> id, @Nullable ConfigIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:runtimeconfig/configIamBinding:ConfigIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -164,7 +166,7 @@ public class ConfigIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigIamBinding get(String name, Output<String> id, @Nullable ConfigIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigIamBinding get(String name, Output<String> id, @Nullable ConfigIamBindingState state, @Nullable CustomResourceOptions options) {
         return new ConfigIamBinding(name, id, state, options);
     }
 }

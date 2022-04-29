@@ -5,11 +5,12 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class PolicyNetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyNetworkArgs extends ResourceArgs {
 
     public static final PolicyNetworkArgs Empty = new PolicyNetworkArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionStoredInfoTypeDictionaryArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionStoredInfoTypeDictionaryArgs extends ResourceArgs {
 
     public static final PreventionStoredInfoTypeDictionaryArgs Empty = new PreventionStoredInfoTypeDictionaryArgs();
 

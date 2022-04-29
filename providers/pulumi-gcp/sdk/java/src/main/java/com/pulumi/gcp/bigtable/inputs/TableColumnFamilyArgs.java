@@ -5,11 +5,12 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TableColumnFamilyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableColumnFamilyArgs extends ResourceArgs {
 
     public static final TableColumnFamilyArgs Empty = new TableColumnFamilyArgs();
 

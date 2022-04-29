@@ -6,13 +6,14 @@ package com.pulumi.gcp.datacatalog;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntryArgs extends ResourceArgs {
 
     public static final EntryArgs Empty = new EntryArgs();
 

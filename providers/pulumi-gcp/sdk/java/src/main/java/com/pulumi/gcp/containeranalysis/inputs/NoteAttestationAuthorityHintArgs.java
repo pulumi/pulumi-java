@@ -5,11 +5,12 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class NoteAttestationAuthorityHintArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoteAttestationAuthorityHintArgs extends ResourceArgs {
 
     public static final NoteAttestationAuthorityHintArgs Empty = new NoteAttestationAuthorityHintArgs();
 

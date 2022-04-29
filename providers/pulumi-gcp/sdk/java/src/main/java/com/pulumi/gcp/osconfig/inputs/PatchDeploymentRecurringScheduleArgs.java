@@ -9,13 +9,14 @@ import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyArg
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeZoneArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleWeeklyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchDeploymentRecurringScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchDeploymentRecurringScheduleArgs extends ResourceArgs {
 
     public static final PatchDeploymentRecurringScheduleArgs Empty = new PatchDeploymentRecurringScheduleArgs();
 

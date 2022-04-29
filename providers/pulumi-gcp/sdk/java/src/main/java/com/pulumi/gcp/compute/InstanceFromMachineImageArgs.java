@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinity
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageSchedulingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageServiceAccountArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFromMachineImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromMachineImageArgs extends ResourceArgs {
 
     public static final InstanceFromMachineImageArgs Empty = new InstanceFromMachineImageArgs();
 

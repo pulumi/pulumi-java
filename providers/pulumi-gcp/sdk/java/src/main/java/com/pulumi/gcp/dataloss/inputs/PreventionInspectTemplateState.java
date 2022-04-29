@@ -6,13 +6,14 @@ package com.pulumi.gcp.dataloss.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionInspectTemplateState extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateState extends ResourceArgs {
 
     public static final PreventionInspectTemplateState Empty = new PreventionInspectTemplateState();
 

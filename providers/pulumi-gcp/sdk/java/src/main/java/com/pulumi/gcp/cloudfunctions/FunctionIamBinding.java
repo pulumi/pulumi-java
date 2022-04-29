@@ -11,13 +11,15 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.cloudfunctions.FunctionIamBindingArgs;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamBindingState;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamBinding:FunctionIamBinding")
-public class FunctionIamBinding extends com.pulumi.resources.CustomResource {
+public class FunctionIamBinding extends CustomResource {
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
@@ -82,19 +84,19 @@ public class FunctionIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FunctionIamBinding(String name, FunctionIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FunctionIamBinding(String name, FunctionIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:cloudfunctions/functionIamBinding:FunctionIamBinding", name, args == null ? FunctionIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FunctionIamBinding(String name, Output<String> id, @Nullable FunctionIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FunctionIamBinding(String name, Output<String> id, @Nullable FunctionIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:cloudfunctions/functionIamBinding:FunctionIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class FunctionIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FunctionIamBinding get(String name, Output<String> id, @Nullable FunctionIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FunctionIamBinding get(String name, Output<String> id, @Nullable FunctionIamBindingState state, @Nullable CustomResourceOptions options) {
         return new FunctionIamBinding(name, id, state, options);
     }
 }

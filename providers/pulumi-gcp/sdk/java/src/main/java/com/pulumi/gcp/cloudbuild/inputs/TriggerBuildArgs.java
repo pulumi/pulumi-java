@@ -11,6 +11,7 @@ import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSecretArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerBuildArgs extends ResourceArgs {
 
     public static final TriggerBuildArgs Empty = new TriggerBuildArgs();
 

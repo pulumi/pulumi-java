@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.RouterInterfaceArgs;
 import com.pulumi.gcp.compute.inputs.RouterInterfaceState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/routerInterface:RouterInterface")
-public class RouterInterface extends com.pulumi.resources.CustomResource {
+public class RouterInterface extends CustomResource {
     /**
      * The name or resource link to the
      * VLAN interconnect for this interface. Changing this forces a new interface to
@@ -175,19 +177,19 @@ public class RouterInterface extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RouterInterface(String name, RouterInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RouterInterface(String name, RouterInterfaceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/routerInterface:RouterInterface", name, args == null ? RouterInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RouterInterface(String name, Output<String> id, @Nullable RouterInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RouterInterface(String name, Output<String> id, @Nullable RouterInterfaceState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/routerInterface:RouterInterface", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -199,7 +201,7 @@ public class RouterInterface extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouterInterface get(String name, Output<String> id, @Nullable RouterInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RouterInterface get(String name, Output<String> id, @Nullable RouterInterfaceState state, @Nullable CustomResourceOptions options) {
         return new RouterInterface(name, id, state, options);
     }
 }

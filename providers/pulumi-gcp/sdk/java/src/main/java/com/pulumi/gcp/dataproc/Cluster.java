@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dataproc.ClusterArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterState;
 import com.pulumi.gcp.dataproc.outputs.ClusterClusterConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataproc/cluster:Cluster")
-public class Cluster extends com.pulumi.resources.CustomResource {
+public class Cluster extends CustomResource {
     /**
      * Allows you to configure various aspects of the cluster.
      * Structure defined below.
@@ -156,19 +158,19 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cluster(String name, @Nullable ClusterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Cluster(String name, @Nullable ClusterArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/cluster:Cluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -180,7 +182,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cluster get(String name, Output<String> id, @Nullable ClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Cluster get(String name, Output<String> id, @Nullable ClusterState state, @Nullable CustomResourceOptions options) {
         return new Cluster(name, id, state, options);
     }
 }

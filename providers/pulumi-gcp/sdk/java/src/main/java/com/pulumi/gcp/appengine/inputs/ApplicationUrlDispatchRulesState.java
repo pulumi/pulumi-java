@@ -6,6 +6,7 @@ package com.pulumi.gcp.appengine.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationUrlDispatchRulesState extends ResourceArgs {
 
     public static final ApplicationUrlDispatchRulesState Empty = new ApplicationUrlDispatchRulesState();
 

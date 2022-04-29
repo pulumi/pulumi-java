@@ -6,6 +6,7 @@ package com.pulumi.gcp.dataproc;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.ClusterIAMBindingConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterIAMBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterIAMBindingArgs extends ResourceArgs {
 
     public static final ClusterIAMBindingArgs Empty = new ClusterIAMBindingArgs();
 

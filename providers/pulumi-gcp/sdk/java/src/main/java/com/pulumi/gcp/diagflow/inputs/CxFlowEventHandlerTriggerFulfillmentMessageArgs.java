@@ -6,12 +6,13 @@ package com.pulumi.gcp.diagflow.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends ResourceArgs {
 
     public static final CxFlowEventHandlerTriggerFulfillmentMessageArgs Empty = new CxFlowEventHandlerTriggerFulfillmentMessageArgs();
 

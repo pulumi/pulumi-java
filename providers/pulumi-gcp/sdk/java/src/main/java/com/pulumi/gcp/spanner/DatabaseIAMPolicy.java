@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.spanner.DatabaseIAMPolicyArgs;
 import com.pulumi.gcp.spanner.inputs.DatabaseIAMPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy")
-public class DatabaseIAMPolicy extends com.pulumi.resources.CustomResource {
+public class DatabaseIAMPolicy extends CustomResource {
     /**
      * The name of the Spanner database.
      * 
@@ -156,19 +158,19 @@ public class DatabaseIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatabaseIAMPolicy(String name, DatabaseIAMPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatabaseIAMPolicy(String name, DatabaseIAMPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy", name, args == null ? DatabaseIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatabaseIAMPolicy(String name, Output<String> id, @Nullable DatabaseIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatabaseIAMPolicy(String name, Output<String> id, @Nullable DatabaseIAMPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -180,7 +182,7 @@ public class DatabaseIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatabaseIAMPolicy get(String name, Output<String> id, @Nullable DatabaseIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatabaseIAMPolicy get(String name, Output<String> id, @Nullable DatabaseIAMPolicyState state, @Nullable CustomResourceOptions options) {
         return new DatabaseIAMPolicy(name, id, state, options);
     }
 }

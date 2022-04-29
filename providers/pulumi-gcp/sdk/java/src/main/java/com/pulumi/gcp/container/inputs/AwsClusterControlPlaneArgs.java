@@ -12,6 +12,7 @@ import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneMainVolumeArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneProxyConfigArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneRootVolumeArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneSshConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsClusterControlPlaneArgs extends ResourceArgs {
 
     public static final AwsClusterControlPlaneArgs Empty = new AwsClusterControlPlaneArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.AddressArgs;
 import com.pulumi.gcp.compute.inputs.AddressState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/address:Address")
-public class Address extends com.pulumi.resources.CustomResource {
+public class Address extends CustomResource {
     /**
      * The static external IP address represented by this resource. Only
      * IPv4 is supported. An address may only be specified for INTERNAL
@@ -372,19 +374,19 @@ public class Address extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Address(String name, @Nullable AddressArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Address(String name, @Nullable AddressArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/address:Address", name, args == null ? AddressArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Address(String name, Output<String> id, @Nullable AddressState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Address(String name, Output<String> id, @Nullable AddressState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/address:Address", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -396,7 +398,7 @@ public class Address extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Address get(String name, Output<String> id, @Nullable AddressState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Address get(String name, Output<String> id, @Nullable AddressState state, @Nullable CustomResourceOptions options) {
         return new Address(name, id, state, options);
     }
 }

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.TagTemplateArgs;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateState;
 import com.pulumi.gcp.datacatalog.outputs.TagTemplateField;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:datacatalog/tagTemplate:TagTemplate")
-public class TagTemplate extends com.pulumi.resources.CustomResource {
+public class TagTemplate extends CustomResource {
     /**
      * The display name for this template.
      * 
@@ -166,19 +168,19 @@ public class TagTemplate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TagTemplate(String name, TagTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TagTemplate(String name, TagTemplateArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplate:TagTemplate", name, args == null ? TagTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TagTemplate(String name, Output<String> id, @Nullable TagTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TagTemplate(String name, Output<String> id, @Nullable TagTemplateState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplate:TagTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -190,7 +192,7 @@ public class TagTemplate extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagTemplate get(String name, Output<String> id, @Nullable TagTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TagTemplate get(String name, Output<String> id, @Nullable TagTemplateState state, @Nullable CustomResourceOptions options) {
         return new TagTemplate(name, id, state, options);
     }
 }

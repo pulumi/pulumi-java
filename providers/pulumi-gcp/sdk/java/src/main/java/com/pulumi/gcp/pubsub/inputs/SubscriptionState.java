@@ -9,6 +9,7 @@ import com.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionRetryPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
+public final class SubscriptionState extends ResourceArgs {
 
     public static final SubscriptionState Empty = new SubscriptionState();
 

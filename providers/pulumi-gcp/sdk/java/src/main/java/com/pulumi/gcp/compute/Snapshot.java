@@ -12,6 +12,8 @@ import com.pulumi.gcp.compute.SnapshotArgs;
 import com.pulumi.gcp.compute.inputs.SnapshotState;
 import com.pulumi.gcp.compute.outputs.SnapshotSnapshotEncryptionKey;
 import com.pulumi.gcp.compute.outputs.SnapshotSourceDiskEncryptionKey;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -62,7 +64,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/snapshot:Snapshot")
-public class Snapshot extends com.pulumi.resources.CustomResource {
+public class Snapshot extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -339,19 +341,19 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Snapshot(String name, SnapshotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Snapshot(String name, SnapshotArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Snapshot(String name, Output<String> id, @Nullable SnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Snapshot(String name, Output<String> id, @Nullable SnapshotState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/snapshot:Snapshot", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -363,7 +365,7 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Snapshot get(String name, Output<String> id, @Nullable SnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Snapshot get(String name, Output<String> id, @Nullable SnapshotState state, @Nullable CustomResourceOptions options) {
         return new Snapshot(name, id, state, options);
     }
 }

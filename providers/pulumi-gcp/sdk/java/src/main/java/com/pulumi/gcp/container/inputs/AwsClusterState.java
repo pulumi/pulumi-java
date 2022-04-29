@@ -10,6 +10,7 @@ import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterFleetArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterNetworkingArgs;
 import com.pulumi.gcp.container.inputs.AwsClusterWorkloadIdentityConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
+public final class AwsClusterState extends ResourceArgs {
 
     public static final AwsClusterState Empty = new AwsClusterState();
 

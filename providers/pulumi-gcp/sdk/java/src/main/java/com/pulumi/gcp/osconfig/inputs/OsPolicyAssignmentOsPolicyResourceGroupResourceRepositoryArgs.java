@@ -9,12 +9,13 @@ import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupRes
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs();
 

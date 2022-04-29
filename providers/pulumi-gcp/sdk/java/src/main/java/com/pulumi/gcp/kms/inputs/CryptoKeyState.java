@@ -6,6 +6,7 @@ package com.pulumi.gcp.kms.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
+public final class CryptoKeyState extends ResourceArgs {
 
     public static final CryptoKeyState Empty = new CryptoKeyState();
 

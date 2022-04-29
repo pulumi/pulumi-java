@@ -6,6 +6,7 @@ package com.pulumi.gcp.endpoints;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.endpoints.inputs.ServiceIamBindingConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceIamBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceIamBindingArgs extends ResourceArgs {
 
     public static final ServiceIamBindingArgs Empty = new ServiceIamBindingArgs();
 

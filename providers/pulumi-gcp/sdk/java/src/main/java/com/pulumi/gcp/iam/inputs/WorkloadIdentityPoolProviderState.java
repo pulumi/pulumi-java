@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsArgs;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkloadIdentityPoolProviderState extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadIdentityPoolProviderState extends ResourceArgs {
 
     public static final WorkloadIdentityPoolProviderState Empty = new WorkloadIdentityPoolProviderState();
 

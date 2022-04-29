@@ -5,11 +5,12 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SharedVPCServiceProjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class SharedVPCServiceProjectArgs extends ResourceArgs {
 
     public static final SharedVPCServiceProjectArgs Empty = new SharedVPCServiceProjectArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.gcp.certificateauthority;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaPoolIamMemberArgs extends ResourceArgs {
 
     public static final CaPoolIamMemberArgs Empty = new CaPoolIamMemberArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceAccessConfigArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFromMachineImageNetworkInterfaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromMachineImageNetworkInterfaceArgs extends ResourceArgs {
 
     public static final InstanceFromMachineImageNetworkInterfaceArgs Empty = new InstanceFromMachineImageNetworkInterfaceArgs();
 

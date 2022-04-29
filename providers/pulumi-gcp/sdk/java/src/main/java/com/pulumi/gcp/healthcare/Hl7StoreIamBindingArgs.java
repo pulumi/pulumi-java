@@ -6,6 +6,7 @@ package com.pulumi.gcp.healthcare;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Hl7StoreIamBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class Hl7StoreIamBindingArgs extends ResourceArgs {
 
     public static final Hl7StoreIamBindingArgs Empty = new Hl7StoreIamBindingArgs();
 

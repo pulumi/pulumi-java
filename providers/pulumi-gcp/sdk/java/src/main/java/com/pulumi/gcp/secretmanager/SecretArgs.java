@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationArgs;
 import com.pulumi.gcp.secretmanager.inputs.SecretRotationArgs;
 import com.pulumi.gcp.secretmanager.inputs.SecretTopicArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretArgs extends ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 

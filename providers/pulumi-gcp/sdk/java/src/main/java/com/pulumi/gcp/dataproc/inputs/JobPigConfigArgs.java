@@ -6,6 +6,7 @@ package com.pulumi.gcp.dataproc.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.JobPigConfigLoggingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobPigConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobPigConfigArgs extends ResourceArgs {
 
     public static final JobPigConfigArgs Empty = new JobPigConfigArgs();
 

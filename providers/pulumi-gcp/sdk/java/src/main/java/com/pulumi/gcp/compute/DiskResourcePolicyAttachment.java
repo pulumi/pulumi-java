@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.DiskResourcePolicyAttachmentArgs;
 import com.pulumi.gcp.compute.inputs.DiskResourcePolicyAttachmentState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment")
-public class DiskResourcePolicyAttachment extends com.pulumi.resources.CustomResource {
+public class DiskResourcePolicyAttachment extends CustomResource {
     /**
      * The name of the disk in which the resource policies are attached to.
      * 
@@ -126,19 +128,19 @@ public class DiskResourcePolicyAttachment extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DiskResourcePolicyAttachment(String name, DiskResourcePolicyAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DiskResourcePolicyAttachment(String name, DiskResourcePolicyAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, args == null ? DiskResourcePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DiskResourcePolicyAttachment(String name, Output<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DiskResourcePolicyAttachment(String name, Output<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -150,7 +152,7 @@ public class DiskResourcePolicyAttachment extends com.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DiskResourcePolicyAttachment get(String name, Output<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DiskResourcePolicyAttachment get(String name, Output<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable CustomResourceOptions options) {
         return new DiskResourcePolicyAttachment(name, id, state, options);
     }
 }

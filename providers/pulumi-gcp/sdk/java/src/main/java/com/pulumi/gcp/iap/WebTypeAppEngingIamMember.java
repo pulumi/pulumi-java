@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.WebTypeAppEngingIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebTypeAppEngingIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -62,7 +64,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/webTypeAppEngingIamMember:WebTypeAppEngingIamMember")
-public class WebTypeAppEngingIamMember extends com.pulumi.resources.CustomResource {
+public class WebTypeAppEngingIamMember extends CustomResource {
     /**
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
@@ -169,19 +171,19 @@ public class WebTypeAppEngingIamMember extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebTypeAppEngingIamMember(String name, WebTypeAppEngingIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebTypeAppEngingIamMember(String name, WebTypeAppEngingIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeAppEngingIamMember:WebTypeAppEngingIamMember", name, args == null ? WebTypeAppEngingIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebTypeAppEngingIamMember(String name, Output<String> id, @Nullable WebTypeAppEngingIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebTypeAppEngingIamMember(String name, Output<String> id, @Nullable WebTypeAppEngingIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeAppEngingIamMember:WebTypeAppEngingIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -193,7 +195,7 @@ public class WebTypeAppEngingIamMember extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTypeAppEngingIamMember get(String name, Output<String> id, @Nullable WebTypeAppEngingIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebTypeAppEngingIamMember get(String name, Output<String> id, @Nullable WebTypeAppEngingIamMemberState state, @Nullable CustomResourceOptions options) {
         return new WebTypeAppEngingIamMember(name, id, state, options);
     }
 }

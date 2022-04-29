@@ -10,6 +10,7 @@ import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfig
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends ResourceArgs {
 
     public static final RuntimeVirtualMachineVirtualMachineConfigArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigArgs();
 

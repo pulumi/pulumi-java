@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainMappingState extends com.pulumi.resources.ResourceArgs {
+public final class DomainMappingState extends ResourceArgs {
 
     public static final DomainMappingState Empty = new DomainMappingState();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.accesscontextmanager.ServicePerimetersArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersState;
 import com.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeter;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:accesscontextmanager/servicePerimeters:ServicePerimeters")
-public class ServicePerimeters extends com.pulumi.resources.CustomResource {
+public class ServicePerimeters extends CustomResource {
     /**
      * The AccessPolicy this ServicePerimeter lives in.
      * Format: accessPolicies/{policy_id}
@@ -98,19 +100,19 @@ public class ServicePerimeters extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServicePerimeters(String name, ServicePerimetersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServicePerimeters(String name, ServicePerimetersArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/servicePerimeters:ServicePerimeters", name, args == null ? ServicePerimetersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServicePerimeters(String name, Output<String> id, @Nullable ServicePerimetersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServicePerimeters(String name, Output<String> id, @Nullable ServicePerimetersState state, @Nullable CustomResourceOptions options) {
         super("gcp:accesscontextmanager/servicePerimeters:ServicePerimeters", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -122,7 +124,7 @@ public class ServicePerimeters extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServicePerimeters get(String name, Output<String> id, @Nullable ServicePerimetersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServicePerimeters get(String name, Output<String> id, @Nullable ServicePerimetersState state, @Nullable CustomResourceOptions options) {
         return new ServicePerimeters(name, id, state, options);
     }
 }

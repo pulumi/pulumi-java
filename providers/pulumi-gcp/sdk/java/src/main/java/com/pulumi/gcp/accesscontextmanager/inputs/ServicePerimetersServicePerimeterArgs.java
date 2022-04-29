@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicePerimetersServicePerimeterArgs extends ResourceArgs {
 
     public static final ServicePerimetersServicePerimeterArgs Empty = new ServicePerimetersServicePerimeterArgs();
 

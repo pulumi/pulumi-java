@@ -6,6 +6,7 @@ package com.pulumi.gcp.tags;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.tags.inputs.TagKeyIamBindingConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TagKeyIamBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagKeyIamBindingArgs extends ResourceArgs {
 
     public static final TagKeyIamBindingArgs Empty = new TagKeyIamBindingArgs();
 

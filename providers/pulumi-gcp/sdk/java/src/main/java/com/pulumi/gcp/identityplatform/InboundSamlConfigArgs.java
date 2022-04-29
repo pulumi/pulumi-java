@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigArgs;
 import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InboundSamlConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InboundSamlConfigArgs extends ResourceArgs {
 
     public static final InboundSamlConfigArgs Empty = new InboundSamlConfigArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.gcp.tpu.NodeArgs;
 import com.pulumi.gcp.tpu.inputs.NodeState;
 import com.pulumi.gcp.tpu.outputs.NodeNetworkEndpoint;
 import com.pulumi.gcp.tpu.outputs.NodeSchedulingConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:tpu/node:Node")
-public class Node extends com.pulumi.resources.CustomResource {
+public class Node extends CustomResource {
     /**
      * The type of hardware accelerators associated with this node.
      * 
@@ -291,19 +293,19 @@ public class Node extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Node(String name, NodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Node(String name, NodeArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:tpu/node:Node", name, args == null ? NodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Node(String name, Output<String> id, @Nullable NodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Node(String name, Output<String> id, @Nullable NodeState state, @Nullable CustomResourceOptions options) {
         super("gcp:tpu/node:Node", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -315,7 +317,7 @@ public class Node extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Node get(String name, Output<String> id, @Nullable NodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Node get(String name, Output<String> id, @Nullable NodeState state, @Nullable CustomResourceOptions options) {
         return new Node(name, id, state, options);
     }
 }

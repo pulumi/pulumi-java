@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountArgs;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityScanConfigAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityScanConfigAuthenticationArgs extends ResourceArgs {
 
     public static final SecurityScanConfigAuthenticationArgs Empty = new SecurityScanConfigAuthenticationArgs();
 

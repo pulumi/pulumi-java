@@ -12,6 +12,8 @@ import com.pulumi.gcp.deploymentmanager.DeploymentArgs;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentState;
 import com.pulumi.gcp.deploymentmanager.outputs.DeploymentLabel;
 import com.pulumi.gcp.deploymentmanager.outputs.DeploymentTarget;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -53,7 +55,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:deploymentmanager/deployment:Deployment")
-public class Deployment extends com.pulumi.resources.CustomResource {
+public class Deployment extends CustomResource {
     /**
      * Set the policy to use for creating new resources. Only used on
      * create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
@@ -280,19 +282,19 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Deployment(String name, DeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Deployment(String name, DeploymentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:deploymentmanager/deployment:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Deployment(String name, Output<String> id, @Nullable DeploymentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Deployment(String name, Output<String> id, @Nullable DeploymentState state, @Nullable CustomResourceOptions options) {
         super("gcp:deploymentmanager/deployment:Deployment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -304,7 +306,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Deployment get(String name, Output<String> id, @Nullable DeploymentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Deployment get(String name, Output<String> id, @Nullable DeploymentState state, @Nullable CustomResourceOptions options) {
         return new Deployment(name, id, state, options);
     }
 }

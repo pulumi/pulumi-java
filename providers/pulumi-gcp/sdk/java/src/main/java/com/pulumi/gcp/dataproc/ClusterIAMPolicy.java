@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dataproc.ClusterIAMPolicyArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterIAMPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataproc/clusterIAMPolicy:ClusterIAMPolicy")
-public class ClusterIAMPolicy extends com.pulumi.resources.CustomResource {
+public class ClusterIAMPolicy extends CustomResource {
     /**
      * The name or relative resource id of the cluster to manage IAM policies for.
      * 
@@ -149,19 +151,19 @@ public class ClusterIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClusterIAMPolicy(String name, ClusterIAMPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ClusterIAMPolicy(String name, ClusterIAMPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/clusterIAMPolicy:ClusterIAMPolicy", name, args == null ? ClusterIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ClusterIAMPolicy(String name, Output<String> id, @Nullable ClusterIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ClusterIAMPolicy(String name, Output<String> id, @Nullable ClusterIAMPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/clusterIAMPolicy:ClusterIAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -173,7 +175,7 @@ public class ClusterIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClusterIAMPolicy get(String name, Output<String> id, @Nullable ClusterIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClusterIAMPolicy get(String name, Output<String> id, @Nullable ClusterIAMPolicyState state, @Nullable CustomResourceOptions options) {
         return new ClusterIAMPolicy(name, id, state, options);
     }
 }

@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.inputs.HealthCheckHttpsHealthCheckArgs;
 import com.pulumi.gcp.compute.inputs.HealthCheckLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.HealthCheckSslHealthCheckArgs;
 import com.pulumi.gcp.compute.inputs.HealthCheckTcpHealthCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckState extends ResourceArgs {
 
     public static final HealthCheckState Empty = new HealthCheckState();
 

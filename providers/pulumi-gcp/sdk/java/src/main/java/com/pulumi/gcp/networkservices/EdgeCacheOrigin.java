@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.networkservices.EdgeCacheOriginArgs;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheOriginState;
 import com.pulumi.gcp.networkservices.outputs.EdgeCacheOriginTimeout;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin")
-public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
+public class EdgeCacheOrigin extends CustomResource {
     /**
      * A human-readable description of the resource.
      * 
@@ -282,19 +284,19 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EdgeCacheOrigin(String name, EdgeCacheOriginArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EdgeCacheOrigin(String name, EdgeCacheOriginArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin", name, args == null ? EdgeCacheOriginArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EdgeCacheOrigin(String name, Output<String> id, @Nullable EdgeCacheOriginState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EdgeCacheOrigin(String name, Output<String> id, @Nullable EdgeCacheOriginState state, @Nullable CustomResourceOptions options) {
         super("gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -306,7 +308,7 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EdgeCacheOrigin get(String name, Output<String> id, @Nullable EdgeCacheOriginState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EdgeCacheOrigin get(String name, Output<String> id, @Nullable EdgeCacheOriginState state, @Nullable CustomResourceOptions options) {
         return new EdgeCacheOrigin(name, id, state, options);
     }
 }

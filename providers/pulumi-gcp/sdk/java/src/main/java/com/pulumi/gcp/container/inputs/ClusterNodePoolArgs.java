@@ -10,6 +10,7 @@ import com.pulumi.gcp.container.inputs.ClusterNodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNetworkConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolUpgradeSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterNodePoolArgs extends ResourceArgs {
 
     public static final ClusterNodePoolArgs Empty = new ClusterNodePoolArgs();
 

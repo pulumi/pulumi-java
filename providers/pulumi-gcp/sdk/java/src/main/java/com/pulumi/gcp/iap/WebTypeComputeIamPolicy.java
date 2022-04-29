@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.WebTypeComputeIamPolicyArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeComputeIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,7 +62,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/webTypeComputeIamPolicy:WebTypeComputeIamPolicy")
-public class WebTypeComputeIamPolicy extends com.pulumi.resources.CustomResource {
+public class WebTypeComputeIamPolicy extends CustomResource {
     /**
      * (Computed) The etag of the IAM policy.
      * 
@@ -129,19 +131,19 @@ public class WebTypeComputeIamPolicy extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebTypeComputeIamPolicy(String name, WebTypeComputeIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebTypeComputeIamPolicy(String name, WebTypeComputeIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamPolicy:WebTypeComputeIamPolicy", name, args == null ? WebTypeComputeIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebTypeComputeIamPolicy(String name, Output<String> id, @Nullable WebTypeComputeIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebTypeComputeIamPolicy(String name, Output<String> id, @Nullable WebTypeComputeIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamPolicy:WebTypeComputeIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -153,7 +155,7 @@ public class WebTypeComputeIamPolicy extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTypeComputeIamPolicy get(String name, Output<String> id, @Nullable WebTypeComputeIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebTypeComputeIamPolicy get(String name, Output<String> id, @Nullable WebTypeComputeIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new WebTypeComputeIamPolicy(name, id, state, options);
     }
 }

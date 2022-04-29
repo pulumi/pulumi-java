@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceArgs extends ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 

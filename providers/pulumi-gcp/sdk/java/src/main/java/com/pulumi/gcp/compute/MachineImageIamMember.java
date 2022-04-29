@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.MachineImageIamMemberArgs;
 import com.pulumi.gcp.compute.inputs.MachineImageIamMemberState;
 import com.pulumi.gcp.compute.outputs.MachineImageIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -62,7 +64,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/machineImageIamMember:MachineImageIamMember")
-public class MachineImageIamMember extends com.pulumi.resources.CustomResource {
+public class MachineImageIamMember extends CustomResource {
     /**
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -169,19 +171,19 @@ public class MachineImageIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MachineImageIamMember(String name, MachineImageIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MachineImageIamMember(String name, MachineImageIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/machineImageIamMember:MachineImageIamMember", name, args == null ? MachineImageIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MachineImageIamMember(String name, Output<String> id, @Nullable MachineImageIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MachineImageIamMember(String name, Output<String> id, @Nullable MachineImageIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/machineImageIamMember:MachineImageIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -193,7 +195,7 @@ public class MachineImageIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MachineImageIamMember get(String name, Output<String> id, @Nullable MachineImageIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MachineImageIamMember get(String name, Output<String> id, @Nullable MachineImageIamMemberState state, @Nullable CustomResourceOptions options) {
         return new MachineImageIamMember(name, id, state, options);
     }
 }

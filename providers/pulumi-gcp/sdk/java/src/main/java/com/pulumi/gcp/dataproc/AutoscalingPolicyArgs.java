@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmArgs;
 import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicySecondaryWorkerConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyWorkerConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingPolicyArgs extends ResourceArgs {
 
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 

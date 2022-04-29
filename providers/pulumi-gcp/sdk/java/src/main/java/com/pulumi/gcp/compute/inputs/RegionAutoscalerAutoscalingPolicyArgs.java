@@ -11,6 +11,7 @@ import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyMetricArgs
 import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlArgs;
 import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScaleInControlArgs;
 import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScalingScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionAutoscalerAutoscalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionAutoscalerAutoscalingPolicyArgs extends ResourceArgs {
 
     public static final RegionAutoscalerAutoscalingPolicyArgs Empty = new RegionAutoscalerAutoscalingPolicyArgs();
 

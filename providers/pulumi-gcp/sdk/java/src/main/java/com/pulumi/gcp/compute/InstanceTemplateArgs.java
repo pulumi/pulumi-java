@@ -15,6 +15,7 @@ import com.pulumi.gcp.compute.inputs.InstanceTemplateReservationAffinityArgs;
 import com.pulumi.gcp.compute.inputs.InstanceTemplateSchedulingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceTemplateServiceAccountArgs;
 import com.pulumi.gcp.compute.inputs.InstanceTemplateShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceTemplateArgs extends ResourceArgs {
 
     public static final InstanceTemplateArgs Empty = new InstanceTemplateArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.gcp.diagflow.CxEntityTypeArgs;
 import com.pulumi.gcp.diagflow.inputs.CxEntityTypeState;
 import com.pulumi.gcp.diagflow.outputs.CxEntityTypeEntity;
 import com.pulumi.gcp.diagflow.outputs.CxEntityTypeExcludedPhrase;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/cxEntityType:CxEntityType")
-public class CxEntityType extends com.pulumi.resources.CustomResource {
+public class CxEntityType extends CustomResource {
     /**
      * Represents kinds of entities.
      * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
@@ -239,19 +241,19 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CxEntityType(String name, CxEntityTypeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CxEntityType(String name, CxEntityTypeArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxEntityType:CxEntityType", name, args == null ? CxEntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CxEntityType(String name, Output<String> id, @Nullable CxEntityTypeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CxEntityType(String name, Output<String> id, @Nullable CxEntityTypeState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxEntityType:CxEntityType", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -263,7 +265,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxEntityType get(String name, Output<String> id, @Nullable CxEntityTypeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CxEntityType get(String name, Output<String> id, @Nullable CxEntityTypeState state, @Nullable CustomResourceOptions options) {
         return new CxEntityType(name, id, state, options);
     }
 }

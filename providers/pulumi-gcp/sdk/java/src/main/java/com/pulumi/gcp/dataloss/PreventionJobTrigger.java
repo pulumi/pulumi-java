@@ -12,6 +12,8 @@ import com.pulumi.gcp.dataloss.PreventionJobTriggerArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerState;
 import com.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJob;
 import com.pulumi.gcp.dataloss.outputs.PreventionJobTriggerTrigger;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataloss/preventionJobTrigger:PreventionJobTrigger")
-public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
+public class PreventionJobTrigger extends CustomResource {
     /**
      * A description of the job trigger.
      * 
@@ -187,19 +189,19 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PreventionJobTrigger(String name, PreventionJobTriggerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PreventionJobTrigger(String name, PreventionJobTriggerArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionJobTrigger:PreventionJobTrigger", name, args == null ? PreventionJobTriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PreventionJobTrigger(String name, Output<String> id, @Nullable PreventionJobTriggerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PreventionJobTrigger(String name, Output<String> id, @Nullable PreventionJobTriggerState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataloss/preventionJobTrigger:PreventionJobTrigger", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -211,7 +213,7 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PreventionJobTrigger get(String name, Output<String> id, @Nullable PreventionJobTriggerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PreventionJobTrigger get(String name, Output<String> id, @Nullable PreventionJobTriggerState state, @Nullable CustomResourceOptions options) {
         return new PreventionJobTrigger(name, id, state, options);
     }
 }

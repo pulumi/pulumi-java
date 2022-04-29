@@ -5,11 +5,12 @@ package com.pulumi.gcp.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WorkloadIdentityPoolProviderAwsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadIdentityPoolProviderAwsArgs extends ResourceArgs {
 
     public static final WorkloadIdentityPoolProviderAwsArgs Empty = new WorkloadIdentityPoolProviderAwsArgs();
 

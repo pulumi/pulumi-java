@@ -5,13 +5,14 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccountIamPolicyState extends com.pulumi.resources.ResourceArgs {
+public final class AccountIamPolicyState extends ResourceArgs {
 
     public static final AccountIamPolicyState Empty = new AccountIamPolicyState();
 

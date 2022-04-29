@@ -5,11 +5,12 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketVersioningArgs extends ResourceArgs {
 
     public static final BucketVersioningArgs Empty = new BucketVersioningArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.WebTypeComputeIamBindingArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeComputeIamBindingState;
 import com.pulumi.gcp.iap.outputs.WebTypeComputeIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding")
-public class WebTypeComputeIamBinding extends com.pulumi.resources.CustomResource {
+public class WebTypeComputeIamBinding extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -156,19 +158,19 @@ public class WebTypeComputeIamBinding extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebTypeComputeIamBinding(String name, WebTypeComputeIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebTypeComputeIamBinding(String name, WebTypeComputeIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding", name, args == null ? WebTypeComputeIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebTypeComputeIamBinding(String name, Output<String> id, @Nullable WebTypeComputeIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebTypeComputeIamBinding(String name, Output<String> id, @Nullable WebTypeComputeIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -180,7 +182,7 @@ public class WebTypeComputeIamBinding extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTypeComputeIamBinding get(String name, Output<String> id, @Nullable WebTypeComputeIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebTypeComputeIamBinding get(String name, Output<String> id, @Nullable WebTypeComputeIamBindingState state, @Nullable CustomResourceOptions options) {
         return new WebTypeComputeIamBinding(name, id, state, options);
     }
 }

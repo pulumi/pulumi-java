@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.AttachedDiskArgs;
 import com.pulumi.gcp.compute.inputs.AttachedDiskState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/attachedDisk:AttachedDisk")
-public class AttachedDisk extends com.pulumi.resources.CustomResource {
+public class AttachedDisk extends CustomResource {
     /**
      * Specifies a unique device name of your choice that is
      * reflected into the /dev/disk/by-id/google-* tree of a Linux operating
@@ -174,19 +176,19 @@ public class AttachedDisk extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AttachedDisk(String name, AttachedDiskArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AttachedDisk(String name, AttachedDiskArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/attachedDisk:AttachedDisk", name, args == null ? AttachedDiskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AttachedDisk(String name, Output<String> id, @Nullable AttachedDiskState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AttachedDisk(String name, Output<String> id, @Nullable AttachedDiskState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/attachedDisk:AttachedDisk", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -198,7 +200,7 @@ public class AttachedDisk extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttachedDisk get(String name, Output<String> id, @Nullable AttachedDiskState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AttachedDisk get(String name, Output<String> id, @Nullable AttachedDiskState state, @Nullable CustomResourceOptions options) {
         return new AttachedDisk(name, id, state, options);
     }
 }

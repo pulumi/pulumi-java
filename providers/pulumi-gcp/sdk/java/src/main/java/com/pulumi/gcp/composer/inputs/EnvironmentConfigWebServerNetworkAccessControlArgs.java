@@ -6,13 +6,14 @@ package com.pulumi.gcp.composer.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnvironmentConfigWebServerNetworkAccessControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentConfigWebServerNetworkAccessControlArgs extends ResourceArgs {
 
     public static final EnvironmentConfigWebServerNetworkAccessControlArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlArgs();
 

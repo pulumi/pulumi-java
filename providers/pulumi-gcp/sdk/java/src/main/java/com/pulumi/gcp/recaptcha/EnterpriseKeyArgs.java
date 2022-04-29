@@ -9,6 +9,7 @@ import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsArgs;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsArgs;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsArgs;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyWebSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseKeyArgs extends ResourceArgs {
 
     public static final EnterpriseKeyArgs Empty = new EnterpriseKeyArgs();
 

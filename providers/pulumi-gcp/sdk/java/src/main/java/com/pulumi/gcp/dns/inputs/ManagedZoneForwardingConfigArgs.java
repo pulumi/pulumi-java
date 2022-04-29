@@ -6,11 +6,12 @@ package com.pulumi.gcp.dns.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigTargetNameServerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ManagedZoneForwardingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneForwardingConfigArgs extends ResourceArgs {
 
     public static final ManagedZoneForwardingConfigArgs Empty = new ManagedZoneForwardingConfigArgs();
 

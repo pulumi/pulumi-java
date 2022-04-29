@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.TargetSSLProxyArgs;
 import com.pulumi.gcp.compute.inputs.TargetSSLProxyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/targetSSLProxy:TargetSSLProxy")
-public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
+public class TargetSSLProxy extends CustomResource {
     /**
      * A reference to the BackendService resource.
      * 
@@ -238,19 +240,19 @@ public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TargetSSLProxy(String name, TargetSSLProxyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TargetSSLProxy(String name, TargetSSLProxyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/targetSSLProxy:TargetSSLProxy", name, args == null ? TargetSSLProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TargetSSLProxy(String name, Output<String> id, @Nullable TargetSSLProxyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TargetSSLProxy(String name, Output<String> id, @Nullable TargetSSLProxyState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/targetSSLProxy:TargetSSLProxy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -262,7 +264,7 @@ public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TargetSSLProxy get(String name, Output<String> id, @Nullable TargetSSLProxyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TargetSSLProxy get(String name, Output<String> id, @Nullable TargetSSLProxyState state, @Nullable CustomResourceOptions options) {
         return new TargetSSLProxy(name, id, state, options);
     }
 }

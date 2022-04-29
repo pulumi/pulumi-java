@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.PerInstanceConfigArgs;
 import com.pulumi.gcp.compute.inputs.PerInstanceConfigState;
 import com.pulumi.gcp.compute.outputs.PerInstanceConfigPreservedState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/perInstanceConfig:PerInstanceConfig")
-public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
+public class PerInstanceConfig extends CustomResource {
     /**
      * The instance group manager this instance config is part of.
      * 
@@ -213,19 +215,19 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PerInstanceConfig(String name, PerInstanceConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PerInstanceConfig(String name, PerInstanceConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/perInstanceConfig:PerInstanceConfig", name, args == null ? PerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PerInstanceConfig(String name, Output<String> id, @Nullable PerInstanceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PerInstanceConfig(String name, Output<String> id, @Nullable PerInstanceConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/perInstanceConfig:PerInstanceConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -237,7 +239,7 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PerInstanceConfig get(String name, Output<String> id, @Nullable PerInstanceConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PerInstanceConfig get(String name, Output<String> id, @Nullable PerInstanceConfigState state, @Nullable CustomResourceOptions options) {
         return new PerInstanceConfig(name, id, state, options);
     }
 }

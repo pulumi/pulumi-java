@@ -12,6 +12,8 @@ import com.pulumi.gcp.dns.PolicyArgs;
 import com.pulumi.gcp.dns.inputs.PolicyState;
 import com.pulumi.gcp.dns.outputs.PolicyAlternativeNameServerConfig;
 import com.pulumi.gcp.dns.outputs.PolicyNetwork;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +50,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dns/policy:Policy")
-public class Policy extends com.pulumi.resources.CustomResource {
+public class Policy extends CustomResource {
     /**
      * Sets an alternative name server for the associated networks.
      * When specified, all DNS queries are forwarded to a name server that you choose.
@@ -187,19 +189,19 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Policy(String name, @Nullable PolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Policy(String name, @Nullable PolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dns/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:dns/policy:Policy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -211,7 +213,7 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Policy get(String name, Output<String> id, @Nullable PolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Policy get(String name, Output<String> id, @Nullable PolicyState state, @Nullable CustomResourceOptions options) {
         return new Policy(name, id, state, options);
     }
 }

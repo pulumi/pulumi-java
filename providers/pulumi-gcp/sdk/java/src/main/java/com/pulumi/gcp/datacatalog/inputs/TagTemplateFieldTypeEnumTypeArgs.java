@@ -6,11 +6,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class TagTemplateFieldTypeEnumTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagTemplateFieldTypeEnumTypeArgs extends ResourceArgs {
 
     public static final TagTemplateFieldTypeEnumTypeArgs Empty = new TagTemplateFieldTypeEnumTypeArgs();
 

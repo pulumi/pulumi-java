@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.SubnetworkIAMBindingArgs;
 import com.pulumi.gcp.compute.inputs.SubnetworkIAMBindingState;
 import com.pulumi.gcp.compute.outputs.SubnetworkIAMBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding")
-public class SubnetworkIAMBinding extends com.pulumi.resources.CustomResource {
+public class SubnetworkIAMBinding extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -190,19 +192,19 @@ public class SubnetworkIAMBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SubnetworkIAMBinding(String name, SubnetworkIAMBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SubnetworkIAMBinding(String name, SubnetworkIAMBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, args == null ? SubnetworkIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SubnetworkIAMBinding(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SubnetworkIAMBinding(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -214,7 +216,7 @@ public class SubnetworkIAMBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubnetworkIAMBinding get(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SubnetworkIAMBinding get(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable CustomResourceOptions options) {
         return new SubnetworkIAMBinding(name, id, state, options);
     }
 }

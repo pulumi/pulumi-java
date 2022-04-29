@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.kms.KeyRingIAMBindingArgs;
 import com.pulumi.gcp.kms.inputs.KeyRingIAMBindingState;
 import com.pulumi.gcp.kms.outputs.KeyRingIAMBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -67,7 +69,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:kms/keyRingIAMBinding:KeyRingIAMBinding")
-public class KeyRingIAMBinding extends com.pulumi.resources.CustomResource {
+public class KeyRingIAMBinding extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -164,19 +166,19 @@ public class KeyRingIAMBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public KeyRingIAMBinding(String name, KeyRingIAMBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public KeyRingIAMBinding(String name, KeyRingIAMBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:kms/keyRingIAMBinding:KeyRingIAMBinding", name, args == null ? KeyRingIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private KeyRingIAMBinding(String name, Output<String> id, @Nullable KeyRingIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private KeyRingIAMBinding(String name, Output<String> id, @Nullable KeyRingIAMBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:kms/keyRingIAMBinding:KeyRingIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -188,7 +190,7 @@ public class KeyRingIAMBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KeyRingIAMBinding get(String name, Output<String> id, @Nullable KeyRingIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static KeyRingIAMBinding get(String name, Output<String> id, @Nullable KeyRingIAMBindingState state, @Nullable CustomResourceOptions options) {
         return new KeyRingIAMBinding(name, id, state, options);
     }
 }

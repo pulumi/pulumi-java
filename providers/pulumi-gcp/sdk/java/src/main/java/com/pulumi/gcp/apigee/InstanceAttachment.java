@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.apigee.InstanceAttachmentArgs;
 import com.pulumi.gcp.apigee.inputs.InstanceAttachmentState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:apigee/instanceAttachment:InstanceAttachment")
-public class InstanceAttachment extends com.pulumi.resources.CustomResource {
+public class InstanceAttachment extends CustomResource {
     /**
      * The resource ID of the environment.
      * 
@@ -105,19 +107,19 @@ public class InstanceAttachment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceAttachment(String name, InstanceAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceAttachment(String name, InstanceAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:apigee/instanceAttachment:InstanceAttachment", name, args == null ? InstanceAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceAttachment(String name, Output<String> id, @Nullable InstanceAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceAttachment(String name, Output<String> id, @Nullable InstanceAttachmentState state, @Nullable CustomResourceOptions options) {
         super("gcp:apigee/instanceAttachment:InstanceAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -129,7 +131,7 @@ public class InstanceAttachment extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceAttachment get(String name, Output<String> id, @Nullable InstanceAttachmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceAttachment get(String name, Output<String> id, @Nullable InstanceAttachmentState state, @Nullable CustomResourceOptions options) {
         return new InstanceAttachment(name, id, state, options);
     }
 }

@@ -5,11 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GuestPoliciesRecipeUpdateStepRpmInstallationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestPoliciesRecipeUpdateStepRpmInstallationArgs extends ResourceArgs {
 
     public static final GuestPoliciesRecipeUpdateStepRpmInstallationArgs Empty = new GuestPoliciesRecipeUpdateStepRpmInstallationArgs();
 

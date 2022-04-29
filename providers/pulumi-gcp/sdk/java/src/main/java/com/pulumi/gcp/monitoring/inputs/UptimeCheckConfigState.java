@@ -10,6 +10,7 @@ import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckArgs;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigMonitoredResourceArgs;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigResourceGroupArgs;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigTcpCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceArgs {
+public final class UptimeCheckConfigState extends ResourceArgs {
 
     public static final UptimeCheckConfigState Empty = new UptimeCheckConfigState();
 

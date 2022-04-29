@@ -14,6 +14,8 @@ import com.pulumi.gcp.iot.outputs.DeviceCredential;
 import com.pulumi.gcp.iot.outputs.DeviceGatewayConfig;
 import com.pulumi.gcp.iot.outputs.DeviceLastErrorStatus;
 import com.pulumi.gcp.iot.outputs.DeviceState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iot/device:Device")
-public class Device extends com.pulumi.resources.CustomResource {
+public class Device extends CustomResource {
     /**
      * If a device is blocked, connections or requests from this device will fail.
      * 
@@ -311,19 +313,19 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Device(String name, DeviceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Device(String name, DeviceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iot/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Device(String name, Output<String> id, @Nullable com.pulumi.gcp.iot.inputs.DeviceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Device(String name, Output<String> id, @Nullable com.pulumi.gcp.iot.inputs.DeviceState state, @Nullable CustomResourceOptions options) {
         super("gcp:iot/device:Device", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -335,7 +337,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Device get(String name, Output<String> id, @Nullable com.pulumi.gcp.iot.inputs.DeviceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Device get(String name, Output<String> id, @Nullable com.pulumi.gcp.iot.inputs.DeviceState state, @Nullable CustomResourceOptions options) {
         return new Device(name, id, state, options);
     }
 }

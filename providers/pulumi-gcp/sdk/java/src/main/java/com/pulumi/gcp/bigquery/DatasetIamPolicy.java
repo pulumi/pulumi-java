@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigquery.DatasetIamPolicyArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -70,7 +72,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigquery/datasetIamPolicy:DatasetIamPolicy")
-public class DatasetIamPolicy extends com.pulumi.resources.CustomResource {
+public class DatasetIamPolicy extends CustomResource {
     /**
      * The dataset ID.
      * 
@@ -153,19 +155,19 @@ public class DatasetIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatasetIamPolicy(String name, DatasetIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatasetIamPolicy(String name, DatasetIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/datasetIamPolicy:DatasetIamPolicy", name, args == null ? DatasetIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatasetIamPolicy(String name, Output<String> id, @Nullable DatasetIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatasetIamPolicy(String name, Output<String> id, @Nullable DatasetIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/datasetIamPolicy:DatasetIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -177,7 +179,7 @@ public class DatasetIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatasetIamPolicy get(String name, Output<String> id, @Nullable DatasetIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatasetIamPolicy get(String name, Output<String> id, @Nullable DatasetIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new DatasetIamPolicy(name, id, state, options);
     }
 }

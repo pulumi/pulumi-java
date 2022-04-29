@@ -10,6 +10,7 @@ import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerPortArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerResourcesArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerVolumeMountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTemplateSpecContainerArgs extends ResourceArgs {
 
     public static final ServiceTemplateSpecContainerArgs Empty = new ServiceTemplateSpecContainerArgs();
 

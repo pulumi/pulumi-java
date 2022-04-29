@@ -6,12 +6,13 @@ package com.pulumi.gcp.certificateauthority.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends ResourceArgs {
 
     public static final AuthorityConfigX509ConfigAdditionalExtensionArgs Empty = new AuthorityConfigX509ConfigAdditionalExtensionArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.gcp.compute.RouterNatArgs;
 import com.pulumi.gcp.compute.inputs.RouterNatState;
 import com.pulumi.gcp.compute.outputs.RouterNatLogConfig;
 import com.pulumi.gcp.compute.outputs.RouterNatSubnetwork;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/routerNat:RouterNat")
-public class RouterNat extends com.pulumi.resources.CustomResource {
+public class RouterNat extends CustomResource {
     /**
      * A list of URLs of the IP resources to be drained. These IPs must be
      * valid static external IPs that have been assigned to the NAT.
@@ -343,19 +345,19 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RouterNat(String name, RouterNatArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RouterNat(String name, RouterNatArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/routerNat:RouterNat", name, args == null ? RouterNatArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RouterNat(String name, Output<String> id, @Nullable RouterNatState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RouterNat(String name, Output<String> id, @Nullable RouterNatState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/routerNat:RouterNat", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -367,7 +369,7 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouterNat get(String name, Output<String> id, @Nullable RouterNatState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RouterNat get(String name, Output<String> id, @Nullable RouterNatState state, @Nullable CustomResourceOptions options) {
         return new RouterNat(name, id, state, options);
     }
 }

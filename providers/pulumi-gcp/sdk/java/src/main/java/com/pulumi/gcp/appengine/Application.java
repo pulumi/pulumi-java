@@ -13,6 +13,8 @@ import com.pulumi.gcp.appengine.inputs.ApplicationState;
 import com.pulumi.gcp.appengine.outputs.ApplicationFeatureSettings;
 import com.pulumi.gcp.appengine.outputs.ApplicationIap;
 import com.pulumi.gcp.appengine.outputs.ApplicationUrlDispatchRule;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:appengine/application:Application")
-public class Application extends com.pulumi.resources.CustomResource {
+public class Application extends CustomResource {
     /**
      * Identifier of the app, usually `{PROJECT_ID}`
      * 
@@ -271,19 +273,19 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Application(String name, ApplicationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Application(String name, ApplicationArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/application:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Application(String name, Output<String> id, @Nullable ApplicationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Application(String name, Output<String> id, @Nullable ApplicationState state, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/application:Application", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -295,7 +297,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Application get(String name, Output<String> id, @Nullable ApplicationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Application get(String name, Output<String> id, @Nullable ApplicationState state, @Nullable CustomResourceOptions options) {
         return new Application(name, id, state, options);
     }
 }

@@ -6,13 +6,14 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FunctionIamMemberState extends com.pulumi.resources.ResourceArgs {
+public final class FunctionIamMemberState extends ResourceArgs {
 
     public static final FunctionIamMemberState Empty = new FunctionIamMemberState();
 

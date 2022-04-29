@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceTemplateSpecContainerEnvFromArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTemplateSpecContainerEnvFromArgs extends ResourceArgs {
 
     public static final ServiceTemplateSpecContainerEnvFromArgs Empty = new ServiceTemplateSpecContainerEnvFromArgs();
 

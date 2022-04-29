@@ -10,6 +10,7 @@ import com.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatefulDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerUpdatePolicyArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerVersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerArgs Empty = new InstanceGroupManagerArgs();
 

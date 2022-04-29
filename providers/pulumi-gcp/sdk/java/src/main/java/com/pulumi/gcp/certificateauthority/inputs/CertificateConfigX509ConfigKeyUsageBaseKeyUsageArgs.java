@@ -5,13 +5,14 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends ResourceArgs {
 
     public static final CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs Empty = new CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs();
 

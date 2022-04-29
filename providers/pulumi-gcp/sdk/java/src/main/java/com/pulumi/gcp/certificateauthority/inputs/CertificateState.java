@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateRevocationDetailArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateState extends com.pulumi.resources.ResourceArgs {
+public final class CertificateState extends ResourceArgs {
 
     public static final CertificateState Empty = new CertificateState();
 

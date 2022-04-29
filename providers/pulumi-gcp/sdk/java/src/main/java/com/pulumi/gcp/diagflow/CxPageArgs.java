@@ -9,6 +9,7 @@ import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentArgs;
 import com.pulumi.gcp.diagflow.inputs.CxPageEventHandlerArgs;
 import com.pulumi.gcp.diagflow.inputs.CxPageFormArgs;
 import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CxPageArgs extends ResourceArgs {
 
     public static final CxPageArgs Empty = new CxPageArgs();
 

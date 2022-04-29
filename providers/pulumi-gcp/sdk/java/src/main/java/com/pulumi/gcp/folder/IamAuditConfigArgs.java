@@ -6,12 +6,13 @@ package com.pulumi.gcp.folder;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class IamAuditConfigArgs extends ResourceArgs {
 
     public static final IamAuditConfigArgs Empty = new IamAuditConfigArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class SpokeLinkedRouterApplianceInstancesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpokeLinkedRouterApplianceInstancesArgs extends ResourceArgs {
 
     public static final SpokeLinkedRouterApplianceInstancesArgs Empty = new SpokeLinkedRouterApplianceInstancesArgs();
 

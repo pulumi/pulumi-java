@@ -5,6 +5,7 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs extends ResourceArgs {
 
     public static final RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs();
 

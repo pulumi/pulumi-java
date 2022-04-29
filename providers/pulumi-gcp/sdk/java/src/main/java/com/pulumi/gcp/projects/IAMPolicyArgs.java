@@ -5,11 +5,12 @@ package com.pulumi.gcp.projects;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class IAMPolicyArgs extends ResourceArgs {
 
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 

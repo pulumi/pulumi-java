@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyArgs;
 import com.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyArgs;
 import com.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DiskState extends com.pulumi.resources.ResourceArgs {
+public final class DiskState extends ResourceArgs {
 
     public static final DiskState Empty = new DiskState();
 

@@ -14,6 +14,8 @@ import com.pulumi.gcp.diagflow.outputs.CxPageEntryFulfillment;
 import com.pulumi.gcp.diagflow.outputs.CxPageEventHandler;
 import com.pulumi.gcp.diagflow.outputs.CxPageForm;
 import com.pulumi.gcp.diagflow.outputs.CxPageTransitionRoute;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/cxPage:CxPage")
-public class CxPage extends com.pulumi.resources.CustomResource {
+public class CxPage extends CustomResource {
     /**
      * The human-readable name of the parameter, unique within the form.
      * 
@@ -247,19 +249,19 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CxPage(String name, CxPageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CxPage(String name, CxPageArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxPage:CxPage", name, args == null ? CxPageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CxPage(String name, Output<String> id, @Nullable CxPageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CxPage(String name, Output<String> id, @Nullable CxPageState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxPage:CxPage", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -271,7 +273,7 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxPage get(String name, Output<String> id, @Nullable CxPageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CxPage get(String name, Output<String> id, @Nullable CxPageState state, @Nullable CustomResourceOptions options) {
         return new CxPage(name, id, state, options);
     }
 }

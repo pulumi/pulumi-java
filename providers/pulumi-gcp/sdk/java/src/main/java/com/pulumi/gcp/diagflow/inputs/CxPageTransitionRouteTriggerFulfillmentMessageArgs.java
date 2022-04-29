@@ -6,12 +6,13 @@ package com.pulumi.gcp.diagflow.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteTriggerFulfillmentMessageTextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends ResourceArgs {
 
     public static final CxPageTransitionRouteTriggerFulfillmentMessageArgs Empty = new CxPageTransitionRouteTriggerFulfillmentMessageArgs();
 

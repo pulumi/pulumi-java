@@ -6,13 +6,14 @@ package com.pulumi.gcp.iap;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TunnelInstanceIAMMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class TunnelInstanceIAMMemberArgs extends ResourceArgs {
 
     public static final TunnelInstanceIAMMemberArgs Empty = new TunnelInstanceIAMMemberArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesArgs;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsArgs;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataTransferConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataTransferConfigArgs extends ResourceArgs {
 
     public static final DataTransferConfigArgs Empty = new DataTransferConfigArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.AppEngineVersionIamBindingArgs;
 import com.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingState;
 import com.pulumi.gcp.iap.outputs.AppEngineVersionIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/appEngineVersionIamBinding:AppEngineVersionIamBinding")
-public class AppEngineVersionIamBinding extends com.pulumi.resources.CustomResource {
+public class AppEngineVersionIamBinding extends CustomResource {
     /**
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
@@ -198,19 +200,19 @@ public class AppEngineVersionIamBinding extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppEngineVersionIamBinding(String name, AppEngineVersionIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppEngineVersionIamBinding(String name, AppEngineVersionIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/appEngineVersionIamBinding:AppEngineVersionIamBinding", name, args == null ? AppEngineVersionIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppEngineVersionIamBinding(String name, Output<String> id, @Nullable AppEngineVersionIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppEngineVersionIamBinding(String name, Output<String> id, @Nullable AppEngineVersionIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/appEngineVersionIamBinding:AppEngineVersionIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -222,7 +224,7 @@ public class AppEngineVersionIamBinding extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppEngineVersionIamBinding get(String name, Output<String> id, @Nullable AppEngineVersionIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppEngineVersionIamBinding get(String name, Output<String> id, @Nullable AppEngineVersionIamBindingState state, @Nullable CustomResourceOptions options) {
         return new AppEngineVersionIamBinding(name, id, state, options);
     }
 }

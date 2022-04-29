@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.sql.UserArgs;
 import com.pulumi.gcp.sql.inputs.UserState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:sql/user:User")
-public class User extends com.pulumi.resources.CustomResource {
+public class User extends CustomResource {
     /**
      * The deletion policy for the user.
      * Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
@@ -176,19 +178,19 @@ public class User extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public User(String name, UserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public User(String name, UserArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:sql/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private User(String name, Output<String> id, @Nullable UserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private User(String name, Output<String> id, @Nullable UserState state, @Nullable CustomResourceOptions options) {
         super("gcp:sql/user:User", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -200,7 +202,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static User get(String name, Output<String> id, @Nullable UserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static User get(String name, Output<String> id, @Nullable UserState state, @Nullable CustomResourceOptions options) {
         return new User(name, id, state, options);
     }
 }

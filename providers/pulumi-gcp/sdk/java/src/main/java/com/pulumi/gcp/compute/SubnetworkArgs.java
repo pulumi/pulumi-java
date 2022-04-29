@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetworkArgs extends ResourceArgs {
 
     public static final SubnetworkArgs Empty = new SubnetworkArgs();
 

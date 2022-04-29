@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends ResourceArgs {
 
     public static final CaPoolIssuancePolicyAllowedKeyTypeArgs Empty = new CaPoolIssuancePolicyAllowedKeyTypeArgs();
 

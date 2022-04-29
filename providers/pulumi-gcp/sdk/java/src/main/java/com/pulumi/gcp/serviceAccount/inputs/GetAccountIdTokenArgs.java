@@ -4,6 +4,7 @@
 package com.pulumi.gcp.serviceAccount.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAccountIdTokenArgs extends InvokeArgs {
 
     public static final GetAccountIdTokenArgs Empty = new GetAccountIdTokenArgs();
 

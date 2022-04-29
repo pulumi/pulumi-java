@@ -9,6 +9,7 @@ import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleHeaderActio
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionUrlMapPathMatcherRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionUrlMapPathMatcherRouteRuleArgs extends ResourceArgs {
 
     public static final RegionUrlMapPathMatcherRouteRuleArgs Empty = new RegionUrlMapPathMatcherRouteRuleArgs();
 

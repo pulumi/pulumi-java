@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapPathMatcherRouteRuleHeaderActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherRouteRuleHeaderActionArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherRouteRuleHeaderActionArgs Empty = new URLMapPathMatcherRouteRuleHeaderActionArgs();
 

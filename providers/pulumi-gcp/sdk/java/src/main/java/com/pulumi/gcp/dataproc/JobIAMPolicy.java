@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dataproc.JobIAMPolicyArgs;
 import com.pulumi.gcp.dataproc.inputs.JobIAMPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataproc/jobIAMPolicy:JobIAMPolicy")
-public class JobIAMPolicy extends com.pulumi.resources.CustomResource {
+public class JobIAMPolicy extends CustomResource {
     /**
      * (Computed) The etag of the jobs&#39;s IAM policy.
      * 
@@ -141,19 +143,19 @@ public class JobIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public JobIAMPolicy(String name, JobIAMPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public JobIAMPolicy(String name, JobIAMPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/jobIAMPolicy:JobIAMPolicy", name, args == null ? JobIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private JobIAMPolicy(String name, Output<String> id, @Nullable JobIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private JobIAMPolicy(String name, Output<String> id, @Nullable JobIAMPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/jobIAMPolicy:JobIAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -165,7 +167,7 @@ public class JobIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JobIAMPolicy get(String name, Output<String> id, @Nullable JobIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static JobIAMPolicy get(String name, Output<String> id, @Nullable JobIAMPolicyState state, @Nullable CustomResourceOptions options) {
         return new JobIAMPolicy(name, id, state, options);
     }
 }

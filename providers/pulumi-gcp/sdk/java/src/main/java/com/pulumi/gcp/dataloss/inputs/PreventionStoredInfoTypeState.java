@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionStoredInfoTypeState extends com.pulumi.resources.ResourceArgs {
+public final class PreventionStoredInfoTypeState extends ResourceArgs {
 
     public static final PreventionStoredInfoTypeState Empty = new PreventionStoredInfoTypeState();
 

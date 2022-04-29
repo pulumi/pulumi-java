@@ -12,6 +12,7 @@ import com.pulumi.gcp.storage.inputs.BucketLoggingArgs;
 import com.pulumi.gcp.storage.inputs.BucketRetentionPolicyArgs;
 import com.pulumi.gcp.storage.inputs.BucketVersioningArgs;
 import com.pulumi.gcp.storage.inputs.BucketWebsiteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketArgs extends ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 

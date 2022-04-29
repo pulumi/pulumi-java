@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessLevelsAccessLevelArgs extends ResourceArgs {
 
     public static final AccessLevelsAccessLevelArgs Empty = new AccessLevelsAccessLevelArgs();
 

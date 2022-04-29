@@ -17,6 +17,7 @@ import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfi
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSecurityConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSoftwareConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterClusterConfigArgs extends ResourceArgs {
 
     public static final ClusterClusterConfigArgs Empty = new ClusterClusterConfigArgs();
 

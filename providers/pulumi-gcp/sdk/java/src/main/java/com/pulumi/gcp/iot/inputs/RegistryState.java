@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.iot.inputs.RegistryCredentialArgs;
 import com.pulumi.gcp.iot.inputs.RegistryEventNotificationConfigItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegistryState extends com.pulumi.resources.ResourceArgs {
+public final class RegistryState extends ResourceArgs {
 
     public static final RegistryState Empty = new RegistryState();
 

@@ -11,6 +11,7 @@ import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneProxyConfigArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneReplicaPlacementArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneRootVolumeArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneSshConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureClusterControlPlaneArgs extends ResourceArgs {
 
     public static final AzureClusterControlPlaneArgs Empty = new AzureClusterControlPlaneArgs();
 

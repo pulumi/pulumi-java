@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.AwsNodePoolConfigArgs;
 import com.pulumi.gcp.container.inputs.AwsNodePoolMaxPodsConstraintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AwsNodePoolState extends com.pulumi.resources.ResourceArgs {
+public final class AwsNodePoolState extends ResourceArgs {
 
     public static final AwsNodePoolState Empty = new AwsNodePoolState();
 

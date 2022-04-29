@@ -12,6 +12,8 @@ import com.pulumi.gcp.cloudbuild.WorkerPoolArgs;
 import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolState;
 import com.pulumi.gcp.cloudbuild.outputs.WorkerPoolNetworkConfig;
 import com.pulumi.gcp.cloudbuild.outputs.WorkerPoolWorkerConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:cloudbuild/workerPool:WorkerPool")
-public class WorkerPool extends com.pulumi.resources.CustomResource {
+public class WorkerPool extends CustomResource {
     /**
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size
      * limitations.
@@ -235,19 +237,19 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WorkerPool(String name, WorkerPoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WorkerPool(String name, WorkerPoolArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:cloudbuild/workerPool:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WorkerPool(String name, Output<String> id, @Nullable WorkerPoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WorkerPool(String name, Output<String> id, @Nullable WorkerPoolState state, @Nullable CustomResourceOptions options) {
         super("gcp:cloudbuild/workerPool:WorkerPool", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -259,7 +261,7 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkerPool get(String name, Output<String> id, @Nullable WorkerPoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WorkerPool get(String name, Output<String> id, @Nullable WorkerPoolState state, @Nullable CustomResourceOptions options) {
         return new WorkerPool(name, id, state, options);
     }
 }

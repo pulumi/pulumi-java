@@ -5,11 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs extends ResourceArgs {
 
     public static final AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs Empty = new AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyArgs extends ResourceArgs {
 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 

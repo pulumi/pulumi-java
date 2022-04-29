@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigtable.TableIamBindingArgs;
 import com.pulumi.gcp.bigtable.inputs.TableIamBindingState;
 import com.pulumi.gcp.bigtable.outputs.TableIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -55,7 +57,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigtable/tableIamBinding:TableIamBinding")
-public class TableIamBinding extends com.pulumi.resources.CustomResource {
+public class TableIamBinding extends CustomResource {
     @Export(name="condition", type=TableIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TableIamBindingCondition> condition;
 
@@ -166,19 +168,19 @@ public class TableIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TableIamBinding(String name, TableIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TableIamBinding(String name, TableIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/tableIamBinding:TableIamBinding", name, args == null ? TableIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TableIamBinding(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TableIamBinding(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/tableIamBinding:TableIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -190,7 +192,7 @@ public class TableIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TableIamBinding get(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TableIamBinding get(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable CustomResourceOptions options) {
         return new TableIamBinding(name, id, state, options);
     }
 }

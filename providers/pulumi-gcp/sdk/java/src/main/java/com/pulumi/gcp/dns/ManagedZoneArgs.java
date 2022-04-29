@@ -11,6 +11,7 @@ import com.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigArgs;
 import com.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigArgs;
 import com.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigArgs;
 import com.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneArgs extends ResourceArgs {
 
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 

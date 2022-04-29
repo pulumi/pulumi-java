@@ -6,6 +6,7 @@ package com.pulumi.gcp.pubsub.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubscriptionPushConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubscriptionPushConfigArgs extends ResourceArgs {
 
     public static final SubscriptionPushConfigArgs Empty = new SubscriptionPushConfigArgs();
 

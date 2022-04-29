@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.kms.inputs.RegistryCredentialArgs;
 import com.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistryArgs extends ResourceArgs {
 
     public static final RegistryArgs Empty = new RegistryArgs();
 

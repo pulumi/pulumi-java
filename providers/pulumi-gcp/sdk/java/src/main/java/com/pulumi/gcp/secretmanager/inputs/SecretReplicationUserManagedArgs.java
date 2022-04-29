@@ -6,11 +6,12 @@ package com.pulumi.gcp.secretmanager.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class SecretReplicationUserManagedArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretReplicationUserManagedArgs extends ResourceArgs {
 
     public static final SecretReplicationUserManagedArgs Empty = new SecretReplicationUserManagedArgs();
 

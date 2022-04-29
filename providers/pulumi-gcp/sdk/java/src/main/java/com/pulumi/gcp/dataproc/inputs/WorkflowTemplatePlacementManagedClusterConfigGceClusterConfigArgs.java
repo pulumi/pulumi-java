@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs extends ResourceArgs {
 
     public static final WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs();
 

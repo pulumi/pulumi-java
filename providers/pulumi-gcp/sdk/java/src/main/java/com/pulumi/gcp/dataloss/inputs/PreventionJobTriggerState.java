@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionJobTriggerState extends com.pulumi.resources.ResourceArgs {
+public final class PreventionJobTriggerState extends ResourceArgs {
 
     public static final PreventionJobTriggerState Empty = new PreventionJobTriggerState();
 

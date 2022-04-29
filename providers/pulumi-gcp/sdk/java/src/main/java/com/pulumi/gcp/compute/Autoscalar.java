@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.AutoscalarArgs;
 import com.pulumi.gcp.compute.inputs.AutoscalarState;
 import com.pulumi.gcp.compute.outputs.AutoscalarAutoscalingPolicy;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler */
 @ResourceType(type="gcp:compute/autoscalar:Autoscalar")
-public class Autoscalar extends com.pulumi.resources.CustomResource {
+public class Autoscalar extends CustomResource {
     /**
      * The configuration parameters for the autoscaling algorithm. You can
      * define one or more of the policies for an autoscaler: cpuUtilization,
@@ -207,19 +209,19 @@ public class Autoscalar extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Autoscalar(String name, AutoscalarArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Autoscalar(String name, AutoscalarArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/autoscalar:Autoscalar", name, args == null ? AutoscalarArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Autoscalar(String name, Output<String> id, @Nullable AutoscalarState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Autoscalar(String name, Output<String> id, @Nullable AutoscalarState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/autoscalar:Autoscalar", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -231,7 +233,7 @@ public class Autoscalar extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Autoscalar get(String name, Output<String> id, @Nullable AutoscalarState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Autoscalar get(String name, Output<String> id, @Nullable AutoscalarState state, @Nullable CustomResourceOptions options) {
         return new Autoscalar(name, id, state, options);
     }
 }

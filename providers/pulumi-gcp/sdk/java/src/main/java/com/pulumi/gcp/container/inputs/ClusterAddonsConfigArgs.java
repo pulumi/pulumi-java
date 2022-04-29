@@ -15,12 +15,13 @@ import com.pulumi.gcp.container.inputs.ClusterAddonsConfigHttpLoadBalancingArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigIstioConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigKalmConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigNetworkPolicyConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterAddonsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterAddonsConfigArgs extends ResourceArgs {
 
     public static final ClusterAddonsConfigArgs Empty = new ClusterAddonsConfigArgs();
 

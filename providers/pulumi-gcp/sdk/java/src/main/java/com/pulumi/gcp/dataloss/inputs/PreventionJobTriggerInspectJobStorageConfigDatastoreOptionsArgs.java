@@ -7,10 +7,11 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs extends ResourceArgs {
 
     public static final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs Empty = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs();
 

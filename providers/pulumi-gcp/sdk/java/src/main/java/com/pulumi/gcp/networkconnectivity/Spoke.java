@@ -13,6 +13,8 @@ import com.pulumi.gcp.networkconnectivity.inputs.SpokeState;
 import com.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedInterconnectAttachments;
 import com.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedRouterApplianceInstances;
 import com.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedVpnTunnels;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:networkconnectivity/spoke:Spoke")
-public class Spoke extends com.pulumi.resources.CustomResource {
+public class Spoke extends CustomResource {
     /**
      * Output only. The time the spoke was created.
      * 
@@ -248,19 +250,19 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Spoke(String name, SpokeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Spoke(String name, SpokeArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:networkconnectivity/spoke:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Spoke(String name, Output<String> id, @Nullable SpokeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Spoke(String name, Output<String> id, @Nullable SpokeState state, @Nullable CustomResourceOptions options) {
         super("gcp:networkconnectivity/spoke:Spoke", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -272,7 +274,7 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Spoke get(String name, Output<String> id, @Nullable SpokeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Spoke get(String name, Output<String> id, @Nullable SpokeState state, @Nullable CustomResourceOptions options) {
         return new Spoke(name, id, state, options);
     }
 }

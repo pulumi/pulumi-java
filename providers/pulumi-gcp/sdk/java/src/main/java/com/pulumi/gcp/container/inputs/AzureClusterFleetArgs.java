@@ -5,13 +5,14 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureClusterFleetArgs extends ResourceArgs {
 
     public static final AzureClusterFleetArgs Empty = new AzureClusterFleetArgs();
 

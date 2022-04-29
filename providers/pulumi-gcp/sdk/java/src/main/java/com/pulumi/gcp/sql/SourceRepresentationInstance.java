@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.sql.SourceRepresentationInstanceArgs;
 import com.pulumi.gcp.sql.inputs.SourceRepresentationInstanceState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance")
-public class SourceRepresentationInstance extends com.pulumi.resources.CustomResource {
+public class SourceRepresentationInstance extends CustomResource {
     /**
      * The MySQL version running on your source database server.
      * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
@@ -157,19 +159,19 @@ public class SourceRepresentationInstance extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SourceRepresentationInstance(String name, SourceRepresentationInstanceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SourceRepresentationInstance(String name, SourceRepresentationInstanceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance", name, args == null ? SourceRepresentationInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SourceRepresentationInstance(String name, Output<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SourceRepresentationInstance(String name, Output<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable CustomResourceOptions options) {
         super("gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -181,7 +183,7 @@ public class SourceRepresentationInstance extends com.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SourceRepresentationInstance get(String name, Output<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SourceRepresentationInstance get(String name, Output<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable CustomResourceOptions options) {
         return new SourceRepresentationInstance(name, id, state, options);
     }
 }

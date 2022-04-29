@@ -6,11 +6,12 @@ package com.pulumi.gcp.dataloss.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs Empty = new PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs();
 

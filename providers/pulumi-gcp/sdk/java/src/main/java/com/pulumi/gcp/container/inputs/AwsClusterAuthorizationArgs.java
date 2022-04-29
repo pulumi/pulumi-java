@@ -6,11 +6,12 @@ package com.pulumi.gcp.container.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.AwsClusterAuthorizationAdminUserArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class AwsClusterAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsClusterAuthorizationArgs extends ResourceArgs {
 
     public static final AwsClusterAuthorizationArgs Empty = new AwsClusterAuthorizationArgs();
 

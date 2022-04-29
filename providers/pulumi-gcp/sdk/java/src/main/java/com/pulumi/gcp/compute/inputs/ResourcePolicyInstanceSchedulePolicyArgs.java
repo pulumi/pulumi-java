@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourcePolicyInstanceSchedulePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyInstanceSchedulePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyArgs Empty = new ResourcePolicyInstanceSchedulePolicyArgs();
 

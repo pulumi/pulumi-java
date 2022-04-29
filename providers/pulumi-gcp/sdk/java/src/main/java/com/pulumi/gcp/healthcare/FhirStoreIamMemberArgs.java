@@ -6,13 +6,14 @@ package com.pulumi.gcp.healthcare;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FhirStoreIamMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class FhirStoreIamMemberArgs extends ResourceArgs {
 
     public static final FhirStoreIamMemberArgs Empty = new FhirStoreIamMemberArgs();
 

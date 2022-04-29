@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.RegionBackendServiceFailoverPolicyArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceIapArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionBackendServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionBackendServiceArgs extends ResourceArgs {
 
     public static final RegionBackendServiceArgs Empty = new RegionBackendServiceArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.InstanceTemplateReservationAffinitySpecificReservationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceTemplateReservationAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceTemplateReservationAffinityArgs extends ResourceArgs {
 
     public static final InstanceTemplateReservationAffinityArgs Empty = new InstanceTemplateReservationAffinityArgs();
 

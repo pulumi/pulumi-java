@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.MachineImageIamPolicyArgs;
 import com.pulumi.gcp.compute.inputs.MachineImageIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,7 +62,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/machineImageIamPolicy:MachineImageIamPolicy")
-public class MachineImageIamPolicy extends com.pulumi.resources.CustomResource {
+public class MachineImageIamPolicy extends CustomResource {
     /**
      * (Computed) The etag of the IAM policy.
      * 
@@ -143,19 +145,19 @@ public class MachineImageIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MachineImageIamPolicy(String name, MachineImageIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MachineImageIamPolicy(String name, MachineImageIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/machineImageIamPolicy:MachineImageIamPolicy", name, args == null ? MachineImageIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MachineImageIamPolicy(String name, Output<String> id, @Nullable MachineImageIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MachineImageIamPolicy(String name, Output<String> id, @Nullable MachineImageIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/machineImageIamPolicy:MachineImageIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -167,7 +169,7 @@ public class MachineImageIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MachineImageIamPolicy get(String name, Output<String> id, @Nullable MachineImageIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MachineImageIamPolicy get(String name, Output<String> id, @Nullable MachineImageIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new MachineImageIamPolicy(name, id, state, options);
     }
 }

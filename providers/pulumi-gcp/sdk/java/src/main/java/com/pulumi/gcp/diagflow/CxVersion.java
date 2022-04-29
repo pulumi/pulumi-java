@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.diagflow.CxVersionArgs;
 import com.pulumi.gcp.diagflow.inputs.CxVersionState;
 import com.pulumi.gcp.diagflow.outputs.CxVersionNluSetting;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/cxVersion:CxVersion")
-public class CxVersion extends com.pulumi.resources.CustomResource {
+public class CxVersion extends CustomResource {
     /**
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples:
      * &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
@@ -171,19 +173,19 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CxVersion(String name, CxVersionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CxVersion(String name, CxVersionArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxVersion:CxVersion", name, args == null ? CxVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CxVersion(String name, Output<String> id, @Nullable CxVersionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CxVersion(String name, Output<String> id, @Nullable CxVersionState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxVersion:CxVersion", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -195,7 +197,7 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxVersion get(String name, Output<String> id, @Nullable CxVersionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CxVersion get(String name, Output<String> id, @Nullable CxVersionState state, @Nullable CustomResourceOptions options) {
         return new CxVersion(name, id, state, options);
     }
 }

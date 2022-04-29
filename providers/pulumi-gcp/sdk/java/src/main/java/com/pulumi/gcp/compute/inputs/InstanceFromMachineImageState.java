@@ -17,6 +17,7 @@ import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageSchedulingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageScratchDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageServiceAccountArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFromMachineImageState extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromMachineImageState extends ResourceArgs {
 
     public static final InstanceFromMachineImageState Empty = new InstanceFromMachineImageState();
 

@@ -6,13 +6,14 @@ package com.pulumi.gcp.container.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigBigqueryDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterResourceUsageExportConfigArgs extends ResourceArgs {
 
     public static final ClusterResourceUsageExportConfigArgs Empty = new ClusterResourceUsageExportConfigArgs();
 

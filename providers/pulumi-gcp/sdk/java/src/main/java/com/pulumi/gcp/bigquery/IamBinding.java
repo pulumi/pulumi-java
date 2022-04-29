@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigquery.IamBindingArgs;
 import com.pulumi.gcp.bigquery.inputs.IamBindingState;
 import com.pulumi.gcp.bigquery.outputs.IamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigquery/iamBinding:IamBinding")
-public class IamBinding extends com.pulumi.resources.CustomResource {
+public class IamBinding extends CustomResource {
     /**
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -168,19 +170,19 @@ public class IamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IamBinding(String name, IamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IamBinding(String name, IamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IamBinding(String name, Output<String> id, @Nullable IamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IamBinding(String name, Output<String> id, @Nullable IamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/iamBinding:IamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -192,7 +194,7 @@ public class IamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamBinding get(String name, Output<String> id, @Nullable IamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IamBinding get(String name, Output<String> id, @Nullable IamBindingState state, @Nullable CustomResourceOptions options) {
         return new IamBinding(name, id, state, options);
     }
 }

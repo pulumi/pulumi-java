@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs Empty = new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs();
 

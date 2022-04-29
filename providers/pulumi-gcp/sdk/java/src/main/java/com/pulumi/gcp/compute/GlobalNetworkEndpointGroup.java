@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.GlobalNetworkEndpointGroupArgs;
 import com.pulumi.gcp.compute.inputs.GlobalNetworkEndpointGroupState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -49,7 +51,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup")
-public class GlobalNetworkEndpointGroup extends com.pulumi.resources.CustomResource {
+public class GlobalNetworkEndpointGroup extends CustomResource {
     /**
      * The default port used if the port number is not specified in the
      * network endpoint.
@@ -176,19 +178,19 @@ public class GlobalNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GlobalNetworkEndpointGroup(String name, GlobalNetworkEndpointGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GlobalNetworkEndpointGroup(String name, GlobalNetworkEndpointGroupArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup", name, args == null ? GlobalNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GlobalNetworkEndpointGroup(String name, Output<String> id, @Nullable GlobalNetworkEndpointGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GlobalNetworkEndpointGroup(String name, Output<String> id, @Nullable GlobalNetworkEndpointGroupState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -200,7 +202,7 @@ public class GlobalNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GlobalNetworkEndpointGroup get(String name, Output<String> id, @Nullable GlobalNetworkEndpointGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GlobalNetworkEndpointGroup get(String name, Output<String> id, @Nullable GlobalNetworkEndpointGroupState state, @Nullable CustomResourceOptions options) {
         return new GlobalNetworkEndpointGroup(name, id, state, options);
     }
 }

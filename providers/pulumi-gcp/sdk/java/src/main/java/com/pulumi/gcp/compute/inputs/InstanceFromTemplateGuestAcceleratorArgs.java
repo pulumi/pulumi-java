@@ -5,12 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class InstanceFromTemplateGuestAcceleratorArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromTemplateGuestAcceleratorArgs extends ResourceArgs {
 
     public static final InstanceFromTemplateGuestAcceleratorArgs Empty = new InstanceFromTemplateGuestAcceleratorArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.gcp.diagflow.CxIntentArgs;
 import com.pulumi.gcp.diagflow.inputs.CxIntentState;
 import com.pulumi.gcp.diagflow.outputs.CxIntentParameter;
 import com.pulumi.gcp.diagflow.outputs.CxIntentTrainingPhrase;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/cxIntent:CxIntent")
-public class CxIntent extends com.pulumi.resources.CustomResource {
+public class CxIntent extends CustomResource {
     /**
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
@@ -230,19 +232,19 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CxIntent(String name, CxIntentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CxIntent(String name, CxIntentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxIntent:CxIntent", name, args == null ? CxIntentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CxIntent(String name, Output<String> id, @Nullable CxIntentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CxIntent(String name, Output<String> id, @Nullable CxIntentState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxIntent:CxIntent", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -254,7 +256,7 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxIntent get(String name, Output<String> id, @Nullable CxIntentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CxIntent get(String name, Output<String> id, @Nullable CxIntentState state, @Nullable CustomResourceOptions options) {
         return new CxIntent(name, id, state, options);
     }
 }

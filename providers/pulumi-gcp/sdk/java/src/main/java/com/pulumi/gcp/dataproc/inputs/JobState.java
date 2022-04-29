@@ -15,6 +15,7 @@ import com.pulumi.gcp.dataproc.inputs.JobSchedulingArgs;
 import com.pulumi.gcp.dataproc.inputs.JobSparkConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobSparksqlConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobState extends com.pulumi.resources.ResourceArgs {
+public final class JobState extends ResourceArgs {
 
     public static final JobState Empty = new JobState();
 

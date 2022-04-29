@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.firebase.ProjectLocationArgs;
 import com.pulumi.gcp.firebase.inputs.ProjectLocationState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:firebase/projectLocation:ProjectLocation")
-public class ProjectLocation extends com.pulumi.resources.CustomResource {
+public class ProjectLocation extends CustomResource {
     /**
      * The ID of the default GCP resource location for the Project. The location must be one of the available GCP
      * resource locations.
@@ -102,19 +104,19 @@ public class ProjectLocation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProjectLocation(String name, ProjectLocationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProjectLocation(String name, ProjectLocationArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:firebase/projectLocation:ProjectLocation", name, args == null ? ProjectLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProjectLocation(String name, Output<String> id, @Nullable ProjectLocationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProjectLocation(String name, Output<String> id, @Nullable ProjectLocationState state, @Nullable CustomResourceOptions options) {
         super("gcp:firebase/projectLocation:ProjectLocation", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -126,7 +128,7 @@ public class ProjectLocation extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectLocation get(String name, Output<String> id, @Nullable ProjectLocationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectLocation get(String name, Output<String> id, @Nullable ProjectLocationState state, @Nullable CustomResourceOptions options) {
         return new ProjectLocation(name, id, state, options);
     }
 }

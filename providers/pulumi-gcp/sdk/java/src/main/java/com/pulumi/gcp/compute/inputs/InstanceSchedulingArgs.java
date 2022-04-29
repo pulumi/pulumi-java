@@ -6,6 +6,7 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.InstanceSchedulingNodeAffinityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceSchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceSchedulingArgs extends ResourceArgs {
 
     public static final InstanceSchedulingArgs Empty = new InstanceSchedulingArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.diagflow.CxAgentArgs;
 import com.pulumi.gcp.diagflow.inputs.CxAgentState;
 import com.pulumi.gcp.diagflow.outputs.CxAgentSpeechToTextSettings;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/cxAgent:CxAgent")
-public class CxAgent extends com.pulumi.resources.CustomResource {
+public class CxAgent extends CustomResource {
     /**
      * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
@@ -283,19 +285,19 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CxAgent(String name, CxAgentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CxAgent(String name, CxAgentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxAgent:CxAgent", name, args == null ? CxAgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CxAgent(String name, Output<String> id, @Nullable CxAgentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CxAgent(String name, Output<String> id, @Nullable CxAgentState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/cxAgent:CxAgent", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -307,7 +309,7 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxAgent get(String name, Output<String> id, @Nullable CxAgentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CxAgent get(String name, Output<String> id, @Nullable CxAgentState state, @Nullable CustomResourceOptions options) {
         return new CxAgent(name, id, state, options);
     }
 }

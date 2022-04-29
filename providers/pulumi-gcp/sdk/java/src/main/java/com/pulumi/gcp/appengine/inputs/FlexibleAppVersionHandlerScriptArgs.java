@@ -5,11 +5,12 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FlexibleAppVersionHandlerScriptArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionHandlerScriptArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionHandlerScriptArgs Empty = new FlexibleAppVersionHandlerScriptArgs();
 

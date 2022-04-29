@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.projects.DefaultServiceAccountsArgs;
 import com.pulumi.gcp.projects.inputs.DefaultServiceAccountsState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:projects/defaultServiceAccounts:DefaultServiceAccounts")
-public class DefaultServiceAccounts extends com.pulumi.resources.CustomResource {
+public class DefaultServiceAccounts extends CustomResource {
     /**
      * The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
      * 
@@ -125,19 +127,19 @@ public class DefaultServiceAccounts extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DefaultServiceAccounts(String name, DefaultServiceAccountsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DefaultServiceAccounts(String name, DefaultServiceAccountsArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, args == null ? DefaultServiceAccountsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DefaultServiceAccounts(String name, Output<String> id, @Nullable DefaultServiceAccountsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DefaultServiceAccounts(String name, Output<String> id, @Nullable DefaultServiceAccountsState state, @Nullable CustomResourceOptions options) {
         super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -149,7 +151,7 @@ public class DefaultServiceAccounts extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefaultServiceAccounts get(String name, Output<String> id, @Nullable DefaultServiceAccountsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DefaultServiceAccounts get(String name, Output<String> id, @Nullable DefaultServiceAccountsState state, @Nullable CustomResourceOptions options) {
         return new DefaultServiceAccounts(name, id, state, options);
     }
 }

@@ -11,12 +11,14 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamMemberState;
 import com.pulumi.gcp.datacatalog.outputs.TagTemplateIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember")
-public class TagTemplateIamMember extends com.pulumi.resources.CustomResource {
+public class TagTemplateIamMember extends CustomResource {
     @Export(name="condition", type=TagTemplateIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamMemberCondition> condition;
 
@@ -81,19 +83,19 @@ public class TagTemplateIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TagTemplateIamMember(String name, TagTemplateIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TagTemplateIamMember(String name, TagTemplateIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember", name, args == null ? TagTemplateIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TagTemplateIamMember(String name, Output<String> id, @Nullable TagTemplateIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TagTemplateIamMember(String name, Output<String> id, @Nullable TagTemplateIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class TagTemplateIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagTemplateIamMember get(String name, Output<String> id, @Nullable TagTemplateIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TagTemplateIamMember get(String name, Output<String> id, @Nullable TagTemplateIamMemberState state, @Nullable CustomResourceOptions options) {
         return new TagTemplateIamMember(name, id, state, options);
     }
 }

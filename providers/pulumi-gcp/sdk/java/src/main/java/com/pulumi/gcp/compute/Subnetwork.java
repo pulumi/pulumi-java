@@ -12,6 +12,8 @@ import com.pulumi.gcp.compute.SubnetworkArgs;
 import com.pulumi.gcp.compute.inputs.SubnetworkState;
 import com.pulumi.gcp.compute.outputs.SubnetworkLogConfig;
 import com.pulumi.gcp.compute.outputs.SubnetworkSecondaryIpRange;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -73,7 +75,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/subnetwork:Subnetwork")
-public class Subnetwork extends com.pulumi.resources.CustomResource {
+public class Subnetwork extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -448,19 +450,19 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Subnetwork(String name, SubnetworkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Subnetwork(String name, SubnetworkArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/subnetwork:Subnetwork", name, args == null ? SubnetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Subnetwork(String name, Output<String> id, @Nullable SubnetworkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Subnetwork(String name, Output<String> id, @Nullable SubnetworkState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/subnetwork:Subnetwork", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -472,7 +474,7 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Subnetwork get(String name, Output<String> id, @Nullable SubnetworkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Subnetwork get(String name, Output<String> id, @Nullable SubnetworkState state, @Nullable CustomResourceOptions options) {
         return new Subnetwork(name, id, state, options);
     }
 }

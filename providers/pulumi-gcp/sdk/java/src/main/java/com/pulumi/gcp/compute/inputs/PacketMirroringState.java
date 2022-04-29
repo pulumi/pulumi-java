@@ -9,6 +9,7 @@ import com.pulumi.gcp.compute.inputs.PacketMirroringCollectorIlbArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringFilterArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringNetworkArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PacketMirroringState extends com.pulumi.resources.ResourceArgs {
+public final class PacketMirroringState extends ResourceArgs {
 
     public static final PacketMirroringState Empty = new PacketMirroringState();
 

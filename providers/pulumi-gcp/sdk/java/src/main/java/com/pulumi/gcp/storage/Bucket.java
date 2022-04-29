@@ -17,6 +17,8 @@ import com.pulumi.gcp.storage.outputs.BucketLogging;
 import com.pulumi.gcp.storage.outputs.BucketRetentionPolicy;
 import com.pulumi.gcp.storage.outputs.BucketVersioning;
 import com.pulumi.gcp.storage.outputs.BucketWebsite;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:storage/bucket:Bucket")
-public class Bucket extends com.pulumi.resources.CustomResource {
+public class Bucket extends CustomResource {
     /**
      * The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
@@ -343,19 +345,19 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Bucket(String name, BucketArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Bucket(String name, BucketArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:storage/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Bucket(String name, Output<String> id, @Nullable BucketState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Bucket(String name, Output<String> id, @Nullable BucketState state, @Nullable CustomResourceOptions options) {
         super("gcp:storage/bucket:Bucket", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -367,7 +369,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Bucket get(String name, Output<String> id, @Nullable BucketState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Bucket get(String name, Output<String> id, @Nullable BucketState state, @Nullable CustomResourceOptions options) {
         return new Bucket(name, id, state, options);
     }
 }

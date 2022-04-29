@@ -5,11 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs extends ResourceArgs {
 
     public static final RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs Empty = new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs();
 

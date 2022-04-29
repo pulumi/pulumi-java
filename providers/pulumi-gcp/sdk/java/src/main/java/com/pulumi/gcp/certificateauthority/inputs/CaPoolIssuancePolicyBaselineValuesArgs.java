@@ -9,6 +9,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineVa
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaPoolIssuancePolicyBaselineValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaPoolIssuancePolicyBaselineValuesArgs extends ResourceArgs {
 
     public static final CaPoolIssuancePolicyBaselineValuesArgs Empty = new CaPoolIssuancePolicyBaselineValuesArgs();
 

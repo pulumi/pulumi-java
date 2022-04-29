@@ -5,11 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class InstanceNetworkPerformanceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceNetworkPerformanceConfigArgs extends ResourceArgs {
 
     public static final InstanceNetworkPerformanceConfigArgs Empty = new InstanceNetworkPerformanceConfigArgs();
 

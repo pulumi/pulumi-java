@@ -12,6 +12,8 @@ import com.pulumi.gcp.storage.TransferJobArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobState;
 import com.pulumi.gcp.storage.outputs.TransferJobSchedule;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpec;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:storage/transferJob:TransferJob")
-public class TransferJob extends com.pulumi.resources.CustomResource {
+public class TransferJob extends CustomResource {
     /**
      * When the Transfer Job was created.
      * 
@@ -189,19 +191,19 @@ public class TransferJob extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransferJob(String name, TransferJobArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransferJob(String name, TransferJobArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:storage/transferJob:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TransferJob(String name, Output<String> id, @Nullable TransferJobState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TransferJob(String name, Output<String> id, @Nullable TransferJobState state, @Nullable CustomResourceOptions options) {
         super("gcp:storage/transferJob:TransferJob", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -213,7 +215,7 @@ public class TransferJob extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransferJob get(String name, Output<String> id, @Nullable TransferJobState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransferJob get(String name, Output<String> id, @Nullable TransferJobState state, @Nullable CustomResourceOptions options) {
         return new TransferJob(name, id, state, options);
     }
 }

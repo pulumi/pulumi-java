@@ -6,13 +6,14 @@ package com.pulumi.gcp.containeranalysis.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
+public final class OccurenceState extends ResourceArgs {
 
     public static final OccurenceState Empty = new OccurenceState();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.DiskIamPolicyArgs;
 import com.pulumi.gcp.compute.inputs.DiskIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/diskIamPolicy:DiskIamPolicy")
-public class DiskIamPolicy extends com.pulumi.resources.CustomResource {
+public class DiskIamPolicy extends CustomResource {
     /**
      * (Computed) The etag of the IAM policy.
      * 
@@ -157,19 +159,19 @@ public class DiskIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DiskIamPolicy(String name, DiskIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DiskIamPolicy(String name, DiskIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskIamPolicy:DiskIamPolicy", name, args == null ? DiskIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DiskIamPolicy(String name, Output<String> id, @Nullable DiskIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DiskIamPolicy(String name, Output<String> id, @Nullable DiskIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/diskIamPolicy:DiskIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -181,7 +183,7 @@ public class DiskIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DiskIamPolicy get(String name, Output<String> id, @Nullable DiskIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DiskIamPolicy get(String name, Output<String> id, @Nullable DiskIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new DiskIamPolicy(name, id, state, options);
     }
 }

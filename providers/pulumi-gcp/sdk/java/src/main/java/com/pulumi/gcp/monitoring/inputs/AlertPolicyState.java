@@ -9,6 +9,7 @@ import com.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyCreationRecordArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyDocumentationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
+public final class AlertPolicyState extends ResourceArgs {
 
     public static final AlertPolicyState Empty = new AlertPolicyState();
 

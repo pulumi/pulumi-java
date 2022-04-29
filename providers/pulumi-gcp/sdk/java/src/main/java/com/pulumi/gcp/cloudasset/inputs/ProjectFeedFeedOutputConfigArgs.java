@@ -6,10 +6,11 @@ package com.pulumi.gcp.cloudasset.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudasset.inputs.ProjectFeedFeedOutputConfigPubsubDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ProjectFeedFeedOutputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectFeedFeedOutputConfigArgs extends ResourceArgs {
 
     public static final ProjectFeedFeedOutputConfigArgs Empty = new ProjectFeedFeedOutputConfigArgs();
 

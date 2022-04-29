@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerGithubPullRequestArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerGithubPushArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TriggerGithubArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerGithubArgs extends ResourceArgs {
 
     public static final TriggerGithubArgs Empty = new TriggerGithubArgs();
 

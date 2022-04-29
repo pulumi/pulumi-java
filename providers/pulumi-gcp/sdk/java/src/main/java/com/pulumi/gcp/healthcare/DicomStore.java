@@ -12,6 +12,8 @@ import com.pulumi.gcp.healthcare.DicomStoreArgs;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreState;
 import com.pulumi.gcp.healthcare.outputs.DicomStoreNotificationConfig;
 import com.pulumi.gcp.healthcare.outputs.DicomStoreStreamConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/dicomStore:DicomStore")
-public class DicomStore extends com.pulumi.resources.CustomResource {
+public class DicomStore extends CustomResource {
     /**
      * Identifies the dataset addressed by this request. Must be in the format
      * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
@@ -175,19 +177,19 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DicomStore(String name, DicomStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DicomStore(String name, DicomStoreArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/dicomStore:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DicomStore(String name, Output<String> id, @Nullable DicomStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DicomStore(String name, Output<String> id, @Nullable DicomStoreState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/dicomStore:DicomStore", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -199,7 +201,7 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DicomStore get(String name, Output<String> id, @Nullable DicomStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DicomStore get(String name, Output<String> id, @Nullable DicomStoreState state, @Nullable CustomResourceOptions options) {
         return new DicomStore(name, id, state, options);
     }
 }

@@ -7,10 +7,11 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs extends ResourceArgs {
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs();
 

@@ -6,10 +6,11 @@ package com.pulumi.gcp.cloudasset.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigPubsubDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class FolderFeedFeedOutputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FolderFeedFeedOutputConfigArgs extends ResourceArgs {
 
     public static final FolderFeedFeedOutputConfigArgs Empty = new FolderFeedFeedOutputConfigArgs();
 

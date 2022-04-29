@@ -6,10 +6,11 @@ package com.pulumi.gcp.dataloss.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends ResourceArgs {
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigArgs();
 

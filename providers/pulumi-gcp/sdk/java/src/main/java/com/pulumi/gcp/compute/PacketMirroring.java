@@ -14,6 +14,8 @@ import com.pulumi.gcp.compute.outputs.PacketMirroringCollectorIlb;
 import com.pulumi.gcp.compute.outputs.PacketMirroringFilter;
 import com.pulumi.gcp.compute.outputs.PacketMirroringMirroredResources;
 import com.pulumi.gcp.compute.outputs.PacketMirroringNetwork;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -54,7 +56,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/packetMirroring:PacketMirroring")
-public class PacketMirroring extends com.pulumi.resources.CustomResource {
+public class PacketMirroring extends CustomResource {
     /**
      * The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
      * that will be used as collector for mirrored traffic. The
@@ -229,19 +231,19 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PacketMirroring(String name, PacketMirroringArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PacketMirroring(String name, PacketMirroringArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/packetMirroring:PacketMirroring", name, args == null ? PacketMirroringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PacketMirroring(String name, Output<String> id, @Nullable PacketMirroringState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PacketMirroring(String name, Output<String> id, @Nullable PacketMirroringState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/packetMirroring:PacketMirroring", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -253,7 +255,7 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PacketMirroring get(String name, Output<String> id, @Nullable PacketMirroringState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PacketMirroring get(String name, Output<String> id, @Nullable PacketMirroringState state, @Nullable CustomResourceOptions options) {
         return new PacketMirroring(name, id, state, options);
     }
 }

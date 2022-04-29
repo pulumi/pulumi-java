@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.pubsub.TopicIAMBindingArgs;
 import com.pulumi.gcp.pubsub.inputs.TopicIAMBindingState;
 import com.pulumi.gcp.pubsub.outputs.TopicIAMBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:pubsub/topicIAMBinding:TopicIAMBinding")
-public class TopicIAMBinding extends com.pulumi.resources.CustomResource {
+public class TopicIAMBinding extends CustomResource {
     @Export(name="condition", type=TopicIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ TopicIAMBindingCondition> condition;
 
@@ -156,19 +158,19 @@ public class TopicIAMBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TopicIAMBinding(String name, TopicIAMBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TopicIAMBinding(String name, TopicIAMBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, args == null ? TopicIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TopicIAMBinding(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TopicIAMBinding(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -180,7 +182,7 @@ public class TopicIAMBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TopicIAMBinding get(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TopicIAMBinding get(String name, Output<String> id, @Nullable TopicIAMBindingState state, @Nullable CustomResourceOptions options) {
         return new TopicIAMBinding(name, id, state, options);
     }
 }

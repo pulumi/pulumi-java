@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.gameservices.GameServerDeploymentArgs;
 import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:gameservices/gameServerDeployment:GameServerDeployment")
-public class GameServerDeployment extends com.pulumi.resources.CustomResource {
+public class GameServerDeployment extends CustomResource {
     /**
      * A unique id for the deployment.
      * 
@@ -159,19 +161,19 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GameServerDeployment(String name, GameServerDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GameServerDeployment(String name, GameServerDeploymentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerDeployment:GameServerDeployment", name, args == null ? GameServerDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GameServerDeployment(String name, Output<String> id, @Nullable GameServerDeploymentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GameServerDeployment(String name, Output<String> id, @Nullable GameServerDeploymentState state, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerDeployment:GameServerDeployment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -183,7 +185,7 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerDeployment get(String name, Output<String> id, @Nullable GameServerDeploymentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerDeployment get(String name, Output<String> id, @Nullable GameServerDeploymentState state, @Nullable CustomResourceOptions options) {
         return new GameServerDeployment(name, id, state, options);
     }
 }

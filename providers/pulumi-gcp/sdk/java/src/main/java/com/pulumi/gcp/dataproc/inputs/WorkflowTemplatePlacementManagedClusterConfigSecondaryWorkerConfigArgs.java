@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs extends ResourceArgs {
 
     public static final WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs();
 

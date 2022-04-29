@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyAllowArgs;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyDenyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationPolicyListPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationPolicyListPolicyArgs extends ResourceArgs {
 
     public static final OrganizationPolicyListPolicyArgs Empty = new OrganizationPolicyListPolicyArgs();
 

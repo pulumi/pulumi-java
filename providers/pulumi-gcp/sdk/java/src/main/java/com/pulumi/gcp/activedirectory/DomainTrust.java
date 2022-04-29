@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.activedirectory.DomainTrustArgs;
 import com.pulumi.gcp.activedirectory.inputs.DomainTrustState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +50,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:activedirectory/domainTrust:DomainTrust")
-public class DomainTrust extends com.pulumi.resources.CustomResource {
+public class DomainTrust extends CustomResource {
     /**
      * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
@@ -193,19 +195,19 @@ public class DomainTrust extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DomainTrust(String name, DomainTrustArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DomainTrust(String name, DomainTrustArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:activedirectory/domainTrust:DomainTrust", name, args == null ? DomainTrustArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DomainTrust(String name, Output<String> id, @Nullable DomainTrustState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DomainTrust(String name, Output<String> id, @Nullable DomainTrustState state, @Nullable CustomResourceOptions options) {
         super("gcp:activedirectory/domainTrust:DomainTrust", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -217,7 +219,7 @@ public class DomainTrust extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DomainTrust get(String name, Output<String> id, @Nullable DomainTrustState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DomainTrust get(String name, Output<String> id, @Nullable DomainTrustState state, @Nullable CustomResourceOptions options) {
         return new DomainTrust(name, id, state, options);
     }
 }

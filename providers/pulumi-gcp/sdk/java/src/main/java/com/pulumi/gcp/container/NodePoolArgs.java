@@ -10,6 +10,7 @@ import com.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNetworkConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolUpgradeSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodePoolArgs extends ResourceArgs {
 
     public static final NodePoolArgs Empty = new NodePoolArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherR
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends ResourceArgs {
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleArgs();
 

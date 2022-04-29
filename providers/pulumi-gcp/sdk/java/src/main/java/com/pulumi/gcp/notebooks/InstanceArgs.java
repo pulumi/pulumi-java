@@ -10,6 +10,7 @@ import com.pulumi.gcp.notebooks.inputs.InstanceContainerImageArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceShieldedInstanceConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceVmImageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

@@ -12,6 +12,8 @@ import com.pulumi.gcp.bigtable.GCPolicyArgs;
 import com.pulumi.gcp.bigtable.inputs.GCPolicyState;
 import com.pulumi.gcp.bigtable.outputs.GCPolicyMaxAge;
 import com.pulumi.gcp.bigtable.outputs.GCPolicyMaxVersion;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigtable/gCPolicy:GCPolicy")
-public class GCPolicy extends com.pulumi.resources.CustomResource {
+public class GCPolicy extends CustomResource {
     /**
      * The name of the column family.
      * 
@@ -151,19 +153,19 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GCPolicy(String name, GCPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GCPolicy(String name, GCPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/gCPolicy:GCPolicy", name, args == null ? GCPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GCPolicy(String name, Output<String> id, @Nullable GCPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GCPolicy(String name, Output<String> id, @Nullable GCPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/gCPolicy:GCPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -175,7 +177,7 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GCPolicy get(String name, Output<String> id, @Nullable GCPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GCPolicy get(String name, Output<String> id, @Nullable GCPolicyState state, @Nullable CustomResourceOptions options) {
         return new GCPolicy(name, id, state, options);
     }
 }

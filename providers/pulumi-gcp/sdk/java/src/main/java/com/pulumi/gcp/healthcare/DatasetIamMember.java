@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.healthcare.DatasetIamMemberArgs;
 import com.pulumi.gcp.healthcare.inputs.DatasetIamMemberState;
 import com.pulumi.gcp.healthcare.outputs.DatasetIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -64,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/datasetIamMember:DatasetIamMember")
-public class DatasetIamMember extends com.pulumi.resources.CustomResource {
+public class DatasetIamMember extends CustomResource {
     @Export(name="condition", type=DatasetIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamMemberCondition> condition;
 
@@ -151,19 +153,19 @@ public class DatasetIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatasetIamMember(String name, DatasetIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatasetIamMember(String name, DatasetIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/datasetIamMember:DatasetIamMember", name, args == null ? DatasetIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatasetIamMember(String name, Output<String> id, @Nullable DatasetIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatasetIamMember(String name, Output<String> id, @Nullable DatasetIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/datasetIamMember:DatasetIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -175,7 +177,7 @@ public class DatasetIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatasetIamMember get(String name, Output<String> id, @Nullable DatasetIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatasetIamMember get(String name, Output<String> id, @Nullable DatasetIamMemberState state, @Nullable CustomResourceOptions options) {
         return new DatasetIamMember(name, id, state, options);
     }
 }

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigquery.DatasetAccessArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessState;
 import com.pulumi.gcp.bigquery.outputs.DatasetAccessView;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigquery/datasetAccess:DatasetAccess")
-public class DatasetAccess extends com.pulumi.resources.CustomResource {
+public class DatasetAccess extends CustomResource {
     /**
      * If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
      * stored in state as a different member type
@@ -216,19 +218,19 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatasetAccess(String name, DatasetAccessArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatasetAccess(String name, DatasetAccessArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/datasetAccess:DatasetAccess", name, args == null ? DatasetAccessArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatasetAccess(String name, Output<String> id, @Nullable DatasetAccessState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatasetAccess(String name, Output<String> id, @Nullable DatasetAccessState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/datasetAccess:DatasetAccess", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -240,7 +242,7 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatasetAccess get(String name, Output<String> id, @Nullable DatasetAccessState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatasetAccess get(String name, Output<String> id, @Nullable DatasetAccessState state, @Nullable CustomResourceOptions options) {
         return new DatasetAccess(name, id, state, options);
     }
 }

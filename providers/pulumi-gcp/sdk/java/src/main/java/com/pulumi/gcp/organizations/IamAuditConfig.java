@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.organizations.IamAuditConfigArgs;
 import com.pulumi.gcp.organizations.inputs.IamAuditConfigState;
 import com.pulumi.gcp.organizations.outputs.IamAuditConfigAuditLogConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:organizations/iamAuditConfig:IamAuditConfig")
-public class IamAuditConfig extends com.pulumi.resources.CustomResource {
+public class IamAuditConfig extends CustomResource {
     /**
      * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
@@ -109,19 +111,19 @@ public class IamAuditConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IamAuditConfig(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IamAuditConfig(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/iamAuditConfig:IamAuditConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class IamAuditConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamAuditConfig get(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IamAuditConfig get(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable CustomResourceOptions options) {
         return new IamAuditConfig(name, id, state, options);
     }
 }

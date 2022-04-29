@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.ProjectMetadataArgs;
 import com.pulumi.gcp.compute.inputs.ProjectMetadataState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/projectMetadata:ProjectMetadata")
-public class ProjectMetadata extends com.pulumi.resources.CustomResource {
+public class ProjectMetadata extends CustomResource {
     /**
      * A series of key value pairs.
      * 
@@ -90,19 +92,19 @@ public class ProjectMetadata extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProjectMetadata(String name, ProjectMetadataArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProjectMetadata(String name, ProjectMetadataArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/projectMetadata:ProjectMetadata", name, args == null ? ProjectMetadataArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProjectMetadata(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProjectMetadata(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/projectMetadata:ProjectMetadata", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -114,7 +116,7 @@ public class ProjectMetadata extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectMetadata get(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectMetadata get(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable CustomResourceOptions options) {
         return new ProjectMetadata(name, id, state, options);
     }
 }

@@ -12,6 +12,8 @@ import com.pulumi.gcp.compute.SecurityPolicyArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyState;
 import com.pulumi.gcp.compute.outputs.SecurityPolicyAdaptiveProtectionConfig;
 import com.pulumi.gcp.compute.outputs.SecurityPolicyRule;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +28,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/securityPolicy:SecurityPolicy")
-public class SecurityPolicy extends com.pulumi.resources.CustomResource {
+public class SecurityPolicy extends CustomResource {
     /**
      * Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
@@ -153,19 +155,19 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/securityPolicy:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SecurityPolicy(String name, Output<String> id, @Nullable SecurityPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SecurityPolicy(String name, Output<String> id, @Nullable SecurityPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/securityPolicy:SecurityPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -177,7 +179,7 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityPolicy get(String name, Output<String> id, @Nullable SecurityPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityPolicy get(String name, Output<String> id, @Nullable SecurityPolicyState state, @Nullable CustomResourceOptions options) {
         return new SecurityPolicy(name, id, state, options);
     }
 }

@@ -9,13 +9,14 @@ import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMatchedLogArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertPolicyConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertPolicyConditionArgs extends ResourceArgs {
 
     public static final AlertPolicyConditionArgs Empty = new AlertPolicyConditionArgs();
 

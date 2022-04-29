@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigArgs;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeploymentTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentTargetArgs extends ResourceArgs {
 
     public static final DeploymentTargetArgs Empty = new DeploymentTargetArgs();
 

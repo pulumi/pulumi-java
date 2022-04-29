@@ -15,6 +15,8 @@ import com.pulumi.gcp.container.outputs.AzureClusterControlPlane;
 import com.pulumi.gcp.container.outputs.AzureClusterFleet;
 import com.pulumi.gcp.container.outputs.AzureClusterNetworking;
 import com.pulumi.gcp.container.outputs.AzureClusterWorkloadIdentityConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:container/azureCluster:AzureCluster")
-public class AzureCluster extends com.pulumi.resources.CustomResource {
+public class AzureCluster extends CustomResource {
     /**
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
@@ -354,19 +356,19 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AzureCluster(String name, AzureClusterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AzureCluster(String name, AzureClusterArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AzureCluster(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AzureCluster(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureCluster:AzureCluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -378,7 +380,7 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AzureCluster get(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AzureCluster get(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable CustomResourceOptions options) {
         return new AzureCluster(name, id, state, options);
     }
 }

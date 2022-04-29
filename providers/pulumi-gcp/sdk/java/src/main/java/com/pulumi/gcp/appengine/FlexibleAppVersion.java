@@ -22,6 +22,8 @@ import com.pulumi.gcp.appengine.outputs.FlexibleAppVersionNetwork;
 import com.pulumi.gcp.appengine.outputs.FlexibleAppVersionReadinessCheck;
 import com.pulumi.gcp.appengine.outputs.FlexibleAppVersionResources;
 import com.pulumi.gcp.appengine.outputs.FlexibleAppVersionVpcAccessConnector;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -64,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:appengine/flexibleAppVersion:FlexibleAppVersion")
-public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
+public class FlexibleAppVersion extends CustomResource {
     /**
      * Serving configuration for Google Cloud Endpoints.
      * Structure is documented below.
@@ -541,19 +543,19 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FlexibleAppVersion(String name, FlexibleAppVersionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FlexibleAppVersion(String name, FlexibleAppVersionArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/flexibleAppVersion:FlexibleAppVersion", name, args == null ? FlexibleAppVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FlexibleAppVersion(String name, Output<String> id, @Nullable FlexibleAppVersionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FlexibleAppVersion(String name, Output<String> id, @Nullable FlexibleAppVersionState state, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/flexibleAppVersion:FlexibleAppVersion", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -565,7 +567,7 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FlexibleAppVersion get(String name, Output<String> id, @Nullable FlexibleAppVersionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FlexibleAppVersion get(String name, Output<String> id, @Nullable FlexibleAppVersionState state, @Nullable CustomResourceOptions options) {
         return new FlexibleAppVersion(name, id, state, options);
     }
 }

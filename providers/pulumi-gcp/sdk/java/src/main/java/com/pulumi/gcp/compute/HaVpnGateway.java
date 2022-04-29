@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.HaVpnGatewayArgs;
 import com.pulumi.gcp.compute.inputs.HaVpnGatewayState;
 import com.pulumi.gcp.compute.outputs.HaVpnGatewayVpnInterface;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/haVpnGateway:HaVpnGateway")
-public class HaVpnGateway extends com.pulumi.resources.CustomResource {
+public class HaVpnGateway extends CustomResource {
     /**
      * An optional description of this resource.
      * 
@@ -189,19 +191,19 @@ public class HaVpnGateway extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public HaVpnGateway(String name, HaVpnGatewayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public HaVpnGateway(String name, HaVpnGatewayArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/haVpnGateway:HaVpnGateway", name, args == null ? HaVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private HaVpnGateway(String name, Output<String> id, @Nullable HaVpnGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private HaVpnGateway(String name, Output<String> id, @Nullable HaVpnGatewayState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/haVpnGateway:HaVpnGateway", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -213,7 +215,7 @@ public class HaVpnGateway extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HaVpnGateway get(String name, Output<String> id, @Nullable HaVpnGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static HaVpnGateway get(String name, Output<String> id, @Nullable HaVpnGatewayState state, @Nullable CustomResourceOptions options) {
         return new HaVpnGateway(name, id, state, options);
     }
 }

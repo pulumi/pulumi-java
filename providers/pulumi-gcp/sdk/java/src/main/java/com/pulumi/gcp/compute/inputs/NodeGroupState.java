@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyArgs;
 import com.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
+public final class NodeGroupState extends ResourceArgs {
 
     public static final NodeGroupState Empty = new NodeGroupState();
 

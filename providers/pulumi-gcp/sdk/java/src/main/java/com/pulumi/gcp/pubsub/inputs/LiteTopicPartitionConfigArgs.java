@@ -6,13 +6,14 @@ package com.pulumi.gcp.pubsub.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigCapacityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LiteTopicPartitionConfigArgs extends ResourceArgs {
 
     public static final LiteTopicPartitionConfigArgs Empty = new LiteTopicPartitionConfigArgs();
 

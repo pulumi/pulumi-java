@@ -6,6 +6,7 @@ package com.pulumi.gcp.dataproc.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkJobLoggingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplateJobSparkJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplateJobSparkJobArgs extends ResourceArgs {
 
     public static final WorkflowTemplateJobSparkJobArgs Empty = new WorkflowTemplateJobSparkJobArgs();
 

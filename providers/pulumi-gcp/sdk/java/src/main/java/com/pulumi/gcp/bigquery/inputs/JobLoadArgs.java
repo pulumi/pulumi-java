@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigquery.inputs.JobLoadDestinationEncryptionConfigurationArgs;
 import com.pulumi.gcp.bigquery.inputs.JobLoadDestinationTableArgs;
 import com.pulumi.gcp.bigquery.inputs.JobLoadTimePartitioningArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobLoadArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobLoadArgs extends ResourceArgs {
 
     public static final JobLoadArgs Empty = new JobLoadArgs();
 

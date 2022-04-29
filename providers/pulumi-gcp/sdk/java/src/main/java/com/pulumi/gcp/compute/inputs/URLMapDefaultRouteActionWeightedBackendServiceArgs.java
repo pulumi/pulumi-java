@@ -6,6 +6,7 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends ResourceArgs {
 
     public static final URLMapDefaultRouteActionWeightedBackendServiceArgs Empty = new URLMapDefaultRouteActionWeightedBackendServiceArgs();
 

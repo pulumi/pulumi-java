@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.TargetHttpsProxyArgs;
 import com.pulumi.gcp.compute.inputs.TargetHttpsProxyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/targetHttpsProxy:TargetHttpsProxy")
-public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
+public class TargetHttpsProxy extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -262,19 +264,19 @@ public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TargetHttpsProxy(String name, TargetHttpsProxyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TargetHttpsProxy(String name, TargetHttpsProxyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/targetHttpsProxy:TargetHttpsProxy", name, args == null ? TargetHttpsProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TargetHttpsProxy(String name, Output<String> id, @Nullable TargetHttpsProxyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TargetHttpsProxy(String name, Output<String> id, @Nullable TargetHttpsProxyState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/targetHttpsProxy:TargetHttpsProxy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -286,7 +288,7 @@ public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TargetHttpsProxy get(String name, Output<String> id, @Nullable TargetHttpsProxyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TargetHttpsProxy get(String name, Output<String> id, @Nullable TargetHttpsProxyState state, @Nullable CustomResourceOptions options) {
         return new TargetHttpsProxy(name, id, state, options);
     }
 }

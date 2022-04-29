@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
 import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceArgs;
 import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkloadState extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadState extends ResourceArgs {
 
     public static final WorkloadState Empty = new WorkloadState();
 

@@ -5,11 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ClusterClusterConfigMetastoreConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterClusterConfigMetastoreConfigArgs extends ResourceArgs {
 
     public static final ClusterClusterConfigMetastoreConfigArgs Empty = new ClusterClusterConfigMetastoreConfigArgs();
 

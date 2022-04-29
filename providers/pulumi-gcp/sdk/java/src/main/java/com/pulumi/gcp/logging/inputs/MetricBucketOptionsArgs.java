@@ -8,12 +8,13 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsExplicitBucketsArgs;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsExponentialBucketsArgs;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsLinearBucketsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MetricBucketOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricBucketOptionsArgs extends ResourceArgs {
 
     public static final MetricBucketOptionsArgs Empty = new MetricBucketOptionsArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescript
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionPublicKeyArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectKeyIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateCertificateDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateCertificateDescriptionArgs extends ResourceArgs {
 
     public static final CertificateCertificateDescriptionArgs Empty = new CertificateCertificateDescriptionArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.WebIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -62,7 +64,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/webIamMember:WebIamMember")
-public class WebIamMember extends com.pulumi.resources.CustomResource {
+public class WebIamMember extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -155,19 +157,19 @@ public class WebIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebIamMember(String name, WebIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebIamMember(String name, WebIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webIamMember:WebIamMember", name, args == null ? WebIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebIamMember(String name, Output<String> id, @Nullable WebIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebIamMember(String name, Output<String> id, @Nullable WebIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/webIamMember:WebIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class WebIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebIamMember get(String name, Output<String> id, @Nullable WebIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebIamMember get(String name, Output<String> id, @Nullable WebIamMemberState state, @Nullable CustomResourceOptions options) {
         return new WebIamMember(name, id, state, options);
     }
 }

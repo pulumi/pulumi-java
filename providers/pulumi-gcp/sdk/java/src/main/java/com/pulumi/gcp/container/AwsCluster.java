@@ -15,6 +15,8 @@ import com.pulumi.gcp.container.outputs.AwsClusterControlPlane;
 import com.pulumi.gcp.container.outputs.AwsClusterFleet;
 import com.pulumi.gcp.container.outputs.AwsClusterNetworking;
 import com.pulumi.gcp.container.outputs.AwsClusterWorkloadIdentityConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +49,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:container/awsCluster:AwsCluster")
-public class AwsCluster extends com.pulumi.resources.CustomResource {
+public class AwsCluster extends CustomResource {
     /**
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
@@ -326,19 +328,19 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AwsCluster(String name, AwsClusterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AwsCluster(String name, AwsClusterArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:container/awsCluster:AwsCluster", name, args == null ? AwsClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AwsCluster(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AwsCluster(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable CustomResourceOptions options) {
         super("gcp:container/awsCluster:AwsCluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -350,7 +352,7 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AwsCluster get(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AwsCluster get(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable CustomResourceOptions options) {
         return new AwsCluster(name, id, state, options);
     }
 }

@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends ResourceArgs {
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdArgs();
 

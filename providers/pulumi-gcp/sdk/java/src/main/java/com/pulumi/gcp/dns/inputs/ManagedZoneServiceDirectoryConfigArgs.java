@@ -6,10 +6,11 @@ package com.pulumi.gcp.dns.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneServiceDirectoryConfigArgs extends ResourceArgs {
 
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 

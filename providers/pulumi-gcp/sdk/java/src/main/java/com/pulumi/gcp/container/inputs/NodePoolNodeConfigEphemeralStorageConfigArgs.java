@@ -5,11 +5,12 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends ResourceArgs {
 
     public static final NodePoolNodeConfigEphemeralStorageConfigArgs Empty = new NodePoolNodeConfigEphemeralStorageConfigArgs();
 

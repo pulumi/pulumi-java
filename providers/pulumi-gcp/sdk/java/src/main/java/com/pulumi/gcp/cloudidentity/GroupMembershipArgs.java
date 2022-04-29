@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs {
+public final class GroupMembershipArgs extends ResourceArgs {
 
     public static final GroupMembershipArgs Empty = new GroupMembershipArgs();
 

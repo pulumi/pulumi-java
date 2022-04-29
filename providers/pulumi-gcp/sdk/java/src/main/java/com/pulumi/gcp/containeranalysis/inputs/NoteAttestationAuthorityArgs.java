@@ -6,10 +6,11 @@ package com.pulumi.gcp.containeranalysis.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityHintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class NoteAttestationAuthorityArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoteAttestationAuthorityArgs extends ResourceArgs {
 
     public static final NoteAttestationAuthorityArgs Empty = new NoteAttestationAuthorityArgs();
 

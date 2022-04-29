@@ -5,13 +5,14 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionAutomaticScalingDiskUtilizationArgs Empty = new FlexibleAppVersionAutomaticScalingDiskUtilizationArgs();
 

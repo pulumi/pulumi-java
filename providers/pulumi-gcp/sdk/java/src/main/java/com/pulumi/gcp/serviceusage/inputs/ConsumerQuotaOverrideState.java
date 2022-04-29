@@ -5,6 +5,7 @@ package com.pulumi.gcp.serviceusage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConsumerQuotaOverrideState extends com.pulumi.resources.ResourceArgs {
+public final class ConsumerQuotaOverrideState extends ResourceArgs {
 
     public static final ConsumerQuotaOverrideState Empty = new ConsumerQuotaOverrideState();
 

@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.containeranalysis.OccurenceArgs;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceState;
 import com.pulumi.gcp.containeranalysis.outputs.OccurenceAttestation;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:containeranalysis/occurence:Occurence")
-public class Occurence extends com.pulumi.resources.CustomResource {
+public class Occurence extends CustomResource {
     /**
      * Occurrence that represents a single &#34;attestation&#34;. The authenticity
      * of an attestation can be verified using the attached signature.
@@ -222,19 +224,19 @@ public class Occurence extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Occurence(String name, OccurenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Occurence(String name, OccurenceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:containeranalysis/occurence:Occurence", name, args == null ? OccurenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Occurence(String name, Output<String> id, @Nullable OccurenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Occurence(String name, Output<String> id, @Nullable OccurenceState state, @Nullable CustomResourceOptions options) {
         super("gcp:containeranalysis/occurence:Occurence", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -246,7 +248,7 @@ public class Occurence extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Occurence get(String name, Output<String> id, @Nullable OccurenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Occurence get(String name, Output<String> id, @Nullable OccurenceState state, @Nullable CustomResourceOptions options) {
         return new Occurence(name, id, state, options);
     }
 }

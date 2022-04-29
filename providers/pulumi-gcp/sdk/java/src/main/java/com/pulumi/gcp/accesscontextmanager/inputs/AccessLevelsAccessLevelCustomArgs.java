@@ -6,10 +6,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class AccessLevelsAccessLevelCustomArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessLevelsAccessLevelCustomArgs extends ResourceArgs {
 
     public static final AccessLevelsAccessLevelCustomArgs Empty = new AccessLevelsAccessLevelCustomArgs();
 

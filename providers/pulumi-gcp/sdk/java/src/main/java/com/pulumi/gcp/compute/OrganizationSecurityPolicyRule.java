@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.OrganizationSecurityPolicyRuleArgs;
 import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleState;
 import com.pulumi.gcp.compute.outputs.OrganizationSecurityPolicyRuleMatch;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule")
-public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomResource {
+public class OrganizationSecurityPolicyRule extends CustomResource {
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either
      * &#34;allow&#34;, &#34;deny&#34; or &#34;goto_next&#34;.
@@ -224,19 +226,19 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OrganizationSecurityPolicyRule(String name, OrganizationSecurityPolicyRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OrganizationSecurityPolicyRule(String name, OrganizationSecurityPolicyRuleArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule", name, args == null ? OrganizationSecurityPolicyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OrganizationSecurityPolicyRule(String name, Output<String> id, @Nullable OrganizationSecurityPolicyRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationSecurityPolicyRule(String name, Output<String> id, @Nullable OrganizationSecurityPolicyRuleState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -248,7 +250,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationSecurityPolicyRule get(String name, Output<String> id, @Nullable OrganizationSecurityPolicyRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationSecurityPolicyRule get(String name, Output<String> id, @Nullable OrganizationSecurityPolicyRuleState state, @Nullable CustomResourceOptions options) {
         return new OrganizationSecurityPolicyRule(name, id, state, options);
     }
 }

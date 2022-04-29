@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.healthcare.ConsentStoreArgs;
 import com.pulumi.gcp.healthcare.inputs.ConsentStoreState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/consentStore:ConsentStore")
-public class ConsentStore extends com.pulumi.resources.CustomResource {
+public class ConsentStore extends CustomResource {
     /**
      * Identifies the dataset addressed by this request. Must be in the format
      * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
@@ -150,19 +152,19 @@ public class ConsentStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConsentStore(String name, ConsentStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConsentStore(String name, ConsentStoreArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/consentStore:ConsentStore", name, args == null ? ConsentStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConsentStore(String name, Output<String> id, @Nullable ConsentStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConsentStore(String name, Output<String> id, @Nullable ConsentStoreState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/consentStore:ConsentStore", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -174,7 +176,7 @@ public class ConsentStore extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConsentStore get(String name, Output<String> id, @Nullable ConsentStoreState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConsentStore get(String name, Output<String> id, @Nullable ConsentStoreState state, @Nullable CustomResourceOptions options) {
         return new ConsentStore(name, id, state, options);
     }
 }

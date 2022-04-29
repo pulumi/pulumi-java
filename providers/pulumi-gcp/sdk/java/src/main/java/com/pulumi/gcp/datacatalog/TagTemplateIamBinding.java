@@ -11,13 +11,15 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.TagTemplateIamBindingArgs;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingState;
 import com.pulumi.gcp.datacatalog.outputs.TagTemplateIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding")
-public class TagTemplateIamBinding extends com.pulumi.resources.CustomResource {
+public class TagTemplateIamBinding extends CustomResource {
     @Export(name="condition", type=TagTemplateIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamBindingCondition> condition;
 
@@ -82,19 +84,19 @@ public class TagTemplateIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TagTemplateIamBinding(String name, TagTemplateIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TagTemplateIamBinding(String name, TagTemplateIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding", name, args == null ? TagTemplateIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TagTemplateIamBinding(String name, Output<String> id, @Nullable TagTemplateIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TagTemplateIamBinding(String name, Output<String> id, @Nullable TagTemplateIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class TagTemplateIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagTemplateIamBinding get(String name, Output<String> id, @Nullable TagTemplateIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TagTemplateIamBinding get(String name, Output<String> id, @Nullable TagTemplateIamBindingState state, @Nullable CustomResourceOptions options) {
         return new TagTemplateIamBinding(name, id, state, options);
     }
 }

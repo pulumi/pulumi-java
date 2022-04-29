@@ -5,6 +5,7 @@ package com.pulumi.gcp.servicedirectory;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NamespaceArgs extends ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 

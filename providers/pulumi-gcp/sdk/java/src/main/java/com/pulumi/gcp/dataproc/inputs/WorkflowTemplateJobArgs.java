@@ -14,6 +14,7 @@ import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSchedulingArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkJobArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkRJobArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplateJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplateJobArgs extends ResourceArgs {
 
     public static final WorkflowTemplateJobArgs Empty = new WorkflowTemplateJobArgs();
 

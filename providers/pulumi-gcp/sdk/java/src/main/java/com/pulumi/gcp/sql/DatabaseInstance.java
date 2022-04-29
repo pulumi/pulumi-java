@@ -16,6 +16,8 @@ import com.pulumi.gcp.sql.outputs.DatabaseInstanceReplicaConfiguration;
 import com.pulumi.gcp.sql.outputs.DatabaseInstanceRestoreBackupContext;
 import com.pulumi.gcp.sql.outputs.DatabaseInstanceServerCaCert;
 import com.pulumi.gcp.sql.outputs.DatabaseInstanceSettings;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -57,7 +59,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:sql/databaseInstance:DatabaseInstance")
-public class DatabaseInstance extends com.pulumi.resources.CustomResource {
+public class DatabaseInstance extends CustomResource {
     /**
      * The context needed to create this instance as a clone of another instance. When this field is set during
      * resource creation, this provider will attempt to clone another instance as indicated in the context. The
@@ -408,19 +410,19 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatabaseInstance(String name, DatabaseInstanceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatabaseInstance(String name, DatabaseInstanceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:sql/databaseInstance:DatabaseInstance", name, args == null ? DatabaseInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatabaseInstance(String name, Output<String> id, @Nullable DatabaseInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatabaseInstance(String name, Output<String> id, @Nullable DatabaseInstanceState state, @Nullable CustomResourceOptions options) {
         super("gcp:sql/databaseInstance:DatabaseInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -432,7 +434,7 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatabaseInstance get(String name, Output<String> id, @Nullable DatabaseInstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatabaseInstance get(String name, Output<String> id, @Nullable DatabaseInstanceState state, @Nullable CustomResourceOptions options) {
         return new DatabaseInstance(name, id, state, options);
     }
 }

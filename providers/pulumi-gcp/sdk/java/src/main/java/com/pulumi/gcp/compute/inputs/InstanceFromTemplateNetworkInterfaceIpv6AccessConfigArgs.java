@@ -5,13 +5,14 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs extends ResourceArgs {
 
     public static final InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs Empty = new InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs();
 

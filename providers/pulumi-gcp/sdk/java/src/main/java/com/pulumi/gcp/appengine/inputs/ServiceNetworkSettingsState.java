@@ -6,13 +6,14 @@ package com.pulumi.gcp.appengine.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceNetworkSettingsState extends com.pulumi.resources.ResourceArgs {
+public final class ServiceNetworkSettingsState extends ResourceArgs {
 
     public static final ServiceNetworkSettingsState Empty = new ServiceNetworkSettingsState();
 

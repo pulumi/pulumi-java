@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.GlobalAddressArgs;
 import com.pulumi.gcp.compute.inputs.GlobalAddressState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/globalAddress:GlobalAddress")
-public class GlobalAddress extends com.pulumi.resources.CustomResource {
+public class GlobalAddress extends CustomResource {
     /**
      * The IP address or beginning of the address range represented by this
      * resource. This can be supplied as an input to reserve a specific
@@ -295,19 +297,19 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GlobalAddress(String name, @Nullable GlobalAddressArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GlobalAddress(String name, @Nullable GlobalAddressArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalAddress:GlobalAddress", name, args == null ? GlobalAddressArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GlobalAddress(String name, Output<String> id, @Nullable GlobalAddressState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GlobalAddress(String name, Output<String> id, @Nullable GlobalAddressState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/globalAddress:GlobalAddress", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -319,7 +321,7 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GlobalAddress get(String name, Output<String> id, @Nullable GlobalAddressState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GlobalAddress get(String name, Output<String> id, @Nullable GlobalAddressState state, @Nullable CustomResourceOptions options) {
         return new GlobalAddress(name, id, state, options);
     }
 }

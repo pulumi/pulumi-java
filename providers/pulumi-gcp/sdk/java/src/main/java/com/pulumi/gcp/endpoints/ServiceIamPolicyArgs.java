@@ -5,11 +5,12 @@ package com.pulumi.gcp.endpoints;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ServiceIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceIamPolicyArgs extends ResourceArgs {
 
     public static final ServiceIamPolicyArgs Empty = new ServiceIamPolicyArgs();
 

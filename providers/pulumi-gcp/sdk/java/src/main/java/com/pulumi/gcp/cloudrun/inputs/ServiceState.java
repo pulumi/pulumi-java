@@ -9,6 +9,7 @@ import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceStatusArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceState extends com.pulumi.resources.ResourceArgs {
+public final class ServiceState extends ResourceArgs {
 
     public static final ServiceState Empty = new ServiceState();
 

@@ -11,12 +11,14 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.cloudfunctions.FunctionIamMemberArgs;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberState;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamMember:FunctionIamMember")
-public class FunctionIamMember extends com.pulumi.resources.CustomResource {
+public class FunctionIamMember extends CustomResource {
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
@@ -81,19 +83,19 @@ public class FunctionIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FunctionIamMember(String name, FunctionIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FunctionIamMember(String name, FunctionIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:cloudfunctions/functionIamMember:FunctionIamMember", name, args == null ? FunctionIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FunctionIamMember(String name, Output<String> id, @Nullable FunctionIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FunctionIamMember(String name, Output<String> id, @Nullable FunctionIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:cloudfunctions/functionIamMember:FunctionIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class FunctionIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FunctionIamMember get(String name, Output<String> id, @Nullable FunctionIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FunctionIamMember get(String name, Output<String> id, @Nullable FunctionIamMemberState state, @Nullable CustomResourceOptions options) {
         return new FunctionIamMember(name, id, state, options);
     }
 }

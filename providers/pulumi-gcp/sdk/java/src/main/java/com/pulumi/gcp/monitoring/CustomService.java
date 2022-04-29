@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.monitoring.CustomServiceArgs;
 import com.pulumi.gcp.monitoring.inputs.CustomServiceState;
 import com.pulumi.gcp.monitoring.outputs.CustomServiceTelemetry;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:monitoring/customService:CustomService")
-public class CustomService extends com.pulumi.resources.CustomResource {
+public class CustomService extends CustomResource {
     /**
      * Name used for UI elements listing this Service.
      * 
@@ -139,19 +141,19 @@ public class CustomService extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CustomService(String name, @Nullable CustomServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CustomService(String name, @Nullable CustomServiceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:monitoring/customService:CustomService", name, args == null ? CustomServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CustomService(String name, Output<String> id, @Nullable CustomServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CustomService(String name, Output<String> id, @Nullable CustomServiceState state, @Nullable CustomResourceOptions options) {
         super("gcp:monitoring/customService:CustomService", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -163,7 +165,7 @@ public class CustomService extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CustomService get(String name, Output<String> id, @Nullable CustomServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CustomService get(String name, Output<String> id, @Nullable CustomServiceState state, @Nullable CustomResourceOptions options) {
         return new CustomService(name, id, state, options);
     }
 }

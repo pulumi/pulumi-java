@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
 import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;
 import com.pulumi.gcp.gameservices.outputs.GameServerDeploymentRolloutGameServerConfigOverride;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout")
-public class GameServerDeploymentRollout extends com.pulumi.resources.CustomResource {
+public class GameServerDeploymentRollout extends CustomResource {
     /**
      * This field points to the game server config that is
      * applied by default to all realms and clusters. For example,
@@ -155,19 +157,19 @@ public class GameServerDeploymentRollout extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GameServerDeploymentRollout(String name, GameServerDeploymentRolloutArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GameServerDeploymentRollout(String name, GameServerDeploymentRolloutArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GameServerDeploymentRollout(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GameServerDeploymentRollout(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable CustomResourceOptions options) {
         super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class GameServerDeploymentRollout extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerDeploymentRollout get(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerDeploymentRollout get(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable CustomResourceOptions options) {
         return new GameServerDeploymentRollout(name, id, state, options);
     }
 }

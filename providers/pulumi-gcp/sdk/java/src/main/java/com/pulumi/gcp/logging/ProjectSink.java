@@ -12,6 +12,8 @@ import com.pulumi.gcp.logging.ProjectSinkArgs;
 import com.pulumi.gcp.logging.inputs.ProjectSinkState;
 import com.pulumi.gcp.logging.outputs.ProjectSinkBigqueryOptions;
 import com.pulumi.gcp.logging.outputs.ProjectSinkExclusion;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:logging/projectSink:ProjectSink")
-public class ProjectSink extends com.pulumi.resources.CustomResource {
+public class ProjectSink extends CustomResource {
     /**
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
@@ -210,19 +212,19 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProjectSink(String name, ProjectSinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProjectSink(String name, ProjectSinkArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:logging/projectSink:ProjectSink", name, args == null ? ProjectSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProjectSink(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProjectSink(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable CustomResourceOptions options) {
         super("gcp:logging/projectSink:ProjectSink", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -234,7 +236,7 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectSink get(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectSink get(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable CustomResourceOptions options) {
         return new ProjectSink(name, id, state, options);
     }
 }

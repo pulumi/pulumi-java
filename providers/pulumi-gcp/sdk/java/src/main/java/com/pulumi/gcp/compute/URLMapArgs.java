@@ -11,6 +11,7 @@ import com.pulumi.gcp.compute.inputs.URLMapHeaderActionArgs;
 import com.pulumi.gcp.compute.inputs.URLMapHostRuleArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherArgs;
 import com.pulumi.gcp.compute.inputs.URLMapTestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class URLMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapArgs extends ResourceArgs {
 
     public static final URLMapArgs Empty = new URLMapArgs();
 

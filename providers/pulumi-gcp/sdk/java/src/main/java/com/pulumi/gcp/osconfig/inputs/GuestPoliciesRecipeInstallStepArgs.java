@@ -12,12 +12,13 @@ import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepFileExecArgs
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepMsiInstallationArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepRpmInstallationArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepScriptRunArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestPoliciesRecipeInstallStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestPoliciesRecipeInstallStepArgs extends ResourceArgs {
 
     public static final GuestPoliciesRecipeInstallStepArgs Empty = new GuestPoliciesRecipeInstallStepArgs();
 

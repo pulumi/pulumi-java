@@ -6,11 +6,12 @@ package com.pulumi.gcp.dns.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZonePrivateVisibilityConfigArgs extends ResourceArgs {
 
     public static final ManagedZonePrivateVisibilityConfigArgs Empty = new ManagedZonePrivateVisibilityConfigArgs();
 

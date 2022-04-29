@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchDeploymentPatchConfigPreStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchDeploymentPatchConfigPreStepArgs extends ResourceArgs {
 
     public static final PatchDeploymentPatchConfigPreStepArgs Empty = new PatchDeploymentPatchConfigPreStepArgs();
 

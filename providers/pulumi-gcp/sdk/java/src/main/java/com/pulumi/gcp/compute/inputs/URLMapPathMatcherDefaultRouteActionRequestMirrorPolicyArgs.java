@@ -5,11 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs Empty = new URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs();
 

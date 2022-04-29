@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.serviceAccount.KeyArgs;
 import com.pulumi.gcp.serviceAccount.inputs.KeyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:serviceAccount/key:Key")
-public class Key extends com.pulumi.resources.CustomResource {
+public class Key extends CustomResource {
     /**
      * Arbitrary map of values that, when changed, will trigger a new key to be generated.
      * 
@@ -222,19 +224,19 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Key(String name, KeyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Key(String name, KeyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:serviceAccount/key:Key", name, args == null ? KeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Key(String name, Output<String> id, @Nullable KeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Key(String name, Output<String> id, @Nullable KeyState state, @Nullable CustomResourceOptions options) {
         super("gcp:serviceAccount/key:Key", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -246,7 +248,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Key get(String name, Output<String> id, @Nullable KeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Key get(String name, Output<String> id, @Nullable KeyState state, @Nullable CustomResourceOptions options) {
         return new Key(name, id, state, options);
     }
 }

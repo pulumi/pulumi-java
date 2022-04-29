@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthorityConfigX509ConfigKeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityConfigX509ConfigKeyUsageArgs extends ResourceArgs {
 
     public static final AuthorityConfigX509ConfigKeyUsageArgs Empty = new AuthorityConfigX509ConfigKeyUsageArgs();
 

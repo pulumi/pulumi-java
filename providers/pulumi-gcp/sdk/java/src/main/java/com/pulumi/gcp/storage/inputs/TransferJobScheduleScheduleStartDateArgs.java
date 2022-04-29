@@ -5,11 +5,12 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class TransferJobScheduleScheduleStartDateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferJobScheduleScheduleStartDateArgs extends ResourceArgs {
 
     public static final TransferJobScheduleScheduleStartDateArgs Empty = new TransferJobScheduleScheduleStartDateArgs();
 

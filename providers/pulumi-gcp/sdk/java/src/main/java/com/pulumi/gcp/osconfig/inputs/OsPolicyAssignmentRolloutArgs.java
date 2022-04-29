@@ -6,11 +6,12 @@ package com.pulumi.gcp.osconfig.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutDisruptionBudgetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class OsPolicyAssignmentRolloutArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentRolloutArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentRolloutArgs Empty = new OsPolicyAssignmentRolloutArgs();
 

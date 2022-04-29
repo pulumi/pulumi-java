@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.pubsub.SubscriptionIAMPolicyArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -52,7 +54,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy")
-public class SubscriptionIAMPolicy extends com.pulumi.resources.CustomResource {
+public class SubscriptionIAMPolicy extends CustomResource {
     /**
      * (Computed) The etag of the subscription&#39;s IAM policy.
      * 
@@ -135,19 +137,19 @@ public class SubscriptionIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SubscriptionIAMPolicy(String name, SubscriptionIAMPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SubscriptionIAMPolicy(String name, SubscriptionIAMPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, args == null ? SubscriptionIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SubscriptionIAMPolicy(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SubscriptionIAMPolicy(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -159,7 +161,7 @@ public class SubscriptionIAMPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubscriptionIAMPolicy get(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SubscriptionIAMPolicy get(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable CustomResourceOptions options) {
         return new SubscriptionIAMPolicy(name, id, state, options);
     }
 }

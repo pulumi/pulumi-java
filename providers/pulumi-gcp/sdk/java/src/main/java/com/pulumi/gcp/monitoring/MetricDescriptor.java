@@ -12,6 +12,8 @@ import com.pulumi.gcp.monitoring.MetricDescriptorArgs;
 import com.pulumi.gcp.monitoring.inputs.MetricDescriptorState;
 import com.pulumi.gcp.monitoring.outputs.MetricDescriptorLabel;
 import com.pulumi.gcp.monitoring.outputs.MetricDescriptorMetadata;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:monitoring/metricDescriptor:MetricDescriptor")
-public class MetricDescriptor extends com.pulumi.resources.CustomResource {
+public class MetricDescriptor extends CustomResource {
     /**
      * A human-readable description for the label.
      * 
@@ -281,19 +283,19 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MetricDescriptor(String name, MetricDescriptorArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MetricDescriptor(String name, MetricDescriptorArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:monitoring/metricDescriptor:MetricDescriptor", name, args == null ? MetricDescriptorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MetricDescriptor(String name, Output<String> id, @Nullable MetricDescriptorState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MetricDescriptor(String name, Output<String> id, @Nullable MetricDescriptorState state, @Nullable CustomResourceOptions options) {
         super("gcp:monitoring/metricDescriptor:MetricDescriptor", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -305,7 +307,7 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MetricDescriptor get(String name, Output<String> id, @Nullable MetricDescriptorState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MetricDescriptor get(String name, Output<String> id, @Nullable MetricDescriptorState state, @Nullable CustomResourceOptions options) {
         return new MetricDescriptor(name, id, state, options);
     }
 }

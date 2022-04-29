@@ -8,10 +8,11 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs();
 

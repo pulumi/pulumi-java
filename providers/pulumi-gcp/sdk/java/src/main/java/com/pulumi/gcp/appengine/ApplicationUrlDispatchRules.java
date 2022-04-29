@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesState;
 import com.pulumi.gcp.appengine.outputs.ApplicationUrlDispatchRulesDispatchRule;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules")
-public class ApplicationUrlDispatchRules extends com.pulumi.resources.CustomResource {
+public class ApplicationUrlDispatchRules extends CustomResource {
     /**
      * Rules to match an HTTP request and dispatch that request to a service.
      * Structure is documented below.
@@ -89,19 +91,19 @@ public class ApplicationUrlDispatchRules extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplicationUrlDispatchRules(String name, ApplicationUrlDispatchRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ApplicationUrlDispatchRules(String name, ApplicationUrlDispatchRulesArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, args == null ? ApplicationUrlDispatchRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ApplicationUrlDispatchRules(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationUrlDispatchRules(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -113,7 +115,7 @@ public class ApplicationUrlDispatchRules extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationUrlDispatchRules get(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationUrlDispatchRules get(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable CustomResourceOptions options) {
         return new ApplicationUrlDispatchRules(name, id, state, options);
     }
 }

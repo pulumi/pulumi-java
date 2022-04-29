@@ -5,12 +5,13 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
 
-public final class JobPigConfigLoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobPigConfigLoggingConfigArgs extends ResourceArgs {
 
     public static final JobPigConfigLoggingConfigArgs Empty = new JobPigConfigLoggingConfigArgs();
 

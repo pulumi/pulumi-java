@@ -9,6 +9,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedIss
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaPoolIssuancePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaPoolIssuancePolicyArgs extends ResourceArgs {
 
     public static final CaPoolIssuancePolicyArgs Empty = new CaPoolIssuancePolicyArgs();
 

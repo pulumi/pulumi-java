@@ -9,13 +9,14 @@ import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentCloudBuildOpt
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentContainerArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentFileArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentZipArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionDeploymentArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionDeploymentArgs Empty = new FlexibleAppVersionDeploymentArgs();
 

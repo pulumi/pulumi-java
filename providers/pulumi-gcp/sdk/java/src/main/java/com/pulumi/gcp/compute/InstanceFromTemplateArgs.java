@@ -17,6 +17,7 @@ import com.pulumi.gcp.compute.inputs.InstanceFromTemplateSchedulingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateScratchDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateServiceAccountArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFromTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFromTemplateArgs extends ResourceArgs {
 
     public static final InstanceFromTemplateArgs Empty = new InstanceFromTemplateArgs();
 

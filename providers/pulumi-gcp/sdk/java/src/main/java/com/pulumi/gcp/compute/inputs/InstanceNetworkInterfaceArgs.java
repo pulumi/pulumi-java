@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceAccessConfigArgs;
 import com.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceAliasIpRangeArgs;
 import com.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceIpv6AccessConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceNetworkInterfaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceNetworkInterfaceArgs extends ResourceArgs {
 
     public static final InstanceNetworkInterfaceArgs Empty = new InstanceNetworkInterfaceArgs();
 

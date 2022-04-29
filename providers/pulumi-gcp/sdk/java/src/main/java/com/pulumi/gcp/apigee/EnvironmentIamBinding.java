@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.apigee.EnvironmentIamBindingArgs;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamBindingState;
 import com.pulumi.gcp.apigee.outputs.EnvironmentIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +61,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:apigee/environmentIamBinding:EnvironmentIamBinding")
-public class EnvironmentIamBinding extends com.pulumi.resources.CustomResource {
+public class EnvironmentIamBinding extends CustomResource {
     @Export(name="condition", type=EnvironmentIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamBindingCondition> condition;
 
@@ -146,19 +148,19 @@ public class EnvironmentIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EnvironmentIamBinding(String name, EnvironmentIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EnvironmentIamBinding(String name, EnvironmentIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:apigee/environmentIamBinding:EnvironmentIamBinding", name, args == null ? EnvironmentIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EnvironmentIamBinding(String name, Output<String> id, @Nullable EnvironmentIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EnvironmentIamBinding(String name, Output<String> id, @Nullable EnvironmentIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:apigee/environmentIamBinding:EnvironmentIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -170,7 +172,7 @@ public class EnvironmentIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnvironmentIamBinding get(String name, Output<String> id, @Nullable EnvironmentIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EnvironmentIamBinding get(String name, Output<String> id, @Nullable EnvironmentIamBindingState state, @Nullable CustomResourceOptions options) {
         return new EnvironmentIamBinding(name, id, state, options);
     }
 }

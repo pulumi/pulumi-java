@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.kms.CryptoKeyArgs;
 import com.pulumi.gcp.kms.inputs.CryptoKeyState;
 import com.pulumi.gcp.kms.outputs.CryptoKeyVersionTemplate;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:kms/cryptoKey:CryptoKey")
-public class CryptoKey extends com.pulumi.resources.CustomResource {
+public class CryptoKey extends CustomResource {
     /**
      * The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
      * If not specified at creation time, the default duration is 24 hours.
@@ -221,19 +223,19 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CryptoKey(String name, CryptoKeyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CryptoKey(String name, CryptoKeyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:kms/cryptoKey:CryptoKey", name, args == null ? CryptoKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CryptoKey(String name, Output<String> id, @Nullable CryptoKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CryptoKey(String name, Output<String> id, @Nullable CryptoKeyState state, @Nullable CustomResourceOptions options) {
         super("gcp:kms/cryptoKey:CryptoKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -245,7 +247,7 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CryptoKey get(String name, Output<String> id, @Nullable CryptoKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CryptoKey get(String name, Output<String> id, @Nullable CryptoKeyState state, @Nullable CustomResourceOptions options) {
         return new CryptoKey(name, id, state, options);
     }
 }

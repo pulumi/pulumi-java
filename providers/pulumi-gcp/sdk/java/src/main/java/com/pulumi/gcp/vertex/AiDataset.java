@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.vertex.AiDatasetArgs;
 import com.pulumi.gcp.vertex.inputs.AiDatasetState;
 import com.pulumi.gcp.vertex.outputs.AiDatasetEncryptionSpec;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:vertex/aiDataset:AiDataset")
-public class AiDataset extends com.pulumi.resources.CustomResource {
+public class AiDataset extends CustomResource {
     /**
      * The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
      * fractional digits.
@@ -190,19 +192,19 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AiDataset(String name, AiDatasetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AiDataset(String name, AiDatasetArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AiDataset(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AiDataset(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable CustomResourceOptions options) {
         super("gcp:vertex/aiDataset:AiDataset", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -214,7 +216,7 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiDataset get(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AiDataset get(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable CustomResourceOptions options) {
         return new AiDataset(name, id, state, options);
     }
 }

@@ -7,11 +7,12 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingHostRuleArgs;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class EdgeCacheServiceRoutingArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdgeCacheServiceRoutingArgs extends ResourceArgs {
 
     public static final EdgeCacheServiceRoutingArgs Empty = new EdgeCacheServiceRoutingArgs();
 

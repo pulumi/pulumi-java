@@ -5,11 +5,12 @@ package com.pulumi.gcp.tpu.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class NodeSchedulingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeSchedulingConfigArgs extends ResourceArgs {
 
     public static final NodeSchedulingConfigArgs Empty = new NodeSchedulingConfigArgs();
 

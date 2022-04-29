@@ -13,6 +13,8 @@ import com.pulumi.gcp.container.inputs.AzureNodePoolState;
 import com.pulumi.gcp.container.outputs.AzureNodePoolAutoscaling;
 import com.pulumi.gcp.container.outputs.AzureNodePoolConfig;
 import com.pulumi.gcp.container.outputs.AzureNodePoolMaxPodsConstraint;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:container/azureNodePool:AzureNodePool")
-public class AzureNodePool extends com.pulumi.resources.CustomResource {
+public class AzureNodePool extends CustomResource {
     /**
      * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
@@ -309,19 +311,19 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AzureNodePool(String name, AzureNodePoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AzureNodePool(String name, AzureNodePoolArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureNodePool:AzureNodePool", name, args == null ? AzureNodePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AzureNodePool(String name, Output<String> id, @Nullable AzureNodePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AzureNodePool(String name, Output<String> id, @Nullable AzureNodePoolState state, @Nullable CustomResourceOptions options) {
         super("gcp:container/azureNodePool:AzureNodePool", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -333,7 +335,7 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AzureNodePool get(String name, Output<String> id, @Nullable AzureNodePoolState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AzureNodePool get(String name, Output<String> id, @Nullable AzureNodePoolState state, @Nullable CustomResourceOptions options) {
         return new AzureNodePool(name, id, state, options);
     }
 }

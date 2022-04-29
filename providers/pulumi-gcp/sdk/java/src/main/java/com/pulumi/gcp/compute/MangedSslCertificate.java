@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.MangedSslCertificateArgs;
 import com.pulumi.gcp.compute.inputs.MangedSslCertificateState;
 import com.pulumi.gcp.compute.outputs.MangedSslCertificateManaged;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  */
 @Deprecated /* gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate */
 @ResourceType(type="gcp:compute/mangedSslCertificate:MangedSslCertificate")
-public class MangedSslCertificate extends com.pulumi.resources.CustomResource {
+public class MangedSslCertificate extends CustomResource {
     /**
      * The unique identifier for the resource.
      * 
@@ -183,19 +185,19 @@ public class MangedSslCertificate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MangedSslCertificate(String name, @Nullable MangedSslCertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MangedSslCertificate(String name, @Nullable MangedSslCertificateArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, args == null ? MangedSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MangedSslCertificate(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MangedSslCertificate(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -207,7 +209,7 @@ public class MangedSslCertificate extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MangedSslCertificate get(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MangedSslCertificate get(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable CustomResourceOptions options) {
         return new MangedSslCertificate(name, id, state, options);
     }
 }

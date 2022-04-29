@@ -5,11 +5,12 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GroupMembershipRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GroupMembershipRoleArgs extends ResourceArgs {
 
     public static final GroupMembershipRoleArgs Empty = new GroupMembershipRoleArgs();
 

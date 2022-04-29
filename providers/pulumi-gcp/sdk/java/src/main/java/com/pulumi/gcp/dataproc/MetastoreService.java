@@ -12,6 +12,8 @@ import com.pulumi.gcp.dataproc.MetastoreServiceArgs;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceState;
 import com.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfig;
 import com.pulumi.gcp.dataproc.outputs.MetastoreServiceMaintenanceWindow;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dataproc/metastoreService:MetastoreService")
-public class MetastoreService extends com.pulumi.resources.CustomResource {
+public class MetastoreService extends CustomResource {
     /**
      * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
@@ -278,19 +280,19 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MetastoreService(String name, MetastoreServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MetastoreService(String name, MetastoreServiceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MetastoreService(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MetastoreService(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable CustomResourceOptions options) {
         super("gcp:dataproc/metastoreService:MetastoreService", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -302,7 +304,7 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MetastoreService get(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MetastoreService get(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable CustomResourceOptions options) {
         return new MetastoreService(name, id, state, options);
     }
 }

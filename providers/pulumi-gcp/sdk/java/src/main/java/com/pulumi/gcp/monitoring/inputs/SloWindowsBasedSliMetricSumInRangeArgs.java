@@ -6,11 +6,12 @@ package com.pulumi.gcp.monitoring.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SloWindowsBasedSliMetricSumInRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SloWindowsBasedSliMetricSumInRangeArgs extends ResourceArgs {
 
     public static final SloWindowsBasedSliMetricSumInRangeArgs Empty = new SloWindowsBasedSliMetricSumInRangeArgs();
 

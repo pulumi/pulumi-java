@@ -5,13 +5,14 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateRevocationDetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateRevocationDetailArgs extends ResourceArgs {
 
     public static final CertificateRevocationDetailArgs Empty = new CertificateRevocationDetailArgs();
 

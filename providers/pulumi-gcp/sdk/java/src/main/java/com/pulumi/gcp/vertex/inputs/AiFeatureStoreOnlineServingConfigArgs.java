@@ -5,11 +5,12 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class AiFeatureStoreOnlineServingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AiFeatureStoreOnlineServingConfigArgs extends ResourceArgs {
 
     public static final AiFeatureStoreOnlineServingConfigArgs Empty = new AiFeatureStoreOnlineServingConfigArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.AzureNodePoolConfigArgs;
 import com.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureNodePoolArgs extends ResourceArgs {
 
     public static final AzureNodePoolArgs Empty = new AzureNodePoolArgs();
 

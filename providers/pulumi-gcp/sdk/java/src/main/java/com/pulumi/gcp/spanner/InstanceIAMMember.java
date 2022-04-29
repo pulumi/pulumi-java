@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.spanner.InstanceIAMMemberArgs;
 import com.pulumi.gcp.spanner.inputs.InstanceIAMMemberState;
 import com.pulumi.gcp.spanner.outputs.InstanceIAMMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +63,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:spanner/instanceIAMMember:InstanceIAMMember")
-public class InstanceIAMMember extends com.pulumi.resources.CustomResource {
+public class InstanceIAMMember extends CustomResource {
     @Export(name="condition", type=InstanceIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIAMMemberCondition> condition;
 
@@ -158,19 +160,19 @@ public class InstanceIAMMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceIAMMember(String name, InstanceIAMMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceIAMMember(String name, InstanceIAMMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/instanceIAMMember:InstanceIAMMember", name, args == null ? InstanceIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceIAMMember(String name, Output<String> id, @Nullable InstanceIAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceIAMMember(String name, Output<String> id, @Nullable InstanceIAMMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:spanner/instanceIAMMember:InstanceIAMMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -182,7 +184,7 @@ public class InstanceIAMMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceIAMMember get(String name, Output<String> id, @Nullable InstanceIAMMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceIAMMember get(String name, Output<String> id, @Nullable InstanceIAMMemberState state, @Nullable CustomResourceOptions options) {
         return new InstanceIAMMember(name, id, state, options);
     }
 }

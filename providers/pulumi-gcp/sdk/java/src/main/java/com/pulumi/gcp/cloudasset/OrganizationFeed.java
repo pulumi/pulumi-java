@@ -12,6 +12,8 @@ import com.pulumi.gcp.cloudasset.OrganizationFeedArgs;
 import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedState;
 import com.pulumi.gcp.cloudasset.outputs.OrganizationFeedCondition;
 import com.pulumi.gcp.cloudasset.outputs.OrganizationFeedFeedOutputConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:cloudasset/organizationFeed:OrganizationFeed")
-public class OrganizationFeed extends com.pulumi.resources.CustomResource {
+public class OrganizationFeed extends CustomResource {
     /**
      * A list of the full names of the assets to receive updates. You must specify either or both of
      * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
@@ -223,19 +225,19 @@ public class OrganizationFeed extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OrganizationFeed(String name, OrganizationFeedArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OrganizationFeed(String name, OrganizationFeedArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:cloudasset/organizationFeed:OrganizationFeed", name, args == null ? OrganizationFeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OrganizationFeed(String name, Output<String> id, @Nullable OrganizationFeedState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationFeed(String name, Output<String> id, @Nullable OrganizationFeedState state, @Nullable CustomResourceOptions options) {
         super("gcp:cloudasset/organizationFeed:OrganizationFeed", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -247,7 +249,7 @@ public class OrganizationFeed extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationFeed get(String name, Output<String> id, @Nullable OrganizationFeedState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationFeed get(String name, Output<String> id, @Nullable OrganizationFeedState state, @Nullable CustomResourceOptions options) {
         return new OrganizationFeed(name, id, state, options);
     }
 }

@@ -6,13 +6,14 @@ package com.pulumi.gcp.certificateauthority.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs extends ResourceArgs {
 
     public static final CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs();
 

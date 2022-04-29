@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.healthcare.Hl7StoreIamBindingArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.Hl7StoreIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -61,7 +63,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding")
-public class Hl7StoreIamBinding extends com.pulumi.resources.CustomResource {
+public class Hl7StoreIamBinding extends CustomResource {
     @Export(name="condition", type=Hl7StoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamBindingCondition> condition;
 
@@ -148,19 +150,19 @@ public class Hl7StoreIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Hl7StoreIamBinding(String name, Hl7StoreIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Hl7StoreIamBinding(String name, Hl7StoreIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding", name, args == null ? Hl7StoreIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Hl7StoreIamBinding(String name, Output<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Hl7StoreIamBinding(String name, Output<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -172,7 +174,7 @@ public class Hl7StoreIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Hl7StoreIamBinding get(String name, Output<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Hl7StoreIamBinding get(String name, Output<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable CustomResourceOptions options) {
         return new Hl7StoreIamBinding(name, id, state, options);
     }
 }

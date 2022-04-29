@@ -12,6 +12,8 @@ import com.pulumi.gcp.compute.ImageArgs;
 import com.pulumi.gcp.compute.inputs.ImageState;
 import com.pulumi.gcp.compute.outputs.ImageGuestOsFeature;
 import com.pulumi.gcp.compute.outputs.ImageRawDisk;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/image:Image")
-public class Image extends com.pulumi.resources.CustomResource {
+public class Image extends CustomResource {
     /**
      * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
      * 
@@ -366,19 +368,19 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Image(String name, @Nullable ImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Image(String name, @Nullable ImageArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/image:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Image(String name, Output<String> id, @Nullable ImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Image(String name, Output<String> id, @Nullable ImageState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/image:Image", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -390,7 +392,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Image get(String name, Output<String> id, @Nullable ImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Image get(String name, Output<String> id, @Nullable ImageState state, @Nullable CustomResourceOptions options) {
         return new Image(name, id, state, options);
     }
 }

@@ -12,6 +12,8 @@ import com.pulumi.gcp.bigquery.DatasetArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetState;
 import com.pulumi.gcp.bigquery.outputs.DatasetAccess;
 import com.pulumi.gcp.bigquery.outputs.DatasetDefaultEncryptionConfiguration;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigquery/dataset:Dataset")
-public class Dataset extends com.pulumi.resources.CustomResource {
+public class Dataset extends CustomResource {
     /**
      * An array of objects that define dataset access for one or more entities.
      * Structure is documented below.
@@ -294,19 +296,19 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Dataset(String name, DatasetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Dataset(String name, DatasetArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/dataset:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Dataset(String name, Output<String> id, @Nullable DatasetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Dataset(String name, Output<String> id, @Nullable DatasetState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigquery/dataset:Dataset", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -318,7 +320,7 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Dataset get(String name, Output<String> id, @Nullable DatasetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Dataset get(String name, Output<String> id, @Nullable DatasetState state, @Nullable CustomResourceOptions options) {
         return new Dataset(name, id, state, options);
     }
 }

@@ -19,6 +19,8 @@ import com.pulumi.gcp.compute.outputs.RegionBackendServiceFailoverPolicy;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceIap;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceLogConfig;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetection;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionBackendService:RegionBackendService")
-public class RegionBackendService extends com.pulumi.resources.CustomResource {
+public class RegionBackendService extends CustomResource {
     /**
      * Lifetime of cookies in seconds if session_affinity is
      * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -604,19 +606,19 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionBackendService(String name, @Nullable RegionBackendServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionBackendService(String name, @Nullable RegionBackendServiceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionBackendService:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionBackendService(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionBackendService(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionBackendService:RegionBackendService", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -628,7 +630,7 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionBackendService get(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionBackendService get(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable CustomResourceOptions options) {
         return new RegionBackendService(name, id, state, options);
     }
 }

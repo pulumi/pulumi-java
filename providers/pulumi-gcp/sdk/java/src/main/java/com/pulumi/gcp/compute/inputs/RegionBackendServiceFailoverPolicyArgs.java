@@ -5,6 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionBackendServiceFailoverPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionBackendServiceFailoverPolicyArgs extends ResourceArgs {
 
     public static final RegionBackendServiceFailoverPolicyArgs Empty = new RegionBackendServiceFailoverPolicyArgs();
 

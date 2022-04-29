@@ -5,11 +5,12 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class FunctionEventTriggerFailurePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionEventTriggerFailurePolicyArgs extends ResourceArgs {
 
     public static final FunctionEventTriggerFailurePolicyArgs Empty = new FunctionEventTriggerFailurePolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.gcp.firestore.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.firestore.inputs.IndexFieldArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IndexState extends com.pulumi.resources.ResourceArgs {
+public final class IndexState extends ResourceArgs {
 
     public static final IndexState Empty = new IndexState();
 

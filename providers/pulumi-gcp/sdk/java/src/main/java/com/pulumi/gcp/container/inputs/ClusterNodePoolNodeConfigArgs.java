@@ -14,6 +14,7 @@ import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigSandboxConfigArg
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigShieldedInstanceConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigTaintArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterNodePoolNodeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterNodePoolNodeConfigArgs extends ResourceArgs {
 
     public static final ClusterNodePoolNodeConfigArgs Empty = new ClusterNodePoolNodeConfigArgs();
 

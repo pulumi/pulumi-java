@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigtable.InstanceArgs;
 import com.pulumi.gcp.bigtable.inputs.InstanceState;
 import com.pulumi.gcp.bigtable.outputs.InstanceCluster;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:bigtable/instance:Instance")
-public class Instance extends com.pulumi.resources.CustomResource {
+public class Instance extends CustomResource {
     /**
      * A block of cluster configuration options. This can be specified at least once, and up to 4 times.
      * See structure below.
@@ -184,19 +186,19 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Instance(String name, @Nullable InstanceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Instance(String name, @Nullable InstanceArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable CustomResourceOptions options) {
         super("gcp:bigtable/instance:Instance", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -208,7 +210,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Instance get(String name, Output<String> id, @Nullable InstanceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Instance get(String name, Output<String> id, @Nullable InstanceState state, @Nullable CustomResourceOptions options) {
         return new Instance(name, id, state, options);
     }
 }

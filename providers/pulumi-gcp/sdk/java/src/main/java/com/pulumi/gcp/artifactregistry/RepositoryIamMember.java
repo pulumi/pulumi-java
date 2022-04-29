@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.artifactregistry.RepositoryIamMemberArgs;
 import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberState;
 import com.pulumi.gcp.artifactregistry.outputs.RepositoryIamMemberCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -58,7 +60,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:artifactregistry/repositoryIamMember:RepositoryIamMember")
-public class RepositoryIamMember extends com.pulumi.resources.CustomResource {
+public class RepositoryIamMember extends CustomResource {
     @Export(name="condition", type=RepositoryIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ RepositoryIamMemberCondition> condition;
 
@@ -171,19 +173,19 @@ public class RepositoryIamMember extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RepositoryIamMember(String name, RepositoryIamMemberArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RepositoryIamMember(String name, RepositoryIamMemberArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, args == null ? RepositoryIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RepositoryIamMember(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RepositoryIamMember(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable CustomResourceOptions options) {
         super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -195,7 +197,7 @@ public class RepositoryIamMember extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RepositoryIamMember get(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RepositoryIamMember get(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable CustomResourceOptions options) {
         return new RepositoryIamMember(name, id, state, options);
     }
 }

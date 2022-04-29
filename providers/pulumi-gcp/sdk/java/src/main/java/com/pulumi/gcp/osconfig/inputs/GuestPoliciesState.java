@@ -9,6 +9,7 @@ import com.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs {
+public final class GuestPoliciesState extends ResourceArgs {
 
     public static final GuestPoliciesState Empty = new GuestPoliciesState();
 

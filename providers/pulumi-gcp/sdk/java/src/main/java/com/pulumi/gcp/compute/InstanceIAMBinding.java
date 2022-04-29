@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.InstanceIAMBindingArgs;
 import com.pulumi.gcp.compute.inputs.InstanceIAMBindingState;
 import com.pulumi.gcp.compute.outputs.InstanceIAMBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/instanceIAMBinding:InstanceIAMBinding")
-public class InstanceIAMBinding extends com.pulumi.resources.CustomResource {
+public class InstanceIAMBinding extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -188,19 +190,19 @@ public class InstanceIAMBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceIAMBinding(String name, InstanceIAMBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceIAMBinding(String name, InstanceIAMBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceIAMBinding:InstanceIAMBinding", name, args == null ? InstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceIAMBinding(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceIAMBinding(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/instanceIAMBinding:InstanceIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -212,7 +214,7 @@ public class InstanceIAMBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceIAMBinding get(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceIAMBinding get(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable CustomResourceOptions options) {
         return new InstanceIAMBinding(name, id, state, options);
     }
 }

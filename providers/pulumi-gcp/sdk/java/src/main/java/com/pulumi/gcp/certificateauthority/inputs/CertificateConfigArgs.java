@@ -8,10 +8,11 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class CertificateConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateConfigArgs extends ResourceArgs {
 
     public static final CertificateConfigArgs Empty = new CertificateConfigArgs();
 

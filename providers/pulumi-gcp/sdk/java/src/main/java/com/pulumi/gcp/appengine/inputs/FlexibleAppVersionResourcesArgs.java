@@ -6,6 +6,7 @@ package com.pulumi.gcp.appengine.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionResourcesArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionResourcesArgs Empty = new FlexibleAppVersionResourcesArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingCpuUtil
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlexibleAppVersionAutomaticScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionAutomaticScalingArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionAutomaticScalingArgs Empty = new FlexibleAppVersionAutomaticScalingArgs();
 

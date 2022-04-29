@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.TunnelInstanceIAMBindingArgs;
 import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingState;
 import com.pulumi.gcp.iap.outputs.TunnelInstanceIAMBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding")
-public class TunnelInstanceIAMBinding extends com.pulumi.resources.CustomResource {
+public class TunnelInstanceIAMBinding extends CustomResource {
     /**
      * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
@@ -176,19 +178,19 @@ public class TunnelInstanceIAMBinding extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TunnelInstanceIAMBinding(String name, TunnelInstanceIAMBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TunnelInstanceIAMBinding(String name, TunnelInstanceIAMBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, args == null ? TunnelInstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TunnelInstanceIAMBinding(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TunnelInstanceIAMBinding(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -200,7 +202,7 @@ public class TunnelInstanceIAMBinding extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TunnelInstanceIAMBinding get(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TunnelInstanceIAMBinding get(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable CustomResourceOptions options) {
         return new TunnelInstanceIAMBinding(name, id, state, options);
     }
 }

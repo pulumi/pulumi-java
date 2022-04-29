@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.healthcare.DicomStoreIamBindingArgs;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.DicomStoreIamBindingCondition;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -61,7 +63,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:healthcare/dicomStoreIamBinding:DicomStoreIamBinding")
-public class DicomStoreIamBinding extends com.pulumi.resources.CustomResource {
+public class DicomStoreIamBinding extends CustomResource {
     @Export(name="condition", type=DicomStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamBindingCondition> condition;
 
@@ -148,19 +150,19 @@ public class DicomStoreIamBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DicomStoreIamBinding(String name, DicomStoreIamBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DicomStoreIamBinding(String name, DicomStoreIamBindingArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/dicomStoreIamBinding:DicomStoreIamBinding", name, args == null ? DicomStoreIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DicomStoreIamBinding(String name, Output<String> id, @Nullable DicomStoreIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DicomStoreIamBinding(String name, Output<String> id, @Nullable DicomStoreIamBindingState state, @Nullable CustomResourceOptions options) {
         super("gcp:healthcare/dicomStoreIamBinding:DicomStoreIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -172,7 +174,7 @@ public class DicomStoreIamBinding extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DicomStoreIamBinding get(String name, Output<String> id, @Nullable DicomStoreIamBindingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DicomStoreIamBinding get(String name, Output<String> id, @Nullable DicomStoreIamBindingState state, @Nullable CustomResourceOptions options) {
         return new DicomStoreIamBinding(name, id, state, options);
     }
 }

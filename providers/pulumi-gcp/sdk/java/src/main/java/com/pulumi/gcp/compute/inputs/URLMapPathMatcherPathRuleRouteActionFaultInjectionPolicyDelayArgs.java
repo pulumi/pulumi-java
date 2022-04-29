@@ -6,11 +6,12 @@ package com.pulumi.gcp.compute.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs Empty = new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Hl7StoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class Hl7StoreArgs extends ResourceArgs {
 
     public static final Hl7StoreArgs Empty = new Hl7StoreArgs();
 

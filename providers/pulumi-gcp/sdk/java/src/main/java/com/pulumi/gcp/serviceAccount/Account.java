@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.serviceAccount.AccountArgs;
 import com.pulumi.gcp.serviceAccount.inputs.AccountState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:serviceAccount/account:Account")
-public class Account extends com.pulumi.resources.CustomResource {
+public class Account extends CustomResource {
     /**
      * The account id that is used to generate the service
      * account email address and a stable unique id. It is unique within a project,
@@ -193,19 +195,19 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Account(String name, AccountArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Account(String name, AccountArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:serviceAccount/account:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Account(String name, Output<String> id, @Nullable AccountState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Account(String name, Output<String> id, @Nullable AccountState state, @Nullable CustomResourceOptions options) {
         super("gcp:serviceAccount/account:Account", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -217,7 +219,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Account get(String name, Output<String> id, @Nullable AccountState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Account get(String name, Output<String> id, @Nullable AccountState state, @Nullable CustomResourceOptions options) {
         return new Account(name, id, state, options);
     }
 }

@@ -6,11 +6,12 @@ package com.pulumi.gcp.monitoring.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs extends com.pulumi.resources.ResourceArgs {
+public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs extends ResourceArgs {
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs();
 

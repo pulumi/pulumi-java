@@ -11,6 +11,8 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.appengine.ServiceNetworkSettingsArgs;
 import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsState;
 import com.pulumi.gcp.appengine.outputs.ServiceNetworkSettingsNetworkSettings;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings")
-public class ServiceNetworkSettings extends com.pulumi.resources.CustomResource {
+public class ServiceNetworkSettings extends CustomResource {
     /**
      * Ingress settings for this service. Will apply to all versions.
      * Structure is documented below.
@@ -110,19 +112,19 @@ public class ServiceNetworkSettings extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceNetworkSettings(String name, ServiceNetworkSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceNetworkSettings(String name, ServiceNetworkSettingsArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, args == null ? ServiceNetworkSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceNetworkSettings(String name, Output<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceNetworkSettings(String name, Output<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable CustomResourceOptions options) {
         super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -134,7 +136,7 @@ public class ServiceNetworkSettings extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceNetworkSettings get(String name, Output<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceNetworkSettings get(String name, Output<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable CustomResourceOptions options) {
         return new ServiceNetworkSettings(name, id, state, options);
     }
 }

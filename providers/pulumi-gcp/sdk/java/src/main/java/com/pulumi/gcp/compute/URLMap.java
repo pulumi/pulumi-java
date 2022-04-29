@@ -16,6 +16,8 @@ import com.pulumi.gcp.compute.outputs.URLMapHeaderAction;
 import com.pulumi.gcp.compute.outputs.URLMapHostRule;
 import com.pulumi.gcp.compute.outputs.URLMapPathMatcher;
 import com.pulumi.gcp.compute.outputs.URLMapTest;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +52,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/uRLMap:URLMap")
-public class URLMap extends com.pulumi.resources.CustomResource {
+public class URLMap extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -307,19 +309,19 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public URLMap(String name, @Nullable URLMapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public URLMap(String name, @Nullable URLMapArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/uRLMap:URLMap", name, args == null ? URLMapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private URLMap(String name, Output<String> id, @Nullable URLMapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private URLMap(String name, Output<String> id, @Nullable URLMapState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/uRLMap:URLMap", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -331,7 +333,7 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static URLMap get(String name, Output<String> id, @Nullable URLMapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static URLMap get(String name, Output<String> id, @Nullable URLMapState state, @Nullable CustomResourceOptions options) {
         return new URLMap(name, id, state, options);
     }
 }

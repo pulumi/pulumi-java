@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.logging.ProjectBucketConfigArgs;
 import com.pulumi.gcp.logging.inputs.ProjectBucketConfigState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:logging/projectBucketConfig:ProjectBucketConfig")
-public class ProjectBucketConfig extends com.pulumi.resources.CustomResource {
+public class ProjectBucketConfig extends CustomResource {
     /**
      * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
@@ -155,19 +157,19 @@ public class ProjectBucketConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProjectBucketConfig(String name, ProjectBucketConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProjectBucketConfig(String name, ProjectBucketConfigArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, args == null ? ProjectBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProjectBucketConfig(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProjectBucketConfig(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable CustomResourceOptions options) {
         super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class ProjectBucketConfig extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectBucketConfig get(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectBucketConfig get(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable CustomResourceOptions options) {
         return new ProjectBucketConfig(name, id, state, options);
     }
 }

@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutArgs;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGoodTotalRatioArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceArgs {
+public final class SloRequestBasedSliArgs extends ResourceArgs {
 
     public static final SloRequestBasedSliArgs Empty = new SloRequestBasedSliArgs();
 

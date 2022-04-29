@@ -10,6 +10,7 @@ import com.pulumi.gcp.bigquery.inputs.JobQueryDestinationEncryptionConfiguration
 import com.pulumi.gcp.bigquery.inputs.JobQueryDestinationTableArgs;
 import com.pulumi.gcp.bigquery.inputs.JobQueryScriptOptionsArgs;
 import com.pulumi.gcp.bigquery.inputs.JobQueryUserDefinedFunctionResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobQueryArgs extends ResourceArgs {
 
     public static final JobQueryArgs Empty = new JobQueryArgs();
 

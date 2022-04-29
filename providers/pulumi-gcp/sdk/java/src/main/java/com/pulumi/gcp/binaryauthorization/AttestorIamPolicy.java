@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.binaryauthorization.AttestorIamPolicyArgs;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,7 +58,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:binaryauthorization/attestorIamPolicy:AttestorIamPolicy")
-public class AttestorIamPolicy extends com.pulumi.resources.CustomResource {
+public class AttestorIamPolicy extends CustomResource {
     /**
      * Used to find the parent resource to bind the IAM policy to
      * 
@@ -139,19 +141,19 @@ public class AttestorIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AttestorIamPolicy(String name, AttestorIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AttestorIamPolicy(String name, AttestorIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:binaryauthorization/attestorIamPolicy:AttestorIamPolicy", name, args == null ? AttestorIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AttestorIamPolicy(String name, Output<String> id, @Nullable AttestorIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AttestorIamPolicy(String name, Output<String> id, @Nullable AttestorIamPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:binaryauthorization/attestorIamPolicy:AttestorIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -163,7 +165,7 @@ public class AttestorIamPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttestorIamPolicy get(String name, Output<String> id, @Nullable AttestorIamPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AttestorIamPolicy get(String name, Output<String> id, @Nullable AttestorIamPolicyState state, @Nullable CustomResourceOptions options) {
         return new AttestorIamPolicy(name, id, state, options);
     }
 }

@@ -9,13 +9,14 @@ import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementBinauthzArg
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncArgs;
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementHierarchyControllerArgs;
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementPolicyControllerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FeatureMembershipConfigmanagementArgs extends com.pulumi.resources.ResourceArgs {
+public final class FeatureMembershipConfigmanagementArgs extends ResourceArgs {
 
     public static final FeatureMembershipConfigmanagementArgs Empty = new FeatureMembershipConfigmanagementArgs();
 

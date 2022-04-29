@@ -10,13 +10,14 @@ import com.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchDeploymentState extends com.pulumi.resources.ResourceArgs {
+public final class PatchDeploymentState extends ResourceArgs {
 
     public static final PatchDeploymentState Empty = new PatchDeploymentState();
 

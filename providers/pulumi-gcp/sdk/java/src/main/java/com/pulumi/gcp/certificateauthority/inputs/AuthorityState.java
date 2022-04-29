@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityState extends ResourceArgs {
 
     public static final AuthorityState Empty = new AuthorityState();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.tpu.inputs.NodeNetworkEndpointArgs;
 import com.pulumi.gcp.tpu.inputs.NodeSchedulingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeState extends com.pulumi.resources.ResourceArgs {
+public final class NodeState extends ResourceArgs {
 
     public static final NodeState Empty = new NodeState();
 

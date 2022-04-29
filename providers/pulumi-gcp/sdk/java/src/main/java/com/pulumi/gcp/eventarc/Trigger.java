@@ -13,6 +13,8 @@ import com.pulumi.gcp.eventarc.inputs.TriggerState;
 import com.pulumi.gcp.eventarc.outputs.TriggerDestination;
 import com.pulumi.gcp.eventarc.outputs.TriggerMatchingCriteria;
 import com.pulumi.gcp.eventarc.outputs.TriggerTransport;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:eventarc/trigger:Trigger")
-public class Trigger extends com.pulumi.resources.CustomResource {
+public class Trigger extends CustomResource {
     /**
      * Output only. The creation time.
      * 
@@ -237,19 +239,19 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Trigger(String name, TriggerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Trigger(String name, TriggerArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:eventarc/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable CustomResourceOptions options) {
         super("gcp:eventarc/trigger:Trigger", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -261,7 +263,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Trigger get(String name, Output<String> id, @Nullable TriggerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Trigger get(String name, Output<String> id, @Nullable TriggerState state, @Nullable CustomResourceOptions options) {
         return new Trigger(name, id, state, options);
     }
 }

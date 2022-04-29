@@ -8,12 +8,13 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends ResourceArgs {
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryArgs();
 

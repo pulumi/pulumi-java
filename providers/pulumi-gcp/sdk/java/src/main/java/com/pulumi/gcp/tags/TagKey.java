@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.tags.TagKeyArgs;
 import com.pulumi.gcp.tags.inputs.TagKeyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:tags/tagKey:TagKey")
-public class TagKey extends com.pulumi.resources.CustomResource {
+public class TagKey extends CustomResource {
     /**
      * Output only. Creation time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
      * fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
@@ -166,19 +168,19 @@ public class TagKey extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TagKey(String name, TagKeyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TagKey(String name, TagKeyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:tags/tagKey:TagKey", name, args == null ? TagKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TagKey(String name, Output<String> id, @Nullable TagKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TagKey(String name, Output<String> id, @Nullable TagKeyState state, @Nullable CustomResourceOptions options) {
         super("gcp:tags/tagKey:TagKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -190,7 +192,7 @@ public class TagKey extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagKey get(String name, Output<String> id, @Nullable TagKeyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TagKey get(String name, Output<String> id, @Nullable TagKeyState state, @Nullable CustomResourceOptions options) {
         return new TagKey(name, id, state, options);
     }
 }

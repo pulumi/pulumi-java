@@ -6,6 +6,7 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends ResourceArgs {
 
     public static final AccessLevelsAccessLevelBasicConditionDevicePolicyArgs Empty = new AccessLevelsAccessLevelBasicConditionDevicePolicyArgs();
 

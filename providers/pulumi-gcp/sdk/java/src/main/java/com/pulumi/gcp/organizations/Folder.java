@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.organizations.FolderArgs;
 import com.pulumi.gcp.organizations.inputs.FolderState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:organizations/folder:Folder")
-public class Folder extends com.pulumi.resources.CustomResource {
+public class Folder extends CustomResource {
     /**
      * Timestamp when the Folder was created. Assigned by the server.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
@@ -157,19 +159,19 @@ public class Folder extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Folder(String name, FolderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Folder(String name, FolderArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/folder:Folder", name, args == null ? FolderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Folder(String name, Output<String> id, @Nullable FolderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Folder(String name, Output<String> id, @Nullable FolderState state, @Nullable CustomResourceOptions options) {
         super("gcp:organizations/folder:Folder", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -181,7 +183,7 @@ public class Folder extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Folder get(String name, Output<String> id, @Nullable FolderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Folder get(String name, Output<String> id, @Nullable FolderState state, @Nullable CustomResourceOptions options) {
         return new Folder(name, id, state, options);
     }
 }

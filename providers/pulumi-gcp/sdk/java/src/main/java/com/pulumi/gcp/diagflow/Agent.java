@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.diagflow.AgentArgs;
 import com.pulumi.gcp.diagflow.inputs.AgentState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -41,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:diagflow/agent:Agent")
-public class Agent extends com.pulumi.resources.CustomResource {
+public class Agent extends CustomResource {
     /**
      * API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
      * different service endpoints for different API versions. However, bots connectors and webhook calls will follow
@@ -298,19 +300,19 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Agent(String name, AgentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Agent(String name, AgentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/agent:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Agent(String name, Output<String> id, @Nullable AgentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Agent(String name, Output<String> id, @Nullable AgentState state, @Nullable CustomResourceOptions options) {
         super("gcp:diagflow/agent:Agent", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -322,7 +324,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Agent get(String name, Output<String> id, @Nullable AgentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Agent get(String name, Output<String> id, @Nullable AgentState state, @Nullable CustomResourceOptions options) {
         return new Agent(name, id, state, options);
     }
 }

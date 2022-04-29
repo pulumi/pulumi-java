@@ -13,6 +13,8 @@ import com.pulumi.gcp.assuredworkloads.inputs.WorkloadState;
 import com.pulumi.gcp.assuredworkloads.outputs.WorkloadKmsSettings;
 import com.pulumi.gcp.assuredworkloads.outputs.WorkloadResource;
 import com.pulumi.gcp.assuredworkloads.outputs.WorkloadResourceSetting;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:assuredworkloads/workload:Workload")
-public class Workload extends com.pulumi.resources.CustomResource {
+public class Workload extends CustomResource {
     /**
      * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, &#39;billingAccounts/012345-567890-ABCDEF`.
      * 
@@ -231,19 +233,19 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Workload(String name, WorkloadArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Workload(String name, WorkloadArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:assuredworkloads/workload:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Workload(String name, Output<String> id, @Nullable WorkloadState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Workload(String name, Output<String> id, @Nullable WorkloadState state, @Nullable CustomResourceOptions options) {
         super("gcp:assuredworkloads/workload:Workload", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -255,7 +257,7 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workload get(String name, Output<String> id, @Nullable WorkloadState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Workload get(String name, Output<String> id, @Nullable WorkloadState state, @Nullable CustomResourceOptions options) {
         return new Workload(name, id, state, options);
     }
 }

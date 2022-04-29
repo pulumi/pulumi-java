@@ -4,11 +4,12 @@
 package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetKMSSecretCiphertextArgs extends InvokeArgs {
 
     public static final GetKMSSecretCiphertextArgs Empty = new GetKMSSecretCiphertextArgs();
 

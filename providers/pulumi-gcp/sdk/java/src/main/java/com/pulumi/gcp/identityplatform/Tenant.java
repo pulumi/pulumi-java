@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.identityplatform.TenantArgs;
 import com.pulumi.gcp.identityplatform.inputs.TenantState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -45,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:identityplatform/tenant:Tenant")
-public class Tenant extends com.pulumi.resources.CustomResource {
+public class Tenant extends CustomResource {
     /**
      * Whether to allow email/password user authentication.
      * 
@@ -158,19 +160,19 @@ public class Tenant extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Tenant(String name, TenantArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Tenant(String name, TenantArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:identityplatform/tenant:Tenant", name, args == null ? TenantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Tenant(String name, Output<String> id, @Nullable TenantState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Tenant(String name, Output<String> id, @Nullable TenantState state, @Nullable CustomResourceOptions options) {
         super("gcp:identityplatform/tenant:Tenant", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -182,7 +184,7 @@ public class Tenant extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Tenant get(String name, Output<String> id, @Nullable TenantState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Tenant get(String name, Output<String> id, @Nullable TenantState state, @Nullable CustomResourceOptions options) {
         return new Tenant(name, id, state, options);
     }
 }

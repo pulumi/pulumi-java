@@ -10,11 +10,13 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.folder.IAMPolicyArgs;
 import com.pulumi.gcp.folder.inputs.IAMPolicyState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:folder/iAMPolicy:IAMPolicy")
-public class IAMPolicy extends com.pulumi.resources.CustomResource {
+public class IAMPolicy extends CustomResource {
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
@@ -55,19 +57,19 @@ public class IAMPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IAMPolicy(String name, IAMPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IAMPolicy(String name, IAMPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:folder/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IAMPolicy(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IAMPolicy(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable CustomResourceOptions options) {
         super("gcp:folder/iAMPolicy:IAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -79,7 +81,7 @@ public class IAMPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMPolicy get(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IAMPolicy get(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable CustomResourceOptions options) {
         return new IAMPolicy(name, id, state, options);
     }
 }

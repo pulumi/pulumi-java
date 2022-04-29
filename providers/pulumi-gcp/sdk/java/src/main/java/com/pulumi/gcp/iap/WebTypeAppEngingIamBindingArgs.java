@@ -6,6 +6,7 @@ package com.pulumi.gcp.iap;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.iap.inputs.WebTypeAppEngingIamBindingConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebTypeAppEngingIamBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebTypeAppEngingIamBindingArgs extends ResourceArgs {
 
     public static final WebTypeAppEngingIamBindingArgs Empty = new WebTypeAppEngingIamBindingArgs();
 

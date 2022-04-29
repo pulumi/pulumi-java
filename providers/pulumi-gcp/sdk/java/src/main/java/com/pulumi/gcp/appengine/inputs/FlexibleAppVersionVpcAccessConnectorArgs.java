@@ -5,11 +5,12 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FlexibleAppVersionVpcAccessConnectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlexibleAppVersionVpcAccessConnectorArgs extends ResourceArgs {
 
     public static final FlexibleAppVersionVpcAccessConnectorArgs Empty = new FlexibleAppVersionVpcAccessConnectorArgs();
 

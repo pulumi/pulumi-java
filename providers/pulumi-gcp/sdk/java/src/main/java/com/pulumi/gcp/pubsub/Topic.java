@@ -12,6 +12,8 @@ import com.pulumi.gcp.pubsub.TopicArgs;
 import com.pulumi.gcp.pubsub.inputs.TopicState;
 import com.pulumi.gcp.pubsub.outputs.TopicMessageStoragePolicy;
 import com.pulumi.gcp.pubsub.outputs.TopicSchemaSettings;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -49,7 +51,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:pubsub/topic:Topic")
-public class Topic extends com.pulumi.resources.CustomResource {
+public class Topic extends CustomResource {
     /**
      * The resource name of the Cloud KMS CryptoKey to be used to protect access
      * to messages published on this topic. Your project&#39;s PubSub service account
@@ -200,19 +202,19 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Topic(String name, @Nullable TopicArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Topic(String name, @Nullable TopicArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/topic:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Topic(String name, Output<String> id, @Nullable TopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Topic(String name, Output<String> id, @Nullable TopicState state, @Nullable CustomResourceOptions options) {
         super("gcp:pubsub/topic:Topic", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -224,7 +226,7 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Topic get(String name, Output<String> id, @Nullable TopicState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Topic get(String name, Output<String> id, @Nullable TopicState state, @Nullable CustomResourceOptions options) {
         return new Topic(name, id, state, options);
     }
 }

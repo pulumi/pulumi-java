@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationState extends ResourceArgs {
 
     public static final ApplicationState Empty = new ApplicationState();
 

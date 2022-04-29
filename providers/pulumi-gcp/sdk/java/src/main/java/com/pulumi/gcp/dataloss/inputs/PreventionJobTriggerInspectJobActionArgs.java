@@ -6,10 +6,11 @@ package com.pulumi.gcp.dataloss.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class PreventionJobTriggerInspectJobActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionJobTriggerInspectJobActionArgs extends ResourceArgs {
 
     public static final PreventionJobTriggerInspectJobActionArgs Empty = new PreventionJobTriggerInspectJobActionArgs();
 

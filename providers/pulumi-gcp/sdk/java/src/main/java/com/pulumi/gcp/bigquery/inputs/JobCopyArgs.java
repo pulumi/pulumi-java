@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigquery.inputs.JobCopyDestinationEncryptionConfigurationArgs;
 import com.pulumi.gcp.bigquery.inputs.JobCopyDestinationTableArgs;
 import com.pulumi.gcp.bigquery.inputs.JobCopySourceTableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobCopyArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobCopyArgs extends ResourceArgs {
 
     public static final JobCopyArgs Empty = new JobCopyArgs();
 

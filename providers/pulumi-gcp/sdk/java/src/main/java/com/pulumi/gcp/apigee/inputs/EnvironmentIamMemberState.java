@@ -6,13 +6,14 @@ package com.pulumi.gcp.apigee.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnvironmentIamMemberState extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentIamMemberState extends ResourceArgs {
 
     public static final EnvironmentIamMemberState Empty = new EnvironmentIamMemberState();
 

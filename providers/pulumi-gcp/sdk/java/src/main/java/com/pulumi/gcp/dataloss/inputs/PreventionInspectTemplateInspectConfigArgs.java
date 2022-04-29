@@ -9,6 +9,7 @@ import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCust
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionInspectTemplateInspectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionInspectTemplateInspectConfigArgs extends ResourceArgs {
 
     public static final PreventionInspectTemplateInspectConfigArgs Empty = new PreventionInspectTemplateInspectConfigArgs();
 

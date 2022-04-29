@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleConditionArgs;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleValuesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicySpecRuleArgs extends ResourceArgs {
 
     public static final PolicySpecRuleArgs Empty = new PolicySpecRuleArgs();
 

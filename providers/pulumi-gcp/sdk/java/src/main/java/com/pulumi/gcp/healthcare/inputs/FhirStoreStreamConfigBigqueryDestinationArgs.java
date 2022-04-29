@@ -6,11 +6,12 @@ package com.pulumi.gcp.healthcare.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FhirStoreStreamConfigBigqueryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FhirStoreStreamConfigBigqueryDestinationArgs extends ResourceArgs {
 
     public static final FhirStoreStreamConfigBigqueryDestinationArgs Empty = new FhirStoreStreamConfigBigqueryDestinationArgs();
 

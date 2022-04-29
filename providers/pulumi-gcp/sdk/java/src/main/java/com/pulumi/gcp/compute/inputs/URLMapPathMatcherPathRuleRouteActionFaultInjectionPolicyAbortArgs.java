@@ -5,12 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs extends com.pulumi.resources.ResourceArgs {
+public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs extends ResourceArgs {
 
     public static final URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs Empty = new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs();
 

@@ -18,6 +18,7 @@ import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterCon
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends ResourceArgs {
 
     public static final WorkflowTemplatePlacementManagedClusterConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigArgs();
 

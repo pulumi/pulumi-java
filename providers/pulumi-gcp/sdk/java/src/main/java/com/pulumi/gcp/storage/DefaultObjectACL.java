@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.storage.DefaultObjectACLArgs;
 import com.pulumi.gcp.storage.inputs.DefaultObjectACLState;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:storage/defaultObjectACL:DefaultObjectACL")
-public class DefaultObjectACL extends com.pulumi.resources.CustomResource {
+public class DefaultObjectACL extends CustomResource {
     /**
      * The name of the bucket it applies to.
      * 
@@ -92,19 +94,19 @@ public class DefaultObjectACL extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DefaultObjectACL(String name, DefaultObjectACLArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DefaultObjectACL(String name, DefaultObjectACLArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, args == null ? DefaultObjectACLArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DefaultObjectACL(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DefaultObjectACL(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable CustomResourceOptions options) {
         super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -116,7 +118,7 @@ public class DefaultObjectACL extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefaultObjectACL get(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DefaultObjectACL get(String name, Output<String> id, @Nullable DefaultObjectACLState state, @Nullable CustomResourceOptions options) {
         return new DefaultObjectACL(name, id, state, options);
     }
 }

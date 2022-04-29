@@ -13,6 +13,8 @@ import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentState;
 import com.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilter;
 import com.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicy;
 import com.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentRollout;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:osconfig/osPolicyAssignment:OsPolicyAssignment")
-public class OsPolicyAssignment extends com.pulumi.resources.CustomResource {
+public class OsPolicyAssignment extends CustomResource {
     /**
      * Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS
      * policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for
@@ -285,19 +287,19 @@ public class OsPolicyAssignment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OsPolicyAssignment(String name, OsPolicyAssignmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OsPolicyAssignment(String name, OsPolicyAssignmentArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, args == null ? OsPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OsPolicyAssignment(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OsPolicyAssignment(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable CustomResourceOptions options) {
         super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -309,7 +311,7 @@ public class OsPolicyAssignment extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OsPolicyAssignment get(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OsPolicyAssignment get(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable CustomResourceOptions options) {
         return new OsPolicyAssignment(name, id, state, options);
     }
 }

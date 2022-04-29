@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyDailyMaintenanceWindowArgs;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyMaintenanceExclusionArgs;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyRecurringWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterMaintenancePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterMaintenancePolicyArgs extends ResourceArgs {
 
     public static final ClusterMaintenancePolicyArgs Empty = new ClusterMaintenancePolicyArgs();
 

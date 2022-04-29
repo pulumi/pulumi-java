@@ -6,10 +6,11 @@ package com.pulumi.gcp.dns.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigTargetNetworkArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ManagedZonePeeringConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZonePeeringConfigArgs extends ResourceArgs {
 
     public static final ManagedZonePeeringConfigArgs Empty = new ManagedZonePeeringConfigArgs();
 

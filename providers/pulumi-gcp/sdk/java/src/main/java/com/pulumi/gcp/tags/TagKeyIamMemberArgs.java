@@ -6,13 +6,14 @@ package com.pulumi.gcp.tags;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TagKeyIamMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagKeyIamMemberArgs extends ResourceArgs {
 
     public static final TagKeyIamMemberArgs Empty = new TagKeyIamMemberArgs();
 

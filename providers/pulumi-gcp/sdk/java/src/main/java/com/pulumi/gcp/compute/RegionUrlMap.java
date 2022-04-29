@@ -14,6 +14,8 @@ import com.pulumi.gcp.compute.outputs.RegionUrlMapDefaultUrlRedirect;
 import com.pulumi.gcp.compute.outputs.RegionUrlMapHostRule;
 import com.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcher;
 import com.pulumi.gcp.compute.outputs.RegionUrlMapTest;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +50,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:compute/regionUrlMap:RegionUrlMap")
-public class RegionUrlMap extends com.pulumi.resources.CustomResource {
+public class RegionUrlMap extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -277,19 +279,19 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionUrlMap(String name, @Nullable RegionUrlMapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionUrlMap(String name, @Nullable RegionUrlMapArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionUrlMap:RegionUrlMap", name, args == null ? RegionUrlMapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionUrlMap(String name, Output<String> id, @Nullable RegionUrlMapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionUrlMap(String name, Output<String> id, @Nullable RegionUrlMapState state, @Nullable CustomResourceOptions options) {
         super("gcp:compute/regionUrlMap:RegionUrlMap", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -301,7 +303,7 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionUrlMap get(String name, Output<String> id, @Nullable RegionUrlMapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionUrlMap get(String name, Output<String> id, @Nullable RegionUrlMapState state, @Nullable CustomResourceOptions options) {
         return new RegionUrlMap(name, id, state, options);
     }
 }

@@ -9,12 +9,13 @@ import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfi
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PreventionJobTriggerInspectJobStorageConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionJobTriggerInspectJobStorageConfigArgs extends ResourceArgs {
 
     public static final PreventionJobTriggerInspectJobStorageConfigArgs Empty = new PreventionJobTriggerInspectJobStorageConfigArgs();
 

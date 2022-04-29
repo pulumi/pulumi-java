@@ -11,6 +11,7 @@ import com.pulumi.gcp.bigquery.inputs.TableMaterializedViewArgs;
 import com.pulumi.gcp.bigquery.inputs.TableRangePartitioningArgs;
 import com.pulumi.gcp.bigquery.inputs.TableTimePartitioningArgs;
 import com.pulumi.gcp.bigquery.inputs.TableViewArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableArgs extends ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 

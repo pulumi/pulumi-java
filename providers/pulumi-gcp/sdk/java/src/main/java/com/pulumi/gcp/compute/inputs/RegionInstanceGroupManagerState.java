@@ -11,6 +11,7 @@ import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatefulDiskArgs;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusArgs;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerUpdatePolicyArgs;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerVersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionInstanceGroupManagerState extends com.pulumi.resources.ResourceArgs {
+public final class RegionInstanceGroupManagerState extends ResourceArgs {
 
     public static final RegionInstanceGroupManagerState Empty = new RegionInstanceGroupManagerState();
 

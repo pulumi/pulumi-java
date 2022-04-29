@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class PreventionJobTriggerInspectJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreventionJobTriggerInspectJobArgs extends ResourceArgs {
 
     public static final PreventionJobTriggerInspectJobArgs Empty = new PreventionJobTriggerInspectJobArgs();
 

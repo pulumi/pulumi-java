@@ -15,6 +15,8 @@ import com.pulumi.gcp.dns.outputs.ManagedZoneForwardingConfig;
 import com.pulumi.gcp.dns.outputs.ManagedZonePeeringConfig;
 import com.pulumi.gcp.dns.outputs.ManagedZonePrivateVisibilityConfig;
 import com.pulumi.gcp.dns.outputs.ManagedZoneServiceDirectoryConfig;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -53,7 +55,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="gcp:dns/managedZone:ManagedZone")
-public class ManagedZone extends com.pulumi.resources.CustomResource {
+public class ManagedZone extends CustomResource {
     /**
      * A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
@@ -304,19 +306,19 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagedZone(String name, ManagedZoneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ManagedZone(String name, ManagedZoneArgs args, @Nullable CustomResourceOptions options) {
         super("gcp:dns/managedZone:ManagedZone", name, args == null ? ManagedZoneArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ManagedZone(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ManagedZone(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable CustomResourceOptions options) {
         super("gcp:dns/managedZone:ManagedZone", name, state, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -328,7 +330,7 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedZone get(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedZone get(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable CustomResourceOptions options) {
         return new ManagedZone(name, id, state, options);
     }
 }

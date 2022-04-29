@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.ResourceArgs {
+public final class RegionNetworkEndpointGroupState extends ResourceArgs {
 
     public static final RegionNetworkEndpointGroupState Empty = new RegionNetworkEndpointGroupState();
 
