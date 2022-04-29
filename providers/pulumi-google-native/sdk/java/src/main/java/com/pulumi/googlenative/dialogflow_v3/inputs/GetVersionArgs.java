@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetVersionArgs extends InvokeArgs {
 
     public static final GetVersionArgs Empty = new GetVersionArgs();
 

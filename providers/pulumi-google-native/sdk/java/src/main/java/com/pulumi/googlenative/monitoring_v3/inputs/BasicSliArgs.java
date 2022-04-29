@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.AvailabilityCriteriaArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.LatencyCriteriaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An SLI measuring performance on a well-known service type. Performance will be computed on the basis of pre-defined metrics. The type of the service_resource determines the metrics to use and the service_resource.labels and metric_labels are used to construct a monitoring filter to filter that metric down to just the data relevant to this service.
  * 
  */
-public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicSliArgs extends ResourceArgs {
 
     public static final BasicSliArgs Empty = new BasicSliArgs();
 

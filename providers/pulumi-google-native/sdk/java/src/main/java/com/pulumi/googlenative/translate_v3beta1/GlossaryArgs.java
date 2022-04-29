@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.translate_v3beta1.inputs.GlossaryInputConfigArgs;
 import com.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodePairArgs;
 import com.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodesSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlossaryArgs extends ResourceArgs {
 
     public static final GlossaryArgs Empty = new GlossaryArgs();
 

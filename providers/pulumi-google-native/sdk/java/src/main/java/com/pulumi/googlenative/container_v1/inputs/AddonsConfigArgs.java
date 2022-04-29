@@ -14,6 +14,7 @@ import com.pulumi.googlenative.container_v1.inputs.HorizontalPodAutoscalingArgs;
 import com.pulumi.googlenative.container_v1.inputs.HttpLoadBalancingArgs;
 import com.pulumi.googlenative.container_v1.inputs.KubernetesDashboardArgs;
 import com.pulumi.googlenative.container_v1.inputs.NetworkPolicyConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
  * 
  */
-public final class AddonsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddonsConfigArgs extends ResourceArgs {
 
     public static final AddonsConfigArgs Empty = new AddonsConfigArgs();
 

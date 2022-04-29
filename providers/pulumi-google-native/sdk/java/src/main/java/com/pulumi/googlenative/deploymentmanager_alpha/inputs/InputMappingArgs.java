@@ -6,6 +6,7 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.InputMappingLocation;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * InputMapping creates a &#39;virtual&#39; property that will be injected into the properties before sending the request to the underlying API.
  * 
  */
-public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class InputMappingArgs extends ResourceArgs {
 
     public static final InputMappingArgs Empty = new InputMappingArgs();
 

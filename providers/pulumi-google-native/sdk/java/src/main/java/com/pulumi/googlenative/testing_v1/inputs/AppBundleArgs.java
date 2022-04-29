@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory, zero or more dynamic feature module directories. See https://developer.android.com/guide/app-bundle/build for guidance on building App Bundles.
  * 
  */
-public final class AppBundleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppBundleArgs extends ResourceArgs {
 
     public static final AppBundleArgs Empty = new AppBundleArgs();
 

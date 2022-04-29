@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterSelectorArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ManagedClusterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
  * 
  */
-public final class WorkflowTemplatePlacementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplatePlacementArgs extends ResourceArgs {
 
     public static final WorkflowTemplatePlacementArgs Empty = new WorkflowTemplatePlacementArgs();
 

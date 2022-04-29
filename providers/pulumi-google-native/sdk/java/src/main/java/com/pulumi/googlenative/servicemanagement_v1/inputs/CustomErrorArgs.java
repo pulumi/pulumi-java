@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Customize service error responses. For example, list any service specific protobuf types that can appear in error detail lists of error responses. Example: custom_error: types: - google.foo.v1.CustomError - google.foo.v1.AnotherError
  * 
  */
-public final class CustomErrorArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomErrorArgs extends ResourceArgs {
 
     public static final CustomErrorArgs Empty = new CustomErrorArgs();
 

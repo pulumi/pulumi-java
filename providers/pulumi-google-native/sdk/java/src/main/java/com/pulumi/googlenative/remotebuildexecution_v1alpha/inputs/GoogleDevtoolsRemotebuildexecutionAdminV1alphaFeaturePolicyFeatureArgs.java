@@ -6,6 +6,7 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines whether a feature can be used or what values are accepted.
  * 
  */
-public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs();
 

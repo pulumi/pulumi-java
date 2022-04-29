@@ -10,6 +10,7 @@ import com.pulumi.googlenative.datafusion_v1beta1.inputs.AcceleratorArgs;
 import com.pulumi.googlenative.datafusion_v1beta1.inputs.CryptoKeyConfigArgs;
 import com.pulumi.googlenative.datafusion_v1beta1.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.datafusion_v1beta1.inputs.VersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

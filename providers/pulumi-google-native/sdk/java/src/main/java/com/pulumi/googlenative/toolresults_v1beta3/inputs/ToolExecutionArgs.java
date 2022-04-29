@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An execution of an arbitrary tool. It could be a test runner or a tool copying artifacts or deploying code.
  * 
  */
-public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToolExecutionArgs extends ResourceArgs {
 
     public static final ToolExecutionArgs Empty = new ToolExecutionArgs();
 

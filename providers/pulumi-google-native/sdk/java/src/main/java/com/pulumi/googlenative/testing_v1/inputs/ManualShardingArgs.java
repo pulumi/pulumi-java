@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.TestTargetsForShardArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Shards test cases into the specified groups of packages, classes, and/or methods. With manual sharding enabled, specifying test targets via environment_variables or in InstrumentationTest is invalid.
  * 
  */
-public final class ManualShardingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManualShardingArgs extends ResourceArgs {
 
     public static final ManualShardingArgs Empty = new ManualShardingArgs();
 

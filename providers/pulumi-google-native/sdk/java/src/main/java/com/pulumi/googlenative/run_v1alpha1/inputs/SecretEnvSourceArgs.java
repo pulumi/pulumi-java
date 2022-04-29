@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Not supported by Cloud Run SecretEnvSource selects a Secret to populate the environment variables with. The contents of the target Secret&#39;s Data field will represent the key-value pairs as environment variables.
  * 
  */
-public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretEnvSourceArgs extends ResourceArgs {
 
     public static final SecretEnvSourceArgs Empty = new SecretEnvSourceArgs();
 

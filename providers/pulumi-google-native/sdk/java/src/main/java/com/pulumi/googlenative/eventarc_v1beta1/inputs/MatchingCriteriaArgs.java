@@ -5,6 +5,7 @@ package com.pulumi.googlenative.eventarc_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Matches events based on exact matches on the CloudEvents attributes.
  * 
  */
-public final class MatchingCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class MatchingCriteriaArgs extends ResourceArgs {
 
     public static final MatchingCriteriaArgs Empty = new MatchingCriteriaArgs();
 

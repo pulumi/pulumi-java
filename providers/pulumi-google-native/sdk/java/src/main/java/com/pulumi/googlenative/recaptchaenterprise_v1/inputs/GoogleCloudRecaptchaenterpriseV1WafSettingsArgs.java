@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafService;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Settings specific to keys that can be used for WAF (Web Application Firewall).
  * 
  */
-public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1WafSettingsArgs Empty = new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs();
 

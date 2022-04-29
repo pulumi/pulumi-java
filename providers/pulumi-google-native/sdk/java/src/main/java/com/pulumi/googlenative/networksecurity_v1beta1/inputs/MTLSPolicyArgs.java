@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specification of the MTLSPolicy.
  * 
  */
-public final class MTLSPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class MTLSPolicyArgs extends ResourceArgs {
 
     public static final MTLSPolicyArgs Empty = new MTLSPolicyArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetIamPolicyArgs extends ResourceArgs {
 
     public static final DatasetIamPolicyArgs Empty = new DatasetIamPolicyArgs();
 

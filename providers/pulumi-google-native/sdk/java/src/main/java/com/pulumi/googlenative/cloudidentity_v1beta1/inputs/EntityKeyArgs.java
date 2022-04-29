@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A unique identifier for an entity in the Cloud Identity Groups API. An entity can represent either a group with an optional `namespace` or a user without a `namespace`. The combination of `id` and `namespace` must be unique; however, the same `id` can be used with different `namespace`s.
  * 
  */
-public final class EntityKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntityKeyArgs extends ResourceArgs {
 
     public static final EntityKeyArgs Empty = new EntityKeyArgs();
 

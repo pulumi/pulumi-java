@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkservices_v1beta1.enums.EndpointPolicyType;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.EndpointMatcherArgs;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.TrafficPortSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointPolicyArgs extends ResourceArgs {
 
     public static final EndpointPolicyArgs Empty = new EndpointPolicyArgs();
 

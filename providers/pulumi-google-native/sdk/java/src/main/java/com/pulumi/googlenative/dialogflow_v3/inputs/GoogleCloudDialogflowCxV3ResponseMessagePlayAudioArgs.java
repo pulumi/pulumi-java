@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies an audio clip to be played by the client as part of the response.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs Empty = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs();
 

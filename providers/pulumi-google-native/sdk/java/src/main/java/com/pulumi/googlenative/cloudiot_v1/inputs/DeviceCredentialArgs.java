@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A server-stored device credential used for authentication.
  * 
  */
-public final class DeviceCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceCredentialArgs extends ResourceArgs {
 
     public static final DeviceCredentialArgs Empty = new DeviceCredentialArgs();
 

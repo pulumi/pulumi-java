@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details for an outcome with an INCONCLUSIVE outcome summary.
  * 
  */
-public final class InconclusiveDetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class InconclusiveDetailArgs extends ResourceArgs {
 
     public static final InconclusiveDetailArgs Empty = new InconclusiveDetailArgs();
 

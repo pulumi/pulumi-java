@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.DeprecationStatusState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Deprecation status for a public resource.
  * 
  */
-public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeprecationStatusArgs extends ResourceArgs {
 
     public static final DeprecationStatusArgs Empty = new DeprecationStatusArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Edit atom.
  * 
  */
-public final class EditAtomArgs extends com.pulumi.resources.ResourceArgs {
+public final class EditAtomArgs extends ResourceArgs {
 
     public static final EditAtomArgs Empty = new EditAtomArgs();
 

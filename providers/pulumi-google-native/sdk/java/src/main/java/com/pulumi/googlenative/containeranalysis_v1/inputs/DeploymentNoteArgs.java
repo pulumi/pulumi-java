@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An artifact that can be deployed in some runtime.
  * 
  */
-public final class DeploymentNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentNoteArgs extends ResourceArgs {
 
     public static final DeploymentNoteArgs Empty = new DeploymentNoteArgs();
 

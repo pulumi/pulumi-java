@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.CallCredentialsArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ChannelCredentialsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * [Deprecated] gRPC config to access the SDS server. gRPC config to access the SDS server.
  * 
  */
-public final class GrpcServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GrpcServiceConfigArgs extends ResourceArgs {
 
     public static final GrpcServiceConfigArgs Empty = new GrpcServiceConfigArgs();
 

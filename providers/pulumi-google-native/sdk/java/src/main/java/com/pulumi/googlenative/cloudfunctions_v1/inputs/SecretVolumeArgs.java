@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.SecretVersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for a secret volume. It has the information necessary to fetch the secret value from secret manager and make it available as files mounted at the requested paths within the application container. Secret value is not a part of the configuration. Every filesystem read operation performs a lookup in secret manager to retrieve the secret value.
  * 
  */
-public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretVolumeArgs extends ResourceArgs {
 
     public static final SecretVolumeArgs Empty = new SecretVolumeArgs();
 

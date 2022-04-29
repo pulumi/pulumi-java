@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.FileNoteFileType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * FileNote represents an SPDX File Information section: https://spdx.github.io/spdx-spec/4-file-information/
  * 
  */
-public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class FileNoteArgs extends ResourceArgs {
 
     public static final FileNoteArgs Empty = new FileNoteArgs();
 

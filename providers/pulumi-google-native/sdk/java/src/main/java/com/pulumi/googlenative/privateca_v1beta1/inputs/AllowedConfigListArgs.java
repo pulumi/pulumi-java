@@ -6,11 +6,12 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class AllowedConfigListArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedConfigListArgs extends ResourceArgs {
 
     public static final AllowedConfigListArgs Empty = new AllowedConfigListArgs();
 

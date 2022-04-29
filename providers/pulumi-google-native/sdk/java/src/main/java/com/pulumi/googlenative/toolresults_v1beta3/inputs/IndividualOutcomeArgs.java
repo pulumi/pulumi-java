@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.IndividualOutcomeOutcomeSummary;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Step Id and outcome of each individual step that was run as a group with other steps with the same configuration.
  * 
  */
-public final class IndividualOutcomeArgs extends com.pulumi.resources.ResourceArgs {
+public final class IndividualOutcomeArgs extends ResourceArgs {
 
     public static final IndividualOutcomeArgs Empty = new IndividualOutcomeArgs();
 

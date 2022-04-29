@@ -12,6 +12,8 @@ import com.pulumi.googlenative.compute_beta.RegionCommitmentArgs;
 import com.pulumi.googlenative.compute_beta.outputs.LicenseResourceCommitmentResponse;
 import com.pulumi.googlenative.compute_beta.outputs.ReservationResponse;
 import com.pulumi.googlenative.compute_beta.outputs.ResourceCommitmentResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/beta:RegionCommitment")
-public class RegionCommitment extends com.pulumi.resources.CustomResource {
+public class RegionCommitment extends CustomResource {
     /**
      * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
      * 
@@ -285,19 +287,19 @@ public class RegionCommitment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionCommitment(String name, RegionCommitmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionCommitment(String name, RegionCommitmentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:RegionCommitment", name, args == null ? RegionCommitmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionCommitment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionCommitment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:RegionCommitment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -308,7 +310,7 @@ public class RegionCommitment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionCommitment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionCommitment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionCommitment(name, id, options);
     }
 }

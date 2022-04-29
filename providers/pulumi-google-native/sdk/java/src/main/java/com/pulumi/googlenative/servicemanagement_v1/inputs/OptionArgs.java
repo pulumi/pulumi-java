@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A protocol buffer option, which can be attached to a message, field, enumeration, etc.
  * 
  */
-public final class OptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OptionArgs extends ResourceArgs {
 
     public static final OptionArgs Empty = new OptionArgs();
 

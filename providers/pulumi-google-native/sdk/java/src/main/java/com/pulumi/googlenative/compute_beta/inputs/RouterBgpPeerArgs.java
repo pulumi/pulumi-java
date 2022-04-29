@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_beta.enums.RouterBgpPeerAdvertisedGroupsI
 import com.pulumi.googlenative.compute_beta.enums.RouterBgpPeerEnable;
 import com.pulumi.googlenative.compute_beta.inputs.RouterAdvertisedIpRangeArgs;
 import com.pulumi.googlenative.compute_beta.inputs.RouterBgpPeerBfdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterBgpPeerArgs extends ResourceArgs {
 
     public static final RouterBgpPeerArgs Empty = new RouterBgpPeerArgs();
 

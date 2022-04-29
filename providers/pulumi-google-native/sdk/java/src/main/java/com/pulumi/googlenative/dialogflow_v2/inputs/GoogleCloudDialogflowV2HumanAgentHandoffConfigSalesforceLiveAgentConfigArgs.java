@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration specific to Salesforce Live Agent.
  * 
  */
-public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs();
 

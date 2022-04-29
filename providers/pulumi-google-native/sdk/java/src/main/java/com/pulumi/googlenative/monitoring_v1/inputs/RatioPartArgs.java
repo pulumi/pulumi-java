@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes a query to build the numerator or denominator of a TimeSeriesFilterRatio.
  * 
  */
-public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
+public final class RatioPartArgs extends ResourceArgs {
 
     public static final RatioPartArgs Empty = new RatioPartArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.oslogin_v1beta.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSshPublicKeyArgs extends InvokeArgs {
 
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 

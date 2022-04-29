@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.enums.DomainMappingSpecCertificateMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The desired state of the Domain Mapping.
  * 
  */
-public final class DomainMappingSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainMappingSpecArgs extends ResourceArgs {
 
     public static final DomainMappingSpecArgs Empty = new DomainMappingSpecArgs();
 

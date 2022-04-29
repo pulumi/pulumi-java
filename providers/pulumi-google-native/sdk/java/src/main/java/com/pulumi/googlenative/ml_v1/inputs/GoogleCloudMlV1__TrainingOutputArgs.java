@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterOutputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Represents results of a training job. Output only.
  * 
  */
-public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__TrainingOutputArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__TrainingOutputArgs Empty = new GoogleCloudMlV1__TrainingOutputArgs();
 

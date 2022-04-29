@@ -14,6 +14,8 @@ import com.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import com.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
 import com.pulumi.googlenative.privateca_v1.outputs.KeyVersionSpecResponse;
 import com.pulumi.googlenative.privateca_v1.outputs.SubordinateConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:privateca/v1:CertificateAuthority")
-public class CertificateAuthority extends com.pulumi.resources.CustomResource {
+public class CertificateAuthority extends CustomResource {
     /**
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
@@ -286,19 +288,19 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:privateca/v1:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CertificateAuthority(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CertificateAuthority(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:privateca/v1:CertificateAuthority", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -309,7 +311,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CertificateAuthority get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CertificateAuthority get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new CertificateAuthority(name, id, options);
     }
 }

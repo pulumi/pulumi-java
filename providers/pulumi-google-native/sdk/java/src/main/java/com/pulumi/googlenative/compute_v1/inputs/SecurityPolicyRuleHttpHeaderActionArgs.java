@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyRuleHttpHeaderActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyRuleHttpHeaderActionArgs extends ResourceArgs {
 
     public static final SecurityPolicyRuleHttpHeaderActionArgs Empty = new SecurityPolicyRuleHttpHeaderActionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Oracle database profile.
  * 
  */
-public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class OracleProfileArgs extends ResourceArgs {
 
     public static final OracleProfileArgs Empty = new OracleProfileArgs();
 

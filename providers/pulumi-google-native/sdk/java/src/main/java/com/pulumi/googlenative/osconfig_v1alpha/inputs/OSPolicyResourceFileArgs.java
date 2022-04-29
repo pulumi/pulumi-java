@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileGcsArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileRemoteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A remote or local file.
  * 
  */
-public final class OSPolicyResourceFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceFileArgs extends ResourceArgs {
 
     public static final OSPolicyResourceFileArgs Empty = new OSPolicyResourceFileArgs();
 

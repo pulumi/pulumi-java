@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An InstanceSchedulePolicy specifies when and how frequent certain operations are performed on the instance.
  * 
  */
-public final class ResourcePolicyInstanceSchedulePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyInstanceSchedulePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyArgs Empty = new ResourcePolicyInstanceSchedulePolicyArgs();
 

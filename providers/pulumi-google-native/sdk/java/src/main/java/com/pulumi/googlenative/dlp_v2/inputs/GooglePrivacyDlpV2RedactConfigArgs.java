@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Redact a given value. For example, if used with an `InfoTypeTransformation` transforming PHONE_NUMBER, and input &#39;My phone number is 206-555-0123&#39;, the output would be &#39;My phone number is &#39;.
  * 
  */
-public final class GooglePrivacyDlpV2RedactConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RedactConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RedactConfigArgs Empty = new GooglePrivacyDlpV2RedactConfigArgs();
 

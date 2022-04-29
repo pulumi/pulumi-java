@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleIamV1__AuditConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleIamV1__BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobIamPolicyArgs extends ResourceArgs {
 
     public static final JobIamPolicyArgs Empty = new JobIamPolicyArgs();
 

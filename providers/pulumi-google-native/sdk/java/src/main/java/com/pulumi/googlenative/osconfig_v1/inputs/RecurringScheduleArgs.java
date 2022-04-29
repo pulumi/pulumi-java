@@ -10,6 +10,7 @@ import com.pulumi.googlenative.osconfig_v1.inputs.MonthlyScheduleArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.TimeOfDayArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.TimeZoneArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.WeeklyScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Sets the time for recurring patch deployments.
  * 
  */
-public final class RecurringScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecurringScheduleArgs extends ResourceArgs {
 
     public static final RecurringScheduleArgs Empty = new RecurringScheduleArgs();
 

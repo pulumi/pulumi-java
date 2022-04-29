@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ByProductsArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.EnvironmentArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoArtifactArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * This corresponds to an in-toto link.
  * 
  */
-public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkArgs extends ResourceArgs {
 
     public static final LinkArgs Empty = new LinkArgs();
 

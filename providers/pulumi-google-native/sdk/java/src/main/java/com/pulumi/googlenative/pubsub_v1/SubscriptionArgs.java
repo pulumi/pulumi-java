@@ -9,6 +9,7 @@ import com.pulumi.googlenative.pubsub_v1.inputs.DeadLetterPolicyArgs;
 import com.pulumi.googlenative.pubsub_v1.inputs.ExpirationPolicyArgs;
 import com.pulumi.googlenative.pubsub_v1.inputs.PushConfigArgs;
 import com.pulumi.googlenative.pubsub_v1.inputs.RetryPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubscriptionArgs extends ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 

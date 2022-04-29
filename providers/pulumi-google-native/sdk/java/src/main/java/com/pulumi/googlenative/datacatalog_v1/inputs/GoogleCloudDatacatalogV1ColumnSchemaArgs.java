@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A column within a schema. Columns can be nested inside other columns.
  * 
  */
-public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1ColumnSchemaArgs Empty = new GoogleCloudDatacatalogV1ColumnSchemaArgs();
 

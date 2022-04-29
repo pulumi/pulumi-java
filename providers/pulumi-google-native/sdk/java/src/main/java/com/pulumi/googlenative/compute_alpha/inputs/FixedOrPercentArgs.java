@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Encapsulates numeric value that can be either absolute or relative.
  * 
  */
-public final class FixedOrPercentArgs extends com.pulumi.resources.ResourceArgs {
+public final class FixedOrPercentArgs extends ResourceArgs {
 
     public static final FixedOrPercentArgs Empty = new FixedOrPercentArgs();
 

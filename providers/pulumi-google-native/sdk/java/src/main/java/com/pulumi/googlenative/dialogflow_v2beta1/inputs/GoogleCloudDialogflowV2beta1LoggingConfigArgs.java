@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines logging behavior for conversation lifecycle events.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1LoggingConfigArgs Empty = new GoogleCloudDialogflowV2beta1LoggingConfigArgs();
 

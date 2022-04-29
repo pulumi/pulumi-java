@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The button object that appears at the bottom of a card.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs Empty = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs();
 

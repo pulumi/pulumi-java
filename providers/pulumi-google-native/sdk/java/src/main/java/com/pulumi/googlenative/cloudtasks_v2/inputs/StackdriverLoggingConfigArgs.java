@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration options for writing logs to [Stackdriver Logging](https://cloud.google.com/logging/docs/).
  * 
  */
-public final class StackdriverLoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackdriverLoggingConfigArgs extends ResourceArgs {
 
     public static final StackdriverLoggingConfigArgs Empty = new StackdriverLoggingConfigArgs();
 

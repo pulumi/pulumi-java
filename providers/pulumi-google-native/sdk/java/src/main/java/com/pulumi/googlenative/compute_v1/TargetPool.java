@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_v1.TargetPoolArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:TargetPool")
-public class TargetPool extends com.pulumi.resources.CustomResource {
+public class TargetPool extends CustomResource {
     /**
      * The server-defined URL for the resource. This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is properly set to a value between [0, 1]. backupPool and failoverRatio together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
      * 
@@ -196,19 +198,19 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TargetPool(String name, TargetPoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TargetPool(String name, TargetPoolArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:TargetPool", name, args == null ? TargetPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TargetPool(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TargetPool(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:TargetPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -219,7 +221,7 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TargetPool get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TargetPool get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new TargetPool(name, id, options);
     }
 }

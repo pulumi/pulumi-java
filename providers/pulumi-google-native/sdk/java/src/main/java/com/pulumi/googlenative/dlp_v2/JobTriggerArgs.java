@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.JobTriggerStatus;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobTriggerArgs extends ResourceArgs {
 
     public static final JobTriggerArgs Empty = new JobTriggerArgs();
 

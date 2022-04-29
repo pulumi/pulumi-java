@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A deb package file. dpkg packages only support INSTALLED state.
  * 
  */
-public final class OSPolicyResourcePackageResourceDebArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourcePackageResourceDebArgs extends ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceDebArgs Empty = new OSPolicyResourcePackageResourceDebArgs();
 

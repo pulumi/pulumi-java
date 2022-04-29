@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.VersionKind;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Version contains structured information about the version of the package. For a discussion of this in Debian/Ubuntu: http://serverfault.com/questions/604541/debian-packages-version-convention For a discussion of this in Redhat/Fedora/Centos: http://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/
  * 
  */
-public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionArgs extends ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 

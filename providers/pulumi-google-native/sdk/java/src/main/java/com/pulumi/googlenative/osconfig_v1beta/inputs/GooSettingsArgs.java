@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Googet patching is performed by running `googet update`.
  * 
  */
-public final class GooSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooSettingsArgs extends ResourceArgs {
 
     public static final GooSettingsArgs Empty = new GooSettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigateway_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiArgs extends ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 

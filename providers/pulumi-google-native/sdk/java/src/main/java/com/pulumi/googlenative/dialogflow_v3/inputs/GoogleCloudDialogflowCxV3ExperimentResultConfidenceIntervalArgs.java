@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A confidence interval is a range of possible values for the experiment objective you are trying to measure.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs Empty = new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs();
 

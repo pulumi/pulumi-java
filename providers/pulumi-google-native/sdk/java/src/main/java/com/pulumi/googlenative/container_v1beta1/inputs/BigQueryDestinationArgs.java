@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Parameters for using BigQuery as the destination of resource usage export.
  * 
  */
-public final class BigQueryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BigQueryDestinationArgs extends ResourceArgs {
 
     public static final BigQueryDestinationArgs Empty = new BigQueryDestinationArgs();
 

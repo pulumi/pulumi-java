@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An **entity entry** for an associated entity type.
  * 
  */
-public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2EntityTypeEntityArgs Empty = new GoogleCloudDialogflowV2EntityTypeEntityArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.DateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Definition of a single value with generic type.
  * 
  */
-public final class ValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValueArgs extends ResourceArgs {
 
     public static final ValueArgs Empty = new ValueArgs();
 

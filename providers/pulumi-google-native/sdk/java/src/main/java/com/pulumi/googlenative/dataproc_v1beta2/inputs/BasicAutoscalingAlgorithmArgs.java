@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.BasicYarnAutoscalingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Basic algorithm for autoscaling.
  * 
  */
-public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicAutoscalingAlgorithmArgs extends ResourceArgs {
 
     public static final BasicAutoscalingAlgorithmArgs Empty = new BasicAutoscalingAlgorithmArgs();
 

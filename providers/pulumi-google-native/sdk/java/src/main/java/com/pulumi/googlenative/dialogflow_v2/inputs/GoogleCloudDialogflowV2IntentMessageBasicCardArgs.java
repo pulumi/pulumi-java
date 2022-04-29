@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The basic card message. Useful for displaying information.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBasicCardArgs Empty = new GoogleCloudDialogflowV2IntentMessageBasicCardArgs();
 

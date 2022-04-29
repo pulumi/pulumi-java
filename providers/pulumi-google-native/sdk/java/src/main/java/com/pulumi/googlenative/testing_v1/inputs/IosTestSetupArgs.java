@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A description of how to set up an iOS device prior to running the test.
  * 
  */
-public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosTestSetupArgs extends ResourceArgs {
 
     public static final IosTestSetupArgs Empty = new IosTestSetupArgs();
 

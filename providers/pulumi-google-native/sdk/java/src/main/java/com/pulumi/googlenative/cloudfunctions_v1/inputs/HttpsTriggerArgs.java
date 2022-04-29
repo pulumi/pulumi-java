@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudfunctions_v1.enums.HttpsTriggerSecurityLevel;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes HttpsTrigger, could be used to connect web hooks to function.
  * 
  */
-public final class HttpsTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpsTriggerArgs extends ResourceArgs {
 
     public static final HttpsTriggerArgs Empty = new HttpsTriggerArgs();
 

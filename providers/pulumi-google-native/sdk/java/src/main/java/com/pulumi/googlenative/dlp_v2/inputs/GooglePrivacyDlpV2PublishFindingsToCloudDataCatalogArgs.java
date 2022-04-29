@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Publish findings of a DlpJob to Data Catalog. Labels summarizing the results of the DlpJob will be applied to the entry for the resource scanned in Data Catalog. Any labels previously written by another DlpJob will be deleted. InfoType naming patterns are strictly enforced when using this feature. Note that the findings will be persisted in Data Catalog storage and are governed by Data Catalog service-specific policy, see https://cloud.google.com/terms/service-terms Only a single instance of this action can be specified and only allowed if all resources being scanned are BigQuery tables. Compatible with: Inspect
  * 
  */
-public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs Empty = new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs();
 

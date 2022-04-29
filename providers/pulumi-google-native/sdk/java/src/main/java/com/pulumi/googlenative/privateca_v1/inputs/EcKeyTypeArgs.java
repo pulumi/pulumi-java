@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes an Elliptic Curve key that may be used in a Certificate issued from a CaPool.
  * 
  */
-public final class EcKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class EcKeyTypeArgs extends ResourceArgs {
 
     public static final EcKeyTypeArgs Empty = new EcKeyTypeArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datafusion_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datafusion_v1.enums.VersionType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The Data Fusion version. This proto message stores information about certain Data Fusion version, which is used for Data Fusion version upgrade.
  * 
  */
-public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionArgs extends ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 

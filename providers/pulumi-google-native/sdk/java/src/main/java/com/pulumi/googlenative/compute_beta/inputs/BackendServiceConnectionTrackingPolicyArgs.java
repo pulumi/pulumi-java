@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import com.pulumi.googlenative.compute_beta.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Connection Tracking configuration for this BackendService.
  * 
  */
-public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceConnectionTrackingPolicyArgs extends ResourceArgs {
 
     public static final BackendServiceConnectionTrackingPolicyArgs Empty = new BackendServiceConnectionTrackingPolicyArgs();
 

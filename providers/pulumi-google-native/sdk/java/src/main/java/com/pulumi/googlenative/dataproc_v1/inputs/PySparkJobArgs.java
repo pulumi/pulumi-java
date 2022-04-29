@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.LoggingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A Dataproc job for running Apache PySpark (https://spark.apache.org/docs/0.9.0/python-programming-guide.html) applications on YARN.
  * 
  */
-public final class PySparkJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class PySparkJobArgs extends ResourceArgs {
 
     public static final PySparkJobArgs Empty = new PySparkJobArgs();
 

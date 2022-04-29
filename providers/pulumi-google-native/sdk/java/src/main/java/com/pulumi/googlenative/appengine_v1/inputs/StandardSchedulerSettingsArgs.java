@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Scheduler settings for standard environment.
  * 
  */
-public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StandardSchedulerSettingsArgs extends ResourceArgs {
 
     public static final StandardSchedulerSettingsArgs Empty = new StandardSchedulerSettingsArgs();
 

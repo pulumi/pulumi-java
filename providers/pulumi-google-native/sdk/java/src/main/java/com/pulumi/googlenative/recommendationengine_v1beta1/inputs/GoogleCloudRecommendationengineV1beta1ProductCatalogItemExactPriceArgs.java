@@ -5,6 +5,7 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Exact product price.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs();
 

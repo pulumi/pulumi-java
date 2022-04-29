@@ -9,6 +9,7 @@ import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionInputArgs
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionOutputArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingInputArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingOutputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

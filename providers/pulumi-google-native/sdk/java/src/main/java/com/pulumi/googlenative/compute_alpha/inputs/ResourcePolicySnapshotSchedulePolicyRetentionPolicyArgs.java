@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Policy for retention of scheduled snapshots.
  * 
  */
-public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs();
 

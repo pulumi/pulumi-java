@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specified snapshot properties for scheduled snapshots created by this policy.
  * 
  */
-public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs Empty = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs();
 

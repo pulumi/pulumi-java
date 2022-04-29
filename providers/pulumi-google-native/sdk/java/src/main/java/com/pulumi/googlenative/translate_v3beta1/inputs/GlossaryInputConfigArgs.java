@@ -6,6 +6,7 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.translate_v3beta1.inputs.GcsSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Input configuration for glossaries.
  * 
  */
-public final class GlossaryInputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlossaryInputConfigArgs extends ResourceArgs {
 
     public static final GlossaryInputConfigArgs Empty = new GlossaryInputConfigArgs();
 

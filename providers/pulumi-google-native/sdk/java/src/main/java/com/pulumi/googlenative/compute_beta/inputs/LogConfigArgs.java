@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.LogConfigCloudAuditOptionsArgs;
 import com.pulumi.googlenative.compute_beta.inputs.LogConfigCounterOptionsArgs;
 import com.pulumi.googlenative.compute_beta.inputs.LogConfigDataAccessOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * This is deprecated and has no effect. Do not use.
  * 
  */
-public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogConfigArgs extends ResourceArgs {
 
     public static final LogConfigArgs Empty = new LogConfigArgs();
 

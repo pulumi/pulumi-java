@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networkservices_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkservices_v1.inputs.EndpointMatcherMetadataLabelMatcherArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A definition of a matcher that selects endpoints to which the policies should be applied.
  * 
  */
-public final class EndpointMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointMatcherArgs extends ResourceArgs {
 
     public static final EndpointMatcherArgs Empty = new EndpointMatcherArgs();
 

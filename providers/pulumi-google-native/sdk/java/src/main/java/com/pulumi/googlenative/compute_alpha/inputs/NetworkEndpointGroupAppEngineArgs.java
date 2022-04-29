@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for an App Engine network endpoint group (NEG). The service is optional, may be provided explicitly or in the URL mask. The version is optional and can only be provided explicitly or in the URL mask when service is present. Note: App Engine service must be in the same project and located in the same region as the Serverless NEG.
  * 
  */
-public final class NetworkEndpointGroupAppEngineArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkEndpointGroupAppEngineArgs extends ResourceArgs {
 
     public static final NetworkEndpointGroupAppEngineArgs Empty = new NetworkEndpointGroupAppEngineArgs();
 

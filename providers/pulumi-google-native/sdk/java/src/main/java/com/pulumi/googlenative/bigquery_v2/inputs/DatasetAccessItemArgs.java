@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetAccessItemArgs extends ResourceArgs {
 
     public static final DatasetAccessItemArgs Empty = new DatasetAccessItemArgs();
 

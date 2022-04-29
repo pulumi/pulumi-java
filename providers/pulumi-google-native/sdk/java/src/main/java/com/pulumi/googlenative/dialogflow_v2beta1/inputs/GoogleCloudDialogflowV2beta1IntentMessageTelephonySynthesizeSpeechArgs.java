@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Synthesizes speech and plays back the synthesized audio to the caller in Telephony Gateway. Telephony Gateway takes the synthesizer settings from `DetectIntentResponse.output_audio_config` which can either be set at request-level or can come from the agent-level synthesizer config.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs();
 

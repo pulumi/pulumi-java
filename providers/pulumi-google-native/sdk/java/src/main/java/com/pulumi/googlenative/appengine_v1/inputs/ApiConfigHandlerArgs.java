@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerAuthFailAction;
 import com.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerLogin;
 import com.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerSecurityLevel;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/) configuration for API handlers.
  * 
  */
-public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiConfigHandlerArgs extends ResourceArgs {
 
     public static final ApiConfigHandlerArgs Empty = new ApiConfigHandlerArgs();
 

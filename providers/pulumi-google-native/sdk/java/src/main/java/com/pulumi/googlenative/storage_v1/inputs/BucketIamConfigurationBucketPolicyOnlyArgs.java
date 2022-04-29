@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
  * 
  */
-public final class BucketIamConfigurationBucketPolicyOnlyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketIamConfigurationBucketPolicyOnlyArgs extends ResourceArgs {
 
     public static final BucketIamConfigurationBucketPolicyOnlyArgs Empty = new BucketIamConfigurationBucketPolicyOnlyArgs();
 

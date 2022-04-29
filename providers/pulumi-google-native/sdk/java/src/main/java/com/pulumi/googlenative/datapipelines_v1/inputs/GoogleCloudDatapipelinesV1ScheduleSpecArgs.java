@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details of the schedule the pipeline runs on.
  * 
  */
-public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1ScheduleSpecArgs Empty = new GoogleCloudDatapipelinesV1ScheduleSpecArgs();
 

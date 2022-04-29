@@ -10,6 +10,7 @@ import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EncryptionConfigArg
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ReplicaConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SchedulingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Represents input parameters for a training job. When using the gcloud command to submit your training job, you can specify the input parameters as command-line arguments and/or in a YAML configuration file referenced from the --config command-line argument. For details, see the guide to [submitting a training job](/ai-platform/training/docs/training-jobs).
  * 
  */
-public final class GoogleCloudMlV1__TrainingInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__TrainingInputArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__TrainingInputArgs Empty = new GoogleCloudMlV1__TrainingInputArgs();
 

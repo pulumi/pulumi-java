@@ -6,6 +6,7 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.ConsumerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Network configuration for the Dataproc Metastore service.
  * 
  */
-public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigArgs extends ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 

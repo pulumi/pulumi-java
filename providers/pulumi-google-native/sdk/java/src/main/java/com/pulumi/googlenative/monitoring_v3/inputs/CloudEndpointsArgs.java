@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
  * 
  */
-public final class CloudEndpointsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudEndpointsArgs extends ResourceArgs {
 
     public static final CloudEndpointsArgs Empty = new CloudEndpointsArgs();
 

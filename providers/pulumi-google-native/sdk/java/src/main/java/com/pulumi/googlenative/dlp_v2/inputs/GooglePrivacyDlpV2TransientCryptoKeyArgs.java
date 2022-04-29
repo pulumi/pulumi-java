@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Use this to have a random data crypto key generated. It will be discarded after the request finishes.
  * 
  */
-public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2TransientCryptoKeyArgs Empty = new GooglePrivacyDlpV2TransientCryptoKeyArgs();
 

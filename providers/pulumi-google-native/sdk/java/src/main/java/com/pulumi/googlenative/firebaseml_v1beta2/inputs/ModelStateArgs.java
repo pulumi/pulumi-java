@@ -5,6 +5,7 @@ package com.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * State common to all model types. Includes publishing and validation information.
  * 
  */
-public final class ModelStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelStateArgs extends ResourceArgs {
 
     public static final ModelStateArgs Empty = new ModelStateArgs();
 

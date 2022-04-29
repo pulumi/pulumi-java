@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionStatesItem;
 import com.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionsItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the logging behavior for transfer operations. For cloud-to-cloud transfers, logs are sent to Cloud Logging. See [Read transfer logs](https://cloud.google.com/storage-transfer/docs/read-transfer-logs) for details. For transfers to or from a POSIX file system, logs are stored in the Cloud Storage bucket that is the source or sink of the transfer. See [Managing Transfer for on-premises jobs] (https://cloud.google.com/storage-transfer/docs/managing-on-prem-jobs#viewing-logs) for details.
  * 
  */
-public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigArgs extends ResourceArgs {
 
     public static final LoggingConfigArgs Empty = new LoggingConfigArgs();
 

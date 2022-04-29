@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.WorkerSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Taskrunner configuration settings.
  * 
  */
-public final class TaskRunnerSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskRunnerSettingsArgs extends ResourceArgs {
 
     public static final TaskRunnerSettingsArgs Empty = new TaskRunnerSettingsArgs();
 

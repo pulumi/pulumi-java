@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents an expression text. Example: title: &#34;User account presence&#34; description: &#34;Determines whether the request has a user account&#34; expression: &#34;size(request.user) &gt; 0&#34;
  * 
  */
-public final class ExprArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExprArgs extends ResourceArgs {
 
     public static final ExprArgs Empty = new ExprArgs();
 

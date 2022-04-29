@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The price information of a Product.
  * 
  */
-public final class GoogleCloudRetailV2alphaPriceInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaPriceInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaPriceInfoArgs Empty = new GoogleCloudRetailV2alphaPriceInfoArgs();
 

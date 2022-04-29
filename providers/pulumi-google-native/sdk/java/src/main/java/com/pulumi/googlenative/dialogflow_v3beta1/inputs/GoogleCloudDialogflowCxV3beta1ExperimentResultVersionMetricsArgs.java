@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Version variant and associated metrics.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more information, see https://cloud.google.com/dlp/docs/creating-custom-infotypes.
  * 
  */
-public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2StoredInfoTypeConfigArgs Empty = new GooglePrivacyDlpV2StoredInfoTypeConfigArgs();
 

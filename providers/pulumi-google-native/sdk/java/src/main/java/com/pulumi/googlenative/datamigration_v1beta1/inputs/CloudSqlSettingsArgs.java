@@ -9,6 +9,7 @@ import com.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsActiv
 import com.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDataDiskType;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDatabaseVersion;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.SqlIpConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Settings for creating a Cloud SQL database instance.
  * 
  */
-public final class CloudSqlSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudSqlSettingsArgs extends ResourceArgs {
 
     public static final CloudSqlSettingsArgs Empty = new CloudSqlSettingsArgs();
 

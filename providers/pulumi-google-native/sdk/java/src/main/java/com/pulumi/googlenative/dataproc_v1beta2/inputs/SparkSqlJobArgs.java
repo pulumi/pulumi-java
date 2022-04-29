@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.QueryListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A Dataproc job for running Apache Spark SQL (http://spark.apache.org/sql/) queries.
  * 
  */
-public final class SparkSqlJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class SparkSqlJobArgs extends ResourceArgs {
 
     public static final SparkSqlJobArgs Empty = new SparkSqlJobArgs();
 

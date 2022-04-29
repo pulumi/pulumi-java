@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents intent parameters.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentParameterArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentParameterArgs Empty = new GoogleCloudDialogflowV2IntentParameterArgs();
 

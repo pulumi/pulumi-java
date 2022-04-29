@@ -12,6 +12,8 @@ import com.pulumi.googlenative.cloudidentity_v1beta1.GroupArgs;
 import com.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupMetadataResponse;
 import com.pulumi.googlenative.cloudidentity_v1beta1.outputs.EntityKeyResponse;
 import com.pulumi.googlenative.cloudidentity_v1beta1.outputs.PosixGroupResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudidentity/v1beta1:Group")
-public class Group extends com.pulumi.resources.CustomResource {
+public class Group extends CustomResource {
     /**
      * Additional entity key aliases for a Group.
      * 
@@ -200,19 +202,19 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Group(String name, GroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Group(String name, GroupArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudidentity/v1beta1:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Group(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Group(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudidentity/v1beta1:Group", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -223,7 +225,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Group get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Group get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Group(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
  * 
  */
-public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1DatabaseTableSpecArgs Empty = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs();
 

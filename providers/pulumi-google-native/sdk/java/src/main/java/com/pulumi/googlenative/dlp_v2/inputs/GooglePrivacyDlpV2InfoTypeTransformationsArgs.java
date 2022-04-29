@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A type of transformation that will scan unstructured text and apply various `PrimitiveTransformation`s to each finding, where the transformation is applied to only values that were identified as a specific info_type.
  * 
  */
-public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeTransformationsArgs Empty = new GooglePrivacyDlpV2InfoTypeTransformationsArgs();
 

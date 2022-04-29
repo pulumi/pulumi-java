@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.secretmanager_v1beta1.inputs.AutomaticArgs;
 import com.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A policy that defines the replication configuration of data.
  * 
  */
-public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationArgs extends ResourceArgs {
 
     public static final ReplicationArgs Empty = new ReplicationArgs();
 

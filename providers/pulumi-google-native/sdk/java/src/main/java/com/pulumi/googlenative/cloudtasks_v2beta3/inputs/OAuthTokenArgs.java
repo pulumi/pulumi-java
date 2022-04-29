@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains information needed for generating an [OAuth token](https://developers.google.com/identity/protocols/OAuth2). This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
  * 
  */
-public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
+public final class OAuthTokenArgs extends ResourceArgs {
 
     public static final OAuthTokenArgs Empty = new OAuthTokenArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration details used for calculating evaluation metrics and creating an Evaluation.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs();
 

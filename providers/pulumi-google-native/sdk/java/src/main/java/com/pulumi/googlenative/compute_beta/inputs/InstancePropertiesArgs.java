@@ -21,6 +21,7 @@ import com.pulumi.googlenative.compute_beta.inputs.ServiceAccountArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ShieldedInstanceConfigArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ShieldedVmConfigArgs;
 import com.pulumi.googlenative.compute_beta.inputs.TagsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstancePropertiesArgs extends ResourceArgs {
 
     public static final InstancePropertiesArgs Empty = new InstancePropertiesArgs();
 

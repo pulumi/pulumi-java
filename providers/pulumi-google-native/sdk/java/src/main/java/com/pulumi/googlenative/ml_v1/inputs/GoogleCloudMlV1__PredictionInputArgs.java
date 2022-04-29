@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__PredictionInputDataFormat;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__PredictionInputOutputDataFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents input parameters for a prediction job.
  * 
  */
-public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__PredictionInputArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__PredictionInputArgs Empty = new GoogleCloudMlV1__PredictionInputArgs();
 

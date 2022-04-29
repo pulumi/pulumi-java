@@ -14,6 +14,7 @@ import com.pulumi.googlenative.containeranalysis_v1.enums.CVSSIntegrityImpact;
 import com.pulumi.googlenative.containeranalysis_v1.enums.CVSSPrivilegesRequired;
 import com.pulumi.googlenative.containeranalysis_v1.enums.CVSSScope;
 import com.pulumi.googlenative.containeranalysis_v1.enums.CVSSUserInteraction;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing multiple versions of CVSS. The intention is that as new versions of CVSS scores get added, we will be able to modify this message rather than adding new protos for each new version of the score.
  * 
  */
-public final class CVSSArgs extends com.pulumi.resources.ResourceArgs {
+public final class CVSSArgs extends ResourceArgs {
 
     public static final CVSSArgs Empty = new CVSSArgs();
 

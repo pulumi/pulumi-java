@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyInventoryFilterArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Resource groups provide a mechanism to group OS policy resources. Resource groups enable OS policy authors to create a single OS policy to be applied to VMs running different operating Systems. When the OS policy is applied to a target VM, the appropriate resource group within the OS policy is selected based on the `OSFilter` specified within the resource group.
  * 
  */
-public final class OSPolicyResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceGroupArgs extends ResourceArgs {
 
     public static final OSPolicyResourceGroupArgs Empty = new OSPolicyResourceGroupArgs();
 

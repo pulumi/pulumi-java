@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.ReservationAffinityConsumeReservationType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the reservations that this instance can consume from.
  * 
  */
-public final class ReservationAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReservationAffinityArgs extends ResourceArgs {
 
     public static final ReservationAffinityArgs Empty = new ReservationAffinityArgs();
 

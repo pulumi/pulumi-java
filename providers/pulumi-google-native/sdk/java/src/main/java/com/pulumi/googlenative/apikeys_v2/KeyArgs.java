@@ -6,13 +6,14 @@ package com.pulumi.googlenative.apikeys_v2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2RestrictionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyArgs extends ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 

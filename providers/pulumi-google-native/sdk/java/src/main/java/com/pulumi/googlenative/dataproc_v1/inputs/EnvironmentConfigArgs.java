@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Environment configuration for a workload.
  * 
  */
-public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentConfigArgs extends ResourceArgs {
 
     public static final EnvironmentConfigArgs Empty = new EnvironmentConfigArgs();
 

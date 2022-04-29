@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cloud Logging configurations for publicly visible zones.
  * 
  */
-public final class ManagedZoneCloudLoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneCloudLoggingConfigArgs extends ResourceArgs {
 
     public static final ManagedZoneCloudLoggingConfigArgs Empty = new ManagedZoneCloudLoggingConfigArgs();
 

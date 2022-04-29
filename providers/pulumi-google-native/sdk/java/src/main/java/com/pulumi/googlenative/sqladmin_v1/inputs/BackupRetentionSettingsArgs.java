@@ -6,6 +6,7 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sqladmin_v1.enums.BackupRetentionSettingsRetentionUnit;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * We currently only support backup retention by specifying the number of backups we will retain.
  * 
  */
-public final class BackupRetentionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupRetentionSettingsArgs extends ResourceArgs {
 
     public static final BackupRetentionSettingsArgs Empty = new BackupRetentionSettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration options for the private GKE cluster in a Cloud Composer environment.
  * 
  */
-public final class PrivateClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateClusterConfigArgs extends ResourceArgs {
 
     public static final PrivateClusterConfigArgs Empty = new PrivateClusterConfigArgs();
 

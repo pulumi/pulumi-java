@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.orgpolicy_v2.FolderPolicyArgs;
 import com.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:orgpolicy/v2:FolderPolicy")
-public class FolderPolicy extends com.pulumi.resources.CustomResource {
+public class FolderPolicy extends CustomResource {
     /**
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
@@ -70,19 +72,19 @@ public class FolderPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FolderPolicy(String name, FolderPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FolderPolicy(String name, FolderPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:orgpolicy/v2:FolderPolicy", name, args == null ? FolderPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FolderPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FolderPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:orgpolicy/v2:FolderPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -93,7 +95,7 @@ public class FolderPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FolderPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FolderPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FolderPolicy(name, id, options);
     }
 }

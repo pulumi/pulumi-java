@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A message describing the state of a particular execution stage.
  * 
  */
-public final class ExecutionStageStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecutionStageStateArgs extends ResourceArgs {
 
     public static final ExecutionStageStateArgs Empty = new ExecutionStageStateArgs();
 

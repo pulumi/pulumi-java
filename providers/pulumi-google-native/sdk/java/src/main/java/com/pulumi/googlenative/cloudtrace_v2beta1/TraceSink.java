@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs;
 import com.pulumi.googlenative.cloudtrace_v2beta1.outputs.OutputConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudtrace/v2beta1:TraceSink")
-public class TraceSink extends com.pulumi.resources.CustomResource {
+public class TraceSink extends CustomResource {
     /**
      * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
@@ -83,19 +85,19 @@ public class TraceSink extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TraceSink(String name, TraceSinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TraceSink(String name, TraceSinkArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudtrace/v2beta1:TraceSink", name, args == null ? TraceSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TraceSink(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TraceSink(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudtrace/v2beta1:TraceSink", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class TraceSink extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TraceSink get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TraceSink get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new TraceSink(name, id, options);
     }
 }

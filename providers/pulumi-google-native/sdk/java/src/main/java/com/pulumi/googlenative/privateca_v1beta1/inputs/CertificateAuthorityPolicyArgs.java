@@ -10,6 +10,7 @@ import com.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesAr
 import com.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.SubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The issuing policy for a CertificateAuthority. Certificates will not be successfully issued from this CertificateAuthority if they violate the policy.
  * 
  */
-public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityPolicyArgs extends ResourceArgs {
 
     public static final CertificateAuthorityPolicyArgs Empty = new CertificateAuthorityPolicyArgs();
 

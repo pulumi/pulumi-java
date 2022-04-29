@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.enums.AptRepositoryArchiveType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a single Apt package repository. This repository is added to a repo file that is stored at `/etc/apt/sources.list.d/google_osconfig.list`.
  * 
  */
-public final class AptRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class AptRepositoryArgs extends ResourceArgs {
 
     public static final AptRepositoryArgs Empty = new AptRepositoryArgs();
 

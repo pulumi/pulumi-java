@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1AssociationInfoArgs;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1CommitmentSettingsArgs;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ParameterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntitlementArgs extends ResourceArgs {
 
     public static final EntitlementArgs Empty = new EntitlementArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of &#34;sneakers&#34; and &#34;shoes&#34;. * &#34;sneakers&#34; will use a synonym of &#34;shoes&#34;. * &#34;shoes&#34; will use a synonym of &#34;sneakers&#34;.
  * 
  */
-public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs Empty = new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs();
 

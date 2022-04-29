@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Res
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Represents a response message that can be returned by a conversational agent. Response messages are also used for output audio synthesis. The approach is as follows: * If at least one OutputAudioText response is present, then all OutputAudioText responses are linearly concatenated, and the result is used for output audio synthesis. * If the OutputAudioText responses are a mixture of text and SSML, then the concatenated result is treated as SSML; otherwise, the result is treated as either text or SSML as appropriate. The agent designer should ideally use either text or SSML consistently throughout the bot design. * Otherwise, all Text responses are linearly concatenated, and the result is used for output audio synthesis. This approach allows for more sophisticated user experience scenarios, where the text displayed to the user may differ from what is heard.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessageArgs Empty = new GoogleCloudDialogflowCxV3ResponseMessageArgs();
 

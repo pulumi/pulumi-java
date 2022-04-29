@@ -5,6 +5,7 @@ package com.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MemcacheParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class MemcacheParametersArgs extends ResourceArgs {
 
     public static final MemcacheParametersArgs Empty = new MemcacheParametersArgs();
 

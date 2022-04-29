@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Node Group Affinity for clusters using sole-tenant node groups.
  * 
  */
-public final class NodeGroupAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeGroupAffinityArgs extends ResourceArgs {
 
     public static final NodeGroupAffinityArgs Empty = new NodeGroupAffinityArgs();
 

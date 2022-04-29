@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Pull target.
  * 
  */
-public final class PullTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class PullTargetArgs extends ResourceArgs {
 
     public static final PullTargetArgs Empty = new PullTargetArgs();
 

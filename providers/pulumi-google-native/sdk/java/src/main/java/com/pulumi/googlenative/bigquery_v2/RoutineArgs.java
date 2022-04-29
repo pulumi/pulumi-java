@@ -12,6 +12,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.ArgumentArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlTableTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutineArgs extends ResourceArgs {
 
     public static final RoutineArgs Empty = new RoutineArgs();
 

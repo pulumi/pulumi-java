@@ -12,6 +12,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.ScorecardArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TextArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesTableArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.XyChartArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Widget contains a single dashboard component and configuration of how to present the component in the dashboard.
  * 
  */
-public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
+public final class WidgetArgs extends ResourceArgs {
 
     public static final WidgetArgs Empty = new WidgetArgs();
 

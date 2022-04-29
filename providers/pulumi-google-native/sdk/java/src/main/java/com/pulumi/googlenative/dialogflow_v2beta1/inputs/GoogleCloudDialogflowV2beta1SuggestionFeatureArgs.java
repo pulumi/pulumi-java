@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SuggestionFeatureType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The type of Human Agent Assistant API suggestion to perform, and the maximum number of results to return for that type. Multiple `Feature` objects can be specified in the `features` list.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1SuggestionFeatureArgs Empty = new GoogleCloudDialogflowV2beta1SuggestionFeatureArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently supported: Image Types * image/jpeg * image/jpg&#39; * image/gif * image/png Video Types * video/h263 * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs();
 

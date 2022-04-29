@@ -15,6 +15,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableSchemaArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TimePartitioningArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.ViewDefinitionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableArgs extends ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies the resource to analyze for access policies, which may be set directly on the resource, or on ancestors such as organizations, folders or projects.
  * 
  */
-public final class ResourceSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSelectorArgs extends ResourceArgs {
 
     public static final ResourceSelectorArgs Empty = new ResourceSelectorArgs();
 

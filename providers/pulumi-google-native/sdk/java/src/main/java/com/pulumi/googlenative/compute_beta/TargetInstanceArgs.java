@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_beta;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.TargetInstanceNatPolicy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetInstanceArgs extends ResourceArgs {
 
     public static final TargetInstanceArgs Empty = new TargetInstanceArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.enums.ConsentState;
 import com.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1ConsentPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsentArgs extends ResourceArgs {
 
     public static final ConsentArgs Empty = new ConsentArgs();
 

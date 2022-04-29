@@ -6,12 +6,13 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.NetworkPerformanceConfigTotalEgressBandwidthTier;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkPerformanceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPerformanceConfigArgs extends ResourceArgs {
 
     public static final NetworkPerformanceConfigArgs Empty = new NetworkPerformanceConfigArgs();
 

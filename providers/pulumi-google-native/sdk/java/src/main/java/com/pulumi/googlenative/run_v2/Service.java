@@ -14,6 +14,8 @@ import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionRespons
 import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;
 import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetResponse;
 import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetStatusResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:run/v2:Service")
-public class Service extends com.pulumi.resources.CustomResource {
+public class Service extends CustomResource {
     /**
      * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
      * 
@@ -440,19 +442,19 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Service(String name, ServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Service(String name, ServiceArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:run/v2:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Service(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Service(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:run/v2:Service", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -463,7 +465,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Service get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Service get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Service(name, id, options);
     }
 }

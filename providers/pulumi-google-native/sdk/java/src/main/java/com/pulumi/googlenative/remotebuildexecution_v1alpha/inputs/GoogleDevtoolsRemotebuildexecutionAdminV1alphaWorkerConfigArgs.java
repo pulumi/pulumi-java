@@ -6,6 +6,7 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines the configuration to be used for creating workers in the worker pool.
  * 
  */
-public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorMetricKind;
 import com.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorValueType;
 import com.pulumi.googlenative.monitoring_v3.inputs.LabelDescriptorArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricDescriptorMetadataArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MetricDescriptorArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricDescriptorArgs extends ResourceArgs {
 
     public static final MetricDescriptorArgs Empty = new MetricDescriptorArgs();
 

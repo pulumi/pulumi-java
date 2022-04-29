@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vision_v1.ReferenceImageArgs;
 import com.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:vision/v1:ReferenceImage")
-public class ReferenceImage extends com.pulumi.resources.CustomResource {
+public class ReferenceImage extends CustomResource {
     /**
      * Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
      * 
@@ -84,19 +86,19 @@ public class ReferenceImage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ReferenceImage(String name, ReferenceImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ReferenceImage(String name, ReferenceImageArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:vision/v1:ReferenceImage", name, args == null ? ReferenceImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ReferenceImage(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ReferenceImage(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:vision/v1:ReferenceImage", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -107,7 +109,7 @@ public class ReferenceImage extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReferenceImage get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ReferenceImage get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ReferenceImage(name, id, options);
     }
 }

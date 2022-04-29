@@ -11,6 +11,7 @@ import com.pulumi.googlenative.datamigration_v1.inputs.DatabaseTypeArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.ReverseSshConnectivityArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.StaticIpConnectivityArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.VpcPeeringConnectivityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrationJobArgs extends ResourceArgs {
 
     public static final MigrationJobArgs Empty = new MigrationJobArgs();
 

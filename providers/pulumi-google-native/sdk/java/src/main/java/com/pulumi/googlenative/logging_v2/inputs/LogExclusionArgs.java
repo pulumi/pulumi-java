@@ -5,6 +5,7 @@ package com.pulumi.googlenative.logging_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies a set of log entries that are filtered out by a sink. If your Google Cloud resource receives a large volume of log entries, you can use exclusions to reduce your chargeable logs. Note that exclusions on organization-level and folder-level sinks don&#39;t apply to child resources. Note also that you cannot modify the _Required sink or exclude logs from it.
  * 
  */
-public final class LogExclusionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogExclusionArgs extends ResourceArgs {
 
     public static final LogExclusionArgs Empty = new LogExclusionArgs();
 

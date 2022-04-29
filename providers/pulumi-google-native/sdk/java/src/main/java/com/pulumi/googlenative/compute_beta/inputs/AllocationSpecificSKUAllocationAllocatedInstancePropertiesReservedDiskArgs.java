@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs extends ResourceArgs {
 
     public static final AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs Empty = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs();
 

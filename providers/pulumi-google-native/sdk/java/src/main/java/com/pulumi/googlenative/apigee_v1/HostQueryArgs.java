@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QueryMetricArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostQueryArgs extends ResourceArgs {
 
     public static final HostQueryArgs Empty = new HostQueryArgs();
 

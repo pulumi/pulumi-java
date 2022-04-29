@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies how many time series must fail a predicate to trigger a condition. If not specified, then a {count: 1} trigger is used.
  * 
  */
-public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerArgs extends ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 

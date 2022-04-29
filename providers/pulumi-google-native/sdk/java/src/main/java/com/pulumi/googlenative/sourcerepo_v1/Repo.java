@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.sourcerepo_v1.RepoArgs;
 import com.pulumi.googlenative.sourcerepo_v1.outputs.MirrorConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:sourcerepo/v1:Repo")
-public class Repo extends com.pulumi.resources.CustomResource {
+public class Repo extends CustomResource {
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
      * 
@@ -112,19 +114,19 @@ public class Repo extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Repo(String name, @Nullable RepoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Repo(String name, @Nullable RepoArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:sourcerepo/v1:Repo", name, args == null ? RepoArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Repo(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Repo(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:sourcerepo/v1:Repo", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class Repo extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Repo get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Repo get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Repo(name, id, options);
     }
 }

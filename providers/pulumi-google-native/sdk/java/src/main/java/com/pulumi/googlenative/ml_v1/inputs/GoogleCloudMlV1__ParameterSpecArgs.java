@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecScaleType;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Represents a single hyperparameter to optimize.
  * 
  */
-public final class GoogleCloudMlV1__ParameterSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__ParameterSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__ParameterSpecArgs Empty = new GoogleCloudMlV1__ParameterSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networksecurity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specification of traffic source attributes.
  * 
  */
-public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceArgs extends ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 

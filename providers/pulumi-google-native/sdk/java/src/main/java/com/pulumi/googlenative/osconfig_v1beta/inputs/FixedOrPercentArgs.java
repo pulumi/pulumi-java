@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Message encapsulating a value that can be either absolute (&#34;fixed&#34;) or relative (&#34;percent&#34;) to a value.
  * 
  */
-public final class FixedOrPercentArgs extends com.pulumi.resources.ResourceArgs {
+public final class FixedOrPercentArgs extends ResourceArgs {
 
     public static final FixedOrPercentArgs Empty = new FixedOrPercentArgs();
 

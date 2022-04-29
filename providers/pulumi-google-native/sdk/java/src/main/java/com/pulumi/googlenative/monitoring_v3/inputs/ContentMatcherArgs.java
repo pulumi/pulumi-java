@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.enums.ContentMatcherMatcher;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Optional. Used to perform content matching. This allows matching based on substrings and regular expressions, together with their negations. Only the first 4 MB of an HTTP or HTTPS check&#39;s response (and the first 1 MB of a TCP check&#39;s response) are examined for purposes of content matching.
  * 
  */
-public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentMatcherArgs extends ResourceArgs {
 
     public static final ContentMatcherArgs Empty = new ContentMatcherArgs();
 

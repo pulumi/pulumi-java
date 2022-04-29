@@ -15,6 +15,7 @@ import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1Gcs
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1SchemaArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1SystemTimestampsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntryArgs extends ResourceArgs {
 
     public static final EntryArgs Empty = new EntryArgs();
 

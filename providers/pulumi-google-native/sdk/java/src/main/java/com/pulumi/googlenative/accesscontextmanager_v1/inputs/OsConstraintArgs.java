@@ -6,6 +6,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.enums.OsConstraintOsType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A restriction on the OS type and version of devices making requests.
  * 
  */
-public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsConstraintArgs extends ResourceArgs {
 
     public static final OsConstraintArgs Empty = new OsConstraintArgs();
 

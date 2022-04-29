@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v2.VersionArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v2:Version")
-public class Version extends com.pulumi.resources.CustomResource {
+public class Version extends CustomResource {
     /**
      * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
@@ -112,19 +114,19 @@ public class Version extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Version(String name, @Nullable VersionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Version(String name, @Nullable VersionArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2:Version", name, args == null ? VersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Version(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Version(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2:Version", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class Version extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Version get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Version get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Version(name, id, options);
     }
 }

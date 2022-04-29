@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a single yum package repository. These are added to a repo file that is managed at `/etc/yum.repos.d/google_osconfig.repo`.
  * 
  */
-public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceYumRepositoryArgs Empty = new OSPolicyResourceRepositoryResourceYumRepositoryArgs();
 

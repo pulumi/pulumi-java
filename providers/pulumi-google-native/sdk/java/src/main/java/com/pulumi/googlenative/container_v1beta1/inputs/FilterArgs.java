@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.FilterEventTypeItem;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Allows filtering to one or more specific event types. If event types are present, those and only those event types will be transmitted to the cluster. Other types will be skipped. If no filter is specified, or no event types are present, all event types will be sent
  * 
  */
-public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterArgs extends ResourceArgs {
 
     public static final FilterArgs Empty = new FilterArgs();
 

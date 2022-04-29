@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.DistributionArchitecture;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * This represents a particular channel of distribution for a given package. E.g., Debian&#39;s jessie-backports dpkg mirror.
  * 
  */
-public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionArgs extends ResourceArgs {
 
     public static final DistributionArgs Empty = new DistributionArgs();
 

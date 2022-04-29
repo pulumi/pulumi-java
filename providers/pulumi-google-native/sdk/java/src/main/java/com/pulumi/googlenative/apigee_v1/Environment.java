@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.apigee_v1.EnvironmentArgs;
 import com.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:apigee/v1:Environment")
-public class Environment extends com.pulumi.resources.CustomResource {
+public class Environment extends CustomResource {
     /**
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
      * 
@@ -167,19 +169,19 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Environment(String name, EnvironmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Environment(String name, EnvironmentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Environment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Environment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Environment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -190,7 +192,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Environment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Environment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Environment(name, id, options);
     }
 }

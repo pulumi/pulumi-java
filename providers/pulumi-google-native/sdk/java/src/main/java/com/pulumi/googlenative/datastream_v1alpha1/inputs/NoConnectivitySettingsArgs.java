@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * No connectivity settings.
  * 
  */
-public final class NoConnectivitySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoConnectivitySettingsArgs extends ResourceArgs {
 
     public static final NoConnectivitySettingsArgs Empty = new NoConnectivitySettingsArgs();
 

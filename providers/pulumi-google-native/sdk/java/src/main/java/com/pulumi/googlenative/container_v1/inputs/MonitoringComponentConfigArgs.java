@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.MonitoringComponentConfigEnableComponentsItem;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MonitoringComponentConfig is cluster monitoring component configuration.
  * 
  */
-public final class MonitoringComponentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringComponentConfigArgs extends ResourceArgs {
 
     public static final MonitoringComponentConfigArgs Empty = new MonitoringComponentConfigArgs();
 

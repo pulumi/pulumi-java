@@ -5,6 +5,7 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * FeatureMap represents extra features that customers want to include in the recommendation model for catalogs/user events as categorical/numerical features.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1FeatureMapArgs Empty = new GoogleCloudRecommendationengineV1beta1FeatureMapArgs();
 

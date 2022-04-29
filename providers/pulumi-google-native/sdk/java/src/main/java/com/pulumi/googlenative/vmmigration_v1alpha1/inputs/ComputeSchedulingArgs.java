@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeSchedulingOnHostMaintenance;
 import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeSchedulingRestartType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulingNodeAffinityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Scheduling information for VM on maintenance/restart behaviour and node allocation in sole tenant nodes.
  * 
  */
-public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComputeSchedulingArgs extends ResourceArgs {
 
     public static final ComputeSchedulingArgs Empty = new ComputeSchedulingArgs();
 

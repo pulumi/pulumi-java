@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Instructs the speech synthesizer on how to generate the output audio content.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs Empty = new GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs();
 

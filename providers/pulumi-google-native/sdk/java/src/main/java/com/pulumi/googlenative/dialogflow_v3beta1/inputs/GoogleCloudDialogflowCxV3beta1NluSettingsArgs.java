@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1NluSettingsModelType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Settings related to NLU.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1NluSettingsArgs Empty = new GoogleCloudDialogflowCxV3beta1NluSettingsArgs();
 

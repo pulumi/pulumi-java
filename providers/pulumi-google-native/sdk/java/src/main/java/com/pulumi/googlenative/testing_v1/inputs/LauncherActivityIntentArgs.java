@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.testing_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Specifies an intent that starts the main launcher activity.
  * 
  */
-public final class LauncherActivityIntentArgs extends com.pulumi.resources.ResourceArgs {
+public final class LauncherActivityIntentArgs extends ResourceArgs {
 
     public static final LauncherActivityIntentArgs Empty = new LauncherActivityIntentArgs();
 

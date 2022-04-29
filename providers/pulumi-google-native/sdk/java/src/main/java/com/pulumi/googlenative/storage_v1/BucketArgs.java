@@ -19,6 +19,7 @@ import com.pulumi.googlenative.storage_v1.inputs.BucketRetentionPolicyArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketVersioningArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketWebsiteArgs;
 import com.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketArgs extends ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 

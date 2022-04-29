@@ -6,6 +6,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Multiplexing settings for output stream.
  * 
  */
-public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class MuxStreamArgs extends ResourceArgs {
 
     public static final MuxStreamArgs Empty = new MuxStreamArgs();
 

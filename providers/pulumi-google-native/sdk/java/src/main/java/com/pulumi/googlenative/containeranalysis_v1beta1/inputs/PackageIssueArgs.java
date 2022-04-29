@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * This message wraps a location affected by a vulnerability and its associated fix (if one is available).
  * 
  */
-public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageIssueArgs extends ResourceArgs {
 
     public static final PackageIssueArgs Empty = new PackageIssueArgs();
 

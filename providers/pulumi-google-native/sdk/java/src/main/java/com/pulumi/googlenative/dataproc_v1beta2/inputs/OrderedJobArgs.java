@@ -14,6 +14,7 @@ import com.pulumi.googlenative.dataproc_v1beta2.inputs.PySparkJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.SparkJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.SparkRJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.SparkSqlJobArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * A job executed by the workflow.
  * 
  */
-public final class OrderedJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrderedJobArgs extends ResourceArgs {
 
     public static final OrderedJobArgs Empty = new OrderedJobArgs();
 

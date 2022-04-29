@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A chart that displays alert policy data.
  * 
  */
-public final class AlertChartArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertChartArgs extends ResourceArgs {
 
     public static final AlertChartArgs Empty = new AlertChartArgs();
 

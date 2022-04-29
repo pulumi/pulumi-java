@@ -6,6 +6,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaIntervalArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies how a facet is computed.
  * 
  */
-public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs Empty = new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs();
 

@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.securitycenter_v1.SourceArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:securitycenter/v1:Source")
-public class Source extends com.pulumi.resources.CustomResource {
+public class Source extends CustomResource {
     /**
      * The canonical name of the finding. It&#39;s either &#34;organizations/{organization_id}/sources/{source_id}&#34;, &#34;folders/{folder_id}/sources/{source_id}&#34; or &#34;projects/{project_number}/sources/{source_id}&#34;, depending on the closest CRM ancestor of the resource associated with the finding.
      * 
@@ -98,19 +100,19 @@ public class Source extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Source(String name, SourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Source(String name, SourceArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:securitycenter/v1:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Source(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Source(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:securitycenter/v1:Source", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -121,7 +123,7 @@ public class Source extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Source get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Source get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Source(name, id, options);
     }
 }

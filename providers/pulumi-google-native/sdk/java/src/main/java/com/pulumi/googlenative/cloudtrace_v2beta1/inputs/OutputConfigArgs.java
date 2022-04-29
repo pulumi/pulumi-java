@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * OutputConfig contains a destination for writing trace data.
  * 
  */
-public final class OutputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutputConfigArgs extends ResourceArgs {
 
     public static final OutputConfigArgs Empty = new OutputConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.SourceContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Source describes the location of the source used for the build.
  * 
  */
-public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceArgs extends ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 

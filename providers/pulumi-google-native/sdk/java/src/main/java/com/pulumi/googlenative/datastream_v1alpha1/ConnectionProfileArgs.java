@@ -12,6 +12,7 @@ import com.pulumi.googlenative.datastream_v1alpha1.inputs.NoConnectivitySettings
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleProfileArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.PrivateConnectivityArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.StaticServiceIpConnectivityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionProfileArgs extends ResourceArgs {
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 

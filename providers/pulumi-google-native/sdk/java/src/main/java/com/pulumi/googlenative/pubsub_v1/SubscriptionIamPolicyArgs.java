@@ -6,6 +6,7 @@ package com.pulumi.googlenative.pubsub_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsub_v1.inputs.BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubscriptionIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubscriptionIamPolicyArgs extends ResourceArgs {
 
     public static final SubscriptionIamPolicyArgs Empty = new SubscriptionIamPolicyArgs();
 

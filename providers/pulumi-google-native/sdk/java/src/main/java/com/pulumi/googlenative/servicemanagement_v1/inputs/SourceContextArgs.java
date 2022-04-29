@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * `SourceContext` represents information about the source of a protobuf element, like the file in which it is defined.
  * 
  */
-public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceContextArgs extends ResourceArgs {
 
     public static final SourceContextArgs Empty = new SourceContextArgs();
 

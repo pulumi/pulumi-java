@@ -12,6 +12,7 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepInstallD
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepInstallMsiArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepInstallRpmArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepRunScriptArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * An action that can be taken as part of installing or updating a recipe.
  * 
  */
-public final class SoftwareRecipeStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepArgs Empty = new SoftwareRecipeStepArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firestore_v1beta1.IndexArgs;
 import com.pulumi.googlenative.firestore_v1beta1.outputs.GoogleFirestoreAdminV1beta1IndexFieldResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:firestore/v1beta1:Index")
-public class Index extends com.pulumi.resources.CustomResource {
+public class Index extends CustomResource {
     /**
      * The collection ID to which this index applies. Required.
      * 
@@ -98,19 +100,19 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Index(String name, IndexArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Index(String name, IndexArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:firestore/v1beta1:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Index(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Index(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:firestore/v1beta1:Index", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -121,7 +123,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Index get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Index get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Index(name, id, options);
     }
 }

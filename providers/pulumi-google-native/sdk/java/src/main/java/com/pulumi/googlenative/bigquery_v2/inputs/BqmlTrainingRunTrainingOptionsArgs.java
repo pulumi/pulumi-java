@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
  * 
  */
-public final class BqmlTrainingRunTrainingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BqmlTrainingRunTrainingOptionsArgs extends ResourceArgs {
 
     public static final BqmlTrainingRunTrainingOptionsArgs Empty = new BqmlTrainingRunTrainingOptionsArgs();
 

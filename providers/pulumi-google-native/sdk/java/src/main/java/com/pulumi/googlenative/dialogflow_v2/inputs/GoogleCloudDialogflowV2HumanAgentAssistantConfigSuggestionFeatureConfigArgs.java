@@ -10,6 +10,7 @@ import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2Human
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2SuggestionFeatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Config for suggestion features.
  * 
  */
-public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs();
 

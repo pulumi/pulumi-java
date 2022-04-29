@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be translated to &#34;-e numShard&#34; &#34;-e shardIndex&#34; AndroidJUnitRunner arguments. With uniform sharding enabled, specifying these sharding arguments via environment_variables is invalid.
  * 
  */
-public final class UniformShardingArgs extends com.pulumi.resources.ResourceArgs {
+public final class UniformShardingArgs extends ResourceArgs {
 
     public static final UniformShardingArgs Empty = new UniformShardingArgs();
 

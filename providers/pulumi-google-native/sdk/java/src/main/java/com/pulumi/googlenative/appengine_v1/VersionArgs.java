@@ -23,6 +23,7 @@ import com.pulumi.googlenative.appengine_v1.inputs.ReadinessCheckArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.ResourcesArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.UrlMapArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.VpcAccessConnectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionArgs extends ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 

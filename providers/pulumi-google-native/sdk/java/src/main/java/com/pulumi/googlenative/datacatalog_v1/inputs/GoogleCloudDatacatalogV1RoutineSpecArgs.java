@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecRoutineType;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgumentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Specification that applies to a routine. Valid only for entries with the `ROUTINE` type.
  * 
  */
-public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1RoutineSpecArgs Empty = new GoogleCloudDatacatalogV1RoutineSpecArgs();
 

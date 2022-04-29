@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * POSIX Group definition to represent a group in a POSIX compliant system.
  * 
  */
-public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class PosixGroupArgs extends ResourceArgs {
 
     public static final PosixGroupArgs Empty = new PosixGroupArgs();
 

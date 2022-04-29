@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.assuredworkloads_v1.enums.WorkloadComplianceRegime;
 import com.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs;
 import com.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadArgs extends ResourceArgs {
 
     public static final WorkloadArgs Empty = new WorkloadArgs();
 

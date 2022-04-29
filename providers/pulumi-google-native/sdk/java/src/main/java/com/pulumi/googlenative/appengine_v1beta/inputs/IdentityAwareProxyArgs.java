@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Identity-Aware Proxy
  * 
  */
-public final class IdentityAwareProxyArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityAwareProxyArgs extends ResourceArgs {
 
     public static final IdentityAwareProxyArgs Empty = new IdentityAwareProxyArgs();
 

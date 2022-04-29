@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3TestCaseResultTestResult;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a result from running a test case in an agent environment.
  * 
  */
-public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3TestCaseResultArgs Empty = new GoogleCloudDialogflowCxV3TestCaseResultArgs();
 

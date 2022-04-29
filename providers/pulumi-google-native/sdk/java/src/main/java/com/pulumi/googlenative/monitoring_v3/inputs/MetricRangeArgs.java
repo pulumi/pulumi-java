@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min &lt;= x &lt;= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
  * 
  */
-public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricRangeArgs extends ResourceArgs {
 
     public static final MetricRangeArgs Empty = new MetricRangeArgs();
 

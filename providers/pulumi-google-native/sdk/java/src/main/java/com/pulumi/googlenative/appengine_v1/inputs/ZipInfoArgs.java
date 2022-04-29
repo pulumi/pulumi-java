@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The zip file information for a zip deployment.
  * 
  */
-public final class ZipInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ZipInfoArgs extends ResourceArgs {
 
     public static final ZipInfoArgs Empty = new ZipInfoArgs();
 

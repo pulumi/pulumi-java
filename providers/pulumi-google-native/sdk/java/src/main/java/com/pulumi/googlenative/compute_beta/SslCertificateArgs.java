@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.SslCertificateType;
 import com.pulumi.googlenative.compute_beta.inputs.SslCertificateManagedSslCertificateArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SslCertificateSelfManagedSslCertificateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SslCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class SslCertificateArgs extends ResourceArgs {
 
     public static final SslCertificateArgs Empty = new SslCertificateArgs();
 

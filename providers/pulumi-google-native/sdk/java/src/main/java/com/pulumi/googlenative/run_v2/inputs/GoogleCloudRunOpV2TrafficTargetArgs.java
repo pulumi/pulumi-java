@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2TrafficTargetType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Holds a single traffic routing entry for the Service. Allocations can be done to a specific Revision name, or pointing to the latest Ready Revision.
  * 
  */
-public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2TrafficTargetArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2TrafficTargetArgs Empty = new GoogleCloudRunOpV2TrafficTargetArgs();
 

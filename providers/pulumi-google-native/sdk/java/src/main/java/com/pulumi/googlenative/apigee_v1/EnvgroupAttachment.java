@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.apigee_v1.EnvgroupAttachmentArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -17,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:apigee/v1:EnvgroupAttachment")
-public class EnvgroupAttachment extends com.pulumi.resources.CustomResource {
+public class EnvgroupAttachment extends CustomResource {
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
      * 
@@ -82,19 +84,19 @@ public class EnvgroupAttachment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EnvgroupAttachment(String name, EnvgroupAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EnvgroupAttachment(String name, EnvgroupAttachmentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:EnvgroupAttachment", name, args == null ? EnvgroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EnvgroupAttachment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EnvgroupAttachment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:EnvgroupAttachment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class EnvgroupAttachment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnvgroupAttachment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EnvgroupAttachment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new EnvgroupAttachment(name, id, options);
     }
 }

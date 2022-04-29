@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A boost action to apply to results matching condition specified above.
  * 
  */
-public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleBoostActionArgs Empty = new GoogleCloudRetailV2betaRuleBoostActionArgs();
 

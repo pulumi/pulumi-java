@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * DocumentNote represents an SPDX Document Creation Infromation section: https://spdx.github.io/spdx-spec/2-document-creation-information/
  * 
  */
-public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class DocumentNoteArgs extends ResourceArgs {
 
     public static final DocumentNoteArgs Empty = new DocumentNoteArgs();
 

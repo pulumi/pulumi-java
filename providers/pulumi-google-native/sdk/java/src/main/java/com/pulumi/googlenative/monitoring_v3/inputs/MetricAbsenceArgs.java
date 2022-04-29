@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A condition type that checks that monitored resources are reporting data. The configuration defines a metric and a set of monitored resources. The predicate is considered in violation when a time series for the specified metric of a monitored resource does not include any data in the specified duration.
  * 
  */
-public final class MetricAbsenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricAbsenceArgs extends ResourceArgs {
 
     public static final MetricAbsenceArgs Empty = new MetricAbsenceArgs();
 

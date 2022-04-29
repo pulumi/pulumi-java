@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.appengine_v1.inputs.CloudBuildOptionsArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.ContainerInfoArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.ZipInfoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Code and application artifacts used to deploy a version to App Engine.
  * 
  */
-public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentArgs extends ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 

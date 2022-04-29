@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.ImageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Overlay configuration.
  * 
  */
-public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
+public final class OverlayArgs extends ResourceArgs {
 
     public static final OverlayArgs Empty = new OverlayArgs();
 

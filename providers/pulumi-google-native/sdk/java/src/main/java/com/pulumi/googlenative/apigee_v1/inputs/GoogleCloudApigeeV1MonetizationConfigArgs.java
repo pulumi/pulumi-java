@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for the Monetization add-on.
  * 
  */
-public final class GoogleCloudApigeeV1MonetizationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1MonetizationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1MonetizationConfigArgs Empty = new GoogleCloudApigeeV1MonetizationConfigArgs();
 

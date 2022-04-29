@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Definition of the experiment.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ExperimentDefinitionArgs Empty = new GoogleCloudDialogflowCxV3ExperimentDefinitionArgs();
 

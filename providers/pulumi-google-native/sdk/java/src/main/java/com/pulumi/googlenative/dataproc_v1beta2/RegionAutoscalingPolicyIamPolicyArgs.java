@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1beta2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionAutoscalingPolicyIamPolicyArgs extends ResourceArgs {
 
     public static final RegionAutoscalingPolicyIamPolicyArgs Empty = new RegionAutoscalingPolicyIamPolicyArgs();
 

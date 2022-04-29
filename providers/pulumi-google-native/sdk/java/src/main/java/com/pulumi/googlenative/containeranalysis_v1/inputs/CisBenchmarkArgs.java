@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.enums.CisBenchmarkSeverity;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A compliance check that is a CIS benchmark.
  * 
  */
-public final class CisBenchmarkArgs extends com.pulumi.resources.ResourceArgs {
+public final class CisBenchmarkArgs extends ResourceArgs {
 
     public static final CisBenchmarkArgs Empty = new CisBenchmarkArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentParameterArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * An intent represents a user&#39;s intent to interact with a conversational agent. You can provide information for the Dialogflow API to use to match user input to an intent by adding training phrases (i.e., examples of user input) to your intent.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1IntentArgs Empty = new GoogleCloudDialogflowCxV3beta1IntentArgs();
 

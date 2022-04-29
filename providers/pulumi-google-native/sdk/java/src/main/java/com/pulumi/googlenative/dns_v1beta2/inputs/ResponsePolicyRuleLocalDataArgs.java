@@ -6,13 +6,14 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResponsePolicyRuleLocalDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponsePolicyRuleLocalDataArgs extends ResourceArgs {
 
     public static final ResponsePolicyRuleLocalDataArgs Empty = new ResponsePolicyRuleLocalDataArgs();
 

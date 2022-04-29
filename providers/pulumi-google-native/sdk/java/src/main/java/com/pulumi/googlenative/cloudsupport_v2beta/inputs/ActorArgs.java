@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An object containing information about the effective user and authenticated principal responsible for an action.
  * 
  */
-public final class ActorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActorArgs extends ResourceArgs {
 
     public static final ActorArgs Empty = new ActorArgs();
 

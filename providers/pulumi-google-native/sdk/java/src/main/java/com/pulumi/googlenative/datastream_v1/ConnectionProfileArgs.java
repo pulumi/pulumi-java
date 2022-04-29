@@ -11,6 +11,7 @@ import com.pulumi.googlenative.datastream_v1.inputs.MysqlProfileArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleProfileArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.PrivateConnectivityArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.StaticServiceIpConnectivityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionProfileArgs extends ResourceArgs {
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 

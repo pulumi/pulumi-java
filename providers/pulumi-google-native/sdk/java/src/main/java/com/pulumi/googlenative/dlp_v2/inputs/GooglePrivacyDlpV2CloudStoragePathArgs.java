@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Message representing a single file or path in Cloud Storage.
  * 
  */
-public final class GooglePrivacyDlpV2CloudStoragePathArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CloudStoragePathArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CloudStoragePathArgs Empty = new GooglePrivacyDlpV2CloudStoragePathArgs();
 

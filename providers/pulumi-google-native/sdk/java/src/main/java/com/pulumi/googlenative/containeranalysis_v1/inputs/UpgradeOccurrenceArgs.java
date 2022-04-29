@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An Upgrade Occurrence represents that a specific resource_url could install a specific upgrade. This presence is supplied via local sources (i.e. it is present in the mirror and the running system has noticed its availability). For Windows, both distribution and windows_update contain information for the Windows update.
  * 
  */
-public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpgradeOccurrenceArgs extends ResourceArgs {
 
     public static final UpgradeOccurrenceArgs Empty = new UpgradeOccurrenceArgs();
 

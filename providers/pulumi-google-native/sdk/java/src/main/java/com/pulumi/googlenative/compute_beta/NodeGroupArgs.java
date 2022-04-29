@@ -9,13 +9,14 @@ import com.pulumi.googlenative.compute_beta.enums.NodeGroupMaintenancePolicy;
 import com.pulumi.googlenative.compute_beta.enums.NodeGroupStatus;
 import com.pulumi.googlenative.compute_beta.inputs.NodeGroupAutoscalingPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.NodeGroupMaintenanceWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeGroupArgs extends ResourceArgs {
 
     public static final NodeGroupArgs Empty = new NodeGroupArgs();
 

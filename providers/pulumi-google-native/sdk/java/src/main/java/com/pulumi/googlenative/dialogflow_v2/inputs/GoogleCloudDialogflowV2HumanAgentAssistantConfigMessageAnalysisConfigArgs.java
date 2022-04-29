@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for analyses to run on each conversation message.
  * 
  */
-public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs();
 

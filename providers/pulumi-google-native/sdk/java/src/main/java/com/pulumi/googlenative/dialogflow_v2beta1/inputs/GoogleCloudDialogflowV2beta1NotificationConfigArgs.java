@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines notification behavior.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1NotificationConfigArgs Empty = new GoogleCloudDialogflowV2beta1NotificationConfigArgs();
 

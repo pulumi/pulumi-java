@@ -9,6 +9,7 @@ import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AdvancedApiOp
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ConnectorsPlatformConfigArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1IntegrationConfigArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1MonetizationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Add-on configurations for the Apigee organization.
  * 
  */
-public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1AddonsConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1AddonsConfigArgs Empty = new GoogleCloudApigeeV1AddonsConfigArgs();
 

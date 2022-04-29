@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.enums.VersionKind;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Version contains structured information about the version of a package.
  * 
  */
-public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionArgs extends ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 

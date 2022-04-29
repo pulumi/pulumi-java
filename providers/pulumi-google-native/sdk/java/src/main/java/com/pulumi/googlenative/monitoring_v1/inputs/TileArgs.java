@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A single tile in the mosaic. The placement and size of the tile are configurable.
  * 
  */
-public final class TileArgs extends com.pulumi.resources.ResourceArgs {
+public final class TileArgs extends ResourceArgs {
 
     public static final TileArgs Empty = new TileArgs();
 

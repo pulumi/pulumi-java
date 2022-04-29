@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Stores rollup test status of multiple steps that were run as a group and outcome of each individual step.
  * 
  */
-public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrimaryStepArgs extends ResourceArgs {
 
     public static final PrimaryStepArgs Empty = new PrimaryStepArgs();
 

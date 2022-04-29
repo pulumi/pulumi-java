@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Extra network settings. Only applicable in the App Engine flexible environment.
  * 
  */
-public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkArgs extends ResourceArgs {
 
     public static final NetworkArgs Empty = new NetworkArgs();
 

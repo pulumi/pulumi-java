@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.enums.WeeklyScheduleDayOfWeek;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents a weekly schedule.
  * 
  */
-public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeeklyScheduleArgs extends ResourceArgs {
 
     public static final WeeklyScheduleArgs Empty = new WeeklyScheduleArgs();
 

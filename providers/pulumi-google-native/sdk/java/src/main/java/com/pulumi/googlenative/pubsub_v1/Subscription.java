@@ -13,6 +13,8 @@ import com.pulumi.googlenative.pubsub_v1.outputs.DeadLetterPolicyResponse;
 import com.pulumi.googlenative.pubsub_v1.outputs.ExpirationPolicyResponse;
 import com.pulumi.googlenative.pubsub_v1.outputs.PushConfigResponse;
 import com.pulumi.googlenative.pubsub_v1.outputs.RetryPolicyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:pubsub/v1:Subscription")
-public class Subscription extends com.pulumi.resources.CustomResource {
+public class Subscription extends CustomResource {
     /**
      * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
      * 
@@ -257,19 +259,19 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Subscription(String name, SubscriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Subscription(String name, SubscriptionArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:pubsub/v1:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Subscription(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Subscription(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:pubsub/v1:Subscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -280,7 +282,7 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Subscription get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Subscription get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Subscription(name, id, options);
     }
 }

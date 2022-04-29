@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Max findings configuration per infoType, per content item or long running DlpJob.
  * 
  */
-public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeLimitArgs Empty = new GooglePrivacyDlpV2InfoTypeLimitArgs();
 

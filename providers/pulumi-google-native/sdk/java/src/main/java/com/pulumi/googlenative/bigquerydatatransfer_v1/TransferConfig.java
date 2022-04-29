@@ -12,6 +12,8 @@ import com.pulumi.googlenative.bigquerydatatransfer_v1.TransferConfigArgs;
 import com.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
 import com.pulumi.googlenative.bigquerydatatransfer_v1.outputs.ScheduleOptionsResponse;
 import com.pulumi.googlenative.bigquerydatatransfer_v1.outputs.UserInfoResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:bigquerydatatransfer/v1:TransferConfig")
-public class TransferConfig extends com.pulumi.resources.CustomResource {
+public class TransferConfig extends CustomResource {
     /**
      * The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
      * 
@@ -270,19 +272,19 @@ public class TransferConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransferConfig(String name, @Nullable TransferConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransferConfig(String name, @Nullable TransferConfigArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:bigquerydatatransfer/v1:TransferConfig", name, args == null ? TransferConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TransferConfig(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TransferConfig(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:bigquerydatatransfer/v1:TransferConfig", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -293,7 +295,7 @@ public class TransferConfig extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransferConfig get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransferConfig get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new TransferConfig(name, id, options);
     }
 }

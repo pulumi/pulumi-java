@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Control over the rate of notifications sent to this alert policy&#39;s notification channels.
  * 
  */
-public final class NotificationRateLimitArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationRateLimitArgs extends ResourceArgs {
 
     public static final NotificationRateLimitArgs Empty = new NotificationRateLimitArgs();
 

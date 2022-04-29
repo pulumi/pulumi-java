@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
  * 
  */
-public final class MeshCertificatesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MeshCertificatesArgs extends ResourceArgs {
 
     public static final MeshCertificatesArgs Empty = new MeshCertificatesArgs();
 

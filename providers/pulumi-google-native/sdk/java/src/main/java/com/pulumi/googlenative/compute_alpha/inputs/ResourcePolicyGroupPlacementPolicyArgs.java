@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementP
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyLocality;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyScope;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyStyle;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
  * 
  */
-public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyGroupPlacementPolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyGroupPlacementPolicyArgs Empty = new ResourcePolicyGroupPlacementPolicyArgs();
 

@@ -17,6 +17,8 @@ import com.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2PriceInfoRes
 import com.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2ProductResponse;
 import com.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2PromotionResponse;
 import com.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2RatingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:retail/v2:Product")
-public class Product extends com.pulumi.resources.CustomResource {
+public class Product extends CustomResource {
     /**
      * Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
      * 
@@ -499,19 +501,19 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Product(String name, ProductArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Product(String name, ProductArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:retail/v2:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Product(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Product(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:retail/v2:Product", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -522,7 +524,7 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Product get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Product get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Product(name, id, options);
     }
 }

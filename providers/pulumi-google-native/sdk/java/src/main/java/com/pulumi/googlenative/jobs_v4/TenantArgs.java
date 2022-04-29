@@ -5,13 +5,14 @@ package com.pulumi.googlenative.jobs_v4;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TenantArgs extends com.pulumi.resources.ResourceArgs {
+public final class TenantArgs extends ResourceArgs {
 
     public static final TenantArgs Empty = new TenantArgs();
 

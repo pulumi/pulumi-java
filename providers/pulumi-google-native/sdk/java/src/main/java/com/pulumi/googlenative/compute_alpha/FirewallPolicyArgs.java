@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.FirewallPolicyVpcNetworkScope;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyAssociationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyArgs extends ResourceArgs {
 
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 

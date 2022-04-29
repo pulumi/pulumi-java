@@ -9,6 +9,7 @@ import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceExecResou
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileResourceArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An OS policy resource is used to define the desired state configuration and provides a specific functionality like installing/removing packages, executing a script etc. The system ensures that resources are always in their desired state by taking necessary actions if they have drifted from their desired state.
  * 
  */
-public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceArgs extends ResourceArgs {
 
     public static final OSPolicyResourceArgs Empty = new OSPolicyResourceArgs();
 

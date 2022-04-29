@@ -10,6 +10,7 @@ import com.pulumi.googlenative.tpu_v2alpha1.inputs.AttachedDiskArgs;
 import com.pulumi.googlenative.tpu_v2alpha1.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.tpu_v2alpha1.inputs.SchedulingConfigArgs;
 import com.pulumi.googlenative.tpu_v2alpha1.inputs.ServiceAccountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeArgs extends ResourceArgs {
 
     public static final NodeArgs Empty = new NodeArgs();
 

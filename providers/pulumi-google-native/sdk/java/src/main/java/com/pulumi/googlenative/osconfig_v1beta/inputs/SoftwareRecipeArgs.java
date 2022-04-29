@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeDesiredState;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A software recipe is a set of instructions for installing and configuring a piece of software. It consists of a set of artifacts that are downloaded, and a set of steps that install, configure, and/or update the software. Recipes support installing and updating software from artifacts in the following formats: Zip archive, Tar archive, Windows MSI, Debian package, and RPM package. Additionally, recipes support executing a script (either defined in a file or directly in this api) in bash, sh, cmd, and powershell. Updating a software recipe If a recipe is assigned to an instance and there is a recipe with the same name but a lower version already installed and the assigned state of the recipe is `UPDATED`, then the recipe is updated to the new version. Script Working Directories Each script or execution step is run in its own temporary directory which is deleted after completing the step.
  * 
  */
-public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeArgs extends ResourceArgs {
 
     public static final SoftwareRecipeArgs Empty = new SoftwareRecipeArgs();
 

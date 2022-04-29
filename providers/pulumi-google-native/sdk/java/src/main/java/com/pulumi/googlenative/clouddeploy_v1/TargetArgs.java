@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetArgs extends ResourceArgs {
 
     public static final TargetArgs Empty = new TargetArgs();
 

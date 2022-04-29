@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingPurgeData
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionScope;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionStrategy;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecuritySettingArgs extends ResourceArgs {
 
     public static final SecuritySettingArgs Empty = new SecuritySettingArgs();
 

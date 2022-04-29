@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StatisticalTableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * δ-presence metric, used to estimate how likely it is for an attacker to figure out that one given individual appears in a de-identified dataset. Similarly to the k-map metric, we cannot compute δ-presence exactly without knowing the attack dataset, so we use a statistical model instead.
  * 
  */
-public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs Empty = new GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs();
 

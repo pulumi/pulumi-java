@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * `QuotaLimit` defines a specific limit that applies over a specified duration for a limit type. There can be at most one limit for a duration and limit type combination defined within a `QuotaGroup`.
  * 
  */
-public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
+public final class QuotaLimitArgs extends ResourceArgs {
 
     public static final QuotaLimitArgs Empty = new QuotaLimitArgs();
 

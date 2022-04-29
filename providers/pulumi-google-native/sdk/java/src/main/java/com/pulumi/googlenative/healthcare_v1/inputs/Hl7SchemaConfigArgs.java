@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.inputs.VersionSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Root config message for HL7v2 schema. This contains a schema structure of groups and segments, and filters that determine which messages to apply the schema structure to.
  * 
  */
-public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class Hl7SchemaConfigArgs extends ResourceArgs {
 
     public static final Hl7SchemaConfigArgs Empty = new Hl7SchemaConfigArgs();
 

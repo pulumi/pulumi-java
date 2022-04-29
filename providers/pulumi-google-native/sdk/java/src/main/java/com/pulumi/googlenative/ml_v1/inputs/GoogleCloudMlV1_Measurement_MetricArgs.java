@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A message representing a metric in the measurement.
  * 
  */
-public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1_Measurement_MetricArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1_Measurement_MetricArgs Empty = new GoogleCloudMlV1_Measurement_MetricArgs();
 

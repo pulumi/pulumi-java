@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.healthcare_v1beta1.DicomStoreArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1DicomStreamConfigResponse;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:DicomStore")
-public class DicomStore extends com.pulumi.resources.CustomResource {
+public class DicomStore extends CustomResource {
     /**
      * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
@@ -100,19 +102,19 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DicomStore(String name, DicomStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DicomStore(String name, DicomStoreArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DicomStore(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DicomStore(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:DicomStore", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -123,7 +125,7 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DicomStore get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DicomStore get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DicomStore(name, id, options);
     }
 }

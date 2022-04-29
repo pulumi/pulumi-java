@@ -13,6 +13,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2SurrogateTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Custom information type provided by the user. Used to find domain-specific sensitive information configurable to the data in question.
  * 
  */
-public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CustomInfoTypeArgs Empty = new GooglePrivacyDlpV2CustomInfoTypeArgs();
 

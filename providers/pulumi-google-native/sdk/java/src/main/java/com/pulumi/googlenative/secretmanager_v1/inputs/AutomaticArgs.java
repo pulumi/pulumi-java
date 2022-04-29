@@ -6,6 +6,7 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A replication policy that replicates the Secret payload without any restrictions.
  * 
  */
-public final class AutomaticArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomaticArgs extends ResourceArgs {
 
     public static final AutomaticArgs Empty = new AutomaticArgs();
 

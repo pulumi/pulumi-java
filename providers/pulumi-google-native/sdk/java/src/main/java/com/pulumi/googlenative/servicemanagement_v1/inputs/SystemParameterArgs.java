@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Define a parameter&#39;s name and location. The parameter may be passed as either an HTTP header or a URL query parameter, and if both are passed the behavior is implementation-dependent.
  * 
  */
-public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemParameterArgs extends ResourceArgs {
 
     public static final SystemParameterArgs Empty = new SystemParameterArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Config for image bounding poly (and bounding box) human labeling task.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs Empty = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs();
 

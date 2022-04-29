@@ -6,11 +6,12 @@ package com.pulumi.googlenative.cloudchannel_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudchannel_v1.enums.ChannelPartnerLinkLinkState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChannelPartnerLinkArgs extends ResourceArgs {
 
     public static final ChannelPartnerLinkArgs Empty = new ChannelPartnerLinkArgs();
 

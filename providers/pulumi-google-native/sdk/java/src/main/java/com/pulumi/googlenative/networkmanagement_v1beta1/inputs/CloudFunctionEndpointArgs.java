@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Wrapper for cloud function attributes.
  * 
  */
-public final class CloudFunctionEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudFunctionEndpointArgs extends ResourceArgs {
 
     public static final CloudFunctionEndpointArgs Empty = new CloudFunctionEndpointArgs();
 

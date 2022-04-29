@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The BigQuery location for input data. If used in an EvaluationJob, this is where the service saves the prediction input and output sampled from the model version.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1BigQuerySourceArgs Empty = new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs();
 

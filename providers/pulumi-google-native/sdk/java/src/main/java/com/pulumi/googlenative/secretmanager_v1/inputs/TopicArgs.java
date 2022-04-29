@@ -5,6 +5,7 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A Pub/Sub topic which Secret Manager will publish to when control plane events occur on this secret.
  * 
  */
-public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicArgs extends ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 

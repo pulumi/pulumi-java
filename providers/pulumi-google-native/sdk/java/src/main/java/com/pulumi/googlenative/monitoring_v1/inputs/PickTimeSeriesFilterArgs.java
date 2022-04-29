@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterDirection;
 import com.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterRankingMethod;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a ranking-based time series filter. Each input time series is ranked with an aligner. The filter will allow up to num_time_series time series to pass through it, selecting them based on the relative ranking.For example, if ranking_method is METHOD_MEAN,direction is BOTTOM, and num_time_series is 3, then the 3 times series with the lowest mean values will pass through the filter.
  * 
  */
-public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class PickTimeSeriesFilterArgs extends ResourceArgs {
 
     public static final PickTimeSeriesFilterArgs Empty = new PickTimeSeriesFilterArgs();
 

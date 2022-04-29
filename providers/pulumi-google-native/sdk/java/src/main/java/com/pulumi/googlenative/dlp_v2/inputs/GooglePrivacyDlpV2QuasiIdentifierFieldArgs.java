@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A quasi-identifier column has a custom_tag, used to know which column in the data corresponds to which column in the statistical model.
  * 
  */
-public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2QuasiIdentifierFieldArgs Empty = new GooglePrivacyDlpV2QuasiIdentifierFieldArgs();
 

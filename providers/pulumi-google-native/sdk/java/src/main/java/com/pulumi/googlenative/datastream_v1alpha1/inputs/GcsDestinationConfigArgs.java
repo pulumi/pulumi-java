@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.AvroFileFormatArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.JsonFileFormatArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Google Cloud Storage destination configuration
  * 
  */
-public final class GcsDestinationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcsDestinationConfigArgs extends ResourceArgs {
 
     public static final GcsDestinationConfigArgs Empty = new GcsDestinationConfigArgs();
 

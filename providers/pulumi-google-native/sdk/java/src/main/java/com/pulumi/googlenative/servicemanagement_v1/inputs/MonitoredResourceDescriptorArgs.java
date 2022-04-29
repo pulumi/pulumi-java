@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.enums.MonitoredResourceDescriptorLaunchStage;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An object that describes the schema of a MonitoredResource object using a type name and a set of labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has a type of `&#34;gce_instance&#34;` and specifies the use of the labels `&#34;instance_id&#34;` and `&#34;zone&#34;` to identify particular VM instances. Different APIs can support different monitored resource types. APIs generally provide a `list` method that returns the monitored resource descriptors used by the API.
  * 
  */
-public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoredResourceDescriptorArgs extends ResourceArgs {
 
     public static final MonitoredResourceDescriptorArgs Empty = new MonitoredResourceDescriptorArgs();
 

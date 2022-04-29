@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a documentation page. A page can contain subpages to represent nested documentation set structure.
  * 
  */
-public final class PageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PageArgs extends ResourceArgs {
 
     public static final PageArgs Empty = new PageArgs();
 

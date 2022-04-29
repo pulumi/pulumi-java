@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storage_v1.inputs.ExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ObjectIamPolicyBindingsItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectIamPolicyBindingsItemArgs extends ResourceArgs {
 
     public static final ObjectIamPolicyBindingsItemArgs Empty = new ObjectIamPolicyBindingsItemArgs();
 

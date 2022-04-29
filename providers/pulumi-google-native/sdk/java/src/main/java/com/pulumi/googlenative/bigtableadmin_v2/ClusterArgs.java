@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigtableadmin_v2.enums.ClusterDefaultStorageType;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterConfigArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.EncryptionConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterArgs extends ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Retry config. These settings determine when a failed task attempt is retried.
  * 
  */
-public final class RetryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryConfigArgs extends ResourceArgs {
 
     public static final RetryConfigArgs Empty = new RetryConfigArgs();
 

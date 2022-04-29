@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the bound `Value` type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
  * 
  */
-public final class GooglePrivacyDlpV2BucketingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2BucketingConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2BucketingConfigArgs Empty = new GooglePrivacyDlpV2BucketingConfigArgs();
 

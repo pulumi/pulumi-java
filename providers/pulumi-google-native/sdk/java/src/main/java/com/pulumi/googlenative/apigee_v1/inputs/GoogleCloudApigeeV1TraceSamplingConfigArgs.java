@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.enums.GoogleCloudApigeeV1TraceSamplingConfigSampler;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * TraceSamplingConfig represents the detail settings of distributed tracing. Only the fields that are defined in the distributed trace configuration can be overridden using the distribute trace configuration override APIs.
  * 
  */
-public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1TraceSamplingConfigArgs Empty = new GoogleCloudApigeeV1TraceSamplingConfigArgs();
 

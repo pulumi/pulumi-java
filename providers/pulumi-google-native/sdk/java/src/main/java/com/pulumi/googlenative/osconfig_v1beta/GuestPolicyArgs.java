@@ -9,6 +9,7 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.PackageArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.PackageRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestPolicyArgs extends ResourceArgs {
 
     public static final GuestPolicyArgs Empty = new GuestPolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details of an attestation occurrence.
  * 
  */
-public final class DetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetailsArgs extends ResourceArgs {
 
     public static final DetailsArgs Empty = new DetailsArgs();
 

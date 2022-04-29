@@ -6,6 +6,7 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configs for the input data used to create the issue model.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs Empty = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs();
 

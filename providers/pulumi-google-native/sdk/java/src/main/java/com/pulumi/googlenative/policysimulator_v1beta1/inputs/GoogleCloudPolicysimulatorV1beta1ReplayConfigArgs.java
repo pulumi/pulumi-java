@@ -6,6 +6,7 @@ package com.pulumi.googlenative.policysimulator_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.policysimulator_v1beta1.enums.GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration used for a Replay.
  * 
  */
-public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs Empty = new GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs();
 

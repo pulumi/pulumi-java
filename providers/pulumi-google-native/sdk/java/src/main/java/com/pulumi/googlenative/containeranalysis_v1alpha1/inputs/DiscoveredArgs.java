@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredAnalysisStatus;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredContinuousAnalysis;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Provides information about the scan status of a discovered resource.
  * 
  */
-public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiscoveredArgs extends ResourceArgs {
 
     public static final DiscoveredArgs Empty = new DiscoveredArgs();
 

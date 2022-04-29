@@ -6,6 +6,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.appengine_v1.enums.EndpointsApiServiceRolloutStrategy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Cloud Endpoints (https://cloud.google.com/endpoints) configuration. The Endpoints API Service provides tooling for serving Open API and gRPC endpoints via an NGINX proxy. Only valid for App Engine Flexible environment deployments.The fields here refer to the name and configuration ID of a &#34;service&#34; resource in the Service Management API (https://cloud.google.com/service-management/overview).
  * 
  */
-public final class EndpointsApiServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointsApiServiceArgs extends ResourceArgs {
 
     public static final EndpointsApiServiceArgs Empty = new EndpointsApiServiceArgs();
 

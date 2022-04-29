@@ -9,6 +9,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessItemArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.DatasetTagsItemArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetArgs extends ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 

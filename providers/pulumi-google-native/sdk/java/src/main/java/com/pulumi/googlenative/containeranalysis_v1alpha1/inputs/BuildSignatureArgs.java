@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.BuildSignatureKeyType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message encapsulating the signature of the verified build.
  * 
  */
-public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildSignatureArgs extends ResourceArgs {
 
     public static final BuildSignatureArgs Empty = new BuildSignatureArgs();
 

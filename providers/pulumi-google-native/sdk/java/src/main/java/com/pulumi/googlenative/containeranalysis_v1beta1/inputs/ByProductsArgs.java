@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines an object for the byproducts field in in-toto links. The suggested fields are &#34;stderr&#34;, &#34;stdout&#34;, and &#34;return-value&#34;.
  * 
  */
-public final class ByProductsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ByProductsArgs extends ResourceArgs {
 
     public static final ByProductsArgs Empty = new ByProductsArgs();
 

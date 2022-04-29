@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a generic term for something you (a developer) may want to interact with through one of our API&#39;s. Some examples are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.
  * 
  */
-public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdArgs extends ResourceArgs {
 
     public static final ResourceIdArgs Empty = new ResourceIdArgs();
 

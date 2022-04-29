@@ -6,13 +6,14 @@ package com.pulumi.googlenative.toolresults_v1beta3;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.HistoryTestPlatform;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class HistoryArgs extends ResourceArgs {
 
     public static final HistoryArgs Empty = new HistoryArgs();
 

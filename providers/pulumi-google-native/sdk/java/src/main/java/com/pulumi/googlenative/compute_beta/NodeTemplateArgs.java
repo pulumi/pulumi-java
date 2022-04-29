@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.compute_beta.inputs.LocalDiskArgs;
 import com.pulumi.googlenative.compute_beta.inputs.NodeTemplateNodeTypeFlexibilityArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ServerBindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeTemplateArgs extends ResourceArgs {
 
     public static final NodeTemplateArgs Empty = new NodeTemplateArgs();
 

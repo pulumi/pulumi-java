@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Cloud Storage object representation.
  * 
  */
-public final class GcsObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcsObjectArgs extends ResourceArgs {
 
     public static final GcsObjectArgs Empty = new GcsObjectArgs();
 

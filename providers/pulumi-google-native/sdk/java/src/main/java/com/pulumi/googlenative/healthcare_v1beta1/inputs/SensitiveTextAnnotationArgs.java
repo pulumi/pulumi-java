@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A TextAnnotation specifies a text range that includes sensitive information.
  * 
  */
-public final class SensitiveTextAnnotationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SensitiveTextAnnotationArgs extends ResourceArgs {
 
     public static final SensitiveTextAnnotationArgs Empty = new SensitiveTextAnnotationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The environment values to set at runtime.
  * 
  */
-public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs Empty = new GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs();
 

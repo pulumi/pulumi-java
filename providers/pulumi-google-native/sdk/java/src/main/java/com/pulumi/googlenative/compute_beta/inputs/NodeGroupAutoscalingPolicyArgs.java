@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.NodeGroupAutoscalingPolicyMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeGroupAutoscalingPolicyArgs extends ResourceArgs {
 
     public static final NodeGroupAutoscalingPolicyArgs Empty = new NodeGroupAutoscalingPolicyArgs();
 

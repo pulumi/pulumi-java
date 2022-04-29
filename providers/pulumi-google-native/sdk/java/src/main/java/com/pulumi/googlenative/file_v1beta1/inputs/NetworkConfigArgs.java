@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.file_v1beta1.enums.NetworkConfigConnectMode;
 import com.pulumi.googlenative.file_v1beta1.enums.NetworkConfigModesItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Network configuration for the instance.
  * 
  */
-public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigArgs extends ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 

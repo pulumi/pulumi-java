@@ -6,12 +6,13 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerAllInstancesConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerAllInstancesConfigArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerAllInstancesConfigArgs Empty = new InstanceGroupManagerAllInstancesConfigArgs();
 

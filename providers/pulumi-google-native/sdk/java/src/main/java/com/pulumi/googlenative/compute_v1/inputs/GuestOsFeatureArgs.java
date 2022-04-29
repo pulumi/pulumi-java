@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.GuestOsFeatureType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Guest OS features.
  * 
  */
-public final class GuestOsFeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestOsFeatureArgs extends ResourceArgs {
 
     public static final GuestOsFeatureArgs Empty = new GuestOsFeatureArgs();
 

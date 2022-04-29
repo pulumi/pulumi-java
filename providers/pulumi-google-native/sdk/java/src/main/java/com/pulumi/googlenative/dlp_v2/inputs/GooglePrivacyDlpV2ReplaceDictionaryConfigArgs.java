@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Replace each input value with a value randomly selected from the dictionary.
  * 
  */
-public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ReplaceDictionaryConfigArgs Empty = new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs();
 

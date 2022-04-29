@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received.
  * 
  */
-public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitHubEventsConfigArgs extends ResourceArgs {
 
     public static final GitHubEventsConfigArgs Empty = new GitHubEventsConfigArgs();
 

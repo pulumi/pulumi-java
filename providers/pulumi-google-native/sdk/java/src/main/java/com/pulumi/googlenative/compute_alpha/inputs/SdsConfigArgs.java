@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * [Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.
  * 
  */
-public final class SdsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SdsConfigArgs extends ResourceArgs {
 
     public static final SdsConfigArgs Empty = new SdsConfigArgs();
 

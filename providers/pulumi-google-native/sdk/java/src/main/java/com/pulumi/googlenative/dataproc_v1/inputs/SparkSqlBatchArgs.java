@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A configuration for running Apache Spark SQL (https://spark.apache.org/sql/) queries as a batch workload.
  * 
  */
-public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class SparkSqlBatchArgs extends ResourceArgs {
 
     public static final SparkSqlBatchArgs Empty = new SparkSqlBatchArgs();
 

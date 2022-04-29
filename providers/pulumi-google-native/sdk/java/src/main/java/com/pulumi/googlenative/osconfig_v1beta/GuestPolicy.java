@@ -13,6 +13,8 @@ import com.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.PackageRepositoryResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.PackageResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:osconfig/v1beta:GuestPolicy")
-public class GuestPolicy extends com.pulumi.resources.CustomResource {
+public class GuestPolicy extends CustomResource {
     /**
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
      * 
@@ -171,19 +173,19 @@ public class GuestPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GuestPolicy(String name, GuestPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GuestPolicy(String name, GuestPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:osconfig/v1beta:GuestPolicy", name, args == null ? GuestPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GuestPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GuestPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:osconfig/v1beta:GuestPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -194,7 +196,7 @@ public class GuestPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GuestPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GuestPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new GuestPolicy(name, id, options);
     }
 }

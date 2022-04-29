@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.ClientCertificateConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The authentication information for accessing the master endpoint. Authentication can be done using HTTP basic auth or using client certificates.
  * 
  */
-public final class MasterAuthArgs extends com.pulumi.resources.ResourceArgs {
+public final class MasterAuthArgs extends ResourceArgs {
 
     public static final MasterAuthArgs Empty = new MasterAuthArgs();
 

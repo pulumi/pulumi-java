@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.DateArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Transfers can be scheduled to recur or to run just once.
  * 
  */
-public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleArgs extends ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 

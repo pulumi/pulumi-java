@@ -9,6 +9,7 @@ import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDef
 import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeSchedulingArgs;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.NetworkInterfaceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
  * 
  */
-public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComputeEngineTargetDefaultsArgs extends ResourceArgs {
 
     public static final ComputeEngineTargetDefaultsArgs Empty = new ComputeEngineTargetDefaultsArgs();
 

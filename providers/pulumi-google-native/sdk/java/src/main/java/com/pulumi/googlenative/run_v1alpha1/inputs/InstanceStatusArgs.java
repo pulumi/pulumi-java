@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceAttemptResultArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Instance represents the status of an instance of a Job.
  * 
  */
-public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceStatusArgs extends ResourceArgs {
 
     public static final InstanceStatusArgs Empty = new InstanceStatusArgs();
 

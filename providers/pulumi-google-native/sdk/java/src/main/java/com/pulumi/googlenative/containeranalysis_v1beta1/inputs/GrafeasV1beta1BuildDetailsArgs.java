@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildProvenanceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details of a build occurrence.
  * 
  */
-public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GrafeasV1beta1BuildDetailsArgs extends ResourceArgs {
 
     public static final GrafeasV1beta1BuildDetailsArgs Empty = new GrafeasV1beta1BuildDetailsArgs();
 

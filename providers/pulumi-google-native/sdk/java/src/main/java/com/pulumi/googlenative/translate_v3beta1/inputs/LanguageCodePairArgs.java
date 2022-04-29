@@ -5,6 +5,7 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Used with unidirectional glossaries.
  * 
  */
-public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArgs {
+public final class LanguageCodePairArgs extends ResourceArgs {
 
     public static final LanguageCodePairArgs Empty = new LanguageCodePairArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Exp
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3RolloutConfigArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3RolloutStateArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VariantsHistoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentArgs extends ResourceArgs {
 
     public static final ExperimentArgs Empty = new ExperimentArgs();
 

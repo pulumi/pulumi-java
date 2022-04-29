@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
  * 
  */
-public final class IssuanceModesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IssuanceModesArgs extends ResourceArgs {
 
     public static final IssuanceModesArgs Empty = new IssuanceModesArgs();
 

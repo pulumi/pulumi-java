@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * **Cloud Audit Logging**: Spec for Audit Logging Allowlisting.
  * 
  */
-public final class CloudAuditLoggingFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudAuditLoggingFeatureSpecArgs extends ResourceArgs {
 
     public static final CloudAuditLoggingFeatureSpecArgs Empty = new CloudAuditLoggingFeatureSpecArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.genomics_v1alpha2.enums.DiskType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A Google Compute Engine disk resource specification.
  * 
  */
-public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskArgs extends ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ParameterValidationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A configurable parameter that replaces one or more fields in the template. Parameterizable fields: - Labels - File uris - Job properties - Job arguments - Script variables - Main class (in HadoopJob and SparkJob) - Zone (in ClusterSelector)
  * 
  */
-public final class TemplateParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class TemplateParameterArgs extends ResourceArgs {
 
     public static final TemplateParameterArgs Empty = new TemplateParameterArgs();
 

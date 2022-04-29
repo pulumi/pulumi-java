@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Installs an MSI file.
  * 
  */
-public final class SoftwareRecipeStepInstallMsiArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepInstallMsiArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepInstallMsiArgs Empty = new SoftwareRecipeStepInstallMsiArgs();
 

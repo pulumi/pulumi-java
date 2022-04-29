@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Master is the configuration for components on master.
  * 
  */
-public final class MasterArgs extends com.pulumi.resources.ResourceArgs {
+public final class MasterArgs extends ResourceArgs {
 
     public static final MasterArgs Empty = new MasterArgs();
 

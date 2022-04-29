@@ -12,6 +12,7 @@ import com.pulumi.googlenative.apigee_v1.enums.RatePlanState;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1RateRangeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1RevenueShareRangeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class RatePlanArgs extends ResourceArgs {
 
     public static final RatePlanArgs Empty = new RatePlanArgs();
 

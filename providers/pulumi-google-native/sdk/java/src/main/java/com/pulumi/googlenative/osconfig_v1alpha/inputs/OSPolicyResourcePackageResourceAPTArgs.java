@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A package managed by APT. - install: `apt-get update &amp;&amp; apt-get -y install [name]` - remove: `apt-get -y remove [name]`
  * 
  */
-public final class OSPolicyResourcePackageResourceAPTArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourcePackageResourceAPTArgs extends ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceAPTArgs Empty = new OSPolicyResourcePackageResourceAPTArgs();
 

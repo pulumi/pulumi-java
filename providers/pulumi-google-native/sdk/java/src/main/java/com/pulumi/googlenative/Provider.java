@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ProviderArgs;
 import com.pulumi.googlenative.Utilities;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.ProviderResource;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="pulumi:providers:google-native")
-public class Provider extends com.pulumi.resources.ProviderResource {
+public class Provider extends ProviderResource {
     /**
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
@@ -83,15 +85,15 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Provider(String name, @Nullable ProviderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Provider(String name, @Nullable ProviderArgs args, @Nullable CustomResourceOptions options) {
         super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

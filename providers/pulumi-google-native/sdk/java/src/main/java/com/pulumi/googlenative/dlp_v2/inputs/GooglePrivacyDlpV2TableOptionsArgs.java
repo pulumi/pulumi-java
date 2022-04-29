@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Instructions regarding the table content being inspected.
  * 
  */
-public final class GooglePrivacyDlpV2TableOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2TableOptionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2TableOptionsArgs Empty = new GooglePrivacyDlpV2TableOptionsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The collection of suggestions.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs();
 

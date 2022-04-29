@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Dialogflow contexts are similar to natural language context. If a person says to you &#34;they are orange&#34;, you need context in order to understand what &#34;they&#34; is referring to. Similarly, for Dialogflow to handle an end-user expression like that, it needs to be provided with context in order to correctly match an intent. Using contexts, you can control the flow of a conversation. You can configure contexts for an intent by setting input and output contexts, which are identified by string names. When an intent is matched, any configured output contexts for that intent become active. While any contexts are active, Dialogflow is more likely to match intents that are configured with input contexts that correspond to the currently active contexts. For more information about context, see the [Contexts guide](https://cloud.google.com/dialogflow/docs/contexts-overview).
  * 
  */
-public final class GoogleCloudDialogflowV2ContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2ContextArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2ContextArgs Empty = new GoogleCloudDialogflowV2ContextArgs();
 

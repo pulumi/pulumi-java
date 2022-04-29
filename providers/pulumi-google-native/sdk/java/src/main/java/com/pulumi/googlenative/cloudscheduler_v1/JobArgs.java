@@ -9,13 +9,14 @@ import com.pulumi.googlenative.cloudscheduler_v1.inputs.AppEngineHttpTargetArgs;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.HttpTargetArgs;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.PubsubTargetArgs;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.RetryConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

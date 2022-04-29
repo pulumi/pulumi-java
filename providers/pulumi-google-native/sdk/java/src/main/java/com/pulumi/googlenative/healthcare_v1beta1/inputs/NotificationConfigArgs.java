@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies where to send notifications upon changes to a data store.
  * 
  */
-public final class NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationConfigArgs extends ResourceArgs {
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 

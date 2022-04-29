@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Column properties for TableCard.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs();
 

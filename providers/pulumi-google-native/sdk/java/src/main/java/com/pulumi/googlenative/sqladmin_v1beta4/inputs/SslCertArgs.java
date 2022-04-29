@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * SslCerts Resource
  * 
  */
-public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
+public final class SslCertArgs extends ResourceArgs {
 
     public static final SslCertArgs Empty = new SslCertArgs();
 

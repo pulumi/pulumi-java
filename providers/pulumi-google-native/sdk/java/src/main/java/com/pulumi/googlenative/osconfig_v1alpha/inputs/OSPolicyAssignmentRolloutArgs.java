@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.FixedOrPercentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Message to configure the rollout at the zonal level for the OS policy assignment.
  * 
  */
-public final class OSPolicyAssignmentRolloutArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyAssignmentRolloutArgs extends ResourceArgs {
 
     public static final OSPolicyAssignmentRolloutArgs Empty = new OSPolicyAssignmentRolloutArgs();
 

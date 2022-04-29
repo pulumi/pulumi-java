@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Options for the build operations performed as a part of the version deployment. Only applicable for App Engine flexible environment when creating a version using source code directly.
  * 
  */
-public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudBuildOptionsArgs extends ResourceArgs {
 
     public static final CloudBuildOptionsArgs Empty = new CloudBuildOptionsArgs();
 

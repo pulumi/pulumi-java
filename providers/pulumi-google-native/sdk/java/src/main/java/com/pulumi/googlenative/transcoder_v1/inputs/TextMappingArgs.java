@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
  * 
  */
-public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class TextMappingArgs extends ResourceArgs {
 
     public static final TextMappingArgs Empty = new TextMappingArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * OnPremCluster contains information specific to GKE On-Prem clusters.
  * 
  */
-public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OnPremClusterArgs extends ResourceArgs {
 
     public static final OnPremClusterArgs Empty = new OnPremClusterArgs();
 

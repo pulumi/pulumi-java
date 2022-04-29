@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import com.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * [Deprecated] Defines the mechanism to obtain the client or server certificate. Defines the mechanism to obtain the client or server certificate.
  * 
  */
-public final class TlsCertificateContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class TlsCertificateContextArgs extends ResourceArgs {
 
     public static final TlsCertificateContextArgs Empty = new TlsCertificateContextArgs();
 

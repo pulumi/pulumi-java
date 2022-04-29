@@ -15,6 +15,8 @@ import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalo
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1SchemaResponse;
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1SystemTimestampsResponse;
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1UsageSignalResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datacatalog/v1beta1:Entry")
-public class Entry extends com.pulumi.resources.CustomResource {
+public class Entry extends CustomResource {
     /**
      * Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
@@ -243,19 +245,19 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Entry(String name, EntryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Entry(String name, EntryArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Entry(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Entry(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:Entry", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -266,7 +268,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Entry get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Entry get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Entry(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleTypeDateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
  * 
  */
-public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs Empty = new GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs();
 

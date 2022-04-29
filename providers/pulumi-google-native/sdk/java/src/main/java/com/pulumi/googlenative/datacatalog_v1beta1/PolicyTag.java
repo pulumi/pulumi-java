@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datacatalog_v1beta1.PolicyTagArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datacatalog/v1beta1:PolicyTag")
-public class PolicyTag extends com.pulumi.resources.CustomResource {
+public class PolicyTag extends CustomResource {
     /**
      * Resource names of child policy tags of this policy tag.
      * 
@@ -112,19 +114,19 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PolicyTag(String name, PolicyTagArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PolicyTag(String name, PolicyTagArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:PolicyTag", name, args == null ? PolicyTagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PolicyTag(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PolicyTag(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:PolicyTag", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicyTag get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PolicyTag get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PolicyTag(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MonitoringDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Monitoring configuration of the service. The example below shows how to configure monitored resources and metrics for monitoring. In the example, a monitored resource and two metrics are defined. The `library.googleapis.com/book/returned_count` metric is sent to both producer and consumer projects, whereas the `library.googleapis.com/book/num_overdue` metric is only sent to the consumer project. monitored_resources: - type: library.googleapis.com/Branch display_name: &#34;Library Branch&#34; description: &#34;A branch of a library.&#34; launch_stage: GA labels: - key: resource_container description: &#34;The Cloud container (ie. project id) for the Branch.&#34; - key: location description: &#34;The location of the library branch.&#34; - key: branch_id description: &#34;The id of the branch.&#34; metrics: - name: library.googleapis.com/book/returned_count display_name: &#34;Books Returned&#34; description: &#34;The count of books that have been returned.&#34; launch_stage: GA metric_kind: DELTA value_type: INT64 unit: &#34;1&#34; labels: - key: customer_id description: &#34;The id of the customer.&#34; - name: library.googleapis.com/book/num_overdue display_name: &#34;Books Overdue&#34; description: &#34;The current number of overdue books.&#34; launch_stage: GA metric_kind: GAUGE value_type: INT64 unit: &#34;1&#34; labels: - key: customer_id description: &#34;The id of the customer.&#34; monitoring: producer_destinations: - monitored_resource: library.googleapis.com/Branch metrics: - library.googleapis.com/book/returned_count consumer_destinations: - monitored_resource: library.googleapis.com/Branch metrics: - library.googleapis.com/book/returned_count - library.googleapis.com/book/num_overdue
  * 
  */
-public final class MonitoringArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringArgs extends ResourceArgs {
 
     public static final MonitoringArgs Empty = new MonitoringArgs();
 

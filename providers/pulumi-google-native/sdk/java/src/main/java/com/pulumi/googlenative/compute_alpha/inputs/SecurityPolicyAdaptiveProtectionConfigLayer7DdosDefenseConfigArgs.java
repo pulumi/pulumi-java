@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration options for L7 DDoS detection.
  * 
  */
-public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs extends ResourceArgs {
 
     public static final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs Empty = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs();
 

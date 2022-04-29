@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecPreSharedKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration information for enabling Media Access Control security (Macsec) on this Interconnect between Google and your on-premises router.
  * 
  */
-public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceArgs {
+public final class InterconnectMacsecArgs extends ResourceArgs {
 
     public static final InterconnectMacsecArgs Empty = new InterconnectMacsecArgs();
 

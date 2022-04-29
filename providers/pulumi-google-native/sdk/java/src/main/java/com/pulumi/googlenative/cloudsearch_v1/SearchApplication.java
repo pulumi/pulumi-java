@@ -15,6 +15,8 @@ import com.pulumi.googlenative.cloudsearch_v1.outputs.QueryInterpretationConfigR
 import com.pulumi.googlenative.cloudsearch_v1.outputs.ScoringConfigResponse;
 import com.pulumi.googlenative.cloudsearch_v1.outputs.SortOptionsResponse;
 import com.pulumi.googlenative.cloudsearch_v1.outputs.SourceConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudsearch/v1:SearchApplication")
-public class SearchApplication extends com.pulumi.resources.CustomResource {
+public class SearchApplication extends CustomResource {
     /**
      * Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
@@ -202,19 +204,19 @@ public class SearchApplication extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SearchApplication(String name, @Nullable SearchApplicationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SearchApplication(String name, @Nullable SearchApplicationArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudsearch/v1:SearchApplication", name, args == null ? SearchApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SearchApplication(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SearchApplication(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudsearch/v1:SearchApplication", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -225,7 +227,7 @@ public class SearchApplication extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SearchApplication get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SearchApplication get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SearchApplication(name, id, options);
     }
 }

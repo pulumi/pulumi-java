@@ -13,6 +13,8 @@ import com.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.RuntimeMetricsResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.RuntimeSoftwareConfigResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.VirtualMachineResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:notebooks/v1:Runtime")
-public class Runtime extends com.pulumi.resources.CustomResource {
+public class Runtime extends CustomResource {
     /**
      * The config settings for accessing runtime.
      * 
@@ -171,19 +173,19 @@ public class Runtime extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Runtime(String name, RuntimeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Runtime(String name, RuntimeArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:notebooks/v1:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Runtime(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Runtime(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:notebooks/v1:Runtime", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -194,7 +196,7 @@ public class Runtime extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Runtime get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Runtime get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Runtime(name, id, options);
     }
 }

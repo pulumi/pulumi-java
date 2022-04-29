@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudkms_v1.KeyRingArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudkms/v1:KeyRing")
-public class KeyRing extends com.pulumi.resources.CustomResource {
+public class KeyRing extends CustomResource {
     /**
      * The time at which this KeyRing was created.
      * 
@@ -71,19 +73,19 @@ public class KeyRing extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public KeyRing(String name, KeyRingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public KeyRing(String name, KeyRingArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudkms/v1:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private KeyRing(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private KeyRing(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudkms/v1:KeyRing", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -94,7 +96,7 @@ public class KeyRing extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KeyRing get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static KeyRing get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new KeyRing(name, id, options);
     }
 }

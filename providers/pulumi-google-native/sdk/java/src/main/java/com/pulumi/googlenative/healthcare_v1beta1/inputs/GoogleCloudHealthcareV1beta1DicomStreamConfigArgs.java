@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * StreamConfig specifies configuration for a streaming DICOM export.
  * 
  */
-public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudHealthcareV1beta1DicomStreamConfigArgs Empty = new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs();
 

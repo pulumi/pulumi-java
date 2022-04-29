@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.BuilderConfigArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.MetadataArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.RecipeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InTotoProvenanceArgs extends ResourceArgs {
 
     public static final InTotoProvenanceArgs Empty = new InTotoProvenanceArgs();
 

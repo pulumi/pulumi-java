@@ -12,6 +12,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.GoogleSheetsOptionsArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.HivePartitioningOptionsArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.ParquetOptionsArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableSchemaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExternalDataConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExternalDataConfigurationArgs extends ResourceArgs {
 
     public static final ExternalDataConfigurationArgs Empty = new ExternalDataConfigurationArgs();
 

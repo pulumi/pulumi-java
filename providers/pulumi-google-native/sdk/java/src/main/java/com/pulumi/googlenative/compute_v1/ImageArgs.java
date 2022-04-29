@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_v1.inputs.DeprecationStatusArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GuestOsFeatureArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ImageRawDiskArgs;
 import com.pulumi.googlenative.compute_v1.inputs.InitialStateConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageArgs extends ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 

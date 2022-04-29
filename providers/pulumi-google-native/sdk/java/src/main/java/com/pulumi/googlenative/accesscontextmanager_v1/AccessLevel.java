@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.accesscontextmanager_v1.AccessLevelArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.outputs.BasicLevelResponse;
 import com.pulumi.googlenative.accesscontextmanager_v1.outputs.CustomLevelResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:accesscontextmanager/v1:AccessLevel")
-public class AccessLevel extends com.pulumi.resources.CustomResource {
+public class AccessLevel extends CustomResource {
     /**
      * A `BasicLevel` composed of `Conditions`.
      * 
@@ -112,19 +114,19 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AccessLevel(String name, AccessLevelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AccessLevel(String name, AccessLevelArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:accesscontextmanager/v1:AccessLevel", name, args == null ? AccessLevelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AccessLevel(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AccessLevel(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:accesscontextmanager/v1:AccessLevel", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessLevel get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AccessLevel get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AccessLevel(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents configurations for a test case.
  * 
  */
-public final class GoogleCloudDialogflowCxV3TestConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3TestConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3TestConfigArgs Empty = new GoogleCloudDialogflowCxV3TestConfigArgs();
 

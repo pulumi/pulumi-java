@@ -10,6 +10,7 @@ import com.pulumi.googlenative.servicemanagement_v1.enums.MetricDescriptorMetric
 import com.pulumi.googlenative.servicemanagement_v1.enums.MetricDescriptorValueType;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MetricDescriptorMetadataArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Defines a metric type and its schema. Once a metric descriptor is created, deleting or altering it stops data collection and makes the metric type&#39;s existing data unusable.
  * 
  */
-public final class MetricDescriptorArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricDescriptorArgs extends ResourceArgs {
 
     public static final MetricDescriptorArgs Empty = new MetricDescriptorArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Default options to interpret user query.
  * 
  */
-public final class QueryInterpretationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueryInterpretationConfigArgs extends ResourceArgs {
 
     public static final QueryInterpretationConfigArgs Empty = new QueryInterpretationConfigArgs();
 

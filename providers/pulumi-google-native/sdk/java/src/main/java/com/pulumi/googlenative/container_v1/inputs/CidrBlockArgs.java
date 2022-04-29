@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * CidrBlock contains an optional name and one CIDR block.
  * 
  */
-public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
+public final class CidrBlockArgs extends ResourceArgs {
 
     public static final CidrBlockArgs Empty = new CidrBlockArgs();
 

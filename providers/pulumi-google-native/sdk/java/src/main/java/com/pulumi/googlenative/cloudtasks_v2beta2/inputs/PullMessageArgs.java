@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The pull message contains data that can be used by the caller of LeaseTasks to process the task. This proto can only be used for tasks in a queue which has pull_target set.
  * 
  */
-public final class PullMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PullMessageArgs extends ResourceArgs {
 
     public static final PullMessageArgs Empty = new PullMessageArgs();
 

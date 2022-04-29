@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A condition type that allows alert policies to be defined using Monitoring Query Language (https://cloud.google.com/monitoring/mql).
  * 
  */
-public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringQueryLanguageConditionArgs extends ResourceArgs {
 
     public static final MonitoringQueryLanguageConditionArgs Empty = new MonitoringQueryLanguageConditionArgs();
 

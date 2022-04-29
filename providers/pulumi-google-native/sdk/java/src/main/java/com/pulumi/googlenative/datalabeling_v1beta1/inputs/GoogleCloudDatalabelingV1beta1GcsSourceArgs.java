@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Source of the Cloud Storage file to be imported.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1GcsSourceArgs Empty = new GoogleCloudDatalabelingV1beta1GcsSourceArgs();
 

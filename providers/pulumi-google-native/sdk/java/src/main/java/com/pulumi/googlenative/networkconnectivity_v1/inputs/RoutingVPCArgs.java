@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * RoutingVPC contains information about the VPC networks that are associated with a hub&#39;s spokes.
  * 
  */
-public final class RoutingVPCArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutingVPCArgs extends ResourceArgs {
 
     public static final RoutingVPCArgs Empty = new RoutingVPCArgs();
 

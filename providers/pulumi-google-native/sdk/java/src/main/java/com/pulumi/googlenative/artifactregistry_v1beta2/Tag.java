@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.artifactregistry_v1beta2.TagArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -17,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:artifactregistry/v1beta2:Tag")
-public class Tag extends com.pulumi.resources.CustomResource {
+public class Tag extends CustomResource {
     /**
      * The name of the tag, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1&#34;. If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
      * 
@@ -68,19 +70,19 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Tag(String name, TagArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Tag(String name, TagArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:artifactregistry/v1beta2:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Tag(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Tag(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:artifactregistry/v1beta2:Tag", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -91,7 +93,7 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Tag get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Tag get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Tag(name, id, options);
     }
 }

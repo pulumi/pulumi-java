@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines sources for the suggest/search APIs.
  * 
  */
-public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceArgs extends ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 

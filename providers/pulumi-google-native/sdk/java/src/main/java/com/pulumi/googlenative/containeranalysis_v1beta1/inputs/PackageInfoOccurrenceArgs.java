@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
  * 
  */
-public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageInfoOccurrenceArgs extends ResourceArgs {
 
     public static final PackageInfoOccurrenceArgs Empty = new PackageInfoOccurrenceArgs();
 

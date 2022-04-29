@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceAnalysisStatus;
 import com.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceContinuousAnalysis;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.StatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Provides information about the analysis status of a discovered resource.
  * 
  */
-public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiscoveryOccurrenceArgs extends ResourceArgs {
 
     public static final DiscoveryOccurrenceArgs Empty = new DiscoveryOccurrenceArgs();
 

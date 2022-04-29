@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingLimitsArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Autoscaling config for a cluster.
  * 
  */
-public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterAutoscalingConfigArgs extends ResourceArgs {
 
     public static final ClusterAutoscalingConfigArgs Empty = new ClusterAutoscalingConfigArgs();
 

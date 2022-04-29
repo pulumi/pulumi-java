@@ -14,6 +14,8 @@ import com.pulumi.googlenative.osconfig_v1beta.outputs.PatchConfigResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.PatchInstanceFilterResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.PatchRolloutResponse;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.RecurringScheduleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:osconfig/v1beta:PatchDeployment")
-public class PatchDeployment extends com.pulumi.resources.CustomResource {
+public class PatchDeployment extends CustomResource {
     /**
      * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
@@ -213,19 +215,19 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PatchDeployment(String name, PatchDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PatchDeployment(String name, PatchDeploymentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:osconfig/v1beta:PatchDeployment", name, args == null ? PatchDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PatchDeployment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PatchDeployment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:osconfig/v1beta:PatchDeployment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -236,7 +238,7 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchDeployment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PatchDeployment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PatchDeployment(name, id, options);
     }
 }

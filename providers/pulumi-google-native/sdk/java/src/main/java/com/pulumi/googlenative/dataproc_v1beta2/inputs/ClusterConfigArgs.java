@@ -16,6 +16,7 @@ import com.pulumi.googlenative.dataproc_v1beta2.inputs.MetastoreConfigArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.NodeInitializationActionArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.SecurityConfigArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.SoftwareConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * The cluster config.
  * 
  */
-public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterConfigArgs extends ResourceArgs {
 
     public static final ClusterConfigArgs Empty = new ClusterConfigArgs();
 

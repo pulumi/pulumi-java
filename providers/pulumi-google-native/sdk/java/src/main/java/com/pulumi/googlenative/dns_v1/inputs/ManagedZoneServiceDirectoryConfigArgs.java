@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dns_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Contains information about Service Directory-backed zones.
  * 
  */
-public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneServiceDirectoryConfigArgs extends ResourceArgs {
 
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 

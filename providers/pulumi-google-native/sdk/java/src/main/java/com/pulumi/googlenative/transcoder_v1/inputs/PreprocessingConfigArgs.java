@@ -11,6 +11,7 @@ import com.pulumi.googlenative.transcoder_v1.inputs.CropArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.DeblockArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.DenoiseArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.PadArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Preprocessing configurations.
  * 
  */
-public final class PreprocessingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreprocessingConfigArgs extends ResourceArgs {
 
     public static final PreprocessingConfigArgs Empty = new PreprocessingConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An alias to a repo revision.
  * 
  */
-public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs Empty = new GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs();
 

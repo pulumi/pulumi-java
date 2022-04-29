@@ -6,6 +6,7 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gameservices_v1.inputs.GkeClusterReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The game server cluster connection information.
  * 
  */
-public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GameServerClusterConnectionInfoArgs extends ResourceArgs {
 
     public static final GameServerClusterConnectionInfoArgs Empty = new GameServerClusterConnectionInfoArgs();
 

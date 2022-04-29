@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A test of an iOS application that uses the XCTest framework.
  * 
  */
-public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosXcTestArgs extends ResourceArgs {
 
     public static final IosXcTestArgs Empty = new IosXcTestArgs();
 

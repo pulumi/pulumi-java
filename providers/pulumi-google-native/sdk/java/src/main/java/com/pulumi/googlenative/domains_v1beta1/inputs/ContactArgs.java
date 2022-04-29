@@ -6,6 +6,7 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1beta1.inputs.PostalAddressArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details required for a contact associated with a `Registration`.
  * 
  */
-public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactArgs extends ResourceArgs {
 
     public static final ContactArgs Empty = new ContactArgs();
 

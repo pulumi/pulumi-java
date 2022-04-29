@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.CompositeFilterArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.ValueFilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A generic way of expressing filters in a query, which supports two approaches: **1. Setting a ValueFilter.** The name must match an operator_name defined in the schema for your data source. **2. Setting a CompositeFilter.** The filters are evaluated using the logical operator. The top-level operators can only be either an AND or a NOT. AND can appear only at the top-most level. OR can appear only under a top-level AND.
  * 
  */
-public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterArgs extends ResourceArgs {
 
     public static final FilterArgs Empty = new FilterArgs();
 

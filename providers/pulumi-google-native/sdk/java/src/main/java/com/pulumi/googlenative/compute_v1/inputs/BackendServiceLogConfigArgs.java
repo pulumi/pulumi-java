@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The available logging options for the load balancer traffic served by this backend service.
  * 
  */
-public final class BackendServiceLogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceLogConfigArgs extends ResourceArgs {
 
     public static final BackendServiceLogConfigArgs Empty = new BackendServiceLogConfigArgs();
 

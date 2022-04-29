@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
 import com.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainMappingArgs extends ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 

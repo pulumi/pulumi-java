@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings for exporting conversations to [Insights](https://cloud.google.com/contact-center/insights/docs).
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs Empty = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs();
 

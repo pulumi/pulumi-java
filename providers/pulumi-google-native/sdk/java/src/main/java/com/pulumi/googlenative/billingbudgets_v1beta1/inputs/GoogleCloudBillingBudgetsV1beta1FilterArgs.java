@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod;
 import com.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A filter for a budget, limiting the scope of the cost to calculate.
  * 
  */
-public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1beta1FilterArgs Empty = new GoogleCloudBillingBudgetsV1beta1FilterArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Characters to skip when doing deidentification of a value. These will be left alone and skipped.
  * 
  */
-public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CharsToIgnoreArgs Empty = new GooglePrivacyDlpV2CharsToIgnoreArgs();
 

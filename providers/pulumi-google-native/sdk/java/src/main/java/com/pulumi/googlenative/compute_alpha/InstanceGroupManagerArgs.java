@@ -15,6 +15,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerUpdatePo
 import com.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerVersionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NamedPortArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.StatefulPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerArgs Empty = new InstanceGroupManagerArgs();
 

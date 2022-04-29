@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A DistributionCut defines a TimeSeries and thresholds used for measuring good service and total service. The TimeSeries must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE. The computed good_service will be the estimated count of values in the Distribution that fall within the specified min and max.
  * 
  */
-public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionCutArgs extends ResourceArgs {
 
     public static final DistributionCutArgs Empty = new DistributionCutArgs();
 

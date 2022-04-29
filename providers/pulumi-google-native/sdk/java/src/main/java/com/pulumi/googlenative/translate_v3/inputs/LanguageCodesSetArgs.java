@@ -5,6 +5,7 @@ package com.pulumi.googlenative.translate_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Used with equivalent term set glossaries.
  * 
  */
-public final class LanguageCodesSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class LanguageCodesSetArgs extends ResourceArgs {
 
     public static final LanguageCodesSetArgs Empty = new LanguageCodesSetArgs();
 

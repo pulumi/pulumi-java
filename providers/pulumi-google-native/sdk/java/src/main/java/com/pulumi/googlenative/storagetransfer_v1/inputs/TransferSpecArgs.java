@@ -13,6 +13,7 @@ import com.pulumi.googlenative.storagetransfer_v1.inputs.ObjectConditionsArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.PosixFilesystemArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferManifestArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Configuration for running a transfer.
  * 
  */
-public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferSpecArgs extends ResourceArgs {
 
     public static final TransferSpecArgs Empty = new TransferSpecArgs();
 

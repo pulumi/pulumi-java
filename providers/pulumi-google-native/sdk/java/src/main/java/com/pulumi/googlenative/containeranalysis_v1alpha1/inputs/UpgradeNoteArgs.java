@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An Upgrade Note represents a potential upgrade of a package to a given version. For each package version combination (i.e. bash 4.0, bash 4.1, bash 4.1.2), there will be a Upgrade Note.
  * 
  */
-public final class UpgradeNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpgradeNoteArgs extends ResourceArgs {
 
     public static final UpgradeNoteArgs Empty = new UpgradeNoteArgs();
 

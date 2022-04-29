@@ -9,6 +9,7 @@ import com.pulumi.googlenative.datapipelines_v1.enums.PipelineState;
 import com.pulumi.googlenative.datapipelines_v1.enums.PipelineType;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1ScheduleSpecArgs;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1WorkloadArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineArgs extends ResourceArgs {
 
     public static final PipelineArgs Empty = new PipelineArgs();
 

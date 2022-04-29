@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
  * 
  */
-public final class StaticFilesHandlerArgs extends com.pulumi.resources.ResourceArgs {
+public final class StaticFilesHandlerArgs extends ResourceArgs {
 
     public static final StaticFilesHandlerArgs Empty = new StaticFilesHandlerArgs();
 

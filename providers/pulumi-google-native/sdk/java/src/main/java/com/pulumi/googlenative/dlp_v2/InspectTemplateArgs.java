@@ -6,13 +6,14 @@ package com.pulumi.googlenative.dlp_v2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class InspectTemplateArgs extends ResourceArgs {
 
     public static final InspectTemplateArgs Empty = new InspectTemplateArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cloud Key Management Service (Cloud KMS) settings for a CMEK-protected cluster.
  * 
  */
-public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionConfigArgs extends ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 

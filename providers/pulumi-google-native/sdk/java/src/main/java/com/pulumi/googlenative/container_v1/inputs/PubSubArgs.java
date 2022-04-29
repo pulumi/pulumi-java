@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.FilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Pub/Sub specific notification config.
  * 
  */
-public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
+public final class PubSubArgs extends ResourceArgs {
 
     public static final PubSubArgs Empty = new PubSubArgs();
 

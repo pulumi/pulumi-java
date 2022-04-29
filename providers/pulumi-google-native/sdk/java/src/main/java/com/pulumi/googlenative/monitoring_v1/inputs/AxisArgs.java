@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.enums.AxisScale;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A chart axis.
  * 
  */
-public final class AxisArgs extends com.pulumi.resources.ResourceArgs {
+public final class AxisArgs extends ResourceArgs {
 
     public static final AxisArgs Empty = new AxisArgs();
 

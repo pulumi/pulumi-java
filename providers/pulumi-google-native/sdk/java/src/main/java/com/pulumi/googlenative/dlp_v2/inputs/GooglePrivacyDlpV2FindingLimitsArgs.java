@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeLimitArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration to control the number of findings returned for inspection. This is not used for de-identification or data profiling.
  * 
  */
-public final class GooglePrivacyDlpV2FindingLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2FindingLimitsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2FindingLimitsArgs Empty = new GooglePrivacyDlpV2FindingLimitsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Identity related configuration, including service account based secure multi-tenancy user mappings.
  * 
  */
-public final class IdentityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityConfigArgs extends ResourceArgs {
 
     public static final IdentityConfigArgs Empty = new IdentityConfigArgs();
 

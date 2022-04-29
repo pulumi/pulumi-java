@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.RegexValidationArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ValueValidationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for parameter validation.
  * 
  */
-public final class ParameterValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterValidationArgs extends ResourceArgs {
 
     public static final ParameterValidationArgs Empty = new ParameterValidationArgs();
 

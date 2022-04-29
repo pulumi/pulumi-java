@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.PubSubArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * NotificationConfig is the configuration of notifications.
  * 
  */
-public final class NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationConfigArgs extends ResourceArgs {
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 

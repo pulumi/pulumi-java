@@ -6,13 +6,14 @@ package com.pulumi.googlenative.orgpolicy_v2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyArgs extends ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 

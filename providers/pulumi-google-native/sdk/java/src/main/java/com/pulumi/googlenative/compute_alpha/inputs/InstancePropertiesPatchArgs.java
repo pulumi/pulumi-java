@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the change that you want to make to the instance properties.
  * 
  */
-public final class InstancePropertiesPatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstancePropertiesPatchArgs extends ResourceArgs {
 
     public static final InstancePropertiesPatchArgs Empty = new InstancePropertiesPatchArgs();
 

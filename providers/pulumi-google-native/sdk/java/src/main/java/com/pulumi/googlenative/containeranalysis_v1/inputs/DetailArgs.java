@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A detail for a distro and package affected by this vulnerability and its associated fix (if one is available).
  * 
  */
-public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetailArgs extends ResourceArgs {
 
     public static final DetailArgs Empty = new DetailArgs();
 

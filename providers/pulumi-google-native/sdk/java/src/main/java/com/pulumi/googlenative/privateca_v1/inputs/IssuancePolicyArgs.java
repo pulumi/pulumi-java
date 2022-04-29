@@ -10,6 +10,7 @@ import com.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstrain
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.IssuanceModesArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Defines controls over all certificate issuance within a CaPool.
  * 
  */
-public final class IssuancePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class IssuancePolicyArgs extends ResourceArgs {
 
     public static final IssuancePolicyArgs Empty = new IssuancePolicyArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Spec for App Dev Experience Feature.
  * 
  */
-public final class AppDevExperienceFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppDevExperienceFeatureSpecArgs extends ResourceArgs {
 
     public static final AppDevExperienceFeatureSpecArgs Empty = new AppDevExperienceFeatureSpecArgs();
 

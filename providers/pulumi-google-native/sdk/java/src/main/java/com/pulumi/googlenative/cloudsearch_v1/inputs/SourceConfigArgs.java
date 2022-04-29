@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configurations for a source while processing a Search or Suggest request.
  * 
  */
-public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceConfigArgs extends ResourceArgs {
 
     public static final SourceConfigArgs Empty = new SourceConfigArgs();
 

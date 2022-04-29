@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for how the filling of a parameter should be handled.
  * 
  */
-public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs Empty = new GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Date range of the data to export.
  * 
  */
-public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1DateRangeArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1DateRangeArgs Empty = new GoogleCloudApigeeV1DateRangeArgs();
 

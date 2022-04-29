@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.metastore_v1beta.ServiceBackupIamPolicyArgs;
 import com.pulumi.googlenative.metastore_v1beta.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.metastore_v1beta.outputs.BindingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:metastore/v1beta:ServiceBackupIamPolicy")
-public class ServiceBackupIamPolicy extends com.pulumi.resources.CustomResource {
+public class ServiceBackupIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -102,19 +104,19 @@ public class ServiceBackupIamPolicy extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceBackupIamPolicy(String name, ServiceBackupIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceBackupIamPolicy(String name, ServiceBackupIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:metastore/v1beta:ServiceBackupIamPolicy", name, args == null ? ServiceBackupIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceBackupIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceBackupIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:metastore/v1beta:ServiceBackupIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -125,7 +127,7 @@ public class ServiceBackupIamPolicy extends com.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceBackupIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceBackupIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ServiceBackupIamPolicy(name, id, options);
     }
 }

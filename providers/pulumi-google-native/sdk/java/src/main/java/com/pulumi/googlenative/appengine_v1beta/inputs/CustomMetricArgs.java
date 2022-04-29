@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Allows autoscaling based on Stackdriver metrics.
  * 
  */
-public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomMetricArgs extends ResourceArgs {
 
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 

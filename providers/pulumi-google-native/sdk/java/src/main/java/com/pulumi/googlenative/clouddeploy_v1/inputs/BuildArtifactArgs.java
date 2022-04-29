@@ -5,6 +5,7 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Description of an a image to use during Skaffold rendering.
  * 
  */
-public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildArtifactArgs extends ResourceArgs {
 
     public static final BuildArtifactArgs Empty = new BuildArtifactArgs();
 

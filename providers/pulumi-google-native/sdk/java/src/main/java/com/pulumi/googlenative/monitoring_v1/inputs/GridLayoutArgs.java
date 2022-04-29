@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A basic layout divides the available space into vertical columns of equal width and arranges a list of widgets using a row-first strategy.
  * 
  */
-public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
+public final class GridLayoutArgs extends ResourceArgs {
 
     public static final GridLayoutArgs Empty = new GridLayoutArgs();
 

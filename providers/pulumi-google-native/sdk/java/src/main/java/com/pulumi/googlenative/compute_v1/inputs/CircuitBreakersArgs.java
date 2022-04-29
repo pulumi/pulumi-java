@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings controlling the volume of requests, connections and retries to this backend service.
  * 
  */
-public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs {
+public final class CircuitBreakersArgs extends ResourceArgs {
 
     public static final CircuitBreakersArgs Empty = new CircuitBreakersArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.MethodSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Identification for an API Operation.
  * 
  */
-public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiOperationArgs extends ResourceArgs {
 
     public static final ApiOperationArgs Empty = new ApiOperationArgs();
 

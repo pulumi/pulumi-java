@@ -6,6 +6,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.InstanceReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * On-premises instance configuration.
  * 
  */
-public final class OnPremisesConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OnPremisesConfigurationArgs extends ResourceArgs {
 
     public static final OnPremisesConfigurationArgs Empty = new OnPremisesConfigurationArgs();
 

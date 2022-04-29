@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Basic autoscaling configurations for Spark Standalone.
  * 
  */
-public final class SparkStandaloneAutoscalingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SparkStandaloneAutoscalingConfigArgs extends ResourceArgs {
 
     public static final SparkStandaloneAutoscalingConfigArgs Empty = new SparkStandaloneAutoscalingConfigArgs();
 

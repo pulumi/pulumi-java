@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.metastore_v1beta.inputs.DataCatalogConfigArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.DataplexConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies how metastore metadata should be integrated with external services.
  * 
  */
-public final class MetadataIntegrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataIntegrationArgs extends ResourceArgs {
 
     public static final MetadataIntegrationArgs Empty = new MetadataIntegrationArgs();
 

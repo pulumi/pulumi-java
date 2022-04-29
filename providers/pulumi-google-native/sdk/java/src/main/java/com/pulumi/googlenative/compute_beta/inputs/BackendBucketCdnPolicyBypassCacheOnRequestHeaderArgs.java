@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.
  * 
  */
-public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends ResourceArgs {
 
     public static final BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs Empty = new BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs();
 

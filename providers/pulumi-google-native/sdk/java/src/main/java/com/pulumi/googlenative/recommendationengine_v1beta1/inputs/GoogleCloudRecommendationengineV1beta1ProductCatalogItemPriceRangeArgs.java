@@ -5,6 +5,7 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Product price range when there are a range of prices for different variations of the same product.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The throughput capacity configuration for each partition.
  * 
  */
-public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CapacityArgs extends ResourceArgs {
 
     public static final CapacityArgs Empty = new CapacityArgs();
 

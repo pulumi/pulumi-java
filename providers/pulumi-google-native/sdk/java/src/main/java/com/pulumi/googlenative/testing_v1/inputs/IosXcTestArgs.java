@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A test of an iOS application that uses the XCTest framework. Xcode supports the option to &#34;build for testing&#34;, which generates an .xctestrun file that contains a test specification (arguments, test methods, etc). This test type accepts a zip file containing the .xctestrun file and the corresponding contents of the Build/Products directory that contains all the binaries needed to run the tests.
  * 
  */
-public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosXcTestArgs extends ResourceArgs {
 
     public static final IosXcTestArgs Empty = new IosXcTestArgs();
 

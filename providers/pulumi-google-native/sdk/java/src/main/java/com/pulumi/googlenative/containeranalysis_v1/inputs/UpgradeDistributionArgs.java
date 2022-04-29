@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The Upgrade Distribution represents metadata about the Upgrade for each operating system (CPE). Some distributions have additional metadata around updates, classifying them into various categories and severities.
  * 
  */
-public final class UpgradeDistributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpgradeDistributionArgs extends ResourceArgs {
 
     public static final UpgradeDistributionArgs Empty = new UpgradeDistributionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.DevicePolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A condition necessary for an `AccessLevel` to be granted. The Condition is an AND over its fields. So a Condition is true if: 1) the request IP is from one of the listed subnetworks AND 2) the originating device complies with the listed device policy AND 3) all listed access levels are granted AND 4) the request was sent at a time allowed by the DateTimeRestriction.
  * 
  */
-public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConditionArgs extends ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.SchedulingNodeAffinityOperator;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled.
  * 
  */
-public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingNodeAffinityArgs extends ResourceArgs {
 
     public static final SchedulingNodeAffinityArgs Empty = new SchedulingNodeAffinityArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A custom error rule.
  * 
  */
-public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomErrorRuleArgs extends ResourceArgs {
 
     public static final CustomErrorRuleArgs Empty = new CustomErrorRuleArgs();
 

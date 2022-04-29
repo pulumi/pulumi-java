@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297.
  * 
  */
-public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CryptoDeterministicConfigArgs Empty = new GooglePrivacyDlpV2CryptoDeterministicConfigArgs();
 

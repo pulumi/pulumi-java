@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a form parameter.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FormParameterArgs Empty = new GoogleCloudDialogflowCxV3beta1FormParameterArgs();
 

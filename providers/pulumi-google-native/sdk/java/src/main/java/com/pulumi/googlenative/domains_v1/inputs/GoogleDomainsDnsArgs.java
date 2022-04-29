@@ -6,6 +6,7 @@ package com.pulumi.googlenative.domains_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1.enums.GoogleDomainsDnsDsState;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration for using the free DNS zone provided by Google Domains as a `Registration`&#39;s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
  * 
  */
-public final class GoogleDomainsDnsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDomainsDnsArgs extends ResourceArgs {
 
     public static final GoogleDomainsDnsArgs Empty = new GoogleDomainsDnsArgs();
 

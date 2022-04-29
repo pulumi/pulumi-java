@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * KeyUsage.ExtendedKeyUsageOptions has fields that correspond to certain common OIDs that could be specified as an extended key usage value.
  * 
  */
-public final class ExtendedKeyUsageOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExtendedKeyUsageOptionsArgs extends ResourceArgs {
 
     public static final ExtendedKeyUsageOptionsArgs Empty = new ExtendedKeyUsageOptionsArgs();
 

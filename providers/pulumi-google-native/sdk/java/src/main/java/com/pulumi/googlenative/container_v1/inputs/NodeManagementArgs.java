@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * NodeManagement defines the set of node management services turned on for the node pool.
  * 
  */
-public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeManagementArgs extends ResourceArgs {
 
     public static final NodeManagementArgs Empty = new NodeManagementArgs();
 

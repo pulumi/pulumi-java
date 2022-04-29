@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.EnvVarSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EnvVar represents an environment variable present in a Container.
  * 
  */
-public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvVarArgs extends ResourceArgs {
 
     public static final EnvVarArgs Empty = new EnvVarArgs();
 

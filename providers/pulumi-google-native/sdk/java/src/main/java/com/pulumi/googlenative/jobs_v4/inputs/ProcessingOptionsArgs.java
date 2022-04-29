@@ -6,6 +6,7 @@ package com.pulumi.googlenative.jobs_v4.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.jobs_v4.enums.ProcessingOptionsHtmlSanitization;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Options for job processing.
  * 
  */
-public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProcessingOptionsArgs extends ResourceArgs {
 
     public static final ProcessingOptionsArgs Empty = new ProcessingOptionsArgs();
 

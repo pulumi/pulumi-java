@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * TrafficTarget holds a single entry of the routing table for a Route.
  * 
  */
-public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficTargetArgs extends ResourceArgs {
 
     public static final TrafficTargetArgs Empty = new TrafficTargetArgs();
 

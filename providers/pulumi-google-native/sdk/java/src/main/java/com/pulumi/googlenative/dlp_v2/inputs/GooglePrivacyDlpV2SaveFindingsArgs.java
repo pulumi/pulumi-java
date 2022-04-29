@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk
  * 
  */
-public final class GooglePrivacyDlpV2SaveFindingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2SaveFindingsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2SaveFindingsArgs Empty = new GooglePrivacyDlpV2SaveFindingsArgs();
 

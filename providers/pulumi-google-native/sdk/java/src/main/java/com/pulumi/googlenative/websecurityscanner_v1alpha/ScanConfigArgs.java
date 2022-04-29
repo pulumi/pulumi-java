@@ -10,6 +10,7 @@ import com.pulumi.googlenative.websecurityscanner_v1alpha.enums.ScanConfigUserAg
 import com.pulumi.googlenative.websecurityscanner_v1alpha.inputs.AuthenticationArgs;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.inputs.ScanRunArgs;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.inputs.ScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ScanConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanConfigArgs extends ResourceArgs {
 
     public static final ScanConfigArgs Empty = new ScanConfigArgs();
 

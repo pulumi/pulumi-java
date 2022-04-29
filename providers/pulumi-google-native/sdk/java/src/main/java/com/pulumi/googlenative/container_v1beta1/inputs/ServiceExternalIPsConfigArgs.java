@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Config to block services with externalIPs field.
  * 
  */
-public final class ServiceExternalIPsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceExternalIPsConfigArgs extends ResourceArgs {
 
     public static final ServiceExternalIPsConfigArgs Empty = new ServiceExternalIPsConfigArgs();
 

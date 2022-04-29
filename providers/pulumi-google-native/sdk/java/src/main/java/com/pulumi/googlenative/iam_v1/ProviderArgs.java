@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.iam_v1.inputs.AwsArgs;
 import com.pulumi.googlenative.iam_v1.inputs.OidcArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderArgs extends ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 

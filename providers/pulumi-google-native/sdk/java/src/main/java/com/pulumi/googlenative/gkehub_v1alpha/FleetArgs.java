@@ -5,13 +5,14 @@ package com.pulumi.googlenative.gkehub_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetArgs extends ResourceArgs {
 
     public static final FleetArgs Empty = new FleetArgs();
 

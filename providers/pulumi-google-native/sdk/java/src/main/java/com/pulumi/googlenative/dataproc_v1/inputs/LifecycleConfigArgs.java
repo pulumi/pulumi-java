@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the cluster auto-delete schedule configuration.
  * 
  */
-public final class LifecycleConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecycleConfigArgs extends ResourceArgs {
 
     public static final LifecycleConfigArgs Empty = new LifecycleConfigArgs();
 

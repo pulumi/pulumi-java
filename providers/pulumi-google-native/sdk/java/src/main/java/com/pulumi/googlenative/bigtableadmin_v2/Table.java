@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigtableadmin_v2.TableArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.outputs.RestoreInfoResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:Table")
-public class Table extends com.pulumi.resources.CustomResource {
+public class Table extends CustomResource {
     /**
      * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
      * 
@@ -112,19 +114,19 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Table(String name, TableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Table(String name, TableArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:bigtableadmin/v2:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Table(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Table(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:bigtableadmin/v2:Table", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Table get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Table get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Table(name, id, options);
     }
 }

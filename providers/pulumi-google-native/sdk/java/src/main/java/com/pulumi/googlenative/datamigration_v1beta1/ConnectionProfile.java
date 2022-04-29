@@ -12,6 +12,8 @@ import com.pulumi.googlenative.datamigration_v1beta1.ConnectionProfileArgs;
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.CloudSqlConnectionProfileResponse;
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.MySqlConnectionProfileResponse;
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.StatusResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datamigration/v1beta1:ConnectionProfile")
-public class ConnectionProfile extends com.pulumi.resources.CustomResource {
+public class ConnectionProfile extends CustomResource {
     /**
      * A CloudSQL database connection profile.
      * 
@@ -184,19 +186,19 @@ public class ConnectionProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConnectionProfile(String name, ConnectionProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConnectionProfile(String name, ConnectionProfileArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datamigration/v1beta1:ConnectionProfile", name, args == null ? ConnectionProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConnectionProfile(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConnectionProfile(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datamigration/v1beta1:ConnectionProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -207,7 +209,7 @@ public class ConnectionProfile extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectionProfile get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectionProfile get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ConnectionProfile(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies an executable to run on a fully configured node and a timeout period for executable completion.
  * 
  */
-public final class NodeInitializationActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeInitializationActionArgs extends ResourceArgs {
 
     public static final NodeInitializationActionArgs Empty = new NodeInitializationActionArgs();
 

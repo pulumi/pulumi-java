@@ -25,6 +25,7 @@ import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ import javax.annotation.Nullable;
  * Corresponds to the `Response` field in the Dialogflow console.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageArgs();
 

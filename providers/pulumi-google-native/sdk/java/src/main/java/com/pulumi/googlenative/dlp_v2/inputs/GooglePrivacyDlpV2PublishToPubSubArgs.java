@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Publish a message into given Pub/Sub topic when DlpJob has completed. The message contains a single field, `DlpJobName`, which is equal to the finished job&#39;s [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob). Compatible with: Inspect, Risk
  * 
  */
-public final class GooglePrivacyDlpV2PublishToPubSubArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2PublishToPubSubArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2PublishToPubSubArgs Empty = new GooglePrivacyDlpV2PublishToPubSubArgs();
 

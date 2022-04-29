@@ -6,13 +6,14 @@ package com.pulumi.googlenative.dialogflow_v2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.enums.ConversationConversationStage;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConversationArgs extends ResourceArgs {
 
     public static final ConversationArgs Empty = new ConversationArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A single Android device.
  * 
  */
-public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidDeviceArgs extends ResourceArgs {
 
     public static final AndroidDeviceArgs Empty = new AndroidDeviceArgs();
 

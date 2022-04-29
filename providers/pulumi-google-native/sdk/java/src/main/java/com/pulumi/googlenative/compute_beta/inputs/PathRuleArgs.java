@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.HttpRedirectActionArgs;
 import com.pulumi.googlenative.compute_beta.inputs.HttpRouteActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A path-matching rule for a URL. If matched, will use the specified BackendService to handle the traffic arriving at this URL.
  * 
  */
-public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class PathRuleArgs extends ResourceArgs {
 
     public static final PathRuleArgs Empty = new PathRuleArgs();
 

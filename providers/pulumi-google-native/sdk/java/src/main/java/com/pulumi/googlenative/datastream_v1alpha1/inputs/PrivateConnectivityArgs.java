@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Private Connectivity
  * 
  */
-public final class PrivateConnectivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateConnectivityArgs extends ResourceArgs {
 
     public static final PrivateConnectivityArgs Empty = new PrivateConnectivityArgs();
 

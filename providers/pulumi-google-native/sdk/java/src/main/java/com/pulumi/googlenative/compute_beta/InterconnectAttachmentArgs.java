@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_beta.enums.InterconnectAttachmentEncrypti
 import com.pulumi.googlenative.compute_beta.enums.InterconnectAttachmentStackType;
 import com.pulumi.googlenative.compute_beta.enums.InterconnectAttachmentType;
 import com.pulumi.googlenative.compute_beta.inputs.InterconnectAttachmentPartnerMetadataArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InterconnectAttachmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class InterconnectAttachmentArgs extends ResourceArgs {
 
     public static final InterconnectAttachmentArgs Empty = new InterconnectAttachmentArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.googlenative.appengine_v1beta.enums.AppServingStatus;
 import com.pulumi.googlenative.appengine_v1beta.inputs.FeatureSettingsArgs;
 import com.pulumi.googlenative.appengine_v1beta.inputs.IdentityAwareProxyArgs;
 import com.pulumi.googlenative.appengine_v1beta.inputs.UrlDispatchRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AppArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppArgs extends ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.servicemanagement_v1.enums.EnumSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.EnumValueArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Enum type definition.
  * 
  */
-public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnumArgs extends ResourceArgs {
 
     public static final EnumArgs Empty = new EnumArgs();
 

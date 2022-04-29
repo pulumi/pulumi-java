@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.FingerprintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Basis describes the base image portion (Note) of the DockerImage relationship. Linked occurrences are derived from this or an equivalent image via: FROM Or an equivalent reference, e.g., a tag of the resource_url.
  * 
  */
-public final class ImageNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageNoteArgs extends ResourceArgs {
 
     public static final ImageNoteArgs Empty = new ImageNoteArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Describes a budget amount targeted to the last Filter.calendar_period spend. At this time, the amount is automatically 100% of the last calendar period&#39;s spend; that is, there are no other options yet. LastPeriodAmount cannot be set for a budget configured with a Filter.custom_period.
  * 
  */
-public final class GoogleCloudBillingBudgetsV1LastPeriodAmountArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudBillingBudgetsV1LastPeriodAmountArgs extends ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1LastPeriodAmountArgs Empty = new GoogleCloudBillingBudgetsV1LastPeriodAmountArgs();
 

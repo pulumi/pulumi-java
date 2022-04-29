@@ -5,6 +5,7 @@ package com.pulumi.googlenative.securitycenter_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The config for streaming-based notifications, which send each event as soon as it is detected.
  * 
  */
-public final class StreamingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingConfigArgs extends ResourceArgs {
 
     public static final StreamingConfigArgs Empty = new StreamingConfigArgs();
 

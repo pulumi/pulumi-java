@@ -9,6 +9,7 @@ import com.pulumi.googlenative.notebooks_v1.enums.ExecutionTemplateJobType;
 import com.pulumi.googlenative.notebooks_v1.inputs.DataprocParametersArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.SchedulerAcceleratorConfigArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.VertexAIParametersArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The description a notebook execution workload.
  * 
  */
-public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecutionTemplateArgs extends ResourceArgs {
 
     public static final ExecutionTemplateArgs Empty = new ExecutionTemplateArgs();
 

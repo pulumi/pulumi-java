@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.enums.CompositeFilterLogicOperator;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class CompositeFilterArgs extends ResourceArgs {
 
     public static final CompositeFilterArgs Empty = new CompositeFilterArgs();
 

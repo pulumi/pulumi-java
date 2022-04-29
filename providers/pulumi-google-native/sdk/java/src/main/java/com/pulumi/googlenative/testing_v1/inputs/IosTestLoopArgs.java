@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A test of an iOS application that implements one or more game loop scenarios. This test type accepts an archived application (.ipa file) and a list of integer scenarios that will be executed on the app sequentially.
  * 
  */
-public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosTestLoopArgs extends ResourceArgs {
 
     public static final IosTestLoopArgs Empty = new IosTestLoopArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.iam_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetOrganizationRoleArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetOrganizationRoleArgs extends InvokeArgs {
 
     public static final GetOrganizationRoleArgs Empty = new GetOrganizationRoleArgs();
 

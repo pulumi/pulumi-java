@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs Empty = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs();
 

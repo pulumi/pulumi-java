@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetScanConfigArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetScanConfigArgs extends InvokeArgs {
 
     public static final GetScanConfigArgs Empty = new GetScanConfigArgs();
 

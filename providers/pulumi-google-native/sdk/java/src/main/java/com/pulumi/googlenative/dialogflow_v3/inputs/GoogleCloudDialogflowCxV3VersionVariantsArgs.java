@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsVariantArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A list of flow version variants.
  * 
  */
-public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3VersionVariantsArgs Empty = new GoogleCloudDialogflowCxV3VersionVariantsArgs();
 

@@ -10,13 +10,14 @@ import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalog
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1SchemaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntryArgs extends ResourceArgs {
 
     public static final EntryArgs Empty = new EntryArgs();
 

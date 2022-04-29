@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.CustomDnsArgs;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.GlueRecordArgs;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.GoogleDomainsDnsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines the DNS configuration of a `Registration`, including name servers, DNSSEC, and glue records.
  * 
  */
-public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DnsSettingsArgs extends ResourceArgs {
 
     public static final DnsSettingsArgs Empty = new DnsSettingsArgs();
 

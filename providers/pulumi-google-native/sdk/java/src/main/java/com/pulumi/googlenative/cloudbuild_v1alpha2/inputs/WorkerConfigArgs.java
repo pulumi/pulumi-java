@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * WorkerConfig defines the configuration to be used for a creating workers in the pool.
  * 
  */
-public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkerConfigArgs extends ResourceArgs {
 
     public static final WorkerConfigArgs Empty = new WorkerConfigArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1alpha2.enums.ContactSettingsPrivacy;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.ContactArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Defines the contact information associated with a `Registration`. [ICANN](https://icann.org/) requires all domain names to have associated contact information. The `registrant_contact` is considered the domain&#39;s legal owner, and often the other contacts are identical.
  * 
  */
-public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactSettingsArgs extends ResourceArgs {
 
     public static final ContactSettingsArgs Empty = new ContactSettingsArgs();
 

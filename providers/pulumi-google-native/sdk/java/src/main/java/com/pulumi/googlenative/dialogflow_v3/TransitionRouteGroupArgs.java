@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TransitionRouteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransitionRouteGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransitionRouteGroupArgs extends ResourceArgs {
 
     public static final TransitionRouteGroupArgs Empty = new TransitionRouteGroupArgs();
 

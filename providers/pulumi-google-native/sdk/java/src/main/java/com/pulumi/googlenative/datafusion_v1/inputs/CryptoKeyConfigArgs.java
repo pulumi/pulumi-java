@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datafusion_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The crypto key configuration. This field is used by the Customer-managed encryption keys (CMEK) feature.
  * 
  */
-public final class CryptoKeyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class CryptoKeyConfigArgs extends ResourceArgs {
 
     public static final CryptoKeyConfigArgs Empty = new CryptoKeyConfigArgs();
 

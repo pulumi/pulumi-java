@@ -6,6 +6,7 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.SecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration information for a Kerberos principal.
  * 
  */
-public final class KerberosConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class KerberosConfigArgs extends ResourceArgs {
 
     public static final KerberosConfigArgs Empty = new KerberosConfigArgs();
 

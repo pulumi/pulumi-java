@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudkms_v1.enums.ImportJobImportMethod;
 import com.pulumi.googlenative.cloudkms_v1.enums.ImportJobProtectionLevel;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImportJobArgs extends ResourceArgs {
 
     public static final ImportJobArgs Empty = new ImportJobArgs();
 

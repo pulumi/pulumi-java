@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.SecurityPolicyRuleMatcherVersionedExpr;
 import com.pulumi.googlenative.compute_v1.inputs.ExprArgs;
 import com.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
  * 
  */
-public final class SecurityPolicyRuleMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyRuleMatcherArgs extends ResourceArgs {
 
     public static final SecurityPolicyRuleMatcherArgs Empty = new SecurityPolicyRuleMatcherArgs();
 

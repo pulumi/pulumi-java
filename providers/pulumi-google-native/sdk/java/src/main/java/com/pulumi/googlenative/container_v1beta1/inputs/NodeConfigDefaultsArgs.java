@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.GcfsConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Subset of NodeConfig message that has defaults.
  * 
  */
-public final class NodeConfigDefaultsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeConfigDefaultsArgs extends ResourceArgs {
 
     public static final NodeConfigDefaultsArgs Empty = new NodeConfigDefaultsArgs();
 

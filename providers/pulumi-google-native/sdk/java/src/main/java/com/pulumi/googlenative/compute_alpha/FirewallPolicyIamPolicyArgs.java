@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.BindingArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.RuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallPolicyIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyIamPolicyArgs extends ResourceArgs {
 
     public static final FirewallPolicyIamPolicyArgs Empty = new FirewallPolicyIamPolicyArgs();
 

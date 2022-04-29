@@ -10,6 +10,7 @@ import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionScalingArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VolumeArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VpcAccessArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * RevisionTemplate describes the data a revision should have when created from a template.
  * 
  */
-public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2RevisionTemplateArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2RevisionTemplateArgs Empty = new GoogleCloudRunOpV2RevisionTemplateArgs();
 

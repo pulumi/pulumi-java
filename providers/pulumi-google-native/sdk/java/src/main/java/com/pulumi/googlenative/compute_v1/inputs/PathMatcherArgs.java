@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_v1.inputs.HttpRedirectActionArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HttpRouteActionArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HttpRouteRuleArgs;
 import com.pulumi.googlenative.compute_v1.inputs.PathRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A matcher for the path portion of the URL. The BackendService from the longest-matched rule will serve the URL. If no rule was matched, the default service is used.
  * 
  */
-public final class PathMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class PathMatcherArgs extends ResourceArgs {
 
     public static final PathMatcherArgs Empty = new PathMatcherArgs();
 

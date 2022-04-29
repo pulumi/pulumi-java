@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageCardButtonArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The card response message.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageCardArgs Empty = new GoogleCloudDialogflowV2IntentMessageCardArgs();
 

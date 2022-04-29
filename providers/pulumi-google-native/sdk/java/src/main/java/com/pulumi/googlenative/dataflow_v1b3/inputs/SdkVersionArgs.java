@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.SdkVersionSdkSupportStatus;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The version of the SDK used to run the job.
  * 
  */
-public final class SdkVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SdkVersionArgs extends ResourceArgs {
 
     public static final SdkVersionArgs Empty = new SdkVersionArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationMetricsArgs;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmwareVmDetailsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Utilization information of a single VM.
  * 
  */
-public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class VmUtilizationInfoArgs extends ResourceArgs {
 
     public static final VmUtilizationInfoArgs Empty = new VmUtilizationInfoArgs();
 

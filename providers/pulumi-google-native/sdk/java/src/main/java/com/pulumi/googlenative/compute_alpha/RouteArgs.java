@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RouteIlbRouteBehaviorOnUnhealthy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteArgs extends ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 

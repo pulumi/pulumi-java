@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Custom utilization metric policy.
  * 
  */
-public final class AutoscalingPolicyCustomMetricUtilizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingPolicyCustomMetricUtilizationArgs extends ResourceArgs {
 
     public static final AutoscalingPolicyCustomMetricUtilizationArgs Empty = new AutoscalingPolicyCustomMetricUtilizationArgs();
 

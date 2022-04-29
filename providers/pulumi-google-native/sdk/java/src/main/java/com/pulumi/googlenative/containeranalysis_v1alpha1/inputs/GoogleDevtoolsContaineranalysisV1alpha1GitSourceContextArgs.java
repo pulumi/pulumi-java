@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A GitSourceContext denotes a particular revision in a third party Git repository (e.g., GitHub).
  * 
  */
-public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs Empty = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs();
 

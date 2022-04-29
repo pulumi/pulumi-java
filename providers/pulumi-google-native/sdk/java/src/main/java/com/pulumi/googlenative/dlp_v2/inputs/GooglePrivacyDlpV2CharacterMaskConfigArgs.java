@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharsToIgnoreArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. This can be used on data of any type (numbers, longs, and so on) and when de-identifying structured data we&#39;ll attempt to preserve the original data&#39;s type. (This allows you to take a long like 123 and modify it to a string like **3.
  * 
  */
-public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CharacterMaskConfigArgs Empty = new GooglePrivacyDlpV2CharacterMaskConfigArgs();
 

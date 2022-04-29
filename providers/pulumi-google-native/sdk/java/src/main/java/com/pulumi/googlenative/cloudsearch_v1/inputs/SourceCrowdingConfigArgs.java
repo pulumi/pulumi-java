@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Set search results crowding limits. Crowding is a situation in which multiple results from the same source or host &#34;crowd out&#34; other results, diminishing the quality of search for users. To foster better search quality and source diversity in search results, you can set a condition to reduce repetitive results by source.
  * 
  */
-public final class SourceCrowdingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceCrowdingConfigArgs extends ResourceArgs {
 
     public static final SourceCrowdingConfigArgs Empty = new SourceCrowdingConfigArgs();
 

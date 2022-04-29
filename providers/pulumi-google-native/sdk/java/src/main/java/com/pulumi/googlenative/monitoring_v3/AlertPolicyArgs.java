@@ -11,6 +11,7 @@ import com.pulumi.googlenative.monitoring_v3.inputs.ConditionArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.DocumentationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MutationRecordArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.StatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertPolicyArgs extends ResourceArgs {
 
     public static final AlertPolicyArgs Empty = new AlertPolicyArgs();
 

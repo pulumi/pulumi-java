@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.healthcare_v1.AttributeDefinitionArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1:AttributeDefinition")
-public class AttributeDefinition extends com.pulumi.resources.CustomResource {
+public class AttributeDefinition extends CustomResource {
     /**
      * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
      * 
@@ -125,19 +127,19 @@ public class AttributeDefinition extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AttributeDefinition(String name, AttributeDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AttributeDefinition(String name, AttributeDefinitionArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1:AttributeDefinition", name, args == null ? AttributeDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AttributeDefinition(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AttributeDefinition(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1:AttributeDefinition", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -148,7 +150,7 @@ public class AttributeDefinition extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttributeDefinition get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AttributeDefinition get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AttributeDefinition(name, id, options);
     }
 }

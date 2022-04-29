@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The inference result which includes an objective metric to optimize and the confidence interval.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultArgs Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs();
 

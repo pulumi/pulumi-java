@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerBfdMode;
 import com.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerBfdPacketMode;
 import com.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerBfdSessionInitializationMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouterBgpPeerBfdArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterBgpPeerBfdArgs extends ResourceArgs {
 
     public static final RouterBgpPeerBfdArgs Empty = new RouterBgpPeerBfdArgs();
 

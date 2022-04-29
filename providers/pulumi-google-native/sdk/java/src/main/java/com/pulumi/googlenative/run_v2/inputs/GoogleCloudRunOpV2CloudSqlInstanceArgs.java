@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a specific Cloud SQL instance.
  * 
  */
-public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2CloudSqlInstanceArgs Empty = new GoogleCloudRunOpV2CloudSqlInstanceArgs();
 

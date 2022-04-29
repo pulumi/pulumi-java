@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.metastore_v1beta.enums.HiveMetastoreConfigEndpointProtocol;
 import com.pulumi.googlenative.metastore_v1beta.inputs.KerberosConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
  * 
  */
-public final class HiveMetastoreConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HiveMetastoreConfigArgs extends ResourceArgs {
 
     public static final HiveMetastoreConfigArgs Empty = new HiveMetastoreConfigArgs();
 

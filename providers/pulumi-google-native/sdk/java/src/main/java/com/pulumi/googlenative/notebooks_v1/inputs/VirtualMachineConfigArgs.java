@@ -11,6 +11,7 @@ import com.pulumi.googlenative.notebooks_v1.inputs.EncryptionConfigArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.LocalDiskArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.RuntimeAcceleratorConfigArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.RuntimeShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * The config settings for virtual machine.
  * 
  */
-public final class VirtualMachineConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineConfigArgs extends ResourceArgs {
 
     public static final VirtualMachineConfigArgs Empty = new VirtualMachineConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.BoundingPolyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Image annotation.
  * 
  */
-public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageAnnotationArgs extends ResourceArgs {
 
     public static final ImageAnnotationArgs Empty = new ImageAnnotationArgs();
 

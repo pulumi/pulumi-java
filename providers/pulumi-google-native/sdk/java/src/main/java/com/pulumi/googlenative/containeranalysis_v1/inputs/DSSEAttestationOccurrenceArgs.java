@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the Occurrence.
  * 
  */
-public final class DSSEAttestationOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DSSEAttestationOccurrenceArgs extends ResourceArgs {
 
     public static final DSSEAttestationOccurrenceArgs Empty = new DSSEAttestationOccurrenceArgs();
 

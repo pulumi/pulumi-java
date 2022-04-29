@@ -6,6 +6,7 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsublite_v1.inputs.CapacityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The settings for a topic&#39;s partitions.
  * 
  */
-public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PartitionConfigArgs extends ResourceArgs {
 
     public static final PartitionConfigArgs Empty = new PartitionConfigArgs();
 

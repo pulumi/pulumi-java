@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents output related to a built-in algorithm Job.
  * 
  */
-public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__BuiltInAlgorithmOutputArgs Empty = new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs();
 

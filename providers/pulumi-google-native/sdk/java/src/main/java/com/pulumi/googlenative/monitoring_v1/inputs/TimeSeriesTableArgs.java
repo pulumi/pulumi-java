@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.TableDataSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A table that displays time series data.
  * 
  */
-public final class TimeSeriesTableArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeSeriesTableArgs extends ResourceArgs {
 
     public static final TimeSeriesTableArgs Empty = new TimeSeriesTableArgs();
 

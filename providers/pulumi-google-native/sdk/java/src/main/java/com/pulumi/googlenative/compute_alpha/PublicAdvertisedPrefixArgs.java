@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_alpha;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixStatus;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicAdvertisedPrefixArgs extends ResourceArgs {
 
     public static final PublicAdvertisedPrefixArgs Empty = new PublicAdvertisedPrefixArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.TargetSslProxyProxyHeader;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetSslProxyArgs extends ResourceArgs {
 
     public static final TargetSslProxyArgs Empty = new TargetSslProxyArgs();
 

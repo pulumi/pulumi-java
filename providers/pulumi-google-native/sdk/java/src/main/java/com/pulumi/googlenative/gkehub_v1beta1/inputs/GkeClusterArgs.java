@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * GkeCluster contains information specific to GKE clusters.
  * 
  */
-public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GkeClusterArgs extends ResourceArgs {
 
     public static final GkeClusterArgs Empty = new GkeClusterArgs();
 

@@ -12,13 +12,14 @@ import com.pulumi.googlenative.compute_beta.inputs.HttpRetryPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.RequestMirrorPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.UrlRewriteArgs;
 import com.pulumi.googlenative.compute_beta.inputs.WeightedBackendServiceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpRouteActionArgs extends ResourceArgs {
 
     public static final HttpRouteActionArgs Empty = new HttpRouteActionArgs();
 

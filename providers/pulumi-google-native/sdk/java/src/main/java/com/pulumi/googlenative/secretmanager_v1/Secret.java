@@ -12,6 +12,8 @@ import com.pulumi.googlenative.secretmanager_v1.SecretArgs;
 import com.pulumi.googlenative.secretmanager_v1.outputs.ReplicationResponse;
 import com.pulumi.googlenative.secretmanager_v1.outputs.RotationResponse;
 import com.pulumi.googlenative.secretmanager_v1.outputs.TopicResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:secretmanager/v1:Secret")
-public class Secret extends com.pulumi.resources.CustomResource {
+public class Secret extends CustomResource {
     /**
      * The time at which the Secret was created.
      * 
@@ -172,19 +174,19 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Secret(String name, SecretArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Secret(String name, SecretArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:secretmanager/v1:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Secret(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Secret(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:secretmanager/v1:Secret", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -195,7 +197,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Secret get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Secret get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Secret(name, id, options);
     }
 }

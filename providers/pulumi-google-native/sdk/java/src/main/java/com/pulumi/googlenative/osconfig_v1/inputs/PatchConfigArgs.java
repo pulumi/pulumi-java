@@ -12,6 +12,7 @@ import com.pulumi.googlenative.osconfig_v1.inputs.GooSettingsArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.WindowsUpdateSettingsArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.YumSettingsArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.ZypperSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Patch configuration specifications. Contains details on how to apply the patch(es) to a VM instance.
  * 
  */
-public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchConfigArgs extends ResourceArgs {
 
     public static final PatchConfigArgs Empty = new PatchConfigArgs();
 

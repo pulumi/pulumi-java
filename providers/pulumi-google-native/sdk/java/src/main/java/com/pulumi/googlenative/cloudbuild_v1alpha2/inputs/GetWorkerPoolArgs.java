@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetWorkerPoolArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetWorkerPoolArgs extends InvokeArgs {
 
     public static final GetWorkerPoolArgs Empty = new GetWorkerPoolArgs();
 

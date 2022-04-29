@@ -12,6 +12,7 @@ import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabeli
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1InputConfigArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Configures specific details of how a continuous evaluation job works. Provide this configuration when you create an EvaluationJob.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs Empty = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs();
 

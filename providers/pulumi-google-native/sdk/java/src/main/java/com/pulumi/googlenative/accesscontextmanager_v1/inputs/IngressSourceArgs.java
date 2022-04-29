@@ -5,6 +5,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The source that IngressPolicy authorizes access from.
  * 
  */
-public final class IngressSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressSourceArgs extends ResourceArgs {
 
     public static final IngressSourceArgs Empty = new IngressSourceArgs();
 

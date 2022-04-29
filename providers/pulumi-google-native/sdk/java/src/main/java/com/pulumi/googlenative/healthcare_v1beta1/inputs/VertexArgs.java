@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A 2D coordinate in an image. The origin is the top-left.
  * 
  */
-public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
+public final class VertexArgs extends ResourceArgs {
 
     public static final VertexArgs Empty = new VertexArgs();
 

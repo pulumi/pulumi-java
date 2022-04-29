@@ -13,6 +13,7 @@ import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourc
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceRPMArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceYUMArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceZypperArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * A resource that manages a system package.
  * 
  */
-public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourcePackageResourceArgs extends ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceArgs Empty = new OSPolicyResourcePackageResourceArgs();
 

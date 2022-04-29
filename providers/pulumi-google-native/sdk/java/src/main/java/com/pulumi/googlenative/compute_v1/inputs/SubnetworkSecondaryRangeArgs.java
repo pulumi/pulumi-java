@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a secondary IP range of a subnetwork.
  * 
  */
-public final class SubnetworkSecondaryRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetworkSecondaryRangeArgs extends ResourceArgs {
 
     public static final SubnetworkSecondaryRangeArgs Empty = new SubnetworkSecondaryRangeArgs();
 

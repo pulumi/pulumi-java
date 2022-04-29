@@ -13,6 +13,8 @@ import com.pulumi.googlenative.compute_alpha.outputs.PacketMirroringFilterRespon
 import com.pulumi.googlenative.compute_alpha.outputs.PacketMirroringForwardingRuleInfoResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.PacketMirroringNetworkInfoResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:PacketMirroring")
-public class PacketMirroring extends com.pulumi.resources.CustomResource {
+public class PacketMirroring extends CustomResource {
     /**
      * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
      * 
@@ -227,19 +229,19 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PacketMirroring(String name, PacketMirroringArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PacketMirroring(String name, PacketMirroringArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:PacketMirroring", name, args == null ? PacketMirroringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PacketMirroring(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PacketMirroring(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:PacketMirroring", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -250,7 +252,7 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PacketMirroring get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PacketMirroring get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PacketMirroring(name, id, options);
     }
 }

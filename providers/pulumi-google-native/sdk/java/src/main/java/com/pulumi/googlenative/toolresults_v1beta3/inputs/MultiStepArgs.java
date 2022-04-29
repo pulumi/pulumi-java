@@ -6,6 +6,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details when multiple steps are run with the same configuration as a group.
  * 
  */
-public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class MultiStepArgs extends ResourceArgs {
 
     public static final MultiStepArgs Empty = new MultiStepArgs();
 

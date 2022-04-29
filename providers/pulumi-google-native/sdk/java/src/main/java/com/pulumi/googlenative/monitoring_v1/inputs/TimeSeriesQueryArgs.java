@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * TimeSeriesQuery collects the set of supported methods for querying time series data from the Stackdriver metrics API.
  * 
  */
-public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeSeriesQueryArgs extends ResourceArgs {
 
     public static final TimeSeriesQueryArgs Empty = new TimeSeriesQueryArgs();
 

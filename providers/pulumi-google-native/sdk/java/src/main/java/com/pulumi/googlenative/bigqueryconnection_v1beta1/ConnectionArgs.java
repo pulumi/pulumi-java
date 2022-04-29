@@ -6,13 +6,14 @@ package com.pulumi.googlenative.bigqueryconnection_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlPropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionArgs extends ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 

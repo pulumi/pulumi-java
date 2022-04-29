@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
  * 
  */
-public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CorsPolicyArgs extends ResourceArgs {
 
     public static final CorsPolicyArgs Empty = new CorsPolicyArgs();
 

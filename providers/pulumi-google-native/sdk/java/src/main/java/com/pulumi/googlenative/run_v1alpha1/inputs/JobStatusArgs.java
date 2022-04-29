@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceStatusArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.JobConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * JobStatus represents the current state of a Job.
  * 
  */
-public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobStatusArgs extends ResourceArgs {
 
     public static final JobStatusArgs Empty = new JobStatusArgs();
 

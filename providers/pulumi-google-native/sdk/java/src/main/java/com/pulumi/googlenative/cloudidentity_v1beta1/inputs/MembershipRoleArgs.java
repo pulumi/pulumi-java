@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.ExpiryDetailArgs;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.RestrictionEvaluationsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
  * 
  */
-public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class MembershipRoleArgs extends ResourceArgs {
 
     public static final MembershipRoleArgs Empty = new MembershipRoleArgs();
 

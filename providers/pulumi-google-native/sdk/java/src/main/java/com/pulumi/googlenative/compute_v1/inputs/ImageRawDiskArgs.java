@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.ImageRawDiskContainerType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The parameters of the raw disk image.
  * 
  */
-public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageRawDiskArgs extends ResourceArgs {
 
     public static final ImageRawDiskArgs Empty = new ImageRawDiskArgs();
 

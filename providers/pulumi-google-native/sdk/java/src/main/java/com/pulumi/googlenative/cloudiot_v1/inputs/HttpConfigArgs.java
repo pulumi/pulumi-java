@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration of the HTTP bridge for a device registry.
  * 
  */
-public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpConfigArgs extends ResourceArgs {
 
     public static final HttpConfigArgs Empty = new HttpConfigArgs();
 

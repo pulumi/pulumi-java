@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudresourcemanager_v1beta1.ProjectArgs;
 import com.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs.ResourceIdResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudresourcemanager/v1beta1:Project")
-public class Project extends com.pulumi.resources.CustomResource {
+public class Project extends CustomResource {
     /**
      * Creation time. Read-only.
      * 
@@ -140,19 +142,19 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Project(String name, @Nullable ProjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Project(String name, @Nullable ProjectArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudresourcemanager/v1beta1:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Project(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Project(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudresourcemanager/v1beta1:Project", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -163,7 +165,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Project get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Project get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Project(name, id, options);
     }
 }

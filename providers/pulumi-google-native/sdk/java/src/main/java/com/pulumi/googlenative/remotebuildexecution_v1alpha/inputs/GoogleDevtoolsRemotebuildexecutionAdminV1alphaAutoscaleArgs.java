@@ -5,6 +5,7 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Autoscale defines the autoscaling policy of a worker pool.
  * 
  */
-public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs();
 

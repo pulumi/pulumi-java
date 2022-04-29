@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCx
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1TransitionRouteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PageArgs extends ResourceArgs {
 
     public static final PageArgs Empty = new PageArgs();
 

@@ -15,6 +15,7 @@ import com.pulumi.googlenative.transcoder_v1.inputs.OutputArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.OverlayArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.PubsubDestinationArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.SpriteSheetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Job configuration
  * 
  */
-public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobConfigArgs extends ResourceArgs {
 
     public static final JobConfigArgs Empty = new JobConfigArgs();
 

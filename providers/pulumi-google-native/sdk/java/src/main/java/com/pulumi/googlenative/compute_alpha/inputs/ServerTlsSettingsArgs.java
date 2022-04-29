@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.ServerTlsSettingsTlsMode;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The TLS settings for the server.
  * 
  */
-public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerTlsSettingsArgs extends ResourceArgs {
 
     public static final ServerTlsSettingsArgs Empty = new ServerTlsSettingsArgs();
 

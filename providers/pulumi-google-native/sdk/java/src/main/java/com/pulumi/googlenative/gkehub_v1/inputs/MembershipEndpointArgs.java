@@ -10,6 +10,7 @@ import com.pulumi.googlenative.gkehub_v1.inputs.GkeClusterArgs;
 import com.pulumi.googlenative.gkehub_v1.inputs.KubernetesResourceArgs;
 import com.pulumi.googlenative.gkehub_v1.inputs.MultiCloudClusterArgs;
 import com.pulumi.googlenative.gkehub_v1.inputs.OnPremClusterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
  * 
  */
-public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class MembershipEndpointArgs extends ResourceArgs {
 
     public static final MembershipEndpointArgs Empty = new MembershipEndpointArgs();
 

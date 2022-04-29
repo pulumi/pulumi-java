@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.FixedOrPercentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.
  * 
  */
-public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingPolicyScaleInControlArgs extends ResourceArgs {
 
     public static final AutoscalingPolicyScaleInControlArgs Empty = new AutoscalingPolicyScaleInControlArgs();
 

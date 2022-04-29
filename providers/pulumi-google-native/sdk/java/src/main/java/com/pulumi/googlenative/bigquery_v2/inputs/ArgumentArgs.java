@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.enums.ArgumentArgumentKind;
 import com.pulumi.googlenative.bigquery_v2.enums.ArgumentMode;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Input/output argument of a function or a stored procedure.
  * 
  */
-public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArgumentArgs extends ResourceArgs {
 
     public static final ArgumentArgs Empty = new ArgumentArgs();
 

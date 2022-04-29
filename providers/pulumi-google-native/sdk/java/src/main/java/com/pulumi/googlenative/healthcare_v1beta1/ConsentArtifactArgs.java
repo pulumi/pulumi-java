@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.ImageArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.SignatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsentArtifactArgs extends ResourceArgs {
 
     public static final ConsentArtifactArgs Empty = new ConsentArtifactArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__MetricSpecName;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MetricSpec contains the specifications to use to calculate the desired nodes count when autoscaling is enabled.
  * 
  */
-public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__MetricSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__MetricSpecArgs Empty = new GoogleCloudMlV1__MetricSpecArgs();
 

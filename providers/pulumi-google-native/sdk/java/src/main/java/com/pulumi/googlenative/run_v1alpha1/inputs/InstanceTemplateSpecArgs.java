@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * InstanceTemplateSpec describes the data an instance should have when created from a template.
  * 
  */
-public final class InstanceTemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceTemplateSpecArgs extends ResourceArgs {
 
     public static final InstanceTemplateSpecArgs Empty = new InstanceTemplateSpecArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoCommonNameArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * TLS configuration information for virtual hosts and TargetServers.
  * 
  */
-public final class GoogleCloudApigeeV1TlsInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1TlsInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1TlsInfoArgs Empty = new GoogleCloudApigeeV1TlsInfoArgs();
 

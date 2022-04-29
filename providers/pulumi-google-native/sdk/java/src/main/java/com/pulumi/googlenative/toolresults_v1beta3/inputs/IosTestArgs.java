@@ -10,6 +10,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosRoboTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestLoopArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosXcTestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A iOS mobile test specification
  * 
  */
-public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosTestArgs extends ResourceArgs {
 
     public static final IosTestArgs Empty = new IosTestArgs();
 

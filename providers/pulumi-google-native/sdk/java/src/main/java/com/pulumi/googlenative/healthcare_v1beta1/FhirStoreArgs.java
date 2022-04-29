@@ -10,6 +10,7 @@ import com.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.SearchConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.StreamConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.ValidationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class FhirStoreArgs extends ResourceArgs {
 
     public static final FhirStoreArgs Empty = new FhirStoreArgs();
 

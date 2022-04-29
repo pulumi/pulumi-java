@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dns_v1beta2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceRecordSetArgs extends ResourceArgs {
 
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 

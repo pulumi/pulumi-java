@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Timestamps associated with this resource in a particular system.
  * 
  */
-public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1SystemTimestampsArgs Empty = new GoogleCloudDatacatalogV1SystemTimestampsArgs();
 

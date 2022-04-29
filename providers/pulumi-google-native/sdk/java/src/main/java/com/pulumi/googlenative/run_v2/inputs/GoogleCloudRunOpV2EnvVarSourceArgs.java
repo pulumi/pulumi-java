@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * EnvVarSource represents a source for the value of an EnvVar.
  * 
  */
-public final class GoogleCloudRunOpV2EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2EnvVarSourceArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2EnvVarSourceArgs Empty = new GoogleCloudRunOpV2EnvVarSourceArgs();
 

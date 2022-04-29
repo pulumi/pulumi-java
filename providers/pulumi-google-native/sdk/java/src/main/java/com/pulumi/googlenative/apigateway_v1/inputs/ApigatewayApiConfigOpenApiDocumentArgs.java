@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigateway_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An OpenAPI Specification Document describing an API.
  * 
  */
-public final class ApigatewayApiConfigOpenApiDocumentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApigatewayApiConfigOpenApiDocumentArgs extends ResourceArgs {
 
     public static final ApigatewayApiConfigOpenApiDocumentArgs Empty = new ApigatewayApiConfigOpenApiDocumentArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaCategoriesArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaPolicyTagsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableFieldSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableFieldSchemaArgs extends ResourceArgs {
 
     public static final TableFieldSchemaArgs Empty = new TableFieldSchemaArgs();
 

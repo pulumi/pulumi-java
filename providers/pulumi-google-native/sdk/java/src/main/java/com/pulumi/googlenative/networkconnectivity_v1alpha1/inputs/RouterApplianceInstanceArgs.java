@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * RouterAppliance represents a Router appliance which is specified by a VM URI and a NIC address.
  * 
  */
-public final class RouterApplianceInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterApplianceInstanceArgs extends ResourceArgs {
 
     public static final RouterApplianceInstanceArgs Empty = new RouterApplianceInstanceArgs();
 

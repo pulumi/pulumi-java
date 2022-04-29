@@ -6,6 +6,7 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration information of a phrase match rule.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs();
 

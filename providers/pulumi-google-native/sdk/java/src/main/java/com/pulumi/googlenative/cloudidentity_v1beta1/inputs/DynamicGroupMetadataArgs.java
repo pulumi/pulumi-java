@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Dynamic group metadata like queries and status.
  * 
  */
-public final class DynamicGroupMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class DynamicGroupMetadataArgs extends ResourceArgs {
 
     public static final DynamicGroupMetadataArgs Empty = new DynamicGroupMetadataArgs();
 

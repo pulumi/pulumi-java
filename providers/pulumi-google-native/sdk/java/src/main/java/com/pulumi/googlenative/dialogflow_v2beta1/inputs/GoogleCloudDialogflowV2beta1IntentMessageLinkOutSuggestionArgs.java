@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The suggestion chip message that allows the user to jump out to the app or website associated with this agent.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs();
 

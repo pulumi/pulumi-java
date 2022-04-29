@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firebaserules_v1.RulesetArgs;
 import com.pulumi.googlenative.firebaserules_v1.outputs.MetadataResponse;
 import com.pulumi.googlenative.firebaserules_v1.outputs.SourceResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:firebaserules/v1:Ruleset")
-public class Ruleset extends com.pulumi.resources.CustomResource {
+public class Ruleset extends CustomResource {
     /**
      * Time the `Ruleset` was created.
      * 
@@ -99,19 +101,19 @@ public class Ruleset extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ruleset(String name, RulesetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Ruleset(String name, RulesetArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:firebaserules/v1:Ruleset", name, args == null ? RulesetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Ruleset(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Ruleset(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:firebaserules/v1:Ruleset", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -122,7 +124,7 @@ public class Ruleset extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ruleset get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ruleset get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Ruleset(name, id, options);
     }
 }

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricRangeArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.PerformanceThresholdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A WindowsBasedSli defines good_service as the count of time windows for which the provided service was of good quality. Criteria for determining if service was good are embedded in the window_criterion.
  * 
  */
-public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs {
+public final class WindowsBasedSliArgs extends ResourceArgs {
 
     public static final WindowsBasedSliArgs Empty = new WindowsBasedSliArgs();
 

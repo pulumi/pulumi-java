@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Message encapsulating build provenance details.
  * 
  */
-public final class BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildDetailsArgs extends ResourceArgs {
 
     public static final BuildDetailsArgs Empty = new BuildDetailsArgs();
 

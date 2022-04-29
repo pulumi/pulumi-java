@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A policy that specifies how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer doesn&#39;t wait for responses from the shadow service. Before sending traffic to the shadow service, the host or authority header is suffixed with -shadow.
  * 
  */
-public final class RequestMirrorPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RequestMirrorPolicyArgs extends ResourceArgs {
 
     public static final RequestMirrorPolicyArgs Empty = new RequestMirrorPolicyArgs();
 

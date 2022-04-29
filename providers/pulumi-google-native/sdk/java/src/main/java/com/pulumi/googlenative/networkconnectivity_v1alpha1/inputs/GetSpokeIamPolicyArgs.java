@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetSpokeIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSpokeIamPolicyArgs extends InvokeArgs {
 
     public static final GetSpokeIamPolicyArgs Empty = new GetSpokeIamPolicyArgs();
 

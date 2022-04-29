@@ -13,6 +13,8 @@ import com.pulumi.googlenative.compute_alpha.outputs.FutureReservationSpecificSK
 import com.pulumi.googlenative.compute_alpha.outputs.FutureReservationStatusResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.FutureReservationTimeWindowResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.ShareSettingsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:FutureReservation")
-public class FutureReservation extends com.pulumi.resources.CustomResource {
+public class FutureReservation extends CustomResource {
     /**
      * The creation timestamp for this future reservation in RFC3339 text format.
      * 
@@ -204,19 +206,19 @@ public class FutureReservation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FutureReservation(String name, @Nullable FutureReservationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FutureReservation(String name, @Nullable FutureReservationArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:FutureReservation", name, args == null ? FutureReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FutureReservation(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FutureReservation(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:FutureReservation", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -227,7 +229,7 @@ public class FutureReservation extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FutureReservation get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FutureReservation get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FutureReservation(name, id, options);
     }
 }

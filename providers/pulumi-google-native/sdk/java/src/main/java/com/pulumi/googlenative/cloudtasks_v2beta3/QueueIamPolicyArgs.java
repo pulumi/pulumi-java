@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta3;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class QueueIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueueIamPolicyArgs extends ResourceArgs {
 
     public static final QueueIamPolicyArgs Empty = new QueueIamPolicyArgs();
 

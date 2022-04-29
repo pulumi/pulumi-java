@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_v1.RegionSslCertificateArgs;
 import com.pulumi.googlenative.compute_v1.outputs.SslCertificateManagedSslCertificateResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SslCertificateSelfManagedSslCertificateResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:RegionSslCertificate")
-public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
+public class RegionSslCertificate extends CustomResource {
     /**
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
@@ -225,19 +227,19 @@ public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionSslCertificate(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionSslCertificate(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:RegionSslCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -248,7 +250,7 @@ public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionSslCertificate get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionSslCertificate get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionSslCertificate(name, id, options);
     }
 }

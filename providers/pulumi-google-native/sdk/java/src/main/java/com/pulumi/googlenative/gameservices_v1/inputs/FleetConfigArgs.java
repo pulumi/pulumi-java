@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Fleet configs for Agones.
  * 
  */
-public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetConfigArgs extends ResourceArgs {
 
     public static final FleetConfigArgs Empty = new FleetConfigArgs();
 

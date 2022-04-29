@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for an authentication provider, including support for [JSON Web Token (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
  * 
  */
-public final class AuthProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthProviderArgs extends ResourceArgs {
 
     public static final AuthProviderArgs Empty = new AuthProviderArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networksecurity_v1.ServerTlsPolicyArgs;
 import com.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1CertificateProviderResponse;
 import com.pulumi.googlenative.networksecurity_v1.outputs.MTLSPolicyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:networksecurity/v1:ServerTlsPolicy")
-public class ServerTlsPolicy extends com.pulumi.resources.CustomResource {
+public class ServerTlsPolicy extends CustomResource {
     /**
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
@@ -156,19 +158,19 @@ public class ServerTlsPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServerTlsPolicy(String name, ServerTlsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServerTlsPolicy(String name, ServerTlsPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1:ServerTlsPolicy", name, args == null ? ServerTlsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServerTlsPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServerTlsPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1:ServerTlsPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class ServerTlsPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerTlsPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServerTlsPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ServerTlsPolicy(name, id, options);
     }
 }

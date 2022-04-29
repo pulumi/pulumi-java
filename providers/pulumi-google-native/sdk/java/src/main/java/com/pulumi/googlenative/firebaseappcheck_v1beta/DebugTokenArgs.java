@@ -5,13 +5,14 @@ package com.pulumi.googlenative.firebaseappcheck_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DebugTokenArgs extends com.pulumi.resources.ResourceArgs {
+public final class DebugTokenArgs extends ResourceArgs {
 
     public static final DebugTokenArgs Empty = new DebugTokenArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.Int64RangeMatchArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * matchRule criteria for request header matches.
  * 
  */
-public final class HttpHeaderMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpHeaderMatchArgs extends ResourceArgs {
 
     public static final HttpHeaderMatchArgs Empty = new HttpHeaderMatchArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.AzureCredentialsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An AzureBlobStorageData resource can be a data source, but not a data sink. An AzureBlobStorageData resource represents one Azure container. The storage account determines the [Azure endpoint](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#storage-account-endpoints). In an AzureBlobStorageData resource, a blobs&#39;s name is the [Azure Blob Storage blob&#39;s key name](https://docs.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#blob-names).
  * 
  */
-public final class AzureBlobStorageDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureBlobStorageDataArgs extends ResourceArgs {
 
     public static final AzureBlobStorageDataArgs Empty = new AzureBlobStorageDataArgs();
 

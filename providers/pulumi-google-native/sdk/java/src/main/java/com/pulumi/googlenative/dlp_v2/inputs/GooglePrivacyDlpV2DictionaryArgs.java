@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Custom information type based on a dictionary of words or phrases. This can be used to match sensitive information specific to the data, such as a list of employee IDs or job titles. Dictionary words are case-insensitive and all characters other than letters and digits in the unicode [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) will be replaced with whitespace when scanning for matches, so the dictionary phrase &#34;Sam Johnson&#34; will match all three phrases &#34;sam johnson&#34;, &#34;Sam, Johnson&#34;, and &#34;Sam (Johnson)&#34;. Additionally, the characters surrounding any match must be of a different type than the adjacent characters within the word, so letters must be next to non-letters and digits next to non-digits. For example, the dictionary word &#34;jen&#34; will match the first three letters of the text &#34;jen123&#34; but will return no matches for &#34;jennifer&#34;. Dictionary words containing a large number of characters that are not letters or digits may result in unexpected findings because such characters are treated as whitespace. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries. For dictionaries that do not fit within these constraints, consider using `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
  * 
  */
-public final class GooglePrivacyDlpV2DictionaryArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DictionaryArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DictionaryArgs Empty = new GooglePrivacyDlpV2DictionaryArgs();
 

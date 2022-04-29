@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.RelationshipNoteType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
  * 
  */
-public final class RelationshipNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class RelationshipNoteArgs extends ResourceArgs {
 
     public static final RelationshipNoteArgs Empty = new RelationshipNoteArgs();
 

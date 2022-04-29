@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datamigration_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datamigration_v1.inputs.SqlAclEntryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * IP Management configuration.
  * 
  */
-public final class SqlIpConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlIpConfigArgs extends ResourceArgs {
 
     public static final SqlIpConfigArgs Empty = new SqlIpConfigArgs();
 

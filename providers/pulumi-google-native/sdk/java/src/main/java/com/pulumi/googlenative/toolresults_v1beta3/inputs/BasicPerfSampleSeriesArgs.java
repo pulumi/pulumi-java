@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfMetricType;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfUnit;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesSampleSeriesLabel;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Encapsulates the metadata for basic sample series represented by a line chart
  * 
  */
-public final class BasicPerfSampleSeriesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicPerfSampleSeriesArgs extends ResourceArgs {
 
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();
 

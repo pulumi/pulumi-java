@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.enums.NetworkConfigEgressOption;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the network configuration for the pool.
  * 
  */
-public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigArgs extends ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 

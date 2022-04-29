@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.jobs_v4.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetTenantArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTenantArgs extends InvokeArgs {
 
     public static final GetTenantArgs Empty = new GetTenantArgs();
 

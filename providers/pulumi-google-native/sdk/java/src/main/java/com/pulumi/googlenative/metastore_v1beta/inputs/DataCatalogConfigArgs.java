@@ -5,6 +5,7 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies how metastore metadata should be integrated with the Data Catalog service.
  * 
  */
-public final class DataCatalogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCatalogConfigArgs extends ResourceArgs {
 
     public static final DataCatalogConfigArgs Empty = new DataCatalogConfigArgs();
 

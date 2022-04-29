@@ -9,13 +9,14 @@ import com.pulumi.googlenative.containeranalysis_v1.inputs.MaterialArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SlsaBuilderArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SlsaMetadataArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SlsaRecipeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SlsaProvenanceArgs extends ResourceArgs {
 
     public static final SlsaProvenanceArgs Empty = new SlsaProvenanceArgs();
 

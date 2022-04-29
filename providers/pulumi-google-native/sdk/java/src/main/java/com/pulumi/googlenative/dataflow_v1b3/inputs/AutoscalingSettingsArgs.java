@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.AutoscalingSettingsAlgorithm;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Settings for WorkerPool autoscaling.
  * 
  */
-public final class AutoscalingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingSettingsArgs extends ResourceArgs {
 
     public static final AutoscalingSettingsArgs Empty = new AutoscalingSettingsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ### System parameter configuration A system parameter is a special kind of parameter defined by the API system, not by an individual API. It is typically mapped to an HTTP header and/or a URL query parameter. This configuration specifies which methods change the names of the system parameters.
  * 
  */
-public final class SystemParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemParametersArgs extends ResourceArgs {
 
     public static final SystemParametersArgs Empty = new SystemParametersArgs();
 

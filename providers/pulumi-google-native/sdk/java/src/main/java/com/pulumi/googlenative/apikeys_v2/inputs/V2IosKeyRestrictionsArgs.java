@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The iOS apps that are allowed to use the key.
  * 
  */
-public final class V2IosKeyRestrictionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class V2IosKeyRestrictionsArgs extends ResourceArgs {
 
     public static final V2IosKeyRestrictionsArgs Empty = new V2IosKeyRestrictionsArgs();
 

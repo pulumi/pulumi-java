@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for controlling how IPs are allocated in the GKE cluster.
  * 
  */
-public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class IPAllocationPolicyArgs extends ResourceArgs {
 
     public static final IPAllocationPolicyArgs Empty = new IPAllocationPolicyArgs();
 

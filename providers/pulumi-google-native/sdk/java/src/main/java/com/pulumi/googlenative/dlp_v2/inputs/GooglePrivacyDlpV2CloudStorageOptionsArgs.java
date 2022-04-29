@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CloudStorageOptionsSampleMethod;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FileSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Options defining a file or a set of files within a Google Cloud Storage bucket.
  * 
  */
-public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CloudStorageOptionsArgs Empty = new GooglePrivacyDlpV2CloudStorageOptionsArgs();
 

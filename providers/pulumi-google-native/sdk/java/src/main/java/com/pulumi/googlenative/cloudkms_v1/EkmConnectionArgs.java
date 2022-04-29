@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudkms_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudkms_v1.inputs.ServiceResolverArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EkmConnectionArgs extends ResourceArgs {
 
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * VmwareSourceDetails message describes a specific source details for the vmware source type.
  * 
  */
-public final class VmwareSourceDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VmwareSourceDetailsArgs extends ResourceArgs {
 
     public static final VmwareSourceDetailsArgs Empty = new VmwareSourceDetailsArgs();
 

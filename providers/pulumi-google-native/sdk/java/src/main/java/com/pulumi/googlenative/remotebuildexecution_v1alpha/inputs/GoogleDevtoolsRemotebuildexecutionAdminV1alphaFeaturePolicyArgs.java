@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * FeaturePolicy defines features allowed to be used on RBE instances, as well as instance-wide behavior changes that take effect without opt-in or opt-out at usage time.
  * 
  */
-public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs();
 

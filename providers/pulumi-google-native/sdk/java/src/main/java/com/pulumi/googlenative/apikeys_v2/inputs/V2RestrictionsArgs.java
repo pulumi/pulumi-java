@@ -10,6 +10,7 @@ import com.pulumi.googlenative.apikeys_v2.inputs.V2ApiTargetArgs;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2BrowserKeyRestrictionsArgs;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2IosKeyRestrictionsArgs;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2ServerKeyRestrictionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Describes the restrictions on the key.
  * 
  */
-public final class V2RestrictionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class V2RestrictionsArgs extends ResourceArgs {
 
     public static final V2RestrictionsArgs Empty = new V2RestrictionsArgs();
 

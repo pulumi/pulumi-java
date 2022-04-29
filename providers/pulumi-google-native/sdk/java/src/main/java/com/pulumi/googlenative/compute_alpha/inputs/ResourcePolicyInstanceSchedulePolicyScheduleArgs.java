@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Schedule for an instance operation.
  * 
  */
-public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends ResourceArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyScheduleArgs Empty = new ResourcePolicyInstanceSchedulePolicyScheduleArgs();
 

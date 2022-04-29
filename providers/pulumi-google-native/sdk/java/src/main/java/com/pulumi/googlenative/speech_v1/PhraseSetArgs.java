@@ -6,6 +6,7 @@ package com.pulumi.googlenative.speech_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.speech_v1.inputs.PhraseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class PhraseSetArgs extends ResourceArgs {
 
     public static final PhraseSetArgs Empty = new PhraseSetArgs();
 

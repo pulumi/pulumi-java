@@ -6,6 +6,7 @@ package com.pulumi.googlenative.artifactregistry_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.artifactregistry_v1.enums.MavenRepositoryConfigVersionPolicy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.
  * 
  */
-public final class MavenRepositoryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MavenRepositoryConfigArgs extends ResourceArgs {
 
     public static final MavenRepositoryConfigArgs Empty = new MavenRepositoryConfigArgs();
 

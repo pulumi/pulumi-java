@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Identifier of an Android application for key use.
  * 
  */
-public final class V2AndroidApplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class V2AndroidApplicationArgs extends ResourceArgs {
 
     public static final V2AndroidApplicationArgs Empty = new V2AndroidApplicationArgs();
 

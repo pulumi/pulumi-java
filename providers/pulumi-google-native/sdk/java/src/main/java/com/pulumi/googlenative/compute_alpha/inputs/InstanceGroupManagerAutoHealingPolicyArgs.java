@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyUpdateInstances;
 import com.pulumi.googlenative.compute_alpha.inputs.FixedOrPercentArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerAutoHealingPolicyArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerAutoHealingPolicyArgs Empty = new InstanceGroupManagerAutoHealingPolicyArgs();
 

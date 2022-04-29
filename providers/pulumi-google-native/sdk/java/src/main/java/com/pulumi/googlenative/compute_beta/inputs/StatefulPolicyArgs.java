@@ -6,12 +6,13 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.StatefulPolicyPreservedStateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StatefulPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatefulPolicyArgs extends ResourceArgs {
 
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 

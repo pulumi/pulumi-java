@@ -6,6 +6,7 @@ package com.pulumi.googlenative.binaryauthorization_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.binaryauthorization_v1beta1.inputs.PkixPublicKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An attestor public key that will be used to verify attestations signed by this attestor.
  * 
  */
-public final class AttestorPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestorPublicKeyArgs extends ResourceArgs {
 
     public static final AttestorPublicKeyArgs Empty = new AttestorPublicKeyArgs();
 

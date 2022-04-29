@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.GlobalForwardingRuleArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.ForwardingRuleServiceDirectoryRegistrationResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.MetadataFilterResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:GlobalForwardingRule")
-public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
+public class GlobalForwardingRule extends CustomResource {
     /**
      * This field is used along with the backend_service field for Internal TCP/UDP Load Balancing or Network Load Balancing, or with the target field for internal and external TargetInstance. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. For TCP, UDP and SCTP traffic, packets addressed to any ports will be forwarded to the target or backendService.
      * 
@@ -477,19 +479,19 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GlobalForwardingRule(String name, @Nullable GlobalForwardingRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GlobalForwardingRule(String name, @Nullable GlobalForwardingRuleArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:GlobalForwardingRule", name, args == null ? GlobalForwardingRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GlobalForwardingRule(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GlobalForwardingRule(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:GlobalForwardingRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -500,7 +502,7 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GlobalForwardingRule get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GlobalForwardingRule get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new GlobalForwardingRule(name, id, options);
     }
 }

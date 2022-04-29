@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A transformation to apply to text that is identified as a specific info_type.
  * 
  */
-public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeTransformationArgs Empty = new GooglePrivacyDlpV2InfoTypeTransformationArgs();
 

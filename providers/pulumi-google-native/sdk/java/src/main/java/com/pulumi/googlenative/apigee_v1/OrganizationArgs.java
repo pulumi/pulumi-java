@@ -10,6 +10,7 @@ import com.pulumi.googlenative.apigee_v1.enums.OrganizationRuntimeType;
 import com.pulumi.googlenative.apigee_v1.enums.OrganizationType;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AddonsConfigArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationArgs extends ResourceArgs {
 
     public static final OrganizationArgs Empty = new OrganizationArgs();
 

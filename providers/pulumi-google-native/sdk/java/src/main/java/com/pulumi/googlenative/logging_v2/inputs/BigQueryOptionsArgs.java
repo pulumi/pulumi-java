@@ -5,6 +5,7 @@ package com.pulumi.googlenative.logging_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Options that change functionality of a sink exporting data to BigQuery.
  * 
  */
-public final class BigQueryOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BigQueryOptionsArgs extends ResourceArgs {
 
     public static final BigQueryOptionsArgs Empty = new BigQueryOptionsArgs();
 

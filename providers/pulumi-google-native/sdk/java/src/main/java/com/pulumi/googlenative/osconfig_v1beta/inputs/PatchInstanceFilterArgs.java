@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.PatchInstanceFilterGroupLabelArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A filter to target VM instances for patching. The targeted VMs must meet all criteria specified. So if both labels and zones are specified, the patch job targets only VMs with those labels and in those zones.
  * 
  */
-public final class PatchInstanceFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchInstanceFilterArgs extends ResourceArgs {
 
     public static final PatchInstanceFilterArgs Empty = new PatchInstanceFilterArgs();
 

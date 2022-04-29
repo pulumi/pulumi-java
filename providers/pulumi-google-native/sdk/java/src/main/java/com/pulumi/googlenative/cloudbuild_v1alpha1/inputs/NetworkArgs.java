@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Network describes the GCP network used to create workers in.
  * 
  */
-public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkArgs extends ResourceArgs {
 
     public static final NetworkArgs Empty = new NetworkArgs();
 

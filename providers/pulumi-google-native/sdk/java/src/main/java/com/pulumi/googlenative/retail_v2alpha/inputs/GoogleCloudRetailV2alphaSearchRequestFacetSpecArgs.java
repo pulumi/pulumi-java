@@ -6,6 +6,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A facet specification to perform faceted search.
  * 
  */
-public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs Empty = new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs();
 

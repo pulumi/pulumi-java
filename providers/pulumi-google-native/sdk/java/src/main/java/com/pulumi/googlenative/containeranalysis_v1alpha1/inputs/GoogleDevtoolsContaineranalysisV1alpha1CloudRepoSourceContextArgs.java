@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A CloudRepoSourceContext denotes a particular revision in a Google Cloud Source Repo.
  * 
  */
-public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs Empty = new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs();
 

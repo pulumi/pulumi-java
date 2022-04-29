@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.PlacementPolicyType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * PlacementPolicy defines the placement policy used by the node pool.
  * 
  */
-public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlacementPolicyArgs extends ResourceArgs {
 
     public static final PlacementPolicyArgs Empty = new PlacementPolicyArgs();
 

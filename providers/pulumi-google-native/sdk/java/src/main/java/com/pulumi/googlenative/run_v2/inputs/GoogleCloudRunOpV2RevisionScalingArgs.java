@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings for revision-level scaling settings.
  * 
  */
-public final class GoogleCloudRunOpV2RevisionScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2RevisionScalingArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2RevisionScalingArgs Empty = new GoogleCloudRunOpV2RevisionScalingArgs();
 

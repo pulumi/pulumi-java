@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdColor;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdDirection;
 import com.pulumi.googlenative.monitoring_v1.enums.ThresholdTargetAxis;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines a threshold for categorizing time series values.
  * 
  */
-public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThresholdArgs extends ResourceArgs {
 
     public static final ThresholdArgs Empty = new ThresholdArgs();
 

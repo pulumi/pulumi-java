@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveryAnalysisKind;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A note that indicates a type of analysis a provider would perform. This note exists in a provider&#39;s project. A `Discovery` occurrence is created in a consumer&#39;s project at the start of analysis.
  * 
  */
-public final class DiscoveryArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiscoveryArgs extends ResourceArgs {
 
     public static final DiscoveryArgs Empty = new DiscoveryArgs();
 

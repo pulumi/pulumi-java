@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudscheduler_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Settings that determine the retry behavior. By default, if a job does not complete successfully (meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings in RetryConfig.
  * 
  */
-public final class RetryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryConfigArgs extends ResourceArgs {
 
     public static final RetryConfigArgs Empty = new RetryConfigArgs();
 

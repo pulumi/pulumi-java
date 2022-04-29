@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Istio service scoped to an Istio mesh. Anthos clusters running ASM &lt; 1.6.8 will have their services ingested as this type.
  * 
  */
-public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
+public final class MeshIstioArgs extends ResourceArgs {
 
     public static final MeshIstioArgs Empty = new MeshIstioArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contact information for a customer account.
  * 
  */
-public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1ContactInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1ContactInfoArgs Empty = new GoogleCloudChannelV1ContactInfoArgs();
 

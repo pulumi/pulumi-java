@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.ExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes constraints on a Certificate&#39;s Subject and SubjectAltNames.
  * 
  */
-public final class CertificateIdentityConstraintsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateIdentityConstraintsArgs extends ResourceArgs {
 
     public static final CertificateIdentityConstraintsArgs Empty = new CertificateIdentityConstraintsArgs();
 

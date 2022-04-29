@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Insights configuration. This specifies when Cloud SQL Insights feature is enabled and optional configuration.
  * 
  */
-public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InsightsConfigArgs extends ResourceArgs {
 
     public static final InsightsConfigArgs Empty = new InsightsConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.KeyToPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The secret&#39;s value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. The contents of the target Secret&#39;s Data field will be presented in a volume as files using the keys in the Data field as the file names.
  * 
  */
-public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretVolumeSourceArgs extends ResourceArgs {
 
     public static final SecretVolumeSourceArgs Empty = new SecretVolumeSourceArgs();
 

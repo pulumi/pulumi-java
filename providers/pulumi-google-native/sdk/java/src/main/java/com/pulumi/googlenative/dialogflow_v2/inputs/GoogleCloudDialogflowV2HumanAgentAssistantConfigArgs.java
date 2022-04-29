@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2NotificationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines the Human Agent Assist to connect to a conversation.
  * 
  */
-public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.securitycenter_v1.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.securitycenter_v1.inputs.BindingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationSourceIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationSourceIamPolicyArgs extends ResourceArgs {
 
     public static final OrganizationSourceIamPolicyArgs Empty = new OrganizationSourceIamPolicyArgs();
 

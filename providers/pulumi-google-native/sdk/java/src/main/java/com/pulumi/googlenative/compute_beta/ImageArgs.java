@@ -12,6 +12,7 @@ import com.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ImageRawDiskArgs;
 import com.pulumi.googlenative.compute_beta.inputs.InitialStateConfigArgs;
 import com.pulumi.googlenative.compute_beta.inputs.RolloutPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageArgs extends ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 

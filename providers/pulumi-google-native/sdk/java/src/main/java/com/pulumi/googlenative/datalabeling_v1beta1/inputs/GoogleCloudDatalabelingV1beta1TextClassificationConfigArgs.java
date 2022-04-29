@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1SentimentConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Config for text classification human labeling task.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs();
 

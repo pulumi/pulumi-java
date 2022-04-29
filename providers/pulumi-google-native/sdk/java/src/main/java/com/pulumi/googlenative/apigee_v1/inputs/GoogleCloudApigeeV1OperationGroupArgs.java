@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * List of operation configuration details associated with Apigee API proxies or remote services. Remote services are non-Apigee proxies, such as Istio-Envoy.
  * 
  */
-public final class GoogleCloudApigeeV1OperationGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1OperationGroupArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1OperationGroupArgs Empty = new GoogleCloudApigeeV1OperationGroupArgs();
 

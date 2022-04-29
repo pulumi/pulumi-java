@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Pairs a set of secret environment variables mapped to encrypted values with the Cloud KMS key to use to decrypt the value.
  * 
  */
-public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class InlineSecretArgs extends ResourceArgs {
 
     public static final InlineSecretArgs Empty = new InlineSecretArgs();
 

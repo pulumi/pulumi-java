@@ -12,6 +12,7 @@ import com.pulumi.googlenative.monitoring_v3.inputs.CustomArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.IstioCanonicalServiceArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MeshIstioArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TelemetryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceArgs extends ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 

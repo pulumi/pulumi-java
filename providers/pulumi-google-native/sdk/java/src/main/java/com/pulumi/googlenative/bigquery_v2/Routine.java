@@ -13,6 +13,8 @@ import com.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlTableTypeResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:bigquery/v2:Routine")
-public class Routine extends com.pulumi.resources.CustomResource {
+public class Routine extends CustomResource {
     /**
      * Optional.
      * 
@@ -243,19 +245,19 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Routine(String name, RoutineArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Routine(String name, RoutineArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:bigquery/v2:Routine", name, args == null ? RoutineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Routine(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Routine(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:bigquery/v2:Routine", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -266,7 +268,7 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Routine get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Routine get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Routine(name, id, options);
     }
 }

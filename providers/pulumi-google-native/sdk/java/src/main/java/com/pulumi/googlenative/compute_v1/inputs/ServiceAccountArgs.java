@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A service account.
  * 
  */
-public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccountArgs extends ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 

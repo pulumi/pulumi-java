@@ -5,6 +5,7 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Secret provides a reference to entries in Secret Manager.
  * 
  */
-public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretArgs extends ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 

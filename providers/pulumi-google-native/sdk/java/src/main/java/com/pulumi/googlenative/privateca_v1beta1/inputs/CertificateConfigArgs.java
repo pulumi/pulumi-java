@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.PublicKeyArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.SubjectConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A CertificateConfig describes an X.509 certificate or CSR that is to be created, as an alternative to using ASN.1.
  * 
  */
-public final class CertificateConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateConfigArgs extends ResourceArgs {
 
     public static final CertificateConfigArgs Empty = new CertificateConfigArgs();
 

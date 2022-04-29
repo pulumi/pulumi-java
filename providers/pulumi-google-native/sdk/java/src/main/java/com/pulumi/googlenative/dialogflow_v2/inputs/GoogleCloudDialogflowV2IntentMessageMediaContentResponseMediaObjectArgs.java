@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Response media object for media content card.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs Empty = new GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs();
 

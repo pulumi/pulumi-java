@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Key-value pair of detailed information about the client which invoked the test. Examples: {&#39;Version&#39;, &#39;1.0&#39;}, {&#39;Release Track&#39;, &#39;BETA&#39;}.
  * 
  */
-public final class ClientInfoDetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClientInfoDetailArgs extends ResourceArgs {
 
     public static final ClientInfoDetailArgs Empty = new ClientInfoDetailArgs();
 

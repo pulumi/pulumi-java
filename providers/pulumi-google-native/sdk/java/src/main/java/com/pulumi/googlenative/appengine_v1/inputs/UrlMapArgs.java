@@ -12,6 +12,7 @@ import com.pulumi.googlenative.appengine_v1.enums.UrlMapSecurityLevel;
 import com.pulumi.googlenative.appengine_v1.inputs.ApiEndpointHandlerArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.ScriptHandlerArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.StaticFilesHandlerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * URL pattern and description of how the URL should be handled. App Engine can handle URLs by executing application code or by serving static files uploaded with the version, such as images, CSS, or JavaScript.
  * 
  */
-public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlMapArgs extends ResourceArgs {
 
     public static final UrlMapArgs Empty = new UrlMapArgs();
 

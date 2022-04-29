@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.IstioConfigAuth;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration options for Istio addon.
  * 
  */
-public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class IstioConfigArgs extends ResourceArgs {
 
     public static final IstioConfigArgs Empty = new IstioConfigArgs();
 

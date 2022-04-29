@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExpressionsLogicalOperator;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An expression, consisting or an operator and conditions.
  * 
  */
-public final class GooglePrivacyDlpV2ExpressionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ExpressionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ExpressionsArgs Empty = new GooglePrivacyDlpV2ExpressionsArgs();
 

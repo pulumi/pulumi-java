@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Autoscaling Policy config associated with the cluster.
  * 
  */
-public final class AutoscalingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingConfigArgs extends ResourceArgs {
 
     public static final AutoscalingConfigArgs Empty = new AutoscalingConfigArgs();
 

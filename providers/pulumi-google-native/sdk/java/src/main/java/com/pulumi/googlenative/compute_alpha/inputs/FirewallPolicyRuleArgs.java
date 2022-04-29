@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.FirewallPolicyRuleDirection;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
  * 
  */
-public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyRuleArgs extends ResourceArgs {
 
     public static final FirewallPolicyRuleArgs Empty = new FirewallPolicyRuleArgs();
 

@@ -12,6 +12,7 @@ import com.pulumi.googlenative.cloudfunctions_v1.inputs.HttpsTriggerArgs;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.SecretEnvVarArgs;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.SecretVolumeArgs;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.SourceRepositoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionArgs extends ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 

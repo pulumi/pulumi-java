@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleColumnArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Oracle table.
  * 
  */
-public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
+public final class OracleTableArgs extends ResourceArgs {
 
     public static final OracleTableArgs Empty = new OracleTableArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.AttributeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserDataMappingArgs extends ResourceArgs {
 
     public static final UserDataMappingArgs Empty = new UserDataMappingArgs();
 

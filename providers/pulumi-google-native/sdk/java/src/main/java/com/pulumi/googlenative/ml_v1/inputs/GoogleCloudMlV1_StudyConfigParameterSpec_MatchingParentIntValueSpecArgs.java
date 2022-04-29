@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the spec to match integer values from parent parameter.
  * 
  */
-public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for all backends.
  * 
  */
-public final class ApigatewayBackendConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApigatewayBackendConfigArgs extends ResourceArgs {
 
     public static final ApigatewayBackendConfigArgs Empty = new ApigatewayBackendConfigArgs();
 

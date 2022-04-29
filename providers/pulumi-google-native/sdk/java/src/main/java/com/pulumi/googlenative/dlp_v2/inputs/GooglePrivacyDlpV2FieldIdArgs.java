@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * General identifier of a data field in a storage service.
  * 
  */
-public final class GooglePrivacyDlpV2FieldIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2FieldIdArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2FieldIdArgs Empty = new GooglePrivacyDlpV2FieldIdArgs();
 

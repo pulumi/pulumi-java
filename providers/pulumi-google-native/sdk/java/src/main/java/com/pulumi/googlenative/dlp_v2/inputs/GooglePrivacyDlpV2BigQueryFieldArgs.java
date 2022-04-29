@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message defining a field of a BigQuery table.
  * 
  */
-public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2BigQueryFieldArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2BigQueryFieldArgs Empty = new GooglePrivacyDlpV2BigQueryFieldArgs();
 

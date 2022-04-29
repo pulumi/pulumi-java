@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dns_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configures a RRSetRoutingPolicy that routes based on the geo location of the querying user.
  * 
  */
-public final class RRSetRoutingPolicyGeoPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RRSetRoutingPolicyGeoPolicyArgs extends ResourceArgs {
 
     public static final RRSetRoutingPolicyGeoPolicyArgs Empty = new RRSetRoutingPolicyGeoPolicyArgs();
 

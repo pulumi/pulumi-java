@@ -13,6 +13,7 @@ import com.pulumi.googlenative.dns_v1.inputs.ManagedZonePeeringConfigArgs;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZonePrivateVisibilityConfigArgs;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZoneReverseLookupConfigArgs;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedZoneArgs extends ResourceArgs {
 
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 

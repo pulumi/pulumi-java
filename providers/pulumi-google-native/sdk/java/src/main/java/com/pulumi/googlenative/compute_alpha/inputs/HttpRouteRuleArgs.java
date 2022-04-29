@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpRouteActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpRouteRuleMatchArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The HttpRouteRule setting specifies how to match an HTTP request and the corresponding routing action that load balancing proxies perform.
  * 
  */
-public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpRouteRuleArgs extends ResourceArgs {
 
     public static final HttpRouteRuleArgs Empty = new HttpRouteRuleArgs();
 

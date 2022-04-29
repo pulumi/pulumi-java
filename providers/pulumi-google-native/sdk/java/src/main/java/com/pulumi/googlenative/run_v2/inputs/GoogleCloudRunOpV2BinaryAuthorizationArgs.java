@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Settings for Binary Authorization feature.
  * 
  */
-public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2BinaryAuthorizationArgs Empty = new GoogleCloudRunOpV2BinaryAuthorizationArgs();
 

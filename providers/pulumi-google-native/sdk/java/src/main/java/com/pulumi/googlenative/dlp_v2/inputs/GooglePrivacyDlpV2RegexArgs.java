@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Message defining a custom regular expression.
  * 
  */
-public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RegexArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RegexArgs Empty = new GooglePrivacyDlpV2RegexArgs();
 

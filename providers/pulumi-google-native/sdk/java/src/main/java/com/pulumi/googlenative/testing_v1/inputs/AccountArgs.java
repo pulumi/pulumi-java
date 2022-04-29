@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.GoogleAutoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Identifies an account and how to log into it.
  * 
  */
-public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountArgs extends ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 

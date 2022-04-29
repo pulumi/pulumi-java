@@ -9,13 +9,14 @@ import com.pulumi.googlenative.cloudtasks_v2.inputs.AppEngineRoutingArgs;
 import com.pulumi.googlenative.cloudtasks_v2.inputs.RateLimitsArgs;
 import com.pulumi.googlenative.cloudtasks_v2.inputs.RetryConfigArgs;
 import com.pulumi.googlenative.cloudtasks_v2.inputs.StackdriverLoggingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueueArgs extends ResourceArgs {
 
     public static final QueueArgs Empty = new QueueArgs();
 

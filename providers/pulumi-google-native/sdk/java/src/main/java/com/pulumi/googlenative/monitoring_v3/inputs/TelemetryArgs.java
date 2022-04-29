@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for how to query telemetry on a Service.
  * 
  */
-public final class TelemetryArgs extends com.pulumi.resources.ResourceArgs {
+public final class TelemetryArgs extends ResourceArgs {
 
     public static final TelemetryArgs Empty = new TelemetryArgs();
 

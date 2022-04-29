@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Represents the result of a single hyperparameter tuning trial from a training job. The TrainingOutput object that is returned on successful completion of a training job with hyperparameter tuning includes a list of HyperparameterOutput objects, one for each successful trial.
  * 
  */
-public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__HyperparameterOutputArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__HyperparameterOutputArgs Empty = new GoogleCloudMlV1__HyperparameterOutputArgs();
 

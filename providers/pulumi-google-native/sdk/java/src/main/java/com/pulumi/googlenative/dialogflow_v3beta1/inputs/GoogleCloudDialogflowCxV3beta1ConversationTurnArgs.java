@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * One interaction between a human and virtual agent. The human provides some input and the virtual agent provides a response.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ConversationTurnArgs Empty = new GoogleCloudDialogflowCxV3beta1ConversationTurnArgs();
 

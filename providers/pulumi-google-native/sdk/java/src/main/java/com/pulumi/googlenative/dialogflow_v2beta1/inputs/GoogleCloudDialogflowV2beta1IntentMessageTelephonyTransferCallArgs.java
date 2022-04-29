@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Transfers the call in Telephony Gateway.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs();
 

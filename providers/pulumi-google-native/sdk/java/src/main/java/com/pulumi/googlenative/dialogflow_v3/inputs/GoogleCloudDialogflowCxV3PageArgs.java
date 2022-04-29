@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Eve
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TransitionRouteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A Dialogflow CX conversation (session) can be described and visualized as a state machine. The states of a CX session are represented by pages. For each flow, you define many pages, where your combined pages can handle a complete conversation on the topics the flow is designed for. At any given moment, exactly one page is the current page, the current page is considered active, and the flow associated with that page is considered active. Every flow has a special start page. When a flow initially becomes active, the start page page becomes the current page. For each conversational turn, the current page will either stay the same or transition to another page. You configure each page to collect information from the end-user that is relevant for the conversational state represented by the page. For more information, see the [Page guide](https://cloud.google.com/dialogflow/cx/docs/concept/page).
  * 
  */
-public final class GoogleCloudDialogflowCxV3PageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3PageArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3PageArgs Empty = new GoogleCloudDialogflowCxV3PageArgs();
 

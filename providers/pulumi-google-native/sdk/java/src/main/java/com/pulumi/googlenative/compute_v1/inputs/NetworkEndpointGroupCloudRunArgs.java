@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for a Cloud Run network endpoint group (NEG). The service must be provided explicitly or in the URL mask. The tag is optional, may be provided explicitly or in the URL mask. Note: Cloud Run service must be in the same project and located in the same region as the Serverless NEG.
  * 
  */
-public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkEndpointGroupCloudRunArgs extends ResourceArgs {
 
     public static final NetworkEndpointGroupCloudRunArgs Empty = new NetworkEndpointGroupCloudRunArgs();
 

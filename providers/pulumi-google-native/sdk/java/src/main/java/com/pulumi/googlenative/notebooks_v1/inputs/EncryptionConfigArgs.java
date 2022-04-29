@@ -5,6 +5,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a custom encryption key configuration that can be applied to a resource. This will encrypt all disks in Virtual Machine.
  * 
  */
-public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionConfigArgs extends ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 

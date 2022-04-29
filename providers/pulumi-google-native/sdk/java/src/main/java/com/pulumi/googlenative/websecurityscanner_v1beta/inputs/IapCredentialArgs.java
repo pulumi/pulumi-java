@@ -6,6 +6,7 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.IapTestServiceAccountInfoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes authentication configuration for Identity-Aware-Proxy (IAP).
  * 
  */
-public final class IapCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class IapCredentialArgs extends ResourceArgs {
 
     public static final IapCredentialArgs Empty = new IapCredentialArgs();
 

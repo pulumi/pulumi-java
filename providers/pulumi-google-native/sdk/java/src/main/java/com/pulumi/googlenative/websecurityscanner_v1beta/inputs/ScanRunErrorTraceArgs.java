@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunErrorTraceCode;
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Output only. Defines an error trace message for a ScanRun.
  * 
  */
-public final class ScanRunErrorTraceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanRunErrorTraceArgs extends ResourceArgs {
 
     public static final ScanRunErrorTraceArgs Empty = new ScanRunErrorTraceArgs();
 

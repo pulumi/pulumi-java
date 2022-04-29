@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.ExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
  * 
  */
-public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends ResourceArgs {
 
     public static final GoogleCloudHealthcareV1ConsentPolicyArgs Empty = new GoogleCloudHealthcareV1ConsentPolicyArgs();
 

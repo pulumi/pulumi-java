@@ -5,6 +5,7 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect).
  * 
  */
-public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
+public final class OidcTokenArgs extends ResourceArgs {
 
     public static final OidcTokenArgs Empty = new OidcTokenArgs();
 

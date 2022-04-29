@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.connectors_v1.inputs.JwtClaimsArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.
  * 
  */
-public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs {
+public final class Oauth2JwtBearerArgs extends ResourceArgs {
 
     public static final Oauth2JwtBearerArgs Empty = new Oauth2JwtBearerArgs();
 

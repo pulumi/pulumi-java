@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerPortArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EnvVarArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specification of a custom container for serving predictions. This message is a subset of the [Kubernetes Container v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
  * 
  */
-public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__ContainerSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__ContainerSpecArgs Empty = new GoogleCloudMlV1__ContainerSpecArgs();
 

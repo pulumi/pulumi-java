@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The quick replies response message.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs();
 

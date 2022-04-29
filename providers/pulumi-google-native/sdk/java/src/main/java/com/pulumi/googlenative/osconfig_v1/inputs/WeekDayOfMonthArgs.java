@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.enums.WeekDayOfMonthDayOfWeek;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents one week day in a month. An example is &#34;the 4th Sunday&#34;.
  * 
  */
-public final class WeekDayOfMonthArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeekDayOfMonthArgs extends ResourceArgs {
 
     public static final WeekDayOfMonthArgs Empty = new WeekDayOfMonthArgs();
 

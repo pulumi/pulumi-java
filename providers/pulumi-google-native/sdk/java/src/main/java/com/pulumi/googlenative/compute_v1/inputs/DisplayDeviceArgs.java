@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A set of Display Device options
  * 
  */
-public final class DisplayDeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DisplayDeviceArgs extends ResourceArgs {
 
     public static final DisplayDeviceArgs Empty = new DisplayDeviceArgs();
 

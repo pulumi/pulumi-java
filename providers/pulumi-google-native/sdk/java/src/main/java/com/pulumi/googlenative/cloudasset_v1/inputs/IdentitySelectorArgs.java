@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies an identity for which to determine resource access, based on roles assigned either directly to them or to the groups they belong to, directly or indirectly.
  * 
  */
-public final class IdentitySelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentitySelectorArgs extends ResourceArgs {
 
     public static final IdentitySelectorArgs Empty = new IdentitySelectorArgs();
 

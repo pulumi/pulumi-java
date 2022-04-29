@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringFilterArgs;
 import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringForwardingRuleInfoArgs;
 import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringMirroredResourceInfoArgs;
 import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringNetworkInfoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs {
+public final class PacketMirroringArgs extends ResourceArgs {
 
     public static final PacketMirroringArgs Empty = new PacketMirroringArgs();
 

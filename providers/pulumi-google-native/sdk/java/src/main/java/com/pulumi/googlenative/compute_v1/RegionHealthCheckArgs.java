@@ -13,6 +13,7 @@ import com.pulumi.googlenative.compute_v1.inputs.HTTPSHealthCheckArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HealthCheckLogConfigArgs;
 import com.pulumi.googlenative.compute_v1.inputs.SSLHealthCheckArgs;
 import com.pulumi.googlenative.compute_v1.inputs.TCPHealthCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionHealthCheckArgs extends ResourceArgs {
 
     public static final RegionHealthCheckArgs Empty = new RegionHealthCheckArgs();
 

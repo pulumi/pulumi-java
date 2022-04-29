@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Location of the source in an archive file in Google Cloud Storage.
  * 
  */
-public final class StorageSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageSourceArgs extends ResourceArgs {
 
     public static final StorageSourceArgs Empty = new StorageSourceArgs();
 

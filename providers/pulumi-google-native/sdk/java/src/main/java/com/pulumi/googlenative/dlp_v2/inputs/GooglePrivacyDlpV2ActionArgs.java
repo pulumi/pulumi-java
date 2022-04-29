@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishSummaryToC
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishToPubSubArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishToStackdriverArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2SaveFindingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
  * 
  */
-public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ActionArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ActionArgs Empty = new GooglePrivacyDlpV2ActionArgs();
 

@@ -13,6 +13,7 @@ import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsStorageCl
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsSymlink;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsTemporaryHold;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsUid;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Specifies the metadata options for running a transfer.
  * 
  */
-public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataOptionsArgs extends ResourceArgs {
 
     public static final MetadataOptionsArgs Empty = new MetadataOptionsArgs();
 

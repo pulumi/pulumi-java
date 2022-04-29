@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ResourceRequirements describes the compute resource requirements.
  * 
  */
-public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2ResourceRequirementsArgs Empty = new GoogleCloudRunOpV2ResourceRequirementsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import com.pulumi.googlenative.run_v1.inputs.RevisionSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * RevisionTemplateSpec describes the data a revision should have when created from a template. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
  * 
  */
-public final class RevisionTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class RevisionTemplateArgs extends ResourceArgs {
 
     public static final RevisionTemplateArgs Empty = new RevisionTemplateArgs();
 

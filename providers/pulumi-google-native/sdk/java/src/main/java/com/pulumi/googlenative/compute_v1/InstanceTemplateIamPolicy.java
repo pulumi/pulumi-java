@@ -12,6 +12,8 @@ import com.pulumi.googlenative.compute_v1.InstanceTemplateIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.BindingResponse;
 import com.pulumi.googlenative.compute_v1.outputs.RuleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:InstanceTemplateIamPolicy")
-public class InstanceTemplateIamPolicy extends com.pulumi.resources.CustomResource {
+public class InstanceTemplateIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -117,19 +119,19 @@ public class InstanceTemplateIamPolicy extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InstanceTemplateIamPolicy(String name, InstanceTemplateIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InstanceTemplateIamPolicy(String name, InstanceTemplateIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:InstanceTemplateIamPolicy", name, args == null ? InstanceTemplateIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InstanceTemplateIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InstanceTemplateIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:InstanceTemplateIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -140,7 +142,7 @@ public class InstanceTemplateIamPolicy extends com.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceTemplateIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceTemplateIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new InstanceTemplateIamPolicy(name, id, options);
     }
 }

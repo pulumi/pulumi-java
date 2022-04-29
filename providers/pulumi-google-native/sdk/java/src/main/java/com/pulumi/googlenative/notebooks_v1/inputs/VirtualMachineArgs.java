@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Runtime using Virtual Machine for computing.
  * 
  */
-public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineArgs extends ResourceArgs {
 
     public static final VirtualMachineArgs Empty = new VirtualMachineArgs();
 

@@ -11,13 +11,14 @@ import com.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunType;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.DiskEncryptionConfigurationArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.DiskEncryptionStatusArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.OperationErrorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupRunArgs extends ResourceArgs {
 
     public static final BackupRunArgs Empty = new BackupRunArgs();
 

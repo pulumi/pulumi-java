@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Files in the workspace to upload to Cloud Storage upon successful completion of all build steps.
  * 
  */
-public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArtifactObjectsArgs extends ResourceArgs {
 
     public static final ArtifactObjectsArgs Empty = new ArtifactObjectsArgs();
 

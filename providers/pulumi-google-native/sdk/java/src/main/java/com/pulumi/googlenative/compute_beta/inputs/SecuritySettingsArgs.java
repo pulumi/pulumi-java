@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The authentication and authorization settings for a BackendService.
  * 
  */
-public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecuritySettingsArgs extends ResourceArgs {
 
     public static final SecuritySettingsArgs Empty = new SecuritySettingsArgs();
 

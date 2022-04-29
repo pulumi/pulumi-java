@@ -5,6 +5,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Definition of a container image for starting a notebook instance with the environment installed in a container.
  * 
  */
-public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerImageArgs extends ResourceArgs {
 
     public static final ContainerImageArgs Empty = new ContainerImageArgs();
 

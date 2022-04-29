@@ -17,6 +17,8 @@ import com.pulumi.googlenative.dataproc_v1.outputs.SparkBatchResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.SparkRBatchResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.SparkSqlBatchResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.StateHistoryResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dataproc/v1:Batch")
-public class Batch extends com.pulumi.resources.CustomResource {
+public class Batch extends CustomResource {
     /**
      * The time when the batch was created.
      * 
@@ -289,19 +291,19 @@ public class Batch extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Batch(String name, @Nullable BatchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Batch(String name, @Nullable BatchArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dataproc/v1:Batch", name, args == null ? BatchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Batch(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Batch(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dataproc/v1:Batch", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -312,7 +314,7 @@ public class Batch extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Batch get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Batch get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Batch(name, id, options);
     }
 }

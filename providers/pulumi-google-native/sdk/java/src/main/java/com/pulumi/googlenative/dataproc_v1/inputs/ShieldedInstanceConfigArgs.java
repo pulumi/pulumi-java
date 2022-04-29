@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
  * 
  */
-public final class ShieldedInstanceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ShieldedInstanceConfigArgs extends ResourceArgs {
 
     public static final ShieldedInstanceConfigArgs Empty = new ShieldedInstanceConfigArgs();
 

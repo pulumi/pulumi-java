@@ -6,6 +6,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.appengine_v1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Machine resources for a version.
  * 
  */
-public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcesArgs extends ResourceArgs {
 
     public static final ResourcesArgs Empty = new ResourcesArgs();
 

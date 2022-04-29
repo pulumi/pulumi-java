@@ -17,6 +17,8 @@ import com.pulumi.googlenative.compute_alpha.outputs.HealthCheckLogConfigRespons
 import com.pulumi.googlenative.compute_alpha.outputs.SSLHealthCheckResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.TCPHealthCheckResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.UDPHealthCheckResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -26,7 +28,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:RegionHealthCheck")
-public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
+public class RegionHealthCheck extends CustomResource {
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
@@ -273,19 +275,19 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionHealthCheck(String name, RegionHealthCheckArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionHealthCheck(String name, RegionHealthCheckArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:RegionHealthCheck", name, args == null ? RegionHealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionHealthCheck(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionHealthCheck(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:RegionHealthCheck", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -296,7 +298,7 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionHealthCheck get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionHealthCheck get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionHealthCheck(name, id, options);
     }
 }

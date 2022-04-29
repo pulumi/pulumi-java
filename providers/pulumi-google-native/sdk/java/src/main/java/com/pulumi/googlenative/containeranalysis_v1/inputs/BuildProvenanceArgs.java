@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.ArtifactArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.CommandArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Provenance of a build. Contains all information needed to verify the full details about the build from source to completion.
  * 
  */
-public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildProvenanceArgs extends ResourceArgs {
 
     public static final BuildProvenanceArgs Empty = new BuildProvenanceArgs();
 

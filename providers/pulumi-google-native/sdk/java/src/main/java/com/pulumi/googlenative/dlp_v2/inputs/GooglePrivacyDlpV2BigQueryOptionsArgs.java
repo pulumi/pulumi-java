@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2BigQueryOptionsSampleMethod;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Options defining BigQuery table and row identifiers.
  * 
  */
-public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2BigQueryOptionsArgs Empty = new GooglePrivacyDlpV2BigQueryOptionsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.assuredworkloads_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Settings specific to the Key Management Service.
  * 
  */
-public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs Empty = new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster.
  * 
  */
-public final class DefaultSnatStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultSnatStatusArgs extends ResourceArgs {
 
     public static final DefaultSnatStatusArgs Empty = new DefaultSnatStatusArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
  * 
  */
-public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlActiveDirectoryConfigArgs extends ResourceArgs {
 
     public static final SqlActiveDirectoryConfigArgs Empty = new SqlActiveDirectoryConfigArgs();
 

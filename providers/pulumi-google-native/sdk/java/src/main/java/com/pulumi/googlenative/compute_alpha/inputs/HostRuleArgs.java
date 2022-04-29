@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * UrlMaps A host-matching rule for a URL. If matched, will use the named PathMatcher to select the BackendService.
  * 
  */
-public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostRuleArgs extends ResourceArgs {
 
     public static final HostRuleArgs Empty = new HostRuleArgs();
 

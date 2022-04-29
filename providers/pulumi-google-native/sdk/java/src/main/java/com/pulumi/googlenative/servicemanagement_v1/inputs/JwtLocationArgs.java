@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies a location to extract JWT from an API request.
  * 
  */
-public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class JwtLocationArgs extends ResourceArgs {
 
     public static final JwtLocationArgs Empty = new JwtLocationArgs();
 

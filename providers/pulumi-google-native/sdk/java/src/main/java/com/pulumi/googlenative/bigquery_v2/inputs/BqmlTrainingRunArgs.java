@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.inputs.BqmlIterationResultArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunTrainingOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BqmlTrainingRunArgs extends com.pulumi.resources.ResourceArgs {
+public final class BqmlTrainingRunArgs extends ResourceArgs {
 
     public static final BqmlTrainingRunArgs Empty = new BqmlTrainingRunArgs();
 

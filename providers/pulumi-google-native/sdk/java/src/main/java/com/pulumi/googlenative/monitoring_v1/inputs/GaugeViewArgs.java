@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A gauge chart shows where the current value sits within a pre-defined range. The upper and lower bounds should define the possible range of values for the scorecard&#39;s query (inclusive).
  * 
  */
-public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
+public final class GaugeViewArgs extends ResourceArgs {
 
     public static final GaugeViewArgs Empty = new GaugeViewArgs();
 

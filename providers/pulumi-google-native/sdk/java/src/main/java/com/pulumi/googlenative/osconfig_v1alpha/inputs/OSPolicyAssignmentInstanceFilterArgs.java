@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentLabelSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Filters to select target VMs for an assignment. If more than one filter criteria is specified below, a VM will be selected if and only if it satisfies all of them.
  * 
  */
-public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyAssignmentInstanceFilterArgs extends ResourceArgs {
 
     public static final OSPolicyAssignmentInstanceFilterArgs Empty = new OSPolicyAssignmentInstanceFilterArgs();
 

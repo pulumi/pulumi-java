@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetResponsePolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResponsePolicyArgs extends InvokeArgs {
 
     public static final GetResponsePolicyArgs Empty = new GetResponsePolicyArgs();
 

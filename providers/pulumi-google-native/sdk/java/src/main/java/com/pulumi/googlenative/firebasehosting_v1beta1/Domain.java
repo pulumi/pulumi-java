@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firebasehosting_v1beta1.DomainArgs;
 import com.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainProvisioningResponse;
 import com.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainRedirectResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:firebasehosting/v1beta1:Domain")
-public class Domain extends com.pulumi.resources.CustomResource {
+public class Domain extends CustomResource {
     /**
      * The domain name of the association.
      * 
@@ -127,19 +129,19 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Domain(String name, DomainArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Domain(String name, DomainArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:firebasehosting/v1beta1:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Domain(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Domain(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:firebasehosting/v1beta1:Domain", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -150,7 +152,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Domain get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Domain get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Domain(name, id, options);
     }
 }

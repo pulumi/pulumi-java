@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Disk encryption status for an instance.
  * 
  */
-public final class DiskEncryptionStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskEncryptionStatusArgs extends ResourceArgs {
 
     public static final DiskEncryptionStatusArgs Empty = new DiskEncryptionStatusArgs();
 

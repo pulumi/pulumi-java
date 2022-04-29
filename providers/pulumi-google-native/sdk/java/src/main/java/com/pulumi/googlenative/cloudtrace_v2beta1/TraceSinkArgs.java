@@ -6,13 +6,14 @@ package com.pulumi.googlenative.cloudtrace_v2beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class TraceSinkArgs extends ResourceArgs {
 
     public static final TraceSinkArgs Empty = new TraceSinkArgs();
 

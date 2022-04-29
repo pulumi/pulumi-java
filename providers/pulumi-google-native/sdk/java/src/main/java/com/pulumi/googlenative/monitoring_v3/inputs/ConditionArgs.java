@@ -9,6 +9,7 @@ import com.pulumi.googlenative.monitoring_v3.inputs.LogMatchArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricAbsenceArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricThresholdArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MonitoringQueryLanguageConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A condition is a true/false test that determines when an alerting policy should open an incident. If a condition evaluates to true, it signifies that something is wrong.
  * 
  */
-public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConditionArgs extends ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 

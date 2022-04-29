@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
  * 
  */
-public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
+public final class OidcTokenArgs extends ResourceArgs {
 
     public static final OidcTokenArgs Empty = new OidcTokenArgs();
 

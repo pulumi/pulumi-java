@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateTemplateArgs extends ResourceArgs {
 
     public static final CertificateTemplateArgs Empty = new CertificateTemplateArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.gkehub_v1alpha2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gkehub_v1alpha2.inputs.ResourceOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * KubernetesResource contains the YAML manifests and configuration for Membership Kubernetes resources in the cluster. After CreateMembership or UpdateMembership, these resources should be re-applied in the cluster.
  * 
  */
-public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubernetesResourceArgs extends ResourceArgs {
 
     public static final KubernetesResourceArgs Empty = new KubernetesResourceArgs();
 

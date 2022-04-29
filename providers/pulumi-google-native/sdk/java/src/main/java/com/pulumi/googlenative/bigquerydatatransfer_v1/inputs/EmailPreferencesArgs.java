@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents preferences for sending email notifications for transfer run events.
  * 
  */
-public final class EmailPreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EmailPreferencesArgs extends ResourceArgs {
 
     public static final EmailPreferencesArgs Empty = new EmailPreferencesArgs();
 

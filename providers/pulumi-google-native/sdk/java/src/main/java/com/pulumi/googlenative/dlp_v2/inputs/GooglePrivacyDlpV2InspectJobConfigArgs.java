@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Controls what and how to inspect for findings.
  * 
  */
-public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InspectJobConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectJobConfigArgs Empty = new GooglePrivacyDlpV2InspectJobConfigArgs();
 

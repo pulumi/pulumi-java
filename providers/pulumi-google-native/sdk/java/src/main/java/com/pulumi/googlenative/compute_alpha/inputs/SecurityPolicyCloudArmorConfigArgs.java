@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration options for Cloud Armor.
  * 
  */
-public final class SecurityPolicyCloudArmorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyCloudArmorConfigArgs extends ResourceArgs {
 
     public static final SecurityPolicyCloudArmorConfigArgs Empty = new SecurityPolicyCloudArmorConfigArgs();
 

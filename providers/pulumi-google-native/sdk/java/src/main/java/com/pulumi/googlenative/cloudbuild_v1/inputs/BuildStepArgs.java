@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A step in the build pipeline.
  * 
  */
-public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildStepArgs extends ResourceArgs {
 
     public static final BuildStepArgs Empty = new BuildStepArgs();
 

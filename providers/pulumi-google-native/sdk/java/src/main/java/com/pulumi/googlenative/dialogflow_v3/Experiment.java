@@ -14,6 +14,8 @@ import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3Ex
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3RolloutConfigResponse;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3RolloutStateResponse;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3VariantsHistoryResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3:Experiment")
-public class Experiment extends com.pulumi.resources.CustomResource {
+public class Experiment extends CustomResource {
     /**
      * Creation time of this experiment.
      * 
@@ -256,19 +258,19 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Experiment(String name, ExperimentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Experiment(String name, ExperimentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Experiment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Experiment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:Experiment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -279,7 +281,7 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Experiment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Experiment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Experiment(name, id, options);
     }
 }

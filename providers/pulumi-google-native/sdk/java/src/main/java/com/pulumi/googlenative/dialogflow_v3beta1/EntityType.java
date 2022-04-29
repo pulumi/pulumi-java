@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v3beta1.EntityTypeArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse;
 import com.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3beta1:EntityType")
-public class EntityType extends com.pulumi.resources.CustomResource {
+public class EntityType extends CustomResource {
     /**
      * Indicates whether the entity type can be automatically expanded.
      * 
@@ -156,19 +158,19 @@ public class EntityType extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EntityType(String name, EntityTypeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public EntityType(String name, EntityTypeArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3beta1:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private EntityType(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private EntityType(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3beta1:EntityType", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class EntityType extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EntityType get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EntityType get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new EntityType(name, id, options);
     }
 }

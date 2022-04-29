@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Specifies the selection and configuration of software inside the runtime. The properties to set on runtime. Properties keys are specified in `key:value` format, for example: * `idle_shutdown: true` * `idle_shutdown_timeout: 180` * `enable_health_monitoring: true`
  * 
  */
-public final class RuntimeSoftwareConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeSoftwareConfigArgs extends ResourceArgs {
 
     public static final RuntimeSoftwareConfigArgs Empty = new RuntimeSoftwareConfigArgs();
 

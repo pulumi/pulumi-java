@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.DiskInstantiationConfigInstantiateFrom;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A specification of the desired way to instantiate a disk in the instance template when its created from a source instance.
  * 
  */
-public final class DiskInstantiationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskInstantiationConfigArgs extends ResourceArgs {
 
     public static final DiskInstantiationConfigArgs Empty = new DiskInstantiationConfigArgs();
 

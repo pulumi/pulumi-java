@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpRouteActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.PathMatcherArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.UrlMapTestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionUrlMapArgs extends ResourceArgs {
 
     public static final RegionUrlMapArgs Empty = new RegionUrlMapArgs();
 

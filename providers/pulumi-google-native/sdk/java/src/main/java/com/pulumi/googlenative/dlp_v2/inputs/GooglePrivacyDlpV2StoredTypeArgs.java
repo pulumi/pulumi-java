@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A reference to a StoredInfoType to use with scanning.
  * 
  */
-public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2StoredTypeArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2StoredTypeArgs Empty = new GooglePrivacyDlpV2StoredTypeArgs();
 

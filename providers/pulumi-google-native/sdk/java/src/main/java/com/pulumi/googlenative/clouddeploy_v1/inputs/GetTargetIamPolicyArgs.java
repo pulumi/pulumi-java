@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetTargetIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTargetIamPolicyArgs extends InvokeArgs {
 
     public static final GetTargetIamPolicyArgs Empty = new GetTargetIamPolicyArgs();
 

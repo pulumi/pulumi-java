@@ -6,6 +6,7 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.genomics_v1alpha2.inputs.DiskArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The system resources for the pipeline run.
  * 
  */
-public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineResourcesArgs extends ResourceArgs {
 
     public static final PipelineResourcesArgs Empty = new PipelineResourcesArgs();
 

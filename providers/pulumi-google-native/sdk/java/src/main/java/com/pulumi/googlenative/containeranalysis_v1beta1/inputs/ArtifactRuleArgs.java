@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines an object to declare an in-toto artifact rule
  * 
  */
-public final class ArtifactRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArtifactRuleArgs extends ResourceArgs {
 
     public static final ArtifactRuleArgs Empty = new ArtifactRuleArgs();
 

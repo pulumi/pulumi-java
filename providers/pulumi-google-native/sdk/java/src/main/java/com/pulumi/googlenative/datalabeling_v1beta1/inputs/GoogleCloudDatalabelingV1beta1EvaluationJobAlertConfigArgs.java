@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Provides details for how an evaluation job sends email alerts based on the results of a run.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs Empty = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs();
 

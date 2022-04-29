@@ -10,6 +10,7 @@ import com.pulumi.googlenative.datamigration_v1.enums.ConnectionProfileState;
 import com.pulumi.googlenative.datamigration_v1.inputs.CloudSqlConnectionProfileArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.MySqlConnectionProfileArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.PostgreSqlConnectionProfileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionProfileArgs extends ResourceArgs {
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 

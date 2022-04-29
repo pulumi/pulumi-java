@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An entity in a dataset is a field or set of fields that correspond to a single person. For example, in medical records the `EntityId` might be a patient identifier, or for financial records it might be an account identifier. This message is used when generalizations or analysis must take into account that multiple rows correspond to the same entity.
  * 
  */
-public final class GooglePrivacyDlpV2EntityIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2EntityIdArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2EntityIdArgs Empty = new GooglePrivacyDlpV2EntityIdArgs();
 

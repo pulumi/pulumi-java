@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Replace each matching finding with the name of the info_type.
  * 
  */
-public final class GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs Empty = new GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs();
 

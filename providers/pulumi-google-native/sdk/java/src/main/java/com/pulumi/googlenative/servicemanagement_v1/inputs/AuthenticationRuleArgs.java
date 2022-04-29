@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthRequirementArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OAuthRequirementsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Authentication rules for the service. By default, if a method has any authentication requirements, every request must include a valid credential matching one of the requirements. It&#39;s an error to include more than one kind of credential in a single request. If a method doesn&#39;t have any auth requirements, request credentials will be ignored.
  * 
  */
-public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthenticationRuleArgs extends ResourceArgs {
 
     public static final AuthenticationRuleArgs Empty = new AuthenticationRuleArgs();
 

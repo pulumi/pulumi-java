@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for a serverless network endpoint group (NEG). The platform must be provided. Note: The target backend service must be in the same project and located in the same region as the Serverless NEG.
  * 
  */
-public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkEndpointGroupServerlessDeploymentArgs extends ResourceArgs {
 
     public static final NetworkEndpointGroupServerlessDeploymentArgs Empty = new NetworkEndpointGroupServerlessDeploymentArgs();
 

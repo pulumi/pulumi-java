@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration options for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
  * 
  */
-public final class HttpLoadBalancingArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpLoadBalancingArgs extends ResourceArgs {
 
     public static final HttpLoadBalancingArgs Empty = new HttpLoadBalancingArgs();
 

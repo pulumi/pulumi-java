@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.healthcare_v1beta1.ConsentArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1ConsentPolicyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:Consent")
-public class Consent extends com.pulumi.resources.CustomResource {
+public class Consent extends CustomResource {
     /**
      * The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
@@ -183,19 +185,19 @@ public class Consent extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Consent(String name, ConsentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Consent(String name, ConsentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Consent", name, args == null ? ConsentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Consent(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Consent(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Consent", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -206,7 +208,7 @@ public class Consent extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Consent get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Consent get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Consent(name, id, options);
     }
 }

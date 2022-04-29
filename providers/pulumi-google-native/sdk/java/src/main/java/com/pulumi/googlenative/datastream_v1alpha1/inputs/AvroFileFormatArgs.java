@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * AVRO file format configuration.
  * 
  */
-public final class AvroFileFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class AvroFileFormatArgs extends ResourceArgs {
 
     public static final AvroFileFormatArgs Empty = new AvroFileFormatArgs();
 

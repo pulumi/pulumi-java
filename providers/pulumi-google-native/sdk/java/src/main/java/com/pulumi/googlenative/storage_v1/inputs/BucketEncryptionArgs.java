@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Encryption configuration for a bucket.
  * 
  */
-public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketEncryptionArgs extends ResourceArgs {
 
     public static final BucketEncryptionArgs Empty = new BucketEncryptionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Message containing connection draining configuration.
  * 
  */
-public final class ConnectionDrainingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionDrainingArgs extends ResourceArgs {
 
     public static final ConnectionDrainingArgs Empty = new ConnectionDrainingArgs();
 

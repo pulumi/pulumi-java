@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1LastPeriodAmountArgs;
 import com.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeMoneyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The budgeted amount for each usage period.
  * 
  */
-public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1BudgetAmountArgs Empty = new GoogleCloudBillingBudgetsV1BudgetAmountArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Additional info about the select item for when it is triggered in a dialog.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs Empty = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs();
 

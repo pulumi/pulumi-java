@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedInterconnectAttachmentsArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedRouterApplianceInstancesArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedVpnTunnelsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpokeArgs extends ResourceArgs {
 
     public static final SpokeArgs Empty = new SpokeArgs();
 

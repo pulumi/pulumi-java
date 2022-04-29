@@ -5,6 +5,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies how APIs are allowed to communicate within the Service Perimeter.
  * 
  */
-public final class VpcAccessibleServicesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpcAccessibleServicesArgs extends ResourceArgs {
 
     public static final VpcAccessibleServicesArgs Empty = new VpcAccessibleServicesArgs();
 

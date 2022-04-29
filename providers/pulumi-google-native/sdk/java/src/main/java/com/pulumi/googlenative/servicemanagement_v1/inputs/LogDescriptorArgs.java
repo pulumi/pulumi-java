@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A description of a log type. Example in YAML format: - name: library.googleapis.com/activity_history description: The history of borrowing and returning library items. display_name: Activity labels: - key: /customer_id description: Identifier of a library customer
  * 
  */
-public final class LogDescriptorArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogDescriptorArgs extends ResourceArgs {
 
     public static final LogDescriptorArgs Empty = new LogDescriptorArgs();
 

@@ -17,6 +17,7 @@ import com.pulumi.googlenative.container_v1beta1.inputs.IstioConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.KalmConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.KubernetesDashboardArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.NetworkPolicyConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
  * 
  */
-public final class AddonsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddonsConfigArgs extends ResourceArgs {
 
     public static final AddonsConfigArgs Empty = new AddonsConfigArgs();
 

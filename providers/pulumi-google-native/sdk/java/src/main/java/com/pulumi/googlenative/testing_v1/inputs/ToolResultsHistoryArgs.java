@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents a tool results history resource.
  * 
  */
-public final class ToolResultsHistoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToolResultsHistoryArgs extends ResourceArgs {
 
     public static final ToolResultsHistoryArgs Empty = new ToolResultsHistoryArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.enums.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The BigQuery table where the server writes output.
  * 
  */
-public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs extends ResourceArgs {
 
     public static final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs Empty = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs();
 

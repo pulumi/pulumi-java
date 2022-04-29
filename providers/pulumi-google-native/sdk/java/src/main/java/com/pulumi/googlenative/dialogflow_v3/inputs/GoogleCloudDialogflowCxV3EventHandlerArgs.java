@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An event handler specifies an event that can be handled during a session. When the specified event happens, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the event, it will be called. * If there is a `target_page` associated with the event, the session will transition into the specified page. * If there is a `target_flow` associated with the event, the session will transition into the specified flow.
  * 
  */
-public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3EventHandlerArgs Empty = new GoogleCloudDialogflowCxV3EventHandlerArgs();
 

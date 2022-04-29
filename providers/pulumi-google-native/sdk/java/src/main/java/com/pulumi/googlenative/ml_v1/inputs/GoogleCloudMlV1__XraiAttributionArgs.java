@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
  * 
  */
-public final class GoogleCloudMlV1__XraiAttributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__XraiAttributionArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__XraiAttributionArgs Empty = new GoogleCloudMlV1__XraiAttributionArgs();
 

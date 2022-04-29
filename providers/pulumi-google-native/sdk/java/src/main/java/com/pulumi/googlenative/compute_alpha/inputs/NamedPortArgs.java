@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The named port. For example: &lt;&#34;http&#34;, 80&gt;.
  * 
  */
-public final class NamedPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class NamedPortArgs extends ResourceArgs {
 
     public static final NamedPortArgs Empty = new NamedPortArgs();
 

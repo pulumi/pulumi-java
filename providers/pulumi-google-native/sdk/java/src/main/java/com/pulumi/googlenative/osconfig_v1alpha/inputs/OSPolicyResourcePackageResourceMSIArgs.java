@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An MSI package. MSI packages only support INSTALLED state.
  * 
  */
-public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourcePackageResourceMSIArgs extends ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceMSIArgs Empty = new OSPolicyResourcePackageResourceMSIArgs();
 

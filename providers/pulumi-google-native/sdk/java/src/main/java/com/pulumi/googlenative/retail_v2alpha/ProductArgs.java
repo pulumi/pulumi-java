@@ -14,6 +14,7 @@ import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaIma
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaPriceInfoArgs;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaPromotionArgs;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRatingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProductArgs extends ResourceArgs {
 
     public static final ProductArgs Empty = new ProductArgs();
 

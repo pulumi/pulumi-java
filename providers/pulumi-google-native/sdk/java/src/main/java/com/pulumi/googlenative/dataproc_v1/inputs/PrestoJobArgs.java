@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.LoggingConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.QueryListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A Dataproc job for running Presto (https://prestosql.io/) queries. IMPORTANT: The Dataproc Presto Optional Component (https://cloud.google.com/dataproc/docs/concepts/components/presto) must be enabled when the cluster is created to submit a Presto job to the cluster.
  * 
  */
-public final class PrestoJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrestoJobArgs extends ResourceArgs {
 
     public static final PrestoJobArgs Empty = new PrestoJobArgs();
 

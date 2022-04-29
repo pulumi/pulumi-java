@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.LauncherActivityIntentArgs;
 import com.pulumi.googlenative.testing_v1.inputs.StartActivityIntentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Message for specifying the start activities to crawl.
  * 
  */
-public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoboStartingIntentArgs extends ResourceArgs {
 
     public static final RoboStartingIntentArgs Empty = new RoboStartingIntentArgs();
 

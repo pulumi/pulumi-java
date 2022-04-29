@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Message for specifying a window around a finding to apply a detection rule.
  * 
  */
-public final class GooglePrivacyDlpV2ProximityArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ProximityArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ProximityArgs Empty = new GooglePrivacyDlpV2ProximityArgs();
 

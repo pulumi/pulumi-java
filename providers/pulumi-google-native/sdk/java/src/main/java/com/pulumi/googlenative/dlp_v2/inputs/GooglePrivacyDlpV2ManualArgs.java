@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Job trigger option for hybrid jobs. Jobs must be manually created and finished.
  * 
  */
-public final class GooglePrivacyDlpV2ManualArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ManualArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ManualArgs Empty = new GooglePrivacyDlpV2ManualArgs();
 

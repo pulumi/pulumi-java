@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Strategy used to delete a service. This strategy is a placeholder only used by the system generated rollout to delete a service.
  * 
  */
-public final class DeleteServiceStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeleteServiceStrategyArgs extends ResourceArgs {
 
     public static final DeleteServiceStrategyArgs Empty = new DeleteServiceStrategyArgs();
 

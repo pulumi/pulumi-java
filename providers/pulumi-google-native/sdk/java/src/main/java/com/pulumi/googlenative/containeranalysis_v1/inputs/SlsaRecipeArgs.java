@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Steps taken to build the artifact. For a TaskRun, typically each container corresponds to one step in the recipe.
  * 
  */
-public final class SlsaRecipeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SlsaRecipeArgs extends ResourceArgs {
 
     public static final SlsaRecipeArgs Empty = new SlsaRecipeArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * One dimension of the matrix of different runs of a step.
  * 
  */
-public final class MatrixDimensionDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MatrixDimensionDefinitionArgs extends ResourceArgs {
 
     public static final MatrixDimensionDefinitionArgs Empty = new MatrixDimensionDefinitionArgs();
 

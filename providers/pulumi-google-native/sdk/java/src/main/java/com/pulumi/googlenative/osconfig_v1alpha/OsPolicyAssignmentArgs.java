@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentRolloutArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsPolicyAssignmentArgs extends ResourceArgs {
 
     public static final OsPolicyAssignmentArgs Empty = new OsPolicyAssignmentArgs();
 

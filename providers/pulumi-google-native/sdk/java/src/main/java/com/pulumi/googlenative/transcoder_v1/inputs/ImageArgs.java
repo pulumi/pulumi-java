@@ -6,6 +6,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Overlaid jpeg image.
  * 
  */
-public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageArgs extends ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 

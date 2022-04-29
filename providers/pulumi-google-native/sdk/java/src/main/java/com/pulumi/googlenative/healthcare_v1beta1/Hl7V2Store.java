@@ -12,6 +12,8 @@ import com.pulumi.googlenative.healthcare_v1beta1.Hl7V2StoreArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7V2NotificationConfigResponse;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.ParserConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:Hl7V2Store")
-public class Hl7V2Store extends com.pulumi.resources.CustomResource {
+public class Hl7V2Store extends CustomResource {
     /**
      * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
@@ -130,19 +132,19 @@ public class Hl7V2Store extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Hl7V2Store(String name, Hl7V2StoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Hl7V2Store(String name, Hl7V2StoreArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Hl7V2Store", name, args == null ? Hl7V2StoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Hl7V2Store(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Hl7V2Store(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Hl7V2Store", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -153,7 +155,7 @@ public class Hl7V2Store extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Hl7V2Store get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Hl7V2Store get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Hl7V2Store(name, id, options);
     }
 }

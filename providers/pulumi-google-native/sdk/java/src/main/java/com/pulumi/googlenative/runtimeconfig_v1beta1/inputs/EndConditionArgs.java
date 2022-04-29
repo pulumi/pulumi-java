@@ -6,6 +6,7 @@ package com.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The condition that a Waiter resource is waiting for.
  * 
  */
-public final class EndConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndConditionArgs extends ResourceArgs {
 
     public static final EndConditionArgs Empty = new EndConditionArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.CategoryArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.IdentityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Windows Update represents the metadata about the update for the Windows operating system. The fields in this message come from the Windows Update API documented at https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
  * 
  */
-public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
+public final class WindowsUpdateArgs extends ResourceArgs {
 
     public static final WindowsUpdateArgs Empty = new WindowsUpdateArgs();
 

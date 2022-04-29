@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for how human labeling task should be done.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs();
 

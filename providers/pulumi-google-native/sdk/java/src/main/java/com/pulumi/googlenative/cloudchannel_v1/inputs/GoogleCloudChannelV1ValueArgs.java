@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Data type and value of a parameter.
  * 
  */
-public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1ValueArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1ValueArgs Empty = new GoogleCloudChannelV1ValueArgs();
 

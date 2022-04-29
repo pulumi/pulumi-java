@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class EvaluationJobArgs extends ResourceArgs {
 
     public static final EvaluationJobArgs Empty = new EvaluationJobArgs();
 

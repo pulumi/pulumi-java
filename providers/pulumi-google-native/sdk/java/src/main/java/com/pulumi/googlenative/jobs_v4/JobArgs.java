@@ -13,6 +13,7 @@ import com.pulumi.googlenative.jobs_v4.enums.JobPostingRegion;
 import com.pulumi.googlenative.jobs_v4.inputs.ApplicationInfoArgs;
 import com.pulumi.googlenative.jobs_v4.inputs.CompensationInfoArgs;
 import com.pulumi.googlenative.jobs_v4.inputs.ProcessingOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

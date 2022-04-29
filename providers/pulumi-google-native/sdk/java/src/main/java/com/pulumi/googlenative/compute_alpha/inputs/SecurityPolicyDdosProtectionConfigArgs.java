@@ -6,12 +6,13 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyDdosProtectionConfigDdosProtection;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyDdosProtectionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyDdosProtectionConfigArgs extends ResourceArgs {
 
     public static final SecurityPolicyDdosProtectionConfigArgs Empty = new SecurityPolicyDdosProtectionConfigArgs();
 

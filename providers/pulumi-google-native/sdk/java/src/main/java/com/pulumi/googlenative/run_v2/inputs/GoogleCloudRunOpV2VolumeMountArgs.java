@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * VolumeMount describes a mounting of a Volume within a container.
  * 
  */
-public final class GoogleCloudRunOpV2VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2VolumeMountArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2VolumeMountArgs Empty = new GoogleCloudRunOpV2VolumeMountArgs();
 

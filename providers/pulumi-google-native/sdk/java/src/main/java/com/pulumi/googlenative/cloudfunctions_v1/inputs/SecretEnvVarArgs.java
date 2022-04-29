@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for a secret environment variable. It has the information necessary to fetch the secret value from secret manager and expose it as an environment variable. Secret value is not a part of the configuration. Secret values are only fetched when a new clone starts.
  * 
  */
-public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretEnvVarArgs extends ResourceArgs {
 
     public static final SecretEnvVarArgs Empty = new SecretEnvVarArgs();
 

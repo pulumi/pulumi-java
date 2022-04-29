@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Enum value definition.
  * 
  */
-public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnumValueArgs extends ResourceArgs {
 
     public static final EnumValueArgs Empty = new EnumValueArgs();
 

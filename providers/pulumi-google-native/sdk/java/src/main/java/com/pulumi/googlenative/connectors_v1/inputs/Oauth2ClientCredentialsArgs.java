@@ -6,6 +6,7 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
  * 
  */
-public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class Oauth2ClientCredentialsArgs extends ResourceArgs {
 
     public static final Oauth2ClientCredentialsArgs Empty = new Oauth2ClientCredentialsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnFamilyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BigtableOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BigtableOptionsArgs extends ResourceArgs {
 
     public static final BigtableOptionsArgs Empty = new BigtableOptionsArgs();
 

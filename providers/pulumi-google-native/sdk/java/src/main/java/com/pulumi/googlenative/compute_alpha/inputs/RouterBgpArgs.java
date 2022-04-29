@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RouterBgpAdvertiseMode;
 import com.pulumi.googlenative.compute_alpha.enums.RouterBgpAdvertisedGroupsItem;
 import com.pulumi.googlenative.compute_alpha.inputs.RouterAdvertisedIpRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterBgpArgs extends ResourceArgs {
 
     public static final RouterBgpArgs Empty = new RouterBgpArgs();
 

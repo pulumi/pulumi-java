@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Workload details for creating the pipeline jobs.
  * 
  */
-public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1WorkloadArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1WorkloadArgs Empty = new GoogleCloudDatapipelinesV1WorkloadArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * This submessage provides human-readable hints about the purpose of the authority. Because the name of a note acts as its resource reference, it is important to disambiguate the canonical name of the Note (which might be a UUID for security purposes) from &#34;readable&#34; names more suitable for debug output. Note that these hints should not be used to look up authorities in security sensitive contexts, such as when looking up attestations to verify.
  * 
  */
-public final class DSSEHintArgs extends com.pulumi.resources.ResourceArgs {
+public final class DSSEHintArgs extends ResourceArgs {
 
     public static final DSSEHintArgs Empty = new DSSEHintArgs();
 

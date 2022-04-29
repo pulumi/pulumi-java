@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageMediaContentMediaType;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The media content card for Actions on Google.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageMediaContentArgs Empty = new GoogleCloudDialogflowV2IntentMessageMediaContentArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.file_v1beta1.enums.NfsExportOptionsAccessMode;
 import com.pulumi.googlenative.file_v1beta1.enums.NfsExportOptionsSquashMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * NFS export options specifications.
  * 
  */
-public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NfsExportOptionsArgs extends ResourceArgs {
 
     public static final NfsExportOptionsArgs Empty = new NfsExportOptionsArgs();
 

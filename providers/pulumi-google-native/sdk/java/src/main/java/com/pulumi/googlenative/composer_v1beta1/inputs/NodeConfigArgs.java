@@ -6,6 +6,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.composer_v1beta1.inputs.IPAllocationPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The configuration information for the Kubernetes Engine nodes running the Apache Airflow software.
  * 
  */
-public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeConfigArgs extends ResourceArgs {
 
     public static final NodeConfigArgs Empty = new NodeConfigArgs();
 

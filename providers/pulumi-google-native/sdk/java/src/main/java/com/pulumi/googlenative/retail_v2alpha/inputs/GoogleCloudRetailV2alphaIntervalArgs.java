@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A floating point interval.
  * 
  */
-public final class GoogleCloudRetailV2alphaIntervalArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaIntervalArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaIntervalArgs Empty = new GoogleCloudRetailV2alphaIntervalArgs();
 

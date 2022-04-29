@@ -17,6 +17,7 @@ import com.pulumi.googlenative.container_v1beta1.inputs.SandboxConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.ShieldedInstanceConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.VirtualNICArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.WorkloadMetadataConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ import javax.annotation.Nullable;
  * Parameters that describe the nodes in a cluster.
  * 
  */
-public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeConfigArgs extends ResourceArgs {
 
     public static final NodeConfigArgs Empty = new NodeConfigArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.cloudresourcemanager_v3.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTagValueIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTagValueIamPolicyArgs extends InvokeArgs {
 
     public static final GetTagValueIamPolicyArgs Empty = new GetTagValueIamPolicyArgs();
 

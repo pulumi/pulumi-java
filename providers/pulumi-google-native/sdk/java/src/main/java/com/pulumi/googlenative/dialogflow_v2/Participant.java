@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v2.ParticipantArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v2:Participant")
-public class Participant extends com.pulumi.resources.CustomResource {
+public class Participant extends CustomResource {
     /**
      * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
      * 
@@ -99,19 +101,19 @@ public class Participant extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Participant(String name, ParticipantArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Participant(String name, ParticipantArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2:Participant", name, args == null ? ParticipantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Participant(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Participant(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2:Participant", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -122,7 +124,7 @@ public class Participant extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Participant get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Participant get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Participant(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.enums.SparkChartViewSparkChartType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A sparkChart is a small chart suitable for inclusion in a table-cell or inline in text. This message contains the configuration for a sparkChart to show up on a Scorecard, showing recent trends of the scorecard&#39;s timeseries.
  * 
  */
-public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs {
+public final class SparkChartViewArgs extends ResourceArgs {
 
     public static final SparkChartViewArgs Empty = new SparkChartViewArgs();
 

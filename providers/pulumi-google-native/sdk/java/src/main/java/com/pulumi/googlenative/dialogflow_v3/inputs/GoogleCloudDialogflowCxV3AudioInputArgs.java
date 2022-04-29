@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3InputAudioConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the natural speech audio to be processed.
  * 
  */
-public final class GoogleCloudDialogflowCxV3AudioInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3AudioInputArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3AudioInputArgs Empty = new GoogleCloudDialogflowCxV3AudioInputArgs();
 

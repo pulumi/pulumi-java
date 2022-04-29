@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigtableadmin_v2.AppProfileArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.outputs.MultiClusterRoutingUseAnyResponse;
 import com.pulumi.googlenative.bigtableadmin_v2.outputs.SingleClusterRoutingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:AppProfile")
-public class AppProfile extends com.pulumi.resources.CustomResource {
+public class AppProfile extends CustomResource {
     /**
      * Long form description of the use case for this AppProfile.
      * 
@@ -112,19 +114,19 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppProfile(String name, AppProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppProfile(String name, AppProfileArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:bigtableadmin/v2:AppProfile", name, args == null ? AppProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppProfile(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppProfile(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:bigtableadmin/v2:AppProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppProfile get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppProfile get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AppProfile(name, id, options);
     }
 }

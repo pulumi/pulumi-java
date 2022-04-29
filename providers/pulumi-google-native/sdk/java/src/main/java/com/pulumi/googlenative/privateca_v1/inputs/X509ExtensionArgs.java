@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An X509Extension specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
  * 
  */
-public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class X509ExtensionArgs extends ResourceArgs {
 
     public static final X509ExtensionArgs Empty = new X509ExtensionArgs();
 

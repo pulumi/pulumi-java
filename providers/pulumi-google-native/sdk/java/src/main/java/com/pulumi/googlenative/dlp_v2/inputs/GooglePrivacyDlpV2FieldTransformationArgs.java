@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The transformation to apply to the field.
  * 
  */
-public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2FieldTransformationArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2FieldTransformationArgs Empty = new GooglePrivacyDlpV2FieldTransformationArgs();
 

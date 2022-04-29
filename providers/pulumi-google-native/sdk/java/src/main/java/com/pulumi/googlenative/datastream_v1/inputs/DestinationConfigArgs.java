@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1.inputs.GcsDestinationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration of the stream destination.
  * 
  */
-public final class DestinationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DestinationConfigArgs extends ResourceArgs {
 
     public static final DestinationConfigArgs Empty = new DestinationConfigArgs();
 

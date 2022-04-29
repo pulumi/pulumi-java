@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Exit code from a tool execution.
  * 
  */
-public final class ToolExitCodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToolExitCodeArgs extends ResourceArgs {
 
     public static final ToolExitCodeArgs Empty = new ToolExitCodeArgs();
 

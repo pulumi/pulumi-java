@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration of a specific logging destination (the producer project or the consumer project).
  * 
  */
-public final class LoggingDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingDestinationArgs extends ResourceArgs {
 
     public static final LoggingDestinationArgs Empty = new LoggingDestinationArgs();
 

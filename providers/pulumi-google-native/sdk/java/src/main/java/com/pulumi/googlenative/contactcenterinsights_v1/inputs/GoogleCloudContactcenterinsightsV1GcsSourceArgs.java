@@ -5,6 +5,7 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A Cloud Storage source of conversation data.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1GcsSourceArgs Empty = new GoogleCloudContactcenterinsightsV1GcsSourceArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_beta.enums.BackendServiceCdnPolicyCacheMo
 import com.pulumi.googlenative.compute_beta.inputs.BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs;
 import com.pulumi.googlenative.compute_beta.inputs.BackendServiceCdnPolicyNegativeCachingPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.CacheKeyPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Message containing Cloud CDN configuration for a backend service.
  * 
  */
-public final class BackendServiceCdnPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceCdnPolicyArgs extends ResourceArgs {
 
     public static final BackendServiceCdnPolicyArgs Empty = new BackendServiceCdnPolicyArgs();
 

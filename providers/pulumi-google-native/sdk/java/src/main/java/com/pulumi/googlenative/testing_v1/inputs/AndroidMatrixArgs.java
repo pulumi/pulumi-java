@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A set of Android device configuration permutations is defined by the the cross-product of the given axes. Internally, the given AndroidMatrix will be expanded into a set of AndroidDevices. Only supported permutations will be instantiated. Invalid permutations (e.g., incompatible models/versions) are ignored.
  * 
  */
-public final class AndroidMatrixArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidMatrixArgs extends ResourceArgs {
 
     public static final AndroidMatrixArgs Empty = new AndroidMatrixArgs();
 

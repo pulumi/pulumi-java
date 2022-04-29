@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Association links that an entitlement has to other entitlements.
  * 
  */
-public final class GoogleCloudChannelV1AssociationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1AssociationInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1AssociationInfoArgs Empty = new GoogleCloudChannelV1AssociationInfoArgs();
 

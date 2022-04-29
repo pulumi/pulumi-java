@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * iOS app information
  * 
  */
-public final class IosAppInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosAppInfoArgs extends ResourceArgs {
 
     public static final IosAppInfoArgs Empty = new IosAppInfoArgs();
 

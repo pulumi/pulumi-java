@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the auto-registration of the Forwarding Rule to Service Directory. The region and project of the Service Directory resource generated from this registration will be the same as this Forwarding Rule.
  * 
  */
-public final class ForwardingRuleServiceDirectoryRegistrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ForwardingRuleServiceDirectoryRegistrationArgs extends ResourceArgs {
 
     public static final ForwardingRuleServiceDirectoryRegistrationArgs Empty = new ForwardingRuleServiceDirectoryRegistrationArgs();
 

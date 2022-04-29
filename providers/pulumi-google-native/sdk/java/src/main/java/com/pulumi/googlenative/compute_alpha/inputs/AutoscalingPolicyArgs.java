@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyCustomMetri
 import com.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyLoadBalancingUtilizationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyScaleDownControlArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyScaleInControlArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Cloud Autoscaler policy.
  * 
  */
-public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingPolicyArgs extends ResourceArgs {
 
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 

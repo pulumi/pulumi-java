@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration of the timespan of the items to include in scanning. Currently only supported when inspecting Google Cloud Storage and BigQuery.
  * 
  */
-public final class GooglePrivacyDlpV2TimespanConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2TimespanConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2TimespanConfigArgs Empty = new GooglePrivacyDlpV2TimespanConfigArgs();
 

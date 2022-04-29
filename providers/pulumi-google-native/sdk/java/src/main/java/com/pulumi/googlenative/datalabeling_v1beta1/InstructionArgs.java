@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datalabeling_v1beta1.enums.InstructionDataType;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1PdfInstructionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstructionArgs extends ResourceArgs {
 
     public static final InstructionArgs Empty = new InstructionArgs();
 

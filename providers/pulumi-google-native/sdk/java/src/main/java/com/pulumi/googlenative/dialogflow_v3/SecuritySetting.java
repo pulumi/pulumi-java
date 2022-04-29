@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v3.SecuritySettingArgs;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3:SecuritySetting")
-public class SecuritySetting extends com.pulumi.resources.CustomResource {
+public class SecuritySetting extends CustomResource {
     /**
      * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. The `DLP De-identify Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent&#39;s project. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.
      * 
@@ -169,19 +171,19 @@ public class SecuritySetting extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecuritySetting(String name, SecuritySettingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SecuritySetting(String name, SecuritySettingArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:SecuritySetting", name, args == null ? SecuritySettingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SecuritySetting(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SecuritySetting(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:SecuritySetting", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -192,7 +194,7 @@ public class SecuritySetting extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecuritySetting get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SecuritySetting get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SecuritySetting(name, id, options);
     }
 }

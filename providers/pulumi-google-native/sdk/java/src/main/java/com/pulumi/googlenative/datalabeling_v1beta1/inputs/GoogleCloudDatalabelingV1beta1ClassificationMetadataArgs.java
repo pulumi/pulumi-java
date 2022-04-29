@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Metadata for classification annotations.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs();
 

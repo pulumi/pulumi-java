@@ -9,13 +9,14 @@ import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyGroupPlacement
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A Duration represents a fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like &#34;day&#34; or &#34;month&#34;. Range is approximately 10,000 years.
  * 
  */
-public final class DurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DurationArgs extends ResourceArgs {
 
     public static final DurationArgs Empty = new DurationArgs();
 

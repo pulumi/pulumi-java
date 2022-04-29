@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Prevents a term in the query from being used in search. Example: Don&#39;t search for &#34;shoddy&#34;.
  * 
  */
-public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaRuleIgnoreActionArgs Empty = new GoogleCloudRetailV2alphaRuleIgnoreActionArgs();
 

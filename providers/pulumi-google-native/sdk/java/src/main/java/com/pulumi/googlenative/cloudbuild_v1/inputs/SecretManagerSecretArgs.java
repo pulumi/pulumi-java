@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Pairs a secret environment variable with a SecretVersion in Secret Manager.
  * 
  */
-public final class SecretManagerSecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretManagerSecretArgs extends ResourceArgs {
 
     public static final SecretManagerSecretArgs Empty = new SecretManagerSecretArgs();
 

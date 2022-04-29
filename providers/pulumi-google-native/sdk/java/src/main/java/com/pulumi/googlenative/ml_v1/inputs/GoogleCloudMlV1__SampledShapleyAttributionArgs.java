@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
  * 
  */
-public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__SampledShapleyAttributionArgs Empty = new GoogleCloudMlV1__SampledShapleyAttributionArgs();
 

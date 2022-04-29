@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Command describes a step performed as part of the build pipeline.
  * 
  */
-public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
+public final class CommandArgs extends ResourceArgs {
 
     public static final CommandArgs Empty = new CommandArgs();
 

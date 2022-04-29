@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1FulfillmentFeatureType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Whether fulfillment is enabled for the specific feature.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs Empty = new GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupAppEngin
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupCloudFunctionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupCloudRunArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupServerlessDeploymentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionNetworkEndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionNetworkEndpointGroupArgs extends ResourceArgs {
 
     public static final RegionNetworkEndpointGroupArgs Empty = new RegionNetworkEndpointGroupArgs();
 

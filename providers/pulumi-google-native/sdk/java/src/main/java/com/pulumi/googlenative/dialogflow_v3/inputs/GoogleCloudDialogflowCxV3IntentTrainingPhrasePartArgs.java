@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a part of a training phrase.
  * 
  */
-public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs Empty = new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs();
 

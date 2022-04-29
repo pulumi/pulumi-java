@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.enums.EntityTypeAutoExpansionMode;
 import com.pulumi.googlenative.dialogflow_v2.enums.EntityTypeKind;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2EntityTypeEntityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class EntityTypeArgs extends ResourceArgs {
 
     public static final EntityTypeArgs Empty = new EntityTypeArgs();
 

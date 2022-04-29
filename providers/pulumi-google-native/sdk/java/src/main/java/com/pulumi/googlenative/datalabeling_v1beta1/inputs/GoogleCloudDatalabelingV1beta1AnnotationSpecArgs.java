@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Container of information related to one possible annotation that can be used in a labeling task. For example, an image classification task where images are labeled as `dog` or `cat` must reference an AnnotationSpec for `dog` and an AnnotationSpec for `cat`.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1AnnotationSpecArgs Empty = new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs();
 

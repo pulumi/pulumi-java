@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.apigee_v1.ReportArgs;
 import com.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CustomReportMetricResponse;
 import com.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ReportPropertyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:apigee/v1:Report")
-public class Report extends com.pulumi.resources.CustomResource {
+public class Report extends CustomResource {
     /**
      * This field contains the chart type for the report
      * 
@@ -351,19 +353,19 @@ public class Report extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Report(String name, ReportArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Report(String name, ReportArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Report", name, args == null ? ReportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Report(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Report(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Report", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -374,7 +376,7 @@ public class Report extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Report get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Report get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Report(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.ReleaseChannelChannel;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are arranged in order of risk. When a cluster is subscribed to a release channel, Google maintains both the master version and the node version. Node auto-upgrade defaults to true and cannot be disabled.
  * 
  */
-public final class ReleaseChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReleaseChannelArgs extends ResourceArgs {
 
     public static final ReleaseChannelArgs Empty = new ReleaseChannelArgs();
 

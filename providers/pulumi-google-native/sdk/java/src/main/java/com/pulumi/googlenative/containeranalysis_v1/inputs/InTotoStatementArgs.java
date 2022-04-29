@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.InTotoProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SlsaProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Spec defined at https://github.com/in-toto/attestation/tree/main/spec#statement The serialized InTotoStatement will be stored as Envelope.payload. Envelope.payloadType is always &#34;application/vnd.in-toto+json&#34;.
  * 
  */
-public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class InTotoStatementArgs extends ResourceArgs {
 
     public static final InTotoStatementArgs Empty = new InTotoStatementArgs();
 

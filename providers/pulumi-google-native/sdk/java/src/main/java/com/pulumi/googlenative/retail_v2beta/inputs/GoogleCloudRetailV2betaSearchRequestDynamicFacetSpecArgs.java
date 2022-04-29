@@ -6,6 +6,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2beta.enums.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The specifications of dynamically generated facets.
  * 
  */
-public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs Empty = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs();
 

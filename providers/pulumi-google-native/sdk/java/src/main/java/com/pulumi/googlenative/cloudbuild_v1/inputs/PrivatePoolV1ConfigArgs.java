@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for a V1 `PrivatePool`.
  * 
  */
-public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivatePoolV1ConfigArgs extends ResourceArgs {
 
     public static final PrivatePoolV1ConfigArgs Empty = new PrivatePoolV1ConfigArgs();
 

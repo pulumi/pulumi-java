@@ -9,6 +9,7 @@ import com.pulumi.googlenative.testing_v1.inputs.AccountArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ApkArgs;
 import com.pulumi.googlenative.testing_v1.inputs.DeviceFileArgs;
 import com.pulumi.googlenative.testing_v1.inputs.EnvironmentVariableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A description of how to set up the Android device prior to running the test.
  * 
  */
-public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestSetupArgs extends ResourceArgs {
 
     public static final TestSetupArgs Empty = new TestSetupArgs();
 

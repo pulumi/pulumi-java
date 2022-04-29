@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Shifts dates by random number of days, with option to be consistent for the same context. See https://cloud.google.com/dlp/docs/concepts-date-shifting to learn more.
  * 
  */
-public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DateShiftConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DateShiftConfigArgs Empty = new GooglePrivacyDlpV2DateShiftConfigArgs();
 

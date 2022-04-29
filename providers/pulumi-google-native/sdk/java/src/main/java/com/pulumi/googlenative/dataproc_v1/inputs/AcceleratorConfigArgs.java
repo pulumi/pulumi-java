@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the type and number of accelerator cards attached to the instances of an instance. See GPUs on Compute Engine (https://cloud.google.com/compute/docs/gpus/).
  * 
  */
-public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AcceleratorConfigArgs extends ResourceArgs {
 
     public static final AcceleratorConfigArgs Empty = new AcceleratorConfigArgs();
 

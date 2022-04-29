@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.RouterNatLogConfigFilter;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration of logging on a NAT.
  * 
  */
-public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterNatLogConfigArgs extends ResourceArgs {
 
     public static final RouterNatLogConfigArgs Empty = new RouterNatLogConfigArgs();
 

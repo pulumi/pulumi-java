@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal;
 import com.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The environment values to be set at runtime for a Flex Template.
  * 
  */
-public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs Empty = new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.InconclusiveDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.SkippedDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.SuccessDetailArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Interprets a result so that humans and machines can act on it.
  * 
  */
-public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutcomeArgs extends ResourceArgs {
 
     public static final OutcomeArgs Empty = new OutcomeArgs();
 

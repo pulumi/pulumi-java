@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigDestinationPortArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigLayer4ConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyRuleMatcherConfigArgs extends ResourceArgs {
 
     public static final SecurityPolicyRuleMatcherConfigArgs Empty = new SecurityPolicyRuleMatcherConfigArgs();
 

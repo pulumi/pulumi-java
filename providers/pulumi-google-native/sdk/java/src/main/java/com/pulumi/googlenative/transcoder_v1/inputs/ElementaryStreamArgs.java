@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.AudioStreamArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.TextStreamArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.VideoStreamArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Encoding of an input file such as an audio, video, or text track. Elementary streams must be packaged before mapping and sharing between different output formats.
  * 
  */
-public final class ElementaryStreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class ElementaryStreamArgs extends ResourceArgs {
 
     public static final ElementaryStreamArgs Empty = new ElementaryStreamArgs();
 

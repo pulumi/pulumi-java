@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Location of output file(s) in a Cloud Storage bucket.
  * 
  */
-public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutputArgs extends ResourceArgs {
 
     public static final OutputArgs Empty = new OutputArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * This corresponds to a signed in-toto link - it is made up of one or more signatures and the in-toto link itself. This is used for occurrences of a Grafeas in-toto note.
  * 
  */
-public final class GrafeasV1beta1IntotoDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GrafeasV1beta1IntotoDetailsArgs extends ResourceArgs {
 
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 

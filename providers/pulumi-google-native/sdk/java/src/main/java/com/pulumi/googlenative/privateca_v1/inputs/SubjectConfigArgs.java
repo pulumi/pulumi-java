@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.SubjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * These values are used to create the distinguished name and subject alternative name fields in an X.509 certificate.
  * 
  */
-public final class SubjectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectConfigArgs extends ResourceArgs {
 
     public static final SubjectConfigArgs Empty = new SubjectConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.vision_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A product label represented as a key-value pair.
  * 
  */
-public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyValueArgs extends ResourceArgs {
 
     public static final KeyValueArgs Empty = new KeyValueArgs();
 

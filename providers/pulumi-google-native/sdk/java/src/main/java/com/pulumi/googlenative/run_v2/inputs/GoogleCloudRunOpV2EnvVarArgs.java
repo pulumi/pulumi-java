@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EnvVar represents an environment variable present in a Container.
  * 
  */
-public final class GoogleCloudRunOpV2EnvVarArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2EnvVarArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2EnvVarArgs Empty = new GoogleCloudRunOpV2EnvVarArgs();
 

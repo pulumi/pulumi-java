@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.enums.CertificateExtensionConstraintsKnownExtensionsItem;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a set of X.509 extensions that may be part of some certificate issuance controls.
  * 
  */
-public final class CertificateExtensionConstraintsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateExtensionConstraintsArgs extends ResourceArgs {
 
     public static final CertificateExtensionConstraintsArgs Empty = new CertificateExtensionConstraintsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Allowed IP range with user-provided description.
  * 
  */
-public final class AllowedIpRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedIpRangeArgs extends ResourceArgs {
 
     public static final AllowedIpRangeArgs Empty = new AllowedIpRangeArgs();
 

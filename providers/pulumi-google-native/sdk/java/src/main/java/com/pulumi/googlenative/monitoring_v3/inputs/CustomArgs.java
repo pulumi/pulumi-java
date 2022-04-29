@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Custom view of service telemetry. Currently a place-holder pending final design.
  * 
  */
-public final class CustomArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomArgs extends ResourceArgs {
 
     public static final CustomArgs Empty = new CustomArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.NamespacedGkeDeploymentTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The cluster&#39;s GKE config.
  * 
  */
-public final class GkeClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GkeClusterConfigArgs extends ResourceArgs {
 
     public static final GkeClusterConfigArgs Empty = new GkeClusterConfigArgs();
 

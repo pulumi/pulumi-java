@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1.enums.DsRecordAlgorithm;
 import com.pulumi.googlenative.domains_v1.enums.DsRecordDigestType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain&#39;s DNS zone.
  * 
  */
-public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
+public final class DsRecordArgs extends ResourceArgs {
 
     public static final DsRecordArgs Empty = new DsRecordArgs();
 

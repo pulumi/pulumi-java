@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Copies the artifact to the specified path on the instance.
  * 
  */
-public final class SoftwareRecipeStepCopyFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepCopyFileArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepCopyFileArgs Empty = new SoftwareRecipeStepCopyFileArgs();
 

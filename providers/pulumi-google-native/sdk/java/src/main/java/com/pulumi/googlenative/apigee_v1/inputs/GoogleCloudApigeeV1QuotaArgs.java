@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Quota contains the essential parameters needed that can be applied on the resources, methods, API source combination associated with this API product. While Quota is optional, setting it prevents requests from exceeding the provisioned parameters.
  * 
  */
-public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1QuotaArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1QuotaArgs Empty = new GoogleCloudApigeeV1QuotaArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectInterconnectType;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectLinkType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
+public final class InterconnectArgs extends ResourceArgs {
 
     public static final InterconnectArgs Empty = new InterconnectArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configures speech transcription for ConversationProfile.
  * 
  */
-public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2SpeechToTextConfigArgs Empty = new GoogleCloudDialogflowV2SpeechToTextConfigArgs();
 

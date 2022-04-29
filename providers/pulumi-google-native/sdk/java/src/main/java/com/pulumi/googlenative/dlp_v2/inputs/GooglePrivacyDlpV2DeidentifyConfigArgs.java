@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransformationErrorHandlingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration that controls how the data will change.
  * 
  */
-public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DeidentifyConfigArgs Empty = new GooglePrivacyDlpV2DeidentifyConfigArgs();
 

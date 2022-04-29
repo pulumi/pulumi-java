@@ -23,6 +23,7 @@ import com.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import com.pulumi.googlenative.compute_beta.inputs.OutlierDetectionArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SecuritySettingsArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SubsettingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +33,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceArgs extends ResourceArgs {
 
     public static final BackendServiceArgs Empty = new BackendServiceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration options for the KALM addon.
  * 
  */
-public final class KalmConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class KalmConfigArgs extends ResourceArgs {
 
     public static final KalmConfigArgs Empty = new KalmConfigArgs();
 

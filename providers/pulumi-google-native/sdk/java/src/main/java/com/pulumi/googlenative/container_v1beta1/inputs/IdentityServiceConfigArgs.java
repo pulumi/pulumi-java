@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
  * 
  */
-public final class IdentityServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityServiceConfigArgs extends ResourceArgs {
 
     public static final IdentityServiceConfigArgs Empty = new IdentityServiceConfigArgs();
 

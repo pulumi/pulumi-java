@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringMirroredResourceInfoInstanceInfoArgs;
 import com.pulumi.googlenative.compute_beta.inputs.PacketMirroringMirroredResourceInfoSubnetInfoArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PacketMirroringMirroredResourceInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class PacketMirroringMirroredResourceInfoArgs extends ResourceArgs {
 
     public static final PacketMirroringMirroredResourceInfoArgs Empty = new PacketMirroringMirroredResourceInfoArgs();
 

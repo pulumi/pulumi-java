@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ValueDayOfWeekValue;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a &#39;Value&#39; is based on its representation as a UTF-8 encoded string. For example, if &#39;integer_value&#39; is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
  * 
  */
-public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ValueArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ValueArgs Empty = new GooglePrivacyDlpV2ValueArgs();
 

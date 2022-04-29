@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies options for controlling advanced machine features. Options that would traditionally be configured in a BIOS belong here. Features that require operating system support may have corresponding entries in the GuestOsFeatures of an Image (e.g., whether or not the OS in the Image supports nested virtualization being enabled or disabled).
  * 
  */
-public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdvancedMachineFeaturesArgs extends ResourceArgs {
 
     public static final AdvancedMachineFeaturesArgs Empty = new AdvancedMachineFeaturesArgs();
 

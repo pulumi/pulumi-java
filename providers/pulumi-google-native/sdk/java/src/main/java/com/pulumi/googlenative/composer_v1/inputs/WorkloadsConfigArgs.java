@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.composer_v1.inputs.SchedulerResourceArgs;
 import com.pulumi.googlenative.composer_v1.inputs.WebServerResourceArgs;
 import com.pulumi.googlenative.composer_v1.inputs.WorkerResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
  * 
  */
-public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadsConfigArgs extends ResourceArgs {
 
     public static final WorkloadsConfigArgs Empty = new WorkloadsConfigArgs();
 

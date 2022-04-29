@@ -6,6 +6,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.AudioMappingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Audio stream resource.
  * 
  */
-public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class AudioStreamArgs extends ResourceArgs {
 
     public static final AudioStreamArgs Empty = new AudioStreamArgs();
 

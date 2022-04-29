@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Service Level Indicators for which atomic units of service are counted directly.
  * 
  */
-public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs {
+public final class RequestBasedSliArgs extends ResourceArgs {
 
     public static final RequestBasedSliArgs Empty = new RequestBasedSliArgs();
 

@@ -14,6 +14,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TimePartitioningArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobConfigurationQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobConfigurationQueryArgs extends ResourceArgs {
 
     public static final JobConfigurationQueryArgs Empty = new JobConfigurationQueryArgs();
 

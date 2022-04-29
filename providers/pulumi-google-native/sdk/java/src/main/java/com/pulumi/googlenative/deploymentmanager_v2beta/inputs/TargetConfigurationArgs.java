@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.ConfigFileArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.ImportFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TargetConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetConfigurationArgs extends ResourceArgs {
 
     public static final TargetConfigurationArgs Empty = new TargetConfigurationArgs();
 

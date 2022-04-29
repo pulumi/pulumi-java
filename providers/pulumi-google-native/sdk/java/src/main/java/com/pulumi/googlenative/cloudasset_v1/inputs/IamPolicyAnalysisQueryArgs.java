@@ -10,6 +10,7 @@ import com.pulumi.googlenative.cloudasset_v1.inputs.ConditionContextArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.IdentitySelectorArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.OptionsArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.ResourceSelectorArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * IAM policy analysis query message.
  * 
  */
-public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class IamPolicyAnalysisQueryArgs extends ResourceArgs {
 
     public static final IamPolicyAnalysisQueryArgs Empty = new IamPolicyAnalysisQueryArgs();
 

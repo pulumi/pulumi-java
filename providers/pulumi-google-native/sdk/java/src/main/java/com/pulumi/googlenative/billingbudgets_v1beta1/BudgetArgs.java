@@ -9,6 +9,7 @@ import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingB
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1FilterArgs;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetArgs extends ResourceArgs {
 
     public static final BudgetArgs Empty = new BudgetArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.CidrBlockArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration options for the master authorized networks feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes master through HTTPS except traffic from the given CIDR blocks, Google Compute Engine Public IPs and Google Prod IPs.
  * 
  */
-public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MasterAuthorizedNetworksConfigArgs extends ResourceArgs {
 
     public static final MasterAuthorizedNetworksConfigArgs Empty = new MasterAuthorizedNetworksConfigArgs();
 

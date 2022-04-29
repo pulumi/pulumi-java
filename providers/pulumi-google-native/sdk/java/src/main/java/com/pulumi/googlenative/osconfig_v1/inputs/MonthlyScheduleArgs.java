@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.inputs.WeekDayOfMonthArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Represents a monthly schedule. An example of a valid monthly schedule is &#34;on the third Tuesday of the month&#34; or &#34;on the 15th of the month&#34;.
  * 
  */
-public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonthlyScheduleArgs extends ResourceArgs {
 
     public static final MonthlyScheduleArgs Empty = new MonthlyScheduleArgs();
 

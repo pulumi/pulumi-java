@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentGroupLabelArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentOsTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An assignment represents the group or groups of VM instances that the policy applies to. If an assignment is empty, it applies to all VM instances. Otherwise, the targeted VM instances must meet all the criteria specified. So if both labels and zones are specified, the policy applies to VM instances with those labels and in those zones.
  * 
  */
-public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentArgs extends ResourceArgs {
 
     public static final AssignmentArgs Empty = new AssignmentArgs();
 

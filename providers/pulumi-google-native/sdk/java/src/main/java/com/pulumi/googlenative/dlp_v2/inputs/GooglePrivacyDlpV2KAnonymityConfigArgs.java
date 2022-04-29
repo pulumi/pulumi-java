@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2EntityIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * k-anonymity metric, used for analysis of reidentification risk.
  * 
  */
-public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2KAnonymityConfigArgs Empty = new GooglePrivacyDlpV2KAnonymityConfigArgs();
 

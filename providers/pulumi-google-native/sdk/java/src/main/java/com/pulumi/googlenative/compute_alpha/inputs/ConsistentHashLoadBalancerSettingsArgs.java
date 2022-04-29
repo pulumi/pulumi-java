@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.ConsistentHashLoadBalancerSettingsHttpCookieArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * This message defines settings for a consistent hash style load balancer.
  * 
  */
-public final class ConsistentHashLoadBalancerSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsistentHashLoadBalancerSettingsArgs extends ResourceArgs {
 
     public static final ConsistentHashLoadBalancerSettingsArgs Empty = new ConsistentHashLoadBalancerSettingsArgs();
 

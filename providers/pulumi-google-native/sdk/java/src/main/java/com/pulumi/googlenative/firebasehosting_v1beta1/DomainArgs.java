@@ -6,13 +6,14 @@ package com.pulumi.googlenative.firebasehosting_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.DomainRedirectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainArgs extends ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 

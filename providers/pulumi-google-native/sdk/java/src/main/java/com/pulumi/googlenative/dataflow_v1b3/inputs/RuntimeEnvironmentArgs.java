@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.RuntimeEnvironmentIpConfiguration;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The environment values to set at runtime.
  * 
  */
-public final class RuntimeEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeEnvironmentArgs extends ResourceArgs {
 
     public static final RuntimeEnvironmentArgs Empty = new RuntimeEnvironmentArgs();
 

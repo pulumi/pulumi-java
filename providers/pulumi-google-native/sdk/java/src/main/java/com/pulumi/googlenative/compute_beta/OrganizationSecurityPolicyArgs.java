@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdvancedOptions
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAssociationArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRecaptchaOptionsConfigArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationSecurityPolicyArgs extends ResourceArgs {
 
     public static final OrganizationSecurityPolicyArgs Empty = new OrganizationSecurityPolicyArgs();
 

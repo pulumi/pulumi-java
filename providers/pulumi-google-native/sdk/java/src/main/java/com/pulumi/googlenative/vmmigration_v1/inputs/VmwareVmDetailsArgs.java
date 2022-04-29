@@ -6,6 +6,7 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.vmmigration_v1.enums.VmwareVmDetailsPowerState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * VmwareVmDetails describes a VM in vCenter.
  * 
  */
-public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VmwareVmDetailsArgs extends ResourceArgs {
 
     public static final VmwareVmDetailsArgs Empty = new VmwareVmDetailsArgs();
 

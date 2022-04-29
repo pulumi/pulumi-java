@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datamigration_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datamigration_v1.inputs.SslConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies connection parameters required specifically for PostgreSQL databases.
  * 
  */
-public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class PostgreSqlConnectionProfileArgs extends ResourceArgs {
 
     public static final PostgreSqlConnectionProfileArgs Empty = new PostgreSqlConnectionProfileArgs();
 

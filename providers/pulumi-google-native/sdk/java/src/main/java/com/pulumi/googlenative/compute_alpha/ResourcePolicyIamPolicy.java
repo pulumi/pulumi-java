@@ -12,6 +12,8 @@ import com.pulumi.googlenative.compute_alpha.ResourcePolicyIamPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.BindingResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.RuleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:ResourcePolicyIamPolicy")
-public class ResourcePolicyIamPolicy extends com.pulumi.resources.CustomResource {
+public class ResourcePolicyIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -117,19 +119,19 @@ public class ResourcePolicyIamPolicy extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ResourcePolicyIamPolicy(String name, ResourcePolicyIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ResourcePolicyIamPolicy(String name, ResourcePolicyIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:ResourcePolicyIamPolicy", name, args == null ? ResourcePolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ResourcePolicyIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ResourcePolicyIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:ResourcePolicyIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -140,7 +142,7 @@ public class ResourcePolicyIamPolicy extends com.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourcePolicyIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ResourcePolicyIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ResourcePolicyIamPolicy(name, id, options);
     }
 }

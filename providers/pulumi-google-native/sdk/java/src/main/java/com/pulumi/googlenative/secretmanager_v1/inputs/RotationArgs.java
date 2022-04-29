@@ -5,6 +5,7 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The rotation time and period for a Secret. At next_rotation_time, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. Secret.topics must be set to configure rotation.
  * 
  */
-public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RotationArgs extends ResourceArgs {
 
     public static final RotationArgs Empty = new RotationArgs();
 

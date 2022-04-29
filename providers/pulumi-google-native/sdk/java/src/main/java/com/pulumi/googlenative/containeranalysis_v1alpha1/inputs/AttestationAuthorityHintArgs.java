@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This submessage provides human-readable hints about the purpose of the AttestationAuthority. Because the name of a Note acts as its resource reference, it is important to disambiguate the canonical name of the Note (which might be a UUID for security purposes) from &#34;readable&#34; names more suitable for debug output. Note that these hints should NOT be used to look up AttestationAuthorities in security sensitive contexts, such as when looking up Attestations to verify.
  * 
  */
-public final class AttestationAuthorityHintArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestationAuthorityHintArgs extends ResourceArgs {
 
     public static final AttestationAuthorityHintArgs Empty = new AttestationAuthorityHintArgs();
 

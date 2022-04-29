@@ -12,6 +12,7 @@ import com.pulumi.googlenative.container_v1.inputs.NodeNetworkConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NodePoolAutoscalingArgs;
 import com.pulumi.googlenative.container_v1.inputs.StatusConditionArgs;
 import com.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodePoolArgs extends ResourceArgs {
 
     public static final NodePoolArgs Empty = new NodePoolArgs();
 

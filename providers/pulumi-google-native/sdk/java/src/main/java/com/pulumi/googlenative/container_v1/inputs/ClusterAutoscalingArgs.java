@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.ClusterAutoscalingAutoscalingProfile;
 import com.pulumi.googlenative.container_v1.inputs.AutoprovisioningNodePoolDefaultsArgs;
 import com.pulumi.googlenative.container_v1.inputs.ResourceLimitArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * ClusterAutoscaling contains global, per-cluster information required by Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs.
  * 
  */
-public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterAutoscalingArgs extends ResourceArgs {
 
     public static final ClusterAutoscalingArgs Empty = new ClusterAutoscalingArgs();
 

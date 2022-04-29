@@ -5,6 +5,7 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The settings for this topic&#39;s Reservation usage.
  * 
  */
-public final class ReservationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReservationConfigArgs extends ResourceArgs {
 
     public static final ReservationConfigArgs Empty = new ReservationConfigArgs();
 

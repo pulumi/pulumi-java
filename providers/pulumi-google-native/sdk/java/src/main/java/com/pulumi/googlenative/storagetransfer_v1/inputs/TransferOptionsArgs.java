@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.MetadataOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * TransferOptions define the actions to be performed on objects in a transfer.
  * 
  */
-public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferOptionsArgs extends ResourceArgs {
 
     public static final TransferOptionsArgs Empty = new TransferOptionsArgs();
 

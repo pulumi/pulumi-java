@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datastream_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Backfill strategy to disable automatic backfill for the Stream&#39;s objects.
  * 
  */
-public final class BackfillNoneStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackfillNoneStrategyArgs extends ResourceArgs {
 
     public static final BackfillNoneStrategyArgs Empty = new BackfillNoneStrategyArgs();
 

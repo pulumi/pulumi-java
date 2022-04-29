@@ -9,6 +9,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.AxisArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.DataSetArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ThresholdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A chart that displays data on a 2D (X and Y axes) plane.
  * 
  */
-public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
+public final class XyChartArgs extends ResourceArgs {
 
     public static final XyChartArgs Empty = new XyChartArgs();
 

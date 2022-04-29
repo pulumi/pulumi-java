@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The list of messages or conditional cases to activate for this case.
  * 
  */
-public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs Empty = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs();
 

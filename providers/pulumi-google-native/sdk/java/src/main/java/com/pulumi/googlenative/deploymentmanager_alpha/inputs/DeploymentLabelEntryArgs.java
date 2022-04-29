@@ -5,6 +5,7 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Label object for Deployments
  * 
  */
-public final class DeploymentLabelEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentLabelEntryArgs extends ResourceArgs {
 
     public static final DeploymentLabelEntryArgs Empty = new DeploymentLabelEntryArgs();
 

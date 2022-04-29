@@ -12,6 +12,8 @@ import com.pulumi.googlenative.healthcare_v1beta1.MessageArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.ParsedDataResponse;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.PatientIdResponse;
 import com.pulumi.googlenative.healthcare_v1beta1.outputs.SchematizedDataResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:Message")
-public class Message extends com.pulumi.resources.CustomResource {
+public class Message extends CustomResource {
     /**
      * The datetime when the message was created. Set by the server.
      * 
@@ -185,19 +187,19 @@ public class Message extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Message(String name, MessageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Message(String name, MessageArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Message", name, args == null ? MessageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Message(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Message(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1beta1:Message", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -208,7 +210,7 @@ public class Message extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Message get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Message get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Message(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.enums.SourceScoringConfigSourceImportance;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Set the scoring configuration. This allows modifying the ranking of results for a source.
  * 
  */
-public final class SourceScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceScoringConfigArgs extends ResourceArgs {
 
     public static final SourceScoringConfigArgs Empty = new SourceScoringConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Key-value pair to store extra metadata.
  * 
  */
-public final class GoogleCloudApigeeV1AttributeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1AttributeArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1AttributeArgs Empty = new GoogleCloudApigeeV1AttributeArgs();
 

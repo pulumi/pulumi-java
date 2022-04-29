@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration to suppress records whose suppression conditions evaluate to true.
  * 
  */
-public final class GooglePrivacyDlpV2RecordSuppressionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RecordSuppressionArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordSuppressionArgs Empty = new GooglePrivacyDlpV2RecordSuppressionArgs();
 

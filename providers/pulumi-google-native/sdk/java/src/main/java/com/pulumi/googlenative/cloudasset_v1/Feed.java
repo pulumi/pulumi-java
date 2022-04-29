@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudasset_v1.FeedArgs;
 import com.pulumi.googlenative.cloudasset_v1.outputs.ExprResponse;
 import com.pulumi.googlenative.cloudasset_v1.outputs.FeedOutputConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudasset/v1:Feed")
-public class Feed extends com.pulumi.resources.CustomResource {
+public class Feed extends CustomResource {
     /**
      * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
      * 
@@ -142,19 +144,19 @@ public class Feed extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Feed(String name, FeedArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Feed(String name, FeedArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudasset/v1:Feed", name, args == null ? FeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Feed(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Feed(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudasset/v1:Feed", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -165,7 +167,7 @@ public class Feed extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Feed get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Feed get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Feed(name, id, options);
     }
 }

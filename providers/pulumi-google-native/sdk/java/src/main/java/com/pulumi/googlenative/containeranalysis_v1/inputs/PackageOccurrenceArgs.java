@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.LocationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Details on how a particular software package was installed on a system.
  * 
  */
-public final class PackageOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageOccurrenceArgs extends ResourceArgs {
 
     public static final PackageOccurrenceArgs Empty = new PackageOccurrenceArgs();
 

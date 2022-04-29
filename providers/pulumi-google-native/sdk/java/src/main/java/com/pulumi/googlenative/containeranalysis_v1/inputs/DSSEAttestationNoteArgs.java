@@ -6,12 +6,13 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.DSSEHintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DSSEAttestationNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class DSSEAttestationNoteArgs extends ResourceArgs {
 
     public static final DSSEAttestationNoteArgs Empty = new DSSEAttestationNoteArgs();
 

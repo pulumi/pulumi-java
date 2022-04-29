@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A restriction for a specific service and optionally one or multiple specific methods. Both fields are case insensitive.
  * 
  */
-public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class V2ApiTargetArgs extends ResourceArgs {
 
     public static final V2ApiTargetArgs Empty = new V2ApiTargetArgs();
 

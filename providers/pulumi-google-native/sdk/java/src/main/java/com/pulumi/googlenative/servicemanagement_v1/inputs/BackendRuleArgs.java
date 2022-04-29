@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.enums.BackendRulePathTranslation;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A backend rule provides configuration for an individual API element.
  * 
  */
-public final class BackendRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendRuleArgs extends ResourceArgs {
 
     public static final BackendRuleArgs Empty = new BackendRuleArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Subject describes parts of a distinguished name that, in turn, describes the subject of the certificate.
  * 
  */
-public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectArgs extends ResourceArgs {
 
     public static final SubjectArgs Empty = new SubjectArgs();
 

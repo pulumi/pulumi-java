@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.PgpSignedAttestationContentType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An attestation wrapper with a PGP-compatible signature. This message only supports `ATTACHED` signatures, where the payload that is signed is included alongside the signature itself in the same file.
  * 
  */
-public final class PgpSignedAttestationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PgpSignedAttestationArgs extends ResourceArgs {
 
     public static final PgpSignedAttestationArgs Empty = new PgpSignedAttestationArgs();
 

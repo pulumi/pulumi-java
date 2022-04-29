@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1CertificateProviderArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.MTLSPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerTlsPolicyArgs extends ResourceArgs {
 
     public static final ServerTlsPolicyArgs Empty = new ServerTlsPolicyArgs();
 

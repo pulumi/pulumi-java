@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.documentai_v1beta3.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetProcessorArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetProcessorArgs extends InvokeArgs {
 
     public static final GetProcessorArgs Empty = new GetProcessorArgs();
 

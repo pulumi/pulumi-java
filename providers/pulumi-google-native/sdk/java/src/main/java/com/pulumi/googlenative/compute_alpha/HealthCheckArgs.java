@@ -14,6 +14,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.HealthCheckLogConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SSLHealthCheckArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.TCPHealthCheckArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.UDPHealthCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckArgs extends ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 

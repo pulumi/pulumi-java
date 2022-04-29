@@ -12,6 +12,7 @@ import com.pulumi.googlenative.compute_alpha.enums.ForwardingRuleNetworkTier;
 import com.pulumi.googlenative.compute_alpha.enums.ForwardingRulePscConnectionStatus;
 import com.pulumi.googlenative.compute_alpha.inputs.ForwardingRuleServiceDirectoryRegistrationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.MetadataFilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ForwardingRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ForwardingRuleArgs extends ResourceArgs {
 
     public static final ForwardingRuleArgs Empty = new ForwardingRuleArgs();
 

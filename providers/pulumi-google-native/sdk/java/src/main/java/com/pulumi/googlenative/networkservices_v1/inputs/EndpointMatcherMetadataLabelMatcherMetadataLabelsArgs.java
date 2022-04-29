@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Defines a name-pair value for a single label.
  * 
  */
-public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends ResourceArgs {
 
     public static final EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs Empty = new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1FhirBigQueryDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Contains configuration for streaming FHIR export.
  * 
  */
-public final class StreamConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamConfigArgs extends ResourceArgs {
 
     public static final StreamConfigArgs Empty = new StreamConfigArgs();
 

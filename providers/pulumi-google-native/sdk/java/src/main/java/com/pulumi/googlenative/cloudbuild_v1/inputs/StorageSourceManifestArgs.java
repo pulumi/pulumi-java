@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Location of the source manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
  * 
  */
-public final class StorageSourceManifestArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageSourceManifestArgs extends ResourceArgs {
 
     public static final StorageSourceManifestArgs Empty = new StorageSourceManifestArgs();
 

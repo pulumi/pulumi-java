@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidDeviceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A list of Android device configurations in which the test is to be executed.
  * 
  */
-public final class AndroidDeviceListArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidDeviceListArgs extends ResourceArgs {
 
     public static final AndroidDeviceListArgs Empty = new AndroidDeviceListArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies how metastore metadata should be integrated with the Dataplex service.
  * 
  */
-public final class DataplexConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataplexConfigArgs extends ResourceArgs {
 
     public static final DataplexConfigArgs Empty = new DataplexConfigArgs();
 

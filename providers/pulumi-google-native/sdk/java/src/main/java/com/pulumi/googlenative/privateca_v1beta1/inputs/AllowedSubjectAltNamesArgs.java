@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * AllowedSubjectAltNames specifies the allowed values for SubjectAltNames by the CertificateAuthority when issuing Certificates.
  * 
  */
-public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedSubjectAltNamesArgs extends ResourceArgs {
 
     public static final AllowedSubjectAltNamesArgs Empty = new AllowedSubjectAltNamesArgs();
 

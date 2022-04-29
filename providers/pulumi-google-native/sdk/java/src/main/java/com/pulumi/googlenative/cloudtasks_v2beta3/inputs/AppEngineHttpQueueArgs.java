@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineRoutingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * App Engine HTTP queue. The task will be delivered to the App Engine application hostname specified by its AppEngineHttpQueue and AppEngineHttpRequest. The documentation for AppEngineHttpRequest explains how the task&#39;s host URL is constructed. Using AppEngineHttpQueue requires [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control) Google IAM permission for the project and the following scope: `https://www.googleapis.com/auth/cloud-platform`
  * 
  */
-public final class AppEngineHttpQueueArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppEngineHttpQueueArgs extends ResourceArgs {
 
     public static final AppEngineHttpQueueArgs Empty = new AppEngineHttpQueueArgs();
 

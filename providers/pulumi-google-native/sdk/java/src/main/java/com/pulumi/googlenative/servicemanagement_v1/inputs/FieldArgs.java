@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.enums.FieldCardinality;
 import com.pulumi.googlenative.servicemanagement_v1.enums.FieldKind;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A single field of a message type.
  * 
  */
-public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class FieldArgs extends ResourceArgs {
 
     public static final FieldArgs Empty = new FieldArgs();
 

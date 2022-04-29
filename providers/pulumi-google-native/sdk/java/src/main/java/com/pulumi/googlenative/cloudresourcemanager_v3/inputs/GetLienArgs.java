@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.cloudresourcemanager_v3.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLienArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLienArgs extends InvokeArgs {
 
     public static final GetLienArgs Empty = new GetLienArgs();
 

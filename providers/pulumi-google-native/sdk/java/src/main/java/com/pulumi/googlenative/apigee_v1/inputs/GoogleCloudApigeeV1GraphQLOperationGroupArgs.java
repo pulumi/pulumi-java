@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * List of graphQL operation configuration details associated with Apigee API proxies or remote services. Remote services are non-Apigee proxies, such as Istio-Envoy.
  * 
  */
-public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1GraphQLOperationGroupArgs Empty = new GoogleCloudApigeeV1GraphQLOperationGroupArgs();
 

@@ -19,6 +19,7 @@ import com.pulumi.googlenative.sqladmin_v1beta4.inputs.MaintenanceWindowArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.PasswordValidationPolicyArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlActiveDirectoryConfigArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlServerAuditConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ import javax.annotation.Nullable;
  * Database instance settings.
  * 
  */
-public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SettingsArgs extends ResourceArgs {
 
     public static final SettingsArgs Empty = new SettingsArgs();
 

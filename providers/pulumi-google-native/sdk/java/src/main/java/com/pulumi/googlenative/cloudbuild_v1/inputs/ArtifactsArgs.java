@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Artifacts produced by a build that should be uploaded upon successful completion of all build steps.
  * 
  */
-public final class ArtifactsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArtifactsArgs extends ResourceArgs {
 
     public static final ArtifactsArgs Empty = new ArtifactsArgs();
 

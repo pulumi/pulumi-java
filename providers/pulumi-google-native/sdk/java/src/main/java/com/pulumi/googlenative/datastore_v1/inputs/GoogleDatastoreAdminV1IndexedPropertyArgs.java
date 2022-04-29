@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datastore_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastore_v1.enums.GoogleDatastoreAdminV1IndexedPropertyDirection;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A property of an index.
  * 
  */
-public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends ResourceArgs {
 
     public static final GoogleDatastoreAdminV1IndexedPropertyArgs Empty = new GoogleDatastoreAdminV1IndexedPropertyArgs();
 

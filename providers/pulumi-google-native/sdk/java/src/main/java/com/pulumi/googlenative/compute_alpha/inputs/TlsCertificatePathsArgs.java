@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * [Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.
  * 
  */
-public final class TlsCertificatePathsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TlsCertificatePathsArgs extends ResourceArgs {
 
     public static final TlsCertificatePathsArgs Empty = new TlsCertificatePathsArgs();
 

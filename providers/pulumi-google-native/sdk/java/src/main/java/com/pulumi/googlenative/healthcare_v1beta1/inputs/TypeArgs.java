@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.enums.TypePrimitive;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.FieldArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A type definition for some HL7v2 type (incl. Segments and Datatypes).
  * 
  */
-public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TypeArgs extends ResourceArgs {
 
     public static final TypeArgs Empty = new TypeArgs();
 

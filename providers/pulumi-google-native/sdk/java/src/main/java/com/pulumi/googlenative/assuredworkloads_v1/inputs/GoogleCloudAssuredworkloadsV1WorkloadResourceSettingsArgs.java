@@ -6,6 +6,7 @@ package com.pulumi.googlenative.assuredworkloads_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.assuredworkloads_v1.enums.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represent the custom settings for the resources to be created.
  * 
  */
-public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs Empty = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudkms_v1.inputs.CertificateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A ServiceResolver represents an EKM replica that can be reached within an EkmConnection.
  * 
  */
-public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceResolverArgs extends ResourceArgs {
 
     public static final ServiceResolverArgs Empty = new ServiceResolverArgs();
 

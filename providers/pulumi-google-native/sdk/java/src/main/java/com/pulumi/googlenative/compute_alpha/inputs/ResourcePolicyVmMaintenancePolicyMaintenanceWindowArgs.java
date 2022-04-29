@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A maintenance window for VMs. When set, we restrict our maintenance operations to this window.
  * 
  */
-public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extends ResourceArgs {
 
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs();
 

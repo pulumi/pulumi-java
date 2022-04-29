@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specification of ValidationCA. Defines the mechanism to obtain the Certificate Authority certificate to validate the peer certificate.
  * 
  */
-public final class ValidationCAArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidationCAArgs extends ResourceArgs {
 
     public static final ValidationCAArgs Empty = new ValidationCAArgs();
 

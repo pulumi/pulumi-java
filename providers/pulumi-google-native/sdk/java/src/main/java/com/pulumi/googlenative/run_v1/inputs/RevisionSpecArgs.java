@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.ContainerArgs;
 import com.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import com.pulumi.googlenative.run_v1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * RevisionSpec holds the desired state of the Revision (from the client).
  * 
  */
-public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class RevisionSpecArgs extends ResourceArgs {
 
     public static final RevisionSpecArgs Empty = new RevisionSpecArgs();
 

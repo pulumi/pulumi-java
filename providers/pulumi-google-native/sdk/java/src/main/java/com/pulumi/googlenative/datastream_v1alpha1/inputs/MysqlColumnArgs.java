@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * MySQL Column.
  * 
  */
-public final class MysqlColumnArgs extends com.pulumi.resources.ResourceArgs {
+public final class MysqlColumnArgs extends ResourceArgs {
 
     public static final MysqlColumnArgs Empty = new MysqlColumnArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyPurpose;
 import com.pulumi.googlenative.cloudkms_v1.inputs.CryptoKeyVersionTemplateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CryptoKeyArgs extends ResourceArgs {
 
     public static final CryptoKeyArgs Empty = new CryptoKeyArgs();
 

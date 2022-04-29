@@ -6,6 +6,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleType__ExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Associates `members`, or principals, with a `role`.
  * 
  */
-public final class GoogleIamV1__BindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleIamV1__BindingArgs extends ResourceArgs {
 
     public static final GoogleIamV1__BindingArgs Empty = new GoogleIamV1__BindingArgs();
 

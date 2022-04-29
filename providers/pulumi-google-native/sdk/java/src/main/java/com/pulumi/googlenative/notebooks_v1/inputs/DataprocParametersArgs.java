@@ -5,6 +5,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Parameters used in Dataproc JobType executions.
  * 
  */
-public final class DataprocParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataprocParametersArgs extends ResourceArgs {
 
     public static final DataprocParametersArgs Empty = new DataprocParametersArgs();
 

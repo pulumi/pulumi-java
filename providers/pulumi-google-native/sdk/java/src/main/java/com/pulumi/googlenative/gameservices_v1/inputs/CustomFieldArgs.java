@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go/rpcsp-custom-fields.
  * 
  */
-public final class CustomFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomFieldArgs extends ResourceArgs {
 
     public static final CustomFieldArgs Empty = new CustomFieldArgs();
 

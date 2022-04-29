@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.enums.IngressFromIdentityType;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the source of the request. The request must satisfy what is defined in `sources` AND identity related fields in order to match.
  * 
  */
-public final class IngressFromArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressFromArgs extends ResourceArgs {
 
     public static final IngressFromArgs Empty = new IngressFromArgs();
 

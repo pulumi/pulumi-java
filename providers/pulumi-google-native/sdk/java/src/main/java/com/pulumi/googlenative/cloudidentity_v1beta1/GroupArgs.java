@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupMetadataArgs;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.EntityKeyArgs;
 import com.pulumi.googlenative.cloudidentity_v1beta1.inputs.PosixGroupArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class GroupArgs extends ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 

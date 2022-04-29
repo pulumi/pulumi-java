@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Deny Maintenance Periods. This specifies a date range during when all CSA rollout will be denied.
  * 
  */
-public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class DenyMaintenancePeriodArgs extends ResourceArgs {
 
     public static final DenyMaintenancePeriodArgs Empty = new DenyMaintenancePeriodArgs();
 

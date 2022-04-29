@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An intended audience of the Product for whom it&#39;s sold.
  * 
  */
-public final class GoogleCloudRetailV2betaAudienceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaAudienceArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaAudienceArgs Empty = new GoogleCloudRetailV2betaAudienceArgs();
 

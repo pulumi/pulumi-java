@@ -10,6 +10,7 @@ import com.pulumi.googlenative.appengine_v1.inputs.DiskUtilizationArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.NetworkUtilizationArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.RequestUtilizationArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.StandardSchedulerSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Automatic scaling is based on request rate, response latencies, and other application metrics.
  * 
  */
-public final class AutomaticScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomaticScalingArgs extends ResourceArgs {
 
     public static final AutomaticScalingArgs Empty = new AutomaticScalingArgs();
 

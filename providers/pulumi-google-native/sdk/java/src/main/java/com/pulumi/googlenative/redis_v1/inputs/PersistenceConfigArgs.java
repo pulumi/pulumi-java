@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.redis_v1.enums.PersistenceConfigPersistenceMode;
 import com.pulumi.googlenative.redis_v1.enums.PersistenceConfigRdbSnapshotPeriod;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration of the persistence functionality.
  * 
  */
-public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistenceConfigArgs extends ResourceArgs {
 
     public static final PersistenceConfigArgs Empty = new PersistenceConfigArgs();
 

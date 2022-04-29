@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Describes the retry policy in case of function&#39;s execution failure. A function execution will be retried on any failure. A failed execution will be retried up to 7 days with an exponential backoff (capped at 10 seconds). Retried execution is charged as any other execution.
  * 
  */
-public final class RetryArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryArgs extends ResourceArgs {
 
     public static final RetryArgs Empty = new RetryArgs();
 

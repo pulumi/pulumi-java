@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Layer holds metadata specific to a layer of a Docker image.
  * 
  */
-public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
+public final class LayerArgs extends ResourceArgs {
 
     public static final LayerArgs Empty = new LayerArgs();
 

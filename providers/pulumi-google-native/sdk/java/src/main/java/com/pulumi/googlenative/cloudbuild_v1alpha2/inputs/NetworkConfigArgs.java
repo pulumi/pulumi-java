@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Network describes the network configuration for a `WorkerPool`.
  * 
  */
-public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigArgs extends ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 

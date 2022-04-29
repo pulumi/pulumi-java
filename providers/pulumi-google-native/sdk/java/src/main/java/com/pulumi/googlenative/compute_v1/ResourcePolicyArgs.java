@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An AwsS3Data resource can be a data source, but not a data sink. In an AwsS3Data resource, an object&#39;s name is the S3 object&#39;s key name.
  * 
  */
-public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsS3DataArgs extends ResourceArgs {
 
     public static final AwsS3DataArgs Empty = new AwsS3DataArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A summary of a test suite result either parsed from XML or uploaded directly by a user. Note: the API related comments are for StepService only. This message is also being used in ExecutionService in a read only mode for the corresponding step.
  * 
  */
-public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestSuiteOverviewArgs extends ResourceArgs {
 
     public static final TestSuiteOverviewArgs Empty = new TestSuiteOverviewArgs();
 

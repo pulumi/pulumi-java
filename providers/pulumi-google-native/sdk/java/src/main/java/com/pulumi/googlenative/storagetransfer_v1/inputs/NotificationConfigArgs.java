@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigEventTypesItem;
 import com.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigPayloadFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specification to configure notifications published to Pub/Sub. Notifications are published to the customer-provided topic using the following `PubsubMessage.attributes`: * `&#34;eventType&#34;`: one of the EventType values * `&#34;payloadFormat&#34;`: one of the PayloadFormat values * `&#34;projectId&#34;`: the project_id of the `TransferOperation` * `&#34;transferJobName&#34;`: the transfer_job_name of the `TransferOperation` * `&#34;transferOperationName&#34;`: the name of the `TransferOperation` The `PubsubMessage.data` contains a TransferOperation resource formatted according to the specified `PayloadFormat`.
  * 
  */
-public final class NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationConfigArgs extends ResourceArgs {
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 

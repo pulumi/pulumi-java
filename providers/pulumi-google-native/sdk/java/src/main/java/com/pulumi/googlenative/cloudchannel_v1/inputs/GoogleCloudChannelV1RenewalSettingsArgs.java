@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1RenewalSettingsPaymentPlan;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1PeriodArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Renewal settings for renewable Offers.
  * 
  */
-public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1RenewalSettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1RenewalSettingsArgs Empty = new GoogleCloudChannelV1RenewalSettingsArgs();
 

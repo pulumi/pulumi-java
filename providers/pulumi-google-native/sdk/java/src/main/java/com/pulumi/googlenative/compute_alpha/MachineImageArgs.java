@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SavedDiskArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SourceDiskEncryptionKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class MachineImageArgs extends ResourceArgs {
 
     public static final MachineImageArgs Empty = new MachineImageArgs();
 

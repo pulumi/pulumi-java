@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A message representing a rule in the phrase matcher.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsCertificateContextArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * [Deprecated] The TLS settings for the client or server. The TLS settings for the client or server.
  * 
  */
-public final class TlsContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class TlsContextArgs extends ResourceArgs {
 
     public static final TlsContextArgs Empty = new TlsContextArgs();
 

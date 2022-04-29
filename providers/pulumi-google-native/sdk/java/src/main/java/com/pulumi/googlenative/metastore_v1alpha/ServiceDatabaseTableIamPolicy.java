@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.metastore_v1alpha.ServiceDatabaseTableIamPolicyArgs;
 import com.pulumi.googlenative.metastore_v1alpha.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.metastore_v1alpha.outputs.BindingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy")
-public class ServiceDatabaseTableIamPolicy extends com.pulumi.resources.CustomResource {
+public class ServiceDatabaseTableIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -102,19 +104,19 @@ public class ServiceDatabaseTableIamPolicy extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceDatabaseTableIamPolicy(String name, ServiceDatabaseTableIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceDatabaseTableIamPolicy(String name, ServiceDatabaseTableIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy", name, args == null ? ServiceDatabaseTableIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ServiceDatabaseTableIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ServiceDatabaseTableIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -125,7 +127,7 @@ public class ServiceDatabaseTableIamPolicy extends com.pulumi.resources.CustomRe
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceDatabaseTableIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceDatabaseTableIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ServiceDatabaseTableIamPolicy(name, id, options);
     }
 }

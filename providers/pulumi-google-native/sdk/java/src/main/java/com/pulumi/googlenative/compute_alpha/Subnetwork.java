@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.SubnetworkArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.SubnetworkLogConfigResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.SubnetworkSecondaryRangeResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:Subnetwork")
-public class Subnetwork extends com.pulumi.resources.CustomResource {
+public class Subnetwork extends CustomResource {
     /**
      * Can only be specified if VPC flow logging for this subnetwork is enabled. Sets the aggregation interval for collecting flow logs. Increasing the interval time reduces the amount of generated flow logs for long-lasting connections. Default is an interval of 5 seconds per connection. Valid values: INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN, INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN.
      * 
@@ -466,19 +468,19 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Subnetwork(String name, SubnetworkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Subnetwork(String name, SubnetworkArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:Subnetwork", name, args == null ? SubnetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Subnetwork(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Subnetwork(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:Subnetwork", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -489,7 +491,7 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Subnetwork get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Subnetwork get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Subnetwork(name, id, options);
     }
 }

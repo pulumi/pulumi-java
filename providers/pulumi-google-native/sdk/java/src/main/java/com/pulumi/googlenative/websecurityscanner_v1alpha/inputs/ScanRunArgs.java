@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.enums.ScanRunExecutionState;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.enums.ScanRunResultState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A ScanRun is a output-only resource representing an actual run of the scan.
  * 
  */
-public final class ScanRunArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanRunArgs extends ResourceArgs {
 
     public static final ScanRunArgs Empty = new ScanRunArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2alpha.enums.ControlSolutionTypesItem;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleArgs;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class ControlArgs extends ResourceArgs {
 
     public static final ControlArgs Empty = new ControlArgs();
 

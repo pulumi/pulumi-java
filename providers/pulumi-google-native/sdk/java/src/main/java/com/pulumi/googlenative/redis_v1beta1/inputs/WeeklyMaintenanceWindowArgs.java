@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.redis_v1beta1.enums.WeeklyMaintenanceWindowDay;
 import com.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Time window in which disruptive maintenance updates occur. Non-disruptive updates can occur inside or outside this window.
  * 
  */
-public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeeklyMaintenanceWindowArgs extends ResourceArgs {
 
     public static final WeeklyMaintenanceWindowArgs Empty = new WeeklyMaintenanceWindowArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VersionToPathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The secret&#39;s value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret.
  * 
  */
-public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2SecretVolumeSourceArgs Empty = new GoogleCloudRunOpV2SecretVolumeSourceArgs();
 

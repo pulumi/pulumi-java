@@ -10,6 +10,7 @@ import com.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillAllStrategyArg
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillNoneStrategyArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.DestinationConfigArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.SourceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamArgs extends ResourceArgs {
 
     public static final StreamArgs Empty = new StreamArgs();
 

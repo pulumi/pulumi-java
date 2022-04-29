@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsupport_v2beta.enums.CasePriority;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.ActorArgs;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.CaseClassificationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaseArgs extends ResourceArgs {
 
     public static final CaseArgs Empty = new CaseArgs();
 

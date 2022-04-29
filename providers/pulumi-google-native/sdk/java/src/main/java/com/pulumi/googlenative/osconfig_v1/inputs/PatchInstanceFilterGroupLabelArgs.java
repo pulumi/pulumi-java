@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Targets a group of VM instances by using their [assigned labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A `GroupLabel` is a combination of labels that is used to target VMs for a patch job. For example, a patch job can target VMs that have the following `GroupLabel`: `{&#34;env&#34;:&#34;test&#34;, &#34;app&#34;:&#34;web&#34;}`. This means that the patch job is applied to VMs that have both the labels `env=test` and `app=web`.
  * 
  */
-public final class PatchInstanceFilterGroupLabelArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchInstanceFilterGroupLabelArgs extends ResourceArgs {
 
     public static final PatchInstanceFilterGroupLabelArgs Empty = new PatchInstanceFilterGroupLabelArgs();
 

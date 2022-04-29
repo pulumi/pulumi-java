@@ -6,6 +6,7 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * CollectionOverride allows resource handling overrides for specific resources within a BaseType
  * 
  */
-public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class CollectionOverrideArgs extends ResourceArgs {
 
     public static final CollectionOverrideArgs Empty = new CollectionOverrideArgs();
 

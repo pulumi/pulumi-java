@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods.
  * 
  */
-public final class GoogleCloudRetailV2FulfillmentInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2FulfillmentInfoArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2FulfillmentInfoArgs Empty = new GoogleCloudRetailV2FulfillmentInfoArgs();
 

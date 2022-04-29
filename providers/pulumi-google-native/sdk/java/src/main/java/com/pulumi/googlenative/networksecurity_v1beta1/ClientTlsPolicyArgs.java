@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1CertificateProviderArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClientTlsPolicyArgs extends ResourceArgs {
 
     public static final ClientTlsPolicyArgs Empty = new ClientTlsPolicyArgs();
 

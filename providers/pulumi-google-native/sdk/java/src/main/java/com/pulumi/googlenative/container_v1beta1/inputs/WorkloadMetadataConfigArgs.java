@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigMode;
 import com.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigNodeMetadata;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * WorkloadMetadataConfig defines the metadata configuration to expose to workloads on the node pool.
  * 
  */
-public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadMetadataConfigArgs extends ResourceArgs {
 
     public static final WorkloadMetadataConfigArgs Empty = new WorkloadMetadataConfigArgs();
 

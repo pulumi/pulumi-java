@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.RouterNatSubnetworkToNatSourceIpRangesToNatItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines the IP ranges that want to use NAT for a subnetwork.
  * 
  */
-public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterNatSubnetworkToNatArgs extends ResourceArgs {
 
     public static final RouterNatSubnetworkToNatArgs Empty = new RouterNatSubnetworkToNatArgs();
 

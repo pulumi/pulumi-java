@@ -12,6 +12,8 @@ import com.pulumi.googlenative.cloudchannel_v1.CustomerArgs;
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ContactInfoResponse;
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleTypePostalAddressResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudchannel/v1:Customer")
-public class Customer extends com.pulumi.resources.CustomResource {
+public class Customer extends CustomResource {
     /**
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
@@ -212,19 +214,19 @@ public class Customer extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Customer(String name, CustomerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Customer(String name, CustomerArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudchannel/v1:Customer", name, args == null ? CustomerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Customer(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Customer(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudchannel/v1:Customer", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -235,7 +237,7 @@ public class Customer extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Customer get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Customer get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Customer(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Each case has a Boolean condition. When it is evaluated to be True, the corresponding messages will be selected and evaluated recursively.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs Empty = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs();
 

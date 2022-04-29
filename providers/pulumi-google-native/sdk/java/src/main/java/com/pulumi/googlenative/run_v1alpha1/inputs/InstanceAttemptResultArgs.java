@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Result of an instance attempt.
  * 
  */
-public final class InstanceAttemptResultArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceAttemptResultArgs extends ResourceArgs {
 
     public static final InstanceAttemptResultArgs Empty = new InstanceAttemptResultArgs();
 

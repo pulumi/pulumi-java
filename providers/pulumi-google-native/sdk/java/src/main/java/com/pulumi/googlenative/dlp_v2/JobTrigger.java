@@ -12,6 +12,8 @@ import com.pulumi.googlenative.dlp_v2.JobTriggerArgs;
 import com.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import com.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectJobConfigResponse;
 import com.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TriggerResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dlp/v2:JobTrigger")
-public class JobTrigger extends com.pulumi.resources.CustomResource {
+public class JobTrigger extends CustomResource {
     /**
      * The creation timestamp of a triggeredJob.
      * 
@@ -184,19 +186,19 @@ public class JobTrigger extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public JobTrigger(String name, JobTriggerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public JobTrigger(String name, JobTriggerArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dlp/v2:JobTrigger", name, args == null ? JobTriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private JobTrigger(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private JobTrigger(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dlp/v2:JobTrigger", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -207,7 +209,7 @@ public class JobTrigger extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JobTrigger get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static JobTrigger get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new JobTrigger(name, id, options);
     }
 }

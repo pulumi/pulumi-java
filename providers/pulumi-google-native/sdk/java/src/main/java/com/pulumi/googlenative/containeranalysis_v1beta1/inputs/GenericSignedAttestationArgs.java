@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.GenericSignedAttestationContentType;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An attestation wrapper that uses the Grafeas `Signature` message. This attestation must define the `serialized_payload` that the `signatures` verify and any metadata necessary to interpret that plaintext. The signatures should always be over the `serialized_payload` bytestring.
  * 
  */
-public final class GenericSignedAttestationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GenericSignedAttestationArgs extends ResourceArgs {
 
     public static final GenericSignedAttestationArgs Empty = new GenericSignedAttestationArgs();
 

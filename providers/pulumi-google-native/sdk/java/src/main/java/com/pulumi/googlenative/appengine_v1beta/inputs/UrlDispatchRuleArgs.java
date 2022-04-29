@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Rules to match an HTTP request and dispatch that request to a service.
  * 
  */
-public final class UrlDispatchRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlDispatchRuleArgs extends ResourceArgs {
 
     public static final UrlDispatchRuleArgs Empty = new UrlDispatchRuleArgs();
 

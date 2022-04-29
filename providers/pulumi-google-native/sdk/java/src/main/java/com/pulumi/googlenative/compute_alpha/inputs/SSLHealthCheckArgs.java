@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.SSLHealthCheckPortSpecification;
 import com.pulumi.googlenative.compute_alpha.enums.SSLHealthCheckProxyHeader;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SSLHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class SSLHealthCheckArgs extends ResourceArgs {
 
     public static final SSLHealthCheckArgs Empty = new SSLHealthCheckArgs();
 

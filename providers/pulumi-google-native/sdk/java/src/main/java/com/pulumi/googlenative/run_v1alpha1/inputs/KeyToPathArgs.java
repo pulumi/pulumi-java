@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Maps a string key to a path within a volume.
  * 
  */
-public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyToPathArgs extends ResourceArgs {
 
     public static final KeyToPathArgs Empty = new KeyToPathArgs();
 

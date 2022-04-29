@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
  * 
  */
-public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class AudioMappingArgs extends ResourceArgs {
 
     public static final AudioMappingArgs Empty = new AudioMappingArgs();
 

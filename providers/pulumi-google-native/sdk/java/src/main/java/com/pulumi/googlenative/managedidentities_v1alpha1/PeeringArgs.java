@@ -5,6 +5,7 @@ package com.pulumi.googlenative.managedidentities_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeeringArgs extends ResourceArgs {
 
     public static final PeeringArgs Empty = new PeeringArgs();
 

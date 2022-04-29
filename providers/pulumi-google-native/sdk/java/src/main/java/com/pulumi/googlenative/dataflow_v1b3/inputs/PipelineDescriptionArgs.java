@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.TransformSummaryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A descriptive representation of submitted pipeline as well as the executed form. This data is provided by the Dataflow service for ease of visualizing the pipeline and interpreting Dataflow provided metrics.
  * 
  */
-public final class PipelineDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineDescriptionArgs extends ResourceArgs {
 
     public static final PipelineDescriptionArgs Empty = new PipelineDescriptionArgs();
 

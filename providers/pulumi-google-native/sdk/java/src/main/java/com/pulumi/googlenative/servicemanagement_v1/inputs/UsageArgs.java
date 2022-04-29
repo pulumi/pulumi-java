@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.UsageRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration controlling usage of a service.
  * 
  */
-public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class UsageArgs extends ResourceArgs {
 
     public static final UsageArgs Empty = new UsageArgs();
 

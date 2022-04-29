@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Settings specific to keys that can be used by websites.
  * 
  */
-public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends ResourceArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs Empty = new GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs();
 

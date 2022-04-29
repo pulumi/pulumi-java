@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
  * 
  */
-public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs Empty = new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs();
 

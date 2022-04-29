@@ -14,6 +14,8 @@ import com.pulumi.googlenative.datamigration_v1beta1.outputs.ReverseSshConnectiv
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.StaticIpConnectivityResponse;
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.StatusResponse;
 import com.pulumi.googlenative.datamigration_v1beta1.outputs.VpcPeeringConnectivityResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datamigration/v1beta1:MigrationJob")
-public class MigrationJob extends com.pulumi.resources.CustomResource {
+public class MigrationJob extends CustomResource {
     /**
      * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
@@ -312,19 +314,19 @@ public class MigrationJob extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MigrationJob(String name, MigrationJobArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MigrationJob(String name, MigrationJobArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datamigration/v1beta1:MigrationJob", name, args == null ? MigrationJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MigrationJob(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MigrationJob(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datamigration/v1beta1:MigrationJob", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -335,7 +337,7 @@ public class MigrationJob extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MigrationJob get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MigrationJob get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new MigrationJob(name, id, options);
     }
 }

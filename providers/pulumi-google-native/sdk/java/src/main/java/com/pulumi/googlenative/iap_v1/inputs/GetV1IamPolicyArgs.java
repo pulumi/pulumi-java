@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.iap_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetV1IamPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetV1IamPolicyArgs extends InvokeArgs {
 
     public static final GetV1IamPolicyArgs Empty = new GetV1IamPolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1QueryInputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The input from the human user.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs Empty = new GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs();
 

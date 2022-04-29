@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * RelationshipOccurrence represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
  * 
  */
-public final class RelationshipOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RelationshipOccurrenceArgs extends ResourceArgs {
 
     public static final RelationshipOccurrenceArgs Empty = new RelationshipOccurrenceArgs();
 

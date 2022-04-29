@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.tpu_v1alpha1.enums.NodeHealth;
 import com.pulumi.googlenative.tpu_v1alpha1.inputs.SchedulingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeArgs extends ResourceArgs {
 
     public static final NodeArgs Empty = new NodeArgs();
 

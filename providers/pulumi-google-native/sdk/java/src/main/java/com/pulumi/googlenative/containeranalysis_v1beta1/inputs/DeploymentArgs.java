@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.DeploymentPlatform;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The period during which some deployable was active in a runtime.
  * 
  */
-public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentArgs extends ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 

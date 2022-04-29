@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A contact person for the entry.
  * 
  */
-public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1ContactsPersonArgs Empty = new GoogleCloudDatacatalogV1ContactsPersonArgs();
 

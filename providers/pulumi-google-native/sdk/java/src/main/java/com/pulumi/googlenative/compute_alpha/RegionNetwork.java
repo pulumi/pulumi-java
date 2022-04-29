@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.RegionNetworkArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.NetworkPeeringResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.NetworkRoutingConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:RegionNetwork")
-public class RegionNetwork extends com.pulumi.resources.CustomResource {
+public class RegionNetwork extends CustomResource {
     /**
      * Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
      * 
@@ -275,19 +277,19 @@ public class RegionNetwork extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionNetwork(String name, RegionNetworkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionNetwork(String name, RegionNetworkArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:RegionNetwork", name, args == null ? RegionNetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionNetwork(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionNetwork(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:RegionNetwork", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -298,7 +300,7 @@ public class RegionNetwork extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionNetwork get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionNetwork get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionNetwork(name, id, options);
     }
 }

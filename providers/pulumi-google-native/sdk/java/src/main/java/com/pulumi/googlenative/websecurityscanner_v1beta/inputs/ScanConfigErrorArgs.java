@@ -6,6 +6,7 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigErrorCode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines a custom error message used by CreateScanConfig and UpdateScanConfig APIs when scan configuration validation fails. It is also reported as part of a ScanRunErrorTrace message if scan validation fails due to a scan configuration error.
  * 
  */
-public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanConfigErrorArgs extends ResourceArgs {
 
     public static final ScanConfigErrorArgs Empty = new ScanConfigErrorArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.ExtendedKeyUsageOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.KeyUsageOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A KeyUsage describes key usage values that may appear in an X.509 certificate.
  * 
  */
-public final class KeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyUsageArgs extends ResourceArgs {
 
     public static final KeyUsageArgs Empty = new KeyUsageArgs();
 

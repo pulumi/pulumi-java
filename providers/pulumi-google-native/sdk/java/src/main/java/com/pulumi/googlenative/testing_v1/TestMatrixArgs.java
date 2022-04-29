@@ -9,6 +9,7 @@ import com.pulumi.googlenative.testing_v1.inputs.ClientInfoArgs;
 import com.pulumi.googlenative.testing_v1.inputs.EnvironmentMatrixArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ResultStorageArgs;
 import com.pulumi.googlenative.testing_v1.inputs.TestSpecificationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestMatrixArgs extends ResourceArgs {
 
     public static final TestMatrixArgs Empty = new TestMatrixArgs();
 

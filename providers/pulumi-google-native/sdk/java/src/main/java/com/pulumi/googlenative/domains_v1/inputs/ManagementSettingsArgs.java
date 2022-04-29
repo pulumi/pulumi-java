@@ -6,6 +6,7 @@ package com.pulumi.googlenative.domains_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.domains_v1.enums.ManagementSettingsTransferLockState;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines renewal, billing, and transfer settings for a `Registration`.
  * 
  */
-public final class ManagementSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementSettingsArgs extends ResourceArgs {
 
     public static final ManagementSettingsArgs Empty = new ManagementSettingsArgs();
 

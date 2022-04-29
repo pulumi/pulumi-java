@@ -5,6 +5,7 @@ package com.pulumi.googlenative.vision_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A vertex represents a 2D point in the image. NOTE: the vertex coordinates are in the same scale as the original image.
  * 
  */
-public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
+public final class VertexArgs extends ResourceArgs {
 
     public static final VertexArgs Empty = new VertexArgs();
 

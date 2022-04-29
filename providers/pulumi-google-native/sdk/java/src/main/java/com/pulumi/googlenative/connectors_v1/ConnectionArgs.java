@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.connectors_v1.inputs.AuthConfigArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.LockConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionArgs extends ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 

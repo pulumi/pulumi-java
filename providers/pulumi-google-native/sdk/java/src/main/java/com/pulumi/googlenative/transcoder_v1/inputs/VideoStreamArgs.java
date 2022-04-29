@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Video stream resource.
  * 
  */
-public final class VideoStreamArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoStreamArgs extends ResourceArgs {
 
     public static final VideoStreamArgs Empty = new VideoStreamArgs();
 

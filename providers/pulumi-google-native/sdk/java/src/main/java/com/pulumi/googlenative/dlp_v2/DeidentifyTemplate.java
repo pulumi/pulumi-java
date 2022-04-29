@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dlp_v2.DeidentifyTemplateArgs;
 import com.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeidentifyConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dlp/v2:DeidentifyTemplate")
-public class DeidentifyTemplate extends com.pulumi.resources.CustomResource {
+public class DeidentifyTemplate extends CustomResource {
     /**
      * The creation timestamp of an inspectTemplate.
      * 
@@ -126,19 +128,19 @@ public class DeidentifyTemplate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DeidentifyTemplate(String name, @Nullable DeidentifyTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DeidentifyTemplate(String name, @Nullable DeidentifyTemplateArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dlp/v2:DeidentifyTemplate", name, args == null ? DeidentifyTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DeidentifyTemplate(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DeidentifyTemplate(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dlp/v2:DeidentifyTemplate", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -149,7 +151,7 @@ public class DeidentifyTemplate extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeidentifyTemplate get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DeidentifyTemplate get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DeidentifyTemplate(name, id, options);
     }
 }

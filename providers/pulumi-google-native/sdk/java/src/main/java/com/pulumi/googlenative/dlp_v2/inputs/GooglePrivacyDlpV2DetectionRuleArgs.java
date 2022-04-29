@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter behavior under certain circumstances, depending on the specific details of the rule. Not supported for the `surrogate_type` custom infoType.
  * 
  */
-public final class GooglePrivacyDlpV2DetectionRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DetectionRuleArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DetectionRuleArgs Empty = new GooglePrivacyDlpV2DetectionRuleArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An excluded entity phrase that should not be matched.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs Empty = new GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs();
 

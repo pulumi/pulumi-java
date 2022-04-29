@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.BigQueryDestinationArgs;
 import com.pulumi.googlenative.container_v1.inputs.ConsumptionMeteringConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for exporting cluster resource usages.
  * 
  */
-public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceUsageExportConfigArgs extends ResourceArgs {
 
     public static final ResourceUsageExportConfigArgs Empty = new ResourceUsageExportConfigArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentParameterArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntentArgs extends ResourceArgs {
 
     public static final IntentArgs Empty = new IntentArgs();
 

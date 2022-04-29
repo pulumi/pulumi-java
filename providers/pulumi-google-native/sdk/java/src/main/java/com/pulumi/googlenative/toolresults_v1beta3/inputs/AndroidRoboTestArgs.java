@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
  * 
  */
-public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidRoboTestArgs extends ResourceArgs {
 
     public static final AndroidRoboTestArgs Empty = new AndroidRoboTestArgs();
 

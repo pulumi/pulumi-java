@@ -5,13 +5,14 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutineReferenceArgs extends ResourceArgs {
 
     public static final RoutineReferenceArgs Empty = new RoutineReferenceArgs();
 

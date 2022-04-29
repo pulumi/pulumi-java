@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_alpha.enums.RegionCommitmentType;
 import com.pulumi.googlenative.compute_alpha.inputs.LicenseResourceCommitmentArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ReservationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourceCommitmentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionCommitmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionCommitmentArgs extends ResourceArgs {
 
     public static final RegionCommitmentArgs Empty = new RegionCommitmentArgs();
 

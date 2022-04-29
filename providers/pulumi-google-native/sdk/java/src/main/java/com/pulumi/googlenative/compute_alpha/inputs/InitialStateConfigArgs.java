@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.FileContentBufferArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Initial State for shielded instance, these are public keys which are safe to store in public
  * 
  */
-public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InitialStateConfigArgs extends ResourceArgs {
 
     public static final InitialStateConfigArgs Empty = new InitialStateConfigArgs();
 

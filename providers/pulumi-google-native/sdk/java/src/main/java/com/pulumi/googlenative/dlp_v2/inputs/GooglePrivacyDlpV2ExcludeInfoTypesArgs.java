@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * List of exclude infoTypes.
  * 
  */
-public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ExcludeInfoTypesArgs Empty = new GooglePrivacyDlpV2ExcludeInfoTypesArgs();
 

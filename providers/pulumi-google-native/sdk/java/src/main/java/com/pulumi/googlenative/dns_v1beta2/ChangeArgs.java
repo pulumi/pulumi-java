@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1beta2.enums.ChangeStatus;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChangeArgs extends ResourceArgs {
 
     public static final ChangeArgs Empty = new ChangeArgs();
 

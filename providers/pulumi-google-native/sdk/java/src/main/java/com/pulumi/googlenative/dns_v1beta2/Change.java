@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dns_v1beta2.ChangeArgs;
 import com.pulumi.googlenative.dns_v1beta2.outputs.ResourceRecordSetResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dns/v1beta2:Change")
-public class Change extends com.pulumi.resources.CustomResource {
+public class Change extends CustomResource {
     /**
      * Which ResourceRecordSets to add?
      * 
@@ -122,19 +124,19 @@ public class Change extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Change(String name, ChangeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Change(String name, ChangeArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dns/v1beta2:Change", name, args == null ? ChangeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Change(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Change(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dns/v1beta2:Change", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -145,7 +147,7 @@ public class Change extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Change get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Change get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Change(name, id, options);
     }
 }

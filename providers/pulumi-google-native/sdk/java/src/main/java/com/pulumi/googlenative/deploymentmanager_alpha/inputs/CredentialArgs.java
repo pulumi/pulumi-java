@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.BasicAuthArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.ServiceAccountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The credential used by Deployment Manager and TypeProvider. Only one of the options is permitted.
  * 
  */
-public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class CredentialArgs extends ResourceArgs {
 
     public static final CredentialArgs Empty = new CredentialArgs();
 

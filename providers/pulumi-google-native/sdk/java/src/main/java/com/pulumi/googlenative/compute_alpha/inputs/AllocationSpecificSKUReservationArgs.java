@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * This reservation type allows to pre allocate specific instance configuration. Next ID: 5
  * 
  */
-public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllocationSpecificSKUReservationArgs extends ResourceArgs {
 
     public static final AllocationSpecificSKUReservationArgs Empty = new AllocationSpecificSKUReservationArgs();
 

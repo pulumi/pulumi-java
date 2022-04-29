@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.CloudRepoSourceContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.GerritSourceContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.GitSourceContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A SourceContext is a reference to a tree of files. A SourceContext together with a path point to a unique revision of a single file or directory.
  * 
  */
-public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceContextArgs extends ResourceArgs {
 
     public static final SourceContextArgs Empty = new SourceContextArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The simple response message containing speech or text.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs Empty = new GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs();
 

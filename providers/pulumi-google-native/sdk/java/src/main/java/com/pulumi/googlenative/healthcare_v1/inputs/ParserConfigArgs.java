@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.enums.ParserConfigVersion;
 import com.pulumi.googlenative.healthcare_v1.inputs.SchemaPackageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration for the parser. It determines how the server parses the messages.
  * 
  */
-public final class ParserConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParserConfigArgs extends ResourceArgs {
 
     public static final ParserConfigArgs Empty = new ParserConfigArgs();
 

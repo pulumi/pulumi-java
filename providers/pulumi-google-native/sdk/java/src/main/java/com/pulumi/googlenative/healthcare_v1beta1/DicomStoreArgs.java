@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomStreamConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class DicomStoreArgs extends ResourceArgs {
 
     public static final DicomStoreArgs Empty = new DicomStoreArgs();
 

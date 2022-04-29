@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
  * 
  */
-public final class BucketLifecycleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleArgs extends ResourceArgs {
 
     public static final BucketLifecycleArgs Empty = new BucketLifecycleArgs();
 

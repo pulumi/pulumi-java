@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.enums.GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition;
 import com.pulumi.googlenative.healthcare_v1.inputs.SchemaConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration for exporting to BigQuery.
  * 
  */
-public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends ResourceArgs {
 
     public static final GoogleCloudHealthcareV1FhirBigQueryDestinationArgs Empty = new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs();
 

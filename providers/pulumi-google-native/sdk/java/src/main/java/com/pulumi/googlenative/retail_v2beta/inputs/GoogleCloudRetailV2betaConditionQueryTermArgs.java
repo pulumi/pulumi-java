@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Query terms that we want to match on.
  * 
  */
-public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaConditionQueryTermArgs Empty = new GoogleCloudRetailV2betaConditionQueryTermArgs();
 

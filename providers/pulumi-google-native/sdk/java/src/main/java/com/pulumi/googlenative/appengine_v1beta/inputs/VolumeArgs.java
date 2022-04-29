@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Volumes mounted within the app container. Only applicable in the App Engine flexible environment.
  * 
  */
-public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeArgs extends ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 

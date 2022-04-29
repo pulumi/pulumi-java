@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.RatioPartArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A pair of time series filters that define a ratio computation. The output time series is the pair-wise division of each aligned element from the numerator and denominator time series.
  * 
  */
-public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeSeriesFilterRatioArgs extends ResourceArgs {
 
     public static final TimeSeriesFilterRatioArgs Empty = new TimeSeriesFilterRatioArgs();
 

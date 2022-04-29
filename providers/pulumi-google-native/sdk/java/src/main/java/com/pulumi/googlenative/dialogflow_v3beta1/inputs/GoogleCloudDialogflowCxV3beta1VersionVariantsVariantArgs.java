@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A single flow version with specified traffic allocation.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs Empty = new GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs();
 

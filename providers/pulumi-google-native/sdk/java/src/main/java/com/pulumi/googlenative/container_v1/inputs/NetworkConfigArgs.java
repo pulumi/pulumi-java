@@ -10,6 +10,7 @@ import com.pulumi.googlenative.container_v1.enums.NetworkConfigPrivateIpv6Google
 import com.pulumi.googlenative.container_v1.inputs.DNSConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.DefaultSnatStatusArgs;
 import com.pulumi.googlenative.container_v1.inputs.ServiceExternalIPsConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * NetworkConfig reports the relative names of network &amp; subnetwork.
  * 
  */
-public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigArgs extends ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 

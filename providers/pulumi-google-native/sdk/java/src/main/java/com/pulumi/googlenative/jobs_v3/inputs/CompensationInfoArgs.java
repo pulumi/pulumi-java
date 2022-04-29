@@ -6,6 +6,7 @@ package com.pulumi.googlenative.jobs_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.jobs_v3.inputs.CompensationEntryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Job compensation details.
  * 
  */
-public final class CompensationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class CompensationInfoArgs extends ResourceArgs {
 
     public static final CompensationInfoArgs Empty = new CompensationInfoArgs();
 

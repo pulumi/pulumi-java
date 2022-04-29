@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networksecurity_v1beta1.ClientTlsPolicyArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleCloudNetworksecurityV1beta1CertificateProviderResponse;
 import com.pulumi.googlenative.networksecurity_v1beta1.outputs.ValidationCAResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:networksecurity/v1beta1:ClientTlsPolicy")
-public class ClientTlsPolicy extends com.pulumi.resources.CustomResource {
+public class ClientTlsPolicy extends CustomResource {
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
@@ -156,19 +158,19 @@ public class ClientTlsPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClientTlsPolicy(String name, ClientTlsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ClientTlsPolicy(String name, ClientTlsPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1beta1:ClientTlsPolicy", name, args == null ? ClientTlsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ClientTlsPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ClientTlsPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1beta1:ClientTlsPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -179,7 +181,7 @@ public class ClientTlsPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClientTlsPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClientTlsPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ClientTlsPolicy(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration for encrypting secret payloads using customer-managed encryption keys (CMEK).
  * 
  */
-public final class CustomerManagedEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomerManagedEncryptionArgs extends ResourceArgs {
 
     public static final CustomerManagedEncryptionArgs Empty = new CustomerManagedEncryptionArgs();
 

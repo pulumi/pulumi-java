@@ -9,6 +9,7 @@ import com.pulumi.googlenative.healthcare_v1beta1.inputs.AnnotationSourceArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.ImageAnnotationArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.ResourceAnnotationArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.SensitiveTextAnnotationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnnotationArgs extends ResourceArgs {
 
     public static final AnnotationArgs Empty = new AnnotationArgs();
 

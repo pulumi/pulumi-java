@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.genomics_v1alpha2.inputs.DockerExecutorArgs;
 import com.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineParameterArgs;
 import com.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineResourcesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineArgs extends ResourceArgs {
 
     public static final PipelineArgs Empty = new PipelineArgs();
 

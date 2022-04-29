@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.enums.LabelDescriptorValueType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A description of a label.
  * 
  */
-public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelDescriptorArgs extends ResourceArgs {
 
     public static final LabelDescriptorArgs Empty = new LabelDescriptorArgs();
 

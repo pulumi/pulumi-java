@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyMinTlsVersion;
 import com.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyProfile;
 import com.pulumi.googlenative.compute_alpha.inputs.ServerTlsSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionSslPolicyArgs extends ResourceArgs {
 
     public static final RegionSslPolicyArgs Empty = new RegionSslPolicyArgs();
 

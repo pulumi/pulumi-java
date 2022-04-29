@@ -12,6 +12,7 @@ import com.pulumi.googlenative.dataflow_v1b3.inputs.FileIODetailsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.PubSubIODetailsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.SdkVersionArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.SpannerIODetailsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Metadata available primarily for filtering jobs. Will be included in the ListJob response and Job SUMMARY view.
  * 
  */
-public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobMetadataArgs extends ResourceArgs {
 
     public static final JobMetadataArgs Empty = new JobMetadataArgs();
 

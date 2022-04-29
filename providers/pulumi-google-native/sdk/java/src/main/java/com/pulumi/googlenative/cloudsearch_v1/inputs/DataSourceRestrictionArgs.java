@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterOptionsArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Restriction on Datasource.
  * 
  */
-public final class DataSourceRestrictionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceRestrictionArgs extends ResourceArgs {
 
     public static final DataSourceRestrictionArgs Empty = new DataSourceRestrictionArgs();
 

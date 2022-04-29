@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * GitRepoSource describes a repo and ref of a code repository.
  * 
  */
-public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitRepoSourceArgs extends ResourceArgs {
 
     public static final GitRepoSourceArgs Empty = new GitRepoSourceArgs();
 

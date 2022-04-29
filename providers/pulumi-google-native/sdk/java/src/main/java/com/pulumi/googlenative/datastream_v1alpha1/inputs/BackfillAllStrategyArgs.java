@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Backfill strategy to automatically backfill the Stream&#39;s objects. Specific objects can be excluded.
  * 
  */
-public final class BackfillAllStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackfillAllStrategyArgs extends ResourceArgs {
 
     public static final BackfillAllStrategyArgs Empty = new BackfillAllStrategyArgs();
 

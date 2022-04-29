@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.TableDisplayOptionsArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Groups a time series query definition with table options.
  * 
  */
-public final class TableDataSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableDataSetArgs extends ResourceArgs {
 
     public static final TableDataSetArgs Empty = new TableDataSetArgs();
 

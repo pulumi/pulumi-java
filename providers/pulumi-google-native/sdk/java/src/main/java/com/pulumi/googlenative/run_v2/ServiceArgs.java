@@ -10,6 +10,7 @@ import com.pulumi.googlenative.run_v2.enums.ServiceLaunchStage;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2BinaryAuthorizationArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionTemplateArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2TrafficTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceArgs extends ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 

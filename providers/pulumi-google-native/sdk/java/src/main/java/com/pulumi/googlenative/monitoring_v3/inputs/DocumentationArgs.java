@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A content string and a MIME type that describes the content string&#39;s format.
  * 
  */
-public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DocumentationArgs extends ResourceArgs {
 
     public static final DocumentationArgs Empty = new DocumentationArgs();
 

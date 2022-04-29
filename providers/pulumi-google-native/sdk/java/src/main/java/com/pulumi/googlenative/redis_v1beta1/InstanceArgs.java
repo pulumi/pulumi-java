@@ -11,6 +11,7 @@ import com.pulumi.googlenative.redis_v1beta1.enums.InstanceTier;
 import com.pulumi.googlenative.redis_v1beta1.enums.InstanceTransitEncryptionMode;
 import com.pulumi.googlenative.redis_v1beta1.inputs.MaintenancePolicyArgs;
 import com.pulumi.googlenative.redis_v1beta1.inputs.PersistenceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

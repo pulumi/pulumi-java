@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents configuration for a generic web service.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs Empty = new GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs();
 

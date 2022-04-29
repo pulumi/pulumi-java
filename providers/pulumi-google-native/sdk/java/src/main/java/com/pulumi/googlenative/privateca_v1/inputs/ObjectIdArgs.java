@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
  * 
  */
-public final class ObjectIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectIdArgs extends ResourceArgs {
 
     public static final ObjectIdArgs Empty = new ObjectIdArgs();
 

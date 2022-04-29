@@ -9,6 +9,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestIssueArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestSuiteOverviewArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestTimingArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A step that represents running tests. It accepts ant-junit xml files which will be parsed into structured test results by the service. Xml file paths are updated in order to append more files, however they can&#39;t be deleted. Users can also add test results manually by using the test_result field.
  * 
  */
-public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestExecutionStepArgs extends ResourceArgs {
 
     public static final TestExecutionStepArgs Empty = new TestExecutionStepArgs();
 

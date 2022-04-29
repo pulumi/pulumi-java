@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Target scaling by request utilization. Only applicable in the App Engine flexible environment.
  * 
  */
-public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RequestUtilizationArgs extends ResourceArgs {
 
     public static final RequestUtilizationArgs Empty = new RequestUtilizationArgs();
 

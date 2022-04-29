@@ -17,6 +17,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ReplaceDictionary
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ReplaceValueConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TimePartConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * A rule for transforming a value.
  * 
  */
-public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2PrimitiveTransformationArgs Empty = new GooglePrivacyDlpV2PrimitiveTransformationArgs();
 

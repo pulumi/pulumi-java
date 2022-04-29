@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
  * 
  */
-public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadIdentityConfigArgs extends ResourceArgs {
 
     public static final WorkloadIdentityConfigArgs Empty = new WorkloadIdentityConfigArgs();
 

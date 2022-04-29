@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message defining a list of words or phrases to search for in the data.
  * 
  */
-public final class GooglePrivacyDlpV2WordListArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2WordListArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2WordListArgs Empty = new GooglePrivacyDlpV2WordListArgs();
 

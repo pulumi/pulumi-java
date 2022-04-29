@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Int
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3PageArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleRpcStatusArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The output from the virtual agent.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs Empty = new GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs();
 

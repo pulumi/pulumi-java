@@ -9,6 +9,7 @@ import com.pulumi.googlenative.cloudiot_v1.enums.DeviceLogLevel;
 import com.pulumi.googlenative.cloudiot_v1.inputs.DeviceConfigArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.DeviceCredentialArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.GatewayConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceArgs extends ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 

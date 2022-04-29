@@ -22,6 +22,8 @@ import com.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import com.pulumi.googlenative.compute_v1.outputs.OutlierDetectionResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecuritySettingsResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SubsettingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:RegionBackendService")
-public class RegionBackendService extends com.pulumi.resources.CustomResource {
+public class RegionBackendService extends CustomResource {
     /**
      * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
@@ -508,19 +510,19 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionBackendService(String name, RegionBackendServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionBackendService(String name, RegionBackendServiceArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionBackendService(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionBackendService(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:RegionBackendService", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -531,7 +533,7 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionBackendService get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionBackendService get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionBackendService(name, id, options);
     }
 }

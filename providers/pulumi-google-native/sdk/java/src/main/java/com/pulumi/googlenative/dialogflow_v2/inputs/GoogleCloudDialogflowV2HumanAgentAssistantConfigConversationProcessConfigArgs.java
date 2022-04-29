@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Config to process conversation.
  * 
  */
-public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs();
 

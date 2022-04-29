@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.websecurityscanner_v1.ScanConfigArgs;
 import com.pulumi.googlenative.websecurityscanner_v1.outputs.AuthenticationResponse;
 import com.pulumi.googlenative.websecurityscanner_v1.outputs.ScheduleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:websecurityscanner/v1:ScanConfig")
-public class ScanConfig extends com.pulumi.resources.CustomResource {
+public class ScanConfig extends CustomResource {
     /**
      * The authentication configuration. If specified, service will use the authentication configuration during scanning.
      * 
@@ -227,19 +229,19 @@ public class ScanConfig extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ScanConfig(String name, ScanConfigArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ScanConfig(String name, ScanConfigArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:websecurityscanner/v1:ScanConfig", name, args == null ? ScanConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ScanConfig(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ScanConfig(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:websecurityscanner/v1:ScanConfig", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -250,7 +252,7 @@ public class ScanConfig extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ScanConfig get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ScanConfig get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ScanConfig(name, id, options);
     }
 }

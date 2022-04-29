@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A file or directory to install on the device before the test starts.
  * 
  */
-public final class RegularFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegularFileArgs extends ResourceArgs {
 
     public static final RegularFileArgs Empty = new RegularFileArgs();
 

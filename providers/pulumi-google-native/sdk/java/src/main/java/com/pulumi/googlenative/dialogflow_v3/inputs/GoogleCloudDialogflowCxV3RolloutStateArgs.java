@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * State of the auto-rollout process.
  * 
  */
-public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3RolloutStateArgs Empty = new GoogleCloudDialogflowCxV3RolloutStateArgs();
 

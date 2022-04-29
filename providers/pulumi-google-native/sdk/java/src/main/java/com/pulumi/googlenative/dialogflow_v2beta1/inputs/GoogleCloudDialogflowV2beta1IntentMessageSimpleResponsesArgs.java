@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The collection of simple response candidates. This message in `QueryResult.fulfillment_messages` and `WebhookResponse.fulfillment_messages` should contain only one `SimpleResponse`.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs();
 

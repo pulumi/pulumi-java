@@ -39,6 +39,7 @@ import com.pulumi.googlenative.container_v1beta1.inputs.TpuConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.VerticalPodAutoscalingArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.WorkloadCertificatesArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.WorkloadIdentityConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterArgs extends ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2CloudSqlInstanceArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretVolumeSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Volume represents a named volume in a container.
  * 
  */
-public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2VolumeArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2VolumeArgs Empty = new GoogleCloudRunOpV2VolumeArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dataproc_v1beta2.enums.GceClusterConfigPrivateIpv
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.NodeGroupAffinityArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ReservationAffinityArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ShieldedInstanceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Common config settings for resources of Compute Engine cluster instances, applicable to all instances in the cluster.
  * 
  */
-public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GceClusterConfigArgs extends ResourceArgs {
 
     public static final GceClusterConfigArgs Empty = new GceClusterConfigArgs();
 

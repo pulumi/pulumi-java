@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The configuration settings for Cloud Composer maintenance window. The following example: ```{ &#34;startTime&#34;:&#34;2019-08-01T01:00:00Z&#34; &#34;endTime&#34;:&#34;2019-08-01T07:00:00Z&#34; &#34;recurrence&#34;:&#34;FREQ=WEEKLY;BYDAY=TU,WE&#34; }``` would define a maintenance window between 01 and 07 hours UTC during each Tuesday and Wednesday.
  * 
  */
-public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class MaintenanceWindowArgs extends ResourceArgs {
 
     public static final MaintenanceWindowArgs Empty = new MaintenanceWindowArgs();
 

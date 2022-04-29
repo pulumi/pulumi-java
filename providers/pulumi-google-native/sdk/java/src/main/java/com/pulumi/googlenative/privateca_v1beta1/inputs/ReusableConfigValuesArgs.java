@@ -9,6 +9,7 @@ import com.pulumi.googlenative.privateca_v1beta1.inputs.CaOptionsArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.X509ExtensionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A ReusableConfigValues is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
  * 
  */
-public final class ReusableConfigValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReusableConfigValuesArgs extends ResourceArgs {
 
     public static final ReusableConfigValuesArgs Empty = new ReusableConfigValuesArgs();
 

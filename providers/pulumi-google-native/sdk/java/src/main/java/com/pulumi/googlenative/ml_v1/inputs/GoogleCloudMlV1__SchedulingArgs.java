@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * All parameters related to scheduling of training jobs.
  * 
  */
-public final class GoogleCloudMlV1__SchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__SchedulingArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__SchedulingArgs Empty = new GoogleCloudMlV1__SchedulingArgs();
 

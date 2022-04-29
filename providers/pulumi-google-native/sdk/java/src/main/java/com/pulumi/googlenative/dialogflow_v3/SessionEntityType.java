@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v3.SessionEntityTypeArgs;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EntityTypeEntityResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3:SessionEntityType")
-public class SessionEntityType extends com.pulumi.resources.CustomResource {
+public class SessionEntityType extends CustomResource {
     /**
      * The collection of entities to override or supplement the custom entity type.
      * 
@@ -84,19 +86,19 @@ public class SessionEntityType extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SessionEntityType(String name, SessionEntityTypeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SessionEntityType(String name, SessionEntityTypeArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:SessionEntityType", name, args == null ? SessionEntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SessionEntityType(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SessionEntityType(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:SessionEntityType", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -107,7 +109,7 @@ public class SessionEntityType extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SessionEntityType get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SessionEntityType get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SessionEntityType(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Filtering criteria to select VMs based on inventory details.
  * 
  */
-public final class OSPolicyInventoryFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyInventoryFilterArgs extends ResourceArgs {
 
     public static final OSPolicyInventoryFilterArgs Empty = new OSPolicyInventoryFilterArgs();
 

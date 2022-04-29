@@ -9,6 +9,7 @@ import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.CollectionOverrid
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.CredentialArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.TypeProviderLabelEntryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class TypeProviderArgs extends ResourceArgs {
 
     public static final TypeProviderArgs Empty = new TypeProviderArgs();
 

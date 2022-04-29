@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message for specifying an adjustment to the likelihood of a finding as part of a detection rule.
  * 
  */
-public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2LikelihoodAdjustmentArgs Empty = new GooglePrivacyDlpV2LikelihoodAdjustmentArgs();
 

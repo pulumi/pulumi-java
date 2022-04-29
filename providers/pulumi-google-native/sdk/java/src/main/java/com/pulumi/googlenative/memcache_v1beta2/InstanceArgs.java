@@ -9,6 +9,7 @@ import com.pulumi.googlenative.memcache_v1beta2.enums.InstanceMemcacheVersion;
 import com.pulumi.googlenative.memcache_v1beta2.inputs.InstanceMessageArgs;
 import com.pulumi.googlenative.memcache_v1beta2.inputs.MemcacheParametersArgs;
 import com.pulumi.googlenative.memcache_v1beta2.inputs.NodeConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

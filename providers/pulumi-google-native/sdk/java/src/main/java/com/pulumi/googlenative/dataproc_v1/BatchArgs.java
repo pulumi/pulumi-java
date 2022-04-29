@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dataproc_v1.inputs.RuntimeConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.SparkBatchArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.SparkRBatchArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.SparkSqlBatchArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchArgs extends ResourceArgs {
 
     public static final BatchArgs Empty = new BatchArgs();
 

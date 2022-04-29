@@ -10,6 +10,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentation
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestLoopArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An Android mobile test specification.
  * 
  */
-public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidTestArgs extends ResourceArgs {
 
     public static final AndroidTestArgs Empty = new AndroidTestArgs();
 

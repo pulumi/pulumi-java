@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
  * 
  */
-public final class ExternalProtectionLevelOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExternalProtectionLevelOptionsArgs extends ResourceArgs {
 
     public static final ExternalProtectionLevelOptionsArgs Empty = new ExternalProtectionLevelOptionsArgs();
 

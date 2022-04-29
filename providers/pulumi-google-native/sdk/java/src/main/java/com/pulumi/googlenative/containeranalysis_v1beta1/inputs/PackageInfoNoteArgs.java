@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ExternalRefArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * PackageInfoNote represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
  * 
  */
-public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageInfoNoteArgs extends ResourceArgs {
 
     public static final PackageInfoNoteArgs Empty = new PackageInfoNoteArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Usage configuration rules for the service. NOTE: Under development. Use this rule to configure unregistered calls for the service. Unregistered calls are calls that do not contain consumer project identity. (Example: calls that do not contain an API key). By default, API methods do not allow unregistered calls, and each method call must be identified by a consumer project identity. Use this rule to allow/disallow unregistered calls. Example of an API that wants to allow unregistered calls for entire service. usage: rules: - selector: &#34;*&#34; allow_unregistered_calls: true Example of a method that wants to allow unregistered calls. usage: rules: - selector: &#34;google.example.library.v1.LibraryService.CreateBook&#34; allow_unregistered_calls: true
  * 
  */
-public final class UsageRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class UsageRuleArgs extends ResourceArgs {
 
     public static final UsageRuleArgs Empty = new UsageRuleArgs();
 

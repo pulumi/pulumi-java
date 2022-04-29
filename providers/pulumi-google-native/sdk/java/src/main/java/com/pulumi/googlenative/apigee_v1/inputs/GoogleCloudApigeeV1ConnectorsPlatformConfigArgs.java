@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for the Connectors Platform add-on.
  * 
  */
-public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1ConnectorsPlatformConfigArgs Empty = new GoogleCloudApigeeV1ConnectorsPlatformConfigArgs();
 

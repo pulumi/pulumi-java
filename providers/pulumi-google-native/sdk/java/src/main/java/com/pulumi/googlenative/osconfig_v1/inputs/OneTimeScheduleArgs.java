@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Sets the time for a one time patch deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
  * 
  */
-public final class OneTimeScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class OneTimeScheduleArgs extends ResourceArgs {
 
     public static final OneTimeScheduleArgs Empty = new OneTimeScheduleArgs();
 

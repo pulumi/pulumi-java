@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
  * 
  */
-public final class ManualScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManualScalingArgs extends ResourceArgs {
 
     public static final ManualScalingArgs Empty = new ManualScalingArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * H264 codec settings.
  * 
  */
-public final class H264CodecSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class H264CodecSettingsArgs extends ResourceArgs {
 
     public static final H264CodecSettingsArgs Empty = new H264CodecSettingsArgs();
 

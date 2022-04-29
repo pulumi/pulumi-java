@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A collection of conditions.
  * 
  */
-public final class GooglePrivacyDlpV2ConditionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ConditionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ConditionsArgs Empty = new GooglePrivacyDlpV2ConditionsArgs();
 

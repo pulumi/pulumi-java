@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.HttpHeaderMatchArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HttpQueryParameterMatchArgs;
 import com.pulumi.googlenative.compute_v1.inputs.MetadataFilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * HttpRouteRuleMatch specifies a set of criteria for matching requests to an HttpRouteRule. All specified criteria must be satisfied for a match to occur.
  * 
  */
-public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpRouteRuleMatchArgs extends ResourceArgs {
 
     public static final HttpRouteRuleMatchArgs Empty = new HttpRouteRuleMatchArgs();
 

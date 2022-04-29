@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Informational metadata about Partner attachments from Partners to display to customers. These fields are propagated from PARTNER_PROVIDER attachments to their corresponding PARTNER attachments.
  * 
  */
-public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class InterconnectAttachmentPartnerMetadataArgs extends ResourceArgs {
 
     public static final InterconnectAttachmentPartnerMetadataArgs Empty = new InterconnectAttachmentPartnerMetadataArgs();
 

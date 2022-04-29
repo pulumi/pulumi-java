@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents an environment variable to be made available in a container. This message is a subset of the [Kubernetes EnvVar v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#envvar-v1-core).
  * 
  */
-public final class GoogleCloudMlV1__EnvVarArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__EnvVarArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__EnvVarArgs Empty = new GoogleCloudMlV1__EnvVarArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Table view specification.
  * 
  */
-public final class GoogleCloudDatacatalogV1beta1ViewSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1beta1ViewSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1ViewSpecArgs Empty = new GoogleCloudDatacatalogV1beta1ViewSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * AWS access key (see [AWS Security Credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html)). For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
  * 
  */
-public final class AwsAccessKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsAccessKeyArgs extends ResourceArgs {
 
     public static final AwsAccessKeyArgs Empty = new AwsAccessKeyArgs();
 

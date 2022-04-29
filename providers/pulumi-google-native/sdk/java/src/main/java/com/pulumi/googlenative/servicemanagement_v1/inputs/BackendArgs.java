@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.BackendRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * `Backend` defines the backend configuration for a service.
  * 
  */
-public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendArgs extends ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 

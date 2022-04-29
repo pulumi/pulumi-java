@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A collection of router appliance instances. If you have multiple router appliance instances connected to the same site, they should all be attached to the same spoke.
  * 
  */
-public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkedRouterApplianceInstancesArgs extends ResourceArgs {
 
     public static final LinkedRouterApplianceInstancesArgs Empty = new LinkedRouterApplianceInstancesArgs();
 

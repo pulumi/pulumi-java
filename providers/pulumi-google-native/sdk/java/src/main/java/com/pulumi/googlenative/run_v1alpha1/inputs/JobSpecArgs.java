@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceTemplateSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * JobSpec describes how the job execution will look like.
  * 
  */
-public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobSpecArgs extends ResourceArgs {
 
     public static final JobSpecArgs Empty = new JobSpecArgs();
 

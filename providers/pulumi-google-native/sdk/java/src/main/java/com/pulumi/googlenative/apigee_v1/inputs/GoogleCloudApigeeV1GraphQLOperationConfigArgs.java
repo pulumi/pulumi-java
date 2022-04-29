@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Binds the resources in a proxy or remote service with the GraphQL operation and its associated quota enforcement.
  * 
  */
-public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1GraphQLOperationConfigArgs Empty = new GoogleCloudApigeeV1GraphQLOperationConfigArgs();
 

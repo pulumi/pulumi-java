@@ -13,6 +13,7 @@ import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ExplanationConfigAr
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ManualScalingArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__RequestLoggingConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__RouteMapArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionArgs extends ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 

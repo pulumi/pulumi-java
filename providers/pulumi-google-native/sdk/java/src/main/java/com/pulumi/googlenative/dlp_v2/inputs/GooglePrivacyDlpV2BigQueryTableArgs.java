@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Message defining the location of a BigQuery table. A table is uniquely identified by its project_id, dataset_id, and table_name. Within a query a table is often referenced with a string in the format of: `:.` or `..`.
  * 
  */
-public final class GooglePrivacyDlpV2BigQueryTableArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2BigQueryTableArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2BigQueryTableArgs Empty = new GooglePrivacyDlpV2BigQueryTableArgs();
 

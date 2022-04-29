@@ -6,6 +6,7 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
  * 
  */
-public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigVariableArgs extends ResourceArgs {
 
     public static final ConfigVariableArgs Empty = new ConfigVariableArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.pubsub_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsub_v1beta2.inputs.OidcTokenArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for a push delivery endpoint.
  * 
  */
-public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PushConfigArgs extends ResourceArgs {
 
     public static final PushConfigArgs Empty = new PushConfigArgs();
 

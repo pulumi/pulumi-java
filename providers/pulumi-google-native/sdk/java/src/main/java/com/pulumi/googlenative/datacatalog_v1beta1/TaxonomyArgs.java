@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datacatalog_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1beta1.enums.TaxonomyActivatedPolicyTypesItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaxonomyArgs extends ResourceArgs {
 
     public static final TaxonomyArgs Empty = new TaxonomyArgs();
 

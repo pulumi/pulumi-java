@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Output configuration for asset feed destination.
  * 
  */
-public final class FeedOutputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FeedOutputConfigArgs extends ResourceArgs {
 
     public static final FeedOutputConfigArgs Empty = new FeedOutputConfigArgs();
 

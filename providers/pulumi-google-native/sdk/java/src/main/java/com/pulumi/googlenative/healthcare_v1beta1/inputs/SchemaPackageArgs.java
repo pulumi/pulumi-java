@@ -9,6 +9,7 @@ import com.pulumi.googlenative.healthcare_v1beta1.enums.SchemaPackageSchematized
 import com.pulumi.googlenative.healthcare_v1beta1.enums.SchemaPackageUnexpectedSegmentHandling;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7SchemaConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7TypesConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A schema package contains a set of schemas and type definitions.
  * 
  */
-public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchemaPackageArgs extends ResourceArgs {
 
     public static final SchemaPackageArgs Empty = new SchemaPackageArgs();
 

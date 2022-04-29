@@ -6,6 +6,7 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.PollingOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Async options that determine when a resource should finish.
  * 
  */
-public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AsyncOptionsArgs extends ResourceArgs {
 
     public static final AsyncOptionsArgs Empty = new AsyncOptionsArgs();
 

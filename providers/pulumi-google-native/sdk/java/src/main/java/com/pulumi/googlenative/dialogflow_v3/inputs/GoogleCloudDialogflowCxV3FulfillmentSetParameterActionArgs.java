@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Setting a parameter value.
  * 
  */
-public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs Empty = new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs();
 

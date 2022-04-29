@@ -6,13 +6,14 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RangePartitioningArgs extends com.pulumi.resources.ResourceArgs {
+public final class RangePartitioningArgs extends ResourceArgs {
 
     public static final RangePartitioningArgs Empty = new RangePartitioningArgs();
 

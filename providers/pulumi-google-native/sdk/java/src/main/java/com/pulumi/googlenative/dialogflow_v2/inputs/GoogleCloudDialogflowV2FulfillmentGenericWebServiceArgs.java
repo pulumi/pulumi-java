@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers. More information could be found at: https://cloud.google.com/dialogflow/docs/fulfillment-configure.
  * 
  */
-public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs Empty = new GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs();
 

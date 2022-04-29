@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.DiskArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:Disk")
-public class Disk extends com.pulumi.resources.CustomResource {
+public class Disk extends CustomResource {
     /**
      * The architecture of the disk. Valid values are ARM64 or X86_64.
      * 
@@ -647,19 +649,19 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Disk(String name, @Nullable DiskArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Disk(String name, @Nullable DiskArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Disk(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Disk(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:Disk", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -670,7 +672,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Disk get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Disk get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Disk(name, id, options);
     }
 }

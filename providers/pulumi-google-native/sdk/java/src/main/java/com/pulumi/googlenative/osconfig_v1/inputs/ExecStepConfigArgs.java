@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.enums.ExecStepConfigInterpreter;
 import com.pulumi.googlenative.osconfig_v1.inputs.GcsObjectArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Common configurations for an ExecStep.
  * 
  */
-public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecStepConfigArgs extends ResourceArgs {
 
     public static final ExecStepConfigArgs Empty = new ExecStepConfigArgs();
 

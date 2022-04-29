@@ -14,6 +14,7 @@ import com.pulumi.googlenative.compute_alpha.enums.SubnetworkRole;
 import com.pulumi.googlenative.compute_alpha.enums.SubnetworkStackType;
 import com.pulumi.googlenative.compute_alpha.inputs.SubnetworkLogConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SubnetworkSecondaryRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetworkArgs extends ResourceArgs {
 
     public static final SubnetworkArgs Empty = new SubnetworkArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specification for the BigQuery connection.
  * 
  */
-public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs Empty = new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs();
 

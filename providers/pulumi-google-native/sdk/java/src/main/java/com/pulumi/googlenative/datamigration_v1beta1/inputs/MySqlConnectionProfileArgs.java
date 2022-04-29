@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.SslConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies connection parameters required specifically for MySQL databases.
  * 
  */
-public final class MySqlConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class MySqlConnectionProfileArgs extends ResourceArgs {
 
     public static final MySqlConnectionProfileArgs Empty = new MySqlConnectionProfileArgs();
 

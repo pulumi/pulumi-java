@@ -13,6 +13,7 @@ import com.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsSourceProvenanceH
 import com.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsSubstitutionOption;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PoolOptionArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Optional arguments to enable specific features of builds.
  * 
  */
-public final class BuildOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildOptionsArgs extends ResourceArgs {
 
     public static final BuildOptionsArgs Empty = new BuildOptionsArgs();
 

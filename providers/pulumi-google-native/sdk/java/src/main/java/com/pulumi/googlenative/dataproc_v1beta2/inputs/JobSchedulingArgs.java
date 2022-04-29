@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Job scheduling options.
  * 
  */
-public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobSchedulingArgs extends ResourceArgs {
 
     public static final JobSchedulingArgs Empty = new JobSchedulingArgs();
 

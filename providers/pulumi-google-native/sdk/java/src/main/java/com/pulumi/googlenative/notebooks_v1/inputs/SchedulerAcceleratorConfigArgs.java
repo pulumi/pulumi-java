@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.SchedulerAcceleratorConfigType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid combination. TPUs are not supported.
  * 
  */
-public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulerAcceleratorConfigArgs extends ResourceArgs {
 
     public static final SchedulerAcceleratorConfigArgs Empty = new SchedulerAcceleratorConfigArgs();
 

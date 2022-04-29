@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Credential info for the Cloud SQL.
  * 
  */
-public final class CloudSqlCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudSqlCredentialArgs extends ResourceArgs {
 
     public static final CloudSqlCredentialArgs Empty = new CloudSqlCredentialArgs();
 

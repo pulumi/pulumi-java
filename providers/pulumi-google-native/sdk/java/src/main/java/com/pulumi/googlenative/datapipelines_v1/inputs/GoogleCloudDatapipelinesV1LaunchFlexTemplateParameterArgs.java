@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Launch Flex Template parameter.
  * 
  */
-public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs Empty = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs();
 

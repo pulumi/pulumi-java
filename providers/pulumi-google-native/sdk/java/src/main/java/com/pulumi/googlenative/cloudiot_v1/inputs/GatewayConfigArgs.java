@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayAuthMethod;
 import com.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayType;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Gateway-related configuration and state.
  * 
  */
-public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayConfigArgs extends ResourceArgs {
 
     public static final GatewayConfigArgs Empty = new GatewayConfigArgs();
 

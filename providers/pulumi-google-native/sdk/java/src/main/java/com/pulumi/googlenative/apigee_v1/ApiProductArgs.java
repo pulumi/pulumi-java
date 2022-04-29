@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationGroupArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationGroupArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiProductArgs extends ResourceArgs {
 
     public static final ApiProductArgs Empty = new ApiProductArgs();
 

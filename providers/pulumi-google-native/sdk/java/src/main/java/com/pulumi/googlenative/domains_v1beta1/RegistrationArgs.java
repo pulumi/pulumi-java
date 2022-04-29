@@ -11,6 +11,7 @@ import com.pulumi.googlenative.domains_v1beta1.inputs.ContactSettingsArgs;
 import com.pulumi.googlenative.domains_v1beta1.inputs.DnsSettingsArgs;
 import com.pulumi.googlenative.domains_v1beta1.inputs.ManagementSettingsArgs;
 import com.pulumi.googlenative.domains_v1beta1.inputs.MoneyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistrationArgs extends ResourceArgs {
 
     public static final RegistrationArgs Empty = new RegistrationArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The label selector, used to group labels on the resources.
  * 
  */
-public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelSelectorArgs extends ResourceArgs {
 
     public static final LabelSelectorArgs Empty = new LabelSelectorArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Encapsulates the full scoping used to reference a job.
  * 
  */
-public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobReferenceArgs extends ResourceArgs {
 
     public static final JobReferenceArgs Empty = new JobReferenceArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.enums.RoboDirectiveActionType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Directs Robo to interact with a specific UI element if it is encountered during the crawl. Currently, Robo can perform text entry or element click.
  * 
  */
-public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoboDirectiveArgs extends ResourceArgs {
 
     public static final RoboDirectiveArgs Empty = new RoboDirectiveArgs();
 

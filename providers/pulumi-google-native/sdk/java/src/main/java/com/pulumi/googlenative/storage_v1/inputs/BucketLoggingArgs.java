@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s logging configuration, which defines the destination bucket and optional name prefix for the current bucket&#39;s logs.
  * 
  */
-public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLoggingArgs extends ResourceArgs {
 
     public static final BucketLoggingArgs Empty = new BucketLoggingArgs();
 

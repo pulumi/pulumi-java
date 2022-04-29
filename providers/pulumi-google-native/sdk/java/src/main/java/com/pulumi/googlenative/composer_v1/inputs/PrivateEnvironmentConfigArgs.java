@@ -6,6 +6,7 @@ package com.pulumi.googlenative.composer_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.composer_v1.inputs.PrivateClusterConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration information for configuring a Private IP Cloud Composer environment.
  * 
  */
-public final class PrivateEnvironmentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEnvironmentConfigArgs extends ResourceArgs {
 
     public static final PrivateEnvironmentConfigArgs Empty = new PrivateEnvironmentConfigArgs();
 

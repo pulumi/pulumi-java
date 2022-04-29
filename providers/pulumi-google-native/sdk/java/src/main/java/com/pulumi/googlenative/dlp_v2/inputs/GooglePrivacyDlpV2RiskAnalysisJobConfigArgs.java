@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrivacyMetricArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration for a risk analysis job. See https://cloud.google.com/dlp/docs/concepts-risk-analysis to learn more.
  * 
  */
-public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RiskAnalysisJobConfigArgs Empty = new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs();
 

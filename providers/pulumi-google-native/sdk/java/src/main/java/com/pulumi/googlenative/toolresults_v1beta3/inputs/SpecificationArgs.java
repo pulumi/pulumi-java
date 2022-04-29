@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The details about how to run the execution.
  * 
  */
-public final class SpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpecificationArgs extends ResourceArgs {
 
     public static final SpecificationArgs Empty = new SpecificationArgs();
 

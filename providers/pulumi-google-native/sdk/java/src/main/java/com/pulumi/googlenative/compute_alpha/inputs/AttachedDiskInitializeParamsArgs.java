@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsA
 import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GuestOsFeatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
  * 
  */
-public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttachedDiskInitializeParamsArgs extends ResourceArgs {
 
     public static final AttachedDiskInitializeParamsArgs Empty = new AttachedDiskInitializeParamsArgs();
 

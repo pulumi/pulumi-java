@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Compute numerical stats over an individual column, including min, max, and quantiles.
  * 
  */
-public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2NumericalStatsConfigArgs Empty = new GooglePrivacyDlpV2NumericalStatsConfigArgs();
 

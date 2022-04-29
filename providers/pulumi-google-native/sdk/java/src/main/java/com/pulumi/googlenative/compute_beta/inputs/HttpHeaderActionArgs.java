@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.HttpHeaderOptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The request and response header transformations that take effect before the request is passed along to the selected backendService.
  * 
  */
-public final class HttpHeaderActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpHeaderActionArgs extends ResourceArgs {
 
     public static final HttpHeaderActionArgs Empty = new HttpHeaderActionArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_v1.enums.SchedulingInstanceTerminationAct
 import com.pulumi.googlenative.compute_v1.enums.SchedulingOnHostMaintenance;
 import com.pulumi.googlenative.compute_v1.enums.SchedulingProvisioningModel;
 import com.pulumi.googlenative.compute_v1.inputs.SchedulingNodeAffinityArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Sets the scheduling options for an Instance. NextID: 21
  * 
  */
-public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingArgs extends ResourceArgs {
 
     public static final SchedulingArgs Empty = new SchedulingArgs();
 

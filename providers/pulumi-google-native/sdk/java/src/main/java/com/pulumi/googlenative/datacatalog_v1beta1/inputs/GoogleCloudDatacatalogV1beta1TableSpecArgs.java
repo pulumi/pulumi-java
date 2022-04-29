@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Normal BigQuery table spec.
  * 
  */
-public final class GoogleCloudDatacatalogV1beta1TableSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1beta1TableSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1TableSpecArgs Empty = new GoogleCloudDatacatalogV1beta1TableSpecArgs();
 

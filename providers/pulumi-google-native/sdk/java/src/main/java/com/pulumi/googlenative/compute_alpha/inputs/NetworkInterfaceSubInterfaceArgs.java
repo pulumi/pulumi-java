@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceSubInterfaceIpAllocationMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceSubInterfaceArgs extends ResourceArgs {
 
     public static final NetworkInterfaceSubInterfaceArgs Empty = new NetworkInterfaceSubInterfaceArgs();
 

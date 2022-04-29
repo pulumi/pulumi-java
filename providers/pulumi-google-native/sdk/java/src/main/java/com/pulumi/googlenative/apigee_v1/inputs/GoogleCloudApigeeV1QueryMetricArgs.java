@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * More info about Metric: https://docs.apigee.com/api-platform/analytics/analytics-reference#metrics
  * 
  */
-public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1QueryMetricArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1QueryMetricArgs Empty = new GoogleCloudApigeeV1QueryMetricArgs();
 

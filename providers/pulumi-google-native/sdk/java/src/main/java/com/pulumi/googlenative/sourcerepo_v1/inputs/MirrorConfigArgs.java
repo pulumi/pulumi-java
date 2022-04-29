@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sourcerepo_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration to automatically mirror a repository from another hosting service, for example GitHub or Bitbucket.
  * 
  */
-public final class MirrorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MirrorConfigArgs extends ResourceArgs {
 
     public static final MirrorConfigArgs Empty = new MirrorConfigArgs();
 

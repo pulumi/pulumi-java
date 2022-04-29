@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidDeviceListArgs;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidMatrixArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The matrix of environments in which the test is to be executed.
  * 
  */
-public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentMatrixArgs extends ResourceArgs {
 
     public static final EnvironmentMatrixArgs Empty = new EnvironmentMatrixArgs();
 

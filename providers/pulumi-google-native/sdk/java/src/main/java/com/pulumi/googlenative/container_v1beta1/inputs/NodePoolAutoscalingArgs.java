@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * NodePoolAutoscaling contains information required by cluster autoscaler to adjust the size of the node pool to the current cluster usage.
  * 
  */
-public final class NodePoolAutoscalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodePoolAutoscalingArgs extends ResourceArgs {
 
     public static final NodePoolAutoscalingArgs Empty = new NodePoolAutoscalingArgs();
 

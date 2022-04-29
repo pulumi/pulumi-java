@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A ReusableConfigWrapper describes values that may assist in creating an X.509 certificate, or a reference to a pre-defined set of values.
  * 
  */
-public final class ReusableConfigWrapperArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReusableConfigWrapperArgs extends ResourceArgs {
 
     public static final ReusableConfigWrapperArgs Empty = new ReusableConfigWrapperArgs();
 

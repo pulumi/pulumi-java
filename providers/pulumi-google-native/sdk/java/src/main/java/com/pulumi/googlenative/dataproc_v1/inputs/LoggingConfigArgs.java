@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The runtime logging config of the job.
  * 
  */
-public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigArgs extends ResourceArgs {
 
     public static final LoggingConfigArgs Empty = new LoggingConfigArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storage_v1.inputs.BucketObjectCustomerEncryptionArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketObjectOwnerArgs;
 import com.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketObjectArgs extends ResourceArgs {
 
     public static final BucketObjectArgs Empty = new BucketObjectArgs();
 

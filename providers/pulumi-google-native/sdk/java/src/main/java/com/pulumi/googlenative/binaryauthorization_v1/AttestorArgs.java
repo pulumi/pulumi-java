@@ -6,13 +6,14 @@ package com.pulumi.googlenative.binaryauthorization_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.binaryauthorization_v1.inputs.UserOwnedGrafeasNoteArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestorArgs extends ResourceArgs {
 
     public static final AttestorArgs Empty = new AttestorArgs();
 

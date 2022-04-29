@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AcceleratorConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__DiskConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents the configuration for a replica in a cluster.
  * 
  */
-public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__ReplicaConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__ReplicaConfigArgs Empty = new GoogleCloudMlV1__ReplicaConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepExtractArchiveType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Extracts an archive of the type specified in the specified directory.
  * 
  */
-public final class SoftwareRecipeStepExtractArchiveArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepExtractArchiveArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepExtractArchiveArgs Empty = new SoftwareRecipeStepExtractArchiveArgs();
 

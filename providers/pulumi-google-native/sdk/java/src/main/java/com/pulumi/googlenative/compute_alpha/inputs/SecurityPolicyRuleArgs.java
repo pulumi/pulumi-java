@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleHttpHeader
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRedirectOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
  * 
  */
-public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyRuleArgs extends ResourceArgs {
 
     public static final SecurityPolicyRuleArgs Empty = new SecurityPolicyRuleArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__AcceleratorConfigType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a hardware accelerator request config. Note that the AcceleratorConfig can be used in both Jobs and Versions. Learn more about [accelerators for training](/ml-engine/docs/using-gpus) and [accelerators for online prediction](/ml-engine/docs/machine-types-online-prediction#gpus).
  * 
  */
-public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__AcceleratorConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__AcceleratorConfigArgs Empty = new GoogleCloudMlV1__AcceleratorConfigArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyWrrPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the response varying based on configured properties such as geolocation or by weighted random selection.
  * 
  */
-public final class RRSetRoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RRSetRoutingPolicyArgs extends ResourceArgs {
 
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 

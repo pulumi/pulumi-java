@@ -6,13 +6,14 @@ package com.pulumi.googlenative.securitycenter_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.securitycenter_v1.inputs.StreamingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationConfigArgs extends ResourceArgs {
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RegionHealthCheckServiceHealthStatusAggregationPolicy;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionHealthCheckServiceArgs extends ResourceArgs {
 
     public static final RegionHealthCheckServiceArgs Empty = new RegionHealthCheckServiceArgs();
 

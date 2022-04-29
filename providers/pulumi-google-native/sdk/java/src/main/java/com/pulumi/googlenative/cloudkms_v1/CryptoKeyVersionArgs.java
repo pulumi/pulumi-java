@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionState;
 import com.pulumi.googlenative.cloudkms_v1.inputs.ExternalProtectionLevelOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CryptoKeyVersionArgs extends ResourceArgs {
 
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 

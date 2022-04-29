@@ -25,6 +25,7 @@ import com.pulumi.googlenative.servicemanagement_v1.inputs.QuotaArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SystemParametersArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.TypeArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.UsageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigArgs extends ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 

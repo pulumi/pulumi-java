@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_v1.enums.RouterNatSourceSubnetworkIpRange
 import com.pulumi.googlenative.compute_v1.inputs.RouterNatLogConfigArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterNatRuleArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterNatSubnetworkToNatArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Represents a Nat resource. It enables the VMs within the specified subnetworks to access Internet without external IP addresses. It specifies a list of subnetworks (and the ranges within) that want to use NAT. Customers can also provide the external IPs that would be used for NAT. GCP would auto-allocate ephemeral IPs if no external IPs are provided.
  * 
  */
-public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterNatArgs extends ResourceArgs {
 
     public static final RouterNatArgs Empty = new RouterNatArgs();
 

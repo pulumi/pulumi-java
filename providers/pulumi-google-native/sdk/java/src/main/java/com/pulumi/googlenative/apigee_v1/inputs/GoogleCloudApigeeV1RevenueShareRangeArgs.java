@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * API call volume range and the percentage of revenue to share with the developer when the total number of API calls is within the range.
  * 
  */
-public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1RevenueShareRangeArgs Empty = new GoogleCloudApigeeV1RevenueShareRangeArgs();
 

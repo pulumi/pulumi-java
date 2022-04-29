@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.ExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Associates `members`, or principals, with a `role`.
  * 
  */
-public final class GoogleIamV1BindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleIamV1BindingArgs extends ResourceArgs {
 
     public static final GoogleIamV1BindingArgs Empty = new GoogleIamV1BindingArgs();
 

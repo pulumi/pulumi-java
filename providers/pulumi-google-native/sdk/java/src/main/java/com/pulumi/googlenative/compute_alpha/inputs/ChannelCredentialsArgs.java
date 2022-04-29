@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.ChannelCredentialsChannelCredentialType;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * [Deprecated] gRPC channel credentials to access the SDS server. gRPC channel credentials to access the SDS server.
  * 
  */
-public final class ChannelCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChannelCredentialsArgs extends ResourceArgs {
 
     public static final ChannelCredentialsArgs Empty = new ChannelCredentialsArgs();
 

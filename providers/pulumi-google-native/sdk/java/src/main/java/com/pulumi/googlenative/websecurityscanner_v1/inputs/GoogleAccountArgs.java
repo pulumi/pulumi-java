@@ -5,6 +5,7 @@ package com.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes authentication configuration that uses a Google account.
  * 
  */
-public final class GoogleAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleAccountArgs extends ResourceArgs {
 
     public static final GoogleAccountArgs Empty = new GoogleAccountArgs();
 

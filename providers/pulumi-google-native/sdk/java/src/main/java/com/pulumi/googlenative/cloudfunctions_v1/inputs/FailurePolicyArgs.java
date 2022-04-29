@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the policy in case of function&#39;s execution failure. If empty, then defaults to ignoring failures (i.e. not retrying them).
  * 
  */
-public final class FailurePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FailurePolicyArgs extends ResourceArgs {
 
     public static final FailurePolicyArgs Empty = new FailurePolicyArgs();
 

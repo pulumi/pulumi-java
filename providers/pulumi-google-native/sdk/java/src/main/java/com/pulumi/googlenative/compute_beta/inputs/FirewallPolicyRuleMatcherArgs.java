@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.FirewallPolicyRuleMatcherLayer4ConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
  * 
  */
-public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyRuleMatcherArgs extends ResourceArgs {
 
     public static final FirewallPolicyRuleMatcherArgs Empty = new FirewallPolicyRuleMatcherArgs();
 

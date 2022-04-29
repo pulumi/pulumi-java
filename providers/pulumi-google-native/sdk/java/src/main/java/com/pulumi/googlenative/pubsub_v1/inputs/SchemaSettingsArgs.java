@@ -6,6 +6,7 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Settings for validating messages published against a schema.
  * 
  */
-public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchemaSettingsArgs extends ResourceArgs {
 
     public static final SchemaSettingsArgs Empty = new SchemaSettingsArgs();
 

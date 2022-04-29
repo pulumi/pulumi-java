@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2TimePartConfigPartToExtract;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
  * 
  */
-public final class GooglePrivacyDlpV2TimePartConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2TimePartConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2TimePartConfigArgs Empty = new GooglePrivacyDlpV2TimePartConfigArgs();
 

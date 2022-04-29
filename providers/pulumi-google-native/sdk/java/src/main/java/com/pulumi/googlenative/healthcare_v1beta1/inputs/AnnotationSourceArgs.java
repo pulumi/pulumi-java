@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.CloudHealthcareSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * AnnotationSource holds the source information of the annotation.
  * 
  */
-public final class AnnotationSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnnotationSourceArgs extends ResourceArgs {
 
     public static final AnnotationSourceArgs Empty = new AnnotationSourceArgs();
 

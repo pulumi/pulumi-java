@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ManualArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * What event needs to occur for a new job to be started.
  * 
  */
-public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2TriggerArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2TriggerArgs Empty = new GooglePrivacyDlpV2TriggerArgs();
 

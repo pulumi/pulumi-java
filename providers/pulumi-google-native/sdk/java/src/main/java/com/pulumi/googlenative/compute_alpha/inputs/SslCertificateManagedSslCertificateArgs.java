@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration and status of a managed SSL certificate.
  * 
  */
-public final class SslCertificateManagedSslCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class SslCertificateManagedSslCertificateArgs extends ResourceArgs {
 
     public static final SslCertificateManagedSslCertificateArgs Empty = new SslCertificateManagedSslCertificateArgs();
 

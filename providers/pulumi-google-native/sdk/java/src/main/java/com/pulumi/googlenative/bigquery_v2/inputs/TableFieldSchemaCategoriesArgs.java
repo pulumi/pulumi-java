@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * [Optional] The categories attached to this field, used for field-level access control.
  * 
  */
-public final class TableFieldSchemaCategoriesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableFieldSchemaCategoriesArgs extends ResourceArgs {
 
     public static final TableFieldSchemaCategoriesArgs Empty = new TableFieldSchemaCategoriesArgs();
 

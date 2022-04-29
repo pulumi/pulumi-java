@@ -6,6 +6,7 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunWarningTraceCode;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Output only. Defines a warning trace message for ScanRun. Warning traces provide customers with useful information that helps make the scanning process more effective.
  * 
  */
-public final class ScanRunWarningTraceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanRunWarningTraceArgs extends ResourceArgs {
 
     public static final ScanRunWarningTraceArgs Empty = new ScanRunWarningTraceArgs();
 

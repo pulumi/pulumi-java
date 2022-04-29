@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudtasks_v2.enums.TaskResponseView;
 import com.pulumi.googlenative.cloudtasks_v2.inputs.AppEngineHttpRequestArgs;
 import com.pulumi.googlenative.cloudtasks_v2.inputs.HttpRequestArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskArgs extends ResourceArgs {
 
     public static final TaskArgs Empty = new TaskArgs();
 

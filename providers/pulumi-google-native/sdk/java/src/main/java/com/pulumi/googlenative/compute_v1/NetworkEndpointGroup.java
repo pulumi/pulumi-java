@@ -12,6 +12,8 @@ import com.pulumi.googlenative.compute_v1.NetworkEndpointGroupArgs;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupAppEngineResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupCloudFunctionResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupCloudRunResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:NetworkEndpointGroup")
-public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
+public class NetworkEndpointGroup extends CustomResource {
     /**
      * Metadata defined as annotations on the network endpoint group.
      * 
@@ -283,19 +285,19 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NetworkEndpointGroup(String name, @Nullable NetworkEndpointGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NetworkEndpointGroup(String name, @Nullable NetworkEndpointGroupArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:NetworkEndpointGroup", name, args == null ? NetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private NetworkEndpointGroup(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private NetworkEndpointGroup(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:NetworkEndpointGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -306,7 +308,7 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkEndpointGroup get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkEndpointGroup get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new NetworkEndpointGroup(name, id, options);
     }
 }

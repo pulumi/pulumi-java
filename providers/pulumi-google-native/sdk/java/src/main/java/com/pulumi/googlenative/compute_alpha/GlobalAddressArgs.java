@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_alpha.enums.GlobalAddressAddressType;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalAddressIpVersion;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalAddressNetworkTier;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalAddressPurpose;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GlobalAddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalAddressArgs extends ResourceArgs {
 
     public static final GlobalAddressArgs Empty = new GlobalAddressArgs();
 

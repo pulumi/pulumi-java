@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigateway_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A gRPC service definition.
  * 
  */
-public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends ResourceArgs {
 
     public static final ApigatewayApiConfigGrpcServiceDefinitionArgs Empty = new ApigatewayApiConfigGrpcServiceDefinitionArgs();
 

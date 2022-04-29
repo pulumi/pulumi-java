@@ -12,6 +12,7 @@ import com.pulumi.googlenative.compute_beta.inputs.InstanceGroupManagerUpdatePol
 import com.pulumi.googlenative.compute_beta.inputs.InstanceGroupManagerVersionArgs;
 import com.pulumi.googlenative.compute_beta.inputs.NamedPortArgs;
 import com.pulumi.googlenative.compute_beta.inputs.StatefulPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegionInstanceGroupManagerArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegionInstanceGroupManagerArgs extends ResourceArgs {
 
     public static final RegionInstanceGroupManagerArgs Empty = new RegionInstanceGroupManagerArgs();
 

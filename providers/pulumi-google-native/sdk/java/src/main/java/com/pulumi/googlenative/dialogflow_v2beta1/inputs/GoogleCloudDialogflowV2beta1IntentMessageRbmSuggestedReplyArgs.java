@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Rich Business Messaging (RBM) suggested reply that the user can click instead of typing in their own response.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs();
 

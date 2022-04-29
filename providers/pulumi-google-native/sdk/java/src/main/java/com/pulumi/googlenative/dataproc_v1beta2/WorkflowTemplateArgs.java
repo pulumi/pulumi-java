@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.OrderedJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.TemplateParameterArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.WorkflowTemplatePlacementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTemplateArgs extends ResourceArgs {
 
     public static final WorkflowTemplateArgs Empty = new WorkflowTemplateArgs();
 

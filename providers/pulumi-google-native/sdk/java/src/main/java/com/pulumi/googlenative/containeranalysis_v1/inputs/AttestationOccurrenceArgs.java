@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Occurrence that represents a single &#34;attestation&#34;. The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.
  * 
  */
-public final class AttestationOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestationOccurrenceArgs extends ResourceArgs {
 
     public static final AttestationOccurrenceArgs Empty = new AttestationOccurrenceArgs();
 

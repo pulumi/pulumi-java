@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A filter that defines a subset of time series data that is displayed in a widget. Time series data is fetched using the ListTimeSeries (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
  * 
  */
-public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeSeriesFilterArgs extends ResourceArgs {
 
     public static final TimeSeriesFilterArgs Empty = new TimeSeriesFilterArgs();
 

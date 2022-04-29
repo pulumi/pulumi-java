@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.HTTPHealthCheckPortSpecification;
 import com.pulumi.googlenative.compute_v1.enums.HTTPHealthCheckProxyHeader;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HTTPHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPHealthCheckArgs extends ResourceArgs {
 
     public static final HTTPHealthCheckArgs Empty = new HTTPHealthCheckArgs();
 

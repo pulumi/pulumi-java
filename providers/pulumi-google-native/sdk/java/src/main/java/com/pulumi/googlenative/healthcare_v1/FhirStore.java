@@ -12,6 +12,8 @@ import com.pulumi.googlenative.healthcare_v1.FhirStoreArgs;
 import com.pulumi.googlenative.healthcare_v1.outputs.NotificationConfigResponse;
 import com.pulumi.googlenative.healthcare_v1.outputs.StreamConfigResponse;
 import com.pulumi.googlenative.healthcare_v1.outputs.ValidationConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:healthcare/v1:FhirStore")
-public class FhirStore extends com.pulumi.resources.CustomResource {
+public class FhirStore extends CustomResource {
     /**
      * If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
      * 
@@ -187,19 +189,19 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FhirStore(String name, FhirStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FhirStore(String name, FhirStoreArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FhirStore(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FhirStore(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:healthcare/v1:FhirStore", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -210,7 +212,7 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FhirStore get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FhirStore get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FhirStore(name, id, options);
     }
 }

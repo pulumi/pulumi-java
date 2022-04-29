@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration for notification of new states received from the device.
  * 
  */
-public final class StateNotificationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class StateNotificationConfigArgs extends ResourceArgs {
 
     public static final StateNotificationConfigArgs Empty = new StateNotificationConfigArgs();
 

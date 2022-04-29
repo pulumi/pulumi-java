@@ -14,6 +14,8 @@ import com.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse
 import com.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.PipelineDescriptionResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.StepResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dataflow/v1b3:Job")
-public class Job extends com.pulumi.resources.CustomResource {
+public class Job extends CustomResource {
     /**
      * The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
      * 
@@ -372,19 +374,19 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Job(String name, @Nullable JobArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Job(String name, @Nullable JobArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dataflow/v1b3:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Job(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Job(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dataflow/v1b3:Job", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -395,7 +397,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Job get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Job get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Job(name, id, options);
     }
 }

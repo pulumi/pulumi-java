@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs;
 import com.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A snapshot schedule policy specifies when and how frequently snapshots are to be created for the target disk. Also specifies how many and how long these scheduled snapshots should be retained.
  * 
  */
-public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyArgs();
 

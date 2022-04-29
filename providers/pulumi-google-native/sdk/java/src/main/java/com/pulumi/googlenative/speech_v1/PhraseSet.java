@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.speech_v1.PhraseSetArgs;
 import com.pulumi.googlenative.speech_v1.outputs.PhraseResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:speech/v1:PhraseSet")
-public class PhraseSet extends com.pulumi.resources.CustomResource {
+public class PhraseSet extends CustomResource {
     /**
      * Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
      * 
@@ -85,19 +87,19 @@ public class PhraseSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PhraseSet(String name, PhraseSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PhraseSet(String name, PhraseSetArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:speech/v1:PhraseSet", name, args == null ? PhraseSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PhraseSet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PhraseSet(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:speech/v1:PhraseSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -108,7 +110,7 @@ public class PhraseSet extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PhraseSet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PhraseSet get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PhraseSet(name, id, options);
     }
 }

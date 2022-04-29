@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.AsyncOptionsArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.InputMappingArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.ValidationOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Options allows customized resource handling by Deployment Manager.
  * 
  */
-public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class OptionsArgs extends ResourceArgs {
 
     public static final OptionsArgs Empty = new OptionsArgs();
 

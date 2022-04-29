@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.BackendBalancingMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Message containing information of one individual backend.
  * 
  */
-public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendArgs extends ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.metastore_v1alpha.enums.DatabaseDumpDatabaseType;
 import com.pulumi.googlenative.metastore_v1alpha.enums.DatabaseDumpType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A specification of the location of and metadata about a database dump from a relational database management system.
  * 
  */
-public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatabaseDumpArgs extends ResourceArgs {
 
     public static final DatabaseDumpArgs Empty = new DatabaseDumpArgs();
 

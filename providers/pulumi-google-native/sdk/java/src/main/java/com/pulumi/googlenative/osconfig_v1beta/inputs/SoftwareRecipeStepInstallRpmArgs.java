@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Installs an rpm file via the rpm utility.
  * 
  */
-public final class SoftwareRecipeStepInstallRpmArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepInstallRpmArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepInstallRpmArgs Empty = new SoftwareRecipeStepInstallRpmArgs();
 

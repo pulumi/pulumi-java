@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networksecurity_v1beta1.AuthorizationPolicyArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.outputs.RuleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:networksecurity/v1beta1:AuthorizationPolicy")
-public class AuthorizationPolicy extends com.pulumi.resources.CustomResource {
+public class AuthorizationPolicy extends CustomResource {
     /**
      * The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
@@ -141,19 +143,19 @@ public class AuthorizationPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AuthorizationPolicy(String name, AuthorizationPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AuthorizationPolicy(String name, AuthorizationPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1beta1:AuthorizationPolicy", name, args == null ? AuthorizationPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AuthorizationPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AuthorizationPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:networksecurity/v1beta1:AuthorizationPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -164,7 +166,7 @@ public class AuthorizationPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AuthorizationPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AuthorizationPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AuthorizationPolicy(name, id, options);
     }
 }

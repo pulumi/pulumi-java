@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An SSL certificate obtained from a certificate authority.
  * 
  */
-public final class CertificateRawDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateRawDataArgs extends ResourceArgs {
 
     public static final CertificateRawDataArgs Empty = new CertificateRawDataArgs();
 

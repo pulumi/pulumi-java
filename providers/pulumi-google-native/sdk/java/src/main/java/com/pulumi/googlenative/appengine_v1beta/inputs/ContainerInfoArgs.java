@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Docker image that is used to create a container and start a VM instance for the version that you deploy. Only applicable for instances running in the App Engine flexible environment.
  * 
  */
-public final class ContainerInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerInfoArgs extends ResourceArgs {
 
     public static final ContainerInfoArgs Empty = new ContainerInfoArgs();
 

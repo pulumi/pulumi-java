@@ -6,6 +6,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MetricSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Options for automatically scaling a model.
  * 
  */
-public final class GoogleCloudMlV1__AutoScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__AutoScalingArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__AutoScalingArgs Empty = new GoogleCloudMlV1__AutoScalingArgs();
 

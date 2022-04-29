@@ -10,6 +10,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.MatrixDimensionDefinit
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.OutcomeArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.SpecificationArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecutionArgs extends ResourceArgs {
 
     public static final ExecutionArgs Empty = new ExecutionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.inputs.LocalDiskInitializeParamsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A Local attached disk resource.
  * 
  */
-public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalDiskArgs extends ResourceArgs {
 
     public static final LocalDiskArgs Empty = new LocalDiskArgs();
 

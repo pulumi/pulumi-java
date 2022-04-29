@@ -11,13 +11,14 @@ import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePoli
 import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyReplacementMethod;
 import com.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerUpdatePolicyType;
 import com.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupManagerUpdatePolicyArgs extends ResourceArgs {
 
     public static final InstanceGroupManagerUpdatePolicyArgs Empty = new InstanceGroupManagerUpdatePolicyArgs();
 

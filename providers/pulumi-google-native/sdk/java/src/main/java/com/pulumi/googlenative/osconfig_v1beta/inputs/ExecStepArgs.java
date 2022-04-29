@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.ExecStepConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A step that runs an executable for a PatchJob.
  * 
  */
-public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecStepArgs extends ResourceArgs {
 
     public static final ExecStepArgs Empty = new ExecStepArgs();
 

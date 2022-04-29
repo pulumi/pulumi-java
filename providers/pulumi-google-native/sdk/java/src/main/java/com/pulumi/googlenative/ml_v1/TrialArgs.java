@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.enums.TrialState;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MeasurementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrialArgs extends ResourceArgs {
 
     public static final TrialArgs Empty = new TrialArgs();
 

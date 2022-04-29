@@ -20,6 +20,7 @@ import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RelatedUrlArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RelationshipNoteArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeNoteArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoteArgs extends ResourceArgs {
 
     public static final NoteArgs Empty = new NoteArgs();
 

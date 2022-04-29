@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsearch_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.GSuitePrincipalArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceArgs extends ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 

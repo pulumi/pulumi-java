@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents a Goo package repository. These are added to a repo file that is managed at `C:/ProgramData/GooGet/repos/google_osconfig.repo`.
  * 
  */
-public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceGooRepositoryArgs Empty = new OSPolicyResourceRepositoryResourceGooRepositoryArgs();
 

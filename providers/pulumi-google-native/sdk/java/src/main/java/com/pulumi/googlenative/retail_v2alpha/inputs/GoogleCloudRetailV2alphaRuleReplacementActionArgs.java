@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Replaces a term in the query. Multiple replacement candidates can be specified. All `query_terms` will be replaced with the replacement term. Example: Replace &#34;gShoe&#34; with &#34;google shoe&#34;.
  * 
  */
-public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaRuleReplacementActionArgs Empty = new GoogleCloudRetailV2alphaRuleReplacementActionArgs();
 

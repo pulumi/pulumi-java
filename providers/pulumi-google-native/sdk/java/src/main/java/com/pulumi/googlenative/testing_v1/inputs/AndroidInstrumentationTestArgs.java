@@ -9,6 +9,7 @@ import com.pulumi.googlenative.testing_v1.enums.AndroidInstrumentationTestOrches
 import com.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ShardingOptionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A test of an Android application that can control an Android component independently of its normal lifecycle. Android instrumentation tests run an application APK and test APK inside the same process on a virtual or physical AndroidDevice. They also specify a test runner class, such as com.google.GoogleTestRunner, which can vary on the specific instrumentation framework chosen. See for more information on types of Android tests.
  * 
  */
-public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidInstrumentationTestArgs extends ResourceArgs {
 
     public static final AndroidInstrumentationTestArgs Empty = new AndroidInstrumentationTestArgs();
 

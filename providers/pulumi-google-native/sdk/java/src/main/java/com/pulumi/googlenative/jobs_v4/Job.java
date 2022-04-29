@@ -13,6 +13,8 @@ import com.pulumi.googlenative.jobs_v4.outputs.ApplicationInfoResponse;
 import com.pulumi.googlenative.jobs_v4.outputs.CompensationInfoResponse;
 import com.pulumi.googlenative.jobs_v4.outputs.JobDerivedInfoResponse;
 import com.pulumi.googlenative.jobs_v4.outputs.ProcessingOptionsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:jobs/v4:Job")
-public class Job extends com.pulumi.resources.CustomResource {
+public class Job extends CustomResource {
     /**
      * Strongly recommended for the best service experience. Location(s) where the employer is looking to hire for this job posting. Specifying the full street address(es) of the hiring location enables better API results, especially job searches by commute time. At most 50 locations are allowed for best search performance. If a job has more locations, it is suggested to split it into multiple jobs with unique requisition_ids (e.g. &#39;ReqA&#39; becomes &#39;ReqA-1&#39;, &#39;ReqA-2&#39;, and so on.) as multiple jobs with the same company, language_code and requisition_id are not allowed. If the original requisition_id must be preserved, a custom field should be used for storage. It is also suggested to group the locations that close to each other in the same job for better search experience. Jobs with multiple addresses must have their addresses with the same LocationType to allow location filtering to work properly. (For example, a Job with addresses &#34;1600 Amphitheatre Parkway, Mountain View, CA, USA&#34; and &#34;London, UK&#34; may not have location filters applied correctly at search time since the first is a LocationType.STREET_ADDRESS and the second is a LocationType.LOCALITY.) If a job needs to have multiple addresses, it is suggested to split it into multiple jobs with same LocationTypes. The maximum number of allowed characters is 500.
      * 
@@ -453,19 +455,19 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Job(String name, JobArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Job(String name, JobArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:jobs/v4:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Job(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Job(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:jobs/v4:Job", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -476,7 +478,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Job get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Job get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Job(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Autopilot is the configuration for Autopilot settings on the cluster.
  * 
  */
-public final class AutopilotArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutopilotArgs extends ResourceArgs {
 
     public static final AutopilotArgs Empty = new AutopilotArgs();
 

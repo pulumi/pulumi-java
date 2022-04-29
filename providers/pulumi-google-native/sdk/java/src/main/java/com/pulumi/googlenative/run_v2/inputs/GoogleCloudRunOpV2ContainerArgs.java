@@ -9,6 +9,7 @@ import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerPortArgs
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ResourceRequirementsArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VolumeMountArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A single application container. This specifies both the container to run, the command to run in the container and the arguments to supply to it. Note that additional arguments may be supplied by the system to the container at runtime.
  * 
  */
-public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2ContainerArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2ContainerArgs Empty = new GoogleCloudRunOpV2ContainerArgs();
 

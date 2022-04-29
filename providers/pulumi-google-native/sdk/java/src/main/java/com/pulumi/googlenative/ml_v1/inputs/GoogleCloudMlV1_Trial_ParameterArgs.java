@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A message representing a parameter to be tuned. Contains the name of the parameter and the suggested value to use for this trial.
  * 
  */
-public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1_Trial_ParameterArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1_Trial_ParameterArgs Empty = new GoogleCloudMlV1_Trial_ParameterArgs();
 

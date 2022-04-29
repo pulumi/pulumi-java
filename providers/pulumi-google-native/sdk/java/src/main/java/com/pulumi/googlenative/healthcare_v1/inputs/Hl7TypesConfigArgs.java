@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1.inputs.TypeArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.VersionSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Root config for HL7v2 datatype definitions for a specific HL7v2 version.
  * 
  */
-public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class Hl7TypesConfigArgs extends ResourceArgs {
 
     public static final Hl7TypesConfigArgs Empty = new Hl7TypesConfigArgs();
 

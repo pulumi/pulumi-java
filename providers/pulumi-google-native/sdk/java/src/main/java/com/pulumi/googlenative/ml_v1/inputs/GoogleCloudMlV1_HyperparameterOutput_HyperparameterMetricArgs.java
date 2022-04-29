@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An observed value of a metric.
  * 
  */
-public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs Empty = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs();
 

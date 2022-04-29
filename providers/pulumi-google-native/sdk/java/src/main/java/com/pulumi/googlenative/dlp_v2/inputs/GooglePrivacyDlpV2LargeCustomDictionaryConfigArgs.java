@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryFieldArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageFileSetArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration for a custom dictionary created from a data source of any size up to the maximum size defined in the [limits](https://cloud.google.com/dlp/limits) page. The artifacts of dictionary creation are stored in the specified Google Cloud Storage location. Consider using `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
  * 
  */
-public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs Empty = new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs();
 

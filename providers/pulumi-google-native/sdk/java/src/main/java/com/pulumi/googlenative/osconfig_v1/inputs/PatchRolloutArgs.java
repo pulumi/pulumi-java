@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.enums.PatchRolloutMode;
 import com.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Patch rollout configuration specifications. Contains details on the concurrency control when applying patch(es) to all targeted VMs.
  * 
  */
-public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchRolloutArgs extends ResourceArgs {
 
     public static final PatchRolloutArgs Empty = new PatchRolloutArgs();
 

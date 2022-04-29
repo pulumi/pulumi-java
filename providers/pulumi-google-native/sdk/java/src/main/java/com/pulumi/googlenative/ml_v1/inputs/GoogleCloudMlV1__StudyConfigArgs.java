@@ -9,6 +9,7 @@ import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__StudyConfigAlgorithm
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AutomatedStoppingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Represents configuration of a study.
  * 
  */
-public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__StudyConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__StudyConfigArgs Empty = new GoogleCloudMlV1__StudyConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Validation based on regular expressions.
  * 
  */
-public final class RegexValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegexValidationArgs extends ResourceArgs {
 
     public static final RegexValidationArgs Empty = new RegexValidationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.DiskInstantiationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A specification of the parameters to use when creating the instance template from a source instance.
  * 
  */
-public final class SourceInstanceParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceInstanceParamsArgs extends ResourceArgs {
 
     public static final SourceInstanceParamsArgs Empty = new SourceInstanceParamsArgs();
 

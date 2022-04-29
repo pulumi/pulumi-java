@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.enums.HttpCheckContentType;
 import com.pulumi.googlenative.monitoring_v3.enums.HttpCheckRequestMethod;
 import com.pulumi.googlenative.monitoring_v3.inputs.BasicAuthenticationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Information involved in an HTTP/HTTPS Uptime check request.
  * 
  */
-public final class HttpCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpCheckArgs extends ResourceArgs {
 
     public static final HttpCheckArgs Empty = new HttpCheckArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2AuxiliaryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TaggedFieldArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Reidentifiability metric. This corresponds to a risk model similar to what is called &#34;journalist risk&#34; in the literature, except the attack dataset is statistically modeled instead of being perfectly known. This can be done using publicly available data (like the US Census), or using a custom statistical model (indicated as one or several BigQuery tables), or by extrapolating from the distribution of values in the input dataset.
  * 
  */
-public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2KMapEstimationConfigArgs Empty = new GooglePrivacyDlpV2KMapEstimationConfigArgs();
 

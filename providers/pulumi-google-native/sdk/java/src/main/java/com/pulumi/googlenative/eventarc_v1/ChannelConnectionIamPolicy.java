@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.eventarc_v1.ChannelConnectionIamPolicyArgs;
 import com.pulumi.googlenative.eventarc_v1.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.eventarc_v1.outputs.BindingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:eventarc/v1:ChannelConnectionIamPolicy")
-public class ChannelConnectionIamPolicy extends com.pulumi.resources.CustomResource {
+public class ChannelConnectionIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -102,19 +104,19 @@ public class ChannelConnectionIamPolicy extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ChannelConnectionIamPolicy(String name, ChannelConnectionIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ChannelConnectionIamPolicy(String name, ChannelConnectionIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:eventarc/v1:ChannelConnectionIamPolicy", name, args == null ? ChannelConnectionIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ChannelConnectionIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ChannelConnectionIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:eventarc/v1:ChannelConnectionIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -125,7 +127,7 @@ public class ChannelConnectionIamPolicy extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ChannelConnectionIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ChannelConnectionIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ChannelConnectionIamPolicy(name, id, options);
     }
 }

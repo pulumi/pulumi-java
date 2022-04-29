@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Metadata for a BigQuery connector used by the job.
  * 
  */
-public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BigQueryIODetailsArgs extends ResourceArgs {
 
     public static final BigQueryIODetailsArgs Empty = new BigQueryIODetailsArgs();
 

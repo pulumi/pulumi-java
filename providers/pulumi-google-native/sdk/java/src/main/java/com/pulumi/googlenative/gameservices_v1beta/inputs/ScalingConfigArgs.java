@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gameservices_v1beta.inputs.LabelSelectorArgs;
 import com.pulumi.googlenative.gameservices_v1beta.inputs.ScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Autoscaling config for an Agones fleet.
  * 
  */
-public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScalingConfigArgs extends ResourceArgs {
 
     public static final ScalingConfigArgs Empty = new ScalingConfigArgs();
 

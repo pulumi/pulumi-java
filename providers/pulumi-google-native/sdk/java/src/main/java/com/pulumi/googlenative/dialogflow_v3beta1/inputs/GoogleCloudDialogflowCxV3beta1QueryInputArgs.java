@@ -10,6 +10,7 @@ import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCx
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventInputArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentInputArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1TextInputArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1QueryInputArgs Empty = new GoogleCloudDialogflowCxV3beta1QueryInputArgs();
 

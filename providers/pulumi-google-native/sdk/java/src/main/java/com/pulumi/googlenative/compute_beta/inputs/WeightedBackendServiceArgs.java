@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.HttpHeaderActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * In contrast to a single BackendService in HttpRouteAction to which all matching traffic is directed to, WeightedBackendService allows traffic to be split across multiple backend services. The volume of traffic for each backend service is proportional to the weight specified in each WeightedBackendService
  * 
  */
-public final class WeightedBackendServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeightedBackendServiceArgs extends ResourceArgs {
 
     public static final WeightedBackendServiceArgs Empty = new WeightedBackendServiceArgs();
 

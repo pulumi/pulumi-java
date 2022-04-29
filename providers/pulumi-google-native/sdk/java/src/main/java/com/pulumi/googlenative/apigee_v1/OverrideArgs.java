@@ -6,13 +6,14 @@ package com.pulumi.googlenative.apigee_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TraceSamplingConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class OverrideArgs extends ResourceArgs {
 
     public static final OverrideArgs Empty = new OverrideArgs();
 

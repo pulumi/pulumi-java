@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Metadata for any related URL information
  * 
  */
-public final class RelatedUrlArgs extends com.pulumi.resources.ResourceArgs {
+public final class RelatedUrlArgs extends ResourceArgs {
 
     public static final RelatedUrlArgs Empty = new RelatedUrlArgs();
 

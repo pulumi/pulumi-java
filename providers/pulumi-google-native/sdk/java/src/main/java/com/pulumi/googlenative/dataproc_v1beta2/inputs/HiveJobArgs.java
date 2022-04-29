@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.QueryListArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A Dataproc job for running Apache Hive (https://hive.apache.org/) queries on YARN.
  * 
  */
-public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class HiveJobArgs extends ResourceArgs {
 
     public static final HiveJobArgs Empty = new HiveJobArgs();
 

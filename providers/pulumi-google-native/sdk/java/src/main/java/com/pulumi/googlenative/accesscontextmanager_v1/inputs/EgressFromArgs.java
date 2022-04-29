@@ -6,6 +6,7 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.enums.EgressFromIdentityType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines the conditions under which an EgressPolicy matches a request. Conditions based on information about the source of the request. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed.
  * 
  */
-public final class EgressFromArgs extends com.pulumi.resources.ResourceArgs {
+public final class EgressFromArgs extends ResourceArgs {
 
     public static final EgressFromArgs Empty = new EgressFromArgs();
 

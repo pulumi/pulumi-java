@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2beta.enums.ServingConfigSolutionTypesItem;
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServingConfigArgs extends ResourceArgs {
 
     public static final ServingConfigArgs Empty = new ServingConfigArgs();
 

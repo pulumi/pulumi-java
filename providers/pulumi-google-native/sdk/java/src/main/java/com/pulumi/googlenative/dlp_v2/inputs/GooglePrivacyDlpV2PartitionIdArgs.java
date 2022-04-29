@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty. A partition ID contains several dimensions: project ID and namespace ID.
  * 
  */
-public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2PartitionIdArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2PartitionIdArgs Empty = new GooglePrivacyDlpV2PartitionIdArgs();
 

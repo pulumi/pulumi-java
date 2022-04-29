@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.ShareSettingsShareType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The share setting for reservations and sole tenancy node groups.
  * 
  */
-public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ShareSettingsArgs extends ResourceArgs {
 
     public static final ShareSettingsArgs Empty = new ShareSettingsArgs();
 

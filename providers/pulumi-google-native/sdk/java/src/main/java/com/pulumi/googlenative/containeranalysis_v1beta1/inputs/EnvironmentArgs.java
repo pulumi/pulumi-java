@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines an object for the environment field in in-toto links. The suggested fields are &#34;variables&#34;, &#34;filesystem&#34;, and &#34;workdir&#34;.
  * 
  */
-public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentArgs extends ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 

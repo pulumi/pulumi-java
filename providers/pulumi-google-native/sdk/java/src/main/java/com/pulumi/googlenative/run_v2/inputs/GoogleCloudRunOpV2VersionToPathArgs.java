@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * VersionToPath maps a specific version of a secret to a relative file to mount to, relative to VolumeMount&#39;s mount_path.
  * 
  */
-public final class GoogleCloudRunOpV2VersionToPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRunOpV2VersionToPathArgs extends ResourceArgs {
 
     public static final GoogleCloudRunOpV2VersionToPathArgs Empty = new GoogleCloudRunOpV2VersionToPathArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration parameters of autoscaling based on load balancing.
  * 
  */
-public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends ResourceArgs {
 
     public static final AutoscalingPolicyLoadBalancingUtilizationArgs Empty = new AutoscalingPolicyLoadBalancingUtilizationArgs();
 

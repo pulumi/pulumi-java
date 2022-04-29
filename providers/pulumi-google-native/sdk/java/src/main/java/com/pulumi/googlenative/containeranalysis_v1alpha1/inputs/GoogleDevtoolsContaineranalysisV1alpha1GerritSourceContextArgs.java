@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A SourceContext referring to a Gerrit project.
  * 
  */
-public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs extends ResourceArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs Empty = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs();
 

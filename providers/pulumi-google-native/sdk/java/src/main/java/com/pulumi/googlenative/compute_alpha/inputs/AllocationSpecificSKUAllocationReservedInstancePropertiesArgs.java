@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval;
 import com.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Properties of the SKU instances being reserved. Next ID: 9
  * 
  */
-public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs extends ResourceArgs {
 
     public static final AllocationSpecificSKUAllocationReservedInstancePropertiesArgs Empty = new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs();
 

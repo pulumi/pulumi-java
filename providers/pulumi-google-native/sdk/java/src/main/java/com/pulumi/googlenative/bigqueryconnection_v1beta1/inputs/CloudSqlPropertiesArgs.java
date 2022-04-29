@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigqueryconnection_v1beta1.enums.CloudSqlPropertiesType;
 import com.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Connection properties specific to the Cloud SQL.
  * 
  */
-public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudSqlPropertiesArgs extends ResourceArgs {
 
     public static final CloudSqlPropertiesArgs Empty = new CloudSqlPropertiesArgs();
 

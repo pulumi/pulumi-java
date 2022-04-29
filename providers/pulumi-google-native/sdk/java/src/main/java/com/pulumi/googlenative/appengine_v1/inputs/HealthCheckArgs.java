@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances. Only applicable for instances in App Engine flexible environment.
  * 
  */
-public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckArgs extends ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.CallCredentialsCallCredentialType;
 import com.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * [Deprecated] gRPC call credentials to access the SDS server. gRPC call credentials to access the SDS server.
  * 
  */
-public final class CallCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CallCredentialsArgs extends ResourceArgs {
 
     public static final CallCredentialsArgs Empty = new CallCredentialsArgs();
 

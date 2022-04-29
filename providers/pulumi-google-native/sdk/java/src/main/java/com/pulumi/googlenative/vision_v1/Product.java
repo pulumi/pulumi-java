@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vision_v1.ProductArgs;
 import com.pulumi.googlenative.vision_v1.outputs.KeyValueResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:vision/v1:Product")
-public class Product extends com.pulumi.resources.CustomResource {
+public class Product extends CustomResource {
     /**
      * User-provided metadata to be stored with this product. Must be at most 4096 characters long.
      * 
@@ -112,19 +114,19 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Product(String name, @Nullable ProductArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Product(String name, @Nullable ProductArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:vision/v1:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Product(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Product(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:vision/v1:Product", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -135,7 +137,7 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Product get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Product get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Product(name, id, options);
     }
 }

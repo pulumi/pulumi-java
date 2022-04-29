@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapVolumeSourceArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.SecretVolumeSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Volume represents a named volume in a container.
  * 
  */
-public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeArgs extends ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 

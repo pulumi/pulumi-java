@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1PeriodPeriodType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents period in days/months/years.
  * 
  */
-public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1PeriodArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1PeriodArgs Empty = new GoogleCloudChannelV1PeriodArgs();
 

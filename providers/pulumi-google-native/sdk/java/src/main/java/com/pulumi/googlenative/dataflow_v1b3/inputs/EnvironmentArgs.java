@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.WorkerPoolArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Describes the environment in which a Dataflow Job runs.
  * 
  */
-public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentArgs extends ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 

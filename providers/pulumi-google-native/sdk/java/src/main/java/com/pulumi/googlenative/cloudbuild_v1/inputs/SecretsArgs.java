@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Secrets and secret environment variables.
  * 
  */
-public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretsArgs extends ResourceArgs {
 
     public static final SecretsArgs Empty = new SecretsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Used for time-dependent conditions. Example: Want to have rule applied for week long sale.
  * 
  */
-public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaConditionTimeRangeArgs Empty = new GoogleCloudRetailV2betaConditionTimeRangeArgs();
 

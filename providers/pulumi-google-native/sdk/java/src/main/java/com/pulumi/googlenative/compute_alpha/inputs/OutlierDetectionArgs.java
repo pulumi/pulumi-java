@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service.
  * 
  */
-public final class OutlierDetectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutlierDetectionArgs extends ResourceArgs {
 
     public static final OutlierDetectionArgs Empty = new OutlierDetectionArgs();
 

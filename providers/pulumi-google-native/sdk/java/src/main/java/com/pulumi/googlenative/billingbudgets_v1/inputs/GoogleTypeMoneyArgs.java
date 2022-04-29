@@ -5,6 +5,7 @@ package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an amount of money with its currency type.
  * 
  */
-public final class GoogleTypeMoneyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleTypeMoneyArgs extends ResourceArgs {
 
     public static final GoogleTypeMoneyArgs Empty = new GoogleTypeMoneyArgs();
 

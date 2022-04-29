@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.enums.MetricThresholdComparison;
 import com.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A condition type that compares a collection of time series against a threshold.
  * 
  */
-public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricThresholdArgs extends ResourceArgs {
 
     public static final MetricThresholdArgs Empty = new MetricThresholdArgs();
 

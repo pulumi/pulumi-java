@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsublite_v1.inputs.PartitionConfigArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.ReservationConfigArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.RetentionConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicArgs extends ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 

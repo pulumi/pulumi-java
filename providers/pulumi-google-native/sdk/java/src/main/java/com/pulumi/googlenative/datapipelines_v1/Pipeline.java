@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datapipelines_v1.PipelineArgs;
 import com.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1ScheduleSpecResponse;
 import com.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1WorkloadResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datapipelines/v1:Pipeline")
-public class Pipeline extends com.pulumi.resources.CustomResource {
+public class Pipeline extends CustomResource {
     /**
      * Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
      * 
@@ -198,19 +200,19 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Pipeline(String name, PipelineArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Pipeline(String name, PipelineArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datapipelines/v1:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Pipeline(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Pipeline(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datapipelines/v1:Pipeline", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -221,7 +223,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Pipeline get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Pipeline get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Pipeline(name, id, options);
     }
 }

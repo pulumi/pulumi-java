@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Strategy that specifies how clients of Google Service Controller want to send traffic to use different config versions. This is generally used by API proxy to split traffic based on your configured percentage for each config version. One example of how to gradually rollout a new service configuration using this strategy: Day 1 Rollout { id: &#34;example.googleapis.com/rollout_20160206&#34; traffic_percent_strategy { percentages: { &#34;example.googleapis.com/20160201&#34;: 70.00 &#34;example.googleapis.com/20160206&#34;: 30.00 } } } Day 2 Rollout { id: &#34;example.googleapis.com/rollout_20160207&#34; traffic_percent_strategy: { percentages: { &#34;example.googleapis.com/20160206&#34;: 100.00 } } }
  * 
  */
-public final class TrafficPercentStrategyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficPercentStrategyArgs extends ResourceArgs {
 
     public static final TrafficPercentStrategyArgs Empty = new TrafficPercentStrategyArgs();
 

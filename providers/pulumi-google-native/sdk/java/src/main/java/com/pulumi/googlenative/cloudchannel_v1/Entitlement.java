@@ -14,6 +14,8 @@ import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1Commi
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ParameterResponse;
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ProvisionedServiceResponse;
 import com.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1TrialSettingsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,7 +28,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudchannel/v1:Entitlement")
-public class Entitlement extends com.pulumi.resources.CustomResource {
+public class Entitlement extends CustomResource {
     /**
      * Association information to other entitlements.
      * 
@@ -217,19 +219,19 @@ public class Entitlement extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Entitlement(String name, EntitlementArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Entitlement(String name, EntitlementArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudchannel/v1:Entitlement", name, args == null ? EntitlementArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Entitlement(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Entitlement(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudchannel/v1:Entitlement", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -240,7 +242,7 @@ public class Entitlement extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Entitlement get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Entitlement get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Entitlement(name, id, options);
     }
 }

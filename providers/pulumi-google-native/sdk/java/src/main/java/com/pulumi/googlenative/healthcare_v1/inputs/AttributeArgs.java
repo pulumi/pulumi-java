@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An attribute value for a Consent or User data mapping. Each Attribute must have a corresponding AttributeDefinition in the consent store that defines the default and allowed values.
  * 
  */
-public final class AttributeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttributeArgs extends ResourceArgs {
 
     public static final AttributeArgs Empty = new AttributeArgs();
 

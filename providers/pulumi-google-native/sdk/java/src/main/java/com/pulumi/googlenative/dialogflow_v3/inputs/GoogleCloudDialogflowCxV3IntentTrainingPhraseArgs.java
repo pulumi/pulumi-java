@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents an example that the agent is trained on to identify the intent.
  * 
  */
-public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs Empty = new GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs();
 

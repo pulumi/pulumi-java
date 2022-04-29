@@ -5,6 +5,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A storage location within Google cloud storage (GCS).
  * 
  */
-public final class GoogleCloudStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudStorageArgs extends ResourceArgs {
 
     public static final GoogleCloudStorageArgs Empty = new GoogleCloudStorageArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.enums.WebhookConfigState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
  * 
  */
-public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebhookConfigArgs extends ResourceArgs {
 
     public static final WebhookConfigArgs Empty = new WebhookConfigArgs();
 

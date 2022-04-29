@@ -17,14 +17,14 @@ import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1Pa
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1VulnerabilityDetailsArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.PackageInfoOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.RelationshipOccurrenceArgs;
-import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ResourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OccurrenceArgs extends ResourceArgs {
 
     public static final OccurrenceArgs Empty = new OccurrenceArgs();
 
@@ -175,13 +175,13 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resource", required=true)
-    private Output<ResourceArgs> resource;
+    private Output<com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ResourceArgs> resource;
 
     /**
      * @return Immutable. The resource for which the occurrence applies.
      * 
      */
-    public Output<ResourceArgs> resource() {
+    public Output<com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ResourceArgs> resource() {
         return this.resource;
     }
 
@@ -503,7 +503,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resource(Output<ResourceArgs> resource) {
+        public Builder resource(Output<com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ResourceArgs> resource) {
             $.resource = resource;
             return this;
         }
@@ -514,7 +514,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resource(ResourceArgs resource) {
+        public Builder resource(com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ResourceArgs resource) {
             return resource(Output.of(resource));
         }
 

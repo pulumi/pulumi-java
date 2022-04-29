@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_v1.LicenseArgs;
 import com.pulumi.googlenative.compute_v1.outputs.LicenseResourceRequirementsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:License")
-public class License extends com.pulumi.resources.CustomResource {
+public class License extends CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
@@ -146,19 +148,19 @@ public class License extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public License(String name, @Nullable LicenseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public License(String name, @Nullable LicenseArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private License(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private License(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:License", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class License extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static License get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static License get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new License(name, id, options);
     }
 }

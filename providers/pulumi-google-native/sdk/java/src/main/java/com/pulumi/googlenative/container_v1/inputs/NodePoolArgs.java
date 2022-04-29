@@ -12,6 +12,7 @@ import com.pulumi.googlenative.container_v1.inputs.NodeNetworkConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NodePoolAutoscalingArgs;
 import com.pulumi.googlenative.container_v1.inputs.StatusConditionArgs;
 import com.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * NodePool contains the name and configuration for a cluster&#39;s node pool. Node pools are a set of nodes (i.e. VM&#39;s), with a common configuration and specification, under the control of the cluster master. They may have a set of Kubernetes labels applied to them, which may be used to reference them during pod scheduling. They may also be resized up or down, to accommodate the workload.
  * 
  */
-public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodePoolArgs extends ResourceArgs {
 
     public static final NodePoolArgs Empty = new NodePoolArgs();
 

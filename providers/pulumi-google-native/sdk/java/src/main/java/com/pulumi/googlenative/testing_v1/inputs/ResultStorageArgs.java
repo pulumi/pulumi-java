@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Locations where the results of running the test are stored.
  * 
  */
-public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResultStorageArgs extends ResourceArgs {
 
     public static final ResultStorageArgs Empty = new ResultStorageArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Rate limits. This message determines the maximum rate that tasks can be dispatched by a queue, regardless of whether the dispatch is a first task attempt or a retry. Note: The debugging command, RunTask, will run a task even if the queue has reached its RateLimits.
  * 
  */
-public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RateLimitsArgs extends ResourceArgs {
 
     public static final RateLimitsArgs Empty = new RateLimitsArgs();
 

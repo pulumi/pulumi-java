@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration for continuous tests.
  * 
  */
-public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs Empty = new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs();
 

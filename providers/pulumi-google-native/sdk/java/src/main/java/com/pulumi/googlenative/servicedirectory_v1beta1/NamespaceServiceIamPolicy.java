@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.servicedirectory_v1beta1.NamespaceServiceIamPolicyArgs;
 import com.pulumi.googlenative.servicedirectory_v1beta1.outputs.BindingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:servicedirectory/v1beta1:NamespaceServiceIamPolicy")
-public class NamespaceServiceIamPolicy extends com.pulumi.resources.CustomResource {
+public class NamespaceServiceIamPolicy extends CustomResource {
     /**
      * Associates a list of `members`, or principals, with a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one principal. The `bindings` in a `Policy` can refer to up to 1,500 principals; up to 250 of these principals can be Google groups. Each occurrence of a principal counts towards these limits. For example, if the `bindings` grant 50 different roles to `user:alice@example.com`, and not to any other principal, then you can add another 1,450 principals to the `bindings` in the `Policy`.
      * 
@@ -87,19 +89,19 @@ public class NamespaceServiceIamPolicy extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NamespaceServiceIamPolicy(String name, NamespaceServiceIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NamespaceServiceIamPolicy(String name, NamespaceServiceIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:servicedirectory/v1beta1:NamespaceServiceIamPolicy", name, args == null ? NamespaceServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private NamespaceServiceIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private NamespaceServiceIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:servicedirectory/v1beta1:NamespaceServiceIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -110,7 +112,7 @@ public class NamespaceServiceIamPolicy extends com.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NamespaceServiceIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NamespaceServiceIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new NamespaceServiceIamPolicy(name, id, options);
     }
 }

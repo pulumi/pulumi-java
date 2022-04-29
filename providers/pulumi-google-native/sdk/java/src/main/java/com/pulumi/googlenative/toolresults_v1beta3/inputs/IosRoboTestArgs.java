@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * A Robo test for an iOS application.
  * 
  */
-public final class IosRoboTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosRoboTestArgs extends ResourceArgs {
 
     public static final IosRoboTestArgs Empty = new IosRoboTestArgs();
 

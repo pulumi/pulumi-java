@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * API call volume range and the fees charged when the total number of API calls is within the range.
  * 
  */
-public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1RateRangeArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1RateRangeArgs Empty = new GoogleCloudApigeeV1RateRangeArgs();
 

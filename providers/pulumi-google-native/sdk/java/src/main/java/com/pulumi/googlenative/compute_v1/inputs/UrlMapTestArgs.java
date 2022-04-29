@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.UrlMapTestHeaderArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Message for the expected URL mappings.
  * 
  */
-public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlMapTestArgs extends ResourceArgs {
 
     public static final UrlMapTestArgs Empty = new UrlMapTestArgs();
 

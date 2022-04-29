@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * OwnerReference contains enough information to let you identify an owning object. Currently, an owning object must be in the same namespace, so there is no namespace field.
  * 
  */
-public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OwnerReferenceArgs extends ResourceArgs {
 
     public static final OwnerReferenceArgs Empty = new OwnerReferenceArgs();
 

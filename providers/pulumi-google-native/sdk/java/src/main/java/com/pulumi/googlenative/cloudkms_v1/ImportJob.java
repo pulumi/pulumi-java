@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudkms_v1.ImportJobArgs;
 import com.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import com.pulumi.googlenative.cloudkms_v1.outputs.WrappingPublicKeyResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:cloudkms/v1:ImportJob")
-public class ImportJob extends com.pulumi.resources.CustomResource {
+public class ImportJob extends CustomResource {
     /**
      * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
      * 
@@ -185,19 +187,19 @@ public class ImportJob extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ImportJob(String name, ImportJobArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ImportJob(String name, ImportJobArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:cloudkms/v1:ImportJob", name, args == null ? ImportJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ImportJob(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ImportJob(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:cloudkms/v1:ImportJob", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -208,7 +210,7 @@ public class ImportJob extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImportJob get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ImportJob get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ImportJob(name, id, options);
     }
 }

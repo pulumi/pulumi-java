@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Rule set for modifying a set of infoTypes to alter behavior under certain circumstances, depending on the specific details of the rules within the set.
  * 
  */
-public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectionRuleSetArgs Empty = new GooglePrivacyDlpV2InspectionRuleSetArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Third-party Python runtime library that is required by the application.
  * 
  */
-public final class LibraryArgs extends com.pulumi.resources.ResourceArgs {
+public final class LibraryArgs extends ResourceArgs {
 
     public static final LibraryArgs Empty = new LibraryArgs();
 

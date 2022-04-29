@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleTableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Oracle schema.
  * 
  */
-public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class OracleSchemaArgs extends ResourceArgs {
 
     public static final OracleSchemaArgs Empty = new OracleSchemaArgs();
 

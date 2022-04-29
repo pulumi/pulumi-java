@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ApprovalConfig describes configuration for manual approval of a build.
  * 
  */
-public final class ApprovalConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApprovalConfigArgs extends ResourceArgs {
 
     public static final ApprovalConfigArgs Empty = new ApprovalConfigArgs();
 

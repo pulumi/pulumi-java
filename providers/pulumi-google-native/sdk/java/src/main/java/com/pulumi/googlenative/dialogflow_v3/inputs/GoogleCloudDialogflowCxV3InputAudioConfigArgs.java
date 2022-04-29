@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding;
 import com.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3InputAudioConfigModelVariant;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Instructs the speech recognizer on how to process the audio content.
  * 
  */
-public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3InputAudioConfigArgs Empty = new GoogleCloudDialogflowCxV3InputAudioConfigArgs();
 

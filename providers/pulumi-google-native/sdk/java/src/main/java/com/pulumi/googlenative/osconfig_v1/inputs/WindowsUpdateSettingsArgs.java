@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.enums.WindowsUpdateSettingsClassificationsItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Windows patching is performed using the Windows Update Agent.
  * 
  */
-public final class WindowsUpdateSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WindowsUpdateSettingsArgs extends ResourceArgs {
 
     public static final WindowsUpdateSettingsArgs Empty = new WindowsUpdateSettingsArgs();
 

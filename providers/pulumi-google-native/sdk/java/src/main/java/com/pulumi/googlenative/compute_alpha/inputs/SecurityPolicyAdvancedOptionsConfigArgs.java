@@ -7,12 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigJsonParsing;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigLogLevel;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyAdvancedOptionsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyAdvancedOptionsConfigArgs extends ResourceArgs {
 
     public static final SecurityPolicyAdvancedOptionsConfigArgs Empty = new SecurityPolicyAdvancedOptionsConfigArgs();
 

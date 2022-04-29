@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the pairing of REST resource path and the actions (verbs) allowed on the resource path.
  * 
  */
-public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1OperationArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1OperationArgs Empty = new GoogleCloudApigeeV1OperationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Description of the type, names/ids, and input/outputs for a transform.
  * 
  */
-public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransformSummaryArgs extends ResourceArgs {
 
     public static final TransformSummaryArgs Empty = new TransformSummaryArgs();
 

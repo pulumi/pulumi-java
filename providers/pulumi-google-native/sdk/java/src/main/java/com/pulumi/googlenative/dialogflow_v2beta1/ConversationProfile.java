@@ -15,6 +15,8 @@ import com.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV
 import com.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1LoggingConfigResponse;
 import com.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1NotificationConfigResponse;
 import com.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v2beta1:ConversationProfile")
-public class ConversationProfile extends com.pulumi.resources.CustomResource {
+public class ConversationProfile extends CustomResource {
     /**
      * Configuration for an automated agent to use with this profile.
      * 
@@ -242,19 +244,19 @@ public class ConversationProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConversationProfile(String name, ConversationProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ConversationProfile(String name, ConversationProfileArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2beta1:ConversationProfile", name, args == null ? ConversationProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ConversationProfile(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ConversationProfile(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v2beta1:ConversationProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -265,7 +267,7 @@ public class ConversationProfile extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConversationProfile get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConversationProfile get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ConversationProfile(name, id, options);
     }
 }

@@ -18,16 +18,16 @@ import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FileOccurrenceA
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InstallationArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PackageInfoOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RelationshipOccurrenceArgs;
-import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ResourceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityDetailsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OccurrenceArgs extends ResourceArgs {
 
     public static final OccurrenceArgs Empty = new OccurrenceArgs();
 
@@ -208,13 +208,13 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resource")
-    private @Nullable Output<ResourceArgs> resource;
+    private @Nullable Output<com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ResourceArgs> resource;
 
     /**
      * @return  The resource for which the `Occurrence` applies.
      * 
      */
-    public Optional<Output<ResourceArgs>> resource() {
+    public Optional<Output<com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ResourceArgs>> resource() {
         return Optional.ofNullable(this.resource);
     }
 
@@ -612,7 +612,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resource(@Nullable Output<ResourceArgs> resource) {
+        public Builder resource(@Nullable Output<com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ResourceArgs> resource) {
             $.resource = resource;
             return this;
         }
@@ -623,7 +623,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resource(ResourceArgs resource) {
+        public Builder resource(com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ResourceArgs resource) {
             return resource(Output.of(resource));
         }
 

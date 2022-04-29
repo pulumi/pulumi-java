@@ -9,6 +9,7 @@ import com.pulumi.googlenative.servicemanagement_v1.enums.TypeSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.FieldArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A protocol buffer message type.
  * 
  */
-public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TypeArgs extends ResourceArgs {
 
     public static final TypeArgs Empty = new TypeArgs();
 

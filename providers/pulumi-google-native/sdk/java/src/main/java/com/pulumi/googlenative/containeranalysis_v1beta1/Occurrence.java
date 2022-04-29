@@ -22,6 +22,8 @@ import com.pulumi.googlenative.containeranalysis_v1beta1.outputs.GrafeasV1beta1V
 import com.pulumi.googlenative.containeranalysis_v1beta1.outputs.PackageInfoOccurrenceResponse;
 import com.pulumi.googlenative.containeranalysis_v1beta1.outputs.RelationshipOccurrenceResponse;
 import com.pulumi.googlenative.containeranalysis_v1beta1.outputs.ResourceResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:containeranalysis/v1beta1:Occurrence")
-public class Occurrence extends com.pulumi.resources.CustomResource {
+public class Occurrence extends CustomResource {
     /**
      * Describes an attestation of an artifact.
      * 
@@ -320,19 +322,19 @@ public class Occurrence extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Occurrence(String name, OccurrenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Occurrence(String name, OccurrenceArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:containeranalysis/v1beta1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Occurrence(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Occurrence(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:containeranalysis/v1beta1:Occurrence", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -343,7 +345,7 @@ public class Occurrence extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Occurrence get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Occurrence get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Occurrence(name, id, options);
     }
 }

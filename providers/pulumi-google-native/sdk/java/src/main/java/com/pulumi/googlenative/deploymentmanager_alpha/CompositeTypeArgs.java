@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.CompositeTypeStatus;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.CompositeTypeLabelEntryArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.TemplateContentsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class CompositeTypeArgs extends ResourceArgs {
 
     public static final CompositeTypeArgs Empty = new CompositeTypeArgs();
 

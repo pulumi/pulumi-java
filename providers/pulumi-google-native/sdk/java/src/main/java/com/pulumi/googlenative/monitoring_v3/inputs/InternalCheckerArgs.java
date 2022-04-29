@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.enums.InternalCheckerState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An internal checker allows Uptime checks to run on private/internal GCP resources.
  * 
  */
-public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs {
+public final class InternalCheckerArgs extends ResourceArgs {
 
     public static final InternalCheckerArgs Empty = new InternalCheckerArgs();
 

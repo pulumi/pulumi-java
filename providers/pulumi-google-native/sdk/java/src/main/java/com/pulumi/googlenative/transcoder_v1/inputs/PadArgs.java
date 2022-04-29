@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Pad filter configuration for the input video. The padded input video is scaled after padding with black to match the output resolution.
  * 
  */
-public final class PadArgs extends com.pulumi.resources.ResourceArgs {
+public final class PadArgs extends ResourceArgs {
 
     public static final PadArgs Empty = new PadArgs();
 

@@ -16,6 +16,8 @@ import com.pulumi.googlenative.vmmigration_v1.outputs.ReplicationCycleResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.ReplicationSyncResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.SchedulePolicyResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:vmmigration/v1:MigratingVm")
-public class MigratingVm extends com.pulumi.resources.CustomResource {
+public class MigratingVm extends CustomResource {
     /**
      * Details of the target VM in Compute Engine.
      * 
@@ -288,19 +290,19 @@ public class MigratingVm extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MigratingVm(String name, MigratingVmArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MigratingVm(String name, MigratingVmArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:vmmigration/v1:MigratingVm", name, args == null ? MigratingVmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MigratingVm(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MigratingVm(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:vmmigration/v1:MigratingVm", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -311,7 +313,7 @@ public class MigratingVm extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MigratingVm get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MigratingVm get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new MigratingVm(name, id, options);
     }
 }

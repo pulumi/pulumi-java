@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
  * 
  */
-public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeZoneArgs extends ResourceArgs {
 
     public static final TimeZoneArgs Empty = new TimeZoneArgs();
 

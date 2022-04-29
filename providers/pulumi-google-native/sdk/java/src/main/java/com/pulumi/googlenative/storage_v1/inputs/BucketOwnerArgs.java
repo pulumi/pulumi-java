@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The owner of the bucket. This is always the project team&#39;s owner group.
  * 
  */
-public final class BucketOwnerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketOwnerArgs extends ResourceArgs {
 
     public static final BucketOwnerArgs Empty = new BucketOwnerArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.privateca_v1.inputs.CaOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.KeyUsageArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.X509ExtensionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * An X509Parameters is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
  * 
  */
-public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class X509ParametersArgs extends ResourceArgs {
 
     public static final X509ParametersArgs Empty = new X509ParametersArgs();
 

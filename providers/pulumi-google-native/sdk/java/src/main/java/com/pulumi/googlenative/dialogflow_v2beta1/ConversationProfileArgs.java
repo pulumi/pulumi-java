@@ -11,13 +11,14 @@ import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1LoggingConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1NotificationConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConversationProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConversationProfileArgs extends ResourceArgs {
 
     public static final ConversationProfileArgs Empty = new ConversationProfileArgs();
 

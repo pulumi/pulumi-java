@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a group of VMs that can be identified as having all these labels, for example &#34;env=prod and app=web&#34;.
  * 
  */
-public final class PatchInstanceFilterGroupLabelArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchInstanceFilterGroupLabelArgs extends ResourceArgs {
 
     public static final PatchInstanceFilterGroupLabelArgs Empty = new PatchInstanceFilterGroupLabelArgs();
 

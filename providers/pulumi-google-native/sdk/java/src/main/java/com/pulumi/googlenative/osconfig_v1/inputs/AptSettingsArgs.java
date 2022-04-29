@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1.enums.AptSettingsType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Apt patching is completed by executing `apt-get update &amp;&amp; apt-get upgrade`. Additional options can be set to control how this is executed.
  * 
  */
-public final class AptSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AptSettingsArgs extends ResourceArgs {
 
     public static final AptSettingsArgs Empty = new AptSettingsArgs();
 

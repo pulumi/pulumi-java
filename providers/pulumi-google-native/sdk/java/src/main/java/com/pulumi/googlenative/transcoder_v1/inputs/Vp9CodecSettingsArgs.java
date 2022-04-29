@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * VP9 codec settings.
  * 
  */
-public final class Vp9CodecSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class Vp9CodecSettingsArgs extends ResourceArgs {
 
     public static final Vp9CodecSettingsArgs Empty = new Vp9CodecSettingsArgs();
 

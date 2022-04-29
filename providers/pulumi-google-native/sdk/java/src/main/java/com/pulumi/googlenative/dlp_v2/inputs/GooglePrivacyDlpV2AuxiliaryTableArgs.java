@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdFieldArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * An auxiliary table contains statistical information on the relative frequency of different quasi-identifiers values. It has one or several quasi-identifiers columns, and one column that indicates the relative frequency of each quasi-identifier tuple. If a tuple is present in the data but not in the auxiliary table, the corresponding relative frequency is assumed to be zero (and thus, the tuple is highly reidentifiable).
  * 
  */
-public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2AuxiliaryTableArgs Empty = new GooglePrivacyDlpV2AuxiliaryTableArgs();
 

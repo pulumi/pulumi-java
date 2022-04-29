@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetServiceConsumerIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetServiceConsumerIamPolicyArgs extends InvokeArgs {
 
     public static final GetServiceConsumerIamPolicyArgs Empty = new GetServiceConsumerIamPolicyArgs();
 

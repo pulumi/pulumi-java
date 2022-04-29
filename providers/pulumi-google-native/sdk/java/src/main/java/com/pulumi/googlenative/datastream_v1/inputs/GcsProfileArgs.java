@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cloud Storage bucket profile.
  * 
  */
-public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcsProfileArgs extends ResourceArgs {
 
     public static final GcsProfileArgs Empty = new GcsProfileArgs();
 

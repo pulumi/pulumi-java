@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2OutputStorageConfigOutputSchema;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cloud repository for storing output.
  * 
  */
-public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2OutputStorageConfigArgs Empty = new GooglePrivacyDlpV2OutputStorageConfigArgs();
 

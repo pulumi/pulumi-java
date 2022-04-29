@@ -5,6 +5,7 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A policy that specifies how Cloud Pub/Sub retries message delivery. Retry delay will be exponential based on provided minimum and maximum backoffs. https://en.wikipedia.org/wiki/Exponential_backoff. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message. Retry Policy is implemented on a best effort basis. At times, the delay between consecutive deliveries may not match the configuration. That is, delay can be more or less than configured backoff.
  * 
  */
-public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryPolicyArgs extends ResourceArgs {
 
     public static final RetryPolicyArgs Empty = new RetryPolicyArgs();
 

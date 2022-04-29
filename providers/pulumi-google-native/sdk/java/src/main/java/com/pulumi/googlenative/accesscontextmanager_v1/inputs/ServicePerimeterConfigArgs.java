@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressPolicyArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressPolicyArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.VpcAccessibleServicesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service Perimeter configuration.
  * 
  */
-public final class ServicePerimeterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicePerimeterConfigArgs extends ResourceArgs {
 
     public static final ServicePerimeterConfigArgs Empty = new ServicePerimeterConfigArgs();
 

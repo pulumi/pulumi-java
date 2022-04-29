@@ -6,6 +6,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Display static overlay object.
  * 
  */
-public final class AnimationStaticArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnimationStaticArgs extends ResourceArgs {
 
     public static final AnimationStaticArgs Empty = new AnimationStaticArgs();
 

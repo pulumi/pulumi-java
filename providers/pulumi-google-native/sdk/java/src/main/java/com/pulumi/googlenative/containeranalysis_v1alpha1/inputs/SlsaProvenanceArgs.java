@@ -9,6 +9,7 @@ import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MaterialArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaBuilderArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaMetadataArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaRecipeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * SlsaProvenance is the slsa provenance as defined by the slsa spec.
  * 
  */
-public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SlsaProvenanceArgs extends ResourceArgs {
 
     public static final SlsaProvenanceArgs Empty = new SlsaProvenanceArgs();
 

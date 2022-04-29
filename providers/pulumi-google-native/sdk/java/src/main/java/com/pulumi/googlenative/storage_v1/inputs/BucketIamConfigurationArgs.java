@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s IAM configuration.
  * 
  */
-public final class BucketIamConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketIamConfigurationArgs extends ResourceArgs {
 
     public static final BucketIamConfigurationArgs Empty = new BucketIamConfigurationArgs();
 

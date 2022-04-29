@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The authentication parameters to provide to the specified resource or URL that requires a username and password. Currently, only Basic HTTP authentication (https://tools.ietf.org/html/rfc7617) is supported in Uptime checks.
  * 
  */
-public final class BasicAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicAuthenticationArgs extends ResourceArgs {
 
     public static final BasicAuthenticationArgs Empty = new BasicAuthenticationArgs();
 

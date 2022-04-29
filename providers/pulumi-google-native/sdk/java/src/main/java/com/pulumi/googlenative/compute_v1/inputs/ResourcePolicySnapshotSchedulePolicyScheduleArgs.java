@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicyDailyCycleArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicyHourlyCycleArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ResourcePolicyWeeklyCycleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A schedule for disks where the schedueled operations are performed.
  * 
  */
-public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 

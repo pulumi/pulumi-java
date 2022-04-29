@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.iap_v1.IdentityAwareProxyClientArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:iap/v1:IdentityAwareProxyClient")
-public class IdentityAwareProxyClient extends com.pulumi.resources.CustomResource {
+public class IdentityAwareProxyClient extends CustomResource {
     /**
      * Human-friendly name given to the OAuth client.
      * 
@@ -83,19 +85,19 @@ public class IdentityAwareProxyClient extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IdentityAwareProxyClient(String name, IdentityAwareProxyClientArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IdentityAwareProxyClient(String name, IdentityAwareProxyClientArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:iap/v1:IdentityAwareProxyClient", name, args == null ? IdentityAwareProxyClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IdentityAwareProxyClient(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IdentityAwareProxyClient(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:iap/v1:IdentityAwareProxyClient", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -106,7 +108,7 @@ public class IdentityAwareProxyClient extends com.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityAwareProxyClient get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityAwareProxyClient get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new IdentityAwareProxyClient(name, id, options);
     }
 }

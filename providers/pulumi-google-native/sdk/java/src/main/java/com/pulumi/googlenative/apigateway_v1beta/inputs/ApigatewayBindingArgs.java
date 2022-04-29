@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigateway_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Associates `members`, or principals, with a `role`.
  * 
  */
-public final class ApigatewayBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApigatewayBindingArgs extends ResourceArgs {
 
     public static final ApigatewayBindingArgs Empty = new ApigatewayBindingArgs();
 

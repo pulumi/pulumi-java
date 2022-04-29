@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ContainerArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.VolumeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * InstanceSpec is a description of an instance.
  * 
  */
-public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceSpecArgs extends ResourceArgs {
 
     public static final InstanceSpecArgs Empty = new InstanceSpecArgs();
 

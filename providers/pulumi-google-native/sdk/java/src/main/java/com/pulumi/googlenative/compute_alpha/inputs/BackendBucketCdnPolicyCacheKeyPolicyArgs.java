@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message containing what to include in the cache key for a request for Cloud CDN.
  * 
  */
-public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends ResourceArgs {
 
     public static final BackendBucketCdnPolicyCacheKeyPolicyArgs Empty = new BackendBucketCdnPolicyCacheKeyPolicyArgs();
 

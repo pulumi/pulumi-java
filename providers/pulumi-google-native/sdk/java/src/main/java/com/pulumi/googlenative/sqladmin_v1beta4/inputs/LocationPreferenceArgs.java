@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Preferred location. This specifies where a Cloud SQL instance is located. Note that if the preferred location is not available, the instance will be located as close as possible within the region. Only one location may be specified.
  * 
  */
-public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationPreferenceArgs extends ResourceArgs {
 
     public static final LocationPreferenceArgs Empty = new LocationPreferenceArgs();
 

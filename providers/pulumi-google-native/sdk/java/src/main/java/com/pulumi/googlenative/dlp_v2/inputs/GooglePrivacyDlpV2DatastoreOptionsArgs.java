@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KindExpressionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Options defining a data set within Google Cloud Datastore.
  * 
  */
-public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2DatastoreOptionsArgs Empty = new GooglePrivacyDlpV2DatastoreOptionsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ColumnSchemaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
  * 
  */
-public final class GoogleCloudDatacatalogV1SchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1SchemaArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1SchemaArgs Empty = new GoogleCloudDatacatalogV1SchemaArgs();
 

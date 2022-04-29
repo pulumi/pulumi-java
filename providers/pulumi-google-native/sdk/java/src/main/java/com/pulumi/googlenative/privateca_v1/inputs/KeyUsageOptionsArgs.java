@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * KeyUsage.KeyUsageOptions corresponds to the key usage values described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
  * 
  */
-public final class KeyUsageOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyUsageOptionsArgs extends ResourceArgs {
 
     public static final KeyUsageOptionsArgs Empty = new KeyUsageOptionsArgs();
 

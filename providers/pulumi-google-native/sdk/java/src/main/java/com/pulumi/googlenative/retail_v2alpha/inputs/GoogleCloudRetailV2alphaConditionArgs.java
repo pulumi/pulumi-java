@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionQueryTermArgs;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionTimeRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Metadata that is used to define a condition that triggers an action. A valid condition must specify at least one of &#39;query_terms&#39; or &#39;products_filter&#39;. If multiple fields are specified, the condition is met if all the fields are satisfied e.g. if a set of query terms and product_filter are set, then only items matching the product_filter for requests with a query matching the query terms wil get boosted.
  * 
  */
-public final class GoogleCloudRetailV2alphaConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2alphaConditionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaConditionArgs Empty = new GoogleCloudRetailV2alphaConditionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gameservices_v1.inputs.CustomFieldArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Increment a streamz counter with the specified metric and field names. Metric names should start with a &#39;/&#39;, generally be lowercase-only, and end in &#34;_count&#34;. Field names should not contain an initial slash. The actual exported metric names will have &#34;/iam/policy&#34; prepended. Field names correspond to IAM request parameters and field values are their respective values. Supported field names: - &#34;authority&#34;, which is &#34;[token]&#34; if IAMContext.token is present, otherwise the value of IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or - &#34;iam_principal&#34;, a representation of IAMContext.principal even if a token or authority selector is present; or - &#34;&#34; (empty string), resulting in a counter with no fields. Examples: counter { metric: &#34;/debug_access_count&#34; field: &#34;iam_principal&#34; } ==&gt; increment counter /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}
  * 
  */
-public final class CounterOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CounterOptionsArgs extends ResourceArgs {
 
     public static final CounterOptionsArgs Empty = new CounterOptionsArgs();
 

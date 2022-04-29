@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * VerticalPodAutoscaling contains global, per-cluster information required by Vertical Pod Autoscaler to automatically adjust the resources of pods controlled by it.
  * 
  */
-public final class VerticalPodAutoscalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class VerticalPodAutoscalingArgs extends ResourceArgs {
 
     public static final VerticalPodAutoscalingArgs Empty = new VerticalPodAutoscalingArgs();
 

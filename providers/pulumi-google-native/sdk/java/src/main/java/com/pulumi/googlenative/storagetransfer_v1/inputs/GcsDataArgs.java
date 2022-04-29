@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * In a GcsData resource, an object&#39;s name is the Cloud Storage object&#39;s name and its &#34;last modification time&#34; refers to the object&#39;s `updated` property of Cloud Storage objects, which changes when the content or the metadata of the object is updated.
  * 
  */
-public final class GcsDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcsDataArgs extends ResourceArgs {
 
     public static final GcsDataArgs Empty = new GcsDataArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s custom placement configuration for Custom Dual Regions.
  * 
  */
-public final class BucketCustomPlacementConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketCustomPlacementConfigArgs extends ResourceArgs {
 
     public static final BucketCustomPlacementConfigArgs Empty = new BucketCustomPlacementConfigArgs();
 

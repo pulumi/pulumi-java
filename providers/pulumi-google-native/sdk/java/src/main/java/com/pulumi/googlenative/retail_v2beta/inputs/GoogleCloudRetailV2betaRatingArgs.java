@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The rating of a Product.
  * 
  */
-public final class GoogleCloudRetailV2betaRatingArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaRatingArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRatingArgs Empty = new GoogleCloudRetailV2betaRatingArgs();
 

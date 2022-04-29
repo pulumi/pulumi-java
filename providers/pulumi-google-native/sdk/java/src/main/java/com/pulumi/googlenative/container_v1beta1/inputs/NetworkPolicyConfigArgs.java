@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
  * 
  */
-public final class NetworkPolicyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyConfigArgs extends ResourceArgs {
 
     public static final NetworkPolicyConfigArgs Empty = new NetworkPolicyConfigArgs();
 

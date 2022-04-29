@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Raw bytes representing consent artifact content.
  * 
  */
-public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageArgs extends ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.policysimulator_v1.FolderReplayArgs;
 import com.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayConfigResponse;
 import com.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:policysimulator/v1:FolderReplay")
-public class FolderReplay extends com.pulumi.resources.CustomResource {
+public class FolderReplay extends CustomResource {
     /**
      * The configuration used for the `Replay`.
      * 
@@ -101,19 +103,19 @@ public class FolderReplay extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FolderReplay(String name, FolderReplayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FolderReplay(String name, FolderReplayArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:policysimulator/v1:FolderReplay", name, args == null ? FolderReplayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FolderReplay(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FolderReplay(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:policysimulator/v1:FolderReplay", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -124,7 +126,7 @@ public class FolderReplay extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FolderReplay get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FolderReplay get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FolderReplay(name, id, options);
     }
 }

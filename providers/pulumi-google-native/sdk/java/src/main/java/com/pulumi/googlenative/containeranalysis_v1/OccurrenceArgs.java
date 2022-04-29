@@ -16,13 +16,14 @@ import com.pulumi.googlenative.containeranalysis_v1.inputs.ImageOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.PackageOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeOccurrenceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VulnerabilityOccurrenceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OccurrenceArgs extends ResourceArgs {
 
     public static final OccurrenceArgs Empty = new OccurrenceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * BitbucketServerSecrets represents the secrets in Secret Manager for a Bitbucket Server.
  * 
  */
-public final class BitbucketServerSecretsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BitbucketServerSecretsArgs extends ResourceArgs {
 
     public static final BitbucketServerSecretsArgs Empty = new BitbucketServerSecretsArgs();
 

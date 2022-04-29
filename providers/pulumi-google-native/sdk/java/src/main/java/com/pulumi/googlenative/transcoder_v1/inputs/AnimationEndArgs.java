@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * End previous overlay animation from the video. Without AnimationEnd, the overlay object will keep the state of previous animation until the end of the video.
  * 
  */
-public final class AnimationEndArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnimationEndArgs extends ResourceArgs {
 
     public static final AnimationEndArgs Empty = new AnimationEndArgs();
 

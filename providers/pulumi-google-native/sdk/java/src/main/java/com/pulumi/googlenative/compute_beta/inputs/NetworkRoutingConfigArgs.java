@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.NetworkRoutingConfigRoutingMode;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A routing configuration attached to a network resource. The message includes the list of routers associated with the network, and a flag indicating the type of routing behavior to enforce network-wide.
  * 
  */
-public final class NetworkRoutingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkRoutingConfigArgs extends ResourceArgs {
 
     public static final NetworkRoutingConfigArgs Empty = new NetworkRoutingConfigArgs();
 

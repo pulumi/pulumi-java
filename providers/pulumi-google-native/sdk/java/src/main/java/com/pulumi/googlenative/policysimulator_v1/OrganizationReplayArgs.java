@@ -6,13 +6,14 @@ package com.pulumi.googlenative.policysimulator_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OrganizationReplayArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationReplayArgs extends ResourceArgs {
 
     public static final OrganizationReplayArgs Empty = new OrganizationReplayArgs();
 

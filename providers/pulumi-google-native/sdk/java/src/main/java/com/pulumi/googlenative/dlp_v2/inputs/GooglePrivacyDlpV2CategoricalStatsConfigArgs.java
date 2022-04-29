@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Compute numerical stats over an individual column, including number of distinct values and value count distribution.
  * 
  */
-public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2CategoricalStatsConfigArgs Empty = new GooglePrivacyDlpV2CategoricalStatsConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
  * 
  */
-public final class IapTestServiceAccountInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IapTestServiceAccountInfoArgs extends ResourceArgs {
 
     public static final IapTestServiceAccountInfoArgs Empty = new IapTestServiceAccountInfoArgs();
 

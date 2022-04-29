@@ -6,6 +6,7 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.pubsublite_v1.enums.DeliveryConfigDeliveryRequirement;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The settings for a subscription&#39;s message delivery.
  * 
  */
-public final class DeliveryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryConfigArgs extends ResourceArgs {
 
     public static final DeliveryConfigArgs Empty = new DeliveryConfigArgs();
 

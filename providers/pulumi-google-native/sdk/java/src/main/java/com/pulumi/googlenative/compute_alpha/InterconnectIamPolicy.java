@@ -12,6 +12,8 @@ import com.pulumi.googlenative.compute_alpha.InterconnectIamPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.BindingResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.RuleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/alpha:InterconnectIamPolicy")
-public class InterconnectIamPolicy extends com.pulumi.resources.CustomResource {
+public class InterconnectIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -117,19 +119,19 @@ public class InterconnectIamPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InterconnectIamPolicy(String name, InterconnectIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InterconnectIamPolicy(String name, InterconnectIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:InterconnectIamPolicy", name, args == null ? InterconnectIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private InterconnectIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private InterconnectIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/alpha:InterconnectIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -140,7 +142,7 @@ public class InterconnectIamPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InterconnectIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InterconnectIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new InterconnectIamPolicy(name, id, options);
     }
 }

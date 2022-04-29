@@ -12,6 +12,7 @@ import com.pulumi.googlenative.testing_v1.inputs.IosTestLoopArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosTestSetupArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosXcTestArgs;
 import com.pulumi.googlenative.testing_v1.inputs.TestSetupArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * A description of how to run the test.
  * 
  */
-public final class TestSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestSpecificationArgs extends ResourceArgs {
 
     public static final TestSpecificationArgs Empty = new TestSpecificationArgs();
 

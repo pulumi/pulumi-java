@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapEnvSourceArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.SecretEnvSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Not supported by Cloud Run EnvFromSource represents the source of a set of ConfigMaps
  * 
  */
-public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvFromSourceArgs extends ResourceArgs {
 
     public static final EnvFromSourceArgs Empty = new EnvFromSourceArgs();
 

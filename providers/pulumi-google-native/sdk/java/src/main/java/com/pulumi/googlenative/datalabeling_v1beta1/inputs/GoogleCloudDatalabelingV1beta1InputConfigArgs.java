@@ -11,6 +11,7 @@ import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabeli
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1GcsSourceArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1TextMetadataArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The configuration of input data, including data type, location, etc.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1InputConfigArgs Empty = new GoogleCloudDatalabelingV1beta1InputConfigArgs();
 

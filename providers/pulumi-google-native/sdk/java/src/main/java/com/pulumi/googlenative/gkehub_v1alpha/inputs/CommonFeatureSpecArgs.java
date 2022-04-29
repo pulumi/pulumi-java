@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.MultiClusterIngressFeatureSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * CommonFeatureSpec contains Hub-wide configuration information
  * 
  */
-public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class CommonFeatureSpecArgs extends ResourceArgs {
 
     public static final CommonFeatureSpecArgs Empty = new CommonFeatureSpecArgs();
 

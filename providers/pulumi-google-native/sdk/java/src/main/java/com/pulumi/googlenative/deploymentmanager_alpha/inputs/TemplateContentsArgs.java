@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.TemplateContentsInterpreter;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.ImportFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Files that make up the template contents of a template type.
  * 
  */
-public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TemplateContentsArgs extends ResourceArgs {
 
     public static final TemplateContentsArgs Empty = new TemplateContentsArgs();
 

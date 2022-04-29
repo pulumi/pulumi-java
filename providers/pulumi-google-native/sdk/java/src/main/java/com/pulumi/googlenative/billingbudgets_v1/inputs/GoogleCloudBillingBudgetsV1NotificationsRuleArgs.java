@@ -5,6 +5,7 @@ package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * NotificationsRule defines notifications that are sent based on budget spend and thresholds.
  * 
  */
-public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1NotificationsRuleArgs Empty = new GoogleCloudBillingBudgetsV1NotificationsRuleArgs();
 

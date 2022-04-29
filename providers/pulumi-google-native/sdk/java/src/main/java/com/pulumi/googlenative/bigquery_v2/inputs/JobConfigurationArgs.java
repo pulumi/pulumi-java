@@ -9,6 +9,7 @@ import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationQueryArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationTableCopyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobConfigurationArgs extends ResourceArgs {
 
     public static final JobConfigurationArgs Empty = new JobConfigurationArgs();
 

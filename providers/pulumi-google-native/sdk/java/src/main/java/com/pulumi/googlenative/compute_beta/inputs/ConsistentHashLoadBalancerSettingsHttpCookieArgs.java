@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The information about the HTTP Cookie on which the hash function is based for load balancing policies that use a consistent hash.
  * 
  */
-public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends ResourceArgs {
 
     public static final ConsistentHashLoadBalancerSettingsHttpCookieArgs Empty = new ConsistentHashLoadBalancerSettingsHttpCookieArgs();
 

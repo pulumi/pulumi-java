@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.securitycenter_v1beta1.OrganizationSourceIamPolicyArgs;
 import com.pulumi.googlenative.securitycenter_v1beta1.outputs.AuditConfigResponse;
 import com.pulumi.googlenative.securitycenter_v1beta1.outputs.BindingResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:securitycenter/v1beta1:OrganizationSourceIamPolicy")
-public class OrganizationSourceIamPolicy extends com.pulumi.resources.CustomResource {
+public class OrganizationSourceIamPolicy extends CustomResource {
     /**
      * Specifies cloud audit logging configuration for this policy.
      * 
@@ -102,19 +104,19 @@ public class OrganizationSourceIamPolicy extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OrganizationSourceIamPolicy(String name, OrganizationSourceIamPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public OrganizationSourceIamPolicy(String name, OrganizationSourceIamPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:securitycenter/v1beta1:OrganizationSourceIamPolicy", name, args == null ? OrganizationSourceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private OrganizationSourceIamPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationSourceIamPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:securitycenter/v1beta1:OrganizationSourceIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -125,7 +127,7 @@ public class OrganizationSourceIamPolicy extends com.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationSourceIamPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationSourceIamPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new OrganizationSourceIamPolicy(name, id, options);
     }
 }

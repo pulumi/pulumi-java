@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.enums.AnimationFadeFadeType;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Display overlay object with fade animation.
  * 
  */
-public final class AnimationFadeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnimationFadeArgs extends ResourceArgs {
 
     public static final AnimationFadeArgs Empty = new AnimationFadeArgs();
 

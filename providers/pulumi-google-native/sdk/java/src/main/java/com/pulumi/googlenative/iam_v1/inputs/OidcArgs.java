@@ -5,6 +5,7 @@ package com.pulumi.googlenative.iam_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an OpenId Connect 1.0 identity provider.
  * 
  */
-public final class OidcArgs extends com.pulumi.resources.ResourceArgs {
+public final class OidcArgs extends ResourceArgs {
 
     public static final OidcArgs Empty = new OidcArgs();
 

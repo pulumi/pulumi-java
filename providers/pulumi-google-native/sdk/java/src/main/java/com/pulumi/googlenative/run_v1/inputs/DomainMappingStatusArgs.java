@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import com.pulumi.googlenative.run_v1.inputs.ResourceRecordArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The current state of the Domain Mapping.
  * 
  */
-public final class DomainMappingStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainMappingStatusArgs extends ResourceArgs {
 
     public static final DomainMappingStatusArgs Empty = new DomainMappingStatusArgs();
 

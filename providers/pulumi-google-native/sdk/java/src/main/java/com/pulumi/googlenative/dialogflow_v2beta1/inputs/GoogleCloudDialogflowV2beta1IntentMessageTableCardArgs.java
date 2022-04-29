@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Table card for Actions on Google.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs();
 

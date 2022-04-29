@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A selector that chooses target cluster for jobs based on metadata.
  * 
  */
-public final class ClusterSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterSelectorArgs extends ResourceArgs {
 
     public static final ClusterSelectorArgs Empty = new ClusterSelectorArgs();
 

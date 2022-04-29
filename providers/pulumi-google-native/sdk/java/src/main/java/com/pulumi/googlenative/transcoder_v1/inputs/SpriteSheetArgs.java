@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Sprite sheet configuration.
  * 
  */
-public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpriteSheetArgs extends ResourceArgs {
 
     public static final SpriteSheetArgs Empty = new SpriteSheetArgs();
 

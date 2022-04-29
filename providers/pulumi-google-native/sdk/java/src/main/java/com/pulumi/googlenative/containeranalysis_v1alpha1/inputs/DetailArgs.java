@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Identifies all occurrences of this vulnerability in the package for a specific distro/location For example: glibc in cpe:/o:debian:debian_linux:8 for versions 2.1 - 2.2
  * 
  */
-public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetailArgs extends ResourceArgs {
 
     public static final DetailArgs Empty = new DetailArgs();
 

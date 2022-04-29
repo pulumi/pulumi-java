@@ -9,6 +9,7 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.ZypperRepositoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A package repository.
  * 
  */
-public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageRepositoryArgs extends ResourceArgs {
 
     public static final PackageRepositoryArgs Empty = new PackageRepositoryArgs();
 

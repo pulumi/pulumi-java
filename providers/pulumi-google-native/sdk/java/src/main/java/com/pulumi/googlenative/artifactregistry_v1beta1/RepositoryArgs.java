@@ -6,6 +6,7 @@ package com.pulumi.googlenative.artifactregistry_v1beta1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.artifactregistry_v1beta1.enums.RepositoryFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepositoryArgs extends ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 

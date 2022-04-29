@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gameservices_v1.inputs.CloudAuditOptionsArgs;
 import com.pulumi.googlenative.gameservices_v1.inputs.CounterOptionsArgs;
 import com.pulumi.googlenative.gameservices_v1.inputs.DataAccessOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies what kind of log the caller must write
  * 
  */
-public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogConfigArgs extends ResourceArgs {
 
     public static final LogConfigArgs Empty = new LogConfigArgs();
 

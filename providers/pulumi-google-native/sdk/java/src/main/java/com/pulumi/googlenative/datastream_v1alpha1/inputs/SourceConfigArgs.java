@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSourceConfigArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSourceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration of the stream source.
  * 
  */
-public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceConfigArgs extends ResourceArgs {
 
     public static final SourceConfigArgs Empty = new SourceConfigArgs();
 

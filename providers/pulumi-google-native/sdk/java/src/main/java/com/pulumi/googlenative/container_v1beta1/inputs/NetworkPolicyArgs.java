@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.NetworkPolicyProvider;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration options for the NetworkPolicy feature. https://kubernetes.io/docs/concepts/services-networking/networkpolicies/
  * 
  */
-public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkPolicyArgs extends ResourceArgs {
 
     public static final NetworkPolicyArgs Empty = new NetworkPolicyArgs();
 

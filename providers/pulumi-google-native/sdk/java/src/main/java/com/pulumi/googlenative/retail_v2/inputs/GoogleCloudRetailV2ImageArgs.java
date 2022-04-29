@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Product thumbnail/detail image.
  * 
  */
-public final class GoogleCloudRetailV2ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2ImageArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2ImageArgs Empty = new GoogleCloudRetailV2ImageArgs();
 

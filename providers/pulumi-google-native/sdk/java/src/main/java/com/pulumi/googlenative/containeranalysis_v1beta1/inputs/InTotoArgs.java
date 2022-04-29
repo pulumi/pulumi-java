@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * This contains the fields corresponding to the definition of a software supply chain step in an in-toto layout. This information goes into a Grafeas note.
  * 
  */
-public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
+public final class InTotoArgs extends ResourceArgs {
 
     public static final InTotoArgs Empty = new InTotoArgs();
 

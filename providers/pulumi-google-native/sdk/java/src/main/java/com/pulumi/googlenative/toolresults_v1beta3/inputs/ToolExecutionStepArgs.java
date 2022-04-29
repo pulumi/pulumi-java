@@ -6,6 +6,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Generic tool step to be used for binaries we do not explicitly support. For example: running cp to copy artifacts from one location to another.
  * 
  */
-public final class ToolExecutionStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToolExecutionStepArgs extends ResourceArgs {
 
     public static final ToolExecutionStepArgs Empty = new ToolExecutionStepArgs();
 

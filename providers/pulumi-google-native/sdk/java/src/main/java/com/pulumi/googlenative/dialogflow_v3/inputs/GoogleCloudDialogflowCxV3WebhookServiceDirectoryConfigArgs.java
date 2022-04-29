@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
  * 
  */
-public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs Empty = new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs();
 

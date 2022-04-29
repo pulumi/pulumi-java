@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The condition(s) under which the action will be taken.
  * 
  */
-public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLifecycleRuleItemConditionArgs extends ResourceArgs {
 
     public static final BucketLifecycleRuleItemConditionArgs Empty = new BucketLifecycleRuleItemConditionArgs();
 

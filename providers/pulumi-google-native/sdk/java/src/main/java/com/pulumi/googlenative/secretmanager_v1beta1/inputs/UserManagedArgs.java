@@ -6,6 +6,7 @@ package com.pulumi.googlenative.secretmanager_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.secretmanager_v1beta1.inputs.ReplicaArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A replication policy that replicates the Secret payload into the locations specified in Secret.replication.user_managed.replicas
  * 
  */
-public final class UserManagedArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserManagedArgs extends ResourceArgs {
 
     public static final UserManagedArgs Empty = new UserManagedArgs();
 

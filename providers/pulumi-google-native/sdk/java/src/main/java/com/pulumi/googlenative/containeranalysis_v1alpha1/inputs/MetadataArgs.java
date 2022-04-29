@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CompletenessArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Other properties of the build.
  * 
  */
-public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataArgs extends ResourceArgs {
 
     public static final MetadataArgs Empty = new MetadataArgs();
 

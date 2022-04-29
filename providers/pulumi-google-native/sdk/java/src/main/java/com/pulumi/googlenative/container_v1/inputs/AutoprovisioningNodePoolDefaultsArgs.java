@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
 import com.pulumi.googlenative.container_v1.inputs.ShieldedInstanceConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
  * 
  */
-public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoprovisioningNodePoolDefaultsArgs extends ResourceArgs {
 
     public static final AutoprovisioningNodePoolDefaultsArgs Empty = new AutoprovisioningNodePoolDefaultsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.HintArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;. For example, an organization might have one `Authority` for &#34;QA&#34; and one for &#34;build&#34;. This note is intended to act strictly as a grouping mechanism for the attached occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the ability for a principle to attach an occurrence to a given note. It also provides a single point of lookup to find all attached attestation occurrences, even if they don&#39;t all live in the same project.
  * 
  */
-public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityArgs extends ResourceArgs {
 
     public static final AuthorityArgs Empty = new AuthorityArgs();
 

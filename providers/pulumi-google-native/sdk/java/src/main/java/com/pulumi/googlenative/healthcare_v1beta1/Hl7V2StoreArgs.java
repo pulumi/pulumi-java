@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7V2NotificationConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.ParserConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class Hl7V2StoreArgs extends ResourceArgs {
 
     public static final Hl7V2StoreArgs Empty = new Hl7V2StoreArgs();
 

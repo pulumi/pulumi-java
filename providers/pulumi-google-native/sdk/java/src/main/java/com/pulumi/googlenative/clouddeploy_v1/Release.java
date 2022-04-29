@@ -12,6 +12,8 @@ import com.pulumi.googlenative.clouddeploy_v1.ReleaseArgs;
 import com.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
 import com.pulumi.googlenative.clouddeploy_v1.outputs.DeliveryPipelineResponse;
 import com.pulumi.googlenative.clouddeploy_v1.outputs.TargetResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:clouddeploy/v1:Release")
-public class Release extends com.pulumi.resources.CustomResource {
+public class Release extends CustomResource {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
@@ -300,19 +302,19 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Release(String name, ReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Release(String name, ReleaseArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:clouddeploy/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Release(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Release(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:clouddeploy/v1:Release", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -323,7 +325,7 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Release get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Release get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Release(name, id, options);
     }
 }

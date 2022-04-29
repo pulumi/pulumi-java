@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datastream_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Static IP address connectivity.
  * 
  */
-public final class StaticServiceIpConnectivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class StaticServiceIpConnectivityArgs extends ResourceArgs {
 
     public static final StaticServiceIpConnectivityArgs Empty = new StaticServiceIpConnectivityArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.googlenative.storage_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.storage_v1.inputs.DefaultObjectAccessControlProjectTeamArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultObjectAccessControlArgs extends ResourceArgs {
 
     public static final DefaultObjectAccessControlArgs Empty = new DefaultObjectAccessControlArgs();
 

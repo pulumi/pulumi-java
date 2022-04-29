@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigquery_v2.enums.StandardSqlDataTypeTypeKind;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlStructTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The data type of a variable such as a function argument. Examples include: * INT64: `{&#34;typeKind&#34;: &#34;INT64&#34;}` * ARRAY: { &#34;typeKind&#34;: &#34;ARRAY&#34;, &#34;arrayElementType&#34;: {&#34;typeKind&#34;: &#34;STRING&#34;} } * STRUCT&gt;: { &#34;typeKind&#34;: &#34;STRUCT&#34;, &#34;structType&#34;: { &#34;fields&#34;: [ { &#34;name&#34;: &#34;x&#34;, &#34;type&#34;: {&#34;typeKind: &#34;STRING&#34;} }, { &#34;name&#34;: &#34;y&#34;, &#34;type&#34;: { &#34;typeKind&#34;: &#34;ARRAY&#34;, &#34;arrayElementType&#34;: {&#34;typekind&#34;: &#34;DATE&#34;} } } ] } }
  * 
  */
-public final class StandardSqlDataTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class StandardSqlDataTypeArgs extends ResourceArgs {
 
     public static final StandardSqlDataTypeArgs Empty = new StandardSqlDataTypeArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KAnonymityConfigA
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KMapEstimationConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LDiversityConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2NumericalStatsConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Privacy metric to compute for reidentification risk analysis.
  * 
  */
-public final class GooglePrivacyDlpV2PrivacyMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2PrivacyMetricArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2PrivacyMetricArgs Empty = new GooglePrivacyDlpV2PrivacyMetricArgs();
 

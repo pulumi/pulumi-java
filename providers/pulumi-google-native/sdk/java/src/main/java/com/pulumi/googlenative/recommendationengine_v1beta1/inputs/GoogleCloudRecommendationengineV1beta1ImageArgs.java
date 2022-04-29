@@ -5,6 +5,7 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Catalog item thumbnail/detail image.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ImageArgs Empty = new GoogleCloudRecommendationengineV1beta1ImageArgs();
 

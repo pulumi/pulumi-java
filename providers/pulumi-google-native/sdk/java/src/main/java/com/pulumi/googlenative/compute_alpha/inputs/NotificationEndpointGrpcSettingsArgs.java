@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a gRPC setting that describes one gRPC notification endpoint and the retry duration attempting to send notification to this endpoint.
  * 
  */
-public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationEndpointGrpcSettingsArgs extends ResourceArgs {
 
     public static final NotificationEndpointGrpcSettingsArgs Empty = new NotificationEndpointGrpcSettingsArgs();
 

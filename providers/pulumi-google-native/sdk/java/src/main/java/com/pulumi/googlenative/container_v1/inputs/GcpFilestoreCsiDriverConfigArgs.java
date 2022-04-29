@@ -5,6 +5,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for the GCP Filestore CSI driver.
  * 
  */
-public final class GcpFilestoreCsiDriverConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcpFilestoreCsiDriverConfigArgs extends ResourceArgs {
 
     public static final GcpFilestoreCsiDriverConfigArgs Empty = new GcpFilestoreCsiDriverConfigArgs();
 

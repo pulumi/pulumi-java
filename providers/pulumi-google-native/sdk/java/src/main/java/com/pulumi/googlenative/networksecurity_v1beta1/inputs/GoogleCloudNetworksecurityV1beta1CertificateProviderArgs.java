@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
  * 
  */
-public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs extends ResourceArgs {
 
     public static final GoogleCloudNetworksecurityV1beta1CertificateProviderArgs Empty = new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs();
 

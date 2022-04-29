@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A package managed by Zypper. - install: `zypper -y install package` - remove: `zypper -y rm package`
  * 
  */
-public final class OSPolicyResourcePackageResourceZypperArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourcePackageResourceZypperArgs extends ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceZypperArgs Empty = new OSPolicyResourcePackageResourceZypperArgs();
 

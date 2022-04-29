@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.pubsub_v1beta2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSubscriptionArgs extends InvokeArgs {
 
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 

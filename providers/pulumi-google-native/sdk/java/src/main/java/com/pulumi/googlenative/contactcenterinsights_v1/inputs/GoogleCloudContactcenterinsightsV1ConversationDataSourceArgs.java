@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceArgs;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The conversation source, which is a combination of transcript and audio.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs Empty = new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs();
 

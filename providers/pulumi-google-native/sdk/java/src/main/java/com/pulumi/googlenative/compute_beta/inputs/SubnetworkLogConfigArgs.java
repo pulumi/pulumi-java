@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigAggregationInterval;
 import com.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigMetadata;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The available logging options for this subnetwork.
  * 
  */
-public final class SubnetworkLogConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetworkLogConfigArgs extends ResourceArgs {
 
     public static final SubnetworkLogConfigArgs Empty = new SubnetworkLogConfigArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FutureReservationTimeWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class FutureReservationTimeWindowArgs extends ResourceArgs {
 
     public static final FutureReservationTimeWindowArgs Empty = new FutureReservationTimeWindowArgs();
 

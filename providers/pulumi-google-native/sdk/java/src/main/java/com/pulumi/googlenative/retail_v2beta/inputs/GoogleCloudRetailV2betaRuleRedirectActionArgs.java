@@ -5,6 +5,7 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition. * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
  * 
  */
-public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleRedirectActionArgs Empty = new GoogleCloudRetailV2betaRuleRedirectActionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for resources used by Airflow web server.
  * 
  */
-public final class WebServerResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebServerResourceArgs extends ResourceArgs {
 
     public static final WebServerResourceArgs Empty = new WebServerResourceArgs();
 

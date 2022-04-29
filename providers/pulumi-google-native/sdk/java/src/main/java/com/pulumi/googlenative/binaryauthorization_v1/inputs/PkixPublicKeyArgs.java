@@ -6,6 +6,7 @@ package com.pulumi.googlenative.binaryauthorization_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.binaryauthorization_v1.enums.PkixPublicKeySignatureAlgorithm;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details). Public keys of this type are typically textually encoded using the PEM format.
  * 
  */
-public final class PkixPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PkixPublicKeyArgs extends ResourceArgs {
 
     public static final PkixPublicKeyArgs Empty = new PkixPublicKeyArgs();
 

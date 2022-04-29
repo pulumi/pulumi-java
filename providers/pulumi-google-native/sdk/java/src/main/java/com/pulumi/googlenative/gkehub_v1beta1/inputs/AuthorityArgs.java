@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
  * 
  */
-public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorityArgs extends ResourceArgs {
 
     public static final AuthorityArgs Empty = new AuthorityArgs();
 

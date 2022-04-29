@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.VertexArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A bounding polygon for the detected image annotation.
  * 
  */
-public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BoundingPolyArgs extends ResourceArgs {
 
     public static final BoundingPolyArgs Empty = new BoundingPolyArgs();
 

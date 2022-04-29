@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes a selector for extracting and matching an MSH field to a value.
  * 
  */
-public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class VersionSourceArgs extends ResourceArgs {
 
     public static final VersionSourceArgs Empty = new VersionSourceArgs();
 

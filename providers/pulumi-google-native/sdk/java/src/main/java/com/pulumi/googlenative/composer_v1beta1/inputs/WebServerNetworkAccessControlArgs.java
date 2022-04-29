@@ -6,6 +6,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.composer_v1beta1.inputs.AllowedIpRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Network-level access control policy for the Airflow web server.
  * 
  */
-public final class WebServerNetworkAccessControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebServerNetworkAccessControlArgs extends ResourceArgs {
 
     public static final WebServerNetworkAccessControlArgs Empty = new WebServerNetworkAccessControlArgs();
 

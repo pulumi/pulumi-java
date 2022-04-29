@@ -6,6 +6,7 @@ package com.pulumi.googlenative.firestore_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A field of an index.
  * 
  */
-public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends ResourceArgs {
 
     public static final GoogleFirestoreAdminV1beta1IndexFieldArgs Empty = new GoogleFirestoreAdminV1beta1IndexFieldArgs();
 

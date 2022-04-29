@@ -9,6 +9,7 @@ import com.pulumi.googlenative.recommendationengine_v1beta1.enums.GoogleCloudRec
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageArgs;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * ProductCatalogItem captures item metadata specific to retail products.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs();
 

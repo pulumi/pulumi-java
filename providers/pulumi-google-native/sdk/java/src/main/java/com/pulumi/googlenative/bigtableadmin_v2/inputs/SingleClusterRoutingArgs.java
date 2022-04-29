@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Unconditionally routes all read/write requests to a specific cluster. This option preserves read-your-writes consistency but does not improve availability.
  * 
  */
-public final class SingleClusterRoutingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SingleClusterRoutingArgs extends ResourceArgs {
 
     public static final SingleClusterRoutingArgs Empty = new SingleClusterRoutingArgs();
 

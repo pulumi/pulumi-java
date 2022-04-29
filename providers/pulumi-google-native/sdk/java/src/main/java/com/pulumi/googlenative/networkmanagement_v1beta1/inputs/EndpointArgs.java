@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkmanagement_v1beta1.enums.EndpointNetworkType;
 import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.CloudFunctionEndpointArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Source or destination of the Connectivity Test.
  * 
  */
-public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointArgs extends ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 

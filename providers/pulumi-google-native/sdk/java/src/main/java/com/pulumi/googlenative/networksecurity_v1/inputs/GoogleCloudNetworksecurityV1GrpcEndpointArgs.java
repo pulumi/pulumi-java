@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networksecurity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specification of the GRPC Endpoint.
  * 
  */
-public final class GoogleCloudNetworksecurityV1GrpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudNetworksecurityV1GrpcEndpointArgs extends ResourceArgs {
 
     public static final GoogleCloudNetworksecurityV1GrpcEndpointArgs Empty = new GoogleCloudNetworksecurityV1GrpcEndpointArgs();
 

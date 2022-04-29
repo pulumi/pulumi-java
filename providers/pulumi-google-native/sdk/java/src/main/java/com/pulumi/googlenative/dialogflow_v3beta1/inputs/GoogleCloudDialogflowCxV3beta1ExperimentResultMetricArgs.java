@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Metric and corresponding confidence intervals.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.inputs.MaintenanceWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MaintenancePolicy defines the maintenance policy to be used for the cluster.
  * 
  */
-public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class MaintenancePolicyArgs extends ResourceArgs {
 
     public static final MaintenancePolicyArgs Empty = new MaintenancePolicyArgs();
 

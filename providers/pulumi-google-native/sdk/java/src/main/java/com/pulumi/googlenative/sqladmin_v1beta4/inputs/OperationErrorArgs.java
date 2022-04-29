@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Database instance operation error.
  * 
  */
-public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs {
+public final class OperationErrorArgs extends ResourceArgs {
 
     public static final OperationErrorArgs Empty = new OperationErrorArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.ProjectRepoIdArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A unique identifier for a Cloud Repo.
  * 
  */
-public final class RepoIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepoIdArgs extends ResourceArgs {
 
     public static final RepoIdArgs Empty = new RepoIdArgs();
 

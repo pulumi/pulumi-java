@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestCaseReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A reference to a ToolExecution output file.
  * 
  */
-public final class ToolOutputReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ToolOutputReferenceArgs extends ResourceArgs {
 
     public static final ToolOutputReferenceArgs Empty = new ToolOutputReferenceArgs();
 

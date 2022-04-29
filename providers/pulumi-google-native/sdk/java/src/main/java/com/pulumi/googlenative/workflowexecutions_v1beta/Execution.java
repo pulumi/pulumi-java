@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.workflowexecutions_v1beta.ExecutionArgs;
 import com.pulumi.googlenative.workflowexecutions_v1beta.outputs.ErrorResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:workflowexecutions/v1beta:Execution")
-public class Execution extends com.pulumi.resources.CustomResource {
+public class Execution extends CustomResource {
     /**
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
@@ -170,19 +172,19 @@ public class Execution extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Execution(String name, ExecutionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Execution(String name, ExecutionArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:workflowexecutions/v1beta:Execution", name, args == null ? ExecutionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Execution(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Execution(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:workflowexecutions/v1beta:Execution", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -193,7 +195,7 @@ public class Execution extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Execution get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Execution get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Execution(name, id, options);
     }
 }

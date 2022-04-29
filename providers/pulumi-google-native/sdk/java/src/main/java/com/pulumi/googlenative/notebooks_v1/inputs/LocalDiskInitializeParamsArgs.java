@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.LocalDiskInitializeParamsDiskType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new runtime. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
  * 
  */
-public final class LocalDiskInitializeParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalDiskInitializeParamsArgs extends ResourceArgs {
 
     public static final LocalDiskInitializeParamsArgs Empty = new LocalDiskInitializeParamsArgs();
 

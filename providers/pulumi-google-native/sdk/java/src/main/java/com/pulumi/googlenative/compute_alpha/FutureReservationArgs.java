@@ -8,13 +8,14 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.FutureReservationSpecificSKUPropertiesArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FutureReservationTimeWindowArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ShareSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FutureReservationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FutureReservationArgs extends ResourceArgs {
 
     public static final FutureReservationArgs Empty = new FutureReservationArgs();
 

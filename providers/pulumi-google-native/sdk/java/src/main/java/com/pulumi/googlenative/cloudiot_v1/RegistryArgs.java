@@ -11,6 +11,7 @@ import com.pulumi.googlenative.cloudiot_v1.inputs.HttpConfigArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.MqttConfigArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.RegistryCredentialArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.StateNotificationConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistryArgs extends ResourceArgs {
 
     public static final RegistryArgs Empty = new RegistryArgs();
 

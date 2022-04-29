@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.enums.DataSetPlotType;
 import com.pulumi.googlenative.monitoring_v1.enums.DataSetTargetAxis;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Groups a time series query definition with charting options.
  * 
  */
-public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetArgs extends ResourceArgs {
 
     public static final DataSetArgs Empty = new DataSetArgs();
 

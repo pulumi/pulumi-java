@@ -12,6 +12,7 @@ import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigUserAge
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.AuthenticationArgs;
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanRunArgs;
 import com.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ScanConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScanConfigArgs extends ResourceArgs {
 
     public static final ScanConfigArgs Empty = new ScanConfigArgs();
 

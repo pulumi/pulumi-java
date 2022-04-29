@@ -9,6 +9,8 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_beta.RegionTargetHttpsProxyArgs;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/beta:RegionTargetHttpsProxy")
-public class RegionTargetHttpsProxy extends com.pulumi.resources.CustomResource {
+public class RegionTargetHttpsProxy extends CustomResource {
     /**
      * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
@@ -266,19 +268,19 @@ public class RegionTargetHttpsProxy extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionTargetHttpsProxy(String name, RegionTargetHttpsProxyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RegionTargetHttpsProxy(String name, RegionTargetHttpsProxyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:RegionTargetHttpsProxy", name, args == null ? RegionTargetHttpsProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RegionTargetHttpsProxy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RegionTargetHttpsProxy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:RegionTargetHttpsProxy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -289,7 +291,7 @@ public class RegionTargetHttpsProxy extends com.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionTargetHttpsProxy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionTargetHttpsProxy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RegionTargetHttpsProxy(name, id, options);
     }
 }

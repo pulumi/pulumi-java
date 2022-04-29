@@ -14,6 +14,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.StepLabelsEntryArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestExecutionStepArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionStepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StepArgs extends com.pulumi.resources.ResourceArgs {
+public final class StepArgs extends ResourceArgs {
 
     public static final StepArgs Empty = new StepArgs();
 

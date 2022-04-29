@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
 import com.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:vpcaccess/v1:Connector")
-public class Connector extends com.pulumi.resources.CustomResource {
+public class Connector extends CustomResource {
     /**
      * List of projects using the connector.
      * 
@@ -197,19 +199,19 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Connector(String name, ConnectorArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Connector(String name, ConnectorArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:vpcaccess/v1:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Connector(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Connector(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:vpcaccess/v1:Connector", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -220,7 +222,7 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Connector get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Connector get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Connector(name, id, options);
     }
 }

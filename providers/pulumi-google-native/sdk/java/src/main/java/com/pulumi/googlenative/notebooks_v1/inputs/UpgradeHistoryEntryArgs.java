@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryAction;
 import com.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The entry of VM image upgrade history.
  * 
  */
-public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpgradeHistoryEntryArgs extends ResourceArgs {
 
     public static final UpgradeHistoryEntryArgs Empty = new UpgradeHistoryEntryArgs();
 

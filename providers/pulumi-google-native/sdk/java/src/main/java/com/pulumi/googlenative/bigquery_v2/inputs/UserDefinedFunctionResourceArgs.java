@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This is used for defining User Defined Function (UDF) resources only when using legacy SQL. Users of Standard SQL should leverage either DDL (e.g. CREATE [TEMPORARY] FUNCTION ... ) or the Routines API to define UDF resources. For additional information on migrating, see: https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql#differences_in_user-defined_javascript_functions
  * 
  */
-public final class UserDefinedFunctionResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserDefinedFunctionResourceArgs extends ResourceArgs {
 
     public static final UserDefinedFunctionResourceArgs Empty = new UserDefinedFunctionResourceArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_beta.enums.FirewallDirection;
 import com.pulumi.googlenative.compute_beta.inputs.FirewallAllowedItemArgs;
 import com.pulumi.googlenative.compute_beta.inputs.FirewallDeniedItemArgs;
 import com.pulumi.googlenative.compute_beta.inputs.FirewallLogConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallArgs extends ResourceArgs {
 
     public static final FirewallArgs Empty = new FirewallArgs();
 

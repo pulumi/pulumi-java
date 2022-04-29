@@ -5,6 +5,7 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Google Cloud Storage location for the input content.
  * 
  */
-public final class GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcsSourceArgs extends ResourceArgs {
 
     public static final GcsSourceArgs Empty = new GcsSourceArgs();
 

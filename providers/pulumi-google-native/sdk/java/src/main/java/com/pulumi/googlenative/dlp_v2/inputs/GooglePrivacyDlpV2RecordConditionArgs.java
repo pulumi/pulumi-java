@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A condition for determining whether a transformation should be applied to a field.
  * 
  */
-public final class GooglePrivacyDlpV2RecordConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RecordConditionArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordConditionArgs Empty = new GooglePrivacyDlpV2RecordConditionArgs();
 

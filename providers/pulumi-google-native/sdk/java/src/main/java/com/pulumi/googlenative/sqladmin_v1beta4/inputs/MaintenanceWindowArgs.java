@@ -6,6 +6,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.MaintenanceWindowUpdateTrack;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Maintenance window. This specifies when a Cloud SQL instance is restarted for system maintenance purposes.
  * 
  */
-public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class MaintenanceWindowArgs extends ResourceArgs {
 
     public static final MaintenanceWindowArgs Empty = new MaintenanceWindowArgs();
 

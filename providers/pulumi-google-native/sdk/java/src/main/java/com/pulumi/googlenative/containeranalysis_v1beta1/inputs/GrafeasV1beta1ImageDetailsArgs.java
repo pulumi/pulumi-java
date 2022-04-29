@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details of an image occurrence.
  * 
  */
-public final class GrafeasV1beta1ImageDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GrafeasV1beta1ImageDetailsArgs extends ResourceArgs {
 
     public static final GrafeasV1beta1ImageDetailsArgs Empty = new GrafeasV1beta1ImageDetailsArgs();
 

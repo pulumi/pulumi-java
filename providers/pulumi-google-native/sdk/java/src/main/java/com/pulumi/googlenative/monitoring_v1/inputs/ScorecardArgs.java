@@ -9,6 +9,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.GaugeViewArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.SparkChartViewArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ThresholdArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A widget showing the latest value of a metric, and how this value relates to one or more thresholds.
  * 
  */
-public final class ScorecardArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScorecardArgs extends ResourceArgs {
 
     public static final ScorecardArgs Empty = new ScorecardArgs();
 

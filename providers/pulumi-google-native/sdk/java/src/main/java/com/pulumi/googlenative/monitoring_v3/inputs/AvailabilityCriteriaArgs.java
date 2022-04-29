@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Future parameters for the availability SLI.
  * 
  */
-public final class AvailabilityCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class AvailabilityCriteriaArgs extends ResourceArgs {
 
     public static final AvailabilityCriteriaArgs Empty = new AvailabilityCriteriaArgs();
 

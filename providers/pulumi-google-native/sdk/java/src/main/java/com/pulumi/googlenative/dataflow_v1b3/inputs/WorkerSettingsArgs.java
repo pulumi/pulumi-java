@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Provides data to pass through to the worker harness.
  * 
  */
-public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkerSettingsArgs extends ResourceArgs {
 
     public static final WorkerSettingsArgs Empty = new WorkerSettingsArgs();
 

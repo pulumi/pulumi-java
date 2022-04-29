@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.ValidationOptionsSchemaValidation;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.ValidationOptionsUndeclaredProperties;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Options for how to validate and process properties on a resource.
  * 
  */
-public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidationOptionsArgs extends ResourceArgs {
 
     public static final ValidationOptionsArgs Empty = new ValidationOptionsArgs();
 

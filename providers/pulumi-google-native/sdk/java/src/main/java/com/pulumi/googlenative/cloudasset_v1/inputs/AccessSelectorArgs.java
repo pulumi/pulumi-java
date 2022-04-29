@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies roles and/or permissions to analyze, to determine both the identities possessing them and the resources they control. If multiple values are specified, results will include roles or permissions matching any of them. The total number of roles and permissions should be equal or less than 10.
  * 
  */
-public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessSelectorArgs extends ResourceArgs {
 
     public static final AccessSelectorArgs Empty = new AccessSelectorArgs();
 

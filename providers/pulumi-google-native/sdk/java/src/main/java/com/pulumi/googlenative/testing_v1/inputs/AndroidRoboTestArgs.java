@@ -10,6 +10,7 @@ import com.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RoboDirectiveArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RoboStartingIntentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A test of an android application that explores the application on a virtual or physical Android Device, finding culprits and crashes as it goes.
  * 
  */
-public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs {
+public final class AndroidRoboTestArgs extends ResourceArgs {
 
     public static final AndroidRoboTestArgs Empty = new AndroidRoboTestArgs();
 

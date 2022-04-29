@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudbuild_v1.enums.PubsubConfigState;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
  * 
  */
-public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class PubsubConfigArgs extends ResourceArgs {
 
     public static final PubsubConfigArgs Empty = new PubsubConfigArgs();
 

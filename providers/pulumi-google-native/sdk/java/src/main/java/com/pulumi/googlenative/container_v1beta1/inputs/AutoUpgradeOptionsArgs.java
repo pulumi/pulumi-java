@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * AutoUpgradeOptions defines the set of options for the user to control how the Auto Upgrades will proceed.
  * 
  */
-public final class AutoUpgradeOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoUpgradeOptionsArgs extends ResourceArgs {
 
     public static final AutoUpgradeOptionsArgs Empty = new AutoUpgradeOptionsArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.googlenative.servicemanagement_v1.inputs.MethodArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MixinArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Api is a light-weight descriptor for an API Interface. Interfaces are also described as &#34;protocol buffer services&#34; in some contexts, such as by the &#34;service&#34; keyword in a .proto file, but they are different from API Services, which represent a concrete implementation of an interface as opposed to simply a description of methods and bindings. They are also sometimes simply referred to as &#34;APIs&#34; in other contexts, such as the name of this message itself. See https://cloud.google.com/apis/design/glossary for detailed terminology.
  * 
  */
-public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiArgs extends ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 

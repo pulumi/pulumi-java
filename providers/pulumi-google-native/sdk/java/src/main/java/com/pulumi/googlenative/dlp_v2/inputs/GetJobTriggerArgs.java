@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetJobTriggerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetJobTriggerArgs extends InvokeArgs {
 
     public static final GetJobTriggerArgs Empty = new GetJobTriggerArgs();
 

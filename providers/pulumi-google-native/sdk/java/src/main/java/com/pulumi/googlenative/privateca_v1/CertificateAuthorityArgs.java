@@ -9,6 +9,7 @@ import com.pulumi.googlenative.privateca_v1.enums.CertificateAuthorityType;
 import com.pulumi.googlenative.privateca_v1.inputs.CertificateConfigArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.KeyVersionSpecArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.SubordinateConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CertificateAuthorityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityArgs extends ResourceArgs {
 
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 

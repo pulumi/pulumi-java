@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import com.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.FeedOutputConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
+public final class FeedArgs extends ResourceArgs {
 
     public static final FeedArgs Empty = new FeedArgs();
 

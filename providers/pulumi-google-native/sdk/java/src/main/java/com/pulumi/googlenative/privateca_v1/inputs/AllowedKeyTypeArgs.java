@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.EcKeyTypeArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.RsaKeyTypeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes a &#34;type&#34; of key that may be used in a Certificate issued from a CaPool. Note that a single AllowedKeyType may refer to either a fully-qualified key algorithm, such as RSA 4096, or a family of key algorithms, such as any RSA key.
  * 
  */
-public final class AllowedKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowedKeyTypeArgs extends ResourceArgs {
 
     public static final AllowedKeyTypeArgs Empty = new AllowedKeyTypeArgs();
 

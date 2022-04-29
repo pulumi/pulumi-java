@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A router appliance instance is a Compute Engine virtual machine (VM) instance that acts as a BGP speaker. A router appliance instance is specified by the URI of the VM and the internal IP address of one of the VM&#39;s network interfaces.
  * 
  */
-public final class RouterApplianceInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterApplianceInstanceArgs extends ResourceArgs {
 
     public static final RouterApplianceInstanceArgs Empty = new RouterApplianceInstanceArgs();
 

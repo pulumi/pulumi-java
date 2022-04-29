@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration of a specific billing destination (Currently only support bill against consumer project).
  * 
  */
-public final class BillingDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BillingDestinationArgs extends ResourceArgs {
 
     public static final BillingDestinationArgs Empty = new BillingDestinationArgs();
 

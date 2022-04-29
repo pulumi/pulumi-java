@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.DailyMaintenanceWindowArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.RecurringTimeWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * MaintenanceWindow defines the maintenance window to be used for the cluster.
  * 
  */
-public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class MaintenanceWindowArgs extends ResourceArgs {
 
     public static final MaintenanceWindowArgs Empty = new MaintenanceWindowArgs();
 

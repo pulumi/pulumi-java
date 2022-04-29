@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Filter options to be applied on query.
  * 
  */
-public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterOptionsArgs extends ResourceArgs {
 
     public static final FilterOptionsArgs Empty = new FilterOptionsArgs();
 

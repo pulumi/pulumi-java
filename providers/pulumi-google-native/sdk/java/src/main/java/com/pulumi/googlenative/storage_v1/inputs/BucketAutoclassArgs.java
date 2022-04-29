@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s Autoclass configuration.
  * 
  */
-public final class BucketAutoclassArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAutoclassArgs extends ResourceArgs {
 
     public static final BucketAutoclassArgs Empty = new BucketAutoclassArgs();
 

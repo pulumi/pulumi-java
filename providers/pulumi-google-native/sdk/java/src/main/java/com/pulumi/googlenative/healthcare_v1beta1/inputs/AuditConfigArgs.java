@@ -6,6 +6,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.AuditLogConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs. If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each AuditLogConfig are exempted. Example Policy with multiple AuditConfigs: { &#34;audit_configs&#34;: [ { &#34;service&#34;: &#34;allServices&#34;, &#34;audit_log_configs&#34;: [ { &#34;log_type&#34;: &#34;DATA_READ&#34;, &#34;exempted_members&#34;: [ &#34;user:jose@example.com&#34; ] }, { &#34;log_type&#34;: &#34;DATA_WRITE&#34; }, { &#34;log_type&#34;: &#34;ADMIN_READ&#34; } ] }, { &#34;service&#34;: &#34;sampleservice.googleapis.com&#34;, &#34;audit_log_configs&#34;: [ { &#34;log_type&#34;: &#34;DATA_READ&#34; }, { &#34;log_type&#34;: &#34;DATA_WRITE&#34;, &#34;exempted_members&#34;: [ &#34;user:aliya@example.com&#34; ] } ] } ] } For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts jose@example.com from DATA_READ logging, and aliya@example.com from DATA_WRITE logging.
  * 
  */
-public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuditConfigArgs extends ResourceArgs {
 
     public static final AuditConfigArgs Empty = new AuditConfigArgs();
 

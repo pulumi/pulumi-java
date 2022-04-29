@@ -11,6 +11,7 @@ import com.pulumi.googlenative.cloudsearch_v1.inputs.QueryInterpretationConfigAr
 import com.pulumi.googlenative.cloudsearch_v1.inputs.ScoringConfigArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SortOptionsArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SearchApplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SearchApplicationArgs extends ResourceArgs {
 
     public static final SearchApplicationArgs Empty = new SearchApplicationArgs();
 

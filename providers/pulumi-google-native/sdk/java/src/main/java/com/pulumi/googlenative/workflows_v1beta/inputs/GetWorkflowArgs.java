@@ -4,13 +4,14 @@
 package com.pulumi.googlenative.workflows_v1beta.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetWorkflowArgs extends InvokeArgs {
 
     public static final GetWorkflowArgs Empty = new GetWorkflowArgs();
 

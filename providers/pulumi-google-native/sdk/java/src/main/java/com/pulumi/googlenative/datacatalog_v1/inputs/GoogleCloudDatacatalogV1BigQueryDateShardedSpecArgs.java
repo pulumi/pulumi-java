@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datacatalog_v1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
  * 
  */
-public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs Empty = new GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration settings for the Airflow web server App Engine instance. Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
  * 
  */
-public final class WebServerConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebServerConfigArgs extends ResourceArgs {
 
     public static final WebServerConfigArgs Empty = new WebServerConfigArgs();
 

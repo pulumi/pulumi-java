@@ -5,6 +5,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A set of Shielded Instance options. Check [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm). Not all combinations are valid.
  * 
  */
-public final class RuntimeShieldedInstanceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeShieldedInstanceConfigArgs extends ResourceArgs {
 
     public static final RuntimeShieldedInstanceConfigArgs Empty = new RuntimeShieldedInstanceConfigArgs();
 

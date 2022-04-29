@@ -9,6 +9,7 @@ import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositor
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceGooRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceYumRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceZypperRepositoryArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A resource that manages a package repository.
  * 
  */
-public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceRepositoryResourceArgs extends ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceArgs Empty = new OSPolicyResourceRepositoryResourceArgs();
 

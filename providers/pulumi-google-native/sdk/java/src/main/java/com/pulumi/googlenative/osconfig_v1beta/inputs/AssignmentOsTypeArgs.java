@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines the criteria for selecting VM Instances by OS type.
  * 
  */
-public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentOsTypeArgs extends ResourceArgs {
 
     public static final AssignmentOsTypeArgs Empty = new AssignmentOsTypeArgs();
 

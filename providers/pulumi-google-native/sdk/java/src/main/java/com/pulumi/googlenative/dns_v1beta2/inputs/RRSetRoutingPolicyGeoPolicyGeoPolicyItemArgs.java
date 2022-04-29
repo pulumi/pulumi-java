@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ResourceRecordSet data for one geo location.
  * 
  */
-public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends ResourceArgs {
 
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs();
 

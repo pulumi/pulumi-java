@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ValueArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Definition for extended entitlement parameters.
  * 
  */
-public final class GoogleCloudChannelV1ParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudChannelV1ParameterArgs extends ResourceArgs {
 
     public static final GoogleCloudChannelV1ParameterArgs Empty = new GoogleCloudChannelV1ParameterArgs();
 

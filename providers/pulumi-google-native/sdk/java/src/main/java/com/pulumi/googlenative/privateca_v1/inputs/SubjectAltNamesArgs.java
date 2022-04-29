@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1.inputs.X509ExtensionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the &#34;common name&#34; in the distinguished name).
  * 
  */
-public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubjectAltNamesArgs extends ResourceArgs {
 
     public static final SubjectAltNamesArgs Empty = new SubjectAltNamesArgs();
 

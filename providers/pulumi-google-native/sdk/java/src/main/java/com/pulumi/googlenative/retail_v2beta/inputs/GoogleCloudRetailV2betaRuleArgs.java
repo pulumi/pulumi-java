@@ -14,6 +14,7 @@ import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleO
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleRedirectActionArgs;
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleReplacementActionArgs;
 import com.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently only boost rules are supported. Currently only supported by the search endpoint.
  * 
  */
-public final class GoogleCloudRetailV2betaRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRetailV2betaRuleArgs extends ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleArgs Empty = new GoogleCloudRetailV2betaRuleArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Throw an error and fail the request when a transformation error occurs.
  * 
  */
-public final class GooglePrivacyDlpV2ThrowErrorArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ThrowErrorArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ThrowErrorArgs Empty = new GooglePrivacyDlpV2ThrowErrorArgs();
 

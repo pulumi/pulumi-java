@@ -5,6 +5,7 @@ package com.pulumi.googlenative.tpu_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Sets the scheduling options for this node.
  * 
  */
-public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingConfigArgs extends ResourceArgs {
 
     public static final SchedulingConfigArgs Empty = new SchedulingConfigArgs();
 

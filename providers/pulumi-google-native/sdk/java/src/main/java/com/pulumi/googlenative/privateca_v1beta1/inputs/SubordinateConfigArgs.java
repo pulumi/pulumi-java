@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.SubordinateConfigChainArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Describes a subordinate CA&#39;s issuers. This is either a resource path to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
  * 
  */
-public final class SubordinateConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubordinateConfigArgs extends ResourceArgs {
 
     public static final SubordinateConfigArgs Empty = new SubordinateConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.LoggingComponentConfigEnableComponentsItem;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * LoggingComponentConfig is cluster logging component configuration.
  * 
  */
-public final class LoggingComponentConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingComponentConfigArgs extends ResourceArgs {
 
     public static final LoggingComponentConfigArgs Empty = new LoggingComponentConfigArgs();
 

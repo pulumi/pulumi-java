@@ -6,6 +6,7 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
  * 
  */
-public final class SerialPipelineArgs extends com.pulumi.resources.ResourceArgs {
+public final class SerialPipelineArgs extends ResourceArgs {
 
     public static final SerialPipelineArgs Empty = new SerialPipelineArgs();
 

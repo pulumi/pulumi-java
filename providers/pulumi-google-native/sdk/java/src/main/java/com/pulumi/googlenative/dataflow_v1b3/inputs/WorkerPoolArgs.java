@@ -13,6 +13,7 @@ import com.pulumi.googlenative.dataflow_v1b3.inputs.DiskArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.PackageArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.SdkHarnessContainerImageArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.TaskRunnerSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * Describes one particular pool of Cloud Dataflow workers to be instantiated by the Cloud Dataflow service in order to perform the computations required by a job. Note that a workflow job may use multiple pools, in order to match the various computational requirements of the various stages of the job.
  * 
  */
-public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkerPoolArgs extends ResourceArgs {
 
     public static final WorkerPoolArgs Empty = new WorkerPoolArgs();
 

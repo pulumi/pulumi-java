@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networksecurity_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1.inputs.HttpHeaderMatchArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specification of traffic destination attributes.
  * 
  */
-public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DestinationArgs extends ResourceArgs {
 
     public static final DestinationArgs Empty = new DestinationArgs();
 

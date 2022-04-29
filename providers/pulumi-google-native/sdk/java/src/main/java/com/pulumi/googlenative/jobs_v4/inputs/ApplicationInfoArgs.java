@@ -5,6 +5,7 @@ package com.pulumi.googlenative.jobs_v4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Application related details of a job posting.
  * 
  */
-public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationInfoArgs extends ResourceArgs {
 
     public static final ApplicationInfoArgs Empty = new ApplicationInfoArgs();
 

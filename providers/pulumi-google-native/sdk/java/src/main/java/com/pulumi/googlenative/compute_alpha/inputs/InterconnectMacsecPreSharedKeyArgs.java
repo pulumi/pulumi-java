@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes a pre-shared key used to setup MACsec in static connectivity association key (CAK) mode.
  * 
  */
-public final class InterconnectMacsecPreSharedKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class InterconnectMacsecPreSharedKeyArgs extends ResourceArgs {
 
     public static final InterconnectMacsecPreSharedKeyArgs Empty = new InterconnectMacsecPreSharedKeyArgs();
 

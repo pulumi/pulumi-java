@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The content of an HL7v2 message in a structured format as specified by a schema.
  * 
  */
-public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchematizedDataArgs extends ResourceArgs {
 
     public static final SchematizedDataArgs Empty = new SchematizedDataArgs();
 

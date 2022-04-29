@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.enums.PublicKeyType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A PublicKey describes a public key.
  * 
  */
-public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicKeyArgs extends ResourceArgs {
 
     public static final PublicKeyArgs Empty = new PublicKeyArgs();
 

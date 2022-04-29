@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.clouddeploy_v1.enums.ExecutionConfigUsagesItem;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.PrivatePoolArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Configuration of the environment to use when calling Skaffold.
  * 
  */
-public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExecutionConfigArgs extends ResourceArgs {
 
     public static final ExecutionConfigArgs Empty = new ExecutionConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Note holding the version of the provider&#39;s builder and the signature of the provenance message in the build details occurrence.
  * 
  */
-public final class BuildNoteArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildNoteArgs extends ResourceArgs {
 
     public static final BuildNoteArgs Empty = new BuildNoteArgs();
 

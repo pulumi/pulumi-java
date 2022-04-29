@@ -10,6 +10,7 @@ import com.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.Oauth2JwtBearerArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.UserPasswordArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * AuthConfig defines details of a authentication type.
  * 
  */
-public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthConfigArgs extends ResourceArgs {
 
     public static final AuthConfigArgs Empty = new AuthConfigArgs();
 

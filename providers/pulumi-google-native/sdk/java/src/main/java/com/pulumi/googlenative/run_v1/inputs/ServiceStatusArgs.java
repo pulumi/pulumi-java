@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.AddressableArgs;
 import com.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import com.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The current state of the Service. Output only.
  * 
  */
-public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceStatusArgs extends ResourceArgs {
 
     public static final ServiceStatusArgs Empty = new ServiceStatusArgs();
 

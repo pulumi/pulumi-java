@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.LogConfigCloudAuditOptionsLogName;
 import com.pulumi.googlenative.compute_v1.inputs.AuthorizationLoggingOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * This is deprecated and has no effect. Do not use.
  * 
  */
-public final class LogConfigCloudAuditOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogConfigCloudAuditOptionsArgs extends ResourceArgs {
 
     public static final LogConfigCloudAuditOptionsArgs Empty = new LogConfigCloudAuditOptionsArgs();
 

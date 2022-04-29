@@ -13,6 +13,8 @@ import com.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredwor
 import com.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse;
 import com.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse;
 import com.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:assuredworkloads/v1:Workload")
-public class Workload extends com.pulumi.resources.CustomResource {
+public class Workload extends CustomResource {
     /**
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
      * 
@@ -243,19 +245,19 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Workload(String name, WorkloadArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Workload(String name, WorkloadArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:assuredworkloads/v1:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Workload(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Workload(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:assuredworkloads/v1:Workload", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -266,7 +268,7 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workload get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Workload get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Workload(name, id, options);
     }
 }

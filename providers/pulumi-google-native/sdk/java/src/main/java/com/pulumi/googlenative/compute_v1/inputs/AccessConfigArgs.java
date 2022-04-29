@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.AccessConfigNetworkTier;
 import com.pulumi.googlenative.compute_v1.enums.AccessConfigType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An access configuration attached to an instance&#39;s network interface. Only one access config per instance is supported.
  * 
  */
-public final class AccessConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessConfigArgs extends ResourceArgs {
 
     public static final AccessConfigArgs Empty = new AccessConfigArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherRoleMatch;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherType;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
+public final class PhraseMatcherArgs extends ResourceArgs {
 
     public static final PhraseMatcherArgs Empty = new PhraseMatcherArgs();
 

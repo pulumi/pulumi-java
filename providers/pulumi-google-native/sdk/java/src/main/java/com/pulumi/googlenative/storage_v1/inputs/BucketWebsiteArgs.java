@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
  * 
  */
-public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketWebsiteArgs extends ResourceArgs {
 
     public static final BucketWebsiteArgs Empty = new BucketWebsiteArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Business Context of the entry.
  * 
  */
-public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1BusinessContextArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1BusinessContextArgs Empty = new GoogleCloudDatacatalogV1BusinessContextArgs();
 

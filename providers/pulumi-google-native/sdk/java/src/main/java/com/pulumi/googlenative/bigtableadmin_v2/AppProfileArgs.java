@@ -7,13 +7,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.MultiClusterRoutingUseAnyArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.SingleClusterRoutingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppProfileArgs extends ResourceArgs {
 
     public static final AppProfileArgs Empty = new AppProfileArgs();
 

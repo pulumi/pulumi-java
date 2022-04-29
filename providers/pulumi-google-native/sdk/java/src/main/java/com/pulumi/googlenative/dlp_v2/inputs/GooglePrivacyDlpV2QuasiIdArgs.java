@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GoogleProtobufEmptyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A column with a semantic tag attached.
  * 
  */
-public final class GooglePrivacyDlpV2QuasiIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2QuasiIdArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2QuasiIdArgs Empty = new GooglePrivacyDlpV2QuasiIdArgs();
 

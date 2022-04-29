@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes consistency to improve availability.
  * 
  */
-public final class MultiClusterRoutingUseAnyArgs extends com.pulumi.resources.ResourceArgs {
+public final class MultiClusterRoutingUseAnyArgs extends ResourceArgs {
 
     public static final MultiClusterRoutingUseAnyArgs Empty = new MultiClusterRoutingUseAnyArgs();
 

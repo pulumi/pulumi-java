@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ContainerPort represents a network port in a single container.
  * 
  */
-public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerPortArgs extends ResourceArgs {
 
     public static final ContainerPortArgs Empty = new ContainerPortArgs();
 

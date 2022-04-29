@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1beta2.enums.SoftwareConfigOptionalComponentsItem;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the selection and config of software inside the cluster.
  * 
  */
-public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareConfigArgs extends ResourceArgs {
 
     public static final SoftwareConfigArgs Empty = new SoftwareConfigArgs();
 

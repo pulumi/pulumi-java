@@ -9,6 +9,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueCategory;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueSeverity;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueType;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AnyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An issue detected occurring during a test execution.
  * 
  */
-public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestIssueArgs extends ResourceArgs {
 
     public static final TestIssueArgs Empty = new TestIssueArgs();
 

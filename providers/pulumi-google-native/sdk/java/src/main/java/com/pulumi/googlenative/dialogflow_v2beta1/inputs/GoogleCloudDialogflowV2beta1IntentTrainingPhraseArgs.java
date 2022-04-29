@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentTrainingPhraseType;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents an example that the agent is trained on.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs Empty = new GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs();
 

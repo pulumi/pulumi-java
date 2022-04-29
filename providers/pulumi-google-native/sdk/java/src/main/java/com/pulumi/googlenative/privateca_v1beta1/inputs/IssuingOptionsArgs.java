@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Options that affect all certificates issued by a CertificateAuthority.
  * 
  */
-public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class IssuingOptionsArgs extends ResourceArgs {
 
     public static final IssuingOptionsArgs Empty = new IssuingOptionsArgs();
 

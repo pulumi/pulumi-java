@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.gameservices_v1.enums.ConditionIam;
 import com.pulumi.googlenative.gameservices_v1.enums.ConditionOp;
 import com.pulumi.googlenative.gameservices_v1.enums.ConditionSys;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A condition to be met.
  * 
  */
-public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConditionArgs extends ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 

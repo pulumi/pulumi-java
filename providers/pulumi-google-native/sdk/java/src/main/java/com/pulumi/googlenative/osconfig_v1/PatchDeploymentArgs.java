@@ -10,13 +10,14 @@ import com.pulumi.googlenative.osconfig_v1.inputs.PatchConfigArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.PatchInstanceFilterArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.PatchRolloutArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.RecurringScheduleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchDeploymentArgs extends ResourceArgs {
 
     public static final PatchDeploymentArgs Empty = new PatchDeploymentArgs();
 

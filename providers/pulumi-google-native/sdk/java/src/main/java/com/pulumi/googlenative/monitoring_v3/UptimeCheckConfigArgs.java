@@ -13,6 +13,7 @@ import com.pulumi.googlenative.monitoring_v3.inputs.InternalCheckerArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MonitoredResourceArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.ResourceGroupArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TcpCheckArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class UptimeCheckConfigArgs extends ResourceArgs {
 
     public static final UptimeCheckConfigArgs Empty = new UptimeCheckConfigArgs();
 

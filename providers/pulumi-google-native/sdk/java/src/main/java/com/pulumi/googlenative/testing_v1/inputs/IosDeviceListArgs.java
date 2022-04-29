@@ -6,6 +6,7 @@ package com.pulumi.googlenative.testing_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A list of iOS device configurations in which the test is to be executed.
  * 
  */
-public final class IosDeviceListArgs extends com.pulumi.resources.ResourceArgs {
+public final class IosDeviceListArgs extends ResourceArgs {
 
     public static final IosDeviceListArgs Empty = new IosDeviceListArgs();
 

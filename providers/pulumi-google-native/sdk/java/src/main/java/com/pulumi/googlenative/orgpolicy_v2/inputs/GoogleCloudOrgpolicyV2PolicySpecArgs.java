@@ -6,6 +6,7 @@ package com.pulumi.googlenative.orgpolicy_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines a Cloud Organization `PolicySpec` which is used to specify `Constraints` for configurations of Cloud Platform resources.
  * 
  */
-public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends ResourceArgs {
 
     public static final GoogleCloudOrgpolicyV2PolicySpecArgs Empty = new GoogleCloudOrgpolicyV2PolicySpecArgs();
 

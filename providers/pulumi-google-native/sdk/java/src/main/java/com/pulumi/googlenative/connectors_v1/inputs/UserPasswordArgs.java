@@ -6,6 +6,7 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Parameters to support Username and Password Authentication.
  * 
  */
-public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPasswordArgs extends ResourceArgs {
 
     public static final UserPasswordArgs Empty = new UserPasswordArgs();
 

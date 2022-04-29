@@ -13,6 +13,7 @@ import com.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3IntegrityIm
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3PrivilegesRequired;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3Scope;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3UserInteraction;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss/specification-document
  * 
  */
-public final class CVSSv3Args extends com.pulumi.resources.ResourceArgs {
+public final class CVSSv3Args extends ResourceArgs {
 
     public static final CVSSv3Args Empty = new CVSSv3Args();
 

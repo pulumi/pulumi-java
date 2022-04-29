@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Not supported by Cloud Run SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext. When both are set, the values in SecurityContext take precedence.
  * 
  */
-public final class SecurityContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityContextArgs extends ResourceArgs {
 
     public static final SecurityContextArgs Empty = new SecurityContextArgs();
 

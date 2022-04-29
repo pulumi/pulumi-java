@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An entry for an Access Control list.
  * 
  */
-public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlAclEntryArgs extends ResourceArgs {
 
     public static final SqlAclEntryArgs Empty = new SqlAclEntryArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.networkconnectivity_v1alpha1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs.RouterApplianceInstanceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpokeArgs extends ResourceArgs {
 
     public static final SpokeArgs Empty = new SpokeArgs();
 

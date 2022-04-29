@@ -11,6 +11,7 @@ import com.pulumi.googlenative.compute_v1.enums.AttachedDiskType;
 import com.pulumi.googlenative.compute_v1.inputs.AttachedDiskInitializeParamsArgs;
 import com.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GuestOsFeatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * An instance-attached disk resource.
  * 
  */
-public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttachedDiskArgs extends ResourceArgs {
 
     public static final AttachedDiskArgs Empty = new AttachedDiskArgs();
 

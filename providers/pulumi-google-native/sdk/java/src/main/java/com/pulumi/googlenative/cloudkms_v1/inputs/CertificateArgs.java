@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
  * 
  */
-public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateArgs extends ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 

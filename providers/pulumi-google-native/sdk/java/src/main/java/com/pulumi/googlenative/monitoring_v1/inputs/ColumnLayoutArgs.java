@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.ColumnArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A simplified layout that divides the available space into vertical columns and arranges a set of widgets vertically in each column.
  * 
  */
-public final class ColumnLayoutArgs extends com.pulumi.resources.ResourceArgs {
+public final class ColumnLayoutArgs extends ResourceArgs {
 
     public static final ColumnLayoutArgs Empty = new ColumnLayoutArgs();
 

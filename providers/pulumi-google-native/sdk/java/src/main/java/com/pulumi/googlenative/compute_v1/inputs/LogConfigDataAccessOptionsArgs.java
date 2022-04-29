@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.LogConfigDataAccessOptionsLogMode;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This is deprecated and has no effect. Do not use.
  * 
  */
-public final class LogConfigDataAccessOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogConfigDataAccessOptionsArgs extends ResourceArgs {
 
     public static final LogConfigDataAccessOptionsArgs Empty = new LogConfigDataAccessOptionsArgs();
 

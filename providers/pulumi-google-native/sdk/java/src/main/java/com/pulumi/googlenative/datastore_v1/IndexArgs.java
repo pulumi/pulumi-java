@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastore_v1.enums.IndexAncestor;
 import com.pulumi.googlenative.datastore_v1.inputs.GoogleDatastoreAdminV1IndexedPropertyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
+public final class IndexArgs extends ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 

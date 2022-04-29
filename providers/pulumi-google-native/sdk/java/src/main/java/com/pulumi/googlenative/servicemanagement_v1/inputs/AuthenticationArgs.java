@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthProviderArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationRuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * `Authentication` defines the authentication configuration for API methods provided by an API service. Example: name: calendar.googleapis.com authentication: providers: - id: google_calendar_auth jwks_uri: https://www.googleapis.com/oauth2/v1/certs issuer: https://securetoken.google.com rules: - selector: &#34;*&#34; requirements: provider_id: google_calendar_auth - selector: google.calendar.Delegate oauth: canonical_scopes: https://www.googleapis.com/auth/calendar.read
  * 
  */
-public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthenticationArgs extends ResourceArgs {
 
     public static final AuthenticationArgs Empty = new AuthenticationArgs();
 

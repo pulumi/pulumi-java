@@ -10,6 +10,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CustomInfoTypeArg
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FindingLimitsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Configuration description of the scanning process. When used with redactContent only info_types and min_likelihood are currently used.
  * 
  */
-public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2InspectConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectConfigArgs Empty = new GooglePrivacyDlpV2InspectConfigArgs();
 

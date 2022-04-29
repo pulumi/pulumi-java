@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entry_fulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.
  * 
  */
-public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs Empty = new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Color preprocessing configuration.
  * 
  */
-public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ColorArgs extends ResourceArgs {
 
     public static final ColorArgs Empty = new ColorArgs();
 

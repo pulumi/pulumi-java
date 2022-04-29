@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A server-stored registry credential used to validate device credentials.
  * 
  */
-public final class RegistryCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistryCredentialArgs extends ResourceArgs {
 
     public static final RegistryCredentialArgs Empty = new RegistryCredentialArgs();
 

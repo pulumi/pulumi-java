@@ -13,6 +13,7 @@ import com.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageStateArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.JobMetadataArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.PipelineDescriptionArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.StepArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobArgs extends ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 

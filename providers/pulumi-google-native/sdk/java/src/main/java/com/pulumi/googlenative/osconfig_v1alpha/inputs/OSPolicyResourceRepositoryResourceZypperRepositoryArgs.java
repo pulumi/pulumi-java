@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents a single zypper package repository. These are added to a repo file that is managed at `/etc/zypp/repos.d/google_osconfig.repo`.
  * 
  */
-public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extends ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceZypperRepositoryArgs Empty = new OSPolicyResourceRepositoryResourceZypperRepositoryArgs();
 

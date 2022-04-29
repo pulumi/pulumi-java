@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.DurationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the delay introduced by the load balancer before forwarding the request to the backend service as part of fault injection.
  * 
  */
-public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpFaultDelayArgs extends ResourceArgs {
 
     public static final HttpFaultDelayArgs Empty = new HttpFaultDelayArgs();
 

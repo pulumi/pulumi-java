@@ -3,14 +3,14 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Metadata describing the feedback from the operator.
  * 
  */
-public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs extends ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs();
 

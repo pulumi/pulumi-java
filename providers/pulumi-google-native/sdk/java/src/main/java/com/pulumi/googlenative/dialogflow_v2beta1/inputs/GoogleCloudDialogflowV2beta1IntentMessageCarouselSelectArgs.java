@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The card for presenting a carousel of options to select from.
  * 
  */
-public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs();
 

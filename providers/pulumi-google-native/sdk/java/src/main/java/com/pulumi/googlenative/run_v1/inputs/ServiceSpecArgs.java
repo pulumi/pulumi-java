@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import com.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * ServiceSpec holds the desired state of the Route (from the client), which is used to manipulate the underlying Route and Configuration(s).
  * 
  */
-public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSpecArgs extends ResourceArgs {
 
     public static final ServiceSpecArgs Empty = new ServiceSpecArgs();
 

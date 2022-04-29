@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.enums.InstanceGroupConfigPreemptibility;
 import com.pulumi.googlenative.dataproc_v1.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.DiskConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
  * 
  */
-public final class InstanceGroupConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceGroupConfigArgs extends ResourceArgs {
 
     public static final InstanceGroupConfigArgs Empty = new InstanceGroupConfigArgs();
 

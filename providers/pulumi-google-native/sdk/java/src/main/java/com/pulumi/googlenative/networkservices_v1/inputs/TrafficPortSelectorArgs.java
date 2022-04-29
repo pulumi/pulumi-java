@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specification of a port-based selector.
  * 
  */
-public final class TrafficPortSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficPortSelectorArgs extends ResourceArgs {
 
     public static final TrafficPortSelectorArgs Empty = new TrafficPortSelectorArgs();
 

@@ -14,6 +14,7 @@ import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameter
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Represents a single parameter to optimize.
  * 
  */
-public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfig_ParameterSpecArgs Empty = new GoogleCloudMlV1_StudyConfig_ParameterSpecArgs();
 

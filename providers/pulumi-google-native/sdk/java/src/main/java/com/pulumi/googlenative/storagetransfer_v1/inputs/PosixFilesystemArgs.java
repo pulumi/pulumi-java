@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A POSIX filesystem resource.
  * 
  */
-public final class PosixFilesystemArgs extends com.pulumi.resources.ResourceArgs {
+public final class PosixFilesystemArgs extends ResourceArgs {
 
     public static final PosixFilesystemArgs Empty = new PosixFilesystemArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sqladmin_v1.inputs.BackupRetentionSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Database instance backup configuration.
  * 
  */
-public final class BackupConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupConfigurationArgs extends ResourceArgs {
 
     public static final BackupConfigurationArgs Empty = new BackupConfigurationArgs();
 

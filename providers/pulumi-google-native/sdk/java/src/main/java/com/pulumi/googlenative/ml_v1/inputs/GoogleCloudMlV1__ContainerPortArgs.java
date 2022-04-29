@@ -5,6 +5,7 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a network port in a single container. This message is a subset of the [Kubernetes ContainerPort v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#containerport-v1-core).
  * 
  */
-public final class GoogleCloudMlV1__ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__ContainerPortArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__ContainerPortArgs Empty = new GoogleCloudMlV1__ContainerPortArgs();
 

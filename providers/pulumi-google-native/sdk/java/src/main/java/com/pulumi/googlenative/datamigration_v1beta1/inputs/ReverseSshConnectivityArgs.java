@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The details needed to configure a reverse SSH tunnel between the source and destination databases. These details will be used when calling the generateSshScript method (see https://cloud.google.com/database-migration/docs/reference/rest/v1beta1/projects.locations.migrationJobs/generateSshScript) to produce the script that will help set up the reverse SSH tunnel, and to set up the VPC peering between the Cloud SQL private network and the VPC.
  * 
  */
-public final class ReverseSshConnectivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReverseSshConnectivityArgs extends ResourceArgs {
 
     public static final ReverseSshConnectivityArgs Empty = new ReverseSshConnectivityArgs();
 

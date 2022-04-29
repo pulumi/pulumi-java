@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCertificateFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A public key certificate format and data.
  * 
  */
-public final class PublicKeyCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicKeyCertificateArgs extends ResourceArgs {
 
     public static final PublicKeyCertificateArgs Empty = new PublicKeyCertificateArgs();
 

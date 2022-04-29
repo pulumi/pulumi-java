@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration to control jobs where the content being inspected is outside of Google Cloud Platform.
  * 
  */
-public final class GooglePrivacyDlpV2HybridOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2HybridOptionsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2HybridOptionsArgs Empty = new GooglePrivacyDlpV2HybridOptionsArgs();
 

@@ -13,6 +13,8 @@ import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdaptiveProtecti
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRecaptchaOptionsConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRuleResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/v1:SecurityPolicy")
-public class SecurityPolicy extends com.pulumi.resources.CustomResource {
+public class SecurityPolicy extends CustomResource {
     @Export(name="adaptiveProtectionConfig", type=SecurityPolicyAdaptiveProtectionConfigResponse.class, parameters={})
     private Output<SecurityPolicyAdaptiveProtectionConfigResponse> adaptiveProtectionConfig;
 
@@ -175,19 +177,19 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SecurityPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SecurityPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/v1:SecurityPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -198,7 +200,7 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SecurityPolicy(name, id, options);
     }
 }

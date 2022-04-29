@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A request to launch a Dataflow job from a Flex Template.
  * 
  */
-public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs extends ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs Empty = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs();
 

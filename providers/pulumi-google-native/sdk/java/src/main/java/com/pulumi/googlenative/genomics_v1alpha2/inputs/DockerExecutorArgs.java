@@ -5,6 +5,7 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Docker execuctor specification.
  * 
  */
-public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs {
+public final class DockerExecutorArgs extends ResourceArgs {
 
     public static final DockerExecutorArgs Empty = new DockerExecutorArgs();
 

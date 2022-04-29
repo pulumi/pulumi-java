@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Data provided with a pipeline or transform to provide descriptive info.
  * 
  */
-public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class DisplayDataArgs extends ResourceArgs {
 
     public static final DisplayDataArgs Empty = new DisplayDataArgs();
 

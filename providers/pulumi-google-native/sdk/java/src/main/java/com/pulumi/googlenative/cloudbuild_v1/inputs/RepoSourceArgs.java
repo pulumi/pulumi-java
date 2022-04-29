@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Location of the source in a Google Cloud Source Repository.
  * 
  */
-public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepoSourceArgs extends ResourceArgs {
 
     public static final RepoSourceArgs Empty = new RepoSourceArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.networksecurity_v1beta1.enums.AuthorizationPolicyAction;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.RuleArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthorizationPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorizationPolicyArgs extends ResourceArgs {
 
     public static final AuthorizationPolicyArgs Empty = new AuthorizationPolicyArgs();
 

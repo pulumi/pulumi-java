@@ -5,6 +5,7 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Video cropping configuration for the input video. The cropped input video is scaled to match the output resolution.
  * 
  */
-public final class CropArgs extends com.pulumi.resources.ResourceArgs {
+public final class CropArgs extends ResourceArgs {
 
     public static final CropArgs Empty = new CropArgs();
 

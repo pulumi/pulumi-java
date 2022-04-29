@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1VersionVariantsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The history of variants update.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs Empty = new GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs();
 

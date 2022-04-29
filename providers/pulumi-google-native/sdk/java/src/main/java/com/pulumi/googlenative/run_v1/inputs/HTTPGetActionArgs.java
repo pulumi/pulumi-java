@@ -6,6 +6,7 @@ package com.pulumi.googlenative.run_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.HTTPHeaderArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
  * 
  */
-public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HTTPGetActionArgs extends ResourceArgs {
 
     public static final HTTPGetActionArgs Empty = new HTTPGetActionArgs();
 

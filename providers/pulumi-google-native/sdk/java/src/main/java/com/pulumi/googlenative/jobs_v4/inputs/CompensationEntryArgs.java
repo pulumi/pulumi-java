@@ -9,6 +9,7 @@ import com.pulumi.googlenative.jobs_v4.enums.CompensationEntryType;
 import com.pulumi.googlenative.jobs_v4.enums.CompensationEntryUnit;
 import com.pulumi.googlenative.jobs_v4.inputs.CompensationRangeArgs;
 import com.pulumi.googlenative.jobs_v4.inputs.MoneyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A compensation entry that represents one component of compensation, such as base pay, bonus, or other compensation type. Annualization: One compensation entry can be annualized if - it contains valid amount or range. - and its expected_units_per_year is set or can be derived. Its annualized range is determined as (amount or range) times expected_units_per_year.
  * 
  */
-public final class CompensationEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class CompensationEntryArgs extends ResourceArgs {
 
     public static final CompensationEntryArgs Empty = new CompensationEntryArgs();
 

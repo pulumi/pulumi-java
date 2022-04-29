@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldTransformationArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordSuppressionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A type of transformation that is applied over structured data such as a table.
  * 
  */
-public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2RecordTransformationsArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordTransformationsArgs Empty = new GooglePrivacyDlpV2RecordTransformationsArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleRedirectOptionsType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyRuleRedirectOptionsArgs extends ResourceArgs {
 
     public static final SecurityPolicyRuleRedirectOptionsArgs Empty = new SecurityPolicyRuleRedirectOptionsArgs();
 

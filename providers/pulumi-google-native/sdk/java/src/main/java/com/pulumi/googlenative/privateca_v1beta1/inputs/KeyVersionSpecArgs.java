@@ -6,6 +6,7 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.privateca_v1beta1.enums.KeyVersionSpecAlgorithm;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A Cloud KMS key configuration that a CertificateAuthority will use.
  * 
  */
-public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVersionSpecArgs extends ResourceArgs {
 
     public static final KeyVersionSpecArgs Empty = new KeyVersionSpecArgs();
 

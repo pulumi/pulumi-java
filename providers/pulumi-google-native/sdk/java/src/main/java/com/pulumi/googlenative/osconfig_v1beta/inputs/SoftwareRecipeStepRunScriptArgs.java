@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepRunScriptInterpreter;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Runs a script through an interpreter.
  * 
  */
-public final class SoftwareRecipeStepRunScriptArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareRecipeStepRunScriptArgs extends ResourceArgs {
 
     public static final SoftwareRecipeStepRunScriptArgs Empty = new SoftwareRecipeStepRunScriptArgs();
 

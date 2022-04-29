@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.RowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A simplified layout that divides the available space into rows and arranges a set of widgets horizontally in each row.
  * 
  */
-public final class RowLayoutArgs extends com.pulumi.resources.ResourceArgs {
+public final class RowLayoutArgs extends ResourceArgs {
 
     public static final RowLayoutArgs Empty = new RowLayoutArgs();
 

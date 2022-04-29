@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datamigration_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datamigration_v1.inputs.CloudSqlSettingsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
  * 
  */
-public final class CloudSqlConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudSqlConnectionProfileArgs extends ResourceArgs {
 
     public static final CloudSqlConnectionProfileArgs Empty = new CloudSqlConnectionProfileArgs();
 

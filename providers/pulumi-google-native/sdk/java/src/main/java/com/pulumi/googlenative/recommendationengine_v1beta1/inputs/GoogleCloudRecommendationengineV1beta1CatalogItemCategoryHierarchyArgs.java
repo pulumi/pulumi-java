@@ -5,6 +5,7 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Category represents catalog item category hierarchy.
  * 
  */
-public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs extends ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs Empty = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs();
 

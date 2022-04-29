@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Not supported by Cloud Run TCPSocketAction describes an action based on opening a socket
  * 
  */
-public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TCPSocketActionArgs extends ResourceArgs {
 
     public static final TCPSocketActionArgs Empty = new TCPSocketActionArgs();
 

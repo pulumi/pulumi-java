@@ -5,6 +5,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A single property entry in the Properties message.
  * 
  */
-public final class GoogleCloudApigeeV1PropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1PropertyArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1PropertyArgs Empty = new GoogleCloudApigeeV1PropertyArgs();
 

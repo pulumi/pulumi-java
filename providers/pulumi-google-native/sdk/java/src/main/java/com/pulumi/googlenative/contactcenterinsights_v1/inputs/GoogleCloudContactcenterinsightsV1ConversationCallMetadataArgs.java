@@ -5,6 +5,7 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Call-specific metadata.
  * 
  */
-public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs extends ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs Empty = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs();
 

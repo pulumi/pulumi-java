@@ -9,6 +9,7 @@ import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileA
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigGrpcServiceDefinitionArgs;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigOpenApiDocumentArgs;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayGatewayConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigArgs extends ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 

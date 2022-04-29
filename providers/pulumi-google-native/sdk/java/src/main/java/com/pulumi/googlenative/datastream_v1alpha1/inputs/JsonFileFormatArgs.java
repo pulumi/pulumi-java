@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datastream_v1alpha1.enums.JsonFileFormatCompression;
 import com.pulumi.googlenative.datastream_v1alpha1.enums.JsonFileFormatSchemaFileFormat;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * JSON file format configuration.
  * 
  */
-public final class JsonFileFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class JsonFileFormatArgs extends ResourceArgs {
 
     public static final JsonFileFormatArgs Empty = new JsonFileFormatArgs();
 

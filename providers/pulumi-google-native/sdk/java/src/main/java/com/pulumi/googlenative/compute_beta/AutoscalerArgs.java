@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_beta;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.AutoscalingPolicyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AutoscalerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalerArgs extends ResourceArgs {
 
     public static final AutoscalerArgs Empty = new AutoscalerArgs();
 

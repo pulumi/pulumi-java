@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The details of the VPC where the source database is located in Google Cloud. We will use this information to set up the VPC peering connection between Cloud SQL and this VPC.
  * 
  */
-public final class VpcPeeringConnectivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpcPeeringConnectivityArgs extends ResourceArgs {
 
     public static final VpcPeeringConnectivityArgs Empty = new VpcPeeringConnectivityArgs();
 

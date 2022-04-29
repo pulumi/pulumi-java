@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudscheduler_v1.enums.AppEngineHttpTargetHttpMethod;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.AppEngineRoutingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * App Engine target. The job will be pushed to a job handler by means of an HTTP request via an http_method such as HTTP POST, HTTP GET, etc. The job is acknowledged by means of an HTTP response code in the range [200 - 299]. Error 503 is considered an App Engine system error instead of an application error. Requests returning error 503 will be retried regardless of retry configuration and not counted against retry counts. Any other response code, or a failure to receive a response before the deadline, constitutes a failed attempt.
  * 
  */
-public final class AppEngineHttpTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppEngineHttpTargetArgs extends ResourceArgs {
 
     public static final AppEngineHttpTargetArgs Empty = new AppEngineHttpTargetArgs();
 

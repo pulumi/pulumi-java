@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datalabeling_v1beta1.FeedbackMessageArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -19,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:FeedbackMessage")
-public class FeedbackMessage extends com.pulumi.resources.CustomResource {
+public class FeedbackMessage extends CustomResource {
     /**
      * String content of the feedback. Maximum of 10000 characters.
      * 
@@ -110,19 +112,19 @@ public class FeedbackMessage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FeedbackMessage(String name, FeedbackMessageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FeedbackMessage(String name, FeedbackMessageArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datalabeling/v1beta1:FeedbackMessage", name, args == null ? FeedbackMessageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FeedbackMessage(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FeedbackMessage(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datalabeling/v1beta1:FeedbackMessage", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class FeedbackMessage extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FeedbackMessage get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FeedbackMessage get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FeedbackMessage(name, id, options);
     }
 }

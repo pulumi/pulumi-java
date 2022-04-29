@@ -5,6 +5,7 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Options relating to the publication of each CertificateAuthority&#39;s CA certificate and CRLs and their inclusion as extensions in issued Certificates. The options set here apply to certificates issued by any CertificateAuthority in the CaPool.
  * 
  */
-public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublishingOptionsArgs extends ResourceArgs {
 
     public static final PublishingOptionsArgs Empty = new PublishingOptionsArgs();
 

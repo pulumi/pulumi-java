@@ -6,6 +6,7 @@ package com.pulumi.googlenative.tpu_v2alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.tpu_v2alpha1.enums.AttachedDiskMode;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A node-attached disk resource. Next ID: 8;
  * 
  */
-public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttachedDiskArgs extends ResourceArgs {
 
     public static final AttachedDiskArgs Empty = new AttachedDiskArgs();
 

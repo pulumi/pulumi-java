@@ -9,6 +9,7 @@ import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExclusionRuleMatch
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExcludeInfoTypesArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The rule that specifies conditions when findings of infoTypes specified in `InspectionRuleSet` are removed from results.
  * 
  */
-public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2ExclusionRuleArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2ExclusionRuleArgs Empty = new GooglePrivacyDlpV2ExclusionRuleArgs();
 

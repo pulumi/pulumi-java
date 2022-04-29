@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible.
  * 
  */
-public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2UnwrappedCryptoKeyArgs Empty = new GooglePrivacyDlpV2UnwrappedCryptoKeyArgs();
 

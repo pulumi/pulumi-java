@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Limits for the number of nodes a Cluster can autoscale up/down to.
  * 
  */
-public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscalingLimitsArgs extends ResourceArgs {
 
     public static final AutoscalingLimitsArgs Empty = new AutoscalingLimitsArgs();
 

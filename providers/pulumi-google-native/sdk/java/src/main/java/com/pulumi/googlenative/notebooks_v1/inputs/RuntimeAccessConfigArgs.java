@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.RuntimeAccessConfigAccessType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the login configuration for Runtime
  * 
  */
-public final class RuntimeAccessConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuntimeAccessConfigArgs extends ResourceArgs {
 
     public static final RuntimeAccessConfigArgs Empty = new RuntimeAccessConfigArgs();
 

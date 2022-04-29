@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTopicArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTopicArgs extends InvokeArgs {
 
     public static final GetTopicArgs Empty = new GetTopicArgs();
 

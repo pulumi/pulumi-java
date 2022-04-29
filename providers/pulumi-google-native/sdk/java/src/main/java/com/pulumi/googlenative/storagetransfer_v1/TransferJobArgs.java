@@ -10,13 +10,14 @@ import com.pulumi.googlenative.storagetransfer_v1.inputs.LoggingConfigArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.NotificationConfigArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.ScheduleArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferSpecArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferJobArgs extends ResourceArgs {
 
     public static final TransferJobArgs Empty = new TransferJobArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_v1.inputs.RouterBgpArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterBgpPeerArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterInterfaceArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterNatArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouterArgs extends ResourceArgs {
 
     public static final RouterArgs Empty = new RouterArgs();
 

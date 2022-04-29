@@ -10,6 +10,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageOptio
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DatastoreOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HybridOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TimespanConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Shared message indicating Cloud storage type.
  * 
  */
-public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2StorageConfigArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2StorageConfigArgs Empty = new GooglePrivacyDlpV2StorageConfigArgs();
 

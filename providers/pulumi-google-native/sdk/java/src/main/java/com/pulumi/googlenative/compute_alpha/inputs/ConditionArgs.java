@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.ConditionIam;
 import com.pulumi.googlenative.compute_alpha.enums.ConditionOp;
 import com.pulumi.googlenative.compute_alpha.enums.ConditionSys;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * This is deprecated and has no effect. Do not use.
  * 
  */
-public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConditionArgs extends ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 

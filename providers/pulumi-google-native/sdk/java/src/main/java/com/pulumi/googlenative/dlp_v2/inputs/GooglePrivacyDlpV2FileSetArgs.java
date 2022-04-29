@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageRegexFileSetArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Set of files to scan.
  * 
  */
-public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class GooglePrivacyDlpV2FileSetArgs extends ResourceArgs {
 
     public static final GooglePrivacyDlpV2FileSetArgs Empty = new GooglePrivacyDlpV2FileSetArgs();
 

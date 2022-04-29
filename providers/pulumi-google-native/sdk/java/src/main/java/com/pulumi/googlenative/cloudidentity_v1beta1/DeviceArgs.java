@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudidentity_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceArgs extends ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 

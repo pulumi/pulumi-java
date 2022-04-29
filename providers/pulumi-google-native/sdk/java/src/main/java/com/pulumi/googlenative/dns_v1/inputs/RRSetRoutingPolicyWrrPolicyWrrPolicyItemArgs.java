@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A routing block which contains the routing information for one WRR item.
  * 
  */
-public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends ResourceArgs {
 
     public static final RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs Empty = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs();
 

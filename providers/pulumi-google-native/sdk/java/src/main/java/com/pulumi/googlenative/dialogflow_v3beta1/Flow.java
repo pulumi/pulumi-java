@@ -12,6 +12,8 @@ import com.pulumi.googlenative.dialogflow_v3beta1.FlowArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EventHandlerResponse;
 import com.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1NluSettingsResponse;
 import com.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TransitionRouteResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3beta1:Flow")
-public class Flow extends com.pulumi.resources.CustomResource {
+public class Flow extends CustomResource {
     /**
      * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
@@ -142,19 +144,19 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Flow(String name, FlowArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Flow(String name, FlowArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3beta1:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Flow(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Flow(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3beta1:Flow", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -165,7 +167,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Flow get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Flow get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Flow(name, id, options);
     }
 }

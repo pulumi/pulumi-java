@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudscheduler_v1.enums.HttpTargetHttpMethod;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.OAuthTokenArgs;
 import com.pulumi.googlenative.cloudscheduler_v1.inputs.OidcTokenArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Http target. The job will be pushed to the job handler by means of an HTTP request via an http_method such as HTTP POST, HTTP GET, etc. The job is acknowledged by means of an HTTP response code in the range [200 - 299]. A failure to receive a response constitutes a failed execution. For a redirected request, the response returned by the redirected request is considered.
  * 
  */
-public final class HttpTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpTargetArgs extends ResourceArgs {
 
     public static final HttpTargetArgs Empty = new HttpTargetArgs();
 

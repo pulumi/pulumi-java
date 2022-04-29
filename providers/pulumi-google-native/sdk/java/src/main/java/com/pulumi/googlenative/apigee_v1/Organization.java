@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.apigee_v1.OrganizationArgs;
 import com.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AddonsConfigResponse;
 import com.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:apigee/v1:Organization")
-public class Organization extends com.pulumi.resources.CustomResource {
+public class Organization extends CustomResource {
     /**
      * Addon configurations of the Apigee organization.
      * 
@@ -339,19 +341,19 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Organization(String name, OrganizationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Organization(String name, OrganizationArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Organization(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Organization(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:apigee/v1:Organization", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -362,7 +364,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Organization get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Organization get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Organization(name, id, options);
     }
 }

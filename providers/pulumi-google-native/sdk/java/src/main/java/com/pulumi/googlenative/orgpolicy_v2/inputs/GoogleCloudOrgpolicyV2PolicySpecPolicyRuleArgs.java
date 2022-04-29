@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleTypeExprArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A rule used to express this policy.
  * 
  */
-public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends ResourceArgs {
 
     public static final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs Empty = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs();
 

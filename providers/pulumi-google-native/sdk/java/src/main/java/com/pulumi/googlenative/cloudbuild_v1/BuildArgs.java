@@ -11,6 +11,7 @@ import com.pulumi.googlenative.cloudbuild_v1.inputs.BuildStepArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.SecretArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.SecretsArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.SourceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildArgs extends ResourceArgs {
 
     public static final BuildArgs Empty = new BuildArgs();
 

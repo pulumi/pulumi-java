@@ -6,13 +6,14 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FutureReservationSpecificSKUPropertiesArgs extends ResourceArgs {
 
     public static final FutureReservationSpecificSKUPropertiesArgs Empty = new FutureReservationSpecificSKUPropertiesArgs();
 

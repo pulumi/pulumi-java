@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Indicates that the builder claims certain fields in this message to be complete.
  * 
  */
-public final class SlsaCompletenessArgs extends com.pulumi.resources.ResourceArgs {
+public final class SlsaCompletenessArgs extends ResourceArgs {
 
     public static final SlsaCompletenessArgs Empty = new SlsaCompletenessArgs();
 

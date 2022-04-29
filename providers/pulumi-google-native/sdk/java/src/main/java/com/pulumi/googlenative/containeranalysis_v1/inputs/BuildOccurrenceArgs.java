@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.BuildProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details of a build occurrence.
  * 
  */
-public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildOccurrenceArgs extends ResourceArgs {
 
     public static final BuildOccurrenceArgs Empty = new BuildOccurrenceArgs();
 

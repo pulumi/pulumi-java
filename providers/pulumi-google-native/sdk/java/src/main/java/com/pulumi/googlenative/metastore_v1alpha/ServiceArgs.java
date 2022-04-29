@@ -13,6 +13,7 @@ import com.pulumi.googlenative.metastore_v1alpha.inputs.HiveMetastoreConfigArgs;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.MaintenanceWindowArgs;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.MetadataIntegrationArgs;
 import com.pulumi.googlenative.metastore_v1alpha.inputs.NetworkConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceArgs extends ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 

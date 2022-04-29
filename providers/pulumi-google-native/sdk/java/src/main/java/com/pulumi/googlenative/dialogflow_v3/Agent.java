@@ -11,6 +11,8 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v3.AgentArgs;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3AdvancedSettingsResponse;
 import com.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:dialogflow/v3:Agent")
-public class Agent extends com.pulumi.resources.CustomResource {
+public class Agent extends CustomResource {
     /**
      * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
      * 
@@ -226,19 +228,19 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Agent(String name, AgentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Agent(String name, AgentArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Agent(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Agent(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:dialogflow/v3:Agent", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -249,7 +251,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Agent get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Agent get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Agent(name, id, options);
     }
 }

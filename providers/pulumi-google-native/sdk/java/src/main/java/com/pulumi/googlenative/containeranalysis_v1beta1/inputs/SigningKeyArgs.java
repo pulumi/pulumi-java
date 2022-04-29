@@ -5,6 +5,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This defines the format used to record keys used in the software supply chain. An in-toto link is attested using one or more keys defined in the in-toto layout. An example of this is: { &#34;key_id&#34;: &#34;776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b0...&#34;, &#34;key_type&#34;: &#34;rsa&#34;, &#34;public_key_value&#34;: &#34;-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0B...&#34;, &#34;key_scheme&#34;: &#34;rsassa-pss-sha256&#34; } The format for in-toto&#39;s key definition can be found in section 4.2 of the in-toto specification.
  * 
  */
-public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SigningKeyArgs extends ResourceArgs {
 
     public static final SigningKeyArgs Empty = new SigningKeyArgs();
 

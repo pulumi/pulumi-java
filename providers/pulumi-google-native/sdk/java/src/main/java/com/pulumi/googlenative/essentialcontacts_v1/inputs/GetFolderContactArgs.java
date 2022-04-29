@@ -4,11 +4,12 @@
 package com.pulumi.googlenative.essentialcontacts_v1.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetFolderContactArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetFolderContactArgs extends InvokeArgs {
 
     public static final GetFolderContactArgs Empty = new GetFolderContactArgs();
 

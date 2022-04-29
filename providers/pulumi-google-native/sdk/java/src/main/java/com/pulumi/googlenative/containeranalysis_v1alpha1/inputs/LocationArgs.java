@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An occurrence of a particular package installation found within a system&#39;s filesystem. e.g. glibc was found in /var/lib/dpkg/status
  * 
  */
-public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationArgs extends ResourceArgs {
 
     public static final LocationArgs Empty = new LocationArgs();
 

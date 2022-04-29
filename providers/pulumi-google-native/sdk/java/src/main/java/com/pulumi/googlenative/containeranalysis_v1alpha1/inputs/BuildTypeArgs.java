@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildSignatureArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Note holding the version of the provider&#39;s builder and the signature of the provenance message in linked BuildDetails.
  * 
  */
-public final class BuildTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildTypeArgs extends ResourceArgs {
 
     public static final BuildTypeArgs Empty = new BuildTypeArgs();
 

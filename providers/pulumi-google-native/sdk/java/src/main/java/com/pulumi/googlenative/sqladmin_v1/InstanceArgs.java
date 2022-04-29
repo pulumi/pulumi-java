@@ -20,6 +20,7 @@ import com.pulumi.googlenative.sqladmin_v1.inputs.SettingsArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.SqlOutOfDiskReportArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.SqlScheduledMaintenanceArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.SslCertArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceArgs extends ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 

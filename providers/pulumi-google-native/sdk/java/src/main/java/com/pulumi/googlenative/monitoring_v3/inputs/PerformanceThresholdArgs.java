@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A PerformanceThreshold is used when each window is good when that window has a sufficiently high performance.
  * 
  */
-public final class PerformanceThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class PerformanceThresholdArgs extends ResourceArgs {
 
     public static final PerformanceThresholdArgs Empty = new PerformanceThresholdArgs();
 

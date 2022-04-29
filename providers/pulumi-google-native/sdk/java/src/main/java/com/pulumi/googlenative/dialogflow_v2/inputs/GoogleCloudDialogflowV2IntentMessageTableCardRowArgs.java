@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageTableCardCellArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Row of TableCard.
  * 
  */
-public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageTableCardRowArgs Empty = new GoogleCloudDialogflowV2IntentMessageTableCardRowArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.
  * 
  */
-public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs extends ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs();
 

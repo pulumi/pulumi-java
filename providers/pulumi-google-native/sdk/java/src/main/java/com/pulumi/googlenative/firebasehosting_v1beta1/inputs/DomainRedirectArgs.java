@@ -6,6 +6,7 @@ package com.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.firebasehosting_v1beta1.enums.DomainRedirectType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Defines the behavior of a domain-level redirect. Domain redirects preserve the path of the redirect but replace the requested domain with the one specified in the redirect configuration.
  * 
  */
-public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainRedirectArgs extends ResourceArgs {
 
     public static final DomainRedirectArgs Empty = new DomainRedirectArgs();
 

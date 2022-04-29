@@ -14,6 +14,8 @@ import com.pulumi.googlenative.compute_beta.outputs.InstancePropertiesResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SavedDiskResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SourceDiskEncryptionKeyResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SourceInstancePropertiesResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:compute/beta:MachineImage")
-public class MachineImage extends com.pulumi.resources.CustomResource {
+public class MachineImage extends CustomResource {
     /**
      * The creation timestamp for this machine image in RFC3339 text format.
      * 
@@ -271,19 +273,19 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MachineImage(String name, MachineImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MachineImage(String name, MachineImageArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:MachineImage", name, args == null ? MachineImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MachineImage(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MachineImage(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:compute/beta:MachineImage", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -294,7 +296,7 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MachineImage get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MachineImage get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new MachineImage(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the selection and configuration of software inside the environment.
  * 
  */
-public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SoftwareConfigArgs extends ResourceArgs {
 
     public static final SoftwareConfigArgs Empty = new SoftwareConfigArgs();
 

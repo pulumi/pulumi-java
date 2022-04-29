@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceStackType;
 import com.pulumi.googlenative.compute_alpha.inputs.AccessConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.AliasIpRangeArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkInterfaceSubInterfaceArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * A network interface resource attached to an instance.
  * 
  */
-public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceArgs extends ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 

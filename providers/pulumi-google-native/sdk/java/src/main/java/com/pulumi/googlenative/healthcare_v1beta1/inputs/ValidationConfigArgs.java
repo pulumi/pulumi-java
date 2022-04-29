@@ -5,6 +5,7 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Contains the configuration for FHIR profiles and validation.
  * 
  */
-public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidationConfigArgs extends ResourceArgs {
 
     public static final ValidationConfigArgs Empty = new ValidationConfigArgs();
 

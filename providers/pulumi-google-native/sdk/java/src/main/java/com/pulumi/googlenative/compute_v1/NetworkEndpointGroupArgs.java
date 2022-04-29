@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_v1.enums.NetworkEndpointGroupNetworkEndpo
 import com.pulumi.googlenative.compute_v1.inputs.NetworkEndpointGroupAppEngineArgs;
 import com.pulumi.googlenative.compute_v1.inputs.NetworkEndpointGroupCloudFunctionArgs;
 import com.pulumi.googlenative.compute_v1.inputs.NetworkEndpointGroupCloudRunArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkEndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkEndpointGroupArgs extends ResourceArgs {
 
     public static final NetworkEndpointGroupArgs Empty = new NetworkEndpointGroupArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.googlenative.toolresults_v1beta3;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.BasicPerfSampleSeriesArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PerfSampleSeriesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PerfSampleSeriesArgs extends ResourceArgs {
 
     public static final PerfSampleSeriesArgs Empty = new PerfSampleSeriesArgs();
 

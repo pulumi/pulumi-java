@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LocationArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * This represents how a particular software package may be installed on a system.
  * 
  */
-public final class InstallationArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstallationArgs extends ResourceArgs {
 
     public static final InstallationArgs Empty = new InstallationArgs();
 

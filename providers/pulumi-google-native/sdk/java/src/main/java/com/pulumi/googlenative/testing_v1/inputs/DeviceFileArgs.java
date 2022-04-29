@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.ObbFileArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RegularFileArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A single device file description.
  * 
  */
-public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceFileArgs extends ResourceArgs {
 
     public static final DeviceFileArgs Empty = new DeviceFileArgs();
 

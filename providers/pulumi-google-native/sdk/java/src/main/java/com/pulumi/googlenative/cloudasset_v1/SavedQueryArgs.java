@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudasset_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudasset_v1.inputs.QueryContentArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SavedQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class SavedQueryArgs extends ResourceArgs {
 
     public static final SavedQueryArgs Empty = new SavedQueryArgs();
 

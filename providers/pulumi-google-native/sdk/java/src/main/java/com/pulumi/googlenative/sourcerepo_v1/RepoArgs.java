@@ -6,6 +6,7 @@ package com.pulumi.googlenative.sourcerepo_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sourcerepo_v1.inputs.MirrorConfigArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepoArgs extends ResourceArgs {
 
     public static final RepoArgs Empty = new RepoArgs();
 

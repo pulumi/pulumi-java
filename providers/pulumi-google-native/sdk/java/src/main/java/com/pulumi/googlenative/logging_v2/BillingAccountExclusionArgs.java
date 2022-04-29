@@ -5,6 +5,7 @@ package com.pulumi.googlenative.logging_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BillingAccountExclusionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BillingAccountExclusionArgs extends ResourceArgs {
 
     public static final BillingAccountExclusionArgs Empty = new BillingAccountExclusionArgs();
 

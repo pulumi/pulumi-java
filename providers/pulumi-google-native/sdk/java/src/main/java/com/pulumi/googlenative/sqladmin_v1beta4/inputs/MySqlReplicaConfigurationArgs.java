@@ -5,6 +5,7 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Read-replica configuration specific to MySQL databases.
  * 
  */
-public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MySqlReplicaConfigurationArgs extends ResourceArgs {
 
     public static final MySqlReplicaConfigurationArgs Empty = new MySqlReplicaConfigurationArgs();
 

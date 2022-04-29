@@ -5,6 +5,7 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
  * 
  */
-public final class GoogleRpcStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleRpcStatusArgs extends ResourceArgs {
 
     public static final GoogleRpcStatusArgs Empty = new GoogleRpcStatusArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.MosaicLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.RowLayoutArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
+public final class DashboardArgs extends ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 

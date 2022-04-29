@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.MaintenanceExclusionOptionsArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an arbitrary window of time.
  * 
  */
-public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeWindowArgs extends ResourceArgs {
 
     public static final TimeWindowArgs Empty = new TimeWindowArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationEndArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationFadeArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Animation types.
  * 
  */
-public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnimationArgs extends ResourceArgs {
 
     public static final AnimationArgs Empty = new AnimationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertyArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Message for compatibility with legacy Edge specification for Java Properties object in JSON.
  * 
  */
-public final class GoogleCloudApigeeV1PropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudApigeeV1PropertiesArgs extends ResourceArgs {
 
     public static final GoogleCloudApigeeV1PropertiesArgs Empty = new GoogleCloudApigeeV1PropertiesArgs();
 

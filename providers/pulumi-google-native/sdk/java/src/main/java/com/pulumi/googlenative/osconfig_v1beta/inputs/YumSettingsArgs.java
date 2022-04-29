@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Yum patching is performed by executing `yum update`. Additional options can be set to control how this is executed. Note that not all settings are supported on all platforms.
  * 
  */
-public final class YumSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class YumSettingsArgs extends ResourceArgs {
 
     public static final YumSettingsArgs Empty = new YumSettingsArgs();
 

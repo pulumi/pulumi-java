@@ -5,13 +5,14 @@ package com.pulumi.googlenative.firebaserules_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReleaseArgs extends ResourceArgs {
 
     public static final ReleaseArgs Empty = new ReleaseArgs();
 

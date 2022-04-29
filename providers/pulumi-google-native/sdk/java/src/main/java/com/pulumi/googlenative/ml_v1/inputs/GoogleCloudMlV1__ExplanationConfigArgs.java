@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__IntegratedGradientsAttributionArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SampledShapleyAttributionArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__XraiAttributionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Message holding configuration options for explaining model predictions. There are three feature attribution methods supported for TensorFlow models: integrated gradients, sampled Shapley, and XRAI. [Learn more about feature attributions.](/ai-platform/prediction/docs/ai-explanations/overview)
  * 
  */
-public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudMlV1__ExplanationConfigArgs extends ResourceArgs {
 
     public static final GoogleCloudMlV1__ExplanationConfigArgs Empty = new GoogleCloudMlV1__ExplanationConfigArgs();
 

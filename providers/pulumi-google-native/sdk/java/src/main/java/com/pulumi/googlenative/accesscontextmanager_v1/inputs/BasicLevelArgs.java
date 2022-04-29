@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.accesscontextmanager_v1.enums.BasicLevelCombiningFunction;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.ConditionArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * `BasicLevel` is an `AccessLevel` using a set of recommended features.
  * 
  */
-public final class BasicLevelArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicLevelArgs extends ResourceArgs {
 
     public static final BasicLevelArgs Empty = new BasicLevelArgs();
 

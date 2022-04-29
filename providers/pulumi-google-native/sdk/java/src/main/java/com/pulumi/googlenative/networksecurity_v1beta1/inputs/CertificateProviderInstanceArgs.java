@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specification of a TLS certificate provider instance. Workloads may have one or more CertificateProvider instances (plugins) and one of them is enabled and configured by specifying this message. Workloads use the values from this message to locate and load the CertificateProvider instance configuration.
  * 
  */
-public final class CertificateProviderInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateProviderInstanceArgs extends ResourceArgs {
 
     public static final CertificateProviderInstanceArgs Empty = new CertificateProviderInstanceArgs();
 

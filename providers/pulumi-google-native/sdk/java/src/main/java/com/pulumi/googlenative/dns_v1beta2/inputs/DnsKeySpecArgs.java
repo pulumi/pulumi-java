@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecAlgorithm;
 import com.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecKeyType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Parameters for DnsKey key generation. Used for generating initial keys for a new ManagedZone and as default when adding a new DnsKey.
  * 
  */
-public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class DnsKeySpecArgs extends ResourceArgs {
 
     public static final DnsKeySpecArgs Empty = new DnsKeySpecArgs();
 

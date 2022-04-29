@@ -12,6 +12,8 @@ import com.pulumi.googlenative.privateca_v1.CertificateArgs;
 import com.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import com.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
 import com.pulumi.googlenative.privateca_v1.outputs.RevocationDetailsResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:privateca/v1:Certificate")
-public class Certificate extends com.pulumi.resources.CustomResource {
+public class Certificate extends CustomResource {
     /**
      * A structured description of the issued X.509 certificate.
      * 
@@ -244,19 +246,19 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Certificate(String name, CertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Certificate(String name, CertificateArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:privateca/v1:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Certificate(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Certificate(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:privateca/v1:Certificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -267,7 +269,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Certificate get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Certificate get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }
 }

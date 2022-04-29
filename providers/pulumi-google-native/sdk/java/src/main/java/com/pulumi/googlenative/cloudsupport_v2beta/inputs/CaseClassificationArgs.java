@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A classification object with a product type and value.
  * 
  */
-public final class CaseClassificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CaseClassificationArgs extends ResourceArgs {
 
     public static final CaseClassificationArgs Empty = new CaseClassificationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.testing_v1.inputs.ManualShardingArgs;
 import com.pulumi.googlenative.testing_v1.inputs.UniformShardingArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Options for enabling sharding.
  * 
  */
-public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ShardingOptionArgs extends ResourceArgs {
 
     public static final ShardingOptionArgs Empty = new ShardingOptionArgs();
 

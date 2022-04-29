@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Entry overview fields for rich text descriptions of entries.
  * 
  */
-public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1EntryOverviewArgs Empty = new GoogleCloudDatacatalogV1EntryOverviewArgs();
 

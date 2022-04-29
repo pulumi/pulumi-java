@@ -6,6 +6,7 @@ package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Options for user acceptance testing.
  * 
  */
-public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends ResourceArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs Empty = new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs();
 

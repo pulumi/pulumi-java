@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_v1.enums.AddressAddressType;
 import com.pulumi.googlenative.compute_v1.enums.AddressIpVersion;
 import com.pulumi.googlenative.compute_v1.enums.AddressNetworkTier;
 import com.pulumi.googlenative.compute_v1.enums.AddressPurpose;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressArgs extends ResourceArgs {
 
     public static final AddressArgs Empty = new AddressArgs();
 

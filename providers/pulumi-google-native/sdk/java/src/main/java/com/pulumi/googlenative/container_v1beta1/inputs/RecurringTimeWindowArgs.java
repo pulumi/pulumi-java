@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.TimeWindowArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an arbitrary window of time that recurs.
  * 
  */
-public final class RecurringTimeWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecurringTimeWindowArgs extends ResourceArgs {
 
     public static final RecurringTimeWindowArgs Empty = new RecurringTimeWindowArgs();
 

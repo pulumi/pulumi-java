@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The project team associated with the entity, if any.
  * 
  */
-public final class BucketAccessControlProjectTeamArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAccessControlProjectTeamArgs extends ResourceArgs {
 
     public static final BucketAccessControlProjectTeamArgs Empty = new BucketAccessControlProjectTeamArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datafusion_v1.enums.AcceleratorAcceleratorType;
 import com.pulumi.googlenative.datafusion_v1.enums.AcceleratorState;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Identifies Data Fusion accelerators for an instance.
  * 
  */
-public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
+public final class AcceleratorArgs extends ResourceArgs {
 
     public static final AcceleratorArgs Empty = new AcceleratorArgs();
 

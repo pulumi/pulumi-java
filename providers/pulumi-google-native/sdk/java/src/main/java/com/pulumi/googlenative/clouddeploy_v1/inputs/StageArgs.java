@@ -5,6 +5,7 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Stage specifies a location to which to deploy.
  * 
  */
-public final class StageArgs extends com.pulumi.resources.ResourceArgs {
+public final class StageArgs extends ResourceArgs {
 
     public static final StageArgs Empty = new StageArgs();
 

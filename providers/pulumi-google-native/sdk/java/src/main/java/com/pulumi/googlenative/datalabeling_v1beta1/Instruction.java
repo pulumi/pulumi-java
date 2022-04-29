@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datalabeling_v1beta1.InstructionArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:Instruction")
-public class Instruction extends com.pulumi.resources.CustomResource {
+public class Instruction extends CustomResource {
     /**
      * The names of any related resources that are blocking changes to the instruction.
      * 
@@ -155,19 +157,19 @@ public class Instruction extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Instruction(String name, InstructionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Instruction(String name, InstructionArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:datalabeling/v1beta1:Instruction", name, args == null ? InstructionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Instruction(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Instruction(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:datalabeling/v1beta1:Instruction", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -178,7 +180,7 @@ public class Instruction extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Instruction get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Instruction get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Instruction(name, id, options);
     }
 }

@@ -43,6 +43,8 @@ import com.pulumi.googlenative.container_v1beta1.outputs.TpuConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.VerticalPodAutoscalingResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.WorkloadCertificatesResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.WorkloadIdentityConfigResponse;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -55,7 +57,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="google-native:container/v1beta1:Cluster")
-public class Cluster extends com.pulumi.resources.CustomResource {
+public class Cluster extends CustomResource {
     /**
      * Configurations for the various addons available to run in the cluster.
      * 
@@ -876,19 +878,19 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cluster(String name, @Nullable ClusterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Cluster(String name, @Nullable ClusterArgs args, @Nullable CustomResourceOptions options) {
         super("google-native:container/v1beta1:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Cluster(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Cluster(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("google-native:container/v1beta1:Cluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -899,7 +901,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cluster get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Cluster get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Cluster(name, id, options);
     }
 }

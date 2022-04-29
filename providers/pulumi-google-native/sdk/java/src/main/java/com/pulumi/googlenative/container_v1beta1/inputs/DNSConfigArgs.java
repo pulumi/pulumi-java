@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDns;
 import com.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDnsScope;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DNSConfig contains the desired set of options for configuring clusterDNS.
  * 
  */
-public final class DNSConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DNSConfigArgs extends ResourceArgs {
 
     public static final DNSConfigArgs Empty = new DNSConfigArgs();
 

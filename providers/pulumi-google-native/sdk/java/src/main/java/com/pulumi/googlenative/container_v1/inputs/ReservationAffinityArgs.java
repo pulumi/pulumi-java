@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.ReservationAffinityConsumeReservationType;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) is the configuration of desired reservation which instances could take capacity from.
  * 
  */
-public final class ReservationAffinityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReservationAffinityArgs extends ResourceArgs {
 
     public static final ReservationAffinityArgs Empty = new ReservationAffinityArgs();
 

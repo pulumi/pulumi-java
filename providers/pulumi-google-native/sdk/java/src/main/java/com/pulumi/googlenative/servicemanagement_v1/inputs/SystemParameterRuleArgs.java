@@ -6,6 +6,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Define a system parameter rule mapping system parameter definitions to methods.
  * 
  */
-public final class SystemParameterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemParameterRuleArgs extends ResourceArgs {
 
     public static final SystemParameterRuleArgs Empty = new SystemParameterRuleArgs();
 

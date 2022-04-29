@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.FingerprintArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.LayerArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details of the derived image portion of the DockerImage relationship. This image would be produced from a Dockerfile with FROM .
  * 
  */
-public final class ImageOccurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageOccurrenceArgs extends ResourceArgs {
 
     public static final ImageOccurrenceArgs Empty = new ImageOccurrenceArgs();
 
