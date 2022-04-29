@@ -93,7 +93,7 @@ export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
 
 ### Working with published dependencies
 
-The repository publishes builds dev and release builds to
+The repository publishes dev and release builds to
 [Packages](https://github.com/orgs/pulumi/packages?repo_name=pulumi-java).
 Release builds are also published to Maven Central.
 
