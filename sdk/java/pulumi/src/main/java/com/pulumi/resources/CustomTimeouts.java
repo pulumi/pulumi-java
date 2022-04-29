@@ -79,4 +79,37 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         // We also append "ns" to it, for the Golang parser.
         return duration.get().toNanos() + "ns";
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        @Nullable
+        private Duration create;
+        @Nullable
+        private Duration update;
+        @Nullable
+        private Duration delete;
+        public Builder() { }
+
+        public Builder create(Duration create) {
+            this.create = create;
+            return this;
+        }
+
+        public Builder update(Duration update) {
+            this.update = update;
+            return this;
+        }
+
+        public Builder delete(Duration delete) {
+            this.delete = delete;
+            return this;
+        }
+
+        public CustomTimeouts build() {
+            return new CustomTimeouts(this.create, this.update, this.delete);
+        }
+    }
 }
