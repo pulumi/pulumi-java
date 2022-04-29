@@ -3,10 +3,10 @@
 
 package com.pulumi.awsx.vpc;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultVpcArgs extends ResourceArgs {
 
     public static final DefaultVpcArgs Empty = new DefaultVpcArgs();
 

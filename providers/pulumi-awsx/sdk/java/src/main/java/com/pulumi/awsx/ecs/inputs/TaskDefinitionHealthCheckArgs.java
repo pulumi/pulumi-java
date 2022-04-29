@@ -5,6 +5,7 @@ package com.pulumi.awsx.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The health check command and associated configuration parameters for the container.
  * 
  */
-public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionHealthCheckArgs extends ResourceArgs {
 
     public static final TaskDefinitionHealthCheckArgs Empty = new TaskDefinitionHealthCheckArgs();
 

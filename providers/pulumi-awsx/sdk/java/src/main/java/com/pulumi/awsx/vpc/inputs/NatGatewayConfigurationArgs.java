@@ -5,6 +5,7 @@ package com.pulumi.awsx.vpc.inputs;
 
 import com.pulumi.awsx.vpc.enums.NatGatewayStrategy;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for NAT Gateways.
  * 
  */
-public final class NatGatewayConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NatGatewayConfigurationArgs extends ResourceArgs {
 
     public static final NatGatewayConfigurationArgs Empty = new NatGatewayConfigurationArgs();
 

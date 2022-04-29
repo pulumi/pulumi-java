@@ -3,10 +3,10 @@
 
 package com.pulumi.awsx.vpc.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class GetDefaultVpcArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDefaultVpcArgs extends InvokeArgs {
 
     public static final GetDefaultVpcArgs Empty = new GetDefaultVpcArgs();
 

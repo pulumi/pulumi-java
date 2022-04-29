@@ -5,6 +5,7 @@ package com.pulumi.awsx.vpc.inputs;
 
 import com.pulumi.awsx.vpc.enums.SubnetType;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Configuration for a VPC subnet.
  * 
  */
-public final class SubnetConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetConfigurationArgs extends ResourceArgs {
 
     public static final SubnetConfigurationArgs Empty = new SubnetConfigurationArgs();
 

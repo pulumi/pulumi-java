@@ -21,6 +21,7 @@ import com.pulumi.awsx.ecs.inputs.TaskDefinitionUlimitArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionVolumeFromArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -35,7 +36,7 @@ import javax.annotation.Nullable;
  * List of container definitions that are passed to the Docker daemon on a container instance
  * 
  */
-public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionContainerDefinitionArgs extends ResourceArgs {
 
     public static final TaskDefinitionContainerDefinitionArgs Empty = new TaskDefinitionContainerDefinitionArgs();
 

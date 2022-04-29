@@ -7,6 +7,7 @@ import com.pulumi.aws.lb.inputs.TargetGroupHealthCheckArgs;
 import com.pulumi.aws.lb.inputs.TargetGroupStickinessArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +33,7 @@ import javax.annotation.Nullable;
  * ```
  * 
  */
-public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetGroupArgs extends ResourceArgs {
 
     public static final TargetGroupArgs Empty = new TargetGroupArgs();
 

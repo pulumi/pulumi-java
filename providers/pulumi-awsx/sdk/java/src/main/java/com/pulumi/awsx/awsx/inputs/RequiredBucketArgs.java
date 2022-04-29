@@ -6,6 +6,7 @@ package com.pulumi.awsx.awsx.inputs;
 import com.pulumi.awsx.awsx.inputs.BucketArgs;
 import com.pulumi.awsx.awsx.inputs.ExistingBucketArgs;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Bucket with default setup.
  * 
  */
-public final class RequiredBucketArgs extends com.pulumi.resources.ResourceArgs {
+public final class RequiredBucketArgs extends ResourceArgs {
 
     public static final RequiredBucketArgs Empty = new RequiredBucketArgs();
 

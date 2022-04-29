@@ -6,6 +6,7 @@ package com.pulumi.awsx.awsx.inputs;
 import com.pulumi.awsx.awsx.inputs.ExistingLogGroupArgs;
 import com.pulumi.awsx.awsx.inputs.LogGroupArgs;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Log group which is only created if enabled.
  * 
  */
-public final class OptionalLogGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class OptionalLogGroupArgs extends ResourceArgs {
 
     public static final OptionalLogGroupArgs Empty = new OptionalLogGroupArgs();
 

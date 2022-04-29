@@ -6,6 +6,7 @@ package com.pulumi.awsx.lb.inputs;
 import com.pulumi.aws.lb.inputs.ListenerDefaultActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ import javax.annotation.Nullable;
  * ```
  * 
  */
-public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerArgs extends ResourceArgs {
 
     public static final ListenerArgs Empty = new ListenerArgs();
 

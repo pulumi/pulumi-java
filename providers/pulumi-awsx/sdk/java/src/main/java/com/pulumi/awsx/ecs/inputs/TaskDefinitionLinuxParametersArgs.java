@@ -8,6 +8,7 @@ import com.pulumi.awsx.ecs.inputs.TaskDefinitionKernelCapabilitiesArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionTmpfsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionLinuxParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionLinuxParametersArgs extends ResourceArgs {
 
     public static final TaskDefinitionLinuxParametersArgs Empty = new TaskDefinitionLinuxParametersArgs();
 

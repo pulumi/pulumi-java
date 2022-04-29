@@ -11,11 +11,14 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="awsx:cloudtrail:Trail")
-public class Trail extends com.pulumi.resources.ComponentResource {
+public class Trail extends ComponentResource {
     /**
      * The managed S3 Bucket where the Trail will place its logs.
      * 
@@ -80,15 +83,15 @@ public class Trail extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Trail(String name, @Nullable TrailArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public Trail(String name, @Nullable TrailArgs args, @Nullable ComponentResourceOptions options) {
         super("awsx:cloudtrail:Trail", name, args == null ? TrailArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

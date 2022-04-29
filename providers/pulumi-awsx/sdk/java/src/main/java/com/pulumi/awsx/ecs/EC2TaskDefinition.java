@@ -13,6 +13,9 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="awsx:ecs:EC2TaskDefinition")
-public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
+public class EC2TaskDefinition extends ComponentResource {
     /**
      * Auto-created IAM task execution role that the Amazon ECS container agent and the Docker daemon can assume.
      * 
@@ -117,15 +120,15 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EC2TaskDefinition(String name, @Nullable EC2TaskDefinitionArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public EC2TaskDefinition(String name, @Nullable EC2TaskDefinitionArgs args, @Nullable ComponentResourceOptions options) {
         super("awsx:ecs:EC2TaskDefinition", name, args == null ? EC2TaskDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

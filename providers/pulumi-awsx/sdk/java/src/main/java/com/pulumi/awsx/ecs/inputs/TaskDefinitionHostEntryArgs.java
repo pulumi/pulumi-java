@@ -5,13 +5,14 @@ package com.pulumi.awsx.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionHostEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionHostEntryArgs extends ResourceArgs {
 
     public static final TaskDefinitionHostEntryArgs Empty = new TaskDefinitionHostEntryArgs();
 

@@ -14,6 +14,7 @@ import com.pulumi.awsx.awsx.inputs.DefaultRoleWithPolicyArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * Presents required Service load balancers if target group included in port mappings.
  * 
  */
-public final class FargateServiceTaskDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FargateServiceTaskDefinitionArgs extends ResourceArgs {
 
     public static final FargateServiceTaskDefinitionArgs Empty = new FargateServiceTaskDefinitionArgs();
 

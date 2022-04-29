@@ -10,12 +10,15 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="awsx:vpc:Vpc")
-public class Vpc extends com.pulumi.resources.ComponentResource {
+public class Vpc extends ComponentResource {
     /**
      * The VPC&#39;s subnets.
      * 
@@ -66,15 +69,15 @@ public class Vpc extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Vpc(String name, @Nullable VpcArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public Vpc(String name, @Nullable VpcArgs args, @Nullable ComponentResourceOptions options) {
         super("awsx:vpc:Vpc", name, args == null ? VpcArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
+    private static ComponentResourceOptions makeResourceOptions(@Nullable ComponentResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
+        return ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
 }

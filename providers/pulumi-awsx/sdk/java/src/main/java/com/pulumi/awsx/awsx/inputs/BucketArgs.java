@@ -14,6 +14,7 @@ import com.pulumi.aws.s3.inputs.BucketVersioningArgs;
 import com.pulumi.aws.s3.inputs.BucketWebsiteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * The set of arguments for constructing a Bucket resource.
  * 
  */
-public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketArgs extends ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 

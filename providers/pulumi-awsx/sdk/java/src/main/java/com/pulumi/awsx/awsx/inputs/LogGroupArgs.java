@@ -5,6 +5,7 @@ package com.pulumi.awsx.awsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The set of arguments for constructing a LogGroup resource.
  * 
  */
-public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogGroupArgs extends ResourceArgs {
 
     public static final LogGroupArgs Empty = new LogGroupArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsx.ecr.inputs;
 import com.pulumi.awsx.ecr.inputs.LifecyclePolicyRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Simplified lifecycle policy model consisting of one or more rules that determine which images in a repository should be expired. See https://docs.aws.amazon.com/AmazonECR/latest/userguide/lifecycle_policy_examples.html for more details.
  * 
  */
-public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class LifecyclePolicyArgs extends ResourceArgs {
 
     public static final LifecyclePolicyArgs Empty = new LifecyclePolicyArgs();
 

@@ -13,6 +13,7 @@ import com.pulumi.aws.ecs.inputs.ServiceServiceRegistriesArgs;
 import com.pulumi.awsx.ecs.inputs.EC2ServiceTaskDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2ServiceArgs extends ResourceArgs {
 
     public static final EC2ServiceArgs Empty = new EC2ServiceArgs();
 

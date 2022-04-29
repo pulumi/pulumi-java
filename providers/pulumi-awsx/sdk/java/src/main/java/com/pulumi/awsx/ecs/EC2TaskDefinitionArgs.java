@@ -14,6 +14,7 @@ import com.pulumi.awsx.awsx.inputs.DefaultRoleWithPolicyArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2TaskDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2TaskDefinitionArgs extends ResourceArgs {
 
     public static final EC2TaskDefinitionArgs Empty = new EC2TaskDefinitionArgs();
 
