@@ -1,6 +1,6 @@
 ## Welcome
 
-* **[Get Started with Pulumi using Java](#getting-started): Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java
+* **[Get Started with Pulumi using Java](#getting-started)**: Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java
 
 * **[Examples](https://github.com/pulumi/examples)**: Browse Java examples across many clouds and scenarios including containers, serverless, and infrastructure.
 
