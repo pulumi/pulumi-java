@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
  * 
  */
-public final class AutomationActionEventHubArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationActionEventHubArgs extends ResourceArgs {
 
     public static final AutomationActionEventHubArgs Empty = new AutomationActionEventHubArgs();
 

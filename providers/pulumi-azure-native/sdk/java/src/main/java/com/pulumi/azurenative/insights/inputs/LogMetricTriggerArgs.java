@@ -8,6 +8,7 @@ import com.pulumi.azurenative.insights.enums.MetricTriggerType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A log metrics trigger descriptor.
  * 
  */
-public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogMetricTriggerArgs extends ResourceArgs {
 
     public static final LogMetricTriggerArgs Empty = new LogMetricTriggerArgs();
 

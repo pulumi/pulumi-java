@@ -9,6 +9,7 @@ import com.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerArgs;
 import com.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Triggers for auto-heal.
  * 
  */
-public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoHealTriggersArgs extends ResourceArgs {
 
     public static final AutoHealTriggersArgs Empty = new AutoHealTriggersArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the nonce used in the login flow.
  * 
  */
-public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NonceArgs extends ResourceArgs {
 
     public static final NonceArgs Empty = new NonceArgs();
 

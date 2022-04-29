@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
  * 
  */
-public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs extends ResourceArgs {
 
     public static final ApplicationInsightsComponentAnalyticsItemPropertiesArgs Empty = new ApplicationInsightsComponentAnalyticsItemPropertiesArgs();
 

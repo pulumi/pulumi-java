@@ -7,6 +7,7 @@ import com.pulumi.azurenative.kubernetes.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Identity for the connected cluster.
  * 
  */
-public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectedClusterIdentityArgs extends ResourceArgs {
 
     public static final ConnectedClusterIdentityArgs Empty = new ConnectedClusterIdentityArgs();
 

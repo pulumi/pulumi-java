@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.enums.TokenCertificateName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties of a certificate used for authenticating a token.
  * 
  */
-public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenCertificateArgs extends ResourceArgs {
 
     public static final TokenCertificateArgs Empty = new TokenCertificateArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicebus.inputs;
 import com.pulumi.azurenative.servicebus.inputs.SubnetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Description of VirtualNetworkRules - NetworkRules resource.
  * 
  */
-public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources.ResourceArgs {
+public final class NWRuleSetVirtualNetworkRulesArgs extends ResourceArgs {
 
     public static final NWRuleSetVirtualNetworkRulesArgs Empty = new NWRuleSetVirtualNetworkRulesArgs();
 

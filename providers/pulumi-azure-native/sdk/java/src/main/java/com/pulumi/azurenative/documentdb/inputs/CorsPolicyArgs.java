@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The CORS policy for the Cosmos DB database account.
  * 
  */
-public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CorsPolicyArgs extends ResourceArgs {
 
     public static final CorsPolicyArgs Empty = new CorsPolicyArgs();
 

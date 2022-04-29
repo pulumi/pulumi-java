@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.inputs.AssignedStandardItemArgs;
 import com.pulumi.azurenative.security.inputs.AssignmentPropertiesAdditionalDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentArgs extends ResourceArgs {
 
     public static final AssignmentArgs Empty = new AssignmentArgs();
 

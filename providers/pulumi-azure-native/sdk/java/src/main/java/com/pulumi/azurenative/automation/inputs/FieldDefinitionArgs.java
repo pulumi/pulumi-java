@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Definition of the connection fields.
  * 
  */
-public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FieldDefinitionArgs extends ResourceArgs {
 
     public static final FieldDefinitionArgs Empty = new FieldDefinitionArgs();
 

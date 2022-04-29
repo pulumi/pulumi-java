@@ -11,6 +11,7 @@ import com.pulumi.azurenative.containerservice.inputs.OpenShiftRouterProfileArgs
 import com.pulumi.azurenative.containerservice.inputs.PurchasePlanArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenShiftManagedClusterArgs extends ResourceArgs {
 
     public static final OpenShiftManagedClusterArgs Empty = new OpenShiftManagedClusterArgs();
 

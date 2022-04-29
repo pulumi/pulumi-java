@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.FormatTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connector mapping property format.
  * 
  */
-public final class ConnectorMappingFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorMappingFormatArgs extends ResourceArgs {
 
     public static final ConnectorMappingFormatArgs Empty = new ConnectorMappingFormatArgs();
 

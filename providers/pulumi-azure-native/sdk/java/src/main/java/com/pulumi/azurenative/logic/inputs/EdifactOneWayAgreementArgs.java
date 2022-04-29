@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import com.pulumi.azurenative.logic.inputs.EdifactProtocolSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The Edifact one way agreement.
  * 
  */
-public final class EdifactOneWayAgreementArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactOneWayAgreementArgs extends ResourceArgs {
 
     public static final EdifactOneWayAgreementArgs Empty = new EdifactOneWayAgreementArgs();
 

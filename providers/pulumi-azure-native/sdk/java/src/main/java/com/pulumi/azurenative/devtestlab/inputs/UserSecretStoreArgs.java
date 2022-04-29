@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of a user&#39;s secret store.
  * 
  */
-public final class UserSecretStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserSecretStoreArgs extends ResourceArgs {
 
     public static final UserSecretStoreArgs Empty = new UserSecretStoreArgs();
 

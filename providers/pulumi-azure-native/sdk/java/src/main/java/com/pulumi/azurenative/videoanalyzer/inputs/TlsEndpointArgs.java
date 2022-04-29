@@ -10,6 +10,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsAr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * TLS endpoint describes an endpoint that the pipeline can connect to over TLS transport (data is encrypted in transit).
  * 
  */
-public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class TlsEndpointArgs extends ResourceArgs {
 
     public static final TlsEndpointArgs Empty = new TlsEndpointArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.VideoPublishingOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Video sink in a live topology allows for video and audio to be captured, optionally archived, and published via a video resource. If archiving is enabled, this results in a video of type &#39;archive&#39;. If used in a batch topology, this allows for video and audio to be stored as a file, and published via a video resource of type &#39;file&#39;
  * 
  */
-public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoSinkArgs extends ResourceArgs {
 
     public static final VideoSinkArgs Empty = new VideoSinkArgs();
 

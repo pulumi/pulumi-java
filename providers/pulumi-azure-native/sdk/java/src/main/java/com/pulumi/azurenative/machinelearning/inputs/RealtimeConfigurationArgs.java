@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Holds the available configuration options for an Azure ML web service endpoint.
  * 
  */
-public final class RealtimeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RealtimeConfigurationArgs extends ResourceArgs {
 
     public static final RealtimeConfigurationArgs Empty = new RealtimeConfigurationArgs();
 

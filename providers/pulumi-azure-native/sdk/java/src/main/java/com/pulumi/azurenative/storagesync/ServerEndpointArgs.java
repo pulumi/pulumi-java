@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerEndpointArgs extends ResourceArgs {
 
     public static final ServerEndpointArgs Empty = new ServerEndpointArgs();
 

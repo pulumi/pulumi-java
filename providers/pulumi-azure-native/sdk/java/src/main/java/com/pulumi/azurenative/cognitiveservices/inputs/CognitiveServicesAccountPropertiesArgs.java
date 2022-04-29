@@ -12,6 +12,7 @@ import com.pulumi.azurenative.cognitiveservices.inputs.UserOwnedStorageArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Properties of Cognitive Services account.
  * 
  */
-public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CognitiveServicesAccountPropertiesArgs extends ResourceArgs {
 
     public static final CognitiveServicesAccountPropertiesArgs Empty = new CognitiveServicesAccountPropertiesArgs();
 

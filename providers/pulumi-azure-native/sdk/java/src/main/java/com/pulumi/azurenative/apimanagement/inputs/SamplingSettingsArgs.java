@@ -7,6 +7,7 @@ import com.pulumi.azurenative.apimanagement.enums.SamplingType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Sampling settings for Diagnostic.
  * 
  */
-public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SamplingSettingsArgs extends ResourceArgs {
 
     public static final SamplingSettingsArgs Empty = new SamplingSettingsArgs();
 

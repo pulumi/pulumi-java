@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabric.inputs.SubResourceArgs;
 import com.pulumi.azurenative.servicefabric.inputs.VaultCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Specifies set of certificates that should be installed onto the virtual machines.
  * 
  */
-public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class VaultSecretGroupArgs extends ResourceArgs {
 
     public static final VaultSecretGroupArgs Empty = new VaultSecretGroupArgs();
 

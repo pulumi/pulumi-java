@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.RosettaNetPipRoleType;
 import com.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The integration account RosettaNet ProcessConfiguration role settings.
  * 
  */
-public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RosettaNetPipRoleSettingsArgs extends ResourceArgs {
 
     public static final RosettaNetPipRoleSettingsArgs Empty = new RosettaNetPipRoleSettingsArgs();
 

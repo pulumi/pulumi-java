@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.FrontDoorMatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Defines contents of a web application rule
  * 
  */
-public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomRuleArgs extends ResourceArgs {
 
     public static final CustomRuleArgs Empty = new CustomRuleArgs();
 

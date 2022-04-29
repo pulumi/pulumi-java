@@ -6,13 +6,14 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.Office365PolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualApplianceSiteArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualApplianceSiteArgs extends ResourceArgs {
 
     public static final VirtualApplianceSiteArgs Empty = new VirtualApplianceSiteArgs();
 

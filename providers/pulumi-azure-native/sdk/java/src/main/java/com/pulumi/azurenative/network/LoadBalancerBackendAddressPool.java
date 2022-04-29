@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:network:LoadBalancerBackendAddressPool")
-public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomResource {
+public class LoadBalancerBackendAddressPool extends CustomResource {
     /**
      * An array of references to IP addresses defined in network interfaces.
      * 
@@ -197,16 +199,16 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LoadBalancerBackendAddressPool(String name, LoadBalancerBackendAddressPoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LoadBalancerBackendAddressPool(String name, LoadBalancerBackendAddressPoolArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:network:LoadBalancerBackendAddressPool", name, args == null ? LoadBalancerBackendAddressPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private LoadBalancerBackendAddressPool(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancerBackendAddressPool(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:network:LoadBalancerBackendAddressPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20200401:LoadBalancerBackendAddressPool").build()),
@@ -220,7 +222,7 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
                 Output.of(Alias.builder().type("azure-native:network/v20210501:LoadBalancerBackendAddressPool").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -231,7 +233,7 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancerBackendAddressPool get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancerBackendAddressPool get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new LoadBalancerBackendAddressPool(name, id, options);
     }
 }

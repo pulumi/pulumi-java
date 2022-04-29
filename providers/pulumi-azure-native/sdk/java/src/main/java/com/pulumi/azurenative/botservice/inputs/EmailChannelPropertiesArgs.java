@@ -5,6 +5,7 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Email channel.
  * 
  */
-public final class EmailChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EmailChannelPropertiesArgs extends ResourceArgs {
 
     public static final EmailChannelPropertiesArgs Empty = new EmailChannelPropertiesArgs();
 

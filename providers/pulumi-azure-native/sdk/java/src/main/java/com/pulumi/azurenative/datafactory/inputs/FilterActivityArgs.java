@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Filter and return results from input array based on the conditions.
  * 
  */
-public final class FilterActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterActivityArgs extends ResourceArgs {
 
     public static final FilterActivityArgs Empty = new FilterActivityArgs();
 

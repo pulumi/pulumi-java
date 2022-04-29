@@ -23,6 +23,7 @@ import com.pulumi.azurenative.media.inputs.VideoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ import javax.annotation.Nullable;
  * Describes all the settings to be used when encoding the input video with the Standard Encoder.
  * 
  */
-public final class StandardEncoderPresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class StandardEncoderPresetArgs extends ResourceArgs {
 
     public static final StandardEncoderPresetArgs Empty = new StandardEncoderPresetArgs();
 

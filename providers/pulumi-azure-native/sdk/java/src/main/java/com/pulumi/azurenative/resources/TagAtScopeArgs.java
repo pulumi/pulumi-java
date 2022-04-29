@@ -6,11 +6,12 @@ package com.pulumi.azurenative.resources;
 import com.pulumi.azurenative.resources.inputs.TagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagAtScopeArgs extends ResourceArgs {
 
     public static final TagAtScopeArgs Empty = new TagAtScopeArgs();
 

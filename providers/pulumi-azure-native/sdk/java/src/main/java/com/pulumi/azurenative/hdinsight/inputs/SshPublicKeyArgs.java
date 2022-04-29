@@ -5,6 +5,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The SSH public key for the cluster nodes.
  * 
  */
-public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SshPublicKeyArgs extends ResourceArgs {
 
     public static final SshPublicKeyArgs Empty = new SshPublicKeyArgs();
 

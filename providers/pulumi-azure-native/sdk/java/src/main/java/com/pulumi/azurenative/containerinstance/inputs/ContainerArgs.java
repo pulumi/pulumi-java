@@ -10,6 +10,7 @@ import com.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsArgs;
 import com.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A container instance.
  * 
  */
-public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerArgs extends ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 

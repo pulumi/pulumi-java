@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningcompute.enums.SystemServiceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Information about a system service deployed in the cluster
  * 
  */
-public final class SystemServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemServiceArgs extends ResourceArgs {
 
     public static final SystemServiceArgs Empty = new SystemServiceArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the public IP address resource settings.
  * 
  */
-public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicIPAddressResourceSettingsArgs extends ResourceArgs {
 
     public static final PublicIPAddressResourceSettingsArgs Empty = new PublicIPAddressResourceSettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Control Plane Apis version constraint for the API Management service.
  * 
  */
-public final class ApiVersionConstraintArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiVersionConstraintArgs extends ResourceArgs {
 
     public static final ApiVersionConstraintArgs Empty = new ApiVersionConstraintArgs();
 

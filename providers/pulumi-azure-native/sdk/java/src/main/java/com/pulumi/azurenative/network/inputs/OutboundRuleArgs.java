@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Outbound rule of the load balancer.
  * 
  */
-public final class OutboundRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutboundRuleArgs extends ResourceArgs {
 
     public static final OutboundRuleArgs Empty = new OutboundRuleArgs();
 

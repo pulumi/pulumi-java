@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicelinker.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The authentication info when authType is systemAssignedIdentity
  * 
  */
-public final class SystemAssignedIdentityAuthInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemAssignedIdentityAuthInfoArgs extends ResourceArgs {
 
     public static final SystemAssignedIdentityAuthInfoArgs Empty = new SystemAssignedIdentityAuthInfoArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.eventhub.enums.EntityStatus;
 import com.pulumi.azurenative.eventhub.inputs.CaptureDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventHubArgs extends ResourceArgs {
 
     public static final EventHubArgs Empty = new EventHubArgs();
 

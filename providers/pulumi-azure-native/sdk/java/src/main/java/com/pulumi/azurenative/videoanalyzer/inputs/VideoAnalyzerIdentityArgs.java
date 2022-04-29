@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The managed identity for the Video Analyzer resource.
  * 
  */
-public final class VideoAnalyzerIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoAnalyzerIdentityArgs extends ResourceArgs {
 
     public static final VideoAnalyzerIdentityArgs Empty = new VideoAnalyzerIdentityArgs();
 

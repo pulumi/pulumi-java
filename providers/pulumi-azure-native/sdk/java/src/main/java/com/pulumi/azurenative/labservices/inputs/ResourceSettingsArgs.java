@@ -8,6 +8,7 @@ import com.pulumi.azurenative.labservices.inputs.ReferenceVmArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents resource specific settings
  * 
  */
-public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSettingsArgs extends ResourceArgs {
 
     public static final ResourceSettingsArgs Empty = new ResourceSettingsArgs();
 

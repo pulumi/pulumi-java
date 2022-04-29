@@ -6,6 +6,7 @@ package com.pulumi.azurenative.mixedreality.inputs;
 import com.pulumi.azurenative.mixedreality.enums.SkuTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The resource model definition representing SKU
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

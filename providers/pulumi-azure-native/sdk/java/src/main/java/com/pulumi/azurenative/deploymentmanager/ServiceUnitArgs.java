@@ -7,6 +7,7 @@ import com.pulumi.azurenative.deploymentmanager.enums.DeploymentMode;
 import com.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitArtifactsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceUnitArgs extends ResourceArgs {
 
     public static final ServiceUnitArgs Empty = new ServiceUnitArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetVirtualNetworkArgs extends InvokeArgs {
 
     public static final GetVirtualNetworkArgs Empty = new GetVirtualNetworkArgs();
 

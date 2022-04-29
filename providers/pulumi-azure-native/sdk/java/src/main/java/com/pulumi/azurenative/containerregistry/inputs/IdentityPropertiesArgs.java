@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.enums.ResourceIdentityType;
 import com.pulumi.azurenative.containerregistry.inputs.UserIdentityPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Managed identity for the resource.
  * 
  */
-public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityPropertiesArgs extends ResourceArgs {
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 

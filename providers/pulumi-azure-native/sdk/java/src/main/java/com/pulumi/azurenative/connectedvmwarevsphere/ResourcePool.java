@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:connectedvmwarevsphere:ResourcePool")
-public class ResourcePool extends com.pulumi.resources.CustomResource {
+public class ResourcePool extends CustomResource {
     /**
      * Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
      * Utilization will not exceed this limit even if there are available resources.
@@ -365,22 +367,22 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ResourcePool(String name, ResourcePoolArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ResourcePool(String name, ResourcePoolArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:connectedvmwarevsphere:ResourcePool", name, args == null ? ResourcePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ResourcePool(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ResourcePool(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:connectedvmwarevsphere:ResourcePool", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:connectedvmwarevsphere/v20201001preview:ResourcePool").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -391,7 +393,7 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourcePool get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ResourcePool get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ResourcePool(name, id, options);
     }
 }

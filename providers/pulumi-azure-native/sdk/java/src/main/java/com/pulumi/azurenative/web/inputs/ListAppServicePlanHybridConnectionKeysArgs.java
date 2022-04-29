@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListAppServicePlanHybridConnectionKeysArgs extends InvokeArgs {
 
     public static final ListAppServicePlanHybridConnectionKeysArgs Empty = new ListAppServicePlanHybridConnectionKeysArgs();
 

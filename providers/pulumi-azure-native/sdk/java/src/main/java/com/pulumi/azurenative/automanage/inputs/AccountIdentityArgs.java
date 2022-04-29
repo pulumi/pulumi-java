@@ -6,6 +6,7 @@ package com.pulumi.azurenative.automanage.inputs;
 import com.pulumi.azurenative.automanage.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Identity for the Automanage account.
  * 
  */
-public final class AccountIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountIdentityArgs extends ResourceArgs {
 
     public static final AccountIdentityArgs Empty = new AccountIdentityArgs();
 

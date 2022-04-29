@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Peerings in a virtual network resource.
  * 
  */
-public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkPeeringArgs extends ResourceArgs {
 
     public static final VirtualNetworkPeeringArgs Empty = new VirtualNetworkPeeringArgs();
 

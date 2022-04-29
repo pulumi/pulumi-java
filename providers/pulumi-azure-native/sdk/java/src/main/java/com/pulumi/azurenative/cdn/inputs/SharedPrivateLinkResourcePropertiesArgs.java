@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.SharedPrivateLinkResourceStatus;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
  * 
  */
-public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SharedPrivateLinkResourcePropertiesArgs extends ResourceArgs {
 
     public static final SharedPrivateLinkResourcePropertiesArgs Empty = new SharedPrivateLinkResourcePropertiesArgs();
 

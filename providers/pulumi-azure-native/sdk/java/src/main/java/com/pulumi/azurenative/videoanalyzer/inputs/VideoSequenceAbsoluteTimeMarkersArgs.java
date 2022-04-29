@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A sequence of absolute datetime ranges as a string. The datetime values should follow IS08601, and the sum of the ranges should add up to 24 hours or less. Currently, there can be only one range specified in the sequence.
  * 
  */
-public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoSequenceAbsoluteTimeMarkersArgs extends ResourceArgs {
 
     public static final VideoSequenceAbsoluteTimeMarkersArgs Empty = new VideoSequenceAbsoluteTimeMarkersArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines an edge within the web service&#39;s graph.
  * 
  */
-public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphEdgeArgs extends ResourceArgs {
 
     public static final GraphEdgeArgs Empty = new GraphEdgeArgs();
 

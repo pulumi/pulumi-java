@@ -8,6 +8,7 @@ import com.pulumi.azurenative.alertsmanagement.inputs.DiagnosticsArgs;
 import com.pulumi.azurenative.alertsmanagement.inputs.SuppressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActionRuleByNameArgs extends ResourceArgs {
 
     public static final ActionRuleByNameArgs Empty = new ActionRuleByNameArgs();
 

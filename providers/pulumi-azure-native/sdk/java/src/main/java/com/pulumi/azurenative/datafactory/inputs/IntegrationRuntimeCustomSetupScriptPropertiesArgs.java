@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Custom setup script properties for a managed dedicated integration runtime.
  * 
  */
-public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationRuntimeCustomSetupScriptPropertiesArgs Empty = new IntegrationRuntimeCustomSetupScriptPropertiesArgs();
 

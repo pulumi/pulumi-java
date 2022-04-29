@@ -8,6 +8,7 @@ import com.pulumi.azurenative.aad.enums.NotifyGlobalAdmins;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Settings for notification
  * 
  */
-public final class NotificationSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationSettingsArgs extends ResourceArgs {
 
     public static final NotificationSettingsArgs Empty = new NotificationSettingsArgs();
 

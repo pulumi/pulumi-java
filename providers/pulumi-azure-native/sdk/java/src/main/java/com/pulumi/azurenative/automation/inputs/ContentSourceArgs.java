@@ -8,6 +8,7 @@ import com.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Definition of the content source.
  * 
  */
-public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentSourceArgs extends ResourceArgs {
 
     public static final ContentSourceArgs Empty = new ContentSourceArgs();
 

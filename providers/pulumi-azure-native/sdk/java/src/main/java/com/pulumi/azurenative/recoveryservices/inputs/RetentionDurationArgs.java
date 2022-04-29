@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.RetentionDurationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Retention duration.
  * 
  */
-public final class RetentionDurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetentionDurationArgs extends ResourceArgs {
 
     public static final RetentionDurationArgs Empty = new RetentionDurationArgs();
 

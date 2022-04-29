@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Managed Virtual Network Settings
  * 
  */
-public final class ManagedVirtualNetworkSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedVirtualNetworkSettingsArgs extends ResourceArgs {
 
     public static final ManagedVirtualNetworkSettingsArgs Empty = new ManagedVirtualNetworkSettingsArgs();
 

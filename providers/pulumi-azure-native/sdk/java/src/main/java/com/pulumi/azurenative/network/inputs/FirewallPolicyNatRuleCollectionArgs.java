@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.NetworkRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Firewall Policy NAT Rule Collection.
  * 
  */
-public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyNatRuleCollectionArgs extends ResourceArgs {
 
     public static final FirewallPolicyNatRuleCollectionArgs Empty = new FirewallPolicyNatRuleCollectionArgs();
 

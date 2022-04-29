@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSkusNestedResourceTypeSecondArgs extends InvokeArgs {
 
     public static final GetSkusNestedResourceTypeSecondArgs Empty = new GetSkusNestedResourceTypeSecondArgs();
 

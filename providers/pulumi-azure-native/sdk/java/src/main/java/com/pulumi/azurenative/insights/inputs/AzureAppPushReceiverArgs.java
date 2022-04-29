@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Azure mobile App push notification receiver.
  * 
  */
-public final class AzureAppPushReceiverArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureAppPushReceiverArgs extends ResourceArgs {
 
     public static final AzureAppPushReceiverArgs Empty = new AzureAppPushReceiverArgs();
 

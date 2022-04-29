@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceArgs;
 import com.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a Encryption Settings for a Disk
  * 
  */
-public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskEncryptionSettingsArgs extends ResourceArgs {
 
     public static final DiskEncryptionSettingsArgs Empty = new DiskEncryptionSettingsArgs();
 

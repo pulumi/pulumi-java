@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Network Virtual Appliance Sku Properties.
  * 
  */
-public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BreakOutCategoryPoliciesArgs extends ResourceArgs {
 
     public static final BreakOutCategoryPoliciesArgs Empty = new BreakOutCategoryPoliciesArgs();
 

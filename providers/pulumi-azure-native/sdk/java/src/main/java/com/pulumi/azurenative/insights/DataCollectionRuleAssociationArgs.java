@@ -5,13 +5,14 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataCollectionRuleAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCollectionRuleAssociationArgs extends ResourceArgs {
 
     public static final DataCollectionRuleAssociationArgs Empty = new DataCollectionRuleAssociationArgs();
 

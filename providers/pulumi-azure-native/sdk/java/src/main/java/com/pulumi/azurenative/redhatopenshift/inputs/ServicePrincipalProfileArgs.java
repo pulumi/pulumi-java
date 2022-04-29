@@ -5,6 +5,7 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * ServicePrincipalProfile represents a service principal profile.
  * 
  */
-public final class ServicePrincipalProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicePrincipalProfileArgs extends ResourceArgs {
 
     public static final ServicePrincipalProfileArgs Empty = new ServicePrincipalProfileArgs();
 

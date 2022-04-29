@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A Kubernetes add-on profile for a managed cluster.
  * 
  */
-public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterAddonProfileArgs extends ResourceArgs {
 
     public static final ManagedClusterAddonProfileArgs Empty = new ManagedClusterAddonProfileArgs();
 

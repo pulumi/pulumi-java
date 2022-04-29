@@ -7,6 +7,7 @@ import com.pulumi.azurenative.migrate.inputs.IdentityArgs;
 import com.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MoveCollectionArgs extends ResourceArgs {
 
     public static final MoveCollectionArgs Empty = new MoveCollectionArgs();
 

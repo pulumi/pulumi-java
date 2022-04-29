@@ -5,6 +5,7 @@ package com.pulumi.azurenative.resourcegraph;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GraphQueryArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphQueryArgs extends ResourceArgs {
 
     public static final GraphQueryArgs Empty = new GraphQueryArgs();
 

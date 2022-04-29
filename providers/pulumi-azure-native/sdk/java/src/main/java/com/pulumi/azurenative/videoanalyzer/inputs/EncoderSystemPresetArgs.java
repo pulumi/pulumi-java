@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Describes a built-in preset for encoding the input content using the encoder processor.
  * 
  */
-public final class EncoderSystemPresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncoderSystemPresetArgs extends ResourceArgs {
 
     public static final EncoderSystemPresetArgs Empty = new EncoderSystemPresetArgs();
 

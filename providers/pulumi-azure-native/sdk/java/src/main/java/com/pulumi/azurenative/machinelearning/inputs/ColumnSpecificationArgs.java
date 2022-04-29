@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearning.enums.ColumnType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Swagger 2.0 schema for a column within the data table representing a web service input or output. See Swagger specification: http://swagger.io/specification/
  * 
  */
-public final class ColumnSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ColumnSpecificationArgs extends ResourceArgs {
 
     public static final ColumnSpecificationArgs Empty = new ColumnSpecificationArgs();
 

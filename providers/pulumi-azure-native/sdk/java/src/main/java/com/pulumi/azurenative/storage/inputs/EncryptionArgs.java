@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The encryption settings on the storage account.
  * 
  */
-public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionArgs extends ResourceArgs {
 
     public static final EncryptionArgs Empty = new EncryptionArgs();
 

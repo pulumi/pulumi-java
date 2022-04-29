@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The auto scaler properties.
  * 
  */
-public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AKSServiceCreateRequestAutoScalerArgs extends ResourceArgs {
 
     public static final AKSServiceCreateRequestAutoScalerArgs Empty = new AKSServiceCreateRequestAutoScalerArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueMeta
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The definition of a parameter that can be provided to the policy.
  * 
  */
-public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterDefinitionsValueArgs extends ResourceArgs {
 
     public static final ParameterDefinitionsValueArgs Empty = new ParameterDefinitionsValueArgs();
 

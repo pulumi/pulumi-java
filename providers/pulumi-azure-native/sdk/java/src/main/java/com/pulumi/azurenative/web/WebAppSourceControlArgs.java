@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web;
 import com.pulumi.azurenative.web.inputs.GitHubActionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAppSourceControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAppSourceControlArgs extends ResourceArgs {
 
     public static final WebAppSourceControlArgs Empty = new WebAppSourceControlArgs();
 

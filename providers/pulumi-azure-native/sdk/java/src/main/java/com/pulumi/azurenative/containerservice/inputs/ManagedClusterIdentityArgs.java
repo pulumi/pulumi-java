@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Identity for the managed cluster.
  * 
  */
-public final class ManagedClusterIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterIdentityArgs extends ResourceArgs {
 
     public static final ManagedClusterIdentityArgs Empty = new ManagedClusterIdentityArgs();
 

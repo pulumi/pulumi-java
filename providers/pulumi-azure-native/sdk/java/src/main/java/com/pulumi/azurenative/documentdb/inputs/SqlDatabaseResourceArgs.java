@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Cosmos DB SQL database resource object
  * 
  */
-public final class SqlDatabaseResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlDatabaseResourceArgs extends ResourceArgs {
 
     public static final SqlDatabaseResourceArgs Empty = new SqlDatabaseResourceArgs();
 

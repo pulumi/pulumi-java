@@ -6,13 +6,14 @@ package com.pulumi.azurenative.databoxedge;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArcAddonArgs extends ResourceArgs {
 
     public static final ArcAddonArgs Empty = new ArcAddonArgs();
 

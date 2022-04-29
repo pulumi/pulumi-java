@@ -14,6 +14,7 @@ import com.pulumi.azurenative.web.inputs.LegacyMicrosoftAccountArgs;
 import com.pulumi.azurenative.web.inputs.TwitterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
  * 
  */
-public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityProvidersArgs extends ResourceArgs {
 
     public static final IdentityProvidersArgs Empty = new IdentityProvidersArgs();
 

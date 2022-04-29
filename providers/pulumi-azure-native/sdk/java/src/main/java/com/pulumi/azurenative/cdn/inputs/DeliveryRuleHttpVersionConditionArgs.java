@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.inputs.HttpVersionMatchConditionParametersArgs
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines the HttpVersion condition for the delivery rule.
  * 
  */
-public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryRuleHttpVersionConditionArgs extends ResourceArgs {
 
     public static final DeliveryRuleHttpVersionConditionArgs Empty = new DeliveryRuleHttpVersionConditionArgs();
 

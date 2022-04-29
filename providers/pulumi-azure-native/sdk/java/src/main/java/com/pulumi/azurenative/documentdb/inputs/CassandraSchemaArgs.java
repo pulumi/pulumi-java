@@ -8,6 +8,7 @@ import com.pulumi.azurenative.documentdb.inputs.ClusterKeyArgs;
 import com.pulumi.azurenative.documentdb.inputs.ColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Cosmos DB Cassandra table schema
  * 
  */
-public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class CassandraSchemaArgs extends ResourceArgs {
 
     public static final CassandraSchemaArgs Empty = new CassandraSchemaArgs();
 

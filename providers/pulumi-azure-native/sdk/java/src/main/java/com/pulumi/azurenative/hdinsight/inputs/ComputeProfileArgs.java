@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.RoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the compute profile.
  * 
  */
-public final class ComputeProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComputeProfileArgs extends ResourceArgs {
 
     public static final ComputeProfileArgs Empty = new ComputeProfileArgs();
 

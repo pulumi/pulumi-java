@@ -5,6 +5,7 @@ package com.pulumi.azurenative.policyinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A piece of evidence supporting the compliance state set in the attestation.
  * 
  */
-public final class AttestationEvidenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestationEvidenceArgs extends ResourceArgs {
 
     public static final AttestationEvidenceArgs Empty = new AttestationEvidenceArgs();
 

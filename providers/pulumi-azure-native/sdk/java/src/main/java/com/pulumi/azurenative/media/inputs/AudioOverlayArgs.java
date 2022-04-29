@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the properties of an audio overlay.
  * 
  */
-public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
+public final class AudioOverlayArgs extends ResourceArgs {
 
     public static final AudioOverlayArgs Empty = new AudioOverlayArgs();
 

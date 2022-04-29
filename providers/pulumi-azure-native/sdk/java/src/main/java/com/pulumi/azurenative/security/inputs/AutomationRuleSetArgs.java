@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.AutomationTriggeringRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A rule set which evaluates all its rules upon an event interception. Only when all the included rules in the rule set will be evaluated as &#39;true&#39;, will the event trigger the defined actions.
  * 
  */
-public final class AutomationRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationRuleSetArgs extends ResourceArgs {
 
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();
 

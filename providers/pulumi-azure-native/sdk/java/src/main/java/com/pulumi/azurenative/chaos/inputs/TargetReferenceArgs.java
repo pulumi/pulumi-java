@@ -6,6 +6,7 @@ package com.pulumi.azurenative.chaos.inputs;
 import com.pulumi.azurenative.chaos.enums.TargetReferenceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Model that represents a reference to a Target in the selector.
  * 
  */
-public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetReferenceArgs extends ResourceArgs {
 
     public static final TargetReferenceArgs Empty = new TargetReferenceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Create keyVault contract details.
  * 
  */
-public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultContractCreatePropertiesArgs extends ResourceArgs {
 
     public static final KeyVaultContractCreatePropertiesArgs Empty = new KeyVaultContractCreatePropertiesArgs();
 

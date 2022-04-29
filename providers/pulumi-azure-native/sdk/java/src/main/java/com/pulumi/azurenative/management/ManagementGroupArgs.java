@@ -6,13 +6,14 @@ package com.pulumi.azurenative.management;
 import com.pulumi.azurenative.management.inputs.CreateManagementGroupDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementGroupArgs extends ResourceArgs {
 
     public static final ManagementGroupArgs Empty = new ManagementGroupArgs();
 

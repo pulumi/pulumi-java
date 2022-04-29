@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.storsimple.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListManagerPublicEncryptionKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListManagerPublicEncryptionKeyArgs extends InvokeArgs {
 
     public static final ListManagerPublicEncryptionKeyArgs Empty = new ListManagerPublicEncryptionKeyArgs();
 

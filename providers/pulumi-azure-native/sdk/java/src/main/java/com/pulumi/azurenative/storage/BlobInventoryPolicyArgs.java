@@ -6,13 +6,14 @@ package com.pulumi.azurenative.storage;
 import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicySchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BlobInventoryPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobInventoryPolicyArgs extends ResourceArgs {
 
     public static final BlobInventoryPolicyArgs Empty = new BlobInventoryPolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Diagnostics settings for Geneva.
  * 
  */
-public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends ResourceArgs {
 
     public static final AzureInternalMonitoringPipelineSinkDescriptionArgs Empty = new AzureInternalMonitoringPipelineSinkDescriptionArgs();
 

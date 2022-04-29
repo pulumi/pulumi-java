@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Optional flags used to change how video is published. These are only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
  * 
  */
-public final class VideoPublishingOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoPublishingOptionsArgs extends ResourceArgs {
 
     public static final VideoPublishingOptionsArgs Empty = new VideoPublishingOptionsArgs();
 

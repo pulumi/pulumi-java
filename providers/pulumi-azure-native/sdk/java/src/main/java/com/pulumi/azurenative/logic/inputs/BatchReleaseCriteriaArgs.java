@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.WorkflowTriggerRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The batch release criteria.
  * 
  */
-public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchReleaseCriteriaArgs extends ResourceArgs {
 
     public static final BatchReleaseCriteriaArgs Empty = new BatchReleaseCriteriaArgs();
 

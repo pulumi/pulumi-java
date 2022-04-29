@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.RampUpRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Routing rules in production experiments.
  * 
  */
-public final class ExperimentsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentsArgs extends ResourceArgs {
 
     public static final ExperimentsArgs Empty = new ExperimentsArgs();
 

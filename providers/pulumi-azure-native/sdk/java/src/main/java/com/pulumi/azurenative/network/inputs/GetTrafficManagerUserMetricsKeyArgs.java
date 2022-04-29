@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class GetTrafficManagerUserMetricsKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTrafficManagerUserMetricsKeyArgs extends InvokeArgs {
 
     public static final GetTrafficManagerUserMetricsKeyArgs Empty = new GetTrafficManagerUserMetricsKeyArgs();
 

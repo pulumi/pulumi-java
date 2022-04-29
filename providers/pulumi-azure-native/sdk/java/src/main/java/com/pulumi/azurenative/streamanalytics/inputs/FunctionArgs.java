@@ -6,6 +6,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
  * 
  */
-public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionArgs extends ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Identity for the resource.
  * 
  */
-public final class ManagedServiceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedServiceIdentityArgs extends ResourceArgs {
 
     public static final ManagedServiceIdentityArgs Empty = new ManagedServiceIdentityArgs();
 

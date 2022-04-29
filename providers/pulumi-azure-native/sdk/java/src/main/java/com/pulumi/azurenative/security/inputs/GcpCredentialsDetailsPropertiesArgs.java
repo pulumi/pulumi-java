@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * GCP cloud account connector based service to service credentials, the credentials are composed of the organization ID and a JSON API key (write only)
  * 
  */
-public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GcpCredentialsDetailsPropertiesArgs extends ResourceArgs {
 
     public static final GcpCredentialsDetailsPropertiesArgs Empty = new GcpCredentialsDetailsPropertiesArgs();
 

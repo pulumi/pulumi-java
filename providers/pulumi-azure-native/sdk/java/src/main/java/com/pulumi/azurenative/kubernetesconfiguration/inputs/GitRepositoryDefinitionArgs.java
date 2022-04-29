@@ -7,6 +7,7 @@ import com.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefini
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Parameters to reconcile to the GitRepository source kind type.
  * 
  */
-public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitRepositoryDefinitionArgs extends ResourceArgs {
 
     public static final GitRepositoryDefinitionArgs Empty = new GitRepositoryDefinitionArgs();
 

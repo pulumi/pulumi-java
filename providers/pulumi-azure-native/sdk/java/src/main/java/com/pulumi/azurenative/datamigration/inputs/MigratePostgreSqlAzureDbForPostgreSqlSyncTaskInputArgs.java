@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigratePostgreSqlAzureDbForPo
 import com.pulumi.azurenative.datamigration.inputs.PostgreSqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Input for the task that migrates PostgreSQL databases to Azure Database for PostgreSQL for online migrations
  * 
  */
-public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extends ResourceArgs {
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs();
 

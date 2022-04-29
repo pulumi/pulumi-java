@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Customized setup scripts
  * 
  */
-public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScriptsToExecuteArgs extends ResourceArgs {
 
     public static final ScriptsToExecuteArgs Empty = new ScriptsToExecuteArgs();
 

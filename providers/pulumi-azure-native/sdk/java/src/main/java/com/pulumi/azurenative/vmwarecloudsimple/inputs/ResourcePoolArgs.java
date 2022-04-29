@@ -5,6 +5,7 @@ package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Resource pool model
  * 
  */
-public final class ResourcePoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePoolArgs extends ResourceArgs {
 
     public static final ResourcePoolArgs Empty = new ResourcePoolArgs();
 

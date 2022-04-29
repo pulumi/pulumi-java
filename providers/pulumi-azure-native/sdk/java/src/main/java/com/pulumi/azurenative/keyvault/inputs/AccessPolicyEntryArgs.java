@@ -6,6 +6,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 import com.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID.
  * 
  */
-public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPolicyEntryArgs extends ResourceArgs {
 
     public static final AccessPolicyEntryArgs Empty = new AccessPolicyEntryArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListDelegationSettingSecretsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListDelegationSettingSecretsArgs extends InvokeArgs {
 
     public static final ListDelegationSettingSecretsArgs Empty = new ListDelegationSettingSecretsArgs();
 

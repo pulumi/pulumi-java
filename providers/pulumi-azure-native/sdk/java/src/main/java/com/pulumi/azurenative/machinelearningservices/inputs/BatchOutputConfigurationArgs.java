@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.enums.BatchOutputAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Batch inference output configuration.
  * 
  */
-public final class BatchOutputConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchOutputConfigurationArgs extends ResourceArgs {
 
     public static final BatchOutputConfigurationArgs Empty = new BatchOutputConfigurationArgs();
 

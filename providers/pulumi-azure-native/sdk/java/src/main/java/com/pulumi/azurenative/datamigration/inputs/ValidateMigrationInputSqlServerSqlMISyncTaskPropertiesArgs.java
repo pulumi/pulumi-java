@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServ
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for task that validates migration input for SQL to Azure SQL Database Managed Instance sync scenario
  * 
  */
-public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs Empty = new ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs();
 

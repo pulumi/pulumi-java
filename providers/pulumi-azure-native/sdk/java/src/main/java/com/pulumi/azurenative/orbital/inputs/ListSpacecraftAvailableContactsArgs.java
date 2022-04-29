@@ -5,11 +5,12 @@ package com.pulumi.azurenative.orbital.inputs;
 
 import com.pulumi.azurenative.orbital.inputs.ResourceReference;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListSpacecraftAvailableContactsArgs extends InvokeArgs {
 
     public static final ListSpacecraftAvailableContactsArgs Empty = new ListSpacecraftAvailableContactsArgs();
 

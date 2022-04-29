@@ -9,6 +9,7 @@ import com.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import com.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Class for CommonEncryptionCbcs encryption scheme
  * 
  */
-public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CommonEncryptionCbcsArgs extends ResourceArgs {
 
     public static final CommonEncryptionCbcsArgs Empty = new CommonEncryptionCbcsArgs();
 

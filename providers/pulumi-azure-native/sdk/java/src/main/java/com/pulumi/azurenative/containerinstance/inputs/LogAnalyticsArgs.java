@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.enums.LogAnalyticsLogType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Container group log analytics information.
  * 
  */
-public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogAnalyticsArgs extends ResourceArgs {
 
     public static final LogAnalyticsArgs Empty = new LogAnalyticsArgs();
 

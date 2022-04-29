@@ -8,6 +8,7 @@ import com.pulumi.azurenative.hanaonazure.inputs.OSProfileArgs;
 import com.pulumi.azurenative.hanaonazure.inputs.StorageProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class HanaInstanceArgs extends ResourceArgs {
 
     public static final HanaInstanceArgs Empty = new HanaInstanceArgs();
 

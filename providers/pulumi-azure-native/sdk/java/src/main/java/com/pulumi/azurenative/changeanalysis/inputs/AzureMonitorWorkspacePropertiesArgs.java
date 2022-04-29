@@ -7,6 +7,7 @@ import com.pulumi.azurenative.changeanalysis.enums.ChangeDetailsMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration properties of an Azure Monitor workspace that receives change notifications.
  * 
  */
-public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureMonitorWorkspacePropertiesArgs extends ResourceArgs {
 
     public static final AzureMonitorWorkspacePropertiesArgs Empty = new AzureMonitorWorkspacePropertiesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.CompletionOperationTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The complete operation.
  * 
  */
-public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorMappingCompleteOperationArgs extends ResourceArgs {
 
     public static final ConnectorMappingCompleteOperationArgs Empty = new ConnectorMappingCompleteOperationArgs();
 

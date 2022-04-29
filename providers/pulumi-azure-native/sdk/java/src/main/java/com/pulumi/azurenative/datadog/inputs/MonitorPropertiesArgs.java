@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datadog.inputs.UserInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Properties specific to the monitor resource.
  * 
  */
-public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitorPropertiesArgs extends ResourceArgs {
 
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 

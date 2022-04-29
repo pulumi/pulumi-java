@@ -6,6 +6,7 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.enums.TagOperators;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Tag filter information for the VM.
  * 
  */
-public final class TagSettingsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagSettingsPropertiesArgs extends ResourceArgs {
 
     public static final TagSettingsPropertiesArgs Empty = new TagSettingsPropertiesArgs();
 

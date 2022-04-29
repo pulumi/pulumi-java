@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Virtual Machine image for Windows AML Compute
  * 
  */
-public final class VirtualMachineImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineImageArgs extends ResourceArgs {
 
     public static final VirtualMachineImageArgs Empty = new VirtualMachineImageArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Body logging settings.
  * 
  */
-public final class BodyDiagnosticSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BodyDiagnosticSettingsArgs extends ResourceArgs {
 
     public static final BodyDiagnosticSettingsArgs Empty = new BodyDiagnosticSettingsArgs();
 

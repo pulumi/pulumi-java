@@ -16,6 +16,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:recoveryservices:ProtectionPolicy")
-public class ProtectionPolicy extends com.pulumi.resources.CustomResource {
+public class ProtectionPolicy extends CustomResource {
     /**
      * Optional ETag.
      * 
@@ -146,16 +148,16 @@ public class ProtectionPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProtectionPolicy(String name, ProtectionPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ProtectionPolicy(String name, ProtectionPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:recoveryservices:ProtectionPolicy", name, args == null ? ProtectionPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ProtectionPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ProtectionPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:recoveryservices:ProtectionPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20160601:ProtectionPolicy").build()),
@@ -174,7 +176,7 @@ public class ProtectionPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ProtectionPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -185,7 +187,7 @@ public class ProtectionPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProtectionPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProtectionPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ProtectionPolicy(name, id, options);
     }
 }

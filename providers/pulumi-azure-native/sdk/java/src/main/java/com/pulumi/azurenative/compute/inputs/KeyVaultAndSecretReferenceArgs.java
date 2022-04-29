@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SourceVaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Key Vault Secret Url and vault id of the encryption key
  * 
  */
-public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultAndSecretReferenceArgs extends ResourceArgs {
 
     public static final KeyVaultAndSecretReferenceArgs Empty = new KeyVaultAndSecretReferenceArgs();
 

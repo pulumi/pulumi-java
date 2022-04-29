@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.enums.UrlPathOperator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Defines the parameters for UrlPath match conditions
  * 
  */
-public final class UrlPathMatchConditionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlPathMatchConditionParametersArgs extends ResourceArgs {
 
     public static final UrlPathMatchConditionParametersArgs Empty = new UrlPathMatchConditionParametersArgs();
 

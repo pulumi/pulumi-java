@@ -5,6 +5,7 @@ package com.pulumi.azurenative.signalrservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cross-Origin Resource Sharing (CORS) settings.
  * 
  */
-public final class SignalRCorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SignalRCorsSettingsArgs extends ResourceArgs {
 
     public static final SignalRCorsSettingsArgs Empty = new SignalRCorsSettingsArgs();
 

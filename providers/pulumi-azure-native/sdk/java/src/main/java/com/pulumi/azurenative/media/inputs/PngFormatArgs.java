@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Describes the settings for producing PNG thumbnails.
  * 
  */
-public final class PngFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class PngFormatArgs extends ResourceArgs {
 
     public static final PngFormatArgs Empty = new PngFormatArgs();
 

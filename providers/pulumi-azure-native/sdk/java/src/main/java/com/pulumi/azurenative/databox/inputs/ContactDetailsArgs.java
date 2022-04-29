@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databox.inputs;
 import com.pulumi.azurenative.databox.inputs.NotificationPreferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Contact Details.
  * 
  */
-public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactDetailsArgs extends ResourceArgs {
 
     public static final ContactDetailsArgs Empty = new ContactDetailsArgs();
 

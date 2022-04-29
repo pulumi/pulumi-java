@@ -8,6 +8,7 @@ import com.pulumi.azurenative.documentdb.inputs.PrivilegeArgs;
 import com.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MongoDBResourceMongoRoleDefinitionArgs extends ResourceArgs {
 
     public static final MongoDBResourceMongoRoleDefinitionArgs Empty = new MongoDBResourceMongoRoleDefinitionArgs();
 

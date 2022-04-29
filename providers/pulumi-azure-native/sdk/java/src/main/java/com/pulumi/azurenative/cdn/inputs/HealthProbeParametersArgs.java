@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.HealthProbeRequestType;
 import com.pulumi.azurenative.cdn.enums.ProbeProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The JSON object that contains the properties to send health probes to origin.
  * 
  */
-public final class HealthProbeParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthProbeParametersArgs extends ResourceArgs {
 
     public static final HealthProbeParametersArgs Empty = new HealthProbeParametersArgs();
 

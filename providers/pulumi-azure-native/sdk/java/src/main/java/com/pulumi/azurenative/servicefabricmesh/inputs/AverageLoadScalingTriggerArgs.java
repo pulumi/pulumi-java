@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetric
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * Describes the average load trigger used for auto scaling.
  * 
  */
-public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AverageLoadScalingTriggerArgs extends ResourceArgs {
 
     public static final AverageLoadScalingTriggerArgs Empty = new AverageLoadScalingTriggerArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The source image from which the Image Version is going to be created.
  * 
  */
-public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserArtifactSourceArgs extends ResourceArgs {
 
     public static final UserArtifactSourceArgs Empty = new UserArtifactSourceArgs();
 

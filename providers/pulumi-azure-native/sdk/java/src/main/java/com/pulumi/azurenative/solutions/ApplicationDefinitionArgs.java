@@ -14,6 +14,7 @@ import com.pulumi.azurenative.solutions.inputs.ApplicationPolicyArgs;
 import com.pulumi.azurenative.solutions.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationDefinitionArgs extends ResourceArgs {
 
     public static final ApplicationDefinitionArgs Empty = new ApplicationDefinitionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Azure VM disk input details.
  * 
  */
-public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class A2AVmDiskInputDetailsArgs extends ResourceArgs {
 
     public static final A2AVmDiskInputDetailsArgs Empty = new A2AVmDiskInputDetailsArgs();
 

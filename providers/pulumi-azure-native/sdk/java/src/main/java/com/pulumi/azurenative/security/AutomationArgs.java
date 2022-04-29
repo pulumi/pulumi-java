@@ -10,6 +10,7 @@ import com.pulumi.azurenative.security.inputs.AutomationScopeArgs;
 import com.pulumi.azurenative.security.inputs.AutomationSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationArgs extends ResourceArgs {
 
     public static final AutomationArgs Empty = new AutomationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * storage resource of type Azure Storage Account.
  * 
  */
-public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageAccountArgs extends ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 

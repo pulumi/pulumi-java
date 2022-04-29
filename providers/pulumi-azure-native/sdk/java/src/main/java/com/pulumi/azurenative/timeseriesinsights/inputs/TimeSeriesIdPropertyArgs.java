@@ -7,6 +7,7 @@ import com.pulumi.azurenative.timeseriesinsights.enums.PropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The structure of the property that a time series id can have. An environment can have multiple such properties.
  * 
  */
-public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeSeriesIdPropertyArgs extends ResourceArgs {
 
     public static final TimeSeriesIdPropertyArgs Empty = new TimeSeriesIdPropertyArgs();
 

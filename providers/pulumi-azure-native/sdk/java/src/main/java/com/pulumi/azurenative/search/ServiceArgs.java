@@ -11,6 +11,7 @@ import com.pulumi.azurenative.search.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceArgs extends ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 

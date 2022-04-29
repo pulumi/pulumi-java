@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A2A container mapping input.
  * 
  */
-public final class A2AContainerMappingInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class A2AContainerMappingInputArgs extends ResourceArgs {
 
     public static final A2AContainerMappingInputArgs Empty = new A2AContainerMappingInputArgs();
 

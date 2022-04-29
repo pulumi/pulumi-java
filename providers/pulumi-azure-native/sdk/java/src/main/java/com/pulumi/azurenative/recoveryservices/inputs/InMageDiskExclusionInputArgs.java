@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageDiskSignatureExclusi
 import com.pulumi.azurenative.recoveryservices.inputs.InMageVolumeExclusionOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
  * 
  */
-public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class InMageDiskExclusionInputArgs extends ResourceArgs {
 
     public static final InMageDiskExclusionInputArgs Empty = new InMageDiskExclusionInputArgs();
 

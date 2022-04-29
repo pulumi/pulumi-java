@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.enums.OwaspCrsExclusionEntrySelectorMatchO
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Allow to exclude some variable satisfy the condition for the WAF check.
  * 
  */
-public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class OwaspCrsExclusionEntryArgs extends ResourceArgs {
 
     public static final OwaspCrsExclusionEntryArgs Empty = new OwaspCrsExclusionEntryArgs();
 

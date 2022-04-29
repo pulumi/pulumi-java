@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
  * 
  */
-public final class RuleMetricDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleMetricDataSourceArgs extends ResourceArgs {
 
     public static final RuleMetricDataSourceArgs Empty = new RuleMetricDataSourceArgs();
 

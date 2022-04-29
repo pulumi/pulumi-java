@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetServiceTopologyArgs extends InvokeArgs {
 
     public static final GetServiceTopologyArgs Empty = new GetServiceTopologyArgs();
 

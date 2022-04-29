@@ -11,6 +11,7 @@ import com.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Cloud service properties
  * 
  */
-public final class CloudServicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudServicePropertiesArgs extends ResourceArgs {
 
     public static final CloudServicePropertiesArgs Empty = new CloudServicePropertiesArgs();
 

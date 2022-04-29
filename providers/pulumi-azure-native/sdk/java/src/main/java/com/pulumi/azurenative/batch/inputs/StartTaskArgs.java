@@ -9,6 +9,7 @@ import com.pulumi.azurenative.batch.inputs.TaskContainerSettingsArgs;
 import com.pulumi.azurenative.batch.inputs.UserIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * In some cases the start task may be re-run even though the node was not rebooted. Due to this, start tasks should be idempotent and exit gracefully if the setup they&#39;re performing has already been done. Special care should be taken to avoid start tasks which create breakaway process or install/launch services from the start task working directory, as this will block Batch from being able to re-run the start task.
  * 
  */
-public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
+public final class StartTaskArgs extends ResourceArgs {
 
     public static final StartTaskArgs Empty = new StartTaskArgs();
 

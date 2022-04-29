@@ -7,6 +7,7 @@ import com.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAn
 import com.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Automanage configuration profile preference properties.
  * 
  */
-public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationProfilePreferencePropertiesArgs extends ResourceArgs {
 
     public static final ConfigurationProfilePreferencePropertiesArgs Empty = new ConfigurationProfilePreferencePropertiesArgs();
 

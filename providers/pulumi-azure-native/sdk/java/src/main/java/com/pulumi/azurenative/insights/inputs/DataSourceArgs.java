@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import com.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Data source object contains configuration to collect telemetry and one or more sinks to send that telemetry data to
  * 
  */
-public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceArgs extends ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 

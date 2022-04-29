@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.enums.DatasetType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Data asset version details.
  * 
  */
-public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataVersionArgs extends ResourceArgs {
 
     public static final DataVersionArgs Empty = new DataVersionArgs();
 

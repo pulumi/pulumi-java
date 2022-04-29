@@ -8,13 +8,14 @@ import com.pulumi.azurenative.avs.inputs.VmVmPlacementPolicyPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlacementPolicyArgs extends ResourceArgs {
 
     public static final PlacementPolicyArgs Empty = new PlacementPolicyArgs();
 

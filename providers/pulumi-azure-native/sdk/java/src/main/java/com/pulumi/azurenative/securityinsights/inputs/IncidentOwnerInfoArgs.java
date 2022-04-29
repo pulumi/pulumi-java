@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Information on the user an incident is assigned to
  * 
  */
-public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IncidentOwnerInfoArgs extends ResourceArgs {
 
     public static final IncidentOwnerInfoArgs Empty = new IncidentOwnerInfoArgs();
 

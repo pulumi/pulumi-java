@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The origin group for CDN content which is added when creating a CDN endpoint. Traffic is sent to the origins within the origin group based on origin health.
  * 
  */
-public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeepCreatedOriginGroupArgs extends ResourceArgs {
 
     public static final DeepCreatedOriginGroupArgs Empty = new DeepCreatedOriginGroupArgs();
 

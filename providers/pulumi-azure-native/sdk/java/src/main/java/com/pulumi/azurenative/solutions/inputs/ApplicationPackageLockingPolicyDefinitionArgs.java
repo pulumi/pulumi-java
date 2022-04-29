@@ -5,6 +5,7 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Managed application locking policy.
  * 
  */
-public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationPackageLockingPolicyDefinitionArgs extends ResourceArgs {
 
     public static final ApplicationPackageLockingPolicyDefinitionArgs Empty = new ApplicationPackageLockingPolicyDefinitionArgs();
 

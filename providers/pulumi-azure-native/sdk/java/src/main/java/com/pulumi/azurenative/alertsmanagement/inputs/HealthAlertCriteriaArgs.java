@@ -6,6 +6,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 import com.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the resource health alert criteria for a single resource that has multiple metric criteria.
  * 
  */
-public final class HealthAlertCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthAlertCriteriaArgs extends ResourceArgs {
 
     public static final HealthAlertCriteriaArgs Empty = new HealthAlertCriteriaArgs();
 

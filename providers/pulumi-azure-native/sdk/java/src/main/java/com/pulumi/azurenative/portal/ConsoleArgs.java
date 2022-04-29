@@ -6,13 +6,14 @@ package com.pulumi.azurenative.portal;
 import com.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsoleArgs extends ResourceArgs {
 
     public static final ConsoleArgs Empty = new ConsoleArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.IPConfigurationProfileArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Container network interface configuration child resource.
  * 
  */
-public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerNetworkInterfaceConfigurationArgs extends ResourceArgs {
 
     public static final ContainerNetworkInterfaceConfigurationArgs Empty = new ContainerNetworkInterfaceConfigurationArgs();
 

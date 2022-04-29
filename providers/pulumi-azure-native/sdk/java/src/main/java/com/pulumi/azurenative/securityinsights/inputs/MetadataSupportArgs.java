@@ -7,6 +7,7 @@ import com.pulumi.azurenative.securityinsights.enums.SupportTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Support information for the content item.
  * 
  */
-public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataSupportArgs extends ResourceArgs {
 
     public static final MetadataSupportArgs Empty = new MetadataSupportArgs();
 

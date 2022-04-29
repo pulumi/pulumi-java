@@ -9,6 +9,7 @@ import com.pulumi.azurenative.providerhub.inputs.SkuLocationInfoArgs;
 import com.pulumi.azurenative.providerhub.inputs.SkuSettingCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SkuSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuSettingArgs extends ResourceArgs {
 
     public static final SkuSettingArgs Empty = new SkuSettingArgs();
 

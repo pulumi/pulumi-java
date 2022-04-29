@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Allow to exclude some variable satisfy the condition for the WAF check.
  * 
  */
-public final class ApplicationGatewayFirewallExclusionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayFirewallExclusionArgs extends ResourceArgs {
 
     public static final ApplicationGatewayFirewallExclusionArgs Empty = new ApplicationGatewayFirewallExclusionArgs();
 

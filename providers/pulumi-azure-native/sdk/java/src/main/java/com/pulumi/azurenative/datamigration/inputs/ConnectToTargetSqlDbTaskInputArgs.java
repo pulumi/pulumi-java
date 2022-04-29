@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Input for the task that validates connection to SQL DB and target server requirements
  * 
  */
-public final class ConnectToTargetSqlDbTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToTargetSqlDbTaskInputArgs extends ResourceArgs {
 
     public static final ConnectToTargetSqlDbTaskInputArgs Empty = new ConnectToTargetSqlDbTaskInputArgs();
 

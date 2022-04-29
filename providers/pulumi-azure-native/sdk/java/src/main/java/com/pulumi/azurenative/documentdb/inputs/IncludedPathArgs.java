@@ -6,6 +6,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.IndexesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The paths that are included in indexing
  * 
  */
-public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class IncludedPathArgs extends ResourceArgs {
 
     public static final IncludedPathArgs Empty = new IncludedPathArgs();
 

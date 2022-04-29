@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
  * 
  */
-public final class AddressSpaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressSpaceArgs extends ResourceArgs {
 
     public static final AddressSpaceArgs Empty = new AddressSpaceArgs();
 

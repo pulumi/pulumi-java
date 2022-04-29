@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeContainerArgs extends ResourceArgs {
 
     public static final VolumeContainerArgs Empty = new VolumeContainerArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.documentdb.inputs.IndexingPolicyArgs;
 import com.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Cosmos DB SQL container resource object
  * 
  */
-public final class SqlContainerResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlContainerResourceArgs extends ResourceArgs {
 
     public static final SqlContainerResourceArgs Empty = new SqlContainerResourceArgs();
 

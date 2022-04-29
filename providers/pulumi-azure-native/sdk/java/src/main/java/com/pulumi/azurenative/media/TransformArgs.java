@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.TransformOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransformArgs extends ResourceArgs {
 
     public static final TransformArgs Empty = new TransformArgs();
 

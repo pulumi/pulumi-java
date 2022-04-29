@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Defines the parameters for the origin group override action.
  * 
  */
-public final class OriginGroupOverrideActionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginGroupOverrideActionParametersArgs extends ResourceArgs {
 
     public static final OriginGroupOverrideActionParametersArgs Empty = new OriginGroupOverrideActionParametersArgs();
 

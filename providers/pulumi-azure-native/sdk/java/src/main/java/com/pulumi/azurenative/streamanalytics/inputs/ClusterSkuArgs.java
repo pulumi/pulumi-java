@@ -7,6 +7,7 @@ import com.pulumi.azurenative.streamanalytics.enums.ClusterSkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
  * 
  */
-public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterSkuArgs extends ResourceArgs {
 
     public static final ClusterSkuArgs Empty = new ClusterSkuArgs();
 

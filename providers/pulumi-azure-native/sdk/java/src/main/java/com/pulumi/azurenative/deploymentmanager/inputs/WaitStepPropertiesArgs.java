@@ -7,6 +7,7 @@ import com.pulumi.azurenative.deploymentmanager.inputs.WaitStepAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines the properties of a Wait step.
  * 
  */
-public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WaitStepPropertiesArgs extends ResourceArgs {
 
     public static final WaitStepPropertiesArgs Empty = new WaitStepPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Enables or disables a capability on the virtual machine or virtual machine scale set.
  * 
  */
-public final class AdditionalCapabilitiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdditionalCapabilitiesArgs extends ResourceArgs {
 
     public static final AdditionalCapabilitiesArgs Empty = new AdditionalCapabilitiesArgs();
 

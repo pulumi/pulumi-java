@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.digitaltwins.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDigitalTwinsEndpointArgs extends InvokeArgs {
 
     public static final GetDigitalTwinsEndpointArgs Empty = new GetDigitalTwinsEndpointArgs();
 

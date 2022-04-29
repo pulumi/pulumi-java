@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Temporary disk payload
  * 
  */
-public final class TemporaryDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class TemporaryDiskArgs extends ResourceArgs {
 
     public static final TemporaryDiskArgs Empty = new TemporaryDiskArgs();
 

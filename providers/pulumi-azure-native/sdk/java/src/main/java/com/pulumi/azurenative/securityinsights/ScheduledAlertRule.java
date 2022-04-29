@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:securityinsights:ScheduledAlertRule")
-public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
+public class ScheduledAlertRule extends CustomResource {
     /**
      * The Name of the alert rule template used to create this rule.
      * 
@@ -310,11 +312,11 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ScheduledAlertRule(String name, ScheduledAlertRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ScheduledAlertRule(String name, ScheduledAlertRuleArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:securityinsights:ScheduledAlertRule", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ScheduledAlertRule(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ScheduledAlertRule(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:securityinsights:ScheduledAlertRule", name, null, makeResourceOptions(options, id));
     }
 
@@ -325,8 +327,8 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:ScheduledAlertRule").build()),
@@ -335,7 +337,7 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ScheduledAlertRule").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -346,7 +348,7 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ScheduledAlertRule get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ScheduledAlertRule get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ScheduledAlertRule(name, id, options);
     }
 }

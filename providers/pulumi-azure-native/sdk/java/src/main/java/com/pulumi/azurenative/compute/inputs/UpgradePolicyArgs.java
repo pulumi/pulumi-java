@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyArgs;
 import com.pulumi.azurenative.compute.inputs.RollingUpgradePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes an upgrade policy - automatic, manual, or rolling.
  * 
  */
-public final class UpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpgradePolicyArgs extends ResourceArgs {
 
     public static final UpgradePolicyArgs Empty = new UpgradePolicyArgs();
 

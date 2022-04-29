@@ -9,6 +9,7 @@ import com.pulumi.azurenative.web.inputs.NonceArgs;
 import com.pulumi.azurenative.web.inputs.TokenStoreArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the login flow of users using App Service Authentication/Authorization.
  * 
  */
-public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoginArgs extends ResourceArgs {
 
     public static final LoginArgs Empty = new LoginArgs();
 

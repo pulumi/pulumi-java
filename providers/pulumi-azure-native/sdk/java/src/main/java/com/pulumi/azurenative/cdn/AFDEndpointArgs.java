@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.EnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class AFDEndpointArgs extends ResourceArgs {
 
     public static final AFDEndpointArgs Empty = new AFDEndpointArgs();
 

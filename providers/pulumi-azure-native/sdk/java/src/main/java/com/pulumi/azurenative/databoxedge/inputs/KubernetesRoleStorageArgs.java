@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Kubernetes role storage resource
  * 
  */
-public final class KubernetesRoleStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubernetesRoleStorageArgs extends ResourceArgs {
 
     public static final KubernetesRoleStorageArgs Empty = new KubernetesRoleStorageArgs();
 

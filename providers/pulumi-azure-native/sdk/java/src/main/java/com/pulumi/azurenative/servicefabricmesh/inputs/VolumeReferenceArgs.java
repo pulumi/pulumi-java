@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes a reference to a volume resource.
  * 
  */
-public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeReferenceArgs extends ResourceArgs {
 
     public static final VolumeReferenceArgs Empty = new VolumeReferenceArgs();
 

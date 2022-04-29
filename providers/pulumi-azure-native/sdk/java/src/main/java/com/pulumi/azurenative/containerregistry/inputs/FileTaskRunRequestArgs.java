@@ -10,6 +10,7 @@ import com.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * The request parameters for a scheduling run against a task file.
  * 
  */
-public final class FileTaskRunRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class FileTaskRunRequestArgs extends ResourceArgs {
 
     public static final FileTaskRunRequestArgs Empty = new FileTaskRunRequestArgs();
 

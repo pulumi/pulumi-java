@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Class for NoEncryption scheme
  * 
  */
-public final class NoEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class NoEncryptionArgs extends ResourceArgs {
 
     public static final NoEncryptionArgs Empty = new NoEncryptionArgs();
 

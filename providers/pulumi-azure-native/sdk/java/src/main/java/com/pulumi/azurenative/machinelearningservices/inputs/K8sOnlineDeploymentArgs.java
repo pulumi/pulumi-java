@@ -16,6 +16,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class K8sOnlineDeploymentArgs extends ResourceArgs {
 
     public static final K8sOnlineDeploymentArgs Empty = new K8sOnlineDeploymentArgs();
 

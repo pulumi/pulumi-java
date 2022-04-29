@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DayArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Daily retention format.
  * 
  */
-public final class DailyRetentionFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class DailyRetentionFormatArgs extends ResourceArgs {
 
     public static final DailyRetentionFormatArgs Empty = new DailyRetentionFormatArgs();
 

@@ -5,11 +5,12 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs Empty = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs();
 

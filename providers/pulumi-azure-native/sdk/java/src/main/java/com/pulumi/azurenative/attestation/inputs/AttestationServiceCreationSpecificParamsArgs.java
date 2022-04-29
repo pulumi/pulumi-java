@@ -6,6 +6,7 @@ package com.pulumi.azurenative.attestation.inputs;
 import com.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Client supplied parameters used to create a new attestation provider.
  * 
  */
-public final class AttestationServiceCreationSpecificParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttestationServiceCreationSpecificParamsArgs extends ResourceArgs {
 
     public static final AttestationServiceCreationSpecificParamsArgs Empty = new AttestationServiceCreationSpecificParamsArgs();
 

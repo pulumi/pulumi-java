@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Amazon S3 read settings.
  * 
  */
-public final class AmazonS3ReadSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmazonS3ReadSettingsArgs extends ResourceArgs {
 
     public static final AmazonS3ReadSettingsArgs Empty = new AmazonS3ReadSettingsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ConnectionErrorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connection status
  * 
  */
-public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionStatusDefinitionArgs extends ResourceArgs {
 
     public static final ConnectionStatusDefinitionArgs Empty = new ConnectionStatusDefinitionArgs();
 

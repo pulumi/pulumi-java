@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines the parameter value of an specific pipeline topology parameter. See pipeline topology parameters for more information.
  * 
  */
-public final class ParameterDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterDefinitionArgs extends ResourceArgs {
 
     public static final ParameterDefinitionArgs Empty = new ParameterDefinitionArgs();
 

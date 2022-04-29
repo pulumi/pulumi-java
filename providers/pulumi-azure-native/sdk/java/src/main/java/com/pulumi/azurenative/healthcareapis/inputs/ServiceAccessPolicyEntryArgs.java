@@ -5,6 +5,7 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An access policy entry.
  * 
  */
-public final class ServiceAccessPolicyEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAccessPolicyEntryArgs extends ResourceArgs {
 
     public static final ServiceAccessPolicyEntryArgs Empty = new ServiceAccessPolicyEntryArgs();
 

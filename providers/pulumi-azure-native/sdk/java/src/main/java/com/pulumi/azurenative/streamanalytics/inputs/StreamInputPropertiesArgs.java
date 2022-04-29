@@ -12,6 +12,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * The properties that are associated with an input containing stream data.
  * 
  */
-public final class StreamInputPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamInputPropertiesArgs extends ResourceArgs {
 
     public static final StreamInputPropertiesArgs Empty = new StreamInputPropertiesArgs();
 

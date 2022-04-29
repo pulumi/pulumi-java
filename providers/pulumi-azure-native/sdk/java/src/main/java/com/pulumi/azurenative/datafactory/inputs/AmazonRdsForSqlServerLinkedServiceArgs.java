@@ -12,6 +12,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Amazon RDS for SQL Server linked service.
  * 
  */
-public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmazonRdsForSqlServerLinkedServiceArgs extends ResourceArgs {
 
     public static final AmazonRdsForSqlServerLinkedServiceArgs Empty = new AmazonRdsForSqlServerLinkedServiceArgs();
 

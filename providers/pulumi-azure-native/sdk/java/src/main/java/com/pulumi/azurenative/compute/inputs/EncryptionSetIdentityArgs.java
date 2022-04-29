@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.DiskEncryptionSetIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
  * 
  */
-public final class EncryptionSetIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionSetIdentityArgs extends ResourceArgs {
 
     public static final EncryptionSetIdentityArgs Empty = new EncryptionSetIdentityArgs();
 

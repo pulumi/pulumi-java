@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The value which should be used for this field.
  * 
  */
-public final class WorkspaceCustomBooleanParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceCustomBooleanParameterArgs extends ResourceArgs {
 
     public static final WorkspaceCustomBooleanParameterArgs Empty = new WorkspaceCustomBooleanParameterArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Web Service Parameter object for node and global parameter
  * 
  */
-public final class WebServiceParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebServiceParameterArgs extends ResourceArgs {
 
     public static final WebServiceParameterArgs Empty = new WebServiceParameterArgs();
 

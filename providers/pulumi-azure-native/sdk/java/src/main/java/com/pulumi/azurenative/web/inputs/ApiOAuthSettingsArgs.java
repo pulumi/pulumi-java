@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ApiOAuthSettingsParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * OAuth settings for the connection provider
  * 
  */
-public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiOAuthSettingsArgs extends ResourceArgs {
 
     public static final ApiOAuthSettingsArgs Empty = new ApiOAuthSettingsArgs();
 

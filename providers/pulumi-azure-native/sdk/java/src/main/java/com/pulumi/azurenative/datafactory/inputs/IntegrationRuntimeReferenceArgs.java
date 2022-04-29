@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Integration runtime reference type.
  * 
  */
-public final class IntegrationRuntimeReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationRuntimeReferenceArgs extends ResourceArgs {
 
     public static final IntegrationRuntimeReferenceArgs Empty = new IntegrationRuntimeReferenceArgs();
 

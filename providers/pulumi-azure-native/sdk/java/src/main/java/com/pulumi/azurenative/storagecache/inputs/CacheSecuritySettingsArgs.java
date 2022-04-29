@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cache security settings.
  * 
  */
-public final class CacheSecuritySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheSecuritySettingsArgs extends ResourceArgs {
 
     public static final CacheSecuritySettingsArgs Empty = new CacheSecuritySettingsArgs();
 

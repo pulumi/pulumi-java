@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details of the Backend WebProxy Server to use in the Request to Backend.
  * 
  */
-public final class BackendProxyContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendProxyContractArgs extends ResourceArgs {
 
     public static final BackendProxyContractArgs Empty = new BackendProxyContractArgs();
 

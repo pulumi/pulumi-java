@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Private endpoint connection properties.
  * 
  */
-public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 

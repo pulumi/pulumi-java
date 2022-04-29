@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes Advanced Audio Codec (AAC) audio encoding settings.
  * 
  */
-public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
+public final class AacAudioArgs extends ResourceArgs {
 
     public static final AacAudioArgs Empty = new AacAudioArgs();
 

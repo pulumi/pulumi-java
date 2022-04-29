@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:sql:DatabaseBlobAuditingPolicy")
-public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResource {
+public class DatabaseBlobAuditingPolicy extends CustomResource {
     /**
      * Specifies the Actions-Groups and Actions to audit.
      * 
@@ -344,16 +346,16 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DatabaseBlobAuditingPolicy(String name, DatabaseBlobAuditingPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DatabaseBlobAuditingPolicy(String name, DatabaseBlobAuditingPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:DatabaseBlobAuditingPolicy", name, args == null ? DatabaseBlobAuditingPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DatabaseBlobAuditingPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DatabaseBlobAuditingPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:DatabaseBlobAuditingPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20150501preview:DatabaseBlobAuditingPolicy").build()),
@@ -366,7 +368,7 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:sql/v20210801preview:DatabaseBlobAuditingPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -377,7 +379,7 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatabaseBlobAuditingPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DatabaseBlobAuditingPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DatabaseBlobAuditingPolicy(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.search.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The private endpoint resource from Microsoft.Network provider.
  * 
  */
-public final class PrivateEndpointConnectionPropertiesPrivateEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionPropertiesPrivateEndpointArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesPrivateEndpointArgs Empty = new PrivateEndpointConnectionPropertiesPrivateEndpointArgs();
 

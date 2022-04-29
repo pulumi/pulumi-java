@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An Activity Log Alert rule condition that is met when all its member conditions are met.
  * 
  */
-public final class AlertRuleAllOfConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertRuleAllOfConditionArgs extends ResourceArgs {
 
     public static final AlertRuleAllOfConditionArgs Empty = new AlertRuleAllOfConditionArgs();
 

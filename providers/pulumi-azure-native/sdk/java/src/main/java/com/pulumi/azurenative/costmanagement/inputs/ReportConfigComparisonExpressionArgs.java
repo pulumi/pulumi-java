@@ -7,6 +7,7 @@ import com.pulumi.azurenative.costmanagement.enums.OperatorType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * The comparison expression to be used in the report.
  * 
  */
-public final class ReportConfigComparisonExpressionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportConfigComparisonExpressionArgs extends ResourceArgs {
 
     public static final ReportConfigComparisonExpressionArgs Empty = new ReportConfigComparisonExpressionArgs();
 

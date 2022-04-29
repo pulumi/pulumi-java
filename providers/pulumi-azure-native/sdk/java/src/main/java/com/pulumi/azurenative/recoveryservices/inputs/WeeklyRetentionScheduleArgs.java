@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import com.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Weekly retention schedule.
  * 
  */
-public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeeklyRetentionScheduleArgs extends ResourceArgs {
 
     public static final WeeklyRetentionScheduleArgs Empty = new WeeklyRetentionScheduleArgs();
 

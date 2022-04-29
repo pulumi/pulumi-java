@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomIPPrefixArgs extends ResourceArgs {
 
     public static final CustomIPPrefixArgs Empty = new CustomIPPrefixArgs();
 

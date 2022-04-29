@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes a setting for the container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
  * 
  */
-public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class SettingArgs extends ResourceArgs {
 
     public static final SettingArgs Empty = new SettingArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearning.inputs.GraphNodeArgs;
 import com.pulumi.azurenative.machinelearning.inputs.GraphParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Defines the graph of modules making up the machine learning solution.
  * 
  */
-public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphPackageArgs extends ResourceArgs {
 
     public static final GraphPackageArgs Empty = new GraphPackageArgs();
 

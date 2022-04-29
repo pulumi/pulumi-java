@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import com.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The encryption configuration for the account.
  * 
  */
-public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionConfigArgs extends ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 

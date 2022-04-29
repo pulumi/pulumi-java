@@ -5,6 +5,7 @@ package com.pulumi.azurenative.managedservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Authorization tuple containing principal Id (of user/service principal/security group) and role definition id.
  * 
  */
-public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorizationArgs extends ResourceArgs {
 
     public static final AuthorizationArgs Empty = new AuthorizationArgs();
 

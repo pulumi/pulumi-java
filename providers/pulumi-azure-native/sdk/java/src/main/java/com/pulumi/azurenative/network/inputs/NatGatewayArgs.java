@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.NatGatewaySkuArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Nat Gateway resource.
  * 
  */
-public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
+public final class NatGatewayArgs extends ResourceArgs {
 
     public static final NatGatewayArgs Empty = new NatGatewayArgs();
 

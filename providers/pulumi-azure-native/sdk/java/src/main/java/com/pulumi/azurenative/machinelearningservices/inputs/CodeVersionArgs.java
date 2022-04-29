@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Code asset version details.
  * 
  */
-public final class CodeVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CodeVersionArgs extends ResourceArgs {
 
     public static final CodeVersionArgs Empty = new CodeVersionArgs();
 

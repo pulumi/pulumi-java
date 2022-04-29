@@ -7,6 +7,7 @@ import com.pulumi.azurenative.avs.enums.DhcpTypeEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadNetworkDhcpArgs extends ResourceArgs {
 
     public static final WorkloadNetworkDhcpArgs Empty = new WorkloadNetworkDhcpArgs();
 

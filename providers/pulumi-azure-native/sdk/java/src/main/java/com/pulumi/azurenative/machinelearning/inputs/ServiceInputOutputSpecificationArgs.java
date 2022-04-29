@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearning.inputs.TableSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The swagger 2.0 schema describing the service&#39;s inputs or outputs. See Swagger specification: http://swagger.io/specification/
  * 
  */
-public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceInputOutputSpecificationArgs extends ResourceArgs {
 
     public static final ServiceInputOutputSpecificationArgs Empty = new ServiceInputOutputSpecificationArgs();
 

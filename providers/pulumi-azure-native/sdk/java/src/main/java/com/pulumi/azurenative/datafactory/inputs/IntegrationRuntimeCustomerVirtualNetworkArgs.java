@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The definition and properties of virtual network to which Azure-SSIS integration runtime will join.
  * 
  */
-public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends ResourceArgs {
 
     public static final IntegrationRuntimeCustomerVirtualNetworkArgs Empty = new IntegrationRuntimeCustomerVirtualNetworkArgs();
 

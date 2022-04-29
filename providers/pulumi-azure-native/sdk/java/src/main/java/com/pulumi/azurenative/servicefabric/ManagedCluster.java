@@ -15,6 +15,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +41,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:servicefabric:ManagedCluster")
-public class ManagedCluster extends com.pulumi.resources.CustomResource {
+public class ManagedCluster extends CustomResource {
     /**
      * client certificates for the cluster.
      * 
@@ -370,16 +372,16 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagedCluster(String name, ManagedClusterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ManagedCluster(String name, ManagedClusterArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:servicefabric:ManagedCluster", name, args == null ? ManagedClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ManagedCluster(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ManagedCluster(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:servicefabric:ManagedCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20200101preview:ManagedCluster").build()),
@@ -390,7 +392,7 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:ManagedCluster").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -401,7 +403,7 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedCluster get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedCluster get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ManagedCluster(name, id, options);
     }
 }

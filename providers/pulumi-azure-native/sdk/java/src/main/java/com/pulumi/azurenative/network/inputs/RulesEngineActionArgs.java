@@ -9,6 +9,7 @@ import com.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * One or more actions that will execute, modifying the request and/or response.
  * 
  */
-public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RulesEngineActionArgs extends ResourceArgs {
 
     public static final RulesEngineActionArgs Empty = new RulesEngineActionArgs();
 

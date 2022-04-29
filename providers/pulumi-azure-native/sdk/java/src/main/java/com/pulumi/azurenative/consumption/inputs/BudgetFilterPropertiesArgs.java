@@ -6,6 +6,7 @@ package com.pulumi.azurenative.consumption.inputs;
 import com.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Dimensions or Tags to filter a budget by.
  * 
  */
-public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetFilterPropertiesArgs extends ResourceArgs {
 
     public static final BudgetFilterPropertiesArgs Empty = new BudgetFilterPropertiesArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.enums.PolicyMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines contents of a web application firewall global configuration
  * 
  */
-public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicySettingsArgs extends ResourceArgs {
 
     public static final PolicySettingsArgs Empty = new PolicySettingsArgs();
 

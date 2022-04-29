@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.ResourceRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
  * 
  */
-public final class RecommendedMachineConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecommendedMachineConfigurationArgs extends ResourceArgs {
 
     public static final RecommendedMachineConfigurationArgs Empty = new RecommendedMachineConfigurationArgs();
 

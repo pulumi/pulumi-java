@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An Image asset.
  * 
  */
-public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageAssetArgs extends ResourceArgs {
 
     public static final ImageAssetArgs Empty = new ImageAssetArgs();
 

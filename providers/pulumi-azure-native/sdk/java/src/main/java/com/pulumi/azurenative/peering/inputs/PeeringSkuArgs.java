@@ -9,6 +9,7 @@ import com.pulumi.azurenative.peering.enums.Tier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The SKU that defines the tier and kind of the peering.
  * 
  */
-public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeeringSkuArgs extends ResourceArgs {
 
     public static final PeeringSkuArgs Empty = new PeeringSkuArgs();
 

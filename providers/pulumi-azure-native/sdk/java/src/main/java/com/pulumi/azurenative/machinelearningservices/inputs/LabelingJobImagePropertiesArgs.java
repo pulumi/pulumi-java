@@ -8,13 +8,14 @@ import com.pulumi.azurenative.machinelearningservices.enums.MediaType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelingJobImagePropertiesArgs extends ResourceArgs {
 
     public static final LabelingJobImagePropertiesArgs Empty = new LabelingJobImagePropertiesArgs();
 

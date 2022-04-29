@@ -7,13 +7,14 @@ import com.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerArgs extends ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 

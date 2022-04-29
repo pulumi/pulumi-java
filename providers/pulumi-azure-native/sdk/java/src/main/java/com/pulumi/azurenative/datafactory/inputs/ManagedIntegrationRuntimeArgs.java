@@ -10,6 +10,7 @@ import com.pulumi.azurenative.datafactory.inputs.ManagedVirtualNetworkReferenceA
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
  * 
  */
-public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedIntegrationRuntimeArgs extends ResourceArgs {
 
     public static final ManagedIntegrationRuntimeArgs Empty = new ManagedIntegrationRuntimeArgs();
 

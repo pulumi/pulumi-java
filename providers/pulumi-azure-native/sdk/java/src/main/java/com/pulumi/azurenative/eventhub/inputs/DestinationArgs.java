@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Capture storage details for capture description
  * 
  */
-public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DestinationArgs extends ResourceArgs {
 
     public static final DestinationArgs Empty = new DestinationArgs();
 

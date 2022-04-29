@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
  * 
  */
-public final class VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs extends ResourceArgs {
 
     public static final VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs Empty = new VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs();
 

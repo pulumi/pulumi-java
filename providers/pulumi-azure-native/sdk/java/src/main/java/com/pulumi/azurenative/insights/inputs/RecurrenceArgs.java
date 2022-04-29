@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.insights.inputs.RecurrentScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
  * 
  */
-public final class RecurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecurrenceArgs extends ResourceArgs {
 
     public static final RecurrenceArgs Empty = new RecurrenceArgs();
 

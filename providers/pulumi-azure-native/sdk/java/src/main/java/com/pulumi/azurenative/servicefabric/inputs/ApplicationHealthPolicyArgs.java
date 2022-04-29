@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines a health policy used to evaluate the health of an application or one of its children entities.
  * 
  */
-public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationHealthPolicyArgs extends ResourceArgs {
 
     public static final ApplicationHealthPolicyArgs Empty = new ApplicationHealthPolicyArgs();
 

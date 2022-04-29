@@ -7,6 +7,7 @@ import com.pulumi.azurenative.blueprint.enums.AssignmentLockMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines how resources deployed by a blueprint assignment are locked.
  * 
  */
-public final class AssignmentLockSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentLockSettingsArgs extends ResourceArgs {
 
     public static final AssignmentLockSettingsArgs Empty = new AssignmentLockSettingsArgs();
 

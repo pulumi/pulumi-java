@@ -12,6 +12,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.CreateServiceReques
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ACIServiceArgs extends ResourceArgs {
 
     public static final ACIServiceArgs Empty = new ACIServiceArgs();
 

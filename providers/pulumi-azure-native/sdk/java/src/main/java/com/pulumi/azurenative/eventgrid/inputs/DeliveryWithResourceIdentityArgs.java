@@ -13,6 +13,7 @@ import com.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDest
 import com.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Information about the delivery for an event subscription with resource identity.
  * 
  */
-public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryWithResourceIdentityArgs extends ResourceArgs {
 
     public static final DeliveryWithResourceIdentityArgs Empty = new DeliveryWithResourceIdentityArgs();
 

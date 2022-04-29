@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Specifies that the content key ID is in the PlayReady header.
  * 
  */
-public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs Empty = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs();
 

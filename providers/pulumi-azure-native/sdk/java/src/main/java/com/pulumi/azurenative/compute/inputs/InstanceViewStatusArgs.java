@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.enums.StatusLevelTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Instance view status.
  * 
  */
-public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceViewStatusArgs extends ResourceArgs {
 
     public static final InstanceViewStatusArgs Empty = new InstanceViewStatusArgs();
 

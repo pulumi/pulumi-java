@@ -8,6 +8,7 @@ import com.pulumi.azurenative.webpubsub.inputs.ManagedIdentitySettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Upstream auth settings. If not set, no auth is used for upstream messages.
  * 
  */
-public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpstreamAuthSettingsArgs extends ResourceArgs {
 
     public static final UpstreamAuthSettingsArgs Empty = new UpstreamAuthSettingsArgs();
 

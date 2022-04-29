@@ -6,6 +6,7 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The identity of the Batch account, if configured. This is only used when the user specifies &#39;Microsoft.KeyVault&#39; as their Batch account encryption configuration.
  * 
  */
-public final class BatchAccountIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchAccountIdentityArgs extends ResourceArgs {
 
     public static final BatchAccountIdentityArgs Empty = new BatchAccountIdentityArgs();
 

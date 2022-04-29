@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Input for the task that collects user tables for the given list of databases
  * 
  */
-public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GetUserTablesSqlSyncTaskInputArgs extends ResourceArgs {
 
     public static final GetUserTablesSqlSyncTaskInputArgs Empty = new GetUserTablesSqlSyncTaskInputArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncData
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Input for task that validates migration input for SQL sync migrations
  * 
  */
-public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends ResourceArgs {
 
     public static final ValidateSyncMigrationInputSqlServerTaskInputArgs Empty = new ValidateSyncMigrationInputSqlServerTaskInputArgs();
 

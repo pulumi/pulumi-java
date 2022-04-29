@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Database specific information for SQL to Azure SQL DB Managed Instance migration task inputs
  * 
  */
-public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateSqlServerSqlMIDatabaseInputArgs extends ResourceArgs {
 
     public static final MigrateSqlServerSqlMIDatabaseInputArgs Empty = new MigrateSqlServerSqlMIDatabaseInputArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationAr
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The definition for data in the export.
  * 
  */
-public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportDatasetArgs extends ResourceArgs {
 
     public static final ExportDatasetArgs Empty = new ExportDatasetArgs();
 

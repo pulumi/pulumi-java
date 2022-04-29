@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.OutputFileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the properties for producing a collection of GOP aligned multi-bitrate files. The default behavior is to produce one output file for each video layer which is muxed together with all the audios. The exact output files produced can be controlled by specifying the outputFiles collection.
  * 
  */
-public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class MultiBitrateFormatArgs extends ResourceArgs {
 
     public static final MultiBitrateFormatArgs Empty = new MultiBitrateFormatArgs();
 

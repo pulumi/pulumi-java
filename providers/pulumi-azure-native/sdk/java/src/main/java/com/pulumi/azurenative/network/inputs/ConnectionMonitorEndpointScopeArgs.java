@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the connection monitor endpoint scope.
  * 
  */
-public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionMonitorEndpointScopeArgs extends ResourceArgs {
 
     public static final ConnectionMonitorEndpointScopeArgs Empty = new ConnectionMonitorEndpointScopeArgs();
 

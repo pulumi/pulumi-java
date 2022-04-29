@@ -5,6 +5,7 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Volume Snapshot Properties
  * 
  */
-public final class VolumeSnapshotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeSnapshotPropertiesArgs extends ResourceArgs {
 
     public static final VolumeSnapshotPropertiesArgs Empty = new VolumeSnapshotPropertiesArgs();
 

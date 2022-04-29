@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * List of properties of the device.
  * 
  */
-public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DevicePropertiesArgs extends ResourceArgs {
 
     public static final DevicePropertiesArgs Empty = new DevicePropertiesArgs();
 

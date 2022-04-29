@@ -9,6 +9,7 @@ import com.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Settings for hybrid compute management
  * 
  */
-public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class HybridComputeSettingsPropertiesArgs extends ResourceArgs {
 
     public static final HybridComputeSettingsPropertiesArgs Empty = new HybridComputeSettingsPropertiesArgs();
 

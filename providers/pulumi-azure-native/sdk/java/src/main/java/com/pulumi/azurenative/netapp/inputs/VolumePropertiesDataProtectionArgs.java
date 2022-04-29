@@ -8,6 +8,7 @@ import com.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import com.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * DataProtection type volumes include an object containing details of the replication
  * 
  */
-public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumePropertiesDataProtectionArgs extends ResourceArgs {
 
     public static final VolumePropertiesDataProtectionArgs Empty = new VolumePropertiesDataProtectionArgs();
 

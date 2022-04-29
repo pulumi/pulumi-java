@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagepool.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Attributes of a iSCSI target portal group.
  * 
  */
-public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttributesArgs extends ResourceArgs {
 
     public static final AttributesArgs Empty = new AttributesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.DateAfterModificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Management policy action for base blob.
  * 
  */
-public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicyBaseBlobArgs extends ResourceArgs {
 
     public static final ManagementPolicyBaseBlobArgs Empty = new ManagementPolicyBaseBlobArgs();
 

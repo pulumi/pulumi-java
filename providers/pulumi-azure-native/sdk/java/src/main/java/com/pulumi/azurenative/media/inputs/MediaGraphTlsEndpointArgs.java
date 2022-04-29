@@ -9,6 +9,7 @@ import com.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentials
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An endpoint which must be connected over TLS/SSL.
  * 
  */
-public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class MediaGraphTlsEndpointArgs extends ResourceArgs {
 
     public static final MediaGraphTlsEndpointArgs Empty = new MediaGraphTlsEndpointArgs();
 

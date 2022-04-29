@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.
  * 
  */
-public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayUrlPathMapArgs extends ResourceArgs {
 
     public static final ApplicationGatewayUrlPathMapArgs Empty = new ApplicationGatewayUrlPathMapArgs();
 

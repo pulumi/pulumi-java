@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import com.pulumi.azurenative.network.inputs.BgpSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A common class for general resource information.
  * 
  */
-public final class LocalNetworkGatewayArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalNetworkGatewayArgs extends ResourceArgs {
 
     public static final LocalNetworkGatewayArgs Empty = new LocalNetworkGatewayArgs();
 

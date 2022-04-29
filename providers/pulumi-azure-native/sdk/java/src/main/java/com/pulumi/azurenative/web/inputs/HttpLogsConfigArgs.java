@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.AzureBlobStorageHttpLogsConfigArgs;
 import com.pulumi.azurenative.web.inputs.FileSystemHttpLogsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Http logs configuration.
  * 
  */
-public final class HttpLogsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpLogsConfigArgs extends ResourceArgs {
 
     public static final HttpLogsConfigArgs Empty = new HttpLogsConfigArgs();
 

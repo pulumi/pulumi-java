@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:notificationhubs:Namespace")
-public class Namespace extends com.pulumi.resources.CustomResource {
+public class Namespace extends CustomResource {
     /**
      * The time the namespace was created.
      * 
@@ -309,16 +311,16 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Namespace(String name, NamespaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Namespace(String name, NamespaceArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:notificationhubs:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Namespace(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Namespace(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:notificationhubs:Namespace", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:notificationhubs/v20140901:Namespace").build()),
@@ -326,7 +328,7 @@ public class Namespace extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:notificationhubs/v20170401:Namespace").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -337,7 +339,7 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Namespace get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Namespace get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Namespace(name, id, options);
     }
 }

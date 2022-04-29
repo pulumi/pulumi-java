@@ -9,6 +9,7 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfig
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set network profile.
  * 
  */
-public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetNetworkProfileArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetNetworkProfileArgs Empty = new VirtualMachineScaleSetNetworkProfileArgs();
 

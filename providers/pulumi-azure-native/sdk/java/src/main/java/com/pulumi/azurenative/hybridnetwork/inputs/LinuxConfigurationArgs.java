@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 import com.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the Linux operating system settings on the virtual machine.
  * 
  */
-public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinuxConfigurationArgs extends ResourceArgs {
 
     public static final LinuxConfigurationArgs Empty = new LinuxConfigurationArgs();
 

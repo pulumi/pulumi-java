@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An email receiver.
  * 
  */
-public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
+public final class EmailReceiverArgs extends ResourceArgs {
 
     public static final EmailReceiverArgs Empty = new EmailReceiverArgs();
 

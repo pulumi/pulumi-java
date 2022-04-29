@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:testbase:FavoriteProcess")
-public class FavoriteProcess extends com.pulumi.resources.CustomResource {
+public class FavoriteProcess extends CustomResource {
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
      * 
@@ -110,22 +112,22 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FavoriteProcess(String name, FavoriteProcessArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FavoriteProcess(String name, FavoriteProcessArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:testbase:FavoriteProcess", name, args == null ? FavoriteProcessArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FavoriteProcess(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FavoriteProcess(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:testbase:FavoriteProcess", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:testbase/v20201216preview:FavoriteProcess").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -136,7 +138,7 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FavoriteProcess get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FavoriteProcess get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new FavoriteProcess(name, id, options);
     }
 }

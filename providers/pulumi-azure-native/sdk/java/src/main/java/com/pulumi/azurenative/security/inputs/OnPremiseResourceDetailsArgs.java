@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Details of the On Premise resource that was assessed
  * 
  */
-public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class OnPremiseResourceDetailsArgs extends ResourceArgs {
 
     public static final OnPremiseResourceDetailsArgs Empty = new OnPremiseResourceDetailsArgs();
 

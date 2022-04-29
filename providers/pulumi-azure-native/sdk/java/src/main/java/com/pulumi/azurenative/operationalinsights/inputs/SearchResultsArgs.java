@@ -5,6 +5,7 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Parameters of the search job that initiated this table.
  * 
  */
-public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SearchResultsArgs extends ResourceArgs {
 
     public static final SearchResultsArgs Empty = new SearchResultsArgs();
 

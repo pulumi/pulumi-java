@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Round-Robin load balancing settings for a backend pool
  * 
  */
-public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancingSettingsParametersArgs extends ResourceArgs {
 
     public static final LoadBalancingSettingsParametersArgs Empty = new LoadBalancingSettingsParametersArgs();
 

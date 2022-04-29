@@ -9,6 +9,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines how the Video Analyzer account is (optionally) encrypted.
  * 
  */
-public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountEncryptionArgs extends ResourceArgs {
 
     public static final AccountEncryptionArgs Empty = new AccountEncryptionArgs();
 

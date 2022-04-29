@@ -6,6 +6,7 @@ package com.pulumi.azurenative.keyvault;
 import com.pulumi.azurenative.keyvault.inputs.KeyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyArgs extends ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 

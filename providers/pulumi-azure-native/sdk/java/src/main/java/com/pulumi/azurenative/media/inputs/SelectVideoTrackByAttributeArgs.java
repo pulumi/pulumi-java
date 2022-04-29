@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Select video tracks from the input by specifying an attribute and an attribute filter.
  * 
  */
-public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.ResourceArgs {
+public final class SelectVideoTrackByAttributeArgs extends ResourceArgs {
 
     public static final SelectVideoTrackByAttributeArgs Empty = new SelectVideoTrackByAttributeArgs();
 

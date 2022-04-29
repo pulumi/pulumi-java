@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devops.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Template used to bootstrap the pipeline.
  * 
  */
-public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineTemplateArgs extends ResourceArgs {
 
     public static final PipelineTemplateArgs Empty = new PipelineTemplateArgs();
 

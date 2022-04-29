@@ -6,6 +6,7 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.PoolIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The identity of the Batch pool, if configured. If the pool identity is updated during update an existing pool, only the new vms which are created after the pool shrinks to 0 will have the updated identities
  * 
  */
-public final class BatchPoolIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchPoolIdentityArgs extends ResourceArgs {
 
     public static final BatchPoolIdentityArgs Empty = new BatchPoolIdentityArgs();
 

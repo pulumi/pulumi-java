@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes capacity information for a custom resource balancing metric. This can be used to limit the total consumption of this metric by the services of this application.
  * 
  */
-public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationMetricDescriptionArgs extends ResourceArgs {
 
     public static final ApplicationMetricDescriptionArgs Empty = new ApplicationMetricDescriptionArgs();
 

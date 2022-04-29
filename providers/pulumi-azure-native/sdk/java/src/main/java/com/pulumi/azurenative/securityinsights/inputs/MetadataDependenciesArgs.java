@@ -8,6 +8,7 @@ import com.pulumi.azurenative.securityinsights.enums.Operator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
  * 
  */
-public final class MetadataDependenciesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataDependenciesArgs extends ResourceArgs {
 
     public static final MetadataDependenciesArgs Empty = new MetadataDependenciesArgs();
 

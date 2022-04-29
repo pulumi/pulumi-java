@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Compute role against which events will be raised.
  * 
  */
-public final class RoleSinkInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoleSinkInfoArgs extends ResourceArgs {
 
     public static final RoleSinkInfoArgs Empty = new RoleSinkInfoArgs();
 

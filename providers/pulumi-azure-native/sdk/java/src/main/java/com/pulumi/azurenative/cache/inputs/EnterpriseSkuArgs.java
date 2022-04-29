@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cache.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * SKU parameters supplied to the create RedisEnterprise operation.
  * 
  */
-public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseSkuArgs extends ResourceArgs {
 
     public static final EnterpriseSkuArgs Empty = new EnterpriseSkuArgs();
 

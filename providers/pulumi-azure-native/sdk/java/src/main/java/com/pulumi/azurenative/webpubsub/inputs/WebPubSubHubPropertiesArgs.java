@@ -7,6 +7,7 @@ import com.pulumi.azurenative.webpubsub.inputs.EventHandlerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of a hub.
  * 
  */
-public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebPubSubHubPropertiesArgs extends ResourceArgs {
 
     public static final WebPubSubHubPropertiesArgs Empty = new WebPubSubHubPropertiesArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import com.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Address Properties
  * 
  */
-public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressPropertiesArgs extends ResourceArgs {
 
     public static final AddressPropertiesArgs Empty = new AddressPropertiesArgs();
 

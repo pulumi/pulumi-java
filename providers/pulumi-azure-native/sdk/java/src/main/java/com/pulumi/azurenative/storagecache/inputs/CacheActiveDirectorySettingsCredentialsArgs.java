@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Active Directory admin credentials used to join the HPC Cache to a domain.
  * 
  */
-public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheActiveDirectorySettingsCredentialsArgs extends ResourceArgs {
 
     public static final CacheActiveDirectorySettingsCredentialsArgs Empty = new CacheActiveDirectorySettingsCredentialsArgs();
 

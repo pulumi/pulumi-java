@@ -19,6 +19,7 @@ import com.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsArgs;
 import com.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ import javax.annotation.Nullable;
  * Defines the move resource properties.
  * 
  */
-public final class MoveResourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MoveResourcePropertiesArgs extends ResourceArgs {
 
     public static final MoveResourcePropertiesArgs Empty = new MoveResourcePropertiesArgs();
 

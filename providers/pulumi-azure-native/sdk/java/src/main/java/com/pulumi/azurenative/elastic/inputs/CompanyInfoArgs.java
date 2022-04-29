@@ -5,6 +5,7 @@ package com.pulumi.azurenative.elastic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Company information of the user to be passed to partners.
  * 
  */
-public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class CompanyInfoArgs extends ResourceArgs {
 
     public static final CompanyInfoArgs Empty = new CompanyInfoArgs();
 

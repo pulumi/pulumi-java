@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.ConnectionStringType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Database connection string value to type pair.
  * 
  */
-public final class ConnStringValueTypePairArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnStringValueTypePairArgs extends ResourceArgs {
 
     public static final ConnStringValueTypePairArgs Empty = new ConnStringValueTypePairArgs();
 

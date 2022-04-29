@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configurations for provisioning the cluster with HTTP proxy servers.
  * 
  */
-public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterHTTPProxyConfigArgs extends ResourceArgs {
 
     public static final ManagedClusterHTTPProxyConfigArgs Empty = new ManagedClusterHTTPProxyConfigArgs();
 

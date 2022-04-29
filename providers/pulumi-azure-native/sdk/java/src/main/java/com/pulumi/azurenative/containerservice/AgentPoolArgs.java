@@ -18,6 +18,7 @@ import com.pulumi.azurenative.containerservice.inputs.LinuxOSConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class AgentPoolArgs extends ResourceArgs {
 
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 

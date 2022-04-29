@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Trusted client certificates of an application gateway.
  * 
  */
-public final class ApplicationGatewayTrustedClientCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayTrustedClientCertificateArgs extends ResourceArgs {
 
     public static final ApplicationGatewayTrustedClientCertificateArgs Empty = new ApplicationGatewayTrustedClientCertificateArgs();
 

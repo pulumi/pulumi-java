@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagepool.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * LUN to expose the Azure Managed Disk.
  * 
  */
-public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
+public final class IscsiLunArgs extends ResourceArgs {
 
     public static final IscsiLunArgs Empty = new IscsiLunArgs();
 

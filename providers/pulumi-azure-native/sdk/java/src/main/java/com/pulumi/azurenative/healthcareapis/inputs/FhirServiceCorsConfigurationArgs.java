@@ -5,6 +5,7 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The settings for the CORS configuration of the service instance.
  * 
  */
-public final class FhirServiceCorsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FhirServiceCorsConfigurationArgs extends ResourceArgs {
 
     public static final FhirServiceCorsConfigurationArgs Empty = new FhirServiceCorsConfigurationArgs();
 

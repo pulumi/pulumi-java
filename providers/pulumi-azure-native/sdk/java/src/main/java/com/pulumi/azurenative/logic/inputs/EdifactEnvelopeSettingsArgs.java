@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The Edifact agreement envelope settings.
  * 
  */
-public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactEnvelopeSettingsArgs extends ResourceArgs {
 
     public static final EdifactEnvelopeSettingsArgs Empty = new EdifactEnvelopeSettingsArgs();
 

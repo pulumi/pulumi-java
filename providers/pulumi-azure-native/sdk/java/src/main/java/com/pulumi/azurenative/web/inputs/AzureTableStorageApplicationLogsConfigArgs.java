@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.LogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Application logs to Azure table storage configuration.
  * 
  */
-public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureTableStorageApplicationLogsConfigArgs extends ResourceArgs {
 
     public static final AzureTableStorageApplicationLogsConfigArgs Empty = new AzureTableStorageApplicationLogsConfigArgs();
 

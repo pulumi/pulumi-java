@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Client secret information for factory&#39;s bring your own app repository configuration.
  * 
  */
-public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitHubClientSecretArgs extends ResourceArgs {
 
     public static final GitHubClientSecretArgs Empty = new GitHubClientSecretArgs();
 

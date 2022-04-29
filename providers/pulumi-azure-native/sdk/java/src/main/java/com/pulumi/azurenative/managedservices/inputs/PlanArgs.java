@@ -5,6 +5,7 @@ package com.pulumi.azurenative.managedservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Plan details for the managed services.
  * 
  */
-public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlanArgs extends ResourceArgs {
 
     public static final PlanArgs Empty = new PlanArgs();
 

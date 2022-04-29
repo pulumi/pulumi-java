@@ -7,6 +7,7 @@ import com.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResource
 import com.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Resource details of the cost allocation rule
  * 
  */
-public final class CostAllocationRuleDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CostAllocationRuleDetailsArgs extends ResourceArgs {
 
     public static final CostAllocationRuleDetailsArgs Empty = new CostAllocationRuleDetailsArgs();
 

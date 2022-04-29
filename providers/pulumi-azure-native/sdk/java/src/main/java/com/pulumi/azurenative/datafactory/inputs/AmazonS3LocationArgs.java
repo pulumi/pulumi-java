@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The location of amazon S3 dataset.
  * 
  */
-public final class AmazonS3LocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmazonS3LocationArgs extends ResourceArgs {
 
     public static final AmazonS3LocationArgs Empty = new AmazonS3LocationArgs();
 

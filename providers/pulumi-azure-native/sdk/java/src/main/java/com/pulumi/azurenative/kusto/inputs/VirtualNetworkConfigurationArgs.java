@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kusto.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A class that contains virtual network definition.
  * 
  */
-public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkConfigurationArgs extends ResourceArgs {
 
     public static final VirtualNetworkConfigurationArgs Empty = new VirtualNetworkConfigurationArgs();
 

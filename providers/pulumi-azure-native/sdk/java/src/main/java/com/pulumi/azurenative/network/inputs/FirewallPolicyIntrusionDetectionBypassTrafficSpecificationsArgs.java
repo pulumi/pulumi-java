@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionProt
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Intrusion detection bypass traffic specification.
  * 
  */
-public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs extends ResourceArgs {
 
     public static final FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs Empty = new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs();
 

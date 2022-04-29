@@ -6,6 +6,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of &#39;scriptUri&#39; or &#39;inline&#39; can be specified.
  * 
  */
-public final class ImageTemplateShellCustomizerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplateShellCustomizerArgs extends ResourceArgs {
 
     public static final ImageTemplateShellCustomizerArgs Empty = new ImageTemplateShellCustomizerArgs();
 

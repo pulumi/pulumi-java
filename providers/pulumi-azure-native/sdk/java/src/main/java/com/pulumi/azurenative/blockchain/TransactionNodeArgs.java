@@ -6,6 +6,7 @@ package com.pulumi.azurenative.blockchain;
 import com.pulumi.azurenative.blockchain.inputs.FirewallRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransactionNodeArgs extends ResourceArgs {
 
     public static final TransactionNodeArgs Empty = new TransactionNodeArgs();
 

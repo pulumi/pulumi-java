@@ -7,6 +7,7 @@ import com.pulumi.azurenative.customproviders.enums.ResourceTypeRouting;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The route definition for a resource implemented by the custom resource provider.
  * 
  */
-public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomRPResourceTypeRouteDefinitionArgs extends ResourceArgs {
 
     public static final CustomRPResourceTypeRouteDefinitionArgs Empty = new CustomRPResourceTypeRouteDefinitionArgs();
 

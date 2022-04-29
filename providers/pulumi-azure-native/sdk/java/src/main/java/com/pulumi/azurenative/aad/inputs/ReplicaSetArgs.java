@@ -5,6 +5,7 @@ package com.pulumi.azurenative.aad.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Replica Set Definition
  * 
  */
-public final class ReplicaSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicaSetArgs extends ResourceArgs {
 
     public static final ReplicaSetArgs Empty = new ReplicaSetArgs();
 

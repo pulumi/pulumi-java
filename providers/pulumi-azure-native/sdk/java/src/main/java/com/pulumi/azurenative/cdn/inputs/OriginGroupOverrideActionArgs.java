@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionParametersArgs
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines the origin group override action for the delivery rule.
  * 
  */
-public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginGroupOverrideActionArgs extends ResourceArgs {
 
     public static final OriginGroupOverrideActionArgs Empty = new OriginGroupOverrideActionArgs();
 

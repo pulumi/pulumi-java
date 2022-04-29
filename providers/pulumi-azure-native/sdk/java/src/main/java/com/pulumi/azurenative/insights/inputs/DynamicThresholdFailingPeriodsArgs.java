@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The minimum number of violations required within the selected lookback time window required to raise an alert.
  * 
  */
-public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DynamicThresholdFailingPeriodsArgs extends ResourceArgs {
 
     public static final DynamicThresholdFailingPeriodsArgs Empty = new DynamicThresholdFailingPeriodsArgs();
 

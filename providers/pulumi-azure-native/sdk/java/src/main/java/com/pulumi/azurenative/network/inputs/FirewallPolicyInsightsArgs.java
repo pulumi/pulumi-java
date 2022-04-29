@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsResourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Firewall Policy Insights.
  * 
  */
-public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyInsightsArgs extends ResourceArgs {
 
     public static final FirewallPolicyInsightsArgs Empty = new FirewallPolicyInsightsArgs();
 

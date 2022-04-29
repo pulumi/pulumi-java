@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Criteria to limit import of WSDL to a subset of the document.
  * 
  */
-public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends ResourceArgs {
 
     public static final ApiCreateOrUpdatePropertiesWsdlSelectorArgs Empty = new ApiCreateOrUpdatePropertiesWsdlSelectorArgs();
 

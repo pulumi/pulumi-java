@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes how data from an input is serialized or how data is serialized when written to an output in JSON format.
  * 
  */
-public final class JsonSerializationArgs extends com.pulumi.resources.ResourceArgs {
+public final class JsonSerializationArgs extends ResourceArgs {
 
     public static final JsonSerializationArgs Empty = new JsonSerializationArgs();
 

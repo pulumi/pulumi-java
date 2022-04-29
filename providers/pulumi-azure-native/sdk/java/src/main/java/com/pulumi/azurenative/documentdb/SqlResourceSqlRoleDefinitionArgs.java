@@ -7,6 +7,7 @@ import com.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import com.pulumi.azurenative.documentdb.inputs.PermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlResourceSqlRoleDefinitionArgs extends ResourceArgs {
 
     public static final SqlResourceSqlRoleDefinitionArgs Empty = new SqlResourceSqlRoleDefinitionArgs();
 

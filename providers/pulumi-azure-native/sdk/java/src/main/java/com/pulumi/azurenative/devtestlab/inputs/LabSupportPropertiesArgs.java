@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties of a lab&#39;s support banner
  * 
  */
-public final class LabSupportPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabSupportPropertiesArgs extends ResourceArgs {
 
     public static final LabSupportPropertiesArgs Empty = new LabSupportPropertiesArgs();
 

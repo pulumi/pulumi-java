@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.CrossSiteAccessPoliciesArgs;
 import com.pulumi.azurenative.media.inputs.StreamingEndpointAccessControlArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingEndpointArgs extends ResourceArgs {
 
     public static final StreamingEndpointArgs Empty = new StreamingEndpointArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * (Deprecated. Please use LogSettings) Log storage settings.
  * 
  */
-public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogStorageSettingsArgs extends ResourceArgs {
 
     public static final LogStorageSettingsArgs Empty = new LogStorageSettingsArgs();
 

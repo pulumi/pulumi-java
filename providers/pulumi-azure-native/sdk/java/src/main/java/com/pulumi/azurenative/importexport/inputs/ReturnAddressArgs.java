@@ -5,6 +5,7 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the return address information for the job.
  * 
  */
-public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReturnAddressArgs extends ResourceArgs {
 
     public static final ReturnAddressArgs Empty = new ReturnAddressArgs();
 

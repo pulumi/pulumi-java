@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes a single certificate reference in a Key Vault, and where the certificate should reside on the role instance.
  * 
  */
-public final class CloudServiceVaultCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudServiceVaultCertificateArgs extends ResourceArgs {
 
     public static final CloudServiceVaultCertificateArgs Empty = new CloudServiceVaultCertificateArgs();
 

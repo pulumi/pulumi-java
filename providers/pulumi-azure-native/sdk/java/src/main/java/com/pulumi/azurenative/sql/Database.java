@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -36,7 +38,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:sql:Database")
-public class Database extends com.pulumi.resources.CustomResource {
+public class Database extends CustomResource {
     /**
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
      * 
@@ -525,16 +527,16 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Database(String name, DatabaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Database(String name, DatabaseArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Database(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Database(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:Database", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20140401:Database").build()),
@@ -549,7 +551,7 @@ public class Database extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20210801preview:Database").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -560,7 +562,7 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Database get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Database get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Database(name, id, options);
     }
 }

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the GitHub provider.
  * 
  */
-public final class GitHubArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitHubArgs extends ResourceArgs {
 
     public static final GitHubArgs Empty = new GitHubArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The fields mapping for Relationships.
  * 
  */
-public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class RelationshipLinkFieldMappingArgs extends ResourceArgs {
 
     public static final RelationshipLinkFieldMappingArgs Empty = new RelationshipLinkFieldMappingArgs();
 

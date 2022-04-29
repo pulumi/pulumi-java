@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Set of conditions in the Rewrite Rule in Application Gateway.
  * 
  */
-public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayRewriteRuleConditionArgs extends ResourceArgs {
 
     public static final ApplicationGatewayRewriteRuleConditionArgs Empty = new ApplicationGatewayRewriteRuleConditionArgs();
 

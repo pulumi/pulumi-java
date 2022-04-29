@@ -9,6 +9,7 @@ import com.pulumi.azurenative.network.inputs.RulesEngineMatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Contains a list of match conditions, and an action on how to modify the request/response. If multiple rules match, the actions from one rule that conflict with a previous rule overwrite for a singular action, or append in the case of headers manipulation.
  * 
  */
-public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RulesEngineRuleArgs extends ResourceArgs {
 
     public static final RulesEngineRuleArgs Empty = new RulesEngineRuleArgs();
 

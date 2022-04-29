@@ -5,6 +5,7 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Display information of the operation.
  * 
  */
-public final class OperationsDefinitionDisplayArgs extends com.pulumi.resources.ResourceArgs {
+public final class OperationsDefinitionDisplayArgs extends ResourceArgs {
 
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();
 

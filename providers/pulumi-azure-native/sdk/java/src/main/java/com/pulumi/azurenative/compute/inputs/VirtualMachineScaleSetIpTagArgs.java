@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains the IP tag associated with the public IP address.
  * 
  */
-public final class VirtualMachineScaleSetIpTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetIpTagArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetIpTagArgs Empty = new VirtualMachineScaleSetIpTagArgs();
 

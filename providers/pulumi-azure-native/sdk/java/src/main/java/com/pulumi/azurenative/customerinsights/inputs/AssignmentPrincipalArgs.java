@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The AssignmentPrincipal
  * 
  */
-public final class AssignmentPrincipalArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentPrincipalArgs extends ResourceArgs {
 
     public static final AssignmentPrincipalArgs Empty = new AssignmentPrincipalArgs();
 

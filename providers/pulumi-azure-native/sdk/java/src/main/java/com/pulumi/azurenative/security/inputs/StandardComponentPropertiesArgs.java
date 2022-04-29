@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes properties of an component as related to the standard
  * 
  */
-public final class StandardComponentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class StandardComponentPropertiesArgs extends ResourceArgs {
 
     public static final StandardComponentPropertiesArgs Empty = new StandardComponentPropertiesArgs();
 

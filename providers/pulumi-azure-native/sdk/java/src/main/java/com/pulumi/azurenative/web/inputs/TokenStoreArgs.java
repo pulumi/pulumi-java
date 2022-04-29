@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.BlobStorageTokenStoreArgs;
 import com.pulumi.azurenative.web.inputs.FileSystemTokenStoreArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the token store.
  * 
  */
-public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenStoreArgs extends ResourceArgs {
 
     public static final TokenStoreArgs Empty = new TokenStoreArgs();
 

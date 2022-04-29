@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The Log Analytics Workspace to which event data will be exported. Security alerts data will reside in the &#39;SecurityAlert&#39; table and the assessments data will reside in the &#39;SecurityRecommendation&#39; table (under the &#39;Security&#39;/&#39;SecurityCenterFree&#39; solutions). Note that in order to view the data in the workspace, the Security Center Log Analytics free/standard solution needs to be enabled on that workspace. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
  * 
  */
-public final class AutomationActionWorkspaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationActionWorkspaceArgs extends ResourceArgs {
 
     public static final AutomationActionWorkspaceArgs Empty = new AutomationActionWorkspaceArgs();
 

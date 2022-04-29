@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * MAB workload-specific backup item.
  * 
  */
-public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class MabFileFolderProtectedItemArgs extends ResourceArgs {
 
     public static final MabFileFolderProtectedItemArgs Empty = new MabFileFolderProtectedItemArgs();
 

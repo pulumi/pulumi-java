@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.HttpScaleRuleArgs;
 import com.pulumi.azurenative.web.inputs.QueueScaleRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Container App container scaling rule.
  * 
  */
-public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleRuleArgs extends ResourceArgs {
 
     public static final ScaleRuleArgs Empty = new ScaleRuleArgs();
 

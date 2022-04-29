@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Map Power Query mashup query to sink dataset(s).
  * 
  */
-public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class PowerQuerySinkMappingArgs extends ResourceArgs {
 
     public static final PowerQuerySinkMappingArgs Empty = new PowerQuerySinkMappingArgs();
 

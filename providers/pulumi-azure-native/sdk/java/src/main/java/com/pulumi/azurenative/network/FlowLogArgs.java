@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.RetentionPolicyParametersArgs;
 import com.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowLogArgs extends ResourceArgs {
 
     public static final FlowLogArgs Empty = new FlowLogArgs();
 

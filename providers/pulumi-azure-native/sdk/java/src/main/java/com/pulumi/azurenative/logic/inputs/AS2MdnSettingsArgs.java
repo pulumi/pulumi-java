@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.HashingAlgorithm;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The AS2 agreement mdn settings.
  * 
  */
-public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2MdnSettingsArgs extends ResourceArgs {
 
     public static final AS2MdnSettingsArgs Empty = new AS2MdnSettingsArgs();
 

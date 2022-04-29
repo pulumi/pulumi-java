@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.VirtualMachineSizeTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the hardware settings for the virtual machine.
  * 
  */
-public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class HardwareProfileArgs extends ResourceArgs {
 
     public static final HardwareProfileArgs Empty = new HardwareProfileArgs();
 

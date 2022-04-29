@@ -9,6 +9,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDef
 import com.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionSparkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The details of the AZURE ML environment.
  * 
  */
-public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentImageRequestEnvironmentArgs extends ResourceArgs {
 
     public static final EnvironmentImageRequestEnvironmentArgs Empty = new EnvironmentImageRequestEnvironmentArgs();
 

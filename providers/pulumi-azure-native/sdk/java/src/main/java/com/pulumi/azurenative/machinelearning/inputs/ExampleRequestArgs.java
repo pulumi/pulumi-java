@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Sample input data for the service&#39;s input(s).
  * 
  */
-public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExampleRequestArgs extends ResourceArgs {
 
     public static final ExampleRequestArgs Empty = new ExampleRequestArgs();
 

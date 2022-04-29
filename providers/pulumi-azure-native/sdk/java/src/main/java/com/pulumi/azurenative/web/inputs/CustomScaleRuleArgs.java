@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Container App container Custom scaling rule.
  * 
  */
-public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomScaleRuleArgs extends ResourceArgs {
 
     public static final CustomScaleRuleArgs Empty = new CustomScaleRuleArgs();
 

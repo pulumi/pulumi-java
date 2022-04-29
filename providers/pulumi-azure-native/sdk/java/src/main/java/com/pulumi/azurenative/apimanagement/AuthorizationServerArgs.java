@@ -11,6 +11,7 @@ import com.pulumi.azurenative.apimanagement.inputs.TokenBodyParameterContractArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthorizationServerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthorizationServerArgs extends ResourceArgs {
 
     public static final AuthorizationServerArgs Empty = new AuthorizationServerArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.EncryptionServiceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A list of services that support encryption.
  * 
  */
-public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionServicesArgs extends ResourceArgs {
 
     public static final EncryptionServicesArgs Empty = new EncryptionServicesArgs();
 

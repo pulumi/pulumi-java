@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * IP configuration of an Bastion Host.
  * 
  */
-public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BastionHostIPConfigurationArgs extends ResourceArgs {
 
     public static final BastionHostIPConfigurationArgs Empty = new BastionHostIPConfigurationArgs();
 

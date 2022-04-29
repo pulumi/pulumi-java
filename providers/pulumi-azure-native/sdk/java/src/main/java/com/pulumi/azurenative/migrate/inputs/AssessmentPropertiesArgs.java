@@ -20,6 +20,7 @@ import com.pulumi.azurenative.migrate.inputs.VmUptimeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ import java.util.Objects;
  * Properties of an assessment.
  * 
  */
-public final class AssessmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssessmentPropertiesArgs extends ResourceArgs {
 
     public static final AssessmentPropertiesArgs Empty = new AssessmentPropertiesArgs();
 

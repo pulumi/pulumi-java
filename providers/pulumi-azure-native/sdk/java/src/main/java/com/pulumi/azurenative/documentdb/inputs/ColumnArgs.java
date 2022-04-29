@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cosmos DB Cassandra table column
  * 
  */
-public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
+public final class ColumnArgs extends ResourceArgs {
 
     public static final ColumnArgs Empty = new ColumnArgs();
 

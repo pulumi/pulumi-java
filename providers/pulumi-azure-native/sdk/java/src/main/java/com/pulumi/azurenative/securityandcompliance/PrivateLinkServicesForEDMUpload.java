@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:securityandcompliance:privateLinkServicesForEDMUpload")
-public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.CustomResource {
+public class PrivateLinkServicesForEDMUpload extends CustomResource {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
@@ -184,23 +186,23 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PrivateLinkServicesForEDMUpload(String name, PrivateLinkServicesForEDMUploadArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PrivateLinkServicesForEDMUpload(String name, PrivateLinkServicesForEDMUploadArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:securityandcompliance:privateLinkServicesForEDMUpload", name, args == null ? PrivateLinkServicesForEDMUploadArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PrivateLinkServicesForEDMUpload(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PrivateLinkServicesForEDMUpload(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:securityandcompliance:privateLinkServicesForEDMUpload", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityandcompliance/v20210111:privateLinkServicesForEDMUpload").build()),
                 Output.of(Alias.builder().type("azure-native:securityandcompliance/v20210308:privateLinkServicesForEDMUpload").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -211,7 +213,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateLinkServicesForEDMUpload get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateLinkServicesForEDMUpload get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PrivateLinkServicesForEDMUpload(name, id, options);
     }
 }

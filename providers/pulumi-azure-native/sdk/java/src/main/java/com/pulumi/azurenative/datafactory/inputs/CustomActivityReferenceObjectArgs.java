@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Reference objects for custom activity
  * 
  */
-public final class CustomActivityReferenceObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomActivityReferenceObjectArgs extends ResourceArgs {
 
     public static final CustomActivityReferenceObjectArgs Empty = new CustomActivityReferenceObjectArgs();
 

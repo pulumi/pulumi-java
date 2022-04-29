@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Identity provider input.
  * 
  */
-public final class IdentityProviderInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityProviderInputArgs extends ResourceArgs {
 
     public static final IdentityProviderInputArgs Empty = new IdentityProviderInputArgs();
 

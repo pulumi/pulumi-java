@@ -8,6 +8,7 @@ import com.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTyp
 import com.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesTeamsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The available data types for office data connector.
  * 
  */
-public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources.ResourceArgs {
+public final class OfficeDataConnectorDataTypesArgs extends ResourceArgs {
 
     public static final OfficeDataConnectorDataTypesArgs Empty = new OfficeDataConnectorDataTypesArgs();
 

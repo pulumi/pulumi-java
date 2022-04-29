@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

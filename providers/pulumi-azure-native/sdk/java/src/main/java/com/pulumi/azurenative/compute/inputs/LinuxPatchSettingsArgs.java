@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.enums.LinuxVMGuestPatchMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies settings related to VM Guest Patching on Linux.
  * 
  */
-public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinuxPatchSettingsArgs extends ResourceArgs {
 
     public static final LinuxPatchSettingsArgs Empty = new LinuxPatchSettingsArgs();
 

@@ -19,6 +19,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:storagecache:Cache")
-public class Cache extends com.pulumi.resources.CustomResource {
+public class Cache extends CustomResource {
     /**
      * The size of this Cache, in GB.
      * 
@@ -303,16 +305,16 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Cache(String name, CacheArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Cache(String name, CacheArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Cache(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Cache(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:storagecache:Cache", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:storagecache/v20190801preview:Cache").build()),
@@ -324,7 +326,7 @@ public class Cache extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storagecache/v20210901:Cache").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -335,7 +337,7 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cache get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Cache get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Cache(name, id, options);
     }
 }

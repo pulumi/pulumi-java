@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Additional SQL Server feature settings.
  * 
  */
-public final class AdditionalFeaturesServerConfigurationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdditionalFeaturesServerConfigurationsArgs extends ResourceArgs {
 
     public static final AdditionalFeaturesServerConfigurationsArgs Empty = new AdditionalFeaturesServerConfigurationsArgs();
 

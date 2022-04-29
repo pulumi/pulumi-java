@@ -8,6 +8,7 @@ import com.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueArgs;
 import com.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A notification event receiver value.
  * 
  */
-public final class NotificationReceiverValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationReceiverValueArgs extends ResourceArgs {
 
     public static final NotificationReceiverValueArgs Empty = new NotificationReceiverValueArgs();
 

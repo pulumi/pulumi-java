@@ -7,6 +7,7 @@ import com.pulumi.azurenative.timeseriesinsights.enums.ReferenceDataKeyPropertyT
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A key property for the reference data set. A reference data set can have multiple key properties.
  * 
  */
-public final class ReferenceDataSetKeyPropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReferenceDataSetKeyPropertyArgs extends ResourceArgs {
 
     public static final ReferenceDataSetKeyPropertyArgs Empty = new ReferenceDataSetKeyPropertyArgs();
 

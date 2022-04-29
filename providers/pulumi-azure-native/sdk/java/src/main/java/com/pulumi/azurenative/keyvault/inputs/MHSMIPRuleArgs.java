@@ -5,6 +5,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A rule governing the accessibility of a managed hsm pool from a specific ip address or ip range.
  * 
  */
-public final class MHSMIPRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class MHSMIPRuleArgs extends ResourceArgs {
 
     public static final MHSMIPRuleArgs Empty = new MHSMIPRuleArgs();
 

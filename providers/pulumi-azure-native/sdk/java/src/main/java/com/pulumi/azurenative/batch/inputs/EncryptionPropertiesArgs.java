@@ -7,6 +7,7 @@ import com.pulumi.azurenative.batch.enums.KeySource;
 import com.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
  * 
  */
-public final class EncryptionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionPropertiesArgs extends ResourceArgs {
 
     public static final EncryptionPropertiesArgs Empty = new EncryptionPropertiesArgs();
 

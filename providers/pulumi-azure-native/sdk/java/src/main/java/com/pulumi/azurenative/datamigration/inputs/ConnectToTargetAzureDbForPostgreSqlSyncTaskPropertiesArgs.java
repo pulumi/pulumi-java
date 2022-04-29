@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.ConnectToTargetAzureDbForPost
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that validates connection to Azure Database For PostgreSQL server and target server requirements for online migration
  * 
  */
-public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs Empty = new ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs();
 

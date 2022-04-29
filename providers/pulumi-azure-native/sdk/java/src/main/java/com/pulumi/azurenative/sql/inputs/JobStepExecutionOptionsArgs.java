@@ -6,6 +6,7 @@ package com.pulumi.azurenative.sql.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The execution options of a job step.
  * 
  */
-public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobStepExecutionOptionsArgs extends ResourceArgs {
 
     public static final JobStepExecutionOptionsArgs Empty = new JobStepExecutionOptionsArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
  * The type of IoT Security recommendation.
  * 
  */
-public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecommendationConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final RecommendationConfigurationPropertiesArgs Empty = new RecommendationConfigurationPropertiesArgs();
 

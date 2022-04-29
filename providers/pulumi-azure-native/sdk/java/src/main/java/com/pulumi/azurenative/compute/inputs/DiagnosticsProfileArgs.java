@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.BootDiagnosticsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
  * 
  */
-public final class DiagnosticsProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiagnosticsProfileArgs extends ResourceArgs {
 
     public static final DiagnosticsProfileArgs Empty = new DiagnosticsProfileArgs();
 

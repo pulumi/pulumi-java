@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cache.inputs;
 import com.pulumi.azurenative.cache.enums.DayOfWeek;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Patch schedule entry for a Premium Redis Cache.
  * 
  */
-public final class ScheduleEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleEntryArgs extends ResourceArgs {
 
     public static final ScheduleEntryArgs Empty = new ScheduleEntryArgs();
 

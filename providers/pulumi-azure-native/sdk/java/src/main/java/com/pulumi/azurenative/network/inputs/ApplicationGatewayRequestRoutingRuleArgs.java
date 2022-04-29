@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Request routing rule of an application gateway.
  * 
  */
-public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayRequestRoutingRuleArgs extends ResourceArgs {
 
     public static final ApplicationGatewayRequestRoutingRuleArgs Empty = new ApplicationGatewayRequestRoutingRuleArgs();
 

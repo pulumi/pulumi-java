@@ -6,6 +6,7 @@ package com.pulumi.azurenative.avs;
 import com.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadNetworkSegmentArgs extends ResourceArgs {
 
     public static final WorkloadNetworkSegmentArgs Empty = new WorkloadNetworkSegmentArgs();
 

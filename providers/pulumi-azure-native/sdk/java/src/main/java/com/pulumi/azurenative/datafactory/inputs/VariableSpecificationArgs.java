@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.enums.VariableType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Definition of a single variable for a Pipeline.
  * 
  */
-public final class VariableSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VariableSpecificationArgs extends ResourceArgs {
 
     public static final VariableSpecificationArgs Empty = new VariableSpecificationArgs();
 

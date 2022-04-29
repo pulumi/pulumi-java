@@ -7,6 +7,7 @@ import com.pulumi.azurenative.automation.enums.LinuxUpdateClasses;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Linux specific update configuration.
  * 
  */
-public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinuxPropertiesArgs extends ResourceArgs {
 
     public static final LinuxPropertiesArgs Empty = new LinuxPropertiesArgs();
 

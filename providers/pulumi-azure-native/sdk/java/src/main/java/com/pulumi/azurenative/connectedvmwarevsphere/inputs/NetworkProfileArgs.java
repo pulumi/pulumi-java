@@ -6,6 +6,7 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import com.pulumi.azurenative.connectedvmwarevsphere.inputs.NetworkInterfaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the resource properties.
  * 
  */
-public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkProfileArgs extends ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 

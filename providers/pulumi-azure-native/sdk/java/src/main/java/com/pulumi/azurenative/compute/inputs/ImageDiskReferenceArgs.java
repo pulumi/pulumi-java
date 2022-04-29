@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The source image used for creating the disk.
  * 
  */
-public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageDiskReferenceArgs extends ResourceArgs {
 
     public static final ImageDiskReferenceArgs Empty = new ImageDiskReferenceArgs();
 

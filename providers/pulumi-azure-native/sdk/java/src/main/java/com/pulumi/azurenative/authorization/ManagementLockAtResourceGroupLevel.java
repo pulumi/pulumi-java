@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:authorization:ManagementLockAtResourceGroupLevel")
-public class ManagementLockAtResourceGroupLevel extends com.pulumi.resources.CustomResource {
+public class ManagementLockAtResourceGroupLevel extends CustomResource {
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
      * 
@@ -125,16 +127,16 @@ public class ManagementLockAtResourceGroupLevel extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagementLockAtResourceGroupLevel(String name, ManagementLockAtResourceGroupLevelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ManagementLockAtResourceGroupLevel(String name, ManagementLockAtResourceGroupLevelArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockAtResourceGroupLevel", name, args == null ? ManagementLockAtResourceGroupLevelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ManagementLockAtResourceGroupLevel(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ManagementLockAtResourceGroupLevel(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockAtResourceGroupLevel", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:authorization/v20150101:ManagementLockAtResourceGroupLevel").build()),
@@ -143,7 +145,7 @@ public class ManagementLockAtResourceGroupLevel extends com.pulumi.resources.Cus
                 Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockAtResourceGroupLevel").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -154,7 +156,7 @@ public class ManagementLockAtResourceGroupLevel extends com.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementLockAtResourceGroupLevel get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementLockAtResourceGroupLevel get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ManagementLockAtResourceGroupLevel(name, id, options);
     }
 }

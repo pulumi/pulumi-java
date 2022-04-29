@@ -6,13 +6,14 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationRecoveryPlanArgs extends ResourceArgs {
 
     public static final ReplicationRecoveryPlanArgs Empty = new ReplicationRecoveryPlanArgs();
 

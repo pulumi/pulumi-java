@@ -6,6 +6,7 @@ package com.pulumi.azurenative.blueprint.inputs;
 import com.pulumi.azurenative.blueprint.inputs.SecretValueReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Value for the specified parameter. Can be either &#39;value&#39; or &#39;reference&#39; but not both.
  * 
  */
-public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterValueArgs extends ResourceArgs {
 
     public static final ParameterValueArgs Empty = new ParameterValueArgs();
 

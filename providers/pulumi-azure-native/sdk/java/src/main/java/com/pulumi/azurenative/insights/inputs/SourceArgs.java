@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.QueryType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the log search query.
  * 
  */
-public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceArgs extends ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 

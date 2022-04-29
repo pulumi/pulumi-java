@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.EndpointRefArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a network reference in a service.
  * 
  */
-public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkRefArgs extends ResourceArgs {
 
     public static final NetworkRefArgs Empty = new NetworkRefArgs();
 

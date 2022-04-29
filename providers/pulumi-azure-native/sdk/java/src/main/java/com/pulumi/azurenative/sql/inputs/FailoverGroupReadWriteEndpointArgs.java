@@ -7,6 +7,7 @@ import com.pulumi.azurenative.sql.enums.ReadWriteEndpointFailoverPolicy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Read-write endpoint of the failover group instance.
  * 
  */
-public final class FailoverGroupReadWriteEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class FailoverGroupReadWriteEndpointArgs extends ResourceArgs {
 
     public static final FailoverGroupReadWriteEndpointArgs Empty = new FailoverGroupReadWriteEndpointArgs();
 

@@ -7,11 +7,12 @@ import com.pulumi.azurenative.media.enums.ManagedIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class MediaServiceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class MediaServiceIdentityArgs extends ResourceArgs {
 
     public static final MediaServiceIdentityArgs Empty = new MediaServiceIdentityArgs();
 

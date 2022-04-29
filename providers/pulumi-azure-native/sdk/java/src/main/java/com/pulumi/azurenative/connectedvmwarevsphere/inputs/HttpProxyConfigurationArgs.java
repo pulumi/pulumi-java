@@ -5,6 +5,7 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * HTTP Proxy configuration for the VM.
  * 
  */
-public final class HttpProxyConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpProxyConfigurationArgs extends ResourceArgs {
 
     public static final HttpProxyConfigurationArgs Empty = new HttpProxyConfigurationArgs();
 

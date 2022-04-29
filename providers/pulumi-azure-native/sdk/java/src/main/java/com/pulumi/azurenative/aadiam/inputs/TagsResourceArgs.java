@@ -5,6 +5,7 @@ package com.pulumi.azurenative.aadiam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A container holding only the Tags for a resource, allowing the user to update the tags on a PrivateLinkConnection instance.
  * 
  */
-public final class TagsResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TagsResourceArgs extends ResourceArgs {
 
     public static final TagsResourceArgs Empty = new TagsResourceArgs();
 

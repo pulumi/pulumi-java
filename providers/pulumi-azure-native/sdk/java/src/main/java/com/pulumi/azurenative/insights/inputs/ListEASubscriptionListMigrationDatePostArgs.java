@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class ListEASubscriptionListMigrationDatePostArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListEASubscriptionListMigrationDatePostArgs extends InvokeArgs {
 
     public static final ListEASubscriptionListMigrationDatePostArgs Empty = new ListEASubscriptionListMigrationDatePostArgs();
 

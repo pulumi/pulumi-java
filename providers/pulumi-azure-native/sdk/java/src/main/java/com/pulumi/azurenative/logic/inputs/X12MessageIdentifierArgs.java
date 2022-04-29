@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The X12 message identifier.
  * 
  */
-public final class X12MessageIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12MessageIdentifierArgs extends ResourceArgs {
 
     public static final X12MessageIdentifierArgs Empty = new X12MessageIdentifierArgs();
 

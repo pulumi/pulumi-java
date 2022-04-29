@@ -6,6 +6,7 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The properties of the create Advanced Schedule.
  * 
  */
-public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdvancedScheduleArgs extends ResourceArgs {
 
     public static final AdvancedScheduleArgs Empty = new AdvancedScheduleArgs();
 

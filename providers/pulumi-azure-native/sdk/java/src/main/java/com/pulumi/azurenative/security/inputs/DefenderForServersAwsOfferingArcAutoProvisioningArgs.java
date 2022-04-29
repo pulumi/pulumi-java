@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The ARC autoprovisioning configuration
  * 
  */
-public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends ResourceArgs {
 
     public static final DefenderForServersAwsOfferingArcAutoProvisioningArgs Empty = new DefenderForServersAwsOfferingArcAutoProvisioningArgs();
 

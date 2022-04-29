@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes the hostname properties for http routing.
  * 
  */
-public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpRouteConfigArgs extends ResourceArgs {
 
     public static final HttpRouteConfigArgs Empty = new HttpRouteConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The properties of the feedback queue for cloud-to-device messages.
  * 
  */
-public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FeedbackPropertiesArgs extends ResourceArgs {
 
     public static final FeedbackPropertiesArgs Empty = new FeedbackPropertiesArgs();
 

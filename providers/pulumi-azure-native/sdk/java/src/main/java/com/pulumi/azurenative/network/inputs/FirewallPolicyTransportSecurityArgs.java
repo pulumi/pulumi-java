@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.FirewallPolicyCertificateAuthorityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration needed to perform TLS termination &amp; initiation.
  * 
  */
-public final class FirewallPolicyTransportSecurityArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyTransportSecurityArgs extends ResourceArgs {
 
     public static final FirewallPolicyTransportSecurityArgs Empty = new FirewallPolicyTransportSecurityArgs();
 

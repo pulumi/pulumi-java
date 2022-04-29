@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Select audio tracks from the input by specifying a track identifier.
  * 
  */
-public final class SelectAudioTrackByIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class SelectAudioTrackByIdArgs extends ResourceArgs {
 
     public static final SelectAudioTrackByIdArgs Empty = new SelectAudioTrackByIdArgs();
 

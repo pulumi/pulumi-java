@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.AlertRuleLeafConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  *       _Please note, &#39;field&#39;, &#39;equals&#39; and &#39;containsAny&#39; should __not__ be set in an AnyOf Condition._
  * 
  */
-public final class AlertRuleAnyOfOrLeafConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertRuleAnyOfOrLeafConditionArgs extends ResourceArgs {
 
     public static final AlertRuleAnyOfOrLeafConditionArgs Empty = new AlertRuleAnyOfOrLeafConditionArgs();
 

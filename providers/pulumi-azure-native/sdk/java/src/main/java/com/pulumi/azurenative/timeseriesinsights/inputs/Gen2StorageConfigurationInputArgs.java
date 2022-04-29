@@ -5,6 +5,7 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
  * 
  */
-public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class Gen2StorageConfigurationInputArgs extends ResourceArgs {
 
     public static final Gen2StorageConfigurationInputArgs Empty = new Gen2StorageConfigurationInputArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.TagSettingsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Azure query for the update configuration.
  * 
  */
-public final class AzureQueryPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureQueryPropertiesArgs extends ResourceArgs {
 
     public static final AzureQueryPropertiesArgs Empty = new AzureQueryPropertiesArgs();
 

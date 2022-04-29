@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An application security group in a resource group.
  * 
  */
-public final class ApplicationSecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationSecurityGroupArgs extends ResourceArgs {
 
     public static final ApplicationSecurityGroupArgs Empty = new ApplicationSecurityGroupArgs();
 

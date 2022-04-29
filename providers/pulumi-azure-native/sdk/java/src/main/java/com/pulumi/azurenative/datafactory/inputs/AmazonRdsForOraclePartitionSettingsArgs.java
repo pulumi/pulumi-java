@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
  * 
  */
-public final class AmazonRdsForOraclePartitionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AmazonRdsForOraclePartitionSettingsArgs extends ResourceArgs {
 
     public static final AmazonRdsForOraclePartitionSettingsArgs Empty = new AmazonRdsForOraclePartitionSettingsArgs();
 

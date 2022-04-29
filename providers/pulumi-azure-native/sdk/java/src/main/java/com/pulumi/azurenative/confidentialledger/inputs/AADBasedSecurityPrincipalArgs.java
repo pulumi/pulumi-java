@@ -7,6 +7,7 @@ import com.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * AAD based security principal with associated Ledger RoleName
  * 
  */
-public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.ResourceArgs {
+public final class AADBasedSecurityPrincipalArgs extends ResourceArgs {
 
     public static final AADBasedSecurityPrincipalArgs Empty = new AADBasedSecurityPrincipalArgs();
 

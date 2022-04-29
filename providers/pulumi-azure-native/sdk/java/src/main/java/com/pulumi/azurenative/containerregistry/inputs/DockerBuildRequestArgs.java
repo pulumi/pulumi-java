@@ -10,6 +10,7 @@ import com.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * The parameters for a docker quick build.
  * 
  */
-public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class DockerBuildRequestArgs extends ResourceArgs {
 
     public static final DockerBuildRequestArgs Empty = new DockerBuildRequestArgs();
 

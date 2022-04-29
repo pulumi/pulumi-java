@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * ies for the solution content item
  * 
  */
-public final class MetadataCategoriesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataCategoriesArgs extends ResourceArgs {
 
     public static final MetadataCategoriesArgs Empty = new MetadataCategoriesArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallAss
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The json object containing security policy waf parameters
  * 
  */
-public final class SecurityPolicyWebApplicationFirewallParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyWebApplicationFirewallParametersArgs extends ResourceArgs {
 
     public static final SecurityPolicyWebApplicationFirewallParametersArgs Empty = new SecurityPolicyWebApplicationFirewallParametersArgs();
 

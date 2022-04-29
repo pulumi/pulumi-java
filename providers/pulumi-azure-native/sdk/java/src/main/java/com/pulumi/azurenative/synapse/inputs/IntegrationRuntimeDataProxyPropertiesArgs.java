@@ -6,6 +6,7 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.inputs.EntityReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Data proxy properties for a managed dedicated integration runtime.
  * 
  */
-public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationRuntimeDataProxyPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationRuntimeDataProxyPropertiesArgs Empty = new IntegrationRuntimeDataProxyPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The start and end date for pulling data for the report.
  * 
  */
-public final class ReportConfigTimePeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportConfigTimePeriodArgs extends ResourceArgs {
 
     public static final ReportConfigTimePeriodArgs Empty = new ReportConfigTimePeriodArgs();
 

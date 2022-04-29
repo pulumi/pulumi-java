@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Azure action group
  * 
  */
-public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzNsActionGroupArgs extends ResourceArgs {
 
     public static final AzNsActionGroupArgs Empty = new AzNsActionGroupArgs();
 

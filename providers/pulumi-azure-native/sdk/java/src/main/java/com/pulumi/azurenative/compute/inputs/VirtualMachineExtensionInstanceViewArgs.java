@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The instance view of a virtual machine extension.
  * 
  */
-public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineExtensionInstanceViewArgs extends ResourceArgs {
 
     public static final VirtualMachineExtensionInstanceViewArgs Empty = new VirtualMachineExtensionInstanceViewArgs();
 

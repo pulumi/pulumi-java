@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineRunCommandScriptSourc
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetVMRunCommandArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetVMRunCommandArgs Empty = new VirtualMachineScaleSetVMRunCommandArgs();
 

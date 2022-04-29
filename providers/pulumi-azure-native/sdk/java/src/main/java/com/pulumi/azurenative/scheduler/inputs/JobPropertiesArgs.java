@@ -8,13 +8,14 @@ import com.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import com.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobPropertiesArgs extends ResourceArgs {
 
     public static final JobPropertiesArgs Empty = new JobPropertiesArgs();
 

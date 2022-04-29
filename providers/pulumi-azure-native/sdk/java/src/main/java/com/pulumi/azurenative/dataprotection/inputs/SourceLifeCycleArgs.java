@@ -8,6 +8,7 @@ import com.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import com.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Source LifeCycle
  * 
  */
-public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceLifeCycleArgs extends ResourceArgs {
 
     public static final SourceLifeCycleArgs Empty = new SourceLifeCycleArgs();
 

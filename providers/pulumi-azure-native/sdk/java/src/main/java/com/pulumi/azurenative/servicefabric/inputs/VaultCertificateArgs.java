@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.
  * 
  */
-public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class VaultCertificateArgs extends ResourceArgs {
 
     public static final VaultCertificateArgs Empty = new VaultCertificateArgs();
 

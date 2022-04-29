@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.DiskStorageAccountTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
  * 
  */
-public final class DiskSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskSkuArgs extends ResourceArgs {
 
     public static final DiskSkuArgs Empty = new DiskSkuArgs();
 

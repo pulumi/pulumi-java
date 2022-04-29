@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -34,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:containerservice:MaintenanceConfiguration")
-public class MaintenanceConfiguration extends com.pulumi.resources.CustomResource {
+public class MaintenanceConfiguration extends CustomResource {
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
@@ -127,16 +129,16 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MaintenanceConfiguration(String name, MaintenanceConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public MaintenanceConfiguration(String name, MaintenanceConfigurationArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:containerservice:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private MaintenanceConfiguration(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private MaintenanceConfiguration(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:containerservice:MaintenanceConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:containerservice/v20201201:MaintenanceConfiguration").build()),
@@ -150,7 +152,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:MaintenanceConfiguration").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -161,7 +163,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MaintenanceConfiguration get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MaintenanceConfiguration get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new MaintenanceConfiguration(name, id, options);
     }
 }

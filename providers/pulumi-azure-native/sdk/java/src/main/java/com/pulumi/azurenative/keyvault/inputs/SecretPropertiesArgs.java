@@ -6,6 +6,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 import com.pulumi.azurenative.keyvault.inputs.SecretAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of the secret
  * 
  */
-public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretPropertiesArgs extends ResourceArgs {
 
     public static final SecretPropertiesArgs Empty = new SecretPropertiesArgs();
 

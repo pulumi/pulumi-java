@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SourceVaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
  * 
  */
-public final class KeyVaultAndKeyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultAndKeyReferenceArgs extends ResourceArgs {
 
     public static final KeyVaultAndKeyReferenceArgs Empty = new KeyVaultAndKeyReferenceArgs();
 

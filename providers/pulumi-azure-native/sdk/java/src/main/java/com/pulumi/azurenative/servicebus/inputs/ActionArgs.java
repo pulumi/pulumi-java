@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicebus.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
  * 
  */
-public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActionArgs extends ResourceArgs {
 
     public static final ActionArgs Empty = new ActionArgs();
 

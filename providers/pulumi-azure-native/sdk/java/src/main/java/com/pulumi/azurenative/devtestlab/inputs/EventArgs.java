@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An event to be notified for.
  * 
  */
-public final class EventArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventArgs extends ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 

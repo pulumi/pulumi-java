@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.NfsAccessRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * A set of rules describing access policies applied to NFSv3 clients of the cache.
  * 
  */
-public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class NfsAccessPolicyArgs extends ResourceArgs {
 
     public static final NfsAccessPolicyArgs Empty = new NfsAccessPolicyArgs();
 

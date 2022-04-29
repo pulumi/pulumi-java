@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kusto.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A class that contains the optimized auto scale definition.
  * 
  */
-public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceArgs {
+public final class OptimizedAutoscaleArgs extends ResourceArgs {
 
     public static final OptimizedAutoscaleArgs Empty = new OptimizedAutoscaleArgs();
 

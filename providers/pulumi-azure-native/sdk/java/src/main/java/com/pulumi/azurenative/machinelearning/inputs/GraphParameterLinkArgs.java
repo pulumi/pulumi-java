@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Association link for a graph global parameter to a node in the graph.
  * 
  */
-public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphParameterLinkArgs extends ResourceArgs {
 
     public static final GraphParameterLinkArgs Empty = new GraphParameterLinkArgs();
 

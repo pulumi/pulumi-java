@@ -6,13 +6,14 @@ package com.pulumi.azurenative.operationsmanagement;
 import com.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagementAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementAssociationArgs extends ResourceArgs {
 
     public static final ManagementAssociationArgs Empty = new ManagementAssociationArgs();
 

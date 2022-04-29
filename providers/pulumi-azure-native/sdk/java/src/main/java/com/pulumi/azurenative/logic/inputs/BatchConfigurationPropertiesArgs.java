@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.BatchReleaseCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The batch configuration properties definition.
  * 
  */
-public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final BatchConfigurationPropertiesArgs Empty = new BatchConfigurationPropertiesArgs();
 

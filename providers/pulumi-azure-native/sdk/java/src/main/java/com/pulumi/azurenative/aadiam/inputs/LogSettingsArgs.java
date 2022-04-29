@@ -8,6 +8,7 @@ import com.pulumi.azurenative.aadiam.inputs.RetentionPolicyArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular log.
  * 
  */
-public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogSettingsArgs extends ResourceArgs {
 
     public static final LogSettingsArgs Empty = new LogSettingsArgs();
 

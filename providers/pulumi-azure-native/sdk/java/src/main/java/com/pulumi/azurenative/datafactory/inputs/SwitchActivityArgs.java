@@ -47,6 +47,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +60,7 @@ import javax.annotation.Nullable;
  * This activity evaluates an expression and executes activities under the cases property that correspond to the expression evaluation expected in the equals property.
  * 
  */
-public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class SwitchActivityArgs extends ResourceArgs {
 
     public static final SwitchActivityArgs Empty = new SwitchActivityArgs();
 

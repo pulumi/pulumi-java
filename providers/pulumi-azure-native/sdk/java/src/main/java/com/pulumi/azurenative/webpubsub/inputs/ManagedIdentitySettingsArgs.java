@@ -5,6 +5,7 @@ package com.pulumi.azurenative.webpubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Managed identity settings for upstream.
  * 
  */
-public final class ManagedIdentitySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedIdentitySettingsArgs extends ResourceArgs {
 
     public static final ManagedIdentitySettingsArgs Empty = new ManagedIdentitySettingsArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cache.enums.RdbFrequency;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Persistence-related configuration for the RedisEnterprise database
  * 
  */
-public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PersistenceArgs extends ResourceArgs {
 
     public static final PersistenceArgs Empty = new PersistenceArgs();
 

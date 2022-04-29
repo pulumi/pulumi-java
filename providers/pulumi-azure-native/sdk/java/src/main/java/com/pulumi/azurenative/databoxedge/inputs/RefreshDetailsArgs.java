@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Fields for tracking refresh job on the share or container.
  * 
  */
-public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RefreshDetailsArgs extends ResourceArgs {
 
     public static final RefreshDetailsArgs Empty = new RefreshDetailsArgs();
 

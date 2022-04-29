@@ -5,6 +5,7 @@ package com.pulumi.azurenative.operationsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Solution properties supported by the OperationsManagement resource provider.
  * 
  */
-public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SolutionPropertiesArgs extends ResourceArgs {
 
     public static final SolutionPropertiesArgs Empty = new SolutionPropertiesArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.azurestackhci.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetArcSettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetArcSettingArgs extends InvokeArgs {
 
     public static final GetArcSettingArgs Empty = new GetArcSettingArgs();
 

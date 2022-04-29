@@ -12,6 +12,7 @@ import com.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * The configuration of the modify properties automation rule action
  * 
  */
-public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs extends ResourceArgs {
 
     public static final AutomationRuleModifyPropertiesActionActionConfigurationArgs Empty = new AutomationRuleModifyPropertiesActionActionConfigurationArgs();
 

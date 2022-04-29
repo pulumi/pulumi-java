@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.enums.State;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
  * 
  */
-public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityContactPropertiesNotificationsByRoleArgs extends ResourceArgs {
 
     public static final SecurityContactPropertiesNotificationsByRoleArgs Empty = new SecurityContactPropertiesNotificationsByRoleArgs();
 

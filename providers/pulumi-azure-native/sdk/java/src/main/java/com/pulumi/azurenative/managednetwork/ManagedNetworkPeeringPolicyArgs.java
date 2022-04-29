@@ -6,13 +6,14 @@ package com.pulumi.azurenative.managednetwork;
 import com.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedNetworkPeeringPolicyArgs extends ResourceArgs {
 
     public static final ManagedNetworkPeeringPolicyArgs Empty = new ManagedNetworkPeeringPolicyArgs();
 

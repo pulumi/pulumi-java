@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:servicebus:Subscription")
-public class Subscription extends com.pulumi.resources.CustomResource {
+public class Subscription extends CustomResource {
     /**
      * Last time there was a receive request to this subscription.
      * 
@@ -324,16 +326,16 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Subscription(String name, SubscriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Subscription(String name, SubscriptionArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:servicebus:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Subscription(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Subscription(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:servicebus:Subscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:servicebus/v20140901:Subscription").build()),
@@ -345,7 +347,7 @@ public class Subscription extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:servicebus/v20211101:Subscription").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -356,7 +358,7 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Subscription get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Subscription get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Subscription(name, id, options);
     }
 }

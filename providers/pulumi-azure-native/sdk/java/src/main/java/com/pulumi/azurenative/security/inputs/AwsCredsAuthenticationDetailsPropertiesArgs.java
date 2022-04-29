@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * AWS cloud account connector based credentials, the credentials is composed of access key ID and secret key, for more details, refer to &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html&#34;&gt;Creating an IAM User in Your AWS Account (write only)&lt;/a&gt;
  * 
  */
-public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwsCredsAuthenticationDetailsPropertiesArgs extends ResourceArgs {
 
     public static final AwsCredsAuthenticationDetailsPropertiesArgs Empty = new AwsCredsAuthenticationDetailsPropertiesArgs();
 

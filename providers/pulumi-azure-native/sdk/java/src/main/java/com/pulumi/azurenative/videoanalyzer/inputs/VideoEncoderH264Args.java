@@ -7,6 +7,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.VideoScaleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A custom preset for encoding video with the H.264 (AVC) codec.
  * 
  */
-public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArgs {
+public final class VideoEncoderH264Args extends ResourceArgs {
 
     public static final VideoEncoderH264Args Empty = new VideoEncoderH264Args();
 

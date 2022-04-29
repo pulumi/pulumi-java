@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:compute:VirtualMachineRunCommandByVirtualMachine")
-public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resources.CustomResource {
+public class VirtualMachineRunCommandByVirtualMachine extends CustomResource {
     /**
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
@@ -270,16 +272,16 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VirtualMachineRunCommandByVirtualMachine(String name, VirtualMachineRunCommandByVirtualMachineArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VirtualMachineRunCommandByVirtualMachine(String name, VirtualMachineRunCommandByVirtualMachineArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineRunCommandByVirtualMachine", name, args == null ? VirtualMachineRunCommandByVirtualMachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VirtualMachineRunCommandByVirtualMachine(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineRunCommandByVirtualMachine(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineRunCommandByVirtualMachine", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:compute/v20200601:VirtualMachineRunCommandByVirtualMachine").build()),
@@ -290,7 +292,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
                 Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineRunCommandByVirtualMachine").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -301,7 +303,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineRunCommandByVirtualMachine get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineRunCommandByVirtualMachine get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new VirtualMachineRunCommandByVirtualMachine(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.EncryptionSettingsElementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Encryption settings for disk or snapshot
  * 
  */
-public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionSettingsCollectionArgs extends ResourceArgs {
 
     public static final EncryptionSettingsCollectionArgs Empty = new EncryptionSettingsCollectionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Properties for expected token claims.
  * 
  */
-public final class TokenClaimArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenClaimArgs extends ResourceArgs {
 
     public static final TokenClaimArgs Empty = new TokenClaimArgs();
 

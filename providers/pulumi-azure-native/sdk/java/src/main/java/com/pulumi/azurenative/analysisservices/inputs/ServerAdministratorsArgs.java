@@ -5,6 +5,7 @@ package com.pulumi.azurenative.analysisservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An array of administrator user identities.
  * 
  */
-public final class ServerAdministratorsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerAdministratorsArgs extends ResourceArgs {
 
     public static final ServerAdministratorsArgs Empty = new ServerAdministratorsArgs();
 

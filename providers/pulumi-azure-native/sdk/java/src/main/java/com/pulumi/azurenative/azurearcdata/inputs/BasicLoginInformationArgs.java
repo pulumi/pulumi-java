@@ -5,6 +5,7 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Username and password for basic login authentication.
  * 
  */
-public final class BasicLoginInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BasicLoginInformationArgs extends ResourceArgs {
 
     public static final BasicLoginInformationArgs Empty = new BasicLoginInformationArgs();
 

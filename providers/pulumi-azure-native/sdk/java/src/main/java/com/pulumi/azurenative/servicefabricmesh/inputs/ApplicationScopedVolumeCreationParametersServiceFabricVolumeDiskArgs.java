@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes parameters for creating application-scoped volumes provided by Service Fabric Volume Disks
  * 
  */
-public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs extends ResourceArgs {
 
     public static final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs Empty = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs();
 

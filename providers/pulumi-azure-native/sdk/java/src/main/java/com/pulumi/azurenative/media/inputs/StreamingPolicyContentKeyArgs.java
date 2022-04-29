@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Class to specify properties of content key
  * 
  */
-public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingPolicyContentKeyArgs extends ResourceArgs {
 
     public static final StreamingPolicyContentKeyArgs Empty = new StreamingPolicyContentKeyArgs();
 

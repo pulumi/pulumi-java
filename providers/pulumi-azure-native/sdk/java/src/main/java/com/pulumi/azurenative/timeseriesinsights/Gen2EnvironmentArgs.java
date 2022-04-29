@@ -10,6 +10,7 @@ import com.pulumi.azurenative.timeseriesinsights.inputs.WarmStoreConfigurationPr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class Gen2EnvironmentArgs extends ResourceArgs {
 
     public static final Gen2EnvironmentArgs Empty = new Gen2EnvironmentArgs();
 

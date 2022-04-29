@@ -8,6 +8,7 @@ import com.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Settings for Azure Files identity based authentication.
  * 
  */
-public final class AzureFilesIdentityBasedAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFilesIdentityBasedAuthenticationArgs extends ResourceArgs {
 
     public static final AzureFilesIdentityBasedAuthenticationArgs Empty = new AzureFilesIdentityBasedAuthenticationArgs();
 

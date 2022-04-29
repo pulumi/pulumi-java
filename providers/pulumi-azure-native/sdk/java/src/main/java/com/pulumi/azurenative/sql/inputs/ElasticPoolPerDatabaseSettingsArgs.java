@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Per database settings of an elastic pool.
  * 
  */
-public final class ElasticPoolPerDatabaseSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ElasticPoolPerDatabaseSettingsArgs extends ResourceArgs {
 
     public static final ElasticPoolPerDatabaseSettingsArgs Empty = new ElasticPoolPerDatabaseSettingsArgs();
 

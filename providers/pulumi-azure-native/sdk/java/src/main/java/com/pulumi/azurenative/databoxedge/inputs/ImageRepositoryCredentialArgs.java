@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Image repository credential.
  * 
  */
-public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageRepositoryCredentialArgs extends ResourceArgs {
 
     public static final ImageRepositoryCredentialArgs Empty = new ImageRepositoryCredentialArgs();
 

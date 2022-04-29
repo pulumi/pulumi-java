@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Represents the SKU name and Azure pricing tier for Analysis Services resource.
  * 
  */
-public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSkuArgs extends ResourceArgs {
 
     public static final ResourceSkuArgs Empty = new ResourceSkuArgs();
 

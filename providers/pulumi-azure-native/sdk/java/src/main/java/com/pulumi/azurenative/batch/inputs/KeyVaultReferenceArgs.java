@@ -5,6 +5,7 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Identifies the Azure key vault associated with a Batch account.
  * 
  */
-public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultReferenceArgs extends ResourceArgs {
 
     public static final KeyVaultReferenceArgs Empty = new KeyVaultReferenceArgs();
 

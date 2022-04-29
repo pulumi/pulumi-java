@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The source event types which evaluate the security automation set of rules. For example - security alerts and security assessments. To learn more about the supported security events data models schemas - please visit https://aka.ms/ASCAutomationSchemas.
  * 
  */
-public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationSourceArgs extends ResourceArgs {
 
     public static final AutomationSourceArgs Empty = new AutomationSourceArgs();
 

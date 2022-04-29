@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListLocalUserKeysArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListLocalUserKeysArgs extends InvokeArgs {
 
     public static final ListLocalUserKeysArgs Empty = new ListLocalUserKeysArgs();
 

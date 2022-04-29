@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ServiceEndpointPolicyDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Service End point policy resource.
  * 
  */
-public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceEndpointPolicyArgs extends ResourceArgs {
 
     public static final ServiceEndpointPolicyArgs Empty = new ServiceEndpointPolicyArgs();
 

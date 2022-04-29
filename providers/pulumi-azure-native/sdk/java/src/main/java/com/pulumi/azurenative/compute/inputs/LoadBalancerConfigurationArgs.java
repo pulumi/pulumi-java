@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the load balancer configuration.
  * 
  */
-public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerConfigurationArgs extends ResourceArgs {
 
     public static final LoadBalancerConfigurationArgs Empty = new LoadBalancerConfigurationArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Schedule for backup
  * 
  */
-public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupScheduleArgs extends ResourceArgs {
 
     public static final BackupScheduleArgs Empty = new BackupScheduleArgs();
 

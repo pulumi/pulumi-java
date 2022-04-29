@@ -6,6 +6,7 @@ package com.pulumi.azurenative.guestconfiguration.inputs;
 import com.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Guest configuration assignment properties.
  * 
  */
-public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestConfigurationAssignmentPropertiesArgs extends ResourceArgs {
 
     public static final GuestConfigurationAssignmentPropertiesArgs Empty = new GuestConfigurationAssignmentPropertiesArgs();
 

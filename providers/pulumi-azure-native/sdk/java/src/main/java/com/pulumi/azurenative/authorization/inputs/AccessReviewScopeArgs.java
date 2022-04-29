@@ -5,6 +5,7 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Descriptor for what needs to be reviewed
  * 
  */
-public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessReviewScopeArgs extends ResourceArgs {
 
     public static final AccessReviewScopeArgs Empty = new AccessReviewScopeArgs();
 

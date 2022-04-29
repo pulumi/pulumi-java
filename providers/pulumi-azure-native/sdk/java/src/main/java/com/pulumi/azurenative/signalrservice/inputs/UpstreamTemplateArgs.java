@@ -5,6 +5,7 @@ package com.pulumi.azurenative.signalrservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.
  * 
  */
-public final class UpstreamTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpstreamTemplateArgs extends ResourceArgs {
 
     public static final UpstreamTemplateArgs Empty = new UpstreamTemplateArgs();
 

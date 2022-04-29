@@ -7,6 +7,7 @@ import com.pulumi.azurenative.iotcentral.enums.AppSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Information about the SKU of the IoT Central application.
  * 
  */
-public final class AppSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppSkuInfoArgs extends ResourceArgs {
 
     public static final AppSkuInfoArgs Empty = new AppSkuInfoArgs();
 

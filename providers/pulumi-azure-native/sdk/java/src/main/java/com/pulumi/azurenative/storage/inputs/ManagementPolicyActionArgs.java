@@ -8,6 +8,7 @@ import com.pulumi.azurenative.storage.inputs.ManagementPolicySnapShotArgs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Actions are applied to the filtered blobs when the execution condition is met.
  * 
  */
-public final class ManagementPolicyActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicyActionArgs extends ResourceArgs {
 
     public static final ManagementPolicyActionArgs Empty = new ManagementPolicyActionArgs();
 

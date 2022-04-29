@@ -5,6 +5,7 @@ package com.pulumi.azurenative.extendedlocation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This is optional input that contains the authentication that should be used to generate the namespace.
  * 
  */
-public final class CustomLocationPropertiesAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomLocationPropertiesAuthenticationArgs extends ResourceArgs {
 
     public static final CustomLocationPropertiesAuthenticationArgs Empty = new CustomLocationPropertiesAuthenticationArgs();
 

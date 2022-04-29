@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the disallowed disk types.
  * 
  */
-public final class DisallowedArgs extends com.pulumi.resources.ResourceArgs {
+public final class DisallowedArgs extends ResourceArgs {
 
     public static final DisallowedArgs Empty = new DisallowedArgs();
 

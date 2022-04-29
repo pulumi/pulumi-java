@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the login flow, including the scopes that should be requested.
  * 
  */
-public final class LoginScopesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoginScopesArgs extends ResourceArgs {
 
     public static final LoginScopesArgs Empty = new LoginScopesArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferen
 import com.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkArgs extends ResourceArgs {
 
     public static final LinkArgs Empty = new LinkArgs();
 

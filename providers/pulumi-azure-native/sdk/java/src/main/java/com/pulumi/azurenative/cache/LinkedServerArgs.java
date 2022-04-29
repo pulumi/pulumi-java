@@ -6,13 +6,14 @@ package com.pulumi.azurenative.cache;
 import com.pulumi.azurenative.cache.enums.ReplicationRole;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkedServerArgs extends ResourceArgs {
 
     public static final LinkedServerArgs Empty = new LinkedServerArgs();
 

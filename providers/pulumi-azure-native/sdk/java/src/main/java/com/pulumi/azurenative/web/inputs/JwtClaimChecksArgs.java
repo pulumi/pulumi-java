@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the checks that should be made while validating the JWT Claims.
  * 
  */
-public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs {
+public final class JwtClaimChecksArgs extends ResourceArgs {
 
     public static final JwtClaimChecksArgs Empty = new JwtClaimChecksArgs();
 

@@ -13,6 +13,7 @@ import com.pulumi.azurenative.storagecache.inputs.CacheSkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheArgs extends ResourceArgs {
 
     public static final CacheArgs Empty = new CacheArgs();
 

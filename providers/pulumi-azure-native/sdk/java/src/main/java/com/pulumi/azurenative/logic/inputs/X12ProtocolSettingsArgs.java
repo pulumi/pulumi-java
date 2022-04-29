@@ -17,6 +17,7 @@ import com.pulumi.azurenative.logic.inputs.X12ValidationOverrideArgs;
 import com.pulumi.azurenative.logic.inputs.X12ValidationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * The X12 agreement protocol settings.
  * 
  */
-public final class X12ProtocolSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12ProtocolSettingsArgs extends ResourceArgs {
 
     public static final X12ProtocolSettingsArgs Empty = new X12ProtocolSettingsArgs();
 

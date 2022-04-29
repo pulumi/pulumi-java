@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Object to define the number of days after creation.
  * 
  */
-public final class DateAfterCreationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DateAfterCreationArgs extends ResourceArgs {
 
     public static final DateAfterCreationArgs Empty = new DateAfterCreationArgs();
 

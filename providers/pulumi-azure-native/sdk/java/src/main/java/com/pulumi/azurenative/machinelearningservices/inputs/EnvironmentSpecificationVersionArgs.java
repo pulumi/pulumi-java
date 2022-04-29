@@ -9,6 +9,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerP
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/specification.html&#34; /&gt;
  * 
  */
-public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentSpecificationVersionArgs extends ResourceArgs {
 
     public static final EnvironmentSpecificationVersionArgs Empty = new EnvironmentSpecificationVersionArgs();
 

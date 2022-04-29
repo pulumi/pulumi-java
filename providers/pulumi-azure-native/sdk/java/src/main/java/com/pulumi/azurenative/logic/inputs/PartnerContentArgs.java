@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.B2BPartnerContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The integration account partner content.
  * 
  */
-public final class PartnerContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class PartnerContentArgs extends ResourceArgs {
 
     public static final PartnerContentArgs Empty = new PartnerContentArgs();
 

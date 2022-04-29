@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * IaaS VM workload-specific backup item representing a classic virtual machine.
  * 
  */
-public final class AzureIaaSClassicComputeVMContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureIaaSClassicComputeVMContainerArgs extends ResourceArgs {
 
     public static final AzureIaaSClassicComputeVMContainerArgs Empty = new AzureIaaSClassicComputeVMContainerArgs();
 

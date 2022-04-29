@@ -5,6 +5,7 @@ package com.pulumi.azurenative.portal;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TenantConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TenantConfigurationArgs extends ResourceArgs {
 
     public static final TenantConfigurationArgs Empty = new TenantConfigurationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.enums.GpuSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * The GPU resource.
  * 
  */
-public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GpuResourceArgs extends ResourceArgs {
 
     public static final GpuResourceArgs Empty = new GpuResourceArgs();
 

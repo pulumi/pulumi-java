@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.AzureStaticWebAppsRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the Azure Static Web Apps provider.
  * 
  */
-public final class AzureStaticWebAppsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureStaticWebAppsArgs extends ResourceArgs {
 
     public static final AzureStaticWebAppsArgs Empty = new AzureStaticWebAppsArgs();
 

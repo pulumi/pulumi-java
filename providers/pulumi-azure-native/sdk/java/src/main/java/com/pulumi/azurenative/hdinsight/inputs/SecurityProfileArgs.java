@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.enums.DirectoryType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The security profile which contains Ssh public key for the HDInsight cluster.
  * 
  */
-public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileArgs extends ResourceArgs {
 
     public static final SecurityProfileArgs Empty = new SecurityProfileArgs();
 

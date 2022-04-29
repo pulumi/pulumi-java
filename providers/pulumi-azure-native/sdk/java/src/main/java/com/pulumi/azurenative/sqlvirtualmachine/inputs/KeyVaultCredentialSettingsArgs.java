@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configure your SQL virtual machine to be able to connect to the Azure Key Vault service.
  * 
  */
-public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultCredentialSettingsArgs extends ResourceArgs {
 
     public static final KeyVaultCredentialSettingsArgs Empty = new KeyVaultCredentialSettingsArgs();
 

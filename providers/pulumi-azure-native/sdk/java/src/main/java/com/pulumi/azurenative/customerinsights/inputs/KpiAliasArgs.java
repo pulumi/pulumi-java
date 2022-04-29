@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The KPI alias.
  * 
  */
-public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
+public final class KpiAliasArgs extends ResourceArgs {
 
     public static final KpiAliasArgs Empty = new KpiAliasArgs();
 

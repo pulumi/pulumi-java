@@ -12,6 +12,7 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskPa
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set operating system disk.
  * 
  */
-public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetOSDiskArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetOSDiskArgs Empty = new VirtualMachineScaleSetOSDiskArgs();
 

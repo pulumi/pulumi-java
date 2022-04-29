@@ -7,6 +7,7 @@ import com.pulumi.azurenative.hybridcompute.enums.PublicNetworkAccessType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties that define a Azure Arc PrivateLinkScope resource.
  * 
  */
-public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class HybridComputePrivateLinkScopePropertiesArgs extends ResourceArgs {
 
     public static final HybridComputePrivateLinkScopePropertiesArgs Empty = new HybridComputePrivateLinkScopePropertiesArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.cdn.inputs.MatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Defines a rate limiting rule that can be included in a waf policy
  * 
  */
-public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RateLimitRuleArgs extends ResourceArgs {
 
     public static final RateLimitRuleArgs Empty = new RateLimitRuleArgs();
 

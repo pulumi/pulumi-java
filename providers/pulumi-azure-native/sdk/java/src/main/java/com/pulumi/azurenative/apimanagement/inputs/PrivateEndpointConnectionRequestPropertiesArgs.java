@@ -6,6 +6,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The connection state of the private endpoint connection.
  * 
  */
-public final class PrivateEndpointConnectionRequestPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionRequestPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionRequestPropertiesArgs Empty = new PrivateEndpointConnectionRequestPropertiesArgs();
 

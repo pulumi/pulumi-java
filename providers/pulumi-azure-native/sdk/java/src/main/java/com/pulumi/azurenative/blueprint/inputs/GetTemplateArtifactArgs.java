@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.blueprint.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTemplateArtifactArgs extends InvokeArgs {
 
     public static final GetTemplateArtifactArgs Empty = new GetTemplateArtifactArgs();
 

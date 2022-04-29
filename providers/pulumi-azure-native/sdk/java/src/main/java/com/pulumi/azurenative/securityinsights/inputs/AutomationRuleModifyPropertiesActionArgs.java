@@ -7,6 +7,7 @@ import com.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyProper
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Describes an automation rule action to modify an object&#39;s properties
  * 
  */
-public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationRuleModifyPropertiesActionArgs extends ResourceArgs {
 
     public static final AutomationRuleModifyPropertiesActionArgs Empty = new AutomationRuleModifyPropertiesActionArgs();
 

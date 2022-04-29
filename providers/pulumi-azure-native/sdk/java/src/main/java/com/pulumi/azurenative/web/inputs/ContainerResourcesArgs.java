@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Container App container resource requirements.
  * 
  */
-public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerResourcesArgs extends ResourceArgs {
 
     public static final ContainerResourcesArgs Empty = new ContainerResourcesArgs();
 

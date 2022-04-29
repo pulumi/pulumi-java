@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Gets or sets the availability set resource settings.
  * 
  */
-public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AvailabilitySetResourceSettingsArgs extends ResourceArgs {
 
     public static final AvailabilitySetResourceSettingsArgs Empty = new AvailabilitySetResourceSettingsArgs();
 

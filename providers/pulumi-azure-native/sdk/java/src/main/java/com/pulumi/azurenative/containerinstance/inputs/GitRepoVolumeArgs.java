@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a volume that is populated with the contents of a git repository
  * 
  */
-public final class GitRepoVolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitRepoVolumeArgs extends ResourceArgs {
 
     public static final GitRepoVolumeArgs Empty = new GitRepoVolumeArgs();
 

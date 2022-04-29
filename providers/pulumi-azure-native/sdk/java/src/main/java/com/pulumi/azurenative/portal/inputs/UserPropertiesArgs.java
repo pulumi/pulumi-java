@@ -10,6 +10,7 @@ import com.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +19,7 @@ import java.util.Objects;
  * The cloud shell user settings properties.
  * 
  */
-public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPropertiesArgs extends ResourceArgs {
 
     public static final UserPropertiesArgs Empty = new UserPropertiesArgs();
 

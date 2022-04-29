@@ -5,6 +5,7 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The subscription role receiver value.
  * 
  */
-public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubscriptionReceiverValueArgs extends ResourceArgs {
 
     public static final SubscriptionReceiverValueArgs Empty = new SubscriptionReceiverValueArgs();
 

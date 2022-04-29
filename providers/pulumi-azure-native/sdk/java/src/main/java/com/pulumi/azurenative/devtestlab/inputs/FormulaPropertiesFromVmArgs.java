@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Information about a VM from which a formula is to be created.
  * 
  */
-public final class FormulaPropertiesFromVmArgs extends com.pulumi.resources.ResourceArgs {
+public final class FormulaPropertiesFromVmArgs extends ResourceArgs {
 
     public static final FormulaPropertiesFromVmArgs Empty = new FormulaPropertiesFromVmArgs();
 

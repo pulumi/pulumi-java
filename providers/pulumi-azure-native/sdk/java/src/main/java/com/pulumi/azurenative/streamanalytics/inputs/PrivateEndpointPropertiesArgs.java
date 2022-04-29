@@ -6,6 +6,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The properties associated with a private endpoint.
  * 
  */
-public final class PrivateEndpointPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointPropertiesArgs Empty = new PrivateEndpointPropertiesArgs();
 

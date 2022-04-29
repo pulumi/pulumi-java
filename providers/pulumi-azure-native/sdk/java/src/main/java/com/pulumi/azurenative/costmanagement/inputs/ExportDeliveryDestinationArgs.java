@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The destination information for the delivery of the export. To allow access to a storage account, you must register the account&#39;s subscription with the Microsoft.CostManagementExports resource provider. This is required once per subscription. When creating an export in the Azure portal, it is done automatically, however API users need to register the subscription. For more information see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services .
  * 
  */
-public final class ExportDeliveryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportDeliveryDestinationArgs extends ResourceArgs {
 
     public static final ExportDeliveryDestinationArgs Empty = new ExportDeliveryDestinationArgs();
 

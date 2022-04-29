@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOpe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * Recovery plan action details.
  * 
  */
-public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecoveryPlanActionArgs extends ResourceArgs {
 
     public static final RecoveryPlanActionArgs Empty = new RecoveryPlanActionArgs();
 

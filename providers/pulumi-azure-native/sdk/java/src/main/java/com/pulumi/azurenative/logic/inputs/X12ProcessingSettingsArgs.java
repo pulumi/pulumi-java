@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The X12 processing settings.
  * 
  */
-public final class X12ProcessingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12ProcessingSettingsArgs extends ResourceArgs {
 
     public static final X12ProcessingSettingsArgs Empty = new X12ProcessingSettingsArgs();
 

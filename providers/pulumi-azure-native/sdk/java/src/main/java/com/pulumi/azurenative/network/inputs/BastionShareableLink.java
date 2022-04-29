@@ -5,6 +5,8 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.inputs.VM;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -12,7 +14,7 @@ import java.util.Objects;
  * Bastion Shareable Link.
  * 
  */
-public final class BastionShareableLink extends com.pulumi.resources.InvokeArgs {
+public final class BastionShareableLink extends InvokeArgs {
 
     public static final BastionShareableLink Empty = new BastionShareableLink();
 

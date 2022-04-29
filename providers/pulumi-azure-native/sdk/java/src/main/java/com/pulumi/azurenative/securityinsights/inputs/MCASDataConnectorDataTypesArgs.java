@@ -6,6 +6,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The available data types for MCAS (Microsoft Cloud App Security) data connector.
  * 
  */
-public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MCASDataConnectorDataTypesArgs extends ResourceArgs {
 
     public static final MCASDataConnectorDataTypesArgs Empty = new MCASDataConnectorDataTypesArgs();
 

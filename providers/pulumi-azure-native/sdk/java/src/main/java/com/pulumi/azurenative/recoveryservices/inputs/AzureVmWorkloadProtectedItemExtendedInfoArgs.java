@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Additional information on Azure Workload for SQL specific backup item.
  * 
  */
-public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends ResourceArgs {
 
     public static final AzureVmWorkloadProtectedItemExtendedInfoArgs Empty = new AzureVmWorkloadProtectedItemExtendedInfoArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Details of the data to be used for importing data to azure.
  * 
  */
-public final class DataImportDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataImportDetailsArgs extends ResourceArgs {
 
     public static final DataImportDetailsArgs Empty = new DataImportDetailsArgs();
 

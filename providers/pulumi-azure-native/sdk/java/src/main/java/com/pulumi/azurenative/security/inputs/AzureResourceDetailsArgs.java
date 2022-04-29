@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Details of the Azure resource that was assessed
  * 
  */
-public final class AzureResourceDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureResourceDetailsArgs extends ResourceArgs {
 
     public static final AzureResourceDetailsArgs Empty = new AzureResourceDetailsArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.logic.enums.X12CharacterSet;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * The X12 agreement framing settings.
  * 
  */
-public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12FramingSettingsArgs extends ResourceArgs {
 
     public static final X12FramingSettingsArgs Empty = new X12FramingSettingsArgs();
 

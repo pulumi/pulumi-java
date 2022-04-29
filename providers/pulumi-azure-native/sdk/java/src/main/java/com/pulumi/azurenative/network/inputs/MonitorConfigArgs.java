@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.MonitorConfigExpectedStatusCodeRang
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Class containing endpoint monitoring settings in a Traffic Manager profile.
  * 
  */
-public final class MonitorConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitorConfigArgs extends ResourceArgs {
 
     public static final MonitorConfigArgs Empty = new MonitorConfigArgs();
 

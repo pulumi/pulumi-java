@@ -6,6 +6,7 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specify either the userName or autoUser property, but not both.
  * 
  */
-public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserIdentityArgs extends ResourceArgs {
 
     public static final UserIdentityArgs Empty = new UserIdentityArgs();
 

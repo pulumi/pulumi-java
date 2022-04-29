@@ -8,6 +8,7 @@ import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * The storage account blob inventory policy rules.
  * 
  */
-public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobInventoryPolicySchemaArgs extends ResourceArgs {
 
     public static final BlobInventoryPolicySchemaArgs Empty = new BlobInventoryPolicySchemaArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.azurenative.cognitiveservices;
 import com.pulumi.azurenative.cognitiveservices.inputs.CommitmentPlanPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class CommitmentPlanArgs extends ResourceArgs {
 
     public static final CommitmentPlanArgs Empty = new CommitmentPlanArgs();
 

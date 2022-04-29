@@ -7,6 +7,7 @@ import com.pulumi.azurenative.blueprint.enums.TemplateParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Represent a parameter with constrains and metadata.
  * 
  */
-public final class ParameterDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterDefinitionArgs extends ResourceArgs {
 
     public static final ParameterDefinitionArgs Empty = new ParameterDefinitionArgs();
 

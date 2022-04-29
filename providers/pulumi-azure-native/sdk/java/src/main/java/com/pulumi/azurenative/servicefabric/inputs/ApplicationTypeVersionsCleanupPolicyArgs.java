@@ -5,11 +5,12 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class ApplicationTypeVersionsCleanupPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationTypeVersionsCleanupPolicyArgs extends ResourceArgs {
 
     public static final ApplicationTypeVersionsCleanupPolicyArgs Empty = new ApplicationTypeVersionsCleanupPolicyArgs();
 

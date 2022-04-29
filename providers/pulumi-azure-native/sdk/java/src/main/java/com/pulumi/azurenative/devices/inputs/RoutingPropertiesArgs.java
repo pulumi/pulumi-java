@@ -9,6 +9,7 @@ import com.pulumi.azurenative.devices.inputs.RoutePropertiesArgs;
 import com.pulumi.azurenative.devices.inputs.RoutingEndpointsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
  * 
  */
-public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutingPropertiesArgs extends ResourceArgs {
 
     public static final RoutingPropertiesArgs Empty = new RoutingPropertiesArgs();
 

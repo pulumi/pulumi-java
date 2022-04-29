@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Container extended information
  * 
  */
-public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class GenericContainerExtendedInfoArgs extends ResourceArgs {
 
     public static final GenericContainerExtendedInfoArgs Empty = new GenericContainerExtendedInfoArgs();
 

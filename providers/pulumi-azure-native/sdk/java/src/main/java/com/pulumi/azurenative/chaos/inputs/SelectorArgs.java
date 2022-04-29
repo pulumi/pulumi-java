@@ -7,6 +7,7 @@ import com.pulumi.azurenative.chaos.enums.SelectorType;
 import com.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Model that represents a selector in the Experiment resource.
  * 
  */
-public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class SelectorArgs extends ResourceArgs {
 
     public static final SelectorArgs Empty = new SelectorArgs();
 

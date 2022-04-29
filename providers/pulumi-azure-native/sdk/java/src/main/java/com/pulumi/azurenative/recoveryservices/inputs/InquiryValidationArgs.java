@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Validation for inquired protectable items under a given container.
  * 
  */
-public final class InquiryValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class InquiryValidationArgs extends ResourceArgs {
 
     public static final InquiryValidationArgs Empty = new InquiryValidationArgs();
 

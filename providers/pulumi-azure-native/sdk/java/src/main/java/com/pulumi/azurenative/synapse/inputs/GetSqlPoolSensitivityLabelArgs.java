@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSqlPoolSensitivityLabelArgs extends InvokeArgs {
 
     public static final GetSqlPoolSensitivityLabelArgs Empty = new GetSqlPoolSensitivityLabelArgs();
 

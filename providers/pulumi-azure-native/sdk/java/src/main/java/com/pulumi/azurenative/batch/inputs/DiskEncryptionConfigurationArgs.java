@@ -6,6 +6,7 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The disk encryption configuration applied on compute nodes in the pool. Disk encryption configuration is not supported on Linux pool created with Virtual Machine Image or Shared Image Gallery Image.
  * 
  */
-public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final DiskEncryptionConfigurationArgs Empty = new DiskEncryptionConfigurationArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The data controller properties.
  * 
  */
-public final class DataControllerPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataControllerPropertiesArgs extends ResourceArgs {
 
     public static final DataControllerPropertiesArgs Empty = new DataControllerPropertiesArgs();
 

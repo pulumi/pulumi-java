@@ -7,6 +7,7 @@ import com.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValu
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes an automation rule condition that evaluates a property&#39;s value
  * 
  */
-public final class AutomationRulePropertyValuesConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationRulePropertyValuesConditionArgs extends ResourceArgs {
 
     public static final AutomationRulePropertyValuesConditionArgs Empty = new AutomationRulePropertyValuesConditionArgs();
 

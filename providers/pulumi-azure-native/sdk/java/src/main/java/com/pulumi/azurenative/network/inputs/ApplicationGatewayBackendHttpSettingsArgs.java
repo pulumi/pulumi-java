@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Backend address pool settings of an application gateway.
  * 
  */
-public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayBackendHttpSettingsArgs extends ResourceArgs {
 
     public static final ApplicationGatewayBackendHttpSettingsArgs Empty = new ApplicationGatewayBackendHttpSettingsArgs();
 

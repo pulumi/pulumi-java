@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information about the machine learning workspace containing the experiment that is source for the web service.
  * 
  */
-public final class MachineLearningWorkspaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class MachineLearningWorkspaceArgs extends ResourceArgs {
 
     public static final MachineLearningWorkspaceArgs Empty = new MachineLearningWorkspaceArgs();
 

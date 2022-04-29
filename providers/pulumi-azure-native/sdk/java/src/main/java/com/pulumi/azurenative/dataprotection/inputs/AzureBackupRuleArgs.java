@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Azure backup rule
  * 
  */
-public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureBackupRuleArgs extends ResourceArgs {
 
     public static final AzureBackupRuleArgs Empty = new AzureBackupRuleArgs();
 

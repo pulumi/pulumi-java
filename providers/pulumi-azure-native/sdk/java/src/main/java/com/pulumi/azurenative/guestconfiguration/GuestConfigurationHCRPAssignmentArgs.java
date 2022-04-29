@@ -6,13 +6,14 @@ package com.pulumi.azurenative.guestconfiguration;
 import com.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestConfigurationHCRPAssignmentArgs extends ResourceArgs {
 
     public static final GuestConfigurationHCRPAssignmentArgs Empty = new GuestConfigurationHCRPAssignmentArgs();
 

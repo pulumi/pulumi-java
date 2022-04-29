@@ -12,6 +12,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExpressRouteCircuitArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressRouteCircuitArgs extends ResourceArgs {
 
     public static final ExpressRouteCircuitArgs Empty = new ExpressRouteCircuitArgs();
 

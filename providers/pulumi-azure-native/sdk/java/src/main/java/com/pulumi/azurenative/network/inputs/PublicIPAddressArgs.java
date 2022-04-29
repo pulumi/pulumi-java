@@ -16,6 +16,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * Public IP address resource.
  * 
  */
-public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicIPAddressArgs extends ResourceArgs {
 
     public static final PublicIPAddressArgs Empty = new PublicIPAddressArgs();
 

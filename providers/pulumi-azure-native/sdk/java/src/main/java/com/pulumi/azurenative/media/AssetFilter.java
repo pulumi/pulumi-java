@@ -14,6 +14,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +37,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:media:AssetFilter")
-public class AssetFilter extends com.pulumi.resources.CustomResource {
+public class AssetFilter extends CustomResource {
     /**
      * The first quality.
      * 
@@ -142,16 +144,16 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AssetFilter(String name, AssetFilterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AssetFilter(String name, AssetFilterArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:media:AssetFilter", name, args == null ? AssetFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AssetFilter(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AssetFilter(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:media:AssetFilter", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:media/v20180701:AssetFilter").build()),
@@ -159,7 +161,7 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20210601:AssetFilter").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -170,7 +172,7 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AssetFilter get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AssetFilter get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AssetFilter(name, id, options);
     }
 }

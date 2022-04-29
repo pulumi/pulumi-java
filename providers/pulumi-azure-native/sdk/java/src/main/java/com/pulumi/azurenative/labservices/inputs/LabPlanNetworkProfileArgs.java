@@ -5,6 +5,7 @@ package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Profile for how to handle networking for Lab Plans.
  * 
  */
-public final class LabPlanNetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabPlanNetworkProfileArgs extends ResourceArgs {
 
     public static final LabPlanNetworkProfileArgs Empty = new LabPlanNetworkProfileArgs();
 

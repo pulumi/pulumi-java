@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetIntegrationServiceEnvironmentManagedApiArgs extends InvokeArgs {
 
     public static final GetIntegrationServiceEnvironmentManagedApiArgs Empty = new GetIntegrationServiceEnvironmentManagedApiArgs();
 

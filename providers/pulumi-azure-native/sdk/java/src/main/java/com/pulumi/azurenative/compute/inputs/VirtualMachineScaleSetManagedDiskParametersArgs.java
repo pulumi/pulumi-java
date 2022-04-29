@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the parameters of a ScaleSet managed disk.
  * 
  */
-public final class VirtualMachineScaleSetManagedDiskParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetManagedDiskParametersArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetManagedDiskParametersArgs Empty = new VirtualMachineScaleSetManagedDiskParametersArgs();
 

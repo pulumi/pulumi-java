@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Settings that apply to all backend pools.
  * 
  */
-public final class BackendPoolsSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendPoolsSettingsArgs extends ResourceArgs {
 
     public static final BackendPoolsSettingsArgs Empty = new BackendPoolsSettingsArgs();
 

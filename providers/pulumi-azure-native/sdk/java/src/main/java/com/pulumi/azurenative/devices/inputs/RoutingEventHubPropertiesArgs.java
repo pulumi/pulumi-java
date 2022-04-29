@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devices.enums.AuthenticationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties related to an event hub endpoint.
  * 
  */
-public final class RoutingEventHubPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutingEventHubPropertiesArgs extends ResourceArgs {
 
     public static final RoutingEventHubPropertiesArgs Empty = new RoutingEventHubPropertiesArgs();
 

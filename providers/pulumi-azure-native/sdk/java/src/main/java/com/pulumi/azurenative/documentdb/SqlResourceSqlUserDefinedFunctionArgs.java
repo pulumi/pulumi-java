@@ -7,6 +7,7 @@ import com.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import com.pulumi.azurenative.documentdb.inputs.SqlUserDefinedFunctionResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlResourceSqlUserDefinedFunctionArgs extends ResourceArgs {
 
     public static final SqlResourceSqlUserDefinedFunctionArgs Empty = new SqlResourceSqlUserDefinedFunctionArgs();
 

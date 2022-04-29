@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.DeliveryRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A policy that specifies the delivery rules to be used for an endpoint.
  * 
  */
-public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends ResourceArgs {
 
     public static final EndpointPropertiesUpdateParametersDeliveryPolicyArgs Empty = new EndpointPropertiesUpdateParametersDeliveryPolicyArgs();
 

@@ -5,13 +5,14 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class VmUptimeArgs extends ResourceArgs {
 
     public static final VmUptimeArgs Empty = new VmUptimeArgs();
 

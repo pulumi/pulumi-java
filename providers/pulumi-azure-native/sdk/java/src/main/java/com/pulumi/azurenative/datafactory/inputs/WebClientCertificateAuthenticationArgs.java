@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * A WebLinkedService that uses client certificate based authentication to communicate with an HTTP endpoint. This scheme follows mutual authentication; the server must also provide valid credentials to the client.
  * 
  */
-public final class WebClientCertificateAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebClientCertificateAuthenticationArgs extends ResourceArgs {
 
     public static final WebClientCertificateAuthenticationArgs Empty = new WebClientCertificateAuthenticationArgs();
 

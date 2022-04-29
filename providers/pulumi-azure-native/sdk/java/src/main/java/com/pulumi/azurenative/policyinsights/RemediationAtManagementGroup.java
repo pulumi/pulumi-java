@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:policyinsights:RemediationAtManagementGroup")
-public class RemediationAtManagementGroup extends com.pulumi.resources.CustomResource {
+public class RemediationAtManagementGroup extends CustomResource {
     /**
      * The time at which the remediation was created.
      * 
@@ -196,16 +198,16 @@ public class RemediationAtManagementGroup extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RemediationAtManagementGroup(String name, RemediationAtManagementGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public RemediationAtManagementGroup(String name, RemediationAtManagementGroupArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:policyinsights:RemediationAtManagementGroup", name, args == null ? RemediationAtManagementGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private RemediationAtManagementGroup(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private RemediationAtManagementGroup(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:policyinsights:RemediationAtManagementGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:policyinsights/v20180701preview:RemediationAtManagementGroup").build()),
@@ -213,7 +215,7 @@ public class RemediationAtManagementGroup extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:policyinsights/v20211001:RemediationAtManagementGroup").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -224,7 +226,7 @@ public class RemediationAtManagementGroup extends com.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RemediationAtManagementGroup get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RemediationAtManagementGroup get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new RemediationAtManagementGroup(name, id, options);
     }
 }

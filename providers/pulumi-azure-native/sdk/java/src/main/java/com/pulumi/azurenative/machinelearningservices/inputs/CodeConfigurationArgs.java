@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration for a scoring code asset.
  * 
  */
-public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CodeConfigurationArgs extends ResourceArgs {
 
     public static final CodeConfigurationArgs Empty = new CodeConfigurationArgs();
 

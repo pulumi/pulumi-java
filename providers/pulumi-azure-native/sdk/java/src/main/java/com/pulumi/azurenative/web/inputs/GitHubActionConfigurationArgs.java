@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationArgs;
 import com.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The GitHub action configuration.
  * 
  */
-public final class GitHubActionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GitHubActionConfigurationArgs extends ResourceArgs {
 
     public static final GitHubActionConfigurationArgs Empty = new GitHubActionConfigurationArgs();
 

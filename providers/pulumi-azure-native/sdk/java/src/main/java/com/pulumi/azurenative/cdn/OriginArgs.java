@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginArgs extends ResourceArgs {
 
     public static final OriginArgs Empty = new OriginArgs();
 

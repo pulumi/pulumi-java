@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Route Filter Rule Resource.
  * 
  */
-public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteFilterRuleArgs extends ResourceArgs {
 
     public static final RouteFilterRuleArgs Empty = new RouteFilterRuleArgs();
 

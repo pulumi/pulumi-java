@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncTask
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
  * 
  */
-public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final MigrateSqlServerSqlDbSyncTaskPropertiesArgs Empty = new MigrateSqlServerSqlDbSyncTaskPropertiesArgs();
 

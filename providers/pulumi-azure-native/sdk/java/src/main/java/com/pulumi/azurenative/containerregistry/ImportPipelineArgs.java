@@ -10,6 +10,7 @@ import com.pulumi.azurenative.containerregistry.inputs.PipelineTriggerProperties
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImportPipelineArgs extends ResourceArgs {
 
     public static final ImportPipelineArgs Empty = new ImportPipelineArgs();
 

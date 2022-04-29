@@ -7,6 +7,7 @@ import com.pulumi.azurenative.azureactivedirectory.inputs.B2CResourceSKUArgs;
 import com.pulumi.azurenative.azureactivedirectory.inputs.CreateTenantRequestBodyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
+public final class B2CTenantArgs extends ResourceArgs {
 
     public static final B2CTenantArgs Empty = new B2CTenantArgs();
 

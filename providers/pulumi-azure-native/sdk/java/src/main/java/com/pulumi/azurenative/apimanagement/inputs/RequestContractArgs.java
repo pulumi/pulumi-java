@@ -7,6 +7,7 @@ import com.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import com.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Operation request details.
  * 
  */
-public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class RequestContractArgs extends ResourceArgs {
 
     public static final RequestContractArgs Empty = new RequestContractArgs();
 

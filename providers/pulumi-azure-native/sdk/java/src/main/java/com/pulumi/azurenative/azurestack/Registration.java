@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:azurestack:Registration")
-public class Registration extends com.pulumi.resources.CustomResource {
+public class Registration extends CustomResource {
     /**
      * Specifies the billing mode for the Azure Stack registration.
      * 
@@ -167,16 +169,16 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Registration(String name, RegistrationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Registration(String name, RegistrationArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:azurestack:Registration", name, args == null ? RegistrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Registration(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Registration(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:azurestack:Registration", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:azurestack/v20160101:Registration").build()),
@@ -184,7 +186,7 @@ public class Registration extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:azurestack/v20200601preview:Registration").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -195,7 +197,7 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Registration get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Registration get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Registration(name, id, options);
     }
 }

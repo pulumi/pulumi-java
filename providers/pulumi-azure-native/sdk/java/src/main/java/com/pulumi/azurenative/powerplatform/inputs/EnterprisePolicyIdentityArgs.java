@@ -6,6 +6,7 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The identity of the EnterprisePolicy.
  * 
  */
-public final class EnterprisePolicyIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterprisePolicyIdentityArgs extends ResourceArgs {
 
     public static final EnterprisePolicyIdentityArgs Empty = new EnterprisePolicyIdentityArgs();
 

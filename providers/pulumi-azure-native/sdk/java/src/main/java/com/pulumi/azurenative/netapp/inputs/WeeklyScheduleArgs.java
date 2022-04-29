@@ -5,6 +5,7 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Weekly Schedule properties, make a snapshot every week at a specific day or days
  * 
  */
-public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WeeklyScheduleArgs extends ResourceArgs {
 
     public static final WeeklyScheduleArgs Empty = new WeeklyScheduleArgs();
 

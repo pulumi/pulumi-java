@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearning.enums.DiagnosticsLevel;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Diagnostics settings for an Azure ML web service.
  * 
  */
-public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiagnosticsConfigurationArgs extends ResourceArgs {
 
     public static final DiagnosticsConfigurationArgs Empty = new DiagnosticsConfigurationArgs();
 

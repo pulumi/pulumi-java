@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.OpenIdConnectLoginArgs;
 import com.pulumi.azurenative.web.inputs.OpenIdConnectRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the custom Open ID Connect provider.
  * 
  */
-public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomOpenIdConnectProviderArgs extends ResourceArgs {
 
     public static final CustomOpenIdConnectProviderArgs Empty = new CustomOpenIdConnectProviderArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The Audio Analyzer preset applies a pre-defined set of AI-based analysis operations, including speech transcription. Currently, the preset supports processing of content with a single audio track.
  * 
  */
-public final class AudioAnalyzerPresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AudioAnalyzerPresetArgs extends ResourceArgs {
 
     public static final AudioAnalyzerPresetArgs Empty = new AudioAnalyzerPresetArgs();
 

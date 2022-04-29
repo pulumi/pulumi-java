@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Azure VM (Mercury) workload-specific backup policy.
  * 
  */
-public final class GenericProtectionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GenericProtectionPolicyArgs extends ResourceArgs {
 
     public static final GenericProtectionPolicyArgs Empty = new GenericProtectionPolicyArgs();
 

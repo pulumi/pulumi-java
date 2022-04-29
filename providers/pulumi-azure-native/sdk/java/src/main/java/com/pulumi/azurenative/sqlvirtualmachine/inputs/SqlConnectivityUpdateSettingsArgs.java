@@ -7,6 +7,7 @@ import com.pulumi.azurenative.sqlvirtualmachine.enums.ConnectivityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Set the access level and network port settings for SQL Server.
  * 
  */
-public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlConnectivityUpdateSettingsArgs extends ResourceArgs {
 
     public static final SqlConnectivityUpdateSettingsArgs Empty = new SqlConnectivityUpdateSettingsArgs();
 

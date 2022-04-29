@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DiskExclusionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Extended Properties for Azure IaasVM Backup.
  * 
  */
-public final class ExtendedPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExtendedPropertiesArgs extends ResourceArgs {
 
     public static final ExtendedPropertiesArgs Empty = new ExtendedPropertiesArgs();
 

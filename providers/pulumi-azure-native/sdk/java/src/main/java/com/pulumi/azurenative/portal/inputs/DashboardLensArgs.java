@@ -6,6 +6,7 @@ package com.pulumi.azurenative.portal.inputs;
 import com.pulumi.azurenative.portal.inputs.DashboardPartsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A dashboard lens.
  * 
  */
-public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
+public final class DashboardLensArgs extends ResourceArgs {
 
     public static final DashboardLensArgs Empty = new DashboardLensArgs();
 

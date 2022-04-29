@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:network:P2sVpnGateway")
-public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
+public class P2sVpnGateway extends CustomResource {
     /**
      * List of all customer specified DNS servers IP addresses.
      * 
@@ -242,16 +244,16 @@ public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public P2sVpnGateway(String name, P2sVpnGatewayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public P2sVpnGateway(String name, P2sVpnGatewayArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:network:P2sVpnGateway", name, args == null ? P2sVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private P2sVpnGateway(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private P2sVpnGateway(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:network:P2sVpnGateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20180801:P2sVpnGateway").build()),
@@ -278,7 +280,7 @@ public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20210501:P2sVpnGateway").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -289,7 +291,7 @@ public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static P2sVpnGateway get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static P2sVpnGateway get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new P2sVpnGateway(name, id, options);
     }
 }

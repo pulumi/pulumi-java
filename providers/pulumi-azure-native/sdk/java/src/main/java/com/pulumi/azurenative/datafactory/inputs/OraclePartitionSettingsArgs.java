@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The settings that will be leveraged for Oracle source partitioning.
  * 
  */
-public final class OraclePartitionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class OraclePartitionSettingsArgs extends ResourceArgs {
 
     public static final OraclePartitionSettingsArgs Empty = new OraclePartitionSettingsArgs();
 

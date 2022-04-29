@@ -6,6 +6,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.AutoscaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are &#34;If-Match&#34;, &#34;If-None-Match&#34;, &#34;Session-Token&#34; and &#34;Throughput&#34;
  * 
  */
-public final class CreateUpdateOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateUpdateOptionsArgs extends ResourceArgs {
 
     public static final CreateUpdateOptionsArgs Empty = new CreateUpdateOptionsArgs();
 

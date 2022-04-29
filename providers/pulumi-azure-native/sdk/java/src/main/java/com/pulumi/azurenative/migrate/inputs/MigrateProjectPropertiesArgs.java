@@ -7,6 +7,7 @@ import com.pulumi.azurenative.migrate.enums.ProvisioningState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Class for migrate project properties.
  * 
  */
-public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateProjectPropertiesArgs extends ResourceArgs {
 
     public static final MigrateProjectPropertiesArgs Empty = new MigrateProjectPropertiesArgs();
 

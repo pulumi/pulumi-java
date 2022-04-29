@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.enums.IpFilterTag;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * IP security restriction on an app.
  * 
  */
-public final class IpSecurityRestrictionArgs extends com.pulumi.resources.ResourceArgs {
+public final class IpSecurityRestrictionArgs extends ResourceArgs {
 
     public static final IpSecurityRestrictionArgs Empty = new IpSecurityRestrictionArgs();
 

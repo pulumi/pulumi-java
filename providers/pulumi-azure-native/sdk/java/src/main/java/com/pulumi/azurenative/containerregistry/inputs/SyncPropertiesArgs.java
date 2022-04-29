@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The sync properties of the connected registry with its parent.
  * 
  */
-public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SyncPropertiesArgs extends ResourceArgs {
 
     public static final SyncPropertiesArgs Empty = new SyncPropertiesArgs();
 

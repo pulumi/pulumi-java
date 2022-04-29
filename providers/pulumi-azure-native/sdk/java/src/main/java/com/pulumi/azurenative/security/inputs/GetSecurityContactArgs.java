@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSecurityContactArgs extends InvokeArgs {
 
     public static final GetSecurityContactArgs Empty = new GetSecurityContactArgs();
 

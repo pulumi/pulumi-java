@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.ArmTemplateParameterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties of an environment deployment.
  * 
  */
-public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentDeploymentPropertiesArgs extends ResourceArgs {
 
     public static final EnvironmentDeploymentPropertiesArgs Empty = new EnvironmentDeploymentPropertiesArgs();
 

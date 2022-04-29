@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines reference to load balancer NAT rules.
  * 
  */
-public final class LoadBalancerNatRuleReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerNatRuleReferenceArgs extends ResourceArgs {
 
     public static final LoadBalancerNatRuleReferenceArgs Empty = new LoadBalancerNatRuleReferenceArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.enums.BuiltInAuthenticationProvider;
 import com.pulumi.azurenative.web.enums.UnauthenticatedClientAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAppAuthSettingsSlotArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAppAuthSettingsSlotArgs extends ResourceArgs {
 
     public static final WebAppAuthSettingsSlotArgs Empty = new WebAppAuthSettingsSlotArgs();
 

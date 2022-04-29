@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Contains SKU in an ExpressRouteCircuit.
  * 
  */
-public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressRouteCircuitSkuArgs extends ResourceArgs {
 
     public static final ExpressRouteCircuitSkuArgs Empty = new ExpressRouteCircuitSkuArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Settings properties for Active Directory (AD).
  * 
  */
-public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActiveDirectoryPropertiesArgs extends ResourceArgs {
 
     public static final ActiveDirectoryPropertiesArgs Empty = new ActiveDirectoryPropertiesArgs();
 

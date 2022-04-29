@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.AS2OneWayAgreementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The integration account AS2 agreement content.
  * 
  */
-public final class AS2AgreementContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2AgreementContentArgs extends ResourceArgs {
 
     public static final AS2AgreementContentArgs Empty = new AS2AgreementContentArgs();
 

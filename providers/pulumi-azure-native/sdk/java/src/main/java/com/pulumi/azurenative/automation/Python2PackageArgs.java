@@ -6,6 +6,7 @@ package com.pulumi.azurenative.automation;
 import com.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class Python2PackageArgs extends ResourceArgs {
 
     public static final Python2PackageArgs Empty = new Python2PackageArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.IdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Managed service identity.
  * 
  */
-public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityArgs extends ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 

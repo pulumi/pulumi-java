@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datalakestore.inputs;
 import com.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The encryption identity properties.
  * 
  */
-public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionIdentityArgs extends ResourceArgs {
 
     public static final EncryptionIdentityArgs Empty = new EncryptionIdentityArgs();
 

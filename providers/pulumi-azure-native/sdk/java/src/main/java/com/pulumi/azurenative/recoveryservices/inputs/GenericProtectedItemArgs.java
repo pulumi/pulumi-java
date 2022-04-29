@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Base class for backup items.
  * 
  */
-public final class GenericProtectedItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class GenericProtectedItemArgs extends ResourceArgs {
 
     public static final GenericProtectedItemArgs Empty = new GenericProtectedItemArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Defender for servers connection configuration
  * 
  */
-public final class DefenderForServersAwsOfferingDefenderForServersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefenderForServersAwsOfferingDefenderForServersArgs extends ResourceArgs {
 
     public static final DefenderForServersAwsOfferingDefenderForServersArgs Empty = new DefenderForServersAwsOfferingDefenderForServersArgs();
 

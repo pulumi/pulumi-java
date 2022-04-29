@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class ListListTenantConfigurationViolationArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListListTenantConfigurationViolationArgs extends InvokeArgs {
 
     public static final ListListTenantConfigurationViolationArgs Empty = new ListListTenantConfigurationViolationArgs();
 

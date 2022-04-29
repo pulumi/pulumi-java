@@ -15,6 +15,7 @@ import com.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * IPConfiguration in a network interface.
  * 
  */
-public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceIPConfigurationArgs extends ResourceArgs {
 
     public static final NetworkInterfaceIPConfigurationArgs Empty = new NetworkInterfaceIPConfigurationArgs();
 

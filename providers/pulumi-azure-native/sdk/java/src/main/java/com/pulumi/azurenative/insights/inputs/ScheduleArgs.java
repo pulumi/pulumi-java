@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Defines how often to run the search and the time interval.
  * 
  */
-public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleArgs extends ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 

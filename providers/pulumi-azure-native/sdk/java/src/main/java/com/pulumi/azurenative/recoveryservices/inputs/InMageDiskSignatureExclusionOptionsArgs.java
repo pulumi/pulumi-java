@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Guest disk signature based disk exclusion option when doing enable protection of virtual machine in InMage provider.
  * 
  */
-public final class InMageDiskSignatureExclusionOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class InMageDiskSignatureExclusionOptionsArgs extends ResourceArgs {
 
     public static final InMageDiskSignatureExclusionOptionsArgs Empty = new InMageDiskSignatureExclusionOptionsArgs();
 

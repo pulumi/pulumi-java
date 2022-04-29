@@ -9,6 +9,7 @@ import com.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsArgs;
 import com.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Spring Cloud Gateway properties payload
  * 
  */
-public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayPropertiesArgs extends ResourceArgs {
 
     public static final GatewayPropertiesArgs Empty = new GatewayPropertiesArgs();
 

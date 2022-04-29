@@ -7,6 +7,7 @@ import com.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import com.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AddressByNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressByNameArgs extends ResourceArgs {
 
     public static final AddressByNameArgs Empty = new AddressByNameArgs();
 

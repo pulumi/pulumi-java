@@ -10,13 +10,14 @@ import com.pulumi.azurenative.web.inputs.IdentityProvidersArgs;
 import com.pulumi.azurenative.web.inputs.LoginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAppAuthSettingsV2SlotArgs extends ResourceArgs {
 
     public static final WebAppAuthSettingsV2SlotArgs Empty = new WebAppAuthSettingsV2SlotArgs();
 

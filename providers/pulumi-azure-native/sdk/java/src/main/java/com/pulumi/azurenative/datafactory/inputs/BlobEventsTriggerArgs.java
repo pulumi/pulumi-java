@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Trigger that runs every time a Blob event occurs.
  * 
  */
-public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobEventsTriggerArgs extends ResourceArgs {
 
     public static final BlobEventsTriggerArgs Empty = new BlobEventsTriggerArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Markdown part metadata.
  * 
  */
-public final class MarkdownPartMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class MarkdownPartMetadataArgs extends ResourceArgs {
 
     public static final MarkdownPartMetadataArgs Empty = new MarkdownPartMetadataArgs();
 

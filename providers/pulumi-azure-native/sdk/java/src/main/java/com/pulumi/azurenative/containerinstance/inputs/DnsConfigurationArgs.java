@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DNS configuration for the container group.
  * 
  */
-public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DnsConfigurationArgs extends ResourceArgs {
 
     public static final DnsConfigurationArgs Empty = new DnsConfigurationArgs();
 

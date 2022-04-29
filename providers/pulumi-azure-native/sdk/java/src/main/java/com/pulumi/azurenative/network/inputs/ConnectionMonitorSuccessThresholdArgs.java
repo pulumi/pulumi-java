@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the threshold for declaring a test successful.
  * 
  */
-public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionMonitorSuccessThresholdArgs extends ResourceArgs {
 
     public static final ConnectionMonitorSuccessThresholdArgs Empty = new ConnectionMonitorSuccessThresholdArgs();
 

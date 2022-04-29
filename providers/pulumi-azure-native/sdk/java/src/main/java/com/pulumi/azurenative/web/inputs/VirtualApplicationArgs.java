@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.VirtualDirectoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Virtual application in an app.
  * 
  */
-public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualApplicationArgs extends ResourceArgs {
 
     public static final VirtualApplicationArgs Empty = new VirtualApplicationArgs();
 

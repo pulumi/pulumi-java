@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.RuleManagementEventClaimsDataSourc
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case.
  * 
  */
-public final class RuleManagementEventDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleManagementEventDataSourceArgs extends ResourceArgs {
 
     public static final RuleManagementEventDataSourceArgs Empty = new RuleManagementEventDataSourceArgs();
 

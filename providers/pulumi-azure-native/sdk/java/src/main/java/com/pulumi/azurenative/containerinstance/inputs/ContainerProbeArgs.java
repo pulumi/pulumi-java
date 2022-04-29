@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.inputs.ContainerExecArgs;
 import com.pulumi.azurenative.containerinstance.inputs.ContainerHttpGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The container probe, for liveness or readiness
  * 
  */
-public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerProbeArgs extends ResourceArgs {
 
     public static final ContainerProbeArgs Empty = new ContainerProbeArgs();
 

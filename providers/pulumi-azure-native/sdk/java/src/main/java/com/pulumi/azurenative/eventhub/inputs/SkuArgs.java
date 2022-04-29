@@ -8,6 +8,7 @@ import com.pulumi.azurenative.eventhub.enums.SkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * SKU parameters supplied to the create namespace operation
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

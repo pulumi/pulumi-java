@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:costmanagement:CloudConnector")
-public class CloudConnector extends com.pulumi.resources.CustomResource {
+public class CloudConnector extends CustomResource {
     /**
      * Connector billing model
      * 
@@ -294,23 +296,23 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CloudConnector(String name, @Nullable CloudConnectorArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public CloudConnector(String name, @Nullable CloudConnectorArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:costmanagement:CloudConnector", name, args == null ? CloudConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private CloudConnector(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private CloudConnector(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:costmanagement:CloudConnector", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:costmanagement/v20180801preview:CloudConnector").build()),
                 Output.of(Alias.builder().type("azure-native:costmanagement/v20190301preview:CloudConnector").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -321,7 +323,7 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CloudConnector get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CloudConnector get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new CloudConnector(name, id, options);
     }
 }

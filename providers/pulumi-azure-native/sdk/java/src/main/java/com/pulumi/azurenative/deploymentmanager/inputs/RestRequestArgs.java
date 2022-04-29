@@ -9,6 +9,7 @@ import com.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthentica
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
  * The properties that make up a REST request
  * 
  */
-public final class RestRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class RestRequestArgs extends ResourceArgs {
 
     public static final RestRequestArgs Empty = new RestRequestArgs();
 

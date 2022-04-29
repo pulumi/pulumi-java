@@ -7,6 +7,7 @@ import com.pulumi.azurenative.webpubsub.enums.ManagedIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A class represent managed identities used for request and response
  * 
  */
-public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedIdentityArgs extends ResourceArgs {
 
     public static final ManagedIdentityArgs Empty = new ManagedIdentityArgs();
 

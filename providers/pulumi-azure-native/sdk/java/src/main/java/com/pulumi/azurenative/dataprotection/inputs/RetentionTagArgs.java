@@ -5,6 +5,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Retention tag
  * 
  */
-public final class RetentionTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetentionTagArgs extends ResourceArgs {
 
     public static final RetentionTagArgs Empty = new RetentionTagArgs();
 

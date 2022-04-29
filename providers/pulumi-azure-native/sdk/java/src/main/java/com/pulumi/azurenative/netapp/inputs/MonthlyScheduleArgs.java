@@ -5,6 +5,7 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Monthly Schedule properties
  * 
  */
-public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonthlyScheduleArgs extends ResourceArgs {
 
     public static final MonthlyScheduleArgs Empty = new MonthlyScheduleArgs();
 

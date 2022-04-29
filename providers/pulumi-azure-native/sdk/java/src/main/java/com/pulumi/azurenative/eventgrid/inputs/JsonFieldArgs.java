@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the &#39;id&#39;, &#39;topic&#39; and &#39;eventtime&#39; properties. This represents a field in the input event schema.
  * 
  */
-public final class JsonFieldArgs extends com.pulumi.resources.ResourceArgs {
+public final class JsonFieldArgs extends ResourceArgs {
 
     public static final JsonFieldArgs Empty = new JsonFieldArgs();
 

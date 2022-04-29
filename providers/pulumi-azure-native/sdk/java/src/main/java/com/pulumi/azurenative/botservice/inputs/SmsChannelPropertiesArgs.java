@@ -5,6 +5,7 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Sms channel.
  * 
  */
-public final class SmsChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SmsChannelPropertiesArgs extends ResourceArgs {
 
     public static final SmsChannelPropertiesArgs Empty = new SmsChannelPropertiesArgs();
 

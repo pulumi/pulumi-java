@@ -5,6 +5,7 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The user object receiver value.
  * 
  */
-public final class UserObjectReceiverValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserObjectReceiverValueArgs extends ResourceArgs {
 
     public static final UserObjectReceiverValueArgs Empty = new UserObjectReceiverValueArgs();
 

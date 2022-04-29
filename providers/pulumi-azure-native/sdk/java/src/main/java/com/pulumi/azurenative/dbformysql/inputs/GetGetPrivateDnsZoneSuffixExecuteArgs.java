@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.dbformysql.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class GetGetPrivateDnsZoneSuffixExecuteArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetGetPrivateDnsZoneSuffixExecuteArgs extends InvokeArgs {
 
     public static final GetGetPrivateDnsZoneSuffixExecuteArgs Empty = new GetGetPrivateDnsZoneSuffixExecuteArgs();
 

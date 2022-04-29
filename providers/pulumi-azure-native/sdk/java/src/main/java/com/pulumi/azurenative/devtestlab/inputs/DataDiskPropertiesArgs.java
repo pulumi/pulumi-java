@@ -8,6 +8,7 @@ import com.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Request body for adding a new or existing data disk to a virtual machine.
  * 
  */
-public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataDiskPropertiesArgs extends ResourceArgs {
 
     public static final DataDiskPropertiesArgs Empty = new DataDiskPropertiesArgs();
 

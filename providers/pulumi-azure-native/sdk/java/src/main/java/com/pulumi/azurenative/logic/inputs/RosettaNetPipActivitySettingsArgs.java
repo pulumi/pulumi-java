@@ -8,6 +8,7 @@ import com.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptS
 import com.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The integration account RosettaNet ProcessConfiguration activity settings.
  * 
  */
-public final class RosettaNetPipActivitySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RosettaNetPipActivitySettingsArgs extends ResourceArgs {
 
     public static final RosettaNetPipActivitySettingsArgs Empty = new RosettaNetPipActivitySettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies that the scope of the extensionInstance is Cluster
  * 
  */
-public final class ScopeClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeClusterArgs extends ResourceArgs {
 
     public static final ScopeClusterArgs Empty = new ScopeClusterArgs();
 

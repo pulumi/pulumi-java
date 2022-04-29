@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Git integration settings
  * 
  */
-public final class WorkspaceRepositoryConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceRepositoryConfigurationArgs extends ResourceArgs {
 
     public static final WorkspaceRepositoryConfigurationArgs Empty = new WorkspaceRepositoryConfigurationArgs();
 

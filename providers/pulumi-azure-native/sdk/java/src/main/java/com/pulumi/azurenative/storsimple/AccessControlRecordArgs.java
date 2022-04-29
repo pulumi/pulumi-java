@@ -6,13 +6,14 @@ package com.pulumi.azurenative.storsimple;
 import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccessControlRecordArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessControlRecordArgs extends ResourceArgs {
 
     public static final AccessControlRecordArgs Empty = new AccessControlRecordArgs();
 

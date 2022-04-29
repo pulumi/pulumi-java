@@ -6,13 +6,14 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class GeoBackupPolicyArgs extends ResourceArgs {
 
     public static final GeoBackupPolicyArgs Empty = new GeoBackupPolicyArgs();
 

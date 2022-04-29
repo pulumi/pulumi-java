@@ -7,13 +7,14 @@ import com.pulumi.azurenative.documentdb.enums.ServerVersion;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiPropertiesArgs extends ResourceArgs {
 
     public static final ApiPropertiesArgs Empty = new ApiPropertiesArgs();
 

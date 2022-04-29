@@ -6,12 +6,13 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.CosmosDbSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceManagedResourcesSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceManagedResourcesSettingsArgs extends ResourceArgs {
 
     public static final ServiceManagedResourcesSettingsArgs Empty = new ServiceManagedResourcesSettingsArgs();
 

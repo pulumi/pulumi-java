@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devices.inputs;
 import com.pulumi.azurenative.devices.inputs.FeedbackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The IoT hub cloud-to-device messaging properties.
  * 
  */
-public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudToDevicePropertiesArgs extends ResourceArgs {
 
     public static final CloudToDevicePropertiesArgs Empty = new CloudToDevicePropertiesArgs();
 

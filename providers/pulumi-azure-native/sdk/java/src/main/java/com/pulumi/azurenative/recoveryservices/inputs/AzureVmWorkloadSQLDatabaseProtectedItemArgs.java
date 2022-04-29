@@ -15,6 +15,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * Azure VM workload-specific protected item representing SQL Database.
  * 
  */
-public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends ResourceArgs {
 
     public static final AzureVmWorkloadSQLDatabaseProtectedItemArgs Empty = new AzureVmWorkloadSQLDatabaseProtectedItemArgs();
 

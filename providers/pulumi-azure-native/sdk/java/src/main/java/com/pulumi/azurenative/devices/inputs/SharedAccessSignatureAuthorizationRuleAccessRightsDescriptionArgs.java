@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devices.enums.AccessRightsDescription;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Description of the shared access key.
  * 
  */
-public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs extends ResourceArgs {
 
     public static final SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs Empty = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.enums.ManagedIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the managed identities for an Azure resource.
  * 
  */
-public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedIdentityArgs extends ResourceArgs {
 
     public static final ManagedIdentityArgs Empty = new ManagedIdentityArgs();
 

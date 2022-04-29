@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.VirtualMachineScaleSetScaleInRules;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a scale-in policy for a virtual machine scale set.
  * 
  */
-public final class ScaleInPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleInPolicyArgs extends ResourceArgs {
 
     public static final ScaleInPolicyArgs Empty = new ScaleInPolicyArgs();
 

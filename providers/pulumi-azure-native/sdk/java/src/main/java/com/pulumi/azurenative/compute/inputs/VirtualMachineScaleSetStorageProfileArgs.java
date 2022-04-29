@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetDataDiskArgs;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set storage profile.
  * 
  */
-public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetStorageProfileArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetStorageProfileArgs Empty = new VirtualMachineScaleSetStorageProfileArgs();
 

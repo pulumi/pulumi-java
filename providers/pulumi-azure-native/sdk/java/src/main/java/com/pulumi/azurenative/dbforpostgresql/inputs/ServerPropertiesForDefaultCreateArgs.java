@@ -13,6 +13,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * The properties used to create a new server.
  * 
  */
-public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerPropertiesForDefaultCreateArgs extends ResourceArgs {
 
     public static final ServerPropertiesForDefaultCreateArgs Empty = new ServerPropertiesForDefaultCreateArgs();
 

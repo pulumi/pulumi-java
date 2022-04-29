@@ -6,6 +6,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.X509CertificateNameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of the Service Fabric Type Backend.
  * 
  */
-public final class BackendServiceFabricClusterPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendServiceFabricClusterPropertiesArgs extends ResourceArgs {
 
     public static final BackendServiceFabricClusterPropertiesArgs Empty = new BackendServiceFabricClusterPropertiesArgs();
 

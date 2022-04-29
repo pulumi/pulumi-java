@@ -6,6 +6,7 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.IPAddressProvisioningType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The public IP Address configuration of the networking configuration of a Pool.
  * 
  */
-public final class PublicIPAddressConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicIPAddressConfigurationArgs extends ResourceArgs {
 
     public static final PublicIPAddressConfigurationArgs Empty = new PublicIPAddressConfigurationArgs();
 

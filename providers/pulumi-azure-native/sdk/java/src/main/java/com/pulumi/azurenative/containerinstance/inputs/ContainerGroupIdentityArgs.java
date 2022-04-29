@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 import com.pulumi.azurenative.containerinstance.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Identity for the container group.
  * 
  */
-public final class ContainerGroupIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerGroupIdentityArgs extends ResourceArgs {
 
     public static final ContainerGroupIdentityArgs Empty = new ContainerGroupIdentityArgs();
 

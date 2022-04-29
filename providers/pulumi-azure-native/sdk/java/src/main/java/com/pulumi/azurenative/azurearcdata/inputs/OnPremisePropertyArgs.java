@@ -5,6 +5,7 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties from the Kubernetes data controller
  * 
  */
-public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class OnPremisePropertyArgs extends ResourceArgs {
 
     public static final OnPremisePropertyArgs Empty = new OnPremisePropertyArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:datashare:ADLSGen2FileDataSetMapping")
-public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResource {
+public class ADLSGen2FileDataSetMapping extends CustomResource {
     /**
      * The id of the source data set.
      * 
@@ -239,11 +241,11 @@ public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ADLSGen2FileDataSetMapping(String name, ADLSGen2FileDataSetMappingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ADLSGen2FileDataSetMapping(String name, ADLSGen2FileDataSetMappingArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:datashare:ADLSGen2FileDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ADLSGen2FileDataSetMapping(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ADLSGen2FileDataSetMapping(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:datashare:ADLSGen2FileDataSetMapping", name, null, makeResourceOptions(options, id));
     }
 
@@ -254,8 +256,8 @@ public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResou
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:ADLSGen2FileDataSetMapping").build()),
@@ -265,7 +267,7 @@ public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:datashare/v20210801:ADLSGen2FileDataSetMapping").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -276,7 +278,7 @@ public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ADLSGen2FileDataSetMapping get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ADLSGen2FileDataSetMapping get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ADLSGen2FileDataSetMapping(name, id, options);
     }
 }

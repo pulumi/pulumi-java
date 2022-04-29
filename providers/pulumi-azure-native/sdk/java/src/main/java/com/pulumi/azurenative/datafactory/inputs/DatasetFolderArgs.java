@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
  * 
  */
-public final class DatasetFolderArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetFolderArgs extends ResourceArgs {
 
     public static final DatasetFolderArgs Empty = new DatasetFolderArgs();
 

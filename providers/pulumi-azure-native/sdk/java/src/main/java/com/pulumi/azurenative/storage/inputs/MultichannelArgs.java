@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Multichannel setting. Applies to Premium FileStorage only.
  * 
  */
-public final class MultichannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class MultichannelArgs extends ResourceArgs {
 
     public static final MultichannelArgs Empty = new MultichannelArgs();
 

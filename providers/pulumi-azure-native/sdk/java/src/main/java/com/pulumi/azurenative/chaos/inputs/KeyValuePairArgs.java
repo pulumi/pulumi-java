@@ -5,6 +5,7 @@ package com.pulumi.azurenative.chaos.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A map to describe the settings of an action.
  * 
  */
-public final class KeyValuePairArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyValuePairArgs extends ResourceArgs {
 
     public static final KeyValuePairArgs Empty = new KeyValuePairArgs();
 

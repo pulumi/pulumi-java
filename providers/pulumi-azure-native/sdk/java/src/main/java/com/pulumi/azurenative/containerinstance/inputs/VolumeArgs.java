@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.inputs.AzureFileVolumeArgs;
 import com.pulumi.azurenative.containerinstance.inputs.GitRepoVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The properties of the volume.
  * 
  */
-public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeArgs extends ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Localized template data and gallery information.
  * 
  */
-public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkbookTemplateLocalizedGalleryArgs extends ResourceArgs {
 
     public static final WorkbookTemplateLocalizedGalleryArgs Empty = new WorkbookTemplateLocalizedGalleryArgs();
 

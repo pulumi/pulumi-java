@@ -8,6 +8,7 @@ import com.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import com.pulumi.azurenative.logic.enums.RosettaNetResponseType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * The integration account RosettaNet ProcessConfiguration activity behavior.
  * 
  */
-public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resources.ResourceArgs {
+public final class RosettaNetPipActivityBehaviorArgs extends ResourceArgs {
 
     public static final RosettaNetPipActivityBehaviorArgs Empty = new RosettaNetPipActivityBehaviorArgs();
 

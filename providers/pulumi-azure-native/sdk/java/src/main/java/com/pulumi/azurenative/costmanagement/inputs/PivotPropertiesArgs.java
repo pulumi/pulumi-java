@@ -7,6 +7,7 @@ import com.pulumi.azurenative.costmanagement.enums.PivotTypeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Each pivot must contain a &#39;type&#39; and &#39;name&#39;.
  * 
  */
-public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PivotPropertiesArgs extends ResourceArgs {
 
     public static final PivotPropertiesArgs Empty = new PivotPropertiesArgs();
 

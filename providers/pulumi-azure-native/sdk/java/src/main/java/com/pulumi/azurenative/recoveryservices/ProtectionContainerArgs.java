@@ -17,6 +17,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.IaaSVMContainerArgs;
 import com.pulumi.azurenative.recoveryservices.inputs.MabContainerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProtectionContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProtectionContainerArgs extends ResourceArgs {
 
     public static final ProtectionContainerArgs Empty = new ProtectionContainerArgs();
 

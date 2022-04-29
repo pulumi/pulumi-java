@@ -7,6 +7,7 @@ import com.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * API OAuth2 Authentication settings details.
  * 
  */
-public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenIdAuthenticationSettingsContractArgs extends ResourceArgs {
 
     public static final OpenIdAuthenticationSettingsContractArgs Empty = new OpenIdAuthenticationSettingsContractArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.KnownExtensionDataSourceStreams;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Collected from either Windows and Linux machines, depending on which extension is defined.
  * 
  */
-public final class ExtensionDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExtensionDataSourceArgs extends ResourceArgs {
 
     public static final ExtensionDataSourceArgs Empty = new ExtensionDataSourceArgs();
 

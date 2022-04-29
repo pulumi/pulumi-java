@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Connection draining allows open connections to a backend server to be active for a specified time after the backend server got removed from the configuration.
  * 
  */
-public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayConnectionDrainingArgs extends ResourceArgs {
 
     public static final ApplicationGatewayConnectionDrainingArgs Empty = new ApplicationGatewayConnectionDrainingArgs();
 

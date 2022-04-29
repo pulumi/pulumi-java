@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:apimanagement:Product")
-public class Product extends com.pulumi.resources.CustomResource {
+public class Product extends CustomResource {
     /**
      * whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
@@ -182,16 +184,16 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Product(String name, ProductArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Product(String name, ProductArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Product(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Product(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:Product", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20160707:Product").build()),
@@ -209,7 +211,7 @@ public class Product extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Product").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -220,7 +222,7 @@ public class Product extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Product get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Product get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Product(name, id, options);
     }
 }

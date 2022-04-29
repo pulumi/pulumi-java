@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Definition of the runbook property type.
  * 
  */
-public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentHashArgs extends ResourceArgs {
 
     public static final ContentHashArgs Empty = new ContentHashArgs();
 

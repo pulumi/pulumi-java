@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databoxedge.enums.ClientPermissionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The mapping between a particular client IP and the type of access client has on the NFS share.
  * 
  */
-public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClientAccessRightArgs extends ResourceArgs {
 
     public static final ClientAccessRightArgs Empty = new ClientAccessRightArgs();
 

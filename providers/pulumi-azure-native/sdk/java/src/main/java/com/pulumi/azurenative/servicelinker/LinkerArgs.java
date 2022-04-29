@@ -12,6 +12,7 @@ import com.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkerArgs extends ResourceArgs {
 
     public static final LinkerArgs Empty = new LinkerArgs();
 

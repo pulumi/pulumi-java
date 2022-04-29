@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.IntegrationAccountSkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The integration account sku.
  * 
  */
-public final class IntegrationAccountSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationAccountSkuArgs extends ResourceArgs {
 
     public static final IntegrationAccountSkuArgs Empty = new IntegrationAccountSkuArgs();
 

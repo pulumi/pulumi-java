@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The trigger based on base image dependency.
  * 
  */
-public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BaseImageTriggerArgs extends ResourceArgs {
 
     public static final BaseImageTriggerArgs Empty = new BaseImageTriggerArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.enums.TrackPropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Class to specify one track property condition
  * 
  */
-public final class TrackPropertyConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrackPropertyConditionArgs extends ResourceArgs {
 
     public static final TrackPropertyConditionArgs Empty = new TrackPropertyConditionArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.enums.FactoryIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Identity properties of the factory resource.
  * 
  */
-public final class FactoryIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class FactoryIdentityArgs extends ResourceArgs {
 
     public static final FactoryIdentityArgs Empty = new FactoryIdentityArgs();
 

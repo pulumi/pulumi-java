@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import com.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The init container definition.
  * 
  */
-public final class InitContainerDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class InitContainerDefinitionArgs extends ResourceArgs {
 
     public static final InitContainerDefinitionArgs Empty = new InitContainerDefinitionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.search.inputs;
 import com.pulumi.azurenative.search.inputs.IpRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Network specific rules that determine how the Azure Cognitive Search service may be reached.
  * 
  */
-public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkRuleSetArgs extends ResourceArgs {
 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 

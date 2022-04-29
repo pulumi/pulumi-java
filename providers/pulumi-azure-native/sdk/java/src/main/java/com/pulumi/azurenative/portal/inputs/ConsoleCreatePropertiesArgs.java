@@ -8,6 +8,7 @@ import com.pulumi.azurenative.portal.enums.ProvisioningState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Cloud shell properties for creating a console.
  * 
  */
-public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsoleCreatePropertiesArgs extends ResourceArgs {
 
     public static final ConsoleCreatePropertiesArgs Empty = new ConsoleCreatePropertiesArgs();
 

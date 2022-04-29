@@ -5,6 +5,7 @@ package com.pulumi.azurenative.search.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The IP restriction rule of the Azure Cognitive Search service.
  * 
  */
-public final class IpRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IpRuleArgs extends ResourceArgs {
 
     public static final IpRuleArgs Empty = new IpRuleArgs();
 

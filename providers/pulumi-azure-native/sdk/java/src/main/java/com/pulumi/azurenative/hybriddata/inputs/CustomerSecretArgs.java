@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hybriddata.inputs;
 import com.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The pair of customer secret.
  * 
  */
-public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomerSecretArgs extends ResourceArgs {
 
     public static final CustomerSecretArgs Empty = new CustomerSecretArgs();
 

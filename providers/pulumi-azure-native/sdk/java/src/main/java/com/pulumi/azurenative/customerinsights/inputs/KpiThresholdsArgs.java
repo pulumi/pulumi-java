@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Defines the KPI Threshold limits.
  * 
  */
-public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
+public final class KpiThresholdsArgs extends ResourceArgs {
 
     public static final KpiThresholdsArgs Empty = new KpiThresholdsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.DistributedNodesInfoArgs;
 import com.pulumi.azurenative.recoveryservices.inputs.InquiryInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Extended information of the container.
  * 
  */
-public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureWorkloadContainerExtendedInfoArgs extends ResourceArgs {
 
     public static final AzureWorkloadContainerExtendedInfoArgs Empty = new AzureWorkloadContainerExtendedInfoArgs();
 

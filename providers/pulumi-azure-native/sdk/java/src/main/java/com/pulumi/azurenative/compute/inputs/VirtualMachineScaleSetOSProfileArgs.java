@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import com.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set OS profile.
  * 
  */
-public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetOSProfileArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetOSProfileArgs Empty = new VirtualMachineScaleSetOSProfileArgs();
 

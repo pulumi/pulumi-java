@@ -9,6 +9,7 @@ import com.pulumi.azurenative.automation.inputs.TargetPropertiesArgs;
 import com.pulumi.azurenative.automation.inputs.WindowsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Update specific properties of the software update configuration.
  * 
  */
-public final class UpdateConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class UpdateConfigurationArgs extends ResourceArgs {
 
     public static final UpdateConfigurationArgs Empty = new UpdateConfigurationArgs();
 

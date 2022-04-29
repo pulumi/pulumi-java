@@ -7,6 +7,7 @@ import com.pulumi.azurenative.relay.enums.SkuName;
 import com.pulumi.azurenative.relay.enums.SkuTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SKU of the namespace.
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

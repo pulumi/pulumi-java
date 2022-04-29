@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Class to specify configurations of Widevine in Streaming Policy
  * 
  */
-public final class StreamingPolicyWidevineConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingPolicyWidevineConfigurationArgs extends ResourceArgs {
 
     public static final StreamingPolicyWidevineConfigurationArgs Empty = new StreamingPolicyWidevineConfigurationArgs();
 

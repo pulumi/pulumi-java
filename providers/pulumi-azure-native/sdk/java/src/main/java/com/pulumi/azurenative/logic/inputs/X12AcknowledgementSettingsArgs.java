@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The X12 agreement acknowledgement settings.
  * 
  */
-public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12AcknowledgementSettingsArgs extends ResourceArgs {
 
     public static final X12AcknowledgementSettingsArgs Empty = new X12AcknowledgementSettingsArgs();
 

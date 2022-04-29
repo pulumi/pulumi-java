@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An alert action.
  * 
  */
-public final class HealthAlertActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthAlertActionArgs extends ResourceArgs {
 
     public static final HealthAlertActionArgs Empty = new HealthAlertActionArgs();
 

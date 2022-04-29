@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the action to send email when the rule condition is evaluated. The discriminator is always RuleEmailAction in this case.
  * 
  */
-public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleEmailActionArgs extends ResourceArgs {
 
     public static final RuleEmailActionArgs Empty = new RuleEmailActionArgs();
 

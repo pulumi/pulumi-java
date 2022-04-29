@@ -5,6 +5,7 @@ package com.pulumi.azurenative.edgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Management resource preference to link device
  * 
  */
-public final class ManagementResourcePreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementResourcePreferencesArgs extends ResourceArgs {
 
     public static final ManagementResourcePreferencesArgs Empty = new ManagementResourcePreferencesArgs();
 

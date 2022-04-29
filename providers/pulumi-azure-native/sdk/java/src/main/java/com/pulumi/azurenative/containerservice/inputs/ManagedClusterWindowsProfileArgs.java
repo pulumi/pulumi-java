@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerservice.enums.LicenseType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Profile for Windows VMs in the container service cluster.
  * 
  */
-public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterWindowsProfileArgs extends ResourceArgs {
 
     public static final ManagedClusterWindowsProfileArgs Empty = new ManagedClusterWindowsProfileArgs();
 

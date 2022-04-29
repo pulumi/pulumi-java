@@ -8,6 +8,7 @@ import com.pulumi.azurenative.devtestlab.inputs.SubnetSharedPublicIpAddressConfi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Property overrides on a subnet of a virtual network.
  * 
  */
-public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetOverrideArgs extends ResourceArgs {
 
     public static final SubnetOverrideArgs Empty = new SubnetOverrideArgs();
 

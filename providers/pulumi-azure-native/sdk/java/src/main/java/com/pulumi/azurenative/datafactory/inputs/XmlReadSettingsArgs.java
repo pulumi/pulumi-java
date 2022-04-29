@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Xml read settings.
  * 
  */
-public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class XmlReadSettingsArgs extends ResourceArgs {
 
     public static final XmlReadSettingsArgs Empty = new XmlReadSettingsArgs();
 

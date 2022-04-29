@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a category of labels in a labeling job.
  * 
  */
-public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelCategoryArgs extends ResourceArgs {
 
     public static final LabelCategoryArgs Empty = new LabelCategoryArgs();
 

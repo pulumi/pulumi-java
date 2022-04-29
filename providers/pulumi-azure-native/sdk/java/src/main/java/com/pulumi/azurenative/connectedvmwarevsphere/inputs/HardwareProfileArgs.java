@@ -5,6 +5,7 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines the resource properties.
  * 
  */
-public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class HardwareProfileArgs extends ResourceArgs {
 
     public static final HardwareProfileArgs Empty = new HardwareProfileArgs();
 

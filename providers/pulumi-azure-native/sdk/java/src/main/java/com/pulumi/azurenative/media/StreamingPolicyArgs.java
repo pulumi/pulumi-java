@@ -9,13 +9,14 @@ import com.pulumi.azurenative.media.inputs.EnvelopeEncryptionArgs;
 import com.pulumi.azurenative.media.inputs.NoEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingPolicyArgs extends ResourceArgs {
 
     public static final StreamingPolicyArgs Empty = new StreamingPolicyArgs();
 

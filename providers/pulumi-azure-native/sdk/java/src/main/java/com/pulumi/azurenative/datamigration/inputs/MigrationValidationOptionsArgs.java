@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Types of validations to run after the migration
  * 
  */
-public final class MigrationValidationOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrationValidationOptionsArgs extends ResourceArgs {
 
     public static final MigrationValidationOptionsArgs Empty = new MigrationValidationOptionsArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.insights.inputs.EmailNotificationArgs;
 import com.pulumi.azurenative.insights.inputs.WebhookNotificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Autoscale notification.
  * 
  */
-public final class AutoscaleNotificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoscaleNotificationArgs extends ResourceArgs {
 
     public static final AutoscaleNotificationArgs Empty = new AutoscaleNotificationArgs();
 

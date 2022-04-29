@@ -7,6 +7,7 @@ import com.pulumi.azurenative.peering.inputs.ExchangeConnectionArgs;
 import com.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties that define an exchange peering.
  * 
  */
-public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeeringPropertiesExchangeArgs extends ResourceArgs {
 
     public static final PeeringPropertiesExchangeArgs Empty = new PeeringPropertiesExchangeArgs();
 

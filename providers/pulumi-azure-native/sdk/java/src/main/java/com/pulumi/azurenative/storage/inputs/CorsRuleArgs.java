@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Specifies a CORS rule for the Blob service.
  * 
  */
-public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class CorsRuleArgs extends ResourceArgs {
 
     public static final CorsRuleArgs Empty = new CorsRuleArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.domainregistration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDomainOwnershipIdentifierArgs extends InvokeArgs {
 
     public static final GetDomainOwnershipIdentifierArgs Empty = new GetDomainOwnershipIdentifierArgs();
 

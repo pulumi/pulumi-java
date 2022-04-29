@@ -9,6 +9,7 @@ import com.pulumi.azurenative.migrate.inputs.PublicIpReferenceArgs;
 import com.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Defines NIC IP configuration properties.
  * 
  */
-public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NicIpConfigurationResourceSettingsArgs extends ResourceArgs {
 
     public static final NicIpConfigurationResourceSettingsArgs Empty = new NicIpConfigurationResourceSettingsArgs();
 

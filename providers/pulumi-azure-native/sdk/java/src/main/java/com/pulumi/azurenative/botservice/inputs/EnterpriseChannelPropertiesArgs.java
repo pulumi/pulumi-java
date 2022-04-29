@@ -8,6 +8,7 @@ import com.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Enterprise Channel.
  * 
  */
-public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseChannelPropertiesArgs extends ResourceArgs {
 
     public static final EnterpriseChannelPropertiesArgs Empty = new EnterpriseChannelPropertiesArgs();
 

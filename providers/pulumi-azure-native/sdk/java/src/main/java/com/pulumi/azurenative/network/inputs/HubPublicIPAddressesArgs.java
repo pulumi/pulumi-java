@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.AzureFirewallPublicIPAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Public IP addresses associated with azure firewall.
  * 
  */
-public final class HubPublicIPAddressesArgs extends com.pulumi.resources.ResourceArgs {
+public final class HubPublicIPAddressesArgs extends ResourceArgs {
 
     public static final HubPublicIPAddressesArgs Empty = new HubPublicIPAddressesArgs();
 

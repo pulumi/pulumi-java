@@ -12,6 +12,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Represents a token restriction. Provided token must match these requirements for successful license or key delivery.
  * 
  */
-public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyTokenRestrictionArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyTokenRestrictionArgs Empty = new ContentKeyPolicyTokenRestrictionArgs();
 

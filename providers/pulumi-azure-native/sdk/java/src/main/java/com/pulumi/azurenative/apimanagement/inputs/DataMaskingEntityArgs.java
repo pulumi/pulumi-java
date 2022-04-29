@@ -7,13 +7,14 @@ import com.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataMaskingEntityArgs extends ResourceArgs {
 
     public static final DataMaskingEntityArgs Empty = new DataMaskingEntityArgs();
 

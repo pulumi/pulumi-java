@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details of the data lake storage account associated with the workspace
  * 
  */
-public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataLakeStorageAccountDetailsArgs extends ResourceArgs {
 
     public static final DataLakeStorageAccountDetailsArgs Empty = new DataLakeStorageAccountDetailsArgs();
 

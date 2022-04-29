@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
  * 
  */
-public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RampUpRuleArgs extends ResourceArgs {
 
     public static final RampUpRuleArgs Empty = new RampUpRuleArgs();
 

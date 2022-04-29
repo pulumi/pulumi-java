@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.ManagedRuleSetArgs;
 import com.pulumi.azurenative.network.inputs.OwaspCrsExclusionEntryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Allow to exclude some variable satisfy the condition for the WAF check.
  * 
  */
-public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedRulesDefinitionArgs extends ResourceArgs {
 
     public static final ManagedRulesDefinitionArgs Empty = new ManagedRulesDefinitionArgs();
 

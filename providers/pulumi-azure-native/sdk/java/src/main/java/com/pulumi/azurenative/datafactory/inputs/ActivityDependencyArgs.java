@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.enums.DependencyCondition;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Activity dependency information.
  * 
  */
-public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActivityDependencyArgs extends ResourceArgs {
 
     public static final ActivityDependencyArgs Empty = new ActivityDependencyArgs();
 

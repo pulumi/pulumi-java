@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * A custom alert rule that checks if the number of activities (depends on the custom alert type) in a time window is within the given range.
  * 
  */
-public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeWindowCustomAlertRuleArgs extends ResourceArgs {
 
     public static final TimeWindowCustomAlertRuleArgs Empty = new TimeWindowCustomAlertRuleArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Traffic weight assigned to a revision
  * 
  */
-public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficWeightArgs extends ResourceArgs {
 
     public static final TrafficWeightArgs Empty = new TrafficWeightArgs();
 

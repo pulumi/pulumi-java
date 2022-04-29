@@ -16,6 +16,7 @@ import com.pulumi.azurenative.logic.inputs.EdifactValidationOverrideArgs;
 import com.pulumi.azurenative.logic.inputs.EdifactValidationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * The Edifact agreement protocol settings.
  * 
  */
-public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactProtocolSettingsArgs extends ResourceArgs {
 
     public static final EdifactProtocolSettingsArgs Empty = new EdifactProtocolSettingsArgs();
 

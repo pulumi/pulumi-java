@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ComputeInstanceProp
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An Azure Machine Learning compute instance.
  * 
  */
-public final class ComputeInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComputeInstanceArgs extends ResourceArgs {
 
     public static final ComputeInstanceArgs Empty = new ComputeInstanceArgs();
 

@@ -12,6 +12,7 @@ import com.pulumi.azurenative.media.inputs.VideoTrackDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * An InputDefinition that looks at each input file provided to select tracks specified by the IncludedTracks property. Generally used with the AudioTrackByAttribute and VideoTrackByAttribute to select tracks from each file given.
  * 
  */
-public final class FromEachInputFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class FromEachInputFileArgs extends ResourceArgs {
 
     public static final FromEachInputFileArgs Empty = new FromEachInputFileArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details of an inquired protectable item.
  * 
  */
-public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkloadInquiryDetailsArgs extends ResourceArgs {
 
     public static final WorkloadInquiryDetailsArgs Empty = new WorkloadInquiryDetailsArgs();
 

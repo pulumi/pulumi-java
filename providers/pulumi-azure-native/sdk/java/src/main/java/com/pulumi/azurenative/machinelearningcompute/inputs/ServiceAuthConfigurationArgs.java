@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn&#39;t define it&#39;s own.
  * 
  */
-public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceAuthConfigurationArgs extends ResourceArgs {
 
     public static final ServiceAuthConfigurationArgs Empty = new ServiceAuthConfigurationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A rule for NAT - exposing a VM&#39;s port (backendPort) on the public IP address using a load balancer.
  * 
  */
-public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class InboundNatRuleArgs extends ResourceArgs {
 
     public static final InboundNatRuleArgs Empty = new InboundNatRuleArgs();
 

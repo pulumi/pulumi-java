@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Referenced tumbling window trigger dependency.
  * 
  */
-public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TumblingWindowTriggerDependencyReferenceArgs extends ResourceArgs {
 
     public static final TumblingWindowTriggerDependencyReferenceArgs Empty = new TumblingWindowTriggerDependencyReferenceArgs();
 

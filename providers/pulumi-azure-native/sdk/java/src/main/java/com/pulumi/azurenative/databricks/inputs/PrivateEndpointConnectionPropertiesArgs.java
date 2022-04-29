@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databricks.inputs;
 import com.pulumi.azurenative.databricks.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The properties of a private endpoint connection
  * 
  */
-public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 

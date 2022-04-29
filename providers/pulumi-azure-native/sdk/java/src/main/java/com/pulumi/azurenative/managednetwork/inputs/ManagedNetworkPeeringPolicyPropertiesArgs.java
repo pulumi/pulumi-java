@@ -8,6 +8,7 @@ import com.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Properties of a Managed Network Peering Policy
  * 
  */
-public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedNetworkPeeringPolicyPropertiesArgs extends ResourceArgs {
 
     public static final ManagedNetworkPeeringPolicyPropertiesArgs Empty = new ManagedNetworkPeeringPolicyPropertiesArgs();
 

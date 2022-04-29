@@ -4,13 +4,14 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListShareSubscriptionSynchronizationsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListShareSubscriptionSynchronizationsArgs extends InvokeArgs {
 
     public static final ListShareSubscriptionSynchronizationsArgs Empty = new ListShareSubscriptionSynchronizationsArgs();
 

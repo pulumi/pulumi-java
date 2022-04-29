@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Subnet first address, scope, and/or last address.
  * 
  */
-public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointPropertiesSubnetsArgs extends ResourceArgs {
 
     public static final EndpointPropertiesSubnetsArgs Empty = new EndpointPropertiesSubnetsArgs();
 

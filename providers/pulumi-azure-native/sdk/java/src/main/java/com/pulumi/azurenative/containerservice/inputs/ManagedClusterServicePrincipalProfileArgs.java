@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
  * 
  */
-public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterServicePrincipalProfileArgs extends ResourceArgs {
 
     public static final ManagedClusterServicePrincipalProfileArgs Empty = new ManagedClusterServicePrincipalProfileArgs();
 

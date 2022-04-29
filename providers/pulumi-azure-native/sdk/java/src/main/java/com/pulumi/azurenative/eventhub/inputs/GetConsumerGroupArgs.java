@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetConsumerGroupArgs extends InvokeArgs {
 
     public static final GetConsumerGroupArgs Empty = new GetConsumerGroupArgs();
 

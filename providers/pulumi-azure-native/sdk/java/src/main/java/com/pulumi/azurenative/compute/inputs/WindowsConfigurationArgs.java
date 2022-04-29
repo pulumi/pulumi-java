@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.PatchSettingsArgs;
 import com.pulumi.azurenative.compute.inputs.WinRMConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Specifies Windows operating system settings on the virtual machine.
  * 
  */
-public final class WindowsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WindowsConfigurationArgs extends ResourceArgs {
 
     public static final WindowsConfigurationArgs Empty = new WindowsConfigurationArgs();
 

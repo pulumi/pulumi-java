@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Metric limits set on an app.
  * 
  */
-public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SiteLimitsArgs extends ResourceArgs {
 
     public static final SiteLimitsArgs Empty = new SiteLimitsArgs();
 

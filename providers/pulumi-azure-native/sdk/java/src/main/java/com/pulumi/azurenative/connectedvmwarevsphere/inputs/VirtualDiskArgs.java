@@ -8,6 +8,7 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.DiskType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Virtual disk model
  * 
  */
-public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualDiskArgs extends ResourceArgs {
 
     public static final VirtualDiskArgs Empty = new VirtualDiskArgs();
 

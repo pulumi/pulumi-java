@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import com.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Class for EnvelopeEncryption encryption scheme
  * 
  */
-public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvelopeEncryptionArgs extends ResourceArgs {
 
     public static final EnvelopeEncryptionArgs Empty = new EnvelopeEncryptionArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.OraclePartitionSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A copy activity Oracle source.
  * 
  */
-public final class OracleSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class OracleSourceArgs extends ResourceArgs {
 
     public static final OracleSourceArgs Empty = new OracleSourceArgs();
 

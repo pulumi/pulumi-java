@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration for compute binding.
  * 
  */
-public final class ComputeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComputeConfigurationArgs extends ResourceArgs {
 
     public static final ComputeConfigurationArgs Empty = new ComputeConfigurationArgs();
 

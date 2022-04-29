@@ -9,6 +9,7 @@ import com.pulumi.azurenative.netapp.inputs.MonthlyScheduleArgs;
 import com.pulumi.azurenative.netapp.inputs.WeeklyScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SnapshotPolicyArgs extends ResourceArgs {
 
     public static final SnapshotPolicyArgs Empty = new SnapshotPolicyArgs();
 

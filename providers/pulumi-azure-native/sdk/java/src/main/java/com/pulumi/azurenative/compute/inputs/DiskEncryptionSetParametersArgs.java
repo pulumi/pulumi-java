@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. &lt;br&gt;&lt;br&gt; NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
  * 
  */
-public final class DiskEncryptionSetParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskEncryptionSetParametersArgs extends ResourceArgs {
 
     public static final DiskEncryptionSetParametersArgs Empty = new DiskEncryptionSetParametersArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

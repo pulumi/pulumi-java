@@ -7,6 +7,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes a blob input data source that contains stream data.
  * 
  */
-public final class BlobStreamInputDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobStreamInputDataSourceArgs extends ResourceArgs {
 
     public static final BlobStreamInputDataSourceArgs Empty = new BlobStreamInputDataSourceArgs();
 

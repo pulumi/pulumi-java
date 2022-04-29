@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.HostCaching;
 import com.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * This is the OS disk image.
  * 
  */
-public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class GalleryOSDiskImageArgs extends ResourceArgs {
 
     public static final GalleryOSDiskImageArgs Empty = new GalleryOSDiskImageArgs();
 

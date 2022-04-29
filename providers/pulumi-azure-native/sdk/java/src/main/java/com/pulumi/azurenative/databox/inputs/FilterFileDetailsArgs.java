@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databox.enums.FilterFileType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Details of the filter files to be used for data transfer.
  * 
  */
-public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterFileDetailsArgs extends ResourceArgs {
 
     public static final FilterFileDetailsArgs Empty = new FilterFileDetailsArgs();
 

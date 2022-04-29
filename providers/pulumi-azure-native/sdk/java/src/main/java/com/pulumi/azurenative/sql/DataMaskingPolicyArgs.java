@@ -6,13 +6,14 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.enums.DataMaskingState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataMaskingPolicyArgs extends ResourceArgs {
 
     public static final DataMaskingPolicyArgs Empty = new DataMaskingPolicyArgs();
 

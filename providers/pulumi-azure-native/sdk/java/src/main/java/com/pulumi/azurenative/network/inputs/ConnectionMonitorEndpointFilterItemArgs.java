@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.ConnectionMonitorEndpointFilterItemT
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the connection monitor endpoint filter item.
  * 
  */
-public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionMonitorEndpointFilterItemArgs extends ResourceArgs {
 
     public static final ConnectionMonitorEndpointFilterItemArgs Empty = new ConnectionMonitorEndpointFilterItemArgs();
 

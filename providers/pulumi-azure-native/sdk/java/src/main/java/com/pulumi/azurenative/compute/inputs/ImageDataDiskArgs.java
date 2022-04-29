@@ -10,6 +10,7 @@ import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Describes a data disk.
  * 
  */
-public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageDataDiskArgs extends ResourceArgs {
 
     public static final ImageDataDiskArgs Empty = new ImageDataDiskArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.inputs.OverrideTaskStepPropertie
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The parameters for a task run request.
  * 
  */
-public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskRunRequestArgs extends ResourceArgs {
 
     public static final TaskRunRequestArgs Empty = new TaskRunRequestArgs();
 

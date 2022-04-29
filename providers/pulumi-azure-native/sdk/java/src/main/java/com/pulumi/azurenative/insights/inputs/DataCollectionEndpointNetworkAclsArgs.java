@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Network access control rules for the endpoints.
  * 
  */
-public final class DataCollectionEndpointNetworkAclsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCollectionEndpointNetworkAclsArgs extends ResourceArgs {
 
     public static final DataCollectionEndpointNetworkAclsArgs Empty = new DataCollectionEndpointNetworkAclsArgs();
 

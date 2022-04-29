@@ -7,6 +7,7 @@ import com.pulumi.azurenative.batch.enums.CachingType;
 import com.pulumi.azurenative.batch.enums.StorageAccountType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Settings which will be used by the data disks associated to Compute Nodes in the Pool. When using attached data disks, you need to mount and format the disks from within a VM to use them.
  * 
  */
-public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataDiskArgs extends ResourceArgs {
 
     public static final DataDiskArgs Empty = new DataDiskArgs();
 

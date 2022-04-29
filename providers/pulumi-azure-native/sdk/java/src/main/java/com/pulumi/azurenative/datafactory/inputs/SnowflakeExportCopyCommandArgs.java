@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Snowflake export command settings.
  * 
  */
-public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.ResourceArgs {
+public final class SnowflakeExportCopyCommandArgs extends ResourceArgs {
 
     public static final SnowflakeExportCopyCommandArgs Empty = new SnowflakeExportCopyCommandArgs();
 

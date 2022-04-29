@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Defines the move collection properties.
  * 
  */
-public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MoveCollectionPropertiesArgs extends ResourceArgs {
 
     public static final MoveCollectionPropertiesArgs Empty = new MoveCollectionPropertiesArgs();
 

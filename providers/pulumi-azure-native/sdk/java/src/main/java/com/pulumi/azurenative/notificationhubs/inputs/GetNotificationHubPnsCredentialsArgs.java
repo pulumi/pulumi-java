@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetNotificationHubPnsCredentialsArgs extends InvokeArgs {
 
     public static final GetNotificationHubPnsCredentialsArgs Empty = new GetNotificationHubPnsCredentialsArgs();
 

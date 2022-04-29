@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.FlavorDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Model asset version details.
  * 
  */
-public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelVersionArgs extends ResourceArgs {
 
     public static final ModelVersionArgs Empty = new ModelVersionArgs();
 

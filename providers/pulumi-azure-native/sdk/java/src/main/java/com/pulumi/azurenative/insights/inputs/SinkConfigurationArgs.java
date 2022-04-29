@@ -5,11 +5,12 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class SinkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SinkConfigurationArgs extends ResourceArgs {
 
     public static final SinkConfigurationArgs Empty = new SinkConfigurationArgs();
 

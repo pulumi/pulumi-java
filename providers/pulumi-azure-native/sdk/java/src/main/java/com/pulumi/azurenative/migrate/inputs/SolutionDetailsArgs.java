@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Class representing the details of the solution.
  * 
  */
-public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SolutionDetailsArgs extends ResourceArgs {
 
     public static final SolutionDetailsArgs Empty = new SolutionDetailsArgs();
 

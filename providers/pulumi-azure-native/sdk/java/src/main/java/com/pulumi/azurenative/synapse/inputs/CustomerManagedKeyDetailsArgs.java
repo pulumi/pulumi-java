@@ -6,6 +6,7 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.inputs.WorkspaceKeyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details of the customer managed key associated with the workspace
  * 
  */
-public final class CustomerManagedKeyDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomerManagedKeyDetailsArgs extends ResourceArgs {
 
     public static final CustomerManagedKeyDetailsArgs Empty = new CustomerManagedKeyDetailsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.ResponseBasedDetectedErrorTypes;
 import com.pulumi.azurenative.cdn.inputs.HttpErrorRangeParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The JSON object that contains the properties to determine origin health using real requests/responses.
  * 
  */
-public final class ResponseBasedOriginErrorDetectionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponseBasedOriginErrorDetectionParametersArgs extends ResourceArgs {
 
     public static final ResponseBasedOriginErrorDetectionParametersArgs Empty = new ResponseBasedOriginErrorDetectionParametersArgs();
 

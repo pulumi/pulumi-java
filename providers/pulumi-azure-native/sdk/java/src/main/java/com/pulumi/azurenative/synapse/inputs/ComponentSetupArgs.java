@@ -7,6 +7,7 @@ import com.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The custom setup of installing 3rd party components.
  * 
  */
-public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentSetupArgs extends ResourceArgs {
 
     public static final ComponentSetupArgs Empty = new ComponentSetupArgs();
 

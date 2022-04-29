@@ -8,6 +8,7 @@ import com.pulumi.azurenative.netapp.enums.ReplicationSchedule;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Replication properties
  * 
  */
-public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationObjectArgs extends ResourceArgs {
 
     public static final ReplicationObjectArgs Empty = new ReplicationObjectArgs();
 

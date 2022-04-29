@@ -8,6 +8,7 @@ import com.pulumi.azurenative.eventhub.enums.SchemaType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchemaRegistryArgs extends ResourceArgs {
 
     public static final SchemaRegistryArgs Empty = new SchemaRegistryArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.securityinsights.enums.IncidentSeverity;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes related incident information for the bookmark
  * 
  */
-public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IncidentInfoArgs extends ResourceArgs {
 
     public static final IncidentInfoArgs Empty = new IncidentInfoArgs();
 

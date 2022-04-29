@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.inputs.ProfileEnumValidValuesFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Property definition.
  * 
  */
-public final class PropertyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PropertyDefinitionArgs extends ResourceArgs {
 
     public static final PropertyDefinitionArgs Empty = new PropertyDefinitionArgs();
 

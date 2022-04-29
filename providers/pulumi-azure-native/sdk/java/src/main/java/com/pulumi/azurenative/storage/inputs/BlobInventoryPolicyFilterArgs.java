@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An object that defines the blob inventory rule filter conditions.
  * 
  */
-public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobInventoryPolicyFilterArgs extends ResourceArgs {
 
     public static final BlobInventoryPolicyFilterArgs Empty = new BlobInventoryPolicyFilterArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.AzureFirewallNetworkRuleArgs;
 import com.pulumi.azurenative.network.inputs.AzureFirewallRCActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Network rule collection resource.
  * 
  */
-public final class AzureFirewallNetworkRuleCollectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFirewallNetworkRuleCollectionArgs extends ResourceArgs {
 
     public static final AzureFirewallNetworkRuleCollectionArgs Empty = new AzureFirewallNetworkRuleCollectionArgs();
 

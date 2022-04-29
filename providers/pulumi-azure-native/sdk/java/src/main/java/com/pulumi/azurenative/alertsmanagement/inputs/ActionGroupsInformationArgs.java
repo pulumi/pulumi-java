@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The Action Groups information, used by the alert rule.
  * 
  */
-public final class ActionGroupsInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActionGroupsInformationArgs extends ResourceArgs {
 
     public static final ActionGroupsInformationArgs Empty = new ActionGroupsInformationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.BreakOutCategoryPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Network Virtual Appliance Sku Properties.
  * 
  */
-public final class Office365PolicyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class Office365PolicyPropertiesArgs extends ResourceArgs {
 
     public static final Office365PolicyPropertiesArgs Empty = new Office365PolicyPropertiesArgs();
 

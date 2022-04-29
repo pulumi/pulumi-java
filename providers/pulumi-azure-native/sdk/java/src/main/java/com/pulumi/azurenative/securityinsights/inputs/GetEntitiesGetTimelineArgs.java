@@ -6,6 +6,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.enums.EntityTimelineKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetEntitiesGetTimelineArgs extends InvokeArgs {
 
     public static final GetEntitiesGetTimelineArgs Empty = new GetEntitiesGetTimelineArgs();
 

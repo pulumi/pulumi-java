@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This is used to represent the various nodes of the distributed container.
  * 
  */
-public final class DistributedNodesInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributedNodesInfoArgs extends ResourceArgs {
 
     public static final DistributedNodesInfoArgs Empty = new DistributedNodesInfoArgs();
 

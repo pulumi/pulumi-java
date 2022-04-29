@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Describes the http configuration for external connectivity for this network.
  * 
  */
-public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpConfigArgs extends ResourceArgs {
 
     public static final HttpConfigArgs Empty = new HttpConfigArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of Cognitive Services account deployment.
  * 
  */
-public final class DeploymentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentPropertiesArgs extends ResourceArgs {
 
     public static final DeploymentPropertiesArgs Empty = new DeploymentPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of column in sync group table.
  * 
  */
-public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.ResourceArgs {
+public final class SyncGroupSchemaTableColumnArgs extends ResourceArgs {
 
     public static final SyncGroupSchemaTableColumnArgs Empty = new SyncGroupSchemaTableColumnArgs();
 

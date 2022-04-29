@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.MessageFilterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The X12 message filter for odata query.
  * 
  */
-public final class X12MessageFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12MessageFilterArgs extends ResourceArgs {
 
     public static final X12MessageFilterArgs Empty = new X12MessageFilterArgs();
 

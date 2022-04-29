@@ -8,6 +8,7 @@ import com.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropert
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Settings of change notification configuration for a subscription.
  * 
  */
-public final class NotificationSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationSettingsArgs extends ResourceArgs {
 
     public static final NotificationSettingsArgs Empty = new NotificationSettingsArgs();
 

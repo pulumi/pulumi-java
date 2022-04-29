@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The properties of the volume mount.
  * 
  */
-public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeMountArgs extends ResourceArgs {
 
     public static final VolumeMountArgs Empty = new VolumeMountArgs();
 

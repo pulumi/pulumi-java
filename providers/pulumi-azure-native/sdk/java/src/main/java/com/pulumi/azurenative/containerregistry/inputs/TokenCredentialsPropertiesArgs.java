@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.inputs.TokenCertificateArgs;
 import com.pulumi.azurenative.containerregistry.inputs.TokenPasswordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties of the credentials that can be used for authenticating the token.
  * 
  */
-public final class TokenCredentialsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenCredentialsPropertiesArgs extends ResourceArgs {
 
     public static final TokenCredentialsPropertiesArgs Empty = new TokenCredentialsPropertiesArgs();
 

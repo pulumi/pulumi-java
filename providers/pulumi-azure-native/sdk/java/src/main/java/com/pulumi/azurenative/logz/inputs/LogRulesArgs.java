@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logz.inputs;
 import com.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Set of rules for sending logs for the Monitor resource.
  * 
  */
-public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogRulesArgs extends ResourceArgs {
 
     public static final LogRulesArgs Empty = new LogRulesArgs();
 

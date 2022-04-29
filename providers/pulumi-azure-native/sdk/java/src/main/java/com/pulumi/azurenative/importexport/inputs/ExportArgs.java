@@ -5,6 +5,7 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A property containing information about the blobs to be exported for an export job. This property is required for export jobs, but must not be specified for import jobs.
  * 
  */
-public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportArgs extends ResourceArgs {
 
     public static final ExportArgs Empty = new ExportArgs();
 

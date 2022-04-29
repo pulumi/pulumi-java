@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Parameters that define the configuration of traffic analytics.
  * 
  */
-public final class TrafficAnalyticsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficAnalyticsPropertiesArgs extends ResourceArgs {
 
     public static final TrafficAnalyticsPropertiesArgs Empty = new TrafficAnalyticsPropertiesArgs();
 

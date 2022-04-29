@@ -8,6 +8,7 @@ import com.pulumi.azurenative.insights.inputs.LogMetricTriggerArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The condition that results in the Log Search rule.
  * 
  */
-public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerConditionArgs extends ResourceArgs {
 
     public static final TriggerConditionArgs Empty = new TriggerConditionArgs();
 

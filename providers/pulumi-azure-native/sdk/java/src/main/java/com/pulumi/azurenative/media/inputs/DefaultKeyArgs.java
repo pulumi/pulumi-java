@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Class to specify properties of default content key for each encryption scheme
  * 
  */
-public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefaultKeyArgs extends ResourceArgs {
 
     public static final DefaultKeyArgs Empty = new DefaultKeyArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurat
 import com.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkFunctionArgs extends ResourceArgs {
 
     public static final NetworkFunctionArgs Empty = new NetworkFunctionArgs();
 

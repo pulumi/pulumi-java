@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Distribute via Shared Image Gallery.
  * 
  */
-public final class ImageTemplateSharedImageDistributorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplateSharedImageDistributorArgs extends ResourceArgs {
 
     public static final ImageTemplateSharedImageDistributorArgs Empty = new ImageTemplateSharedImageDistributorArgs();
 

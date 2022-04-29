@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyExplicitAnal
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Configures the Play Right in the PlayReady license.
  * 
  */
-public final class ContentKeyPolicyPlayReadyPlayRightArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyPlayReadyPlayRightArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyPlayRightArgs Empty = new ContentKeyPolicyPlayReadyPlayRightArgs();
 

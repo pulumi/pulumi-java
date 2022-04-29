@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Container App Ingress configuration.
  * 
  */
-public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
+public final class IngressArgs extends ResourceArgs {
 
     public static final IngressArgs Empty = new IngressArgs();
 

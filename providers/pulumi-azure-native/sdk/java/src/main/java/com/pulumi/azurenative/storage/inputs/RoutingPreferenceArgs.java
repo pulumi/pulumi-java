@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storage.enums.RoutingChoice;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing
  * 
  */
-public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutingPreferenceArgs extends ResourceArgs {
 
     public static final RoutingPreferenceArgs Empty = new RoutingPreferenceArgs();
 

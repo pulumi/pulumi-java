@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The time.
  * 
  */
-public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeArgs extends ResourceArgs {
 
     public static final TimeArgs Empty = new TimeArgs();
 

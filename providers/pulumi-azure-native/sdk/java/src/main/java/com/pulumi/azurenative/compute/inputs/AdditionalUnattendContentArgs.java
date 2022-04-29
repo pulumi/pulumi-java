@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.enums.PassNames;
 import com.pulumi.azurenative.compute.enums.SettingNames;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.
  * 
  */
-public final class AdditionalUnattendContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdditionalUnattendContentArgs extends ResourceArgs {
 
     public static final AdditionalUnattendContentArgs Empty = new AdditionalUnattendContentArgs();
 

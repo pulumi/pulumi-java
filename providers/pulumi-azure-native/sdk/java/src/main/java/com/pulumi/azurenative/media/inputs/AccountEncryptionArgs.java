@@ -8,13 +8,14 @@ import com.pulumi.azurenative.media.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountEncryptionArgs extends ResourceArgs {
 
     public static final AccountEncryptionArgs Empty = new AccountEncryptionArgs();
 

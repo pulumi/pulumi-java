@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListListUpgradableVersionPostArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListListUpgradableVersionPostArgs extends InvokeArgs {
 
     public static final ListListUpgradableVersionPostArgs Empty = new ListListUpgradableVersionPostArgs();
 

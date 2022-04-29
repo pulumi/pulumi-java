@@ -5,6 +5,7 @@ package com.pulumi.azurenative.offazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Class for site properties.
  * 
  */
-public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SiteSpnPropertiesArgs extends ResourceArgs {
 
     public static final SiteSpnPropertiesArgs Empty = new SiteSpnPropertiesArgs();
 

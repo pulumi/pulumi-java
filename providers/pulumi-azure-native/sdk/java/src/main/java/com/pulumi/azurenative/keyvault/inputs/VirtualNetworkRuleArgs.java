@@ -5,6 +5,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A rule governing the accessibility of a vault from a specific virtual network.
  * 
  */
-public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkRuleArgs extends ResourceArgs {
 
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 

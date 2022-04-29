@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.JwtClaimChecksArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the Azure Active Directory token validation flow.
  * 
  */
-public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureActiveDirectoryValidationArgs extends ResourceArgs {
 
     public static final AzureActiveDirectoryValidationArgs Empty = new AzureActiveDirectoryValidationArgs();
 

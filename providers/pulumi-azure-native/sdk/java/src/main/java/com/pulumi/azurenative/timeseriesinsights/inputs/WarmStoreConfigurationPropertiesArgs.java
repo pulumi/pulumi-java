@@ -5,6 +5,7 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
  * 
  */
-public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WarmStoreConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final WarmStoreConfigurationPropertiesArgs Empty = new WarmStoreConfigurationPropertiesArgs();
 

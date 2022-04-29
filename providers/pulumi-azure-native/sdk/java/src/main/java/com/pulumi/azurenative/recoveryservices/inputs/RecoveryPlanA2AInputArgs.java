@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Recovery plan A2A input.
  * 
  */
-public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecoveryPlanA2AInputArgs extends ResourceArgs {
 
     public static final RecoveryPlanA2AInputArgs Empty = new RecoveryPlanA2AInputArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.resources.enums.ExpressionEvaluationOptionsScopeTy
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies whether template expressions are evaluated within the scope of the parent template or nested template.
  * 
  */
-public final class ExpressionEvaluationOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressionEvaluationOptionsArgs extends ResourceArgs {
 
     public static final ExpressionEvaluationOptionsArgs Empty = new ExpressionEvaluationOptionsArgs();
 

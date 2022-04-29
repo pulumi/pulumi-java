@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Transformation for data flow source.
  * 
  */
-public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataFlowSourceArgs extends ResourceArgs {
 
     public static final DataFlowSourceArgs Empty = new DataFlowSourceArgs();
 

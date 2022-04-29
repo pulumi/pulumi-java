@@ -7,6 +7,7 @@ import com.pulumi.azurenative.hybriddata.enums.State;
 import com.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataStoreArgs extends ResourceArgs {
 
     public static final DataStoreArgs Empty = new DataStoreArgs();
 

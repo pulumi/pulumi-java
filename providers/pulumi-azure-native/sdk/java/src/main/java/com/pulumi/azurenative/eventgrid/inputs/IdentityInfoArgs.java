@@ -8,6 +8,7 @@ import com.pulumi.azurenative.eventgrid.inputs.UserIdentityPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The identity information for the resource.
  * 
  */
-public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityInfoArgs extends ResourceArgs {
 
     public static final IdentityInfoArgs Empty = new IdentityInfoArgs();
 

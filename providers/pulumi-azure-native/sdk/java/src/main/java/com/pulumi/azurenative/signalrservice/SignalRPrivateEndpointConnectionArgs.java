@@ -7,13 +7,14 @@ import com.pulumi.azurenative.signalrservice.inputs.PrivateEndpointArgs;
 import com.pulumi.azurenative.signalrservice.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SignalRPrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final SignalRPrivateEndpointConnectionArgs Empty = new SignalRPrivateEndpointConnectionArgs();
 

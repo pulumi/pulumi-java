@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetApiIssueAttachmentArgs extends InvokeArgs {
 
     public static final GetApiIssueAttachmentArgs Empty = new GetApiIssueAttachmentArgs();
 

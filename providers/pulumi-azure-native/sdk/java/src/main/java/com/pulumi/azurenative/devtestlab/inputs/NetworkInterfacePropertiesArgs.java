@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.SharedPublicIpAddressConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of a network interface.
  * 
  */
-public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfacePropertiesArgs extends ResourceArgs {
 
     public static final NetworkInterfacePropertiesArgs Empty = new NetworkInterfacePropertiesArgs();
 

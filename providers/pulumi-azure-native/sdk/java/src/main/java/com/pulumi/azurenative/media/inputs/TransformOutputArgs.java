@@ -13,6 +13,7 @@ import com.pulumi.azurenative.media.inputs.VideoAnalyzerPresetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Describes the properties of a TransformOutput, which are the rules to be applied while generating the desired output.
  * 
  */
-public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransformOutputArgs extends ResourceArgs {
 
     public static final TransformOutputArgs Empty = new TransformOutputArgs();
 

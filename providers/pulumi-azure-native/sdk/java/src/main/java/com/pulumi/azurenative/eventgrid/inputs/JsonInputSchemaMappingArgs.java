@@ -8,6 +8,7 @@ import com.pulumi.azurenative.eventgrid.inputs.JsonFieldWithDefaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
  * 
  */
-public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class JsonInputSchemaMappingArgs extends ResourceArgs {
 
     public static final JsonInputSchemaMappingArgs Empty = new JsonInputSchemaMappingArgs();
 

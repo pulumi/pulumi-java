@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.enums.StretchMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the live event type and optional encoding settings for encoding live events.
  * 
  */
-public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceArgs {
+public final class LiveEventEncodingArgs extends ResourceArgs {
 
     public static final LiveEventEncodingArgs Empty = new LiveEventEncodingArgs();
 

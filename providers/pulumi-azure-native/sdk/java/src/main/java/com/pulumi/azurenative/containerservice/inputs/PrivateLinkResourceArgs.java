@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A private link resource
  * 
  */
-public final class PrivateLinkResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkResourceArgs extends ResourceArgs {
 
     public static final PrivateLinkResourceArgs Empty = new PrivateLinkResourceArgs();
 

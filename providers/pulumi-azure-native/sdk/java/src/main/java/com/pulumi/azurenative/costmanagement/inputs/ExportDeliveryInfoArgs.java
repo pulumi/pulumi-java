@@ -6,6 +6,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 import com.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The delivery information associated with a export.
  * 
  */
-public final class ExportDeliveryInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportDeliveryInfoArgs extends ResourceArgs {
 
     public static final ExportDeliveryInfoArgs Empty = new ExportDeliveryInfoArgs();
 

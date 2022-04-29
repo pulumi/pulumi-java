@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databoxedge.enums.MsiIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Msi identity details of the resource
  * 
  */
-public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdentityArgs extends ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 

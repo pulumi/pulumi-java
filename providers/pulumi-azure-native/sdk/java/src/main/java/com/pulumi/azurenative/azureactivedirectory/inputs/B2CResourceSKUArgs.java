@@ -7,6 +7,7 @@ import com.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import com.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
  * 
  */
-public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs {
+public final class B2CResourceSKUArgs extends ResourceArgs {
 
     public static final B2CResourceSKUArgs Empty = new B2CResourceSKUArgs();
 

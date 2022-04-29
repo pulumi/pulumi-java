@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Ftp read settings.
  * 
  */
-public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FtpReadSettingsArgs extends ResourceArgs {
 
     public static final FtpReadSettingsArgs Empty = new FtpReadSettingsArgs();
 

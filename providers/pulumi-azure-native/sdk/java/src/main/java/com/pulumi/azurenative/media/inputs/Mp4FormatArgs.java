@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.OutputFileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the properties for an output ISO MP4 file.
  * 
  */
-public final class Mp4FormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class Mp4FormatArgs extends ResourceArgs {
 
     public static final Mp4FormatArgs Empty = new Mp4FormatArgs();
 

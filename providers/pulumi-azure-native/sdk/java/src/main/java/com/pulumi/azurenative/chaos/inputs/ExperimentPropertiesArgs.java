@@ -7,6 +7,7 @@ import com.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import com.pulumi.azurenative.chaos.inputs.StepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Model that represents the Experiment properties model.
  * 
  */
-public final class ExperimentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentPropertiesArgs extends ResourceArgs {
 
     public static final ExperimentPropertiesArgs Empty = new ExperimentPropertiesArgs();
 

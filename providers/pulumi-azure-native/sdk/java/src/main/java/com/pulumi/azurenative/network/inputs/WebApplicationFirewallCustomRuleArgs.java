@@ -9,6 +9,7 @@ import com.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Defines contents of a web application rule.
  * 
  */
-public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebApplicationFirewallCustomRuleArgs extends ResourceArgs {
 
     public static final WebApplicationFirewallCustomRuleArgs Empty = new WebApplicationFirewallCustomRuleArgs();
 

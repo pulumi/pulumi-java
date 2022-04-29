@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A request to approve or reject a private endpoint connection
  * 
  */
-public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkConnectionApprovalRequestArgs extends ResourceArgs {
 
     public static final PrivateLinkConnectionApprovalRequestArgs Empty = new PrivateLinkConnectionApprovalRequestArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.ForwardProxyArgs;
 import com.pulumi.azurenative.web.inputs.HttpSettingsRoutesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
  * 
  */
-public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpSettingsArgs extends ResourceArgs {
 
     public static final HttpSettingsArgs Empty = new HttpSettingsArgs();
 

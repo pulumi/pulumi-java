@@ -18,6 +18,7 @@ import com.pulumi.azurenative.containerservice.inputs.LinuxOSConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -33,7 +34,7 @@ import javax.annotation.Nullable;
  * Profile for the container service agent pool.
  * 
  */
-public final class ManagedClusterAgentPoolProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterAgentPoolProfileArgs extends ResourceArgs {
 
     public static final ManagedClusterAgentPoolProfileArgs Empty = new ManagedClusterAgentPoolProfileArgs();
 

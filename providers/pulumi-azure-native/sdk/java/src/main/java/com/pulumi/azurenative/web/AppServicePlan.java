@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +39,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:web:AppServicePlan")
-public class AppServicePlan extends com.pulumi.resources.CustomResource {
+public class AppServicePlan extends CustomResource {
     /**
      * The time when the server farm free offer expires.
      * 
@@ -426,16 +428,16 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppServicePlan(String name, AppServicePlanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppServicePlan(String name, AppServicePlanArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:web:AppServicePlan", name, args == null ? AppServicePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppServicePlan(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppServicePlan(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:web:AppServicePlan", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:web/v20150801:AppServicePlan").build()),
@@ -452,7 +454,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:web/v20210301:AppServicePlan").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -463,7 +465,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppServicePlan get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppServicePlan get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AppServicePlan(name, id, options);
     }
 }

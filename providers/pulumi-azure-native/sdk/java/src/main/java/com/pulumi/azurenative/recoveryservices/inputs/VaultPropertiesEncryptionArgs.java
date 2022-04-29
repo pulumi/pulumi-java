@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.CmkKeyVaultPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Customer Managed Key details of the resource.
  * 
  */
-public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VaultPropertiesEncryptionArgs extends ResourceArgs {
 
     public static final VaultPropertiesEncryptionArgs Empty = new VaultPropertiesEncryptionArgs();
 

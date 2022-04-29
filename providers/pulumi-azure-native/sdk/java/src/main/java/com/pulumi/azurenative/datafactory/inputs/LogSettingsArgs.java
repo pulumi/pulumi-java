@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsArgs;
 import com.pulumi.azurenative.datafactory.inputs.LogLocationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Log settings.
  * 
  */
-public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogSettingsArgs extends ResourceArgs {
 
     public static final LogSettingsArgs Empty = new LogSettingsArgs();
 

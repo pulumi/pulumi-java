@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The properties of an add vCenter request.
  * 
  */
-public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddVCenterRequestPropertiesArgs extends ResourceArgs {
 
     public static final AddVCenterRequestPropertiesArgs Empty = new AddVCenterRequestPropertiesArgs();
 

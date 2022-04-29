@@ -6,6 +6,7 @@ package com.pulumi.azurenative.peering.inputs;
 import com.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties that define an exchange connection.
  * 
  */
-public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExchangeConnectionArgs extends ResourceArgs {
 
     public static final ExchangeConnectionArgs Empty = new ExchangeConnectionArgs();
 

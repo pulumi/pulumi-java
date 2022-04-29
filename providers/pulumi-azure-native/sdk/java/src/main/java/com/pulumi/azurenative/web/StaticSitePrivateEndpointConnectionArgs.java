@@ -6,13 +6,14 @@ package com.pulumi.azurenative.web;
 import com.pulumi.azurenative.web.inputs.PrivateLinkConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StaticSitePrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class StaticSitePrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final StaticSitePrivateEndpointConnectionArgs Empty = new StaticSitePrivateEndpointConnectionArgs();
 

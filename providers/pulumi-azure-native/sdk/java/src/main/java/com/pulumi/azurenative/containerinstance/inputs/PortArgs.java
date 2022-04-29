@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerinstance.enums.ContainerGroupNetworkProto
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The port exposed on the container group.
  * 
  */
-public final class PortArgs extends com.pulumi.resources.ResourceArgs {
+public final class PortArgs extends ResourceArgs {
 
     public static final PortArgs Empty = new PortArgs();
 

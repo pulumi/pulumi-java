@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.management.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetHierarchySettingArgs extends InvokeArgs {
 
     public static final GetHierarchySettingArgs Empty = new GetHierarchySettingArgs();
 

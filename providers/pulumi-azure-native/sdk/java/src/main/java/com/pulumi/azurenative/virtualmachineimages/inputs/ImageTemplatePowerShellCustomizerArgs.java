@@ -6,6 +6,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of &#39;scriptUri&#39; or &#39;inline&#39; can be specified.
  * 
  */
-public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplatePowerShellCustomizerArgs extends ResourceArgs {
 
     public static final ImageTemplatePowerShellCustomizerArgs Empty = new ImageTemplatePowerShellCustomizerArgs();
 

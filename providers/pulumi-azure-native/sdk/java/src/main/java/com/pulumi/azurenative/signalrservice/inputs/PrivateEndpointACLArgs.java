@@ -7,6 +7,7 @@ import com.pulumi.azurenative.signalrservice.enums.SignalRRequestType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * ACL for a private endpoint
  * 
  */
-public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointACLArgs extends ResourceArgs {
 
     public static final PrivateEndpointACLArgs Empty = new PrivateEndpointACLArgs();
 

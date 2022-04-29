@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabric.enums.ArmUpgradeFailureAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The policy used for monitoring the application upgrade
  * 
  */
-public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArmRollingUpgradeMonitoringPolicyArgs extends ResourceArgs {
 
     public static final ArmRollingUpgradeMonitoringPolicyArgs Empty = new ArmRollingUpgradeMonitoringPolicyArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
  * 
  */
-public final class EncryptionScopeKeyVaultPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionScopeKeyVaultPropertiesArgs extends ResourceArgs {
 
     public static final EncryptionScopeKeyVaultPropertiesArgs Empty = new EncryptionScopeKeyVaultPropertiesArgs();
 

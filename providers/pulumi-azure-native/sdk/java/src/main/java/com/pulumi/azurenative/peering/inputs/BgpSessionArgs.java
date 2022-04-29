@@ -5,6 +5,7 @@ package com.pulumi.azurenative.peering.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The properties that define a BGP session.
  * 
  */
-public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BgpSessionArgs extends ResourceArgs {
 
     public static final BgpSessionArgs Empty = new BgpSessionArgs();
 

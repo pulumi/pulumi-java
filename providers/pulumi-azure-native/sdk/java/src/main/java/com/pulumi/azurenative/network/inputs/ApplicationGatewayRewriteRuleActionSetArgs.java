@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfigurati
 import com.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Set of actions in the Rewrite Rule in Application Gateway.
  * 
  */
-public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayRewriteRuleActionSetArgs extends ResourceArgs {
 
     public static final ApplicationGatewayRewriteRuleActionSetArgs Empty = new ApplicationGatewayRewriteRuleActionSetArgs();
 

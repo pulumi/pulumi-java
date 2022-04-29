@@ -9,6 +9,7 @@ import com.pulumi.azurenative.insights.enums.TimeAggregationType;
 import com.pulumi.azurenative.insights.inputs.ScaleRuleMetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The trigger that results in a scaling action.
  * 
  */
-public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricTriggerArgs extends ResourceArgs {
 
     public static final MetricTriggerArgs Empty = new MetricTriggerArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.enums.FrontDoorQuery;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
  * 
  */
-public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheConfigurationArgs extends ResourceArgs {
 
     public static final CacheConfigurationArgs Empty = new CacheConfigurationArgs();
 

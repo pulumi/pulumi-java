@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Contains all the contact details of the customer.
  * 
  */
-public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactDetailsArgs extends ResourceArgs {
 
     public static final ContactDetailsArgs Empty = new ContactDetailsArgs();
 

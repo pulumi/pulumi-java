@@ -9,6 +9,7 @@ import com.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Contact Profile link
  * 
  */
-public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactProfileLinkArgs extends ResourceArgs {
 
     public static final ContactProfileLinkArgs Empty = new ContactProfileLinkArgs();
 

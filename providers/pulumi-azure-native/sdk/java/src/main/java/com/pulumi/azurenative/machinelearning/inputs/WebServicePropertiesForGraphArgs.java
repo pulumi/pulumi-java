@@ -18,6 +18,7 @@ import com.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  * Properties specific to a Graph based web service.
  * 
  */
-public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebServicePropertiesForGraphArgs extends ResourceArgs {
 
     public static final WebServicePropertiesForGraphArgs Empty = new WebServicePropertiesForGraphArgs();
 

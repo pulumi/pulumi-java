@@ -7,6 +7,7 @@ import com.pulumi.azurenative.costmanagement.enums.FunctionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The aggregation expression to be used in the report.
  * 
  */
-public final class ReportAggregationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportAggregationArgs extends ResourceArgs {
 
     public static final ReportAggregationArgs Empty = new ReportAggregationArgs();
 

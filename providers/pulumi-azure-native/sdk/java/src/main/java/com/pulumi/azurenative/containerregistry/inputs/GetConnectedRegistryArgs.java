@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetConnectedRegistryArgs extends InvokeArgs {
 
     public static final GetConnectedRegistryArgs Empty = new GetConnectedRegistryArgs();
 

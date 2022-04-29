@@ -7,13 +7,14 @@ import com.pulumi.azurenative.sql.enums.AdministratorType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerAzureADAdministratorArgs extends ResourceArgs {
 
     public static final ServerAzureADAdministratorArgs Empty = new ServerAzureADAdministratorArgs();
 

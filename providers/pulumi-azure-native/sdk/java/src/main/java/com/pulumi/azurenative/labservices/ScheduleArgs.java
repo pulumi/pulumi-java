@@ -6,13 +6,14 @@ package com.pulumi.azurenative.labservices;
 import com.pulumi.azurenative.labservices.inputs.RecurrencePatternArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleArgs extends ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 

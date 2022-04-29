@@ -28,6 +28,7 @@ import com.pulumi.azurenative.datafactory.inputs.XmlReadSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +41,7 @@ import javax.annotation.Nullable;
  * Activity to get metadata of dataset
  * 
  */
-public final class GetMetadataActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class GetMetadataActivityArgs extends ResourceArgs {
 
     public static final GetMetadataActivityArgs Empty = new GetMetadataActivityArgs();
 

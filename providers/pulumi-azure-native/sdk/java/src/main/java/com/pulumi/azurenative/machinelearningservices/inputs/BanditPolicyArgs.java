@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation.
  * 
  */
-public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BanditPolicyArgs extends ResourceArgs {
 
     public static final BanditPolicyArgs Empty = new BanditPolicyArgs();
 

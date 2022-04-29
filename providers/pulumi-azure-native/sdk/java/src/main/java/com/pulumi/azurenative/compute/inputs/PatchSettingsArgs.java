@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.enums.WindowsVMGuestPatchMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Specifies settings related to VM Guest Patching on Windows.
  * 
  */
-public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class PatchSettingsArgs extends ResourceArgs {
 
     public static final PatchSettingsArgs Empty = new PatchSettingsArgs();
 

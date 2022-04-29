@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Configures the Explicit Analog Television Output Restriction control bits. For further details see the PlayReady Compliance Rules.
  * 
  */
-public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs Empty = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs();
 

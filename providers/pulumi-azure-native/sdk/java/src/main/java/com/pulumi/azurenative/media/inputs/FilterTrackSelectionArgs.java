@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.FilterTrackPropertyConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Representing a list of FilterTrackPropertyConditions to select a track.  The filters are combined using a logical AND operation.
  * 
  */
-public final class FilterTrackSelectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterTrackSelectionArgs extends ResourceArgs {
 
     public static final FilterTrackSelectionArgs Empty = new FilterTrackSelectionArgs();
 

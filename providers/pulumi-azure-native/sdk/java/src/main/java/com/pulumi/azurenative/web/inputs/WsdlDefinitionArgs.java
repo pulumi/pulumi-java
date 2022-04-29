@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The WSDL definition
  * 
  */
-public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WsdlDefinitionArgs extends ResourceArgs {
 
     public static final WsdlDefinitionArgs Empty = new WsdlDefinitionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The resource requirements for the container (cpu and memory).
  * 
  */
-public final class ContainerResourceRequirementsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerResourceRequirementsArgs extends ResourceArgs {
 
     public static final ContainerResourceRequirementsArgs Empty = new ContainerResourceRequirementsArgs();
 

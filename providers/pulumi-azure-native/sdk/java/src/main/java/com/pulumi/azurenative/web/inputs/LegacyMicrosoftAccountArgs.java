@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the legacy Microsoft Account provider.
  * 
  */
-public final class LegacyMicrosoftAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class LegacyMicrosoftAccountArgs extends ResourceArgs {
 
     public static final LegacyMicrosoftAccountArgs Empty = new LegacyMicrosoftAccountArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * SSL certificate information.
  * 
  */
-public final class CertificateInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateInformationArgs extends ResourceArgs {
 
     public static final CertificateInformationArgs Empty = new CertificateInformationArgs();
 

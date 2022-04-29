@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Batch endpoint configuration.
  * 
  */
-public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchEndpointArgs extends ResourceArgs {
 
     public static final BatchEndpointArgs Empty = new BatchEndpointArgs();
 

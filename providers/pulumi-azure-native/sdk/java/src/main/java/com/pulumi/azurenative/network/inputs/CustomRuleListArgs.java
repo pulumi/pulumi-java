@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.CustomRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines contents of custom rules
  * 
  */
-public final class CustomRuleListArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomRuleListArgs extends ResourceArgs {
 
     public static final CustomRuleListArgs Empty = new CustomRuleListArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The properties that define a direct connection.
  * 
  */
-public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DirectConnectionArgs extends ResourceArgs {
 
     public static final DirectConnectionArgs Empty = new DirectConnectionArgs();
 

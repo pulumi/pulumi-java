@@ -7,6 +7,7 @@ import com.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsA
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines the network interface resource settings.
  * 
  */
-public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceResourceSettingsArgs extends ResourceArgs {
 
     public static final NetworkInterfaceResourceSettingsArgs Empty = new NetworkInterfaceResourceSettingsArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetContainerGroupArgs extends InvokeArgs {
 
     public static final GetContainerGroupArgs Empty = new GetContainerGroupArgs();
 

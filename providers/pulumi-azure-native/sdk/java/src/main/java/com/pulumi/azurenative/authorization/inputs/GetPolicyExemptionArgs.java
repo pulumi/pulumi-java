@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPolicyExemptionArgs extends InvokeArgs {
 
     public static final GetPolicyExemptionArgs Empty = new GetPolicyExemptionArgs();
 

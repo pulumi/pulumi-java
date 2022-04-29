@@ -8,6 +8,7 @@ import com.pulumi.azurenative.sql.inputs.FailoverGroupReadWriteEndpointArgs;
 import com.pulumi.azurenative.sql.inputs.PartnerInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class FailoverGroupArgs extends ResourceArgs {
 
     public static final FailoverGroupArgs Empty = new FailoverGroupArgs();
 

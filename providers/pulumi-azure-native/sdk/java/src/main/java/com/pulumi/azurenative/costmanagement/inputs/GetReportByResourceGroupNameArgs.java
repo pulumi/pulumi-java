@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetReportByResourceGroupNameArgs extends InvokeArgs {
 
     public static final GetReportByResourceGroupNameArgs Empty = new GetReportByResourceGroupNameArgs();
 

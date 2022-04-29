@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The connection type property associated with the entity.
  * 
  */
-public final class ConnectionTypeAssociationPropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionTypeAssociationPropertyArgs extends ResourceArgs {
 
     public static final ConnectionTypeAssociationPropertyArgs Empty = new ConnectionTypeAssociationPropertyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A copy activity source for MySQL databases.
  * 
  */
-public final class MySqlSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class MySqlSourceArgs extends ResourceArgs {
 
     public static final MySqlSourceArgs Empty = new MySqlSourceArgs();
 

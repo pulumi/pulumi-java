@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.enums.PropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A rule which is evaluated upon event interception. The rule is configured by comparing a specific value from the event model to an expected value. This comparison is done by using one of the supported operators set.
  * 
  */
-public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationTriggeringRuleArgs extends ResourceArgs {
 
     public static final AutomationTriggeringRuleArgs Empty = new AutomationTriggeringRuleArgs();
 

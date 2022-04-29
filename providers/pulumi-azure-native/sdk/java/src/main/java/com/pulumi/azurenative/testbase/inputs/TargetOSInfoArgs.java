@@ -5,6 +5,7 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The information of the target OS to be tested.
  * 
  */
-public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetOSInfoArgs extends ResourceArgs {
 
     public static final TargetOSInfoArgs Empty = new TargetOSInfoArgs();
 

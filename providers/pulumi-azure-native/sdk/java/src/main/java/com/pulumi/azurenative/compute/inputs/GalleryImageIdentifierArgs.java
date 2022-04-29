@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * This is the gallery image definition identifier.
  * 
  */
-public final class GalleryImageIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class GalleryImageIdentifierArgs extends ResourceArgs {
 
     public static final GalleryImageIdentifierArgs Empty = new GalleryImageIdentifierArgs();
 

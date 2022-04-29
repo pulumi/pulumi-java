@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The scheduling constraints for when the profile begins.
  * 
  */
-public final class RecurrentScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecurrentScheduleArgs extends ResourceArgs {
 
     public static final RecurrentScheduleArgs Empty = new RecurrentScheduleArgs();
 

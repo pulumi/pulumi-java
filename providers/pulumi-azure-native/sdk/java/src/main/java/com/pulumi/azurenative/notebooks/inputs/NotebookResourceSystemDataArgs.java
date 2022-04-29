@@ -5,6 +5,7 @@ package com.pulumi.azurenative.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * System data for notebook resource
  * 
  */
-public final class NotebookResourceSystemDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotebookResourceSystemDataArgs extends ResourceArgs {
 
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 

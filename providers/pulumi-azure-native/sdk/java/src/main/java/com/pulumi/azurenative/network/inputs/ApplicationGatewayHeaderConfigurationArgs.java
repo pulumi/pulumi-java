@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Header configuration of the Actions set in Application Gateway.
  * 
  */
-public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayHeaderConfigurationArgs extends ResourceArgs {
 
     public static final ApplicationGatewayHeaderConfigurationArgs Empty = new ApplicationGatewayHeaderConfigurationArgs();
 

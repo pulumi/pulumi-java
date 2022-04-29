@@ -8,6 +8,7 @@ import com.pulumi.azurenative.logic.enums.SigningAlgorithm;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The AS2 agreement validation settings.
  * 
  */
-public final class AS2ValidationSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2ValidationSettingsArgs extends ResourceArgs {
 
     public static final AS2ValidationSettingsArgs Empty = new AS2ValidationSettingsArgs();
 

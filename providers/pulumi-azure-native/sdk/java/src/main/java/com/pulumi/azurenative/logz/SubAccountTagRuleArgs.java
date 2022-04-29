@@ -6,13 +6,14 @@ package com.pulumi.azurenative.logz;
 import com.pulumi.azurenative.logz.inputs.MonitoringTagRulesPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubAccountTagRuleArgs extends ResourceArgs {
 
     public static final SubAccountTagRuleArgs Empty = new SubAccountTagRuleArgs();
 

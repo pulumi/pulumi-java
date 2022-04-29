@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import com.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAppBackupConfigurationSlotArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAppBackupConfigurationSlotArgs extends ResourceArgs {
 
     public static final WebAppBackupConfigurationSlotArgs Empty = new WebAppBackupConfigurationSlotArgs();
 

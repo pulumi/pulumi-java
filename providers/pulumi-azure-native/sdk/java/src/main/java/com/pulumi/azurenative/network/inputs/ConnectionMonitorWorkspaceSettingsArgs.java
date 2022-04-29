@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the settings for producing output into a log analytics workspace.
  * 
  */
-public final class ConnectionMonitorWorkspaceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionMonitorWorkspaceSettingsArgs extends ResourceArgs {
 
     public static final ConnectionMonitorWorkspaceSettingsArgs Empty = new ConnectionMonitorWorkspaceSettingsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * General metadata for the parameter.
  * 
  */
-public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterDefinitionsValueMetadataArgs extends ResourceArgs {
 
     public static final ParameterDefinitionsValueMetadataArgs Empty = new ParameterDefinitionsValueMetadataArgs();
 

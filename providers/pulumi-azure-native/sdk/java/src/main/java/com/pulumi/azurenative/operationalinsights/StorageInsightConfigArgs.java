@@ -6,6 +6,7 @@ package com.pulumi.azurenative.operationalinsights;
 import com.pulumi.azurenative.operationalinsights.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StorageInsightConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageInsightConfigArgs extends ResourceArgs {
 
     public static final StorageInsightConfigArgs Empty = new StorageInsightConfigArgs();
 

@@ -6,11 +6,12 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.inputs.InboundNatPoolArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class PoolEndpointConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PoolEndpointConfigurationArgs extends ResourceArgs {
 
     public static final PoolEndpointConfigurationArgs Empty = new PoolEndpointConfigurationArgs();
 

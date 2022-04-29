@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.SettingsParameterDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes a section in the fabric settings of the cluster.
  * 
  */
-public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SettingsSectionDescriptionArgs extends ResourceArgs {
 
     public static final SettingsSectionDescriptionArgs Empty = new SettingsSectionDescriptionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
  * 
  */
-public final class NodeTypeDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeTypeDescriptionArgs extends ResourceArgs {
 
     public static final NodeTypeDescriptionArgs Empty = new NodeTypeDescriptionArgs();
 

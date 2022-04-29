@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyNatRuleCollectionActio
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties of the FirewallPolicyNatRuleCollectionAction.
  * 
  */
-public final class FirewallPolicyNatRuleCollectionActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyNatRuleCollectionActionArgs extends ResourceArgs {
 
     public static final FirewallPolicyNatRuleCollectionActionArgs Empty = new FirewallPolicyNatRuleCollectionActionArgs();
 

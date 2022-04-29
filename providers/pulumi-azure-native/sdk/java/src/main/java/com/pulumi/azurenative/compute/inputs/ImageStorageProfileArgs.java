@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import com.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a storage profile.
  * 
  */
-public final class ImageStorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageStorageProfileArgs extends ResourceArgs {
 
     public static final ImageStorageProfileArgs Empty = new ImageStorageProfileArgs();
 

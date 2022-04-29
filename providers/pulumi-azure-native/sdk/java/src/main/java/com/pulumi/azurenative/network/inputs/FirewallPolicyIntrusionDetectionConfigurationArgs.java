@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionByp
 import com.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The operation for configuring intrusion detection.
  * 
  */
-public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends ResourceArgs {
 
     public static final FirewallPolicyIntrusionDetectionConfigurationArgs Empty = new FirewallPolicyIntrusionDetectionConfigurationArgs();
 

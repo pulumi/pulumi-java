@@ -9,6 +9,7 @@ import com.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsA
 import com.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Set the connectivity, storage and workload settings.
  * 
  */
-public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerConfigurationsManagementSettingsArgs extends ResourceArgs {
 
     public static final ServerConfigurationsManagementSettingsArgs Empty = new ServerConfigurationsManagementSettingsArgs();
 

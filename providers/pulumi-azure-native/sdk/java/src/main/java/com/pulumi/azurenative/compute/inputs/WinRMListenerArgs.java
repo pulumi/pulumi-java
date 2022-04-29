@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.enums.ProtocolTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes Protocol and thumbprint of Windows Remote Management listener
  * 
  */
-public final class WinRMListenerArgs extends com.pulumi.resources.ResourceArgs {
+public final class WinRMListenerArgs extends ResourceArgs {
 
     public static final WinRMListenerArgs Empty = new WinRMListenerArgs();
 

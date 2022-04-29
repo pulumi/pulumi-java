@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.FrequencyTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connector mapping property availability.
  * 
  */
-public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorMappingAvailabilityArgs extends ResourceArgs {
 
     public static final ConnectorMappingAvailabilityArgs Empty = new ConnectorMappingAvailabilityArgs();
 

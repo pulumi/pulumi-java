@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Options for controlling the validation of TLS endpoints.
  * 
  */
-public final class TlsValidationOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TlsValidationOptionsArgs extends ResourceArgs {
 
     public static final TlsValidationOptionsArgs Empty = new TlsValidationOptionsArgs();
 

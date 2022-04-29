@@ -10,6 +10,7 @@ import com.pulumi.azurenative.servicefabric.inputs.ManagedIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationArgs extends ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 

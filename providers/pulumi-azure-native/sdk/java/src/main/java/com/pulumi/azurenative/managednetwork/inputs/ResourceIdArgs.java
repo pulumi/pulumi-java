@@ -5,6 +5,7 @@ package com.pulumi.azurenative.managednetwork.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Generic pointer to a resource
  * 
  */
-public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdArgs extends ResourceArgs {
 
     public static final ResourceIdArgs Empty = new ResourceIdArgs();
 

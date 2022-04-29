@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The information about the user identity.
  * 
  */
-public final class UserIdentityPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserIdentityPropertiesArgs extends ResourceArgs {
 
     public static final UserIdentityPropertiesArgs Empty = new UserIdentityPropertiesArgs();
 

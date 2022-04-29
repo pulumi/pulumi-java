@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.UnauthenticatedClientActionV2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
  * 
  */
-public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalValidationArgs extends ResourceArgs {
 
     public static final GlobalValidationArgs Empty = new GlobalValidationArgs();
 

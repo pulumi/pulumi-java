@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
  * 
  */
-public final class DateAfterModificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DateAfterModificationArgs extends ResourceArgs {
 
     public static final DateAfterModificationArgs Empty = new DateAfterModificationArgs();
 

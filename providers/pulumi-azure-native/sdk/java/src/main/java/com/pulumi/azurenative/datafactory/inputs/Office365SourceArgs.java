@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A copy activity source for an Office 365 service.
  * 
  */
-public final class Office365SourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class Office365SourceArgs extends ResourceArgs {
 
     public static final Office365SourceArgs Empty = new Office365SourceArgs();
 

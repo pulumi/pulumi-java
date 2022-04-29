@@ -6,6 +6,7 @@ package com.pulumi.azurenative.operationsmanagement.inputs;
 import com.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * ManagementConfiguration properties supported by the OperationsManagement resource provider.
  * 
  */
-public final class ManagementConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final ManagementConfigurationPropertiesArgs Empty = new ManagementConfigurationPropertiesArgs();
 

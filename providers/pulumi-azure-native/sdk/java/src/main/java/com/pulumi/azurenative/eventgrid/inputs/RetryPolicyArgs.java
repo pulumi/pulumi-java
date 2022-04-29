@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Information about the retry policy for an event subscription.
  * 
  */
-public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryPolicyArgs extends ResourceArgs {
 
     public static final RetryPolicyArgs Empty = new RetryPolicyArgs();
 

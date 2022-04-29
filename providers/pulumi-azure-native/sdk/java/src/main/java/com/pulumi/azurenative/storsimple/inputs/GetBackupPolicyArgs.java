@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.storsimple.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBackupPolicyArgs extends InvokeArgs {
 
     public static final GetBackupPolicyArgs Empty = new GetBackupPolicyArgs();
 

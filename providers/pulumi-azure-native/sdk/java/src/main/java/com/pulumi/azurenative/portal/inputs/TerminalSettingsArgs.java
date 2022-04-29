@@ -8,6 +8,7 @@ import com.pulumi.azurenative.portal.enums.FontStyle;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Settings for terminal appearance.
  * 
  */
-public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TerminalSettingsArgs extends ResourceArgs {
 
     public static final TerminalSettingsArgs Empty = new TerminalSettingsArgs();
 

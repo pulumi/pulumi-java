@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the endpoints used for the custom Open ID Connect provider.
  * 
  */
-public final class OpenIdConnectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenIdConnectConfigArgs extends ResourceArgs {
 
     public static final OpenIdConnectConfigArgs Empty = new OpenIdConnectConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A track selection condition. This property is reserved for future use, any value set on this property will be ignored.
  * 
  */
-public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LiveEventInputTrackSelectionArgs extends ResourceArgs {
 
     public static final LiveEventInputTrackSelectionArgs Empty = new LiveEventInputTrackSelectionArgs();
 

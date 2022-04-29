@@ -20,6 +20,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:compute:VirtualMachineScaleSet")
-public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource {
+public class VirtualMachineScaleSet extends CustomResource {
     /**
      * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
@@ -403,16 +405,16 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VirtualMachineScaleSet(String name, VirtualMachineScaleSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VirtualMachineScaleSet(String name, VirtualMachineScaleSetArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSet", name, args == null ? VirtualMachineScaleSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VirtualMachineScaleSet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineScaleSet(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:compute/v20150615:VirtualMachineScaleSet").build()),
@@ -434,7 +436,7 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineScaleSet").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -445,7 +447,7 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineScaleSet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineScaleSet get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new VirtualMachineScaleSet(name, id, options);
     }
 }

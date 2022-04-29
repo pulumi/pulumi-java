@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Optional throttling information for the alert rule.
  * 
  */
-public final class ThrottlingInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThrottlingInformationArgs extends ResourceArgs {
 
     public static final ThrottlingInformationArgs Empty = new ThrottlingInformationArgs();
 

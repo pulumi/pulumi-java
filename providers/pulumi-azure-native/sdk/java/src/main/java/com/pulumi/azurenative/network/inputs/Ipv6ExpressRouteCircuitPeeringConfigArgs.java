@@ -9,6 +9,7 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Contains IPv6 peering config.
  * 
  */
-public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends ResourceArgs {
 
     public static final Ipv6ExpressRouteCircuitPeeringConfigArgs Empty = new Ipv6ExpressRouteCircuitPeeringConfigArgs();
 

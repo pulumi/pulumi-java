@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Long term policy schedule.
  * 
  */
-public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class LongTermSchedulePolicyArgs extends ResourceArgs {
 
     public static final LongTermSchedulePolicyArgs Empty = new LongTermSchedulePolicyArgs();
 

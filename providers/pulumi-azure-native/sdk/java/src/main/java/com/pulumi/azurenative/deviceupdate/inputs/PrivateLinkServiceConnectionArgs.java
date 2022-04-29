@@ -5,6 +5,7 @@ package com.pulumi.azurenative.deviceupdate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Private link service connection details.
  * 
  */
-public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkServiceConnectionArgs extends ResourceArgs {
 
     public static final PrivateLinkServiceConnectionArgs Empty = new PrivateLinkServiceConnectionArgs();
 

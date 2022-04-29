@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.enums.SnapshotStorageAccountTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
  * 
  */
-public final class SnapshotSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SnapshotSkuArgs extends ResourceArgs {
 
     public static final SnapshotSkuArgs Empty = new SnapshotSkuArgs();
 

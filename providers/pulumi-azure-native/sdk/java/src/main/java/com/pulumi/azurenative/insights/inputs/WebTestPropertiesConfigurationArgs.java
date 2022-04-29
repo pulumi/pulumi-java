@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An XML configuration specification for a WebTest.
  * 
  */
-public final class WebTestPropertiesConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebTestPropertiesConfigurationArgs extends ResourceArgs {
 
     public static final WebTestPropertiesConfigurationArgs Empty = new WebTestPropertiesConfigurationArgs();
 

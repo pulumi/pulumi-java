@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.enums.CacheIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cache identity properties.
  * 
  */
-public final class CacheIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheIdentityArgs extends ResourceArgs {
 
     public static final CacheIdentityArgs Empty = new CacheIdentityArgs();
 

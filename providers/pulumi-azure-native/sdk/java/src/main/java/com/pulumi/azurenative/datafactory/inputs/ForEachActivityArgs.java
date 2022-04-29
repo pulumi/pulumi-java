@@ -46,6 +46,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -60,7 +61,7 @@ import javax.annotation.Nullable;
  * This activity is used for iterating over a collection and execute given activities.
  * 
  */
-public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ForEachActivityArgs extends ResourceArgs {
 
     public static final ForEachActivityArgs Empty = new ForEachActivityArgs();
 

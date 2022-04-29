@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigA
 import com.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Application logs configuration.
  * 
  */
-public final class ApplicationLogsConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationLogsConfigArgs extends ResourceArgs {
 
     public static final ApplicationLogsConfigArgs Empty = new ApplicationLogsConfigArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.enums.AzureFirewallSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * SKU of an Azure Firewall.
  * 
  */
-public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFirewallSkuArgs extends ResourceArgs {
 
     public static final AzureFirewallSkuArgs Empty = new AzureFirewallSkuArgs();
 

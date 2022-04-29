@@ -7,6 +7,7 @@ import com.pulumi.azurenative.labservices.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.labservices.enums.WeekDay;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Recurrence pattern of a lab schedule.
  * 
  */
-public final class RecurrencePatternArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecurrencePatternArgs extends ResourceArgs {
 
     public static final RecurrencePatternArgs Empty = new RecurrencePatternArgs();
 

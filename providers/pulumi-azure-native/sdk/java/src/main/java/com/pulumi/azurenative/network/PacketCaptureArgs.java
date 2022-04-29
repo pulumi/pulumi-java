@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.PacketCaptureStorageLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
+public final class PacketCaptureArgs extends ResourceArgs {
 
     public static final PacketCaptureArgs Empty = new PacketCaptureArgs();
 

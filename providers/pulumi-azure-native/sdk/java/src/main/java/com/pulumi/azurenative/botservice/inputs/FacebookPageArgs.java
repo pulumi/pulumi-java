@@ -5,6 +5,7 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A Facebook page for Facebook channel registration
  * 
  */
-public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
+public final class FacebookPageArgs extends ResourceArgs {
 
     public static final FacebookPageArgs Empty = new FacebookPageArgs();
 

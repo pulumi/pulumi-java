@@ -7,6 +7,7 @@ import com.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionSt
 import com.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MHSMPrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final MHSMPrivateEndpointConnectionArgs Empty = new MHSMPrivateEndpointConnectionArgs();
 

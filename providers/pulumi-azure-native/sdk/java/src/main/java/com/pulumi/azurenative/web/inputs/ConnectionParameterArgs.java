@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.enums.ConnectionParameterType;
 import com.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connection provider parameters
  * 
  */
-public final class ConnectionParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionParameterArgs extends ResourceArgs {
 
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Storage setting
  * 
  */
-public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageSettingArgs extends ResourceArgs {
 
     public static final StorageSettingArgs Empty = new StorageSettingArgs();
 

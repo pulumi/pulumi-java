@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanGroupArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Recovery plan creation properties.
  * 
  */
-public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateRecoveryPlanInputPropertiesArgs extends ResourceArgs {
 
     public static final CreateRecoveryPlanInputPropertiesArgs Empty = new CreateRecoveryPlanInputPropertiesArgs();
 

@@ -13,6 +13,7 @@ import com.pulumi.azurenative.network.inputs.RoutingRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
+public final class FrontDoorArgs extends ResourceArgs {
 
     public static final FrontDoorArgs Empty = new FrontDoorArgs();
 

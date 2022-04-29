@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:web:AppServicePlanRouteForVnet")
-public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResource {
+public class AppServicePlanRouteForVnet extends CustomResource {
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
@@ -145,16 +147,16 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppServicePlanRouteForVnet(String name, AppServicePlanRouteForVnetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppServicePlanRouteForVnet(String name, AppServicePlanRouteForVnetArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:web:AppServicePlanRouteForVnet", name, args == null ? AppServicePlanRouteForVnetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppServicePlanRouteForVnet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppServicePlanRouteForVnet(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:web:AppServicePlanRouteForVnet", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:web/v20150801:AppServicePlanRouteForVnet").build()),
@@ -171,7 +173,7 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:web/v20210301:AppServicePlanRouteForVnet").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -182,7 +184,7 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppServicePlanRouteForVnet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppServicePlanRouteForVnet get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AppServicePlanRouteForVnet(name, id, options);
     }
 }

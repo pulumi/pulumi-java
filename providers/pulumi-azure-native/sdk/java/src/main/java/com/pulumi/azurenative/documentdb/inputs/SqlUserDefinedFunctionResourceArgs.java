@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cosmos DB SQL userDefinedFunction resource object
  * 
  */
-public final class SqlUserDefinedFunctionResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlUserDefinedFunctionResourceArgs extends ResourceArgs {
 
     public static final SqlUserDefinedFunctionResourceArgs Empty = new SqlUserDefinedFunctionResourceArgs();
 

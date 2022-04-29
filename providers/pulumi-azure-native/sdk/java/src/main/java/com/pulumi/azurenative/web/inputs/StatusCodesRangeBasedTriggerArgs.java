@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Trigger based on range of status codes.
  * 
  */
-public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class StatusCodesRangeBasedTriggerArgs extends ResourceArgs {
 
     public static final StatusCodesRangeBasedTriggerArgs Empty = new StatusCodesRangeBasedTriggerArgs();
 

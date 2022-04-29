@@ -8,12 +8,13 @@ import com.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import com.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobCollectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobCollectionPropertiesArgs extends ResourceArgs {
 
     public static final JobCollectionPropertiesArgs Empty = new JobCollectionPropertiesArgs();
 

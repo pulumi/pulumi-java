@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A2A enable protection input.
  * 
  */
-public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class A2AEnableProtectionInputArgs extends ResourceArgs {
 
     public static final A2AEnableProtectionInputArgs Empty = new A2AEnableProtectionInputArgs();
 

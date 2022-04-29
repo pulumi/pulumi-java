@@ -5,6 +5,7 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings to customize ACI container instance.
  * 
  */
-public final class ContainerConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerConfigurationArgs extends ResourceArgs {
 
     public static final ContainerConfigurationArgs Empty = new ContainerConfigurationArgs();
 

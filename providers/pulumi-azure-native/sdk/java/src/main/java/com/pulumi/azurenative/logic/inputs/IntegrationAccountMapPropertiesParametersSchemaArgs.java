@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The parameters schema of integration account map.
  * 
  */
-public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends ResourceArgs {
 
     public static final IntegrationAccountMapPropertiesParametersSchemaArgs Empty = new IntegrationAccountMapPropertiesParametersSchemaArgs();
 

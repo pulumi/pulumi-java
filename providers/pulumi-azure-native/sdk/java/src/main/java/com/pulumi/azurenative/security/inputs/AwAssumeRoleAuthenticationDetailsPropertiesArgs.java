@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html&#34;&gt;Creating a Role to Delegate Permissions to an IAM User (write only)&lt;/a&gt;
  * 
  */
-public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends ResourceArgs {
 
     public static final AwAssumeRoleAuthenticationDetailsPropertiesArgs Empty = new AwAssumeRoleAuthenticationDetailsPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Filters limit replication to a subset of blobs within the storage account. A logical OR is performed on values in the filter. If multiple filters are defined, a logical AND is performed on all filters.
  * 
  */
-public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectReplicationPolicyFilterArgs extends ResourceArgs {
 
     public static final ObjectReplicationPolicyFilterArgs Empty = new ObjectReplicationPolicyFilterArgs();
 

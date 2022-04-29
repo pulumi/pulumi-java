@@ -6,13 +6,14 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.DataMaskingEntityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataMaskingArgs extends ResourceArgs {
 
     public static final DataMaskingArgs Empty = new DataMaskingArgs();
 

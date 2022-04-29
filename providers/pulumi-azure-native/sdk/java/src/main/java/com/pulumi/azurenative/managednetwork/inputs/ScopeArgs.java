@@ -6,6 +6,7 @@ package com.pulumi.azurenative.managednetwork.inputs;
 import com.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Scope of a Managed Network
  * 
  */
-public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeArgs extends ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 

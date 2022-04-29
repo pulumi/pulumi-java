@@ -6,6 +6,7 @@ package com.pulumi.azurenative.management.inputs;
 import com.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The details of a management group used during creation.
  * 
  */
-public final class CreateManagementGroupDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateManagementGroupDetailsArgs extends ResourceArgs {
 
     public static final CreateManagementGroupDetailsArgs Empty = new CreateManagementGroupDetailsArgs();
 

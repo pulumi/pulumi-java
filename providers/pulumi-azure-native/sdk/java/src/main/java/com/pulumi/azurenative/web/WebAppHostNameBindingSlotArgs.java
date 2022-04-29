@@ -9,13 +9,14 @@ import com.pulumi.azurenative.web.enums.HostNameType;
 import com.pulumi.azurenative.web.enums.SslState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebAppHostNameBindingSlotArgs extends ResourceArgs {
 
     public static final WebAppHostNameBindingSlotArgs Empty = new WebAppHostNameBindingSlotArgs();
 

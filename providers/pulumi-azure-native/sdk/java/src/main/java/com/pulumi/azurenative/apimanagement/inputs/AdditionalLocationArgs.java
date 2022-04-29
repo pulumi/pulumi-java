@@ -8,6 +8,7 @@ import com.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationAr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Description of an additional API Management resource location.
  * 
  */
-public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AdditionalLocationArgs extends ResourceArgs {
 
     public static final AdditionalLocationArgs Empty = new AdditionalLocationArgs();
 

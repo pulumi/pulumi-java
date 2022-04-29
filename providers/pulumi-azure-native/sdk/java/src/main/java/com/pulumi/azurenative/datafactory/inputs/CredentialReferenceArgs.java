@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Credential reference type.
  * 
  */
-public final class CredentialReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CredentialReferenceArgs extends ResourceArgs {
 
     public static final CredentialReferenceArgs Empty = new CredentialReferenceArgs();
 

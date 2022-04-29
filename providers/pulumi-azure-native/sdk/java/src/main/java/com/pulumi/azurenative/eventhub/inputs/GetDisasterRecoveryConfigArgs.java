@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDisasterRecoveryConfigArgs extends InvokeArgs {
 
     public static final GetDisasterRecoveryConfigArgs Empty = new GetDisasterRecoveryConfigArgs();
 

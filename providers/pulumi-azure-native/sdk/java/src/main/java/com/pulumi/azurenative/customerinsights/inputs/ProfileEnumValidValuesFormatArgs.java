@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Valid enum values in case of an enum property.
  * 
  */
-public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProfileEnumValidValuesFormatArgs extends ResourceArgs {
 
     public static final ProfileEnumValidValuesFormatArgs Empty = new ProfileEnumValidValuesFormatArgs();
 

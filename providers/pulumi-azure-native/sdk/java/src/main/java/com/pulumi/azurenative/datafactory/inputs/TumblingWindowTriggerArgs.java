@@ -13,6 +13,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
  * 
  */
-public final class TumblingWindowTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class TumblingWindowTriggerArgs extends ResourceArgs {
 
     public static final TumblingWindowTriggerArgs Empty = new TumblingWindowTriggerArgs();
 

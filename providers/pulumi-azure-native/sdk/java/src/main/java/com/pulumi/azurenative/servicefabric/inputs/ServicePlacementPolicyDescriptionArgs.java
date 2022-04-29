@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabric.enums.ServicePlacementPolicyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes the policy to be used for placement of a Service Fabric service.
  * 
  */
-public final class ServicePlacementPolicyDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicePlacementPolicyDescriptionArgs extends ResourceArgs {
 
     public static final ServicePlacementPolicyDescriptionArgs Empty = new ServicePlacementPolicyDescriptionArgs();
 

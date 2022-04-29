@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * The Edifact agreement validation settings.
  * 
  */
-public final class EdifactValidationSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactValidationSettingsArgs extends ResourceArgs {
 
     public static final EdifactValidationSettingsArgs Empty = new EdifactValidationSettingsArgs();
 

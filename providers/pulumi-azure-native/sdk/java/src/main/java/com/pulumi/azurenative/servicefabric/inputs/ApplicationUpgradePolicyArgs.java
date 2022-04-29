@@ -9,6 +9,7 @@ import com.pulumi.azurenative.servicefabric.inputs.ArmRollingUpgradeMonitoringPo
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Describes the policy for a monitored application upgrade.
  * 
  */
-public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationUpgradePolicyArgs extends ResourceArgs {
 
     public static final ApplicationUpgradePolicyArgs Empty = new ApplicationUpgradePolicyArgs();
 

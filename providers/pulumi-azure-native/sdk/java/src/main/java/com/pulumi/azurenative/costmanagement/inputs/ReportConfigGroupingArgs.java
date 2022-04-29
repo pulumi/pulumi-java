@@ -7,6 +7,7 @@ import com.pulumi.azurenative.costmanagement.enums.ReportConfigColumnType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The group by expression to be used in the report.
  * 
  */
-public final class ReportConfigGroupingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportConfigGroupingArgs extends ResourceArgs {
 
     public static final ReportConfigGroupingArgs Empty = new ReportConfigGroupingArgs();
 

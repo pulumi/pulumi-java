@@ -13,6 +13,7 @@ import com.pulumi.azurenative.devices.inputs.TargetIpFilterRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
  * 
  */
-public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class IotDpsPropertiesDescriptionArgs extends ResourceArgs {
 
     public static final IotDpsPropertiesDescriptionArgs Empty = new IotDpsPropertiesDescriptionArgs();
 

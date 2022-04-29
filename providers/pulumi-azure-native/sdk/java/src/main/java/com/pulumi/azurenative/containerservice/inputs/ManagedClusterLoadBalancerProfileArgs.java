@@ -10,6 +10,7 @@ import com.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Profile of the managed cluster load balancer.
  * 
  */
-public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterLoadBalancerProfileArgs extends ResourceArgs {
 
     public static final ManagedClusterLoadBalancerProfileArgs Empty = new ManagedClusterLoadBalancerProfileArgs();
 

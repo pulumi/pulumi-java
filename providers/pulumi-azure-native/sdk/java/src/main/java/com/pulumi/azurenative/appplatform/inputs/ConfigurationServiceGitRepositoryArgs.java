@@ -5,6 +5,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Git repository property payload for Application Configuration Service
  * 
  */
-public final class ConfigurationServiceGitRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationServiceGitRepositoryArgs extends ResourceArgs {
 
     public static final ConfigurationServiceGitRepositoryArgs Empty = new ConfigurationServiceGitRepositoryArgs();
 

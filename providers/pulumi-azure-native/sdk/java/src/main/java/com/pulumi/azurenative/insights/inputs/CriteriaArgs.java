@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.DimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the criteria for converting log to metric.
  * 
  */
-public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class CriteriaArgs extends ResourceArgs {
 
     public static final CriteriaArgs Empty = new CriteriaArgs();
 

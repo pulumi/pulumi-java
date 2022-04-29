@@ -5,6 +5,7 @@ package com.pulumi.azurenative.analysisservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The detail of firewall rule.
  * 
  */
-public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IPv4FirewallRuleArgs extends ResourceArgs {
 
     public static final IPv4FirewallRuleArgs Empty = new IPv4FirewallRuleArgs();
 

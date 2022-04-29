@@ -15,6 +15,7 @@ import com.pulumi.azurenative.datalakestore.inputs.EncryptionConfigArgs;
 import com.pulumi.azurenative.datalakestore.inputs.EncryptionIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountArgs extends ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Schedule for a given suppression configuration.
  * 
  */
-public final class SuppressionScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SuppressionScheduleArgs extends ResourceArgs {
 
     public static final SuppressionScheduleArgs Empty = new SuppressionScheduleArgs();
 

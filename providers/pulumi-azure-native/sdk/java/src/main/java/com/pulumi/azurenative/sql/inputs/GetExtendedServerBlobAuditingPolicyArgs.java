@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetExtendedServerBlobAuditingPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetExtendedServerBlobAuditingPolicyArgs extends InvokeArgs {
 
     public static final GetExtendedServerBlobAuditingPolicyArgs Empty = new GetExtendedServerBlobAuditingPolicyArgs();
 

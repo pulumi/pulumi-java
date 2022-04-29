@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.JobInputClipArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A Sequence contains an ordered list of Clips where each clip is a JobInput.  The Sequence will be treated as a single input.
  * 
  */
-public final class JobInputSequenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobInputSequenceArgs extends ResourceArgs {
 
     public static final JobInputSequenceArgs Empty = new JobInputSequenceArgs();
 

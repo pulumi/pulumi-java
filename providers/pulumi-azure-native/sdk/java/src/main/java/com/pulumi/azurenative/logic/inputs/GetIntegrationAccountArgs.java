@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetIntegrationAccountArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetIntegrationAccountArgs extends InvokeArgs {
 
     public static final GetIntegrationAccountArgs Empty = new GetIntegrationAccountArgs();
 

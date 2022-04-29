@@ -5,6 +5,7 @@ package com.pulumi.azurenative.portal.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The storage profile of the user settings.
  * 
  */
-public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageProfileArgs extends ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 

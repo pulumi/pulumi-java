@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes the properties of a run command parameter.
  * 
  */
-public final class RunCommandInputParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class RunCommandInputParameterArgs extends ResourceArgs {
 
     public static final RunCommandInputParameterArgs Empty = new RunCommandInputParameterArgs();
 

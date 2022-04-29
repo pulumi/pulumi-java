@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Edifact agreement content.
  * 
  */
-public final class EdifactAgreementContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactAgreementContentArgs extends ResourceArgs {
 
     public static final EdifactAgreementContentArgs Empty = new EdifactAgreementContentArgs();
 

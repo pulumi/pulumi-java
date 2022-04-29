@@ -8,6 +8,7 @@ import com.pulumi.azurenative.solutions.inputs.JitApproverDefinitionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Managed application Jit access policy.
  * 
  */
-public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationJitAccessPolicyArgs extends ResourceArgs {
 
     public static final ApplicationJitAccessPolicyArgs Empty = new ApplicationJitAccessPolicyArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.apimanagement.inputs.BodyDiagnosticSettingsArgs;
 import com.pulumi.azurenative.apimanagement.inputs.DataMaskingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Http message diagnostic settings.
  * 
  */
-public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpMessageDiagnosticArgs extends ResourceArgs {
 
     public static final HttpMessageDiagnosticArgs Empty = new HttpMessageDiagnosticArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Properties of the IoT Security solution&#39;s user defined resources.
  * 
  */
-public final class UserDefinedResourcesPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserDefinedResourcesPropertiesArgs extends ResourceArgs {
 
     public static final UserDefinedResourcesPropertiesArgs Empty = new UserDefinedResourcesPropertiesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the delta health policy used to evaluate the health of services belonging to a service type when upgrading the cluster.
  * 
  */
-public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceTypeDeltaHealthPolicyArgs extends ResourceArgs {
 
     public static final ServiceTypeDeltaHealthPolicyArgs Empty = new ServiceTypeDeltaHealthPolicyArgs();
 

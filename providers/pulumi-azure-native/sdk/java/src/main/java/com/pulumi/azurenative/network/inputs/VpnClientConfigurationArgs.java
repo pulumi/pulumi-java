@@ -13,6 +13,7 @@ import com.pulumi.azurenative.network.inputs.VpnClientRootCertificateArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * VpnClientConfiguration for P2S client.
  * 
  */
-public final class VpnClientConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpnClientConfigurationArgs extends ResourceArgs {
 
     public static final VpnClientConfigurationArgs Empty = new VpnClientConfigurationArgs();
 

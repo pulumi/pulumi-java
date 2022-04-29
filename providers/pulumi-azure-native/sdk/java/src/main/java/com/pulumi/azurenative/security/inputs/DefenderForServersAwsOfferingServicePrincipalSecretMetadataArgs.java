@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Metadata of Service Principal secret for autoprovisioning
  * 
  */
-public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs extends ResourceArgs {
 
     public static final DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs Empty = new DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs();
 

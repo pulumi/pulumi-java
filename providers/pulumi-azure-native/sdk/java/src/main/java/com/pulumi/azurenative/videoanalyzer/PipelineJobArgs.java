@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer;
 import com.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineJobArgs extends ResourceArgs {
 
     public static final PipelineJobArgs Empty = new PipelineJobArgs();
 

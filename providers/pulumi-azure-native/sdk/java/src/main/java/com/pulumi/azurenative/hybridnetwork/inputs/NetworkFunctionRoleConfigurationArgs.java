@@ -12,6 +12,7 @@ import com.pulumi.azurenative.hybridnetwork.inputs.StorageProfileArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Network function role configuration.
  * 
  */
-public final class NetworkFunctionRoleConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkFunctionRoleConfigurationArgs extends ResourceArgs {
 
     public static final NetworkFunctionRoleConfigurationArgs Empty = new NetworkFunctionRoleConfigurationArgs();
 

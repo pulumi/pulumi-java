@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The AS2 agreement message connection settings.
  * 
  */
-public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2MessageConnectionSettingsArgs extends ResourceArgs {
 
     public static final AS2MessageConnectionSettingsArgs Empty = new AS2MessageConnectionSettingsArgs();
 

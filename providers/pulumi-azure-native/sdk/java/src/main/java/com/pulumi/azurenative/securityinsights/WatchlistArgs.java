@@ -8,6 +8,7 @@ import com.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
+public final class WatchlistArgs extends ResourceArgs {
 
     public static final WatchlistArgs Empty = new WatchlistArgs();
 

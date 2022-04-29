@@ -7,6 +7,7 @@ import com.pulumi.azurenative.migrate.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines the MSI properties of the Move Collection.
  * 
  */
-public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityArgs extends ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 

@@ -17,6 +17,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +42,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:security:Assessment")
-public class Assessment extends com.pulumi.resources.CustomResource {
+public class Assessment extends CustomResource {
     /**
      * Additional data regarding the assessment
      * 
@@ -189,16 +191,16 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Assessment(String name, AssessmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Assessment(String name, AssessmentArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:security:Assessment", name, args == null ? AssessmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Assessment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Assessment(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:security:Assessment", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:security/v20190101preview:Assessment").build()),
@@ -206,7 +208,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:security/v20210601:Assessment").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -217,7 +219,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Assessment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Assessment get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Assessment(name, id, options);
     }
 }

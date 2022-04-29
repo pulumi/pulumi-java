@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents an Asset used as a JobOutput.
  * 
  */
-public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobOutputAssetArgs extends ResourceArgs {
 
     public static final JobOutputAssetArgs Empty = new JobOutputAssetArgs();
 

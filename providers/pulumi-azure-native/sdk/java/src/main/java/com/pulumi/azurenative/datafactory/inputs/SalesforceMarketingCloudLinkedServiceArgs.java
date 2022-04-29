@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Salesforce Marketing Cloud linked service.
  * 
  */
-public final class SalesforceMarketingCloudLinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SalesforceMarketingCloudLinkedServiceArgs extends ResourceArgs {
 
     public static final SalesforceMarketingCloudLinkedServiceArgs Empty = new SalesforceMarketingCloudLinkedServiceArgs();
 

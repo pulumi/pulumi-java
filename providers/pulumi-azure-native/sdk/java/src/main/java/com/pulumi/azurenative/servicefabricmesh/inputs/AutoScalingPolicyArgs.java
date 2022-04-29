@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.AddRemoveReplicaScalingMe
 import com.pulumi.azurenative.servicefabricmesh.inputs.AverageLoadScalingTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes the auto scaling policy
  * 
  */
-public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoScalingPolicyArgs extends ResourceArgs {
 
     public static final AutoScalingPolicyArgs Empty = new AutoScalingPolicyArgs();
 

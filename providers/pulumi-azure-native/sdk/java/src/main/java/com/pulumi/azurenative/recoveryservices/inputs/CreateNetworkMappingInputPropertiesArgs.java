@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMap
 import com.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Common input details for network mapping operation.
  * 
  */
-public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateNetworkMappingInputPropertiesArgs extends ResourceArgs {
 
     public static final CreateNetworkMappingInputPropertiesArgs Empty = new CreateNetworkMappingInputPropertiesArgs();
 

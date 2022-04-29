@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Server info for the server trust group.
  * 
  */
-public final class ServerInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerInfoArgs extends ResourceArgs {
 
     public static final ServerInfoArgs Empty = new ServerInfoArgs();
 

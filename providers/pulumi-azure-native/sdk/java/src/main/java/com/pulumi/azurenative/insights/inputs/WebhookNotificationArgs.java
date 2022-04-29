@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Webhook notification of an autoscale event.
  * 
  */
-public final class WebhookNotificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebhookNotificationArgs extends ResourceArgs {
 
     public static final WebhookNotificationArgs Empty = new WebhookNotificationArgs();
 

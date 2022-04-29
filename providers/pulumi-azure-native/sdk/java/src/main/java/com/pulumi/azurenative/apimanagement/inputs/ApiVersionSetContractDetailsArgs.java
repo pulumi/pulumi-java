@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An API Version Set contains the common configuration for a set of API Versions relating
  * 
  */
-public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiVersionSetContractDetailsArgs extends ResourceArgs {
 
     public static final ApiVersionSetContractDetailsArgs Empty = new ApiVersionSetContractDetailsArgs();
 

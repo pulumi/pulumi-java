@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Application Configuration Service properties payload
  * 
  */
-public final class ConfigurationServicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationServicePropertiesArgs extends ResourceArgs {
 
     public static final ConfigurationServicePropertiesArgs Empty = new ConfigurationServicePropertiesArgs();
 

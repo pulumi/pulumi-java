@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The storage account information for storing Service Fabric diagnostic logs.
  * 
  */
-public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiagnosticsStorageAccountConfigArgs extends ResourceArgs {
 
     public static final DiagnosticsStorageAccountConfigArgs Empty = new DiagnosticsStorageAccountConfigArgs();
 

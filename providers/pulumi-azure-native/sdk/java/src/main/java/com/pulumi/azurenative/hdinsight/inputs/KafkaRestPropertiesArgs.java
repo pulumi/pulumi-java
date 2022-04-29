@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.ClientGroupInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The kafka rest proxy configuration which contains AAD security group information.
  * 
  */
-public final class KafkaRestPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class KafkaRestPropertiesArgs extends ResourceArgs {
 
     public static final KafkaRestPropertiesArgs Empty = new KafkaRestPropertiesArgs();
 

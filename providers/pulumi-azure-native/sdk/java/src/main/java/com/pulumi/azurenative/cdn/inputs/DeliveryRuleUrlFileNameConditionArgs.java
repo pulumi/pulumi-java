@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.inputs.UrlFileNameMatchConditionParametersArgs
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines the UrlFileName condition for the delivery rule.
  * 
  */
-public final class DeliveryRuleUrlFileNameConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryRuleUrlFileNameConditionArgs extends ResourceArgs {
 
     public static final DeliveryRuleUrlFileNameConditionArgs Empty = new DeliveryRuleUrlFileNameConditionArgs();
 

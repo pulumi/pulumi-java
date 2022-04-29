@@ -8,6 +8,7 @@ import com.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Suppression logic for a given action rule
  * 
  */
-public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SuppressionConfigArgs extends ResourceArgs {
 
     public static final SuppressionConfigArgs Empty = new SuppressionConfigArgs();
 

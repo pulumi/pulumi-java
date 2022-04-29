@@ -7,6 +7,7 @@ import com.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesP
 import com.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
  * 
  */
-public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 

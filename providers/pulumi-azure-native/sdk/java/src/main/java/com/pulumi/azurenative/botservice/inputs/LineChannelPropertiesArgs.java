@@ -6,6 +6,7 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.LineRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The parameters to provide for the Line channel.
  * 
  */
-public final class LineChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LineChannelPropertiesArgs extends ResourceArgs {
 
     public static final LineChannelPropertiesArgs Empty = new LineChannelPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.domainregistration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Domain purchase consent object, representing acceptance of applicable legal agreements.
  * 
  */
-public final class DomainPurchaseConsentArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainPurchaseConsentArgs extends ResourceArgs {
 
     public static final DomainPurchaseConsentArgs Empty = new DomainPurchaseConsentArgs();
 

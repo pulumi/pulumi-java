@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEn
 import com.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The network configuration.
  * 
  */
-public final class NetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigurationArgs extends ResourceArgs {
 
     public static final NetworkConfigurationArgs Empty = new NetworkConfigurationArgs();
 

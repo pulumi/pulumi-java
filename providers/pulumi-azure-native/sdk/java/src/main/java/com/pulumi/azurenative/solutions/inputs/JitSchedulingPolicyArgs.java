@@ -5,6 +5,7 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The JIT scheduling policies.
  * 
  */
-public final class JitSchedulingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class JitSchedulingPolicyArgs extends ResourceArgs {
 
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 

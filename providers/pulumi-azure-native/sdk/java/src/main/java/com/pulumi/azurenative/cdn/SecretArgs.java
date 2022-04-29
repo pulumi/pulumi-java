@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.inputs.ManagedCertificateParametersArgs;
 import com.pulumi.azurenative.cdn.inputs.UrlSigningKeyParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretArgs extends ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Copy on Expiry Option
  * 
  */
-public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CopyOnExpiryOptionArgs extends ResourceArgs {
 
     public static final CopyOnExpiryOptionArgs Empty = new CopyOnExpiryOptionArgs();
 

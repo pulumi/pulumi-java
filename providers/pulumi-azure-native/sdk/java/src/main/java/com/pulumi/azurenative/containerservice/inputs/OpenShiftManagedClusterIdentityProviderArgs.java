@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterAADIdentityProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the configuration of the identity providers to be used in the OpenShift cluster.
  * 
  */
-public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenShiftManagedClusterIdentityProviderArgs extends ResourceArgs {
 
     public static final OpenShiftManagedClusterIdentityProviderArgs Empty = new OpenShiftManagedClusterIdentityProviderArgs();
 

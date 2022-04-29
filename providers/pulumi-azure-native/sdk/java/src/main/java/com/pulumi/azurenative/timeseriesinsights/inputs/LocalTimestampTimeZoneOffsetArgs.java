@@ -5,6 +5,7 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
  * 
  */
-public final class LocalTimestampTimeZoneOffsetArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalTimestampTimeZoneOffsetArgs extends ResourceArgs {
 
     public static final LocalTimestampTimeZoneOffsetArgs Empty = new LocalTimestampTimeZoneOffsetArgs();
 

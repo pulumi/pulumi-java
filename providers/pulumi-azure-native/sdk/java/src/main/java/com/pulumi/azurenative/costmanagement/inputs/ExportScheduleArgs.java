@@ -9,6 +9,7 @@ import com.pulumi.azurenative.costmanagement.inputs.ExportRecurrencePeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The schedule associated with the export.
  * 
  */
-public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportScheduleArgs extends ResourceArgs {
 
     public static final ExportScheduleArgs Empty = new ExportScheduleArgs();
 

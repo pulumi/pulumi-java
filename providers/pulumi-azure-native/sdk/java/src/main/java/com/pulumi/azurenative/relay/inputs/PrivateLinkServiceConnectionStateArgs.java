@@ -7,6 +7,7 @@ import com.pulumi.azurenative.relay.enums.PrivateEndpointServiceConnectionStatus
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An object that represents the approval state of the private link connection.
  * 
  */
-public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkServiceConnectionStateArgs extends ResourceArgs {
 
     public static final PrivateLinkServiceConnectionStateArgs Empty = new PrivateLinkServiceConnectionStateArgs();
 

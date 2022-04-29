@@ -8,6 +8,7 @@ import com.pulumi.azurenative.synapse.enums.AzureSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Azure SKU definition.
  * 
  */
-public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureSkuArgs extends ResourceArgs {
 
     public static final AzureSkuArgs Empty = new AzureSkuArgs();
 

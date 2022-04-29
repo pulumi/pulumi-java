@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.MetadataItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A copy activity Azure Blob sink.
  * 
  */
-public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobSinkArgs extends ResourceArgs {
 
     public static final BlobSinkArgs Empty = new BlobSinkArgs();
 

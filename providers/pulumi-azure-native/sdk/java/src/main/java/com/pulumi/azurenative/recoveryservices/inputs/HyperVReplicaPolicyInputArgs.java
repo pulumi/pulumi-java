@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Hyper-V Replica specific policy Input.
  * 
  */
-public final class HyperVReplicaPolicyInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class HyperVReplicaPolicyInputArgs extends ResourceArgs {
 
     public static final HyperVReplicaPolicyInputArgs Empty = new HyperVReplicaPolicyInputArgs();
 

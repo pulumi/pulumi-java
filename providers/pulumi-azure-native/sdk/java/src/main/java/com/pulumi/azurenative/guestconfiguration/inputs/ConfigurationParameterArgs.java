@@ -5,6 +5,7 @@ package com.pulumi.azurenative.guestconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a configuration parameter.
  * 
  */
-public final class ConfigurationParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationParameterArgs extends ResourceArgs {
 
     public static final ConfigurationParameterArgs Empty = new ConfigurationParameterArgs();
 

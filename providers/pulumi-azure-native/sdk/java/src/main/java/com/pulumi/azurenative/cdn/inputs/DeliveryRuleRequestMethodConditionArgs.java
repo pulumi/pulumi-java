@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.inputs.RequestMethodMatchConditionParametersAr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines the RequestMethod condition for the delivery rule.
  * 
  */
-public final class DeliveryRuleRequestMethodConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryRuleRequestMethodConditionArgs extends ResourceArgs {
 
     public static final DeliveryRuleRequestMethodConditionArgs Empty = new DeliveryRuleRequestMethodConditionArgs();
 

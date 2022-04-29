@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerinstance.inputs.HttpHeadersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The container Http Get settings, for liveness or readiness probe
  * 
  */
-public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerHttpGetArgs extends ResourceArgs {
 
     public static final ContainerHttpGetArgs Empty = new ContainerHttpGetArgs();
 

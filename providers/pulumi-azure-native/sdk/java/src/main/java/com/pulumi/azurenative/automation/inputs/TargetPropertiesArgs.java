@@ -7,6 +7,7 @@ import com.pulumi.azurenative.automation.inputs.AzureQueryPropertiesArgs;
 import com.pulumi.azurenative.automation.inputs.NonAzureQueryPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Group specific to the update configuration.
  * 
  */
-public final class TargetPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetPropertiesArgs extends ResourceArgs {
 
     public static final TargetPropertiesArgs Empty = new TargetPropertiesArgs();
 

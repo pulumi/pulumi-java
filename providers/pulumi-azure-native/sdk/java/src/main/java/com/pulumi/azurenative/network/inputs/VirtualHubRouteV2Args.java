@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * VirtualHubRouteTableV2 route.
  * 
  */
-public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceArgs {
+public final class VirtualHubRouteV2Args extends ResourceArgs {
 
     public static final VirtualHubRouteV2Args Empty = new VirtualHubRouteV2Args();
 

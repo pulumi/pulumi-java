@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A rule governing the accessibility from a specific ip address or ip range.
  * 
  */
-public final class IpRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IpRuleArgs extends ResourceArgs {
 
     public static final IpRuleArgs Empty = new IpRuleArgs();
 

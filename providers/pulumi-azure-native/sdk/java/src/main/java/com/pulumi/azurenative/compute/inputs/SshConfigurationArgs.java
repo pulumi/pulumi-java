@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SshPublicKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SSH configuration for Linux based VMs running on Azure
  * 
  */
-public final class SshConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SshConfigurationArgs extends ResourceArgs {
 
     public static final SshConfigurationArgs Empty = new SshConfigurationArgs();
 

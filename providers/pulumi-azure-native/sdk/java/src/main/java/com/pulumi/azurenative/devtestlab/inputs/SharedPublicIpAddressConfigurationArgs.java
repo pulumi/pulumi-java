@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.InboundNatRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of a virtual machine that determine how it is connected to a load balancer.
  * 
  */
-public final class SharedPublicIpAddressConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SharedPublicIpAddressConfigurationArgs extends ResourceArgs {
 
     public static final SharedPublicIpAddressConfigurationArgs Empty = new SharedPublicIpAddressConfigurationArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.enums.ManagedRuleEnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines a managed rule group override setting.
  * 
  */
-public final class ManagedRuleOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedRuleOverrideArgs extends ResourceArgs {
 
     public static final ManagedRuleOverrideArgs Empty = new ManagedRuleOverrideArgs();
 

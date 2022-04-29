@@ -14,6 +14,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetRefe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * Batch inference settings per deployment.
  * 
  */
-public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchDeploymentArgs extends ResourceArgs {
 
     public static final BatchDeploymentArgs Empty = new BatchDeploymentArgs();
 

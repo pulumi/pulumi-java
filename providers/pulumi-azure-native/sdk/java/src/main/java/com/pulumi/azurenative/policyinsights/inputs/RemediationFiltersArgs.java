@@ -5,6 +5,7 @@ package com.pulumi.azurenative.policyinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The filters that will be applied to determine which resources to remediate.
  * 
  */
-public final class RemediationFiltersArgs extends com.pulumi.resources.ResourceArgs {
+public final class RemediationFiltersArgs extends ResourceArgs {
 
     public static final RemediationFiltersArgs Empty = new RemediationFiltersArgs();
 

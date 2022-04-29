@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.DaprArgs;
 import com.pulumi.azurenative.web.inputs.ScaleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Any changes to this section Will result in a new revision being created
  * 
  */
-public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TemplateArgs extends ResourceArgs {
 
     public static final TemplateArgs Empty = new TemplateArgs();
 

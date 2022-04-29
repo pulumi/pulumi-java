@@ -9,6 +9,7 @@ import com.pulumi.azurenative.edgeorder.inputs.ProductDetailsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Order item details
  * 
  */
-public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrderItemDetailsArgs extends ResourceArgs {
 
     public static final OrderItemDetailsArgs Empty = new OrderItemDetailsArgs();
 

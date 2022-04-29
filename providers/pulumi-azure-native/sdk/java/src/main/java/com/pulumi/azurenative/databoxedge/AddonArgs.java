@@ -7,13 +7,14 @@ import com.pulumi.azurenative.databoxedge.enums.AddonType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddonArgs extends ResourceArgs {
 
     public static final AddonArgs Empty = new AddonArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArg
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Input for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
  * 
  */
-public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends ResourceArgs {
 
     public static final MigrateSqlServerSqlDbSyncTaskInputArgs Empty = new MigrateSqlServerSqlDbSyncTaskInputArgs();
 

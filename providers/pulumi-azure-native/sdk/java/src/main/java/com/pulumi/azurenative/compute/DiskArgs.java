@@ -16,6 +16,7 @@ import com.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +28,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskArgs extends ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 

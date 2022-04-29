@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.changeanalysis.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetConfigurationProfileArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetConfigurationProfileArgs extends InvokeArgs {
 
     public static final GetConfigurationProfileArgs Empty = new GetConfigurationProfileArgs();
 

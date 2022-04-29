@@ -6,6 +6,7 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 import com.pulumi.azurenative.deploymentmanager.enums.RestMatchQuantifier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The regular expressions to match the response content with.
  * 
  */
-public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceArgs {
+public final class RestResponseRegexArgs extends ResourceArgs {
 
     public static final RestResponseRegexArgs Empty = new RestResponseRegexArgs();
 

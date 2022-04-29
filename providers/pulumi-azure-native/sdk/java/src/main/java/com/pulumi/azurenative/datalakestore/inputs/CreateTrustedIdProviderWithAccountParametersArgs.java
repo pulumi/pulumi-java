@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datalakestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The parameters used to create a new trusted identity provider while creating a new Data Lake Store account.
  * 
  */
-public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateTrustedIdProviderWithAccountParametersArgs extends ResourceArgs {
 
     public static final CreateTrustedIdProviderWithAccountParametersArgs Empty = new CreateTrustedIdProviderWithAccountParametersArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration of the run playbook automation rule action
  * 
  */
-public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extends ResourceArgs {
 
     public static final AutomationRuleRunPlaybookActionActionConfigurationArgs Empty = new AutomationRuleRunPlaybookActionActionConfigurationArgs();
 

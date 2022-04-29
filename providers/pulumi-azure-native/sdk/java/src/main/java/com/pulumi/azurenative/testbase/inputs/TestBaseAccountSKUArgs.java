@@ -7,6 +7,7 @@ import com.pulumi.azurenative.testbase.enums.Tier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a Test Base Account SKU.
  * 
  */
-public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestBaseAccountSKUArgs extends ResourceArgs {
 
     public static final TestBaseAccountSKUArgs Empty = new TestBaseAccountSKUArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The properties of an enrichment that your IoT hub applies to messages delivered to endpoints.
  * 
  */
-public final class EnrichmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnrichmentPropertiesArgs extends ResourceArgs {
 
     public static final EnrichmentPropertiesArgs Empty = new EnrichmentPropertiesArgs();
 

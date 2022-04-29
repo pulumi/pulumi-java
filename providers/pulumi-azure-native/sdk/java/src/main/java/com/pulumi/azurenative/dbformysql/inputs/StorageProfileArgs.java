@@ -8,6 +8,7 @@ import com.pulumi.azurenative.dbformysql.enums.StorageAutogrow;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Storage Profile properties of a server
  * 
  */
-public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageProfileArgs extends ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 

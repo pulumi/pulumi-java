@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * VMwareCbt specific enable migration input.
  * 
  */
-public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class VMwareCbtEnableMigrationInputArgs extends ResourceArgs {
 
     public static final VMwareCbtEnableMigrationInputArgs Empty = new VMwareCbtEnableMigrationInputArgs();
 

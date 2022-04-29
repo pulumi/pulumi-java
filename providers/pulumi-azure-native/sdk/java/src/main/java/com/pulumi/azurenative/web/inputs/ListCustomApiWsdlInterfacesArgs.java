@@ -7,13 +7,14 @@ import com.pulumi.azurenative.web.enums.WsdlImportMethod;
 import com.pulumi.azurenative.web.inputs.WsdlService;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListCustomApiWsdlInterfacesArgs extends InvokeArgs {
 
     public static final ListCustomApiWsdlInterfacesArgs Empty = new ListCustomApiWsdlInterfacesArgs();
 

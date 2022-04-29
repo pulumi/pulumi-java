@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logz.inputs;
 import com.pulumi.azurenative.logz.inputs.MetricRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Definition of the properties for a TagRules resource.
  * 
  */
-public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricsTagRulesPropertiesArgs extends ResourceArgs {
 
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 

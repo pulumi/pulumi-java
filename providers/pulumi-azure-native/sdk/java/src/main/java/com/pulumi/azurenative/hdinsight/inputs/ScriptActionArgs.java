@@ -5,6 +5,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes a script action on role on the cluster.
  * 
  */
-public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScriptActionArgs extends ResourceArgs {
 
     public static final ScriptActionArgs Empty = new ScriptActionArgs();
 

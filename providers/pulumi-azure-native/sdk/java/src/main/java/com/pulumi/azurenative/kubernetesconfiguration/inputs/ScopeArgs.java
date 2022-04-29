@@ -7,6 +7,7 @@ import com.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Scope of the extensionInstance. It can be either Cluster or Namespace; but not both.
  * 
  */
-public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeArgs extends ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 

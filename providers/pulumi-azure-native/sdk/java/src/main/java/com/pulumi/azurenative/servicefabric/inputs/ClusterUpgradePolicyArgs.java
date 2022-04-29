@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabric.inputs.ClusterHealthPolicyArgs;
 import com.pulumi.azurenative.servicefabric.inputs.ClusterUpgradeDeltaHealthPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the policy used when upgrading the cluster.
  * 
  */
-public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterUpgradePolicyArgs extends ResourceArgs {
 
     public static final ClusterUpgradePolicyArgs Empty = new ClusterUpgradePolicyArgs();
 

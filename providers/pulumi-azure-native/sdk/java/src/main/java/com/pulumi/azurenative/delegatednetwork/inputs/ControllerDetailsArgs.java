@@ -5,6 +5,7 @@ package com.pulumi.azurenative.delegatednetwork.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * controller details
  * 
  */
-public final class ControllerDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ControllerDetailsArgs extends ResourceArgs {
 
     public static final ControllerDetailsArgs Empty = new ControllerDetailsArgs();
 

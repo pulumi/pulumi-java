@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentials
 import com.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The parameters that describes a set of credentials that will be used when a run is invoked.
  * 
  */
-public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CredentialsArgs extends ResourceArgs {
 
     public static final CredentialsArgs Empty = new CredentialsArgs();
 

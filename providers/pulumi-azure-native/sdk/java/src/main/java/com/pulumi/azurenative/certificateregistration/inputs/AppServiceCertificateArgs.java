@@ -5,6 +5,7 @@ package com.pulumi.azurenative.certificateregistration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Key Vault container for a certificate that is purchased through Azure.
  * 
  */
-public final class AppServiceCertificateArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppServiceCertificateArgs extends ResourceArgs {
 
     public static final AppServiceCertificateArgs Empty = new AppServiceCertificateArgs();
 

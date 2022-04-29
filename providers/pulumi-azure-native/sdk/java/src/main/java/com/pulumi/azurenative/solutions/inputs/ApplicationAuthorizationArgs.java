@@ -5,6 +5,7 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The managed application provider authorization.
  * 
  */
-public final class ApplicationAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationAuthorizationArgs extends ResourceArgs {
 
     public static final ApplicationAuthorizationArgs Empty = new ApplicationAuthorizationArgs();
 

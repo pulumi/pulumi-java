@@ -8,6 +8,7 @@ import com.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import com.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Target portal group properties for create or update iSCSI target request.
  * 
  */
-public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetPortalGroupCreateArgs extends ResourceArgs {
 
     public static final TargetPortalGroupCreateArgs Empty = new TargetPortalGroupCreateArgs();
 

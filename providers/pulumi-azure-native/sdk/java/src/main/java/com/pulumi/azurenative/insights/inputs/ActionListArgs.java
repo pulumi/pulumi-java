@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.ActionGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A list of Activity Log Alert rule actions.
  * 
  */
-public final class ActionListArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActionListArgs extends ResourceArgs {
 
     public static final ActionListArgs Empty = new ActionListArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Objects;
  * Encoder processor allows for encoding of the input content. For example, it can used to change the resolution from 4K to 1280x720.
  * 
  */
-public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncoderProcessorArgs extends ResourceArgs {
 
     public static final EncoderProcessorArgs Empty = new EncoderProcessorArgs();
 

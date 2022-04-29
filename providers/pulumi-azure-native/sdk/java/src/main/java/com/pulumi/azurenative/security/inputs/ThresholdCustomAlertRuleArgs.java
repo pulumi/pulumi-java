@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * A custom alert rule that checks if a value (depends on the custom alert type) is within the given range.
  * 
  */
-public final class ThresholdCustomAlertRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThresholdCustomAlertRuleArgs extends ResourceArgs {
 
     public static final ThresholdCustomAlertRuleArgs Empty = new ThresholdCustomAlertRuleArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Definition of the runbook parameter type.
  * 
  */
-public final class RunbookParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class RunbookParameterArgs extends ResourceArgs {
 
     public static final RunbookParameterArgs Empty = new RunbookParameterArgs();
 

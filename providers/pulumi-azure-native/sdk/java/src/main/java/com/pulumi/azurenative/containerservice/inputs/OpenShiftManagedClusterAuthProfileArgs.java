@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterIdentityProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines all possible authentication profiles for the OpenShift cluster.
  * 
  */
-public final class OpenShiftManagedClusterAuthProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenShiftManagedClusterAuthProfileArgs extends ResourceArgs {
 
     public static final OpenShiftManagedClusterAuthProfileArgs Empty = new OpenShiftManagedClusterAuthProfileArgs();
 

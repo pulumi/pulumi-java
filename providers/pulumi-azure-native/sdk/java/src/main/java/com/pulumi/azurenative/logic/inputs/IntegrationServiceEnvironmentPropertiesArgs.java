@@ -11,6 +11,7 @@ import com.pulumi.azurenative.logic.inputs.NetworkConfigurationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The integration service environment properties.
  * 
  */
-public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationServiceEnvironmentPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationServiceEnvironmentPropertiesArgs Empty = new IntegrationServiceEnvironmentPropertiesArgs();
 

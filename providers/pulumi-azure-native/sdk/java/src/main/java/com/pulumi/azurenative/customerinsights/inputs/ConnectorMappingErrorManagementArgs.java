@@ -6,6 +6,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.ErrorManagementTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The error management.
  * 
  */
-public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorMappingErrorManagementArgs extends ResourceArgs {
 
     public static final ConnectorMappingErrorManagementArgs Empty = new ConnectorMappingErrorManagementArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.
  * 
  */
-public final class DhcpOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DhcpOptionsArgs extends ResourceArgs {
 
     public static final DhcpOptionsArgs Empty = new DhcpOptionsArgs();
 

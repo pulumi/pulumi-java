@@ -7,6 +7,7 @@ import com.pulumi.azurenative.hdinsight.enums.ResourceIdentityType;
 import com.pulumi.azurenative.hdinsight.inputs.ClusterIdentityUserAssignedIdentitiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Identity for the cluster.
  * 
  */
-public final class ClusterIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterIdentityArgs extends ResourceArgs {
 
     public static final ClusterIdentityArgs Empty = new ClusterIdentityArgs();
 

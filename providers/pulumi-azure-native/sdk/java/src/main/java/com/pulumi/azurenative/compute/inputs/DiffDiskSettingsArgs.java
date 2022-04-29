@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.enums.DiffDiskPlacement;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the parameters of ephemeral disk settings that can be specified for operating system disk. &lt;br&gt;&lt;br&gt; NOTE: The ephemeral disk settings can only be specified for managed disk.
  * 
  */
-public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiffDiskSettingsArgs extends ResourceArgs {
 
     public static final DiffDiskSettingsArgs Empty = new DiffDiskSettingsArgs();
 

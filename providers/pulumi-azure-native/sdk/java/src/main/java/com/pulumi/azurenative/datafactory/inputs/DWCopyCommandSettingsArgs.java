@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * DW Copy Command settings.
  * 
  */
-public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DWCopyCommandSettingsArgs extends ResourceArgs {
 
     public static final DWCopyCommandSettingsArgs Empty = new DWCopyCommandSettingsArgs();
 

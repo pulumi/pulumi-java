@@ -9,6 +9,7 @@ import com.pulumi.azurenative.blueprint.inputs.ResourceGroupDefinitionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublishedBlueprintArgs extends ResourceArgs {
 
     public static final PublishedBlueprintArgs Empty = new PublishedBlueprintArgs();
 

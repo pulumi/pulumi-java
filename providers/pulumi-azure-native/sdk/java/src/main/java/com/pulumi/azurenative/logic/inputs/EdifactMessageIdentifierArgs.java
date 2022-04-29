@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Edifact message identifier.
  * 
  */
-public final class EdifactMessageIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactMessageIdentifierArgs extends ResourceArgs {
 
     public static final EdifactMessageIdentifierArgs Empty = new EdifactMessageIdentifierArgs();
 

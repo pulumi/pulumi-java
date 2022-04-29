@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storsimple;
 import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupPolicyArgs extends ResourceArgs {
 
     public static final BackupPolicyArgs Empty = new BackupPolicyArgs();
 

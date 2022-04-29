@@ -8,6 +8,7 @@ import com.pulumi.azurenative.web.inputs.AzureActiveDirectoryRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.AzureActiveDirectoryValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the Azure Active directory provider.
  * 
  */
-public final class AzureActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureActiveDirectoryArgs extends ResourceArgs {
 
     public static final AzureActiveDirectoryArgs Empty = new AzureActiveDirectoryArgs();
 

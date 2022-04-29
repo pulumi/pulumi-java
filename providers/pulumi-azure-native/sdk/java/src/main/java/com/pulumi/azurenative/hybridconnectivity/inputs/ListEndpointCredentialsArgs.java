@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.hybridconnectivity.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListEndpointCredentialsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListEndpointCredentialsArgs extends InvokeArgs {
 
     public static final ListEndpointCredentialsArgs Empty = new ListEndpointCredentialsArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.azurenative.securityandcompliance;
 import com.pulumi.azurenative.securityandcompliance.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PrivateEndpointConnectionsCompArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionsCompArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionsCompArgs Empty = new PrivateEndpointConnectionsCompArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.hybridnetwork.inputs.VirtualHardDiskArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
  * 
  */
-public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class OsDiskArgs extends ResourceArgs {
 
     public static final OsDiskArgs Empty = new OsDiskArgs();
 

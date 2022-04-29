@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.BuildpackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Buildpack group properties of the Builder
  * 
  */
-public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuildpacksGroupPropertiesArgs extends ResourceArgs {
 
     public static final BuildpacksGroupPropertiesArgs Empty = new BuildpacksGroupPropertiesArgs();
 

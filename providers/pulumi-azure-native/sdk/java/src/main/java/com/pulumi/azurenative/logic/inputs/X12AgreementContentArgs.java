@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.X12OneWayAgreementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The X12 agreement content.
  * 
  */
-public final class X12AgreementContentArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12AgreementContentArgs extends ResourceArgs {
 
     public static final X12AgreementContentArgs Empty = new X12AgreementContentArgs();
 

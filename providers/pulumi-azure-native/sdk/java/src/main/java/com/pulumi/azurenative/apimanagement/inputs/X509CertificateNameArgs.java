@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of server X509Names.
  * 
  */
-public final class X509CertificateNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class X509CertificateNameArgs extends ResourceArgs {
 
     public static final X509CertificateNameArgs Empty = new X509CertificateNameArgs();
 

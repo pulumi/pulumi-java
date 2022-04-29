@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Container group network profile information.
  * 
  */
-public final class ContainerGroupNetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerGroupNetworkProfileArgs extends ResourceArgs {
 
     public static final ContainerGroupNetworkProfileArgs Empty = new ContainerGroupNetworkProfileArgs();
 

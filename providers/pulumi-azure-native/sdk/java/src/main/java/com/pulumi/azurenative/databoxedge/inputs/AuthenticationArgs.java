@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.SymmetricKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Authentication mechanism for IoT devices.
  * 
  */
-public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthenticationArgs extends ResourceArgs {
 
     public static final AuthenticationArgs Empty = new AuthenticationArgs();
 

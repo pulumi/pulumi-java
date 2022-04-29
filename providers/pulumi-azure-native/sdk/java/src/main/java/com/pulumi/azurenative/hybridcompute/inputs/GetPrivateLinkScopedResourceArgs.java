@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.hybridcompute.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPrivateLinkScopedResourceArgs extends InvokeArgs {
 
     public static final GetPrivateLinkScopedResourceArgs Empty = new GetPrivateLinkScopedResourceArgs();
 

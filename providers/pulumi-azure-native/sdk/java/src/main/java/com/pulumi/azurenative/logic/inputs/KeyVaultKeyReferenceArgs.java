@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceKeyVaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The reference to the key vault key.
  * 
  */
-public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultKeyReferenceArgs extends ResourceArgs {
 
     public static final KeyVaultKeyReferenceArgs Empty = new KeyVaultKeyReferenceArgs();
 

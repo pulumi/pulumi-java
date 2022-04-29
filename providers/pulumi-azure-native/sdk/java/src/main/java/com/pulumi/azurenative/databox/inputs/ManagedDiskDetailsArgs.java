@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databox.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details of the managed disks.
  * 
  */
-public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedDiskDetailsArgs extends ResourceArgs {
 
     public static final ManagedDiskDetailsArgs Empty = new ManagedDiskDetailsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Sql upsert option settings
  * 
  */
-public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlUpsertSettingsArgs extends ResourceArgs {
 
     public static final SqlUpsertSettingsArgs Empty = new SqlUpsertSettingsArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:datalakeanalytics:ComputePolicy")
-public class ComputePolicy extends com.pulumi.resources.CustomResource {
+public class ComputePolicy extends CustomResource {
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs.
      * 
@@ -138,16 +140,16 @@ public class ComputePolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ComputePolicy(String name, ComputePolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ComputePolicy(String name, ComputePolicyArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:datalakeanalytics:ComputePolicy", name, args == null ? ComputePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ComputePolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ComputePolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:datalakeanalytics:ComputePolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:datalakeanalytics/v20151001preview:ComputePolicy").build()),
@@ -155,7 +157,7 @@ public class ComputePolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:datalakeanalytics/v20191101preview:ComputePolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -166,7 +168,7 @@ public class ComputePolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ComputePolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ComputePolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ComputePolicy(name, id, options);
     }
 }

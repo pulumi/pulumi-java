@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 import com.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the network settings for the HANA instance disks.
  * 
  */
-public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkProfileArgs extends ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 

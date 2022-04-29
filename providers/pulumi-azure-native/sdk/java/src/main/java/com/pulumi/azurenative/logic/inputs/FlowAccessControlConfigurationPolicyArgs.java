@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.inputs.IpAddressRangeArgs;
 import com.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The access control configuration policy.
  * 
  */
-public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowAccessControlConfigurationPolicyArgs extends ResourceArgs {
 
     public static final FlowAccessControlConfigurationPolicyArgs Empty = new FlowAccessControlConfigurationPolicyArgs();
 

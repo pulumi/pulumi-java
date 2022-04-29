@@ -7,6 +7,7 @@ import com.pulumi.azurenative.botservice.inputs.AlexaChannelPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Alexa channel definition
  * 
  */
-public final class AlexaChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlexaChannelArgs extends ResourceArgs {
 
     public static final AlexaChannelArgs Empty = new AlexaChannelArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes a container endpoint.
  * 
  */
-public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointPropertiesArgs extends ResourceArgs {
 
     public static final EndpointPropertiesArgs Empty = new EndpointPropertiesArgs();
 

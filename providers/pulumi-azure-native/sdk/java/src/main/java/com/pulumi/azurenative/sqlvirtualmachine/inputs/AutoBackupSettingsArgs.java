@@ -8,6 +8,7 @@ import com.pulumi.azurenative.sqlvirtualmachine.enums.FullBackupFrequencyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Configure backups for databases in your SQL virtual machine.
  * 
  */
-public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoBackupSettingsArgs extends ResourceArgs {
 
     public static final AutoBackupSettingsArgs Empty = new AutoBackupSettingsArgs();
 

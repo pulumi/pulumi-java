@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Parameters for creating multiple virtual machines as a single action.
  * 
  */
-public final class BulkCreationParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class BulkCreationParametersArgs extends ResourceArgs {
 
     public static final BulkCreationParametersArgs Empty = new BulkCreationParametersArgs();
 

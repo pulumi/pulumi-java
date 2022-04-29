@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeArgs;
 import com.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Kubernetes role resources
  * 
  */
-public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubernetesRoleResourcesArgs extends ResourceArgs {
 
     public static final KubernetesRoleResourcesArgs Empty = new KubernetesRoleResourcesArgs();
 

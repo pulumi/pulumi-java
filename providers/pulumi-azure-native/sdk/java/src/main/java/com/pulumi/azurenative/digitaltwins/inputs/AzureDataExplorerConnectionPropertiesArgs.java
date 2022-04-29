@@ -6,6 +6,7 @@ package com.pulumi.azurenative.digitaltwins.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of a time series database connection to Azure Data Explorer with data being sent via an EventHub.
  * 
  */
-public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureDataExplorerConnectionPropertiesArgs extends ResourceArgs {
 
     public static final AzureDataExplorerConnectionPropertiesArgs Empty = new AzureDataExplorerConnectionPropertiesArgs();
 

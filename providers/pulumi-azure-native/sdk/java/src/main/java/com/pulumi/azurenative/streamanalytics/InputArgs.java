@@ -8,13 +8,14 @@ import com.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InputArgs extends com.pulumi.resources.ResourceArgs {
+public final class InputArgs extends ResourceArgs {
 
     public static final InputArgs Empty = new InputArgs();
 

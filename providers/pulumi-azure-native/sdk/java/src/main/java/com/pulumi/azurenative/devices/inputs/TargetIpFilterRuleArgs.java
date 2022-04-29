@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devices.enums.IpFilterActionType;
 import com.pulumi.azurenative.devices.enums.IpFilterTargetType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The IP filter rules for a provisioning Service.
  * 
  */
-public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetIpFilterRuleArgs extends ResourceArgs {
 
     public static final TargetIpFilterRuleArgs Empty = new TargetIpFilterRuleArgs();
 

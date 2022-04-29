@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Allows to disable rules within a rule group or an entire rule group.
  * 
  */
-public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends ResourceArgs {
 
     public static final ApplicationGatewayFirewallDisabledRuleGroupArgs Empty = new ApplicationGatewayFirewallDisabledRuleGroupArgs();
 

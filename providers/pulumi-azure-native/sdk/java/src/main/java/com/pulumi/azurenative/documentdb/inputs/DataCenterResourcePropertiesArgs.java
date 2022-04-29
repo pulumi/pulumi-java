@@ -7,6 +7,7 @@ import com.pulumi.azurenative.documentdb.enums.ManagedCassandraProvisioningState
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of a managed Cassandra data center.
  * 
  */
-public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCenterResourcePropertiesArgs extends ResourceArgs {
 
     public static final DataCenterResourcePropertiesArgs Empty = new DataCenterResourcePropertiesArgs();
 

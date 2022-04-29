@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.KnownWindowsEventLogDataSourceStrea
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Only collected from Windows machines.
  * 
  */
-public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class WindowsEventLogDataSourceArgs extends ResourceArgs {
 
     public static final WindowsEventLogDataSourceArgs Empty = new WindowsEventLogDataSourceArgs();
 

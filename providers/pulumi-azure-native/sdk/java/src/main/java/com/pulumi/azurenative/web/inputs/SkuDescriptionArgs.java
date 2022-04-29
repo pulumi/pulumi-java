@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.CapabilityArgs;
 import com.pulumi.azurenative.web.inputs.SkuCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Description of a SKU for a scalable resource.
  * 
  */
-public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuDescriptionArgs extends ResourceArgs {
 
     public static final SkuDescriptionArgs Empty = new SkuDescriptionArgs();
 

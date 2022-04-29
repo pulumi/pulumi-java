@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes the tcp configuration for external connectivity for this network.
  * 
  */
-public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class TcpConfigArgs extends ResourceArgs {
 
     public static final TcpConfigArgs Empty = new TcpConfigArgs();
 

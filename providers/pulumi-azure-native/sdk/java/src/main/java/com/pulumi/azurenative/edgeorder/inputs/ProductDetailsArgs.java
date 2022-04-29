@@ -6,6 +6,7 @@ package com.pulumi.azurenative.edgeorder.inputs;
 import com.pulumi.azurenative.edgeorder.inputs.HierarchyInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents product details
  * 
  */
-public final class ProductDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProductDetailsArgs extends ResourceArgs {
 
     public static final ProductDetailsArgs Empty = new ProductDetailsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storage.enums.Name;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The blob service properties for Last access time based tracking policy.
  * 
  */
-public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class LastAccessTimeTrackingPolicyArgs extends ResourceArgs {
 
     public static final LastAccessTimeTrackingPolicyArgs Empty = new LastAccessTimeTrackingPolicyArgs();
 

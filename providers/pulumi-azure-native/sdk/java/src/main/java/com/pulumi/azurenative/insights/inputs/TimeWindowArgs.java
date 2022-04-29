@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A specific date-time for the profile.
  * 
  */
-public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeWindowArgs extends ResourceArgs {
 
     public static final TimeWindowArgs Empty = new TimeWindowArgs();
 

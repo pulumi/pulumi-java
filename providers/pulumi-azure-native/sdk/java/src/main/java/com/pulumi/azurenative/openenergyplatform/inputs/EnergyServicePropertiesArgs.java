@@ -6,6 +6,7 @@ package com.pulumi.azurenative.openenergyplatform.inputs;
 import com.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnergyServicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnergyServicePropertiesArgs extends ResourceArgs {
 
     public static final EnergyServicePropertiesArgs Empty = new EnergyServicePropertiesArgs();
 

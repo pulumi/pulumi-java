@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
  * 
  */
-public final class ProxyServerPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProxyServerPropertiesArgs extends ResourceArgs {
 
     public static final ProxyServerPropertiesArgs Empty = new ProxyServerPropertiesArgs();
 

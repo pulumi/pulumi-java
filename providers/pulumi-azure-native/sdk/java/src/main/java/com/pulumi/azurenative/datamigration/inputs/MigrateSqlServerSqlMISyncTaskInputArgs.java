@@ -10,6 +10,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabase
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance online scenario.
  * 
  */
-public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateSqlServerSqlMISyncTaskInputArgs extends ResourceArgs {
 
     public static final MigrateSqlServerSqlMISyncTaskInputArgs Empty = new MigrateSqlServerSqlMISyncTaskInputArgs();
 

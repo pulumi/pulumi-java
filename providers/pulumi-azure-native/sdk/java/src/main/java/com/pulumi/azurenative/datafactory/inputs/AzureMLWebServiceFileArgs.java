@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Azure ML WebService Input/Output file
  * 
  */
-public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureMLWebServiceFileArgs extends ResourceArgs {
 
     public static final AzureMLWebServiceFileArgs Empty = new AzureMLWebServiceFileArgs();
 

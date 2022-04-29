@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Represents a configuration for non-DRM keys.
  * 
  */
-public final class ContentKeyPolicyClearKeyConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyClearKeyConfigurationArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyClearKeyConfigurationArgs Empty = new ContentKeyPolicyClearKeyConfigurationArgs();
 

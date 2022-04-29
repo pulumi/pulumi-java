@@ -11,6 +11,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Yearly retention schedule.
  * 
  */
-public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class YearlyRetentionScheduleArgs extends ResourceArgs {
 
     public static final YearlyRetentionScheduleArgs Empty = new YearlyRetentionScheduleArgs();
 

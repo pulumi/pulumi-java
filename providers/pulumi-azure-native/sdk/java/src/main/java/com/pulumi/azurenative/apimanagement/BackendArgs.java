@@ -11,13 +11,14 @@ import com.pulumi.azurenative.apimanagement.inputs.BackendTlsPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendArgs extends ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 

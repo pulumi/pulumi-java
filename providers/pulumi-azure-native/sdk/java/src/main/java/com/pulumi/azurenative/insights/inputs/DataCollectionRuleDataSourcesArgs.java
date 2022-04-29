@@ -9,6 +9,7 @@ import com.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import com.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
  * 
  */
-public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCollectionRuleDataSourcesArgs extends ResourceArgs {
 
     public static final DataCollectionRuleDataSourcesArgs Empty = new DataCollectionRuleDataSourcesArgs();
 

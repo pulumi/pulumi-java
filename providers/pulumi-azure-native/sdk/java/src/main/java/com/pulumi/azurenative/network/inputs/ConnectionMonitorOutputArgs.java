@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a connection monitor output destination.
  * 
  */
-public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionMonitorOutputArgs extends ResourceArgs {
 
     public static final ConnectionMonitorOutputArgs Empty = new ConnectionMonitorOutputArgs();
 

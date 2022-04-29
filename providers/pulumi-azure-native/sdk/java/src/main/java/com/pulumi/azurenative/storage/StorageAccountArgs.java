@@ -20,6 +20,7 @@ import com.pulumi.azurenative.storage.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageAccountArgs extends ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents the publisher information of a process/rule
  * 
  */
-public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublisherInfoArgs extends ResourceArgs {
 
     public static final PublisherInfoArgs Empty = new PublisherInfoArgs();
 

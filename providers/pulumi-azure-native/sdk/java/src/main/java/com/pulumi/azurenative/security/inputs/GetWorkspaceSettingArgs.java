@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetWorkspaceSettingArgs extends InvokeArgs {
 
     public static final GetWorkspaceSettingArgs Empty = new GetWorkspaceSettingArgs();
 

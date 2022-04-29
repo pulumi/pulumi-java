@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The role based access control (RBAC) authorization type integration runtime.
  * 
  */
-public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends ResourceArgs {
 
     public static final LinkedIntegrationRuntimeRbacAuthorizationArgs Empty = new LinkedIntegrationRuntimeRbacAuthorizationArgs();
 

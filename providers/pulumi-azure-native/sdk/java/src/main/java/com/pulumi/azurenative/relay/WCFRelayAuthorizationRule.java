@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:relay:WCFRelayAuthorizationRule")
-public class WCFRelayAuthorizationRule extends com.pulumi.resources.CustomResource {
+public class WCFRelayAuthorizationRule extends CustomResource {
     /**
      * Resource name.
      * 
@@ -95,23 +97,23 @@ public class WCFRelayAuthorizationRule extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WCFRelayAuthorizationRule(String name, WCFRelayAuthorizationRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WCFRelayAuthorizationRule(String name, WCFRelayAuthorizationRuleArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:relay:WCFRelayAuthorizationRule", name, args == null ? WCFRelayAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WCFRelayAuthorizationRule(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WCFRelayAuthorizationRule(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:relay:WCFRelayAuthorizationRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:relay/v20160701:WCFRelayAuthorizationRule").build()),
                 Output.of(Alias.builder().type("azure-native:relay/v20170401:WCFRelayAuthorizationRule").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -122,7 +124,7 @@ public class WCFRelayAuthorizationRule extends com.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WCFRelayAuthorizationRule get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WCFRelayAuthorizationRule get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new WCFRelayAuthorizationRule(name, id, options);
     }
 }

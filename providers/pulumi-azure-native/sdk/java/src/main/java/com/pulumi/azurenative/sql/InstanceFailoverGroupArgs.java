@@ -9,6 +9,7 @@ import com.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import com.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InstanceFailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceFailoverGroupArgs extends ResourceArgs {
 
     public static final InstanceFailoverGroupArgs Empty = new InstanceFailoverGroupArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.ArtifactParameterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties of an artifact.
  * 
  */
-public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArtifactInstallPropertiesArgs extends ResourceArgs {
 
     public static final ArtifactInstallPropertiesArgs Empty = new ArtifactInstallPropertiesArgs();
 

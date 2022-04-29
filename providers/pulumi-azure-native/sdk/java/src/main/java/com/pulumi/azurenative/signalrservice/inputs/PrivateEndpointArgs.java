@@ -5,6 +5,7 @@ package com.pulumi.azurenative.signalrservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Private endpoint
  * 
  */
-public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointArgs extends ResourceArgs {
 
     public static final PrivateEndpointArgs Empty = new PrivateEndpointArgs();
 

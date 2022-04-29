@@ -9,6 +9,7 @@ import com.pulumi.azurenative.costmanagement.inputs.CostAllocationProportionArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * Target resources for cost allocation.
  * 
  */
-public final class TargetCostAllocationResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetCostAllocationResourceArgs extends ResourceArgs {
 
     public static final TargetCostAllocationResourceArgs Empty = new TargetCostAllocationResourceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Cosmos DB Gremlin database resource object
  * 
  */
-public final class GremlinDatabaseResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class GremlinDatabaseResourceArgs extends ResourceArgs {
 
     public static final GremlinDatabaseResourceArgs Empty = new GremlinDatabaseResourceArgs();
 

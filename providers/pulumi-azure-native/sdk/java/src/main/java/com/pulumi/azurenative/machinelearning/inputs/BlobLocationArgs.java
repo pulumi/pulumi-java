@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the access location for a blob.
  * 
  */
-public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobLocationArgs extends ResourceArgs {
 
     public static final BlobLocationArgs Empty = new BlobLocationArgs();
 

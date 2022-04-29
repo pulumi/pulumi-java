@@ -7,6 +7,7 @@ import com.pulumi.azurenative.quantum.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Managed Identity information.
  * 
  */
-public final class QuantumWorkspaceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class QuantumWorkspaceIdentityArgs extends ResourceArgs {
 
     public static final QuantumWorkspaceIdentityArgs Empty = new QuantumWorkspaceIdentityArgs();
 

@@ -17,6 +17,7 @@ import com.pulumi.azurenative.devices.inputs.StorageEndpointPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  * The properties of an IoT hub.
  * 
  */
-public final class IotHubPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IotHubPropertiesArgs extends ResourceArgs {
 
     public static final IotHubPropertiesArgs Empty = new IotHubPropertiesArgs();
 

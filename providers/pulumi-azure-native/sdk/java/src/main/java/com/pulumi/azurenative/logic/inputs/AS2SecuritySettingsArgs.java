@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The AS2 agreement security settings.
  * 
  */
-public final class AS2SecuritySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2SecuritySettingsArgs extends ResourceArgs {
 
     public static final AS2SecuritySettingsArgs Empty = new AS2SecuritySettingsArgs();
 

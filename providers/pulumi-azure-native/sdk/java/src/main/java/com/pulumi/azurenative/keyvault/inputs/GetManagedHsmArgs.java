@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetManagedHsmArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetManagedHsmArgs extends InvokeArgs {
 
     public static final GetManagedHsmArgs Empty = new GetManagedHsmArgs();
 

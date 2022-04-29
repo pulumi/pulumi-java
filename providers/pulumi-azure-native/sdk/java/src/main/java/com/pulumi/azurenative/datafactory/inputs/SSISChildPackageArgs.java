@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SSIS embedded child package.
  * 
  */
-public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class SSISChildPackageArgs extends ResourceArgs {
 
     public static final SSISChildPackageArgs Empty = new SSISChildPackageArgs();
 

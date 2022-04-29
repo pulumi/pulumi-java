@@ -5,6 +5,7 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies information related to a SAP system ID
  * 
  */
-public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
+public final class SAPSystemIDArgs extends ResourceArgs {
 
     public static final SAPSystemIDArgs Empty = new SAPSystemIDArgs();
 

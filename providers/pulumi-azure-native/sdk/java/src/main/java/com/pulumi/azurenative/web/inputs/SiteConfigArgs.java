@@ -25,6 +25,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +40,7 @@ import javax.annotation.Nullable;
  * Configuration of an App Service app.
  * 
  */
-public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SiteConfigArgs extends ResourceArgs {
 
     public static final SiteConfigArgs Empty = new SiteConfigArgs();
 

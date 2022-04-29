@@ -7,6 +7,7 @@ import com.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties specific to an Enterprise Channel Node.
  * 
  */
-public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseChannelNodeArgs extends ResourceArgs {
 
     public static final EnterpriseChannelNodeArgs Empty = new EnterpriseChannelNodeArgs();
 

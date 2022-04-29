@@ -8,6 +8,7 @@ import com.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstancePropertiesAr
 import com.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstanceSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SqlManagedInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlManagedInstanceArgs extends ResourceArgs {
 
     public static final SqlManagedInstanceArgs Empty = new SqlManagedInstanceArgs();
 

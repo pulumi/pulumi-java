@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Geo-physical location to run a web test from. You must specify one or more locations for the test to run from.
  * 
  */
-public final class WebTestGeolocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebTestGeolocationArgs extends ResourceArgs {
 
     public static final WebTestGeolocationArgs Empty = new WebTestGeolocationArgs();
 

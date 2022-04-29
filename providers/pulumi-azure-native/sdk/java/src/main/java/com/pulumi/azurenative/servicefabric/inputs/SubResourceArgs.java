@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Azure resource identifier.
  * 
  */
-public final class SubResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubResourceArgs extends ResourceArgs {
 
     public static final SubResourceArgs Empty = new SubResourceArgs();
 

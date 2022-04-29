@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devices.enums.IotDpsSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * List of possible provisioning service SKUs.
  * 
  */
-public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IotDpsSkuInfoArgs extends ResourceArgs {
 
     public static final IotDpsSkuInfoArgs Empty = new IotDpsSkuInfoArgs();
 

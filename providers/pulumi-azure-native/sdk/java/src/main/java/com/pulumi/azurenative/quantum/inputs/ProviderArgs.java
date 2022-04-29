@@ -7,6 +7,7 @@ import com.pulumi.azurenative.quantum.enums.Status;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Information about a Provider. A Provider is an entity that offers Targets to run Azure Quantum Jobs.
  * 
  */
-public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderArgs extends ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 

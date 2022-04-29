@@ -5,6 +5,7 @@ package com.pulumi.azurenative.powerplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of a subnet.
  * 
  */
-public final class SubnetPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetPropertiesArgs extends ResourceArgs {
 
     public static final SubnetPropertiesArgs Empty = new SubnetPropertiesArgs();
 

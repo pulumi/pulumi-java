@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetJobArgs extends InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 

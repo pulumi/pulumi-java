@@ -8,6 +8,7 @@ import com.pulumi.azurenative.keyvault.enums.ManagedHsmSkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * SKU details
  * 
  */
-public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedHsmSkuArgs extends ResourceArgs {
 
     public static final ManagedHsmSkuArgs Empty = new ManagedHsmSkuArgs();
 

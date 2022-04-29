@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:avs:WorkloadNetworkPortMirroring")
-public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomResource {
+public class WorkloadNetworkPortMirroring extends CustomResource {
     /**
      * Destination VM Group.
      * 
@@ -181,16 +183,16 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WorkloadNetworkPortMirroring(String name, WorkloadNetworkPortMirroringArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WorkloadNetworkPortMirroring(String name, WorkloadNetworkPortMirroringArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:avs:WorkloadNetworkPortMirroring", name, args == null ? WorkloadNetworkPortMirroringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WorkloadNetworkPortMirroring(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WorkloadNetworkPortMirroring(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:avs:WorkloadNetworkPortMirroring", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:avs/v20200717preview:WorkloadNetworkPortMirroring").build()),
@@ -199,7 +201,7 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:avs/v20211201:WorkloadNetworkPortMirroring").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -210,7 +212,7 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkloadNetworkPortMirroring get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WorkloadNetworkPortMirroring get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new WorkloadNetworkPortMirroring(name, id, options);
     }
 }

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Application definition artifact.
  * 
  */
-public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationDefinitionArtifactArgs extends ResourceArgs {
 
     public static final ApplicationDefinitionArtifactArgs Empty = new ApplicationDefinitionArtifactArgs();
 

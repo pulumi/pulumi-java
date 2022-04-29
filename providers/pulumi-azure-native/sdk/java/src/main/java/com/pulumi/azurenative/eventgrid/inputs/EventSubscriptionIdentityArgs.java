@@ -7,6 +7,7 @@ import com.pulumi.azurenative.eventgrid.enums.EventSubscriptionIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The identity information with the event subscription.
  * 
  */
-public final class EventSubscriptionIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSubscriptionIdentityArgs extends ResourceArgs {
 
     public static final EventSubscriptionIdentityArgs Empty = new EventSubscriptionIdentityArgs();
 

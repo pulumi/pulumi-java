@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cache.inputs.EnterpriseSkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs {
+public final class RedisEnterpriseArgs extends ResourceArgs {
 
     public static final RedisEnterpriseArgs Empty = new RedisEnterpriseArgs();
 

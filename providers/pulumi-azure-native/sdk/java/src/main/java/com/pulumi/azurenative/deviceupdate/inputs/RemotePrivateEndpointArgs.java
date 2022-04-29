@@ -7,6 +7,7 @@ import com.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionAr
 import com.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Remote private endpoint details.
  * 
  */
-public final class RemotePrivateEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class RemotePrivateEndpointArgs extends ResourceArgs {
 
     public static final RemotePrivateEndpointArgs Empty = new RemotePrivateEndpointArgs();
 

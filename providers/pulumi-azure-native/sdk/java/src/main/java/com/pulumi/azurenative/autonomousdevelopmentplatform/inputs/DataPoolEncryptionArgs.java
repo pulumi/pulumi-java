@@ -5,6 +5,7 @@ package com.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Encryption properties of a Data Pool
  * 
  */
-public final class DataPoolEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataPoolEncryptionArgs extends ResourceArgs {
 
     public static final DataPoolEncryptionArgs Empty = new DataPoolEncryptionArgs();
 

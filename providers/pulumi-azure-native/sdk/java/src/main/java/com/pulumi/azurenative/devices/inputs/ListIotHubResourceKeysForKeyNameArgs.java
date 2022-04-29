@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListIotHubResourceKeysForKeyNameArgs extends InvokeArgs {
 
     public static final ListIotHubResourceKeysForKeyNameArgs Empty = new ListIotHubResourceKeysForKeyNameArgs();
 

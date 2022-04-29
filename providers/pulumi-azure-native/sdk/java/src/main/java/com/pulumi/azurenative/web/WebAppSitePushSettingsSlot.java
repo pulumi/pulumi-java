@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +31,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:web:WebAppSitePushSettingsSlot")
-public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResource {
+public class WebAppSitePushSettingsSlot extends CustomResource {
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
@@ -156,16 +158,16 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebAppSitePushSettingsSlot(String name, WebAppSitePushSettingsSlotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebAppSitePushSettingsSlot(String name, WebAppSitePushSettingsSlotArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:web:WebAppSitePushSettingsSlot", name, args == null ? WebAppSitePushSettingsSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebAppSitePushSettingsSlot(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebAppSitePushSettingsSlot(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:web:WebAppSitePushSettingsSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppSitePushSettingsSlot").build()),
@@ -182,7 +184,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppSitePushSettingsSlot").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -193,7 +195,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppSitePushSettingsSlot get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppSitePushSettingsSlot get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new WebAppSitePushSettingsSlot(name, id, options);
     }
 }

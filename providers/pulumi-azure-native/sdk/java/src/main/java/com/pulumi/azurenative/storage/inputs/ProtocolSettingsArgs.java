@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.SmbSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Protocol settings for file service
  * 
  */
-public final class ProtocolSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProtocolSettingsArgs extends ResourceArgs {
 
     public static final ProtocolSettingsArgs Empty = new ProtocolSettingsArgs();
 

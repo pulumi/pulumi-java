@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automanage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Automanage configuration profile VM Backup preferences.
  * 
  */
-public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationProfilePreferenceVmBackupArgs extends ResourceArgs {
 
     public static final ConfigurationProfilePreferenceVmBackupArgs Empty = new ConfigurationProfilePreferenceVmBackupArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Definition of a single parameter for an entity.
  * 
  */
-public final class GlobalParameterSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalParameterSpecificationArgs extends ResourceArgs {
 
     public static final GlobalParameterSpecificationArgs Empty = new GlobalParameterSpecificationArgs();
 

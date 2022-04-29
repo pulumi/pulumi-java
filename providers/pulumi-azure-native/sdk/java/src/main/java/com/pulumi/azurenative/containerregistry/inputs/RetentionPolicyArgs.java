@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The retention policy for a container registry.
  * 
  */
-public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetentionPolicyArgs extends ResourceArgs {
 
     public static final RetentionPolicyArgs Empty = new RetentionPolicyArgs();
 

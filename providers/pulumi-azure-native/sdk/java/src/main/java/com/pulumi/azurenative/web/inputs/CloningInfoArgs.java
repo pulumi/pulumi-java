@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Information needed for cloning operation.
  * 
  */
-public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloningInfoArgs extends ResourceArgs {
 
     public static final CloningInfoArgs Empty = new CloningInfoArgs();
 

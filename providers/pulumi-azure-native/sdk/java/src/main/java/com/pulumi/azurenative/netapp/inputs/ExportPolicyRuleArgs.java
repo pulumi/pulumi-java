@@ -6,6 +6,7 @@ package com.pulumi.azurenative.netapp.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Volume Export Policy Rule
  * 
  */
-public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportPolicyRuleArgs extends ResourceArgs {
 
     public static final ExportPolicyRuleArgs Empty = new ExportPolicyRuleArgs();
 

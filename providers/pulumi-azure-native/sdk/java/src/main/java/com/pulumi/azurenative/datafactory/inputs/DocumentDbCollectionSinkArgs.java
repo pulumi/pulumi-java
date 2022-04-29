@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A copy activity Document Database Collection sink.
  * 
  */
-public final class DocumentDbCollectionSinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class DocumentDbCollectionSinkArgs extends ResourceArgs {
 
     public static final DocumentDbCollectionSinkArgs Empty = new DocumentDbCollectionSinkArgs();
 

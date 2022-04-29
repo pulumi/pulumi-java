@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * IoT edge agent details is optional, this will be used for download system Agent module while bootstrapping IoT Role if specified.
  * 
  */
-public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class IoTEdgeAgentInfoArgs extends ResourceArgs {
 
     public static final IoTEdgeAgentInfoArgs Empty = new IoTEdgeAgentInfoArgs();
 

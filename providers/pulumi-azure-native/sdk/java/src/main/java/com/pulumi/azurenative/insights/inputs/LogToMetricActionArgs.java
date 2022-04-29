@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.CriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Specify action need to be taken when rule type is converting log to metric
  * 
  */
-public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogToMetricActionArgs extends ResourceArgs {
 
     public static final LogToMetricActionArgs Empty = new LogToMetricActionArgs();
 

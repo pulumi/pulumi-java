@@ -7,6 +7,7 @@ import com.pulumi.azurenative.edgeorder.enums.NotificationStageName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Notification preference for a job stage.
  * 
  */
-public final class NotificationPreferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationPreferenceArgs extends ResourceArgs {
 
     public static final NotificationPreferenceArgs Empty = new NotificationPreferenceArgs();
 

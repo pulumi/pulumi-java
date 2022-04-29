@@ -12,6 +12,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Additional information on Backup engine specific backup item.
  * 
  */
-public final class DPMProtectedItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class DPMProtectedItemArgs extends ResourceArgs {
 
     public static final DPMProtectedItemArgs Empty = new DPMProtectedItemArgs();
 

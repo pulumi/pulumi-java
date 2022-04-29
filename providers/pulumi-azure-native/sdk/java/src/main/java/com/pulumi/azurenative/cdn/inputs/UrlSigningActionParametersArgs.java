@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.inputs.UrlSigningParamIdentifierArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines the parameters for the Url Signing action.
  * 
  */
-public final class UrlSigningActionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlSigningActionParametersArgs extends ResourceArgs {
 
     public static final UrlSigningActionParametersArgs Empty = new UrlSigningActionParametersArgs();
 

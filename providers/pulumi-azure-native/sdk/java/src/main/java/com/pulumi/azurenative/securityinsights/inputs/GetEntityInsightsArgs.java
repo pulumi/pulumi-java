@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetEntityInsightsArgs extends InvokeArgs {
 
     public static final GetEntityInsightsArgs Empty = new GetEntityInsightsArgs();
 

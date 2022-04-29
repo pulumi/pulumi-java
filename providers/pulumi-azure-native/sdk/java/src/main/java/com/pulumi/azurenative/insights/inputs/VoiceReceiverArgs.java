@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A voice receiver.
  * 
  */
-public final class VoiceReceiverArgs extends com.pulumi.resources.ResourceArgs {
+public final class VoiceReceiverArgs extends ResourceArgs {
 
     public static final VoiceReceiverArgs Empty = new VoiceReceiverArgs();
 

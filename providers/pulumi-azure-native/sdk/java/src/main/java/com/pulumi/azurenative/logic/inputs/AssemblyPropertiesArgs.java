@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The assembly properties definition.
  * 
  */
-public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssemblyPropertiesArgs extends ResourceArgs {
 
     public static final AssemblyPropertiesArgs Empty = new AssemblyPropertiesArgs();
 

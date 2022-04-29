@@ -11,6 +11,7 @@ import com.pulumi.azurenative.web.inputs.WsdlDefinitionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Custom API properties
  * 
  */
-public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomApiPropertiesDefinitionArgs extends ResourceArgs {
 
     public static final CustomApiPropertiesDefinitionArgs Empty = new CustomApiPropertiesDefinitionArgs();
 

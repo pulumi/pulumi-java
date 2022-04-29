@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ManagedRuleGroupOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines a managed rule set.
  * 
  */
-public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedRuleSetArgs extends ResourceArgs {
 
     public static final ManagedRuleSetArgs Empty = new ManagedRuleSetArgs();
 

@@ -11,6 +11,7 @@ import com.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Custom activity type.
  * 
  */
-public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomActivityArgs extends ResourceArgs {
 
     public static final CustomActivityArgs Empty = new CustomActivityArgs();
 

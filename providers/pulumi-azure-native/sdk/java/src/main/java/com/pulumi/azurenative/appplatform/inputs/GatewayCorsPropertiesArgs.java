@@ -5,6 +5,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Cross-Origin Resource Sharing property
  * 
  */
-public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayCorsPropertiesArgs extends ResourceArgs {
 
     public static final GatewayCorsPropertiesArgs Empty = new GatewayCorsPropertiesArgs();
 

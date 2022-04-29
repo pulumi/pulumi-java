@@ -7,6 +7,7 @@ import com.pulumi.azurenative.powerbidedicated.enums.CapacitySkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents the SKU name and Azure pricing tier for PowerBI Dedicated capacity resource.
  * 
  */
-public final class CapacitySkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class CapacitySkuArgs extends ResourceArgs {
 
     public static final CapacitySkuArgs Empty = new CapacitySkuArgs();
 

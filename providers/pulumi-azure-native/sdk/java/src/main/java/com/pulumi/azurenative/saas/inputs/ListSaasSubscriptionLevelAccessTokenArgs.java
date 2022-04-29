@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.saas.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListSaasSubscriptionLevelAccessTokenArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListSaasSubscriptionLevelAccessTokenArgs extends InvokeArgs {
 
     public static final ListSaasSubscriptionLevelAccessTokenArgs Empty = new ListSaasSubscriptionLevelAccessTokenArgs();
 

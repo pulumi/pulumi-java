@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.iotsecurity.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class GetDefenderSettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDefenderSettingArgs extends InvokeArgs {
 
     public static final GetDefenderSettingArgs Empty = new GetDefenderSettingArgs();
 

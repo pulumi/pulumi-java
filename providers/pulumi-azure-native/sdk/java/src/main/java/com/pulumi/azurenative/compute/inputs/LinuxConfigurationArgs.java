@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.inputs.LinuxPatchSettingsArgs;
 import com.pulumi.azurenative.compute.inputs.SshConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the Linux operating system settings on the virtual machine. &lt;br&gt;&lt;br&gt;For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
  * 
  */
-public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinuxConfigurationArgs extends ResourceArgs {
 
     public static final LinuxConfigurationArgs Empty = new LinuxConfigurationArgs();
 

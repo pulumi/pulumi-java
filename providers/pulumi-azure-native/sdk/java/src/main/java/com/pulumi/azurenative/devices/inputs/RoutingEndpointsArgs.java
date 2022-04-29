@@ -9,6 +9,7 @@ import com.pulumi.azurenative.devices.inputs.RoutingServiceBusTopicEndpointPrope
 import com.pulumi.azurenative.devices.inputs.RoutingStorageContainerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
  * 
  */
-public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoutingEndpointsArgs extends ResourceArgs {
 
     public static final RoutingEndpointsArgs Empty = new RoutingEndpointsArgs();
 

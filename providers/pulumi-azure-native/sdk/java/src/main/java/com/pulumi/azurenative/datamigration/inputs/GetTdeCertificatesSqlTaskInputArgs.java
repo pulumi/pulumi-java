@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Input for the task that gets TDE certificates in Base64 encoded format.
  * 
  */
-public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class GetTdeCertificatesSqlTaskInputArgs extends ResourceArgs {
 
     public static final GetTdeCertificatesSqlTaskInputArgs Empty = new GetTdeCertificatesSqlTaskInputArgs();
 

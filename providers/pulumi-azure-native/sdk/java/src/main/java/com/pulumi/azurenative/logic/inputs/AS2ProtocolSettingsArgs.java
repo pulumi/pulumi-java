@@ -12,6 +12,7 @@ import com.pulumi.azurenative.logic.inputs.AS2SecuritySettingsArgs;
 import com.pulumi.azurenative.logic.inputs.AS2ValidationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -19,7 +20,7 @@ import java.util.Objects;
  * The AS2 agreement protocol settings.
  * 
  */
-public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2ProtocolSettingsArgs extends ResourceArgs {
 
     public static final AS2ProtocolSettingsArgs Empty = new AS2ProtocolSettingsArgs();
 

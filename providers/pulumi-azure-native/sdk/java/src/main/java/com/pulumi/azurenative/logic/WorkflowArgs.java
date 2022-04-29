@@ -12,6 +12,7 @@ import com.pulumi.azurenative.logic.inputs.WorkflowParameterArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowArgs extends ResourceArgs {
 
     public static final WorkflowArgs Empty = new WorkflowArgs();
 

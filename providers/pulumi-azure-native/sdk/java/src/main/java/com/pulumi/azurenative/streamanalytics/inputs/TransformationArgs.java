@@ -5,6 +5,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A transformation object, containing all information associated with the named transformation. All transformations are contained under a streaming job.
  * 
  */
-public final class TransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransformationArgs extends ResourceArgs {
 
     public static final TransformationArgs Empty = new TransformationArgs();
 

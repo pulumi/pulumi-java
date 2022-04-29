@@ -8,6 +8,7 @@ import com.pulumi.azurenative.desktopvirtualization.enums.StopHostsWhen;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Scaling plan schedule.
  * 
  */
-public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScalingScheduleArgs extends ResourceArgs {
 
     public static final ScalingScheduleArgs Empty = new ScalingScheduleArgs();
 

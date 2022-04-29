@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A rule condition based on a certain number of locations failing.
  * 
  */
-public final class LocationThresholdRuleConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationThresholdRuleConditionArgs extends ResourceArgs {
 
     public static final LocationThresholdRuleConditionArgs Empty = new LocationThresholdRuleConditionArgs();
 

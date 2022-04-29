@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Hub billing info.
  * 
  */
-public final class HubBillingInfoFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class HubBillingInfoFormatArgs extends ResourceArgs {
 
     public static final HubBillingInfoFormatArgs Empty = new HubBillingInfoFormatArgs();
 

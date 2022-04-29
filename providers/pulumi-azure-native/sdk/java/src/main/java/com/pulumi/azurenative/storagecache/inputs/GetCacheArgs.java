@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetCacheArgs extends InvokeArgs {
 
     public static final GetCacheArgs Empty = new GetCacheArgs();
 

@@ -17,6 +17,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSo
 import com.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class OutputArgs extends ResourceArgs {
 
     public static final OutputArgs Empty = new OutputArgs();
 

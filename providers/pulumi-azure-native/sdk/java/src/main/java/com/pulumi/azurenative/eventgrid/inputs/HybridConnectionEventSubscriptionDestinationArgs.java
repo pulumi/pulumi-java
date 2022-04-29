@@ -6,6 +6,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Information about the HybridConnection destination for an event subscription.
  * 
  */
-public final class HybridConnectionEventSubscriptionDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class HybridConnectionEventSubscriptionDestinationArgs extends ResourceArgs {
 
     public static final HybridConnectionEventSubscriptionDestinationArgs Empty = new HybridConnectionEventSubscriptionDestinationArgs();
 

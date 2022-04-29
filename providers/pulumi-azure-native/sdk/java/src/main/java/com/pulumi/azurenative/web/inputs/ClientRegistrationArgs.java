@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the app registration for providers that have client ids and client secrets
  * 
  */
-public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClientRegistrationArgs extends ResourceArgs {
 
     public static final ClientRegistrationArgs Empty = new ClientRegistrationArgs();
 

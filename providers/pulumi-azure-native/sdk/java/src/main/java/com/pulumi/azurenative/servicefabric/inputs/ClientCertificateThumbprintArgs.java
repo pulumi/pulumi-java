@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Describes the client certificate details using thumbprint.
  * 
  */
-public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClientCertificateThumbprintArgs extends ResourceArgs {
 
     public static final ClientCertificateThumbprintArgs Empty = new ClientCertificateThumbprintArgs();
 

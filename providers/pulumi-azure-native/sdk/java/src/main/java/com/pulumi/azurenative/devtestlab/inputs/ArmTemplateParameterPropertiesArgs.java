@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of an Azure Resource Manager template parameter.
  * 
  */
-public final class ArmTemplateParameterPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArmTemplateParameterPropertiesArgs extends ResourceArgs {
 
     public static final ArmTemplateParameterPropertiesArgs Empty = new ArmTemplateParameterPropertiesArgs();
 

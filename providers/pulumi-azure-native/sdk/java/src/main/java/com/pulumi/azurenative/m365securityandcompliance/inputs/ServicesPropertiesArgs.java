@@ -13,6 +13,7 @@ import com.pulumi.azurenative.m365securityandcompliance.inputs.ServiceExportConf
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * The properties of a service instance.
  * 
  */
-public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicesPropertiesArgs extends ResourceArgs {
 
     public static final ServicesPropertiesArgs Empty = new ServicesPropertiesArgs();
 

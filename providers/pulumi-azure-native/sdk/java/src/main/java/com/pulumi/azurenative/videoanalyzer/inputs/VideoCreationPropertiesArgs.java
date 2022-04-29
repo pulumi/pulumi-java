@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Optional properties to be used in case a new video resource needs to be created on the service. These will not take effect if the video already exists.
  * 
  */
-public final class VideoCreationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoCreationPropertiesArgs extends ResourceArgs {
 
     public static final VideoCreationPropertiesArgs Empty = new VideoCreationPropertiesArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The mapping between a particular user and the access type on the SMB share.
  * 
  */
-public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserAccessRightArgs extends ResourceArgs {
 
     public static final UserAccessRightArgs Empty = new UserAccessRightArgs();
 

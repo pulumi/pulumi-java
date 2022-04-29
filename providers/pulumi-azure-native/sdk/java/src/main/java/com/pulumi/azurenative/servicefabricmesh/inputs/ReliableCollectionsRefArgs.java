@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifying this parameter adds support for reliable collections
  * 
  */
-public final class ReliableCollectionsRefArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReliableCollectionsRefArgs extends ResourceArgs {
 
     public static final ReliableCollectionsRefArgs Empty = new ReliableCollectionsRefArgs();
 

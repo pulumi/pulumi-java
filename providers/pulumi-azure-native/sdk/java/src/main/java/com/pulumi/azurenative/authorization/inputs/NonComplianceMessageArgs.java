@@ -5,6 +5,7 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
  * 
  */
-public final class NonComplianceMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class NonComplianceMessageArgs extends ResourceArgs {
 
     public static final NonComplianceMessageArgs Empty = new NonComplianceMessageArgs();
 

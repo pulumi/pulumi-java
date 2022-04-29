@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.enums.ConfigurationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListNetworkManagerDeploymentStatusArgs extends InvokeArgs {
 
     public static final ListNetworkManagerDeploymentStatusArgs Empty = new ListNetworkManagerDeploymentStatusArgs();
 

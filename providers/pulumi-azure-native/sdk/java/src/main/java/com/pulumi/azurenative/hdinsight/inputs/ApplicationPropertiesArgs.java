@@ -10,6 +10,7 @@ import com.pulumi.azurenative.hdinsight.inputs.ErrorsArgs;
 import com.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * The HDInsight cluster application GET response.
  * 
  */
-public final class ApplicationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationPropertiesArgs extends ResourceArgs {
 
     public static final ApplicationPropertiesArgs Empty = new ApplicationPropertiesArgs();
 

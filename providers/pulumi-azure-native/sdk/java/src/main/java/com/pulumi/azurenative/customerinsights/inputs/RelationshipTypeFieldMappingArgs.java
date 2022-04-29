@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Map a field of profile to its corresponding StrongId in Related Profile.
  * 
  */
-public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class RelationshipTypeFieldMappingArgs extends ResourceArgs {
 
     public static final RelationshipTypeFieldMappingArgs Empty = new RelationshipTypeFieldMappingArgs();
 

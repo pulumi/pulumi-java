@@ -8,6 +8,7 @@ import com.pulumi.azurenative.apimanagement.inputs.RequestContractArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ResponseContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiOperationArgs extends ResourceArgs {
 
     public static final ApiOperationArgs Empty = new ApiOperationArgs();
 

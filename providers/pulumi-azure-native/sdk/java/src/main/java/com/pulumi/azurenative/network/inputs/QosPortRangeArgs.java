@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Qos Traffic Profiler Port range properties.
  * 
  */
-public final class QosPortRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class QosPortRangeArgs extends ResourceArgs {
 
     public static final QosPortRangeArgs Empty = new QosPortRangeArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoindexer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The media services details
  * 
  */
-public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class MediaServicesForPutRequestArgs extends ResourceArgs {
 
     public static final MediaServicesForPutRequestArgs Empty = new MediaServicesForPutRequestArgs();
 

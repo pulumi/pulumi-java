@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Specifies a metric dimension.
  * 
  */
-public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricDimensionArgs extends ResourceArgs {
 
     public static final MetricDimensionArgs Empty = new MetricDimensionArgs();
 

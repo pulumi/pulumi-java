@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicebus.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
  * 
  */
-public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlFilterArgs extends ResourceArgs {
 
     public static final SqlFilterArgs Empty = new SqlFilterArgs();
 

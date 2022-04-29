@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Task properties of the software update configuration.
  * 
  */
-public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskPropertiesArgs extends ResourceArgs {
 
     public static final TaskPropertiesArgs Empty = new TaskPropertiesArgs();
 

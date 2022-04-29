@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A copy activity source for a Cassandra database.
  * 
  */
-public final class CassandraSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CassandraSourceArgs extends ResourceArgs {
 
     public static final CassandraSourceArgs Empty = new CassandraSourceArgs();
 

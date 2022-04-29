@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the gallery image definition purchase plan. This is used by marketplace images.
  * 
  */
-public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImagePurchasePlanArgs extends ResourceArgs {
 
     public static final ImagePurchasePlanArgs Empty = new ImagePurchasePlanArgs();
 

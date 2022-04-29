@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.BackupSchedule;
 import com.pulumi.azurenative.web.inputs.DatabaseBackupSetting;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListWebAppBackupStatusSecretsArgs extends InvokeArgs {
 
     public static final ListWebAppBackupStatusSecretsArgs Empty = new ListWebAppBackupStatusSecretsArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:web:WebAppHostNameBinding")
-public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
+public class WebAppHostNameBinding extends CustomResource {
     /**
      * Azure resource name.
      * 
@@ -219,16 +221,16 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WebAppHostNameBinding(String name, WebAppHostNameBindingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public WebAppHostNameBinding(String name, WebAppHostNameBindingArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:web:WebAppHostNameBinding", name, args == null ? WebAppHostNameBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private WebAppHostNameBinding(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private WebAppHostNameBinding(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:web:WebAppHostNameBinding", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppHostNameBinding").build()),
@@ -246,7 +248,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppHostNameBinding").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -257,7 +259,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppHostNameBinding get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppHostNameBinding get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new WebAppHostNameBinding(name, id, options);
     }
 }

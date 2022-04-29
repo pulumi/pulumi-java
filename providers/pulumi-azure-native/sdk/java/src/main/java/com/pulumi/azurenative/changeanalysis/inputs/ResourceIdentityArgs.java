@@ -7,6 +7,7 @@ import com.pulumi.azurenative.changeanalysis.enums.ManagedIdentityTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The identity block returned by ARM resource that supports managed identity.
  * 
  */
-public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdentityArgs extends ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 

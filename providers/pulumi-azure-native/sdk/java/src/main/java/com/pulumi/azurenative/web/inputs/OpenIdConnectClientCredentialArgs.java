@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.ClientCredentialMethod;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The authentication client credentials of the custom Open ID Connect provider.
  * 
  */
-public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenIdConnectClientCredentialArgs extends ResourceArgs {
 
     public static final OpenIdConnectClientCredentialArgs Empty = new OpenIdConnectClientCredentialArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cognitiveservices.enums.IdentityType;
 import com.pulumi.azurenative.cognitiveservices.inputs.UserAssignedIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Managed service identity.
  * 
  */
-public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityArgs extends ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Identity that will be used to access key vault for encryption at rest
  * 
  */
-public final class IdentityForCmkArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityForCmkArgs extends ResourceArgs {
 
     public static final IdentityForCmkArgs Empty = new IdentityForCmkArgs();
 

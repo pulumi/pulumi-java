@@ -6,6 +6,7 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The storage profile.
  * 
  */
-public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageProfileArgs extends ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 

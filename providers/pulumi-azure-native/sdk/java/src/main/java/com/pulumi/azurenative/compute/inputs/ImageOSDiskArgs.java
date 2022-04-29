@@ -12,6 +12,7 @@ import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Describes an Operating System disk.
  * 
  */
-public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageOSDiskArgs extends ResourceArgs {
 
     public static final ImageOSDiskArgs Empty = new ImageOSDiskArgs();
 

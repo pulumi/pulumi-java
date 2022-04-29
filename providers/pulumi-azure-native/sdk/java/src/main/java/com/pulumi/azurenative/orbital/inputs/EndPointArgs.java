@@ -7,6 +7,7 @@ import com.pulumi.azurenative.orbital.enums.Protocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Customer End point to store/retrieve data during a contact.
  * 
  */
-public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndPointArgs extends ResourceArgs {
 
     public static final EndPointArgs Empty = new EndPointArgs();
 

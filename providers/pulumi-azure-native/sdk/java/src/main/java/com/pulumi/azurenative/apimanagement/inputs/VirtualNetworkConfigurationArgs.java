@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Configuration of a virtual network to which API Management service is deployed.
  * 
  */
-public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkConfigurationArgs extends ResourceArgs {
 
     public static final VirtualNetworkConfigurationArgs Empty = new VirtualNetworkConfigurationArgs();
 

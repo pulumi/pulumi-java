@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Custom script action to run on HDI ondemand cluster once it&#39;s up.
  * 
  */
-public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScriptActionArgs extends ResourceArgs {
 
     public static final ScriptActionArgs Empty = new ScriptActionArgs();
 

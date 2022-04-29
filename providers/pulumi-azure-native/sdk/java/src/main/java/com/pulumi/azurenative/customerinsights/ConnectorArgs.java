@@ -7,6 +7,7 @@ import com.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorArgs extends ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 

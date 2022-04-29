@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * SSIS execution parameter.
  * 
  */
-public final class SSISExecutionParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class SSISExecutionParameterArgs extends ResourceArgs {
 
     public static final SSISExecutionParameterArgs Empty = new SSISExecutionParameterArgs();
 

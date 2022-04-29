@@ -7,6 +7,7 @@ import com.pulumi.azurenative.hybridcompute.inputs.PrivateEndpointPropertyArgs;
 import com.pulumi.azurenative.hybridcompute.inputs.PrivateLinkServiceConnectionStatePropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Properties of a private endpoint connection.
  * 
  */
-public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionPropertiesArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 

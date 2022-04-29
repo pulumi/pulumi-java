@@ -10,6 +10,7 @@ import com.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
  * 
  */
-public final class GuestConfigurationNavigationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestConfigurationNavigationArgs extends ResourceArgs {
 
     public static final GuestConfigurationNavigationArgs Empty = new GuestConfigurationNavigationArgs();
 

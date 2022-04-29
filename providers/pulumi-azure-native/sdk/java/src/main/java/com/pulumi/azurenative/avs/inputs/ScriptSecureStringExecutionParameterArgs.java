@@ -6,6 +6,7 @@ package com.pulumi.azurenative.avs.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * a plain text value execution parameter
  * 
  */
-public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScriptSecureStringExecutionParameterArgs extends ResourceArgs {
 
     public static final ScriptSecureStringExecutionParameterArgs Empty = new ScriptSecureStringExecutionParameterArgs();
 

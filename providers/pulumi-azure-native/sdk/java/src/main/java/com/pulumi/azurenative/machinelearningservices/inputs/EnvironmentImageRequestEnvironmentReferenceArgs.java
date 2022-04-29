@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The unique identifying details of the AZURE ML environment.
  * 
  */
-public final class EnvironmentImageRequestEnvironmentReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentImageRequestEnvironmentReferenceArgs extends ResourceArgs {
 
     public static final EnvironmentImageRequestEnvironmentReferenceArgs Empty = new EnvironmentImageRequestEnvironmentReferenceArgs();
 

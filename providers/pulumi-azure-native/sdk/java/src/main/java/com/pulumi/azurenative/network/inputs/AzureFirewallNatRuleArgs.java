@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.AzureFirewallNetworkRuleProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of a NAT rule.
  * 
  */
-public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFirewallNatRuleArgs extends ResourceArgs {
 
     public static final AzureFirewallNatRuleArgs Empty = new AzureFirewallNatRuleArgs();
 

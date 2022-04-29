@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyRuleConditionApplicati
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of the application rule protocol.
  * 
  */
-public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends ResourceArgs {
 
     public static final FirewallPolicyRuleConditionApplicationProtocolArgs Empty = new FirewallPolicyRuleConditionApplicationProtocolArgs();
 

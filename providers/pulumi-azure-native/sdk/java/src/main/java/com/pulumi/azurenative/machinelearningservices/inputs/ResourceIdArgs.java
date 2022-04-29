@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
  * 
  */
-public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdArgs extends ResourceArgs {
 
     public static final ResourceIdArgs Empty = new ResourceIdArgs();
 

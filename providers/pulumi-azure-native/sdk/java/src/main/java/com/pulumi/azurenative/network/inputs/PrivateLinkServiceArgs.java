@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApp
 import com.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Private link service resource.
  * 
  */
-public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkServiceArgs extends ResourceArgs {
 
     public static final PrivateLinkServiceArgs Empty = new PrivateLinkServiceArgs();
 

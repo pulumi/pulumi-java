@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Customer Certificate used for https
  * 
  */
-public final class CustomerCertificateParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomerCertificateParametersArgs extends ResourceArgs {
 
     public static final CustomerCertificateParametersArgs Empty = new CustomerCertificateParametersArgs();
 

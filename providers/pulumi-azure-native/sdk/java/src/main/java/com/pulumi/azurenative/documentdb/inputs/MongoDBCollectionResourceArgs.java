@@ -6,6 +6,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Cosmos DB MongoDB collection resource object
  * 
  */
-public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class MongoDBCollectionResourceArgs extends ResourceArgs {
 
     public static final MongoDBCollectionResourceArgs Empty = new MongoDBCollectionResourceArgs();
 

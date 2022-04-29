@@ -6,6 +6,7 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The workspace managed identity
  * 
  */
-public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedIdentityArgs extends ResourceArgs {
 
     public static final ManagedIdentityArgs Empty = new ManagedIdentityArgs();
 

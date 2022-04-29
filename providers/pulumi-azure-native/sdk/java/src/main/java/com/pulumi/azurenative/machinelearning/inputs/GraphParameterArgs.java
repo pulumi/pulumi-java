@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines a global parameter in the graph.
  * 
  */
-public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphParameterArgs extends ResourceArgs {
 
     public static final GraphParameterArgs Empty = new GraphParameterArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:apimanagement:GatewayCertificateAuthority")
-public class GatewayCertificateAuthority extends com.pulumi.resources.CustomResource {
+public class GatewayCertificateAuthority extends CustomResource {
     /**
      * Determines whether certificate authority is trusted.
      * 
@@ -97,16 +99,16 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GatewayCertificateAuthority(String name, GatewayCertificateAuthorityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GatewayCertificateAuthority(String name, GatewayCertificateAuthorityArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:GatewayCertificateAuthority", name, args == null ? GatewayCertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GatewayCertificateAuthority(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GatewayCertificateAuthority(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:GatewayCertificateAuthority", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:GatewayCertificateAuthority").build()),
@@ -116,7 +118,7 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayCertificateAuthority").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -127,7 +129,7 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayCertificateAuthority get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayCertificateAuthority get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new GatewayCertificateAuthority(name, id, options);
     }
 }

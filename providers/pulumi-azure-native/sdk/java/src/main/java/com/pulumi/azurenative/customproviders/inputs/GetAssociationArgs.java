@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.customproviders.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAssociationArgs extends InvokeArgs {
 
     public static final GetAssociationArgs Empty = new GetAssociationArgs();
 

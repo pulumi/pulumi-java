@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 import com.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The resource limits.
  * 
  */
-public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceLimitsArgs extends ResourceArgs {
 
     public static final ResourceLimitsArgs Empty = new ResourceLimitsArgs();
 

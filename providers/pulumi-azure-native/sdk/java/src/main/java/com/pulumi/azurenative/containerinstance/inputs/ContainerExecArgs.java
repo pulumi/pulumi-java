@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The container execution command, for liveness or readiness probe
  * 
  */
-public final class ContainerExecArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerExecArgs extends ResourceArgs {
 
     public static final ContainerExecArgs Empty = new ContainerExecArgs();
 

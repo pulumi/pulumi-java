@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthRespon
 import com.pulumi.azurenative.network.inputs.SubResource;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetApplicationGatewayBackendHealthOnDemandArgs extends InvokeArgs {
 
     public static final GetApplicationGatewayBackendHealthOnDemandArgs Empty = new GetApplicationGatewayBackendHealthOnDemandArgs();
 

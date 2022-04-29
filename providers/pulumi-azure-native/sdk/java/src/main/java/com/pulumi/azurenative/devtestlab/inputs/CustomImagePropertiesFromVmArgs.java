@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoArgs;
 import com.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for creating a custom image from a virtual machine.
  * 
  */
-public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomImagePropertiesFromVmArgs extends ResourceArgs {
 
     public static final CustomImagePropertiesFromVmArgs Empty = new CustomImagePropertiesFromVmArgs();
 

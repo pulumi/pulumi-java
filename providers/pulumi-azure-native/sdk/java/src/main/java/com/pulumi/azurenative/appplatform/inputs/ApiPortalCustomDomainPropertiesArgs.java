@@ -5,6 +5,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The properties of custom domain for API portal
  * 
  */
-public final class ApiPortalCustomDomainPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiPortalCustomDomainPropertiesArgs extends ResourceArgs {
 
     public static final ApiPortalCustomDomainPropertiesArgs Empty = new ApiPortalCustomDomainPropertiesArgs();
 

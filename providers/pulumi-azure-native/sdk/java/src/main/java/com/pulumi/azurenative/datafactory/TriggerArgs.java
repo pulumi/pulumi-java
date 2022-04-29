@@ -13,6 +13,7 @@ import com.pulumi.azurenative.datafactory.inputs.ScheduleTriggerArgs;
 import com.pulumi.azurenative.datafactory.inputs.TumblingWindowTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerArgs extends ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes a custom preset for encoding the input content using the encoder processor.
  * 
  */
-public final class EncoderCustomPresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncoderCustomPresetArgs extends ResourceArgs {
 
     public static final EncoderCustomPresetArgs Empty = new EncoderCustomPresetArgs();
 

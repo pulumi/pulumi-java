@@ -6,6 +6,8 @@ package com.pulumi.azurenative.edgeorder.inputs;
 import com.pulumi.azurenative.edgeorder.enums.SupportedFilterTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +17,7 @@ import java.util.Objects;
  * Different types of filters supported and its values.
  * 
  */
-public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
+public final class FilterableProperty extends InvokeArgs {
 
     public static final FilterableProperty Empty = new FilterableProperty();
 

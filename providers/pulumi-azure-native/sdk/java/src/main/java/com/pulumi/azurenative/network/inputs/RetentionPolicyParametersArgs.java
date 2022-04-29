@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Parameters that define the retention policy for flow log.
  * 
  */
-public final class RetentionPolicyParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetentionPolicyParametersArgs extends ResourceArgs {
 
     public static final RetentionPolicyParametersArgs Empty = new RetentionPolicyParametersArgs();
 

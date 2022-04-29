@@ -6,6 +6,7 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 import com.pulumi.azurenative.deploymentmanager.inputs.PrePostStepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The properties that define a Step group in a rollout.
  * 
  */
-public final class StepGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class StepGroupArgs extends ResourceArgs {
 
     public static final StepGroupArgs Empty = new StepGroupArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import com.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The policies for a container registry.
  * 
  */
-public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PoliciesArgs extends ResourceArgs {
 
     public static final PoliciesArgs Empty = new PoliciesArgs();
 

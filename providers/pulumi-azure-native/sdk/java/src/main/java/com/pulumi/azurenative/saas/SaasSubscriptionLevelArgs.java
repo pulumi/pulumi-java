@@ -6,6 +6,7 @@ package com.pulumi.azurenative.saas;
 import com.pulumi.azurenative.saas.inputs.SaasCreationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.ResourceArgs {
+public final class SaasSubscriptionLevelArgs extends ResourceArgs {
 
     public static final SaasSubscriptionLevelArgs Empty = new SaasSubscriptionLevelArgs();
 

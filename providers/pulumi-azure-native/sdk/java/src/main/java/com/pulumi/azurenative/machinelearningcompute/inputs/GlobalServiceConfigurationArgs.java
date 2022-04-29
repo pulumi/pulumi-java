@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigura
 import com.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Global configuration for services in the cluster.
  * 
  */
-public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalServiceConfigurationArgs extends ResourceArgs {
 
     public static final GlobalServiceConfigurationArgs Empty = new GlobalServiceConfigurationArgs();
 

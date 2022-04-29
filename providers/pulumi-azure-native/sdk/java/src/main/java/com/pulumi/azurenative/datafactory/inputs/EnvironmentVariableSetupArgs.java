@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The custom setup of setting environment variable.
  * 
  */
-public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentVariableSetupArgs extends ResourceArgs {
 
     public static final EnvironmentVariableSetupArgs Empty = new EnvironmentVariableSetupArgs();
 

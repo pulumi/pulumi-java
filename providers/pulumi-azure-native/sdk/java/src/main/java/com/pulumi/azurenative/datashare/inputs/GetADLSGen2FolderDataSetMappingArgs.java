@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetADLSGen2FolderDataSetMappingArgs extends InvokeArgs {
 
     public static final GetADLSGen2FolderDataSetMappingArgs Empty = new GetADLSGen2FolderDataSetMappingArgs();
 

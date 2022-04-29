@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a volume whose lifetime is scoped to the application&#39;s lifetime.
  * 
  */
-public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationScopedVolumeArgs extends ResourceArgs {
 
     public static final ApplicationScopedVolumeArgs Empty = new ApplicationScopedVolumeArgs();
 

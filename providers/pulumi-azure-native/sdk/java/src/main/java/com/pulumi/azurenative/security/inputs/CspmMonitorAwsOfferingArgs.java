@@ -7,6 +7,7 @@ import com.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingNativeCloudC
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The CSPM monitoring for AWS offering configurations
  * 
  */
-public final class CspmMonitorAwsOfferingArgs extends com.pulumi.resources.ResourceArgs {
+public final class CspmMonitorAwsOfferingArgs extends ResourceArgs {
 
     public static final CspmMonitorAwsOfferingArgs Empty = new CspmMonitorAwsOfferingArgs();
 

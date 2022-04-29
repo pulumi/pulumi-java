@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The participant property reference.
  * 
  */
-public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParticipantPropertyReferenceArgs extends ResourceArgs {
 
     public static final ParticipantPropertyReferenceArgs Empty = new ParticipantPropertyReferenceArgs();
 

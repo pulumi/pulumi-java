@@ -7,6 +7,7 @@ import com.pulumi.azurenative.labservices.enums.ConnectionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connection profile for how users connect to lab virtual machines.
  * 
  */
-public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionProfileArgs extends ResourceArgs {
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 

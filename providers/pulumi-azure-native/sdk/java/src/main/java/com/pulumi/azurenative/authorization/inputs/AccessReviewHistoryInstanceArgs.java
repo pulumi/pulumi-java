@@ -5,6 +5,7 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Access Review History Definition Instance.
  * 
  */
-public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessReviewHistoryInstanceArgs extends ResourceArgs {
 
     public static final AccessReviewHistoryInstanceArgs Empty = new AccessReviewHistoryInstanceArgs();
 

@@ -16,6 +16,7 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfil
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * Describes a virtual machine scale set virtual machine profile.
  * 
  */
-public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetVMProfileArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetVMProfileArgs Empty = new VirtualMachineScaleSetVMProfileArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The parameters used to create a new compute policy while creating a new Data Lake Analytics account.
  * 
  */
-public final class CreateComputePolicyWithAccountParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateComputePolicyWithAccountParametersArgs extends ResourceArgs {
 
     public static final CreateComputePolicyWithAccountParametersArgs Empty = new CreateComputePolicyWithAccountParametersArgs();
 

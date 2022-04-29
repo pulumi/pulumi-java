@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Specifies the clip time as an absolute time position in the media file.  The absolute time can point to a different position depending on whether the media file starts from a timestamp of zero or not.
  * 
  */
-public final class AbsoluteClipTimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AbsoluteClipTimeArgs extends ResourceArgs {
 
     public static final AbsoluteClipTimeArgs Empty = new AbsoluteClipTimeArgs();
 

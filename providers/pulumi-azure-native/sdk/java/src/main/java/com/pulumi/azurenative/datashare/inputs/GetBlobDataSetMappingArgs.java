@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBlobDataSetMappingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBlobDataSetMappingArgs extends InvokeArgs {
 
     public static final GetBlobDataSetMappingArgs Empty = new GetBlobDataSetMappingArgs();
 

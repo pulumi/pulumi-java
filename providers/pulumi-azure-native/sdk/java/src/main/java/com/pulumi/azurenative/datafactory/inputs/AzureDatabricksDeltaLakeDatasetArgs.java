@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Azure Databricks Delta Lake dataset.
  * 
  */
-public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureDatabricksDeltaLakeDatasetArgs extends ResourceArgs {
 
     public static final AzureDatabricksDeltaLakeDatasetArgs Empty = new AzureDatabricksDeltaLakeDatasetArgs();
 

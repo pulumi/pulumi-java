@@ -5,6 +5,7 @@ package com.pulumi.azurenative.openenergyplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The list of Energy services resource&#39;s Data Partition Names.
  * 
  */
-public final class DataPartitionNamesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataPartitionNamesArgs extends ResourceArgs {
 
     public static final DataPartitionNamesArgs Empty = new DataPartitionNamesArgs();
 

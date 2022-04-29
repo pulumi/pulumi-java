@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:blueprint:PolicyAssignmentArtifact")
-public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResource {
+public class PolicyAssignmentArtifact extends CustomResource {
     /**
      * Artifacts which need to be deployed before the specified artifact.
      * 
@@ -184,11 +186,11 @@ public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PolicyAssignmentArtifact(String name, PolicyAssignmentArtifactArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PolicyAssignmentArtifact(String name, PolicyAssignmentArtifactArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:blueprint:PolicyAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PolicyAssignmentArtifact(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PolicyAssignmentArtifact(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:blueprint:PolicyAssignmentArtifact", name, null, makeResourceOptions(options, id));
     }
 
@@ -199,14 +201,14 @@ public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResourc
             .build();
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:blueprint/v20181101preview:PolicyAssignmentArtifact").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -217,7 +219,7 @@ public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicyAssignmentArtifact get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PolicyAssignmentArtifact get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PolicyAssignmentArtifact(name, id, options);
     }
 }

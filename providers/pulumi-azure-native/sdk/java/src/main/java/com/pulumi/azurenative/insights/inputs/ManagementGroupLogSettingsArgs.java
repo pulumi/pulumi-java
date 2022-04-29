@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Part of Management Group diagnostic setting. Specifies the settings for a particular log.
  * 
  */
-public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementGroupLogSettingsArgs extends ResourceArgs {
 
     public static final ManagementGroupLogSettingsArgs Empty = new ManagementGroupLogSettingsArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.cognitiveservices.inputs.VirtualNetworkRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A set of rules governing the network accessibility.
  * 
  */
-public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkRuleSetArgs extends ResourceArgs {
 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 

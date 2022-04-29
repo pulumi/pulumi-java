@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Active Directory settings used to join a cache to a domain.
  * 
  */
-public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheActiveDirectorySettingsArgs extends ResourceArgs {
 
     public static final CacheActiveDirectorySettingsArgs Empty = new CacheActiveDirectorySettingsArgs();
 

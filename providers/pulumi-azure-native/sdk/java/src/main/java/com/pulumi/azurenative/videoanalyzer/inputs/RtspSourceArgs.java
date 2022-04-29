@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * RTSP source allows for media from an RTSP camera or generic RTSP server to be ingested into a pipeline.
  * 
  */
-public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RtspSourceArgs extends ResourceArgs {
 
     public static final RtspSourceArgs Empty = new RtspSourceArgs();
 

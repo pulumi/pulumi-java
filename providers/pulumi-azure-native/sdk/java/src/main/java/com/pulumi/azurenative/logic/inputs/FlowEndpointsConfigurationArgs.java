@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.FlowEndpointsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The endpoints configuration.
  * 
  */
-public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowEndpointsConfigurationArgs extends ResourceArgs {
 
     public static final FlowEndpointsConfigurationArgs Empty = new FlowEndpointsConfigurationArgs();
 

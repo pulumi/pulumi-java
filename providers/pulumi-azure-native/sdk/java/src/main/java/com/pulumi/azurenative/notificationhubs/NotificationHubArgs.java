@@ -13,6 +13,7 @@ import com.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import com.pulumi.azurenative.notificationhubs.inputs.WnsCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs {
+public final class NotificationHubArgs extends ResourceArgs {
 
     public static final NotificationHubArgs Empty = new NotificationHubArgs();
 

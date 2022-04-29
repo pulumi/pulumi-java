@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The source reference for the GitRepository object.
  * 
  */
-public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepositoryRefDefinitionArgs extends ResourceArgs {
 
     public static final RepositoryRefDefinitionArgs Empty = new RepositoryRefDefinitionArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CollectorAgentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CollectorAgentPropertiesArgs extends ResourceArgs {
 
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 

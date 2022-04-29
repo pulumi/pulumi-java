@@ -7,6 +7,7 @@ import com.pulumi.azurenative.deploymentmanager.enums.RestAuthLocation;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
  * 
  */
-public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiKeyAuthenticationArgs extends ResourceArgs {
 
     public static final ApiKeyAuthenticationArgs Empty = new ApiKeyAuthenticationArgs();
 

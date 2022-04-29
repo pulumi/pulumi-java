@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Application gateway client authentication configuration.
  * 
  */
-public final class ApplicationGatewayClientAuthConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayClientAuthConfigurationArgs extends ResourceArgs {
 
     public static final ApplicationGatewayClientAuthConfigurationArgs Empty = new ApplicationGatewayClientAuthConfigurationArgs();
 

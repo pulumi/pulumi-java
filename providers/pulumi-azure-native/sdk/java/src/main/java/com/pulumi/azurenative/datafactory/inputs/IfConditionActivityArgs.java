@@ -46,6 +46,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -58,7 +59,7 @@ import javax.annotation.Nullable;
  * This activity evaluates a boolean expression and executes either the activities under the ifTrueActivities property or the ifFalseActivities property depending on the result of the expression.
  * 
  */
-public final class IfConditionActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IfConditionActivityArgs extends ResourceArgs {
 
     public static final IfConditionActivityArgs Empty = new IfConditionActivityArgs();
 

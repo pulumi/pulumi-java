@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.aad.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetOuContainerArgs extends InvokeArgs {
 
     public static final GetOuContainerArgs Empty = new GetOuContainerArgs();
 

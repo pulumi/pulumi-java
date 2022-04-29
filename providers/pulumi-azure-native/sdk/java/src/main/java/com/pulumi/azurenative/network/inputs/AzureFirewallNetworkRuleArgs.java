@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.AzureFirewallNetworkRuleProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of the network rule.
  * 
  */
-public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFirewallNetworkRuleArgs extends ResourceArgs {
 
     public static final AzureFirewallNetworkRuleArgs Empty = new AzureFirewallNetworkRuleArgs();
 

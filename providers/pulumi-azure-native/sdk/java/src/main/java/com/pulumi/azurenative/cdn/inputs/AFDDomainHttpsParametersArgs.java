@@ -9,6 +9,7 @@ import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The JSON object that contains the properties to secure a domain.
  * 
  */
-public final class AFDDomainHttpsParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class AFDDomainHttpsParametersArgs extends ResourceArgs {
 
     public static final AFDDomainHttpsParametersArgs Empty = new AFDDomainHttpsParametersArgs();
 

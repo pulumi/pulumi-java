@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * MAB workload-specific Health Details.
  * 
  */
-public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MABContainerHealthDetailsArgs extends ResourceArgs {
 
     public static final MABContainerHealthDetailsArgs Empty = new MABContainerHealthDetailsArgs();
 

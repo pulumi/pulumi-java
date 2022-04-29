@@ -8,6 +8,7 @@ import com.pulumi.azurenative.sql.enums.PrincipalType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Properties of a active directory administrator.
  * 
  */
-public final class ServerExternalAdministratorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerExternalAdministratorArgs extends ResourceArgs {
 
     public static final ServerExternalAdministratorArgs Empty = new ServerExternalAdministratorArgs();
 

@@ -22,6 +22,7 @@ import com.pulumi.azurenative.datafactory.inputs.SftpLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +37,7 @@ import javax.annotation.Nullable;
  * Avro dataset.
  * 
  */
-public final class AvroDatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AvroDatasetArgs extends ResourceArgs {
 
     public static final AvroDatasetArgs Empty = new AvroDatasetArgs();
 

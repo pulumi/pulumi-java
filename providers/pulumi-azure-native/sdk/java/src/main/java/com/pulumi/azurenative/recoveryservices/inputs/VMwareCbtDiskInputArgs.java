@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * VMwareCbt disk input.
  * 
  */
-public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class VMwareCbtDiskInputArgs extends ResourceArgs {
 
     public static final VMwareCbtDiskInputArgs Empty = new VMwareCbtDiskInputArgs();
 

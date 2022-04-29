@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Action rule with diagnostics configuration
  * 
  */
-public final class DiagnosticsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiagnosticsArgs extends ResourceArgs {
 
     public static final DiagnosticsArgs Empty = new DiagnosticsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies that the scope of the extensionInstance is Namespace
  * 
  */
-public final class ScopeNamespaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeNamespaceArgs extends ResourceArgs {
 
     public static final ScopeNamespaceArgs Empty = new ScopeNamespaceArgs();
 

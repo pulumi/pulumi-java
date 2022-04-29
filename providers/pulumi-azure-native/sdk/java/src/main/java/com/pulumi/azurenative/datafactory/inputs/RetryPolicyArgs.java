@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Execution policy for an activity.
  * 
  */
-public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RetryPolicyArgs extends ResourceArgs {
 
     public static final RetryPolicyArgs Empty = new RetryPolicyArgs();
 

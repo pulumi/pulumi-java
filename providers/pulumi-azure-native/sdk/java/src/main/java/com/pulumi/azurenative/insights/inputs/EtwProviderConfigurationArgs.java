@@ -6,12 +6,13 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.EtwEventConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class EtwProviderConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class EtwProviderConfigurationArgs extends ResourceArgs {
 
     public static final EtwProviderConfigurationArgs Empty = new EtwProviderConfigurationArgs();
 

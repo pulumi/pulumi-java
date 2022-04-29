@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration parameters used for performing automatic OS upgrade.
  * 
  */
-public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomaticOSUpgradePolicyArgs extends ResourceArgs {
 
     public static final AutomaticOSUpgradePolicyArgs Empty = new AutomaticOSUpgradePolicyArgs();
 

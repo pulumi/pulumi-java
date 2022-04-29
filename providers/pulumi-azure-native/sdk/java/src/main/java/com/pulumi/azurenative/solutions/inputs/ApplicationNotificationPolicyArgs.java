@@ -6,6 +6,7 @@ package com.pulumi.azurenative.solutions.inputs;
 import com.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Managed application notification policy.
  * 
  */
-public final class ApplicationNotificationPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationNotificationPolicyArgs extends ResourceArgs {
 
     public static final ApplicationNotificationPolicyArgs Empty = new ApplicationNotificationPolicyArgs();
 

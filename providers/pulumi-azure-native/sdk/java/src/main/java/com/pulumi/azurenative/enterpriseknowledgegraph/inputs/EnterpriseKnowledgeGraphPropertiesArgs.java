@@ -5,6 +5,7 @@ package com.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the EnterpriseKnowledgeGraph.
  * 
  */
-public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseKnowledgeGraphPropertiesArgs extends ResourceArgs {
 
     public static final EnterpriseKnowledgeGraphPropertiesArgs Empty = new EnterpriseKnowledgeGraphPropertiesArgs();
 

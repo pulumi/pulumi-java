@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devices.enums.RoutingSource;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.
  * 
  */
-public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FallbackRoutePropertiesArgs extends ResourceArgs {
 
     public static final FallbackRoutePropertiesArgs Empty = new FallbackRoutePropertiesArgs();
 

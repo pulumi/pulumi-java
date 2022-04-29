@@ -6,6 +6,7 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.WebChatSiteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Web Chat channel.
  * 
  */
-public final class WebChatChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebChatChannelPropertiesArgs extends ResourceArgs {
 
     public static final WebChatChannelPropertiesArgs Empty = new WebChatChannelPropertiesArgs();
 

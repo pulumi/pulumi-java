@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devices.inputs;
 import com.pulumi.azurenative.devices.enums.IpFilterActionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The IP filter rules for the IoT hub.
  * 
  */
-public final class IpFilterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IpFilterRuleArgs extends ResourceArgs {
 
     public static final IpFilterRuleArgs Empty = new IpFilterRuleArgs();
 

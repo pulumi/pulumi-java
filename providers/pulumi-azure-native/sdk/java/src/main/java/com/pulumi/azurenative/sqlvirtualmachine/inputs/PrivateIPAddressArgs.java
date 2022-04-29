@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A private IP address bound to the availability group listener.
  * 
  */
-public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateIPAddressArgs extends ResourceArgs {
 
     public static final PrivateIPAddressArgs Empty = new PrivateIPAddressArgs();
 

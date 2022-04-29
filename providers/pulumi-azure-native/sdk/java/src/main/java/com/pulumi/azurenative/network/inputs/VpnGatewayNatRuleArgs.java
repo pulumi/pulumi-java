@@ -9,6 +9,7 @@ import com.pulumi.azurenative.network.inputs.VpnNatRuleMappingArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * VpnGatewayNatRule Resource.
  * 
  */
-public final class VpnGatewayNatRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class VpnGatewayNatRuleArgs extends ResourceArgs {
 
     public static final VpnGatewayNatRuleArgs Empty = new VpnGatewayNatRuleArgs();
 

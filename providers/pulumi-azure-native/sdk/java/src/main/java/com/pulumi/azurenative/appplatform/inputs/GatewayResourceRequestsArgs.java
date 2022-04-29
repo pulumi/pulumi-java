@@ -5,6 +5,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Resource request payload of Spring Cloud Gateway.
  * 
  */
-public final class GatewayResourceRequestsArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayResourceRequestsArgs extends ResourceArgs {
 
     public static final GatewayResourceRequestsArgs Empty = new GatewayResourceRequestsArgs();
 

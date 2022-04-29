@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:authorization:ManagementLockByScope")
-public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
+public class ManagementLockByScope extends CustomResource {
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
      * 
@@ -125,16 +127,16 @@ public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagementLockByScope(String name, ManagementLockByScopeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ManagementLockByScope(String name, ManagementLockByScopeArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockByScope", name, args == null ? ManagementLockByScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ManagementLockByScope(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ManagementLockByScope(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockByScope", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:authorization/v20160901:ManagementLockByScope").build()),
@@ -142,7 +144,7 @@ public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockByScope").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -153,7 +155,7 @@ public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementLockByScope get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementLockByScope get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ManagementLockByScope(name, id, options);
     }
 }

@@ -7,13 +7,14 @@ import com.pulumi.azurenative.sql.enums.ManagedInstanceAdministratorType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedInstanceAdministratorArgs extends ResourceArgs {
 
     public static final ManagedInstanceAdministratorArgs Empty = new ManagedInstanceAdministratorArgs();
 

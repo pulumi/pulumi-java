@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSqlDWTableDataSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSqlDWTableDataSetArgs extends InvokeArgs {
 
     public static final GetSqlDWTableDataSetArgs Empty = new GetSqlDWTableDataSetArgs();
 

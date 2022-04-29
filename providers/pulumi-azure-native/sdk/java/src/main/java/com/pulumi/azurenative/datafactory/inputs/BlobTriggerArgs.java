@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Trigger that runs every time the selected Blob container changes.
  * 
  */
-public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobTriggerArgs extends ResourceArgs {
 
     public static final BlobTriggerArgs Empty = new BlobTriggerArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The date range for data in the export. This should only be specified with timeFrame set to &#39;Custom&#39;. The maximum date range is 3 months.
  * 
  */
-public final class ExportTimePeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportTimePeriodArgs extends ResourceArgs {
 
     public static final ExportTimePeriodArgs Empty = new ExportTimePeriodArgs();
 

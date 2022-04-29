@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.inputs.AS2ProtocolSettingsArgs;
 import com.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The integration account AS2 one-way agreement.
  * 
  */
-public final class AS2OneWayAgreementArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2OneWayAgreementArgs extends ResourceArgs {
 
     public static final AS2OneWayAgreementArgs Empty = new AS2OneWayAgreementArgs();
 

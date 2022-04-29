@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Dynamic Executor Allocation Properties
  * 
  */
-public final class DynamicExecutorAllocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DynamicExecutorAllocationArgs extends ResourceArgs {
 
     public static final DynamicExecutorAllocationArgs Empty = new DynamicExecutorAllocationArgs();
 

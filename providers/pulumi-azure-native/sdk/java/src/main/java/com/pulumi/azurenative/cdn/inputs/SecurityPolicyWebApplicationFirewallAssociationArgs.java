@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * settings for security policy patterns to match
  * 
  */
-public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends ResourceArgs {
 
     public static final SecurityPolicyWebApplicationFirewallAssociationArgs Empty = new SecurityPolicyWebApplicationFirewallAssociationArgs();
 

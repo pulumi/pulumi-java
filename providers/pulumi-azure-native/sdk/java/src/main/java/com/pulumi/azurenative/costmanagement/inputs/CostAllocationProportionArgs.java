@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Target resources and allocation
  * 
  */
-public final class CostAllocationProportionArgs extends com.pulumi.resources.ResourceArgs {
+public final class CostAllocationProportionArgs extends ResourceArgs {
 
     public static final CostAllocationProportionArgs Empty = new CostAllocationProportionArgs();
 

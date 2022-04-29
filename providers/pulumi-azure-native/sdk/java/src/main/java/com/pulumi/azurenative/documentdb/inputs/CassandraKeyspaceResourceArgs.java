@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Cosmos DB Cassandra keyspace resource object
  * 
  */
-public final class CassandraKeyspaceResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class CassandraKeyspaceResourceArgs extends ResourceArgs {
 
     public static final CassandraKeyspaceResourceArgs Empty = new CassandraKeyspaceResourceArgs();
 

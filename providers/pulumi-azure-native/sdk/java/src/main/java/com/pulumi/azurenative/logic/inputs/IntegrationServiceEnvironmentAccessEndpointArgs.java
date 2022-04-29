@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.IntegrationServiceEnvironmentAccessEnd
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The integration service environment access endpoint.
  * 
  */
-public final class IntegrationServiceEnvironmentAccessEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationServiceEnvironmentAccessEndpointArgs extends ResourceArgs {
 
     public static final IntegrationServiceEnvironmentAccessEndpointArgs Empty = new IntegrationServiceEnvironmentAccessEndpointArgs();
 

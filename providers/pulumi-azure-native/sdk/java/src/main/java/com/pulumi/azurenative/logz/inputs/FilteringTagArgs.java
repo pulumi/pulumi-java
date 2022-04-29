@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logz.enums.TagAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The definition of a filtering tag. Filtering tags are used for capturing resources and include/exclude them from being monitored.
  * 
  */
-public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilteringTagArgs extends ResourceArgs {
 
     public static final FilteringTagArgs Empty = new FilteringTagArgs();
 

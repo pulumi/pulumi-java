@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * A custom alert rule that checks if a value (depends on the custom alert type) is allowed.
  * 
  */
-public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AllowlistCustomAlertRuleArgs extends ResourceArgs {
 
     public static final AllowlistCustomAlertRuleArgs Empty = new AllowlistCustomAlertRuleArgs();
 

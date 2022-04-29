@@ -9,6 +9,7 @@ import com.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import com.pulumi.azurenative.dataprotection.inputs.ImmediateCopyOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
  * Target copy settings
  * 
  */
-public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class TargetCopySettingArgs extends ResourceArgs {
 
     public static final TargetCopySettingArgs Empty = new TargetCopySettingArgs();
 

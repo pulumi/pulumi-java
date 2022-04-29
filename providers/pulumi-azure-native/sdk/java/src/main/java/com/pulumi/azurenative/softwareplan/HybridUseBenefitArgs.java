@@ -6,13 +6,14 @@ package com.pulumi.azurenative.softwareplan;
 import com.pulumi.azurenative.softwareplan.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArgs {
+public final class HybridUseBenefitArgs extends ResourceArgs {
 
     public static final HybridUseBenefitArgs Empty = new HybridUseBenefitArgs();
 

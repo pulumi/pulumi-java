@@ -17,6 +17,7 @@ import com.pulumi.azurenative.batch.inputs.TaskSchedulingPolicyArgs;
 import com.pulumi.azurenative.batch.inputs.UserAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class PoolArgs extends ResourceArgs {
 
     public static final PoolArgs Empty = new PoolArgs();
 

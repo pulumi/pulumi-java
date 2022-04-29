@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies a configuration for PlayReady licenses.
  * 
  */
-public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyPlayReadyConfigurationArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyConfigurationArgs Empty = new ContentKeyPolicyPlayReadyConfigurationArgs();
 

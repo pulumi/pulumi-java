@@ -8,6 +8,7 @@ import com.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampTimeZoneOf
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
  * 
  */
-public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalTimestampArgs extends ResourceArgs {
 
     public static final LocalTimestampArgs Empty = new LocalTimestampArgs();
 

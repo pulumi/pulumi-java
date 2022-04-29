@@ -11,6 +11,7 @@ import com.pulumi.azurenative.machinelearning.inputs.OutputPortArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Information about an asset associated with the web service.
  * 
  */
-public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetItemArgs extends ResourceArgs {
 
     public static final AssetItemArgs Empty = new AssetItemArgs();
 

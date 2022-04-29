@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualMachineScaleSetVMExtensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualMachineScaleSetVMExtensionArgs extends ResourceArgs {
 
     public static final VirtualMachineScaleSetVMExtensionArgs Empty = new VirtualMachineScaleSetVMExtensionArgs();
 

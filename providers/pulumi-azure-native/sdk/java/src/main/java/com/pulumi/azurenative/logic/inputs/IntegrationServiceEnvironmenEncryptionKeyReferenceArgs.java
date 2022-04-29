@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The encryption key details for the integration service environment.
  * 
  */
-public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extends ResourceArgs {
 
     public static final IntegrationServiceEnvironmenEncryptionKeyReferenceArgs Empty = new IntegrationServiceEnvironmenEncryptionKeyReferenceArgs();
 

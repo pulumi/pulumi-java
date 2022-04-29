@@ -7,6 +7,7 @@ import com.pulumi.azurenative.edgeorder.enums.DoubleEncryptionStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Preferences related to the double encryption
  * 
  */
-public final class EncryptionPreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionPreferencesArgs extends ResourceArgs {
 
     public static final EncryptionPreferencesArgs Empty = new EncryptionPreferencesArgs();
 

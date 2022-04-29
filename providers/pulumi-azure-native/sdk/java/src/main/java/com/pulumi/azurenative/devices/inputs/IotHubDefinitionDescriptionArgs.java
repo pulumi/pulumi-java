@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Description of the IoT hub.
  * 
  */
-public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class IotHubDefinitionDescriptionArgs extends ResourceArgs {
 
     public static final IotHubDefinitionDescriptionArgs Empty = new IotHubDefinitionDescriptionArgs();
 

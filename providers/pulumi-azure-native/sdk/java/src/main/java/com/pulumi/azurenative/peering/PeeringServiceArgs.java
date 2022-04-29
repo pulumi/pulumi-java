@@ -6,6 +6,7 @@ package com.pulumi.azurenative.peering;
 import com.pulumi.azurenative.peering.inputs.PeeringServiceSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeeringServiceArgs extends ResourceArgs {
 
     public static final PeeringServiceArgs Empty = new PeeringServiceArgs();
 

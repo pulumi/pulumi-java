@@ -18,6 +18,7 @@ import com.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +32,7 @@ import javax.annotation.Nullable;
  * Filter for the Event Subscription.
  * 
  */
-public final class EventSubscriptionFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSubscriptionFilterArgs extends ResourceArgs {
 
     public static final EventSubscriptionFilterArgs Empty = new EventSubscriptionFilterArgs();
 

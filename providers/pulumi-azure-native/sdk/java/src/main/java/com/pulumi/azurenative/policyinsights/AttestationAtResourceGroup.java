@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:policyinsights:AttestationAtResourceGroup")
-public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResource {
+public class AttestationAtResourceGroup extends CustomResource {
     /**
      * Comments describing why this attestation was created.
      * 
@@ -224,22 +226,22 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AttestationAtResourceGroup(String name, AttestationAtResourceGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AttestationAtResourceGroup(String name, AttestationAtResourceGroupArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:policyinsights:AttestationAtResourceGroup", name, args == null ? AttestationAtResourceGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AttestationAtResourceGroup(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AttestationAtResourceGroup(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:policyinsights:AttestationAtResourceGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:policyinsights/v20210101:AttestationAtResourceGroup").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -250,7 +252,7 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttestationAtResourceGroup get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AttestationAtResourceGroup get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AttestationAtResourceGroup(name, id, options);
     }
 }

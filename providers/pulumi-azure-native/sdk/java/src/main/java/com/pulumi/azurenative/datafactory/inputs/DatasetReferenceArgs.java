@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Dataset reference type.
  * 
  */
-public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetReferenceArgs extends ResourceArgs {
 
     public static final DatasetReferenceArgs Empty = new DatasetReferenceArgs();
 

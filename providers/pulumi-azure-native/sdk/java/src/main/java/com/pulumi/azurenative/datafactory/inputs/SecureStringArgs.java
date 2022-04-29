@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Azure Data Factory secure string definition. The string value will be masked with asterisks &#39;*&#39; during Get or List API calls.
  * 
  */
-public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecureStringArgs extends ResourceArgs {
 
     public static final SecureStringArgs Empty = new SecureStringArgs();
 

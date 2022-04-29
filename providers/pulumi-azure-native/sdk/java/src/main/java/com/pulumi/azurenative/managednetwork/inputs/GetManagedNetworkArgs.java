@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.managednetwork.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetManagedNetworkArgs extends InvokeArgs {
 
     public static final GetManagedNetworkArgs Empty = new GetManagedNetworkArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes the parameters for using a user&#39;s KeyVault for URL Signing Key.
  * 
  */
-public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultSigningKeyParametersArgs extends ResourceArgs {
 
     public static final KeyVaultSigningKeyParametersArgs Empty = new KeyVaultSigningKeyParametersArgs();
 

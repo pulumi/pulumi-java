@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.AzureFirewallRCActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties of the AzureFirewallRCAction.
  * 
  */
-public final class AzureFirewallRCActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureFirewallRCActionArgs extends ResourceArgs {
 
     public static final AzureFirewallRCActionArgs Empty = new AzureFirewallRCActionArgs();
 

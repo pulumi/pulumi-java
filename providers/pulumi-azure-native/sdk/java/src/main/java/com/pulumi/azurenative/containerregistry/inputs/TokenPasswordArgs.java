@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.enums.TokenPasswordName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The password that will be used for authenticating the token of a container registry.
  * 
  */
-public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenPasswordArgs extends ResourceArgs {
 
     public static final TokenPasswordArgs Empty = new TokenPasswordArgs();
 

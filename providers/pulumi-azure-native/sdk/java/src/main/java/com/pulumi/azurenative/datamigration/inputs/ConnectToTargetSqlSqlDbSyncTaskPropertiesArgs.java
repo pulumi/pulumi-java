@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.ConnectToTargetSqlSqlDbSyncTa
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that validates connection to SQL DB and target server requirements for online migration
  * 
  */
-public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs Empty = new ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs();
 

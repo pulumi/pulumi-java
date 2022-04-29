@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.iotsecurity.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetOnPremiseSensorArgs extends InvokeArgs {
 
     public static final GetOnPremiseSensorArgs Empty = new GetOnPremiseSensorArgs();
 

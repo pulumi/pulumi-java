@@ -8,6 +8,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServ
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The binding to an Azure Machine Learning web service.
  * 
  */
-public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureMachineLearningWebServiceFunctionBindingArgs extends ResourceArgs {
 
     public static final AzureMachineLearningWebServiceFunctionBindingArgs Empty = new AzureMachineLearningWebServiceFunctionBindingArgs();
 

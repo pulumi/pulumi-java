@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.GetUserTablesSqlSyncTaskInput
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that collects user tables for the given list of databases
  * 
  */
-public final class GetUserTablesSqlSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GetUserTablesSqlSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final GetUserTablesSqlSyncTaskPropertiesArgs Empty = new GetUserTablesSqlSyncTaskPropertiesArgs();
 

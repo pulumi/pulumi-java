@@ -6,13 +6,14 @@ package com.pulumi.azurenative.automanage;
 import com.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationProfileAssignmentArgs extends ResourceArgs {
 
     public static final ConfigurationProfileAssignmentArgs Empty = new ConfigurationProfileAssignmentArgs();
 

@@ -13,6 +13,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * IaaS VM workload-specific backup policy.
  * 
  */
-public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureIaaSVMProtectionPolicyArgs extends ResourceArgs {
 
     public static final AzureIaaSVMProtectionPolicyArgs Empty = new AzureIaaSVMProtectionPolicyArgs();
 

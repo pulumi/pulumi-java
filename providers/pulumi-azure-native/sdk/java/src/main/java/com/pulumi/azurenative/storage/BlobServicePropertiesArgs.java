@@ -10,6 +10,7 @@ import com.pulumi.azurenative.storage.inputs.LastAccessTimeTrackingPolicyArgs;
 import com.pulumi.azurenative.storage.inputs.RestorePolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BlobServicePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobServicePropertiesArgs extends ResourceArgs {
 
     public static final BlobServicePropertiesArgs Empty = new BlobServicePropertiesArgs();
 

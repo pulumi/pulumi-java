@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A webhook receiver.
  * 
  */
-public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebhookReceiverArgs extends ResourceArgs {
 
     public static final WebhookReceiverArgs Empty = new WebhookReceiverArgs();
 

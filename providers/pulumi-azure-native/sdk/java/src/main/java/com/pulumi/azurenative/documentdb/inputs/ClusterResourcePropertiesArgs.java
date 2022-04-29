@@ -10,6 +10,7 @@ import com.pulumi.azurenative.documentdb.inputs.SeedNodeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Properties of a managed Cassandra cluster.
  * 
  */
-public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterResourcePropertiesArgs extends ResourceArgs {
 
     public static final ClusterResourcePropertiesArgs Empty = new ClusterResourcePropertiesArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.synapse.enums.DataFlowComputeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Data flow properties for managed integration runtime.
  * 
  */
-public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationRuntimeDataFlowPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationRuntimeDataFlowPropertiesArgs Empty = new IntegrationRuntimeDataFlowPropertiesArgs();
 

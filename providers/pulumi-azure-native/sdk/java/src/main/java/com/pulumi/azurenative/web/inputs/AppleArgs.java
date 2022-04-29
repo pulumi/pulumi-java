@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.inputs.AppleRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the Apple provider.
  * 
  */
-public final class AppleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppleArgs extends ResourceArgs {
 
     public static final AppleArgs Empty = new AppleArgs();
 

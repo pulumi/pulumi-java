@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionArgs;
 import com.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
  * 
  */
-public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionImagesArgs extends ResourceArgs {
 
     public static final EncryptionImagesArgs Empty = new EncryptionImagesArgs();
 

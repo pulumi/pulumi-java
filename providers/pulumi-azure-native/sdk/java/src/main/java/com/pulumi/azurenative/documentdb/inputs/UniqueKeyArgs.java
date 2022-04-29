@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
  * 
  */
-public final class UniqueKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class UniqueKeyArgs extends ResourceArgs {
 
     public static final UniqueKeyArgs Empty = new UniqueKeyArgs();
 

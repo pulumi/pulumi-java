@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetScheduledAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetScheduledAlertRuleArgs extends InvokeArgs {
 
     public static final GetScheduledAlertRuleArgs Empty = new GetScheduledAlertRuleArgs();
 

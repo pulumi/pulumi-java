@@ -5,6 +5,7 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Hourly Schedule properties
  * 
  */
-public final class HourlyScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class HourlyScheduleArgs extends ResourceArgs {
 
     public static final HourlyScheduleArgs Empty = new HourlyScheduleArgs();
 

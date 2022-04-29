@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.IPConfigurationBgpPeeringAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * BGP settings details.
  * 
  */
-public final class BgpSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BgpSettingsArgs extends ResourceArgs {
 
     public static final BgpSettingsArgs Empty = new BgpSettingsArgs();
 

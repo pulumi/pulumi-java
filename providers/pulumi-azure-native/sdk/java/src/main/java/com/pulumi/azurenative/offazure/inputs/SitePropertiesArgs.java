@@ -7,6 +7,7 @@ import com.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesArgs;
 import com.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Class for site properties.
  * 
  */
-public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SitePropertiesArgs extends ResourceArgs {
 
     public static final SitePropertiesArgs Empty = new SitePropertiesArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicebus.enums.SkuName;
 import com.pulumi.azurenative.servicebus.enums.SkuTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * SKU of the namespace.
  * 
  */
-public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SBSkuArgs extends ResourceArgs {
 
     public static final SBSkuArgs Empty = new SBSkuArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.search.inputs;
 import com.pulumi.azurenative.search.enums.SkuName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
  * 
  */
-public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class SkuArgs extends ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 

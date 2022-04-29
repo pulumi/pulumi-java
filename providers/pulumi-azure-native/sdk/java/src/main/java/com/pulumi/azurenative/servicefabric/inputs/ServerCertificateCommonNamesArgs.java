@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a list of server certificates referenced by common name that are used to secure the cluster.
  * 
  */
-public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerCertificateCommonNamesArgs extends ResourceArgs {
 
     public static final ServerCertificateCommonNamesArgs Empty = new ServerCertificateCommonNamesArgs();
 

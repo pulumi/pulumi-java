@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInp
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of site details provided during the time of site creation
  * 
  */
-public final class FabricCreationInputPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FabricCreationInputPropertiesArgs extends ResourceArgs {
 
     public static final FabricCreationInputPropertiesArgs Empty = new FabricCreationInputPropertiesArgs();
 

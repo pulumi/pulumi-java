@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.SecretObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the credentials that will be used to access a custom registry during a run.
  * 
  */
-public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomRegistryCredentialsArgs extends ResourceArgs {
 
     public static final CustomRegistryCredentialsArgs Empty = new CustomRegistryCredentialsArgs();
 

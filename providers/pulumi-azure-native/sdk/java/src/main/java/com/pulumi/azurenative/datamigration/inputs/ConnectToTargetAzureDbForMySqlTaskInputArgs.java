@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Input for the task that validates connection to Azure Database for MySQL and target server requirements
  * 
  */
-public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends ResourceArgs {
 
     public static final ConnectToTargetAzureDbForMySqlTaskInputArgs Empty = new ConnectToTargetAzureDbForMySqlTaskInputArgs();
 

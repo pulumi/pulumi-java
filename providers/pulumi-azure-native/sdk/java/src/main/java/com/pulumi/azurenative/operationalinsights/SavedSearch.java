@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:operationalinsights:SavedSearch")
-public class SavedSearch extends com.pulumi.resources.CustomResource {
+public class SavedSearch extends CustomResource {
     /**
      * The category of the saved search. This helps the user to find a saved search faster.
      * 
@@ -196,16 +198,16 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SavedSearch(String name, SavedSearchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SavedSearch(String name, SavedSearchArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:operationalinsights:SavedSearch", name, args == null ? SavedSearchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SavedSearch(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SavedSearch(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:operationalinsights:SavedSearch", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:operationalinsights/v20150320:SavedSearch").build()),
@@ -213,7 +215,7 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:operationalinsights/v20200801:SavedSearch").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -224,7 +226,7 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SavedSearch get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SavedSearch get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SavedSearch(name, id, options);
     }
 }

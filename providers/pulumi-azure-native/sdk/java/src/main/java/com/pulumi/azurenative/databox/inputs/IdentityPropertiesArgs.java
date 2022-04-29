@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databox.inputs;
 import com.pulumi.azurenative.databox.inputs.UserAssignedPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Managed identity properties.
  * 
  */
-public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityPropertiesArgs extends ResourceArgs {
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 

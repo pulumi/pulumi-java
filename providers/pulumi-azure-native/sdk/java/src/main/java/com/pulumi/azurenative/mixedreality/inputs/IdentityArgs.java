@@ -6,6 +6,7 @@ package com.pulumi.azurenative.mixedreality.inputs;
 import com.pulumi.azurenative.mixedreality.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Identity for the resource.
  * 
  */
-public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityArgs extends ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 

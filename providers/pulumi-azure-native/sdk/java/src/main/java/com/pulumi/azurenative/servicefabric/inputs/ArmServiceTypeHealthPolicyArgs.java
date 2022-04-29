@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the health policy used to evaluate the health of services belonging to a service type.
  * 
  */
-public final class ArmServiceTypeHealthPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ArmServiceTypeHealthPolicyArgs extends ResourceArgs {
 
     public static final ArmServiceTypeHealthPolicyArgs Empty = new ArmServiceTypeHealthPolicyArgs();
 

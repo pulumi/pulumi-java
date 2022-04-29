@@ -6,6 +6,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Installs Windows Updates. Corresponds to Packer Windows Update Provisioner (https://github.com/rgl/packer-provisioner-windows-update)
  * 
  */
-public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplateWindowsUpdateCustomizerArgs extends ResourceArgs {
 
     public static final ImageTemplateWindowsUpdateCustomizerArgs Empty = new ImageTemplateWindowsUpdateCustomizerArgs();
 

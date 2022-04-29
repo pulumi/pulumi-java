@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Describes the horizontal auto scaling mechanism that adds or removes replicas (containers or container groups).
  * 
  */
-public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddRemoveReplicaScalingMechanismArgs extends ResourceArgs {
 
     public static final AddRemoveReplicaScalingMechanismArgs Empty = new AddRemoveReplicaScalingMechanismArgs();
 

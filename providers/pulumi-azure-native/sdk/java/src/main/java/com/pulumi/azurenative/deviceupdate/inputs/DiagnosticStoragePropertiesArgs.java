@@ -7,6 +7,7 @@ import com.pulumi.azurenative.deviceupdate.enums.AuthenticationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Customer-initiated diagnostic log collection storage properties
  * 
  */
-public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiagnosticStoragePropertiesArgs extends ResourceArgs {
 
     public static final DiagnosticStoragePropertiesArgs Empty = new DiagnosticStoragePropertiesArgs();
 

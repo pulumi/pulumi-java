@@ -6,6 +6,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.enums.DefaultConsistencyLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The consistency policy for the Cosmos DB database account.
  * 
  */
-public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConsistencyPolicyArgs extends ResourceArgs {
 
     public static final ConsistencyPolicyArgs Empty = new ConsistencyPolicyArgs();
 

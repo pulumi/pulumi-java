@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import com.pulumi.azurenative.storsimple.inputs.TimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * The schedule for bandwidth setting.
  * 
  */
-public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BandwidthScheduleArgs extends ResourceArgs {
 
     public static final BandwidthScheduleArgs Empty = new BandwidthScheduleArgs();
 

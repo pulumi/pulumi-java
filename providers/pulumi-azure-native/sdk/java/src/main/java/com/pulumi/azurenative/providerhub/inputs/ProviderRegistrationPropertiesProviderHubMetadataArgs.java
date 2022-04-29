@@ -8,13 +8,14 @@ import com.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyPr
 import com.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends ResourceArgs {
 
     public static final ProviderRegistrationPropertiesProviderHubMetadataArgs Empty = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
 

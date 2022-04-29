@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.P2SConnectionConfigurationArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
+public final class P2sVpnGatewayArgs extends ResourceArgs {
 
     public static final P2sVpnGatewayArgs Empty = new P2sVpnGatewayArgs();
 

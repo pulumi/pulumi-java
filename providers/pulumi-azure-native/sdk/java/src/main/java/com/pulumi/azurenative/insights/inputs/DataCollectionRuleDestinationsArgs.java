@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.DestinationsSpecAzureMonitorMetric
 import com.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The specification of destinations.
  * 
  */
-public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataCollectionRuleDestinationsArgs extends ResourceArgs {
 
     public static final DataCollectionRuleDestinationsArgs Empty = new DataCollectionRuleDestinationsArgs();
 

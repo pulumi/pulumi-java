@@ -16,6 +16,7 @@ import com.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllo
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostPoolArgs extends ResourceArgs {
 
     public static final HostPoolArgs Empty = new HostPoolArgs();
 

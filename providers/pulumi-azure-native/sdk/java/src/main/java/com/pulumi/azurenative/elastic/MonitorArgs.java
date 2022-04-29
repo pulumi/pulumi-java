@@ -8,6 +8,7 @@ import com.pulumi.azurenative.elastic.inputs.MonitorPropertiesArgs;
 import com.pulumi.azurenative.elastic.inputs.ResourceSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitorArgs extends ResourceArgs {
 
     public static final MonitorArgs Empty = new MonitorArgs();
 

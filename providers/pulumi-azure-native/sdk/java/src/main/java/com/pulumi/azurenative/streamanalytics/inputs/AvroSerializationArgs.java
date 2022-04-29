@@ -6,6 +6,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Describes how data from an input is serialized or how data is serialized when written to an output in Avro format.
  * 
  */
-public final class AvroSerializationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AvroSerializationArgs extends ResourceArgs {
 
     public static final AvroSerializationArgs Empty = new AvroSerializationArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.databox.inputs.TransferConfigurationTransferFilter
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Configuration for defining the transfer of data.
  * 
  */
-public final class TransferConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransferConfigurationArgs extends ResourceArgs {
 
     public static final TransferConfigurationArgs Empty = new TransferConfigurationArgs();
 

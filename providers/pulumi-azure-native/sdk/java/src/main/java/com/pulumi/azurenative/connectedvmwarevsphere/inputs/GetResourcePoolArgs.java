@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourcePoolArgs extends InvokeArgs {
 
     public static final GetResourcePoolArgs Empty = new GetResourcePoolArgs();
 

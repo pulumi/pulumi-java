@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Required validation properties for tokens generated with RSA algorithm.
  * 
  */
-public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RsaTokenKeyArgs extends ResourceArgs {
 
     public static final RsaTokenKeyArgs Empty = new RsaTokenKeyArgs();
 

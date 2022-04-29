@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The kinesis to s3 connection configuration
  * 
  */
-public final class DefenderForContainersAwsOfferingKinesisToS3Args extends com.pulumi.resources.ResourceArgs {
+public final class DefenderForContainersAwsOfferingKinesisToS3Args extends ResourceArgs {
 
     public static final DefenderForContainersAwsOfferingKinesisToS3Args Empty = new DefenderForContainersAwsOfferingKinesisToS3Args();
 

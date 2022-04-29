@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Specifies the metric alert rule criteria for a web test resource.
  * 
  */
-public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebtestLocationAvailabilityCriteriaArgs extends ResourceArgs {
 
     public static final WebtestLocationAvailabilityCriteriaArgs Empty = new WebtestLocationAvailabilityCriteriaArgs();
 

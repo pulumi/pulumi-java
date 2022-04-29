@@ -12,6 +12,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ import javax.annotation.Nullable;
  * Properties of the vault
  * 
  */
-public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VaultPropertiesArgs extends ResourceArgs {
 
     public static final VaultPropertiesArgs Empty = new VaultPropertiesArgs();
 

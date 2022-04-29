@@ -9,6 +9,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ImageAssetArgs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ModelArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The Environment, models and assets needed for inferencing.
  * 
  */
-public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreateServiceRequestEnvironmentImageRequestArgs extends ResourceArgs {
 
     public static final CreateServiceRequestEnvironmentImageRequestArgs Empty = new CreateServiceRequestEnvironmentImageRequestArgs();
 

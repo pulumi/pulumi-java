@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
  * The class to specify one track property condition.
  * 
  */
-public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterTrackPropertyConditionArgs extends ResourceArgs {
 
     public static final FilterTrackPropertyConditionArgs Empty = new FilterTrackPropertyConditionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A rule governing the accessibility of a vault from a specific ip address or ip range.
  * 
  */
-public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class IPRuleArgs extends ResourceArgs {
 
     public static final IPRuleArgs Empty = new IPRuleArgs();
 

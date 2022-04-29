@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.BackupItemType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Additional information of the container.
  * 
  */
-public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class MabContainerExtendedInfoArgs extends ResourceArgs {
 
     public static final MabContainerExtendedInfoArgs Empty = new MabContainerExtendedInfoArgs();
 

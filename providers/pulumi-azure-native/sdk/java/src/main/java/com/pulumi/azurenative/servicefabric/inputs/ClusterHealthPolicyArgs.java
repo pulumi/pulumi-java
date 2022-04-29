@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabric.inputs.ApplicationHealthPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Defines a health policy used to evaluate the health of the cluster or of a cluster node.
  * 
  */
-public final class ClusterHealthPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterHealthPolicyArgs extends ResourceArgs {
 
     public static final ClusterHealthPolicyArgs Empty = new ClusterHealthPolicyArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAFDCustomDomainArgs extends InvokeArgs {
 
     public static final GetAFDCustomDomainArgs Empty = new GetAFDCustomDomainArgs();
 

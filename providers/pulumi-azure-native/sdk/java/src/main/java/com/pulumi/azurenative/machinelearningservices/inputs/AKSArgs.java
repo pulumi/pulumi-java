@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.AKSPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A Machine Learning compute based on AKS.
  * 
  */
-public final class AKSArgs extends com.pulumi.resources.ResourceArgs {
+public final class AKSArgs extends ResourceArgs {
 
     public static final AKSArgs Empty = new AKSArgs();
 

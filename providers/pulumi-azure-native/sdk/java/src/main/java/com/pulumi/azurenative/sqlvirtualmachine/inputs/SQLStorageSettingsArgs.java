@@ -5,6 +5,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Set disk storage settings for SQL Server.
  * 
  */
-public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SQLStorageSettingsArgs extends ResourceArgs {
 
     public static final SQLStorageSettingsArgs Empty = new SQLStorageSettingsArgs();
 

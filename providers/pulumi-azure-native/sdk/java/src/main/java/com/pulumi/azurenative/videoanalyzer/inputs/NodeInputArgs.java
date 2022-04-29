@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes an input signal to be used on a pipeline node.
  * 
  */
-public final class NodeInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class NodeInputArgs extends ResourceArgs {
 
     public static final NodeInputArgs Empty = new NodeInputArgs();
 

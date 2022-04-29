@@ -8,6 +8,7 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayArgs extends ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 

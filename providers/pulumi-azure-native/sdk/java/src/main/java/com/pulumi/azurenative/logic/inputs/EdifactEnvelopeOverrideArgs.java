@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Edifact envelope override settings.
  * 
  */
-public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactEnvelopeOverrideArgs extends ResourceArgs {
 
     public static final EdifactEnvelopeOverrideArgs Empty = new EdifactEnvelopeOverrideArgs();
 

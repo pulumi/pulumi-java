@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.loadtestservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLoadTestArgs extends InvokeArgs {
 
     public static final GetLoadTestArgs Empty = new GetLoadTestArgs();
 

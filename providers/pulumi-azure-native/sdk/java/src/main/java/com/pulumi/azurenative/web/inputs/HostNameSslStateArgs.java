@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.enums.HostType;
 import com.pulumi.azurenative.web.enums.SslState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * SSL-enabled hostname.
  * 
  */
-public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostNameSslStateArgs extends ResourceArgs {
 
     public static final HostNameSslStateArgs Empty = new HostNameSslStateArgs();
 

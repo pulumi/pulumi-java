@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Azure container mapping of the endpoint.
  * 
  */
-public final class AzureContainerInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureContainerInfoArgs extends ResourceArgs {
 
     public static final AzureContainerInfoArgs Empty = new AzureContainerInfoArgs();
 

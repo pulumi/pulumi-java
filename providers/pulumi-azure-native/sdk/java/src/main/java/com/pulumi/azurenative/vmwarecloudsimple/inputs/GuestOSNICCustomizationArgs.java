@@ -5,6 +5,7 @@ package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Guest OS nic customization
  * 
  */
-public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GuestOSNICCustomizationArgs extends ResourceArgs {
 
     public static final GuestOSNICCustomizationArgs Empty = new GuestOSNICCustomizationArgs();
 

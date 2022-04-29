@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.enums.ParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Definition of a single parameter for an entity.
  * 
  */
-public final class ParameterSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterSpecificationArgs extends ResourceArgs {
 
     public static final ParameterSpecificationArgs Empty = new ParameterSpecificationArgs();
 

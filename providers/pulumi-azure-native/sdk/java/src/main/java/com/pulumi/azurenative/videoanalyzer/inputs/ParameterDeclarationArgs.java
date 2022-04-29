@@ -7,6 +7,7 @@ import com.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Single topology parameter declaration. Declared parameters can and must be referenced throughout the topology and can optionally have default values to be used when they are not defined in the pipelines.
  * 
  */
-public final class ParameterDeclarationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ParameterDeclarationArgs extends ResourceArgs {
 
     public static final ParameterDeclarationArgs Empty = new ParameterDeclarationArgs();
 

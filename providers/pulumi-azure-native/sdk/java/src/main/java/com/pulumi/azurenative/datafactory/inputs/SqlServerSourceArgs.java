@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A copy activity SQL server source.
  * 
  */
-public final class SqlServerSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlServerSourceArgs extends ResourceArgs {
 
     public static final SqlServerSourceArgs Empty = new SqlServerSourceArgs();
 

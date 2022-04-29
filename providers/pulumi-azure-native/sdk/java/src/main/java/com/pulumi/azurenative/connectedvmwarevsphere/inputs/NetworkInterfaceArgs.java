@@ -9,6 +9,7 @@ import com.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Network Interface model
  * 
  */
-public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceArgs extends ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes a resource Id to source Key Vault.
  * 
  */
-public final class KeyVaultKeyReferenceSourceVaultArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultKeyReferenceSourceVaultArgs extends ResourceArgs {
 
     public static final KeyVaultKeyReferenceSourceVaultArgs Empty = new KeyVaultKeyReferenceSourceVaultArgs();
 

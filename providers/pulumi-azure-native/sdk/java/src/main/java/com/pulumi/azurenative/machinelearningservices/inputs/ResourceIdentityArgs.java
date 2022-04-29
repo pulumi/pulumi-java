@@ -8,6 +8,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentit
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Service identity associated with a resource.
  * 
  */
-public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceIdentityArgs extends ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 

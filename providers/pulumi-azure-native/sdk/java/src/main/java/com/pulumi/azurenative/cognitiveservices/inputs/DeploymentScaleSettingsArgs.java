@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cognitiveservices.enums.DeploymentScaleType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of Cognitive Services account deployment model.
  * 
  */
-public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeploymentScaleSettingsArgs extends ResourceArgs {
 
     public static final DeploymentScaleSettingsArgs Empty = new DeploymentScaleSettingsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppArgs;
 import com.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Input for the task that validates connection to Azure SQL Database Managed Instance online scenario.
  * 
  */
-public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToTargetSqlMISyncTaskInputArgs extends ResourceArgs {
 
     public static final ConnectToTargetSqlMISyncTaskInputArgs Empty = new ConnectToTargetSqlMISyncTaskInputArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The settings to enable AAD authentication on the cluster.
  * 
  */
-public final class AzureActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureActiveDirectoryArgs extends ResourceArgs {
 
     public static final AzureActiveDirectoryArgs Empty = new AzureActiveDirectoryArgs();
 

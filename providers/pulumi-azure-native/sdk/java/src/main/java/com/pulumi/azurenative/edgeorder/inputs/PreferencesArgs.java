@@ -9,6 +9,7 @@ import com.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceArgs;
 import com.pulumi.azurenative.edgeorder.inputs.TransportPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Preferences related to the order
  * 
  */
-public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PreferencesArgs extends ResourceArgs {
 
     public static final PreferencesArgs Empty = new PreferencesArgs();
 

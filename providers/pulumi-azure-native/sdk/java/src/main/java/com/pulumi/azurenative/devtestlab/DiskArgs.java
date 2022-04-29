@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.StorageType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskArgs extends ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kusto.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Represents a tenant ID that is trusted by the cluster.
  * 
  */
-public final class TrustedExternalTenantArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrustedExternalTenantArgs extends ResourceArgs {
 
     public static final TrustedExternalTenantArgs Empty = new TrustedExternalTenantArgs();
 

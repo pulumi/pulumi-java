@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A pointer to an Azure Action Group.
  * 
  */
-public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActionGroupArgs extends ResourceArgs {
 
     public static final ActionGroupArgs Empty = new ActionGroupArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import com.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Recovery disk encryption info (BEK and KEK).
  * 
  */
-public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskEncryptionInfoArgs extends ResourceArgs {
 
     public static final DiskEncryptionInfoArgs Empty = new DiskEncryptionInfoArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.inputs.GalleryDataDiskImageArgs;
 import com.pulumi.azurenative.compute.inputs.GalleryOSDiskImageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * This is the storage profile of a Gallery Image Version.
  * 
  */
-public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class GalleryImageVersionStorageProfileArgs extends ResourceArgs {
 
     public static final GalleryImageVersionStorageProfileArgs Empty = new GalleryImageVersionStorageProfileArgs();
 

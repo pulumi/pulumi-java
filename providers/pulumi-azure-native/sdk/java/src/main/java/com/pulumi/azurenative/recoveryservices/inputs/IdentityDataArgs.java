@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Identity for the resource.
  * 
  */
-public final class IdentityDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class IdentityDataArgs extends ResourceArgs {
 
     public static final IdentityDataArgs Empty = new IdentityDataArgs();
 

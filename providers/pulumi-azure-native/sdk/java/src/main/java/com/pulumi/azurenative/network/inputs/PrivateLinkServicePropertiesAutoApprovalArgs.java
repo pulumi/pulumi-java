@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The auto-approval list of the private link service.
  * 
  */
-public final class PrivateLinkServicePropertiesAutoApprovalArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkServicePropertiesAutoApprovalArgs extends ResourceArgs {
 
     public static final PrivateLinkServicePropertiesAutoApprovalArgs Empty = new PrivateLinkServicePropertiesAutoApprovalArgs();
 

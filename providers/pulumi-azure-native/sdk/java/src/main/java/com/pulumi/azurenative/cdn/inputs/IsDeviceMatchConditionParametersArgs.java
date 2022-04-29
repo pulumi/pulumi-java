@@ -8,6 +8,7 @@ import com.pulumi.azurenative.cdn.enums.Transform;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Defines the parameters for IsDevice match conditions
  * 
  */
-public final class IsDeviceMatchConditionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class IsDeviceMatchConditionParametersArgs extends ResourceArgs {
 
     public static final IsDeviceMatchConditionParametersArgs Empty = new IsDeviceMatchConditionParametersArgs();
 

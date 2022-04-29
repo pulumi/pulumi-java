@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.storsimple.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListDeviceFailoverTarsArgs extends InvokeArgs {
 
     public static final ListDeviceFailoverTarsArgs Empty = new ListDeviceFailoverTarsArgs();
 

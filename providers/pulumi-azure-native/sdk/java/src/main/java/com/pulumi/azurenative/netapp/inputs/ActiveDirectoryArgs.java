@@ -6,6 +6,7 @@ package com.pulumi.azurenative.netapp.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Active Directory
  * 
  */
-public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ActiveDirectoryArgs extends ResourceArgs {
 
     public static final ActiveDirectoryArgs Empty = new ActiveDirectoryArgs();
 

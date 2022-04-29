@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * KeyPolicy assigned to the storage account.
  * 
  */
-public final class KeyPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyPolicyArgs extends ResourceArgs {
 
     public static final KeyPolicyArgs Empty = new KeyPolicyArgs();
 

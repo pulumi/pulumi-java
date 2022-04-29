@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.managementpartner.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPartnerArgs extends InvokeArgs {
 
     public static final GetPartnerArgs Empty = new GetPartnerArgs();
 

@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:agfoodplatform:Extension")
-public class Extension extends com.pulumi.resources.CustomResource {
+public class Extension extends CustomResource {
     /**
      * The ETag value to implement optimistic concurrency.
      * 
@@ -180,22 +182,22 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Extension(String name, ExtensionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Extension(String name, ExtensionArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:agfoodplatform:Extension", name, args == null ? ExtensionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Extension(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Extension(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:agfoodplatform:Extension", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:agfoodplatform/v20200512preview:Extension").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -206,7 +208,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Extension get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Extension get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Extension(name, id, options);
     }
 }

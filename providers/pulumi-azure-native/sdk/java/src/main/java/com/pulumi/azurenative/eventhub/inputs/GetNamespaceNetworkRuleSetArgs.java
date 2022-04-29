@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetNamespaceNetworkRuleSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetNamespaceNetworkRuleSetArgs extends InvokeArgs {
 
     public static final GetNamespaceNetworkRuleSetArgs Empty = new GetNamespaceNetworkRuleSetArgs();
 

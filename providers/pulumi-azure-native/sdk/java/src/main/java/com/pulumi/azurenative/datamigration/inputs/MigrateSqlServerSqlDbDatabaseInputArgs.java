@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Database specific information for SQL to Azure SQL DB migration task inputs
  * 
  */
-public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateSqlServerSqlDbDatabaseInputArgs extends ResourceArgs {
 
     public static final MigrateSqlServerSqlDbDatabaseInputArgs Empty = new MigrateSqlServerSqlDbDatabaseInputArgs();
 

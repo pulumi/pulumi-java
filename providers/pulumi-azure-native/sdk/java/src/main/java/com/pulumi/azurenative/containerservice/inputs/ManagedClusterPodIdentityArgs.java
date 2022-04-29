@@ -6,13 +6,14 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterPodIdentityArgs extends ResourceArgs {
 
     public static final ManagedClusterPodIdentityArgs Empty = new ManagedClusterPodIdentityArgs();
 

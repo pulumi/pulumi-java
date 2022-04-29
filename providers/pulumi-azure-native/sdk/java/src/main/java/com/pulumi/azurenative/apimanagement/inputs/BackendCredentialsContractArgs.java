@@ -6,6 +6,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Details of the Credentials used to connect to Backend.
  * 
  */
-public final class BackendCredentialsContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendCredentialsContractArgs extends ResourceArgs {
 
     public static final BackendCredentialsContractArgs Empty = new BackendCredentialsContractArgs();
 

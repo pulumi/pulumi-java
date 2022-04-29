@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Represents configuration for machine learning assisted features in a labeling job.
  * 
  */
-public final class MLAssistConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MLAssistConfigurationArgs extends ResourceArgs {
 
     public static final MLAssistConfigurationArgs Empty = new MLAssistConfigurationArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListSqlMigrationServiceAuthKeysArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListSqlMigrationServiceAuthKeysArgs extends InvokeArgs {
 
     public static final ListSqlMigrationServiceAuthKeysArgs Empty = new ListSqlMigrationServiceAuthKeysArgs();
 

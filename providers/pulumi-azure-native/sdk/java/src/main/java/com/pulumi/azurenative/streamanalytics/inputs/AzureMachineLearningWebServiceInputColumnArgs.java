@@ -5,6 +5,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes an input column for the Azure Machine Learning web service endpoint.
  * 
  */
-public final class AzureMachineLearningWebServiceInputColumnArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureMachineLearningWebServiceInputColumnArgs extends ResourceArgs {
 
     public static final AzureMachineLearningWebServiceInputColumnArgs Empty = new AzureMachineLearningWebServiceInputColumnArgs();
 

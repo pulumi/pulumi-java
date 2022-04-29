@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Specifies a certificate for token validation.
  * 
  */
-public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends ResourceArgs {
 
     public static final ContentKeyPolicyX509CertificateTokenKeyArgs Empty = new ContentKeyPolicyX509CertificateTokenKeyArgs();
 

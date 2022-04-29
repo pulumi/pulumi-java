@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The HTTP headers.
  * 
  */
-public final class HttpHeadersArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpHeadersArgs extends ResourceArgs {
 
     public static final HttpHeadersArgs Empty = new HttpHeadersArgs();
 

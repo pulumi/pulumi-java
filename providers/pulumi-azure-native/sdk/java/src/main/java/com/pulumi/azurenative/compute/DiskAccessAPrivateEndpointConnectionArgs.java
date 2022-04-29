@@ -6,13 +6,14 @@ package com.pulumi.azurenative.compute;
 import com.pulumi.azurenative.compute.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DiskAccessAPrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskAccessAPrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final DiskAccessAPrivateEndpointConnectionArgs Empty = new DiskAccessAPrivateEndpointConnectionArgs();
 

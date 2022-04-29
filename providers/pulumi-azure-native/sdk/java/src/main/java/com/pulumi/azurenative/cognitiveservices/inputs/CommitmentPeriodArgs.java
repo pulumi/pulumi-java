@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cognitive Services account commitment period.
  * 
  */
-public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class CommitmentPeriodArgs extends ResourceArgs {
 
     public static final CommitmentPeriodArgs Empty = new CommitmentPeriodArgs();
 

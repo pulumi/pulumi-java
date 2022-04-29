@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * When present, these are the credentials for the secure LDAP connection.
  * 
  */
-public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheUsernameDownloadSettingsCredentialsArgs extends ResourceArgs {
 
     public static final CacheUsernameDownloadSettingsCredentialsArgs Empty = new CacheUsernameDownloadSettingsCredentialsArgs();
 

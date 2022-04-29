@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListManagedClusterUserCredentialsArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListManagedClusterUserCredentialsArgs extends InvokeArgs {
 
     public static final ListManagedClusterUserCredentialsArgs Empty = new ListManagedClusterUserCredentialsArgs();
 

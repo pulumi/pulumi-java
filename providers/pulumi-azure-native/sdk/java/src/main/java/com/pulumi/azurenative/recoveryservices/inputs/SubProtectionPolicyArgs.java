@@ -12,6 +12,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Sub-protection policy which includes schedule and retention
  * 
  */
-public final class SubProtectionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubProtectionPolicyArgs extends ResourceArgs {
 
     public static final SubProtectionPolicyArgs Empty = new SubProtectionPolicyArgs();
 

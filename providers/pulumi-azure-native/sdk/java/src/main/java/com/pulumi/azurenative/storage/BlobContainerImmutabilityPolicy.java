@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +35,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:storage:BlobContainerImmutabilityPolicy")
-public class BlobContainerImmutabilityPolicy extends com.pulumi.resources.CustomResource {
+public class BlobContainerImmutabilityPolicy extends CustomResource {
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
@@ -140,16 +142,16 @@ public class BlobContainerImmutabilityPolicy extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BlobContainerImmutabilityPolicy(String name, BlobContainerImmutabilityPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BlobContainerImmutabilityPolicy(String name, BlobContainerImmutabilityPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:storage:BlobContainerImmutabilityPolicy", name, args == null ? BlobContainerImmutabilityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BlobContainerImmutabilityPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BlobContainerImmutabilityPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:storage:BlobContainerImmutabilityPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:storage/v20180201:BlobContainerImmutabilityPolicy").build()),
@@ -166,7 +168,7 @@ public class BlobContainerImmutabilityPolicy extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:storage/v20210801:BlobContainerImmutabilityPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -177,7 +179,7 @@ public class BlobContainerImmutabilityPolicy extends com.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlobContainerImmutabilityPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BlobContainerImmutabilityPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new BlobContainerImmutabilityPolicy(name, id, options);
     }
 }

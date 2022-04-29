@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
  * 
  */
-public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChainingTriggerArgs extends ResourceArgs {
 
     public static final ChainingTriggerArgs Empty = new ChainingTriggerArgs();
 

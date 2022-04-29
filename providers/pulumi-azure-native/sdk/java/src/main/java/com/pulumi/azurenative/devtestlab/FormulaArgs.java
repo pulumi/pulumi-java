@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.inputs.FormulaPropertiesFromVmArgs;
 import com.pulumi.azurenative.devtestlab.inputs.LabVirtualMachineCreationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
+public final class FormulaArgs extends ResourceArgs {
 
     public static final FormulaArgs Empty = new FormulaArgs();
 

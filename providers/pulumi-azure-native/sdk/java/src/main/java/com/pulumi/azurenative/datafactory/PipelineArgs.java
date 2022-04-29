@@ -47,6 +47,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -57,7 +58,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
+public final class PipelineArgs extends ResourceArgs {
 
     public static final PipelineArgs Empty = new PipelineArgs();
 

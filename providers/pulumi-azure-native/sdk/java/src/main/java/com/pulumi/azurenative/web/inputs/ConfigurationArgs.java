@@ -10,6 +10,7 @@ import com.pulumi.azurenative.web.inputs.SecretArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Non versioned Container App configuration properties that define the mutable settings of a Container app
  * 
  */
-public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationArgs extends ResourceArgs {
 
     public static final ConfigurationArgs Empty = new ConfigurationArgs();
 

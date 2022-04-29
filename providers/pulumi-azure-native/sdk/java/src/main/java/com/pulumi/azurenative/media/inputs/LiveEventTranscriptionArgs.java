@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionArgs;
 import com.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the transcription tracks in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
  * 
  */
-public final class LiveEventTranscriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LiveEventTranscriptionArgs extends ResourceArgs {
 
     public static final LiveEventTranscriptionArgs Empty = new LiveEventTranscriptionArgs();
 

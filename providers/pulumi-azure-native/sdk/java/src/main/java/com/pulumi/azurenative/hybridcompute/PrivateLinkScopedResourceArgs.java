@@ -5,13 +5,14 @@ package com.pulumi.azurenative.hybridcompute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateLinkScopedResourceArgs extends ResourceArgs {
 
     public static final PrivateLinkScopedResourceArgs Empty = new PrivateLinkScopedResourceArgs();
 

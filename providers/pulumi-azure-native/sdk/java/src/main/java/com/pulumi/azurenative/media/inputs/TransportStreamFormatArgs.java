@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.OutputFileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the properties for generating an MPEG-2 Transport Stream (ISO/IEC 13818-1) output video file(s).
  * 
  */
-public final class TransportStreamFormatArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransportStreamFormatArgs extends ResourceArgs {
 
     public static final TransportStreamFormatArgs Empty = new TransportStreamFormatArgs();
 

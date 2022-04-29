@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Connection error
  * 
  */
-public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionErrorArgs extends ResourceArgs {
 
     public static final ConnectionErrorArgs Empty = new ConnectionErrorArgs();
 

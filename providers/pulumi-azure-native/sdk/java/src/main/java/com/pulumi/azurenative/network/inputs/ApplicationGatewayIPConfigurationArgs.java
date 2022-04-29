@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.
  * 
  */
-public final class ApplicationGatewayIPConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayIPConfigurationArgs extends ResourceArgs {
 
     public static final ApplicationGatewayIPConfigurationArgs Empty = new ApplicationGatewayIPConfigurationArgs();
 

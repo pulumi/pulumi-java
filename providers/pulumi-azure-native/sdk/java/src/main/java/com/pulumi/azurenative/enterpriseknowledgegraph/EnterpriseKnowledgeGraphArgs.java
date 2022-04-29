@@ -7,6 +7,7 @@ import com.pulumi.azurenative.enterpriseknowledgegraph.inputs.EnterpriseKnowledg
 import com.pulumi.azurenative.enterpriseknowledgegraph.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterpriseKnowledgeGraphArgs extends ResourceArgs {
 
     public static final EnterpriseKnowledgeGraphArgs Empty = new EnterpriseKnowledgeGraphArgs();
 

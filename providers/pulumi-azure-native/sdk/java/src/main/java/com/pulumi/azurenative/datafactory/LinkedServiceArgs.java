@@ -107,6 +107,7 @@ import com.pulumi.azurenative.datafactory.inputs.XeroLinkedServiceArgs;
 import com.pulumi.azurenative.datafactory.inputs.ZohoLinkedServiceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -114,7 +115,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinkedServiceArgs extends ResourceArgs {
 
     public static final LinkedServiceArgs Empty = new LinkedServiceArgs();
 

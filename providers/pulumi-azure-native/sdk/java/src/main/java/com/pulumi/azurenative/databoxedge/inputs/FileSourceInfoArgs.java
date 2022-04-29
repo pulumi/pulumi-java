@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * File source details.
  * 
  */
-public final class FileSourceInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class FileSourceInfoArgs extends ResourceArgs {
 
     public static final FileSourceInfoArgs Empty = new FileSourceInfoArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.webpubsub.inputs;
 import com.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The settings for event handler in webpubsub service
  * 
  */
-public final class EventHandlerSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventHandlerSettingsArgs extends ResourceArgs {
 
     public static final EventHandlerSettingsArgs Empty = new EventHandlerSettingsArgs();
 

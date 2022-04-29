@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This type describes a volume provided by an Azure Files file share.
  * 
  */
-public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.resources.ResourceArgs {
+public final class VolumeProviderParametersAzureFileArgs extends ResourceArgs {
 
     public static final VolumeProviderParametersAzureFileArgs Empty = new VolumeProviderParametersAzureFileArgs();
 

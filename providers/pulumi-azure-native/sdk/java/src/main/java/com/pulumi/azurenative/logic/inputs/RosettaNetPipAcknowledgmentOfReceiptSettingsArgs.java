@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The integration account RosettaNet ProcessConfiguration Acknowledgement settings.
  * 
  */
-public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends ResourceArgs {
 
     public static final RosettaNetPipAcknowledgmentOfReceiptSettingsArgs Empty = new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs();
 

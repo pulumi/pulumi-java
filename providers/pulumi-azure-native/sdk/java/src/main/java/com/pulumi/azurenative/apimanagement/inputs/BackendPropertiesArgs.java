@@ -6,6 +6,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.BackendServiceFabricClusterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties specific to the Backend Type.
  * 
  */
-public final class BackendPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackendPropertiesArgs extends ResourceArgs {
 
     public static final BackendPropertiesArgs Empty = new BackendPropertiesArgs();
 

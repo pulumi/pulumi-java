@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import com.pulumi.azurenative.storsimple.enums.RecurrenceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The schedule recurrence.
  * 
  */
-public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleRecurrenceArgs extends ResourceArgs {
 
     public static final ScheduleRecurrenceArgs Empty = new ScheduleRecurrenceArgs();
 

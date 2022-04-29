@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVM
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * OpenShiftManagedClusterMaterPoolProfile contains configuration for OpenShift master VMs.
  * 
  */
-public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class OpenShiftManagedClusterMasterPoolProfileArgs extends ResourceArgs {
 
     public static final OpenShiftManagedClusterMasterPoolProfileArgs Empty = new OpenShiftManagedClusterMasterPoolProfileArgs();
 

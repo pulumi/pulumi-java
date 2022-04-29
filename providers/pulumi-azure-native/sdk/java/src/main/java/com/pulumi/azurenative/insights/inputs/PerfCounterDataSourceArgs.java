@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.KnownPerfCounterDataSourceStreams;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Collected from both Windows and Linux machines where the counter is present.
  * 
  */
-public final class PerfCounterDataSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PerfCounterDataSourceArgs extends ResourceArgs {
 
     public static final PerfCounterDataSourceArgs Empty = new PerfCounterDataSourceArgs();
 

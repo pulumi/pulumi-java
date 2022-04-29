@@ -7,6 +7,7 @@ import com.pulumi.azurenative.cdn.enums.ParamIndicator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Defines how to identify a parameter for a specific purpose e.g. expires
  * 
  */
-public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class UrlSigningParamIdentifierArgs extends ResourceArgs {
 
     public static final UrlSigningParamIdentifierArgs Empty = new UrlSigningParamIdentifierArgs();
 

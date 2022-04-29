@@ -6,6 +6,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 import com.pulumi.azurenative.sqlvirtualmachine.inputs.PrivateIPAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A load balancer configuration for an availability group listener.
  * 
  */
-public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoadBalancerConfigurationArgs extends ResourceArgs {
 
     public static final LoadBalancerConfigurationArgs Empty = new LoadBalancerConfigurationArgs();
 

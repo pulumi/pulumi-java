@@ -7,6 +7,7 @@ import com.pulumi.azurenative.migrate.inputs.NsgSecurityRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Defines the NSG resource settings.
  * 
  */
-public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkSecurityGroupResourceSettingsArgs extends ResourceArgs {
 
     public static final NetworkSecurityGroupResourceSettingsArgs Empty = new NetworkSecurityGroupResourceSettingsArgs();
 

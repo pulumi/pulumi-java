@@ -6,6 +6,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
  * 
  */
-public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplateRestartCustomizerArgs extends ResourceArgs {
 
     public static final ImageTemplateRestartCustomizerArgs Empty = new ImageTemplateRestartCustomizerArgs();
 

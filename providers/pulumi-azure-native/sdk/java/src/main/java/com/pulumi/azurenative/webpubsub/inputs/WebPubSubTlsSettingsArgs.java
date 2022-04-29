@@ -6,6 +6,7 @@ package com.pulumi.azurenative.webpubsub.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * TLS settings for the resource
  * 
  */
-public final class WebPubSubTlsSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebPubSubTlsSettingsArgs extends ResourceArgs {
 
     public static final WebPubSubTlsSettingsArgs Empty = new WebPubSubTlsSettingsArgs();
 

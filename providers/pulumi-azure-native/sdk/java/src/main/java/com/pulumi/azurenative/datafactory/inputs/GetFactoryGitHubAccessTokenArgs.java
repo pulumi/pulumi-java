@@ -5,13 +5,14 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.GitHubClientSecret;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetFactoryGitHubAccessTokenArgs extends InvokeArgs {
 
     public static final GetFactoryGitHubAccessTokenArgs Empty = new GetFactoryGitHubAccessTokenArgs();
 

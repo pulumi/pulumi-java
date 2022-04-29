@@ -6,6 +6,7 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * RolloutIdentity uses the user-assigned managed identity authentication context specified in the Identity property during rollout creation.
  * 
  */
-public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RolloutIdentityAuthenticationArgs extends ResourceArgs {
 
     public static final RolloutIdentityAuthenticationArgs Empty = new RolloutIdentityAuthenticationArgs();
 

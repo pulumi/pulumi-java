@@ -7,6 +7,7 @@ import com.pulumi.azurenative.solutions.enums.DeploymentMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Managed application deployment policy.
  * 
  */
-public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationDeploymentPolicyArgs extends ResourceArgs {
 
     public static final ApplicationDeploymentPolicyArgs Empty = new ApplicationDeploymentPolicyArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.servicefabricmesh.enums.HeaderMatchType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes header information for http route matching.
  * 
  */
-public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpRouteMatchHeaderArgs extends ResourceArgs {
 
     public static final HttpRouteMatchHeaderArgs Empty = new HttpRouteMatchHeaderArgs();
 

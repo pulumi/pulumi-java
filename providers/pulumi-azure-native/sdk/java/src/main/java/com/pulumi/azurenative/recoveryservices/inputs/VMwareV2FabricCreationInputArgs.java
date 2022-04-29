@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * VMwareV2 fabric provider specific settings.
  * 
  */
-public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class VMwareV2FabricCreationInputArgs extends ResourceArgs {
 
     public static final VMwareV2FabricCreationInputArgs Empty = new VMwareV2FabricCreationInputArgs();
 

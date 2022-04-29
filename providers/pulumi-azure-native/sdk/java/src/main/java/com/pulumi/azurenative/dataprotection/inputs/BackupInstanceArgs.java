@@ -8,6 +8,7 @@ import com.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import com.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Backup Instance
  * 
  */
-public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupInstanceArgs extends ResourceArgs {
 
     public static final BackupInstanceArgs Empty = new BackupInstanceArgs();
 

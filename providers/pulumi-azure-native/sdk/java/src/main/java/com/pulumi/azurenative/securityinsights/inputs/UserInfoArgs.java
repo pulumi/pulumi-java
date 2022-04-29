@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * User information that made some action
  * 
  */
-public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserInfoArgs extends ResourceArgs {
 
     public static final UserInfoArgs Empty = new UserInfoArgs();
 

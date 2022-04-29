@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Defines the resource group resource settings.
  * 
  */
-public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceGroupResourceSettingsArgs extends ResourceArgs {
 
     public static final ResourceGroupResourceSettingsArgs Empty = new ResourceGroupResourceSettingsArgs();
 

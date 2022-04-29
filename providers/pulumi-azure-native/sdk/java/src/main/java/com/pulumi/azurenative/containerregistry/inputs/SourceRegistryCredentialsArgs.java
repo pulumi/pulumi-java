@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.enums.SourceRegistryLoginMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the credential parameters for accessing the source registry.
  * 
  */
-public final class SourceRegistryCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SourceRegistryCredentialsArgs extends ResourceArgs {
 
     public static final SourceRegistryCredentialsArgs Empty = new SourceRegistryCredentialsArgs();
 

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class TrafficManagerUserMetricsKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrafficManagerUserMetricsKeyArgs extends ResourceArgs {
 
     public static final TrafficManagerUserMetricsKeyArgs Empty = new TrafficManagerUserMetricsKeyArgs();
 

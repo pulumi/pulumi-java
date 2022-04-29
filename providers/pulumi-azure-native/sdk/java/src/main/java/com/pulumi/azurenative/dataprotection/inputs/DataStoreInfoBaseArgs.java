@@ -7,6 +7,7 @@ import com.pulumi.azurenative.dataprotection.enums.DataStoreTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * DataStoreInfo base
  * 
  */
-public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataStoreInfoBaseArgs extends ResourceArgs {
 
     public static final DataStoreInfoBaseArgs Empty = new DataStoreInfoBaseArgs();
 

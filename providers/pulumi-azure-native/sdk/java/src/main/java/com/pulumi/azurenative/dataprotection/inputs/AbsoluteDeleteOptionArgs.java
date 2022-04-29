@@ -6,6 +6,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Delete option with duration
  * 
  */
-public final class AbsoluteDeleteOptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AbsoluteDeleteOptionArgs extends ResourceArgs {
 
     public static final AbsoluteDeleteOptionArgs Empty = new AbsoluteDeleteOptionArgs();
 

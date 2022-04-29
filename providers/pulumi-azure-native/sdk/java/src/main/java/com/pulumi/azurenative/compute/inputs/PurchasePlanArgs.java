@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
  * 
  */
-public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class PurchasePlanArgs extends ResourceArgs {
 
     public static final PurchasePlanArgs Empty = new PurchasePlanArgs();
 

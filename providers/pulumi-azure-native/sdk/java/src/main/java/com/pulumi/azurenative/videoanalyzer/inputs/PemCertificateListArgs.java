@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * A list of PEM formatted certificates.
  * 
  */
-public final class PemCertificateListArgs extends com.pulumi.resources.ResourceArgs {
+public final class PemCertificateListArgs extends ResourceArgs {
 
     public static final PemCertificateListArgs Empty = new PemCertificateListArgs();
 

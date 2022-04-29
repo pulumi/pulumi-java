@@ -6,6 +6,7 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details of the encryption associated with the workspace
  * 
  */
-public final class EncryptionDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionDetailsArgs extends ResourceArgs {
 
     public static final EncryptionDetailsArgs Empty = new EncryptionDetailsArgs();
 

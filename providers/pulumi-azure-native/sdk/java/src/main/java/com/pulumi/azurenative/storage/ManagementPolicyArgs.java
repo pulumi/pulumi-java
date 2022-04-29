@@ -6,13 +6,14 @@ package com.pulumi.azurenative.storage;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicyArgs extends ResourceArgs {
 
     public static final ManagementPolicyArgs Empty = new ManagementPolicyArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datalakestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Metadata information used by account encryption.
  * 
  */
-public final class KeyVaultMetaInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyVaultMetaInfoArgs extends ResourceArgs {
 
     public static final KeyVaultMetaInfoArgs Empty = new KeyVaultMetaInfoArgs();
 

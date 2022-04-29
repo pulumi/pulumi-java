@@ -6,13 +6,14 @@ package com.pulumi.azurenative.machinelearningservices;
 import com.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelingJobArgs extends ResourceArgs {
 
     public static final LabelingJobArgs Empty = new LabelingJobArgs();
 

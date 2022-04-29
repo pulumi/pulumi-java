@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines an early termination policy based on running averages of the primary metric of all runs.
  * 
  */
-public final class MedianStoppingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class MedianStoppingPolicyArgs extends ResourceArgs {
 
     public static final MedianStoppingPolicyArgs Empty = new MedianStoppingPolicyArgs();
 

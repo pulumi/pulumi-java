@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.Ipv6ExpressRouteCircuitPeeringConfi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressRouteCrossConnectionPeeringArgs extends ResourceArgs {
 
     public static final ExpressRouteCrossConnectionPeeringArgs Empty = new ExpressRouteCrossConnectionPeeringArgs();
 

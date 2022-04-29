@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Describes the named partition scheme of the service.
  * 
  */
-public final class NamedPartitionSchemeDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class NamedPartitionSchemeDescriptionArgs extends ResourceArgs {
 
     public static final NamedPartitionSchemeDescriptionArgs Empty = new NamedPartitionSchemeDescriptionArgs();
 

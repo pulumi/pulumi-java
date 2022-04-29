@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Auth Secrets for Container App Scale Rule
  * 
  */
-public final class ScaleRuleAuthArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleRuleAuthArgs extends ResourceArgs {
 
     public static final ScaleRuleAuthArgs Empty = new ScaleRuleAuthArgs();
 

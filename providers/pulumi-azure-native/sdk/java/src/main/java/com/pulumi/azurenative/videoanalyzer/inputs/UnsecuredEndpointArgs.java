@@ -8,6 +8,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsAr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Unsecured endpoint describes an endpoint that the pipeline can connect to over clear transport (no encryption in transit).
  * 
  */
-public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class UnsecuredEndpointArgs extends ResourceArgs {
 
     public static final UnsecuredEndpointArgs Empty = new UnsecuredEndpointArgs();
 

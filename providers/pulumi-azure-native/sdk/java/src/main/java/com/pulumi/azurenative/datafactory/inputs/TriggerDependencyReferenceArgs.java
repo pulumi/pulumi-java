@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Trigger referenced dependency.
  * 
  */
-public final class TriggerDependencyReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TriggerDependencyReferenceArgs extends ResourceArgs {
 
     public static final TriggerDependencyReferenceArgs Empty = new TriggerDependencyReferenceArgs();
 

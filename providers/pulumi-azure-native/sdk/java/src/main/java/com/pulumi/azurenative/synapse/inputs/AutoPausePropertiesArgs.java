@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Auto-pausing properties of a Big Data pool powered by Apache Spark
  * 
  */
-public final class AutoPausePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoPausePropertiesArgs extends ResourceArgs {
 
     public static final AutoPausePropertiesArgs Empty = new AutoPausePropertiesArgs();
 

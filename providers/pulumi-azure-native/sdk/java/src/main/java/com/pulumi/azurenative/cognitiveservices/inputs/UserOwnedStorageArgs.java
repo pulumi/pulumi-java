@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The user owned storage for Cognitive Services account.
  * 
  */
-public final class UserOwnedStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserOwnedStorageArgs extends ResourceArgs {
 
     public static final UserOwnedStorageArgs Empty = new UserOwnedStorageArgs();
 

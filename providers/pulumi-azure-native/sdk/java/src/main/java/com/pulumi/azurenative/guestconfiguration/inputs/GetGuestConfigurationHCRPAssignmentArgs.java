@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.guestconfiguration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetGuestConfigurationHCRPAssignmentArgs extends InvokeArgs {
 
     public static final GetGuestConfigurationHCRPAssignmentArgs Empty = new GetGuestConfigurationHCRPAssignmentArgs();
 

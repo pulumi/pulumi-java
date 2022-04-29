@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The path of the Dynamics AX OData entity.
  * 
  */
-public final class DynamicsAXResourceDatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DynamicsAXResourceDatasetArgs extends ResourceArgs {
 
     public static final DynamicsAXResourceDatasetArgs Empty = new DynamicsAXResourceDatasetArgs();
 

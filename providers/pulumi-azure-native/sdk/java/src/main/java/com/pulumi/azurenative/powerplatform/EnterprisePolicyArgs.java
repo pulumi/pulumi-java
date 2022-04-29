@@ -11,6 +11,7 @@ import com.pulumi.azurenative.powerplatform.inputs.PropertiesNetworkInjectionArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnterprisePolicyArgs extends ResourceArgs {
 
     public static final EnterprisePolicyArgs Empty = new EnterprisePolicyArgs();
 

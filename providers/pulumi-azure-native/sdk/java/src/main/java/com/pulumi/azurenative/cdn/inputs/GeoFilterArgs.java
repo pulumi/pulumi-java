@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.enums.GeoFilterActions;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Rules defining user&#39;s geo access within a CDN endpoint.
  * 
  */
-public final class GeoFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class GeoFilterArgs extends ResourceArgs {
 
     public static final GeoFilterArgs Empty = new GeoFilterArgs();
 

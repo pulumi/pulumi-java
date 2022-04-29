@@ -10,6 +10,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.LabelingJobInstruct
 import com.pulumi.azurenative.machinelearningservices.inputs.MLAssistConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Definition of a labeling job.
  * 
  */
-public final class LabelingJobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelingJobPropertiesArgs extends ResourceArgs {
 
     public static final LabelingJobPropertiesArgs Empty = new LabelingJobPropertiesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
  * 
  */
-public final class ManagementPolicySchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicySchemaArgs extends ResourceArgs {
 
     public static final ManagementPolicySchemaArgs Empty = new ManagementPolicySchemaArgs();
 

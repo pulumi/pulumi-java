@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.ConnectToSourcePostgreSqlSync
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that validates connection to PostgreSQL server and source server requirements for online migration
  * 
  */
-public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final ConnectToSourcePostgreSqlSyncTaskPropertiesArgs Empty = new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs();
 

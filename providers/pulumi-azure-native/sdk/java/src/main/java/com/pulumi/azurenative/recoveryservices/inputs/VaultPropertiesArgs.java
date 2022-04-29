@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Properties of the vault.
  * 
  */
-public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class VaultPropertiesArgs extends ResourceArgs {
 
     public static final VaultPropertiesArgs Empty = new VaultPropertiesArgs();
 

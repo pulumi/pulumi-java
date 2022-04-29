@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.NetworkProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Service properties payload
  * 
  */
-public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterResourcePropertiesArgs extends ResourceArgs {
 
     public static final ClusterResourcePropertiesArgs Empty = new ClusterResourcePropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings for user account that gets created on each on the nodes of a compute.
  * 
  */
-public final class UserAccountCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserAccountCredentialsArgs extends ResourceArgs {
 
     public static final UserAccountCredentialsArgs Empty = new UserAccountCredentialsArgs();
 

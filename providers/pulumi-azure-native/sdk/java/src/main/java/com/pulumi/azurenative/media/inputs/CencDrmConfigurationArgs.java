@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfiguration
 import com.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Class to specify DRM configurations of CommonEncryptionCenc scheme in Streaming Policy
  * 
  */
-public final class CencDrmConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CencDrmConfigurationArgs extends ResourceArgs {
 
     public static final CencDrmConfigurationArgs Empty = new CencDrmConfigurationArgs();
 

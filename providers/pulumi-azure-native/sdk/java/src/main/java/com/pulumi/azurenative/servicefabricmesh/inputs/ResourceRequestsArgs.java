@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
  * 
  */
-public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceRequestsArgs extends ResourceArgs {
 
     public static final ResourceRequestsArgs Empty = new ResourceRequestsArgs();
 

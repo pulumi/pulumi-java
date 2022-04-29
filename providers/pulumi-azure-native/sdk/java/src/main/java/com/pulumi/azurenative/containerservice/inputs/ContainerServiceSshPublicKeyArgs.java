@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Contains information about SSH certificate public key data.
  * 
  */
-public final class ContainerServiceSshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerServiceSshPublicKeyArgs extends ResourceArgs {
 
     public static final ContainerServiceSshPublicKeyArgs Empty = new ContainerServiceSshPublicKeyArgs();
 

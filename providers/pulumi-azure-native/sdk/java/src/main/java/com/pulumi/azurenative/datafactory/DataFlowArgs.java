@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import com.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataFlowArgs extends ResourceArgs {
 
     public static final DataFlowArgs Empty = new DataFlowArgs();
 

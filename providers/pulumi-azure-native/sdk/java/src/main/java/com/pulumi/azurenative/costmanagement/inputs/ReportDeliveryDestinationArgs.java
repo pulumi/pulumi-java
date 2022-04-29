@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The destination information for the delivery of the report.
  * 
  */
-public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportDeliveryDestinationArgs extends ResourceArgs {
 
     public static final ReportDeliveryDestinationArgs Empty = new ReportDeliveryDestinationArgs();
 

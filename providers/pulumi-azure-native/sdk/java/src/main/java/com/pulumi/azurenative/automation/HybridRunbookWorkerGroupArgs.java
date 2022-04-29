@@ -6,13 +6,14 @@ package com.pulumi.azurenative.automation;
 import com.pulumi.azurenative.automation.inputs.RunAsCredentialAssociationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class HybridRunbookWorkerGroupArgs extends ResourceArgs {
 
     public static final HybridRunbookWorkerGroupArgs Empty = new HybridRunbookWorkerGroupArgs();
 

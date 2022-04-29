@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.enums.ConditionOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * How the data that is collected should be combined over time.
  * 
  */
-public final class ManagementEventAggregationConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementEventAggregationConditionArgs extends ResourceArgs {
 
     public static final ManagementEventAggregationConditionArgs Empty = new ManagementEventAggregationConditionArgs();
 

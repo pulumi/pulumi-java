@@ -5,6 +5,7 @@ package com.pulumi.azurenative.peering.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The SKU that defines the type of the peering service.
  * 
  */
-public final class PeeringServiceSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeeringServiceSkuArgs extends ResourceArgs {
 
     public static final PeeringServiceSkuArgs Empty = new PeeringServiceSkuArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.azurenative.desktopvirtualization.inputs;
 import com.pulumi.azurenative.desktopvirtualization.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceModelWithAllowedPropertySetIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceModelWithAllowedPropertySetIdentityArgs extends ResourceArgs {
 
     public static final ResourceModelWithAllowedPropertySetIdentityArgs Empty = new ResourceModelWithAllowedPropertySetIdentityArgs();
 

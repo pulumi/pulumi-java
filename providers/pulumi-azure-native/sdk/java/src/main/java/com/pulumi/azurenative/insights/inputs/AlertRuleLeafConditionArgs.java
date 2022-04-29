@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * This condition must contain &#39;field&#39; and either &#39;equals&#39; or &#39;containsAny&#39;.
  * 
  */
-public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertRuleLeafConditionArgs extends ResourceArgs {
 
     public static final AlertRuleLeafConditionArgs Empty = new AlertRuleLeafConditionArgs();
 

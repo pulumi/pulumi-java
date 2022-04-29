@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import com.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkTapArgs extends ResourceArgs {
 
     public static final VirtualNetworkTapArgs Empty = new VirtualNetworkTapArgs();
 

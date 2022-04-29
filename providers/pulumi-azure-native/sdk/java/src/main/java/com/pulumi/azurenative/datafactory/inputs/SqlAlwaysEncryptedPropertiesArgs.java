@@ -10,6 +10,7 @@ import com.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Sql always encrypted properties.
  * 
  */
-public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SqlAlwaysEncryptedPropertiesArgs extends ResourceArgs {
 
     public static final SqlAlwaysEncryptedPropertiesArgs Empty = new SqlAlwaysEncryptedPropertiesArgs();
 

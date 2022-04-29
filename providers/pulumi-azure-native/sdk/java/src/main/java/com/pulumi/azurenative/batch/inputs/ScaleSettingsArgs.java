@@ -7,6 +7,7 @@ import com.pulumi.azurenative.batch.inputs.AutoScaleSettingsArgs;
 import com.pulumi.azurenative.batch.inputs.FixedScaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
  * 
  */
-public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleSettingsArgs extends ResourceArgs {
 
     public static final ScaleSettingsArgs Empty = new ScaleSettingsArgs();
 

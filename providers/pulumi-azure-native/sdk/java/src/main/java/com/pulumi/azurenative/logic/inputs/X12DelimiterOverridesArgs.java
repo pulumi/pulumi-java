@@ -6,6 +6,7 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The X12 delimiter override settings.
  * 
  */
-public final class X12DelimiterOverridesArgs extends com.pulumi.resources.ResourceArgs {
+public final class X12DelimiterOverridesArgs extends ResourceArgs {
 
     public static final X12DelimiterOverridesArgs Empty = new X12DelimiterOverridesArgs();
 

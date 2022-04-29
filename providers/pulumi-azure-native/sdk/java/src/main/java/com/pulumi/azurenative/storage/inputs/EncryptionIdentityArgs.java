@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Encryption identity for the storage account.
  * 
  */
-public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionIdentityArgs extends ResourceArgs {
 
     public static final EncryptionIdentityArgs Empty = new EncryptionIdentityArgs();
 

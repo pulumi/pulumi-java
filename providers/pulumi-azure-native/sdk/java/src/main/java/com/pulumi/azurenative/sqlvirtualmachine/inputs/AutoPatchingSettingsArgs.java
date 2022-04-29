@@ -6,6 +6,7 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 import com.pulumi.azurenative.sqlvirtualmachine.enums.DayOfWeek;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Set a patching window during which Windows and SQL patches will be applied.
  * 
  */
-public final class AutoPatchingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoPatchingSettingsArgs extends ResourceArgs {
 
     public static final AutoPatchingSettingsArgs Empty = new AutoPatchingSettingsArgs();
 

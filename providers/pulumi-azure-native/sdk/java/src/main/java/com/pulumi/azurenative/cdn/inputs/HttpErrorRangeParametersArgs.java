@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The JSON object that represents the range for http status codes
  * 
  */
-public final class HttpErrorRangeParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class HttpErrorRangeParametersArgs extends ResourceArgs {
 
     public static final HttpErrorRangeParametersArgs Empty = new HttpErrorRangeParametersArgs();
 

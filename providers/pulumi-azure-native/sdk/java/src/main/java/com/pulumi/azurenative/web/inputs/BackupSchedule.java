@@ -6,6 +6,8 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.FrequencyUnit;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
  * 
  */
-public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
+public final class BackupSchedule extends InvokeArgs {
 
     public static final BackupSchedule Empty = new BackupSchedule();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.appplatform.enums.UserSourceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Source information for a deployment
  * 
  */
-public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserSourceInfoArgs extends ResourceArgs {
 
     public static final UserSourceInfoArgs Empty = new UserSourceInfoArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobRecurrenceArgs extends ResourceArgs {
 
     public static final JobRecurrenceArgs Empty = new JobRecurrenceArgs();
 

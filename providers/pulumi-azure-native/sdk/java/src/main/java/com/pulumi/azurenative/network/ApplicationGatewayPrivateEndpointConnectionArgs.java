@@ -6,13 +6,14 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationGatewayPrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final ApplicationGatewayPrivateEndpointConnectionArgs Empty = new ApplicationGatewayPrivateEndpointConnectionArgs();
 

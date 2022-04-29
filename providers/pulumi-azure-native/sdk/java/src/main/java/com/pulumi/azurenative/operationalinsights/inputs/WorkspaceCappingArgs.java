@@ -5,6 +5,7 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The daily volume cap for ingestion.
  * 
  */
-public final class WorkspaceCappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceCappingArgs extends ResourceArgs {
 
     public static final WorkspaceCappingArgs Empty = new WorkspaceCappingArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.RCranPackageArgs;
 import com.pulumi.azurenative.machinelearningservices.inputs.RGitHubPackageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Settings for a R environment.
  * 
  */
-public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelEnvironmentDefinitionRArgs extends ResourceArgs {
 
     public static final ModelEnvironmentDefinitionRArgs Empty = new ModelEnvironmentDefinitionRArgs();
 

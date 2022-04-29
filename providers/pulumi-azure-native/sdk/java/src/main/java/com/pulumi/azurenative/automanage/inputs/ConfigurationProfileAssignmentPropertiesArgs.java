@@ -7,6 +7,7 @@ import com.pulumi.azurenative.automanage.enums.ConfigurationProfile;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Automanage configuration profile assignment properties.
  * 
  */
-public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigurationProfileAssignmentPropertiesArgs extends ResourceArgs {
 
     public static final ConfigurationProfileAssignmentPropertiesArgs Empty = new ConfigurationProfileAssignmentPropertiesArgs();
 

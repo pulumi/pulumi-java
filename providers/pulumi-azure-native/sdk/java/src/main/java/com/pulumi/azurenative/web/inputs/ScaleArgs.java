@@ -6,6 +6,7 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Container App scaling configurations.
  * 
  */
-public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleArgs extends ResourceArgs {
 
     public static final ScaleArgs Empty = new ScaleArgs();
 

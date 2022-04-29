@@ -7,6 +7,7 @@ import com.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationArgs;
 import com.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The network configuration for a pool.
  * 
  */
-public final class NetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkConfigurationArgs extends ResourceArgs {
 
     public static final NetworkConfigurationArgs Empty = new NetworkConfigurationArgs();
 

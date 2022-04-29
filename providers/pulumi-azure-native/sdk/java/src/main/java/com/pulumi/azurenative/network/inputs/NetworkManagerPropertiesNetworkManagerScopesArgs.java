@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Scope of Network Manager.
  * 
  */
-public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends ResourceArgs {
 
     public static final NetworkManagerPropertiesNetworkManagerScopesArgs Empty = new NetworkManagerPropertiesNetworkManagerScopesArgs();
 

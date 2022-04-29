@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A logic app receiver.
  * 
  */
-public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArgs {
+public final class LogicAppReceiverArgs extends ResourceArgs {
 
     public static final LogicAppReceiverArgs Empty = new LogicAppReceiverArgs();
 

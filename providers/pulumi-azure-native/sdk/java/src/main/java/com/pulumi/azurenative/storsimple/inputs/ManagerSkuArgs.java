@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storsimple.inputs;
 import com.pulumi.azurenative.storsimple.enums.ManagerSkuType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Sku.
  * 
  */
-public final class ManagerSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagerSkuArgs extends ResourceArgs {
 
     public static final ManagerSkuArgs Empty = new ManagerSkuArgs();
 

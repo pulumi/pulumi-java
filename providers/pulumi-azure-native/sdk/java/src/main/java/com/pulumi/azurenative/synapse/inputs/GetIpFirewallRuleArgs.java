@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetIpFirewallRuleArgs extends InvokeArgs {
 
     public static final GetIpFirewallRuleArgs Empty = new GetIpFirewallRuleArgs();
 

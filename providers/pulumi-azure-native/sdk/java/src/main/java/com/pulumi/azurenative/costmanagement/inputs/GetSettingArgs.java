@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSettingArgs extends InvokeArgs {
 
     public static final GetSettingArgs Empty = new GetSettingArgs();
 

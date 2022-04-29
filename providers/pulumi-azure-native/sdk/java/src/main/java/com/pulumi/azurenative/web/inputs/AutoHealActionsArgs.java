@@ -7,6 +7,7 @@ import com.pulumi.azurenative.web.enums.AutoHealActionType;
 import com.pulumi.azurenative.web.inputs.AutoHealCustomActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Actions which to take by the auto-heal module when a rule is triggered.
  * 
  */
-public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutoHealActionsArgs extends ResourceArgs {
 
     public static final AutoHealActionsArgs Empty = new AutoHealActionsArgs();
 

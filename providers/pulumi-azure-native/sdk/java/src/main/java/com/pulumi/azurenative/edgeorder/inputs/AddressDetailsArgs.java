@@ -6,6 +6,7 @@ package com.pulumi.azurenative.edgeorder.inputs;
 import com.pulumi.azurenative.edgeorder.inputs.AddressPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Address details for an order item.
  * 
  */
-public final class AddressDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressDetailsArgs extends ResourceArgs {
 
     public static final AddressDetailsArgs Empty = new AddressDetailsArgs();
 

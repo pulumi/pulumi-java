@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The details about the associated storage account.
  * 
  */
-public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageAccountArgs extends ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 

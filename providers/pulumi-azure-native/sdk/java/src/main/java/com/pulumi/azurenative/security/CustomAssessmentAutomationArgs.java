@@ -8,13 +8,14 @@ import com.pulumi.azurenative.security.enums.SupportedCloudEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomAssessmentAutomationArgs extends ResourceArgs {
 
     public static final CustomAssessmentAutomationArgs Empty = new CustomAssessmentAutomationArgs();
 

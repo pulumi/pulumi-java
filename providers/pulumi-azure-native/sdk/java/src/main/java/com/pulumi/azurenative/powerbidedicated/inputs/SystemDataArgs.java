@@ -7,6 +7,7 @@ import com.pulumi.azurenative.powerbidedicated.enums.IdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Metadata pertaining to creation and last modification of the resource.
  * 
  */
-public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class SystemDataArgs extends ResourceArgs {
 
     public static final SystemDataArgs Empty = new SystemDataArgs();
 

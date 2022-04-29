@@ -15,6 +15,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +40,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:containerregistry:Registry")
-public class Registry extends com.pulumi.resources.CustomResource {
+public class Registry extends CustomResource {
     /**
      * The value that indicates whether the admin user is enabled.
      * 
@@ -243,16 +245,16 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Registry(String name, RegistryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Registry(String name, RegistryArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:containerregistry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Registry(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Registry(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:containerregistry:Registry", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:containerregistry/v20160627preview:Registry").build()),
@@ -268,7 +270,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:containerregistry/v20211201preview:Registry").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -279,7 +281,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Registry get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Registry get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Registry(name, id, options);
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties of an Operation.
  * 
  */
-public final class OperationsDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OperationsDefinitionArgs extends ResourceArgs {
 
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
 

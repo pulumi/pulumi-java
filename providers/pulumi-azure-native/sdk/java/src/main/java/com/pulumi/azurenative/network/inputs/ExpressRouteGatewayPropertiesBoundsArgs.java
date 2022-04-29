@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Minimum and maximum number of scale units to deploy.
  * 
  */
-public final class ExpressRouteGatewayPropertiesBoundsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressRouteGatewayPropertiesBoundsArgs extends ResourceArgs {
 
     public static final ExpressRouteGatewayPropertiesBoundsArgs Empty = new ExpressRouteGatewayPropertiesBoundsArgs();
 

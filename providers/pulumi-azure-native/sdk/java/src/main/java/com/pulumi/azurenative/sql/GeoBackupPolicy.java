@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:sql:GeoBackupPolicy")
-public class GeoBackupPolicy extends com.pulumi.resources.CustomResource {
+public class GeoBackupPolicy extends CustomResource {
     /**
      * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
      * 
@@ -137,22 +139,22 @@ public class GeoBackupPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GeoBackupPolicy(String name, GeoBackupPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GeoBackupPolicy(String name, GeoBackupPolicyArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:GeoBackupPolicy", name, args == null ? GeoBackupPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GeoBackupPolicy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GeoBackupPolicy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:sql:GeoBackupPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20140401:GeoBackupPolicy").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -163,7 +165,7 @@ public class GeoBackupPolicy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GeoBackupPolicy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GeoBackupPolicy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new GeoBackupPolicy(name, id, options);
     }
 }

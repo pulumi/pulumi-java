@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * API OAuth2 Authentication settings details.
  * 
  */
-public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class OAuth2AuthenticationSettingsContractArgs extends ResourceArgs {
 
     public static final OAuth2AuthenticationSettingsContractArgs Empty = new OAuth2AuthenticationSettingsContractArgs();
 

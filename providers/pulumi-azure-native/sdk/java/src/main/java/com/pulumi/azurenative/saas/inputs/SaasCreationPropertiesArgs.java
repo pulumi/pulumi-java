@@ -7,6 +7,7 @@ import com.pulumi.azurenative.saas.enums.PaymentChannelType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * properties for creation saas
  * 
  */
-public final class SaasCreationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SaasCreationPropertiesArgs extends ResourceArgs {
 
     public static final SaasCreationPropertiesArgs Empty = new SaasCreationPropertiesArgs();
 

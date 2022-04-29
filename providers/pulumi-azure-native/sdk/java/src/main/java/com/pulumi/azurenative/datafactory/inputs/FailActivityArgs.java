@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * This activity will fail within its own scope and output a custom error message and error code. The error message and code can provided either as a string literal or as an expression that can be evaluated to a string at runtime. The activity scope can be the whole pipeline or a control activity (e.g. foreach, switch, until), if the fail activity is contained in it.
  * 
  */
-public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
+public final class FailActivityArgs extends ResourceArgs {
 
     public static final FailActivityArgs Empty = new FailActivityArgs();
 

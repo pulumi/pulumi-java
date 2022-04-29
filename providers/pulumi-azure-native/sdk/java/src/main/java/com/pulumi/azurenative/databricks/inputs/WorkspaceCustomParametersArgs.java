@@ -8,6 +8,7 @@ import com.pulumi.azurenative.databricks.inputs.WorkspaceCustomStringParameterAr
 import com.pulumi.azurenative.databricks.inputs.WorkspaceEncryptionParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Custom Parameters used for Cluster Creation.
  * 
  */
-public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceCustomParametersArgs extends ResourceArgs {
 
     public static final WorkspaceCustomParametersArgs Empty = new WorkspaceCustomParametersArgs();
 

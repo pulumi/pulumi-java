@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devices.inputs;
 import com.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The private endpoint connection of an IotHub
  * 
  */
-public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrivateEndpointConnectionArgs extends ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 

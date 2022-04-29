@@ -7,6 +7,7 @@ import com.pulumi.azurenative.desktopvirtualization.enums.Operation;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for arm migration.
  * 
  */
-public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrationRequestPropertiesArgs extends ResourceArgs {
 
     public static final MigrationRequestPropertiesArgs Empty = new MigrationRequestPropertiesArgs();
 

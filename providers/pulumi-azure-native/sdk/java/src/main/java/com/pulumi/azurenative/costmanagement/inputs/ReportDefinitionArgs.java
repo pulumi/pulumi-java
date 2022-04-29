@@ -10,6 +10,7 @@ import com.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The definition of a report.
  * 
  */
-public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportDefinitionArgs extends ResourceArgs {
 
     public static final ReportDefinitionArgs Empty = new ReportDefinitionArgs();
 

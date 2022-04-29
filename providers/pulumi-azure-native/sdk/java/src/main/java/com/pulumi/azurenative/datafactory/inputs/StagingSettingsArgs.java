@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Staging settings.
  * 
  */
-public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StagingSettingsArgs extends ResourceArgs {
 
     public static final StagingSettingsArgs Empty = new StagingSettingsArgs();
 

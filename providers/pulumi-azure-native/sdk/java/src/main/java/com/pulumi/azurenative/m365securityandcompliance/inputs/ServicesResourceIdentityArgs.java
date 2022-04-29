@@ -7,6 +7,7 @@ import com.pulumi.azurenative.m365securityandcompliance.enums.ManagedServiceIden
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Setting indicating whether the service has a managed identity associated with it.
  * 
  */
-public final class ServicesResourceIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServicesResourceIdentityArgs extends ResourceArgs {
 
     public static final ServicesResourceIdentityArgs Empty = new ServicesResourceIdentityArgs();
 

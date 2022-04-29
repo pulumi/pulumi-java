@@ -5,6 +5,7 @@ package com.pulumi.azurenative.powerbidedicated.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An array of administrator user identities
  * 
  */
-public final class DedicatedCapacityAdministratorsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DedicatedCapacityAdministratorsArgs extends ResourceArgs {
 
     public static final DedicatedCapacityAdministratorsArgs Empty = new DedicatedCapacityAdministratorsArgs();
 

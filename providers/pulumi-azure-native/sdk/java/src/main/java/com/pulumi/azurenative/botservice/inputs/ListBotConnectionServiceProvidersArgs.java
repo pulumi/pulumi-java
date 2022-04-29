@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.botservice.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class ListBotConnectionServiceProvidersArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListBotConnectionServiceProvidersArgs extends InvokeArgs {
 
     public static final ListBotConnectionServiceProvidersArgs Empty = new ListBotConnectionServiceProvidersArgs();
 

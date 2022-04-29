@@ -7,6 +7,7 @@ import com.pulumi.azurenative.operationalinsights.enums.ClusterSkuNameEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The cluster sku definition.
  * 
  */
-public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterSkuArgs extends ResourceArgs {
 
     public static final ClusterSkuArgs Empty = new ClusterSkuArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.alertsmanagement.enums.ScopeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Target scope for a given action rule. By default scope will be the subscription. User can also provide list of resource groups or list of resources from the scope subscription as well.
  * 
  */
-public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScopeArgs extends ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 

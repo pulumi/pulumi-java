@@ -8,6 +8,7 @@ import com.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.OsDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the storage settings for the virtual machine disks.
  * 
  */
-public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageProfileArgs extends ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 

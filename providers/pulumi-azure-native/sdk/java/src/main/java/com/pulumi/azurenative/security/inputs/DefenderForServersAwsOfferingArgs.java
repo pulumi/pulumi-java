@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingDefen
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The Defender for Servers AWS offering configurations
  * 
  */
-public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resources.ResourceArgs {
+public final class DefenderForServersAwsOfferingArgs extends ResourceArgs {
 
     public static final DefenderForServersAwsOfferingArgs Empty = new DefenderForServersAwsOfferingArgs();
 

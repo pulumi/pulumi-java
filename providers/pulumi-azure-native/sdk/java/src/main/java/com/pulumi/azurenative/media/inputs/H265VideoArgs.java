@@ -11,6 +11,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Describes all the properties for encoding a video with the H.265 codec.
  * 
  */
-public final class H265VideoArgs extends com.pulumi.resources.ResourceArgs {
+public final class H265VideoArgs extends ResourceArgs {
 
     public static final H265VideoArgs Empty = new H265VideoArgs();
 

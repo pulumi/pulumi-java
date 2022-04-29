@@ -8,6 +8,7 @@ import com.pulumi.azurenative.storagecache.enums.NfsAccessRuleScope;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Rule to place restrictions on portions of the cache namespace being presented to clients.
  * 
  */
-public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class NfsAccessRuleArgs extends ResourceArgs {
 
     public static final NfsAccessRuleArgs Empty = new NfsAccessRuleArgs();
 

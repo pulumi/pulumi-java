@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLivePipelineArgs extends InvokeArgs {
 
     public static final GetLivePipelineArgs Empty = new GetLivePipelineArgs();
 

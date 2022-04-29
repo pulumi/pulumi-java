@@ -5,6 +5,7 @@ package com.pulumi.azurenative.desktopvirtualization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Scaling plan reference to hostpool.
  * 
  */
-public final class ScalingHostPoolReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScalingHostPoolReferenceArgs extends ResourceArgs {
 
     public static final ScalingHostPoolReferenceArgs Empty = new ScalingHostPoolReferenceArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import com.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Trial component definition.
  * 
  */
-public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrialComponentArgs extends ResourceArgs {
 
     public static final TrialComponentArgs Empty = new TrialComponentArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ListBitLockerKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListBitLockerKeyArgs extends InvokeArgs {
 
     public static final ListBitLockerKeyArgs Empty = new ListBitLockerKeyArgs();
 

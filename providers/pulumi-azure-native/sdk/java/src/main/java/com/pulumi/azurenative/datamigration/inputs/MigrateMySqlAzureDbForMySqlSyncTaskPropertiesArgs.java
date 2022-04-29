@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSy
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that migrates MySQL databases to Azure Database for MySQL for online migrations
  * 
  */
-public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends ResourceArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs Empty = new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.NsgReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines the virtual network subnets resource settings.
  * 
  */
-public final class SubnetResourceSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetResourceSettingsArgs extends ResourceArgs {
 
     public static final SubnetResourceSettingsArgs Empty = new SubnetResourceSettingsArgs();
 

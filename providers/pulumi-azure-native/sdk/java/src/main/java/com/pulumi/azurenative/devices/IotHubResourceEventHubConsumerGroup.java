@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:devices:IotHubResourceEventHubConsumerGroup")
-public class IotHubResourceEventHubConsumerGroup extends com.pulumi.resources.CustomResource {
+public class IotHubResourceEventHubConsumerGroup extends CustomResource {
     /**
      * The etag.
      * 
@@ -110,16 +112,16 @@ public class IotHubResourceEventHubConsumerGroup extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IotHubResourceEventHubConsumerGroup(String name, IotHubResourceEventHubConsumerGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IotHubResourceEventHubConsumerGroup(String name, IotHubResourceEventHubConsumerGroupArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:devices:IotHubResourceEventHubConsumerGroup", name, args == null ? IotHubResourceEventHubConsumerGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IotHubResourceEventHubConsumerGroup(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IotHubResourceEventHubConsumerGroup(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:devices:IotHubResourceEventHubConsumerGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:devices/v20160203:IotHubResourceEventHubConsumerGroup").build()),
@@ -148,7 +150,7 @@ public class IotHubResourceEventHubConsumerGroup extends com.pulumi.resources.Cu
                 Output.of(Alias.builder().type("azure-native:devices/v20210702preview:IotHubResourceEventHubConsumerGroup").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -159,7 +161,7 @@ public class IotHubResourceEventHubConsumerGroup extends com.pulumi.resources.Cu
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IotHubResourceEventHubConsumerGroup get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IotHubResourceEventHubConsumerGroup get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new IotHubResourceEventHubConsumerGroup(name, id, options);
     }
 }

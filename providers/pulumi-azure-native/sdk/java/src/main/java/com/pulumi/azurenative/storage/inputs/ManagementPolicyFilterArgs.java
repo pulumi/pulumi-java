@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.TagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
  * 
  */
-public final class ManagementPolicyFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicyFilterArgs extends ResourceArgs {
 
     public static final ManagementPolicyFilterArgs Empty = new ManagementPolicyFilterArgs();
 

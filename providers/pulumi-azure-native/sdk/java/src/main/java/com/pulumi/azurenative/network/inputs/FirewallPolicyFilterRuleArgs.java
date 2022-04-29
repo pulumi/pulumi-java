@@ -10,6 +10,7 @@ import com.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Firewall Policy Filter Rule.
  * 
  */
-public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallPolicyFilterRuleArgs extends ResourceArgs {
 
     public static final FirewallPolicyFilterRuleArgs Empty = new FirewallPolicyFilterRuleArgs();
 

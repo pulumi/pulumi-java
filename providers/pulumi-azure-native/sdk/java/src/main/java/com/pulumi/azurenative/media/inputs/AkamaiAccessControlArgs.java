@@ -6,6 +6,7 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.AkamaiSignatureHeaderAuthenticationKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Akamai access control
  * 
  */
-public final class AkamaiAccessControlArgs extends com.pulumi.resources.ResourceArgs {
+public final class AkamaiAccessControlArgs extends ResourceArgs {
 
     public static final AkamaiAccessControlArgs Empty = new AkamaiAccessControlArgs();
 

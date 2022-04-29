@@ -5,6 +5,7 @@ package com.pulumi.azurenative.managedservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Properties of a registration assignment.
  * 
  */
-public final class RegistrationAssignmentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistrationAssignmentPropertiesArgs extends ResourceArgs {
 
     public static final RegistrationAssignmentPropertiesArgs Empty = new RegistrationAssignmentPropertiesArgs();
 

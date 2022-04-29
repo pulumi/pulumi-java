@@ -5,6 +5,7 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Batch service does not assign any meaning to this metadata; it is solely for the use of user code.
  * 
  */
-public final class MetadataItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetadataItemArgs extends ResourceArgs {
 
     public static final MetadataItemArgs Empty = new MetadataItemArgs();
 

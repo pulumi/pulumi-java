@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An SRV record.
  * 
  */
-public final class SrvRecordArgs extends com.pulumi.resources.ResourceArgs {
+public final class SrvRecordArgs extends ResourceArgs {
 
     public static final SrvRecordArgs Empty = new SrvRecordArgs();
 

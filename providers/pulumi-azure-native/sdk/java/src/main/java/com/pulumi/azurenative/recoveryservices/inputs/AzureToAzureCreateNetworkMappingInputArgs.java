@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Create network mappings input properties/behavior specific to Azure to Azure Network mapping.
  * 
  */
-public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureToAzureCreateNetworkMappingInputArgs extends ResourceArgs {
 
     public static final AzureToAzureCreateNetworkMappingInputArgs Empty = new AzureToAzureCreateNetworkMappingInputArgs();
 

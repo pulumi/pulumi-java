@@ -15,6 +15,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * IaaS VM workload-specific backup item.
  * 
  */
-public final class AzureIaaSVMProtectedItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureIaaSVMProtectedItemArgs extends ResourceArgs {
 
     public static final AzureIaaSVMProtectedItemArgs Empty = new AzureIaaSVMProtectedItemArgs();
 

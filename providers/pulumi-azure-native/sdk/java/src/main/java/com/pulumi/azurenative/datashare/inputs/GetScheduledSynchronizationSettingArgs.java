@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetScheduledSynchronizationSettingArgs extends InvokeArgs {
 
     public static final GetScheduledSynchronizationSettingArgs Empty = new GetScheduledSynchronizationSettingArgs();
 

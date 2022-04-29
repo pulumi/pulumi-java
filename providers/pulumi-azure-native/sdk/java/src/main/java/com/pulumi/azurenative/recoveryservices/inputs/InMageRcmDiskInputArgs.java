@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * InMageRcm disk input.
  * 
  */
-public final class InMageRcmDiskInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class InMageRcmDiskInputArgs extends ResourceArgs {
 
     public static final InMageRcmDiskInputArgs Empty = new InMageRcmDiskInputArgs();
 

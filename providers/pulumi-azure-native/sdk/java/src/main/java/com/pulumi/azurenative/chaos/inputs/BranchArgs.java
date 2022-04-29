@@ -8,6 +8,7 @@ import com.pulumi.azurenative.chaos.inputs.DelayActionArgs;
 import com.pulumi.azurenative.chaos.inputs.DiscreteActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Objects;
  * Model that represents a branch in the step.
  * 
  */
-public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
+public final class BranchArgs extends ResourceArgs {
 
     public static final BranchArgs Empty = new BranchArgs();
 

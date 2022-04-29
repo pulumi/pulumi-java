@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRe
 import com.pulumi.azurenative.machinelearningservices.inputs.DatasetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * An Azure Machine Learning Model.
  * 
  */
-public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelArgs extends ResourceArgs {
 
     public static final ModelArgs Empty = new ModelArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The main origin of CDN content which is added when creating a CDN endpoint.
  * 
  */
-public final class DeepCreatedOriginArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeepCreatedOriginArgs extends ResourceArgs {
 
     public static final DeepCreatedOriginArgs Empty = new DeepCreatedOriginArgs();
 

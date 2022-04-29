@@ -6,6 +6,7 @@ package com.pulumi.azurenative.authorization.inputs;
 import com.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The policy definition reference.
  * 
  */
-public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyDefinitionReferenceArgs extends ResourceArgs {
 
     public static final PolicyDefinitionReferenceArgs Empty = new PolicyDefinitionReferenceArgs();
 

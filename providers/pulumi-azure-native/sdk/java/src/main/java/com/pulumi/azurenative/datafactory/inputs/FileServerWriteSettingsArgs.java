@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * File server write settings.
  * 
  */
-public final class FileServerWriteSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class FileServerWriteSettingsArgs extends ResourceArgs {
 
     public static final FileServerWriteSettingsArgs Empty = new FileServerWriteSettingsArgs();
 

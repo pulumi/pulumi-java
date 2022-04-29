@@ -6,13 +6,14 @@ package com.pulumi.azurenative.scheduler.inputs;
 import com.pulumi.azurenative.scheduler.enums.ServiceBusAuthenticationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceBusAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceBusAuthenticationArgs extends ResourceArgs {
 
     public static final ServiceBusAuthenticationArgs Empty = new ServiceBusAuthenticationArgs();
 

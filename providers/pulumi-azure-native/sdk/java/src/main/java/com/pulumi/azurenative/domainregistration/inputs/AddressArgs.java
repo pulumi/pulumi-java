@@ -5,6 +5,7 @@ package com.pulumi.azurenative.domainregistration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Address information for domain registration.
  * 
  */
-public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class AddressArgs extends ResourceArgs {
 
     public static final AddressArgs Empty = new AddressArgs();
 

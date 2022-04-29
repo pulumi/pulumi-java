@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Data regarding 3rd party partner integration
  * 
  */
-public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityAssessmentPartnerDataArgs extends ResourceArgs {
 
     public static final SecurityAssessmentPartnerDataArgs Empty = new SecurityAssessmentPartnerDataArgs();
 

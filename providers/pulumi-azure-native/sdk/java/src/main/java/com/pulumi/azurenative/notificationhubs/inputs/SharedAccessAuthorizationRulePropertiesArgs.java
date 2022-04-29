@@ -6,6 +6,7 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 import com.pulumi.azurenative.notificationhubs.enums.AccessRights;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * SharedAccessAuthorizationRule properties.
  * 
  */
-public final class SharedAccessAuthorizationRulePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SharedAccessAuthorizationRulePropertiesArgs extends ResourceArgs {
 
     public static final SharedAccessAuthorizationRulePropertiesArgs Empty = new SharedAccessAuthorizationRulePropertiesArgs();
 

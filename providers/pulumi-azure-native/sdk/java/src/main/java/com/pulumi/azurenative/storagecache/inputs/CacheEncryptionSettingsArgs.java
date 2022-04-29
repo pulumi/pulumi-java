@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Cache encryption settings.
  * 
  */
-public final class CacheEncryptionSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CacheEncryptionSettingsArgs extends ResourceArgs {
 
     public static final CacheEncryptionSettingsArgs Empty = new CacheEncryptionSettingsArgs();
 

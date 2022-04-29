@@ -5,6 +5,7 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Settings to use an existing storage account. Valid storage account kinds are: Storage, StorageV2 and FileStorage
  * 
  */
-public final class StorageAccountConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageAccountConfigurationArgs extends ResourceArgs {
 
     public static final StorageAccountConfigurationArgs Empty = new StorageAccountConfigurationArgs();
 

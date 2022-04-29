@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * AzureBackupServer (DPMVenus) workload-specific protection container.
  * 
  */
-public final class AzureBackupServerContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class AzureBackupServerContainerArgs extends ResourceArgs {
 
     public static final AzureBackupServerContainerArgs Empty = new AzureBackupServerContainerArgs();
 

@@ -43,6 +43,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -55,7 +56,7 @@ import javax.annotation.Nullable;
  * Switch cases with have a value and corresponding activities.
  * 
  */
-public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
+public final class SwitchCaseArgs extends ResourceArgs {
 
     public static final SwitchCaseArgs Empty = new SwitchCaseArgs();
 

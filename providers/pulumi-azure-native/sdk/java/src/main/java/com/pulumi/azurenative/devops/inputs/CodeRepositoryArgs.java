@@ -8,6 +8,7 @@ import com.pulumi.azurenative.devops.inputs.AuthorizationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Repository containing the source code for a pipeline.
  * 
  */
-public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class CodeRepositoryArgs extends ResourceArgs {
 
     public static final CodeRepositoryArgs Empty = new CodeRepositoryArgs();
 

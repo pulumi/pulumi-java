@@ -7,6 +7,7 @@ import com.pulumi.azurenative.logic.enums.EdifactDecimalIndicator;
 import com.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The Edifact delimiter override settings.
  * 
  */
-public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactDelimiterOverrideArgs extends ResourceArgs {
 
     public static final EdifactDelimiterOverrideArgs Empty = new EdifactDelimiterOverrideArgs();
 

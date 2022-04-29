@@ -6,6 +6,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 import com.pulumi.azurenative.alertsmanagement.inputs.ConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Conditions in alert instance to be matched for a given action rule. Default value is all. Multiple values could be provided with comma separation.
  * 
  */
-public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConditionsArgs extends ResourceArgs {
 
     public static final ConditionsArgs Empty = new ConditionsArgs();
 

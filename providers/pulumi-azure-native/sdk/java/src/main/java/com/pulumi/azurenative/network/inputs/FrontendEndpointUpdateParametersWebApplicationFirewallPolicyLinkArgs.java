@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Defines the Web Application Firewall policy for each host (if applicable)
  * 
  */
-public final class FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs extends com.pulumi.resources.ResourceArgs {
+public final class FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs extends ResourceArgs {
 
     public static final FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs Empty = new FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs();
 

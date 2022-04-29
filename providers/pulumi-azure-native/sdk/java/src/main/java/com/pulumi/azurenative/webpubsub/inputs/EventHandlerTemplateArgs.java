@@ -6,6 +6,7 @@ package com.pulumi.azurenative.webpubsub.inputs;
 import com.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * EventHandler template item settings.
  * 
  */
-public final class EventHandlerTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventHandlerTemplateArgs extends ResourceArgs {
 
     public static final EventHandlerTemplateArgs Empty = new EventHandlerTemplateArgs();
 

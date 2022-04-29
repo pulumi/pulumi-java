@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
  * 
  */
-public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceLimitsArgs extends ResourceArgs {
 
     public static final ResourceLimitsArgs Empty = new ResourceLimitsArgs();
 

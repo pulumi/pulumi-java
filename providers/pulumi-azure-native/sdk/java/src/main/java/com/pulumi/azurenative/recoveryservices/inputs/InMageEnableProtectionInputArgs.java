@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageDiskExclusionInputAr
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * VMware Azure specific enable protection input.
  * 
  */
-public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class InMageEnableProtectionInputArgs extends ResourceArgs {
 
     public static final InMageEnableProtectionInputArgs Empty = new InMageEnableProtectionInputArgs();
 

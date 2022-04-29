@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +34,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="azure-native:apimanagement:ApiSchema")
-public class ApiSchema extends com.pulumi.resources.CustomResource {
+public class ApiSchema extends CustomResource {
     /**
      * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). &lt;/br&gt; - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` &lt;/br&gt; - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` &lt;/br&gt; - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` &lt;/br&gt; - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
      * 
@@ -125,16 +127,16 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApiSchema(String name, ApiSchemaArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ApiSchema(String name, ApiSchemaArgs args, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiSchema", name, args == null ? ApiSchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ApiSchema(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ApiSchema(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiSchema", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:ApiSchema").build()),
@@ -150,7 +152,7 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiSchema").build())
             ))
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -161,7 +163,7 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiSchema get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApiSchema get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new ApiSchema(name, id, options);
     }
 }

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * Schedule based trigger context
  * 
  */
-public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleBasedTriggerContextArgs extends ResourceArgs {
 
     public static final ScheduleBasedTriggerContextArgs Empty = new ScheduleBasedTriggerContextArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.billing.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBillingRoleAssignmentByDepartmentArgs extends InvokeArgs {
 
     public static final GetBillingRoleAssignmentByDepartmentArgs Empty = new GetBillingRoleAssignmentByDepartmentArgs();
 

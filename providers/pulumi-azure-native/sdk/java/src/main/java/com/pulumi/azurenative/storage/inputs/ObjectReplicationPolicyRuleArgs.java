@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The replication policy rule between two containers.
  * 
  */
-public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectReplicationPolicyRuleArgs extends ResourceArgs {
 
     public static final ObjectReplicationPolicyRuleArgs Empty = new ObjectReplicationPolicyRuleArgs();
 

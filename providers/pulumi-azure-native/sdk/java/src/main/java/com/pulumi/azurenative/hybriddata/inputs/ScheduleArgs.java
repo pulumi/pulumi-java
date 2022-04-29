@@ -5,6 +5,7 @@ package com.pulumi.azurenative.hybriddata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Schedule for the job run.
  * 
  */
-public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduleArgs extends ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 

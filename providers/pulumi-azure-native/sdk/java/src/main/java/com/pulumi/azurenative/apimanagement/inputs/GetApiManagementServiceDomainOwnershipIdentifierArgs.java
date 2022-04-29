@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.resources.InvokeArgs;
 
 
-
-public final class GetApiManagementServiceDomainOwnershipIdentifierArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetApiManagementServiceDomainOwnershipIdentifierArgs extends InvokeArgs {
 
     public static final GetApiManagementServiceDomainOwnershipIdentifierArgs Empty = new GetApiManagementServiceDomainOwnershipIdentifierArgs();
 

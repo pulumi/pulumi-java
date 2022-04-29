@@ -7,6 +7,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.VideoSequenceAbsoluteTimeMark
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Video source allows for content from a Video Analyzer video resource to be ingested into a pipeline. Currently supported only with batch pipelines.
  * 
  */
-public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class VideoSourceArgs extends ResourceArgs {
 
     public static final VideoSourceArgs Empty = new VideoSourceArgs();
 

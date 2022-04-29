@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * SSIS package execution log location
  * 
  */
-public final class SSISLogLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SSISLogLocationArgs extends ResourceArgs {
 
     public static final SSISLogLocationArgs Empty = new SSISLogLocationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOpera
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a RegistrationInfo definition.
  * 
  */
-public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class RegistrationInfoArgs extends ResourceArgs {
 
     public static final RegistrationInfoArgs Empty = new RegistrationInfoArgs();
 

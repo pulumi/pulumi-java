@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The AS2 agreement envelope settings.
  * 
  */
-public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AS2EnvelopeSettingsArgs extends ResourceArgs {
 
     public static final AS2EnvelopeSettingsArgs Empty = new AS2EnvelopeSettingsArgs();
 

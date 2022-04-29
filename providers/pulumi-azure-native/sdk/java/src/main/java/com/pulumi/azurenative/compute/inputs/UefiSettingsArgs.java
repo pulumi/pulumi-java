@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the security settings like secure boot and vTPM used while creating the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
  * 
  */
-public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UefiSettingsArgs extends ResourceArgs {
 
     public static final UefiSettingsArgs Empty = new UefiSettingsArgs();
 

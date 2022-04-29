@@ -6,6 +6,7 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.CloudServiceVaultAndSecretReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Extension Properties.
  * 
  */
-public final class CloudServiceExtensionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudServiceExtensionPropertiesArgs extends ResourceArgs {
 
     public static final CloudServiceExtensionPropertiesArgs Empty = new CloudServiceExtensionPropertiesArgs();
 

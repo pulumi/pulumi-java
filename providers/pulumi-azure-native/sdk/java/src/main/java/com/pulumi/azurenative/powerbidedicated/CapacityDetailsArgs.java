@@ -10,6 +10,7 @@ import com.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CapacityDetailsArgs extends ResourceArgs {
 
     public static final CapacityDetailsArgs Empty = new CapacityDetailsArgs();
 

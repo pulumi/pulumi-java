@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetServerAzureADOnlyAuthenticationArgs extends InvokeArgs {
 
     public static final GetServerAzureADOnlyAuthenticationArgs Empty = new GetServerAzureADOnlyAuthenticationArgs();
 

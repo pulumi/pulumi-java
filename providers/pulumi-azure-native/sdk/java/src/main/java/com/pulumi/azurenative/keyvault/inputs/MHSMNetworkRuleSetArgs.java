@@ -10,6 +10,7 @@ import com.pulumi.azurenative.keyvault.inputs.MHSMVirtualNetworkRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A set of rules governing the network accessibility of a managed hsm pool.
  * 
  */
-public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class MHSMNetworkRuleSetArgs extends ResourceArgs {
 
     public static final MHSMNetworkRuleSetArgs Empty = new MHSMNetworkRuleSetArgs();
 

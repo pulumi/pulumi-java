@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * OAuth acquire token request body parameter (www-url-form-encoded).
  * 
  */
-public final class TokenBodyParameterContractArgs extends com.pulumi.resources.ResourceArgs {
+public final class TokenBodyParameterContractArgs extends ResourceArgs {
 
     public static final TokenBodyParameterContractArgs Empty = new TokenBodyParameterContractArgs();
 

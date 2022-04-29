@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * along with a default value to be used, and at least one of these two properties should be provided.
  * 
  */
-public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.ResourceArgs {
+public final class JsonFieldWithDefaultArgs extends ResourceArgs {
 
     public static final JsonFieldWithDefaultArgs Empty = new JsonFieldWithDefaultArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Hyper-V Replica Azure specific input for creating a protection profile.
  * 
  */
-public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class HyperVReplicaAzurePolicyInputArgs extends ResourceArgs {
 
     public static final HyperVReplicaAzurePolicyInputArgs Empty = new HyperVReplicaAzurePolicyInputArgs();
 

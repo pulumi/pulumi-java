@@ -6,6 +6,7 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.RateLimitRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Defines contents of rate limit rules
  * 
  */
-public final class RateLimitRuleListArgs extends com.pulumi.resources.ResourceArgs {
+public final class RateLimitRuleListArgs extends ResourceArgs {
 
     public static final RateLimitRuleListArgs Empty = new RateLimitRuleListArgs();
 

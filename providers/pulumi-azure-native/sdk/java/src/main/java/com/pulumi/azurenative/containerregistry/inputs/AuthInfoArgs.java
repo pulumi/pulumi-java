@@ -7,6 +7,7 @@ import com.pulumi.azurenative.containerregistry.enums.TokenType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The authorization properties for accessing the source code repository.
  * 
  */
-public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthInfoArgs extends ResourceArgs {
 
     public static final AuthInfoArgs Empty = new AuthInfoArgs();
 

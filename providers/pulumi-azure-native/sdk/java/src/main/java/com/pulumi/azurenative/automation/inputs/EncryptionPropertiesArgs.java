@@ -8,6 +8,7 @@ import com.pulumi.azurenative.automation.inputs.EncryptionPropertiesIdentityArgs
 import com.pulumi.azurenative.automation.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The encryption settings for automation account
  * 
  */
-public final class EncryptionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class EncryptionPropertiesArgs extends ResourceArgs {
 
     public static final EncryptionPropertiesArgs Empty = new EncryptionPropertiesArgs();
 

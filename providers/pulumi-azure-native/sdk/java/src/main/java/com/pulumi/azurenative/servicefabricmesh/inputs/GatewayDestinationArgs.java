@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes destination endpoint for routing traffic.
  * 
  */
-public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayDestinationArgs extends ResourceArgs {
 
     public static final GatewayDestinationArgs Empty = new GatewayDestinationArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetVirtualHubRouteTableV2Args extends com.pulumi.resources.InvokeArgs {
+public final class GetVirtualHubRouteTableV2Args extends InvokeArgs {
 
     public static final GetVirtualHubRouteTableV2Args Empty = new GetVirtualHubRouteTableV2Args();
 

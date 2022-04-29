@@ -6,6 +6,7 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.FacebookPageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Facebook channel.
  * 
  */
-public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FacebookChannelPropertiesArgs extends ResourceArgs {
 
     public static final FacebookChannelPropertiesArgs Empty = new FacebookChannelPropertiesArgs();
 

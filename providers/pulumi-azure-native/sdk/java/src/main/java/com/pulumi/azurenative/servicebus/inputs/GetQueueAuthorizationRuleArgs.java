@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.servicebus.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetQueueAuthorizationRuleArgs extends InvokeArgs {
 
     public static final GetQueueAuthorizationRuleArgs Empty = new GetQueueAuthorizationRuleArgs();
 

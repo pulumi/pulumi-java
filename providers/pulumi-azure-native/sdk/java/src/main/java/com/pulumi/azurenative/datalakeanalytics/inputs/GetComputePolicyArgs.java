@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.datalakeanalytics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetComputePolicyArgs extends InvokeArgs {
 
     public static final GetComputePolicyArgs Empty = new GetComputePolicyArgs();
 

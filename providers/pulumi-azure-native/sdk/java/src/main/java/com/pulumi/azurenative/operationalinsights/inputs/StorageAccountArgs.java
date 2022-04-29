@@ -5,6 +5,7 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes a storage account connection.
  * 
  */
-public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageAccountArgs extends ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 

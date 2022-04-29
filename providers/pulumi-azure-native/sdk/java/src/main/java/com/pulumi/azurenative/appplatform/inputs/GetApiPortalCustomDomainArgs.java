@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetApiPortalCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetApiPortalCustomDomainArgs extends InvokeArgs {
 
     public static final GetApiPortalCustomDomainArgs Empty = new GetApiPortalCustomDomainArgs();
 

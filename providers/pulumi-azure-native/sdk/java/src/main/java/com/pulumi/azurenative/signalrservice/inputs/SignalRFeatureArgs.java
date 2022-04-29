@@ -7,6 +7,7 @@ import com.pulumi.azurenative.signalrservice.enums.FeatureFlags;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Feature of a SignalR resource, which controls the SignalR runtime behavior.
  * 
  */
-public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class SignalRFeatureArgs extends ResourceArgs {
 
     public static final SignalRFeatureArgs Empty = new SignalRFeatureArgs();
 

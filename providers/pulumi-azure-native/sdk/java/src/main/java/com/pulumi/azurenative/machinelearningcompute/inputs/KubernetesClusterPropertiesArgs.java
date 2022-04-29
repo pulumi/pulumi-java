@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 import com.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Kubernetes cluster specific properties
  * 
  */
-public final class KubernetesClusterPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class KubernetesClusterPropertiesArgs extends ResourceArgs {
 
     public static final KubernetesClusterPropertiesArgs Empty = new KubernetesClusterPropertiesArgs();
 

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.keyvault.inputs.KeyAttributesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The properties of the key.
  * 
  */
-public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class KeyPropertiesArgs extends ResourceArgs {
 
     public static final KeyPropertiesArgs Empty = new KeyPropertiesArgs();
 

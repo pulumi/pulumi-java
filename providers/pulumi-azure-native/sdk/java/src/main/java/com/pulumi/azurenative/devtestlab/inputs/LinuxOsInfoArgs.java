@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Information about a Linux OS.
  * 
  */
-public final class LinuxOsInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class LinuxOsInfoArgs extends ResourceArgs {
 
     public static final LinuxOsInfoArgs Empty = new LinuxOsInfoArgs();
 

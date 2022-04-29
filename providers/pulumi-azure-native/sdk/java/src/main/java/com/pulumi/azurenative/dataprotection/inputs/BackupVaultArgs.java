@@ -6,6 +6,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.StorageSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Backup Vault
  * 
  */
-public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupVaultArgs extends ResourceArgs {
 
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 

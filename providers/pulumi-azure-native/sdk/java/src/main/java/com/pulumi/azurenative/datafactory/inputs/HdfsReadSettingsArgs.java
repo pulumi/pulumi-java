@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.DistcpSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * HDFS read settings.
  * 
  */
-public final class HdfsReadSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class HdfsReadSettingsArgs extends ResourceArgs {
 
     public static final HdfsReadSettingsArgs Empty = new HdfsReadSettingsArgs();
 

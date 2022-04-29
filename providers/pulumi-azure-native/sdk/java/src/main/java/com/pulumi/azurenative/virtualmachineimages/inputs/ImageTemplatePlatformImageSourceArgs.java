@@ -7,6 +7,7 @@ import com.pulumi.azurenative.virtualmachineimages.inputs.PlatformImagePurchaseP
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
  * 
  */
-public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageTemplatePlatformImageSourceArgs extends ResourceArgs {
 
     public static final ImageTemplatePlatformImageSourceArgs Empty = new ImageTemplatePlatformImageSourceArgs();
 

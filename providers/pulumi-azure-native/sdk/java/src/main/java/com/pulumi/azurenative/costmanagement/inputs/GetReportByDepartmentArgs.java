@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetReportByDepartmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetReportByDepartmentArgs extends InvokeArgs {
 
     public static final GetReportByDepartmentArgs Empty = new GetReportByDepartmentArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the configuration parameters for automatic repairs on the virtual machine scale set.
  * 
  */
-public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AutomaticRepairsPolicyArgs extends ResourceArgs {
 
     public static final AutomaticRepairsPolicyArgs Empty = new AutomaticRepairsPolicyArgs();
 

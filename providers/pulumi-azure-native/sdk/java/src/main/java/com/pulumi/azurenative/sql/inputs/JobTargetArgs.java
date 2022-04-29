@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A job target, for example a specific database or a container of databases that is evaluated during job execution.
  * 
  */
-public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobTargetArgs extends ResourceArgs {
 
     public static final JobTargetArgs Empty = new JobTargetArgs();
 

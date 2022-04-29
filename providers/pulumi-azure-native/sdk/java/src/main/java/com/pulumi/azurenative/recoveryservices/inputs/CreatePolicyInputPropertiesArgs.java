@@ -13,6 +13,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInp
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Policy creation properties.
  * 
  */
-public final class CreatePolicyInputPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CreatePolicyInputPropertiesArgs extends ResourceArgs {
 
     public static final CreatePolicyInputPropertiesArgs Empty = new CreatePolicyInputPropertiesArgs();
 

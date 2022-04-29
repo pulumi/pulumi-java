@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.dbforpostgresql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetServerKeyArgs extends InvokeArgs {
 
     public static final GetServerKeyArgs Empty = new GetServerKeyArgs();
 

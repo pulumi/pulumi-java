@@ -6,6 +6,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Describes the partition scheme of a singleton-partitioned, or non-partitioned service.
  * 
  */
-public final class SingletonPartitionSchemeDescriptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SingletonPartitionSchemeDescriptionArgs extends ResourceArgs {
 
     public static final SingletonPartitionSchemeDescriptionArgs Empty = new SingletonPartitionSchemeDescriptionArgs();
 

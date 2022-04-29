@@ -27,6 +27,7 @@ import com.pulumi.azurenative.cdn.inputs.UrlRewriteActionArgs;
 import com.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -40,7 +41,7 @@ import javax.annotation.Nullable;
  * A rule that specifies a set of actions and conditions
  * 
  */
-public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryRuleArgs extends ResourceArgs {
 
     public static final DeliveryRuleArgs Empty = new DeliveryRuleArgs();
 

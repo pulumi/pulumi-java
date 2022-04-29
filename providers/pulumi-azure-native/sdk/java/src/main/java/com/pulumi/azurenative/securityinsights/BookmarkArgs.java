@@ -7,6 +7,7 @@ import com.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import com.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
+public final class BookmarkArgs extends ResourceArgs {
 
     public static final BookmarkArgs Empty = new BookmarkArgs();
 

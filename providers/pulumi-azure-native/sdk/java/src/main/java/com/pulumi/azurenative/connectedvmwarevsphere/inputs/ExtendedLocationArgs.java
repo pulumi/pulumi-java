@@ -5,6 +5,7 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The extended location.
  * 
  */
-public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExtendedLocationArgs extends ResourceArgs {
 
     public static final ExtendedLocationArgs Empty = new ExtendedLocationArgs();
 

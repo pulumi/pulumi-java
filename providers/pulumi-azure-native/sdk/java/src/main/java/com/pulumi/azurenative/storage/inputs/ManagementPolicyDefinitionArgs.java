@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storage.inputs.ManagementPolicyActionArgs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
  * 
  */
-public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagementPolicyDefinitionArgs extends ResourceArgs {
 
     public static final ManagementPolicyDefinitionArgs Empty = new ManagementPolicyDefinitionArgs();
 

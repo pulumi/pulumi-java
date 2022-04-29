@@ -7,6 +7,7 @@ import com.pulumi.azurenative.edgeorder.enums.TransportShipmentTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Preferences related to the shipment logistics of the sku
  * 
  */
-public final class TransportPreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransportPreferencesArgs extends ResourceArgs {
 
     public static final TransportPreferencesArgs Empty = new TransportPreferencesArgs();
 

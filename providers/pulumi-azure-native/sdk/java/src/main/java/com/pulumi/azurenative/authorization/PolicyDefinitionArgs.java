@@ -9,6 +9,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyDefinitionArgs extends ResourceArgs {
 
     public static final PolicyDefinitionArgs Empty = new PolicyDefinitionArgs();
 

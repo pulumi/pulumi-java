@@ -5,6 +5,7 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Contains information about the package being shipped by the customer to the Microsoft data center.
  * 
  */
-public final class PackageInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackageInformationArgs extends ResourceArgs {
 
     public static final PackageInformationArgs Empty = new PackageInformationArgs();
 

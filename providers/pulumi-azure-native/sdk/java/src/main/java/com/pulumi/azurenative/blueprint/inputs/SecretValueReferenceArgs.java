@@ -6,6 +6,7 @@ package com.pulumi.azurenative.blueprint.inputs;
 import com.pulumi.azurenative.blueprint.inputs.KeyVaultReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Reference to a Key Vault secret.
  * 
  */
-public final class SecretValueReferenceArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecretValueReferenceArgs extends ResourceArgs {
 
     public static final SecretValueReferenceArgs Empty = new SecretValueReferenceArgs();
 

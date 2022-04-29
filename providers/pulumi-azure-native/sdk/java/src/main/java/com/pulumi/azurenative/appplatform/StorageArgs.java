@@ -6,13 +6,14 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageArgs extends ResourceArgs {
 
     public static final StorageArgs Empty = new StorageArgs();
 

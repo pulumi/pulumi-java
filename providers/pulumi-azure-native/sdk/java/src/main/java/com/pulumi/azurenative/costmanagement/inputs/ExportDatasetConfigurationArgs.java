@@ -5,6 +5,7 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The export dataset configuration. Allows columns to be selected for the export. If not provided then the export will include all available columns.
  * 
  */
-public final class ExportDatasetConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExportDatasetConfigurationArgs extends ResourceArgs {
 
     public static final ExportDatasetConfigurationArgs Empty = new ExportDatasetConfigurationArgs();
 

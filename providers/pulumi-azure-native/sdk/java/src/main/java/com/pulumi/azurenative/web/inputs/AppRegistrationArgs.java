@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the app registration for providers that have app ids and app secrets
  * 
  */
-public final class AppRegistrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppRegistrationArgs extends ResourceArgs {
 
     public static final AppRegistrationArgs Empty = new AppRegistrationArgs();
 

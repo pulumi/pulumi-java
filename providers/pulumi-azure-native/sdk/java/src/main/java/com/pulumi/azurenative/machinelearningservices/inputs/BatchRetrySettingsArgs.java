@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Retry settings for a batch inference operation.
  * 
  */
-public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BatchRetrySettingsArgs extends ResourceArgs {
 
     public static final BatchRetrySettingsArgs Empty = new BatchRetrySettingsArgs();
 

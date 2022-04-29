@@ -5,6 +5,7 @@ package com.pulumi.azurenative.confluent.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Subscriber detail
  * 
  */
-public final class OrganizationResourcePropertiesUserDetailArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationResourcePropertiesUserDetailArgs extends ResourceArgs {
 
     public static final OrganizationResourcePropertiesUserDetailArgs Empty = new OrganizationResourcePropertiesUserDetailArgs();
 

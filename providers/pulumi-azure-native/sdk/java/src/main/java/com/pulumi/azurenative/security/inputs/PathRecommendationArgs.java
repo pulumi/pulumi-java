@@ -7,6 +7,7 @@ import com.pulumi.azurenative.security.inputs.PublisherInfoArgs;
 import com.pulumi.azurenative.security.inputs.UserRecommendationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Represents a path that is recommended to be allowed and its properties
  * 
  */
-public final class PathRecommendationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PathRecommendationArgs extends ResourceArgs {
 
     public static final PathRecommendationArgs Empty = new PathRecommendationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.O365BreakOutCategoryPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Office365 breakout policy.
  * 
  */
-public final class O365PolicyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class O365PolicyPropertiesArgs extends ResourceArgs {
 
     public static final O365PolicyPropertiesArgs Empty = new O365PolicyPropertiesArgs();
 

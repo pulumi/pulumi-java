@@ -7,6 +7,7 @@ import com.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import com.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Tagging criteria
  * 
  */
-public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaggingCriteriaArgs extends ResourceArgs {
 
     public static final TaggingCriteriaArgs Empty = new TaggingCriteriaArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.GetTdeCertificatesSqlTaskInpu
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Properties for the task that gets TDE certificates in Base64 encoded format.
  * 
  */
-public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class GetTdeCertificatesSqlTaskPropertiesArgs extends ResourceArgs {
 
     public static final GetTdeCertificatesSqlTaskPropertiesArgs Empty = new GetTdeCertificatesSqlTaskPropertiesArgs();
 

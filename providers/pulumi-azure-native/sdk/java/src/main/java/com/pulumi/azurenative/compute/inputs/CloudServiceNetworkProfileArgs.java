@@ -7,6 +7,7 @@ import com.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationArgs;
 import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Network Profile for the cloud service.
  * 
  */
-public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class CloudServiceNetworkProfileArgs extends ResourceArgs {
 
     public static final CloudServiceNetworkProfileArgs Empty = new CloudServiceNetworkProfileArgs();
 

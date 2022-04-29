@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.PortArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for public IP address sharing.
  * 
  */
-public final class SubnetSharedPublicIpAddressConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class SubnetSharedPublicIpAddressConfigurationArgs extends ResourceArgs {
 
     public static final SubnetSharedPublicIpAddressConfigurationArgs Empty = new SubnetSharedPublicIpAddressConfigurationArgs();
 

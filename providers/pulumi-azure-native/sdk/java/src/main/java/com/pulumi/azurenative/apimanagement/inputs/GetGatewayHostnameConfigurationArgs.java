@@ -4,11 +4,12 @@
 package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetGatewayHostnameConfigurationArgs extends InvokeArgs {
 
     public static final GetGatewayHostnameConfigurationArgs Empty = new GetGatewayHostnameConfigurationArgs();
 

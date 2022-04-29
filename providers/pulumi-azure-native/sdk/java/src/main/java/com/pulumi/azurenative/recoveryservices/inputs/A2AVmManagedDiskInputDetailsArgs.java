@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Azure VM managed disk input details.
  * 
  */
-public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class A2AVmManagedDiskInputDetailsArgs extends ResourceArgs {
 
     public static final A2AVmManagedDiskInputDetailsArgs Empty = new A2AVmManagedDiskInputDetailsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Properties for creating a custom image from a VHD.
  * 
  */
-public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomImagePropertiesCustomArgs extends ResourceArgs {
 
     public static final CustomImagePropertiesCustomArgs Empty = new CustomImagePropertiesCustomArgs();
 

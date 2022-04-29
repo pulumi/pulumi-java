@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.azurenative.web.inputs.ConsentLinkParameterDefinition;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListConnectionConsentLinksArgs extends InvokeArgs {
 
     public static final ListConnectionConsentLinksArgs Empty = new ListConnectionConsentLinksArgs();
 

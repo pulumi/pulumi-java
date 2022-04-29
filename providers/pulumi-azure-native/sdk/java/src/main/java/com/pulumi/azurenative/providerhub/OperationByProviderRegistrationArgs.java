@@ -6,12 +6,13 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.OperationsDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class OperationByProviderRegistrationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OperationByProviderRegistrationArgs extends ResourceArgs {
 
     public static final OperationByProviderRegistrationArgs Empty = new OperationByProviderRegistrationArgs();
 

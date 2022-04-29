@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Min and max value of a status code range.
  * 
  */
-public final class MonitorConfigExpectedStatusCodeRangesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitorConfigExpectedStatusCodeRangesArgs extends ResourceArgs {
 
     public static final MonitorConfigExpectedStatusCodeRangesArgs Empty = new MonitorConfigExpectedStatusCodeRangesArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The Edifact agreement framing settings.
  * 
  */
-public final class EdifactFramingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EdifactFramingSettingsArgs extends ResourceArgs {
 
     public static final EdifactFramingSettingsArgs Empty = new EdifactFramingSettingsArgs();
 

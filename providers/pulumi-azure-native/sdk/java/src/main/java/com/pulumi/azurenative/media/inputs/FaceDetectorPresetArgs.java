@@ -10,6 +10,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Describes all the settings to be used when analyzing a video in order to detect (and optionally redact) all the faces present.
  * 
  */
-public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceArgs {
+public final class FaceDetectorPresetArgs extends ResourceArgs {
 
     public static final FaceDetectorPresetArgs Empty = new FaceDetectorPresetArgs();
 

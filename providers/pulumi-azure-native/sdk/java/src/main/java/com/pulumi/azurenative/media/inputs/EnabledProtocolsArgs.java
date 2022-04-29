@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Class to specify which protocols are enabled
  * 
  */
-public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnabledProtocolsArgs extends ResourceArgs {
 
     public static final EnabledProtocolsArgs Empty = new EnabledProtocolsArgs();
 

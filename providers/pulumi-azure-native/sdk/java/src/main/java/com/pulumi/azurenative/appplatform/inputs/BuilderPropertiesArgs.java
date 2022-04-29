@@ -7,6 +7,7 @@ import com.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesArgs;
 import com.pulumi.azurenative.appplatform.inputs.StackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * KPack Builder properties payload
  * 
  */
-public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BuilderPropertiesArgs extends ResourceArgs {
 
     public static final BuilderPropertiesArgs Empty = new BuilderPropertiesArgs();
 

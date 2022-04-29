@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * SSIS package execution credential.
  * 
  */
-public final class SSISExecutionCredentialArgs extends com.pulumi.resources.ResourceArgs {
+public final class SSISExecutionCredentialArgs extends ResourceArgs {
 
     public static final SSISExecutionCredentialArgs Empty = new SSISExecutionCredentialArgs();
 

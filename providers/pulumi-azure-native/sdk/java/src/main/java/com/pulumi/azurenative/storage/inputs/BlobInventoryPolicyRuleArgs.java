@@ -6,6 +6,7 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * An object that wraps the blob inventory rule. Each rule is uniquely defined by name.
  * 
  */
-public final class BlobInventoryPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BlobInventoryPolicyRuleArgs extends ResourceArgs {
 
     public static final BlobInventoryPolicyRuleArgs Empty = new BlobInventoryPolicyRuleArgs();
 

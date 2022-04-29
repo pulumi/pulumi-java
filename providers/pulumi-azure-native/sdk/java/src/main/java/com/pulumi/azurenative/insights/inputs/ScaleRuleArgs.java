@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.MetricTriggerArgs;
 import com.pulumi.azurenative.insights.inputs.ScaleActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A rule that provide the triggers and parameters for the scaling action.
  * 
  */
-public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleRuleArgs extends ResourceArgs {
 
     public static final ScaleRuleArgs Empty = new ScaleRuleArgs();
 

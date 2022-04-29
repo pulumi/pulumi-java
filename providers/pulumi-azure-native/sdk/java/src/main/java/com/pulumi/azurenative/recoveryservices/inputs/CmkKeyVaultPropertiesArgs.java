@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The properties of the Key Vault which hosts CMK
  * 
  */
-public final class CmkKeyVaultPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class CmkKeyVaultPropertiesArgs extends ResourceArgs {
 
     public static final CmkKeyVaultPropertiesArgs Empty = new CmkKeyVaultPropertiesArgs();
 

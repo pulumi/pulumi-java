@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Create network mappings input properties/behavior specific to vmm to vmm Network mapping.
  * 
  */
-public final class VmmToVmmCreateNetworkMappingInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class VmmToVmmCreateNetworkMappingInputArgs extends ResourceArgs {
 
     public static final VmmToVmmCreateNetworkMappingInputArgs Empty = new VmmToVmmCreateNetworkMappingInputArgs();
 

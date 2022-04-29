@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.FilterItems;
 import com.pulumi.azurenative.network.inputs.OrderBy;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListFirewallPolicyIdpsSignatureArgs extends InvokeArgs {
 
     public static final ListFirewallPolicyIdpsSignatureArgs Empty = new ListFirewallPolicyIdpsSignatureArgs();
 

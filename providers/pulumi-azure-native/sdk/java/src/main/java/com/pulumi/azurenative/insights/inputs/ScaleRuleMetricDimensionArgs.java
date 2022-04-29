@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.ScaleRuleMetricDimensionOperationTy
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * Specifies an auto scale rule metric dimension.
  * 
  */
-public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScaleRuleMetricDimensionArgs extends ResourceArgs {
 
     public static final ScaleRuleMetricDimensionArgs Empty = new ScaleRuleMetricDimensionArgs();
 

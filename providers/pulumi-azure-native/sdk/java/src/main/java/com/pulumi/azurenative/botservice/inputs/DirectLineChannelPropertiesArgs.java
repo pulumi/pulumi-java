@@ -6,6 +6,7 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.DirectLineSiteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The parameters to provide for the Direct Line channel.
  * 
  */
-public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DirectLineChannelPropertiesArgs extends ResourceArgs {
 
     public static final DirectLineChannelPropertiesArgs Empty = new DirectLineChannelPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Property/Properties which represent a unique ID.
  * 
  */
-public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
+public final class StrongIdArgs extends ResourceArgs {
 
     public static final StrongIdArgs Empty = new StrongIdArgs();
 

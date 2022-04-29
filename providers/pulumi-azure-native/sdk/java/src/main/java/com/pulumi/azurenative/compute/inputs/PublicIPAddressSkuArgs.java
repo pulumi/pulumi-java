@@ -8,6 +8,7 @@ import com.pulumi.azurenative.compute.enums.PublicIPAddressSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the public IP Sku
  * 
  */
-public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceArgs {
+public final class PublicIPAddressSkuArgs extends ResourceArgs {
 
     public static final PublicIPAddressSkuArgs Empty = new PublicIPAddressSkuArgs();
 

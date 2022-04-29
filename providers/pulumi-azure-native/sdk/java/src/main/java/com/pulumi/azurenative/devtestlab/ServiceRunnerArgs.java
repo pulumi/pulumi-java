@@ -6,6 +6,7 @@ package com.pulumi.azurenative.devtestlab;
 import com.pulumi.azurenative.devtestlab.inputs.IdentityPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceRunnerArgs extends ResourceArgs {
 
     public static final ServiceRunnerArgs Empty = new ServiceRunnerArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Periodic timer event source.
  * 
  */
-public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class PeriodicTimerSourceInfoArgs extends ResourceArgs {
 
     public static final PeriodicTimerSourceInfoArgs Empty = new PeriodicTimerSourceInfoArgs();
 

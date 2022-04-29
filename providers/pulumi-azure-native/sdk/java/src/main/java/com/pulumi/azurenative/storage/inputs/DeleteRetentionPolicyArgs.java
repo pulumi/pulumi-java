@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The service properties for soft delete.
  * 
  */
-public final class DeleteRetentionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeleteRetentionPolicyArgs extends ResourceArgs {
 
     public static final DeleteRetentionPolicyArgs Empty = new DeleteRetentionPolicyArgs();
 

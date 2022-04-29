@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Cosmos DB MongoDB collection index options
  * 
  */
-public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MongoIndexOptionsArgs extends ResourceArgs {
 
     public static final MongoIndexOptionsArgs Empty = new MongoIndexOptionsArgs();
 

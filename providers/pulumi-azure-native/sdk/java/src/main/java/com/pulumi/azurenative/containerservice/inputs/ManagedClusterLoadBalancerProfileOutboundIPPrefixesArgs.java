@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Desired outbound IP Prefix resources for the cluster load balancer.
  * 
  */
-public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs extends ResourceArgs {
 
     public static final ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs Empty = new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs();
 

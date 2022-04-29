@@ -6,6 +6,7 @@ package com.pulumi.azurenative.databricks.inputs;
 import com.pulumi.azurenative.databricks.inputs.EncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The object that contains details of encryption used on the workspace.
  * 
  */
-public final class WorkspaceEncryptionParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkspaceEncryptionParameterArgs extends ResourceArgs {
 
     public static final WorkspaceEncryptionParameterArgs Empty = new WorkspaceEncryptionParameterArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Authorization in an ExpressRouteCircuit resource.
  * 
  */
-public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExpressRouteCircuitAuthorizationArgs extends ResourceArgs {
 
     public static final ExpressRouteCircuitAuthorizationArgs Empty = new ExpressRouteCircuitAuthorizationArgs();
 

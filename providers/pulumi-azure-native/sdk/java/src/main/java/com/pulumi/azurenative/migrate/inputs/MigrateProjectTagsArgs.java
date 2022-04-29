@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Gets or sets the tags.
  * 
  */
-public final class MigrateProjectTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MigrateProjectTagsArgs extends ResourceArgs {
 
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 

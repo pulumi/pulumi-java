@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The ZipDeflate compression read settings.
  * 
  */
-public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ZipDeflateReadSettingsArgs extends ResourceArgs {
 
     public static final ZipDeflateReadSettingsArgs Empty = new ZipDeflateReadSettingsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A list of private link resources
  * 
  */
-public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualNetworkPropertiesListArgs extends ResourceArgs {
 
     public static final VirtualNetworkPropertiesListArgs Empty = new VirtualNetworkPropertiesListArgs();
 

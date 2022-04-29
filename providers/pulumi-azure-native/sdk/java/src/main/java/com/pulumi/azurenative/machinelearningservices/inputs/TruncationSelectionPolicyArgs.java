@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Defines an early termination policy that cancels a given percentage of runs at each evaluation interval.
  * 
  */
-public final class TruncationSelectionPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class TruncationSelectionPolicyArgs extends ResourceArgs {
 
     public static final TruncationSelectionPolicyArgs Empty = new TruncationSelectionPolicyArgs();
 

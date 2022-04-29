@@ -5,6 +5,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Purchase plan configuration for platform image.
  * 
  */
-public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlatformImagePurchasePlanArgs extends ResourceArgs {
 
     public static final PlatformImagePurchasePlanArgs Empty = new PlatformImagePurchasePlanArgs();
 

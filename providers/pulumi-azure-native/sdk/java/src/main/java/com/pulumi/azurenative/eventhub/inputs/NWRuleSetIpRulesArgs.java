@@ -8,6 +8,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Description of NetWorkRuleSet - IpRules resource.
  * 
  */
-public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArgs {
+public final class NWRuleSetIpRulesArgs extends ResourceArgs {
 
     public static final NWRuleSetIpRulesArgs Empty = new NWRuleSetIpRulesArgs();
 
