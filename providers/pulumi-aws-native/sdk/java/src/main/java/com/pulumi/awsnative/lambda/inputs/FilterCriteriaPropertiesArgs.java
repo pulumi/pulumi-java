@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The filter criteria to control event filtering.
  * 
  */
-public final class FilterCriteriaPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterCriteriaPropertiesArgs extends ResourceArgs {
 
     public static final FilterCriteriaPropertiesArgs Empty = new FilterCriteriaPropertiesArgs();
 

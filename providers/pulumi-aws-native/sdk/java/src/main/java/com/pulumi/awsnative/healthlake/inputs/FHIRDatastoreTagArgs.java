@@ -5,6 +5,7 @@ package com.pulumi.awsnative.healthlake.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair. A tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty (null) strings.
  * 
  */
-public final class FHIRDatastoreTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class FHIRDatastoreTagArgs extends ResourceArgs {
 
     public static final FHIRDatastoreTagArgs Empty = new FHIRDatastoreTagArgs();
 

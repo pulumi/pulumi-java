@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A custom SageMaker image.
  * 
  */
-public final class UserProfileCustomImageArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserProfileCustomImageArgs extends ResourceArgs {
 
     public static final UserProfileCustomImageArgs Empty = new UserProfileCustomImageArgs();
 

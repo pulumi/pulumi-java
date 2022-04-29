@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket.
  * 
  */
-public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketRedirectAllRequestsToArgs extends ResourceArgs {
 
     public static final BucketRedirectAllRequestsToArgs Empty = new BucketRedirectAllRequestsToArgs();
 

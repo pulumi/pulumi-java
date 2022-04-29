@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorFileFormatDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AnomalyDetectorS3SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnomalyDetectorS3SourceConfigArgs extends ResourceArgs {
 
     public static final AnomalyDetectorS3SourceConfigArgs Empty = new AnomalyDetectorS3SourceConfigArgs();
 

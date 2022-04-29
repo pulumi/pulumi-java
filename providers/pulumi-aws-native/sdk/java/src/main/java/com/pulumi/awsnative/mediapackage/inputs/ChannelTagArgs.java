@@ -5,11 +5,12 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ChannelTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChannelTagArgs extends ResourceArgs {
 
     public static final ChannelTagArgs Empty = new ChannelTagArgs();
 

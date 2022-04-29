@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetProjectArgs extends InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 

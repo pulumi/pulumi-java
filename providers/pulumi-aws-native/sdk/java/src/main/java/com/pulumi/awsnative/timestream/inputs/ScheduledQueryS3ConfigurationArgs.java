@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details on S3 location for error reports that result from running a query.
  * 
  */
-public final class ScheduledQueryS3ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryS3ConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();
 

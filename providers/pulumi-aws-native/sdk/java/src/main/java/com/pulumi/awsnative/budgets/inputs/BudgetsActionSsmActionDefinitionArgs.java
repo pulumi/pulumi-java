@@ -6,12 +6,13 @@ package com.pulumi.awsnative.budgets.inputs;
 import com.pulumi.awsnative.budgets.enums.BudgetsActionSsmActionDefinitionSubtype;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class BudgetsActionSsmActionDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetsActionSsmActionDefinitionArgs extends ResourceArgs {
 
     public static final BudgetsActionSsmActionDefinitionArgs Empty = new BudgetsActionSsmActionDefinitionArgs();
 

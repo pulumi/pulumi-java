@@ -6,6 +6,7 @@ package com.pulumi.awsnative.robomaker.inputs;
 import com.pulumi.awsnative.robomaker.enums.SimulationApplicationSourceConfigArchitecture;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Information about a source configuration.
  * 
  */
-public final class SimulationApplicationSourceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SimulationApplicationSourceConfigArgs extends ResourceArgs {
 
     public static final SimulationApplicationSourceConfigArgs Empty = new SimulationApplicationSourceConfigArgs();
 

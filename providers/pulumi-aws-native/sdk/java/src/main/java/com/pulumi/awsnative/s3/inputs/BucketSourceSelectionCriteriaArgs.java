@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import com.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A container that describes additional filters for identifying the source objects that you want to replicate.
  * 
  */
-public final class BucketSourceSelectionCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketSourceSelectionCriteriaArgs extends ResourceArgs {
 
     public static final BucketSourceSelectionCriteriaArgs Empty = new BucketSourceSelectionCriteriaArgs();
 

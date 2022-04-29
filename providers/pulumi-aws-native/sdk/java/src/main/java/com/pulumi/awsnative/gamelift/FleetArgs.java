@@ -12,6 +12,7 @@ import com.pulumi.awsnative.gamelift.inputs.FleetResourceCreationLimitPolicyArgs
 import com.pulumi.awsnative.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetArgs extends ResourceArgs {
 
     public static final FleetArgs Empty = new FleetArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Disk associated with the Instance.
  * 
  */
-public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceDiskArgs extends ResourceArgs {
 
     public static final InstanceDiskArgs Empty = new InstanceDiskArgs();
 

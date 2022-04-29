@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
  * 
  */
-public final class RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs extends ResourceArgs {
 
     public static final RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs Empty = new RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs();
 

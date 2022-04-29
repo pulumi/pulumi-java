@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies how requests are redirected. In the event of an error, you can specify a different error code to return.
  * 
  */
-public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketRedirectRuleArgs extends ResourceArgs {
 
     public static final BucketRedirectRuleArgs Empty = new BucketRedirectRuleArgs();
 

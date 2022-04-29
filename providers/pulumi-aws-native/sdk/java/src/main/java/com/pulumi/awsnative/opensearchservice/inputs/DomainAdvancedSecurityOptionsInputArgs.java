@@ -6,13 +6,14 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 import com.pulumi.awsnative.opensearchservice.inputs.DomainMasterUserOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainAdvancedSecurityOptionsInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainAdvancedSecurityOptionsInputArgs extends ResourceArgs {
 
     public static final DomainAdvancedSecurityOptionsInputArgs Empty = new DomainAdvancedSecurityOptionsInputArgs();
 

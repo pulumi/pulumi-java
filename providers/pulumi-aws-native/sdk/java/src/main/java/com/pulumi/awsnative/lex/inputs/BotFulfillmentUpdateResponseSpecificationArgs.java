@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Provides settings for a message that is sent periodically to the user while a fulfillment Lambda function is running.
  * 
  */
-public final class BotFulfillmentUpdateResponseSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotFulfillmentUpdateResponseSpecificationArgs extends ResourceArgs {
 
     public static final BotFulfillmentUpdateResponseSpecificationArgs Empty = new BotFulfillmentUpdateResponseSpecificationArgs();
 

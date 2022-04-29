@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Information required to publish the MQTT message through the AWS IoT message broker.
  * 
  */
-public final class DetectorModelIotTopicPublishArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelIotTopicPublishArgs extends ResourceArgs {
 
     public static final DetectorModelIotTopicPublishArgs Empty = new DetectorModelIotTopicPublishArgs();
 

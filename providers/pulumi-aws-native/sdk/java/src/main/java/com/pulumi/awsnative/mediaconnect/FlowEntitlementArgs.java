@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowEntitlementEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowEntitlementArgs extends ResourceArgs {
 
     public static final FlowEntitlementArgs Empty = new FlowEntitlementArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.awsnative.location.inputs;
 import com.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PlaceIndexDataSourceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class PlaceIndexDataSourceConfigurationArgs extends ResourceArgs {
 
     public static final PlaceIndexDataSourceConfigurationArgs Empty = new PlaceIndexDataSourceConfigurationArgs();
 

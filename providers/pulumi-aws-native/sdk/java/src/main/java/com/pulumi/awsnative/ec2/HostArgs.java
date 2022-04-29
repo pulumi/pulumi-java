@@ -5,13 +5,14 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HostArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostArgs extends ResourceArgs {
 
     public static final HostArgs Empty = new HostArgs();
 

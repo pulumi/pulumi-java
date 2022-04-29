@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ComponentBindingPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentBindingPropertiesArgs extends ResourceArgs {
 
     public static final ComponentBindingPropertiesArgs Empty = new ComponentBindingPropertiesArgs();
 

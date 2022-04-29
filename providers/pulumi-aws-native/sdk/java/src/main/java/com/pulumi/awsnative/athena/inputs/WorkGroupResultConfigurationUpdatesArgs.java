@@ -6,6 +6,7 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The result configuration information about the queries in this workgroup that will be updated. Includes the updated results location and an updated option for encrypting query results.
  * 
  */
-public final class WorkGroupResultConfigurationUpdatesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupResultConfigurationUpdatesArgs extends ResourceArgs {
 
     public static final WorkGroupResultConfigurationUpdatesArgs Empty = new WorkGroupResultConfigurationUpdatesArgs();
 

@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ApplicationTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationTagsArgs extends ResourceArgs {
 
     public static final ApplicationTagsArgs Empty = new ApplicationTagsArgs();
 

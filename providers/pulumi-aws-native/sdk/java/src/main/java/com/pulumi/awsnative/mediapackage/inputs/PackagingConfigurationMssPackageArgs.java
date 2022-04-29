@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncrypt
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
  * 
  */
-public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationMssPackageArgs extends ResourceArgs {
 
     public static final PackagingConfigurationMssPackageArgs Empty = new PackagingConfigurationMssPackageArgs();
 

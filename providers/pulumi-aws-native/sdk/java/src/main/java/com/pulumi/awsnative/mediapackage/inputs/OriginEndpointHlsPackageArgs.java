@@ -11,6 +11,7 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsEncryptionArgs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * An HTTP Live Streaming (HLS) packaging configuration.
  * 
  */
-public final class OriginEndpointHlsPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointHlsPackageArgs extends ResourceArgs {
 
     public static final OriginEndpointHlsPackageArgs Empty = new OriginEndpointHlsPackageArgs();
 

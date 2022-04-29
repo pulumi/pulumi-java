@@ -5,6 +5,7 @@ package com.pulumi.awsnative.fms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A policy tag.
  * 
  */
-public final class PolicyTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class PolicyTagArgs extends ResourceArgs {
 
     public static final PolicyTagArgs Empty = new PolicyTagArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 import com.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Configuration of the encryption method that is used for the studio.&lt;/p&gt;
  * 
  */
-public final class StudioEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final StudioEncryptionConfigurationArgs Empty = new StudioEncryptionConfigurationArgs();
 

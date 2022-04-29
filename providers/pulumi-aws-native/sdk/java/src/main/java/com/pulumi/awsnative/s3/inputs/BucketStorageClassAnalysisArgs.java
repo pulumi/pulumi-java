@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketDataExportArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies data related to access patterns to be collected and made available to analyze the tradeoffs between different storage classes for an Amazon S3 bucket.
  * 
  */
-public final class BucketStorageClassAnalysisArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketStorageClassAnalysisArgs extends ResourceArgs {
 
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();
 

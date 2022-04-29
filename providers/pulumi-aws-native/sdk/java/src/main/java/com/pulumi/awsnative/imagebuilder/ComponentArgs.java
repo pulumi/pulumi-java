@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder;
 import com.pulumi.awsnative.imagebuilder.enums.ComponentPlatform;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentArgs extends ResourceArgs {
 
     public static final ComponentArgs Empty = new ComponentArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.awsnative.stepfunctions.inputs;
 import com.pulumi.awsnative.stepfunctions.inputs.StateMachineCloudWatchLogsLogGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StateMachineLogDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StateMachineLogDestinationArgs extends ResourceArgs {
 
     public static final StateMachineLogDestinationArgs Empty = new StateMachineLogDestinationArgs();
 

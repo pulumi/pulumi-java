@@ -6,11 +6,12 @@ package com.pulumi.awsnative.emr;
 import com.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class StudioSessionMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioSessionMappingArgs extends ResourceArgs {
 
     public static final StudioSessionMappingArgs Empty = new StudioSessionMappingArgs();
 

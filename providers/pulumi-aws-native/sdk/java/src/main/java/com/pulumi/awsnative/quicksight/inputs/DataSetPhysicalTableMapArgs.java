@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class DataSetPhysicalTableMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetPhysicalTableMapArgs extends ResourceArgs {
 
     public static final DataSetPhysicalTableMapArgs Empty = new DataSetPhysicalTableMapArgs();
 

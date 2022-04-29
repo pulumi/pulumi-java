@@ -6,13 +6,14 @@ package com.pulumi.awsnative.fms.inputs;
 import com.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SecurityServicePolicyDataPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityServicePolicyDataPropertiesArgs extends ResourceArgs {
 
     public static final SecurityServicePolicyDataPropertiesArgs Empty = new SecurityServicePolicyDataPropertiesArgs();
 

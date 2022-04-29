@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An array of objects representing the details of a replication destination.
  * 
  */
-public final class ReplicationConfigurationReplicationDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationConfigurationReplicationDestinationArgs extends ResourceArgs {
 
     public static final ReplicationConfigurationReplicationDestinationArgs Empty = new ReplicationConfigurationReplicationDestinationArgs();
 

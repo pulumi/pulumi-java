@@ -7,6 +7,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Xss Match Statement.
  * 
  */
-public final class WebACLXssMatchStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLXssMatchStatementArgs extends ResourceArgs {
 
     public static final WebACLXssMatchStatementArgs Empty = new WebACLXssMatchStatementArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details about a fixed capacity allocated to a connector.
  * 
  */
-public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorProvisionedCapacityArgs extends ResourceArgs {
 
     public static final ConnectorProvisionedCapacityArgs Empty = new ConnectorProvisionedCapacityArgs();
 

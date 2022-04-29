@@ -14,6 +14,7 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointDashEncryptionArgs
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
  * 
  */
-public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointDashPackageArgs extends ResourceArgs {
 
     public static final OriginEndpointDashPackageArgs Empty = new OriginEndpointDashPackageArgs();
 

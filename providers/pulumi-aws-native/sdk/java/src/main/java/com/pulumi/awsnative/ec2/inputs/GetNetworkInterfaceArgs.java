@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetNetworkInterfaceArgs extends InvokeArgs {
 
     public static final GetNetworkInterfaceArgs Empty = new GetNetworkInterfaceArgs();
 

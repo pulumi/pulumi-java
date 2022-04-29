@@ -8,6 +8,7 @@ import com.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUplo
 import com.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Specifies lifecycle rules for an Amazon S3Outposts bucket. You must specify at least one of the following: AbortIncompleteMultipartUpload, ExpirationDate, ExpirationInDays.
  * 
  */
-public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketRuleArgs extends ResourceArgs {
 
     public static final BucketRuleArgs Empty = new BucketRuleArgs();
 

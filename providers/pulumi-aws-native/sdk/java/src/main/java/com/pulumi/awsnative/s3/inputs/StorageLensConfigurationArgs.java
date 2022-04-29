@@ -9,6 +9,7 @@ import com.pulumi.awsnative.s3.inputs.StorageLensBucketsAndRegionsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensDataExportArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Specifies the details of Amazon S3 Storage Lens configuration.
  * 
  */
-public final class StorageLensConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensConfigurationArgs extends ResourceArgs {
 
     public static final StorageLensConfigurationArgs Empty = new StorageLensConfigurationArgs();
 

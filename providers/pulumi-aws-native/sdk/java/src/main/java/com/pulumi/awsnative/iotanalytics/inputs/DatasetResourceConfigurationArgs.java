@@ -6,11 +6,12 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class DatasetResourceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetResourceConfigurationArgs extends ResourceArgs {
 
     public static final DatasetResourceConfigurationArgs Empty = new DatasetResourceConfigurationArgs();
 

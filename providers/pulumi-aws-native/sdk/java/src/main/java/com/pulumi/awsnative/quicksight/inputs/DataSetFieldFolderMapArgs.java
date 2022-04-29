@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class DataSetFieldFolderMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetFieldFolderMapArgs extends ResourceArgs {
 
     public static final DataSetFieldFolderMapArgs Empty = new DataSetFieldFolderMapArgs();
 

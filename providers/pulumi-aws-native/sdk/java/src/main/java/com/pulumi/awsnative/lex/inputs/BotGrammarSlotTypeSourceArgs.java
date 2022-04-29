@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes the Amazon S3 bucket name and location for the grammar that is the source for the slot type.
  * 
  */
-public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotGrammarSlotTypeSourceArgs extends ResourceArgs {
 
     public static final BotGrammarSlotTypeSourceArgs Empty = new BotGrammarSlotTypeSourceArgs();
 

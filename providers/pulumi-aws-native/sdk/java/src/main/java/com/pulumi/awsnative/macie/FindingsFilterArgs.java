@@ -7,6 +7,7 @@ import com.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import com.pulumi.awsnative.macie.inputs.FindingsFilterFindingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class FindingsFilterArgs extends ResourceArgs {
 
     public static final FindingsFilterArgs Empty = new FindingsFilterArgs();
 

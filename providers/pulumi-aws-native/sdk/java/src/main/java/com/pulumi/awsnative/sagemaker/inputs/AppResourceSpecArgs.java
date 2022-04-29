@@ -6,13 +6,14 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.AppResourceSpecInstanceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AppResourceSpecArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppResourceSpecArgs extends ResourceArgs {
 
     public static final AppResourceSpecArgs Empty = new AppResourceSpecArgs();
 

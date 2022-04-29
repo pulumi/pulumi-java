@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsEncrypt
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * An HTTP Live Streaming (HLS) packaging configuration.
  * 
  */
-public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationHlsPackageArgs extends ResourceArgs {
 
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
 

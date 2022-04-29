@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class StudioComponentTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentTagsArgs extends ResourceArgs {
 
     public static final StudioComponentTagsArgs Empty = new StudioComponentTagsArgs();
 

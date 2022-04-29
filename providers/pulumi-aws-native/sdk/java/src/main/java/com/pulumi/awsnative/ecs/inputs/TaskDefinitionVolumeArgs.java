@@ -8,13 +8,14 @@ import com.pulumi.awsnative.ecs.inputs.TaskDefinitionEFSVolumeConfigurationArgs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionHostVolumePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionVolumeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionVolumeArgs extends ResourceArgs {
 
     public static final TaskDefinitionVolumeArgs Empty = new TaskDefinitionVolumeArgs();
 

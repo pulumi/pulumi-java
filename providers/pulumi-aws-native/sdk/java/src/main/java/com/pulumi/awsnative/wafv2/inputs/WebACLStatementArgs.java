@@ -20,6 +20,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLSqliMatchStatementArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLXssMatchStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * First level statement that contains conditions, such as ByteMatch, SizeConstraint, etc
  * 
  */
-public final class WebACLStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLStatementArgs extends ResourceArgs {
 
     public static final WebACLStatementArgs Empty = new WebACLStatementArgs();
 

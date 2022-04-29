@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ComponentOverridesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentOverridesArgs extends ResourceArgs {
 
     public static final ComponentOverridesArgs Empty = new ComponentOverridesArgs();
 

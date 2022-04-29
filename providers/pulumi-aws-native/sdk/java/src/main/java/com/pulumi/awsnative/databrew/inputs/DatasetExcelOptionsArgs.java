@@ -5,6 +5,7 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetExcelOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetExcelOptionsArgs extends ResourceArgs {
 
     public static final DatasetExcelOptionsArgs Empty = new DatasetExcelOptionsArgs();
 

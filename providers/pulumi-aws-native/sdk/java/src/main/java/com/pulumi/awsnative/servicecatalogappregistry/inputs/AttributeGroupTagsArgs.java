@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class AttributeGroupTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttributeGroupTagsArgs extends ResourceArgs {
 
     public static final AttributeGroupTagsArgs Empty = new AttributeGroupTagsArgs();
 

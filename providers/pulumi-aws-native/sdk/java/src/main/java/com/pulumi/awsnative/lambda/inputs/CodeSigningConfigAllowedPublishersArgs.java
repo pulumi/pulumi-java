@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
  * 
  */
-public final class CodeSigningConfigAllowedPublishersArgs extends com.pulumi.resources.ResourceArgs {
+public final class CodeSigningConfigAllowedPublishersArgs extends ResourceArgs {
 
     public static final CodeSigningConfigAllowedPublishersArgs Empty = new CodeSigningConfigAllowedPublishersArgs();
 

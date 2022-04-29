@@ -7,12 +7,13 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProf
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs extends ResourceArgs {
 
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs();
 

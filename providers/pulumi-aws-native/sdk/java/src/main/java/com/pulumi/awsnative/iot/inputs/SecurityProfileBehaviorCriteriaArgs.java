@@ -9,6 +9,7 @@ import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricValueArgs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileStatisticalThresholdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The criteria by which the behavior is determined to be normal.
  * 
  */
-public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileBehaviorCriteriaArgs extends ResourceArgs {
 
     public static final SecurityProfileBehaviorCriteriaArgs Empty = new SecurityProfileBehaviorCriteriaArgs();
 

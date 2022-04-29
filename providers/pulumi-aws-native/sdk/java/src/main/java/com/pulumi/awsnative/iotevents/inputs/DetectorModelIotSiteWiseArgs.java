@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Sends information about the detector model instance and the event that triggered the action to a specified asset property in AWS IoT SiteWise.
  * 
  */
-public final class DetectorModelIotSiteWiseArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelIotSiteWiseArgs extends ResourceArgs {
 
     public static final DetectorModelIotSiteWiseArgs Empty = new DetectorModelIotSiteWiseArgs();
 

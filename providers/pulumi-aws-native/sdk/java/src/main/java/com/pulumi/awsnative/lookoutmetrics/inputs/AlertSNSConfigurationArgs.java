@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration options for an SNS alert action.
  * 
  */
-public final class AlertSNSConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertSNSConfigurationArgs extends ResourceArgs {
 
     public static final AlertSNSConfigurationArgs Empty = new AlertSNSConfigurationArgs();
 

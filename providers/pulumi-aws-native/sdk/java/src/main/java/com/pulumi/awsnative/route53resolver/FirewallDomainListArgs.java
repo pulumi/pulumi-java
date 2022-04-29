@@ -6,6 +6,7 @@ package com.pulumi.awsnative.route53resolver;
 import com.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallDomainListArgs extends ResourceArgs {
 
     public static final FirewallDomainListArgs Empty = new FirewallDomainListArgs();
 

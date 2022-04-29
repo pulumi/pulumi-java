@@ -6,12 +6,13 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigTrackingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigTrackingConfigArgs extends ResourceArgs {
 
     public static final ConfigTrackingConfigArgs Empty = new ConfigTrackingConfigArgs();
 

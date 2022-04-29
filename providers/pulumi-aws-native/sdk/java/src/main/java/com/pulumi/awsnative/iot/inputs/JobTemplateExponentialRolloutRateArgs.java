@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateRateIncreaseCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Allows you to create an exponential rate of rollout for a job.
  * 
  */
-public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobTemplateExponentialRolloutRateArgs extends ResourceArgs {
 
     public static final JobTemplateExponentialRolloutRateArgs Empty = new JobTemplateExponentialRolloutRateArgs();
 

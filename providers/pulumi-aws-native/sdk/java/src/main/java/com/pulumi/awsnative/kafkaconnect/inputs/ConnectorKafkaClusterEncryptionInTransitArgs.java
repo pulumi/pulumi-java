@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterEncryptionInTransitType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details of encryption in transit to the Kafka cluster.
  * 
  */
-public final class ConnectorKafkaClusterEncryptionInTransitArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorKafkaClusterEncryptionInTransitArgs extends ResourceArgs {
 
     public static final ConnectorKafkaClusterEncryptionInTransitArgs Empty = new ConnectorKafkaClusterEncryptionInTransitArgs();
 

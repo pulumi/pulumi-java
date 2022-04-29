@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The instance metadata option settings for the infrastructure configuration.
  * 
  */
-public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extends ResourceArgs {
 
     public static final InfrastructureConfigurationInstanceMetadataOptionsArgs Empty = new InfrastructureConfigurationInstanceMetadataOptionsArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHiveJsonSerDeAr
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOpenXJsonSerDeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamDeserializerArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamDeserializerArgs extends ResourceArgs {
 
     public static final DeliveryStreamDeserializerArgs Empty = new DeliveryStreamDeserializerArgs();
 

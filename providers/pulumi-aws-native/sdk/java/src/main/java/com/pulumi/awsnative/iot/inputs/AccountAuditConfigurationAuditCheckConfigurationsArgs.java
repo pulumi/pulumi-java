@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies which audit checks are enabled and disabled for this account.
  * 
  */
-public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends ResourceArgs {
 
     public static final AccountAuditConfigurationAuditCheckConfigurationsArgs Empty = new AccountAuditConfigurationAuditCheckConfigurationsArgs();
 

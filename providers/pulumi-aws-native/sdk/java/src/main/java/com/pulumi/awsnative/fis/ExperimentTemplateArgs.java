@@ -8,6 +8,7 @@ import com.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import com.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentTemplateArgs extends ResourceArgs {
 
     public static final ExperimentTemplateArgs Empty = new ExperimentTemplateArgs();
 

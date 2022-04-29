@@ -8,12 +8,13 @@ import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyBandwidthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigSpectrumConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigSpectrumConfigArgs extends ResourceArgs {
 
     public static final ConfigSpectrumConfigArgs Empty = new ConfigSpectrumConfigArgs();
 

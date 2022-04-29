@@ -8,6 +8,7 @@ import com.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Contains information about an asset model property.
  * 
  */
-public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelPropertyArgs extends ResourceArgs {
 
     public static final AssetModelPropertyArgs Empty = new AssetModelPropertyArgs();
 

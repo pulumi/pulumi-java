@@ -6,12 +6,13 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AnomalyDetectorRedshiftSourceConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnomalyDetectorRedshiftSourceConfigArgs extends ResourceArgs {
 
     public static final AnomalyDetectorRedshiftSourceConfigArgs Empty = new AnomalyDetectorRedshiftSourceConfigArgs();
 

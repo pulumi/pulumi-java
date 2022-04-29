@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Custom response.
  * 
  */
-public final class RuleGroupCustomResponseArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupCustomResponseArgs extends ResourceArgs {
 
     public static final RuleGroupCustomResponseArgs Empty = new RuleGroupCustomResponseArgs();
 

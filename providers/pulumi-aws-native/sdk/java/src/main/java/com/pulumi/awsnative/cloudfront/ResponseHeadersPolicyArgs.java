@@ -6,10 +6,11 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ResponseHeadersPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponseHeadersPolicyArgs extends ResourceArgs {
 
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 

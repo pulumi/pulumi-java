@@ -6,13 +6,14 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.enums.DataSourceConfluenceSpaceFieldName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataSourceConfluenceSpaceToIndexFieldMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceConfluenceSpaceToIndexFieldMappingArgs extends ResourceArgs {
 
     public static final DataSourceConfluenceSpaceToIndexFieldMappingArgs Empty = new DataSourceConfluenceSpaceToIndexFieldMappingArgs();
 

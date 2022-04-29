@@ -9,6 +9,7 @@ import com.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Contains a property type, which can be one of attribute, measurement, metric, or transform.
  * 
  */
-public final class AssetModelPropertyTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelPropertyTypeArgs extends ResourceArgs {
 
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();
 

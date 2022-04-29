@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketSseKmsEncryptedObjectsStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A container for filter information for the selection of S3 objects encrypted with AWS KMS.
  * 
  */
-public final class BucketSseKmsEncryptedObjectsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketSseKmsEncryptedObjectsArgs extends ResourceArgs {
 
     public static final BucketSseKmsEncryptedObjectsArgs Empty = new BucketSseKmsEncryptedObjectsArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.awsnative.connect.inputs.QuickConnectQueueQuickConnectConfigAr
 import com.pulumi.awsnative.connect.inputs.QuickConnectUserQuickConnectConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration settings for the quick connect.
  * 
  */
-public final class QuickConnectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class QuickConnectConfigArgs extends ResourceArgs {
 
     public static final QuickConnectConfigArgs Empty = new QuickConnectConfigArgs();
 

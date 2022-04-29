@@ -6,6 +6,7 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * If query results are encrypted in Amazon S3, indicates the encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
  * 
  */
-public final class WorkGroupEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final WorkGroupEncryptionConfigurationArgs Empty = new WorkGroupEncryptionConfigurationArgs();
 

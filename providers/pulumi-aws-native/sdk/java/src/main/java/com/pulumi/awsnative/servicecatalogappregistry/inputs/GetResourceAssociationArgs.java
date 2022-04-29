@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetResourceAssociationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourceAssociationArgs extends InvokeArgs {
 
     public static final GetResourceAssociationArgs Empty = new GetResourceAssociationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ProjectProvisioningParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Input ServiceCatalog Provisioning Details
  * 
  */
-public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends ResourceArgs {
 
     public static final ServiceCatalogProvisioningDetailsPropertiesArgs Empty = new ServiceCatalogProvisioningDetailsPropertiesArgs();
 

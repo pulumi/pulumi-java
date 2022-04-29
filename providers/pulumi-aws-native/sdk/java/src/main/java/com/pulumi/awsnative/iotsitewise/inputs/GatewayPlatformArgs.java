@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassV2Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Contains a gateway&#39;s platform information.
  * 
  */
-public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayPlatformArgs extends ResourceArgs {
 
     public static final GatewayPlatformArgs Empty = new GatewayPlatformArgs();
 

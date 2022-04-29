@@ -5,12 +5,13 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class DistributionStatusCodesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionStatusCodesArgs extends ResourceArgs {
 
     public static final DistributionStatusCodesArgs Empty = new DistributionStatusCodesArgs();
 

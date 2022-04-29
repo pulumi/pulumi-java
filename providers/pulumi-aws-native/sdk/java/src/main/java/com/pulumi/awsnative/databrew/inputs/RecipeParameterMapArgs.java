@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.databrew.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class RecipeParameterMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecipeParameterMapArgs extends ResourceArgs {
 
     public static final RecipeParameterMapArgs Empty = new RecipeParameterMapArgs();
 

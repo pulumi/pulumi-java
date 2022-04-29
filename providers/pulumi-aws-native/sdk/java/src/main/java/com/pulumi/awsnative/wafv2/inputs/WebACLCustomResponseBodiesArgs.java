@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.wafv2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Custom response key and body map.
  * 
  */
-public final class WebACLCustomResponseBodiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLCustomResponseBodiesArgs extends ResourceArgs {
 
     public static final WebACLCustomResponseBodiesArgs Empty = new WebACLCustomResponseBodiesArgs();
 

@@ -9,6 +9,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -17,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:ecs:PrimaryTaskSet")
-public class PrimaryTaskSet extends com.pulumi.resources.CustomResource {
+public class PrimaryTaskSet extends CustomResource {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
@@ -82,19 +84,19 @@ public class PrimaryTaskSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PrimaryTaskSet(String name, PrimaryTaskSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public PrimaryTaskSet(String name, PrimaryTaskSetArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:ecs:PrimaryTaskSet", name, args == null ? PrimaryTaskSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private PrimaryTaskSet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private PrimaryTaskSet(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:ecs:PrimaryTaskSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -105,7 +107,7 @@ public class PrimaryTaskSet extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrimaryTaskSet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PrimaryTaskSet get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new PrimaryTaskSet(name, id, options);
     }
 }

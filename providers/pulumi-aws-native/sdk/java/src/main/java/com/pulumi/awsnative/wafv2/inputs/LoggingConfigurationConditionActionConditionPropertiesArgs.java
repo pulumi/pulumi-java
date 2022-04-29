@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationConditionActionConditionPropertiesAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A single action condition.
  * 
  */
-public final class LoggingConfigurationConditionActionConditionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationConditionActionConditionPropertiesArgs extends ResourceArgs {
 
     public static final LoggingConfigurationConditionActionConditionPropertiesArgs Empty = new LoggingConfigurationConditionActionConditionPropertiesArgs();
 

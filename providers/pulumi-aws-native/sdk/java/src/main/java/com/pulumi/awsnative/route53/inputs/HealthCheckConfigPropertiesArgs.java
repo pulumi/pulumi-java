@@ -8,6 +8,7 @@ import com.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import com.pulumi.awsnative.route53.inputs.HealthCheckAlarmIdentifierArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A complex type that contains information about the health check.
  * 
  */
-public final class HealthCheckConfigPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckConfigPropertiesArgs extends ResourceArgs {
 
     public static final HealthCheckConfigPropertiesArgs Empty = new HealthCheckConfigPropertiesArgs();
 

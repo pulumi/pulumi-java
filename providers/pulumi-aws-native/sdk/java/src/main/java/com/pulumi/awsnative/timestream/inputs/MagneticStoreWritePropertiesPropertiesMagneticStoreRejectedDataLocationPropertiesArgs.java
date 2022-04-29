@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Location to store information about records that were asynchronously rejected during magnetic store writes.
  * 
  */
-public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs extends ResourceArgs {
 
     public static final MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs Empty = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs();
 

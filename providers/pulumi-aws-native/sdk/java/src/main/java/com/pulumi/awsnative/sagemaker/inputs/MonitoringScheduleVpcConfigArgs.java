@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Specifies a VPC that your training jobs and hosted models have access to. Control access to and from your training and model containers by configuring the VPC.
  * 
  */
-public final class MonitoringScheduleVpcConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleVpcConfigArgs extends ResourceArgs {
 
     public static final MonitoringScheduleVpcConfigArgs Empty = new MonitoringScheduleVpcConfigArgs();
 

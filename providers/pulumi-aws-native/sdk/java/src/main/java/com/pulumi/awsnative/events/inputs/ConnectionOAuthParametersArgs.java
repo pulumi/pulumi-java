@@ -8,13 +8,14 @@ import com.pulumi.awsnative.events.inputs.ConnectionClientParametersArgs;
 import com.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConnectionOAuthParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionOAuthParametersArgs extends ResourceArgs {
 
     public static final ConnectionOAuthParametersArgs Empty = new ConnectionOAuthParametersArgs();
 

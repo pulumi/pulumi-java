@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
  * 
  */
-public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs extends ResourceArgs {
 
     public static final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs Empty = new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs();
 

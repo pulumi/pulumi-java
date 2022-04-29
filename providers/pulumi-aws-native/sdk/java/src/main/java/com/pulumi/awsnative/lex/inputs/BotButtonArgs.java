@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A button to use on a response card used to gather slot values from a user.
  * 
  */
-public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotButtonArgs extends ResourceArgs {
 
     public static final BotButtonArgs Empty = new BotButtonArgs();
 

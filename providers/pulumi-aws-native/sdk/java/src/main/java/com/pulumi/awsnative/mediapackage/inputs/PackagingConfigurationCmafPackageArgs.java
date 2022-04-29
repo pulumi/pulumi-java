@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncryp
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A CMAF packaging configuration.
  * 
  */
-public final class PackagingConfigurationCmafPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationCmafPackageArgs extends ResourceArgs {
 
     public static final PackagingConfigurationCmafPackageArgs Empty = new PackagingConfigurationCmafPackageArgs();
 

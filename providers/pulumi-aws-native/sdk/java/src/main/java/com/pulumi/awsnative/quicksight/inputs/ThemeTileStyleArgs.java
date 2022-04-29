@@ -6,6 +6,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Display options related to tiles on a sheet.&lt;/p&gt;
  * 
  */
-public final class ThemeTileStyleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeTileStyleArgs extends ResourceArgs {
 
     public static final ThemeTileStyleArgs Empty = new ThemeTileStyleArgs();
 

@@ -8,13 +8,14 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingGroupLogConfigurationAr
 import com.pulumi.awsnative.mediapackage.inputs.PackagingGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingGroupArgs extends ResourceArgs {
 
     public static final PackagingGroupArgs Empty = new PackagingGroupArgs();
 

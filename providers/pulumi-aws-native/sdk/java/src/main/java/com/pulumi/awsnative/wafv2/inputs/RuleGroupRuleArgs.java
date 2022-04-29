@@ -10,6 +10,7 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Rule of RuleGroup that contains condition and action.
  * 
  */
-public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleArgs extends ResourceArgs {
 
     public static final RuleGroupRuleArgs Empty = new RuleGroupRuleArgs();
 

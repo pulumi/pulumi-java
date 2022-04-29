@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS
 import com.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3InputMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The endpoint for a monitoring job.
  * 
  */
-public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelBiasJobDefinitionEndpointInputArgs extends ResourceArgs {
 
     public static final ModelBiasJobDefinitionEndpointInputArgs Empty = new ModelBiasJobDefinitionEndpointInputArgs();
 

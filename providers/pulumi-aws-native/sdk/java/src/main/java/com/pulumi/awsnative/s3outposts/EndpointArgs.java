@@ -6,13 +6,14 @@ package com.pulumi.awsnative.s3outposts;
 import com.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointArgs extends ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 

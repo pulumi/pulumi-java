@@ -20,6 +20,7 @@ import com.pulumi.awsnative.appflow.inputs.FlowVeevaSourcePropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowZendeskSourcePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * Source connector details required to query a connector
  * 
  */
-public final class FlowSourceConnectorPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSourceConnectorPropertiesArgs extends ResourceArgs {
 
     public static final FlowSourceConnectorPropertiesArgs Empty = new FlowSourceConnectorPropertiesArgs();
 

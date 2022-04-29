@@ -8,6 +8,7 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsManifestArgs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A Common Media Application Format (CMAF) packaging configuration.
  * 
  */
-public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointCmafPackageArgs extends ResourceArgs {
 
     public static final OriginEndpointCmafPackageArgs Empty = new OriginEndpointCmafPackageArgs();
 

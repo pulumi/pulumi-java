@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotButtonArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A message that defines a response card that the client application can show to the user.
  * 
  */
-public final class BotImageResponseCardArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotImageResponseCardArgs extends ResourceArgs {
 
     public static final BotImageResponseCardArgs Empty = new BotImageResponseCardArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.timestream.enums.ScheduledQueryMixedMeasureMappingMe
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * MixedMeasureMappings are mappings that can be used to ingest data into a mixture of narrow and multi measures in the derived table.
  * 
  */
-public final class ScheduledQueryMixedMeasureMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryMixedMeasureMappingArgs extends ResourceArgs {
 
     public static final ScheduledQueryMixedMeasureMappingArgs Empty = new ScheduledQueryMixedMeasureMappingArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information about the variable and its new value.
  * 
  */
-public final class DetectorModelSetVariableArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelSetVariableArgs extends ResourceArgs {
 
     public static final DetectorModelSetVariableArgs Empty = new DetectorModelSetVariableArgs();
 

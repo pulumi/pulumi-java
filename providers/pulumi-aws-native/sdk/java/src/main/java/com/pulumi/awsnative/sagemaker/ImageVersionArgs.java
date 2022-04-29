@@ -5,11 +5,12 @@ package com.pulumi.awsnative.sagemaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageVersionArgs extends ResourceArgs {
 
     public static final ImageVersionArgs Empty = new ImageVersionArgs();
 

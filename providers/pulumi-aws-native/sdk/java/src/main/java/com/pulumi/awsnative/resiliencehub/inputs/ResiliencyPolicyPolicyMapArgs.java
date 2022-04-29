@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ResiliencyPolicyPolicyMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResiliencyPolicyPolicyMapArgs extends ResourceArgs {
 
     public static final ResiliencyPolicyPolicyMapArgs Empty = new ResiliencyPolicyPolicyMapArgs();
 

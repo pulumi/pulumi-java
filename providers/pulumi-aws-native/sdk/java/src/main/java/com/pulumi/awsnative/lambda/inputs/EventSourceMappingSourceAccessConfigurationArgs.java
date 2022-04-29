@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.enums.EventSourceMappingSourceAccessConfigurationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration used by AWS Lambda to access event source
  * 
  */
-public final class EventSourceMappingSourceAccessConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingSourceAccessConfigurationArgs extends ResourceArgs {
 
     public static final EventSourceMappingSourceAccessConfigurationArgs Empty = new EventSourceMappingSourceAccessConfigurationArgs();
 

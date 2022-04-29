@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The version of a bot used for a bot locale.
  * 
  */
-public final class BotVersionLocaleDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotVersionLocaleDetailsArgs extends ResourceArgs {
 
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();
 

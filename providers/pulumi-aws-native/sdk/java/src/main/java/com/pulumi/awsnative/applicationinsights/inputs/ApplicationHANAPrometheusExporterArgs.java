@@ -5,6 +5,7 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The HANA DB Prometheus Exporter settings.
  * 
  */
-public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationHANAPrometheusExporterArgs extends ResourceArgs {
 
     public static final ApplicationHANAPrometheusExporterArgs Empty = new ApplicationHANAPrometheusExporterArgs();
 

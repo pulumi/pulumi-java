@@ -9,6 +9,7 @@ import com.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocat
 import com.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -19,7 +20,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssociationArgs extends ResourceArgs {
 
     public static final AssociationArgs Empty = new AssociationArgs();
 

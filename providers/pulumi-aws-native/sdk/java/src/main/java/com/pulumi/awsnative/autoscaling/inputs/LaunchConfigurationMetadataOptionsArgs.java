@@ -5,6 +5,7 @@ package com.pulumi.awsnative.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * MetadataOptions is a property of AWS::AutoScaling::LaunchConfiguration that describes metadata options for the instances.
  * 
  */
-public final class LaunchConfigurationMetadataOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchConfigurationMetadataOptionsArgs extends ResourceArgs {
 
     public static final LaunchConfigurationMetadataOptionsArgs Empty = new LaunchConfigurationMetadataOptionsArgs();
 

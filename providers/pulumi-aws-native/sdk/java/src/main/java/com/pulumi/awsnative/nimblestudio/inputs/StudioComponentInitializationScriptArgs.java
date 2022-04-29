@@ -7,6 +7,7 @@ import com.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScri
 import com.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
  * 
  */
-public final class StudioComponentInitializationScriptArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentInitializationScriptArgs extends ResourceArgs {
 
     public static final StudioComponentInitializationScriptArgs Empty = new StudioComponentInitializationScriptArgs();
 

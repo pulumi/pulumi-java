@@ -8,6 +8,7 @@ import com.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configurations of Source connector of the flow.
  * 
  */
-public final class FlowSourceFlowConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSourceFlowConfigArgs extends ResourceArgs {
 
     public static final FlowSourceFlowConfigArgs Empty = new FlowSourceFlowConfigArgs();
 

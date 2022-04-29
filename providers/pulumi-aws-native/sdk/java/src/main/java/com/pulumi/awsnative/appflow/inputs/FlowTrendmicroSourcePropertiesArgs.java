@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FlowTrendmicroSourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowTrendmicroSourcePropertiesArgs extends ResourceArgs {
 
     public static final FlowTrendmicroSourcePropertiesArgs Empty = new FlowTrendmicroSourcePropertiesArgs();
 

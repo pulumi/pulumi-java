@@ -5,11 +5,12 @@ package com.pulumi.awsnative.events.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ConnectionBasicAuthParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectionBasicAuthParametersArgs extends ResourceArgs {
 
     public static final ConnectionBasicAuthParametersArgs Empty = new ConnectionBasicAuthParametersArgs();
 

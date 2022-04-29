@@ -7,6 +7,7 @@ import com.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAc
 import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration to use when starting the SSM automation document.
  * 
  */
-public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponsePlanSsmAutomationArgs extends ResourceArgs {
 
     public static final ResponsePlanSsmAutomationArgs Empty = new ResponsePlanSsmAutomationArgs();
 

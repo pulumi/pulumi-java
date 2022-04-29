@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iam.inputs.RolePolicyArgs;
 import com.pulumi.awsnative.iam.inputs.RoleTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RoleArgs extends ResourceArgs {
 
     public static final RoleArgs Empty = new RoleArgs();
 

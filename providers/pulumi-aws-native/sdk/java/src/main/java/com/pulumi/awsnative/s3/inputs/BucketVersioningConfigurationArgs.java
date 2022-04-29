@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Describes the versioning state of an Amazon S3 bucket.
  * 
  */
-public final class BucketVersioningConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketVersioningConfigurationArgs extends ResourceArgs {
 
     public static final BucketVersioningConfigurationArgs Empty = new BucketVersioningConfigurationArgs();
 

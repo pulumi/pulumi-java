@@ -6,6 +6,7 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryComputerAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The configuration for a Microsoft Active Directory (Microsoft AD) studio resource.&lt;/p&gt;
  * 
  */
-public final class StudioComponentActiveDirectoryConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentActiveDirectoryConfigurationArgs extends ResourceArgs {
 
     public static final StudioComponentActiveDirectoryConfigurationArgs Empty = new StudioComponentActiveDirectoryConfigurationArgs();
 

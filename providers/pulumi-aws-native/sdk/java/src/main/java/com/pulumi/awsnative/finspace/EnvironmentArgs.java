@@ -8,6 +8,7 @@ import com.pulumi.awsnative.finspace.inputs.EnvironmentFederationParametersArgs;
 import com.pulumi.awsnative.finspace.inputs.EnvironmentSuperuserParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentArgs extends ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 

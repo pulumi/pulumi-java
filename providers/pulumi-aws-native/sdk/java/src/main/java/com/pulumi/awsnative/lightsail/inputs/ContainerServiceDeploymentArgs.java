@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lightsail.inputs.ContainerArgs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerPublicEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a container deployment configuration of an Amazon Lightsail container service.
  * 
  */
-public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerServiceDeploymentArgs extends ResourceArgs {
 
     public static final ContainerServiceDeploymentArgs Empty = new ContainerServiceDeploymentArgs();
 

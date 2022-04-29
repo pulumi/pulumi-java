@@ -6,12 +6,13 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreSchemaDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatastoreParquetConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatastoreParquetConfigurationArgs extends ResourceArgs {
 
     public static final DatastoreParquetConfigurationArgs Empty = new DatastoreParquetConfigurationArgs();
 

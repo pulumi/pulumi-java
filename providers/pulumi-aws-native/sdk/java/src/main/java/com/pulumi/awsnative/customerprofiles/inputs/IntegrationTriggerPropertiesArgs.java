@@ -6,12 +6,13 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationScheduledTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntegrationTriggerPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationTriggerPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationTriggerPropertiesArgs Empty = new IntegrationTriggerPropertiesArgs();
 

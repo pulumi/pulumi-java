@@ -9,6 +9,7 @@ import com.pulumi.awsnative.iotwireless.inputs.TaskDefinitionTagArgs;
 import com.pulumi.awsnative.iotwireless.inputs.TaskDefinitionUpdateWirelessGatewayTaskCreateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionArgs extends ResourceArgs {
 
     public static final TaskDefinitionArgs Empty = new TaskDefinitionArgs();
 

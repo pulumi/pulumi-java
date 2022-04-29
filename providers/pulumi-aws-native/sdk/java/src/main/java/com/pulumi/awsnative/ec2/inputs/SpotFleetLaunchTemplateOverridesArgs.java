@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SpotFleetLaunchTemplateOverridesArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpotFleetLaunchTemplateOverridesArgs extends ResourceArgs {
 
     public static final SpotFleetLaunchTemplateOverridesArgs Empty = new SpotFleetLaunchTemplateOverridesArgs();
 

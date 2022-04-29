@@ -5,6 +5,7 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
  * 
  */
-public final class ReportDeliveryChannelPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportDeliveryChannelPropertiesArgs extends ResourceArgs {
 
     public static final ReportDeliveryChannelPropertiesArgs Empty = new ReportDeliveryChannelPropertiesArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.licensemanager.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetGrantArgs extends InvokeArgs {
 
     public static final GetGrantArgs Empty = new GetGrantArgs();
 

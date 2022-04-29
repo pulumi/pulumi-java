@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The options for the transit gateway vpc attachment.
  * 
  */
-public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class OptionsPropertiesArgs extends ResourceArgs {
 
     public static final OptionsPropertiesArgs Empty = new OptionsPropertiesArgs();
 

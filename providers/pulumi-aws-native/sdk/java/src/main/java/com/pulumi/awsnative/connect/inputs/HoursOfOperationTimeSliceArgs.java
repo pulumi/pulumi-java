@@ -5,6 +5,7 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The start time or end time for an hours of operation.
  * 
  */
-public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.ResourceArgs {
+public final class HoursOfOperationTimeSliceArgs extends ResourceArgs {
 
     public static final HoursOfOperationTimeSliceArgs Empty = new HoursOfOperationTimeSliceArgs();
 

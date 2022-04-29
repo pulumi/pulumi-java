@@ -6,10 +6,11 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetRequestConfigDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class SpotFleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class SpotFleetArgs extends ResourceArgs {
 
     public static final SpotFleetArgs Empty = new SpotFleetArgs();
 

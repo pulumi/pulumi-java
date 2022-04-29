@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kinesisvideo.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair to associated with the Kinesis Video Stream.
  * 
  */
-public final class StreamTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamTagArgs extends ResourceArgs {
 
     public static final StreamTagArgs Empty = new StreamTagArgs();
 

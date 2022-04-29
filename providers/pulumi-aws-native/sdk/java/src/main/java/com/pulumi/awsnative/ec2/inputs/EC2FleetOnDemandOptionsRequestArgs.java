@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.EC2FleetCapacityReservationOptionsRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetOnDemandOptionsRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetOnDemandOptionsRequestArgs extends ResourceArgs {
 
     public static final EC2FleetOnDemandOptionsRequestArgs Empty = new EC2FleetOnDemandOptionsRequestArgs();
 

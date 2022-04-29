@@ -8,6 +8,7 @@ import com.pulumi.awsnative.appflow.inputs.FlowConnectorOperatorArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowTaskArgs extends ResourceArgs {
 
     public static final FlowTaskArgs Empty = new FlowTaskArgs();
 

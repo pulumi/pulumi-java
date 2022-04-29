@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebACLGeoMatchStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLGeoMatchStatementArgs extends ResourceArgs {
 
     public static final WebACLGeoMatchStatementArgs Empty = new WebACLGeoMatchStatementArgs();
 

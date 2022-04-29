@@ -6,11 +6,12 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class RuleGroupAndStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupAndStatementArgs extends ResourceArgs {
 
     public static final RuleGroupAndStatementArgs Empty = new RuleGroupAndStatementArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies the key-value pair that are assigned to a file during the execution of a Tagging step.
  * 
  */
-public final class WorkflowS3TagArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowS3TagArgs extends ResourceArgs {
 
     public static final WorkflowS3TagArgs Empty = new WorkflowS3TagArgs();
 

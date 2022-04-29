@@ -7,6 +7,7 @@ import com.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStor
 import com.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamingSessionStorageRootArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The configuration for a streaming session’s upload storage.&lt;/p&gt;
  * 
  */
-public final class LaunchProfileStreamConfigurationSessionStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchProfileStreamConfigurationSessionStorageArgs extends ResourceArgs {
 
     public static final LaunchProfileStreamConfigurationSessionStorageArgs Empty = new LaunchProfileStreamConfigurationSessionStorageArgs();
 

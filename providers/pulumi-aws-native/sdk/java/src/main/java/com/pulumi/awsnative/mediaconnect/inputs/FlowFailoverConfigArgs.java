@@ -6,6 +6,7 @@ package com.pulumi.awsnative.mediaconnect.inputs;
 import com.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The settings for source failover
  * 
  */
-public final class FlowFailoverConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowFailoverConfigArgs extends ResourceArgs {
 
     public static final FlowFailoverConfigArgs Empty = new FlowFailoverConfigArgs();
 

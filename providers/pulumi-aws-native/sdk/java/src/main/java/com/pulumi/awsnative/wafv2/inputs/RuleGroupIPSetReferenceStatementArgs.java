@@ -6,13 +6,14 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupIPSetForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupIPSetReferenceStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupIPSetReferenceStatementArgs extends ResourceArgs {
 
     public static final RuleGroupIPSetReferenceStatementArgs Empty = new RuleGroupIPSetReferenceStatementArgs();
 

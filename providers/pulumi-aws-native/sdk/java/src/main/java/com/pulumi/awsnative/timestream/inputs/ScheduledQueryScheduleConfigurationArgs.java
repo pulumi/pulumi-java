@@ -5,6 +5,7 @@ package com.pulumi.awsnative.timestream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration for when the scheduled query is executed.
  * 
  */
-public final class ScheduledQueryScheduleConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryScheduleConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryScheduleConfigurationArgs Empty = new ScheduledQueryScheduleConfigurationArgs();
 

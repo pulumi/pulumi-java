@@ -6,13 +6,14 @@ package com.pulumi.awsnative.amplifyuibuilder.inputs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ThemeValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeValuesArgs extends ResourceArgs {
 
     public static final ThemeValuesArgs Empty = new ThemeValuesArgs();
 

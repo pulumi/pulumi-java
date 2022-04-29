@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Network Load Balancer resource that a DNS target resource points to.
  * 
  */
-public final class ResourceSetNLBResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetNLBResourceArgs extends ResourceArgs {
 
     public static final ResourceSetNLBResourceArgs Empty = new ResourceSetNLBResourceArgs();
 

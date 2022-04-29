@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerHealthCheckConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes the settings of a public endpoint for an Amazon Lightsail container service.
  * 
  */
-public final class ContainerPublicEndpointArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerPublicEndpointArgs extends ResourceArgs {
 
     public static final ContainerPublicEndpointArgs Empty = new ContainerPublicEndpointArgs();
 

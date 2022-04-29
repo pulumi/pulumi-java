@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingOnFailureArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
  * 
  */
-public final class EventSourceMappingDestinationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingDestinationConfigArgs extends ResourceArgs {
 
     public static final EventSourceMappingDestinationConfigArgs Empty = new EventSourceMappingDestinationConfigArgs();
 

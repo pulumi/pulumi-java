@@ -8,12 +8,13 @@ import com.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapaci
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ClusterCapacityProviderAssociationsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterCapacityProviderAssociationsArgs extends ResourceArgs {
 
     public static final ClusterCapacityProviderAssociationsArgs Empty = new ClusterCapacityProviderAssociationsArgs();
 

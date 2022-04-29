@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import com.pulumi.awsnative.lex.inputs.BotStillWaitingResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The prompts that Amazon Lex uses while a bot is waiting for customer input.
  * 
  */
-public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotWaitAndContinueSpecificationArgs extends ResourceArgs {
 
     public static final BotWaitAndContinueSpecificationArgs Empty = new BotWaitAndContinueSpecificationArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigUplinkSpectrumConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigUplinkSpectrumConfigArgs extends ResourceArgs {
 
     public static final ConfigUplinkSpectrumConfigArgs Empty = new ConfigUplinkSpectrumConfigArgs();
 

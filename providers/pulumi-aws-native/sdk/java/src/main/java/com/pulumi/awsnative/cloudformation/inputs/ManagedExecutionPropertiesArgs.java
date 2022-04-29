@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
  * 
  */
-public final class ManagedExecutionPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ManagedExecutionPropertiesArgs extends ResourceArgs {
 
     public static final ManagedExecutionPropertiesArgs Empty = new ManagedExecutionPropertiesArgs();
 

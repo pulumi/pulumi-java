@@ -8,6 +8,7 @@ import com.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleB
 import com.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockResponse;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Firewall Rule associating the Rule Group to a Domain List
  * 
  */
-public final class FirewallRuleGroupFirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallRuleGroupFirewallRuleArgs extends ResourceArgs {
 
     public static final FirewallRuleGroupFirewallRuleArgs Empty = new FirewallRuleGroupFirewallRuleArgs();
 

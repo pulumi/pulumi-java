@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.lex.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * A resource policy to add to the resource. The policy is a JSON structure following the IAM syntax that contains one or more statements that define the policy.
  * 
  */
-public final class ResourcePolicyPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourcePolicyPolicyArgs extends ResourceArgs {
 
     public static final ResourcePolicyPolicyArgs Empty = new ResourcePolicyPolicyArgs();
 

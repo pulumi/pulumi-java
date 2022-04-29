@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.cassandra.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetKeyspaceArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetKeyspaceArgs extends InvokeArgs {
 
     public static final GetKeyspaceArgs Empty = new GetKeyspaceArgs();
 

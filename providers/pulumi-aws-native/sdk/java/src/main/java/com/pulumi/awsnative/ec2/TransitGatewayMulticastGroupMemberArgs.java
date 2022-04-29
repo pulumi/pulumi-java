@@ -5,11 +5,12 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TransitGatewayMulticastGroupMemberArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransitGatewayMulticastGroupMemberArgs extends ResourceArgs {
 
     public static final TransitGatewayMulticastGroupMemberArgs Empty = new TransitGatewayMulticastGroupMemberArgs();
 

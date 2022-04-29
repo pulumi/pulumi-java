@@ -6,11 +6,12 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 import com.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FilterStringFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterStringFilterArgs extends ResourceArgs {
 
     public static final FilterStringFilterArgs Empty = new FilterStringFilterArgs();
 

@@ -7,11 +7,12 @@ import com.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import com.pulumi.awsnative.sso.enums.AssignmentTargetType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssignmentArgs extends ResourceArgs {
 
     public static final AssignmentArgs Empty = new AssignmentArgs();
 

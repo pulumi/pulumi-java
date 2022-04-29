@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the AWS Lambda functions to invoke and the events for which to invoke them.
  * 
  */
-public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketLambdaConfigurationArgs extends ResourceArgs {
 
     public static final BucketLambdaConfigurationArgs Empty = new BucketLambdaConfigurationArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.events.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetConnectionArgs extends InvokeArgs {
 
     public static final GetConnectionArgs Empty = new GetConnectionArgs();
 

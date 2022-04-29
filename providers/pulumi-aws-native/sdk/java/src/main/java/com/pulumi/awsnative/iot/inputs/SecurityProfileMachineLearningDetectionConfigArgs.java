@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration of an ML Detect Security Profile.
  * 
  */
-public final class SecurityProfileMachineLearningDetectionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileMachineLearningDetectionConfigArgs extends ResourceArgs {
 
     public static final SecurityProfileMachineLearningDetectionConfigArgs Empty = new SecurityProfileMachineLearningDetectionConfigArgs();
 

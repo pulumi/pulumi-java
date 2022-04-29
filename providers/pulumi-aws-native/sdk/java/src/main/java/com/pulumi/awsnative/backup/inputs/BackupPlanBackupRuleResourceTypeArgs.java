@@ -7,6 +7,7 @@ import com.pulumi.awsnative.backup.inputs.BackupPlanCopyActionResourceTypeArgs;
 import com.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackupPlanBackupRuleResourceTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupPlanBackupRuleResourceTypeArgs extends ResourceArgs {
 
     public static final BackupPlanBackupRuleResourceTypeArgs Empty = new BackupPlanBackupRuleResourceTypeArgs();
 

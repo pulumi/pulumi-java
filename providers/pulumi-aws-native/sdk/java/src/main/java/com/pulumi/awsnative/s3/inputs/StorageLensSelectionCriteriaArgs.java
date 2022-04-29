@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Selection criteria for prefix-level metrics.
  * 
  */
-public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensSelectionCriteriaArgs extends ResourceArgs {
 
     public static final StorageLensSelectionCriteriaArgs Empty = new StorageLensSelectionCriteriaArgs();
 

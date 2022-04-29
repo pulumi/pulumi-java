@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The VPC security groups and subnets that are attached to a Lambda function. When you connect a function to a VPC, Lambda creates an elastic network interface for each combination of security group and subnet in the function&#39;s VPC configuration. The function can only access resources and the internet through that VPC.
  * 
  */
-public final class FunctionVpcConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionVpcConfigArgs extends ResourceArgs {
 
     public static final FunctionVpcConfigArgs Empty = new FunctionVpcConfigArgs();
 

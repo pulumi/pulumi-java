@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.DeviceFleetEdgeOutputConfigArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DeviceFleetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeviceFleetArgs extends ResourceArgs {
 
     public static final DeviceFleetArgs Empty = new DeviceFleetArgs();
 

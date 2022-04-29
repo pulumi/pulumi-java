@@ -5,6 +5,7 @@ package com.pulumi.awsnative.emrcontainers.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An arbitrary set of tags (key-value pairs) for this virtual cluster.
  * 
  */
-public final class VirtualClusterTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualClusterTagArgs extends ResourceArgs {
 
     public static final VirtualClusterTagArgs Empty = new VirtualClusterTagArgs();
 

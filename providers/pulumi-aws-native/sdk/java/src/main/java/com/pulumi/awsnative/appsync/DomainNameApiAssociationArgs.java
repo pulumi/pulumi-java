@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appsync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DomainNameApiAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainNameApiAssociationArgs extends ResourceArgs {
 
     public static final DomainNameApiAssociationArgs Empty = new DomainNameApiAssociationArgs();
 

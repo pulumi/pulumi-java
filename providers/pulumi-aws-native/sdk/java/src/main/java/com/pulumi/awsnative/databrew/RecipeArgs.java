@@ -7,6 +7,7 @@ import com.pulumi.awsnative.databrew.inputs.RecipeStepArgs;
 import com.pulumi.awsnative.databrew.inputs.RecipeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecipeArgs extends ResourceArgs {
 
     public static final RecipeArgs Empty = new RecipeArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.fis.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * The targets for the experiment.
  * 
  */
-public final class ExperimentTemplateTargetMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentTemplateTargetMapArgs extends ResourceArgs {
 
     public static final ExperimentTemplateTargetMapArgs Empty = new ExperimentTemplateTargetMapArgs();
 

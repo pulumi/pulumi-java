@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * &lt;p&gt;A decimal parameter.&lt;/p&gt;
  * 
  */
-public final class AnalysisDecimalParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalysisDecimalParameterArgs extends ResourceArgs {
 
     public static final AnalysisDecimalParameterArgs Empty = new AnalysisDecimalParameterArgs();
 

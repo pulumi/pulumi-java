@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
  * 
  */
-public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationSpekeKeyProviderArgs extends ResourceArgs {
 
     public static final PackagingConfigurationSpekeKeyProviderArgs Empty = new PackagingConfigurationSpekeKeyProviderArgs();
 

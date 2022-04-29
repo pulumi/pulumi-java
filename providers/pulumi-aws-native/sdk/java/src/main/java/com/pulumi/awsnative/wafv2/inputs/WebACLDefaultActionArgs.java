@@ -7,6 +7,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLAllowActionArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Default Action WebACL will take against ingress traffic when there is no matching Rule.
  * 
  */
-public final class WebACLDefaultActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLDefaultActionArgs extends ResourceArgs {
 
     public static final WebACLDefaultActionArgs Empty = new WebACLDefaultActionArgs();
 

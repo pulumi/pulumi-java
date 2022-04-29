@@ -7,6 +7,7 @@ import com.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargetsArgs;
 import com.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Stack instances in some specific accounts and Regions.
  * 
  */
-public final class StackSetStackInstancesArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackSetStackInstancesArgs extends ResourceArgs {
 
     public static final StackSetStackInstancesArgs Empty = new StackSetStackInstancesArgs();
 

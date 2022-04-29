@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionByDefaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the default server-side encryption configuration.
  * 
  */
-public final class BucketServerSideEncryptionRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketServerSideEncryptionRuleArgs extends ResourceArgs {
 
     public static final BucketServerSideEncryptionRuleArgs Empty = new BucketServerSideEncryptionRuleArgs();
 

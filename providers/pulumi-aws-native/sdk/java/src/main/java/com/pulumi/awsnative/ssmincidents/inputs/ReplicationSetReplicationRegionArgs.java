@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 import com.pulumi.awsnative.ssmincidents.inputs.ReplicationSetRegionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The ReplicationSet regional configuration.
  * 
  */
-public final class ReplicationSetReplicationRegionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationSetReplicationRegionArgs extends ResourceArgs {
 
     public static final ReplicationSetReplicationRegionArgs Empty = new ReplicationSetReplicationRegionArgs();
 

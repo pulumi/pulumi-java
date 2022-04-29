@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
  * 
  */
-public final class AppImageConfigFileSystemConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppImageConfigFileSystemConfigArgs extends ResourceArgs {
 
     public static final AppImageConfigFileSystemConfigArgs Empty = new AppImageConfigFileSystemConfigArgs();
 

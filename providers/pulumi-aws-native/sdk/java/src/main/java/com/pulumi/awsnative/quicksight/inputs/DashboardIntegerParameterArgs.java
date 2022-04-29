@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * &lt;p&gt;An integer parameter.&lt;/p&gt;
  * 
  */
-public final class DashboardIntegerParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class DashboardIntegerParameterArgs extends ResourceArgs {
 
     public static final DashboardIntegerParameterArgs Empty = new DashboardIntegerParameterArgs();
 

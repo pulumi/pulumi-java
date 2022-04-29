@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iotevents.inputs.InputDefinitionArgs;
 import com.pulumi.awsnative.iotevents.inputs.InputTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InputArgs extends com.pulumi.resources.ResourceArgs {
+public final class InputArgs extends ResourceArgs {
 
     public static final InputArgs Empty = new InputArgs();
 

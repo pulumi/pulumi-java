@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder;
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionConfigurationArgs extends ResourceArgs {
 
     public static final DistributionConfigurationArgs Empty = new DistributionConfigurationArgs();
 

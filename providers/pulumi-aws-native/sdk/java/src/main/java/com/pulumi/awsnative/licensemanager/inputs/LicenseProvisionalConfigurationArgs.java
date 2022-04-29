@@ -5,11 +5,12 @@ package com.pulumi.awsnative.licensemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class LicenseProvisionalConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LicenseProvisionalConfigurationArgs extends ResourceArgs {
 
     public static final LicenseProvisionalConfigurationArgs Empty = new LicenseProvisionalConfigurationArgs();
 

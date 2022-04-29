@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.wafv2.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Custom response key and body map.
  * 
  */
-public final class RuleGroupCustomResponseBodiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupCustomResponseBodiesArgs extends ResourceArgs {
 
     public static final RuleGroupCustomResponseBodiesArgs Empty = new RuleGroupCustomResponseBodiesArgs();
 

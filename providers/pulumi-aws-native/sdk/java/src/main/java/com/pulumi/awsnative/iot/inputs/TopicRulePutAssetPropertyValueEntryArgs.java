@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRulePutAssetPropertyValueEntryArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRulePutAssetPropertyValueEntryArgs extends ResourceArgs {
 
     public static final TopicRulePutAssetPropertyValueEntryArgs Empty = new TopicRulePutAssetPropertyValueEntryArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * By default, AWS IoT Events generates a standard payload in JSON for any action. This action payload contains all attribute-value pairs that have the information about the detector model instance and the event triggered the action. To configure the action payload, you can use `contentExpression`.
  * 
  */
-public final class DetectorModelPayloadArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelPayloadArgs extends ResourceArgs {
 
     public static final DetectorModelPayloadArgs Empty = new DetectorModelPayloadArgs();
 

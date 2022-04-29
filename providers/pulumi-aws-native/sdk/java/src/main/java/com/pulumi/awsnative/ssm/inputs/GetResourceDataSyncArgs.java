@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.ssm.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetResourceDataSyncArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourceDataSyncArgs extends InvokeArgs {
 
     public static final GetResourceDataSyncArgs Empty = new GetResourceDataSyncArgs();
 

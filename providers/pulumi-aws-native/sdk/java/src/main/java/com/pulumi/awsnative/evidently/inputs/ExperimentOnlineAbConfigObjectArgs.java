@@ -6,6 +6,7 @@ package com.pulumi.awsnative.evidently.inputs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentTreatmentToWeightArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ExperimentOnlineAbConfigObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentOnlineAbConfigObjectArgs extends ResourceArgs {
 
     public static final ExperimentOnlineAbConfigObjectArgs Empty = new ExperimentOnlineAbConfigObjectArgs();
 

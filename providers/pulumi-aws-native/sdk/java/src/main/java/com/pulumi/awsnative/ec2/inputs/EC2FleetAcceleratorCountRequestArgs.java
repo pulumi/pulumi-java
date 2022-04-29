@@ -5,13 +5,14 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetAcceleratorCountRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetAcceleratorCountRequestArgs extends ResourceArgs {
 
     public static final EC2FleetAcceleratorCountRequestArgs Empty = new EC2FleetAcceleratorCountRequestArgs();
 

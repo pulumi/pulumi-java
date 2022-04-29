@@ -7,13 +7,14 @@ import com.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensArgs extends ResourceArgs {
 
     public static final StorageLensArgs Empty = new StorageLensArgs();
 

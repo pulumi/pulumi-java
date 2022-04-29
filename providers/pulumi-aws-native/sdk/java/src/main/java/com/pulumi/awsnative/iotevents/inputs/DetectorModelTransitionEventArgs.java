@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the ` actions  `performed and the next `state` entered when a `condition` evaluates to `TRUE`.
  * 
  */
-public final class DetectorModelTransitionEventArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelTransitionEventArgs extends ResourceArgs {
 
     public static final DetectorModelTransitionEventArgs Empty = new DetectorModelTransitionEventArgs();
 

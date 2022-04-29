@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelTumblingWindowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains a time interval window used for data aggregate computations (for example, average, sum, count, and so on).
  * 
  */
-public final class AssetModelMetricWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelMetricWindowArgs extends ResourceArgs {
 
     public static final AssetModelMetricWindowArgs Empty = new AssetModelMetricWindowArgs();
 

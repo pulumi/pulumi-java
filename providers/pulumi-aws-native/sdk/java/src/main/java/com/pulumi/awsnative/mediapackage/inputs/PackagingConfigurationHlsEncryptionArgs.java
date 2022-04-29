@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncrypti
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An HTTP Live Streaming (HLS) encryption configuration.
  * 
  */
-public final class PackagingConfigurationHlsEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationHlsEncryptionArgs extends ResourceArgs {
 
     public static final PackagingConfigurationHlsEncryptionArgs Empty = new PackagingConfigurationHlsEncryptionArgs();
 

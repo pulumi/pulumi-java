@@ -6,12 +6,13 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class AssetModelTransformArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelTransformArgs extends ResourceArgs {
 
     public static final AssetModelTransformArgs Empty = new AssetModelTransformArgs();
 

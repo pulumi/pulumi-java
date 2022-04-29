@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iot.enums.JobTemplateAction;
 import com.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Objects;
  * The criteria that determine when and how a job abort takes place.
  * 
  */
-public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobTemplateAbortCriteriaArgs extends ResourceArgs {
 
     public static final JobTemplateAbortCriteriaArgs Empty = new JobTemplateAbortCriteriaArgs();
 

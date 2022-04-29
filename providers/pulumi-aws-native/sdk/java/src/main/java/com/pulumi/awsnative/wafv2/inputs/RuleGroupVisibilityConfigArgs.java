@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Visibility Metric of the RuleGroup.
  * 
  */
-public final class RuleGroupVisibilityConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupVisibilityConfigArgs extends ResourceArgs {
 
     public static final RuleGroupVisibilityConfigArgs Empty = new RuleGroupVisibilityConfigArgs();
 

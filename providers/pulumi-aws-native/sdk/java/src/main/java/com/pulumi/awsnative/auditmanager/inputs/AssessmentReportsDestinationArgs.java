@@ -6,6 +6,7 @@ package com.pulumi.awsnative.auditmanager.inputs;
 import com.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The destination in which evidence reports are stored for the specified assessment.
  * 
  */
-public final class AssessmentReportsDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssessmentReportsDestinationArgs extends ResourceArgs {
 
     public static final AssessmentReportsDestinationArgs Empty = new AssessmentReportsDestinationArgs();
 

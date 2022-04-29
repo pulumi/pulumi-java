@@ -8,6 +8,7 @@ import com.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaV
 import com.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * S3 bucket destination settings for the Amazon S3 Storage Lens metrics export.
  * 
  */
-public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensS3BucketDestinationArgs extends ResourceArgs {
 
     public static final StorageLensS3BucketDestinationArgs Empty = new StorageLensS3BucketDestinationArgs();
 

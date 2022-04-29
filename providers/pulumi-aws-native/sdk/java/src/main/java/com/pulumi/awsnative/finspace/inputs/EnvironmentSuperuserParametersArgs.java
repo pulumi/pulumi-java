@@ -5,6 +5,7 @@ package com.pulumi.awsnative.finspace.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Parameters of the first Superuser for the FinSpace Environment
  * 
  */
-public final class EnvironmentSuperuserParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentSuperuserParametersArgs extends ResourceArgs {
 
     public static final EnvironmentSuperuserParametersArgs Empty = new EnvironmentSuperuserParametersArgs();
 

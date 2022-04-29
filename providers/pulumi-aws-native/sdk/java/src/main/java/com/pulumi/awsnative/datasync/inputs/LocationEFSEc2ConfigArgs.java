@@ -5,6 +5,7 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The subnet and security group that DataSync uses to access target EFS file system.
  * 
  */
-public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationEFSEc2ConfigArgs extends ResourceArgs {
 
     public static final LocationEFSEc2ConfigArgs Empty = new LocationEFSEc2ConfigArgs();
 

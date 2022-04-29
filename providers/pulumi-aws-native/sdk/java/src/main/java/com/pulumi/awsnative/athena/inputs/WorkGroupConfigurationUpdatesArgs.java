@@ -7,6 +7,7 @@ import com.pulumi.awsnative.athena.inputs.WorkGroupEngineVersionArgs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationUpdatesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
  * 
  */
-public final class WorkGroupConfigurationUpdatesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupConfigurationUpdatesArgs extends ResourceArgs {
 
     public static final WorkGroupConfigurationUpdatesArgs Empty = new WorkGroupConfigurationUpdatesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.aps;
 import com.pulumi.awsnative.aps.inputs.RuleGroupsNamespaceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupsNamespaceArgs extends ResourceArgs {
 
     public static final RuleGroupsNamespaceArgs Empty = new RuleGroupsNamespaceArgs();
 

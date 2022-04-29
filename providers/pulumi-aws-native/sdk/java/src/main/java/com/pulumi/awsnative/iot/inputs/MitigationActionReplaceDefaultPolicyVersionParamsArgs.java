@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Parameters to define a mitigation action that adds a blank policy to restrict permissions.
  * 
  */
-public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends ResourceArgs {
 
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
 

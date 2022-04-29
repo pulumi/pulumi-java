@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FlowSlackSourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSlackSourcePropertiesArgs extends ResourceArgs {
 
     public static final FlowSlackSourcePropertiesArgs Empty = new FlowSlackSourcePropertiesArgs();
 

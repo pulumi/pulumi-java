@@ -9,12 +9,13 @@ import com.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import com.pulumi.awsnative.events.inputs.ConnectionOAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AuthParametersPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AuthParametersPropertiesArgs extends ResourceArgs {
 
     public static final AuthParametersPropertiesArgs Empty = new AuthParametersPropertiesArgs();
 

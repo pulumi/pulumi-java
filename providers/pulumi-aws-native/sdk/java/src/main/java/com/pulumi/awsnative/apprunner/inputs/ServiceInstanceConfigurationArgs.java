@@ -5,6 +5,7 @@ package com.pulumi.awsnative.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Instance Configuration
  * 
  */
-public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceInstanceConfigurationArgs extends ResourceArgs {
 
     public static final ServiceInstanceConfigurationArgs Empty = new ServiceInstanceConfigurationArgs();
 

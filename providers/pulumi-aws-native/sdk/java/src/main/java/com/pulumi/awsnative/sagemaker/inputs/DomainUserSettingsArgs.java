@@ -8,6 +8,7 @@ import com.pulumi.awsnative.sagemaker.inputs.DomainKernelGatewayAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainSharingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A collection of settings that apply to users of Amazon SageMaker Studio. These settings are specified when the CreateUserProfile API is called, and as DefaultUserSettings when the CreateDomain API is called.
  * 
  */
-public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainUserSettingsArgs extends ResourceArgs {
 
     public static final DomainUserSettingsArgs Empty = new DomainUserSettingsArgs();
 

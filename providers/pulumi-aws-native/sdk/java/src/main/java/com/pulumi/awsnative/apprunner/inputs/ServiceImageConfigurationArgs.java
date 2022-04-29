@@ -6,6 +6,7 @@ package com.pulumi.awsnative.apprunner.inputs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Image Configuration
  * 
  */
-public final class ServiceImageConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceImageConfigurationArgs extends ResourceArgs {
 
     public static final ServiceImageConfigurationArgs Empty = new ServiceImageConfigurationArgs();
 

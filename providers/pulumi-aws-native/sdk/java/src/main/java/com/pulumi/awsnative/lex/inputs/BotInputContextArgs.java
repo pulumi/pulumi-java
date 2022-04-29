@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * InputContext specified for the intent.
  * 
  */
-public final class BotInputContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotInputContextArgs extends ResourceArgs {
 
     public static final BotInputContextArgs Empty = new BotInputContextArgs();
 

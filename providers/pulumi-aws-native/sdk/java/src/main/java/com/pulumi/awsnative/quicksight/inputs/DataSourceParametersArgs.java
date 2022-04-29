@@ -22,6 +22,7 @@ import com.pulumi.awsnative.quicksight.inputs.DataSourceSqlServerParametersArgs;
 import com.pulumi.awsnative.quicksight.inputs.DataSourceTeradataParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ import javax.annotation.Nullable;
  *             attributes can be non-null.&lt;/p&gt;
  * 
  */
-public final class DataSourceParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceParametersArgs extends ResourceArgs {
 
     public static final DataSourceParametersArgs Empty = new DataSourceParametersArgs();
 

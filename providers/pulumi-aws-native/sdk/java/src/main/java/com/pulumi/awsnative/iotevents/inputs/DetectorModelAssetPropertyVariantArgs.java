@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A structure that contains an asset property value. For more information, see [Variant](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_Variant.html) in the *AWS IoT SiteWise API Reference*.
  * 
  */
-public final class DetectorModelAssetPropertyVariantArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelAssetPropertyVariantArgs extends ResourceArgs {
 
     public static final DetectorModelAssetPropertyVariantArgs Empty = new DetectorModelAssetPropertyVariantArgs();
 

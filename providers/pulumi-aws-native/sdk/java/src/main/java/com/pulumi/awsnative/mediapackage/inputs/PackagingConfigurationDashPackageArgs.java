@@ -9,6 +9,7 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashEncryp
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
  * 
  */
-public final class PackagingConfigurationDashPackageArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationDashPackageArgs extends ResourceArgs {
 
     public static final PackagingConfigurationDashPackageArgs Empty = new PackagingConfigurationDashPackageArgs();
 

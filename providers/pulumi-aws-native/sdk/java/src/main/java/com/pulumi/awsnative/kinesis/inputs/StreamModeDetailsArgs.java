@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kinesis.inputs;
 import com.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * When specified, enables or updates the mode of stream. Default is PROVISIONED.
  * 
  */
-public final class StreamModeDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamModeDetailsArgs extends ResourceArgs {
 
     public static final StreamModeDetailsArgs Empty = new StreamModeDetailsArgs();
 

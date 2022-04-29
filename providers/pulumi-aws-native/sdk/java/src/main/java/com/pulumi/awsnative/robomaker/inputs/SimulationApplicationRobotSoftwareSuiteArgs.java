@@ -7,6 +7,7 @@ import com.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSu
 import com.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Information about a robot software suite.
  * 
  */
-public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulumi.resources.ResourceArgs {
+public final class SimulationApplicationRobotSoftwareSuiteArgs extends ResourceArgs {
 
     public static final SimulationApplicationRobotSoftwareSuiteArgs Empty = new SimulationApplicationRobotSoftwareSuiteArgs();
 

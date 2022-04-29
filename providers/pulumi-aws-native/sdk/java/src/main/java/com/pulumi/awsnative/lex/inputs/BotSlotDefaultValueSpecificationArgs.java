@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A list of values that Amazon Lex should use as the default value for a slot.
  * 
  */
-public final class BotSlotDefaultValueSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotDefaultValueSpecificationArgs extends ResourceArgs {
 
     public static final BotSlotDefaultValueSpecificationArgs Empty = new BotSlotDefaultValueSpecificationArgs();
 

@@ -9,6 +9,7 @@ import com.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Describes the notification configuration for an Amazon S3 bucket.
  * 
  */
-public final class BucketNotificationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketNotificationConfigurationArgs extends ResourceArgs {
 
     public static final BucketNotificationConfigurationArgs Empty = new BucketNotificationConfigurationArgs();
 

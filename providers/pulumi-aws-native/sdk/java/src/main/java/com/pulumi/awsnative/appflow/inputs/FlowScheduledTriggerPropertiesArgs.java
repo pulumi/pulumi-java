@@ -6,6 +6,7 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details required for scheduled trigger type
  * 
  */
-public final class FlowScheduledTriggerPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowScheduledTriggerPropertiesArgs extends ResourceArgs {
 
     public static final FlowScheduledTriggerPropertiesArgs Empty = new FlowScheduledTriggerPropertiesArgs();
 

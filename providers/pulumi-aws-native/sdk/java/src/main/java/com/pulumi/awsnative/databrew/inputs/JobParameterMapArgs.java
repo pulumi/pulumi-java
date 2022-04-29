@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.databrew.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class JobParameterMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobParameterMapArgs extends ResourceArgs {
 
     public static final JobParameterMapArgs Empty = new JobParameterMapArgs();
 

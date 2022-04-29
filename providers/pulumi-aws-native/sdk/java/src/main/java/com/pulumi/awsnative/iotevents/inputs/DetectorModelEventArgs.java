@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies the `actions` to be performed when the `condition` evaluates to `TRUE`.
  * 
  */
-public final class DetectorModelEventArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelEventArgs extends ResourceArgs {
 
     public static final DetectorModelEventArgs Empty = new DetectorModelEventArgs();
 

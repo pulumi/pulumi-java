@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.location.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTrackerConsumerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTrackerConsumerArgs extends InvokeArgs {
 
     public static final GetTrackerConsumerArgs Empty = new GetTrackerConsumerArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkInsightsAnalysisArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInsightsAnalysisArgs extends ResourceArgs {
 
     public static final NetworkInsightsAnalysisArgs Empty = new NetworkInsightsAnalysisArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.macie.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Map of filter criteria.
  * 
  */
-public final class FindingsFilterCriterionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FindingsFilterCriterionArgs extends ResourceArgs {
 
     public static final FindingsFilterCriterionArgs Empty = new FindingsFilterCriterionArgs();
 

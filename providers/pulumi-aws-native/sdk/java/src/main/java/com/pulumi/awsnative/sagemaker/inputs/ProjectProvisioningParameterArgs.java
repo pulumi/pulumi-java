@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information about a parameter used to provision a product.
  * 
  */
-public final class ProjectProvisioningParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectProvisioningParameterArgs extends ResourceArgs {
 
     public static final ProjectProvisioningParameterArgs Empty = new ProjectProvisioningParameterArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.awsnative.macie.inputs;
 import com.pulumi.awsnative.macie.inputs.FindingsFilterCriterionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FindingsFilterFindingCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class FindingsFilterFindingCriteriaArgs extends ResourceArgs {
 
     public static final FindingsFilterFindingCriteriaArgs Empty = new FindingsFilterFindingCriteriaArgs();
 

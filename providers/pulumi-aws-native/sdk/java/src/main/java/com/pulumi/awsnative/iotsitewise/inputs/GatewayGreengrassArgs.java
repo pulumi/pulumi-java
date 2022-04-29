@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Contains the ARN of AWS IoT Greengrass Group V1 that the gateway runs on.
  * 
  */
-public final class GatewayGreengrassArgs extends com.pulumi.resources.ResourceArgs {
+public final class GatewayGreengrassArgs extends ResourceArgs {
 
     public static final GatewayGreengrassArgs Empty = new GatewayGreengrassArgs();
 

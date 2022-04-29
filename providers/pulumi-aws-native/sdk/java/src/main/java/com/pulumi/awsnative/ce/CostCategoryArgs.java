@@ -6,13 +6,14 @@ package com.pulumi.awsnative.ce;
 import com.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
+public final class CostCategoryArgs extends ResourceArgs {
 
     public static final CostCategoryArgs Empty = new CostCategoryArgs();
 

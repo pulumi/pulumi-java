@@ -21,6 +21,7 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfile
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfileCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
  * Connector specific configuration needed to create connector profile based on Authentication mechanism
  * 
  */
-public final class ConnectorProfileCredentialsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorProfileCredentialsArgs extends ResourceArgs {
 
     public static final ConnectorProfileCredentialsArgs Empty = new ConnectorProfileCredentialsArgs();
 

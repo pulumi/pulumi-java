@@ -5,6 +5,7 @@ package com.pulumi.awsnative.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration with resource tag settings to ignore across all resources handled by this provider (except any individual service tag resources such as `ec2.Tag`) for situations where external systems are managing certain resource tags.
  * 
  */
-public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderIgnoreTagsArgs extends ResourceArgs {
 
     public static final ProviderIgnoreTagsArgs Empty = new ProviderIgnoreTagsArgs();
 

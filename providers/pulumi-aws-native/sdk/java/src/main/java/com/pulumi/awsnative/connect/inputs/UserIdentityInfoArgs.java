@@ -5,6 +5,7 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains information about the identity of a user.
  * 
  */
-public final class UserIdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserIdentityInfoArgs extends ResourceArgs {
 
     public static final UserIdentityInfoArgs Empty = new UserIdentityInfoArgs();
 

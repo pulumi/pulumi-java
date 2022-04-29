@@ -7,12 +7,13 @@ import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionActionCond
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionLabelNameConditionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LoggingConfigurationConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationConditionArgs extends ResourceArgs {
 
     public static final LoggingConfigurationConditionArgs Empty = new LoggingConfigurationConditionArgs();
 

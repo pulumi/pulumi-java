@@ -7,6 +7,7 @@ import com.pulumi.awsnative.ec2.enums.NetworkInsightsPathProtocol;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsPathTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkInsightsPathArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInsightsPathArgs extends ResourceArgs {
 
     public static final NetworkInsightsPathArgs Empty = new NetworkInsightsPathArgs();
 

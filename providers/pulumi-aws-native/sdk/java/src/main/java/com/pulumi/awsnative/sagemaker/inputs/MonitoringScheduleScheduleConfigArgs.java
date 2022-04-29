@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration details about the monitoring schedule.
  * 
  */
-public final class MonitoringScheduleScheduleConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleScheduleConfigArgs extends ResourceArgs {
 
     public static final MonitoringScheduleScheduleConfigArgs Empty = new MonitoringScheduleScheduleConfigArgs();
 

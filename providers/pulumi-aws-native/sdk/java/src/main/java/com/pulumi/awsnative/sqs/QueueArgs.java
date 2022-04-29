@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sqs;
 import com.pulumi.awsnative.sqs.inputs.QueueTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueueArgs extends ResourceArgs {
 
     public static final QueueArgs Empty = new QueueArgs();
 

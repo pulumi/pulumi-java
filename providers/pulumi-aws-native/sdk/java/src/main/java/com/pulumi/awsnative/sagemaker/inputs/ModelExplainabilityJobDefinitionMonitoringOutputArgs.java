@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionS3OutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The output object for a monitoring job.
  * 
  */
-public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionMonitoringOutputArgs Empty = new ModelExplainabilityJobDefinitionMonitoringOutputArgs();
 

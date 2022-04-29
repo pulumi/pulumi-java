@@ -5,6 +5,7 @@ package com.pulumi.awsnative.networkmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A key-value pair to associate with a global network resource.
  * 
  */
-public final class GlobalNetworkTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalNetworkTagArgs extends ResourceArgs {
 
     public static final GlobalNetworkTagArgs Empty = new GlobalNetworkTagArgs();
 

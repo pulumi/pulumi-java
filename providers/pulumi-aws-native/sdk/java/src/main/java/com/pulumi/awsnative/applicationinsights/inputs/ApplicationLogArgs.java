@@ -6,6 +6,7 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 import com.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A log to be monitored for the component.
  * 
  */
-public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationLogArgs extends ResourceArgs {
 
     public static final ApplicationLogArgs Empty = new ApplicationLogArgs();
 

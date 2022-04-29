@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * S3 buckets and Regions to include/exclude in the Amazon S3 Storage Lens configuration.
  * 
  */
-public final class StorageLensBucketsAndRegionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensBucketsAndRegionsArgs extends ResourceArgs {
 
     public static final StorageLensBucketsAndRegionsArgs Empty = new StorageLensBucketsAndRegionsArgs();
 

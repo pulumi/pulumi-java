@@ -5,11 +5,12 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class NetworkInterfaceInstanceIpv6AddressArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInterfaceInstanceIpv6AddressArgs extends ResourceArgs {
 
     public static final NetworkInterfaceInstanceIpv6AddressArgs Empty = new NetworkInterfaceInstanceIpv6AddressArgs();
 

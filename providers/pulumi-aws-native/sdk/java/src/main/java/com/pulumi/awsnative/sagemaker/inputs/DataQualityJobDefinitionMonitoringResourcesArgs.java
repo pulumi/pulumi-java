@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionClusterConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Identifies the resources to deploy for a monitoring job.
  * 
  */
-public final class DataQualityJobDefinitionMonitoringResourcesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataQualityJobDefinitionMonitoringResourcesArgs extends ResourceArgs {
 
     public static final DataQualityJobDefinitionMonitoringResourcesArgs Empty = new DataQualityJobDefinitionMonitoringResourcesArgs();
 

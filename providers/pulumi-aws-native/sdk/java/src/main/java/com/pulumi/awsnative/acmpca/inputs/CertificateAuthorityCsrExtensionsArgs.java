@@ -7,6 +7,7 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessDescriptionA
 import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityKeyUsageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Structure that contains CSR pass though extensions information.
  * 
  */
-public final class CertificateAuthorityCsrExtensionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityCsrExtensionsArgs extends ResourceArgs {
 
     public static final CertificateAuthorityCsrExtensionsArgs Empty = new CertificateAuthorityCsrExtensionsArgs();
 

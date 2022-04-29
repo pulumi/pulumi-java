@@ -6,11 +6,12 @@ package com.pulumi.awsnative.emrcontainers.inputs;
 import com.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class VirtualClusterContainerProviderArgs extends com.pulumi.resources.ResourceArgs {
+public final class VirtualClusterContainerProviderArgs extends ResourceArgs {
 
     public static final VirtualClusterContainerProviderArgs Empty = new VirtualClusterContainerProviderArgs();
 

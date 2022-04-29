@@ -7,12 +7,13 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfi
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetContentDeliveryRuleDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetContentDeliveryRuleDestinationArgs extends ResourceArgs {
 
     public static final DatasetContentDeliveryRuleDestinationArgs Empty = new DatasetContentDeliveryRuleDestinationArgs();
 

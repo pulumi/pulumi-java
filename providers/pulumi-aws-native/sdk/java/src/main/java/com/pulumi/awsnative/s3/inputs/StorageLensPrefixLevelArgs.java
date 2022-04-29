@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelStorageMetricsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Prefix-level metrics configurations.
  * 
  */
-public final class StorageLensPrefixLevelArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensPrefixLevelArgs extends ResourceArgs {
 
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();
 

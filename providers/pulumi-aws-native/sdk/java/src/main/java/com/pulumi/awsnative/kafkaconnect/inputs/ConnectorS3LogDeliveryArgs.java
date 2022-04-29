@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details about delivering logs to Amazon S3.
  * 
  */
-public final class ConnectorS3LogDeliveryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorS3LogDeliveryArgs extends ResourceArgs {
 
     public static final ConnectorS3LogDeliveryArgs Empty = new ConnectorS3LogDeliveryArgs();
 

@@ -6,12 +6,13 @@ package com.pulumi.awsnative.ssm.inputs;
 import com.pulumi.awsnative.ssm.inputs.AssociationS3OutputLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AssociationInstanceAssociationOutputLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssociationInstanceAssociationOutputLocationArgs extends ResourceArgs {
 
     public static final AssociationInstanceAssociationOutputLocationArgs Empty = new AssociationInstanceAssociationOutputLocationArgs();
 

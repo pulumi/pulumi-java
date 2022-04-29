@@ -7,12 +7,13 @@ import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantValuesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ComponentVariantArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentVariantArgs extends ResourceArgs {
 
     public static final ComponentVariantArgs Empty = new ComponentVariantArgs();
 

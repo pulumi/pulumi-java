@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketTransitionStorageClass;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * You must specify at least one of &#34;TransitionDate&#34; and &#34;TransitionInDays&#34;
  * 
  */
-public final class BucketTransitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketTransitionArgs extends ResourceArgs {
 
     public static final BucketTransitionArgs Empty = new BucketTransitionArgs();
 

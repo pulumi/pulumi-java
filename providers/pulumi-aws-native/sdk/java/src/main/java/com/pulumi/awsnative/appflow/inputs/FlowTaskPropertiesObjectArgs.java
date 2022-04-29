@@ -6,6 +6,7 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An object used to store task related info
  * 
  */
-public final class FlowTaskPropertiesObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowTaskPropertiesObjectArgs extends ResourceArgs {
 
     public static final FlowTaskPropertiesObjectArgs Empty = new FlowTaskPropertiesObjectArgs();
 

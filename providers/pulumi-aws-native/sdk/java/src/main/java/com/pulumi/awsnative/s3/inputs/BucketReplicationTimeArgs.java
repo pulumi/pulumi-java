@@ -7,10 +7,11 @@ import com.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import com.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class BucketReplicationTimeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationTimeArgs extends ResourceArgs {
 
     public static final BucketReplicationTimeArgs Empty = new BucketReplicationTimeArgs();
 

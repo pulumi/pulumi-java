@@ -9,6 +9,7 @@ import com.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import com.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
+public final class FeatureArgs extends ResourceArgs {
 
     public static final FeatureArgs Empty = new FeatureArgs();
 

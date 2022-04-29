@@ -7,11 +7,12 @@ import com.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import com.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSpecificLoggingArgs extends ResourceArgs {
 
     public static final ResourceSpecificLoggingArgs Empty = new ResourceSpecificLoggingArgs();
 

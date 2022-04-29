@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The endpoints used by AWS Lambda to access a self-managed event source.
  * 
  */
-public final class EventSourceMappingEndpointsArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingEndpointsArgs extends ResourceArgs {
 
     public static final EventSourceMappingEndpointsArgs Empty = new EventSourceMappingEndpointsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.acmpca.inputs;
 import com.pulumi.awsnative.acmpca.inputs.CertificatePolicyQualifierInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Structure that contains X.509 Policy information.
  * 
  */
-public final class CertificatePolicyInformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificatePolicyInformationArgs extends ResourceArgs {
 
     public static final CertificatePolicyInformationArgs Empty = new CertificatePolicyInformationArgs();
 

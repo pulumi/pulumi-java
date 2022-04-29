@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAlarmArgs extends InvokeArgs {
 
     public static final GetAlarmArgs Empty = new GetAlarmArgs();
 

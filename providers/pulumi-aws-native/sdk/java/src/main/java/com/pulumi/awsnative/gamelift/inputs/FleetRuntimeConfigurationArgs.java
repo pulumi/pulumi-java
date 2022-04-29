@@ -6,6 +6,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.inputs.FleetServerProcessArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * An Amazon GameLift instance is limited to 50 processes running simultaneously. A runtime configuration must specify fewer than this limit. To calculate the total number of processes specified in a runtime configuration, add the values of the ConcurrentExecutions parameter for each ServerProcess object in the runtime configuration.
  * 
  */
-public final class FleetRuntimeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetRuntimeConfigurationArgs extends ResourceArgs {
 
     public static final FleetRuntimeConfigurationArgs Empty = new FleetRuntimeConfigurationArgs();
 

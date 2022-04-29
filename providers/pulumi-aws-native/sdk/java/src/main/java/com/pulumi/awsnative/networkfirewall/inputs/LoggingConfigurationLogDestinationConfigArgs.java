@@ -7,11 +7,12 @@ import com.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestina
 import com.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 
 
-public final class LoggingConfigurationLogDestinationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationLogDestinationConfigArgs extends ResourceArgs {
 
     public static final LoggingConfigurationLogDestinationConfigArgs Empty = new LoggingConfigurationLogDestinationConfigArgs();
 

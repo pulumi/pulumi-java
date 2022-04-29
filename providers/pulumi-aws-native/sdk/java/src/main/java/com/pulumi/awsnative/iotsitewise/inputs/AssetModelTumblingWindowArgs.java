@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous time interval. This window is used in metric and aggregation computations.
  * 
  */
-public final class AssetModelTumblingWindowArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelTumblingWindowArgs extends ResourceArgs {
 
     public static final AssetModelTumblingWindowArgs Empty = new AssetModelTumblingWindowArgs();
 

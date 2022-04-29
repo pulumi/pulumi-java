@@ -5,6 +5,7 @@ package com.pulumi.awsnative.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Describes a resize cluster operation. For example, a scheduled action to run the `ResizeCluster` API operation.
  * 
  */
-public final class ScheduledActionResizeClusterMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledActionResizeClusterMessageArgs extends ResourceArgs {
 
     public static final ScheduledActionResizeClusterMessageArgs Empty = new ScheduledActionResizeClusterMessageArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionFunctionAssociationArg
 import com.pulumi.awsnative.cloudfront.inputs.DistributionLambdaFunctionAssociationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionDefaultCacheBehaviorArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionDefaultCacheBehaviorArgs extends ResourceArgs {
 
     public static final DistributionDefaultCacheBehaviorArgs Empty = new DistributionDefaultCacheBehaviorArgs();
 

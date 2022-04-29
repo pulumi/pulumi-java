@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketFilterRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A container for object key name prefix and suffix filtering rules.
  * 
  */
-public final class BucketS3KeyFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketS3KeyFilterArgs extends ResourceArgs {
 
     public static final BucketS3KeyFilterArgs Empty = new BucketS3KeyFilterArgs();
 

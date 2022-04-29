@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Information that defines how a detector operates.
  * 
  */
-public final class DetectorModelDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelDefinitionArgs extends ResourceArgs {
 
     public static final DetectorModelDefinitionArgs Empty = new DetectorModelDefinitionArgs();
 

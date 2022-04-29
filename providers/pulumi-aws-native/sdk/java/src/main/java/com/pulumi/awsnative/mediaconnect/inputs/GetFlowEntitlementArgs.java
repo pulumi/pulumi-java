@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.mediaconnect.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetFlowEntitlementArgs extends InvokeArgs {
 
     public static final GetFlowEntitlementArgs Empty = new GetFlowEntitlementArgs();
 

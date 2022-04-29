@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class AppTagMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppTagMapArgs extends ResourceArgs {
 
     public static final AppTagMapArgs Empty = new AppTagMapArgs();
 

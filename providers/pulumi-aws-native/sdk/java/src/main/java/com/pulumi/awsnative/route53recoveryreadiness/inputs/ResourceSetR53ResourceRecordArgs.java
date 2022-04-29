@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Route 53 resource that a DNS target resource record points to.
  * 
  */
-public final class ResourceSetR53ResourceRecordArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetR53ResourceRecordArgs extends ResourceArgs {
 
     public static final ResourceSetR53ResourceRecordArgs Empty = new ResourceSetR53ResourceRecordArgs();
 

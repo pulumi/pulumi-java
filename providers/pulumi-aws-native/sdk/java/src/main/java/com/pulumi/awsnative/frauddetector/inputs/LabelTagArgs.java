@@ -5,11 +5,12 @@ package com.pulumi.awsnative.frauddetector.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class LabelTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class LabelTagArgs extends ResourceArgs {
 
     public static final LabelTagArgs Empty = new LabelTagArgs();
 

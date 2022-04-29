@@ -7,6 +7,7 @@ import com.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import com.pulumi.awsnative.cloudtrail.inputs.TrailDataResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The type of email sending events to publish to the event destination.
  * 
  */
-public final class TrailEventSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrailEventSelectorArgs extends ResourceArgs {
 
     public static final TrailEventSelectorArgs Empty = new TrailEventSelectorArgs();
 

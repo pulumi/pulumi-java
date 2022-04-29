@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * S3 location of bot definitions zip file, if it&#39;s not defined inline in CloudFormation.
  * 
  */
-public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotS3LocationArgs extends ResourceArgs {
 
     public static final BotS3LocationArgs Empty = new BotS3LocationArgs();
 

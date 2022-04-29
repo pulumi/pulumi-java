@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetComponentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetComponentArgs extends InvokeArgs {
 
     public static final GetComponentArgs Empty = new GetComponentArgs();
 

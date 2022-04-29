@@ -6,6 +6,7 @@ package com.pulumi.awsnative.accessanalyzer.inputs;
 import com.pulumi.awsnative.accessanalyzer.inputs.AnalyzerFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * An Access Analyzer archive rule. Archive rules automatically archive new findings that meet the criteria you define when you create the rule.
  * 
  */
-public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalyzerArchiveRuleArgs extends ResourceArgs {
 
     public static final AnalyzerArchiveRuleArgs Empty = new AnalyzerArchiveRuleArgs();
 

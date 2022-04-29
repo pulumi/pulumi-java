@@ -12,6 +12,7 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleNetworkConfigArgs
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStoppingConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * Defines the monitoring job.
  * 
  */
-public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleMonitoringJobDefinitionArgs extends ResourceArgs {
 
     public static final MonitoringScheduleMonitoringJobDefinitionArgs Empty = new MonitoringScheduleMonitoringJobDefinitionArgs();
 

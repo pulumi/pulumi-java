@@ -7,6 +7,7 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateExtensionsArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Structure that specifies fields to be overridden in a certificate at the time of issuance. These requires an API Passthrough template be used or they will be ignored.
  * 
  */
-public final class CertificateApiPassthroughArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateApiPassthroughArgs extends ResourceArgs {
 
     public static final CertificateApiPassthroughArgs Empty = new CertificateApiPassthroughArgs();
 

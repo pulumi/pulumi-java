@@ -8,6 +8,7 @@ import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaEventSourc
 import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaLinuxProcessParamsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ComponentVersionLambdaExecutionParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentVersionLambdaExecutionParametersArgs extends ResourceArgs {
 
     public static final ComponentVersionLambdaExecutionParametersArgs Empty = new ComponentVersionLambdaExecutionParametersArgs();
 

@@ -10,12 +10,13 @@ import com.pulumi.awsnative.customerprofiles.inputs.IntegrationServiceNowSourceP
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationZendeskSourcePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntegrationSourceConnectorPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationSourceConnectorPropertiesArgs extends ResourceArgs {
 
     public static final IntegrationSourceConnectorPropertiesArgs Empty = new IntegrationSourceConnectorPropertiesArgs();
 

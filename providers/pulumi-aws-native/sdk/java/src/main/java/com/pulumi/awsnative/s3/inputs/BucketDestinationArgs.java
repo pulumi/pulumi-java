@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketDestinationFormat;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies information about where to publish analysis or configuration results for an Amazon S3 bucket and S3 Replication Time Control (S3 RTC).
  * 
  */
-public final class BucketDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketDestinationArgs extends ResourceArgs {
 
     public static final BucketDestinationArgs Empty = new BucketDestinationArgs();
 

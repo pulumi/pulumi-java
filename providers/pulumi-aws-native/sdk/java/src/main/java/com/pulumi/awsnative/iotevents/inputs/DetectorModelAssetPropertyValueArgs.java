@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestamp
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A structure that contains value information. For more information, see [AssetPropertyValue](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html) in the *AWS IoT SiteWise API Reference*.
  * 
  */
-public final class DetectorModelAssetPropertyValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelAssetPropertyValueArgs extends ResourceArgs {
 
     public static final DetectorModelAssetPropertyValueArgs Empty = new DetectorModelAssetPropertyValueArgs();
 

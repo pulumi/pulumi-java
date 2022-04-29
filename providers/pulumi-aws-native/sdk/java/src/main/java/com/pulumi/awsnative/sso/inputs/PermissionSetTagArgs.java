@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sso.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The metadata that you apply to the permission set to help you categorize and organize them.
  * 
  */
-public final class PermissionSetTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class PermissionSetTagArgs extends ResourceArgs {
 
     public static final PermissionSetTagArgs Empty = new PermissionSetTagArgs();
 

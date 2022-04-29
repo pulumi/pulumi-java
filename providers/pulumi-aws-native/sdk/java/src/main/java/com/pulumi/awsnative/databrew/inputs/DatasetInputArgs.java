@@ -9,6 +9,7 @@ import com.pulumi.awsnative.databrew.inputs.DatasetMetadataArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Input
  * 
  */
-public final class DatasetInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetInputArgs extends ResourceArgs {
 
     public static final DatasetInputArgs Empty = new DatasetInputArgs();
 

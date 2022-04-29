@@ -5,6 +5,7 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Structure that contains X.509 AccessMethod information. Assign one and ONLY one field.
  * 
  */
-public final class CertificateAuthorityAccessMethodArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityAccessMethodArgs extends ResourceArgs {
 
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();
 

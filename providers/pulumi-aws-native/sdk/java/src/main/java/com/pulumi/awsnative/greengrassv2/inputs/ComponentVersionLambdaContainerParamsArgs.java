@@ -7,6 +7,7 @@ import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaDeviceMoun
 import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaVolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ComponentVersionLambdaContainerParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentVersionLambdaContainerParamsArgs extends ResourceArgs {
 
     public static final ComponentVersionLambdaContainerParamsArgs Empty = new ComponentVersionLambdaContainerParamsArgs();
 

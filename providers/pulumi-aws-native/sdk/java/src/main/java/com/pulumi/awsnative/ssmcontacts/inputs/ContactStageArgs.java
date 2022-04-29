@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ssmcontacts.inputs;
 import com.pulumi.awsnative.ssmcontacts.inputs.ContactTargetsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A set amount of time that an escalation plan or engagement plan engages the specified contacts or contact methods.
  * 
  */
-public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactStageArgs extends ResourceArgs {
 
     public static final ContactStageArgs Empty = new ContactStageArgs();
 

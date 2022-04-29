@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lookoutmetrics;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertArgs extends ResourceArgs {
 
     public static final AlertArgs Empty = new AlertArgs();
 

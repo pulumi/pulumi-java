@@ -6,6 +6,7 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.LocationSMBMountOptionsVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The mount options used by DataSync to access the SMB server.
  * 
  */
-public final class LocationSMBMountOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationSMBMountOptionsArgs extends ResourceArgs {
 
     public static final LocationSMBMountOptionsArgs Empty = new LocationSMBMountOptionsArgs();
 

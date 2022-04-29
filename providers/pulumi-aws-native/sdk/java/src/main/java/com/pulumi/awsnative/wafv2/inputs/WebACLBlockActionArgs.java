@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCustomResponseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Block traffic towards application.
  * 
  */
-public final class WebACLBlockActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLBlockActionArgs extends ResourceArgs {
 
     public static final WebACLBlockActionArgs Empty = new WebACLBlockActionArgs();
 

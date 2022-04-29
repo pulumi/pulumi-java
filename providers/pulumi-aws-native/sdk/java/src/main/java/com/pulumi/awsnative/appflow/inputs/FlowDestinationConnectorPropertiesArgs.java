@@ -13,6 +13,7 @@ import com.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationPropertiesArgs
 import com.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * Destination connector details
  * 
  */
-public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowDestinationConnectorPropertiesArgs extends ResourceArgs {
 
     public static final FlowDestinationConnectorPropertiesArgs Empty = new FlowDestinationConnectorPropertiesArgs();
 

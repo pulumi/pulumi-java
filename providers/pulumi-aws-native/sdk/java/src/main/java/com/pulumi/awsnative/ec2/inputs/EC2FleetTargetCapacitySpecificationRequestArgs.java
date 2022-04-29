@@ -7,13 +7,14 @@ import com.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequest
 import com.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetTargetCapacitySpecificationRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetTargetCapacitySpecificationRequestArgs extends ResourceArgs {
 
     public static final EC2FleetTargetCapacitySpecificationRequestArgs Empty = new EC2FleetTargetCapacitySpecificationRequestArgs();
 

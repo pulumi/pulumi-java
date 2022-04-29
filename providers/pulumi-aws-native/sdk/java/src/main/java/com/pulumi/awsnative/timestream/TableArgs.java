@@ -8,6 +8,7 @@ import com.pulumi.awsnative.timestream.inputs.RetentionPropertiesPropertiesArgs;
 import com.pulumi.awsnative.timestream.inputs.TableTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableArgs extends ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 

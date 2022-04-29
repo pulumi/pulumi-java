@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for the cluster used to run model monitoring jobs.
  * 
  */
-public final class ModelBiasJobDefinitionClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelBiasJobDefinitionClusterConfigArgs extends ResourceArgs {
 
     public static final ModelBiasJobDefinitionClusterConfigArgs Empty = new ModelBiasJobDefinitionClusterConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.devicefarm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The VPC security groups and subnets that are attached to a TestGrid project.
  * 
  */
-public final class TestGridProjectVpcConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class TestGridProjectVpcConfigArgs extends ResourceArgs {
 
     public static final TestGridProjectVpcConfigArgs Empty = new TestGridProjectVpcConfigArgs();
 

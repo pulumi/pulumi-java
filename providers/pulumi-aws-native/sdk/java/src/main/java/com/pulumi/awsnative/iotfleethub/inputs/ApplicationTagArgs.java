@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotfleethub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * To add or update tag, provide both key and value. To delete tag, provide only tag key to be deleted.
  * 
  */
-public final class ApplicationTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationTagArgs extends ResourceArgs {
 
     public static final ApplicationTagArgs Empty = new ApplicationTagArgs();
 

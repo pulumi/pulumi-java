@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.s3.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * Configures the server-side encryption for Amazon S3 Storage Lens report files with either S3-managed keys (SSE-S3) or KMS-managed keys (SSE-KMS).
  * 
  */
-public final class StorageLensEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensEncryptionArgs extends ResourceArgs {
 
     public static final StorageLensEncryptionArgs Empty = new StorageLensEncryptionArgs();
 

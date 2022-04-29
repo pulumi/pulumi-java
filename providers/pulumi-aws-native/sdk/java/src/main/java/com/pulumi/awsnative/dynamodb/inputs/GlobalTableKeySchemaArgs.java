@@ -5,11 +5,12 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GlobalTableKeySchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalTableKeySchemaArgs extends ResourceArgs {
 
     public static final GlobalTableKeySchemaArgs Empty = new GlobalTableKeySchemaArgs();
 

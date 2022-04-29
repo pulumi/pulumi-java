@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationS3LogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The logging configuration of the infrastructure configuration.
  * 
  */
-public final class InfrastructureConfigurationLoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class InfrastructureConfigurationLoggingArgs extends ResourceArgs {
 
     public static final InfrastructureConfigurationLoggingArgs Empty = new InfrastructureConfigurationLoggingArgs();
 

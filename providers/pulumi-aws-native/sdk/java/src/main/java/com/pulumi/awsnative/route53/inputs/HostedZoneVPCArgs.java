@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A complex type that contains information about an Amazon VPC. Route 53 Resolver uses the records in the private hosted zone to route traffic in that VPC.
  * 
  */
-public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostedZoneVPCArgs extends ResourceArgs {
 
     public static final HostedZoneVPCArgs Empty = new HostedZoneVPCArgs();
 

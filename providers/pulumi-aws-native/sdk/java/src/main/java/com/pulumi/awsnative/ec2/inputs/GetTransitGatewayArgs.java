@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTransitGatewayArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTransitGatewayArgs extends InvokeArgs {
 
     public static final GetTransitGatewayArgs Empty = new GetTransitGatewayArgs();
 

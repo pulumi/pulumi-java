@@ -8,13 +8,14 @@ import com.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodA
 import com.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs {
+public final class SigningProfileArgs extends ResourceArgs {
 
     public static final SigningProfileArgs Empty = new SigningProfileArgs();
 

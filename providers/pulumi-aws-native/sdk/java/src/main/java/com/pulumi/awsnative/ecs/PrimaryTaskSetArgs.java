@@ -5,11 +5,12 @@ package com.pulumi.awsnative.ecs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrimaryTaskSetArgs extends ResourceArgs {
 
     public static final PrimaryTaskSetArgs Empty = new PrimaryTaskSetArgs();
 

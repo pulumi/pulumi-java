@@ -8,6 +8,7 @@ import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistrib
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationLaunchTemplateConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The distributions of the distribution configuration.
  * 
  */
-public final class DistributionConfigurationDistributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionConfigurationDistributionArgs extends ResourceArgs {
 
     public static final DistributionConfigurationDistributionArgs Empty = new DistributionConfigurationDistributionArgs();
 

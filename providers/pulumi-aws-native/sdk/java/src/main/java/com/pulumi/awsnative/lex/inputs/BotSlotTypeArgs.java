@@ -8,6 +8,7 @@ import com.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A custom, extended built-in or a grammar slot type.
  * 
  */
-public final class BotSlotTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotTypeArgs extends ResourceArgs {
 
     public static final BotSlotTypeArgs Empty = new BotSlotTypeArgs();
 

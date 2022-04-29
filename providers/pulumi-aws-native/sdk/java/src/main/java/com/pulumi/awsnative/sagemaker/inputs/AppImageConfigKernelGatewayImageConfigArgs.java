@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.AppImageConfigFileSystemConfigArgs;
 import com.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app.
  * 
  */
-public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppImageConfigKernelGatewayImageConfigArgs extends ResourceArgs {
 
     public static final AppImageConfigKernelGatewayImageConfigArgs Empty = new AppImageConfigKernelGatewayImageConfigArgs();
 

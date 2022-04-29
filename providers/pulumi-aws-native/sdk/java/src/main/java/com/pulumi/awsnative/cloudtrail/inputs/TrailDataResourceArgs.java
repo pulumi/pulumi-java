@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions. You can specify up to 250 resources for an individual event selector, but the total number of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource logging for all data events.
  * 
  */
-public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrailDataResourceArgs extends ResourceArgs {
 
     public static final TrailDataResourceArgs Empty = new TrailDataResourceArgs();
 

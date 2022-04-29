@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.logs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLogGroupArgs extends InvokeArgs {
 
     public static final GetLogGroupArgs Empty = new GetLogGroupArgs();
 

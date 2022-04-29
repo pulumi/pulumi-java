@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Parameters to define a mitigation action that moves devices associated with a certificate to one or more specified thing groups, typically for quarantine.
  * 
  */
-public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionAddThingsToThingGroupParamsArgs extends ResourceArgs {
 
     public static final MitigationActionAddThingsToThingGroupParamsArgs Empty = new MitigationActionAddThingsToThingGroupParamsArgs();
 

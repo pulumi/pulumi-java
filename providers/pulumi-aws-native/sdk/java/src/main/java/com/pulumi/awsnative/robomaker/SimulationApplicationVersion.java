@@ -9,6 +9,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:robomaker:SimulationApplicationVersion")
-public class SimulationApplicationVersion extends com.pulumi.resources.CustomResource {
+public class SimulationApplicationVersion extends CustomResource {
     @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
@@ -73,19 +75,19 @@ public class SimulationApplicationVersion extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SimulationApplicationVersion(String name, SimulationApplicationVersionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SimulationApplicationVersion(String name, SimulationApplicationVersionArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private SimulationApplicationVersion(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private SimulationApplicationVersion(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:robomaker:SimulationApplicationVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -96,7 +98,7 @@ public class SimulationApplicationVersion extends com.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SimulationApplicationVersion get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SimulationApplicationVersion get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new SimulationApplicationVersion(name, id, options);
     }
 }

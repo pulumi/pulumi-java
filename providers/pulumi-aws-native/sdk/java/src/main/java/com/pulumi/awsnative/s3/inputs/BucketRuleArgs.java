@@ -11,6 +11,7 @@ import com.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import com.pulumi.awsnative.s3.inputs.BucketTransitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
  * You must specify at least one of the following properties: AbortIncompleteMultipartUpload, ExpirationDate, ExpirationInDays, NoncurrentVersionExpirationInDays, NoncurrentVersionTransition, NoncurrentVersionTransitions, Transition, or Transitions.
  * 
  */
-public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketRuleArgs extends ResourceArgs {
 
     public static final BucketRuleArgs Empty = new BucketRuleArgs();
 

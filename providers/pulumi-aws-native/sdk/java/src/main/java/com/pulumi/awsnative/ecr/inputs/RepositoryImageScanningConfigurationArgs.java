@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The image scanning configuration for the repository. This setting determines whether images are scanned for known vulnerabilities after being pushed to the repository.
  * 
  */
-public final class RepositoryImageScanningConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepositoryImageScanningConfigurationArgs extends ResourceArgs {
 
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();
 

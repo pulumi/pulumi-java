@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A session context that is activated when an intent is fulfilled.
  * 
  */
-public final class BotOutputContextArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotOutputContextArgs extends ResourceArgs {
 
     public static final BotOutputContextArgs Empty = new BotOutputContextArgs();
 

@@ -5,12 +5,13 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
 
-public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetRetentionPeriodArgs extends ResourceArgs {
 
     public static final DatasetRetentionPeriodArgs Empty = new DatasetRetentionPeriodArgs();
 

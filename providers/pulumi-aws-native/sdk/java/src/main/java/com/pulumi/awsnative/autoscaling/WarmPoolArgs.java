@@ -6,6 +6,7 @@ package com.pulumi.awsnative.autoscaling;
 import com.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WarmPoolArgs extends com.pulumi.resources.ResourceArgs {
+public final class WarmPoolArgs extends ResourceArgs {
 
     public static final WarmPoolArgs Empty = new WarmPoolArgs();
 

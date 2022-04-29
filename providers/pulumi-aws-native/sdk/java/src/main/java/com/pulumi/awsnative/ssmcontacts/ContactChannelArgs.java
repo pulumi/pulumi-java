@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ssmcontacts;
 import com.pulumi.awsnative.ssmcontacts.enums.ContactChannelChannelType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactChannelArgs extends ResourceArgs {
 
     public static final ContactChannelArgs Empty = new ContactChannelArgs();
 

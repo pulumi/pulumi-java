@@ -5,6 +5,7 @@ package com.pulumi.awsnative.finspace.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Additional parameters to identify Federation mode
  * 
  */
-public final class EnvironmentFederationParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentFederationParametersArgs extends ResourceArgs {
 
     public static final EnvironmentFederationParametersArgs Empty = new EnvironmentFederationParametersArgs();
 

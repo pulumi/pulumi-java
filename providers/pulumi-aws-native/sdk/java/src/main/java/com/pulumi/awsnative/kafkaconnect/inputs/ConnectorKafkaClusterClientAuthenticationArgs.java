@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterClientAuthenticationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details of the client authentication used by the Kafka cluster.
  * 
  */
-public final class ConnectorKafkaClusterClientAuthenticationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorKafkaClusterClientAuthenticationArgs extends ResourceArgs {
 
     public static final ConnectorKafkaClusterClientAuthenticationArgs Empty = new ConnectorKafkaClusterClientAuthenticationArgs();
 

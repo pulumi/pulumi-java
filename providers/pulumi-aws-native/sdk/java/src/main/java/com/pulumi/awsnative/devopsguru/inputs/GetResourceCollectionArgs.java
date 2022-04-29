@@ -5,10 +5,11 @@ package com.pulumi.awsnative.devopsguru.inputs;
 
 import com.pulumi.awsnative.devopsguru.enums.ResourceCollectionType;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.util.Objects;
 
 
-public final class GetResourceCollectionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourceCollectionArgs extends InvokeArgs {
 
     public static final GetResourceCollectionArgs Empty = new GetResourceCollectionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.evidently.inputs;
 import com.pulumi.awsnative.evidently.inputs.ProjectS3DestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Destinations for data.
  * 
  */
-public final class ProjectDataDeliveryObjectArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectDataDeliveryObjectArgs extends ResourceArgs {
 
     public static final ProjectDataDeliveryObjectArgs Empty = new ProjectDataDeliveryObjectArgs();
 

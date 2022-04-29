@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Location of a resource.
  * 
  */
-public final class InstanceLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceLocationArgs extends ResourceArgs {
 
     public static final InstanceLocationArgs Empty = new InstanceLocationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The dimension of a metric.
  * 
  */
-public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileMetricDimensionArgs extends ResourceArgs {
 
     public static final SecurityProfileMetricDimensionArgs Empty = new SecurityProfileMetricDimensionArgs();
 

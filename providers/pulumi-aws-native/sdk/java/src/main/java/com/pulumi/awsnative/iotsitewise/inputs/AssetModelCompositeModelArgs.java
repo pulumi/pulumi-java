@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Contains a composite model definition in an asset model. This composite model definition is applied to all assets created from the asset model.
  * 
  */
-public final class AssetModelCompositeModelArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetModelCompositeModelArgs extends ResourceArgs {
 
     public static final AssetModelCompositeModelArgs Empty = new AssetModelCompositeModelArgs();
 

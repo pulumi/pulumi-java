@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Aggregation types supported by Fleet Indexing
  * 
  */
-public final class FleetMetricAggregationTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetMetricAggregationTypeArgs extends ResourceArgs {
 
     public static final FleetMetricAggregationTypeArgs Empty = new FleetMetricAggregationTypeArgs();
 

@@ -5,13 +5,14 @@ package com.pulumi.awsnative.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceDataSyncS3DestinationArgs extends ResourceArgs {
 
     public static final ResourceDataSyncS3DestinationArgs Empty = new ResourceDataSyncS3DestinationArgs();
 

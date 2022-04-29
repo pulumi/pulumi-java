@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorApacheKafkaClusterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details of how to connect to the Kafka cluster.
  * 
  */
-public final class ConnectorKafkaClusterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorKafkaClusterArgs extends ResourceArgs {
 
     public static final ConnectorKafkaClusterArgs Empty = new ConnectorKafkaClusterArgs();
 

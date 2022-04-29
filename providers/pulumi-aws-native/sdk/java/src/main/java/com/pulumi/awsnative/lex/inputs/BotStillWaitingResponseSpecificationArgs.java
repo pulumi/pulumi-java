@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * StillWaitingResponseSpecification.
  * 
  */
-public final class BotStillWaitingResponseSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotStillWaitingResponseSpecificationArgs extends ResourceArgs {
 
     public static final BotStillWaitingResponseSpecificationArgs Empty = new BotStillWaitingResponseSpecificationArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 import com.pulumi.awsnative.inspectorv2.enums.FilterMapComparison;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FilterMapFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterMapFilterArgs extends ResourceArgs {
 
     public static final FilterMapFilterArgs Empty = new FilterMapFilterArgs();
 

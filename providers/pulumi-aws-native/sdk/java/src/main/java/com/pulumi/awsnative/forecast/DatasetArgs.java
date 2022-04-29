@@ -10,6 +10,7 @@ import com.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import com.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetArgs extends ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 

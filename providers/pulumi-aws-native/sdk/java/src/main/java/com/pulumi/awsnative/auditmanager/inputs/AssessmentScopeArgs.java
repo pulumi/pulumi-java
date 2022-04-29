@@ -7,6 +7,7 @@ import com.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import com.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The wrapper that contains the AWS accounts and AWS services in scope for the assessment.
  * 
  */
-public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssessmentScopeArgs extends ResourceArgs {
 
     public static final AssessmentScopeArgs Empty = new AssessmentScopeArgs();
 

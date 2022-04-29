@@ -8,6 +8,7 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringJobDefi
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleScheduleConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration object that specifies the monitoring schedule and defines the monitoring job.
  * 
  */
-public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleConfigArgs extends ResourceArgs {
 
     public static final MonitoringScheduleConfigArgs Empty = new MonitoringScheduleConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The policy is evaluated when a player tries to create a new game session. For example, assume you have a policy of 10 new game sessions and a time period of 60 minutes. On receiving a CreateGameSession request, Amazon GameLift checks that the player (identified by CreatorId) has created fewer than 10 game sessions in the past 60 minutes.
  * 
  */
-public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetResourceCreationLimitPolicyArgs extends ResourceArgs {
 
     public static final FleetResourceCreationLimitPolicyArgs Empty = new FleetResourceCreationLimitPolicyArgs();
 

@@ -5,12 +5,13 @@ package com.pulumi.awsnative.sso.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs extends ResourceArgs {
 
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs();
 

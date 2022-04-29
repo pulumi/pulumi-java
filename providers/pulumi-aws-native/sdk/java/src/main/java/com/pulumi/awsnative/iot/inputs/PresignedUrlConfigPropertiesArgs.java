@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configuration for pre-signed S3 URLs.
  * 
  */
-public final class PresignedUrlConfigPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class PresignedUrlConfigPropertiesArgs extends ResourceArgs {
 
     public static final PresignedUrlConfigPropertiesArgs Empty = new PresignedUrlConfigPropertiesArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * You can use this parameter to specify a specific Lambda function to run different functions in different locales.
  * 
  */
-public final class BotAliasLocaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasLocaleSettingsArgs extends ResourceArgs {
 
     public static final BotAliasLocaleSettingsArgs Empty = new BotAliasLocaleSettingsArgs();
 

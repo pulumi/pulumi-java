@@ -7,6 +7,7 @@ import com.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import com.pulumi.awsnative.connect.inputs.HoursOfOperationTimeSliceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Contains information about the hours of operation.
  * 
  */
-public final class HoursOfOperationConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HoursOfOperationConfigArgs extends ResourceArgs {
 
     public static final HoursOfOperationConfigArgs Empty = new HoursOfOperationConfigArgs();
 

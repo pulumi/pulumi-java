@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies a time limit for how long the monitoring job is allowed to run.
  * 
  */
-public final class ModelBiasJobDefinitionStoppingConditionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelBiasJobDefinitionStoppingConditionArgs extends ResourceArgs {
 
     public static final ModelBiasJobDefinitionStoppingConditionArgs Empty = new ModelBiasJobDefinitionStoppingConditionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3objectlambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Configuration to define what content transformation will be applied on which S3 Action.
  * 
  */
-public final class AccessPointTransformationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPointTransformationConfigurationArgs extends ResourceArgs {
 
     public static final AccessPointTransformationConfigurationArgs Empty = new AccessPointTransformationConfigurationArgs();
 

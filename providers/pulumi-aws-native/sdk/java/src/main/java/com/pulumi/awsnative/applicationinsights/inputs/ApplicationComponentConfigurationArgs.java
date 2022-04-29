@@ -7,6 +7,7 @@ import com.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationD
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration settings of the component.
  * 
  */
-public final class ApplicationComponentConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationComponentConfigurationArgs extends ResourceArgs {
 
     public static final ApplicationComponentConfigurationArgs Empty = new ApplicationComponentConfigurationArgs();
 

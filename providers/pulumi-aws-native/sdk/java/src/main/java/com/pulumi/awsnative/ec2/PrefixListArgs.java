@@ -8,6 +8,7 @@ import com.pulumi.awsnative.ec2.inputs.PrefixListEntryArgs;
 import com.pulumi.awsnative.ec2.inputs.PrefixListTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
+public final class PrefixListArgs extends ResourceArgs {
 
     public static final PrefixListArgs Empty = new PrefixListArgs();
 

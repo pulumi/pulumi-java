@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A structure that contains timestamp information. For more information, see [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html) in the *AWS IoT SiteWise API Reference*.
  * 
  */
-public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelAssetPropertyTimestampArgs extends ResourceArgs {
 
     public static final DetectorModelAssetPropertyTimestampArgs Empty = new DetectorModelAssetPropertyTimestampArgs();
 

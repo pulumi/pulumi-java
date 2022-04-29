@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasAudioLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Settings for logging audio of conversations between Amazon Lex and a user. You specify whether to log audio and the Amazon S3 bucket where the audio file is stored.
  * 
  */
-public final class BotAliasAudioLogSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasAudioLogSettingArgs extends ResourceArgs {
 
     public static final BotAliasAudioLogSettingArgs Empty = new BotAliasAudioLogSettingArgs();
 

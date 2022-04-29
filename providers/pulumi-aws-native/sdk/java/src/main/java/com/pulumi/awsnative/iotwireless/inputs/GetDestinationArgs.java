@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDestinationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDestinationArgs extends InvokeArgs {
 
     public static final GetDestinationArgs Empty = new GetDestinationArgs();
 

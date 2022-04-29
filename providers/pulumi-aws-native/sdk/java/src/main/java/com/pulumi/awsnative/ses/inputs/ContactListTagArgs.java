@@ -5,11 +5,12 @@ package com.pulumi.awsnative.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ContactListTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactListTagArgs extends ResourceArgs {
 
     public static final ContactListTagArgs Empty = new ContactListTagArgs();
 

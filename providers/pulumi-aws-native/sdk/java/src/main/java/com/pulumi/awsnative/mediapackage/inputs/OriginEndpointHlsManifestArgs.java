@@ -9,6 +9,7 @@ import com.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdTrigge
 import com.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestPlaylistType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * A HTTP Live Streaming (HLS) manifest configuration.
  * 
  */
-public final class OriginEndpointHlsManifestArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointHlsManifestArgs extends ResourceArgs {
 
     public static final OriginEndpointHlsManifestArgs Empty = new OriginEndpointHlsManifestArgs();
 

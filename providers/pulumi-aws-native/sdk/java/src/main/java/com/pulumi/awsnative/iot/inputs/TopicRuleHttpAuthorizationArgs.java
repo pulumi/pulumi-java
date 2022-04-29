@@ -6,12 +6,13 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleSigV4AuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRuleHttpAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleHttpAuthorizationArgs extends ResourceArgs {
 
     public static final TopicRuleHttpAuthorizationArgs Empty = new TopicRuleHttpAuthorizationArgs();
 

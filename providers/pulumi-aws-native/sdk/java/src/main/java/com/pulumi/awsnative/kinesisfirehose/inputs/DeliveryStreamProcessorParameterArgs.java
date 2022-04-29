@@ -5,11 +5,12 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DeliveryStreamProcessorParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamProcessorParameterArgs extends ResourceArgs {
 
     public static final DeliveryStreamProcessorParameterArgs Empty = new DeliveryStreamProcessorParameterArgs();
 

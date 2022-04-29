@@ -8,6 +8,7 @@ import com.pulumi.awsnative.customerprofiles.inputs.IntegrationConnectorOperator
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskPropertiesMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntegrationTaskArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationTaskArgs extends ResourceArgs {
 
     public static final IntegrationTaskArgs Empty = new IntegrationTaskArgs();
 

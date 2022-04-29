@@ -5,6 +5,7 @@ package com.pulumi.awsnative.codeguruprofiler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Notification medium for users to get alerted for events that occur in application profile. We support SNS topic as a notification channel.
  * 
  */
-public final class ProfilingGroupChannelArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProfilingGroupChannelArgs extends ResourceArgs {
 
     public static final ProfilingGroupChannelArgs Empty = new ProfilingGroupChannelArgs();
 

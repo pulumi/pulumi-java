@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A complex type that contains information about a tag that you want to add or edit for the specified health check or hosted zone.
  * 
  */
-public final class HostedZoneTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostedZoneTagArgs extends ResourceArgs {
 
     public static final HostedZoneTagArgs Empty = new HostedZoneTagArgs();
 

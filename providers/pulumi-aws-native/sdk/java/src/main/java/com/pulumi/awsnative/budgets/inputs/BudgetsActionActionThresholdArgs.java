@@ -6,11 +6,12 @@ package com.pulumi.awsnative.budgets.inputs;
 import com.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
 
-public final class BudgetsActionActionThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetsActionActionThresholdArgs extends ResourceArgs {
 
     public static final BudgetsActionActionThresholdArgs Empty = new BudgetsActionActionThresholdArgs();
 

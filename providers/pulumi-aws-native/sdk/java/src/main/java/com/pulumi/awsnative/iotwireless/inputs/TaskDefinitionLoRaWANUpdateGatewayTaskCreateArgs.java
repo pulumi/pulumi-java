@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotwireless.inputs;
 import com.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs extends ResourceArgs {
 
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs();
 

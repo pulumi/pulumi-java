@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ThemeTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeTagsArgs extends ResourceArgs {
 
     public static final ThemeTagsArgs Empty = new ThemeTagsArgs();
 

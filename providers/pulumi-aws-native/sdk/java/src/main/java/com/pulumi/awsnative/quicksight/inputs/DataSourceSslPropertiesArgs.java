@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  *             underlying data source.&lt;/p&gt;
  * 
  */
-public final class DataSourceSslPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceSslPropertiesArgs extends ResourceArgs {
 
     public static final DataSourceSslPropertiesArgs Empty = new DataSourceSslPropertiesArgs();
 

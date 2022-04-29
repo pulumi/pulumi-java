@@ -5,6 +5,7 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Selector of a column from a dataset for profile job configuration. One selector includes either a column name or a regular expression
  * 
  */
-public final class RulesetColumnSelectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class RulesetColumnSelectorArgs extends ResourceArgs {
 
     public static final RulesetColumnSelectorArgs Empty = new RulesetColumnSelectorArgs();
 

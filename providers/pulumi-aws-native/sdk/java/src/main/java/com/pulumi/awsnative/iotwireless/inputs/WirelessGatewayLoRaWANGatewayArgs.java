@@ -5,11 +5,12 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WirelessGatewayLoRaWANGatewayArgs extends com.pulumi.resources.ResourceArgs {
+public final class WirelessGatewayLoRaWANGatewayArgs extends ResourceArgs {
 
     public static final WirelessGatewayLoRaWANGatewayArgs Empty = new WirelessGatewayLoRaWANGatewayArgs();
 

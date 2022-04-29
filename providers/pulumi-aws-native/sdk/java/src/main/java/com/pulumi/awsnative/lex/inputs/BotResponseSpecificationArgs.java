@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A list of message groups that Amazon Lex uses to respond the user input.
  * 
  */
-public final class BotResponseSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotResponseSpecificationArgs extends ResourceArgs {
 
     public static final BotResponseSpecificationArgs Empty = new BotResponseSpecificationArgs();
 

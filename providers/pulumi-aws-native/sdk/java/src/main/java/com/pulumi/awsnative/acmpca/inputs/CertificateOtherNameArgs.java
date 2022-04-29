@@ -5,6 +5,7 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Structure that contains X.509 OtherName information.
  * 
  */
-public final class CertificateOtherNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateOtherNameArgs extends ResourceArgs {
 
     public static final CertificateOtherNameArgs Empty = new CertificateOtherNameArgs();
 

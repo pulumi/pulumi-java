@@ -9,6 +9,7 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * SharePoint configuration
  * 
  */
-public final class DataSourceSharePointConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceSharePointConfigurationArgs extends ResourceArgs {
 
     public static final DataSourceSharePointConfigurationArgs Empty = new DataSourceSharePointConfigurationArgs();
 

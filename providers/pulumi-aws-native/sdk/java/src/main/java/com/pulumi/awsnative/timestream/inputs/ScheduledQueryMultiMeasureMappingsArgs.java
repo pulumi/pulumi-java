@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Only one of MixedMeasureMappings or MultiMeasureMappings is to be provided. MultiMeasureMappings can be used to ingest data as multi measures in the derived table.
  * 
  */
-public final class ScheduledQueryMultiMeasureMappingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryMultiMeasureMappingsArgs extends ResourceArgs {
 
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();
 

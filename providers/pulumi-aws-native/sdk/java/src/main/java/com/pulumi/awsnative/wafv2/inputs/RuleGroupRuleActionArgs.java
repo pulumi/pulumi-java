@@ -9,6 +9,7 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCaptchaPropertiesArg
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCountPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Action taken when Rule matches its condition.
  * 
  */
-public final class RuleGroupRuleActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRuleActionArgs extends ResourceArgs {
 
     public static final RuleGroupRuleActionArgs Empty = new RuleGroupRuleActionArgs();
 

@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDistributionConfigurationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDistributionConfigurationArgs extends InvokeArgs {
 
     public static final GetDistributionConfigurationArgs Empty = new GetDistributionConfigurationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeFontArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The typeface for the theme.&lt;/p&gt;
  * 
  */
-public final class ThemeTypographyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeTypographyArgs extends ResourceArgs {
 
     public static final ThemeTypographyArgs Empty = new ThemeTypographyArgs();
 

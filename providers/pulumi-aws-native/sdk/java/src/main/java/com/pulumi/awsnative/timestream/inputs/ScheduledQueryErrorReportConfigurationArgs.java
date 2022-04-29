@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryS3ConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
  * 
  */
-public final class ScheduledQueryErrorReportConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryErrorReportConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryErrorReportConfigurationArgs Empty = new ScheduledQueryErrorReportConfigurationArgs();
 

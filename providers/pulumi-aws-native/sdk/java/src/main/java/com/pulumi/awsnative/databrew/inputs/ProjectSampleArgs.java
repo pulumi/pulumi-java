@@ -6,13 +6,14 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.enums.ProjectSampleType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProjectSampleArgs extends ResourceArgs {
 
     public static final ProjectSampleArgs Empty = new ProjectSampleArgs();
 

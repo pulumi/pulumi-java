@@ -5,6 +5,7 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A metric to be monitored for the component.
  * 
  */
-public final class ApplicationAlarmMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationAlarmMetricArgs extends ResourceArgs {
 
     public static final ApplicationAlarmMetricArgs Empty = new ApplicationAlarmMetricArgs();
 

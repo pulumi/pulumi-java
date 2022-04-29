@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandlingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Checks valid token exists with request.
  * 
  */
-public final class WebACLCaptchaActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLCaptchaActionArgs extends ResourceArgs {
 
     public static final WebACLCaptchaActionArgs Empty = new WebACLCaptchaActionArgs();
 

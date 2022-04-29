@@ -5,11 +5,12 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TopicRuleSigV4AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleSigV4AuthorizationArgs extends ResourceArgs {
 
     public static final TopicRuleSigV4AuthorizationArgs Empty = new TopicRuleSigV4AuthorizationArgs();
 

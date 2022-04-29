@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the AWS account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object.
  * 
  */
-public final class BucketAccessControlTranslationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAccessControlTranslationArgs extends ResourceArgs {
 
     public static final BucketAccessControlTranslationArgs Empty = new BucketAccessControlTranslationArgs();
 

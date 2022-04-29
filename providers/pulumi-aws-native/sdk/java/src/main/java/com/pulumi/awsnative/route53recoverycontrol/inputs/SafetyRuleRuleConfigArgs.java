@@ -6,6 +6,7 @@ package com.pulumi.awsnative.route53recoverycontrol.inputs;
 import com.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleRuleType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The rule configuration for an assertion rule or gating rule. This is the criteria that you set for specific assertion controls (routing controls) or gating controls. This configuration specifies how many controls must be enabled after a transaction completes.
  * 
  */
-public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class SafetyRuleRuleConfigArgs extends ResourceArgs {
 
     public static final SafetyRuleRuleConfigArgs Empty = new SafetyRuleRuleConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * S3 Output location
  * 
  */
-public final class JobS3LocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobS3LocationArgs extends ResourceArgs {
 
     public static final JobS3LocationArgs Empty = new JobS3LocationArgs();
 

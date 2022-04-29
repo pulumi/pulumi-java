@@ -5,6 +5,7 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * HDFS Name Node IP and port information.
  * 
  */
-public final class LocationHDFSNameNodeArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationHDFSNameNodeArgs extends ResourceArgs {
 
     public static final LocationHDFSNameNodeArgs Empty = new LocationHDFSNameNodeArgs();
 

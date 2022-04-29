@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAnomalyDetectorArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAnomalyDetectorArgs extends InvokeArgs {
 
     public static final GetAnomalyDetectorArgs Empty = new GetAnomalyDetectorArgs();
 

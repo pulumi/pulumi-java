@@ -6,6 +6,7 @@ package com.pulumi.awsnative.healthlake.inputs;
 import com.pulumi.awsnative.healthlake.enums.FHIRDatastoreKmsEncryptionConfigCmkType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The customer-managed-key (CMK) used when creating a Data Store. If a customer owned key is not specified, an AWS owned key will be used for encryption.
  * 
  */
-public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FHIRDatastoreKmsEncryptionConfigArgs extends ResourceArgs {
 
     public static final FHIRDatastoreKmsEncryptionConfigArgs Empty = new FHIRDatastoreKmsEncryptionConfigArgs();
 

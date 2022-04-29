@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetCloudFrontOriginAccessIdentityArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetCloudFrontOriginAccessIdentityArgs extends InvokeArgs {
 
     public static final GetCloudFrontOriginAccessIdentityArgs Empty = new GetCloudFrontOriginAccessIdentityArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A component for DNS/routing control readiness checks.
  * 
  */
-public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetDNSTargetResourceArgs extends ResourceArgs {
 
     public static final ResourceSetDNSTargetResourceArgs Empty = new ResourceSetDNSTargetResourceArgs();
 

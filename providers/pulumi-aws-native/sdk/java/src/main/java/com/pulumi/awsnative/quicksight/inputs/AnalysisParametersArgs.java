@@ -9,6 +9,7 @@ import com.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;A list of QuickSight parameters and the list&#39;s override values.&lt;/p&gt;
  * 
  */
-public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalysisParametersArgs extends ResourceArgs {
 
     public static final AnalysisParametersArgs Empty = new AnalysisParametersArgs();
 

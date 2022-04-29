@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.UserProfileCustomImageArgs;
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The kernel gateway app settings.
  * 
  */
-public final class UserProfileKernelGatewayAppSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserProfileKernelGatewayAppSettingsArgs extends ResourceArgs {
 
     public static final UserProfileKernelGatewayAppSettingsArgs Empty = new UserProfileKernelGatewayAppSettingsArgs();
 

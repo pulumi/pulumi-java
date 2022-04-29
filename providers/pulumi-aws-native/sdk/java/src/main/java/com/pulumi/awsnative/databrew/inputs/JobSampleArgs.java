@@ -6,6 +6,7 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.enums.JobSampleMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Job Sample
  * 
  */
-public final class JobSampleArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobSampleArgs extends ResourceArgs {
 
     public static final JobSampleArgs Empty = new JobSampleArgs();
 

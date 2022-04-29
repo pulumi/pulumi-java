@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.MonitoringScheduleS3OutputS3UploadMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Information about where and how to store the results of a monitoring job.
  * 
  */
-public final class MonitoringScheduleS3OutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleS3OutputArgs extends ResourceArgs {
 
     public static final MonitoringScheduleS3OutputArgs Empty = new MonitoringScheduleS3OutputArgs();
 

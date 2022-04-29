@@ -6,10 +6,11 @@ package com.pulumi.awsnative.cloudfront.inputs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionStatusCodesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class DistributionOriginGroupFailoverCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionOriginGroupFailoverCriteriaArgs extends ResourceArgs {
 
     public static final DistributionOriginGroupFailoverCriteriaArgs Empty = new DistributionOriginGroupFailoverCriteriaArgs();
 

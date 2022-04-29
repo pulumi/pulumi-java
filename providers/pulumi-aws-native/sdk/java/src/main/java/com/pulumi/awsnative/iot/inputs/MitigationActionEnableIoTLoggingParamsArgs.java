@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
  * 
  */
-public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionEnableIoTLoggingParamsArgs extends ResourceArgs {
 
     public static final MitigationActionEnableIoTLoggingParamsArgs Empty = new MitigationActionEnableIoTLoggingParamsArgs();
 

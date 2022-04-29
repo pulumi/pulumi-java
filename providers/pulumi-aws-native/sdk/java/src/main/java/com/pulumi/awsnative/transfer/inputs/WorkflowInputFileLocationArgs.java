@@ -6,6 +6,7 @@ package com.pulumi.awsnative.transfer.inputs;
 import com.pulumi.awsnative.transfer.inputs.WorkflowS3InputFileLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the location for the file being copied. Only applicable for the Copy type of workflow steps.
  * 
  */
-public final class WorkflowInputFileLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowInputFileLocationArgs extends ResourceArgs {
 
     public static final WorkflowInputFileLocationArgs Empty = new WorkflowInputFileLocationArgs();
 

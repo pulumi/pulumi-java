@@ -18,6 +18,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:quicksight:DataSource")
-public class DataSource extends com.pulumi.resources.CustomResource {
+public class DataSource extends CustomResource {
     /**
      * &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
@@ -219,19 +221,19 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DataSource(String name, @Nullable DataSourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DataSource(String name, @Nullable DataSourceArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:quicksight:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DataSource(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DataSource(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:quicksight:DataSource", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -242,7 +244,7 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataSource get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DataSource get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DataSource(name, id, options);
     }
 }

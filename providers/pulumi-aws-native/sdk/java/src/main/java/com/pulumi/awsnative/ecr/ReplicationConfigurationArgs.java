@@ -5,10 +5,11 @@ package com.pulumi.awsnative.ecr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class ReplicationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationConfigurationArgs extends ResourceArgs {
 
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 

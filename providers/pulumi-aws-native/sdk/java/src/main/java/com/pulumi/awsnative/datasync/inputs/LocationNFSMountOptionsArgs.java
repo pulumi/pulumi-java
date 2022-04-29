@@ -6,6 +6,7 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The NFS mount options that DataSync can use to mount your NFS share.
  * 
  */
-public final class LocationNFSMountOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationNFSMountOptionsArgs extends ResourceArgs {
 
     public static final LocationNFSMountOptionsArgs Empty = new LocationNFSMountOptionsArgs();
 

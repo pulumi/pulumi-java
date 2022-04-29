@@ -11,6 +11,7 @@ import com.pulumi.awsnative.iot.inputs.MitigationActionUpdateCACertificateParams
 import com.pulumi.awsnative.iot.inputs.MitigationActionUpdateDeviceCertificateParamsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * The set of parameters for this mitigation action. You can specify only one type of parameter (in other words, you can apply only one action for each defined mitigation action).
  * 
  */
-public final class MitigationActionActionParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionActionParamsArgs extends ResourceArgs {
 
     public static final MitigationActionActionParamsArgs Empty = new MitigationActionActionParamsArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfiguration
 import com.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StateMachineLoggingConfigurationArgs extends ResourceArgs {
 
     public static final StateMachineLoggingConfigurationArgs Empty = new StateMachineLoggingConfigurationArgs();
 

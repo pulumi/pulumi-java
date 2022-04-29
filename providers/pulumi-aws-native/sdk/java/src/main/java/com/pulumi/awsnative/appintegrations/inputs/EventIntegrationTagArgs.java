@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appintegrations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class EventIntegrationTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventIntegrationTagArgs extends ResourceArgs {
 
     public static final EventIntegrationTagArgs Empty = new EventIntegrationTagArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.enums.BotObfuscationSettingObfuscationSettingType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Determines whether Amazon Lex obscures slot values in conversation logs.
  * 
  */
-public final class BotObfuscationSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotObfuscationSettingArgs extends ResourceArgs {
 
     public static final BotObfuscationSettingArgs Empty = new BotObfuscationSettingArgs();
 

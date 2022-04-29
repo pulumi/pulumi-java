@@ -6,13 +6,14 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetCapacityRebalanceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetCapacityRebalanceArgs extends ResourceArgs {
 
     public static final EC2FleetCapacityRebalanceArgs Empty = new EC2FleetCapacityRebalanceArgs();
 

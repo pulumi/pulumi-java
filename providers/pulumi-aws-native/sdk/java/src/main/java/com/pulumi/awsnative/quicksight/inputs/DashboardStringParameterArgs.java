@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * &lt;p&gt;A string parameter.&lt;/p&gt;
  * 
  */
-public final class DashboardStringParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class DashboardStringParameterArgs extends ResourceArgs {
 
     public static final DashboardStringParameterArgs Empty = new DashboardStringParameterArgs();
 

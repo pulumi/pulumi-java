@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Bucket-level metrics configurations.
  * 
  */
-public final class StorageLensBucketLevelArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensBucketLevelArgs extends ResourceArgs {
 
     public static final StorageLensBucketLevelArgs Empty = new StorageLensBucketLevelArgs();
 

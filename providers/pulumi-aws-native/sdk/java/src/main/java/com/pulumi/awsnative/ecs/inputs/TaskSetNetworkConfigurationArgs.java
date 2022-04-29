@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.TaskSetAwsVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * An object representing the network configuration for a task or service.
  * 
  */
-public final class TaskSetNetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskSetNetworkConfigurationArgs extends ResourceArgs {
 
     public static final TaskSetNetworkConfigurationArgs Empty = new TaskSetNetworkConfigurationArgs();
 

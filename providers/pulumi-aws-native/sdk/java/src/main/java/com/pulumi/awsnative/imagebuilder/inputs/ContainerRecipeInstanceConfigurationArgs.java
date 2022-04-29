@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A group of options that can be used to configure an instance for building and testing container images.
  * 
  */
-public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerRecipeInstanceConfigurationArgs extends ResourceArgs {
 
     public static final ContainerRecipeInstanceConfigurationArgs Empty = new ContainerRecipeInstanceConfigurationArgs();
 

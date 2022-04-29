@@ -7,13 +7,14 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionConfigArgs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionArgs extends ResourceArgs {
 
     public static final DistributionArgs Empty = new DistributionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateExponentialRolloutRateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Allows you to create a staged rollout of a job.
  * 
  */
-public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobExecutionsRolloutConfigPropertiesArgs extends ResourceArgs {
 
     public static final JobExecutionsRolloutConfigPropertiesArgs Empty = new JobExecutionsRolloutConfigPropertiesArgs();
 

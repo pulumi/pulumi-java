@@ -6,6 +6,7 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An object that defines the Key element of a ProfileObject. A Key is a special element that can be used to search for a customer profile.
  * 
  */
-public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ObjectTypeKeyArgs extends ResourceArgs {
 
     public static final ObjectTypeKeyArgs Empty = new ObjectTypeKeyArgs();
 

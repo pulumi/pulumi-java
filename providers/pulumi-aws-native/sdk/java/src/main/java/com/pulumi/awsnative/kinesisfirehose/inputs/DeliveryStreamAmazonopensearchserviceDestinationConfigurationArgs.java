@@ -13,13 +13,14 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationCo
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs extends ResourceArgs {
 
     public static final DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs Empty = new DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs();
 

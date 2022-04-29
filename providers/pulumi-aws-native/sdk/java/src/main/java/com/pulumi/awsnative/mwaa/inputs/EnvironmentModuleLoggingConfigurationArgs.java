@@ -6,6 +6,7 @@ package com.pulumi.awsnative.mwaa.inputs;
 import com.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Logging configuration for a specific airflow component.
  * 
  */
-public final class EnvironmentModuleLoggingConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentModuleLoggingConfigurationArgs extends ResourceArgs {
 
     public static final EnvironmentModuleLoggingConfigurationArgs Empty = new EnvironmentModuleLoggingConfigurationArgs();
 

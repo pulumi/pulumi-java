@@ -6,13 +6,14 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetS3DestinationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetS3DestinationConfigurationArgs extends ResourceArgs {
 
     public static final DatasetS3DestinationConfigurationArgs Empty = new DatasetS3DestinationConfigurationArgs();
 

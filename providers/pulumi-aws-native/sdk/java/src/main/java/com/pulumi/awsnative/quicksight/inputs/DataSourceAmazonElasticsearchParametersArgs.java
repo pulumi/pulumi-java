@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * &lt;p&gt;Amazon Elasticsearch Service parameters.&lt;/p&gt;
  * 
  */
-public final class DataSourceAmazonElasticsearchParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceAmazonElasticsearchParametersArgs extends ResourceArgs {
 
     public static final DataSourceAmazonElasticsearchParametersArgs Empty = new DataSourceAmazonElasticsearchParametersArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The configuration for a shared file storage system that is associated with a studio resource.&lt;/p&gt;
  * 
  */
-public final class StudioComponentSharedFileSystemConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentSharedFileSystemConfigurationArgs extends ResourceArgs {
 
     public static final StudioComponentSharedFileSystemConfigurationArgs Empty = new StudioComponentSharedFileSystemConfigurationArgs();
 

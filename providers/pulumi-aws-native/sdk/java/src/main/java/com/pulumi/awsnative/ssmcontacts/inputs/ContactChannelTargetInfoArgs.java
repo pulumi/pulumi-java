@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ssmcontacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Information about the contact channel that SSM Incident Manager uses to engage the contact.
  * 
  */
-public final class ContactChannelTargetInfoArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactChannelTargetInfoArgs extends ResourceArgs {
 
     public static final ContactChannelTargetInfoArgs Empty = new ContactChannelTargetInfoArgs();
 

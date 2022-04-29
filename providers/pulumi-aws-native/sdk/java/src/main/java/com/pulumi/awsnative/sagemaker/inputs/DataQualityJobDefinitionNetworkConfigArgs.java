@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Networking options for a job, such as network traffic encryption between containers, whether to allow inbound and outbound network calls to and from containers, and the VPC subnets and security groups to use for VPC-enabled jobs.
  * 
  */
-public final class DataQualityJobDefinitionNetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataQualityJobDefinitionNetworkConfigArgs extends ResourceArgs {
 
     public static final DataQualityJobDefinitionNetworkConfigArgs Empty = new DataQualityJobDefinitionNetworkConfigArgs();
 

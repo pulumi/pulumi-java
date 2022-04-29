@@ -5,6 +5,7 @@ package com.pulumi.awsnative.frauddetector.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A model to associate with a detector.
  * 
  */
-public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelArgs extends ResourceArgs {
 
     public static final DetectorModelArgs Empty = new DetectorModelArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Information about a VPC used with the connector.
  * 
  */
-public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorVpcArgs extends ResourceArgs {
 
     public static final ConnectorVpcArgs Empty = new ConnectorVpcArgs();
 

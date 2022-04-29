@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair to tag a resource.
  * 
  */
-public final class ResponsePlanTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponsePlanTagArgs extends ResourceArgs {
 
     public static final ResponsePlanTagArgs Empty = new ResponsePlanTagArgs();
 

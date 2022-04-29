@@ -7,13 +7,14 @@ import com.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigura
 import com.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SuiteDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SuiteDefinitionArgs extends ResourceArgs {
 
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 

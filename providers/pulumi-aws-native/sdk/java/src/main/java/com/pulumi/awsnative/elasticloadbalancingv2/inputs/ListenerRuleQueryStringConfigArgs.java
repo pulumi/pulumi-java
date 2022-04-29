@@ -6,13 +6,14 @@ package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleQueryStringKeyValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListenerRuleQueryStringConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerRuleQueryStringConfigArgs extends ResourceArgs {
 
     public static final ListenerRuleQueryStringConfigArgs Empty = new ListenerRuleQueryStringConfigArgs();
 

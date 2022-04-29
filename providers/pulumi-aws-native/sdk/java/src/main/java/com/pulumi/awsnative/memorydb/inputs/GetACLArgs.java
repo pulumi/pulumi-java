@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.memorydb.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetACLArgs extends InvokeArgs {
 
     public static final GetACLArgs Empty = new GetACLArgs();
 

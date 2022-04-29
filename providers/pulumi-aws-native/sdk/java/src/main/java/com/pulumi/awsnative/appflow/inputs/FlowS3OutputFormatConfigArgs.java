@@ -8,12 +8,13 @@ import com.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowS3OutputFormatConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowS3OutputFormatConfigArgs extends ResourceArgs {
 
     public static final FlowS3OutputFormatConfigArgs Empty = new FlowS3OutputFormatConfigArgs();
 

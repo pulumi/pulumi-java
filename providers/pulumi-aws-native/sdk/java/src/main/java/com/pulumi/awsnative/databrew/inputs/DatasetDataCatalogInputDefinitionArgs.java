@@ -6,13 +6,14 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetDataCatalogInputDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetDataCatalogInputDefinitionArgs extends ResourceArgs {
 
     public static final DatasetDataCatalogInputDefinitionArgs Empty = new DatasetDataCatalogInputDefinitionArgs();
 

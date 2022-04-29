@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lightsail.inputs.InstanceMonthlyTransferArgs;
 import com.pulumi.awsnative.lightsail.inputs.InstancePortArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Networking of the Instance.
  * 
  */
-public final class InstanceNetworkingArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceNetworkingArgs extends ResourceArgs {
 
     public static final InstanceNetworkingArgs Empty = new InstanceNetworkingArgs();
 

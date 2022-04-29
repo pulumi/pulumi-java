@@ -6,12 +6,13 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreTimestampPartitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatastorePartitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatastorePartitionArgs extends ResourceArgs {
 
     public static final DatastorePartitionArgs Empty = new DatastorePartitionArgs();
 

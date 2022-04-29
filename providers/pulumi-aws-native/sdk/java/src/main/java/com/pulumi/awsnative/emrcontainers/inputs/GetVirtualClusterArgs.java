@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.emrcontainers.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetVirtualClusterArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetVirtualClusterArgs extends InvokeArgs {
 
     public static final GetVirtualClusterArgs Empty = new GetVirtualClusterArgs();
 

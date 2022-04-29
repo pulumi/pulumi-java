@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An object that sets the public accessibility of objects in the specified bucket.
  * 
  */
-public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAccessRulesArgs extends ResourceArgs {
 
     public static final BucketAccessRulesArgs Empty = new BucketAccessRulesArgs();
 

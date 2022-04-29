@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.enums.TaskSetAwsVpcConfigurationAssignPublicIp;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The VPC subnets and security groups associated with a task. All specified subnets and security groups must be from the same VPC.
  * 
  */
-public final class TaskSetAwsVpcConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskSetAwsVpcConfigurationArgs extends ResourceArgs {
 
     public static final TaskSetAwsVpcConfigurationArgs Empty = new TaskSetAwsVpcConfigurationArgs();
 

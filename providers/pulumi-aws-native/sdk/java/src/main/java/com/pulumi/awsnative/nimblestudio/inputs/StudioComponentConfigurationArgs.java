@@ -9,6 +9,7 @@ import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceCon
 import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The configuration of the studio component, based on component type.&lt;/p&gt;
  * 
  */
-public final class StudioComponentConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentConfigurationArgs extends ResourceArgs {
 
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();
 

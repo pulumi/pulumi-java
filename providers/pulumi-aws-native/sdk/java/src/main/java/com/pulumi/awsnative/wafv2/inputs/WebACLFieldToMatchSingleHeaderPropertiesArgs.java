@@ -5,11 +5,12 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WebACLFieldToMatchSingleHeaderPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLFieldToMatchSingleHeaderPropertiesArgs extends ResourceArgs {
 
     public static final WebACLFieldToMatchSingleHeaderPropertiesArgs Empty = new WebACLFieldToMatchSingleHeaderPropertiesArgs();
 

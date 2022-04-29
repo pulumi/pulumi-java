@@ -8,6 +8,7 @@ import com.pulumi.awsnative.rds.inputs.DBProxyAuthFormatArgs;
 import com.pulumi.awsnative.rds.inputs.DBProxyTagFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DBProxyArgs extends ResourceArgs {
 
     public static final DBProxyArgs Empty = new DBProxyArgs();
 

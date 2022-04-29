@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.panorama.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPackageArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPackageArgs extends InvokeArgs {
 
     public static final GetPackageArgs Empty = new GetPackageArgs();
 

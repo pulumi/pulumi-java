@@ -5,11 +5,12 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class TransitGatewayMulticastDomainAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TransitGatewayMulticastDomainAssociationArgs extends ResourceArgs {
 
     public static final TransitGatewayMulticastDomainAssociationArgs Empty = new TransitGatewayMulticastDomainAssociationArgs();
 

@@ -5,11 +5,12 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.enums.WebACLScope;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetWebACLArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetWebACLArgs extends InvokeArgs {
 
     public static final GetWebACLArgs Empty = new GetWebACLArgs();
 

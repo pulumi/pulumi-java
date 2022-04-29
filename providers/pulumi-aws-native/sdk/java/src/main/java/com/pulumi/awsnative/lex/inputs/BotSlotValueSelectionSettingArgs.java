@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueRegexFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Contains settings used by Amazon Lex to select a slot value.
  * 
  */
-public final class BotSlotValueSelectionSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotValueSelectionSettingArgs extends ResourceArgs {
 
     public static final BotSlotValueSelectionSettingArgs Empty = new BotSlotValueSelectionSettingArgs();
 

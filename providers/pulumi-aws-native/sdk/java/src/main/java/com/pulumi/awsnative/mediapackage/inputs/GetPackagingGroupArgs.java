@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPackagingGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPackagingGroupArgs extends InvokeArgs {
 
     public static final GetPackagingGroupArgs Empty = new GetPackagingGroupArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestin
 import com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An array of objects representing the details of a replication destination.
  * 
  */
-public final class ReplicationConfigurationReplicationRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationConfigurationReplicationRuleArgs extends ResourceArgs {
 
     public static final ReplicationConfigurationReplicationRuleArgs Empty = new ReplicationConfigurationReplicationRuleArgs();
 

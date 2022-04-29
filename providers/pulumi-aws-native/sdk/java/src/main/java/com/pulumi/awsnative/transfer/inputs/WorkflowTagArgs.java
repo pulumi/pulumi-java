@@ -5,6 +5,7 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Creates a key-value pair for a specific resource.
  * 
  */
-public final class WorkflowTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowTagArgs extends ResourceArgs {
 
     public static final WorkflowTagArgs Empty = new WorkflowTagArgs();
 

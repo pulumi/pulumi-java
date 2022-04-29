@@ -5,6 +5,7 @@ package com.pulumi.awsnative.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specify checkpoint version for update. This is only required to update the Compatibility.
  * 
  */
-public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchemaVersionArgs extends ResourceArgs {
 
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The function&#39;s AWS X-Ray tracing configuration. To sample and record incoming requests, set Mode to Active.
  * 
  */
-public final class FunctionTracingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionTracingConfigArgs extends ResourceArgs {
 
     public static final FunctionTracingConfigArgs Empty = new FunctionTracingConfigArgs();
 

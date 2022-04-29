@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
  * 
  */
-public final class BotDialogCodeHookSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotDialogCodeHookSettingArgs extends ResourceArgs {
 
     public static final BotDialogCodeHookSettingArgs Empty = new BotDialogCodeHookSettingArgs();
 

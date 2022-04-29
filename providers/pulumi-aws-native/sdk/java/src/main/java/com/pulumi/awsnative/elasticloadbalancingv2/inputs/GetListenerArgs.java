@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetListenerArgs extends InvokeArgs {
 
     public static final GetListenerArgs Empty = new GetListenerArgs();
 

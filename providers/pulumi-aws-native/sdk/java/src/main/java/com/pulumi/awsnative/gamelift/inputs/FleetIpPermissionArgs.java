@@ -6,6 +6,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift hosting resource. New game sessions that are started on the fleet are assigned an IP address/port number combination, which must fall into the fleet&#39;s allowed ranges. For fleets created with a custom game server, the ranges reflect the server&#39;s game session assignments. For Realtime Servers fleets, Amazon GameLift automatically opens two port ranges, one for TCP messaging and one for UDP, for use by the Realtime servers.
  * 
  */
-public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetIpPermissionArgs extends ResourceArgs {
 
     public static final FleetIpPermissionArgs Empty = new FleetIpPermissionArgs();
 

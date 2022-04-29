@@ -9,6 +9,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -17,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:route53:DNSSEC")
-public class DNSSEC extends com.pulumi.resources.CustomResource {
+public class DNSSEC extends CustomResource {
     /**
      * The unique string (ID) used to identify a hosted zone.
      * 
@@ -54,19 +56,19 @@ public class DNSSEC extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DNSSEC(String name, DNSSECArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DNSSEC(String name, DNSSECArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:route53:DNSSEC", name, args == null ? DNSSECArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DNSSEC(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DNSSEC(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:route53:DNSSEC", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -77,7 +79,7 @@ public class DNSSEC extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DNSSEC get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DNSSEC get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DNSSEC(name, id, options);
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Excluded Rule in the RuleGroup or ManagedRuleGroup will not be evaluated.
  * 
  */
-public final class WebACLExcludedRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLExcludedRuleArgs extends ResourceArgs {
 
     public static final WebACLExcludedRuleArgs Empty = new WebACLExcludedRuleArgs();
 

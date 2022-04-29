@@ -6,10 +6,11 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.CachePolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class CachePolicyArgs extends ResourceArgs {
 
     public static final CachePolicyArgs Empty = new CachePolicyArgs();
 

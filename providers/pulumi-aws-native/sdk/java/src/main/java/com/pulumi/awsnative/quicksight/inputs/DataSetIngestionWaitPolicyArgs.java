@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Wait policy to use when creating/updating dataset. Default is to wait for SPICE ingestion to finish with timeout of 36 hours.&lt;/p&gt;
  * 
  */
-public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetIngestionWaitPolicyArgs extends ResourceArgs {
 
     public static final DataSetIngestionWaitPolicyArgs Empty = new DataSetIngestionWaitPolicyArgs();
 

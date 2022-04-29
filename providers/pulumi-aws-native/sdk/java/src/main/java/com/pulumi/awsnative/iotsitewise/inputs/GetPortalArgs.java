@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetPortalArgs extends InvokeArgs {
 
     public static final GetPortalArgs Empty = new GetPortalArgs();
 

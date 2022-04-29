@@ -7,12 +7,13 @@ import com.pulumi.awsnative.networkfirewall.enums.RuleGroupGeneratedRulesType;
 import com.pulumi.awsnative.networkfirewall.enums.RuleGroupTargetType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class RuleGroupRulesSourceListArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRulesSourceListArgs extends ResourceArgs {
 
     public static final RuleGroupRulesSourceListArgs Empty = new RuleGroupRulesSourceListArgs();
 

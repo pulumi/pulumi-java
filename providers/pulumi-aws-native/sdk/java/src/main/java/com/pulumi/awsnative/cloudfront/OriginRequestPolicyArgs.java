@@ -6,10 +6,11 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class OriginRequestPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginRequestPolicyArgs extends ResourceArgs {
 
     public static final OriginRequestPolicyArgs Empty = new OriginRequestPolicyArgs();
 

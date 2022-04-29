@@ -5,6 +5,7 @@ package com.pulumi.awsnative.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The configuration with resource tag settings to apply across all resources handled by this provider. This is designed to replace redundant per-resource `tags` configurations. Provider tags can be overridden with new values, but not excluded from specific resources. To override provider tag values, use the `tags` argument within a resource to configure new tag values for matching keys.
  * 
  */
-public final class ProviderDefaultTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderDefaultTagsArgs extends ResourceArgs {
 
     public static final ProviderDefaultTagsArgs Empty = new ProviderDefaultTagsArgs();
 

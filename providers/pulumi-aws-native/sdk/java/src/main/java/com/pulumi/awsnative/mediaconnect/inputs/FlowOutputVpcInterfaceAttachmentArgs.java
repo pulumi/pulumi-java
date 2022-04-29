@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mediaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The settings for attaching a VPC interface to an output.
  * 
  */
-public final class FlowOutputVpcInterfaceAttachmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowOutputVpcInterfaceAttachmentArgs extends ResourceArgs {
 
     public static final FlowOutputVpcInterfaceAttachmentArgs Empty = new FlowOutputVpcInterfaceAttachmentArgs();
 

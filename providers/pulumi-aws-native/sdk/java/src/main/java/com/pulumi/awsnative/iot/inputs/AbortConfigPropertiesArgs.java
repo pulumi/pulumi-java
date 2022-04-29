@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateAbortCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The criteria that determine when and how a job abort takes place.
  * 
  */
-public final class AbortConfigPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AbortConfigPropertiesArgs extends ResourceArgs {
 
     public static final AbortConfigPropertiesArgs Empty = new AbortConfigPropertiesArgs();
 

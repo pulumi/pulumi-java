@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class StreamingImageTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamingImageTagsArgs extends ResourceArgs {
 
     public static final StreamingImageTagsArgs Empty = new StreamingImageTagsArgs();
 

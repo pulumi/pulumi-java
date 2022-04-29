@@ -10,6 +10,7 @@ import com.pulumi.awsnative.lambda.inputs.EventSourceMappingSourceAccessConfigur
 import com.pulumi.awsnative.lambda.inputs.FilterCriteriaPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingArgs extends ResourceArgs {
 
     public static final EventSourceMappingArgs Empty = new EventSourceMappingArgs();
 

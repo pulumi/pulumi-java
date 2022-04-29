@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.stepfunctions.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class StateMachineDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class StateMachineDefinitionArgs extends ResourceArgs {
 
     public static final StateMachineDefinitionArgs Empty = new StateMachineDefinitionArgs();
 

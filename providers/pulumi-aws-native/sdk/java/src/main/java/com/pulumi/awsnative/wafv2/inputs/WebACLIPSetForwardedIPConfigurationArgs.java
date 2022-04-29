@@ -7,11 +7,12 @@ import com.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallb
 import com.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WebACLIPSetForwardedIPConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLIPSetForwardedIPConfigurationArgs extends ResourceArgs {
 
     public static final WebACLIPSetForwardedIPConfigurationArgs Empty = new WebACLIPSetForwardedIPConfigurationArgs();
 

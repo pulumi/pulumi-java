@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.DomainCustomImageArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The kernel gateway app settings.
  * 
  */
-public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainKernelGatewayAppSettingsArgs extends ResourceArgs {
 
     public static final DomainKernelGatewayAppSettingsArgs Empty = new DomainKernelGatewayAppSettingsArgs();
 

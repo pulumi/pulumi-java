@@ -11,13 +11,14 @@ import com.pulumi.awsnative.inspectorv2.inputs.FilterPortRangeFilterArgs;
 import com.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FilterCriteriaArgs extends com.pulumi.resources.ResourceArgs {
+public final class FilterCriteriaArgs extends ResourceArgs {
 
     public static final FilterCriteriaArgs Empty = new FilterCriteriaArgs();
 

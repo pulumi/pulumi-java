@@ -8,6 +8,7 @@ import com.pulumi.awsnative.datasync.inputs.LocationS3S3ConfigArgs;
 import com.pulumi.awsnative.datasync.inputs.LocationS3TagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
+public final class LocationS3Args extends ResourceArgs {
 
     public static final LocationS3Args Empty = new LocationS3Args();
 

@@ -8,11 +8,12 @@ import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationFilterArgs extends ResourceArgs {
 
     public static final LoggingConfigurationFilterArgs Empty = new LoggingConfigurationFilterArgs();
 

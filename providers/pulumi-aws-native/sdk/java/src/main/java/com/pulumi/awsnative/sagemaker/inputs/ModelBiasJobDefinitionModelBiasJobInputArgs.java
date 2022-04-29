@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionEndpointInput
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The inputs for a monitoring job.
  * 
  */
-public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends ResourceArgs {
 
     public static final ModelBiasJobDefinitionModelBiasJobInputArgs Empty = new ModelBiasJobDefinitionModelBiasJobInputArgs();
 

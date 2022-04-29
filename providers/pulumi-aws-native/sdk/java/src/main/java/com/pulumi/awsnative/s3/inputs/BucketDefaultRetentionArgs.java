@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketDefaultRetentionMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The default retention period that you want to apply to new objects placed in the specified bucket.
  * 
  */
-public final class BucketDefaultRetentionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketDefaultRetentionArgs extends ResourceArgs {
 
     public static final BucketDefaultRetentionArgs Empty = new BucketDefaultRetentionArgs();
 

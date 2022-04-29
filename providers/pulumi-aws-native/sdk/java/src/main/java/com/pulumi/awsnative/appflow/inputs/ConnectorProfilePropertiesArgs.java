@@ -17,6 +17,7 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfile
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfilePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * Connector specific properties needed to create connector profile - currently not needed for Amplitude, Trendmicro, Googleanalytics and Singular
  * 
  */
-public final class ConnectorProfilePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorProfilePropertiesArgs extends ResourceArgs {
 
     public static final ConnectorProfilePropertiesArgs Empty = new ConnectorProfilePropertiesArgs();
 

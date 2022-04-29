@@ -7,13 +7,14 @@ import com.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import com.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobDatabaseOutputArgs extends ResourceArgs {
 
     public static final JobDatabaseOutputArgs Empty = new JobDatabaseOutputArgs();
 

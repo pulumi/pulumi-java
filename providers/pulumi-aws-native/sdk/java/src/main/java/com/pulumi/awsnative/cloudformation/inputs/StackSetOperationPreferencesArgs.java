@@ -6,6 +6,7 @@ package com.pulumi.awsnative.cloudformation.inputs;
 import com.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
  * 
  */
-public final class StackSetOperationPreferencesArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackSetOperationPreferencesArgs extends ResourceArgs {
 
     public static final StackSetOperationPreferencesArgs Empty = new StackSetOperationPreferencesArgs();
 

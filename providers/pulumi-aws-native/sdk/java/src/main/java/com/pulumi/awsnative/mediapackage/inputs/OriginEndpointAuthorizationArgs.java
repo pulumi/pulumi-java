@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * CDN Authorization credentials
  * 
  */
-public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointAuthorizationArgs extends ResourceArgs {
 
     public static final OriginEndpointAuthorizationArgs Empty = new OriginEndpointAuthorizationArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionUpdateDeviceCertificateParamsAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Parameters to define a mitigation action that changes the state of the device certificate to inactive.
  * 
  */
-public final class MitigationActionUpdateDeviceCertificateParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionUpdateDeviceCertificateParamsArgs extends ResourceArgs {
 
     public static final MitigationActionUpdateDeviceCertificateParamsArgs Empty = new MitigationActionUpdateDeviceCertificateParamsArgs();
 

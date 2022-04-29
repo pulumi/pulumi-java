@@ -7,6 +7,7 @@ import com.pulumi.awsnative.backup.inputs.BackupSelectionConditionResourceTypeAr
 import com.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeConditionsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackupSelectionResourceTypeArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupSelectionResourceTypeArgs extends ResourceArgs {
 
     public static final BackupSelectionResourceTypeArgs Empty = new BackupSelectionResourceTypeArgs();
 

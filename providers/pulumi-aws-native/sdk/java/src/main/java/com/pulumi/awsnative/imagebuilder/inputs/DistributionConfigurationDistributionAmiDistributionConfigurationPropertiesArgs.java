@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The specific AMI settings (for example, launch permissions, AMI tags).
  * 
  */
-public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs Empty = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs();
 

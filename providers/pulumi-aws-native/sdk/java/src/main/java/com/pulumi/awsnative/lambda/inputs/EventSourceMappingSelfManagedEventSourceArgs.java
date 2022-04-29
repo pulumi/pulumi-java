@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingEndpointsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The configuration used by AWS Lambda to access a self-managed event source.
  * 
  */
-public final class EventSourceMappingSelfManagedEventSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingSelfManagedEventSourceArgs extends ResourceArgs {
 
     public static final EventSourceMappingSelfManagedEventSourceArgs Empty = new EventSourceMappingSelfManagedEventSourceArgs();
 

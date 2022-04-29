@@ -5,13 +5,14 @@ package com.pulumi.awsnative.wisdom.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final KnowledgeBaseServerSideEncryptionConfigurationArgs Empty = new KnowledgeBaseServerSideEncryptionConfigurationArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Current resource capacity settings in a specified fleet or location. The location value might refer to a fleet&#39;s remote location or its home Region.
  * 
  */
-public final class FleetLocationCapacityArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetLocationCapacityArgs extends ResourceArgs {
 
     public static final FleetLocationCapacityArgs Empty = new FleetLocationCapacityArgs();
 

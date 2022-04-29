@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorConfigArgs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnomalyDetectorArgs extends ResourceArgs {
 
     public static final AnomalyDetectorArgs Empty = new AnomalyDetectorArgs();
 

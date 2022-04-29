@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The display options for margins around the outside edge of sheets.&lt;/p&gt;
  * 
  */
-public final class ThemeMarginStyleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeMarginStyleArgs extends ResourceArgs {
 
     public static final ThemeMarginStyleArgs Empty = new ThemeMarginStyleArgs();
 

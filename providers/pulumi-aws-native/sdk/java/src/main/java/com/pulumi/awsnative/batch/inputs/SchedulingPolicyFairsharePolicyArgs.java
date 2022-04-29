@@ -6,6 +6,7 @@ package com.pulumi.awsnative.batch.inputs;
 import com.pulumi.awsnative.batch.inputs.SchedulingPolicyShareAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Fair Share Policy for the Job Queue.
  * 
  */
-public final class SchedulingPolicyFairsharePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingPolicyFairsharePolicyArgs extends ResourceArgs {
 
     public static final SchedulingPolicyFairsharePolicyArgs Empty = new SchedulingPolicyFairsharePolicyArgs();
 

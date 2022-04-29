@@ -7,12 +7,13 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatastoreJsonConfigurationArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreParquetConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatastoreFileFormatConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatastoreFileFormatConfigurationArgs extends ResourceArgs {
 
     public static final DatastoreFileFormatConfigurationArgs Empty = new DatastoreFileFormatConfigurationArgs();
 

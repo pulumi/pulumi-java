@@ -5,6 +5,7 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The Amazon Resource Name (ARN) of the AWS IAM role that is used to access an Amazon S3 bucket.
  * 
  */
-public final class LocationS3S3ConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationS3S3ConfigArgs extends ResourceArgs {
 
     public static final LocationS3S3ConfigArgs Empty = new LocationS3S3ConfigArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A slot is a variable needed to fulfill an intent, where an intent can require zero or more slots.
  * 
  */
-public final class BotSlotArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotArgs extends ResourceArgs {
 
     public static final BotSlotArgs Empty = new BotSlotArgs();
 

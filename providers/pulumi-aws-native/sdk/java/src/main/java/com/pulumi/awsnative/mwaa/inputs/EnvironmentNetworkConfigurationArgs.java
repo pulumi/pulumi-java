@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mwaa.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Configures the network resources of the environment.
  * 
  */
-public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class EnvironmentNetworkConfigurationArgs extends ResourceArgs {
 
     public static final EnvironmentNetworkConfigurationArgs Empty = new EnvironmentNetworkConfigurationArgs();
 

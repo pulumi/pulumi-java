@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Describes the settings of a container that will be launched, or that is launched, to an Amazon Lightsail container service.
  * 
  */
-public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerArgs extends ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 

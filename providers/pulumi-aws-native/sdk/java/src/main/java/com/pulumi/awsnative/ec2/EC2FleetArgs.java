@@ -12,6 +12,7 @@ import com.pulumi.awsnative.ec2.inputs.EC2FleetTagSpecificationArgs;
 import com.pulumi.awsnative.ec2.inputs.EC2FleetTargetCapacitySpecificationRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetArgs extends ResourceArgs {
 
     public static final EC2FleetArgs Empty = new EC2FleetArgs();
 

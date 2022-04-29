@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The output configuration for monitoring jobs.
  * 
  */
-public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends ResourceArgs {
 
     public static final ModelBiasJobDefinitionMonitoringOutputConfigArgs Empty = new ModelBiasJobDefinitionMonitoringOutputConfigArgs();
 

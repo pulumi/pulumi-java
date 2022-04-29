@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The pattern to look for in the JSON body.
  * 
  */
-public final class RuleGroupJsonMatchPatternArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupJsonMatchPatternArgs extends ResourceArgs {
 
     public static final RuleGroupJsonMatchPatternArgs Empty = new RuleGroupJsonMatchPatternArgs();
 

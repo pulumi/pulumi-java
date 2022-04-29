@@ -18,6 +18,7 @@ import com.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import com.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +29,7 @@ import javax.annotation.Nullable;
  * Represents the options that are available to control the behavior of a StartTaskExecution operation.
  * 
  */
-public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskOptionsArgs extends ResourceArgs {
 
     public static final TaskOptionsArgs Empty = new TaskOptionsArgs();
 

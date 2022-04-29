@@ -6,6 +6,7 @@ package com.pulumi.awsnative.devopsguru.inputs;
 import com.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Information about a filter used to specify which AWS resources are analyzed for anomalous behavior by DevOps Guru.
  * 
  */
-public final class ResourceCollectionFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceCollectionFilterArgs extends ResourceArgs {
 
     public static final ResourceCollectionFilterArgs Empty = new ResourceCollectionFilterArgs();
 

@@ -6,11 +6,12 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketOwnershipControlsRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class BucketOwnershipControlsArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketOwnershipControlsArgs extends ResourceArgs {
 
     public static final BucketOwnershipControlsArgs Empty = new BucketOwnershipControlsArgs();
 

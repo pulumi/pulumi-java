@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Sends information about the detector model instance and the event that triggered the action to an Amazon Kinesis Data Firehose delivery stream.
  * 
  */
-public final class DetectorModelFirehoseArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelFirehoseArgs extends ResourceArgs {
 
     public static final DetectorModelFirehoseArgs Empty = new DetectorModelFirehoseArgs();
 

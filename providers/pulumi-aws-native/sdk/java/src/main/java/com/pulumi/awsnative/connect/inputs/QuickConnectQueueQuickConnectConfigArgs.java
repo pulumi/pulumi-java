@@ -5,6 +5,7 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The queue configuration. This is required only if QuickConnectType is QUEUE.
  * 
  */
-public final class QuickConnectQueueQuickConnectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class QuickConnectQueueQuickConnectConfigArgs extends ResourceArgs {
 
     public static final QuickConnectQueueQuickConnectConfigArgs Empty = new QuickConnectQueueQuickConnectConfigArgs();
 

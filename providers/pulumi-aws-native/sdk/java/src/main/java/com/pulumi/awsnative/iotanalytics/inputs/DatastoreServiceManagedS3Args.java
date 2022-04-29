@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class DatastoreServiceManagedS3Args extends com.pulumi.resources.ResourceArgs {
+public final class DatastoreServiceManagedS3Args extends ResourceArgs {
 
     public static final DatastoreServiceManagedS3Args Empty = new DatastoreServiceManagedS3Args();
 

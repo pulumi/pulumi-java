@@ -5,6 +5,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A set of instructions for launching server processes on each instance in a fleet. Each instruction set identifies the location of the server executable, optional launch parameters, and the number of server processes with this configuration to maintain concurrently on the instance. Server process configurations make up a fleet&#39;s RuntimeConfiguration.
  * 
  */
-public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetServerProcessArgs extends ResourceArgs {
 
     public static final FleetServerProcessArgs Empty = new FleetServerProcessArgs();
 

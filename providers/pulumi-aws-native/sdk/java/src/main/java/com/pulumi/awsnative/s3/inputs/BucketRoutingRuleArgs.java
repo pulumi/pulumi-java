@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.BucketRedirectRuleArgs;
 import com.pulumi.awsnative.s3.inputs.BucketRoutingRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the redirect behavior and when a redirect is applied.
  * 
  */
-public final class BucketRoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketRoutingRuleArgs extends ResourceArgs {
 
     public static final BucketRoutingRuleArgs Empty = new BucketRoutingRuleArgs();
 

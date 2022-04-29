@@ -6,6 +6,7 @@ package com.pulumi.awsnative.events;
 import com.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApiDestinationArgs extends ResourceArgs {
 
     public static final ApiDestinationArgs Empty = new ApiDestinationArgs();
 

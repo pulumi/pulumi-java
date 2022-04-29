@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetResourceSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourceSetArgs extends InvokeArgs {
 
     public static final GetResourceSetArgs Empty = new GetResourceSetArgs();
 

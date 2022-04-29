@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sso.inputs;
 import com.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
  * 
  */
-public final class InstanceAccessControlAttributeConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceAccessControlAttributeConfigurationPropertiesArgs extends ResourceArgs {
 
     public static final InstanceAccessControlAttributeConfigurationPropertiesArgs Empty = new InstanceAccessControlAttributeConfigurationPropertiesArgs();
 

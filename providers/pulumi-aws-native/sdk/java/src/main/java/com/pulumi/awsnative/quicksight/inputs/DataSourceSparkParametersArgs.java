@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * &lt;p&gt;Spark parameters.&lt;/p&gt;
  * 
  */
-public final class DataSourceSparkParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceSparkParametersArgs extends ResourceArgs {
 
     public static final DataSourceSparkParametersArgs Empty = new DataSourceSparkParametersArgs();
 

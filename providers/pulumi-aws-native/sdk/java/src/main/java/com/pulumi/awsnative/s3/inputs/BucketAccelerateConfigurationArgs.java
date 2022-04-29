@@ -6,10 +6,11 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class BucketAccelerateConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAccelerateConfigurationArgs extends ResourceArgs {
 
     public static final BucketAccelerateConfigurationArgs Empty = new BucketAccelerateConfigurationArgs();
 

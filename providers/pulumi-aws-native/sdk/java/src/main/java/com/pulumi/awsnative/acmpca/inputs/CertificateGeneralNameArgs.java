@@ -8,6 +8,7 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateOtherNameArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Structure that contains X.509 GeneralName information. Assign one and ONLY one field.
  * 
  */
-public final class CertificateGeneralNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateGeneralNameArgs extends ResourceArgs {
 
     public static final CertificateGeneralNameArgs Empty = new CertificateGeneralNameArgs();
 

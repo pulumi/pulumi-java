@@ -7,6 +7,7 @@ import com.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import com.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InAppTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class InAppTemplateArgs extends ResourceArgs {
 
     public static final InAppTemplateArgs Empty = new InAppTemplateArgs();
 

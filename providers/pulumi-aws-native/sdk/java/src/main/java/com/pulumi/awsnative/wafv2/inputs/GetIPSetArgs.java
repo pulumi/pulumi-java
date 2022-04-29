@@ -5,11 +5,12 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.enums.IPSetScope;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetIPSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetIPSetArgs extends InvokeArgs {
 
     public static final GetIPSetArgs Empty = new GetIPSetArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.
  * 
  */
-public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketCorsRuleArgs extends ResourceArgs {
 
     public static final BucketCorsRuleArgs Empty = new BucketCorsRuleArgs();
 

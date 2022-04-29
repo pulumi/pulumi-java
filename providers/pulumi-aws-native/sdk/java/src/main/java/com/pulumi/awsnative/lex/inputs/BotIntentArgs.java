@@ -15,6 +15,7 @@ import com.pulumi.awsnative.lex.inputs.BotSlotArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotPriorityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
  * An intent represents an action that the user wants to perform. You create a bot to support one or more related intents.
  * 
  */
-public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotIntentArgs extends ResourceArgs {
 
     public static final BotIntentArgs Empty = new BotIntentArgs();
 

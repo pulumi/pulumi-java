@@ -8,6 +8,7 @@ import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorFirehoseLogDeliveryArgs
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorS3LogDeliveryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Specifies where worker logs are delivered.
  * 
  */
-public final class ConnectorWorkerLogDeliveryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorWorkerLogDeliveryArgs extends ResourceArgs {
 
     public static final ConnectorWorkerLogDeliveryArgs Empty = new ConnectorWorkerLogDeliveryArgs();
 

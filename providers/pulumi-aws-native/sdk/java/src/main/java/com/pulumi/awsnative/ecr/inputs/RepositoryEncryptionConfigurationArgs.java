@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ecr.inputs;
 import com.pulumi.awsnative.ecr.enums.RepositoryEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html
  * 
  */
-public final class RepositoryEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepositoryEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final RepositoryEncryptionConfigurationArgs Empty = new RepositoryEncryptionConfigurationArgs();
 

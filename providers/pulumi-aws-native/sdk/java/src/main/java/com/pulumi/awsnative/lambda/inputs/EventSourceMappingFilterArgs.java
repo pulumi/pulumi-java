@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The filter object that defines parameters for ESM filtering.
  * 
  */
-public final class EventSourceMappingFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class EventSourceMappingFilterArgs extends ResourceArgs {
 
     public static final EventSourceMappingFilterArgs Empty = new EventSourceMappingFilterArgs();
 

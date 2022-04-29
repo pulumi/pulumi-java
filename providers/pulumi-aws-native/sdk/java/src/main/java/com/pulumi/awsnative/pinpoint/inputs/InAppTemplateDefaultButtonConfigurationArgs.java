@@ -6,6 +6,7 @@ package com.pulumi.awsnative.pinpoint.inputs;
 import com.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class InAppTemplateDefaultButtonConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class InAppTemplateDefaultButtonConfigurationArgs extends ResourceArgs {
 
     public static final InAppTemplateDefaultButtonConfigurationArgs Empty = new InAppTemplateDefaultButtonConfigurationArgs();
 

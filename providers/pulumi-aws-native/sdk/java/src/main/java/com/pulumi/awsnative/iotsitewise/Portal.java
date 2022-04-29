@@ -11,6 +11,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:iotsitewise:Portal")
-public class Portal extends com.pulumi.resources.CustomResource {
+public class Portal extends CustomResource {
     /**
      * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
@@ -212,19 +214,19 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Portal(String name, PortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Portal(String name, PortalArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:iotsitewise:Portal", name, args == null ? PortalArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Portal(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Portal(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:iotsitewise:Portal", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -235,7 +237,7 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Portal get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Portal get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Portal(name, id, options);
     }
 }

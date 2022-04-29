@@ -6,12 +6,13 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetCapacityReservationOptionsRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetCapacityReservationOptionsRequestArgs extends ResourceArgs {
 
     public static final EC2FleetCapacityReservationOptionsRequestArgs Empty = new EC2FleetCapacityReservationOptionsRequestArgs();
 

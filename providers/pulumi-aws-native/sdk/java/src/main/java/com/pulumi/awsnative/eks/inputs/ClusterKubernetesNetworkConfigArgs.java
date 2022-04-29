@@ -6,6 +6,7 @@ package com.pulumi.awsnative.eks.inputs;
 import com.pulumi.awsnative.eks.enums.ClusterKubernetesNetworkConfigIpFamily;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The Kubernetes network configuration for the cluster.
  * 
  */
-public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterKubernetesNetworkConfigArgs extends ResourceArgs {
 
     public static final ClusterKubernetesNetworkConfigArgs Empty = new ClusterKubernetesNetworkConfigArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The properties that determine whether magnetic store writes are enabled.
  * 
  */
-public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class MagneticStoreWritePropertiesPropertiesArgs extends ResourceArgs {
 
     public static final MagneticStoreWritePropertiesPropertiesArgs Empty = new MagneticStoreWritePropertiesPropertiesArgs();
 

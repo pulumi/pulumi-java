@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lex.inputs.BotFulfillmentStartResponseSpecificationA
 import com.pulumi.awsnative.lex.inputs.BotFulfillmentUpdateResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Provides information for updating the user on the progress of fulfilling an intent.
  * 
  */
-public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotFulfillmentUpdatesSpecificationArgs extends ResourceArgs {
 
     public static final BotFulfillmentUpdatesSpecificationArgs Empty = new BotFulfillmentUpdatesSpecificationArgs();
 

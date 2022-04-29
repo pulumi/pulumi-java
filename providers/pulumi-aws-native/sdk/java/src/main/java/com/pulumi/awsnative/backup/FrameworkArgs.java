@@ -7,6 +7,7 @@ import com.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import com.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
+public final class FrameworkArgs extends ResourceArgs {
 
     public static final FrameworkArgs Empty = new FrameworkArgs();
 

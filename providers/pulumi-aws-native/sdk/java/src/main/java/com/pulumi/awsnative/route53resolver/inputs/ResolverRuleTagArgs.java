@@ -5,11 +5,12 @@ package com.pulumi.awsnative.route53resolver.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ResolverRuleTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResolverRuleTagArgs extends ResourceArgs {
 
     public static final ResolverRuleTagArgs Empty = new ResolverRuleTagArgs();
 

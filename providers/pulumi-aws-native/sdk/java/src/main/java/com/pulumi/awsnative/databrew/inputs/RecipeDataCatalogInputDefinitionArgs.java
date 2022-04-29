@@ -6,13 +6,14 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecipeDataCatalogInputDefinitionArgs extends ResourceArgs {
 
     public static final RecipeDataCatalogInputDefinitionArgs Empty = new RecipeDataCatalogInputDefinitionArgs();
 

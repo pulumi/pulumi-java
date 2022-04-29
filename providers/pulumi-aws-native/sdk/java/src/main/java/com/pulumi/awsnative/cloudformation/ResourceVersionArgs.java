@@ -6,13 +6,14 @@ package com.pulumi.awsnative.cloudformation;
 import com.pulumi.awsnative.cloudformation.inputs.ResourceVersionLoggingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceVersionArgs extends ResourceArgs {
 
     public static final ResourceVersionArgs Empty = new ResourceVersionArgs();
 

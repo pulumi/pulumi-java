@@ -15,6 +15,7 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionRestrictionsArgs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionViewerCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionConfigArgs extends ResourceArgs {
 
     public static final DistributionConfigArgs Empty = new DistributionConfigArgs();
 

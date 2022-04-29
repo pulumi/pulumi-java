@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.robomaker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetSimulationApplicationArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetSimulationApplicationArgs extends InvokeArgs {
 
     public static final GetSimulationApplicationArgs Empty = new GetSimulationApplicationArgs();
 

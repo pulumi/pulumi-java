@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorCustomPluginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Details about a Kafka Connect plugin which will be used with the connector.
  * 
  */
-public final class ConnectorPluginArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorPluginArgs extends ResourceArgs {
 
     public static final ConnectorPluginArgs Empty = new ConnectorPluginArgs();
 

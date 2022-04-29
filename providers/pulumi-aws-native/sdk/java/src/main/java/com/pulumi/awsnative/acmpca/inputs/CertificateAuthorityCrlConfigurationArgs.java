@@ -5,6 +5,7 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Your certificate authority can create and maintain a certificate revocation list (CRL). A CRL contains information about certificates that have been revoked.
  * 
  */
-public final class CertificateAuthorityCrlConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateAuthorityCrlConfigurationArgs extends ResourceArgs {
 
     public static final CertificateAuthorityCrlConfigurationArgs Empty = new CertificateAuthorityCrlConfigurationArgs();
 

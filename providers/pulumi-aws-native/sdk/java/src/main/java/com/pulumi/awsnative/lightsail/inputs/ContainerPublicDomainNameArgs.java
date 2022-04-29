@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The public domain name to use with the container service, such as example.com and www.example.com.
  * 
  */
-public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContainerPublicDomainNameArgs extends ResourceArgs {
 
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 

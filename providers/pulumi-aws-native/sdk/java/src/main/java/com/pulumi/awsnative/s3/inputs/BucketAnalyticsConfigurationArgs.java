@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.BucketStorageClassAnalysisArgs;
 import com.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
  * 
  */
-public final class BucketAnalyticsConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketAnalyticsConfigurationArgs extends ResourceArgs {
 
     public static final BucketAnalyticsConfigurationArgs Empty = new BucketAnalyticsConfigurationArgs();
 

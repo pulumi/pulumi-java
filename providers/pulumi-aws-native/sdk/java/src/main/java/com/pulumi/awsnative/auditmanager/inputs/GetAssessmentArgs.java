@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.auditmanager.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAssessmentArgs extends InvokeArgs {
 
     public static final GetAssessmentArgs Empty = new GetAssessmentArgs();
 

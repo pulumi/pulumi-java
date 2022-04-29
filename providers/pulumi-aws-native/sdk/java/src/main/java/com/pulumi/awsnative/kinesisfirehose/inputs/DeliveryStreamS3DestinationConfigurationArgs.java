@@ -9,13 +9,14 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCloudWatchLoggi
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamS3DestinationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamS3DestinationConfigurationArgs extends ResourceArgs {
 
     public static final DeliveryStreamS3DestinationConfigurationArgs Empty = new DeliveryStreamS3DestinationConfigurationArgs();
 

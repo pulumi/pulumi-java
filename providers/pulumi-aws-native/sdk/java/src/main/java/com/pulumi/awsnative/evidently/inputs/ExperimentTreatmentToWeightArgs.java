@@ -5,12 +5,13 @@ package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ExperimentTreatmentToWeightArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentTreatmentToWeightArgs extends ResourceArgs {
 
     public static final ExperimentTreatmentToWeightArgs Empty = new ExperimentTreatmentToWeightArgs();
 

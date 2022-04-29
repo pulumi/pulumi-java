@@ -9,6 +9,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:ec2:TransitGatewayMulticastGroupSource")
-public class TransitGatewayMulticastGroupSource extends com.pulumi.resources.CustomResource {
+public class TransitGatewayMulticastGroupSource extends CustomResource {
     /**
      * The IP address assigned to the transit gateway multicast group.
      * 
@@ -195,19 +197,19 @@ public class TransitGatewayMulticastGroupSource extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransitGatewayMulticastGroupSource(String name, TransitGatewayMulticastGroupSourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransitGatewayMulticastGroupSource(String name, TransitGatewayMulticastGroupSourceArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:ec2:TransitGatewayMulticastGroupSource", name, args == null ? TransitGatewayMulticastGroupSourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private TransitGatewayMulticastGroupSource(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private TransitGatewayMulticastGroupSource(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:ec2:TransitGatewayMulticastGroupSource", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -218,7 +220,7 @@ public class TransitGatewayMulticastGroupSource extends com.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransitGatewayMulticastGroupSource get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransitGatewayMulticastGroupSource get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new TransitGatewayMulticastGroupSource(name, id, options);
     }
 }

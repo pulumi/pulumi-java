@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class LaunchProfileTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchProfileTagsArgs extends ResourceArgs {
 
     public static final LaunchProfileTagsArgs Empty = new LaunchProfileTagsArgs();
 

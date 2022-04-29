@@ -5,11 +5,12 @@ package com.pulumi.awsnative.sqs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class QueueTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class QueueTagArgs extends ResourceArgs {
 
     public static final QueueTagArgs Empty = new QueueTagArgs();
 

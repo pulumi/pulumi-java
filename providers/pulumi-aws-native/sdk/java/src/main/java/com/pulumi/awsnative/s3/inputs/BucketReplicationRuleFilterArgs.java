@@ -7,13 +7,14 @@ import com.pulumi.awsnative.s3.inputs.BucketReplicationRuleAndOperatorArgs;
 import com.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BucketReplicationRuleFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationRuleFilterArgs extends ResourceArgs {
 
     public static final BucketReplicationRuleFilterArgs Empty = new BucketReplicationRuleFilterArgs();
 

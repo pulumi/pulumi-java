@@ -7,6 +7,7 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeTileLayoutStyleArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeTileStyleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The theme display options for sheets. &lt;/p&gt;
  * 
  */
-public final class ThemeSheetStyleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeSheetStyleArgs extends ResourceArgs {
 
     public static final ThemeSheetStyleArgs Empty = new ThemeSheetStyleArgs();
 

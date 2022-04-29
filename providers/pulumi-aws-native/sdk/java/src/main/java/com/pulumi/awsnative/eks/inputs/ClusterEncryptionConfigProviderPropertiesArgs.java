@@ -5,6 +5,7 @@ package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The encryption provider for the cluster.
  * 
  */
-public final class ClusterEncryptionConfigProviderPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterEncryptionConfigProviderPropertiesArgs extends ResourceArgs {
 
     public static final ClusterEncryptionConfigProviderPropertiesArgs Empty = new ClusterEncryptionConfigProviderPropertiesArgs();
 

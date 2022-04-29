@@ -7,6 +7,7 @@ import com.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import com.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Trigger settings of the flow.
  * 
  */
-public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowTriggerConfigArgs extends ResourceArgs {
 
     public static final FlowTriggerConfigArgs Empty = new FlowTriggerConfigArgs();
 

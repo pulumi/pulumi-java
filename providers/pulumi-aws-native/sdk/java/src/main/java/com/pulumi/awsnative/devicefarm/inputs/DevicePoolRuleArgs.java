@@ -7,6 +7,7 @@ import com.pulumi.awsnative.devicefarm.enums.DevicePoolRuleAttribute;
 import com.pulumi.awsnative.devicefarm.enums.DevicePoolRuleOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Represents a condition for a device pool.
  * 
  */
-public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class DevicePoolRuleArgs extends ResourceArgs {
 
     public static final DevicePoolRuleArgs Empty = new DevicePoolRuleArgs();
 

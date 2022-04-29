@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.StorageLensCloudWatchMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensS3BucketDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies how Amazon S3 Storage Lens metrics should be exported.
  * 
  */
-public final class StorageLensDataExportArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensDataExportArgs extends ResourceArgs {
 
     public static final StorageLensDataExportArgs Empty = new StorageLensDataExportArgs();
 

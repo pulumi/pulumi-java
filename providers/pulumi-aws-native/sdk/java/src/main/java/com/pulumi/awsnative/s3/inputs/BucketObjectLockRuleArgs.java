@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketDefaultRetentionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Object Lock rule in place for the specified object.
  * 
  */
-public final class BucketObjectLockRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketObjectLockRuleArgs extends ResourceArgs {
 
     public static final BucketObjectLockRuleArgs Empty = new BucketObjectLockRuleArgs();
 

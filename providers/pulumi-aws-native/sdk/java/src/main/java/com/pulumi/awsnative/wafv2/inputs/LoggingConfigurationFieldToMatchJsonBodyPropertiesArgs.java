@@ -8,6 +8,7 @@ import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBody
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
  * 
  */
-public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extends ResourceArgs {
 
     public static final LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs Empty = new LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs();
 

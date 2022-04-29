@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Sends an AWS IoT Events input, passing in information about the detector model instance and the event that triggered the action.
  * 
  */
-public final class DetectorModelIotEventsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelIotEventsArgs extends ResourceArgs {
 
     public static final DetectorModelIotEventsArgs Empty = new DetectorModelIotEventsArgs();
 

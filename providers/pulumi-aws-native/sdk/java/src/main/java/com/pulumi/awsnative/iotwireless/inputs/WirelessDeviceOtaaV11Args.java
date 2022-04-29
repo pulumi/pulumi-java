@@ -5,11 +5,12 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WirelessDeviceOtaaV11Args extends com.pulumi.resources.ResourceArgs {
+public final class WirelessDeviceOtaaV11Args extends ResourceArgs {
 
     public static final WirelessDeviceOtaaV11Args Empty = new WirelessDeviceOtaaV11Args();
 

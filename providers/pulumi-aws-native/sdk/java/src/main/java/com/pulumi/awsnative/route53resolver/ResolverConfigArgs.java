@@ -6,11 +6,12 @@ package com.pulumi.awsnative.route53resolver;
 import com.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResolverConfigArgs extends ResourceArgs {
 
     public static final ResolverConfigArgs Empty = new ResolverConfigArgs();
 

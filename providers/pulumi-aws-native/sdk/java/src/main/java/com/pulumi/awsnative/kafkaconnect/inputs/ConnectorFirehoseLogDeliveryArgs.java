@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details about delivering logs to Amazon Kinesis Data Firehose.
  * 
  */
-public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorFirehoseLogDeliveryArgs extends ResourceArgs {
 
     public static final ConnectorFirehoseLogDeliveryArgs Empty = new ConnectorFirehoseLogDeliveryArgs();
 

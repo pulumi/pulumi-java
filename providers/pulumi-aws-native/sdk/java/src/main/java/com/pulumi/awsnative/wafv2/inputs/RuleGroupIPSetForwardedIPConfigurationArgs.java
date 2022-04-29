@@ -7,11 +7,12 @@ import com.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationFa
 import com.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationPosition;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class RuleGroupIPSetForwardedIPConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupIPSetForwardedIPConfigurationArgs extends ResourceArgs {
 
     public static final RuleGroupIPSetForwardedIPConfigurationArgs Empty = new RuleGroupIPSetForwardedIPConfigurationArgs();
 

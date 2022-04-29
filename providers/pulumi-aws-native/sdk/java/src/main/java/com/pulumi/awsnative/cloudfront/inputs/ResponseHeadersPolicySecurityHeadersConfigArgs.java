@@ -11,12 +11,13 @@ import com.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyStrictTranspo
 import com.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyXSSProtectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends ResourceArgs {
 
     public static final ResponseHeadersPolicySecurityHeadersConfigArgs Empty = new ResponseHeadersPolicySecurityHeadersConfigArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A message in a custom format defined by the client application.
  * 
  */
-public final class BotCustomPayloadArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotCustomPayloadArgs extends ResourceArgs {
 
     public static final BotCustomPayloadArgs Empty = new BotCustomPayloadArgs();
 

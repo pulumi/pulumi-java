@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The location of audio log files collected when conversation logging is enabled for a bot.
  * 
  */
-public final class BotAliasAudioLogDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasAudioLogDestinationArgs extends ResourceArgs {
 
     public static final BotAliasAudioLogDestinationArgs Empty = new BotAliasAudioLogDestinationArgs();
 

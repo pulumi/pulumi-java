@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.LocalGatewayRouteTableVPCAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocalGatewayRouteTableVPCAssociationArgs extends ResourceArgs {
 
     public static final LocalGatewayRouteTableVPCAssociationArgs Empty = new LocalGatewayRouteTableVPCAssociationArgs();
 

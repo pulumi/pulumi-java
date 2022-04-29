@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.s3outposts.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBucketPolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBucketPolicyArgs extends InvokeArgs {
 
     public static final GetBucketPolicyArgs Empty = new GetBucketPolicyArgs();
 

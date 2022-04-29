@@ -8,6 +8,7 @@ import com.pulumi.awsnative.iotevents.inputs.DetectorModelOnExitArgs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelOnInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Information that defines a state of a detector.
  * 
  */
-public final class DetectorModelStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelStateArgs extends ResourceArgs {
 
     public static final DetectorModelStateArgs Empty = new DetectorModelStateArgs();
 

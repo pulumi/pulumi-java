@@ -5,11 +5,12 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FunctionConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionConfigArgs extends ResourceArgs {
 
     public static final FunctionConfigArgs Empty = new FunctionConfigArgs();
 

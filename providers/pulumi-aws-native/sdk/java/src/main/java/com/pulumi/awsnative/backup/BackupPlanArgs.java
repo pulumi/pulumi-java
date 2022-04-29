@@ -6,13 +6,14 @@ package com.pulumi.awsnative.backup;
 import com.pulumi.awsnative.backup.inputs.BackupPlanResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BackupPlanArgs extends com.pulumi.resources.ResourceArgs {
+public final class BackupPlanArgs extends ResourceArgs {
 
     public static final BackupPlanArgs Empty = new BackupPlanArgs();
 

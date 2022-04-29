@@ -10,6 +10,7 @@ import com.pulumi.awsnative.ec2.inputs.DestinationOptionsPropertiesArgs;
 import com.pulumi.awsnative.ec2.inputs.FlowLogTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowLogArgs extends ResourceArgs {
 
     public static final FlowLogArgs Empty = new FlowLogArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * A locale setting in alias
  * 
  */
-public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasLocaleSettingsItemArgs extends ResourceArgs {
 
     public static final BotAliasLocaleSettingsItemArgs Empty = new BotAliasLocaleSettingsItemArgs();
 

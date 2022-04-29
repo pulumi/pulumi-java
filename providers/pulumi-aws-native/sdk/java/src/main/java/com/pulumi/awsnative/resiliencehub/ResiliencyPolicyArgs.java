@@ -9,13 +9,14 @@ import com.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import com.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResiliencyPolicyArgs extends ResourceArgs {
 
     public static final ResiliencyPolicyArgs Empty = new ResiliencyPolicyArgs();
 

@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:apprunner:VpcConnector")
-public class VpcConnector extends com.pulumi.resources.CustomResource {
+public class VpcConnector extends CustomResource {
     /**
      * A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
      * 
@@ -128,19 +130,19 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpcConnector(String name, VpcConnectorArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VpcConnector(String name, VpcConnectorArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:apprunner:VpcConnector", name, args == null ? VpcConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private VpcConnector(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private VpcConnector(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:apprunner:VpcConnector", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -151,7 +153,7 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcConnector get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpcConnector get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new VpcConnector(name, id, options);
     }
 }

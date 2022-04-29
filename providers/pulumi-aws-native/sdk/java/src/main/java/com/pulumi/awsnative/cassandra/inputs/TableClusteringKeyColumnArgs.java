@@ -7,12 +7,13 @@ import com.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import com.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableClusteringKeyColumnArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableClusteringKeyColumnArgs extends ResourceArgs {
 
     public static final TableClusteringKeyColumnArgs Empty = new TableClusteringKeyColumnArgs();
 

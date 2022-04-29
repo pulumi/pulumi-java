@@ -14,6 +14,7 @@ import com.pulumi.awsnative.cloudformation.inputs.StackSetStackInstancesArgs;
 import com.pulumi.awsnative.cloudformation.inputs.StackSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackSetArgs extends ResourceArgs {
 
     public static final StackSetArgs Empty = new StackSetArgs();
 

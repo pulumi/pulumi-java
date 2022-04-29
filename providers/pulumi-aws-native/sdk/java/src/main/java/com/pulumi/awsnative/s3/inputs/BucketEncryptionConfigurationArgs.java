@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies encryption-related information for an Amazon S3 bucket that is a destination for replicated objects.
  * 
  */
-public final class BucketEncryptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketEncryptionConfigurationArgs extends ResourceArgs {
 
     public static final BucketEncryptionConfigurationArgs Empty = new BucketEncryptionConfigurationArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicyArgs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Details about auto scaling of a connector.
  * 
  */
-public final class ConnectorAutoScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorAutoScalingArgs extends ResourceArgs {
 
     public static final ConnectorAutoScalingArgs Empty = new ConnectorAutoScalingArgs();
 

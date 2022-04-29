@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The metric you want to retain. Dimensions are optional.
  * 
  */
-public final class SecurityProfileMetricToRetainArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileMetricToRetainArgs extends ResourceArgs {
 
     public static final SecurityProfileMetricToRetainArgs Empty = new SecurityProfileMetricToRetainArgs();
 

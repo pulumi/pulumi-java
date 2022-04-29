@@ -6,6 +6,7 @@ package com.pulumi.awsnative.cloudfront.inputs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DistributionOriginGroupsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DistributionOriginGroupsArgs extends ResourceArgs {
 
     public static final DistributionOriginGroupsArgs Empty = new DistributionOriginGroupsArgs();
 

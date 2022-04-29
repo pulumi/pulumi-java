@@ -6,6 +6,7 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies which files folders and objects to include or exclude when transferring files from source to destination.
  * 
  */
-public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskFilterRuleArgs extends ResourceArgs {
 
     public static final TaskFilterRuleArgs Empty = new TaskFilterRuleArgs();
 

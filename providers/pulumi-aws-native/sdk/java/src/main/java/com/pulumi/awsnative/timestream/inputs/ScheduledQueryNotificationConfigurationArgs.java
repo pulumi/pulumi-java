@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQuerySnsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
  * 
  */
-public final class ScheduledQueryNotificationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryNotificationConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryNotificationConfigurationArgs Empty = new ScheduledQueryNotificationConfigurationArgs();
 

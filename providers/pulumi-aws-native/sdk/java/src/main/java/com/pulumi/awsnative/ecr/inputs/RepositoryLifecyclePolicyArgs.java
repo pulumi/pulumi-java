@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The LifecyclePolicy property type specifies a lifecycle policy. For information about lifecycle policy syntax, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html
  * 
  */
-public final class RepositoryLifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RepositoryLifecyclePolicyArgs extends ResourceArgs {
 
     public static final RepositoryLifecyclePolicyArgs Empty = new RepositoryLifecyclePolicyArgs();
 

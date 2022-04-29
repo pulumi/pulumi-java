@@ -7,6 +7,7 @@ import com.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVers
 import com.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The row-level security configuration for the dataset.&lt;/p&gt;
  * 
  */
-public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetRowLevelPermissionDataSetArgs extends ResourceArgs {
 
     public static final DataSetRowLevelPermissionDataSetArgs Empty = new DataSetRowLevelPermissionDataSetArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropert
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
  * 
  */
-public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingFilterPropertiesArgs extends ResourceArgs {
 
     public static final LoggingFilterPropertiesArgs Empty = new LoggingFilterPropertiesArgs();
 

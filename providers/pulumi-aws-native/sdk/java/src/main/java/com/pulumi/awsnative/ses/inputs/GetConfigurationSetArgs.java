@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.ses.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetConfigurationSetArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetConfigurationSetArgs extends InvokeArgs {
 
     public static final GetConfigurationSetArgs Empty = new GetConfigurationSetArgs();
 

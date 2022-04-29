@@ -6,11 +6,12 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobParameterMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class JobStatisticOverrideArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobStatisticOverrideArgs extends ResourceArgs {
 
     public static final JobStatisticOverrideArgs Empty = new JobStatisticOverrideArgs();
 

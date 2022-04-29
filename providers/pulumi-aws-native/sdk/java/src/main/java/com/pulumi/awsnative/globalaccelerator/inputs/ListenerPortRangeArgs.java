@@ -5,6 +5,7 @@ package com.pulumi.awsnative.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A port range to support for connections from  clients to your accelerator.
  * 
  */
-public final class ListenerPortRangeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerPortRangeArgs extends ResourceArgs {
 
     public static final ListenerPortRangeArgs Empty = new ListenerPortRangeArgs();
 

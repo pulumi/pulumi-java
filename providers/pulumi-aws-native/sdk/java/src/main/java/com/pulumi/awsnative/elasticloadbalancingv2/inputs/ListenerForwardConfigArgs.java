@@ -7,13 +7,14 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupSti
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListenerForwardConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ListenerForwardConfigArgs extends ResourceArgs {
 
     public static final ListenerForwardConfigArgs Empty = new ListenerForwardConfigArgs();
 

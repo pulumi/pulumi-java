@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * If you don&#39;t want to specify a comment, omit the HostedZoneConfig and Comment elements.
  * 
  */
-public final class HostedZoneConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostedZoneConfigArgs extends ResourceArgs {
 
     public static final HostedZoneConfigArgs Empty = new HostedZoneConfigArgs();
 

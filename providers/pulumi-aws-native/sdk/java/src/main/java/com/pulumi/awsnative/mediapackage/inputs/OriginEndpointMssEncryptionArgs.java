@@ -6,6 +6,7 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A Microsoft Smooth Streaming (MSS) encryption configuration.
  * 
  */
-public final class OriginEndpointMssEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointMssEncryptionArgs extends ResourceArgs {
 
     public static final OriginEndpointMssEncryptionArgs Empty = new OriginEndpointMssEncryptionArgs();
 

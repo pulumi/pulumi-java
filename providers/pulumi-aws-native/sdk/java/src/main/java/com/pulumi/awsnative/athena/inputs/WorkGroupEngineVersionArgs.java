@@ -5,6 +5,7 @@ package com.pulumi.awsnative.athena.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The Athena engine version for running queries.
  * 
  */
-public final class WorkGroupEngineVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupEngineVersionArgs extends ResourceArgs {
 
     public static final WorkGroupEngineVersionArgs Empty = new WorkGroupEngineVersionArgs();
 

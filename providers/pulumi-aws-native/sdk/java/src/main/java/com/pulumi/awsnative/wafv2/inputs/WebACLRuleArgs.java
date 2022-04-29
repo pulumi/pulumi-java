@@ -11,6 +11,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ import javax.annotation.Nullable;
  * Rule of WebACL that contains condition and action.
  * 
  */
-public final class WebACLRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLRuleArgs extends ResourceArgs {
 
     public static final WebACLRuleArgs Empty = new WebACLRuleArgs();
 

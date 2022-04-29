@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies the default server-side encryption to apply to new objects in the bucket. If a PUT Object request doesn&#39;t specify any server-side encryption, this default encryption will be applied.
  * 
  */
-public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketServerSideEncryptionByDefaultArgs extends ResourceArgs {
 
     public static final BucketServerSideEncryptionByDefaultArgs Empty = new BucketServerSideEncryptionByDefaultArgs();
 

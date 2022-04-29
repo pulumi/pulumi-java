@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The baseline statistics resource for a monitoring job.
  * 
  */
-public final class MonitoringScheduleStatisticsResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleStatisticsResourceArgs extends ResourceArgs {
 
     public static final MonitoringScheduleStatisticsResourceArgs Empty = new MonitoringScheduleStatisticsResourceArgs();
 

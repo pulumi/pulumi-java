@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Tag type enables you to specify a key-value pair that can be used to store information about an AWS CloudFormation StackSet.
  * 
  */
-public final class StackSetTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class StackSetTagArgs extends ResourceArgs {
 
     public static final StackSetTagArgs Empty = new StackSetTagArgs();
 

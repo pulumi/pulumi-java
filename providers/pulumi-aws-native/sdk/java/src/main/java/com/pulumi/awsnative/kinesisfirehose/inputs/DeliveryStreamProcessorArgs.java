@@ -7,13 +7,14 @@ import com.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamProcessorArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamProcessorArgs extends ResourceArgs {
 
     public static final DeliveryStreamProcessorArgs Empty = new DeliveryStreamProcessorArgs();
 

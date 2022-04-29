@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.macie.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetFindingsFilterArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetFindingsFilterArgs extends InvokeArgs {
 
     public static final GetFindingsFilterArgs Empty = new GetFindingsFilterArgs();
 

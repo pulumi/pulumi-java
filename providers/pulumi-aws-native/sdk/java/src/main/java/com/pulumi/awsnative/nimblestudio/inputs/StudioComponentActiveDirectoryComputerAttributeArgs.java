@@ -5,6 +5,7 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.&lt;/p&gt;
  * 
  */
-public final class StudioComponentActiveDirectoryComputerAttributeArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentActiveDirectoryComputerAttributeArgs extends ResourceArgs {
 
     public static final StudioComponentActiveDirectoryComputerAttributeArgs Empty = new StudioComponentActiveDirectoryComputerAttributeArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * An object representing the VPC configuration to use for an Amazon EKS cluster.
  * 
  */
-public final class ClusterResourcesVpcConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterResourcesVpcConfigArgs extends ResourceArgs {
 
     public static final ClusterResourcesVpcConfigArgs Empty = new ClusterResourcesVpcConfigArgs();
 

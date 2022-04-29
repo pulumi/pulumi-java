@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Custom request handling.
  * 
  */
-public final class RuleGroupCustomRequestHandlingArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupCustomRequestHandlingArgs extends ResourceArgs {
 
     public static final RuleGroupCustomRequestHandlingArgs Empty = new RuleGroupCustomRequestHandlingArgs();
 

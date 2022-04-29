@@ -8,6 +8,7 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUserArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUserArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The identity for this access policy. Choose either an SSO user or group or an IAM user or role.
  * 
  */
-public final class AccessPolicyIdentityArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPolicyIdentityArgs extends ResourceArgs {
 
     public static final AccessPolicyIdentityArgs Empty = new AccessPolicyIdentityArgs();
 

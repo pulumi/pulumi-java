@@ -7,12 +7,13 @@ import com.pulumi.awsnative.cassandra.enums.TableMode;
 import com.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TableBillingModeArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableBillingModeArgs extends ResourceArgs {
 
     public static final TableBillingModeArgs Empty = new TableBillingModeArgs();
 

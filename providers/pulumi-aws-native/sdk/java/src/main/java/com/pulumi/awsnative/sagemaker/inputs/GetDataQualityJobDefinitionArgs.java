@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetDataQualityJobDefinitionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetDataQualityJobDefinitionArgs extends InvokeArgs {
 
     public static final GetDataQualityJobDefinitionArgs Empty = new GetDataQualityJobDefinitionArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cassandra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Throughput for the specified table, which consists of values for ReadCapacityUnits and WriteCapacityUnits
  * 
  */
-public final class TableProvisionedThroughputArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableProvisionedThroughputArgs extends ResourceArgs {
 
     public static final TableProvisionedThroughputArgs Empty = new TableProvisionedThroughputArgs();
 

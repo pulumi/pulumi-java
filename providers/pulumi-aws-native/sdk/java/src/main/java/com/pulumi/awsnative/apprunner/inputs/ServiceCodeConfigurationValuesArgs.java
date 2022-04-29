@@ -7,6 +7,7 @@ import com.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntim
 import com.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Code Configuration Values
  * 
  */
-public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceCodeConfigurationValuesArgs extends ResourceArgs {
 
     public static final ServiceCodeConfigurationValuesArgs Empty = new ServiceCodeConfigurationValuesArgs();
 

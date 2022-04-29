@@ -8,6 +8,7 @@ import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatefulRuleArgs;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatelessRulesAndCustomActionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RuleGroupRulesSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupRulesSourceArgs extends ResourceArgs {
 
     public static final RuleGroupRulesSourceArgs Empty = new RuleGroupRulesSourceArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.inputs.FleetLocationCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A remote location where a multi-location fleet can deploy EC2 instances for game hosting.
  * 
  */
-public final class FleetLocationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetLocationConfigurationArgs extends ResourceArgs {
 
     public static final FleetLocationConfigurationArgs Empty = new FleetLocationConfigurationArgs();
 

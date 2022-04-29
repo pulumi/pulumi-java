@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.fis.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetExperimentTemplateArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetExperimentTemplateArgs extends InvokeArgs {
 
     public static final GetExperimentTemplateArgs Empty = new GetExperimentTemplateArgs();
 

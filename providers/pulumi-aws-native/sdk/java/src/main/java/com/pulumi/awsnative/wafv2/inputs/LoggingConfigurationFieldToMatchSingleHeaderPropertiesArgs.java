@@ -5,6 +5,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
  * 
  */
-public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs extends ResourceArgs {
 
     public static final LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs Empty = new LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs();
 

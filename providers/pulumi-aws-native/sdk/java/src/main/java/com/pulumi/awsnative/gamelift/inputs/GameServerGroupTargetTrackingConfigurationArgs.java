@@ -5,6 +5,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Settings for a target-based scaling policy applied to Auto Scaling group.
  * 
  */
-public final class GameServerGroupTargetTrackingConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class GameServerGroupTargetTrackingConfigurationArgs extends ResourceArgs {
 
     public static final GameServerGroupTargetTrackingConfigurationArgs Empty = new GameServerGroupTargetTrackingConfigurationArgs();
 

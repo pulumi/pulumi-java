@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.rum.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetAppMonitorArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetAppMonitorArgs extends InvokeArgs {
 
     public static final GetAppMonitorArgs Empty = new GetAppMonitorArgs();
 

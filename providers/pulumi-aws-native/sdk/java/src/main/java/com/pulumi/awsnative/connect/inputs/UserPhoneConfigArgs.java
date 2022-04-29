@@ -6,6 +6,7 @@ package com.pulumi.awsnative.connect.inputs;
 import com.pulumi.awsnative.connect.enums.UserPhoneType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Contains information about the phone configuration settings for a user.
  * 
  */
-public final class UserPhoneConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserPhoneConfigArgs extends ResourceArgs {
 
     public static final UserPhoneConfigArgs Empty = new UserPhoneConfigArgs();
 

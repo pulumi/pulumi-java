@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  *                 &lt;code&gt;#&lt;/code&gt;, for example #37BFF5. &lt;/p&gt;
  * 
  */
-public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeDataColorPaletteArgs extends ResourceArgs {
 
     public static final ThemeDataColorPaletteArgs Empty = new ThemeDataColorPaletteArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Details for a step that invokes a lambda function.
  * 
  */
-public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowStepCustomStepDetailsPropertiesArgs extends ResourceArgs {
 
     public static final WorkflowStepCustomStepDetailsPropertiesArgs Empty = new WorkflowStepCustomStepDetailsPropertiesArgs();
 

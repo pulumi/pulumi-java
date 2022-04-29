@@ -8,6 +8,7 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerAuthenticationConf
 import com.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerUrlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataSourceWebCrawlerConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceWebCrawlerConfigurationArgs extends ResourceArgs {
 
     public static final DataSourceWebCrawlerConfigurationArgs Empty = new DataSourceWebCrawlerConfigurationArgs();
 

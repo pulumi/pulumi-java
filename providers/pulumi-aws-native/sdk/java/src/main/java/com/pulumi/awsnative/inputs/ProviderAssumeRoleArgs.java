@@ -5,6 +5,7 @@ package com.pulumi.awsnative.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The configuration for a Provider to assume a role.
  * 
  */
-public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProviderAssumeRoleArgs extends ResourceArgs {
 
     public static final ProviderAssumeRoleArgs Empty = new ProviderAssumeRoleArgs();
 

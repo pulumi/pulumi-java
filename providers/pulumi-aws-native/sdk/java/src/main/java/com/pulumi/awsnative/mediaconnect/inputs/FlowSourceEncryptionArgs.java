@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionAlgorithm;
 import com.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Information about the encryption of the flow.
  * 
  */
-public final class FlowSourceEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSourceEncryptionArgs extends ResourceArgs {
 
     public static final FlowSourceEncryptionArgs Empty = new FlowSourceEncryptionArgs();
 

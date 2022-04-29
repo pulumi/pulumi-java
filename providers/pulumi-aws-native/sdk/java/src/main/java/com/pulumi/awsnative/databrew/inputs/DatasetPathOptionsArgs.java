@@ -8,6 +8,7 @@ import com.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Path options for dataset
  * 
  */
-public final class DatasetPathOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetPathOptionsArgs extends ResourceArgs {
 
     public static final DatasetPathOptionsArgs Empty = new DatasetPathOptionsArgs();
 

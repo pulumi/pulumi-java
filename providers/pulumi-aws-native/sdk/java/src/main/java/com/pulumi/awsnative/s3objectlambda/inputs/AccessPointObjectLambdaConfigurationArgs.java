@@ -6,6 +6,7 @@ package com.pulumi.awsnative.s3objectlambda.inputs;
 import com.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Configuration to be applied to this Object lambda Access Point. It specifies Supporting Access Point, Transformation Configurations. Customers can also set if they like to enable Cloudwatch metrics for accesses to this Object lambda Access Point. Default setting for Cloudwatch metrics is disable.
  * 
  */
-public final class AccessPointObjectLambdaConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPointObjectLambdaConfigurationArgs extends ResourceArgs {
 
     public static final AccessPointObjectLambdaConfigurationArgs Empty = new AccessPointObjectLambdaConfigurationArgs();
 

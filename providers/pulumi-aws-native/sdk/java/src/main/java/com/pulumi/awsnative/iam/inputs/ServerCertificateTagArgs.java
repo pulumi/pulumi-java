@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair to associate with a resource.
  * 
  */
-public final class ServerCertificateTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServerCertificateTagArgs extends ResourceArgs {
 
     public static final ServerCertificateTagArgs Empty = new ServerCertificateTagArgs();
 

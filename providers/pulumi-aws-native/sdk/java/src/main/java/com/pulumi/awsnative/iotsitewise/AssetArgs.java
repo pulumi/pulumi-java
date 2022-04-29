@@ -8,6 +8,7 @@ import com.pulumi.awsnative.iotsitewise.inputs.AssetPropertyArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssetArgs extends ResourceArgs {
 
     public static final AssetArgs Empty = new AssetArgs();
 

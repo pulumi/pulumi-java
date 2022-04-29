@@ -6,6 +6,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information about the use of a TLS/SSL certificate for a fleet. TLS certificate generation is enabled at the fleet level, with one certificate generated for the fleet. When this feature is enabled, the certificate can be retrieved using the GameLift Server SDK call GetInstanceCertificate. All instances in a fleet share the same certificate.
  * 
  */
-public final class FleetCertificateConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FleetCertificateConfigurationArgs extends ResourceArgs {
 
     public static final FleetCertificateConfigurationArgs Empty = new FleetCertificateConfigurationArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information needed to clear the timer.
  * 
  */
-public final class DetectorModelClearTimerArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelClearTimerArgs extends ResourceArgs {
 
     public static final DetectorModelClearTimerArgs Empty = new DetectorModelClearTimerArgs();
 

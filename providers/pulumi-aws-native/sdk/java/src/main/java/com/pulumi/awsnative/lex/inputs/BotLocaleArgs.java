@@ -8,6 +8,7 @@ import com.pulumi.awsnative.lex.inputs.BotSlotTypeArgs;
 import com.pulumi.awsnative.lex.inputs.BotVoiceSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * A locale in the bot, which contains the intents and slot types that the bot uses in conversations with users in the specified language and locale.
  * 
  */
-public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotLocaleArgs extends ResourceArgs {
 
     public static final BotLocaleArgs Empty = new BotLocaleArgs();
 

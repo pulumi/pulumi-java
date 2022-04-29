@@ -13,6 +13,7 @@ import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionStoppingCo
 import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ModelQualityJobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelQualityJobDefinitionArgs extends ResourceArgs {
 
     public static final ModelQualityJobDefinitionArgs Empty = new ModelQualityJobDefinitionArgs();
 

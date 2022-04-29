@@ -10,6 +10,7 @@ import com.pulumi.awsnative.s3.inputs.BucketReplicationRuleFilterArgs;
 import com.pulumi.awsnative.s3.inputs.BucketSourceSelectionCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
  * Specifies which Amazon S3 objects to replicate and where to store the replicas.
  * 
  */
-public final class BucketReplicationRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationRuleArgs extends ResourceArgs {
 
     public static final BucketReplicationRuleArgs Empty = new BucketReplicationRuleArgs();
 

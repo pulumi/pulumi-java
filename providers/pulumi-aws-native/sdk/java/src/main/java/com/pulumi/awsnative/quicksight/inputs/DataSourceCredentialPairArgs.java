@@ -6,6 +6,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.DataSourceParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;The combination of user name and password that are used as credentials.&lt;/p&gt;
  * 
  */
-public final class DataSourceCredentialPairArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceCredentialPairArgs extends ResourceArgs {
 
     public static final DataSourceCredentialPairArgs Empty = new DataSourceCredentialPairArgs();
 

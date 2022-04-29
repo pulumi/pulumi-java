@@ -10,6 +10,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +23,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:ec2:Subnet")
-public class Subnet extends com.pulumi.resources.CustomResource {
+public class Subnet extends CustomResource {
     @Export(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation;
 
@@ -110,19 +112,19 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Subnet(String name, SubnetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Subnet(String name, SubnetArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:ec2:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Subnet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Subnet(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:ec2:Subnet", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -133,7 +135,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Subnet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Subnet get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new Subnet(name, id, options);
     }
 }

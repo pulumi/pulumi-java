@@ -7,12 +7,13 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOrcSerDeArgs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamParquetSerDeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamSerializerArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamSerializerArgs extends ResourceArgs {
 
     public static final DeliveryStreamSerializerArgs Empty = new DeliveryStreamSerializerArgs();
 

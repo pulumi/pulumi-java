@@ -7,12 +7,13 @@ import com.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import com.pulumi.awsnative.macie.enums.SessionStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
+public final class SessionArgs extends ResourceArgs {
 
     public static final SessionArgs Empty = new SessionArgs();
 

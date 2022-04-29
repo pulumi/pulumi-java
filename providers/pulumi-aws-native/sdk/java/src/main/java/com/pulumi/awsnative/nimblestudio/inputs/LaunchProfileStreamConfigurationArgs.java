@@ -8,6 +8,7 @@ import com.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceTyp
 import com.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationSessionStorageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;A configuration for a streaming session.&lt;/p&gt;
  * 
  */
-public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchProfileStreamConfigurationArgs extends ResourceArgs {
 
     public static final LaunchProfileStreamConfigurationArgs Empty = new LaunchProfileStreamConfigurationArgs();
 

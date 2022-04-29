@@ -7,6 +7,7 @@ import com.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import com.pulumi.awsnative.appflow.inputs.FlowDestinationConnectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configurations of destination connector.
  * 
  */
-public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowDestinationFlowConfigArgs extends ResourceArgs {
 
     public static final FlowDestinationFlowConfigArgs Empty = new FlowDestinationFlowConfigArgs();
 

@@ -5,13 +5,14 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class IntegrationS3SourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class IntegrationS3SourcePropertiesArgs extends ResourceArgs {
 
     public static final IntegrationS3SourcePropertiesArgs Empty = new IntegrationS3SourcePropertiesArgs();
 

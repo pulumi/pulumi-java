@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetFeatureGroupArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetFeatureGroupArgs extends InvokeArgs {
 
     public static final GetFeatureGroupArgs Empty = new GetFeatureGroupArgs();
 

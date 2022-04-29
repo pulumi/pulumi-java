@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A complex type that contains information about a configuration for DNS query logging.
  * 
  */
-public final class HostedZoneQueryLoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class HostedZoneQueryLoggingConfigArgs extends ResourceArgs {
 
     public static final HostedZoneQueryLoggingConfigArgs Empty = new HostedZoneQueryLoggingConfigArgs();
 

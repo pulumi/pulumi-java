@@ -8,13 +8,14 @@ import com.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RecipeActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecipeActionArgs extends ResourceArgs {
 
     public static final RecipeActionArgs Empty = new RecipeActionArgs();
 

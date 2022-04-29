@@ -7,12 +7,13 @@ import com.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProces
 import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaContainerParamsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ComponentVersionLambdaLinuxProcessParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentVersionLambdaLinuxProcessParamsArgs extends ResourceArgs {
 
     public static final ComponentVersionLambdaLinuxProcessParamsArgs Empty = new ComponentVersionLambdaLinuxProcessParamsArgs();
 

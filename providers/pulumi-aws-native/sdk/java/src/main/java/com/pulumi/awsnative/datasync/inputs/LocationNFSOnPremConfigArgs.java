@@ -5,6 +5,7 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect an NFS server.
  * 
  */
-public final class LocationNFSOnPremConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class LocationNFSOnPremConfigArgs extends ResourceArgs {
 
     public static final LocationNFSOnPremConfigArgs Empty = new LocationNFSOnPremConfigArgs();
 

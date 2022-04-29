@@ -7,6 +7,7 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ import java.util.Objects;
  * Xss Match Statement.
  * 
  */
-public final class RuleGroupXssMatchStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupXssMatchStatementArgs extends ResourceArgs {
 
     public static final RuleGroupXssMatchStatementArgs Empty = new RuleGroupXssMatchStatementArgs();
 

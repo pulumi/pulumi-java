@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.redshift.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetEventSubscriptionArgs extends InvokeArgs {
 
     public static final GetEventSubscriptionArgs Empty = new GetEventSubscriptionArgs();
 

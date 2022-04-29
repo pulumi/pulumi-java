@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetStreamingImageArgs extends InvokeArgs {
 
     public static final GetStreamingImageArgs Empty = new GetStreamingImageArgs();
 

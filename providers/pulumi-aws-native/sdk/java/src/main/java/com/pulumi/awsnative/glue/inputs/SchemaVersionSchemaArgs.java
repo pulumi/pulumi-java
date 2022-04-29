@@ -5,6 +5,7 @@ package com.pulumi.awsnative.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Identifier for the schema where the schema version will be created.
  * 
  */
-public final class SchemaVersionSchemaArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchemaVersionSchemaArgs extends ResourceArgs {
 
     public static final SchemaVersionSchemaArgs Empty = new SchemaVersionSchemaArgs();
 

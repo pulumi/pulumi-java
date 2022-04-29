@@ -6,13 +6,14 @@ package com.pulumi.awsnative.detective;
 import com.pulumi.awsnative.detective.inputs.GraphTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class GraphArgs extends com.pulumi.resources.ResourceArgs {
+public final class GraphArgs extends ResourceArgs {
 
     public static final GraphArgs Empty = new GraphArgs();
 

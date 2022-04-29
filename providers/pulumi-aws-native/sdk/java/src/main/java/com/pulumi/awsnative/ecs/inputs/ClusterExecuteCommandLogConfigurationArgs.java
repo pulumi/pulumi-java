@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The session logging configuration for ExecuteCommand.
  * 
  */
-public final class ClusterExecuteCommandLogConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterExecuteCommandLogConfigurationArgs extends ResourceArgs {
 
     public static final ClusterExecuteCommandLogConfigurationArgs Empty = new ClusterExecuteCommandLogConfigurationArgs();
 

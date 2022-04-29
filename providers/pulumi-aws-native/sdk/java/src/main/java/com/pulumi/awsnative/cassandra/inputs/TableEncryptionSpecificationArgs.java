@@ -6,6 +6,7 @@ package com.pulumi.awsnative.cassandra.inputs;
 import com.pulumi.awsnative.cassandra.enums.TableEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Represents the settings used to enable server-side encryption
  * 
  */
-public final class TableEncryptionSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TableEncryptionSpecificationArgs extends ResourceArgs {
 
     public static final TableEncryptionSpecificationArgs Empty = new TableEncryptionSpecificationArgs();
 

@@ -11,13 +11,14 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRedshiftRetryOp
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends ResourceArgs {
 
     public static final DeliveryStreamRedshiftDestinationConfigurationArgs Empty = new DeliveryStreamRedshiftDestinationConfigurationArgs();
 

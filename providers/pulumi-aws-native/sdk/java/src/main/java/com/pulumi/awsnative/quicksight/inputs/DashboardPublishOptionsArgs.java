@@ -8,6 +8,7 @@ import com.pulumi.awsnative.quicksight.inputs.DashboardExportToCSVOptionArgs;
 import com.pulumi.awsnative.quicksight.inputs.DashboardSheetControlsOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Dashboard publish options.&lt;/p&gt;
  * 
  */
-public final class DashboardPublishOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DashboardPublishOptionsArgs extends ResourceArgs {
 
     public static final DashboardPublishOptionsArgs Empty = new DashboardPublishOptionsArgs();
 

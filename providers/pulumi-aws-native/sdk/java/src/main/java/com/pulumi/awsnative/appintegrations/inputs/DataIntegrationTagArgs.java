@@ -5,6 +5,7 @@ package com.pulumi.awsnative.appintegrations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A label for tagging DataIntegration resources
  * 
  */
-public final class DataIntegrationTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataIntegrationTagArgs extends ResourceArgs {
 
     public static final DataIntegrationTagArgs Empty = new DataIntegrationTagArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.auditmanager.inputs;
 import com.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The wrapper that contains AWS Audit Manager role information, such as the role type and IAM ARN.
  * 
  */
-public final class AssessmentRoleArgs extends com.pulumi.resources.ResourceArgs {
+public final class AssessmentRoleArgs extends ResourceArgs {
 
     public static final AssessmentRoleArgs Empty = new AssessmentRoleArgs();
 

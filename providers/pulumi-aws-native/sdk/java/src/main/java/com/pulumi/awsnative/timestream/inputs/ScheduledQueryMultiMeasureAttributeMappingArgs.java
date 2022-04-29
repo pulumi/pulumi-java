@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.enums.ScheduledQueryMultiMeasureAttributeMappingMeasureValueType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * An attribute mapping to be used for mapping query results to ingest data for multi-measure attributes.
  * 
  */
-public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends ResourceArgs {
 
     public static final ScheduledQueryMultiMeasureAttributeMappingArgs Empty = new ScheduledQueryMultiMeasureAttributeMappingArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies the schedule you want your task to use for repeated executions.
  * 
  */
-public final class TaskScheduleArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskScheduleArgs extends ResourceArgs {
 
     public static final TaskScheduleArgs Empty = new TaskScheduleArgs();
 

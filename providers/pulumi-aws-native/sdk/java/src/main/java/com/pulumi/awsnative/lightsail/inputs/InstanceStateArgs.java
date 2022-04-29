@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Current State of the Instance.
  * 
  */
-public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstanceStateArgs extends ResourceArgs {
 
     public static final InstanceStateArgs Empty = new InstanceStateArgs();
 

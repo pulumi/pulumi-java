@@ -5,6 +5,7 @@ package com.pulumi.awsnative.accessanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair to associate with a resource.
  * 
  */
-public final class AnalyzerTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalyzerTagArgs extends ResourceArgs {
 
     public static final AnalyzerTagArgs Empty = new AnalyzerTagArgs();
 

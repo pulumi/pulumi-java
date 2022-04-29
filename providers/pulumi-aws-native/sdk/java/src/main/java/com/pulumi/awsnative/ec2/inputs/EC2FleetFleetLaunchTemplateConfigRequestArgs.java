@@ -7,13 +7,14 @@ import com.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateOverridesReque
 import com.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateSpecificationRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends ResourceArgs {
 
     public static final EC2FleetFleetLaunchTemplateConfigRequestArgs Empty = new EC2FleetFleetLaunchTemplateConfigRequestArgs();
 

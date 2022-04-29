@@ -8,6 +8,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentPr
 import com.pulumi.awsnative.wafv2.inputs.WebACLJsonBodyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Field of the request to match.
  * 
  */
-public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLFieldToMatchArgs extends ResourceArgs {
 
     public static final WebACLFieldToMatchArgs Empty = new WebACLFieldToMatchArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobAllowedStatisticsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class JobEntityDetectorConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class JobEntityDetectorConfigurationArgs extends ResourceArgs {
 
     public static final JobEntityDetectorConfigurationArgs Empty = new JobEntityDetectorConfigurationArgs();
 

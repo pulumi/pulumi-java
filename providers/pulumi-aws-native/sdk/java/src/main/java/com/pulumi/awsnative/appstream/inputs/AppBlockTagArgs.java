@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AppBlockTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppBlockTagArgs extends ResourceArgs {
 
     public static final AppBlockTagArgs Empty = new AppBlockTagArgs();
 

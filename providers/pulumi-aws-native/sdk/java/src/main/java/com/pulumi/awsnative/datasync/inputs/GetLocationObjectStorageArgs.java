@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetLocationObjectStorageArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetLocationObjectStorageArgs extends InvokeArgs {
 
     public static final GetLocationObjectStorageArgs Empty = new GetLocationObjectStorageArgs();
 

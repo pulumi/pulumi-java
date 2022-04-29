@@ -6,6 +6,7 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * The log pattern set.
  * 
  */
-public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationLogPatternSetArgs extends ResourceArgs {
 
     public static final ApplicationLogPatternSetArgs Empty = new ApplicationLogPatternSetArgs();
 

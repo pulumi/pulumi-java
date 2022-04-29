@@ -9,6 +9,7 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeTypographyArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeUIColorPaletteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  *             a theme.&lt;/p&gt;
  * 
  */
-public final class ThemeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ThemeConfigurationArgs extends ResourceArgs {
 
     public static final ThemeConfigurationArgs Empty = new ThemeConfigurationArgs();
 

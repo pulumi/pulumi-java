@@ -9,6 +9,7 @@ import com.pulumi.awsnative.lex.inputs.BotPlainTextMessageArgs;
 import com.pulumi.awsnative.lex.inputs.BotSSMLMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The primary message that Amazon Lex should send to the user.
  * 
  */
-public final class BotMessageArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotMessageArgs extends ResourceArgs {
 
     public static final BotMessageArgs Empty = new BotMessageArgs();
 

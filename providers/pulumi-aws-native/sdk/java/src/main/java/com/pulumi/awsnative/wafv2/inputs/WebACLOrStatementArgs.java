@@ -6,11 +6,12 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebACLOrStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLOrStatementArgs extends ResourceArgs {
 
     public static final WebACLOrStatementArgs Empty = new WebACLOrStatementArgs();
 

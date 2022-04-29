@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ssm.inputs;
 import com.pulumi.awsnative.ssm.inputs.ResourceDataSyncAwsOrganizationsSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResourceDataSyncSyncSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceDataSyncSyncSourceArgs extends ResourceArgs {
 
     public static final ResourceDataSyncSyncSourceArgs Empty = new ResourceDataSyncSyncSourceArgs();
 

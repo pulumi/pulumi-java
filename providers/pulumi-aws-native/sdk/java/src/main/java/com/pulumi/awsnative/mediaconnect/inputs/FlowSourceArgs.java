@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The settings for the source of the flow.
  * 
  */
-public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowSourceArgs extends ResourceArgs {
 
     public static final FlowSourceArgs Empty = new FlowSourceArgs();
 

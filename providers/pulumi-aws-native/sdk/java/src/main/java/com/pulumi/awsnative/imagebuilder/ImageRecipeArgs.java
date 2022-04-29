@@ -8,6 +8,7 @@ import com.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentConfiguratio
 import com.pulumi.awsnative.imagebuilder.inputs.ImageRecipeInstanceBlockDeviceMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageRecipeArgs extends ResourceArgs {
 
     public static final ImageRecipeArgs Empty = new ImageRecipeArgs();
 

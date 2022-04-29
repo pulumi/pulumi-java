@@ -7,6 +7,7 @@ import com.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import com.pulumi.awsnative.refactorspaces.enums.RouteMethod;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RouteUriPathRouteInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteUriPathRouteInputArgs extends ResourceArgs {
 
     public static final RouteUriPathRouteInputArgs Empty = new RouteUriPathRouteInputArgs();
 

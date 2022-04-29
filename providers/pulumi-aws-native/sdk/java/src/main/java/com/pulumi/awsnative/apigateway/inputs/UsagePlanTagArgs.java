@@ -5,11 +5,12 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class UsagePlanTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class UsagePlanTagArgs extends ResourceArgs {
 
     public static final UsagePlanTagArgs Empty = new UsagePlanTagArgs();
 

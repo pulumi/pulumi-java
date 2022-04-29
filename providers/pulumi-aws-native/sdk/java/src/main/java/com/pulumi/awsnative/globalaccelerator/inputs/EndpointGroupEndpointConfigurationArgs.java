@@ -5,6 +5,7 @@ package com.pulumi.awsnative.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The configuration for a given endpoint
  * 
  */
-public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class EndpointGroupEndpointConfigurationArgs extends ResourceArgs {
 
     public static final EndpointGroupEndpointConfigurationArgs Empty = new EndpointGroupEndpointConfigurationArgs();
 

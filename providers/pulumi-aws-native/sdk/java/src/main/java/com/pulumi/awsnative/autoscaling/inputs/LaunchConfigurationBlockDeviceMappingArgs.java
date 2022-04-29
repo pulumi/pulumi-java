@@ -6,6 +6,7 @@ package com.pulumi.awsnative.autoscaling.inputs;
 import com.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * BlockDeviceMapping is a property of AWS::AutoScaling::LaunchConfiguration that describes a block device mapping for an Auto Scaling group.
  * 
  */
-public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class LaunchConfigurationBlockDeviceMappingArgs extends ResourceArgs {
 
     public static final LaunchConfigurationBlockDeviceMappingArgs Empty = new LaunchConfigurationBlockDeviceMappingArgs();
 

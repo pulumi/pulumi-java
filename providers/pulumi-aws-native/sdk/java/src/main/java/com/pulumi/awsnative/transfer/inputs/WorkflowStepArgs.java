@@ -10,6 +10,7 @@ import com.pulumi.awsnative.transfer.inputs.WorkflowStepDeleteStepDetailsPropert
 import com.pulumi.awsnative.transfer.inputs.WorkflowStepTagStepDetailsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * The basic building block of a workflow.
  * 
  */
-public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowStepArgs extends ResourceArgs {
 
     public static final WorkflowStepArgs Empty = new WorkflowStepArgs();
 

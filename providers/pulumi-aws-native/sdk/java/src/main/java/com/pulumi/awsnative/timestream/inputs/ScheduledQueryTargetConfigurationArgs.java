@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryTimestreamConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Configuration of target store where scheduled query results are written to.
  * 
  */
-public final class ScheduledQueryTargetConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryTargetConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryTargetConfigurationArgs Empty = new ScheduledQueryTargetConfigurationArgs();
 

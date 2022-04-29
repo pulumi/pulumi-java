@@ -8,6 +8,7 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import java.util.Objects;
  * Size Constraint statement.
  * 
  */
-public final class RuleGroupSizeConstraintStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupSizeConstraintStatementArgs extends ResourceArgs {
 
     public static final RuleGroupSizeConstraintStatementArgs Empty = new RuleGroupSizeConstraintStatementArgs();
 

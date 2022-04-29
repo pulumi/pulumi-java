@@ -5,6 +5,7 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Details for a step that deletes the file.
  * 
  */
-public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends ResourceArgs {
 
     public static final WorkflowStepDeleteStepDetailsPropertiesArgs Empty = new WorkflowStepDeleteStepDetailsPropertiesArgs();
 

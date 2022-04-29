@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConstraintsResour
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStatisticsResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
  * 
  */
-public final class MonitoringScheduleBaselineConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleBaselineConfigArgs extends ResourceArgs {
 
     public static final MonitoringScheduleBaselineConfigArgs Empty = new MonitoringScheduleBaselineConfigArgs();
 

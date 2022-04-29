@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ComponentTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentTagsArgs extends ResourceArgs {
 
     public static final ComponentTagsArgs Empty = new ComponentTagsArgs();
 

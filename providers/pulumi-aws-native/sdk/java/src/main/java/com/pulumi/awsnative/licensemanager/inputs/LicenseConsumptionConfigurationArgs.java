@@ -7,13 +7,14 @@ import com.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfigurationArgs
 import com.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class LicenseConsumptionConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class LicenseConsumptionConfigurationArgs extends ResourceArgs {
 
     public static final LicenseConsumptionConfigurationArgs Empty = new LicenseConsumptionConfigurationArgs();
 

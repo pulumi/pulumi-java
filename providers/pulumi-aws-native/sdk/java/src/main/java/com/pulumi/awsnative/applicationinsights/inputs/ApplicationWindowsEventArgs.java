@@ -6,6 +6,7 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 import com.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A Windows Event to be monitored for the component.
  * 
  */
-public final class ApplicationWindowsEventArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationWindowsEventArgs extends ResourceArgs {
 
     public static final ApplicationWindowsEventArgs Empty = new ApplicationWindowsEventArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A function&#39;s environment variable settings.
  * 
  */
-public final class FunctionEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
+public final class FunctionEnvironmentArgs extends ResourceArgs {
 
     public static final FunctionEnvironmentArgs Empty = new FunctionEnvironmentArgs();
 

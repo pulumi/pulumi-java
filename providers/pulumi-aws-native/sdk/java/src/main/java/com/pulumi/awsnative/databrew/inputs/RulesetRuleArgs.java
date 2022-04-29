@@ -8,6 +8,7 @@ import com.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValueArgs;
 import com.pulumi.awsnative.databrew.inputs.RulesetThresholdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Data quality rule for a target resource (dataset)
  * 
  */
-public final class RulesetRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class RulesetRuleArgs extends ResourceArgs {
 
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
 

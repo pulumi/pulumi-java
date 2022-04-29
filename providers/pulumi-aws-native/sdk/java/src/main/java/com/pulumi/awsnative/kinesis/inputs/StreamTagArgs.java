@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An arbitrary set of tags (key-value pairs) to associate with the Kinesis stream.
  * 
  */
-public final class StreamTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamTagArgs extends ResourceArgs {
 
     public static final StreamTagArgs Empty = new StreamTagArgs();
 

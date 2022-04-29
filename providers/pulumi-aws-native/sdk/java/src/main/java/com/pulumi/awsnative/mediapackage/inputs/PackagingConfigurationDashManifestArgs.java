@@ -8,6 +8,7 @@ import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifes
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * A DASH manifest configuration.
  * 
  */
-public final class PackagingConfigurationDashManifestArgs extends com.pulumi.resources.ResourceArgs {
+public final class PackagingConfigurationDashManifestArgs extends ResourceArgs {
 
     public static final PackagingConfigurationDashManifestArgs Empty = new PackagingConfigurationDashManifestArgs();
 

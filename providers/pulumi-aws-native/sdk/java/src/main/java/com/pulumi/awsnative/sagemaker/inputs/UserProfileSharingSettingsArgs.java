@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.UserProfileSharingSettingsNotebookOutputOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Specifies options when sharing an Amazon SageMaker Studio notebook. These settings are specified as part of DefaultUserSettings when the CreateDomain API is called, and as part of UserSettings when the CreateUserProfile API is called.
  * 
  */
-public final class UserProfileSharingSettingsArgs extends com.pulumi.resources.ResourceArgs {
+public final class UserProfileSharingSettingsArgs extends ResourceArgs {
 
     public static final UserProfileSharingSettingsArgs Empty = new UserProfileSharingSettingsArgs();
 

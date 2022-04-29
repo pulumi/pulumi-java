@@ -5,11 +5,12 @@ package com.pulumi.awsnative.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class ServiceActionDefinitionParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceActionDefinitionParameterArgs extends ResourceArgs {
 
     public static final ServiceActionDefinitionParameterArgs Empty = new ServiceActionDefinitionParameterArgs();
 

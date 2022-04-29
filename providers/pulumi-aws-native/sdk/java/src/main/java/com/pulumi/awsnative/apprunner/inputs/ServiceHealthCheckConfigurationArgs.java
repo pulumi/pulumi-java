@@ -6,6 +6,7 @@ package com.pulumi.awsnative.apprunner.inputs;
 import com.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Health check configuration
  * 
  */
-public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceHealthCheckConfigurationArgs extends ResourceArgs {
 
     public static final ServiceHealthCheckConfigurationArgs Empty = new ServiceHealthCheckConfigurationArgs();
 

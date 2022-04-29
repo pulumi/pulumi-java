@@ -11,6 +11,7 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceConfiguration
 import com.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataSourceConfluenceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceConfluenceConfigurationArgs extends ResourceArgs {
 
     public static final DataSourceConfluenceConfigurationArgs Empty = new DataSourceConfluenceConfigurationArgs();
 

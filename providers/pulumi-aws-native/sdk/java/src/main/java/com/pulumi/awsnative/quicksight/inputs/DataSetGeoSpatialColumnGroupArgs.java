@@ -6,6 +6,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;Geospatial column group that denotes a hierarchy.&lt;/p&gt;
  * 
  */
-public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSetGeoSpatialColumnGroupArgs extends ResourceArgs {
 
     public static final DataSetGeoSpatialColumnGroupArgs Empty = new DataSetGeoSpatialColumnGroupArgs();
 

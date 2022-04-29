@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * A security profile behavior.
  * 
  */
-public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileBehaviorArgs extends ResourceArgs {
 
     public static final SecurityProfileBehaviorArgs Empty = new SecurityProfileBehaviorArgs();
 

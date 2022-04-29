@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Container for the expiration rule that describes when noncurrent objects are expired. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 expire noncurrent object versions at a specific period in the object&#39;s lifetime
  * 
  */
-public final class BucketNoncurrentVersionExpirationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketNoncurrentVersionExpirationArgs extends ResourceArgs {
 
     public static final BucketNoncurrentVersionExpirationArgs Empty = new BucketNoncurrentVersionExpirationArgs();
 

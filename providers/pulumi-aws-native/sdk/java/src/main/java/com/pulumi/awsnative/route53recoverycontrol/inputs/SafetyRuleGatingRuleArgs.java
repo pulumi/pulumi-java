@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * A gating rule verifies that a set of gating controls evaluates as true, based on a rule configuration that you specify. If the gating rule evaluates to true, Amazon Route 53 Application Recovery Controller allows a set of routing control state changes to run and complete against the set of target controls.
  * 
  */
-public final class SafetyRuleGatingRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SafetyRuleGatingRuleArgs extends ResourceArgs {
 
     public static final SafetyRuleGatingRuleArgs Empty = new SafetyRuleGatingRuleArgs();
 

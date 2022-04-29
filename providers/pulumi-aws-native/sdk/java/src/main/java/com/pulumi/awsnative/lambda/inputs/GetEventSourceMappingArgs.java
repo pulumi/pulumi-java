@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetEventSourceMappingArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetEventSourceMappingArgs extends InvokeArgs {
 
     public static final GetEventSourceMappingArgs Empty = new GetEventSourceMappingArgs();
 

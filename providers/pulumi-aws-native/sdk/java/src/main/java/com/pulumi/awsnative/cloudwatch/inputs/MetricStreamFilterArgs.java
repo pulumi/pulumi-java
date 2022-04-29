@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * This structure defines the metrics that will be streamed.
  * 
  */
-public final class MetricStreamFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class MetricStreamFilterArgs extends ResourceArgs {
 
     public static final MetricStreamFilterArgs Empty = new MetricStreamFilterArgs();
 

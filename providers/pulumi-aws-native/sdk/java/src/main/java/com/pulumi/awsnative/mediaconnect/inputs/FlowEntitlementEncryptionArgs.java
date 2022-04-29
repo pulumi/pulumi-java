@@ -7,6 +7,7 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionAlgorith
 import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Information about the encryption of the flow.
  * 
  */
-public final class FlowEntitlementEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowEntitlementEncryptionArgs extends ResourceArgs {
 
     public static final FlowEntitlementEncryptionArgs Empty = new FlowEntitlementEncryptionArgs();
 

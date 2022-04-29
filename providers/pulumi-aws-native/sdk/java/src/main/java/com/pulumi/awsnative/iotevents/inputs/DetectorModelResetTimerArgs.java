@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information required to reset the timer. The timer is reset to the previously evaluated result of the duration. The duration expression isn&#39;t reevaluated when you reset the timer.
  * 
  */
-public final class DetectorModelResetTimerArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelResetTimerArgs extends ResourceArgs {
 
     public static final DetectorModelResetTimerArgs Empty = new DetectorModelResetTimerArgs();
 

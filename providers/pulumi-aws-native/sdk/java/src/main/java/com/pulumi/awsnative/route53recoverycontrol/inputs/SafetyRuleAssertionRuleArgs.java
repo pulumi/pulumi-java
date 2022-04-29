@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * An assertion rule enforces that, when a routing control state is changed, that the criteria set by the rule configuration is met. Otherwise, the change to the routing control is not accepted.
  * 
  */
-public final class SafetyRuleAssertionRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SafetyRuleAssertionRuleArgs extends ResourceArgs {
 
     public static final SafetyRuleAssertionRuleArgs Empty = new SafetyRuleAssertionRuleArgs();
 

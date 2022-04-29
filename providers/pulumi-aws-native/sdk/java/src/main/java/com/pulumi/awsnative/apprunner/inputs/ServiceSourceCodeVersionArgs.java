@@ -6,6 +6,7 @@ package com.pulumi.awsnative.apprunner.inputs;
 import com.pulumi.awsnative.apprunner.enums.ServiceSourceCodeVersionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Source Code Version
  * 
  */
-public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.ResourceArgs {
+public final class ServiceSourceCodeVersionArgs extends ResourceArgs {
 
     public static final ServiceSourceCodeVersionArgs Empty = new ServiceSourceCodeVersionArgs();
 

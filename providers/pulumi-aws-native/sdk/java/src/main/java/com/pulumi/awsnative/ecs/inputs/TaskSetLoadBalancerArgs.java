@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * A load balancer object representing the load balancer to use with the task set. The supported load balancer types are either an Application Load Balancer or a Network Load Balancer.
  * 
  */
-public final class TaskSetLoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskSetLoadBalancerArgs extends ResourceArgs {
 
     public static final TaskSetLoadBalancerArgs Empty = new TaskSetLoadBalancerArgs();
 

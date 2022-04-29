@@ -5,6 +5,7 @@ package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +15,7 @@ import javax.annotation.Nullable;
  * Enable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs based on log types. By default, cluster control plane logs aren&#39;t exported to CloudWatch Logs.
  * 
  */
-public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ClusterLoggingArgs extends ResourceArgs {
 
     public static final ClusterLoggingArgs Empty = new ClusterLoggingArgs();
 

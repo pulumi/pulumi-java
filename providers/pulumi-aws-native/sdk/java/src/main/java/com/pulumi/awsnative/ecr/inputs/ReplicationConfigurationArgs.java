@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ecr.inputs;
 import com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * An object representing the replication configuration for a registry.
  * 
  */
-public final class ReplicationConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReplicationConfigurationArgs extends ResourceArgs {
 
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 

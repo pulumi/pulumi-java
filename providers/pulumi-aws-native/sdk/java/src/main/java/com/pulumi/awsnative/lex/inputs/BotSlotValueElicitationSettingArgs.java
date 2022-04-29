@@ -10,6 +10,7 @@ import com.pulumi.awsnative.lex.inputs.BotSlotDefaultValueSpecificationArgs;
 import com.pulumi.awsnative.lex.inputs.BotWaitAndContinueSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Settings that you can use for eliciting a slot value.
  * 
  */
-public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotValueElicitationSettingArgs extends ResourceArgs {
 
     public static final BotSlotValueElicitationSettingArgs Empty = new BotSlotValueElicitationSettingArgs();
 

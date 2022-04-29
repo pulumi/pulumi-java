@@ -6,6 +6,7 @@ package com.pulumi.awsnative.batch;
 import com.pulumi.awsnative.batch.inputs.SchedulingPolicyFairsharePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SchedulingPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class SchedulingPolicyArgs extends ResourceArgs {
 
     public static final SchedulingPolicyArgs Empty = new SchedulingPolicyArgs();
 

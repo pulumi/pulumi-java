@@ -6,6 +6,7 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.enums.WebACLTextTransformationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Text Transformation on the Search String before match.
  * 
  */
-public final class WebACLTextTransformationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLTextTransformationArgs extends ResourceArgs {
 
     public static final WebACLTextTransformationArgs Empty = new WebACLTextTransformationArgs();
 

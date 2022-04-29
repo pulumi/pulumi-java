@@ -5,6 +5,7 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether the specified health check is healthy.
  * 
  */
-public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckAlarmIdentifierArgs extends ResourceArgs {
 
     public static final HealthCheckAlarmIdentifierArgs Empty = new HealthCheckAlarmIdentifierArgs();
 

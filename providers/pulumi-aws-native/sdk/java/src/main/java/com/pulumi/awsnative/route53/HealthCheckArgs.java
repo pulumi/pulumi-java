@@ -7,13 +7,14 @@ import com.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import com.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
+public final class HealthCheckArgs extends ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 

@@ -7,11 +7,12 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPolicyArgs extends ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Configuration details of the component.
  * 
  */
-public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageRecipeComponentConfigurationArgs extends ResourceArgs {
 
     public static final ImageRecipeComponentConfigurationArgs Empty = new ImageRecipeComponentConfigurationArgs();
 

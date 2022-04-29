@@ -8,6 +8,7 @@ import com.pulumi.awsnative.route53resolver.inputs.ResolverRuleTagArgs;
 import com.pulumi.awsnative.route53resolver.inputs.ResolverRuleTargetAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResolverRuleArgs extends ResourceArgs {
 
     public static final ResolverRuleArgs Empty = new ResolverRuleArgs();
 

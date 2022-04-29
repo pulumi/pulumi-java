@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelTransitionEventArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * When an input is received and the `condition` is `TRUE`, perform the specified `actions`.
  * 
  */
-public final class DetectorModelOnInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelOnInputArgs extends ResourceArgs {
 
     public static final DetectorModelOnInputArgs Empty = new DetectorModelOnInputArgs();
 

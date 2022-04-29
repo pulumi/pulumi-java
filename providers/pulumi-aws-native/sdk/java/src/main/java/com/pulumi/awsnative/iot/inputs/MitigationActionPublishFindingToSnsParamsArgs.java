@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Parameters, to define a mitigation action that publishes findings to Amazon SNS. You can implement your own custom actions in response to the Amazon SNS messages.
  * 
  */
-public final class MitigationActionPublishFindingToSnsParamsArgs extends com.pulumi.resources.ResourceArgs {
+public final class MitigationActionPublishFindingToSnsParamsArgs extends ResourceArgs {
 
     public static final MitigationActionPublishFindingToSnsParamsArgs Empty = new MitigationActionPublishFindingToSnsParamsArgs();
 

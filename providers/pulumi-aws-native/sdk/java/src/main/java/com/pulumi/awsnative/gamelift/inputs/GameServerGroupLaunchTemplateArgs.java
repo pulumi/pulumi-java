@@ -5,6 +5,7 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
  * 
  */
-public final class GameServerGroupLaunchTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class GameServerGroupLaunchTemplateArgs extends ResourceArgs {
 
     public static final GameServerGroupLaunchTemplateArgs Empty = new GameServerGroupLaunchTemplateArgs();
 

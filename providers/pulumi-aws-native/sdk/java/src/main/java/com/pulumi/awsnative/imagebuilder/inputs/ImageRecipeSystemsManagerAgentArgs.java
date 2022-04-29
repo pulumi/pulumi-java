@@ -5,6 +5,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains settings for the SSM agent on your build instance.
  * 
  */
-public final class ImageRecipeSystemsManagerAgentArgs extends com.pulumi.resources.ResourceArgs {
+public final class ImageRecipeSystemsManagerAgentArgs extends ResourceArgs {
 
     public static final ImageRecipeSystemsManagerAgentArgs Empty = new ImageRecipeSystemsManagerAgentArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import com.pulumi.awsnative.wafv2.inputs.WebACLJsonMatchPatternArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Inspect the request body as JSON. The request body immediately follows the request headers.
  * 
  */
-public final class WebACLJsonBodyArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLJsonBodyArgs extends ResourceArgs {
 
     public static final WebACLJsonBodyArgs Empty = new WebACLJsonBodyArgs();
 

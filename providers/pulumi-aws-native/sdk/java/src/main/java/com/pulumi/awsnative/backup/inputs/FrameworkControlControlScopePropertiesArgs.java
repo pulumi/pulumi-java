@@ -6,6 +6,7 @@ package com.pulumi.awsnative.backup.inputs;
 import com.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
  * 
  */
-public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FrameworkControlControlScopePropertiesArgs extends ResourceArgs {
 
     public static final FrameworkControlControlScopePropertiesArgs Empty = new FrameworkControlControlScopePropertiesArgs();
 

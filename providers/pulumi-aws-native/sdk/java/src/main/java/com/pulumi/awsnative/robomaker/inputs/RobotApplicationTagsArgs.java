@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.robomaker.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * A key-value pair to associate with a resource.
  * 
  */
-public final class RobotApplicationTagsArgs extends com.pulumi.resources.ResourceArgs {
+public final class RobotApplicationTagsArgs extends ResourceArgs {
 
     public static final RobotApplicationTagsArgs Empty = new RobotApplicationTagsArgs();
 

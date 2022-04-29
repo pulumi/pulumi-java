@@ -6,6 +6,7 @@ package com.pulumi.awsnative.healthlake.inputs;
 import com.pulumi.awsnative.healthlake.inputs.FHIRDatastoreKmsEncryptionConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The server-side encryption key configuration for a customer provided encryption key.
  * 
  */
-public final class FHIRDatastoreSseConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FHIRDatastoreSseConfigurationArgs extends ResourceArgs {
 
     public static final FHIRDatastoreSseConfigurationArgs Empty = new FHIRDatastoreSseConfigurationArgs();
 

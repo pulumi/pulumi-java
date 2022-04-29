@@ -5,13 +5,14 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamElasticsearchRetryOptionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamElasticsearchRetryOptionsArgs extends ResourceArgs {
 
     public static final DeliveryStreamElasticsearchRetryOptionsArgs Empty = new DeliveryStreamElasticsearchRetryOptionsArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Information about the scale out policy of the connector.
  * 
  */
-public final class ConnectorScaleOutPolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConnectorScaleOutPolicyArgs extends ResourceArgs {
 
     public static final ConnectorScaleOutPolicyArgs Empty = new ConnectorScaleOutPolicyArgs();
 

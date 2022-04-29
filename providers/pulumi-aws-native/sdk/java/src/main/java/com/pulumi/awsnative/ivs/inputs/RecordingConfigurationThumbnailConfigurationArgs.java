@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ivs.inputs;
 import com.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Recording Thumbnail Configuration.
  * 
  */
-public final class RecordingConfigurationThumbnailConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecordingConfigurationThumbnailConfigurationArgs extends ResourceArgs {
 
     public static final RecordingConfigurationThumbnailConfigurationArgs Empty = new RecordingConfigurationThumbnailConfigurationArgs();
 

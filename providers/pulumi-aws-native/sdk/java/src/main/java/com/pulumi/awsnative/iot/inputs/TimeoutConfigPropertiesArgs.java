@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Specifies the amount of time each device has to finish its execution of the job.
  * 
  */
-public final class TimeoutConfigPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class TimeoutConfigPropertiesArgs extends ResourceArgs {
 
     public static final TimeoutConfigPropertiesArgs Empty = new TimeoutConfigPropertiesArgs();
 

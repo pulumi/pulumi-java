@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Container image configuration object for the monitoring job.
  * 
  */
-public final class MonitoringScheduleMonitoringAppSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class MonitoringScheduleMonitoringAppSpecificationArgs extends ResourceArgs {
 
     public static final MonitoringScheduleMonitoringAppSpecificationArgs Empty = new MonitoringScheduleMonitoringAppSpecificationArgs();
 

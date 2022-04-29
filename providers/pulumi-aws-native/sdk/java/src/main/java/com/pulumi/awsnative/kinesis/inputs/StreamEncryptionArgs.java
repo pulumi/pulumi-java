@@ -6,6 +6,7 @@ package com.pulumi.awsnative.kinesis.inputs;
 import com.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream. Removing this property from your stack template and updating your stack disables encryption.
  * 
  */
-public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class StreamEncryptionArgs extends ResourceArgs {
 
     public static final StreamEncryptionArgs Empty = new StreamEncryptionArgs();
 

@@ -7,12 +7,13 @@ import com.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import com.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
+public final class ContactArgs extends ResourceArgs {
 
     public static final ContactArgs Empty = new ContactArgs();
 

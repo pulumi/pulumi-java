@@ -6,11 +6,12 @@ package com.pulumi.awsnative.iot;
 import com.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
+public final class LoggingArgs extends ResourceArgs {
 
     public static final LoggingArgs Empty = new LoggingArgs();
 

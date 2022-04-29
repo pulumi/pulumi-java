@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * One or more messages that Amazon Lex can send to the user.
  * 
  */
-public final class BotMessageGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotMessageGroupArgs extends ResourceArgs {
 
     public static final BotMessageGroupArgs Empty = new BotMessageGroupArgs();
 

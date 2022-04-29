@@ -5,11 +5,12 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends ResourceArgs {
 
     public static final BotAliasCloudWatchLogGroupLogDestinationArgs Empty = new BotAliasCloudWatchLogGroupLogDestinationArgs();
 

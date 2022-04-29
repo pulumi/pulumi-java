@@ -7,12 +7,13 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AlertLambdaConfigurationArgs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AlertSNSConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlertActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlertActionArgs extends ResourceArgs {
 
     public static final AlertActionArgs Empty = new AlertActionArgs();
 

@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInp
 import com.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3InputMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The endpoint for a monitoring job.
  * 
  */
-public final class ModelQualityJobDefinitionEndpointInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelQualityJobDefinitionEndpointInputArgs extends ResourceArgs {
 
     public static final ModelQualityJobDefinitionEndpointInputArgs Empty = new ModelQualityJobDefinitionEndpointInputArgs();
 

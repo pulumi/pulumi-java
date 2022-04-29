@@ -6,6 +6,7 @@ package com.pulumi.awsnative.rum.inputs;
 import com.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * AppMonitor configuration
  * 
  */
-public final class AppMonitorConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppMonitorConfigurationArgs extends ResourceArgs {
 
     public static final AppMonitorConfigurationArgs Empty = new AppMonitorConfigurationArgs();
 

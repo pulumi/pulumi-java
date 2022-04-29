@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import com.pulumi.awsnative.iot.inputs.CustomMetricTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
+public final class CustomMetricArgs extends ResourceArgs {
 
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 

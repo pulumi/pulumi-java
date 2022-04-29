@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.amplify.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBranchArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBranchArgs extends InvokeArgs {
 
     public static final GetBranchArgs Empty = new GetBranchArgs();
 

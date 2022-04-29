@@ -5,6 +5,7 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Specifies the details for the S3 file being copied.
  * 
  */
-public final class WorkflowS3InputFileLocationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowS3InputFileLocationArgs extends ResourceArgs {
 
     public static final WorkflowS3InputFileLocationArgs Empty = new WorkflowS3InputFileLocationArgs();
 

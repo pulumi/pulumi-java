@@ -5,6 +5,7 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Structure that contains X.509 ExtendedKeyUsage information.
  * 
  */
-public final class CertificateExtendedKeyUsageArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateExtendedKeyUsageArgs extends ResourceArgs {
 
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();
 

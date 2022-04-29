@@ -6,6 +6,7 @@ package com.pulumi.awsnative.customerprofiles;
 import com.pulumi.awsnative.customerprofiles.inputs.DomainTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
+public final class DomainArgs extends ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 

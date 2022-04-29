@@ -9,6 +9,7 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificatePolicyInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Structure that contains X.500 extensions for a Certificate.
  * 
  */
-public final class CertificateExtensionsArgs extends com.pulumi.resources.ResourceArgs {
+public final class CertificateExtensionsArgs extends ResourceArgs {
 
     public static final CertificateExtensionsArgs Empty = new CertificateExtensionsArgs();
 

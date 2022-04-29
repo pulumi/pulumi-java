@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The incident template configuration.
  * 
  */
-public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResponsePlanIncidentTemplateArgs extends ResourceArgs {
 
     public static final ResponsePlanIncidentTemplateArgs Empty = new ResponsePlanIncidentTemplateArgs();
 

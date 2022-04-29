@@ -5,6 +5,7 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Identifies the report template for the report. Reports are built using a report template.
  * 
  */
-public final class ReportSettingPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ReportSettingPropertiesArgs extends ResourceArgs {
 
     public static final ReportSettingPropertiesArgs Empty = new ReportSettingPropertiesArgs();
 

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Describes the parameters of the database.
  * 
  */
-public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatabaseRelationalDatabaseParameterArgs extends ResourceArgs {
 
     public static final DatabaseRelationalDatabaseParameterArgs Empty = new DatabaseRelationalDatabaseParameterArgs();
 

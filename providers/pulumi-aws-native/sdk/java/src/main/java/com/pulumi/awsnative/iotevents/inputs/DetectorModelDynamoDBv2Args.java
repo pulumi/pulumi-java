@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * You can use expressions for parameters that are strings. For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*.
  * 
  */
-public final class DetectorModelDynamoDBv2Args extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelDynamoDBv2Args extends ResourceArgs {
 
     public static final DetectorModelDynamoDBv2Args Empty = new DetectorModelDynamoDBv2Args();
 

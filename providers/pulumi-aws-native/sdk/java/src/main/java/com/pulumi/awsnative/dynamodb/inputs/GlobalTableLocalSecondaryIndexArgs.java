@@ -7,12 +7,13 @@ import com.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class GlobalTableLocalSecondaryIndexArgs extends com.pulumi.resources.ResourceArgs {
+public final class GlobalTableLocalSecondaryIndexArgs extends ResourceArgs {
 
     public static final GlobalTableLocalSecondaryIndexArgs Empty = new GlobalTableLocalSecondaryIndexArgs();
 

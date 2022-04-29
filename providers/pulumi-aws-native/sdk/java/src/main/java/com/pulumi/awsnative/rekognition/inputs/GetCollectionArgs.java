@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.rekognition.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetCollectionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetCollectionArgs extends InvokeArgs {
 
     public static final GetCollectionArgs Empty = new GetCollectionArgs();
 

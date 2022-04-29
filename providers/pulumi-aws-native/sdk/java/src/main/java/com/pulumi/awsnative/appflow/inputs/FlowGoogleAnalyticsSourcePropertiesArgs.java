@@ -5,11 +5,12 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class FlowGoogleAnalyticsSourcePropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowGoogleAnalyticsSourcePropertiesArgs extends ResourceArgs {
 
     public static final FlowGoogleAnalyticsSourcePropertiesArgs Empty = new FlowGoogleAnalyticsSourcePropertiesArgs();
 

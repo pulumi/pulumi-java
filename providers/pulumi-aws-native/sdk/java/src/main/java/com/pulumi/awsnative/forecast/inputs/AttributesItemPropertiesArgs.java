@@ -6,13 +6,14 @@ package com.pulumi.awsnative.forecast.inputs;
 import com.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AttributesItemPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AttributesItemPropertiesArgs extends ResourceArgs {
 
     public static final AttributesItemPropertiesArgs Empty = new AttributesItemPropertiesArgs();
 

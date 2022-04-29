@@ -7,6 +7,7 @@ import com.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMu
 import com.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class FirewallRuleGroupAssociationArgs extends ResourceArgs {
 
     public static final FirewallRuleGroupAssociationArgs Empty = new FirewallRuleGroupAssociationArgs();
 

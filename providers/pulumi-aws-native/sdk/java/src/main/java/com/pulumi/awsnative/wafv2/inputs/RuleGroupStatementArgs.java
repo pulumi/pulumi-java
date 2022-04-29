@@ -18,6 +18,7 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupSqliMatchStatementArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupXssMatchStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
  * First level statement that contains conditions, such as ByteMatch, SizeConstraint, etc
  * 
  */
-public final class RuleGroupStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class RuleGroupStatementArgs extends ResourceArgs {
 
     public static final RuleGroupStatementArgs Empty = new RuleGroupStatementArgs();
 

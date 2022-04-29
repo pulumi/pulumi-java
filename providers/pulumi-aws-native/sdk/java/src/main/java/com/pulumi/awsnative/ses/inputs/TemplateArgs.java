@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The content of the email, composed of a subject line, an HTML part, and a text-only part
  * 
  */
-public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class TemplateArgs extends ResourceArgs {
 
     public static final TemplateArgs Empty = new TemplateArgs();
 

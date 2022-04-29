@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  *             &lt;code&gt;Port&lt;/code&gt; fields can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; field is set.&lt;/p&gt;
  * 
  */
-public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourceRedshiftParametersArgs extends ResourceArgs {
 
     public static final DataSourceRedshiftParametersArgs Empty = new DataSourceRedshiftParametersArgs();
 

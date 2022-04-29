@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Ground truth input provided in S3
  * 
  */
-public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs extends ResourceArgs {
 
     public static final ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs Empty = new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs();
 

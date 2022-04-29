@@ -7,13 +7,14 @@ import com.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import com.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatasetFilesLimitArgs extends ResourceArgs {
 
     public static final DatasetFilesLimitArgs Empty = new DatasetFilesLimitArgs();
 

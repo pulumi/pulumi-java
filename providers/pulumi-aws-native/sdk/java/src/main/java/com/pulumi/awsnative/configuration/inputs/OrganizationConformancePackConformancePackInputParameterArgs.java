@@ -5,6 +5,7 @@ package com.pulumi.awsnative.configuration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Input parameters in the form of key-value pairs for the conformance pack.
  * 
  */
-public final class OrganizationConformancePackConformancePackInputParameterArgs extends com.pulumi.resources.ResourceArgs {
+public final class OrganizationConformancePackConformancePackInputParameterArgs extends ResourceArgs {
 
     public static final OrganizationConformancePackConformancePackInputParameterArgs Empty = new OrganizationConformancePackConformancePackInputParameterArgs();
 

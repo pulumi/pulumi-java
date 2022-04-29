@@ -6,6 +6,7 @@ package com.pulumi.awsnative.resiliencehub.inputs;
 import com.pulumi.awsnative.resiliencehub.inputs.AppPhysicalResourceIdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Resource mapping is used to map logical resources from template to physical resource
  * 
  */
-public final class AppResourceMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppResourceMappingArgs extends ResourceArgs {
 
     public static final AppResourceMappingArgs Empty = new AppResourceMappingArgs();
 

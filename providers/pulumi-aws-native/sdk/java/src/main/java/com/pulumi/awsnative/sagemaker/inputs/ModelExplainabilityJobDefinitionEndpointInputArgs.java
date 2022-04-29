@@ -7,6 +7,7 @@ import com.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndp
 import com.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3InputMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * The endpoint for a monitoring job.
  * 
  */
-public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionEndpointInputArgs Empty = new ModelExplainabilityJobDefinitionEndpointInputArgs();
 

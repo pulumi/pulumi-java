@@ -5,11 +5,12 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class DatastoreTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class DatastoreTagArgs extends ResourceArgs {
 
     public static final DatastoreTagArgs Empty = new DatastoreTagArgs();
 

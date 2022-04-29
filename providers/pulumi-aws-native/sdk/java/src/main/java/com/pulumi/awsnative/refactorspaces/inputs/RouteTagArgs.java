@@ -5,6 +5,7 @@ package com.pulumi.awsnative.refactorspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A label for tagging Environment resource
  * 
  */
-public final class RouteTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class RouteTagArgs extends ResourceArgs {
 
     public static final RouteTagArgs Empty = new RouteTagArgs();
 

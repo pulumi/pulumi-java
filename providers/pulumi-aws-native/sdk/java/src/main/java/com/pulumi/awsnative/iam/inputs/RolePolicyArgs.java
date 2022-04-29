@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The inline policy document that is embedded in the specified IAM role.
  * 
  */
-public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
+public final class RolePolicyArgs extends ResourceArgs {
 
     public static final RolePolicyArgs Empty = new RolePolicyArgs();
 

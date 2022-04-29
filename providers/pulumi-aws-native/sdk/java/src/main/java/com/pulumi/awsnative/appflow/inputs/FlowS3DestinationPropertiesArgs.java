@@ -6,13 +6,14 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.inputs.FlowS3OutputFormatConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowS3DestinationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowS3DestinationPropertiesArgs extends ResourceArgs {
 
     public static final FlowS3DestinationPropertiesArgs Empty = new FlowS3DestinationPropertiesArgs();
 

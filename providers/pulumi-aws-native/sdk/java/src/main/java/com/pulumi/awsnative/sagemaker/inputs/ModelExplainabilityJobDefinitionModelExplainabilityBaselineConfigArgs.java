@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionConstraintsResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
  * 
  */
-public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs extends ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs();
 

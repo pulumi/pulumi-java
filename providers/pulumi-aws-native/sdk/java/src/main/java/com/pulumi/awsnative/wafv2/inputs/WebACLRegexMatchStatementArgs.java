@@ -7,12 +7,13 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 
-public final class WebACLRegexMatchStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLRegexMatchStatementArgs extends ResourceArgs {
 
     public static final WebACLRegexMatchStatementArgs Empty = new WebACLRegexMatchStatementArgs();
 

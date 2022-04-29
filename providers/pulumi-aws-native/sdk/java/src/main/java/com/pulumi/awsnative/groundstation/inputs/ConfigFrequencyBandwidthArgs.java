@@ -6,13 +6,14 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigBandwidthUnits;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ConfigFrequencyBandwidthArgs extends com.pulumi.resources.ResourceArgs {
+public final class ConfigFrequencyBandwidthArgs extends ResourceArgs {
 
     public static final ConfigFrequencyBandwidthArgs Empty = new ConfigFrequencyBandwidthArgs();
 

@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.s3outposts.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class BucketFilterAndOperatorArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketFilterAndOperatorArgs extends ResourceArgs {
 
     public static final BucketFilterAndOperatorArgs Empty = new BucketFilterAndOperatorArgs();
 

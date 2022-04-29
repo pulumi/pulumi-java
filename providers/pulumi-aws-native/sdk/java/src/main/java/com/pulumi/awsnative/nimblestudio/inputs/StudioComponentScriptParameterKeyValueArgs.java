@@ -5,6 +5,7 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * &lt;p&gt;A parameter for a studio component script, in the form of a key:value pair.&lt;/p&gt;
  * 
  */
-public final class StudioComponentScriptParameterKeyValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioComponentScriptParameterKeyValueArgs extends ResourceArgs {
 
     public static final StudioComponentScriptParameterKeyValueArgs Empty = new StudioComponentScriptParameterKeyValueArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.awsnative.xray.inputs.SamplingRuleUpdateArgs;
 import com.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
+public final class SamplingRuleArgs extends ResourceArgs {
 
     public static final SamplingRuleArgs Empty = new SamplingRuleArgs();
 

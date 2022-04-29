@@ -8,12 +8,13 @@ import com.pulumi.awsnative.budgets.inputs.BudgetsActionScpActionDefinitionArgs;
 import com.pulumi.awsnative.budgets.inputs.BudgetsActionSsmActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class BudgetsActionDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class BudgetsActionDefinitionArgs extends ResourceArgs {
 
     public static final BudgetsActionDefinitionArgs Empty = new BudgetsActionDefinitionArgs();
 

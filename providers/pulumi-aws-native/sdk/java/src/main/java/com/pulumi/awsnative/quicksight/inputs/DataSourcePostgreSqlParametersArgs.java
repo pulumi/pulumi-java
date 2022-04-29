@@ -5,6 +5,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * &lt;p&gt;PostgreSQL parameters.&lt;/p&gt;
  * 
  */
-public final class DataSourcePostgreSqlParametersArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataSourcePostgreSqlParametersArgs extends ResourceArgs {
 
     public static final DataSourcePostgreSqlParametersArgs Empty = new DataSourcePostgreSqlParametersArgs();
 

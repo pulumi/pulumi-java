@@ -6,6 +6,7 @@ package com.pulumi.awsnative.transfer.inputs;
 import com.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Details for a step that creates one or more tags.
  * 
  */
-public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkflowStepTagStepDetailsPropertiesArgs extends ResourceArgs {
 
     public static final WorkflowStepTagStepDetailsPropertiesArgs Empty = new WorkflowStepTagStepDetailsPropertiesArgs();
 

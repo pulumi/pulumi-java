@@ -7,6 +7,7 @@ import com.pulumi.awsnative.s3.inputs.BucketRedirectAllRequestsToArgs;
 import com.pulumi.awsnative.s3.inputs.BucketRoutingRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Specifies website configuration parameters for an Amazon S3 bucket.
  * 
  */
-public final class BucketWebsiteConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketWebsiteConfigurationArgs extends ResourceArgs {
 
     public static final BucketWebsiteConfigurationArgs Empty = new BucketWebsiteConfigurationArgs();
 

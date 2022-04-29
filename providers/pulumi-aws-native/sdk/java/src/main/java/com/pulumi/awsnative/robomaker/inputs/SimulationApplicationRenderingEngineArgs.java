@@ -6,6 +6,7 @@ package com.pulumi.awsnative.robomaker.inputs;
 import com.pulumi.awsnative.robomaker.enums.SimulationApplicationRenderingEngineName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Information about a rendering engine.
  * 
  */
-public final class SimulationApplicationRenderingEngineArgs extends com.pulumi.resources.ResourceArgs {
+public final class SimulationApplicationRenderingEngineArgs extends ResourceArgs {
 
     public static final SimulationApplicationRenderingEngineArgs Empty = new SimulationApplicationRenderingEngineArgs();
 

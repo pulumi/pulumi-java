@@ -5,6 +5,7 @@ package com.pulumi.awsnative.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An arbitrary set of tags (key-value pairs) for this EMR Studio.
  * 
  */
-public final class StudioTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class StudioTagArgs extends ResourceArgs {
 
     public static final StudioTagArgs Empty = new StudioTagArgs();
 

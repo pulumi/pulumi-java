@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.logs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetResourcePolicyArgs extends InvokeArgs {
 
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 

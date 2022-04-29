@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * Tags to use to identify a subset of objects for an Amazon S3 bucket.
  * 
  */
-public final class BucketTagFilterArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketTagFilterArgs extends ResourceArgs {
 
     public static final BucketTagFilterArgs Empty = new BucketTagFilterArgs();
 

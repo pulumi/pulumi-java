@@ -7,13 +7,14 @@ import com.pulumi.awsnative.databrew.inputs.RecipeActionArgs;
 import com.pulumi.awsnative.databrew.inputs.RecipeConditionExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
+public final class RecipeStepArgs extends ResourceArgs {
 
     public static final RecipeStepArgs Empty = new RecipeStepArgs();
 

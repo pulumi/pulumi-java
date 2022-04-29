@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetTopicRuleArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetTopicRuleArgs extends InvokeArgs {
 
     public static final GetTopicRuleArgs Empty = new GetTopicRuleArgs();
 

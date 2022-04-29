@@ -5,6 +5,7 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * The user configuration. This is required only if QuickConnectType is USER.
  * 
  */
-public final class QuickConnectUserQuickConnectConfigArgs extends com.pulumi.resources.ResourceArgs {
+public final class QuickConnectUserQuickConnectConfigArgs extends ResourceArgs {
 
     public static final QuickConnectUserQuickConnectConfigArgs Empty = new QuickConnectUserQuickConnectConfigArgs();
 

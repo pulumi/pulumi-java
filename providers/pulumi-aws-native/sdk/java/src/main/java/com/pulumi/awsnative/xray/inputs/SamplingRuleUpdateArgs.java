@@ -5,6 +5,7 @@ package com.pulumi.awsnative.xray.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceArgs {
+public final class SamplingRuleUpdateArgs extends ResourceArgs {
 
     public static final SamplingRuleUpdateArgs Empty = new SamplingRuleUpdateArgs();
 

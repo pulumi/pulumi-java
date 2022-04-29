@@ -5,6 +5,7 @@ package com.pulumi.awsnative.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * An arbitrary set of tags (key-value pairs) for this trail.
  * 
  */
-public final class TrailTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class TrailTagArgs extends ResourceArgs {
 
     public static final TrailTagArgs Empty = new TrailTagArgs();
 

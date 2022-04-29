@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasTextLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Contains information about code hooks that Amazon Lex calls during a conversation.
  * 
  */
-public final class BotAliasTextLogSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotAliasTextLogSettingArgs extends ResourceArgs {
 
     public static final BotAliasTextLogSettingArgs Empty = new BotAliasTextLogSettingArgs();
 

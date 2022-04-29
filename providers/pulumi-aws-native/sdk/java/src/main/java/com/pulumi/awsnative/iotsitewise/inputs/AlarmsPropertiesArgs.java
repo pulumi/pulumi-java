@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
  * 
  */
-public final class AlarmsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlarmsPropertiesArgs extends ResourceArgs {
 
     public static final AlarmsPropertiesArgs Empty = new AlarmsPropertiesArgs();
 

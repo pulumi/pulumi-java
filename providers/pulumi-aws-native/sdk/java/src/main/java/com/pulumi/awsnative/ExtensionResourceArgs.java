@@ -5,13 +5,14 @@ package com.pulumi.awsnative;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
 
-public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExtensionResourceArgs extends ResourceArgs {
 
     public static final ExtensionResourceArgs Empty = new ExtensionResourceArgs();
 

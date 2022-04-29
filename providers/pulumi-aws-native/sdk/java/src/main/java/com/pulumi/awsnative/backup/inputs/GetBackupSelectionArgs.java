@@ -4,11 +4,12 @@
 package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.InvokeArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetBackupSelectionArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetBackupSelectionArgs extends InvokeArgs {
 
     public static final GetBackupSelectionArgs Empty = new GetBackupSelectionArgs();
 

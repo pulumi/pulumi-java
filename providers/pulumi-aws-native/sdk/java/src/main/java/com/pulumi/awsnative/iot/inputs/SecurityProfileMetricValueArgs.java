@@ -5,6 +5,7 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * The value to be compared with the metric.
  * 
  */
-public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileMetricValueArgs extends ResourceArgs {
 
     public static final SecurityProfileMetricValueArgs Empty = new SecurityProfileMetricValueArgs();
 

@@ -3,14 +3,14 @@
 
 package com.pulumi.awsnative.fis.inputs;
 
-
+import com.pulumi.resources.ResourceArgs;
 
 
 /**
  * The actions for the experiment.
  * 
  */
-public final class ExperimentTemplateActionMapArgs extends com.pulumi.resources.ResourceArgs {
+public final class ExperimentTemplateActionMapArgs extends ResourceArgs {
 
     public static final ExperimentTemplateActionMapArgs Empty = new ExperimentTemplateActionMapArgs();
 

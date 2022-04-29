@@ -8,6 +8,7 @@ import com.pulumi.awsnative.mediaconnect.inputs.FlowOutputEncryptionArgs;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowOutputVpcInterfaceAttachmentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
+public final class FlowOutputArgs extends ResourceArgs {
 
     public static final FlowOutputArgs Empty = new FlowOutputArgs();
 

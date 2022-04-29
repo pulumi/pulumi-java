@@ -7,13 +7,14 @@ import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePathStatementRe
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends com.pulumi.resources.ResourceArgs {
+public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends ResourceArgs {
 
     public static final NetworkInsightsAccessScopeAccessScopePathRequestArgs Empty = new NetworkInsightsAccessScopeAccessScopePathRequestArgs();
 

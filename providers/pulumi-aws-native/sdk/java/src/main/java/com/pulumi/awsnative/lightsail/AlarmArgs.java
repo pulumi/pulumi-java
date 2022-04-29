@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AlarmArgs extends com.pulumi.resources.ResourceArgs {
+public final class AlarmArgs extends ResourceArgs {
 
     public static final AlarmArgs Empty = new AlarmArgs();
 

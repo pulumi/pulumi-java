@@ -5,6 +5,7 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * Enables activity metrics.
  * 
  */
-public final class StorageLensActivityMetricsArgs extends com.pulumi.resources.ResourceArgs {
+public final class StorageLensActivityMetricsArgs extends ResourceArgs {
 
     public static final StorageLensActivityMetricsArgs Empty = new StorageLensActivityMetricsArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotSampleValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Value that the slot type can take.
  * 
  */
-public final class BotSlotTypeValueArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotSlotTypeValueArgs extends ResourceArgs {
 
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();
 

@@ -8,6 +8,7 @@ import com.pulumi.awsnative.timestream.inputs.ScheduledQueryMixedMeasureMappingA
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureMappingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
  * Configuration needed to write data into the Timestream database and table.
  * 
  */
-public final class ScheduledQueryTimestreamConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryTimestreamConfigurationArgs extends ResourceArgs {
 
     public static final ScheduledQueryTimestreamConfigurationArgs Empty = new ScheduledQueryTimestreamConfigurationArgs();
 

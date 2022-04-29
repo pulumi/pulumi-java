@@ -12,6 +12,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:rds:DBProxy")
-public class DBProxy extends com.pulumi.resources.CustomResource {
+public class DBProxy extends CustomResource {
     /**
      * The authorization mechanism that the proxy uses.
      * 
@@ -215,19 +217,19 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DBProxy(String name, DBProxyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DBProxy(String name, DBProxyArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:rds:DBProxy", name, args == null ? DBProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private DBProxy(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private DBProxy(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:rds:DBProxy", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -238,7 +240,7 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DBProxy get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DBProxy get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new DBProxy(name, id, options);
     }
 }

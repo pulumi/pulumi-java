@@ -13,6 +13,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  */
 @ResourceType(type="aws-native:iotsitewise:AssetModel")
-public class AssetModel extends com.pulumi.resources.CustomResource {
+public class AssetModel extends CustomResource {
     /**
      * The ARN of the asset model, which has the following format.
      * 
@@ -158,19 +160,19 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AssetModel(String name, @Nullable AssetModelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AssetModel(String name, @Nullable AssetModelArgs args, @Nullable CustomResourceOptions options) {
         super("aws-native:iotsitewise:AssetModel", name, args == null ? AssetModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AssetModel(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AssetModel(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         super("aws-native:iotsitewise:AssetModel", name, null, makeResourceOptions(options, id));
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
-        var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
+    private static CustomResourceOptions makeResourceOptions(@Nullable CustomResourceOptions options, @Nullable Output<String> id) {
+        var defaultOptions = CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
-        return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
+        return CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     /**
@@ -181,7 +183,7 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AssetModel get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AssetModel get(String name, Output<String> id, @Nullable CustomResourceOptions options) {
         return new AssetModel(name, id, options);
     }
 }

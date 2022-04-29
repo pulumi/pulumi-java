@@ -12,6 +12,7 @@ import com.pulumi.awsnative.applicationinsights.inputs.ApplicationLogArgs;
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEventArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +23,7 @@ import javax.annotation.Nullable;
  * The configuration settings.
  * 
  */
-public final class ApplicationConfigurationDetailsArgs extends com.pulumi.resources.ResourceArgs {
+public final class ApplicationConfigurationDetailsArgs extends ResourceArgs {
 
     public static final ApplicationConfigurationDetailsArgs Empty = new ApplicationConfigurationDetailsArgs();
 

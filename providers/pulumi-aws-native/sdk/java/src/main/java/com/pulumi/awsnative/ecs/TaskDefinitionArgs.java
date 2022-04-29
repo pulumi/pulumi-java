@@ -13,6 +13,7 @@ import com.pulumi.awsnative.ecs.inputs.TaskDefinitionTagArgs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionArgs extends ResourceArgs {
 
     public static final TaskDefinitionArgs Empty = new TaskDefinitionArgs();
 

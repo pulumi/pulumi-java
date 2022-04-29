@@ -7,6 +7,7 @@ import com.pulumi.awsnative.rum.inputs.AppMonitorConfigurationArgs;
 import com.pulumi.awsnative.rum.inputs.AppMonitorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
+public final class AppMonitorArgs extends ResourceArgs {
 
     public static final AppMonitorArgs Empty = new AppMonitorArgs();
 

@@ -6,13 +6,14 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends ResourceArgs {
 
     public static final DeliveryStreamDynamicPartitioningConfigurationArgs Empty = new DeliveryStreamDynamicPartitioningConfigurationArgs();
 

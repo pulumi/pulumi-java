@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyPortalArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyProjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
  * 
  */
-public final class AccessPolicyResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccessPolicyResourceArgs extends ResourceArgs {
 
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();
 

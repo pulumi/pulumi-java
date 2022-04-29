@@ -7,6 +7,7 @@ import com.pulumi.awsnative.ecs.enums.TaskDefinitionEFSVolumeConfigurationTransi
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionAuthorizationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TaskDefinitionEFSVolumeConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class TaskDefinitionEFSVolumeConfigurationArgs extends ResourceArgs {
 
     public static final TaskDefinitionEFSVolumeConfigurationArgs Empty = new TaskDefinitionEFSVolumeConfigurationArgs();
 

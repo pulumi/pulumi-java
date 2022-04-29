@@ -6,6 +6,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionProblemType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Container image configuration object for the monitoring job.
  * 
  */
-public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class ModelQualityJobDefinitionModelQualityAppSpecificationArgs extends ResourceArgs {
 
     public static final ModelQualityJobDefinitionModelQualityAppSpecificationArgs Empty = new ModelQualityJobDefinitionModelQualityAppSpecificationArgs();
 

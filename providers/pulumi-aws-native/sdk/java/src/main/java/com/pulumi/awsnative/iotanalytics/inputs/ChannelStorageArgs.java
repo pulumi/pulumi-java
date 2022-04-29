@@ -7,12 +7,13 @@ import com.pulumi.awsnative.iotanalytics.inputs.ChannelCustomerManagedS3Args;
 import com.pulumi.awsnative.iotanalytics.inputs.ChannelServiceManagedS3Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ChannelStorageArgs extends com.pulumi.resources.ResourceArgs {
+public final class ChannelStorageArgs extends ResourceArgs {
 
     public static final ChannelStorageArgs Empty = new ChannelStorageArgs();
 

@@ -6,11 +6,12 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.FlowLogDestinationOptionsPropertiesFileFormat;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 
 
-public final class DestinationOptionsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
+public final class DestinationOptionsPropertiesArgs extends ResourceArgs {
 
     public static final DestinationOptionsPropertiesArgs Empty = new DestinationOptionsPropertiesArgs();
 

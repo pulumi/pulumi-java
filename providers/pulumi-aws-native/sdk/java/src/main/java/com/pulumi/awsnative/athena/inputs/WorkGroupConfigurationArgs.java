@@ -7,6 +7,7 @@ import com.pulumi.awsnative.athena.inputs.WorkGroupEngineVersionArgs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WorkGroupConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupConfigurationArgs extends ResourceArgs {
 
     public static final WorkGroupConfigurationArgs Empty = new WorkGroupConfigurationArgs();
 

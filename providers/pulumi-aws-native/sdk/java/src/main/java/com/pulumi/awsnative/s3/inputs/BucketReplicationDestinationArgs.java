@@ -10,6 +10,7 @@ import com.pulumi.awsnative.s3.inputs.BucketMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.BucketReplicationTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Specifies which Amazon S3 bucket to store replicated objects in and their storage class.
  * 
  */
-public final class BucketReplicationDestinationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BucketReplicationDestinationArgs extends ResourceArgs {
 
     public static final BucketReplicationDestinationArgs Empty = new BucketReplicationDestinationArgs();
 

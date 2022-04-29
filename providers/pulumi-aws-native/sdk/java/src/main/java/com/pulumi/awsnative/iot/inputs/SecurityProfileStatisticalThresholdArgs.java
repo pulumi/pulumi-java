@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * A statistical ranking (percentile) which indicates a threshold value by which a behavior is determined to be in compliance or in violation of the behavior.
  * 
  */
-public final class SecurityProfileStatisticalThresholdArgs extends com.pulumi.resources.ResourceArgs {
+public final class SecurityProfileStatisticalThresholdArgs extends ResourceArgs {
 
     public static final SecurityProfileStatisticalThresholdArgs Empty = new SecurityProfileStatisticalThresholdArgs();
 

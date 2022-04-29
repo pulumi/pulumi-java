@@ -5,6 +5,7 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * Port of the Instance.
  * 
  */
-public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
+public final class InstancePortArgs extends ResourceArgs {
 
     public static final InstancePortArgs Empty = new InstancePortArgs();
 

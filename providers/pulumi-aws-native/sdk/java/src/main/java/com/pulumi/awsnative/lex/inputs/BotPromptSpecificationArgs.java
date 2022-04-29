@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Prompts the user to confirm the intent.
  * 
  */
-public final class BotPromptSpecificationArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotPromptSpecificationArgs extends ResourceArgs {
 
     public static final BotPromptSpecificationArgs Empty = new BotPromptSpecificationArgs();
 

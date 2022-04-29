@@ -5,11 +5,12 @@ package com.pulumi.awsnative.wafv2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WebACLAssociationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLAssociationArgs extends ResourceArgs {
 
     public static final WebACLAssociationArgs Empty = new WebACLAssociationArgs();
 

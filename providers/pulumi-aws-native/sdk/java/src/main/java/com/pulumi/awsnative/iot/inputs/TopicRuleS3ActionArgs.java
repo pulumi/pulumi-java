@@ -6,13 +6,14 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class TopicRuleS3ActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class TopicRuleS3ActionArgs extends ResourceArgs {
 
     public static final TopicRuleS3ActionArgs Empty = new TopicRuleS3ActionArgs();
 

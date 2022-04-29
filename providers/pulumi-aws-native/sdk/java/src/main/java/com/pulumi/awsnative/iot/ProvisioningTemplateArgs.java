@@ -7,6 +7,7 @@ import com.pulumi.awsnative.iot.inputs.ProvisioningTemplateProvisioningHookArgs;
 import com.pulumi.awsnative.iot.inputs.ProvisioningTemplateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ProvisioningTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class ProvisioningTemplateArgs extends ResourceArgs {
 
     public static final ProvisioningTemplateArgs Empty = new ProvisioningTemplateArgs();
 

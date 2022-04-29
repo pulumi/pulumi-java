@@ -9,6 +9,7 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ import javax.annotation.Nullable;
  * Action taken when Rule matches its condition.
  * 
  */
-public final class WebACLRuleActionArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLRuleActionArgs extends ResourceArgs {
 
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 

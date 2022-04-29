@@ -6,6 +6,7 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisDataSetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * &lt;p&gt;The source template of an analysis.&lt;/p&gt;
  * 
  */
-public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.ResourceArgs {
+public final class AnalysisSourceTemplateArgs extends ResourceArgs {
 
     public static final AnalysisSourceTemplateArgs Empty = new AnalysisSourceTemplateArgs();
 

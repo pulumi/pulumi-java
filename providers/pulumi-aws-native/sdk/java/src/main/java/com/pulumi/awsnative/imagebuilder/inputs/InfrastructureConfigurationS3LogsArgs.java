@@ -5,6 +5,7 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
  * The S3 path in which to store the logs.
  * 
  */
-public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.resources.ResourceArgs {
+public final class InfrastructureConfigurationS3LogsArgs extends ResourceArgs {
 
     public static final InfrastructureConfigurationS3LogsArgs Empty = new InfrastructureConfigurationS3LogsArgs();
 

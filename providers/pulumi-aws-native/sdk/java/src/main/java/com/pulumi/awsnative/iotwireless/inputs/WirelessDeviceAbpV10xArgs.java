@@ -6,11 +6,12 @@ package com.pulumi.awsnative.iotwireless.inputs;
 import com.pulumi.awsnative.iotwireless.inputs.WirelessDeviceSessionKeysAbpV10xArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class WirelessDeviceAbpV10xArgs extends com.pulumi.resources.ResourceArgs {
+public final class WirelessDeviceAbpV10xArgs extends ResourceArgs {
 
     public static final WirelessDeviceAbpV10xArgs Empty = new WirelessDeviceAbpV10xArgs();
 

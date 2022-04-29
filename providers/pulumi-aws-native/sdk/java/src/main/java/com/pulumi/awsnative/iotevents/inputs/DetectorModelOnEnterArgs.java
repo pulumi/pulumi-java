@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * When entering this state, perform these `actions` if the `condition` is `TRUE`.
  * 
  */
-public final class DetectorModelOnEnterArgs extends com.pulumi.resources.ResourceArgs {
+public final class DetectorModelOnEnterArgs extends ResourceArgs {
 
     public static final DetectorModelOnEnterArgs Empty = new DetectorModelOnEnterArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * This type is used to map column(s) from the query result to a dimension in the destination table.
  * 
  */
-public final class ScheduledQueryDimensionMappingArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryDimensionMappingArgs extends ResourceArgs {
 
     public static final ScheduledQueryDimensionMappingArgs Empty = new ScheduledQueryDimensionMappingArgs();
 

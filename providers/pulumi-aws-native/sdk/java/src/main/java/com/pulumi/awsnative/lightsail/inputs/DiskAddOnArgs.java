@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lightsail.enums.DiskAddOnStatus;
 import com.pulumi.awsnative.lightsail.inputs.DiskAutoSnapshotAddOnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A addon associate with a resource.
  * 
  */
-public final class DiskAddOnArgs extends com.pulumi.resources.ResourceArgs {
+public final class DiskAddOnArgs extends ResourceArgs {
 
     public static final DiskAddOnArgs Empty = new DiskAddOnArgs();
 

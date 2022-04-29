@@ -3,10 +3,10 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.resources.ResourceArgs;
 
 
-
-public final class ComponentVariantValuesArgs extends com.pulumi.resources.ResourceArgs {
+public final class ComponentVariantValuesArgs extends ResourceArgs {
 
     public static final ComponentVariantValuesArgs Empty = new ComponentVariantValuesArgs();
 

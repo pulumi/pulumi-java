@@ -5,6 +5,7 @@ package com.pulumi.awsnative.timestream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A key-value pair to label the scheduled query.
  * 
  */
-public final class ScheduledQueryTagArgs extends com.pulumi.resources.ResourceArgs {
+public final class ScheduledQueryTagArgs extends ResourceArgs {
 
     public static final ScheduledQueryTagArgs Empty = new ScheduledQueryTagArgs();
 

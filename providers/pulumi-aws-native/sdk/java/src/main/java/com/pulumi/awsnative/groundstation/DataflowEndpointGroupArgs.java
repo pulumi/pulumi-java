@@ -7,13 +7,14 @@ import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDe
 import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class DataflowEndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
+public final class DataflowEndpointGroupArgs extends ResourceArgs {
 
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
  * A Common Media Application Format (CMAF) encryption configuration.
  * 
  */
-public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources.ResourceArgs {
+public final class OriginEndpointCmafEncryptionArgs extends ResourceArgs {
 
     public static final OriginEndpointCmafEncryptionArgs Empty = new OriginEndpointCmafEncryptionArgs();
 

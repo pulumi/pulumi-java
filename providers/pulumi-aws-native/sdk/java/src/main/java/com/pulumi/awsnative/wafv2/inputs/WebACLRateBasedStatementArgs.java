@@ -8,13 +8,14 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class WebACLRateBasedStatementArgs extends com.pulumi.resources.ResourceArgs {
+public final class WebACLRateBasedStatementArgs extends ResourceArgs {
 
     public static final WebACLRateBasedStatementArgs Empty = new WebACLRateBasedStatementArgs();
 

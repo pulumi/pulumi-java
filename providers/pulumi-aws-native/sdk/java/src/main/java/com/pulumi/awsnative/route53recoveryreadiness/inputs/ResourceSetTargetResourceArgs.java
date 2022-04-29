@@ -7,6 +7,7 @@ import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetNLBResour
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetR53ResourceRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The target resource that the Route 53 record points to.
  * 
  */
-public final class ResourceSetTargetResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class ResourceSetTargetResourceArgs extends ResourceArgs {
 
     public static final ResourceSetTargetResourceArgs Empty = new ResourceSetTargetResourceArgs();
 

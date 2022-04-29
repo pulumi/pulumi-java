@@ -6,6 +6,7 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The location in Amazon S3 where query results are stored and the encryption option, if any, used for query results. These are known as &#34;client-side settings&#34;. If workgroup settings override client-side settings, then the query uses the workgroup settings.
  * 
  */
-public final class WorkGroupResultConfigurationArgs extends com.pulumi.resources.ResourceArgs {
+public final class WorkGroupResultConfigurationArgs extends ResourceArgs {
 
     public static final WorkGroupResultConfigurationArgs Empty = new WorkGroupResultConfigurationArgs();
 

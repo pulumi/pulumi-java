@@ -6,10 +6,11 @@ package com.pulumi.awsnative.certificatemanager;
 import com.pulumi.awsnative.certificatemanager.inputs.AccountExpiryEventsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.util.Objects;
 
 
-public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
+public final class AccountArgs extends ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 

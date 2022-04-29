@@ -6,6 +6,7 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.enums.CapacityProviderManagedScalingStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * The managed scaling settings for the Auto Scaling group capacity provider.
  * 
  */
-public final class CapacityProviderManagedScalingArgs extends com.pulumi.resources.ResourceArgs {
+public final class CapacityProviderManagedScalingArgs extends ResourceArgs {
 
     public static final CapacityProviderManagedScalingArgs Empty = new CapacityProviderManagedScalingArgs();
 

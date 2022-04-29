@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.resources.ResourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Response that Amazon Lex sends to the user when the intent is closed.
  * 
  */
-public final class BotIntentClosingSettingArgs extends com.pulumi.resources.ResourceArgs {
+public final class BotIntentClosingSettingArgs extends ResourceArgs {
 
     public static final BotIntentClosingSettingArgs Empty = new BotIntentClosingSettingArgs();
 
