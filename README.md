@@ -68,6 +68,6 @@ details of the core Pulumi CLI and [programming model concepts](https://www.pulu
 ## Contributing
 
 Visit
-[Contributing.md](https://github.com/pulumi/pulumi-java/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/pulumi/pulumi-java/blob/master/CONTRIBUTING.md)
 for information on building Pulumi Java support from source or
 contributing improvements.
