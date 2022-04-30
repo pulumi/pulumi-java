@@ -3,16 +3,28 @@ package com.pulumi.core.internal;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples.*;
+import com.pulumi.core.Tuples.Tuple0;
+import com.pulumi.core.Tuples.Tuple1;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.Tuples.Tuple3;
+import com.pulumi.core.Tuples.Tuple4;
+import com.pulumi.core.Tuples.Tuple5;
+import com.pulumi.core.Tuples.Tuple6;
+import com.pulumi.core.Tuples.Tuple7;
+import com.pulumi.core.Tuples.Tuple8;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
-import java.util.*;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -136,6 +148,14 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
 
     public OutputData<T> withIsSecret(boolean isSecret) {
         return ofNullable(this.resources, this.value, this.known, isSecret);
+    }
+
+    public OutputData<T> withDependency(Resource resource) {
+        var newDependencies = Sets.union(
+                this.resources,
+                ImmutableSet.of(resource)
+        ).immutableCopy();
+        return ofNullable(newDependencies, this.value, this.known, this.secret);
     }
 
     public <U> OutputData<U> apply(Function<? super T, ? extends U> function) {
