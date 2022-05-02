@@ -225,7 +225,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180601preview:Asset").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20180701:Asset").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:Asset").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:Asset").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:Asset").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:Asset").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

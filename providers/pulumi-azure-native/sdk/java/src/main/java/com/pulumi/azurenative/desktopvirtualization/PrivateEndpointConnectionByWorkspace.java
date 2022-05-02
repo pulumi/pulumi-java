@@ -154,7 +154,8 @@ public class PrivateEndpointConnectionByWorkspace extends com.pulumi.resources.C
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByWorkspace").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByWorkspace").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:PrivateEndpointConnectionByWorkspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

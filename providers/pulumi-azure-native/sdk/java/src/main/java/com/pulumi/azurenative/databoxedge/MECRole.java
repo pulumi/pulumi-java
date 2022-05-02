@@ -171,7 +171,9 @@ public class MECRole extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:MECRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:MECRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:MECRole").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:MECRole").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:MECRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:MECRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:MECRole").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

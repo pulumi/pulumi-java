@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:connectedvmwarevsphere:VirtualNetwork ContosoAgent /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualNetworks/ContosoAgent 
+ * $ pulumi import azure-native:connectedvmwarevsphere:VirtualNetwork ProdNetwork /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualNetworks/ProdNetwork 
  * ```
  * 
  */

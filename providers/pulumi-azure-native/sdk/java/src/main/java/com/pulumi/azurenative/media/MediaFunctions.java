@@ -19,6 +19,7 @@ import com.pulumi.azurenative.media.inputs.GetPrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.media.inputs.GetStreamingEndpointArgs;
 import com.pulumi.azurenative.media.inputs.GetStreamingLocatorArgs;
 import com.pulumi.azurenative.media.inputs.GetStreamingPolicyArgs;
+import com.pulumi.azurenative.media.inputs.GetTrackArgs;
 import com.pulumi.azurenative.media.inputs.GetTransformArgs;
 import com.pulumi.azurenative.media.inputs.ListAssetContainerSasArgs;
 import com.pulumi.azurenative.media.inputs.ListAssetStreamingLocatorsArgs;
@@ -41,6 +42,7 @@ import com.pulumi.azurenative.media.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.media.outputs.GetStreamingEndpointResult;
 import com.pulumi.azurenative.media.outputs.GetStreamingLocatorResult;
 import com.pulumi.azurenative.media.outputs.GetStreamingPolicyResult;
+import com.pulumi.azurenative.media.outputs.GetTrackResult;
 import com.pulumi.azurenative.media.outputs.GetTransformResult;
 import com.pulumi.azurenative.media.outputs.ListAssetContainerSasResult;
 import com.pulumi.azurenative.media.outputs.ListAssetStreamingLocatorsResult;
@@ -218,6 +220,17 @@ public final class MediaFunctions {
     }
     public static CompletableFuture<GetStreamingPolicyResult> getStreamingPolicy(GetStreamingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingPolicy", TypeShape.of(GetStreamingPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Asset Track resource.
+     * API Version: 2021-11-01.
+     * 
+     */
+    public static CompletableFuture<GetTrackResult> getTrack(GetTrackArgs args) {
+        return getTrack(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetTrackResult> getTrack(GetTrackArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:media:getTrack", TypeShape.of(GetTrackResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.

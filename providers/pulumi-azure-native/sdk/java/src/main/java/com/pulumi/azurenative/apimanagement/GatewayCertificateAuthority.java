@@ -113,7 +113,8 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:GatewayCertificateAuthority").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:GatewayCertificateAuthority").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:GatewayCertificateAuthority").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayCertificateAuthority").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayCertificateAuthority").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:GatewayCertificateAuthority").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

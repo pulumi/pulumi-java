@@ -25,14 +25,14 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     public static final BatchEndpointArgs Empty = new BatchEndpointArgs();
 
     /**
-     * Enum to determine endpoint authentication mode.
+     * [Required] Inference endpoint authentication mode type
      * 
      */
     @Import(name="authMode")
     private @Nullable Output<Either<String,EndpointAuthMode>> authMode;
 
     /**
-     * @return Enum to determine endpoint authentication mode.
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     public Optional<Output<Either<String,EndpointAuthMode>>> authMode() {
@@ -130,7 +130,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authMode Enum to determine endpoint authentication mode.
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authMode Enum to determine endpoint authentication mode.
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authMode Enum to determine endpoint authentication mode.
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authMode Enum to determine endpoint authentication mode.
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 

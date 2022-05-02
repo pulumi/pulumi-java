@@ -7,6 +7,7 @@ import com.pulumi.azurenative.eventgrid.outputs.AzureFunctionEventSubscriptionDe
 import com.pulumi.azurenative.eventgrid.outputs.EventHubEventSubscriptionDestinationResponse;
 import com.pulumi.azurenative.eventgrid.outputs.EventSubscriptionIdentityResponse;
 import com.pulumi.azurenative.eventgrid.outputs.HybridConnectionEventSubscriptionDestinationResponse;
+import com.pulumi.azurenative.eventgrid.outputs.PartnerEventSubscriptionDestinationResponse;
 import com.pulumi.azurenative.eventgrid.outputs.ServiceBusQueueEventSubscriptionDestinationResponse;
 import com.pulumi.azurenative.eventgrid.outputs.ServiceBusTopicEventSubscriptionDestinationResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDestinationResponse;

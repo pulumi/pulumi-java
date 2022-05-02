@@ -156,7 +156,8 @@ public class AccountFilter extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:media/v20180701:AccountFilter").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:AccountFilter").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:AccountFilter").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:AccountFilter").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:AccountFilter").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

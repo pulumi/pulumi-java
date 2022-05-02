@@ -248,7 +248,8 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:RouteTable").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:RouteTable").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:RouteTable").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:RouteTable").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:RouteTable").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:RouteTable").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

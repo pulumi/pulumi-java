@@ -151,7 +151,8 @@ public class DataCollectionRuleAssociation extends com.pulumi.resources.CustomRe
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:insights/v20191101preview:DataCollectionRuleAssociation").build()),
-                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionRuleAssociation").build())
+                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionRuleAssociation").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20210901preview:DataCollectionRuleAssociation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

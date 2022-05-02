@@ -602,7 +602,13 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210801:ManagedCluster").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210901:ManagedCluster").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20211001:ManagedCluster").build()),
-                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:ManagedCluster").build())
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220101:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220102preview:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220201:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220202preview:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220301:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220302preview:ManagedCluster").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

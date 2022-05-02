@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The logic app action that should be triggered. To learn more about Security Center&#39;s Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
+ * The logic app action that should be triggered. To learn more about Microsoft Defender for Cloud&#39;s Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
  * 
  */
 public final class AutomationActionLogicAppArgs extends com.pulumi.resources.ResourceArgs {

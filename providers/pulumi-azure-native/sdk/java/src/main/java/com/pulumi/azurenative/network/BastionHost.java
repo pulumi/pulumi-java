@@ -196,7 +196,8 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:BastionHost").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:BastionHost").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:BastionHost").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:BastionHost").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:BastionHost").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:BastionHost").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

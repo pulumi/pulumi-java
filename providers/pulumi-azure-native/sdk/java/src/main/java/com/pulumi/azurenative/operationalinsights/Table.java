@@ -81,14 +81,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The table plan.
+     * Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     @Export(name="plan", type=String.class, parameters={})
     private Output</* @Nullable */ String> plan;
 
     /**
-     * @return The table plan.
+     * @return Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     public Output<Optional<String>> plan() {
@@ -137,14 +137,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.resultStatistics);
     }
     /**
-     * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
-     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * @return The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     public Output<Optional<Integer>> retentionInDays() {
@@ -193,14 +193,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     @Export(name="totalRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalRetentionInDays;
 
     /**
-     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * @return The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     public Output<Optional<Integer>> totalRetentionInDays() {

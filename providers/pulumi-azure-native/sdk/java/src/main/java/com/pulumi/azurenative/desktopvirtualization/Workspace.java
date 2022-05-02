@@ -269,7 +269,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:Workspace").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:Workspace").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:Workspace").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:Workspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

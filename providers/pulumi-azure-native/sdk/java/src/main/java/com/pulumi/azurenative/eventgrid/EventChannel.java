@@ -216,7 +216,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:EventChannel").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:EventChannel").build()),
-                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:EventChannel").build())
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:EventChannel").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:EventChannel").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

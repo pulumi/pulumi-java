@@ -128,7 +128,8 @@ public class TransparentDataEncryption extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:TransparentDataEncryption").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:TransparentDataEncryption").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:TransparentDataEncryption").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:TransparentDataEncryption").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:TransparentDataEncryption").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:TransparentDataEncryption").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

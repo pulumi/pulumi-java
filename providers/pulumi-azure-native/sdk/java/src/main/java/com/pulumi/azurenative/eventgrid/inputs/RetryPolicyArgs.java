@@ -5,6 +5,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -117,6 +118,8 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public RetryPolicyArgs build() {
+            $.eventTimeToLiveInMinutes = Codegen.integerProp("eventTimeToLiveInMinutes").output().arg($.eventTimeToLiveInMinutes).def(1440).getNullable();
+            $.maxDeliveryAttempts = Codegen.integerProp("maxDeliveryAttempts").output().arg($.maxDeliveryAttempts).def(30).getNullable();
             return $;
         }
     }

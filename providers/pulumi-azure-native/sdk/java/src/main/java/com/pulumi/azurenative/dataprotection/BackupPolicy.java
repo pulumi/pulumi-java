@@ -128,7 +128,10 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210601preview:BackupPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210701:BackupPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20211001preview:BackupPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupPolicy").build())
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220101:BackupPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220201preview:BackupPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220301:BackupPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

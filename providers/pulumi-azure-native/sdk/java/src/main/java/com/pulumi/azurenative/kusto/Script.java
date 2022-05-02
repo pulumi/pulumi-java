@@ -167,7 +167,8 @@ public class Script extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:Script").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Script").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Script").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:Script").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

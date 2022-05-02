@@ -157,7 +157,9 @@ public class SqlResourceSqlDatabase extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlDatabase").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlDatabase").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlDatabase").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

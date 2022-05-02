@@ -179,7 +179,9 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoUserDefinition").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoUserDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:MongoDBResourceMongoUserDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:MongoDBResourceMongoUserDefinition").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

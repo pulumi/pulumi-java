@@ -122,7 +122,8 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:IPv6FirewallRule").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:IPv6FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:IPv6FirewallRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

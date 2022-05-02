@@ -163,7 +163,11 @@ public class MCASDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:MCASDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:MCASDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:MCASDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MCASDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MCASDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:MCASDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:MCASDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:MCASDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:MCASDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -171,7 +171,8 @@ public class DataController extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210601preview:DataController").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:DataController").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210801:DataController").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:DataController").build())
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:DataController").build()),
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20220301preview:DataController").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

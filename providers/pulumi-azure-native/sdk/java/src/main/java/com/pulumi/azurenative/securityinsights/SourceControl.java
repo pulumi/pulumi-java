@@ -279,7 +279,10 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:SourceControl").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:SourceControl").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:SourceControl").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:SourceControl").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:SourceControl").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:SourceControl").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

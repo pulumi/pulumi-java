@@ -35,7 +35,7 @@ public final class ModelVersionResponse {
      */
     private final @Nullable Boolean isAnonymous;
     /**
-     * @return The path of the file/directory in the datastore.
+     * @return [Required] The path of the file/directory in the datastore.
      * 
      */
     private final String path;
@@ -97,7 +97,7 @@ public final class ModelVersionResponse {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
-     * @return The path of the file/directory in the datastore.
+     * @return [Required] The path of the file/directory in the datastore.
      * 
      */
     public String path() {

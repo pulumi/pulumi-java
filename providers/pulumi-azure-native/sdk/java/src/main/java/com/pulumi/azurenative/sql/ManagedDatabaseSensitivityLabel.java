@@ -233,7 +233,8 @@ public class ManagedDatabaseSensitivityLabel extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ManagedDatabaseSensitivityLabel").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ManagedDatabaseSensitivityLabel").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedDatabaseSensitivityLabel").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ManagedDatabaseSensitivityLabel").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

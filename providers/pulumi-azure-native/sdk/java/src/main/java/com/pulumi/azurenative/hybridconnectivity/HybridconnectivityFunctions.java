@@ -6,8 +6,10 @@ package com.pulumi.azurenative.hybridconnectivity;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs;
 import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointCredentialsArgs;
+import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointManagedProxyDetailsArgs;
 import com.pulumi.azurenative.hybridconnectivity.outputs.GetEndpointResult;
 import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointCredentialsResult;
+import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointManagedProxyDetailsResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -35,5 +37,16 @@ public final class HybridconnectivityFunctions {
     }
     public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Managed Proxy
+     * API Version: 2022-05-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args) {
+        return listEndpointManagedProxyDetails(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -35,6 +35,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:automation:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends com.pulumi.resources.CustomResource {
     /**
+     * Gets the groupIds.
+     * 
+     */
+    @Export(name="groupIds", type=List.class, parameters={String.class})
+    private Output</* @Nullable */ List<String>> groupIds;
+
+    /**
+     * @return Gets the groupIds.
+     * 
+     */
+    public Output<Optional<List<String>>> groupIds() {
+        return Codegen.optional(this.groupIds);
+    }
+    /**
      * The name of the resource
      * 
      */

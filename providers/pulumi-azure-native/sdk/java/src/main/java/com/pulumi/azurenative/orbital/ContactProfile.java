@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:orbital:ContactProfile contactProfile1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/contactProfiles/contactProfile1 
+ * $ pulumi import azure-native:orbital:ContactProfile AQUA_DIRECTPLAYBACK_WITH_UPLINK /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK 
  * ```
  * 
  */

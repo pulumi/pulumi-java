@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.azurenative.datafactory.enums.TriggerReferenceType;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +39,13 @@ public final class TriggerReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-    private Output<String> type;
+    private Output<Either<String,TriggerReferenceType>> type;
 
     /**
      * @return Trigger reference type.
      * 
      */
-    public Output<String> type() {
+    public Output<Either<String,TriggerReferenceType>> type() {
         return this.type;
     }
 
@@ -99,7 +101,7 @@ public final class TriggerReferenceArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder type(Output<String> type) {
+        public Builder type(Output<Either<String,TriggerReferenceType>> type) {
             $.type = type;
             return this;
         }
@@ -110,8 +112,28 @@ public final class TriggerReferenceArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder type(String type) {
+        public Builder type(Either<String,TriggerReferenceType> type) {
             return type(Output.of(type));
+        }
+
+        /**
+         * @param type Trigger reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        /**
+         * @param type Trigger reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(TriggerReferenceType type) {
+            return type(Either.ofRight(type));
         }
 
         public TriggerReferenceArgs build() {

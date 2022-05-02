@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ObjectiveResponse {
     /**
-     * @return Defines supported metric goals for hyperparameter tuning
+     * @return [Required] Defines supported metric goals for hyperparameter tuning
      * 
      */
     private final String goal;
     /**
-     * @return Name of the metric to optimize.
+     * @return [Required] Name of the metric to optimize.
      * 
      */
     private final String primaryMetric;
@@ -29,14 +29,14 @@ public final class ObjectiveResponse {
     }
 
     /**
-     * @return Defines supported metric goals for hyperparameter tuning
+     * @return [Required] Defines supported metric goals for hyperparameter tuning
      * 
      */
     public String goal() {
         return this.goal;
     }
     /**
-     * @return Name of the metric to optimize.
+     * @return [Required] Name of the metric to optimize.
      * 
      */
     public String primaryMetric() {

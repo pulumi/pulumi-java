@@ -241,7 +241,8 @@ public class LiveOutput extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180701:LiveOutput").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20190501preview:LiveOutput").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:LiveOutput").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:LiveOutput").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:LiveOutput").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:LiveOutput").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

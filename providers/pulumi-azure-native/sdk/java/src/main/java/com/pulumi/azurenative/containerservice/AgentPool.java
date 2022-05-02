@@ -600,7 +600,13 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210801:AgentPool").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210901:AgentPool").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20211001:AgentPool").build()),
-                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:AgentPool").build())
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220101:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220102preview:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220201:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220202preview:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220301:AgentPool").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220302preview:AgentPool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

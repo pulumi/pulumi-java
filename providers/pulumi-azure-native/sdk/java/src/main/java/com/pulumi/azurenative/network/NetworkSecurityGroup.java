@@ -277,7 +277,8 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkSecurityGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkSecurityGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkSecurityGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkSecurityGroup").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkSecurityGroup").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NetworkSecurityGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

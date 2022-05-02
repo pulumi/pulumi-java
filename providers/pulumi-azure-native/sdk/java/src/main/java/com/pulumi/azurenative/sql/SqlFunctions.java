@@ -40,6 +40,7 @@ import com.pulumi.azurenative.sql.inputs.GetManagedInstanceAzureADOnlyAuthentica
 import com.pulumi.azurenative.sql.inputs.GetManagedInstanceKeyArgs;
 import com.pulumi.azurenative.sql.inputs.GetManagedInstancePrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.sql.inputs.GetManagedInstanceVulnerabilityAssessmentArgs;
+import com.pulumi.azurenative.sql.inputs.GetManagedServerDnsAliasArgs;
 import com.pulumi.azurenative.sql.inputs.GetOutboundFirewallRuleArgs;
 import com.pulumi.azurenative.sql.inputs.GetPrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.sql.inputs.GetSensitivityLabelArgs;
@@ -98,6 +99,7 @@ import com.pulumi.azurenative.sql.outputs.GetManagedInstanceKeyResult;
 import com.pulumi.azurenative.sql.outputs.GetManagedInstancePrivateEndpointConnectionResult;
 import com.pulumi.azurenative.sql.outputs.GetManagedInstanceResult;
 import com.pulumi.azurenative.sql.outputs.GetManagedInstanceVulnerabilityAssessmentResult;
+import com.pulumi.azurenative.sql.outputs.GetManagedServerDnsAliasResult;
 import com.pulumi.azurenative.sql.outputs.GetOutboundFirewallRuleResult;
 import com.pulumi.azurenative.sql.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.sql.outputs.GetSensitivityLabelResult;
@@ -521,6 +523,17 @@ public final class SqlFunctions {
     }
     public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(GetManagedInstanceVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceVulnerabilityAssessment", TypeShape.of(GetManagedInstanceVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A managed server DNS alias.
+     * API Version: 2021-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagedServerDnsAliasResult> getManagedServerDnsAlias(GetManagedServerDnsAliasArgs args) {
+        return getManagedServerDnsAlias(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetManagedServerDnsAliasResult> getManagedServerDnsAlias(GetManagedServerDnsAliasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedServerDnsAlias", TypeShape.of(GetManagedServerDnsAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure SQL DB Server Outbound Firewall Rule.

@@ -173,7 +173,9 @@ public class Container extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Container").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Container").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Container").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Container").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Container").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Container").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Container").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

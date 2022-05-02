@@ -18,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Contact details and configurations for notifications coming from Azure Security Center.
+ * Contact details and configurations for notifications coming from Microsoft Defender for Cloud.
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
@@ -49,14 +49,14 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.alertNotifications);
     }
     /**
-     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     @Export(name="emails", type=String.class, parameters={})
     private Output</* @Nullable */ String> emails;
 
     /**
-     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     public Output<Optional<String>> emails() {
@@ -77,14 +77,14 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     @Export(name="notificationsByRole", type=SecurityContactPropertiesResponseNotificationsByRole.class, parameters={})
     private Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole;
 
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     public Output<Optional<SecurityContactPropertiesResponseNotificationsByRole>> notificationsByRole() {

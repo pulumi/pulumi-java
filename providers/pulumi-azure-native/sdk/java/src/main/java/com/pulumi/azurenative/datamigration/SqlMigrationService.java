@@ -126,7 +126,9 @@ public class SqlMigrationService extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:SqlMigrationService").build())
+                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:SqlMigrationService").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220130preview:SqlMigrationService").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220330preview:SqlMigrationService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

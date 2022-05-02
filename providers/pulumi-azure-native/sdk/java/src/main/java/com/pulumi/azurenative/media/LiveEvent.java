@@ -331,7 +331,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180701:LiveEvent").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20190501preview:LiveEvent").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:LiveEvent").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:LiveEvent").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:LiveEvent").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:LiveEvent").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

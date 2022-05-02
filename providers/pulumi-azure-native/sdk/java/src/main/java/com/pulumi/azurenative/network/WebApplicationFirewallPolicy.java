@@ -272,7 +272,8 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:network/v20201101:WebApplicationFirewallPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:WebApplicationFirewallPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:WebApplicationFirewallPolicy").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:WebApplicationFirewallPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

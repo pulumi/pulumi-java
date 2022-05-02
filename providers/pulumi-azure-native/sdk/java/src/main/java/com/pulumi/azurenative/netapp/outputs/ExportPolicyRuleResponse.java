@@ -19,6 +19,11 @@ public final class ExportPolicyRuleResponse {
      */
     private final @Nullable String allowedClients;
     /**
+     * @return This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+     * 
+     */
+    private final @Nullable String chownMode;
+    /**
      * @return Allows CIFS protocol
      * 
      */
@@ -87,6 +92,7 @@ public final class ExportPolicyRuleResponse {
     @CustomType.Constructor
     private ExportPolicyRuleResponse(
         @CustomType.Parameter("allowedClients") @Nullable String allowedClients,
+        @CustomType.Parameter("chownMode") @Nullable String chownMode,
         @CustomType.Parameter("cifs") @Nullable Boolean cifs,
         @CustomType.Parameter("hasRootAccess") @Nullable Boolean hasRootAccess,
         @CustomType.Parameter("kerberos5ReadOnly") @Nullable Boolean kerberos5ReadOnly,
@@ -101,6 +107,7 @@ public final class ExportPolicyRuleResponse {
         @CustomType.Parameter("unixReadOnly") @Nullable Boolean unixReadOnly,
         @CustomType.Parameter("unixReadWrite") @Nullable Boolean unixReadWrite) {
         this.allowedClients = allowedClients;
+        this.chownMode = chownMode;
         this.cifs = cifs;
         this.hasRootAccess = hasRootAccess;
         this.kerberos5ReadOnly = kerberos5ReadOnly;
@@ -122,6 +129,13 @@ public final class ExportPolicyRuleResponse {
      */
     public Optional<String> allowedClients() {
         return Optional.ofNullable(this.allowedClients);
+    }
+    /**
+     * @return This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+     * 
+     */
+    public Optional<String> chownMode() {
+        return Optional.ofNullable(this.chownMode);
     }
     /**
      * @return Allows CIFS protocol
@@ -225,6 +239,7 @@ public final class ExportPolicyRuleResponse {
 
     public static final class Builder {
         private @Nullable String allowedClients;
+        private @Nullable String chownMode;
         private @Nullable Boolean cifs;
         private @Nullable Boolean hasRootAccess;
         private @Nullable Boolean kerberos5ReadOnly;
@@ -246,6 +261,7 @@ public final class ExportPolicyRuleResponse {
         public Builder(ExportPolicyRuleResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowedClients = defaults.allowedClients;
+    	      this.chownMode = defaults.chownMode;
     	      this.cifs = defaults.cifs;
     	      this.hasRootAccess = defaults.hasRootAccess;
     	      this.kerberos5ReadOnly = defaults.kerberos5ReadOnly;
@@ -263,6 +279,10 @@ public final class ExportPolicyRuleResponse {
 
         public Builder allowedClients(@Nullable String allowedClients) {
             this.allowedClients = allowedClients;
+            return this;
+        }
+        public Builder chownMode(@Nullable String chownMode) {
+            this.chownMode = chownMode;
             return this;
         }
         public Builder cifs(@Nullable Boolean cifs) {
@@ -317,7 +337,7 @@ public final class ExportPolicyRuleResponse {
             this.unixReadWrite = unixReadWrite;
             return this;
         }        public ExportPolicyRuleResponse build() {
-            return new ExportPolicyRuleResponse(allowedClients, cifs, hasRootAccess, kerberos5ReadOnly, kerberos5ReadWrite, kerberos5iReadOnly, kerberos5iReadWrite, kerberos5pReadOnly, kerberos5pReadWrite, nfsv3, nfsv41, ruleIndex, unixReadOnly, unixReadWrite);
+            return new ExportPolicyRuleResponse(allowedClients, chownMode, cifs, hasRootAccess, kerberos5ReadOnly, kerberos5ReadWrite, kerberos5iReadOnly, kerberos5iReadWrite, kerberos5pReadOnly, kerberos5pReadWrite, nfsv3, nfsv41, ruleIndex, unixReadOnly, unixReadWrite);
         }
     }
 }

@@ -294,7 +294,11 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:Bookmark").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:Bookmark").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Bookmark").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Bookmark").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:Bookmark").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Bookmark").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Bookmark").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Bookmark").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

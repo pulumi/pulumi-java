@@ -219,7 +219,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:batch/v20200501:Certificate").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20200901:Certificate").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20210101:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:Certificate").build())
+                Output.of(Alias.builder().type("azure-native:batch/v20210601:Certificate").build()),
+                Output.of(Alias.builder().type("azure-native:batch/v20220101:Certificate").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

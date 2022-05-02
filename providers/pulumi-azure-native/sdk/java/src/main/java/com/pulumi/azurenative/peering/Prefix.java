@@ -199,7 +199,8 @@ public class Prefix extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:peering/v20200401:Prefix").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20201001:Prefix").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20210101:Prefix").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:Prefix").build())
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:Prefix").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20220101:Prefix").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

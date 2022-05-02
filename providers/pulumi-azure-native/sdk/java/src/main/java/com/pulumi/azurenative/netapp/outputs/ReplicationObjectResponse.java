@@ -35,7 +35,7 @@ public final class ReplicationObjectResponse {
      * @return Schedule
      * 
      */
-    private final String replicationSchedule;
+    private final @Nullable String replicationSchedule;
 
     @CustomType.Constructor
     private ReplicationObjectResponse(
@@ -43,7 +43,7 @@ public final class ReplicationObjectResponse {
         @CustomType.Parameter("remoteVolumeRegion") @Nullable String remoteVolumeRegion,
         @CustomType.Parameter("remoteVolumeResourceId") String remoteVolumeResourceId,
         @CustomType.Parameter("replicationId") @Nullable String replicationId,
-        @CustomType.Parameter("replicationSchedule") String replicationSchedule) {
+        @CustomType.Parameter("replicationSchedule") @Nullable String replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
         this.remoteVolumeResourceId = remoteVolumeResourceId;
@@ -83,8 +83,8 @@ public final class ReplicationObjectResponse {
      * @return Schedule
      * 
      */
-    public String replicationSchedule() {
-        return this.replicationSchedule;
+    public Optional<String> replicationSchedule() {
+        return Optional.ofNullable(this.replicationSchedule);
     }
 
     public static Builder builder() {
@@ -100,7 +100,7 @@ public final class ReplicationObjectResponse {
         private @Nullable String remoteVolumeRegion;
         private String remoteVolumeResourceId;
         private @Nullable String replicationId;
-        private String replicationSchedule;
+        private @Nullable String replicationSchedule;
 
         public Builder() {
     	      // Empty
@@ -131,8 +131,8 @@ public final class ReplicationObjectResponse {
             this.replicationId = replicationId;
             return this;
         }
-        public Builder replicationSchedule(String replicationSchedule) {
-            this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
+        public Builder replicationSchedule(@Nullable String replicationSchedule) {
+            this.replicationSchedule = replicationSchedule;
             return this;
         }        public ReplicationObjectResponse build() {
             return new ReplicationObjectResponse(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);

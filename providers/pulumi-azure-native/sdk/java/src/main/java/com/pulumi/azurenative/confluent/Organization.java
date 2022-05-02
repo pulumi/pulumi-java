@@ -212,7 +212,8 @@ public class Organization extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:confluent/v20200301:Organization").build()),
                 Output.of(Alias.builder().type("azure-native:confluent/v20200301preview:Organization").build()),
                 Output.of(Alias.builder().type("azure-native:confluent/v20210301preview:Organization").build()),
-                Output.of(Alias.builder().type("azure-native:confluent/v20210901preview:Organization").build())
+                Output.of(Alias.builder().type("azure-native:confluent/v20210901preview:Organization").build()),
+                Output.of(Alias.builder().type("azure-native:confluent/v20211201:Organization").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

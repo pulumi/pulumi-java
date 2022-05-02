@@ -26,6 +26,21 @@ public final class RemotePrivateEndpointResponse {
      */
     private final @Nullable String id;
     /**
+     * @return Original resource ID needed by Microsoft.Network.
+     * 
+     */
+    private final @Nullable String immutableResourceId;
+    /**
+     * @return Original subscription ID needed by Microsoft.Network.
+     * 
+     */
+    private final @Nullable String immutableSubscriptionId;
+    /**
+     * @return ARM location of the remote private endpoint.
+     * 
+     */
+    private final @Nullable String location;
+    /**
      * @return List of private link service connections that need manual approval.
      * 
      */
@@ -44,18 +59,24 @@ public final class RemotePrivateEndpointResponse {
      * @return Virtual network traffic tag.
      * 
      */
-    private final String vnetTrafficTag;
+    private final @Nullable String vnetTrafficTag;
 
     @CustomType.Constructor
     private RemotePrivateEndpointResponse(
         @CustomType.Parameter("connectionDetails") @Nullable List<ConnectionDetailsResponse> connectionDetails,
         @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("immutableResourceId") @Nullable String immutableResourceId,
+        @CustomType.Parameter("immutableSubscriptionId") @Nullable String immutableSubscriptionId,
+        @CustomType.Parameter("location") @Nullable String location,
         @CustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
         @CustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
         @CustomType.Parameter("privateLinkServiceProxies") @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
-        @CustomType.Parameter("vnetTrafficTag") String vnetTrafficTag) {
+        @CustomType.Parameter("vnetTrafficTag") @Nullable String vnetTrafficTag) {
         this.connectionDetails = connectionDetails;
         this.id = id;
+        this.immutableResourceId = immutableResourceId;
+        this.immutableSubscriptionId = immutableSubscriptionId;
+        this.location = location;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
         this.privateLinkServiceConnections = privateLinkServiceConnections;
         this.privateLinkServiceProxies = privateLinkServiceProxies;
@@ -75,6 +96,27 @@ public final class RemotePrivateEndpointResponse {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+    /**
+     * @return Original resource ID needed by Microsoft.Network.
+     * 
+     */
+    public Optional<String> immutableResourceId() {
+        return Optional.ofNullable(this.immutableResourceId);
+    }
+    /**
+     * @return Original subscription ID needed by Microsoft.Network.
+     * 
+     */
+    public Optional<String> immutableSubscriptionId() {
+        return Optional.ofNullable(this.immutableSubscriptionId);
+    }
+    /**
+     * @return ARM location of the remote private endpoint.
+     * 
+     */
+    public Optional<String> location() {
+        return Optional.ofNullable(this.location);
     }
     /**
      * @return List of private link service connections that need manual approval.
@@ -101,8 +143,8 @@ public final class RemotePrivateEndpointResponse {
      * @return Virtual network traffic tag.
      * 
      */
-    public String vnetTrafficTag() {
-        return this.vnetTrafficTag;
+    public Optional<String> vnetTrafficTag() {
+        return Optional.ofNullable(this.vnetTrafficTag);
     }
 
     public static Builder builder() {
@@ -116,10 +158,13 @@ public final class RemotePrivateEndpointResponse {
     public static final class Builder {
         private @Nullable List<ConnectionDetailsResponse> connectionDetails;
         private @Nullable String id;
+        private @Nullable String immutableResourceId;
+        private @Nullable String immutableSubscriptionId;
+        private @Nullable String location;
         private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
         private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
         private @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
-        private String vnetTrafficTag;
+        private @Nullable String vnetTrafficTag;
 
         public Builder() {
     	      // Empty
@@ -129,6 +174,9 @@ public final class RemotePrivateEndpointResponse {
     	      Objects.requireNonNull(defaults);
     	      this.connectionDetails = defaults.connectionDetails;
     	      this.id = defaults.id;
+    	      this.immutableResourceId = defaults.immutableResourceId;
+    	      this.immutableSubscriptionId = defaults.immutableSubscriptionId;
+    	      this.location = defaults.location;
     	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
     	      this.privateLinkServiceConnections = defaults.privateLinkServiceConnections;
     	      this.privateLinkServiceProxies = defaults.privateLinkServiceProxies;
@@ -144,6 +192,18 @@ public final class RemotePrivateEndpointResponse {
         }
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+        public Builder immutableResourceId(@Nullable String immutableResourceId) {
+            this.immutableResourceId = immutableResourceId;
+            return this;
+        }
+        public Builder immutableSubscriptionId(@Nullable String immutableSubscriptionId) {
+            this.immutableSubscriptionId = immutableSubscriptionId;
+            return this;
+        }
+        public Builder location(@Nullable String location) {
+            this.location = location;
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
@@ -167,11 +227,11 @@ public final class RemotePrivateEndpointResponse {
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyResponse... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
         }
-        public Builder vnetTrafficTag(String vnetTrafficTag) {
-            this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
+        public Builder vnetTrafficTag(@Nullable String vnetTrafficTag) {
+            this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }        public RemotePrivateEndpointResponse build() {
-            return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
+            return new RemotePrivateEndpointResponse(connectionDetails, id, immutableResourceId, immutableSubscriptionId, location, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
         }
     }
 }

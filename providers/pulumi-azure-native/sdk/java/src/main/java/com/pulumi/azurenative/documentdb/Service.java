@@ -112,7 +112,9 @@ public class Service extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:Service").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:Service").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:Service").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:Service").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:Service").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:Service").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

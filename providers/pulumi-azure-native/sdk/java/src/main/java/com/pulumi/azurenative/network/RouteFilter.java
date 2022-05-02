@@ -228,7 +228,8 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:RouteFilter").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:RouteFilter").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:RouteFilter").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:RouteFilter").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:RouteFilter").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:RouteFilter").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -304,7 +304,8 @@ public class Application extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:Application").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:Application").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:Application").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:Application").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:Application").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:Application").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

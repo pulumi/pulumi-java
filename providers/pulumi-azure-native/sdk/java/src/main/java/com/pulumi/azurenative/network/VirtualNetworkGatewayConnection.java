@@ -505,7 +505,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualNetworkGatewayConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualNetworkGatewayConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualNetworkGatewayConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkGatewayConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkGatewayConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualNetworkGatewayConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

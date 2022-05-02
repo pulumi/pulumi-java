@@ -11,6 +11,8 @@ import com.pulumi.azurenative.costmanagement.inputs.GetReportArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetReportByBillingAccountArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetReportByDepartmentArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetReportByResourceGroupNameArgs;
+import com.pulumi.azurenative.costmanagement.inputs.GetScheduledActionArgs;
+import com.pulumi.azurenative.costmanagement.inputs.GetScheduledActionByScopeArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetSettingArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetViewArgs;
 import com.pulumi.azurenative.costmanagement.inputs.GetViewByScopeArgs;
@@ -21,6 +23,8 @@ import com.pulumi.azurenative.costmanagement.outputs.GetReportByBillingAccountRe
 import com.pulumi.azurenative.costmanagement.outputs.GetReportByDepartmentResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetReportByResourceGroupNameResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetReportResult;
+import com.pulumi.azurenative.costmanagement.outputs.GetScheduledActionByScopeResult;
+import com.pulumi.azurenative.costmanagement.outputs.GetScheduledActionResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetSettingResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetViewByScopeResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetViewResult;
@@ -106,6 +110,28 @@ public final class CostmanagementFunctions {
     }
     public static CompletableFuture<GetReportByResourceGroupNameResult> getReportByResourceGroupName(GetReportByResourceGroupNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByResourceGroupName", TypeShape.of(GetReportByResourceGroupNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Scheduled action definition.
+     * API Version: 2022-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args) {
+        return getScheduledAction(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getScheduledAction", TypeShape.of(GetScheduledActionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Scheduled action definition.
+     * API Version: 2022-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args) {
+        return getScheduledActionByScope(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getScheduledActionByScope", TypeShape.of(GetScheduledActionByScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * State of the myscope setting.

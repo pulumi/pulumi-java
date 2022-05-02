@@ -160,7 +160,8 @@ public class PrivateLinkScope extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210517preview:PrivateLinkScope").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210520:PrivateLinkScope").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210610preview:PrivateLinkScope").build()),
-                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:PrivateLinkScope").build())
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:PrivateLinkScope").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20220310:PrivateLinkScope").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

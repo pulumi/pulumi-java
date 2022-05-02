@@ -115,7 +115,8 @@ public class QueueServiceProperties extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:QueueServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:QueueServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:QueueServiceProperties").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:QueueServiceProperties").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:QueueServiceProperties").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

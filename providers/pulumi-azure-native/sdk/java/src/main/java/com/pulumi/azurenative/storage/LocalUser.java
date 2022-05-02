@@ -210,7 +210,8 @@ public class LocalUser extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:LocalUser").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:LocalUser").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:LocalUser").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

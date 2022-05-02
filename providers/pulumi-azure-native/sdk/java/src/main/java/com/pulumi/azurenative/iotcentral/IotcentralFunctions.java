@@ -5,7 +5,9 @@ package com.pulumi.azurenative.iotcentral;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.iotcentral.inputs.GetAppArgs;
+import com.pulumi.azurenative.iotcentral.inputs.GetPrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.iotcentral.outputs.GetAppResult;
+import com.pulumi.azurenative.iotcentral.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -22,5 +24,16 @@ public final class IotcentralFunctions {
     }
     public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The private endpoint connection resource.
+     * API Version: 2021-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -212,7 +212,8 @@ public class NatRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NatRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NatRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NatRule").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NatRule").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NatRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

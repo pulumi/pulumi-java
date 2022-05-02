@@ -136,7 +136,9 @@ public class NotebookWorkspace extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:NotebookWorkspace").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:NotebookWorkspace").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:NotebookWorkspace").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:NotebookWorkspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

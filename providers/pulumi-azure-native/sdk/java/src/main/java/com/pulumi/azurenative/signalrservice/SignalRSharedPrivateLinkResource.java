@@ -182,7 +182,8 @@ public class SignalRSharedPrivateLinkResource extends com.pulumi.resources.Custo
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210401preview:SignalRSharedPrivateLinkResource").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210601preview:SignalRSharedPrivateLinkResource").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210901preview:SignalRSharedPrivateLinkResource").build()),
-                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalRSharedPrivateLinkResource").build())
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalRSharedPrivateLinkResource").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20220201:SignalRSharedPrivateLinkResource").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

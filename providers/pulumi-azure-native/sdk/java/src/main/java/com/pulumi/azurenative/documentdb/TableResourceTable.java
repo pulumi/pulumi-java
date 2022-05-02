@@ -157,7 +157,9 @@ public class TableResourceTable extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:TableResourceTable").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:TableResourceTable").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:TableResourceTable").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:TableResourceTable").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:TableResourceTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:TableResourceTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:TableResourceTable").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

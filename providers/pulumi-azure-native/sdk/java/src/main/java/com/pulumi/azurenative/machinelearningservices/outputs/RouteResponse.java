@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RouteResponse {
     /**
-     * @return The path for the route.
+     * @return [Required] The path for the route.
      * 
      */
     private final String path;
     /**
-     * @return The port for the route.
+     * @return [Required] The port for the route.
      * 
      */
     private final Integer port;
@@ -30,14 +30,14 @@ public final class RouteResponse {
     }
 
     /**
-     * @return The path for the route.
+     * @return [Required] The path for the route.
      * 
      */
     public String path() {
         return this.path;
     }
     /**
-     * @return The port for the route.
+     * @return [Required] The port for the route.
      * 
      */
     public Integer port() {

@@ -29,7 +29,7 @@ public final class CodeVersionResponse {
      */
     private final @Nullable Boolean isAnonymous;
     /**
-     * @return The path of the file/directory in the datastore.
+     * @return [Required] The path of the file/directory in the datastore.
      * 
      */
     private final String path;
@@ -82,7 +82,7 @@ public final class CodeVersionResponse {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
-     * @return The path of the file/directory in the datastore.
+     * @return [Required] The path of the file/directory in the datastore.
      * 
      */
     public String path() {

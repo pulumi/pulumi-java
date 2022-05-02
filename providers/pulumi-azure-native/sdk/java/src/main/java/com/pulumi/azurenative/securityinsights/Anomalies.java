@@ -163,7 +163,10 @@ public class Anomalies extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:Anomalies").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:Anomalies").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Anomalies").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Anomalies").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Anomalies").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Anomalies").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Anomalies").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

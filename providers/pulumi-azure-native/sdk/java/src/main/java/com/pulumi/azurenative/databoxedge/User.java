@@ -163,7 +163,9 @@ public class User extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:User").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:User").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:User").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:User").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:User").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:User").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:User").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

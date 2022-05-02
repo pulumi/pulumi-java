@@ -157,7 +157,9 @@ public class CassandraResourceCassandraTable extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:CassandraResourceCassandraTable").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraResourceCassandraTable").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraTable").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:CassandraResourceCassandraTable").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

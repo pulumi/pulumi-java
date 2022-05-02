@@ -237,7 +237,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210101preview:ArcSetting").build()),
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210901:ArcSetting").build()),
-                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:ArcSetting").build())
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:ArcSetting").build()),
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220301:ArcSetting").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

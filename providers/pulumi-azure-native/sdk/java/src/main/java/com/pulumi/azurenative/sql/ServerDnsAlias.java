@@ -113,7 +113,8 @@ public class ServerDnsAlias extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerDnsAlias").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerDnsAlias").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerDnsAlias").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerDnsAlias").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

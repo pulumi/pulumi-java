@@ -35,6 +35,21 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The table to restore data from.
+     * 
+     */
+    @Import(name="sourceTable")
+    private @Nullable Output<String> sourceTable;
+
+    /**
+     * @return The table to restore data from.
+     * 
+     */
+    public Optional<Output<String>> sourceTable() {
+        return Optional.ofNullable(this.sourceTable);
+    }
+
+    /**
      * The timestamp to start the restore from (UTC).
      * 
      */
@@ -53,6 +68,7 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
 
     private RestoredLogsArgs(RestoredLogsArgs $) {
         this.endRestoreTime = $.endRestoreTime;
+        this.sourceTable = $.sourceTable;
         this.startRestoreTime = $.startRestoreTime;
     }
 
@@ -93,6 +109,27 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder endRestoreTime(String endRestoreTime) {
             return endRestoreTime(Output.of(endRestoreTime));
+        }
+
+        /**
+         * @param sourceTable The table to restore data from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceTable(@Nullable Output<String> sourceTable) {
+            $.sourceTable = sourceTable;
+            return this;
+        }
+
+        /**
+         * @param sourceTable The table to restore data from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceTable(String sourceTable) {
+            return sourceTable(Output.of(sourceTable));
         }
 
         /**

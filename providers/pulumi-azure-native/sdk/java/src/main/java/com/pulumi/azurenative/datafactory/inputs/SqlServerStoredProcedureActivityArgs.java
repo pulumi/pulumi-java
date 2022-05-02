@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import com.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -14,7 +13,6 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -123,13 +121,13 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
      * 
      */
     @Import(name="storedProcedureParameters")
-    private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+    private @Nullable Output<Object> storedProcedureParameters;
 
     /**
      * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
-    public Optional<Output<Map<String,StoredProcedureParameterArgs>>> storedProcedureParameters() {
+    public Optional<Output<Object>> storedProcedureParameters() {
         return Optional.ofNullable(this.storedProcedureParameters);
     }
 
@@ -339,7 +337,7 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Output<Object> storedProcedureParameters) {
             $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
@@ -350,7 +348,7 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder storedProcedureParameters(Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
+        public Builder storedProcedureParameters(Object storedProcedureParameters) {
             return storedProcedureParameters(Output.of(storedProcedureParameters));
         }
 

@@ -108,12 +108,12 @@ public class Binding extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:appplatform/v20190501preview:Binding").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20200701:Binding").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20201101preview:Binding").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210601preview:Binding").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210901preview:Binding").build()),
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Binding").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Binding").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:Binding").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

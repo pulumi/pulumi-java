@@ -222,7 +222,8 @@ public class SqlVirtualMachineGroup extends com.pulumi.resources.CustomResource 
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20170301preview:SqlVirtualMachineGroup").build())
+                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20170301preview:SqlVirtualMachineGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20211101preview:SqlVirtualMachineGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

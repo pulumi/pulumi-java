@@ -109,7 +109,8 @@ public class OutboundFirewallRule extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:OutboundFirewallRule").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:OutboundFirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:OutboundFirewallRule").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:OutboundFirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:OutboundFirewallRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

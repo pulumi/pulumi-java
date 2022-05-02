@@ -31,14 +31,14 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of the resource group the template will be deployed to. The name is case insensitive.
+     * The name of the resource group. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
     /**
-     * @return The name of the resource group the template will be deployed to. The name is case insensitive.
+     * @return The name of the resource group. The name is case insensitive.
      * 
      */
     public Output<String> resourceGroupName() {
@@ -108,7 +108,7 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
         }
 
         /**
-         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
         }
 
         /**
-         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
          * 
          * @return builder
          * 

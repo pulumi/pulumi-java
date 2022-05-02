@@ -173,7 +173,8 @@ public class ServerAzureADAdministrator extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerAzureADAdministrator").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerAzureADAdministrator").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerAzureADAdministrator").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerAzureADAdministrator").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerAzureADAdministrator").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

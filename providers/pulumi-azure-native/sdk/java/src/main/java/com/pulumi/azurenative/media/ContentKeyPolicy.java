@@ -184,7 +184,8 @@ public class ContentKeyPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180601preview:ContentKeyPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20180701:ContentKeyPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:ContentKeyPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:ContentKeyPolicy").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:ContentKeyPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:ContentKeyPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

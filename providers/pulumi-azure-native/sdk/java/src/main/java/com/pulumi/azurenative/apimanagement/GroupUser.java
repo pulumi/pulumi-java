@@ -218,7 +218,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:GroupUser").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:GroupUser").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:GroupUser").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GroupUser").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GroupUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:GroupUser").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Name of policy configuration
+     * [Required] Name of policy configuration
      * 
      */
     @EnumType

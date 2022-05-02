@@ -157,7 +157,9 @@ public class GremlinResourceGremlinGraph extends com.pulumi.resources.CustomReso
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:GremlinResourceGremlinGraph").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:GremlinResourceGremlinGraph").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:GremlinResourceGremlinGraph").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GremlinResourceGremlinGraph").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:GremlinResourceGremlinGraph").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:GremlinResourceGremlinGraph").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

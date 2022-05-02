@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.azurenative.datafactory.enums.CredentialReferenceType;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +39,13 @@ public final class CredentialReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-    private Output<String> type;
+    private Output<Either<String,CredentialReferenceType>> type;
 
     /**
      * @return Credential reference type.
      * 
      */
-    public Output<String> type() {
+    public Output<Either<String,CredentialReferenceType>> type() {
         return this.type;
     }
 
@@ -99,7 +101,7 @@ public final class CredentialReferenceArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder type(Output<String> type) {
+        public Builder type(Output<Either<String,CredentialReferenceType>> type) {
             $.type = type;
             return this;
         }
@@ -110,8 +112,28 @@ public final class CredentialReferenceArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder type(String type) {
+        public Builder type(Either<String,CredentialReferenceType> type) {
             return type(Output.of(type));
+        }
+
+        /**
+         * @param type Credential reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        /**
+         * @param type Credential reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(CredentialReferenceType type) {
+            return type(Either.ofRight(type));
         }
 
         public CredentialReferenceArgs build() {

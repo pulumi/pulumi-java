@@ -166,7 +166,8 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:managedidentity/v20150831preview:UserAssignedIdentity").build()),
-                Output.of(Alias.builder().type("azure-native:managedidentity/v20181130:UserAssignedIdentity").build())
+                Output.of(Alias.builder().type("azure-native:managedidentity/v20181130:UserAssignedIdentity").build()),
+                Output.of(Alias.builder().type("azure-native:managedidentity/v20210930preview:UserAssignedIdentity").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

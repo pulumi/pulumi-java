@@ -6,6 +6,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,6 +36,21 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
      */
     public Output<String> endpointType() {
         return this.endpointType;
+    }
+
+    /**
+     * Storage queue message time to live in seconds.
+     * 
+     */
+    @Import(name="queueMessageTimeToLiveInSeconds")
+    private @Nullable Output<Double> queueMessageTimeToLiveInSeconds;
+
+    /**
+     * @return Storage queue message time to live in seconds.
+     * 
+     */
+    public Optional<Output<Double>> queueMessageTimeToLiveInSeconds() {
+        return Optional.ofNullable(this.queueMessageTimeToLiveInSeconds);
     }
 
     /**
@@ -71,6 +87,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
 
     private StorageQueueEventSubscriptionDestinationArgs(StorageQueueEventSubscriptionDestinationArgs $) {
         this.endpointType = $.endpointType;
+        this.queueMessageTimeToLiveInSeconds = $.queueMessageTimeToLiveInSeconds;
         this.queueName = $.queueName;
         this.resourceId = $.resourceId;
     }
@@ -114,6 +131,27 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
          */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
+        }
+
+        /**
+         * @param queueMessageTimeToLiveInSeconds Storage queue message time to live in seconds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queueMessageTimeToLiveInSeconds(@Nullable Output<Double> queueMessageTimeToLiveInSeconds) {
+            $.queueMessageTimeToLiveInSeconds = queueMessageTimeToLiveInSeconds;
+            return this;
+        }
+
+        /**
+         * @param queueMessageTimeToLiveInSeconds Storage queue message time to live in seconds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queueMessageTimeToLiveInSeconds(Double queueMessageTimeToLiveInSeconds) {
+            return queueMessageTimeToLiveInSeconds(Output.of(queueMessageTimeToLiveInSeconds));
         }
 
         /**

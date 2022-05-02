@@ -128,7 +128,8 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190401preview:RegistrationDefinition").build()),
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190601:RegistrationDefinition").build()),
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190901:RegistrationDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:managedservices/v20200201preview:RegistrationDefinition").build())
+                Output.of(Alias.builder().type("azure-native:managedservices/v20200201preview:RegistrationDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20220101preview:RegistrationDefinition").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

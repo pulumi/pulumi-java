@@ -311,7 +311,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20211101preview:FluxConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:FluxConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:FluxConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220301:FluxConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

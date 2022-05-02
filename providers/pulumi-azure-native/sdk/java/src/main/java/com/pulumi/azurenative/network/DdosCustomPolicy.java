@@ -214,7 +214,8 @@ public class DdosCustomPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:DdosCustomPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:DdosCustomPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:DdosCustomPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:DdosCustomPolicy").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:DdosCustomPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:DdosCustomPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

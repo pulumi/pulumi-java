@@ -50,14 +50,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=Either.class, parameters={CommandJobResponse.class, SweepJobResponse.class})
     private Output<Either<CommandJobResponse,SweepJobResponse>> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<Either<CommandJobResponse,SweepJobResponse>> properties() {

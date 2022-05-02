@@ -48,14 +48,14 @@ public class CodeVersion extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=CodeVersionResponse.class, parameters={})
     private Output<CodeVersionResponse> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<CodeVersionResponse> properties() {

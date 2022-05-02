@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Defines supported metric goals for hyperparameter tuning
+     * [Required] Defines supported metric goals for hyperparameter tuning
      * 
      */
     @EnumType

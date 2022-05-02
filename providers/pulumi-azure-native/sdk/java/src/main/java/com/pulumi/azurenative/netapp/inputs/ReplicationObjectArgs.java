@@ -86,15 +86,15 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
      * Schedule
      * 
      */
-    @Import(name="replicationSchedule", required=true)
-    private Output<Either<String,ReplicationSchedule>> replicationSchedule;
+    @Import(name="replicationSchedule")
+    private @Nullable Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
     /**
      * @return Schedule
      * 
      */
-    public Output<Either<String,ReplicationSchedule>> replicationSchedule() {
-        return this.replicationSchedule;
+    public Optional<Output<Either<String,ReplicationSchedule>>> replicationSchedule() {
+        return Optional.ofNullable(this.replicationSchedule);
     }
 
     private ReplicationObjectArgs() {}
@@ -235,7 +235,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {
+        public Builder replicationSchedule(@Nullable Output<Either<String,ReplicationSchedule>> replicationSchedule) {
             $.replicationSchedule = replicationSchedule;
             return this;
         }
@@ -272,7 +272,6 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
 
         public ReplicationObjectArgs build() {
             $.remoteVolumeResourceId = Objects.requireNonNull($.remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
-            $.replicationSchedule = Objects.requireNonNull($.replicationSchedule, "expected parameter 'replicationSchedule' to be non-null");
             return $;
         }
     }

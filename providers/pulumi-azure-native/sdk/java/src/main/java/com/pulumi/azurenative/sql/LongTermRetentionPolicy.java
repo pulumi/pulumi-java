@@ -157,7 +157,8 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:LongTermRetentionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:LongTermRetentionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:LongTermRetentionPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:LongTermRetentionPolicy").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:LongTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:LongTermRetentionPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

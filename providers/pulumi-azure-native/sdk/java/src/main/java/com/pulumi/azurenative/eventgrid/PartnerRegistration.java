@@ -338,7 +338,8 @@ public class PartnerRegistration extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:PartnerRegistration").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:PartnerRegistration").build()),
-                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerRegistration").build())
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerRegistration").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:PartnerRegistration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

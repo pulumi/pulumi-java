@@ -186,7 +186,8 @@ public class Gallery extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:compute/v20190701:Gallery").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20191201:Gallery").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:Gallery").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210701:Gallery").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:Gallery").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211001:Gallery").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

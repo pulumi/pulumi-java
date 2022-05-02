@@ -187,7 +187,8 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:compute/v20190701:GalleryImageVersion").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20191201:GalleryImageVersion").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210701:GalleryImageVersion").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:GalleryImageVersion").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211001:GalleryImageVersion").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

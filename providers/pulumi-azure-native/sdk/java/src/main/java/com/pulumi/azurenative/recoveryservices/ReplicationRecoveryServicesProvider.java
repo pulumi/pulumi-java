@@ -133,7 +133,9 @@ public class ReplicationRecoveryServicesProvider extends com.pulumi.resources.Cu
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationRecoveryServicesProvider").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationRecoveryServicesProvider").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationRecoveryServicesProvider").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationRecoveryServicesProvider").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationRecoveryServicesProvider").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

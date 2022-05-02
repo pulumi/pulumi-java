@@ -166,7 +166,8 @@ public class B2CTenant extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20190101preview:B2CTenant").build())
+                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20190101preview:B2CTenant").build()),
+                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20210401:B2CTenant").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

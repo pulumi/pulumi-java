@@ -304,7 +304,10 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:ActivityCustomEntityQuery").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ActivityCustomEntityQuery").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ActivityCustomEntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:ActivityCustomEntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:ActivityCustomEntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:ActivityCustomEntityQuery").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -134,7 +134,9 @@ public class ReplicationProtectionContainerMapping extends com.pulumi.resources.
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationProtectionContainerMapping").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationProtectionContainerMapping").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationProtectionContainerMapping").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationProtectionContainerMapping").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationProtectionContainerMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationProtectionContainerMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationProtectionContainerMapping").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

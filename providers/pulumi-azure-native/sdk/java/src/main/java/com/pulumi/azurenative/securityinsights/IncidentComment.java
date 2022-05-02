@@ -183,7 +183,11 @@ public class IncidentComment extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:IncidentComment").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:IncidentComment").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210401:IncidentComment").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:IncidentComment").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:IncidentComment").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:IncidentComment").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:IncidentComment").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:IncidentComment").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:IncidentComment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

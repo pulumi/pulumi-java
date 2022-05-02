@@ -165,7 +165,9 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210701:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

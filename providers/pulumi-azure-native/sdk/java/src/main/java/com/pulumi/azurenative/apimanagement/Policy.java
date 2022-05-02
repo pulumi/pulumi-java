@@ -132,7 +132,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Policy").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Policy").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Policy").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Policy").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Policy").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Policy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

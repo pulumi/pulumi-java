@@ -224,7 +224,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:quantum/v20191104preview:Workspace").build())
+                Output.of(Alias.builder().type("azure-native:quantum/v20191104preview:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:quantum/v20220110preview:Workspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

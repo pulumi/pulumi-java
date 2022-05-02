@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Type of deployment scaling algorithm
+     * [Required] Type of deployment scaling algorithm
      * 
      */
     @EnumType

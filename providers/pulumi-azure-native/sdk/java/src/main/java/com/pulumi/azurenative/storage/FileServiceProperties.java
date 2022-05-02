@@ -161,7 +161,8 @@ public class FileServiceProperties extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:FileServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:FileServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:FileServiceProperties").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:FileServiceProperties").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:FileServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:FileServiceProperties").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

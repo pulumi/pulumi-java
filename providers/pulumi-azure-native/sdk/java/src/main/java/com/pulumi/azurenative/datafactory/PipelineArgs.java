@@ -36,6 +36,7 @@ import com.pulumi.azurenative.datafactory.inputs.LookupActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import com.pulumi.azurenative.datafactory.inputs.PipelineFolderArgs;
 import com.pulumi.azurenative.datafactory.inputs.PipelinePolicyArgs;
+import com.pulumi.azurenative.datafactory.inputs.ScriptActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SetVariableActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SqlServerStoredProcedureActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SwitchActivityArgs;

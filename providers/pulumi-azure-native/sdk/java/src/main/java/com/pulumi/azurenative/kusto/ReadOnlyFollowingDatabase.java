@@ -240,7 +240,8 @@ public class ReadOnlyFollowingDatabase extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:ReadOnlyFollowingDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:ReadOnlyFollowingDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadOnlyFollowingDatabase").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:ReadOnlyFollowingDatabase").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

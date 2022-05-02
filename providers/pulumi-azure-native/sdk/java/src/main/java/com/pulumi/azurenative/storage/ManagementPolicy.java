@@ -131,7 +131,8 @@ public class ManagementPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:ManagementPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:ManagementPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:ManagementPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:ManagementPolicy").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:ManagementPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:ManagementPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

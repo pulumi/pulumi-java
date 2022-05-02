@@ -147,7 +147,8 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiSchema").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiSchema").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiSchema").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiSchema").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiSchema").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

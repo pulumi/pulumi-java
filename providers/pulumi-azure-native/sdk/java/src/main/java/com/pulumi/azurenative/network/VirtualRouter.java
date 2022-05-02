@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * VirtualRouter Resource.
- * API Version: 2020-08-01.
+ * API Version: 2021-08-01.
  * 
  * ## Example Usage
  * 
@@ -237,7 +237,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualRouter").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualRouter").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualRouter").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualRouter").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualRouter").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualRouter").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

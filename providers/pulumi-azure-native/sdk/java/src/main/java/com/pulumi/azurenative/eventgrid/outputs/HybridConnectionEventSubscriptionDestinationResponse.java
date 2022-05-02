@@ -3,14 +3,23 @@
 
 package com.pulumi.azurenative.eventgrid.outputs;
 
+import com.pulumi.azurenative.eventgrid.outputs.DynamicDeliveryAttributeMappingResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StaticDeliveryAttributeMappingResponse;
+import com.pulumi.core.Either;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class HybridConnectionEventSubscriptionDestinationResponse {
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
     /**
      * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;HybridConnection&#39;.
@@ -25,12 +34,21 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
 
     @CustomType.Constructor
     private HybridConnectionEventSubscriptionDestinationResponse(
+        @CustomType.Parameter("deliveryAttributeMappings") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings,
         @CustomType.Parameter("endpointType") String endpointType,
         @CustomType.Parameter("resourceId") @Nullable String resourceId) {
+        this.deliveryAttributeMappings = deliveryAttributeMappings;
         this.endpointType = endpointType;
         this.resourceId = resourceId;
     }
 
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings() {
+        return this.deliveryAttributeMappings == null ? List.of() : this.deliveryAttributeMappings;
+    }
     /**
      * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;HybridConnection&#39;.
@@ -56,6 +74,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
     }
 
     public static final class Builder {
+        private @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
         private String endpointType;
         private @Nullable String resourceId;
 
@@ -65,10 +84,18 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
 
         public Builder(HybridConnectionEventSubscriptionDestinationResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.deliveryAttributeMappings = defaults.deliveryAttributeMappings;
     	      this.endpointType = defaults.endpointType;
     	      this.resourceId = defaults.resourceId;
         }
 
+        public Builder deliveryAttributeMappings(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings) {
+            this.deliveryAttributeMappings = deliveryAttributeMappings;
+            return this;
+        }
+        public Builder deliveryAttributeMappings(Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>... deliveryAttributeMappings) {
+            return deliveryAttributeMappings(List.of(deliveryAttributeMappings));
+        }
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
@@ -77,7 +104,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }        public HybridConnectionEventSubscriptionDestinationResponse build() {
-            return new HybridConnectionEventSubscriptionDestinationResponse(endpointType, resourceId);
+            return new HybridConnectionEventSubscriptionDestinationResponse(deliveryAttributeMappings, endpointType, resourceId);
         }
     }
 }

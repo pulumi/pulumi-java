@@ -197,7 +197,8 @@ public class DatabasePrincipalAssignment extends com.pulumi.resources.CustomReso
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:DatabasePrincipalAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:DatabasePrincipalAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:DatabasePrincipalAssignment").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:DatabasePrincipalAssignment").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:DatabasePrincipalAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:DatabasePrincipalAssignment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

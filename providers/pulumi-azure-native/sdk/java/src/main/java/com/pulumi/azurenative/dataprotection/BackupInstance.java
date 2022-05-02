@@ -128,7 +128,10 @@ public class BackupInstance extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210601preview:BackupInstance").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210701:BackupInstance").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20211001preview:BackupInstance").build()),
-                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupInstance").build())
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupInstance").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220101:BackupInstance").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220201preview:BackupInstance").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220301:BackupInstance").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

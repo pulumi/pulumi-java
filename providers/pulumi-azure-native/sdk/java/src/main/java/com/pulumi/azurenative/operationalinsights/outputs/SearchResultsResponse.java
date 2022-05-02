@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SearchResultsResponse {
     /**
-     * @return Search results table&#39;s Description.
+     * @return Search job Description.
      * 
      */
     private final @Nullable String description;
@@ -33,7 +33,7 @@ public final class SearchResultsResponse {
      */
     private final @Nullable String query;
     /**
-     * @return The table to search data from.
+     * @return The table used in the search job.
      * 
      */
     private final String sourceTable;
@@ -60,7 +60,7 @@ public final class SearchResultsResponse {
     }
 
     /**
-     * @return Search results table&#39;s Description.
+     * @return Search job Description.
      * 
      */
     public Optional<String> description() {
@@ -88,7 +88,7 @@ public final class SearchResultsResponse {
         return Optional.ofNullable(this.query);
     }
     /**
-     * @return The table to search data from.
+     * @return The table used in the search job.
      * 
      */
     public String sourceTable() {

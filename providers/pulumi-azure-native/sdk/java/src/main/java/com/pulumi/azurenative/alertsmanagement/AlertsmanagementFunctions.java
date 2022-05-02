@@ -5,10 +5,8 @@ package com.pulumi.azurenative.alertsmanagement;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.alertsmanagement.inputs.GetActionRuleByNameArgs;
-import com.pulumi.azurenative.alertsmanagement.inputs.GetHealthAlertArgs;
 import com.pulumi.azurenative.alertsmanagement.inputs.GetSmartDetectorAlertRuleArgs;
 import com.pulumi.azurenative.alertsmanagement.outputs.GetActionRuleByNameResult;
-import com.pulumi.azurenative.alertsmanagement.outputs.GetHealthAlertResult;
 import com.pulumi.azurenative.alertsmanagement.outputs.GetSmartDetectorAlertRuleResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -26,17 +24,6 @@ public final class AlertsmanagementFunctions {
     }
     public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * The health alert resource.
-     * API Version: 2020-08-04-preview.
-     * 
-     */
-    public static CompletableFuture<GetHealthAlertResult> getHealthAlert(GetHealthAlertArgs args) {
-        return getHealthAlert(args, InvokeOptions.Empty);
-    }
-    public static CompletableFuture<GetHealthAlertResult> getHealthAlert(GetHealthAlertArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getHealthAlert", TypeShape.of(GetHealthAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The alert rule information

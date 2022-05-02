@@ -258,7 +258,9 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:IoTRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:IoTRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:IoTRole").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:IoTRole").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:IoTRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:IoTRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:IoTRole").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

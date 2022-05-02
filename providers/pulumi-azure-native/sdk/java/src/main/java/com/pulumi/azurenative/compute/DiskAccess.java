@@ -171,7 +171,8 @@ public class DiskAccess extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:DiskAccess").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20201201:DiskAccess").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20210401:DiskAccess").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskAccess").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211201:DiskAccess").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

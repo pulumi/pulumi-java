@@ -112,7 +112,9 @@ public class CassandraDataCenter extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:CassandraDataCenter").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraDataCenter").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraDataCenter").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraDataCenter").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraDataCenter").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:CassandraDataCenter").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:CassandraDataCenter").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

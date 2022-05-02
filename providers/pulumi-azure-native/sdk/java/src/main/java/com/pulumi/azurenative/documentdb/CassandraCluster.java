@@ -157,7 +157,9 @@ public class CassandraCluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:CassandraCluster").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraCluster").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraCluster").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraCluster").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraCluster").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:CassandraCluster").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:CassandraCluster").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

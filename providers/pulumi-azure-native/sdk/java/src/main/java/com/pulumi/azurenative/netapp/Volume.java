@@ -462,7 +462,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401:Volume").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Volume").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210601:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Volume").build())
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Volume").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20211001:Volume").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

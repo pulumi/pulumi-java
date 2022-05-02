@@ -30,7 +30,7 @@ public final class BlobStreamInputDataSourceResponse {
      */
     private final @Nullable String pathPattern;
     /**
-     * @return The partition count of the blob input data source. Range 1 - 256.
+     * @return The partition count of the blob input data source. Range 1 - 1024.
      * 
      */
     private final @Nullable Integer sourcePartitionCount;
@@ -91,7 +91,7 @@ public final class BlobStreamInputDataSourceResponse {
         return Optional.ofNullable(this.pathPattern);
     }
     /**
-     * @return The partition count of the blob input data source. Range 1 - 256.
+     * @return The partition count of the blob input data source. Range 1 - 1024.
      * 
      */
     public Optional<Integer> sourcePartitionCount() {

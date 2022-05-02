@@ -25,7 +25,14 @@ import java.util.StringJoiner;
         StringNotIn("StringNotIn"),
         StringBeginsWith("StringBeginsWith"),
         StringEndsWith("StringEndsWith"),
-        StringContains("StringContains");
+        StringContains("StringContains"),
+        NumberInRange("NumberInRange"),
+        NumberNotInRange("NumberNotInRange"),
+        StringNotBeginsWith("StringNotBeginsWith"),
+        StringNotEndsWith("StringNotEndsWith"),
+        StringNotContains("StringNotContains"),
+        IsNullOrUndefined("IsNullOrUndefined"),
+        IsNotNull("IsNotNull");
 
         private final String value;
 

@@ -194,7 +194,8 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:ConnectionMonitorTest").build())
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:ConnectionMonitorTest").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20220101:ConnectionMonitorTest").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -150,7 +150,9 @@ public class Task extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:datamigration/v20180419:Task").build()),
                 Output.of(Alias.builder().type("azure-native:datamigration/v20180715preview:Task").build()),
                 Output.of(Alias.builder().type("azure-native:datamigration/v20210630:Task").build()),
-                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:Task").build())
+                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220130preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220330preview:Task").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

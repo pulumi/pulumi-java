@@ -194,7 +194,8 @@ public class SecurityUserConfiguration extends com.pulumi.resources.CustomResour
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20210201preview:SecurityUserConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SecurityUserConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SecurityUserConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:SecurityUserConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

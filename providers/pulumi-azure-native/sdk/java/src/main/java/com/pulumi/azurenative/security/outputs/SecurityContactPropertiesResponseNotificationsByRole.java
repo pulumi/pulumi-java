@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityContactPropertiesResponseNotificationsByRole {
     /**
-     * @return Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * @return Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
      * 
      */
     private final @Nullable List<String> roles;
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     private final @Nullable String state;
@@ -32,14 +32,14 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
     }
 
     /**
-     * @return Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * @return Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
      * 
      */
     public List<String> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     public Optional<String> state() {

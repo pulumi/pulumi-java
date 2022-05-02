@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OnlineEndpointResponse {
     /**
-     * @return Inference endpoint authentication mode type
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     private final String authMode;
@@ -76,7 +76,7 @@ public final class OnlineEndpointResponse {
     }
 
     /**
-     * @return Inference endpoint authentication mode type
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     public String authMode() {

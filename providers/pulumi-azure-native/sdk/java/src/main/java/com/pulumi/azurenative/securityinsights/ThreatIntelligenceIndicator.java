@@ -124,7 +124,11 @@ public class ThreatIntelligenceIndicator extends com.pulumi.resources.CustomReso
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:ThreatIntelligenceIndicator").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210401:ThreatIntelligenceIndicator").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ThreatIntelligenceIndicator").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ThreatIntelligenceIndicator").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:ThreatIntelligenceIndicator").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:ThreatIntelligenceIndicator").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:ThreatIntelligenceIndicator").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:ThreatIntelligenceIndicator").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -10,12 +10,14 @@ import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkuPreviewArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkusArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.ListVendorSkusCredentialArgs;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetDeviceResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetNetworkFunctionResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetVendorResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetVendorSkuPreviewResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetVendorSkusResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.ListDeviceRegistrationKeyResult;
+import com.pulumi.azurenative.hybridnetwork.outputs.ListVendorSkusCredentialResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -87,5 +89,16 @@ public final class HybridnetworkFunctions {
     }
     public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(ListDeviceRegistrationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Sku credential definition.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListVendorSkusCredentialResult> listVendorSkusCredential(ListVendorSkusCredentialArgs args) {
+        return listVendorSkusCredential(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListVendorSkusCredentialResult> listVendorSkusCredential(ListVendorSkusCredentialArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listVendorSkusCredential", TypeShape.of(ListVendorSkusCredentialResult.class), args, Utilities.withVersion(options));
     }
 }

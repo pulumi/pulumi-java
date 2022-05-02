@@ -264,7 +264,9 @@ public class Share extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Share").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Share").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Share").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Share").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Share").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Share").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Share").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

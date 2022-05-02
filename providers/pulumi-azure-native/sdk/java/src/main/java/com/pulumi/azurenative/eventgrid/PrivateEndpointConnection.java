@@ -155,6 +155,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:PrivateEndpointConnection").build())
             ))
             .build();

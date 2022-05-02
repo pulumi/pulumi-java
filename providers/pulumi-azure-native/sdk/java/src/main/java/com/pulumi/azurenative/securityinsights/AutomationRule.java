@@ -227,7 +227,11 @@ public class AutomationRule extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:AutomationRule").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AutomationRule").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AutomationRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:AutomationRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:AutomationRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:AutomationRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:AutomationRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

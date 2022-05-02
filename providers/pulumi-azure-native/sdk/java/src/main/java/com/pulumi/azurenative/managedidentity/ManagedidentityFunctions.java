@@ -5,7 +5,9 @@ package com.pulumi.azurenative.managedidentity;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.managedidentity.inputs.GetUserAssignedIdentityArgs;
+import com.pulumi.azurenative.managedidentity.inputs.ListUserAssignedIdentityAssociatedResourcesArgs;
 import com.pulumi.azurenative.managedidentity.outputs.GetUserAssignedIdentityResult;
+import com.pulumi.azurenative.managedidentity.outputs.ListUserAssignedIdentityAssociatedResourcesResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -22,5 +24,16 @@ public final class ManagedidentityFunctions {
     }
     public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedidentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Azure resources returned by the resource action to get a list of assigned resources.
+     * API Version: 2021-09-30-preview.
+     * 
+     */
+    public static CompletableFuture<ListUserAssignedIdentityAssociatedResourcesResult> listUserAssignedIdentityAssociatedResources(ListUserAssignedIdentityAssociatedResourcesArgs args) {
+        return listUserAssignedIdentityAssociatedResources(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListUserAssignedIdentityAssociatedResourcesResult> listUserAssignedIdentityAssociatedResources(ListUserAssignedIdentityAssociatedResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:managedidentity:listUserAssignedIdentityAssociatedResources", TypeShape.of(ListUserAssignedIdentityAssociatedResourcesResult.class), args, Utilities.withVersion(options));
     }
 }
