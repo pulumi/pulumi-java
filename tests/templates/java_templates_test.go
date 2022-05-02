@@ -4,6 +4,7 @@ package templates
 
 import (
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -13,6 +14,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 	ptesting "github.com/pulumi/pulumi/sdk/v3/go/common/testing"
+	"github.com/stretchr/testify/assert"
 )
 
 type templateConfig struct {
@@ -52,6 +54,14 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 	templateName := templateCfg.name
 	e := ptesting.NewEnvironment(t)
 	defer deleteIfNotFailed(e)
+
+	tDir := templateDir(t, templateName)
+	tempFileEditCloser, err := fixupVersions(tDir)
+	assert.NoError(t, err)
+	if tempFileEditCloser != nil {
+		defer tempFileEditCloser.Close()
+	}
+
 	cmdArgs := []string{"new", templateDir(t, templateName), "-f", "--yes", "-s", "template-test"}
 	e.RunCommand("pulumi", cmdArgs...)
 	if t.Failed() {
@@ -63,7 +73,7 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 		// Note: must override PrepareProject to support Java,
 		// even if the override is a no-op.
 		PrepareProject: func(info *engine.Projinfo) error {
-			return fixupVersions(info)
+			return nil
 		},
 	}.With(previewOnlyOptions())
 	integration.ProgramTest(t, &opts)
@@ -96,17 +106,17 @@ func deleteIfNotFailed(e *ptesting.Environment) {
 	}
 }
 
-func fixupVersions(info *engine.Projinfo) error {
-	pom := filepath.Join(info.Root, "pom.xml")
+func fixupVersions(root string) (io.Closer, error) {
+	pom := filepath.Join(root, "pom.xml")
 	hasPom, err := fileExists(pom)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	buildGradle := filepath.Join(info.Root, "app", "build.gradle")
+	buildGradle := filepath.Join(root, "app", "build.gradle")
 	hasBuildGradle, err := fileExists(buildGradle)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	if hasPom {
@@ -115,10 +125,10 @@ func fixupVersions(info *engine.Projinfo) error {
 		return fixupGradleVersions(buildGradle)
 	}
 
-	return nil
+	return nil, nil
 }
 
-func fixupPomVersions(pom string) error {
+func fixupPomVersions(pom string) (io.Closer, error) {
 	versions := versionsFromEnv()
 	vpat := regexp.MustCompile("<version>[^<]+</version>")
 	return editFile(pom, func(bytes []byte) []byte {
@@ -134,7 +144,7 @@ func fixupPomVersions(pom string) error {
 	})
 }
 
-func fixupGradleVersions(buildGradle string) error {
+func fixupGradleVersions(buildGradle string) (io.Closer, error) {
 	versions := versionsFromEnv()
 	return editFile(buildGradle, func(bytes []byte) []byte {
 		for dep, ver := range versions {
@@ -177,10 +187,21 @@ func fileExists(path string) (bool, error) {
 	return true, err
 }
 
-func editFile(path string, edit func([]byte) []byte) error {
+// Edits a file and returns a closer to undo the edit.
+func editFile(path string, edit func([]byte) []byte) (io.Closer, error) {
 	bytes, err := ioutil.ReadFile(path)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	return ioutil.WriteFile(path, edit(bytes), 0600)
+	err = ioutil.WriteFile(path, edit(bytes), 0600)
+	return revertFile{path, bytes}, err
+}
+
+type revertFile struct {
+	path  string
+	bytes []byte
+}
+
+func (rf revertFile) Close() error {
+	return ioutil.WriteFile(rf.path, rf.bytes, 0600)
 }
