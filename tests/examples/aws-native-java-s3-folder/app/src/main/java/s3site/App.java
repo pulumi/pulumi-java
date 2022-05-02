@@ -2,7 +2,6 @@
 package s3site;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.asset.FileAsset;
 import com.pulumi.aws.s3.BucketObject;
@@ -24,7 +23,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         final var siteBucket = new Bucket("s3-website-bucket",
                 BucketArgs.builder().websiteConfiguration(BucketWebsiteConfigurationArgs.builder()
                         .indexDocument("index.html")
@@ -57,8 +56,6 @@ public class App {
 
         ctx.export("bucketName", siteBucket.bucketName());
         ctx.export("websiteUrl", siteBucket.websiteURL());
-
-        return ctx.exports();
     }
 
     private static void forEachFileInTree(String siteDir, BiConsumer<Path, String> consumer) {

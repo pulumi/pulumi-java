@@ -1,7 +1,6 @@
 package com.pulumi.example.infra;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.asset.FileArchive;
 import com.pulumi.azurenative.resources.ResourceGroup;
@@ -37,7 +36,7 @@ public class Main {
         Pulumi.run(Main::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         // Create a separate resource group for this example.
         var resourceGroup = new ResourceGroup("linux-fn-rg");
 
@@ -107,7 +106,6 @@ public class Main {
                 "https://%s/api/hello", // 'hello' corresponds to app/src/main/function/hello
                 app.apply(WebApp::defaultHostName)
         ));
-        return ctx.exports();
     }
 
     static Output<String> getConnectionString(Output<String> resourceGroupName, Output<String> accountName) {
