@@ -26,6 +26,18 @@ public final class Config {
         return Codegen.stringProp("context").config(config).get();
     }
 /**
+ * BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
+ * This feature is in developer preview, and is disabled by default.
+ * 
+ * This config can be specified in the following ways using this precedence:
+ * 1. This `enableConfigMapMutable` parameter.
+ * 2. The `PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE` environment variable.
+ * 
+ */
+    public Optional<Boolean> enableConfigMapMutable() {
+        return Codegen.booleanProp("enableConfigMapMutable").config(config).get();
+    }
+/**
  * BETA FEATURE - If present and set to true, enable server-side diff calculations.
  * This feature is in developer preview, and is disabled by default.
  * 
