@@ -18,6 +18,7 @@ on:
       - gcp/v*.*.*
       - google-native/v*.*.*
       - kubernetes/v*.*.*
+      - oci/v*.*.*
       - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
@@ -175,15 +176,16 @@ jobs:
       fail-fast: false
       matrix:
         provider:
-        - random
-        - azure-native
-        - azuread
-        - google-native
-        - gcp
         - aws
         - aws-native
-        - kubernetes
+        - azure-native
+        - azuread
         - docker
+        - gcp
+        - google-native
+        - kubernetes
+        - oci
+        - random
     steps:
       - uses: actions/checkout@v2
       - run: make submodule_update

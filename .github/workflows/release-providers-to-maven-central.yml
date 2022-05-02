@@ -16,6 +16,7 @@ on:
       - gcp/v*.*.*
       - google-native/v*.*.*
       - kubernetes/v*.*.*
+      - oci/v*.*.*
       - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
