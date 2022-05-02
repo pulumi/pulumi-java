@@ -44,7 +44,7 @@ repositories {
 
 def prerelease = version.contains("+")
 
-def defaultPulumiJavaSdkVersion = "0.0.1";
+def defaultPulumiJavaSdkVersion = "0.1.0";
 
 def pulumiJavaSdkVersion = prerelease
     ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)
