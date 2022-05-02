@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.azurenative.datafactory.enums.ManagedVirtualNetworkReferenceType;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +39,13 @@ public final class ManagedVirtualNetworkReferenceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-    private Output<String> type;
+    private Output<Either<String,ManagedVirtualNetworkReferenceType>> type;
 
     /**
      * @return Managed Virtual Network reference type.
      * 
      */
-    public Output<String> type() {
+    public Output<Either<String,ManagedVirtualNetworkReferenceType>> type() {
         return this.type;
     }
 
@@ -99,7 +101,7 @@ public final class ManagedVirtualNetworkReferenceArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder type(Output<String> type) {
+        public Builder type(Output<Either<String,ManagedVirtualNetworkReferenceType>> type) {
             $.type = type;
             return this;
         }
@@ -110,8 +112,28 @@ public final class ManagedVirtualNetworkReferenceArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder type(String type) {
+        public Builder type(Either<String,ManagedVirtualNetworkReferenceType> type) {
             return type(Output.of(type));
+        }
+
+        /**
+         * @param type Managed Virtual Network reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        /**
+         * @param type Managed Virtual Network reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(ManagedVirtualNetworkReferenceType type) {
+            return type(Either.ofRight(type));
         }
 
         public ManagedVirtualNetworkReferenceArgs build() {

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
+import com.pulumi.azurenative.datafactory.inputs.ExecutePipelineActivityPolicyArgs;
 import com.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import com.pulumi.core.Output;
@@ -103,6 +104,21 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     }
 
     /**
+     * Execute pipeline activity policy.
+     * 
+     */
+    @Import(name="policy")
+    private @Nullable Output<ExecutePipelineActivityPolicyArgs> policy;
+
+    /**
+     * @return Execute pipeline activity policy.
+     * 
+     */
+    public Optional<Output<ExecutePipelineActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
+    }
+
+    /**
      * Type of activity.
      * Expected value is &#39;ExecutePipeline&#39;.
      * 
@@ -157,6 +173,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
         this.name = $.name;
         this.parameters = $.parameters;
         this.pipeline = $.pipeline;
+        this.policy = $.policy;
         this.type = $.type;
         this.userProperties = $.userProperties;
         this.waitOnCompletion = $.waitOnCompletion;
@@ -293,6 +310,27 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
          */
         public Builder pipeline(PipelineReferenceArgs pipeline) {
             return pipeline(Output.of(pipeline));
+        }
+
+        /**
+         * @param policy Execute pipeline activity policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policy(@Nullable Output<ExecutePipelineActivityPolicyArgs> policy) {
+            $.policy = policy;
+            return this;
+        }
+
+        /**
+         * @param policy Execute pipeline activity policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policy(ExecutePipelineActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
 
         /**

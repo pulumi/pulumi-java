@@ -264,7 +264,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ElasticPool").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ElasticPool").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ElasticPool").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ElasticPool").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ElasticPool").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ElasticPool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

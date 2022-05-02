@@ -66,6 +66,11 @@ public final class GetStandardResult {
      */
     private final String standardType;
     /**
+     * @return List of all standard supported clouds.
+     * 
+     */
+    private final @Nullable List<String> supportedClouds;
+    /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
@@ -93,6 +98,7 @@ public final class GetStandardResult {
         @CustomType.Parameter("location") @Nullable String location,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("standardType") String standardType,
+        @CustomType.Parameter("supportedClouds") @Nullable List<String> supportedClouds,
         @CustomType.Parameter("systemData") SystemDataResponse systemData,
         @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
         @CustomType.Parameter("type") String type) {
@@ -106,6 +112,7 @@ public final class GetStandardResult {
         this.location = location;
         this.name = name;
         this.standardType = standardType;
+        this.supportedClouds = supportedClouds;
         this.systemData = systemData;
         this.tags = tags;
         this.type = type;
@@ -182,6 +189,13 @@ public final class GetStandardResult {
         return this.standardType;
     }
     /**
+     * @return List of all standard supported clouds.
+     * 
+     */
+    public List<String> supportedClouds() {
+        return this.supportedClouds == null ? List.of() : this.supportedClouds;
+    }
+    /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
@@ -222,6 +236,7 @@ public final class GetStandardResult {
         private @Nullable String location;
         private String name;
         private String standardType;
+        private @Nullable List<String> supportedClouds;
         private SystemDataResponse systemData;
         private @Nullable Map<String,String> tags;
         private String type;
@@ -242,6 +257,7 @@ public final class GetStandardResult {
     	      this.location = defaults.location;
     	      this.name = defaults.name;
     	      this.standardType = defaults.standardType;
+    	      this.supportedClouds = defaults.supportedClouds;
     	      this.systemData = defaults.systemData;
     	      this.tags = defaults.tags;
     	      this.type = defaults.type;
@@ -290,6 +306,13 @@ public final class GetStandardResult {
             this.standardType = Objects.requireNonNull(standardType);
             return this;
         }
+        public Builder supportedClouds(@Nullable List<String> supportedClouds) {
+            this.supportedClouds = supportedClouds;
+            return this;
+        }
+        public Builder supportedClouds(String... supportedClouds) {
+            return supportedClouds(List.of(supportedClouds));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
@@ -302,7 +325,7 @@ public final class GetStandardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetStandardResult build() {
-            return new GetStandardResult(category, components, description, displayName, etag, id, kind, location, name, standardType, systemData, tags, type);
+            return new GetStandardResult(category, components, description, displayName, etag, id, kind, location, name, standardType, supportedClouds, systemData, tags, type);
         }
     }
 }

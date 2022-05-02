@@ -336,7 +336,8 @@ public class BatchAccount extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:batch/v20200501:BatchAccount").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20200901:BatchAccount").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20210101:BatchAccount").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:BatchAccount").build())
+                Output.of(Alias.builder().type("azure-native:batch/v20210601:BatchAccount").build()),
+                Output.of(Alias.builder().type("azure-native:batch/v20220101:BatchAccount").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

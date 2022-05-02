@@ -134,7 +134,9 @@ public class ReplicationProtectedItem extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationProtectedItem").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationProtectedItem").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationProtectedItem").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationProtectedItem").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationProtectedItem").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

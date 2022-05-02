@@ -129,6 +129,7 @@ public class DomainTopic extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:DomainTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:DomainTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:DomainTopic").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:DomainTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:DomainTopic").build())
             ))
             .build();

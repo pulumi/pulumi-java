@@ -175,7 +175,9 @@ public class BandwidthSchedule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:BandwidthSchedule").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:BandwidthSchedule").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:BandwidthSchedule").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:BandwidthSchedule").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:BandwidthSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:BandwidthSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:BandwidthSchedule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

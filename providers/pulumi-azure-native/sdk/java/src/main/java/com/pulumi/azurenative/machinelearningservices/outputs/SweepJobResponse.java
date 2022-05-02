@@ -26,12 +26,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SweepJobResponse {
     /**
-     * @return Type of the hyperparameter sampling algorithms
+     * @return [Required] Type of the hyperparameter sampling algorithms
      * 
      */
     private final String algorithm;
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     private final ComputeConfigurationResponse compute;
@@ -79,7 +79,7 @@ public final class SweepJobResponse {
      */
     private final @Nullable Integer maxTotalTrials;
     /**
-     * @return Optimization objective.
+     * @return [Required] Optimization objective.
      * 
      */
     private final ObjectiveResponse objective;
@@ -105,7 +105,7 @@ public final class SweepJobResponse {
      */
     private final String provisioningState;
     /**
-     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * @return [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
     private final Map<String,Object> searchSpace;
@@ -175,14 +175,14 @@ public final class SweepJobResponse {
     }
 
     /**
-     * @return Type of the hyperparameter sampling algorithms
+     * @return [Required] Type of the hyperparameter sampling algorithms
      * 
      */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     public ComputeConfigurationResponse compute() {
@@ -248,7 +248,7 @@ public final class SweepJobResponse {
         return Optional.ofNullable(this.maxTotalTrials);
     }
     /**
-     * @return Optimization objective.
+     * @return [Required] Optimization objective.
      * 
      */
     public ObjectiveResponse objective() {
@@ -284,7 +284,7 @@ public final class SweepJobResponse {
         return this.provisioningState;
     }
     /**
-     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * @return [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
     public Map<String,Object> searchSpace() {

@@ -92,14 +92,14 @@ public class BatchEndpoint extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=BatchEndpointResponse.class, parameters={})
     private Output<BatchEndpointResponse> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<BatchEndpointResponse> properties() {

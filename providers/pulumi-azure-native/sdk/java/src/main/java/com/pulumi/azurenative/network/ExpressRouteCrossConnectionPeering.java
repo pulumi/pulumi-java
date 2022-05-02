@@ -333,7 +333,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRouteCrossConnectionPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRouteCrossConnectionPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRouteCrossConnectionPeering").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCrossConnectionPeering").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCrossConnectionPeering").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ExpressRouteCrossConnectionPeering").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

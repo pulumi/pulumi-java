@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Docker specification must be either Build or Image
+     * [Required] Docker specification must be either Build or Image
      * 
      */
     @EnumType

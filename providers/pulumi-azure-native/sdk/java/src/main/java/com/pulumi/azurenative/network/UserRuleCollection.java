@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig 
+ * $ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection 
  * ```
  * 
  */
@@ -181,7 +181,8 @@ public class UserRuleCollection extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20210201preview:UserRuleCollection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:UserRuleCollection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:UserRuleCollection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:UserRuleCollection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

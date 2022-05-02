@@ -139,7 +139,11 @@ public class Action extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:Action").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:Action").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:Action").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Action").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Action").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:Action").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Action").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Action").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Action").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

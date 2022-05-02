@@ -232,7 +232,9 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:StorageAccountCredential").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:StorageAccountCredential").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:StorageAccountCredential").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:StorageAccountCredential").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:StorageAccountCredential").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

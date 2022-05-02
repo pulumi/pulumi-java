@@ -114,7 +114,8 @@ public class JobTargetGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:JobTargetGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:JobTargetGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:JobTargetGroup").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:JobTargetGroup").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:JobTargetGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:JobTargetGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -188,7 +188,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
                 Output.of(Alias.builder().type("azure-native:network/v20201101:HubVirtualNetworkConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:HubVirtualNetworkConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:HubVirtualNetworkConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:HubVirtualNetworkConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

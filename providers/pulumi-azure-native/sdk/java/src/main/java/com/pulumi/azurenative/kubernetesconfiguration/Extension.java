@@ -315,7 +315,9 @@ public class Extension extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20210501preview:Extension").build()),
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20210901:Extension").build()),
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20211101preview:Extension").build()),
-                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:Extension").build())
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:Extension").build()),
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220301:Extension").build()),
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220402preview:Extension").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

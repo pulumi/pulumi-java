@@ -25,14 +25,14 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     public static final OnlineEndpointArgs Empty = new OnlineEndpointArgs();
 
     /**
-     * Inference endpoint authentication mode type
+     * [Required] Inference endpoint authentication mode type
      * 
      */
     @Import(name="authMode", required=true)
     private Output<Either<String,EndpointAuthMode>> authMode;
 
     /**
-     * @return Inference endpoint authentication mode type
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     public Output<Either<String,EndpointAuthMode>> authMode() {
@@ -148,7 +148,7 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param authMode Inference endpoint authentication mode type
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param authMode Inference endpoint authentication mode type
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param authMode Inference endpoint authentication mode type
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param authMode Inference endpoint authentication mode type
+         * @param authMode [Required] Inference endpoint authentication mode type
          * 
          * @return builder
          * 

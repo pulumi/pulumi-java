@@ -184,7 +184,8 @@ public class ServerKey extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerKey").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerKey").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerKey").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerKey").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerKey").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerKey").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

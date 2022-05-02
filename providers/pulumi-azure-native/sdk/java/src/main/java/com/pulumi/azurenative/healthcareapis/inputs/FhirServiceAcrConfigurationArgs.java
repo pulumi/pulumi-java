@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis.inputs;
 
+import com.pulumi.azurenative.healthcareapis.inputs.ServiceOciArtifactEntryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -35,10 +36,26 @@ public final class FhirServiceAcrConfigurationArgs extends com.pulumi.resources.
         return Optional.ofNullable(this.loginServers);
     }
 
+    /**
+     * The list of Open Container Initiative (OCI) artifacts.
+     * 
+     */
+    @Import(name="ociArtifacts")
+    private @Nullable Output<List<ServiceOciArtifactEntryArgs>> ociArtifacts;
+
+    /**
+     * @return The list of Open Container Initiative (OCI) artifacts.
+     * 
+     */
+    public Optional<Output<List<ServiceOciArtifactEntryArgs>>> ociArtifacts() {
+        return Optional.ofNullable(this.ociArtifacts);
+    }
+
     private FhirServiceAcrConfigurationArgs() {}
 
     private FhirServiceAcrConfigurationArgs(FhirServiceAcrConfigurationArgs $) {
         this.loginServers = $.loginServers;
+        this.ociArtifacts = $.ociArtifacts;
     }
 
     public static Builder builder() {
@@ -88,6 +105,37 @@ public final class FhirServiceAcrConfigurationArgs extends com.pulumi.resources.
          */
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
+        }
+
+        /**
+         * @param ociArtifacts The list of Open Container Initiative (OCI) artifacts.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ociArtifacts(@Nullable Output<List<ServiceOciArtifactEntryArgs>> ociArtifacts) {
+            $.ociArtifacts = ociArtifacts;
+            return this;
+        }
+
+        /**
+         * @param ociArtifacts The list of Open Container Initiative (OCI) artifacts.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ociArtifacts(List<ServiceOciArtifactEntryArgs> ociArtifacts) {
+            return ociArtifacts(Output.of(ociArtifacts));
+        }
+
+        /**
+         * @param ociArtifacts The list of Open Container Initiative (OCI) artifacts.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ociArtifacts(ServiceOciArtifactEntryArgs... ociArtifacts) {
+            return ociArtifacts(List.of(ociArtifacts));
         }
 
         public FhirServiceAcrConfigurationArgs build() {

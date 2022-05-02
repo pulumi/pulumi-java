@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of ARM tracked top level resource.
- * API Version: 2021-04-01.
+ * API Version: 2021-09-01-preview.
  * 
  * ## Example Usage
  * 
@@ -38,14 +38,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:insights:DataCollectionEndpoint")
 public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource {
     /**
-     * The endpoint used by agents to access their configuration.
+     * The endpoint used by clients to access their configuration.
      * 
      */
     @Export(name="configurationAccess", type=DataCollectionEndpointResponseConfigurationAccess.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess;
 
     /**
-     * @return The endpoint used by agents to access their configuration.
+     * @return The endpoint used by clients to access their configuration.
      * 
      */
     public Output<Optional<DataCollectionEndpointResponseConfigurationAccess>> configurationAccess() {
@@ -253,7 +253,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionEndpoint").build())
+                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20210901preview:DataCollectionEndpoint").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

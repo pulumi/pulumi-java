@@ -201,7 +201,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180601preview:StreamingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20180701:StreamingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:StreamingPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:StreamingPolicy").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:StreamingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:StreamingPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

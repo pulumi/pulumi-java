@@ -287,7 +287,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:DscpConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:DscpConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:DscpConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:DscpConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:DscpConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:DscpConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

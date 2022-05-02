@@ -129,7 +129,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:FirewallRule").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:FirewallRule").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:FirewallRule").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:FirewallRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

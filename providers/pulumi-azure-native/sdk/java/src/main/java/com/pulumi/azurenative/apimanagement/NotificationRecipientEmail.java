@@ -118,7 +118,8 @@ public class NotificationRecipientEmail extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:NotificationRecipientEmail").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:NotificationRecipientEmail").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:NotificationRecipientEmail").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NotificationRecipientEmail").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NotificationRecipientEmail").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:NotificationRecipientEmail").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

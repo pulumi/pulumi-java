@@ -163,7 +163,11 @@ public class ASCDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:ASCDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:ASCDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:ASCDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ASCDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:ASCDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

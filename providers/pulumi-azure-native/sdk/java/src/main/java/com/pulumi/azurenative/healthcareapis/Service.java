@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 /**
  * The description of the service.
- * API Version: 2021-01-11.
+ * API Version: 2021-11-01.
  * 
  * ## Example Usage
  * 
@@ -201,7 +201,8 @@ public class Service extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20200315:Service").build()),
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20200330:Service").build()),
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210111:Service").build()),
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:Service").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:Service").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:Service").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

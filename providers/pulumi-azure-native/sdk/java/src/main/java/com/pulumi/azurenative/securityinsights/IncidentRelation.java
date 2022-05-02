@@ -182,7 +182,11 @@ public class IncidentRelation extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:IncidentRelation").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:IncidentRelation").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210401:IncidentRelation").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:IncidentRelation").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:IncidentRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:IncidentRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:IncidentRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:IncidentRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:IncidentRelation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

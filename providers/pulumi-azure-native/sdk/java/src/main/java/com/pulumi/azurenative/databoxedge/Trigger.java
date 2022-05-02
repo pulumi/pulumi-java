@@ -136,7 +136,9 @@ public class Trigger extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Trigger").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Trigger").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Trigger").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Trigger").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Trigger").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Trigger").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Trigger").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

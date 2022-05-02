@@ -41,7 +41,7 @@ public final class GetBatchDeploymentResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final BatchDeploymentResponse properties;
@@ -119,7 +119,7 @@ public final class GetBatchDeploymentResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public BatchDeploymentResponse properties() {

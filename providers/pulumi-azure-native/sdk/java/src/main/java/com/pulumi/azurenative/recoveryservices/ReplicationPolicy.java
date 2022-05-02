@@ -134,7 +134,9 @@ public class ReplicationPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationPolicy").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

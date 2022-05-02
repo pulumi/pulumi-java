@@ -229,7 +229,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerSecurityAlertPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerSecurityAlertPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerSecurityAlertPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerSecurityAlertPolicy").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerSecurityAlertPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerSecurityAlertPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

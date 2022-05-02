@@ -7,12 +7,18 @@ import com.pulumi.azurenative.automation.outputs.PrivateEndpointPropertyResponse
 import com.pulumi.azurenative.automation.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
+    /**
+     * @return Gets the groupIds.
+     * 
+     */
+    private final @Nullable List<String> groupIds;
     /**
      * @return Fully qualified resource Id for the resource
      * 
@@ -41,11 +47,13 @@ public final class PrivateEndpointConnectionResponse {
 
     @CustomType.Constructor
     private PrivateEndpointConnectionResponse(
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
         @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
         @CustomType.Parameter("type") String type) {
+        this.groupIds = groupIds;
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;
@@ -53,6 +61,13 @@ public final class PrivateEndpointConnectionResponse {
         this.type = type;
     }
 
+    /**
+     * @return Gets the groupIds.
+     * 
+     */
+    public List<String> groupIds() {
+        return this.groupIds == null ? List.of() : this.groupIds;
+    }
     /**
      * @return Fully qualified resource Id for the resource
      * 
@@ -98,6 +113,7 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     public static final class Builder {
+        private @Nullable List<String> groupIds;
         private String id;
         private String name;
         private @Nullable PrivateEndpointPropertyResponse privateEndpoint;
@@ -110,6 +126,7 @@ public final class PrivateEndpointConnectionResponse {
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.groupIds = defaults.groupIds;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.privateEndpoint = defaults.privateEndpoint;
@@ -117,6 +134,13 @@ public final class PrivateEndpointConnectionResponse {
     	      this.type = defaults.type;
         }
 
+        public Builder groupIds(@Nullable List<String> groupIds) {
+            this.groupIds = groupIds;
+            return this;
+        }
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
@@ -137,7 +161,7 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, type);
+            return new PrivateEndpointConnectionResponse(groupIds, id, name, privateEndpoint, privateLinkServiceConnectionState, type);
         }
     }
 }

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.SecurityConnectorArgs;
 import com.pulumi.azurenative.security.outputs.CspmMonitorAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponse;
+import com.pulumi.azurenative.security.outputs.InformationProtectionAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.SecurityConnectorPropertiesResponseOrganizationalData;
 import com.pulumi.azurenative.security.outputs.SystemDataResponse;
 import com.pulumi.core.Alias;
@@ -227,7 +228,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:security/v20210701preview:SecurityConnector").build())
+                Output.of(Alias.builder().type("azure-native:security/v20210701preview:SecurityConnector").build()),
+                Output.of(Alias.builder().type("azure-native:security/v20211201preview:SecurityConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -184,7 +184,8 @@ public class FluidRelayServer extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:fluidrelay/v20210312preview:FluidRelayServer").build()),
                 Output.of(Alias.builder().type("azure-native:fluidrelay/v20210615preview:FluidRelayServer").build()),
                 Output.of(Alias.builder().type("azure-native:fluidrelay/v20210830preview:FluidRelayServer").build()),
-                Output.of(Alias.builder().type("azure-native:fluidrelay/v20210910preview:FluidRelayServer").build())
+                Output.of(Alias.builder().type("azure-native:fluidrelay/v20210910preview:FluidRelayServer").build()),
+                Output.of(Alias.builder().type("azure-native:fluidrelay/v20220215:FluidRelayServer").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

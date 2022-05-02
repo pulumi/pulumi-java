@@ -4,10 +4,12 @@
 package com.pulumi.azurenative.azurearcdata;
 
 import com.pulumi.azurenative.Utilities;
+import com.pulumi.azurenative.azurearcdata.inputs.GetActiveDirectoryConnectorArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetDataControllerArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetPostgresInstanceArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetSqlManagedInstanceArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetSqlServerInstanceArgs;
+import com.pulumi.azurenative.azurearcdata.outputs.GetActiveDirectoryConnectorResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetDataControllerResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetPostgresInstanceResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetSqlManagedInstanceResult;
@@ -18,6 +20,17 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class AzurearcdataFunctions {
+    /**
+     * Active directory connector resource
+     * API Version: 2022-03-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args) {
+        return getActiveDirectoryConnector(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getActiveDirectoryConnector", TypeShape.of(GetActiveDirectoryConnectorResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Data controller resource
      * API Version: 2021-06-01-preview.

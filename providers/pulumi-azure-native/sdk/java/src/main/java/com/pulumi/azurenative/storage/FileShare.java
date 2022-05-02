@@ -315,7 +315,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:FileShare").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:FileShare").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:FileShare").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:FileShare").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:FileShare").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:FileShare").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

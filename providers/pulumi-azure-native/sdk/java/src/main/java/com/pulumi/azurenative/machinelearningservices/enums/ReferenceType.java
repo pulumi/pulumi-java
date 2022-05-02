@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies the type of asset reference.
+     * [Required] Specifies the type of asset reference.
      * 
      */
     @EnumType

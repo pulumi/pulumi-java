@@ -134,7 +134,8 @@ public class DataConnection extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:DataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:DataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:DataConnection").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:DataConnection").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:DataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:DataConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

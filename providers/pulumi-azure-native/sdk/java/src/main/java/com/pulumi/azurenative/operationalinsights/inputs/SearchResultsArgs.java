@@ -21,14 +21,14 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     public static final SearchResultsArgs Empty = new SearchResultsArgs();
 
     /**
-     * Search results table&#39;s Description.
+     * Search job Description.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Search results table&#39;s Description.
+     * @return Search job Description.
      * 
      */
     public Optional<Output<String>> description() {
@@ -124,7 +124,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description Search results table&#39;s Description.
+         * @param description Search job Description.
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description Search results table&#39;s Description.
+         * @param description Search job Description.
          * 
          * @return builder
          * 

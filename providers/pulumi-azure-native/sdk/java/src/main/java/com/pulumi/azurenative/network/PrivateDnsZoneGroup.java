@@ -132,7 +132,8 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PrivateDnsZoneGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PrivateDnsZoneGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PrivateDnsZoneGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateDnsZoneGroup").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateDnsZoneGroup").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PrivateDnsZoneGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

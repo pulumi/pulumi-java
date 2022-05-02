@@ -6,6 +6,8 @@ package com.pulumi.azurenative.healthcareapis;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.healthcareapis.DicomServiceArgs;
 import com.pulumi.azurenative.healthcareapis.outputs.DicomServiceAuthenticationConfigurationResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointConnectionResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
@@ -20,7 +22,7 @@ import javax.annotation.Nullable;
 
 /**
  * The description of Dicom Service
- * API Version: 2021-06-01-preview.
+ * API Version: 2021-11-01.
  * 
  * ## Example Usage
  * 
@@ -64,6 +66,20 @@ public class DicomService extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.etag);
     }
     /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    @Export(name="identity", type=ServiceManagedIdentityResponseIdentity.class, parameters={})
+    private Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity;
+
+    /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    public Output<Optional<ServiceManagedIdentityResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
+    }
+    /**
      * The resource location.
      * 
      */
@@ -92,6 +108,20 @@ public class DicomService extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
+
+    /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return this.privateEndpointConnections;
+    }
+    /**
      * The provisioning state.
      * 
      */
@@ -104,6 +134,20 @@ public class DicomService extends com.pulumi.resources.CustomResource {
      */
     public Output<String> provisioningState() {
         return this.provisioningState;
+    }
+    /**
+     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
+    private Output<String> publicNetworkAccess;
+
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    public Output<String> publicNetworkAccess() {
+        return this.publicNetworkAccess;
     }
     /**
      * The url of the Dicom Services.
@@ -195,7 +239,8 @@ public class DicomService extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:DicomService").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:DicomService").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:DicomService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

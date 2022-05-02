@@ -108,12 +108,12 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:appplatform/v20190501preview:CustomDomain").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20200701:CustomDomain").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20201101preview:CustomDomain").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210601preview:CustomDomain").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210901preview:CustomDomain").build()),
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:CustomDomain").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:CustomDomain").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

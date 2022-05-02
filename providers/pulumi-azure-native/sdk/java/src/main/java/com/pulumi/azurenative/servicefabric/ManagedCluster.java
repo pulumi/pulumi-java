@@ -387,7 +387,9 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210501:ManagedCluster").build()),
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210701preview:ManagedCluster").build()),
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210901privatepreview:ManagedCluster").build()),
-                Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:ManagedCluster").build())
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20220101:ManagedCluster").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20220201preview:ManagedCluster").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

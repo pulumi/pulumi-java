@@ -418,7 +418,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualHub").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualHub").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualHub").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHub").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHub").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualHub").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

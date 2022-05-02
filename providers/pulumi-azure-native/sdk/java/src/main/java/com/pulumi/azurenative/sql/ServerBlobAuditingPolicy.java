@@ -380,7 +380,8 @@ public class ServerBlobAuditingPolicy extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerBlobAuditingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerBlobAuditingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerBlobAuditingPolicy").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerBlobAuditingPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

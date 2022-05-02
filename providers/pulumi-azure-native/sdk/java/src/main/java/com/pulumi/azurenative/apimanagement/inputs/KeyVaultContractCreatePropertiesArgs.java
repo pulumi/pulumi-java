@@ -20,14 +20,14 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
     public static final KeyVaultContractCreatePropertiesArgs Empty = new KeyVaultContractCreatePropertiesArgs();
 
     /**
-     * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
      * 
      */
     @Import(name="identityClientId")
     private @Nullable Output<String> identityClientId;
 
     /**
-     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * @return Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
      * 
      */
     public Optional<Output<String>> identityClientId() {
@@ -75,7 +75,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityClientId SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+         * @param identityClientId Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityClientId SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+         * @param identityClientId Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
          * 
          * @return builder
          * 

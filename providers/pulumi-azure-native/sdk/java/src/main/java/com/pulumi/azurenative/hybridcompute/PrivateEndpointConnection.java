@@ -130,7 +130,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210517preview:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210520:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210610preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20220310:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -34,14 +34,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Import(name="properties", required=true)
     private Output<Either<CommandJobArgs,SweepJobArgs>> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<Either<CommandJobArgs,SweepJobArgs>> properties() {
@@ -127,7 +127,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 

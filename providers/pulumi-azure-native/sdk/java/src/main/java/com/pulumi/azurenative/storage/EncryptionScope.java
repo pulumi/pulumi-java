@@ -186,7 +186,8 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:EncryptionScope").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:EncryptionScope").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:EncryptionScope").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:EncryptionScope").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:EncryptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:EncryptionScope").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

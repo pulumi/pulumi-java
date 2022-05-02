@@ -96,14 +96,14 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Import(name="properties", required=true)
     private Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties() {
@@ -293,7 +293,7 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -324,7 +324,7 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 

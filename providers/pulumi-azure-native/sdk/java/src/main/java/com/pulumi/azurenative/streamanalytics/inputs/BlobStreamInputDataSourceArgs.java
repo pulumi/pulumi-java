@@ -69,14 +69,14 @@ public final class BlobStreamInputDataSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The partition count of the blob input data source. Range 1 - 256.
+     * The partition count of the blob input data source. Range 1 - 1024.
      * 
      */
     @Import(name="sourcePartitionCount")
     private @Nullable Output<Integer> sourcePartitionCount;
 
     /**
-     * @return The partition count of the blob input data source. Range 1 - 256.
+     * @return The partition count of the blob input data source. Range 1 - 1024.
      * 
      */
     public Optional<Output<Integer>> sourcePartitionCount() {
@@ -224,7 +224,7 @@ public final class BlobStreamInputDataSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param sourcePartitionCount The partition count of the blob input data source. Range 1 - 256.
+         * @param sourcePartitionCount The partition count of the blob input data source. Range 1 - 1024.
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class BlobStreamInputDataSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param sourcePartitionCount The partition count of the blob input data source. Range 1 - 256.
+         * @param sourcePartitionCount The partition count of the blob input data source. Range 1 - 1024.
          * 
          * @return builder
          * 

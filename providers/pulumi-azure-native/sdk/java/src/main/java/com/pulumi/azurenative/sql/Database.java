@@ -546,7 +546,8 @@ public class Database extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:Database").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:Database").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:Database").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:Database").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:Database").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:Database").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

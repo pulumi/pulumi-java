@@ -153,7 +153,9 @@ public class CassandraResourceCassandraView extends com.pulumi.resources.CustomR
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraResourceCassandraView").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraView").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraView").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:CassandraResourceCassandraView").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:CassandraResourceCassandraView").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

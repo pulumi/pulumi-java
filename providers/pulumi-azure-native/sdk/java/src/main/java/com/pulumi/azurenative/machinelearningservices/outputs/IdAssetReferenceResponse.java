@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IdAssetReferenceResponse {
     /**
-     * @return ARM resource ID of the asset.
+     * @return [Required] ARM resource ID of the asset.
      * 
      */
     private final String assetId;
@@ -30,7 +30,7 @@ public final class IdAssetReferenceResponse {
     }
 
     /**
-     * @return ARM resource ID of the asset.
+     * @return [Required] ARM resource ID of the asset.
      * 
      */
     public String assetId() {

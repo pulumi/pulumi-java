@@ -136,7 +136,8 @@ public class Database extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:Database").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:Database").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:Database").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Database").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Database").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:Database").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

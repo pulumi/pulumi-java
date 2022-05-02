@@ -206,7 +206,8 @@ public class IpGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:IpGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:IpGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:IpGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:IpGroup").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:IpGroup").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:IpGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

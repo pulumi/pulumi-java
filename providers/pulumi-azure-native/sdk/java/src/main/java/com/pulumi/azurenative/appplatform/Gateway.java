@@ -139,7 +139,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Gateway").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Gateway").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:Gateway").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -171,7 +171,9 @@ public class ProtectionPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210701:ProtectionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ProtectionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ProtectionPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ProtectionPolicy").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ProtectionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ProtectionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ProtectionPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

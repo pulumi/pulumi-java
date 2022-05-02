@@ -213,7 +213,8 @@ public class EncryptionProtector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:EncryptionProtector").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:EncryptionProtector").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:EncryptionProtector").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:EncryptionProtector").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:EncryptionProtector").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:EncryptionProtector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

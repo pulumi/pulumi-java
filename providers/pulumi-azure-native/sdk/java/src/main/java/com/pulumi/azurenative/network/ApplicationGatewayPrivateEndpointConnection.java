@@ -173,7 +173,8 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ApplicationGatewayPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ApplicationGatewayPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ApplicationGatewayPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ApplicationGatewayPrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ApplicationGatewayPrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

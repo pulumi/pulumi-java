@@ -84,14 +84,14 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The path of the file/directory in the datastore.
+     * [Required] The path of the file/directory in the datastore.
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return The path of the file/directory in the datastore.
+     * @return [Required] The path of the file/directory in the datastore.
      * 
      */
     public Output<String> path() {
@@ -263,7 +263,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param path The path of the file/directory in the datastore.
+         * @param path [Required] The path of the file/directory in the datastore.
          * 
          * @return builder
          * 
@@ -274,7 +274,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param path The path of the file/directory in the datastore.
+         * @param path [Required] The path of the file/directory in the datastore.
          * 
          * @return builder
          * 

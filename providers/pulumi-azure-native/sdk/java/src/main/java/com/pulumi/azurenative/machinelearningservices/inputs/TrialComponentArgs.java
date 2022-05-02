@@ -42,14 +42,14 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     @Import(name="command", required=true)
     private Output<String> command;
 
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     public Output<String> command() {
@@ -201,7 +201,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * @param command [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
          * 
          * @return builder
          * 
@@ -212,7 +212,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * @param command [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
          * 
          * @return builder
          * 

@@ -152,7 +152,9 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoRoleDefinition").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoRoleDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:MongoDBResourceMongoRoleDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:MongoDBResourceMongoRoleDefinition").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

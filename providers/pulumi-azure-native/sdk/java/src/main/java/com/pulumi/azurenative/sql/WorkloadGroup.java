@@ -186,7 +186,8 @@ public class WorkloadGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:WorkloadGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:WorkloadGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:WorkloadGroup").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:WorkloadGroup").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:WorkloadGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:WorkloadGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

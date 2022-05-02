@@ -137,7 +137,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Schema").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Schema").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Schema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Schema").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

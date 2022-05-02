@@ -213,7 +213,8 @@ public class ReadWriteDatabase extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:ReadWriteDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:ReadWriteDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadWriteDatabase").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:ReadWriteDatabase").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

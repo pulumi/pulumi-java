@@ -22,7 +22,7 @@ public final class GetModelVersionResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final ModelVersionResponse properties;
@@ -66,7 +66,7 @@ public final class GetModelVersionResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public ModelVersionResponse properties() {

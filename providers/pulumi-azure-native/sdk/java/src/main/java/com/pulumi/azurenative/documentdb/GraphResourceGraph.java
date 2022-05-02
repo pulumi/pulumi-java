@@ -153,7 +153,9 @@ public class GraphResourceGraph extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:GraphResourceGraph").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GraphResourceGraph").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GraphResourceGraph").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:GraphResourceGraph").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:GraphResourceGraph").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

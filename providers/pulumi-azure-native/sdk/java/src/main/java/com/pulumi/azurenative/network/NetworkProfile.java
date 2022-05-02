@@ -216,7 +216,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkProfile").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkProfile").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkProfile").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkProfile").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkProfile").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NetworkProfile").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

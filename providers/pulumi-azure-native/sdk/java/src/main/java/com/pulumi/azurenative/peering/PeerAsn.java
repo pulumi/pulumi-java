@@ -172,7 +172,8 @@ public class PeerAsn extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:peering/v20200401:PeerAsn").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20201001:PeerAsn").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20210101:PeerAsn").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:PeerAsn").build())
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20220101:PeerAsn").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

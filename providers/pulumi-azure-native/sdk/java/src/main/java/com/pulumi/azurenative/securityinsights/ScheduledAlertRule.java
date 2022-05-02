@@ -332,7 +332,11 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:ScheduledAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:ScheduledAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:ScheduledAlertRule").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ScheduledAlertRule").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ScheduledAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:ScheduledAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:ScheduledAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:ScheduledAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:ScheduledAlertRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

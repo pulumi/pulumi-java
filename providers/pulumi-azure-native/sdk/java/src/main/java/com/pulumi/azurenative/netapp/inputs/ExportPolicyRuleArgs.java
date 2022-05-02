@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.netapp.inputs;
 
+import com.pulumi.azurenative.netapp.enums.ChownMode;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -35,6 +37,21 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<String>> allowedClients() {
         return Optional.ofNullable(this.allowedClients);
+    }
+
+    /**
+     * This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+     * 
+     */
+    @Import(name="chownMode")
+    private @Nullable Output<Either<String,ChownMode>> chownMode;
+
+    /**
+     * @return This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+     * 
+     */
+    public Optional<Output<Either<String,ChownMode>>> chownMode() {
+        return Optional.ofNullable(this.chownMode);
     }
 
     /**
@@ -236,6 +253,7 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
 
     private ExportPolicyRuleArgs(ExportPolicyRuleArgs $) {
         this.allowedClients = $.allowedClients;
+        this.chownMode = $.chownMode;
         this.cifs = $.cifs;
         this.hasRootAccess = $.hasRootAccess;
         this.kerberos5ReadOnly = $.kerberos5ReadOnly;
@@ -288,6 +306,47 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder allowedClients(String allowedClients) {
             return allowedClients(Output.of(allowedClients));
+        }
+
+        /**
+         * @param chownMode This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder chownMode(@Nullable Output<Either<String,ChownMode>> chownMode) {
+            $.chownMode = chownMode;
+            return this;
+        }
+
+        /**
+         * @param chownMode This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder chownMode(Either<String,ChownMode> chownMode) {
+            return chownMode(Output.of(chownMode));
+        }
+
+        /**
+         * @param chownMode This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder chownMode(String chownMode) {
+            return chownMode(Either.ofLeft(chownMode));
+        }
+
+        /**
+         * @param chownMode This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder chownMode(ChownMode chownMode) {
+            return chownMode(Either.ofRight(chownMode));
         }
 
         /**
@@ -564,6 +623,7 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
         }
 
         public ExportPolicyRuleArgs build() {
+            $.chownMode = Codegen.stringProp("chownMode").left(ChownMode.class).output().arg($.chownMode).def("Restricted").getNullable();
             $.hasRootAccess = Codegen.booleanProp("hasRootAccess").output().arg($.hasRootAccess).def(true).getNullable();
             $.kerberos5ReadOnly = Codegen.booleanProp("kerberos5ReadOnly").output().arg($.kerberos5ReadOnly).def(false).getNullable();
             $.kerberos5ReadWrite = Codegen.booleanProp("kerberos5ReadWrite").output().arg($.kerberos5ReadWrite).def(false).getNullable();

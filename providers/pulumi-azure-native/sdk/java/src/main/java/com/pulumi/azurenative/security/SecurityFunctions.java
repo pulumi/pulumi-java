@@ -218,7 +218,7 @@ public final class SecurityFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityConnector", TypeShape.of(GetSecurityConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Contact details and configurations for notifications coming from Azure Security Center.
+     * Contact details and configurations for notifications coming from Microsoft Defender for Cloud.
      * API Version: 2020-01-01-preview.
      * 
      */

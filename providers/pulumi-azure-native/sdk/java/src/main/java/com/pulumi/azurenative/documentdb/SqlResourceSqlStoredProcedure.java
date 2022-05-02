@@ -145,7 +145,9 @@ public class SqlResourceSqlStoredProcedure extends com.pulumi.resources.CustomRe
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlStoredProcedure").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlStoredProcedure").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlStoredProcedure").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlStoredProcedure").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

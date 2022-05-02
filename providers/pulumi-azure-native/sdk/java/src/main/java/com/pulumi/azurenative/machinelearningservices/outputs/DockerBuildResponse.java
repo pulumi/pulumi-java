@@ -26,7 +26,7 @@ public final class DockerBuildResponse {
      */
     private final String dockerSpecificationType;
     /**
-     * @return Docker command line instructions to assemble an image.
+     * @return [Required] Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */
@@ -67,7 +67,7 @@ public final class DockerBuildResponse {
         return this.dockerSpecificationType;
     }
     /**
-     * @return Docker command line instructions to assemble an image.
+     * @return [Required] Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */

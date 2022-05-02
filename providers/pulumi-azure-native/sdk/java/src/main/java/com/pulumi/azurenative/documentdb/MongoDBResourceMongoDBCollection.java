@@ -157,7 +157,9 @@ public class MongoDBResourceMongoDBCollection extends com.pulumi.resources.Custo
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:MongoDBResourceMongoDBCollection").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBCollection").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:MongoDBResourceMongoDBCollection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

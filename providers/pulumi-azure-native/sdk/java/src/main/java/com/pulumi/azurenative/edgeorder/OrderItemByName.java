@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:edgeorder:OrderItemByName TestOrderItemName01 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orderItems/TestOrderItemName01 
+ * $ pulumi import azure-native:edgeorder:OrderItemByName TestOrderItemName2 /subscriptions/YourSubscriptionId/resourceGroups/YourResourceGroupName/providers/Microsoft.EdgeOrder/orderItems/TestOrderItemName2 
  * ```
  * 
  */

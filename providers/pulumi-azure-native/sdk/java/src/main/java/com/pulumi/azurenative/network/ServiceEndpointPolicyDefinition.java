@@ -172,7 +172,8 @@ public class ServiceEndpointPolicyDefinition extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ServiceEndpointPolicyDefinition").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ServiceEndpointPolicyDefinition").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ServiceEndpointPolicyDefinition").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ServiceEndpointPolicyDefinition").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

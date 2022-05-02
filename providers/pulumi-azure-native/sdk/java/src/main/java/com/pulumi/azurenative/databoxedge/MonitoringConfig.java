@@ -114,7 +114,9 @@ public class MonitoringConfig extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:MonitoringConfig").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:MonitoringConfig").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:MonitoringConfig").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:MonitoringConfig").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:MonitoringConfig").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:MonitoringConfig").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:MonitoringConfig").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

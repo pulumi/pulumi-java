@@ -22,14 +22,14 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     public static final TableArgs Empty = new TableArgs();
 
     /**
-     * The table plan.
+     * Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     @Import(name="plan")
     private @Nullable Output<Either<String,TablePlanEnum>> plan;
 
     /**
-     * @return The table plan.
+     * @return Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     public Optional<Output<Either<String,TablePlanEnum>>> plan() {
@@ -67,14 +67,14 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
     /**
-     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * @return The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     public Optional<Output<Integer>> retentionInDays() {
@@ -127,14 +127,14 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     @Import(name="totalRetentionInDays")
     private @Nullable Output<Integer> totalRetentionInDays;
 
     /**
-     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * @return The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     public Optional<Output<Integer>> totalRetentionInDays() {
@@ -189,7 +189,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param plan The table plan.
+         * @param plan Instruct the system how to handle and charge the logs ingested to this table.
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param plan The table plan.
+         * @param plan Instruct the system how to handle and charge the logs ingested to this table.
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param plan The table plan.
+         * @param plan Instruct the system how to handle and charge the logs ingested to this table.
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param plan The table plan.
+         * @param plan Instruct the system how to handle and charge the logs ingested to this table.
          * 
          * @return builder
          * 
@@ -272,7 +272,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param retentionInDays The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+         * @param retentionInDays The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param retentionInDays The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+         * @param retentionInDays The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
          * 
          * @return builder
          * 
@@ -356,7 +356,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param totalRetentionInDays The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+         * @param totalRetentionInDays The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
          * 
          * @return builder
          * 
@@ -367,7 +367,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param totalRetentionInDays The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+         * @param totalRetentionInDays The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
          * 
          * @return builder
          * 

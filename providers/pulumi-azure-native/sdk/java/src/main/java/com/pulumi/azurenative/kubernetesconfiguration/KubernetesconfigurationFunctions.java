@@ -6,9 +6,13 @@ package com.pulumi.azurenative.kubernetesconfiguration;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.GetExtensionArgs;
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.GetFluxConfigurationArgs;
+import com.pulumi.azurenative.kubernetesconfiguration.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.kubernetesconfiguration.inputs.GetPrivateLinkScopeArgs;
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.GetSourceControlConfigurationArgs;
 import com.pulumi.azurenative.kubernetesconfiguration.outputs.GetExtensionResult;
 import com.pulumi.azurenative.kubernetesconfiguration.outputs.GetFluxConfigurationResult;
+import com.pulumi.azurenative.kubernetesconfiguration.outputs.GetPrivateEndpointConnectionResult;
+import com.pulumi.azurenative.kubernetesconfiguration.outputs.GetPrivateLinkScopeResult;
 import com.pulumi.azurenative.kubernetesconfiguration.outputs.GetSourceControlConfigurationResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -37,6 +41,28 @@ public final class KubernetesconfigurationFunctions {
     }
     public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(GetFluxConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getFluxConfiguration", TypeShape.of(GetFluxConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2022-04-02-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Azure Arc PrivateLinkScope definition.
+     * API Version: 2022-04-02-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args) {
+        return getPrivateLinkScope(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The SourceControl Configuration object returned in Get &amp; Put response.

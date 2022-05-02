@@ -48,14 +48,14 @@ public class ModelVersion extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=ModelVersionResponse.class, parameters={})
     private Output<ModelVersionResponse> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<ModelVersionResponse> properties() {

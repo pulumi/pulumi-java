@@ -174,7 +174,8 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiVersionSet").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiVersionSet").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiVersionSet").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiVersionSet").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiVersionSet").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiVersionSet").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

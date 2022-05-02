@@ -197,7 +197,8 @@ public class ClusterPrincipalAssignment extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:ClusterPrincipalAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:ClusterPrincipalAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:ClusterPrincipalAssignment").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ClusterPrincipalAssignment").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:ClusterPrincipalAssignment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

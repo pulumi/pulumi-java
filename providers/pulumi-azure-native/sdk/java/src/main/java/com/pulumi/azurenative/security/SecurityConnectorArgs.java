@@ -7,6 +7,7 @@ import com.pulumi.azurenative.security.enums.CloudName;
 import com.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingArgs;
 import com.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingArgs;
 import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArgs;
+import com.pulumi.azurenative.security.inputs.InformationProtectionAwsOfferingArgs;
 import com.pulumi.azurenative.security.inputs.SecurityConnectorPropertiesOrganizationalDataArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;

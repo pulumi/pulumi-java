@@ -265,7 +265,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:EventHubDataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:EventHubDataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:EventHubDataConnection").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:EventHubDataConnection").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:EventHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:EventHubDataConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

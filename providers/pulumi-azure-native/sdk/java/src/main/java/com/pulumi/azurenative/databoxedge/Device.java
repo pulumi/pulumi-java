@@ -434,7 +434,9 @@ public class Device extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Device").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Device").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Device").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Device").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Device").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

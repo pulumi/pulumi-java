@@ -134,7 +134,9 @@ public class ReplicationStorageClassificationMapping extends com.pulumi.resource
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationStorageClassificationMapping").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationStorageClassificationMapping").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationStorageClassificationMapping").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationStorageClassificationMapping").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationStorageClassificationMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationStorageClassificationMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationStorageClassificationMapping").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

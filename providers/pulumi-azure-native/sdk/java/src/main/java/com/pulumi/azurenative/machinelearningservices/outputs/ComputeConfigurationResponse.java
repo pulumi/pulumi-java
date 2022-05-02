@@ -40,7 +40,7 @@ public final class ComputeConfigurationResponse {
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * @return ARM resource ID of the compute resource.
+     * @return ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
      * 
      */
     private final @Nullable String target;
@@ -97,7 +97,7 @@ public final class ComputeConfigurationResponse {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * @return ARM resource ID of the compute resource.
+     * @return ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
      * 
      */
     public Optional<String> target() {

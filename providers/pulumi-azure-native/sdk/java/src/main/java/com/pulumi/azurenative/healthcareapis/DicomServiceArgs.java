@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis;
 
+import com.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -29,6 +30,21 @@ public final class DicomServiceArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> dicomServiceName() {
         return Optional.ofNullable(this.dicomServiceName);
+    }
+
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    @Import(name="identity")
+    private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
+
+    /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    public Optional<Output<ServiceManagedIdentityIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -95,6 +111,7 @@ public final class DicomServiceArgs extends com.pulumi.resources.ResourceArgs {
 
     private DicomServiceArgs(DicomServiceArgs $) {
         this.dicomServiceName = $.dicomServiceName;
+        this.identity = $.identity;
         this.location = $.location;
         this.resourceGroupName = $.resourceGroupName;
         this.tags = $.tags;
@@ -138,6 +155,27 @@ public final class DicomServiceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder dicomServiceName(String dicomServiceName) {
             return dicomServiceName(Output.of(dicomServiceName));
+        }
+
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
+            $.identity = identity;
+            return this;
+        }
+
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identity(ServiceManagedIdentityIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
 
         /**

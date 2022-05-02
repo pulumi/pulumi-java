@@ -41,7 +41,7 @@ public final class GetOnlineEndpointResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final OnlineEndpointResponse properties;
@@ -119,7 +119,7 @@ public final class GetOnlineEndpointResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public OnlineEndpointResponse properties() {

@@ -22,7 +22,7 @@ public final class GetDataVersionResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final DataVersionResponse properties;
@@ -66,7 +66,7 @@ public final class GetDataVersionResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public DataVersionResponse properties() {

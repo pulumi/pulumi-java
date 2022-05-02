@@ -147,7 +147,13 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210801:MaintenanceConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210901:MaintenanceConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20211001:MaintenanceConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:MaintenanceConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220101:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220102preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220201:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220202preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220301:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220302preview:MaintenanceConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

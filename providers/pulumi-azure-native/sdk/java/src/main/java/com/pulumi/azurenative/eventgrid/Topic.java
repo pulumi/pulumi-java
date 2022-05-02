@@ -260,6 +260,7 @@ public class Topic extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:Topic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:Topic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:Topic").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:Topic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:Topic").build())
             ))
             .build();

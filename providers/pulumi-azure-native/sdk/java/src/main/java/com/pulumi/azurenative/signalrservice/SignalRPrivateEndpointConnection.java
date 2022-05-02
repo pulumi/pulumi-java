@@ -143,7 +143,8 @@ public class SignalRPrivateEndpointConnection extends com.pulumi.resources.Custo
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210401preview:SignalRPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210601preview:SignalRPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210901preview:SignalRPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalRPrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20220201:SignalRPrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

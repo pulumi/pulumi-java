@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * An Log Analytics QueryPack definition.
- * API Version: 2019-09-01-preview.
+ * API Version: 2019-09-01.
  * 
  * ## Example Usage
  * 
@@ -179,6 +179,7 @@ public class QueryPack extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20190901:QueryPack").build()),
                 Output.of(Alias.builder().type("azure-native:operationalinsights/v20190901preview:QueryPack").build())
             ))
             .build();

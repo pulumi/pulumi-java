@@ -124,7 +124,8 @@ public class Storage extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210901preview:Storage").build()),
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Storage").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Storage").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:Storage").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

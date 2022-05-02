@@ -496,7 +496,8 @@ public class HostPool extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:HostPool").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:HostPool").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:HostPool").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:HostPool").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:HostPool").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:HostPool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

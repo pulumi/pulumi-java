@@ -194,7 +194,8 @@ public class ApplicationSecurityGroup extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ApplicationSecurityGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ApplicationSecurityGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ApplicationSecurityGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ApplicationSecurityGroup").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ApplicationSecurityGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

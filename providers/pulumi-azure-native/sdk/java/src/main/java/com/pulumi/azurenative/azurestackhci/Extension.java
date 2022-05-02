@@ -309,7 +309,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210101preview:Extension").build()),
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210901:Extension").build()),
-                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:Extension").build())
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:Extension").build()),
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220301:Extension").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

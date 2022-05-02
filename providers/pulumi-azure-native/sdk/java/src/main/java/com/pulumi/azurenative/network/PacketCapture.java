@@ -230,7 +230,8 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PacketCapture").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PacketCapture").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PacketCapture").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PacketCapture").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PacketCapture").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

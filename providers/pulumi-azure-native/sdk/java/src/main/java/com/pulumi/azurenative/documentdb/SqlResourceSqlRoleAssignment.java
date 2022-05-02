@@ -144,7 +144,9 @@ public class SqlResourceSqlRoleAssignment extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlRoleAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlRoleAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlRoleAssignment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

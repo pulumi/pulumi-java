@@ -134,7 +134,9 @@ public class ReplicationRecoveryPlan extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationRecoveryPlan").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationRecoveryPlan").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationRecoveryPlan").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationRecoveryPlan").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationRecoveryPlan").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationRecoveryPlan").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationRecoveryPlan").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

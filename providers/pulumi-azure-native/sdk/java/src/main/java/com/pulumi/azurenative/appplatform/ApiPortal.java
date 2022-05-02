@@ -139,7 +139,8 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:ApiPortal").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:ApiPortal").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:ApiPortal").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

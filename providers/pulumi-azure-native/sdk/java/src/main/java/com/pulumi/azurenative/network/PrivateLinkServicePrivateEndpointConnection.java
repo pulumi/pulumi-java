@@ -178,7 +178,8 @@ public class PrivateLinkServicePrivateEndpointConnection extends com.pulumi.reso
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PrivateLinkServicePrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PrivateLinkServicePrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PrivateLinkServicePrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateLinkServicePrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateLinkServicePrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PrivateLinkServicePrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

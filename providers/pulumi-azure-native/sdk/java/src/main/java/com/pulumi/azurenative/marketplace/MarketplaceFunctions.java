@@ -7,9 +7,15 @@ import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionArgs;
 import com.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionOfferArgs;
 import com.pulumi.azurenative.marketplace.inputs.GetPrivateStoreOfferArgs;
+import com.pulumi.azurenative.marketplace.inputs.ListPrivateStoreNewPlansNotificationsArgs;
+import com.pulumi.azurenative.marketplace.inputs.ListPrivateStoreStopSellOffersPlansNotificationsArgs;
+import com.pulumi.azurenative.marketplace.inputs.ListPrivateStoreSubscriptionsContextArgs;
 import com.pulumi.azurenative.marketplace.outputs.GetPrivateStoreCollectionOfferResult;
 import com.pulumi.azurenative.marketplace.outputs.GetPrivateStoreCollectionResult;
 import com.pulumi.azurenative.marketplace.outputs.GetPrivateStoreOfferResult;
+import com.pulumi.azurenative.marketplace.outputs.ListPrivateStoreNewPlansNotificationsResult;
+import com.pulumi.azurenative.marketplace.outputs.ListPrivateStoreStopSellOffersPlansNotificationsResult;
+import com.pulumi.azurenative.marketplace.outputs.ListPrivateStoreSubscriptionsContextResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,7 +24,7 @@ import java.util.concurrent.CompletableFuture;
 public final class MarketplaceFunctions {
     /**
      * The Collection data structure.
-     * API Version: 2021-06-01.
+     * API Version: 2021-12-01.
      * 
      */
     public static CompletableFuture<GetPrivateStoreCollectionResult> getPrivateStoreCollection(GetPrivateStoreCollectionArgs args) {
@@ -29,7 +35,7 @@ public final class MarketplaceFunctions {
     }
     /**
      * The privateStore offer data structure.
-     * API Version: 2021-06-01.
+     * API Version: 2021-12-01.
      * 
      */
     public static CompletableFuture<GetPrivateStoreCollectionOfferResult> getPrivateStoreCollectionOffer(GetPrivateStoreCollectionOfferArgs args) {
@@ -48,5 +54,38 @@ public final class MarketplaceFunctions {
     }
     public static CompletableFuture<GetPrivateStoreOfferResult> getPrivateStoreOffer(GetPrivateStoreOfferArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreOffer", TypeShape.of(GetPrivateStoreOfferResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of all new plans notifications for public offers
+     * API Version: 2021-12-01.
+     * 
+     */
+    public static CompletableFuture<ListPrivateStoreNewPlansNotificationsResult> listPrivateStoreNewPlansNotifications(ListPrivateStoreNewPlansNotificationsArgs args) {
+        return listPrivateStoreNewPlansNotifications(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListPrivateStoreNewPlansNotificationsResult> listPrivateStoreNewPlansNotifications(ListPrivateStoreNewPlansNotificationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:marketplace:listPrivateStoreNewPlansNotifications", TypeShape.of(ListPrivateStoreNewPlansNotificationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of stop sell offers and plans notifications.
+     * API Version: 2021-12-01.
+     * 
+     */
+    public static CompletableFuture<ListPrivateStoreStopSellOffersPlansNotificationsResult> listPrivateStoreStopSellOffersPlansNotifications(ListPrivateStoreStopSellOffersPlansNotificationsArgs args) {
+        return listPrivateStoreStopSellOffersPlansNotifications(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListPrivateStoreStopSellOffersPlansNotificationsResult> listPrivateStoreStopSellOffersPlansNotifications(ListPrivateStoreStopSellOffersPlansNotificationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:marketplace:listPrivateStoreStopSellOffersPlansNotifications", TypeShape.of(ListPrivateStoreStopSellOffersPlansNotificationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of subscription Ids in the private store
+     * API Version: 2021-12-01.
+     * 
+     */
+    public static CompletableFuture<ListPrivateStoreSubscriptionsContextResult> listPrivateStoreSubscriptionsContext(ListPrivateStoreSubscriptionsContextArgs args) {
+        return listPrivateStoreSubscriptionsContext(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListPrivateStoreSubscriptionsContextResult> listPrivateStoreSubscriptionsContext(ListPrivateStoreSubscriptionsContextArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:marketplace:listPrivateStoreSubscriptionsContext", TypeShape.of(ListPrivateStoreSubscriptionsContextResult.class), args, Utilities.withVersion(options));
     }
 }

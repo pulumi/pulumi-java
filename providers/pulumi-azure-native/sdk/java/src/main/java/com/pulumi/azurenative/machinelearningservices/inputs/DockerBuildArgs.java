@@ -58,7 +58,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Docker command line instructions to assemble an image.
+     * [Required] Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */
@@ -66,7 +66,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     private Output<String> dockerfile;
 
     /**
-     * @return Docker command line instructions to assemble an image.
+     * @return [Required] Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */
@@ -165,7 +165,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dockerfile Docker command line instructions to assemble an image.
+         * @param dockerfile [Required] Docker command line instructions to assemble an image.
          * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
          * 
          * @return builder
@@ -177,7 +177,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dockerfile Docker command line instructions to assemble an image.
+         * @param dockerfile [Required] Docker command line instructions to assemble an image.
          * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
          * 
          * @return builder

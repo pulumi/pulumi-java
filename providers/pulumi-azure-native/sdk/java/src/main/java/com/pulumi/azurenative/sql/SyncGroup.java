@@ -273,7 +273,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:SyncGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:SyncGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:SyncGroup").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:SyncGroup").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:SyncGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

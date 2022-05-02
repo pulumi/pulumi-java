@@ -256,7 +256,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:SyncMember").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:SyncMember").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:SyncMember").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:SyncMember").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:SyncMember").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:SyncMember").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

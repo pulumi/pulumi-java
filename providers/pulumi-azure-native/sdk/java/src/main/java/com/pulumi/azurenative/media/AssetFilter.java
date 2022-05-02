@@ -156,7 +156,8 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:media/v20180701:AssetFilter").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:AssetFilter").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:AssetFilter").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:AssetFilter").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:AssetFilter").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

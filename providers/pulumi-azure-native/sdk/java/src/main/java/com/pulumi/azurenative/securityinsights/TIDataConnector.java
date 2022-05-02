@@ -177,7 +177,11 @@ public class TIDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:TIDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:TIDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:TIDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:TIDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:TIDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:TIDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:TIDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:TIDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:TIDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

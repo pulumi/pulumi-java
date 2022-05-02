@@ -183,7 +183,10 @@ public class ResourceGuard extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210701:ResourceGuard").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20211001preview:ResourceGuard").build()),
-                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:ResourceGuard").build())
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:ResourceGuard").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220101:ResourceGuard").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220201preview:ResourceGuard").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220301:ResourceGuard").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

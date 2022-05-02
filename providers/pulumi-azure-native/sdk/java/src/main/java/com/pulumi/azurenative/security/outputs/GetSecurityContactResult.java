@@ -19,7 +19,7 @@ public final class GetSecurityContactResult {
      */
     private final @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications;
     /**
-     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     private final @Nullable String emails;
@@ -34,7 +34,7 @@ public final class GetSecurityContactResult {
      */
     private final String name;
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     private final @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole;
@@ -75,7 +75,7 @@ public final class GetSecurityContactResult {
         return Optional.ofNullable(this.alertNotifications);
     }
     /**
-     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     public Optional<String> emails() {
@@ -96,7 +96,7 @@ public final class GetSecurityContactResult {
         return this.name;
     }
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     public Optional<SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole() {

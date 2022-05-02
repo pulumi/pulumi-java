@@ -17,6 +17,7 @@ import com.pulumi.azurenative.authorization.inputs.GetPolicyDefinitionAtManageme
 import com.pulumi.azurenative.authorization.inputs.GetPolicyExemptionArgs;
 import com.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionArgs;
 import com.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionAtManagementGroupArgs;
+import com.pulumi.azurenative.authorization.inputs.GetPrivateLinkAssociationArgs;
 import com.pulumi.azurenative.authorization.inputs.GetResourceManagementPrivateLinkArgs;
 import com.pulumi.azurenative.authorization.inputs.GetRoleAssignmentArgs;
 import com.pulumi.azurenative.authorization.inputs.GetRoleDefinitionArgs;
@@ -35,6 +36,7 @@ import com.pulumi.azurenative.authorization.outputs.GetPolicyDefinitionResult;
 import com.pulumi.azurenative.authorization.outputs.GetPolicyExemptionResult;
 import com.pulumi.azurenative.authorization.outputs.GetPolicySetDefinitionAtManagementGroupResult;
 import com.pulumi.azurenative.authorization.outputs.GetPolicySetDefinitionResult;
+import com.pulumi.azurenative.authorization.outputs.GetPrivateLinkAssociationResult;
 import com.pulumi.azurenative.authorization.outputs.GetResourceManagementPrivateLinkResult;
 import com.pulumi.azurenative.authorization.outputs.GetRoleAssignmentResult;
 import com.pulumi.azurenative.authorization.outputs.GetRoleDefinitionResult;
@@ -208,6 +210,16 @@ public final class AuthorizationFunctions {
      * API Version: 2020-05-01.
      * 
      */
+    public static CompletableFuture<GetPrivateLinkAssociationResult> getPrivateLinkAssociation(GetPrivateLinkAssociationArgs args) {
+        return getPrivateLinkAssociation(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPrivateLinkAssociationResult> getPrivateLinkAssociation(GetPrivateLinkAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:authorization:getPrivateLinkAssociation", TypeShape.of(GetPrivateLinkAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2020-05-01.
+     * 
+     */
     public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(GetResourceManagementPrivateLinkArgs args) {
         return getResourceManagementPrivateLink(args, InvokeOptions.Empty);
     }
@@ -216,7 +228,7 @@ public final class AuthorizationFunctions {
     }
     /**
      * Role Assignments
-     * API Version: 2020-08-01-preview.
+     * API Version: 2020-10-01-preview.
      * 
      */
     public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args) {
@@ -238,7 +250,7 @@ public final class AuthorizationFunctions {
     }
     /**
      * Role management policy
-     * API Version: 2020-10-01-preview.
+     * API Version: 2020-10-01.
      * 
      */
     public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(GetRoleManagementPolicyAssignmentArgs args) {

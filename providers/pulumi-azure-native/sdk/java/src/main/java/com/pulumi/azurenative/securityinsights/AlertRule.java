@@ -129,7 +129,11 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:AlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:AlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:AlertRule").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AlertRule").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:AlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:AlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:AlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:AlertRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

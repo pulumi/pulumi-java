@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
+ * The target Event Hub to which event data will be exported. To learn more about Microsoft Defender for Cloud continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
  * 
  */
 public final class AutomationActionEventHubArgs extends com.pulumi.resources.ResourceArgs {

@@ -237,7 +237,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:PartnerNamespace").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:PartnerNamespace").build()),
-                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerNamespace").build())
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerNamespace").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:PartnerNamespace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

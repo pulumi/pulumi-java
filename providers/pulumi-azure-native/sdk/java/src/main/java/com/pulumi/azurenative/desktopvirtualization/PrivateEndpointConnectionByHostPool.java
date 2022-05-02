@@ -154,7 +154,8 @@ public class PrivateEndpointConnectionByHostPool extends com.pulumi.resources.Cu
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByHostPool").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByHostPool").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByHostPool").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:PrivateEndpointConnectionByHostPool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

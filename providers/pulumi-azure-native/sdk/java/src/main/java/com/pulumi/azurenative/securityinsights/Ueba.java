@@ -162,7 +162,10 @@ public class Ueba extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:Ueba").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:Ueba").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Ueba").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Ueba").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Ueba").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Ueba").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Ueba").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

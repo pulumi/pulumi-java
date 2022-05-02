@@ -10,6 +10,8 @@ import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceAcrConfiguration
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceAuthenticationConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceCorsConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceExportConfigurationResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointConnectionResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.ResourceVersionPolicyConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.Alias;
@@ -25,7 +27,7 @@ import javax.annotation.Nullable;
 
 /**
  * The description of Fhir Service
- * API Version: 2021-06-01-preview.
+ * API Version: 2021-11-01.
  * 
  * ## Example Usage
  * 
@@ -111,6 +113,20 @@ public class FhirService extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.etag);
     }
     /**
+     * Fhir Service event support status.
+     * 
+     */
+    @Export(name="eventState", type=String.class, parameters={})
+    private Output<String> eventState;
+
+    /**
+     * @return Fhir Service event support status.
+     * 
+     */
+    public Output<String> eventState() {
+        return this.eventState;
+    }
+    /**
      * Fhir Service export configuration.
      * 
      */
@@ -181,6 +197,20 @@ public class FhirService extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
+
+    /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return this.privateEndpointConnections;
+    }
+    /**
      * The provisioning state.
      * 
      */
@@ -193,6 +223,34 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      */
     public Output<String> provisioningState() {
         return this.provisioningState;
+    }
+    /**
+     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
+    private Output<String> publicNetworkAccess;
+
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    public Output<String> publicNetworkAccess() {
+        return this.publicNetworkAccess;
+    }
+    /**
+     * Determines tracking of history for resources.
+     * 
+     */
+    @Export(name="resourceVersionPolicyConfiguration", type=ResourceVersionPolicyConfigurationResponse.class, parameters={})
+    private Output</* @Nullable */ ResourceVersionPolicyConfigurationResponse> resourceVersionPolicyConfiguration;
+
+    /**
+     * @return Determines tracking of history for resources.
+     * 
+     */
+    public Output<Optional<ResourceVersionPolicyConfigurationResponse>> resourceVersionPolicyConfiguration() {
+        return Codegen.optional(this.resourceVersionPolicyConfiguration);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
@@ -270,7 +328,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:FhirService").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:FhirService").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:FhirService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

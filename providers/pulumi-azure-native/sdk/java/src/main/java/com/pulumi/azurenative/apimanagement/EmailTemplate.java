@@ -190,7 +190,8 @@ public class EmailTemplate extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:EmailTemplate").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:EmailTemplate").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:EmailTemplate").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:EmailTemplate").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:EmailTemplate").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:EmailTemplate").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

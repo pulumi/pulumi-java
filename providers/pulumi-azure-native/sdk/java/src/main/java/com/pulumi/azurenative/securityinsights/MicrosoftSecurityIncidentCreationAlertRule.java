@@ -261,7 +261,11 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:MicrosoftSecurityIncidentCreationAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MicrosoftSecurityIncidentCreationAlertRule").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:MicrosoftSecurityIncidentCreationAlertRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

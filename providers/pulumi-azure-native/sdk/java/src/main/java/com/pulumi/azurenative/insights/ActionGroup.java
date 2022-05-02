@@ -335,7 +335,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:insights/v20180901:ActionGroup").build()),
                 Output.of(Alias.builder().type("azure-native:insights/v20190301:ActionGroup").build()),
                 Output.of(Alias.builder().type("azure-native:insights/v20190601:ActionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:insights/v20210901:ActionGroup").build())
+                Output.of(Alias.builder().type("azure-native:insights/v20210901:ActionGroup").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20220401:ActionGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -4,16 +4,23 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.azurenative.eventgrid.inputs.BoolEqualsAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.IsNotNullAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.IsNullOrUndefinedAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberGreaterThanAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberGreaterThanOrEqualsAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberInAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.NumberInRangeAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberLessThanAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberLessThanOrEqualsAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.NumberNotInAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.NumberNotInRangeAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StringBeginsWithAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StringContainsAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StringEndsWithAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StringInAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.StringNotBeginsWithAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.StringNotContainsAdvancedFilterArgs;
+import com.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -48,6 +55,21 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      */
     public Optional<Output<List<Object>>> advancedFilters() {
         return Optional.ofNullable(this.advancedFilters);
+    }
+
+    /**
+     * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+     * 
+     */
+    @Import(name="enableAdvancedFilteringOnArrays")
+    private @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
+
+    /**
+     * @return Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+     * 
+     */
+    public Optional<Output<Boolean>> enableAdvancedFilteringOnArrays() {
+        return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
 
     /**
@@ -122,6 +144,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
 
     private EventSubscriptionFilterArgs(EventSubscriptionFilterArgs $) {
         this.advancedFilters = $.advancedFilters;
+        this.enableAdvancedFilteringOnArrays = $.enableAdvancedFilteringOnArrays;
         this.includedEventTypes = $.includedEventTypes;
         this.isSubjectCaseSensitive = $.isSubjectCaseSensitive;
         this.subjectBeginsWith = $.subjectBeginsWith;
@@ -175,6 +198,27 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
          */
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
+        }
+
+        /**
+         * @param enableAdvancedFilteringOnArrays Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Output<Boolean> enableAdvancedFilteringOnArrays) {
+            $.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
+            return this;
+        }
+
+        /**
+         * @param enableAdvancedFilteringOnArrays Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableAdvancedFilteringOnArrays(Boolean enableAdvancedFilteringOnArrays) {
+            return enableAdvancedFilteringOnArrays(Output.of(enableAdvancedFilteringOnArrays));
         }
 
         /**

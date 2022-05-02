@@ -34,6 +34,7 @@ import com.pulumi.azurenative.datafactory.inputs.HDInsightPigActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.HDInsightSparkActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.HDInsightStreamingActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.LookupActivityArgs;
+import com.pulumi.azurenative.datafactory.inputs.ScriptActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SetVariableActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SqlServerStoredProcedureActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.SwitchActivityArgs;

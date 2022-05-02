@@ -203,7 +203,8 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:network/v20201101:SecurityPartnerProvider").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:SecurityPartnerProvider").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:SecurityPartnerProvider").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:SecurityPartnerProvider").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:SecurityPartnerProvider").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:SecurityPartnerProvider").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

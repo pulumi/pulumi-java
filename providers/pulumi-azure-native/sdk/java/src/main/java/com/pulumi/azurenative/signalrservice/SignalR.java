@@ -345,7 +345,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210401preview:SignalR").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210601preview:SignalR").build()),
                 Output.of(Alias.builder().type("azure-native:signalrservice/v20210901preview:SignalR").build()),
-                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalR").build())
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20220201:SignalR").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

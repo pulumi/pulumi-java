@@ -261,7 +261,8 @@ public class VirtualWan extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualWan").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualWan").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualWan").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualWan").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualWan").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualWan").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The compute type of the endpoint.
+     * [Required] The compute type of the endpoint.
      * 
      */
     @EnumType

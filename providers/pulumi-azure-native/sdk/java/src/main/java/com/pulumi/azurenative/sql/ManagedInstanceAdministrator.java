@@ -156,7 +156,8 @@ public class ManagedInstanceAdministrator extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ManagedInstanceAdministrator").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ManagedInstanceAdministrator").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ManagedInstanceAdministrator").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedInstanceAdministrator").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedInstanceAdministrator").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ManagedInstanceAdministrator").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

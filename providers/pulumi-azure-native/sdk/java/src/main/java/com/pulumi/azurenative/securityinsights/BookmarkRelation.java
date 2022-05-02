@@ -165,7 +165,10 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:BookmarkRelation").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:BookmarkRelation").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:BookmarkRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:BookmarkRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:BookmarkRelation").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:BookmarkRelation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

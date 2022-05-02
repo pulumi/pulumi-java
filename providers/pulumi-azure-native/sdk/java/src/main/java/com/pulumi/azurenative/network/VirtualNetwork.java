@@ -351,7 +351,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualNetwork").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualNetwork").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualNetwork").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetwork").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetwork").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualNetwork").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
