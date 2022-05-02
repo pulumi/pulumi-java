@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
     /**
      * If true, requests to different hosts will be cached separately.
-     * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+     * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
     @Import(name="excludeHost")
@@ -27,7 +27,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
     /**
      * @return If true, requests to different hosts will be cached separately.
-     * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+     * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
     public Optional<Output<Boolean>> excludeHost() {
@@ -92,6 +92,33 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     }
 
     /**
+     * Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+     * Cookie names:
+     * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+     * - are case sensitive
+     * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+     *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     *   You may specify up to three cookie names.
+     * 
+     */
+    @Import(name="includedCookieNames")
+    private @Nullable Output<List<String>> includedCookieNames;
+
+    /**
+     * @return Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+     * Cookie names:
+     * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+     * - are case sensitive
+     * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+     *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     *   You may specify up to three cookie names.
+     * 
+     */
+    public Optional<Output<List<String>>> includedCookieNames() {
+        return Optional.ofNullable(this.includedCookieNames);
+    }
+
+    /**
      * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
@@ -138,6 +165,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         this.excludeQueryString = $.excludeQueryString;
         this.excludedQueryParameters = $.excludedQueryParameters;
         this.includeProtocol = $.includeProtocol;
+        this.includedCookieNames = $.includedCookieNames;
         this.includedHeaderNames = $.includedHeaderNames;
         this.includedQueryParameters = $.includedQueryParameters;
     }
@@ -162,7 +190,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
         /**
          * @param excludeHost If true, requests to different hosts will be cached separately.
-         * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+         * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
          * 
          * @return builder
          * 
@@ -174,7 +202,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
         /**
          * @param excludeHost If true, requests to different hosts will be cached separately.
-         * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+         * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
          * 
          * @return builder
          * 
@@ -267,6 +295,55 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
          */
         public Builder includeProtocol(Boolean includeProtocol) {
             return includeProtocol(Output.of(includeProtocol));
+        }
+
+        /**
+         * @param includedCookieNames Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+         * Cookie names:
+         * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+         * - are case sensitive
+         * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+         *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+         *   You may specify up to three cookie names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedCookieNames(@Nullable Output<List<String>> includedCookieNames) {
+            $.includedCookieNames = includedCookieNames;
+            return this;
+        }
+
+        /**
+         * @param includedCookieNames Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+         * Cookie names:
+         * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+         * - are case sensitive
+         * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+         *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+         *   You may specify up to three cookie names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedCookieNames(List<String> includedCookieNames) {
+            return includedCookieNames(Output.of(includedCookieNames));
+        }
+
+        /**
+         * @param includedCookieNames Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+         * Cookie names:
+         * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+         * - are case sensitive
+         * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+         *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+         *   You may specify up to three cookie names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedCookieNames(String... includedCookieNames) {
+            return includedCookieNames(List.of(includedCookieNames));
         }
 
         /**

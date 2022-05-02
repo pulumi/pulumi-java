@@ -14,23 +14,51 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
 
     public static final GetSecretVersionArgs Empty = new GetSecretVersionArgs();
 
+    /**
+     * The project to get the secret version for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project to get the secret version for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * The secret to get the secret version for.
+     * 
+     */
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return The secret to get the secret version for.
+     * 
+     */
     public String secret() {
         return this.secret;
     }
 
+    /**
+     * The version of the secret to get. If it
+     * is not provided, the latest version is retrieved.
+     * 
+     */
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the secret to get. If it
+     * is not provided, the latest version is retrieved.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -61,16 +89,36 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetSecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The project to get the secret version for. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param secret The secret to get the secret version for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param version The version of the secret to get. If it
+         * is not provided, the latest version is retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

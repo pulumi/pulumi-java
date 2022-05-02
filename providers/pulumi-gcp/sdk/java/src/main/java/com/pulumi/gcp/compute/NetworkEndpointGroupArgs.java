@@ -96,8 +96,14 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of network endpoints in this network endpoint group.
+     * NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
+     * endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
+     * Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
+     * that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
+     * INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
+     * CONNECTION balancing modes.
      * Default value is `GCE_VM_IP_PORT`.
-     * Possible values are `GCE_VM_IP_PORT`.
+     * Possible values are `GCE_VM_IP_PORT` and `NON_GCP_PRIVATE_IP_PORT`.
      * 
      */
     @Import(name="networkEndpointType")
@@ -105,8 +111,14 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
 
     /**
      * @return Type of network endpoints in this network endpoint group.
+     * NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
+     * endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
+     * Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
+     * that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
+     * INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
+     * CONNECTION balancing modes.
      * Default value is `GCE_VM_IP_PORT`.
-     * Possible values are `GCE_VM_IP_PORT`.
+     * Possible values are `GCE_VM_IP_PORT` and `NON_GCP_PRIVATE_IP_PORT`.
      * 
      */
     public Optional<Output<String>> networkEndpointType() {
@@ -295,8 +307,14 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param networkEndpointType Type of network endpoints in this network endpoint group.
+         * NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
+         * endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
+         * Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
+         * that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
+         * INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
+         * CONNECTION balancing modes.
          * Default value is `GCE_VM_IP_PORT`.
-         * Possible values are `GCE_VM_IP_PORT`.
+         * Possible values are `GCE_VM_IP_PORT` and `NON_GCP_PRIVATE_IP_PORT`.
          * 
          * @return builder
          * 
@@ -308,8 +326,14 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param networkEndpointType Type of network endpoints in this network endpoint group.
+         * NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
+         * endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
+         * Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
+         * that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
+         * INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
+         * CONNECTION balancing modes.
          * Default value is `GCE_VM_IP_PORT`.
-         * Possible values are `GCE_VM_IP_PORT`.
+         * Possible values are `GCE_VM_IP_PORT` and `NON_GCP_PRIVATE_IP_PORT`.
          * 
          * @return builder
          * 

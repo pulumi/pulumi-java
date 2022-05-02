@@ -19,6 +19,27 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     public static final DatabaseState Empty = new DatabaseState();
 
     /**
+     * The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+     * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+     * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+     * &#34;POSTGRESQL&#34;]
+     * 
+     */
+    @Import(name="databaseDialect")
+    private @Nullable Output<String> databaseDialect;
+
+    /**
+     * @return The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+     * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+     * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+     * &#34;POSTGRESQL&#34;]
+     * 
+     */
+    public Optional<Output<String>> databaseDialect() {
+        return Optional.ofNullable(this.databaseDialect);
+    }
+
+    /**
      * An optional list of DDL statements to run inside the newly created
      * database. Statements can create tables, indexes, etc. These statements
      * execute atomically with the creation of the database: if there is an
@@ -140,6 +161,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     private DatabaseState() {}
 
     private DatabaseState(DatabaseState $) {
+        this.databaseDialect = $.databaseDialect;
         this.ddls = $.ddls;
         this.deletionProtection = $.deletionProtection;
         this.encryptionConfig = $.encryptionConfig;
@@ -165,6 +187,33 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
 
         public Builder(DatabaseState defaults) {
             $ = new DatabaseState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param databaseDialect The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+         * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+         * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+         * &#34;POSTGRESQL&#34;]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseDialect(@Nullable Output<String> databaseDialect) {
+            $.databaseDialect = databaseDialect;
+            return this;
+        }
+
+        /**
+         * @param databaseDialect The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+         * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+         * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+         * &#34;POSTGRESQL&#34;]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseDialect(String databaseDialect) {
+            return databaseDialect(Output.of(databaseDialect));
         }
 
         /**

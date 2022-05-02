@@ -12,6 +12,7 @@ import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigWindowsUpdateArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigYumArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigZypperArgs;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,6 +55,21 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
      */
     public Optional<Output<PatchDeploymentPatchConfigGooArgs>> goo() {
         return Optional.ofNullable(this.goo);
+    }
+
+    /**
+     * Allows the patch job to run on Managed instance groups (MIGs).
+     * 
+     */
+    @Import(name="migInstancesAllowed")
+    private @Nullable Output<Boolean> migInstancesAllowed;
+
+    /**
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
+     * 
+     */
+    public Optional<Output<Boolean>> migInstancesAllowed() {
+        return Optional.ofNullable(this.migInstancesAllowed);
     }
 
     /**
@@ -163,6 +179,7 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     private PatchDeploymentPatchConfigArgs(PatchDeploymentPatchConfigArgs $) {
         this.apt = $.apt;
         this.goo = $.goo;
+        this.migInstancesAllowed = $.migInstancesAllowed;
         this.postStep = $.postStep;
         this.preStep = $.preStep;
         this.rebootConfig = $.rebootConfig;
@@ -233,6 +250,27 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
          */
         public Builder goo(PatchDeploymentPatchConfigGooArgs goo) {
             return goo(Output.of(goo));
+        }
+
+        /**
+         * @param migInstancesAllowed Allows the patch job to run on Managed instance groups (MIGs).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder migInstancesAllowed(@Nullable Output<Boolean> migInstancesAllowed) {
+            $.migInstancesAllowed = migInstancesAllowed;
+            return this;
+        }
+
+        /**
+         * @param migInstancesAllowed Allows the patch job to run on Managed instance groups (MIGs).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
+            return migInstancesAllowed(Output.of(migInstancesAllowed));
         }
 
         /**

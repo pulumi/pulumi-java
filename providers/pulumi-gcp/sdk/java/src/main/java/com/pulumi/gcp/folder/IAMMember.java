@@ -15,23 +15,123 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * Four different resources help you manage your IAM policy for a folder. Each of these resources serves a different use case:
+ * 
+ * * `gcp.folder.IAMPolicy`: Authoritative. Sets the IAM policy for the folder and replaces any existing policy already attached.
+ * * `gcp.folder.IAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the folder are preserved.
+ * * `gcp.folder.IAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the folder are preserved.
+ * * `gcp.folder.IamAuditConfig`: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.
+ * 
+ * &gt; **Note:** `gcp.folder.IAMPolicy` **cannot** be used in conjunction with `gcp.folder.IAMBinding`, `gcp.folder.IAMMember`, or `gcp.folder.IamAuditConfig` or they will fight over what your policy should be.
+ * 
+ * &gt; **Note:** `gcp.folder.IAMBinding` resources **can be** used in conjunction with `gcp.folder.IAMMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * &gt; **Note:** The underlying API method `projects.setIamPolicy` has constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
+ *    IAM Conditions cannot be used with Basic Roles such as Owner. Violating these constraints will result in the API returning a 400 error code so please review these if you encounter errors with this resource.
+ * 
+ * ## google\_folder\_iam\_policy
+ * 
+ * !&gt; **Be careful!** You can accidentally lock yourself out of your folder
+ *    using this resource. Deleting a `gcp.folder.IAMPolicy` removes access
+ *    from anyone without permissions on its parent folder/organization. Proceed with caution.
+ *    It&#39;s not recommended to use `gcp.folder.IAMPolicy` with your provider folder
+ *    to avoid locking yourself out, and it should generally only be used with folders
+ *    fully managed by this provider. If you do use this resource, it is recommended to **import** the policy before
+ *    applying the change.
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_binding
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_member
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_audit\_config
+ * 
+ * ## Import
+ * 
+ * IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+ * 
+ * This member resource can be imported using the `folder`, role, and member e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iAMMember:IAMMember my_folder &#34;folder roles/viewer user:foo@example.com&#34;
+ * ```
+ * 
+ *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
+ * 
+ * This binding resource can be imported using the `folder` and role, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iAMMember:IAMMember my_folder &#34;folder roles/viewer&#34;
+ * ```
+ * 
+ *  IAM policy imports use the identifier of the resource in question.
+ * 
+ * This policy resource can be imported using the `folder`.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iAMMember:IAMMember my_folder folder
+ * ```
+ * 
+ *  IAM audit config imports use the identifier of the resource in question and the service, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iAMMember:IAMMember my_folder &#34;folder foo.googleapis.com&#34;
+ * ```
+ * 
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
+ * 
+ * full name of the custom role, e.g. `organizations/{{org_id}}/roles/{{role_id}}`.
+ * 
+ */
 @ResourceType(type="gcp:folder/iAMMember:IAMMember")
 public class IAMMember extends com.pulumi.resources.CustomResource {
+    /**
+     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Output<Optional<IAMMemberCondition>> condition() {
         return Codegen.optional(this.condition);
     }
+    /**
+     * (Computed) The etag of the folder&#39;s IAM policy.
+     * 
+     */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the folder&#39;s IAM policy.
+     * 
+     */
     public Output<String> etag() {
         return this.etag;
     }
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Output<String> folder() {
         return this.folder;
     }
@@ -41,9 +141,21 @@ public class IAMMember extends com.pulumi.resources.CustomResource {
     public Output<String> member() {
         return this.member;
     }
+    /**
+     * The role that should be applied. Only one
+     * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `organizations/{{org_id}}/roles/{{role_id}}`.
+     * 
+     */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `organizations/{{org_id}}/roles/{{role_id}}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }

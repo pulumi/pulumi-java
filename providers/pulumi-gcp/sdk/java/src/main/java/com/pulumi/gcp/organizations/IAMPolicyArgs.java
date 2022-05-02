@@ -14,23 +14,39 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
     /**
-     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+     * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+     * will not be inferred from the provider.
      * 
      */
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
     /**
-     * @return The numeric ID of the organization in which you want to manage the audit logging config.
+     * @return The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+     * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+     * will not be inferred from the provider.
      * 
      */
     public Output<String> orgId() {
         return this.orgId;
     }
 
+    /**
+     * The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the organization. The policy will be
+     * merged with any existing policy applied to the organization.
+     * 
+     */
     @Import(name="policyData", required=true)
     private Output<String> policyData;
 
+    /**
+     * @return The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the organization. The policy will be
+     * merged with any existing policy applied to the organization.
+     * 
+     */
     public Output<String> policyData() {
         return this.policyData;
     }
@@ -61,7 +77,9 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * @param orgId The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+         * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+         * will not be inferred from the provider.
          * 
          * @return builder
          * 
@@ -72,7 +90,9 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * @param orgId The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+         * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+         * will not be inferred from the provider.
          * 
          * @return builder
          * 
@@ -81,11 +101,27 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the organization. The policy will be
+         * merged with any existing policy applied to the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(Output<String> policyData) {
             $.policyData = policyData;
             return this;
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the organization. The policy will be
+         * merged with any existing policy applied to the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(String policyData) {
             return policyData(Output.of(policyData));
         }

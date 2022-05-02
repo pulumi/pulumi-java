@@ -22,14 +22,14 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     public static final AwsNodePoolConfigArgs Empty = new AwsNodePoolConfigArgs();
 
     /**
-     * Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
     @Import(name="configEncryption", required=true)
     private Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption;
 
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * @return The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
     public Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption() {
@@ -37,14 +37,14 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
     @Import(name="iamInstanceProfile", required=true)
     private Output<String> iamInstanceProfile;
 
     /**
-     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * @return The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
     public Output<String> iamInstanceProfile() {
@@ -52,14 +52,14 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     public Optional<Output<String>> instanceType() {
@@ -189,7 +189,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+         * @param configEncryption The ARN of the AWS KMS key used to encrypt node pool configuration.
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+         * @param configEncryption The ARN of the AWS KMS key used to encrypt node pool configuration.
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iamInstanceProfile Required. The name of the AWS IAM role assigned to nodes in the pool.
+         * @param iamInstanceProfile The name of the AWS IAM role assigned to nodes in the pool.
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iamInstanceProfile Required. The name of the AWS IAM role assigned to nodes in the pool.
+         * @param iamInstanceProfile The name of the AWS IAM role assigned to nodes in the pool.
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
          * 
          * @return builder
          * 

@@ -6,6 +6,8 @@ package com.pulumi.gcp.eventarc.outputs;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerMatchingCriteria {
@@ -15,6 +17,11 @@ public final class TriggerMatchingCriteria {
      */
     private final String attribute;
     /**
+     * @return Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+     * 
+     */
+    private final @Nullable String operator;
+    /**
      * @return Required. The value for the attribute.
      * 
      */
@@ -23,8 +30,10 @@ public final class TriggerMatchingCriteria {
     @CustomType.Constructor
     private TriggerMatchingCriteria(
         @CustomType.Parameter("attribute") String attribute,
+        @CustomType.Parameter("operator") @Nullable String operator,
         @CustomType.Parameter("value") String value) {
         this.attribute = attribute;
+        this.operator = operator;
         this.value = value;
     }
 
@@ -34,6 +43,13 @@ public final class TriggerMatchingCriteria {
      */
     public String attribute() {
         return this.attribute;
+    }
+    /**
+     * @return Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+     * 
+     */
+    public Optional<String> operator() {
+        return Optional.ofNullable(this.operator);
     }
     /**
      * @return Required. The value for the attribute.
@@ -53,6 +69,7 @@ public final class TriggerMatchingCriteria {
 
     public static final class Builder {
         private String attribute;
+        private @Nullable String operator;
         private String value;
 
         public Builder() {
@@ -62,6 +79,7 @@ public final class TriggerMatchingCriteria {
         public Builder(TriggerMatchingCriteria defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.attribute = defaults.attribute;
+    	      this.operator = defaults.operator;
     	      this.value = defaults.value;
         }
 
@@ -69,11 +87,15 @@ public final class TriggerMatchingCriteria {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
+        public Builder operator(@Nullable String operator) {
+            this.operator = operator;
+            return this;
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }        public TriggerMatchingCriteria build() {
-            return new TriggerMatchingCriteria(attribute, value);
+            return new TriggerMatchingCriteria(attribute, operator, value);
         }
     }
 }

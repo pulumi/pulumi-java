@@ -9,17 +9,23 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDatabaseInstanceClone {
+    private final String allocatedIpRange;
     private final String pointInTime;
     private final String sourceInstanceName;
 
     @CustomType.Constructor
     private GetDatabaseInstanceClone(
+        @CustomType.Parameter("allocatedIpRange") String allocatedIpRange,
         @CustomType.Parameter("pointInTime") String pointInTime,
         @CustomType.Parameter("sourceInstanceName") String sourceInstanceName) {
+        this.allocatedIpRange = allocatedIpRange;
         this.pointInTime = pointInTime;
         this.sourceInstanceName = sourceInstanceName;
     }
 
+    public String allocatedIpRange() {
+        return this.allocatedIpRange;
+    }
     public String pointInTime() {
         return this.pointInTime;
     }
@@ -36,6 +42,7 @@ public final class GetDatabaseInstanceClone {
     }
 
     public static final class Builder {
+        private String allocatedIpRange;
         private String pointInTime;
         private String sourceInstanceName;
 
@@ -45,10 +52,15 @@ public final class GetDatabaseInstanceClone {
 
         public Builder(GetDatabaseInstanceClone defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.allocatedIpRange = defaults.allocatedIpRange;
     	      this.pointInTime = defaults.pointInTime;
     	      this.sourceInstanceName = defaults.sourceInstanceName;
         }
 
+        public Builder allocatedIpRange(String allocatedIpRange) {
+            this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
+            return this;
+        }
         public Builder pointInTime(String pointInTime) {
             this.pointInTime = Objects.requireNonNull(pointInTime);
             return this;
@@ -57,7 +69,7 @@ public final class GetDatabaseInstanceClone {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }        public GetDatabaseInstanceClone build() {
-            return new GetDatabaseInstanceClone(pointInTime, sourceInstanceName);
+            return new GetDatabaseInstanceClone(allocatedIpRange, pointInTime, sourceInstanceName);
         }
     }
 }

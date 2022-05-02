@@ -19,6 +19,7 @@ public final class GetBackendBucketResult {
     private final String creationTimestamp;
     private final List<String> customResponseHeaders;
     private final String description;
+    private final String edgeSecurityPolicy;
     private final Boolean enableCdn;
     /**
      * @return The provider-assigned unique ID for this managed resource.
@@ -36,6 +37,7 @@ public final class GetBackendBucketResult {
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
         @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
         @CustomType.Parameter("enableCdn") Boolean enableCdn,
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("name") String name,
@@ -46,6 +48,7 @@ public final class GetBackendBucketResult {
         this.creationTimestamp = creationTimestamp;
         this.customResponseHeaders = customResponseHeaders;
         this.description = description;
+        this.edgeSecurityPolicy = edgeSecurityPolicy;
         this.enableCdn = enableCdn;
         this.id = id;
         this.name = name;
@@ -67,6 +70,9 @@ public final class GetBackendBucketResult {
     }
     public String description() {
         return this.description;
+    }
+    public String edgeSecurityPolicy() {
+        return this.edgeSecurityPolicy;
     }
     public Boolean enableCdn() {
         return this.enableCdn;
@@ -102,6 +108,7 @@ public final class GetBackendBucketResult {
         private String creationTimestamp;
         private List<String> customResponseHeaders;
         private String description;
+        private String edgeSecurityPolicy;
         private Boolean enableCdn;
         private String id;
         private String name;
@@ -119,6 +126,7 @@ public final class GetBackendBucketResult {
     	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.customResponseHeaders = defaults.customResponseHeaders;
     	      this.description = defaults.description;
+    	      this.edgeSecurityPolicy = defaults.edgeSecurityPolicy;
     	      this.enableCdn = defaults.enableCdn;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -152,6 +160,10 @@ public final class GetBackendBucketResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
+            this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
+            return this;
+        }
         public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
@@ -172,7 +184,7 @@ public final class GetBackendBucketResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }        public GetBackendBucketResult build() {
-            return new GetBackendBucketResult(bucketName, cdnPolicies, creationTimestamp, customResponseHeaders, description, enableCdn, id, name, project, selfLink);
+            return new GetBackendBucketResult(bucketName, cdnPolicies, creationTimestamp, customResponseHeaders, description, edgeSecurityPolicy, enableCdn, id, name, project, selfLink);
         }
     }
 }

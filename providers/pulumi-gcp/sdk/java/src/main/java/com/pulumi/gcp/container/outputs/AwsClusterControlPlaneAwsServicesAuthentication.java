@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsClusterControlPlaneAwsServicesAuthentication {
     /**
-     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * @return The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
     private final String roleArn;
@@ -31,7 +31,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
     }
 
     /**
-     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * @return The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
     public String roleArn() {

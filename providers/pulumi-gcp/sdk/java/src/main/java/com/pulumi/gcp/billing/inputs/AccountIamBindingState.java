@@ -17,9 +17,17 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
 
     public static final AccountIamBindingState Empty = new AccountIamBindingState();
 
+    /**
+     * The billing account id.
+     * 
+     */
     @Import(name="billingAccountId")
     private @Nullable Output<String> billingAccountId;
 
+    /**
+     * @return The billing account id.
+     * 
+     */
     public Optional<Output<String>> billingAccountId() {
         return Optional.ofNullable(this.billingAccountId);
     }
@@ -31,9 +39,17 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.condition);
     }
 
+    /**
+     * (Computed) The etag of the billing account&#39;s IAM policy.
+     * 
+     */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the billing account&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -45,9 +61,21 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.members);
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -80,11 +108,23 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
             $ = new AccountIamBindingState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             return billingAccountId(Output.of(billingAccountId));
         }
@@ -98,11 +138,23 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the billing account&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the billing account&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -120,11 +172,27 @@ public final class AccountIamBindingState extends com.pulumi.resources.ResourceA
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

@@ -4,6 +4,7 @@
 package com.pulumi.gcp.bigquery.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.gcp.bigquery.outputs.DatasetAccessDataset;
 import com.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.String;
 import java.util.Objects;
@@ -12,6 +13,12 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetAccess {
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    private final @Nullable DatasetAccessDataset dataset;
     /**
      * @return A domain to grant access to. Any users signed in with the
      * domain specified will be granted the specified access
@@ -56,12 +63,14 @@ public final class DatasetAccess {
 
     @CustomType.Constructor
     private DatasetAccess(
+        @CustomType.Parameter("dataset") @Nullable DatasetAccessDataset dataset,
         @CustomType.Parameter("domain") @Nullable String domain,
         @CustomType.Parameter("groupByEmail") @Nullable String groupByEmail,
         @CustomType.Parameter("role") @Nullable String role,
         @CustomType.Parameter("specialGroup") @Nullable String specialGroup,
         @CustomType.Parameter("userByEmail") @Nullable String userByEmail,
         @CustomType.Parameter("view") @Nullable DatasetAccessView view) {
+        this.dataset = dataset;
         this.domain = domain;
         this.groupByEmail = groupByEmail;
         this.role = role;
@@ -70,6 +79,14 @@ public final class DatasetAccess {
         this.view = view;
     }
 
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    public Optional<DatasetAccessDataset> dataset() {
+        return Optional.ofNullable(this.dataset);
+    }
     /**
      * @return A domain to grant access to. Any users signed in with the
      * domain specified will be granted the specified access
@@ -133,6 +150,7 @@ public final class DatasetAccess {
     }
 
     public static final class Builder {
+        private @Nullable DatasetAccessDataset dataset;
         private @Nullable String domain;
         private @Nullable String groupByEmail;
         private @Nullable String role;
@@ -146,6 +164,7 @@ public final class DatasetAccess {
 
         public Builder(DatasetAccess defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.dataset = defaults.dataset;
     	      this.domain = defaults.domain;
     	      this.groupByEmail = defaults.groupByEmail;
     	      this.role = defaults.role;
@@ -154,6 +173,10 @@ public final class DatasetAccess {
     	      this.view = defaults.view;
         }
 
+        public Builder dataset(@Nullable DatasetAccessDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
@@ -178,7 +201,7 @@ public final class DatasetAccess {
             this.view = view;
             return this;
         }        public DatasetAccess build() {
-            return new DatasetAccess(domain, groupByEmail, role, specialGroup, userByEmail, view);
+            return new DatasetAccess(dataset, domain, groupByEmail, role, specialGroup, userByEmail, view);
         }
     }
 }

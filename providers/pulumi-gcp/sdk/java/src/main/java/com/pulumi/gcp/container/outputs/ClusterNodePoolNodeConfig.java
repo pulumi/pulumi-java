@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigEphemeralStorageConfig;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigGcfsConfig;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigGuestAccelerator;
+import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigGvnic;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigKubeletConfig;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigLinuxNodeConfig;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfigSandboxConfig;
@@ -62,6 +63,15 @@ public final class ClusterNodePoolNodeConfig {
      * 
      */
     private final @Nullable List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
+    /**
+     * @return Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    private final @Nullable ClusterNodePoolNodeConfigGvnic gvnic;
     /**
      * @return The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
@@ -193,6 +203,7 @@ public final class ClusterNodePoolNodeConfig {
         @CustomType.Parameter("ephemeralStorageConfig") @Nullable ClusterNodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
         @CustomType.Parameter("gcfsConfig") @Nullable ClusterNodePoolNodeConfigGcfsConfig gcfsConfig,
         @CustomType.Parameter("guestAccelerators") @Nullable List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("gvnic") @Nullable ClusterNodePoolNodeConfigGvnic gvnic,
         @CustomType.Parameter("imageType") @Nullable String imageType,
         @CustomType.Parameter("kubeletConfig") @Nullable ClusterNodePoolNodeConfigKubeletConfig kubeletConfig,
         @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
@@ -217,6 +228,7 @@ public final class ClusterNodePoolNodeConfig {
         this.ephemeralStorageConfig = ephemeralStorageConfig;
         this.gcfsConfig = gcfsConfig;
         this.guestAccelerators = guestAccelerators;
+        this.gvnic = gvnic;
         this.imageType = imageType;
         this.kubeletConfig = kubeletConfig;
         this.labels = labels;
@@ -286,6 +298,17 @@ public final class ClusterNodePoolNodeConfig {
      */
     public List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
+    }
+    /**
+     * @return Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    public Optional<ClusterNodePoolNodeConfigGvnic> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
     /**
      * @return The image type to use for this node. Note that changing the image type
@@ -461,6 +484,7 @@ public final class ClusterNodePoolNodeConfig {
         private @Nullable ClusterNodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig;
         private @Nullable ClusterNodePoolNodeConfigGcfsConfig gcfsConfig;
         private @Nullable List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
+        private @Nullable ClusterNodePoolNodeConfigGvnic gvnic;
         private @Nullable String imageType;
         private @Nullable ClusterNodePoolNodeConfigKubeletConfig kubeletConfig;
         private @Nullable Map<String,String> labels;
@@ -492,6 +516,7 @@ public final class ClusterNodePoolNodeConfig {
     	      this.ephemeralStorageConfig = defaults.ephemeralStorageConfig;
     	      this.gcfsConfig = defaults.gcfsConfig;
     	      this.guestAccelerators = defaults.guestAccelerators;
+    	      this.gvnic = defaults.gvnic;
     	      this.imageType = defaults.imageType;
     	      this.kubeletConfig = defaults.kubeletConfig;
     	      this.labels = defaults.labels;
@@ -538,6 +563,10 @@ public final class ClusterNodePoolNodeConfig {
         }
         public Builder guestAccelerators(ClusterNodePoolNodeConfigGuestAccelerator... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+        public Builder gvnic(@Nullable ClusterNodePoolNodeConfigGvnic gvnic) {
+            this.gvnic = gvnic;
+            return this;
         }
         public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
@@ -620,7 +649,7 @@ public final class ClusterNodePoolNodeConfig {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }        public ClusterNodePoolNodeConfig build() {
-            return new ClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
+            return new ClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }
 }

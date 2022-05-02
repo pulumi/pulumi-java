@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigEphemeralStorageConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigGcfsConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigGuestAcceleratorArgs;
+import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigGvnicArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigKubeletConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigLinuxNodeConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigSandboxConfigArgs;
@@ -132,6 +133,29 @@ public final class ClusterNodePoolNodeConfigArgs extends com.pulumi.resources.Re
      */
     public Optional<Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
+    }
+
+    /**
+     * Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="gvnic")
+    private @Nullable Output<ClusterNodePoolNodeConfigGvnicArgs> gvnic;
+
+    /**
+     * @return Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<ClusterNodePoolNodeConfigGvnicArgs>> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
 
     /**
@@ -477,6 +501,7 @@ public final class ClusterNodePoolNodeConfigArgs extends com.pulumi.resources.Re
         this.ephemeralStorageConfig = $.ephemeralStorageConfig;
         this.gcfsConfig = $.gcfsConfig;
         this.guestAccelerators = $.guestAccelerators;
+        this.gvnic = $.gvnic;
         this.imageType = $.imageType;
         this.kubeletConfig = $.kubeletConfig;
         this.labels = $.labels;
@@ -666,6 +691,35 @@ public final class ClusterNodePoolNodeConfigArgs extends com.pulumi.resources.Re
          */
         public Builder guestAccelerators(ClusterNodePoolNodeConfigGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+
+        /**
+         * @param gvnic Google Virtual NIC (gVNIC) is a virtual network interface.
+         * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+         * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+         * GKE node version 1.15.11-gke.15 or later
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gvnic(@Nullable Output<ClusterNodePoolNodeConfigGvnicArgs> gvnic) {
+            $.gvnic = gvnic;
+            return this;
+        }
+
+        /**
+         * @param gvnic Google Virtual NIC (gVNIC) is a virtual network interface.
+         * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+         * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+         * GKE node version 1.15.11-gke.15 or later
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gvnic(ClusterNodePoolNodeConfigGvnicArgs gvnic) {
+            return gvnic(Output.of(gvnic));
         }
 
         /**

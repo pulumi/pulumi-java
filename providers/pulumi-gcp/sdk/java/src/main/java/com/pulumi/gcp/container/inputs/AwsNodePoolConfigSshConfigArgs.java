@@ -14,14 +14,14 @@ public final class AwsNodePoolConfigSshConfigArgs extends com.pulumi.resources.R
     public static final AwsNodePoolConfigSshConfigArgs Empty = new AwsNodePoolConfigSshConfigArgs();
 
     /**
-     * Required. The name of the EC2 key pair used to login into cluster machines.
+     * The name of the EC2 key pair used to login into cluster machines.
      * 
      */
     @Import(name="ec2KeyPair", required=true)
     private Output<String> ec2KeyPair;
 
     /**
-     * @return Required. The name of the EC2 key pair used to login into cluster machines.
+     * @return The name of the EC2 key pair used to login into cluster machines.
      * 
      */
     public Output<String> ec2KeyPair() {
@@ -53,7 +53,7 @@ public final class AwsNodePoolConfigSshConfigArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ec2KeyPair Required. The name of the EC2 key pair used to login into cluster machines.
+         * @param ec2KeyPair The name of the EC2 key pair used to login into cluster machines.
          * 
          * @return builder
          * 
@@ -64,7 +64,7 @@ public final class AwsNodePoolConfigSshConfigArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ec2KeyPair Required. The name of the EC2 key pair used to login into cluster machines.
+         * @param ec2KeyPair The name of the EC2 key pair used to login into cluster machines.
          * 
          * @return builder
          * 

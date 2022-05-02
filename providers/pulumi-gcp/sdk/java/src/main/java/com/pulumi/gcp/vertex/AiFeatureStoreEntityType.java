@@ -17,6 +17,8 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * FeaturestoreEntitytype can be imported using any of these accepted formats

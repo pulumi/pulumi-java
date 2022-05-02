@@ -14,14 +14,14 @@ public final class AzureClusterAuthorizationAdminUserArgs extends com.pulumi.res
     public static final AzureClusterAuthorizationAdminUserArgs Empty = new AzureClusterAuthorizationAdminUserArgs();
 
     /**
-     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * The name of the user, e.g. `my-gcp-id@gmail.com`.
      * 
      */
     @Import(name="username", required=true)
     private Output<String> username;
 
     /**
-     * @return Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * @return The name of the user, e.g. `my-gcp-id@gmail.com`.
      * 
      */
     public Output<String> username() {
@@ -53,7 +53,7 @@ public final class AzureClusterAuthorizationAdminUserArgs extends com.pulumi.res
         }
 
         /**
-         * @param username Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+         * @param username The name of the user, e.g. `my-gcp-id@gmail.com`.
          * 
          * @return builder
          * 
@@ -64,7 +64,7 @@ public final class AzureClusterAuthorizationAdminUserArgs extends com.pulumi.res
         }
 
         /**
-         * @param username Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+         * @param username The name of the user, e.g. `my-gcp-id@gmail.com`.
          * 
          * @return builder
          * 

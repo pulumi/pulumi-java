@@ -25,14 +25,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     public static final AwsClusterControlPlaneArgs Empty = new AwsClusterControlPlaneArgs();
 
     /**
-     * Required. Authentication configuration for management of AWS resources.
+     * Authentication configuration for management of AWS resources.
      * 
      */
     @Import(name="awsServicesAuthentication", required=true)
     private Output<AwsClusterControlPlaneAwsServicesAuthenticationArgs> awsServicesAuthentication;
 
     /**
-     * @return Required. Authentication configuration for management of AWS resources.
+     * @return Authentication configuration for management of AWS resources.
      * 
      */
     public Output<AwsClusterControlPlaneAwsServicesAuthenticationArgs> awsServicesAuthentication() {
@@ -40,14 +40,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
      */
     @Import(name="configEncryption", required=true)
     private Output<AwsClusterControlPlaneConfigEncryptionArgs> configEncryption;
 
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * @return The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
      */
     public Output<AwsClusterControlPlaneConfigEncryptionArgs> configEncryption() {
@@ -55,14 +55,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
      */
     @Import(name="databaseEncryption", required=true)
     private Output<AwsClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * @return The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
      */
     public Output<AwsClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption() {
@@ -70,14 +70,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
      */
     @Import(name="iamInstanceProfile", required=true)
     private Output<String> iamInstanceProfile;
 
     /**
-     * @return Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * @return The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
      */
     public Output<String> iamInstanceProfile() {
@@ -85,14 +85,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     public Optional<Output<String>> instanceType() {
@@ -175,14 +175,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
      */
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
     /**
-     * @return Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * @return The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
      */
     public Output<List<String>> subnetIds() {
@@ -205,14 +205,14 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
      */
     @Import(name="version", required=true)
     private Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
      */
     public Output<String> version() {
@@ -256,7 +256,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param awsServicesAuthentication Required. Authentication configuration for management of AWS resources.
+         * @param awsServicesAuthentication Authentication configuration for management of AWS resources.
          * 
          * @return builder
          * 
@@ -267,7 +267,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param awsServicesAuthentication Required. Authentication configuration for management of AWS resources.
+         * @param awsServicesAuthentication Authentication configuration for management of AWS resources.
          * 
          * @return builder
          * 
@@ -277,7 +277,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+         * @param configEncryption The ARN of the AWS KMS key used to encrypt cluster configuration.
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+         * @param configEncryption The ARN of the AWS KMS key used to encrypt cluster configuration.
          * 
          * @return builder
          * 
@@ -298,7 +298,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param databaseEncryption Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+         * @param databaseEncryption The ARN of the AWS KMS key used to encrypt cluster secrets.
          * 
          * @return builder
          * 
@@ -309,7 +309,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param databaseEncryption Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+         * @param databaseEncryption The ARN of the AWS KMS key used to encrypt cluster secrets.
          * 
          * @return builder
          * 
@@ -319,7 +319,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param iamInstanceProfile Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+         * @param iamInstanceProfile The name of the AWS IAM instance pofile to assign to each control plane replica.
          * 
          * @return builder
          * 
@@ -330,7 +330,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param iamInstanceProfile Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+         * @param iamInstanceProfile The name of the AWS IAM instance pofile to assign to each control plane replica.
          * 
          * @return builder
          * 
@@ -340,7 +340,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
          * 
          * @return builder
          * 
@@ -351,7 +351,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
          * 
          * @return builder
          * 
@@ -476,7 +476,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * @param subnetIds The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
          * 
          * @return builder
          * 
@@ -487,7 +487,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * @param subnetIds The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
          * 
          * @return builder
          * 
@@ -497,7 +497,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * @param subnetIds The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
          * 
          * @return builder
          * 
@@ -528,7 +528,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+         * @param version The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
          * 
          * @return builder
          * 
@@ -539,7 +539,7 @@ public final class AwsClusterControlPlaneArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+         * @param version The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
          * 
          * @return builder
          * 

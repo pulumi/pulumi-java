@@ -125,18 +125,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ipRange);
     }
     /**
-     * Compute Engine location where the instance resides. For trial organization
-     * subscriptions, the location must be a Compute Engine zone. For paid organization
-     * subscriptions, it should correspond to a Compute Engine region.
+     * Required. Compute Engine location where the instance resides.
      * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
-     * @return Compute Engine location where the instance resides. For trial organization
-     * subscriptions, the location must be a Compute Engine zone. For paid organization
-     * subscriptions, it should correspond to a Compute Engine region.
+     * @return Required. Compute Engine location where the instance resides.
      * 
      */
     public Output<String> location() {

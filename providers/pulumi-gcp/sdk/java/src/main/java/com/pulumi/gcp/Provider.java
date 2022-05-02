@@ -58,6 +58,12 @@ public class Provider extends com.pulumi.resources.ProviderResource {
     public Output<Optional<String>> apigeeCustomEndpoint() {
         return Codegen.optional(this.apigeeCustomEndpoint);
     }
+    @Export(name="apikeysCustomEndpoint", type=String.class, parameters={})
+    private Output</* @Nullable */ String> apikeysCustomEndpoint;
+
+    public Output<Optional<String>> apikeysCustomEndpoint() {
+        return Codegen.optional(this.apikeysCustomEndpoint);
+    }
     @Export(name="appEngineCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> appEngineCustomEndpoint;
 
@@ -189,6 +195,12 @@ public class Provider extends com.pulumi.resources.ProviderResource {
 
     public Output<Optional<String>> cloudTasksCustomEndpoint() {
         return Codegen.optional(this.cloudTasksCustomEndpoint);
+    }
+    @Export(name="cloudfunctions2CustomEndpoint", type=String.class, parameters={})
+    private Output</* @Nullable */ String> cloudfunctions2CustomEndpoint;
+
+    public Output<Optional<String>> cloudfunctions2CustomEndpoint() {
+        return Codegen.optional(this.cloudfunctions2CustomEndpoint);
     }
     @Export(name="composerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> composerCustomEndpoint;
@@ -322,6 +334,12 @@ public class Provider extends com.pulumi.resources.ProviderResource {
     public Output<Optional<String>> firebaseCustomEndpoint() {
         return Codegen.optional(this.firebaseCustomEndpoint);
     }
+    @Export(name="firebaserulesCustomEndpoint", type=String.class, parameters={})
+    private Output</* @Nullable */ String> firebaserulesCustomEndpoint;
+
+    public Output<Optional<String>> firebaserulesCustomEndpoint() {
+        return Codegen.optional(this.firebaserulesCustomEndpoint);
+    }
     @Export(name="firestoreCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> firestoreCustomEndpoint;
 
@@ -357,6 +375,12 @@ public class Provider extends com.pulumi.resources.ProviderResource {
 
     public Output<Optional<String>> healthcareCustomEndpoint() {
         return Codegen.optional(this.healthcareCustomEndpoint);
+    }
+    @Export(name="iam2CustomEndpoint", type=String.class, parameters={})
+    private Output</* @Nullable */ String> iam2CustomEndpoint;
+
+    public Output<Optional<String>> iam2CustomEndpoint() {
+        return Codegen.optional(this.iam2CustomEndpoint);
     }
     @Export(name="iamBetaCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamBetaCustomEndpoint;

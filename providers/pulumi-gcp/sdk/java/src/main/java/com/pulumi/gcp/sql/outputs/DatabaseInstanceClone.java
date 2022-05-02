@@ -12,6 +12,11 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseInstanceClone {
     /**
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
+    private final @Nullable String allocatedIpRange;
+    /**
      * @return The timestamp of the point in time that should be restored.
      * 
      */
@@ -24,12 +29,21 @@ public final class DatabaseInstanceClone {
 
     @CustomType.Constructor
     private DatabaseInstanceClone(
+        @CustomType.Parameter("allocatedIpRange") @Nullable String allocatedIpRange,
         @CustomType.Parameter("pointInTime") @Nullable String pointInTime,
         @CustomType.Parameter("sourceInstanceName") String sourceInstanceName) {
+        this.allocatedIpRange = allocatedIpRange;
         this.pointInTime = pointInTime;
         this.sourceInstanceName = sourceInstanceName;
     }
 
+    /**
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
+    public Optional<String> allocatedIpRange() {
+        return Optional.ofNullable(this.allocatedIpRange);
+    }
     /**
      * @return The timestamp of the point in time that should be restored.
      * 
@@ -54,6 +68,7 @@ public final class DatabaseInstanceClone {
     }
 
     public static final class Builder {
+        private @Nullable String allocatedIpRange;
         private @Nullable String pointInTime;
         private String sourceInstanceName;
 
@@ -63,10 +78,15 @@ public final class DatabaseInstanceClone {
 
         public Builder(DatabaseInstanceClone defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.allocatedIpRange = defaults.allocatedIpRange;
     	      this.pointInTime = defaults.pointInTime;
     	      this.sourceInstanceName = defaults.sourceInstanceName;
         }
 
+        public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
+            this.allocatedIpRange = allocatedIpRange;
+            return this;
+        }
         public Builder pointInTime(@Nullable String pointInTime) {
             this.pointInTime = pointInTime;
             return this;
@@ -75,7 +95,7 @@ public final class DatabaseInstanceClone {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }        public DatabaseInstanceClone build() {
-            return new DatabaseInstanceClone(pointInTime, sourceInstanceName);
+            return new DatabaseInstanceClone(allocatedIpRange, pointInTime, sourceInstanceName);
         }
     }
 }

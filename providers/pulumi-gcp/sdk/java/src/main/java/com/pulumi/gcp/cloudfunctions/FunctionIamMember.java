@@ -15,11 +15,61 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * Three different resources help you manage your IAM policy for Cloud Functions CloudFunction. Each of these resources serves a different use case:
+ * 
+ * * `gcp.cloudfunctions.FunctionIamPolicy`: Authoritative. Sets the IAM policy for the cloudfunction and replaces any existing policy already attached.
+ * * `gcp.cloudfunctions.FunctionIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cloudfunction are preserved.
+ * * `gcp.cloudfunctions.FunctionIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cloudfunction are preserved.
+ * 
+ * &gt; **Note:** `gcp.cloudfunctions.FunctionIamPolicy` **cannot** be used in conjunction with `gcp.cloudfunctions.FunctionIamBinding` and `gcp.cloudfunctions.FunctionIamMember` or they will fight over what your policy should be.
+ * 
+ * &gt; **Note:** `gcp.cloudfunctions.FunctionIamBinding` resources **can be** used in conjunction with `gcp.cloudfunctions.FunctionIamMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * ## google\_cloudfunctions\_function\_iam\_policy
+ * 
+ * ## google\_cloudfunctions\_function\_iam\_binding
+ * 
+ * ## google\_cloudfunctions\_function\_iam\_member
+ * 
+ * ## Import
+ * 
+ * For all import syntaxes, the &#34;resource in question&#34; can take any of the following forms* projects/{{project}}/locations/{{region}}/functions/{{cloud_function}} * {{project}}/{{region}}/{{cloud_function}} * {{region}}/{{cloud_function}} * {{cloud_function}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Functions cloudfunction IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudfunctions/functionIamMember:FunctionIamMember editor &#34;projects/{{project}}/locations/{{region}}/functions/{{cloud_function}} roles/viewer user:jane@example.com&#34;
+ * ```
+ * 
+ *  IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudfunctions/functionIamMember:FunctionIamMember editor &#34;projects/{{project}}/locations/{{region}}/functions/{{cloud_function}} roles/viewer&#34;
+ * ```
+ * 
+ *  IAM policy imports use the identifier of the resource in question, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudfunctions/functionIamMember:FunctionIamMember editor projects/{{project}}/locations/{{region}}/functions/{{cloud_function}}
+ * ```
+ * 
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
+ * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+ * 
+ */
 @ResourceType(type="gcp:cloudfunctions/functionIamMember:FunctionIamMember")
 public class FunctionIamMember extends com.pulumi.resources.CustomResource {
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
@@ -29,9 +79,17 @@ public class FunctionIamMember extends com.pulumi.resources.CustomResource {
     public Output<Optional<FunctionIamMemberCondition>> condition() {
         return Codegen.optional(this.condition);
     }
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the IAM policy.
+     * 
+     */
     public Output<String> etag() {
         return this.etag;
     }
@@ -41,21 +99,55 @@ public class FunctionIamMember extends com.pulumi.resources.CustomResource {
     public Output<String> member() {
         return this.member;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
+    /**
+     * The location of this cloud function. Used to find the parent resource to bind the IAM policy to. If not specified,
+     * the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+     * region is specified, it is taken from the provider configuration.
+     * 
+     */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The location of this cloud function. Used to find the parent resource to bind the IAM policy to. If not specified,
+     * the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+     * region is specified, it is taken from the provider configuration.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
+    /**
+     * The role that should be applied. Only one
+     * `gcp.cloudfunctions.FunctionIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.cloudfunctions.FunctionIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }

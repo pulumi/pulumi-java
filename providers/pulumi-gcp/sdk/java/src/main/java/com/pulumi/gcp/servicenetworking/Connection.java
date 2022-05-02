@@ -51,9 +51,17 @@ public class Connection extends com.pulumi.resources.CustomResource {
     public Output<String> network() {
         return this.network;
     }
+    /**
+     * (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+     * 
+     */
     @Export(name="peering", type=String.class, parameters={})
     private Output<String> peering;
 
+    /**
+     * @return (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+     * 
+     */
     public Output<String> peering() {
         return this.peering;
     }

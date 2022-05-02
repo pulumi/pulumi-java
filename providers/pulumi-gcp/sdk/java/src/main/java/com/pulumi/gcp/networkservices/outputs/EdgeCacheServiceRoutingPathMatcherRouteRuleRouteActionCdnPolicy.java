@@ -32,23 +32,23 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - The TTL must be &gt; 0 and &lt;= 86400s (1 day)
      * - The clientTtl cannot be larger than the defaultTtl (if set)
      * - Fractions of a second are not allowed.
-     * - Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
+     *   Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     private final @Nullable String clientTtl;
     /**
      * @return Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
      * Defaults to 3600s (1 hour).
-     * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
+     * - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34; (equivalent to must-revalidate)
      * - The value of defaultTTL cannot be set to a value greater than that of maxTTL.
      * - Fractions of a second are not allowed.
      * - When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses.
      *   Note that infrequently accessed objects may be evicted from the cache before the defined TTL. Objects that expire will be revalidated with the origin.
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     private final @Nullable String defaultTtl;
@@ -56,12 +56,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * Defaults to 86400s (1 day).
      * Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
-     * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
+     * - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34;
      * - The value of maxTtl must be equal to or greater than defaultTtl.
      * - Fractions of a second are not allowed.
-     * - When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34;, &#34;FORCE_CACHE_ALL&#34;, or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34;, &#34;FORCE_CACHE_ALL&#34;, or &#34;BYPASS_CACHE&#34;, you must omit this field.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     private final @Nullable String maxTtl;
@@ -141,9 +141,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - The TTL must be &gt; 0 and &lt;= 86400s (1 day)
      * - The clientTtl cannot be larger than the defaultTtl (if set)
      * - Fractions of a second are not allowed.
-     * - Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
+     *   Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     public Optional<String> clientTtl() {
@@ -152,14 +152,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     /**
      * @return Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
      * Defaults to 3600s (1 hour).
-     * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
+     * - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34; (equivalent to must-revalidate)
      * - The value of defaultTTL cannot be set to a value greater than that of maxTTL.
      * - Fractions of a second are not allowed.
      * - When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses.
      *   Note that infrequently accessed objects may be evicted from the cache before the defined TTL. Objects that expire will be revalidated with the origin.
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     public Optional<String> defaultTtl() {
@@ -169,12 +169,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * Defaults to 86400s (1 day).
      * Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
-     * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
+     * - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34;
      * - The value of maxTtl must be equal to or greater than defaultTtl.
      * - Fractions of a second are not allowed.
-     * - When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34;, &#34;FORCE_CACHE_ALL&#34;, or &#34;BYPASS_CACHE&#34;, you must omit this field.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34;, &#34;FORCE_CACHE_ALL&#34;, or &#34;BYPASS_CACHE&#34;, you must omit this field.
+     *   A duration in seconds terminated by &#39;s&#39;. Example: &#34;3s&#34;.
      * 
      */
     public Optional<String> maxTtl() {

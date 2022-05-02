@@ -5,6 +5,7 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.bigquery.inputs.DatasetAccessAuthorizedDatasetArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,23 @@ import javax.annotation.Nullable;
 public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DatasetAccessArgs Empty = new DatasetAccessArgs();
+
+    /**
+     * The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="authorizedDataset")
+    private @Nullable Output<DatasetAccessAuthorizedDatasetArgs> authorizedDataset;
+
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<DatasetAccessAuthorizedDatasetArgs>> authorizedDataset() {
+        return Optional.ofNullable(this.authorizedDataset);
+    }
 
     /**
      * The ID of the dataset containing this table.
@@ -182,6 +200,7 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     private DatasetAccessArgs() {}
 
     private DatasetAccessArgs(DatasetAccessArgs $) {
+        this.authorizedDataset = $.authorizedDataset;
         this.datasetId = $.datasetId;
         this.domain = $.domain;
         this.groupByEmail = $.groupByEmail;
@@ -209,6 +228,29 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(DatasetAccessArgs defaults) {
             $ = new DatasetAccessArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param authorizedDataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizedDataset(@Nullable Output<DatasetAccessAuthorizedDatasetArgs> authorizedDataset) {
+            $.authorizedDataset = authorizedDataset;
+            return this;
+        }
+
+        /**
+         * @param authorizedDataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizedDataset(DatasetAccessAuthorizedDatasetArgs authorizedDataset) {
+            return authorizedDataset(Output.of(authorizedDataset));
         }
 
         /**

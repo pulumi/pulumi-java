@@ -14,12 +14,20 @@ import com.pulumi.gcp.runtimeconfig.outputs.GetVariableResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class RuntimeconfigFunctions {
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }

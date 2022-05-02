@@ -11,6 +11,8 @@ import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecGcsDataSinkArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecGcsDataSourceArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecHttpDataSourceArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecObjectConditionsArgs;
+import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecPosixDataSinkArgs;
+import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecPosixDataSourceArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecTransferOptionsArgs;
 import java.util.Objects;
 import java.util.Optional;
@@ -112,6 +114,36 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     }
 
     /**
+     * A POSIX data sink. Structure documented below.
+     * 
+     */
+    @Import(name="posixDataSink")
+    private @Nullable Output<TransferJobTransferSpecPosixDataSinkArgs> posixDataSink;
+
+    /**
+     * @return A POSIX data sink. Structure documented below.
+     * 
+     */
+    public Optional<Output<TransferJobTransferSpecPosixDataSinkArgs>> posixDataSink() {
+        return Optional.ofNullable(this.posixDataSink);
+    }
+
+    /**
+     * A POSIX filesystem data source. Structure documented below.
+     * 
+     */
+    @Import(name="posixDataSource")
+    private @Nullable Output<TransferJobTransferSpecPosixDataSourceArgs> posixDataSource;
+
+    /**
+     * @return A POSIX filesystem data source. Structure documented below.
+     * 
+     */
+    public Optional<Output<TransferJobTransferSpecPosixDataSourceArgs>> posixDataSource() {
+        return Optional.ofNullable(this.posixDataSource);
+    }
+
+    /**
      * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
      * 
      */
@@ -135,6 +167,8 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
         this.gcsDataSource = $.gcsDataSource;
         this.httpDataSource = $.httpDataSource;
         this.objectConditions = $.objectConditions;
+        this.posixDataSink = $.posixDataSink;
+        this.posixDataSource = $.posixDataSource;
         this.transferOptions = $.transferOptions;
     }
 
@@ -280,6 +314,48 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
          */
         public Builder objectConditions(TransferJobTransferSpecObjectConditionsArgs objectConditions) {
             return objectConditions(Output.of(objectConditions));
+        }
+
+        /**
+         * @param posixDataSink A POSIX data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder posixDataSink(@Nullable Output<TransferJobTransferSpecPosixDataSinkArgs> posixDataSink) {
+            $.posixDataSink = posixDataSink;
+            return this;
+        }
+
+        /**
+         * @param posixDataSink A POSIX data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder posixDataSink(TransferJobTransferSpecPosixDataSinkArgs posixDataSink) {
+            return posixDataSink(Output.of(posixDataSink));
+        }
+
+        /**
+         * @param posixDataSource A POSIX filesystem data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder posixDataSource(@Nullable Output<TransferJobTransferSpecPosixDataSourceArgs> posixDataSource) {
+            $.posixDataSource = posixDataSource;
+            return this;
+        }
+
+        /**
+         * @param posixDataSource A POSIX filesystem data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder posixDataSource(TransferJobTransferSpecPosixDataSourceArgs posixDataSource) {
+            return posixDataSource(Output.of(posixDataSource));
         }
 
         /**

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetTransferProjectServieAccountResult {
     /**
-     * @return Email address of the default service account used by Storage Transfer Jobs running in this project
+     * @return Email address of the default service account used by Storage Transfer Jobs running in this project.
      * 
      */
     private final String email;
@@ -20,19 +20,26 @@ public final class GetTransferProjectServieAccountResult {
      */
     private final String id;
     private final String project;
+    /**
+     * @return Unique identifier for the service account.
+     * 
+     */
+    private final String subjectId;
 
     @CustomType.Constructor
     private GetTransferProjectServieAccountResult(
         @CustomType.Parameter("email") String email,
         @CustomType.Parameter("id") String id,
-        @CustomType.Parameter("project") String project) {
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("subjectId") String subjectId) {
         this.email = email;
         this.id = id;
         this.project = project;
+        this.subjectId = subjectId;
     }
 
     /**
-     * @return Email address of the default service account used by Storage Transfer Jobs running in this project
+     * @return Email address of the default service account used by Storage Transfer Jobs running in this project.
      * 
      */
     public String email() {
@@ -48,6 +55,13 @@ public final class GetTransferProjectServieAccountResult {
     public String project() {
         return this.project;
     }
+    /**
+     * @return Unique identifier for the service account.
+     * 
+     */
+    public String subjectId() {
+        return this.subjectId;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -61,6 +75,7 @@ public final class GetTransferProjectServieAccountResult {
         private String email;
         private String id;
         private String project;
+        private String subjectId;
 
         public Builder() {
     	      // Empty
@@ -71,6 +86,7 @@ public final class GetTransferProjectServieAccountResult {
     	      this.email = defaults.email;
     	      this.id = defaults.id;
     	      this.project = defaults.project;
+    	      this.subjectId = defaults.subjectId;
         }
 
         public Builder email(String email) {
@@ -84,8 +100,12 @@ public final class GetTransferProjectServieAccountResult {
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
+        }
+        public Builder subjectId(String subjectId) {
+            this.subjectId = Objects.requireNonNull(subjectId);
+            return this;
         }        public GetTransferProjectServieAccountResult build() {
-            return new GetTransferProjectServieAccountResult(email, id, project);
+            return new GetTransferProjectServieAccountResult(email, id, project, subjectId);
         }
     }
 }
