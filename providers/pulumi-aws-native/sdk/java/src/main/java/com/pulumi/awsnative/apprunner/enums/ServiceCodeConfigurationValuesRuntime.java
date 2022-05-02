@@ -15,7 +15,10 @@ import java.util.StringJoiner;
     @EnumType
     public enum ServiceCodeConfigurationValuesRuntime {
         Python3("PYTHON_3"),
-        Nodejs12("NODEJS_12");
+        Nodejs12("NODEJS_12"),
+        Nodejs14("NODEJS_14"),
+        Corretto8("CORRETTO_8"),
+        Corretto11("CORRETTO_11");
 
         private final String value;
 

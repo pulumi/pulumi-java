@@ -14,14 +14,14 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     public static final BotAliasCloudWatchLogGroupLogDestinationArgs Empty = new BotAliasCloudWatchLogGroupLogDestinationArgs();
 
     /**
-     * A string used to identify this tag
+     * A string used to identify the groupArn for the Cloudwatch Log Group
      * 
      */
     @Import(name="cloudWatchLogGroupArn", required=true)
     private Output<String> cloudWatchLogGroupArn;
 
     /**
-     * @return A string used to identify this tag
+     * @return A string used to identify the groupArn for the Cloudwatch Log Group
      * 
      */
     public Output<String> cloudWatchLogGroupArn() {
@@ -29,14 +29,14 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     }
 
     /**
-     * A string containing the value for the tag
+     * A string containing the value for the Log Prefix
      * 
      */
     @Import(name="logPrefix", required=true)
     private Output<String> logPrefix;
 
     /**
-     * @return A string containing the value for the tag
+     * @return A string containing the value for the Log Prefix
      * 
      */
     public Output<String> logPrefix() {
@@ -69,7 +69,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
         }
 
         /**
-         * @param cloudWatchLogGroupArn A string used to identify this tag
+         * @param cloudWatchLogGroupArn A string used to identify the groupArn for the Cloudwatch Log Group
          * 
          * @return builder
          * 
@@ -80,7 +80,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
         }
 
         /**
-         * @param cloudWatchLogGroupArn A string used to identify this tag
+         * @param cloudWatchLogGroupArn A string used to identify the groupArn for the Cloudwatch Log Group
          * 
          * @return builder
          * 
@@ -90,7 +90,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
         }
 
         /**
-         * @param logPrefix A string containing the value for the tag
+         * @param logPrefix A string containing the value for the Log Prefix
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
         }
 
         /**
-         * @param logPrefix A string containing the value for the tag
+         * @param logPrefix A string containing the value for the Log Prefix
          * 
          * @return builder
          * 

@@ -34,6 +34,13 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.authorizerName);
     }
 
+    @Import(name="enableCachingForHttp")
+    private @Nullable Output<Boolean> enableCachingForHttp;
+
+    public Optional<Output<Boolean>> enableCachingForHttp() {
+        return Optional.ofNullable(this.enableCachingForHttp);
+    }
+
     @Import(name="signingDisabled")
     private @Nullable Output<Boolean> signingDisabled;
 
@@ -74,6 +81,7 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     private AuthorizerArgs(AuthorizerArgs $) {
         this.authorizerFunctionArn = $.authorizerFunctionArn;
         this.authorizerName = $.authorizerName;
+        this.enableCachingForHttp = $.enableCachingForHttp;
         this.signingDisabled = $.signingDisabled;
         this.status = $.status;
         this.tags = $.tags;
@@ -115,6 +123,15 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder authorizerName(String authorizerName) {
             return authorizerName(Output.of(authorizerName));
+        }
+
+        public Builder enableCachingForHttp(@Nullable Output<Boolean> enableCachingForHttp) {
+            $.enableCachingForHttp = enableCachingForHttp;
+            return this;
+        }
+
+        public Builder enableCachingForHttp(Boolean enableCachingForHttp) {
+            return enableCachingForHttp(Output.of(enableCachingForHttp));
         }
 
         public Builder signingDisabled(@Nullable Output<Boolean> signingDisabled) {

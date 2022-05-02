@@ -7,6 +7,7 @@ import com.pulumi.awsnative.ec2.inputs.VPCTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * The primary IPv4 CIDR block for the VPC.
      * 
      */
-    @Import(name="cidrBlock", required=true)
-    private Output<String> cidrBlock;
+    @Import(name="cidrBlock")
+    private @Nullable Output<String> cidrBlock;
 
     /**
      * @return The primary IPv4 CIDR block for the VPC.
      * 
      */
-    public Output<String> cidrBlock() {
-        return this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -91,6 +92,36 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+     * 
+     */
+    @Import(name="ipv4IpamPoolId")
+    private @Nullable Output<String> ipv4IpamPoolId;
+
+    /**
+     * @return The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+     * 
+     */
+    public Optional<Output<String>> ipv4IpamPoolId() {
+        return Optional.ofNullable(this.ipv4IpamPoolId);
+    }
+
+    /**
+     * The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+     * 
+     */
+    @Import(name="ipv4NetmaskLength")
+    private @Nullable Output<Integer> ipv4NetmaskLength;
+
+    /**
+     * @return The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+     * 
+     */
+    public Optional<Output<Integer>> ipv4NetmaskLength() {
+        return Optional.ofNullable(this.ipv4NetmaskLength);
+    }
+
+    /**
      * The tags for the VPC.
      * 
      */
@@ -112,6 +143,8 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
         this.enableDnsHostnames = $.enableDnsHostnames;
         this.enableDnsSupport = $.enableDnsSupport;
         this.instanceTenancy = $.instanceTenancy;
+        this.ipv4IpamPoolId = $.ipv4IpamPoolId;
+        this.ipv4NetmaskLength = $.ipv4NetmaskLength;
         this.tags = $.tags;
     }
 
@@ -139,7 +172,7 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(Output<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
@@ -230,6 +263,48 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param ipv4IpamPoolId The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
+            $.ipv4IpamPoolId = ipv4IpamPoolId;
+            return this;
+        }
+
+        /**
+         * @param ipv4IpamPoolId The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4IpamPoolId(String ipv4IpamPoolId) {
+            return ipv4IpamPoolId(Output.of(ipv4IpamPoolId));
+        }
+
+        /**
+         * @param ipv4NetmaskLength The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
+            $.ipv4NetmaskLength = ipv4NetmaskLength;
+            return this;
+        }
+
+        /**
+         * @param ipv4NetmaskLength The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4NetmaskLength(Integer ipv4NetmaskLength) {
+            return ipv4NetmaskLength(Output.of(ipv4NetmaskLength));
+        }
+
+        /**
          * @param tags The tags for the VPC.
          * 
          * @return builder
@@ -261,7 +336,6 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public VPCArgs build() {
-            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
             return $;
         }
     }

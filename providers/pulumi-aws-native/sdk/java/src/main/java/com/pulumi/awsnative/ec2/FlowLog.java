@@ -27,14 +27,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:ec2:FlowLog")
 public class FlowLog extends com.pulumi.resources.CustomResource {
     /**
-     * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     @Export(name="deliverLogsPermissionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliverLogsPermissionArn;
 
     /**
-     * @return The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * @return The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     public Output<Optional<String>> deliverLogsPermissionArn() {
@@ -47,14 +47,14 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.destinationOptions);
     }
     /**
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
      * 
      */
     @Export(name="logDestination", type=String.class, parameters={})
     private Output</* @Nullable */ String> logDestination;
 
     /**
-     * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+     * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
      * 
      */
     public Output<Optional<String>> logDestination() {
@@ -89,14 +89,14 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.logFormat);
     }
     /**
-     * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     @Export(name="logGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> logGroupName;
 
     /**
-     * @return The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * @return The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     public Output<Optional<String>> logGroupName() {

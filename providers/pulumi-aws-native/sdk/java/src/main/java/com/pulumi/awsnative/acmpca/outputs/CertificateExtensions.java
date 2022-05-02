@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.acmpca.outputs;
 
+import com.pulumi.awsnative.acmpca.outputs.CertificateCustomExtension;
 import com.pulumi.awsnative.acmpca.outputs.CertificateExtendedKeyUsage;
 import com.pulumi.awsnative.acmpca.outputs.CertificateGeneralName;
 import com.pulumi.awsnative.acmpca.outputs.CertificateKeyUsage;
@@ -16,6 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateExtensions {
     private final @Nullable List<CertificatePolicyInformation> certificatePolicies;
+    private final @Nullable List<CertificateCustomExtension> customExtensions;
     private final @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage;
     private final @Nullable CertificateKeyUsage keyUsage;
     private final @Nullable List<CertificateGeneralName> subjectAlternativeNames;
@@ -23,10 +25,12 @@ public final class CertificateExtensions {
     @CustomType.Constructor
     private CertificateExtensions(
         @CustomType.Parameter("certificatePolicies") @Nullable List<CertificatePolicyInformation> certificatePolicies,
+        @CustomType.Parameter("customExtensions") @Nullable List<CertificateCustomExtension> customExtensions,
         @CustomType.Parameter("extendedKeyUsage") @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
         @CustomType.Parameter("keyUsage") @Nullable CertificateKeyUsage keyUsage,
         @CustomType.Parameter("subjectAlternativeNames") @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
         this.certificatePolicies = certificatePolicies;
+        this.customExtensions = customExtensions;
         this.extendedKeyUsage = extendedKeyUsage;
         this.keyUsage = keyUsage;
         this.subjectAlternativeNames = subjectAlternativeNames;
@@ -34,6 +38,9 @@ public final class CertificateExtensions {
 
     public List<CertificatePolicyInformation> certificatePolicies() {
         return this.certificatePolicies == null ? List.of() : this.certificatePolicies;
+    }
+    public List<CertificateCustomExtension> customExtensions() {
+        return this.customExtensions == null ? List.of() : this.customExtensions;
     }
     public List<CertificateExtendedKeyUsage> extendedKeyUsage() {
         return this.extendedKeyUsage == null ? List.of() : this.extendedKeyUsage;
@@ -55,6 +62,7 @@ public final class CertificateExtensions {
 
     public static final class Builder {
         private @Nullable List<CertificatePolicyInformation> certificatePolicies;
+        private @Nullable List<CertificateCustomExtension> customExtensions;
         private @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage;
         private @Nullable CertificateKeyUsage keyUsage;
         private @Nullable List<CertificateGeneralName> subjectAlternativeNames;
@@ -66,6 +74,7 @@ public final class CertificateExtensions {
         public Builder(CertificateExtensions defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.certificatePolicies = defaults.certificatePolicies;
+    	      this.customExtensions = defaults.customExtensions;
     	      this.extendedKeyUsage = defaults.extendedKeyUsage;
     	      this.keyUsage = defaults.keyUsage;
     	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
@@ -77,6 +86,13 @@ public final class CertificateExtensions {
         }
         public Builder certificatePolicies(CertificatePolicyInformation... certificatePolicies) {
             return certificatePolicies(List.of(certificatePolicies));
+        }
+        public Builder customExtensions(@Nullable List<CertificateCustomExtension> customExtensions) {
+            this.customExtensions = customExtensions;
+            return this;
+        }
+        public Builder customExtensions(CertificateCustomExtension... customExtensions) {
+            return customExtensions(List.of(customExtensions));
         }
         public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
@@ -96,7 +112,7 @@ public final class CertificateExtensions {
         public Builder subjectAlternativeNames(CertificateGeneralName... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }        public CertificateExtensions build() {
-            return new CertificateExtensions(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
+            return new CertificateExtensions(certificatePolicies, customExtensions, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }
     }
 }

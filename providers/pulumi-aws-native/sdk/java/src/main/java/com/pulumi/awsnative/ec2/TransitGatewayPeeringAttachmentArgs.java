@@ -3,7 +3,6 @@
 
 package com.pulumi.awsnative.ec2;
 
-import com.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentOptionsArgs;
 import com.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -17,21 +16,6 @@ import javax.annotation.Nullable;
 public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final TransitGatewayPeeringAttachmentArgs Empty = new TransitGatewayPeeringAttachmentArgs();
-
-    /**
-     * Options for transit gateway peering attachment
-     * 
-     */
-    @Import(name="options")
-    private @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
-
-    /**
-     * @return Options for transit gateway peering attachment
-     * 
-     */
-    public Optional<Output<TransitGatewayPeeringAttachmentOptionsArgs>> options() {
-        return Optional.ofNullable(this.options);
-    }
 
     /**
      * The ID of the peer account
@@ -111,7 +95,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     private TransitGatewayPeeringAttachmentArgs() {}
 
     private TransitGatewayPeeringAttachmentArgs(TransitGatewayPeeringAttachmentArgs $) {
-        this.options = $.options;
         this.peerAccountId = $.peerAccountId;
         this.peerRegion = $.peerRegion;
         this.peerTransitGatewayId = $.peerTransitGatewayId;
@@ -135,27 +118,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
 
         public Builder(TransitGatewayPeeringAttachmentArgs defaults) {
             $ = new TransitGatewayPeeringAttachmentArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param options Options for transit gateway peering attachment
-         * 
-         * @return builder
-         * 
-         */
-        public Builder options(@Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options) {
-            $.options = options;
-            return this;
-        }
-
-        /**
-         * @param options Options for transit gateway peering attachment
-         * 
-         * @return builder
-         * 
-         */
-        public Builder options(TransitGatewayPeeringAttachmentOptionsArgs options) {
-            return options(Output.of(options));
         }
 
         /**

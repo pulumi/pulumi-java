@@ -162,6 +162,13 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.scheduleExpression);
     }
 
+    @Import(name="scheduleOffset")
+    private @Nullable Output<Integer> scheduleOffset;
+
+    public Optional<Output<Integer>> scheduleOffset() {
+        return Optional.ofNullable(this.scheduleOffset);
+    }
+
     @Import(name="syncCompliance")
     private @Nullable Output<AssociationSyncCompliance> syncCompliance;
 
@@ -207,6 +214,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
         this.outputLocation = $.outputLocation;
         this.parameters = $.parameters;
         this.scheduleExpression = $.scheduleExpression;
+        this.scheduleOffset = $.scheduleOffset;
         this.syncCompliance = $.syncCompliance;
         this.targets = $.targets;
         this.waitForSuccessTimeoutSeconds = $.waitForSuccessTimeoutSeconds;
@@ -421,6 +429,15 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
+            $.scheduleOffset = scheduleOffset;
+            return this;
+        }
+
+        public Builder scheduleOffset(Integer scheduleOffset) {
+            return scheduleOffset(Output.of(scheduleOffset));
         }
 
         public Builder syncCompliance(@Nullable Output<AssociationSyncCompliance> syncCompliance) {

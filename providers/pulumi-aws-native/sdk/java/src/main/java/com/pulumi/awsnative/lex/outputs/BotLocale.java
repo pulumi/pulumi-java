@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lex.outputs;
 
+import com.pulumi.awsnative.lex.outputs.BotCustomVocabulary;
 import com.pulumi.awsnative.lex.outputs.BotIntent;
 import com.pulumi.awsnative.lex.outputs.BotSlotType;
 import com.pulumi.awsnative.lex.outputs.BotVoiceSettings;
@@ -16,6 +17,7 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BotLocale {
+    private final @Nullable BotCustomVocabulary customVocabulary;
     private final @Nullable String description;
     /**
      * @return List of intents
@@ -33,12 +35,14 @@ public final class BotLocale {
 
     @CustomType.Constructor
     private BotLocale(
+        @CustomType.Parameter("customVocabulary") @Nullable BotCustomVocabulary customVocabulary,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("intents") @Nullable List<BotIntent> intents,
         @CustomType.Parameter("localeId") String localeId,
         @CustomType.Parameter("nluConfidenceThreshold") Double nluConfidenceThreshold,
         @CustomType.Parameter("slotTypes") @Nullable List<BotSlotType> slotTypes,
         @CustomType.Parameter("voiceSettings") @Nullable BotVoiceSettings voiceSettings) {
+        this.customVocabulary = customVocabulary;
         this.description = description;
         this.intents = intents;
         this.localeId = localeId;
@@ -47,6 +51,9 @@ public final class BotLocale {
         this.voiceSettings = voiceSettings;
     }
 
+    public Optional<BotCustomVocabulary> customVocabulary() {
+        return Optional.ofNullable(this.customVocabulary);
+    }
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +90,7 @@ public final class BotLocale {
     }
 
     public static final class Builder {
+        private @Nullable BotCustomVocabulary customVocabulary;
         private @Nullable String description;
         private @Nullable List<BotIntent> intents;
         private String localeId;
@@ -96,6 +104,7 @@ public final class BotLocale {
 
         public Builder(BotLocale defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.customVocabulary = defaults.customVocabulary;
     	      this.description = defaults.description;
     	      this.intents = defaults.intents;
     	      this.localeId = defaults.localeId;
@@ -104,6 +113,10 @@ public final class BotLocale {
     	      this.voiceSettings = defaults.voiceSettings;
         }
 
+        public Builder customVocabulary(@Nullable BotCustomVocabulary customVocabulary) {
+            this.customVocabulary = customVocabulary;
+            return this;
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -134,7 +147,7 @@ public final class BotLocale {
             this.voiceSettings = voiceSettings;
             return this;
         }        public BotLocale build() {
-            return new BotLocale(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
+            return new BotLocale(customVocabulary, description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
         }
     }
 }

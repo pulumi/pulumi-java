@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.eks.inputs;
 
-import com.pulumi.awsnative.eks.inputs.ClusterEncryptionConfigProviderPropertiesArgs;
+import com.pulumi.awsnative.eks.inputs.ClusterProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -26,13 +26,13 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="provider")
-    private @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
+    private @Nullable Output<ClusterProviderArgs> provider;
 
     /**
      * @return The encryption provider for the cluster.
      * 
      */
-    public Optional<Output<ClusterEncryptionConfigProviderPropertiesArgs>> provider() {
+    public Optional<Output<ClusterProviderArgs>> provider() {
         return Optional.ofNullable(this.provider);
     }
 
@@ -82,7 +82,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder provider(@Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
+        public Builder provider(@Nullable Output<ClusterProviderArgs> provider) {
             $.provider = provider;
             return this;
         }
@@ -93,7 +93,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder provider(ClusterEncryptionConfigProviderPropertiesArgs provider) {
+        public Builder provider(ClusterProviderArgs provider) {
             return provider(Output.of(provider));
         }
 

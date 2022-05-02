@@ -8,8 +8,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 /**
@@ -20,18 +18,18 @@ public final class BotAliasTextLogSettingArgs extends com.pulumi.resources.Resou
 
     public static final BotAliasTextLogSettingArgs Empty = new BotAliasTextLogSettingArgs();
 
-    @Import(name="destination")
-    private @Nullable Output<BotAliasTextLogDestinationArgs> destination;
+    @Import(name="destination", required=true)
+    private Output<BotAliasTextLogDestinationArgs> destination;
 
-    public Optional<Output<BotAliasTextLogDestinationArgs>> destination() {
-        return Optional.ofNullable(this.destination);
+    public Output<BotAliasTextLogDestinationArgs> destination() {
+        return this.destination;
     }
 
-    @Import(name="enabled")
-    private @Nullable Output<Boolean> enabled;
+    @Import(name="enabled", required=true)
+    private Output<Boolean> enabled;
 
-    public Optional<Output<Boolean>> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Output<Boolean> enabled() {
+        return this.enabled;
     }
 
     private BotAliasTextLogSettingArgs() {}
@@ -59,7 +57,7 @@ public final class BotAliasTextLogSettingArgs extends com.pulumi.resources.Resou
             $ = new BotAliasTextLogSettingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder destination(@Nullable Output<BotAliasTextLogDestinationArgs> destination) {
+        public Builder destination(Output<BotAliasTextLogDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
@@ -68,7 +66,7 @@ public final class BotAliasTextLogSettingArgs extends com.pulumi.resources.Resou
             return destination(Output.of(destination));
         }
 
-        public Builder enabled(@Nullable Output<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
@@ -78,6 +76,8 @@ public final class BotAliasTextLogSettingArgs extends com.pulumi.resources.Resou
         }
 
         public BotAliasTextLogSettingArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
             return $;
         }
     }

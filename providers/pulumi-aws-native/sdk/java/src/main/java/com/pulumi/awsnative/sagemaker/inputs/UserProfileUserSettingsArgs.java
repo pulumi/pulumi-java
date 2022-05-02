@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileJupyterServerAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileKernelGatewayAppSettingsArgs;
+import com.pulumi.awsnative.sagemaker.inputs.UserProfileRStudioServerProAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileSharingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -68,6 +69,13 @@ public final class UserProfileUserSettingsArgs extends com.pulumi.resources.Reso
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
+    @Import(name="rStudioServerProAppSettings")
+    private @Nullable Output<UserProfileRStudioServerProAppSettingsArgs> rStudioServerProAppSettings;
+
+    public Optional<Output<UserProfileRStudioServerProAppSettingsArgs>> rStudioServerProAppSettings() {
+        return Optional.ofNullable(this.rStudioServerProAppSettings);
+    }
+
     /**
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
@@ -104,6 +112,7 @@ public final class UserProfileUserSettingsArgs extends com.pulumi.resources.Reso
         this.executionRole = $.executionRole;
         this.jupyterServerAppSettings = $.jupyterServerAppSettings;
         this.kernelGatewayAppSettings = $.kernelGatewayAppSettings;
+        this.rStudioServerProAppSettings = $.rStudioServerProAppSettings;
         this.securityGroups = $.securityGroups;
         this.sharingSettings = $.sharingSettings;
     }
@@ -187,6 +196,15 @@ public final class UserProfileUserSettingsArgs extends com.pulumi.resources.Reso
          */
         public Builder kernelGatewayAppSettings(UserProfileKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
             return kernelGatewayAppSettings(Output.of(kernelGatewayAppSettings));
+        }
+
+        public Builder rStudioServerProAppSettings(@Nullable Output<UserProfileRStudioServerProAppSettingsArgs> rStudioServerProAppSettings) {
+            $.rStudioServerProAppSettings = rStudioServerProAppSettings;
+            return this;
+        }
+
+        public Builder rStudioServerProAppSettings(UserProfileRStudioServerProAppSettingsArgs rStudioServerProAppSettings) {
+            return rStudioServerProAppSettings(Output.of(rStudioServerProAppSettings));
         }
 
         /**

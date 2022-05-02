@@ -38,6 +38,13 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends com.pulumi.resou
         return Optional.ofNullable(this.instanceType);
     }
 
+    @Import(name="priority")
+    private @Nullable Output<Double> priority;
+
+    public Optional<Output<Double>> priority() {
+        return Optional.ofNullable(this.priority);
+    }
+
     @Import(name="spotPrice")
     private @Nullable Output<String> spotPrice;
 
@@ -65,6 +72,7 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends com.pulumi.resou
         this.availabilityZone = $.availabilityZone;
         this.instanceRequirements = $.instanceRequirements;
         this.instanceType = $.instanceType;
+        this.priority = $.priority;
         this.spotPrice = $.spotPrice;
         this.subnetId = $.subnetId;
         this.weightedCapacity = $.weightedCapacity;
@@ -113,6 +121,15 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends com.pulumi.resou
 
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
+        }
+
+        public Builder priority(@Nullable Output<Double> priority) {
+            $.priority = priority;
+            return this;
+        }
+
+        public Builder priority(Double priority) {
+            return priority(Output.of(priority));
         }
 
         public Builder spotPrice(@Nullable Output<String> spotPrice) {

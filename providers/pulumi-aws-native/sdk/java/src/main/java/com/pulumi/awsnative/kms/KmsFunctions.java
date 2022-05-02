@@ -27,7 +27,7 @@ public final class KmsFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:kms:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The AWS::KMS::Key resource specifies a customer master key (CMK) in AWS Key Management Service (AWS KMS). Authorized users can use the CMK to encrypt and decrypt small amounts of data (up to 4096 bytes), but they are more commonly used to generate data keys. You can also use CMKs to encrypt data stored in AWS services that are integrated with AWS KMS or within their applications.
+     * The AWS::KMS::Key resource specifies an AWS KMS key in AWS Key Management Service (AWS KMS). Authorized users can use the AWS KMS key to encrypt and decrypt small amounts of data (up to 4096 bytes), but they are more commonly used to generate data keys. You can also use AWS KMS keys to encrypt data stored in AWS services that are integrated with AWS KMS or within their applications.
      * 
      */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
@@ -37,7 +37,7 @@ public final class KmsFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:kms:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
+     * The AWS::KMS::ReplicaKey resource specifies a multi-region replica AWS KMS key in AWS Key Management Service (AWS KMS).
      * 
      */
     public static CompletableFuture<GetReplicaKeyResult> getReplicaKey(GetReplicaKeyArgs args) {

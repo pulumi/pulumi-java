@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DomainTag {
+    /**
+     * @return The value of the tag.
+     * 
+     */
     private final String key;
+    /**
+     * @return The key of the tag.
+     * 
+     */
     private final String value;
 
     @CustomType.Constructor
@@ -20,9 +28,17 @@ public final class DomainTag {
         this.value = value;
     }
 
+    /**
+     * @return The value of the tag.
+     * 
+     */
     public String key() {
         return this.key;
     }
+    /**
+     * @return The key of the tag.
+     * 
+     */
     public String value() {
         return this.value;
     }

@@ -10,6 +10,7 @@ import com.pulumi.awsnative.lambda.enums.FunctionPackageType;
 import com.pulumi.awsnative.lambda.outputs.FunctionCode;
 import com.pulumi.awsnative.lambda.outputs.FunctionDeadLetterConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionEnvironment;
+import com.pulumi.awsnative.lambda.outputs.FunctionEphemeralStorage;
 import com.pulumi.awsnative.lambda.outputs.FunctionFileSystemConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionImageConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionTag;
@@ -122,6 +123,20 @@ public class Function extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<FunctionEnvironment>> environment() {
         return Codegen.optional(this.environment);
+    }
+    /**
+     * A function&#39;s ephemeral storage settings.
+     * 
+     */
+    @Export(name="ephemeralStorage", type=FunctionEphemeralStorage.class, parameters={})
+    private Output</* @Nullable */ FunctionEphemeralStorage> ephemeralStorage;
+
+    /**
+     * @return A function&#39;s ephemeral storage settings.
+     * 
+     */
+    public Output<Optional<FunctionEphemeralStorage>> ephemeralStorage() {
+        return Codegen.optional(this.ephemeralStorage);
     }
     /**
      * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.

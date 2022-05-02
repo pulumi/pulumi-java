@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.kendra.outputs;
 
 import com.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
+import com.pulumi.awsnative.kendra.outputs.DataSourceCustomDocumentEnrichmentConfiguration;
 import com.pulumi.awsnative.kendra.outputs.DataSourceTag;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -15,6 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataSourceResult {
     private final @Nullable String arn;
+    private final @Nullable DataSourceCustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
     private final @Nullable DataSourceConfiguration dataSourceConfiguration;
     private final @Nullable String description;
     private final @Nullable String id;
@@ -31,6 +33,7 @@ public final class GetDataSourceResult {
     @CustomType.Constructor
     private GetDataSourceResult(
         @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("customDocumentEnrichmentConfiguration") @Nullable DataSourceCustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration,
         @CustomType.Parameter("dataSourceConfiguration") @Nullable DataSourceConfiguration dataSourceConfiguration,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("id") @Nullable String id,
@@ -40,6 +43,7 @@ public final class GetDataSourceResult {
         @CustomType.Parameter("schedule") @Nullable String schedule,
         @CustomType.Parameter("tags") @Nullable List<DataSourceTag> tags) {
         this.arn = arn;
+        this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;
         this.id = id;
@@ -52,6 +56,9 @@ public final class GetDataSourceResult {
 
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
+    }
+    public Optional<DataSourceCustomDocumentEnrichmentConfiguration> customDocumentEnrichmentConfiguration() {
+        return Optional.ofNullable(this.customDocumentEnrichmentConfiguration);
     }
     public Optional<DataSourceConfiguration> dataSourceConfiguration() {
         return Optional.ofNullable(this.dataSourceConfiguration);
@@ -92,6 +99,7 @@ public final class GetDataSourceResult {
 
     public static final class Builder {
         private @Nullable String arn;
+        private @Nullable DataSourceCustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
         private @Nullable DataSourceConfiguration dataSourceConfiguration;
         private @Nullable String description;
         private @Nullable String id;
@@ -108,6 +116,7 @@ public final class GetDataSourceResult {
         public Builder(GetDataSourceResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
+    	      this.customDocumentEnrichmentConfiguration = defaults.customDocumentEnrichmentConfiguration;
     	      this.dataSourceConfiguration = defaults.dataSourceConfiguration;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
@@ -120,6 +129,10 @@ public final class GetDataSourceResult {
 
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
+            return this;
+        }
+        public Builder customDocumentEnrichmentConfiguration(@Nullable DataSourceCustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
+            this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
             return this;
         }
         public Builder dataSourceConfiguration(@Nullable DataSourceConfiguration dataSourceConfiguration) {
@@ -157,7 +170,7 @@ public final class GetDataSourceResult {
         public Builder tags(DataSourceTag... tags) {
             return tags(List.of(tags));
         }        public GetDataSourceResult build() {
-            return new GetDataSourceResult(arn, dataSourceConfiguration, description, id, indexId, name, roleArn, schedule, tags);
+            return new GetDataSourceResult(arn, customDocumentEnrichmentConfiguration, dataSourceConfiguration, description, id, indexId, name, roleArn, schedule, tags);
         }
     }
 }

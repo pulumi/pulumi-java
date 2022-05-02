@@ -17,15 +17,15 @@ public final class GetImageResult {
      */
     private final @Nullable String arn;
     /**
-     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
-     * 
-     */
-    private final @Nullable String containerRecipeArn;
-    /**
      * @return The AMI ID of the EC2 AMI in current region.
      * 
      */
     private final @Nullable String imageId;
+    /**
+     * @return URI for containers created in current Region with default ECR image tag
+     * 
+     */
+    private final @Nullable String imageUri;
     /**
      * @return The name of the image.
      * 
@@ -35,12 +35,12 @@ public final class GetImageResult {
     @CustomType.Constructor
     private GetImageResult(
         @CustomType.Parameter("arn") @Nullable String arn,
-        @CustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
         @CustomType.Parameter("imageId") @Nullable String imageId,
+        @CustomType.Parameter("imageUri") @Nullable String imageUri,
         @CustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
-        this.containerRecipeArn = containerRecipeArn;
         this.imageId = imageId;
+        this.imageUri = imageUri;
         this.name = name;
     }
 
@@ -52,18 +52,18 @@ public final class GetImageResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
-     * 
-     */
-    public Optional<String> containerRecipeArn() {
-        return Optional.ofNullable(this.containerRecipeArn);
-    }
-    /**
      * @return The AMI ID of the EC2 AMI in current region.
      * 
      */
     public Optional<String> imageId() {
         return Optional.ofNullable(this.imageId);
+    }
+    /**
+     * @return URI for containers created in current Region with default ECR image tag
+     * 
+     */
+    public Optional<String> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
     /**
      * @return The name of the image.
@@ -83,8 +83,8 @@ public final class GetImageResult {
 
     public static final class Builder {
         private @Nullable String arn;
-        private @Nullable String containerRecipeArn;
         private @Nullable String imageId;
+        private @Nullable String imageUri;
         private @Nullable String name;
 
         public Builder() {
@@ -94,8 +94,8 @@ public final class GetImageResult {
         public Builder(GetImageResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
-    	      this.containerRecipeArn = defaults.containerRecipeArn;
     	      this.imageId = defaults.imageId;
+    	      this.imageUri = defaults.imageUri;
     	      this.name = defaults.name;
         }
 
@@ -103,19 +103,19 @@ public final class GetImageResult {
             this.arn = arn;
             return this;
         }
-        public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
-            this.containerRecipeArn = containerRecipeArn;
-            return this;
-        }
         public Builder imageId(@Nullable String imageId) {
             this.imageId = imageId;
+            return this;
+        }
+        public Builder imageUri(@Nullable String imageUri) {
+            this.imageUri = imageUri;
             return this;
         }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }        public GetImageResult build() {
-            return new GetImageResult(arn, containerRecipeArn, imageId, name);
+            return new GetImageResult(arn, imageId, imageUri, name);
         }
     }
 }

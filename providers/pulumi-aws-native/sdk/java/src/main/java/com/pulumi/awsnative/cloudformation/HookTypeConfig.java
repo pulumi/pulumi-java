@@ -17,6 +17,8 @@ import javax.annotation.Nullable;
 /**
  * Specifies the configuration data for a registered hook in CloudFormation Registry.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="aws-native:cloudformation:HookTypeConfig")
 public class HookTypeConfig extends com.pulumi.resources.CustomResource {

@@ -49,10 +49,10 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
         return Codegen.optional(this.removeSubnetIds);
     }
     @Export(name="subnetIds", type=List.class, parameters={String.class})
-    private Output</* @Nullable */ List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
-    public Output<Optional<List<String>>> subnetIds() {
-        return Codegen.optional(this.subnetIds);
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds;
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayVpcAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags;
@@ -61,16 +61,16 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
         return Codegen.optional(this.tags);
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
-    private Output</* @Nullable */ String> transitGatewayId;
+    private Output<String> transitGatewayId;
 
-    public Output<Optional<String>> transitGatewayId() {
-        return Codegen.optional(this.transitGatewayId);
+    public Output<String> transitGatewayId() {
+        return this.transitGatewayId;
     }
     @Export(name="vpcId", type=String.class, parameters={})
-    private Output</* @Nullable */ String> vpcId;
+    private Output<String> vpcId;
 
-    public Output<Optional<String>> vpcId() {
-        return Codegen.optional(this.vpcId);
+    public Output<String> vpcId() {
+        return this.vpcId;
     }
 
     /**
@@ -85,7 +85,7 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransitGatewayVpcAttachment(String name, @Nullable TransitGatewayVpcAttachmentArgs args) {
+    public TransitGatewayVpcAttachment(String name, TransitGatewayVpcAttachmentArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,7 +94,7 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransitGatewayVpcAttachment(String name, @Nullable TransitGatewayVpcAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransitGatewayVpcAttachment(String name, TransitGatewayVpcAttachmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:TransitGatewayVpcAttachment", name, args == null ? TransitGatewayVpcAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

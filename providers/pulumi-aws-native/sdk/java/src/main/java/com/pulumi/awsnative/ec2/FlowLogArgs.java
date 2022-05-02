@@ -23,14 +23,14 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     public static final FlowLogArgs Empty = new FlowLogArgs();
 
     /**
-     * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     @Import(name="deliverLogsPermissionArn")
     private @Nullable Output<String> deliverLogsPermissionArn;
 
     /**
-     * @return The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * @return The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     public Optional<Output<String>> deliverLogsPermissionArn() {
@@ -45,14 +45,14 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
      * 
      */
     @Import(name="logDestination")
     private @Nullable Output<String> logDestination;
 
     /**
-     * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+     * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
      * 
      */
     public Optional<Output<String>> logDestination() {
@@ -90,14 +90,14 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     @Import(name="logGroupName")
     private @Nullable Output<String> logGroupName;
 
     /**
-     * @return The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+     * @return The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
     public Optional<Output<String>> logGroupName() {
@@ -214,7 +214,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param deliverLogsPermissionArn The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+         * @param deliverLogsPermissionArn The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param deliverLogsPermissionArn The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+         * @param deliverLogsPermissionArn The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logDestination Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+         * @param logDestination Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logDestination Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
+         * @param logDestination Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group, an Amazon S3 bucket, or a Kinesis Firehose stream. The value specified for this parameter depends on the value specified for LogDestinationType.
          * 
          * @return builder
          * 
@@ -307,7 +307,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logGroupName The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+         * @param logGroupName The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
          * 
          * @return builder
          * 
@@ -318,7 +318,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logGroupName The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
+         * @param logGroupName The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3 or kinesis-data-firehose, do not specify DeliverLogsPermissionArn or LogGroupName.
          * 
          * @return builder
          * 

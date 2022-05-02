@@ -19,6 +19,8 @@ import javax.annotation.Nullable;
 /**
  * Publishes new or first hook version to AWS CloudFormation Registry.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="aws-native:cloudformation:HookVersion")
 public class HookVersion extends com.pulumi.resources.CustomResource {

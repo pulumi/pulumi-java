@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestManifestLayout;
 import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
+import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestScteMarkersSource;
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -75,6 +76,21 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
         return Optional.ofNullable(this.profile);
     }
 
+    /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     */
+    @Import(name="scteMarkersSource")
+    private @Nullable Output<PackagingConfigurationDashManifestScteMarkersSource> scteMarkersSource;
+
+    /**
+     * @return The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     */
+    public Optional<Output<PackagingConfigurationDashManifestScteMarkersSource>> scteMarkersSource() {
+        return Optional.ofNullable(this.scteMarkersSource);
+    }
+
     @Import(name="streamSelection")
     private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
@@ -89,6 +105,7 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
         this.manifestName = $.manifestName;
         this.minBufferTimeSeconds = $.minBufferTimeSeconds;
         this.profile = $.profile;
+        this.scteMarkersSource = $.scteMarkersSource;
         this.streamSelection = $.streamSelection;
     }
 
@@ -180,6 +197,27 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
          */
         public Builder profile(PackagingConfigurationDashManifestProfile profile) {
             return profile(Output.of(profile));
+        }
+
+        /**
+         * @param scteMarkersSource The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scteMarkersSource(@Nullable Output<PackagingConfigurationDashManifestScteMarkersSource> scteMarkersSource) {
+            $.scteMarkersSource = scteMarkersSource;
+            return this;
+        }
+
+        /**
+         * @param scteMarkersSource The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scteMarkersSource(PackagingConfigurationDashManifestScteMarkersSource scteMarkersSource) {
+            return scteMarkersSource(Output.of(scteMarkersSource));
         }
 
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {

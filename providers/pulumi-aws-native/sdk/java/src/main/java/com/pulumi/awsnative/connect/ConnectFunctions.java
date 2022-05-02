@@ -7,12 +7,14 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.connect.inputs.GetContactFlowArgs;
 import com.pulumi.awsnative.connect.inputs.GetContactFlowModuleArgs;
 import com.pulumi.awsnative.connect.inputs.GetHoursOfOperationArgs;
+import com.pulumi.awsnative.connect.inputs.GetPhoneNumberArgs;
 import com.pulumi.awsnative.connect.inputs.GetQuickConnectArgs;
 import com.pulumi.awsnative.connect.inputs.GetUserArgs;
 import com.pulumi.awsnative.connect.inputs.GetUserHierarchyGroupArgs;
 import com.pulumi.awsnative.connect.outputs.GetContactFlowModuleResult;
 import com.pulumi.awsnative.connect.outputs.GetContactFlowResult;
 import com.pulumi.awsnative.connect.outputs.GetHoursOfOperationResult;
+import com.pulumi.awsnative.connect.outputs.GetPhoneNumberResult;
 import com.pulumi.awsnative.connect.outputs.GetQuickConnectResult;
 import com.pulumi.awsnative.connect.outputs.GetUserHierarchyGroupResult;
 import com.pulumi.awsnative.connect.outputs.GetUserResult;
@@ -51,6 +53,16 @@ public final class ConnectFunctions {
     }
     public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Connect::PhoneNumber
+     * 
+     */
+    public static CompletableFuture<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args) {
+        return getPhoneNumber(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:connect:getPhoneNumber", TypeShape.of(GetPhoneNumberResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::QuickConnect

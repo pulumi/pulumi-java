@@ -7,25 +7,27 @@ import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetRetentionPeriod {
-    private final Integer numberOfDays;
-    private final Boolean unlimited;
+    private final @Nullable Integer numberOfDays;
+    private final @Nullable Boolean unlimited;
 
     @CustomType.Constructor
     private DatasetRetentionPeriod(
-        @CustomType.Parameter("numberOfDays") Integer numberOfDays,
-        @CustomType.Parameter("unlimited") Boolean unlimited) {
+        @CustomType.Parameter("numberOfDays") @Nullable Integer numberOfDays,
+        @CustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }
 
-    public Integer numberOfDays() {
-        return this.numberOfDays;
+    public Optional<Integer> numberOfDays() {
+        return Optional.ofNullable(this.numberOfDays);
     }
-    public Boolean unlimited() {
-        return this.unlimited;
+    public Optional<Boolean> unlimited() {
+        return Optional.ofNullable(this.unlimited);
     }
 
     public static Builder builder() {
@@ -37,8 +39,8 @@ public final class DatasetRetentionPeriod {
     }
 
     public static final class Builder {
-        private Integer numberOfDays;
-        private Boolean unlimited;
+        private @Nullable Integer numberOfDays;
+        private @Nullable Boolean unlimited;
 
         public Builder() {
     	      // Empty
@@ -50,12 +52,12 @@ public final class DatasetRetentionPeriod {
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder numberOfDays(Integer numberOfDays) {
-            this.numberOfDays = Objects.requireNonNull(numberOfDays);
+        public Builder numberOfDays(@Nullable Integer numberOfDays) {
+            this.numberOfDays = numberOfDays;
             return this;
         }
-        public Builder unlimited(Boolean unlimited) {
-            this.unlimited = Objects.requireNonNull(unlimited);
+        public Builder unlimited(@Nullable Boolean unlimited) {
+            this.unlimited = unlimited;
             return this;
         }        public DatasetRetentionPeriod build() {
             return new DatasetRetentionPeriod(numberOfDays, unlimited);

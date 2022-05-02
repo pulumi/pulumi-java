@@ -7,6 +7,7 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.kendra.DataSourceArgs;
 import com.pulumi.awsnative.kendra.enums.DataSourceType;
 import com.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
+import com.pulumi.awsnative.kendra.outputs.DataSourceCustomDocumentEnrichmentConfiguration;
 import com.pulumi.awsnative.kendra.outputs.DataSourceTag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -28,6 +29,12 @@ public class DataSource extends com.pulumi.resources.CustomResource {
 
     public Output<String> arn() {
         return this.arn;
+    }
+    @Export(name="customDocumentEnrichmentConfiguration", type=DataSourceCustomDocumentEnrichmentConfiguration.class, parameters={})
+    private Output</* @Nullable */ DataSourceCustomDocumentEnrichmentConfiguration> customDocumentEnrichmentConfiguration;
+
+    public Output<Optional<DataSourceCustomDocumentEnrichmentConfiguration>> customDocumentEnrichmentConfiguration() {
+        return Codegen.optional(this.customDocumentEnrichmentConfiguration);
     }
     @Export(name="dataSourceConfiguration", type=DataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration;

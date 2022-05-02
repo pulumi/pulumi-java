@@ -21,6 +21,8 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::SQS::Queue
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="aws-native:sqs:Queue")
 public class Queue extends com.pulumi.resources.CustomResource {

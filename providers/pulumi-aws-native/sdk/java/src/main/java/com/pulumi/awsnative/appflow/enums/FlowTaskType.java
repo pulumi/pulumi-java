@@ -16,6 +16,7 @@ import java.util.StringJoiner;
         MapAll("Map_all"),
         Mask("Mask"),
         Merge("Merge"),
+        Passthrough("Passthrough"),
         Truncate("Truncate"),
         Validate("Validate");
 

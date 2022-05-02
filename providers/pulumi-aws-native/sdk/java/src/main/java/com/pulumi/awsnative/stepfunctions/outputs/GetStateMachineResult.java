@@ -3,7 +3,6 @@
 
 package com.pulumi.awsnative.stepfunctions.outputs;
 
-import com.pulumi.awsnative.stepfunctions.enums.StateMachineType;
 import com.pulumi.awsnative.stepfunctions.outputs.StateMachineLoggingConfiguration;
 import com.pulumi.awsnative.stepfunctions.outputs.StateMachineTagsEntry;
 import com.pulumi.awsnative.stepfunctions.outputs.StateMachineTracingConfiguration;
@@ -21,7 +20,6 @@ public final class GetStateMachineResult {
     private final @Nullable StateMachineLoggingConfiguration loggingConfiguration;
     private final @Nullable String name;
     private final @Nullable String roleArn;
-    private final @Nullable StateMachineType stateMachineType;
     private final @Nullable List<StateMachineTagsEntry> tags;
     private final @Nullable StateMachineTracingConfiguration tracingConfiguration;
 
@@ -32,7 +30,6 @@ public final class GetStateMachineResult {
         @CustomType.Parameter("loggingConfiguration") @Nullable StateMachineLoggingConfiguration loggingConfiguration,
         @CustomType.Parameter("name") @Nullable String name,
         @CustomType.Parameter("roleArn") @Nullable String roleArn,
-        @CustomType.Parameter("stateMachineType") @Nullable StateMachineType stateMachineType,
         @CustomType.Parameter("tags") @Nullable List<StateMachineTagsEntry> tags,
         @CustomType.Parameter("tracingConfiguration") @Nullable StateMachineTracingConfiguration tracingConfiguration) {
         this.arn = arn;
@@ -40,7 +37,6 @@ public final class GetStateMachineResult {
         this.loggingConfiguration = loggingConfiguration;
         this.name = name;
         this.roleArn = roleArn;
-        this.stateMachineType = stateMachineType;
         this.tags = tags;
         this.tracingConfiguration = tracingConfiguration;
     }
@@ -59,9 +55,6 @@ public final class GetStateMachineResult {
     }
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
-    }
-    public Optional<StateMachineType> stateMachineType() {
-        return Optional.ofNullable(this.stateMachineType);
     }
     public List<StateMachineTagsEntry> tags() {
         return this.tags == null ? List.of() : this.tags;
@@ -84,7 +77,6 @@ public final class GetStateMachineResult {
         private @Nullable StateMachineLoggingConfiguration loggingConfiguration;
         private @Nullable String name;
         private @Nullable String roleArn;
-        private @Nullable StateMachineType stateMachineType;
         private @Nullable List<StateMachineTagsEntry> tags;
         private @Nullable StateMachineTracingConfiguration tracingConfiguration;
 
@@ -99,7 +91,6 @@ public final class GetStateMachineResult {
     	      this.loggingConfiguration = defaults.loggingConfiguration;
     	      this.name = defaults.name;
     	      this.roleArn = defaults.roleArn;
-    	      this.stateMachineType = defaults.stateMachineType;
     	      this.tags = defaults.tags;
     	      this.tracingConfiguration = defaults.tracingConfiguration;
         }
@@ -124,10 +115,6 @@ public final class GetStateMachineResult {
             this.roleArn = roleArn;
             return this;
         }
-        public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
-            this.stateMachineType = stateMachineType;
-            return this;
-        }
         public Builder tags(@Nullable List<StateMachineTagsEntry> tags) {
             this.tags = tags;
             return this;
@@ -139,7 +126,7 @@ public final class GetStateMachineResult {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }        public GetStateMachineResult build() {
-            return new GetStateMachineResult(arn, definitionString, loggingConfiguration, name, roleArn, stateMachineType, tags, tracingConfiguration);
+            return new GetStateMachineResult(arn, definitionString, loggingConfiguration, name, roleArn, tags, tracingConfiguration);
         }
     }
 }

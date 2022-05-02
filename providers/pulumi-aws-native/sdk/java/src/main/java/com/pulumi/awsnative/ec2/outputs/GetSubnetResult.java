@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.outputs;
 
+import com.pulumi.awsnative.ec2.outputs.PrivateDnsNameOptionsOnLaunchProperties;
 import com.pulumi.awsnative.ec2.outputs.SubnetTag;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -15,33 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSubnetResult {
     private final @Nullable Boolean assignIpv6AddressOnCreation;
+    private final @Nullable Boolean enableDns64;
     private final @Nullable String ipv6CidrBlock;
     private final @Nullable List<String> ipv6CidrBlocks;
     private final @Nullable Boolean mapPublicIpOnLaunch;
     private final @Nullable String networkAclAssociationId;
+    private final @Nullable PrivateDnsNameOptionsOnLaunchProperties privateDnsNameOptionsOnLaunch;
     private final @Nullable String subnetId;
     private final @Nullable List<SubnetTag> tags;
 
     @CustomType.Constructor
     private GetSubnetResult(
         @CustomType.Parameter("assignIpv6AddressOnCreation") @Nullable Boolean assignIpv6AddressOnCreation,
+        @CustomType.Parameter("enableDns64") @Nullable Boolean enableDns64,
         @CustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
         @CustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
         @CustomType.Parameter("mapPublicIpOnLaunch") @Nullable Boolean mapPublicIpOnLaunch,
         @CustomType.Parameter("networkAclAssociationId") @Nullable String networkAclAssociationId,
+        @CustomType.Parameter("privateDnsNameOptionsOnLaunch") @Nullable PrivateDnsNameOptionsOnLaunchProperties privateDnsNameOptionsOnLaunch,
         @CustomType.Parameter("subnetId") @Nullable String subnetId,
         @CustomType.Parameter("tags") @Nullable List<SubnetTag> tags) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
+        this.enableDns64 = enableDns64;
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6CidrBlocks = ipv6CidrBlocks;
         this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
         this.networkAclAssociationId = networkAclAssociationId;
+        this.privateDnsNameOptionsOnLaunch = privateDnsNameOptionsOnLaunch;
         this.subnetId = subnetId;
         this.tags = tags;
     }
 
     public Optional<Boolean> assignIpv6AddressOnCreation() {
         return Optional.ofNullable(this.assignIpv6AddressOnCreation);
+    }
+    public Optional<Boolean> enableDns64() {
+        return Optional.ofNullable(this.enableDns64);
     }
     public Optional<String> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
@@ -54,6 +64,9 @@ public final class GetSubnetResult {
     }
     public Optional<String> networkAclAssociationId() {
         return Optional.ofNullable(this.networkAclAssociationId);
+    }
+    public Optional<PrivateDnsNameOptionsOnLaunchProperties> privateDnsNameOptionsOnLaunch() {
+        return Optional.ofNullable(this.privateDnsNameOptionsOnLaunch);
     }
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
@@ -72,10 +85,12 @@ public final class GetSubnetResult {
 
     public static final class Builder {
         private @Nullable Boolean assignIpv6AddressOnCreation;
+        private @Nullable Boolean enableDns64;
         private @Nullable String ipv6CidrBlock;
         private @Nullable List<String> ipv6CidrBlocks;
         private @Nullable Boolean mapPublicIpOnLaunch;
         private @Nullable String networkAclAssociationId;
+        private @Nullable PrivateDnsNameOptionsOnLaunchProperties privateDnsNameOptionsOnLaunch;
         private @Nullable String subnetId;
         private @Nullable List<SubnetTag> tags;
 
@@ -86,16 +101,22 @@ public final class GetSubnetResult {
         public Builder(GetSubnetResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.assignIpv6AddressOnCreation = defaults.assignIpv6AddressOnCreation;
+    	      this.enableDns64 = defaults.enableDns64;
     	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
     	      this.ipv6CidrBlocks = defaults.ipv6CidrBlocks;
     	      this.mapPublicIpOnLaunch = defaults.mapPublicIpOnLaunch;
     	      this.networkAclAssociationId = defaults.networkAclAssociationId;
+    	      this.privateDnsNameOptionsOnLaunch = defaults.privateDnsNameOptionsOnLaunch;
     	      this.subnetId = defaults.subnetId;
     	      this.tags = defaults.tags;
         }
 
         public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
+            return this;
+        }
+        public Builder enableDns64(@Nullable Boolean enableDns64) {
+            this.enableDns64 = enableDns64;
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
@@ -117,6 +138,10 @@ public final class GetSubnetResult {
             this.networkAclAssociationId = networkAclAssociationId;
             return this;
         }
+        public Builder privateDnsNameOptionsOnLaunch(@Nullable PrivateDnsNameOptionsOnLaunchProperties privateDnsNameOptionsOnLaunch) {
+            this.privateDnsNameOptionsOnLaunch = privateDnsNameOptionsOnLaunch;
+            return this;
+        }
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
@@ -128,7 +153,7 @@ public final class GetSubnetResult {
         public Builder tags(SubnetTag... tags) {
             return tags(List.of(tags));
         }        public GetSubnetResult build() {
-            return new GetSubnetResult(assignIpv6AddressOnCreation, ipv6CidrBlock, ipv6CidrBlocks, mapPublicIpOnLaunch, networkAclAssociationId, subnetId, tags);
+            return new GetSubnetResult(assignIpv6AddressOnCreation, enableDns64, ipv6CidrBlock, ipv6CidrBlocks, mapPublicIpOnLaunch, networkAclAssociationId, privateDnsNameOptionsOnLaunch, subnetId, tags);
         }
     }
 }
