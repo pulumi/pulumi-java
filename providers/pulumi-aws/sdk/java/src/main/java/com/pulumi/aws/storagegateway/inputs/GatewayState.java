@@ -4,6 +4,7 @@
 package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceArgs;
+import com.pulumi.aws.storagegateway.inputs.GatewayMaintenanceStartTimeArgs;
 import com.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -247,6 +248,21 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+     * 
+     */
+    @Import(name="maintenanceStartTime")
+    private @Nullable Output<GatewayMaintenanceStartTimeArgs> maintenanceStartTime;
+
+    /**
+     * @return The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+     * 
+     */
+    public Optional<Output<GatewayMaintenanceStartTimeArgs>> maintenanceStartTime() {
+        return Optional.ofNullable(this.maintenanceStartTime);
+    }
+
+    /**
      * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
      * 
      */
@@ -384,6 +400,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
         this.gatewayType = $.gatewayType;
         this.gatewayVpcEndpoint = $.gatewayVpcEndpoint;
         this.hostEnvironment = $.hostEnvironment;
+        this.maintenanceStartTime = $.maintenanceStartTime;
         this.mediumChangerType = $.mediumChangerType;
         this.smbActiveDirectorySettings = $.smbActiveDirectorySettings;
         this.smbFileShareVisibility = $.smbFileShareVisibility;
@@ -735,6 +752,27 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder hostEnvironment(String hostEnvironment) {
             return hostEnvironment(Output.of(hostEnvironment));
+        }
+
+        /**
+         * @param maintenanceStartTime The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceStartTime(@Nullable Output<GatewayMaintenanceStartTimeArgs> maintenanceStartTime) {
+            $.maintenanceStartTime = maintenanceStartTime;
+            return this;
+        }
+
+        /**
+         * @param maintenanceStartTime The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceStartTime(GatewayMaintenanceStartTimeArgs maintenanceStartTime) {
+            return maintenanceStartTime(Output.of(maintenanceStartTime));
         }
 
         /**

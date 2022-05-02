@@ -23,6 +23,11 @@ public final class CutoverJobResponse {
      */
     private final String createTime;
     /**
+     * @return The time the cutover job had finished.
+     * 
+     */
+    private final String endTime;
+    /**
      * @return Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
@@ -57,6 +62,7 @@ public final class CutoverJobResponse {
     private CutoverJobResponse(
         @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
         @CustomType.Parameter("error") StatusResponse error,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("progressPercent") Integer progressPercent,
@@ -65,6 +71,7 @@ public final class CutoverJobResponse {
         @CustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
+        this.endTime = endTime;
         this.error = error;
         this.name = name;
         this.progressPercent = progressPercent;
@@ -86,6 +93,13 @@ public final class CutoverJobResponse {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return The time the cutover job had finished.
+     * 
+     */
+    public String endTime() {
+        return this.endTime;
     }
     /**
      * @return Provides details for the errors that led to the Cutover Job&#39;s state.
@@ -141,6 +155,7 @@ public final class CutoverJobResponse {
     public static final class Builder {
         private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
         private String createTime;
+        private String endTime;
         private StatusResponse error;
         private String name;
         private Integer progressPercent;
@@ -156,6 +171,7 @@ public final class CutoverJobResponse {
     	      Objects.requireNonNull(defaults);
     	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
     	      this.createTime = defaults.createTime;
+    	      this.endTime = defaults.endTime;
     	      this.error = defaults.error;
     	      this.name = defaults.name;
     	      this.progressPercent = defaults.progressPercent;
@@ -170,6 +186,10 @@ public final class CutoverJobResponse {
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder endTime(String endTime) {
+            this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
         public Builder error(StatusResponse error) {
@@ -196,7 +216,7 @@ public final class CutoverJobResponse {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }        public CutoverJobResponse build() {
-            return new CutoverJobResponse(computeEngineTargetDetails, createTime, error, name, progressPercent, state, stateMessage, stateTime);
+            return new CutoverJobResponse(computeEngineTargetDetails, createTime, endTime, error, name, progressPercent, state, stateMessage, stateTime);
         }
     }
 }

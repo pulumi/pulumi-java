@@ -78,14 +78,14 @@ public class Rule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.inputParameters);
     }
     /**
-     * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     @Export(name="maximumExecutionFrequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> maximumExecutionFrequency;
 
     /**
-     * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * @return The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     public Output<Optional<String>> maximumExecutionFrequency() {
@@ -120,42 +120,42 @@ public class Rule extends com.pulumi.resources.CustomResource {
         return this.ruleId;
     }
     /**
-     * Scope defines which resources can trigger an evaluation for the rule as documented below.
+     * Scope defines which resources can trigger an evaluation for the rule. See Source Below.
      * 
      */
     @Export(name="scope", type=RuleScope.class, parameters={})
     private Output</* @Nullable */ RuleScope> scope;
 
     /**
-     * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
+     * @return Scope defines which resources can trigger an evaluation for the rule. See Source Below.
      * 
      */
     public Output<Optional<RuleScope>> scope() {
         return Codegen.optional(this.scope);
     }
     /**
-     * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+     * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
      * 
      */
     @Export(name="source", type=RuleSource.class, parameters={})
     private Output<RuleSource> source;
 
     /**
-     * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+     * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
      * 
      */
     public Output<RuleSource> source() {
         return this.source;
     }
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

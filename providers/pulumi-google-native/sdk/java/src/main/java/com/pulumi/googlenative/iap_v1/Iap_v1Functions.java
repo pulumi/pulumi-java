@@ -8,9 +8,11 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.iap_v1.inputs.GetBrandArgs;
+import com.pulumi.googlenative.iap_v1.inputs.GetDestGroupArgs;
 import com.pulumi.googlenative.iap_v1.inputs.GetIdentityAwareProxyClientArgs;
 import com.pulumi.googlenative.iap_v1.inputs.GetV1IamPolicyArgs;
 import com.pulumi.googlenative.iap_v1.outputs.GetBrandResult;
+import com.pulumi.googlenative.iap_v1.outputs.GetDestGroupResult;
 import com.pulumi.googlenative.iap_v1.outputs.GetIdentityAwareProxyClientResult;
 import com.pulumi.googlenative.iap_v1.outputs.GetV1IamPolicyResult;
 import java.util.concurrent.CompletableFuture;
@@ -25,6 +27,16 @@ public final class Iap_v1Functions {
     }
     public static CompletableFuture<GetBrandResult> getBrand(GetBrandArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getBrand", TypeShape.of(GetBrandResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves an existing TunnelDestGroup.
+     * 
+     */
+    public static CompletableFuture<GetDestGroupResult> getDestGroup(GetDestGroupArgs args) {
+        return getDestGroup(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetDestGroupResult> getDestGroup(GetDestGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:iap/v1:getDestGroup", TypeShape.of(GetDestGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.

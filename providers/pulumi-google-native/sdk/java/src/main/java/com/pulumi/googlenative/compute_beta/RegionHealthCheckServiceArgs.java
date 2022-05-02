@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.enums.RegionHealthCheckServiceHealthStatusAggregationPolicy;
+import com.pulumi.googlenative.compute_beta.enums.RegionHealthCheckServiceHealthStatusAggregationStrategy;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,6 +61,29 @@ public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.Res
      */
     public Optional<Output<RegionHealthCheckServiceHealthStatusAggregationPolicy>> healthStatusAggregationPolicy() {
         return Optional.ofNullable(this.healthStatusAggregationPolicy);
+    }
+
+    /**
+     * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     * @deprecated
+     * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     */
+    @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+    @Import(name="healthStatusAggregationStrategy")
+    private @Nullable Output<RegionHealthCheckServiceHealthStatusAggregationStrategy> healthStatusAggregationStrategy;
+
+    /**
+     * @return This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     * @deprecated
+     * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     */
+    @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+    public Optional<Output<RegionHealthCheckServiceHealthStatusAggregationStrategy>> healthStatusAggregationStrategy() {
+        return Optional.ofNullable(this.healthStatusAggregationStrategy);
     }
 
     /**
@@ -121,9 +145,17 @@ public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.Res
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -134,6 +166,7 @@ public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.Res
         this.description = $.description;
         this.healthChecks = $.healthChecks;
         this.healthStatusAggregationPolicy = $.healthStatusAggregationPolicy;
+        this.healthStatusAggregationStrategy = $.healthStatusAggregationStrategy;
         this.name = $.name;
         this.networkEndpointGroups = $.networkEndpointGroups;
         this.notificationEndpoints = $.notificationEndpoints;
@@ -231,6 +264,35 @@ public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.Res
          */
         public Builder healthStatusAggregationPolicy(RegionHealthCheckServiceHealthStatusAggregationPolicy healthStatusAggregationPolicy) {
             return healthStatusAggregationPolicy(Output.of(healthStatusAggregationPolicy));
+        }
+
+        /**
+         * @param healthStatusAggregationStrategy This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+         * 
+         */
+        @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+        public Builder healthStatusAggregationStrategy(@Nullable Output<RegionHealthCheckServiceHealthStatusAggregationStrategy> healthStatusAggregationStrategy) {
+            $.healthStatusAggregationStrategy = healthStatusAggregationStrategy;
+            return this;
+        }
+
+        /**
+         * @param healthStatusAggregationStrategy This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+         * 
+         */
+        @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+        public Builder healthStatusAggregationStrategy(RegionHealthCheckServiceHealthStatusAggregationStrategy healthStatusAggregationStrategy) {
+            return healthStatusAggregationStrategy(Output.of(healthStatusAggregationStrategy));
         }
 
         /**
@@ -334,11 +396,23 @@ public final class RegionHealthCheckServiceArgs extends com.pulumi.resources.Res
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

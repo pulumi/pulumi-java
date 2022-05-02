@@ -15,9 +15,17 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CloneJobArgs Empty = new CloneJobArgs();
 
+    /**
+     * Required. The clone job identifier.
+     * 
+     */
     @Import(name="cloneJobId", required=true)
     private Output<String> cloneJobId;
 
+    /**
+     * @return Required. The clone job identifier.
+     * 
+     */
     public Output<String> cloneJobId() {
         return this.cloneJobId;
     }
@@ -36,21 +44,6 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
         return this.migratingVmId;
     }
 
-    /**
-     * The name of the clone.
-     * 
-     */
-    @Import(name="name")
-    private @Nullable Output<String> name;
-
-    /**
-     * @return The name of the clone.
-     * 
-     */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
-    }
-
     @Import(name="project")
     private @Nullable Output<String> project;
 
@@ -58,9 +51,17 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -78,7 +79,6 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
         this.cloneJobId = $.cloneJobId;
         this.location = $.location;
         this.migratingVmId = $.migratingVmId;
-        this.name = $.name;
         this.project = $.project;
         this.requestId = $.requestId;
         this.sourceId = $.sourceId;
@@ -102,11 +102,23 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CloneJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloneJobId Required. The clone job identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloneJobId(Output<String> cloneJobId) {
             $.cloneJobId = cloneJobId;
             return this;
         }
 
+        /**
+         * @param cloneJobId Required. The clone job identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloneJobId(String cloneJobId) {
             return cloneJobId(Output.of(cloneJobId));
         }
@@ -129,27 +141,6 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
             return migratingVmId(Output.of(migratingVmId));
         }
 
-        /**
-         * @param name The name of the clone.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder name(@Nullable Output<String> name) {
-            $.name = name;
-            return this;
-        }
-
-        /**
-         * @param name The name of the clone.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder name(String name) {
-            return name(Output.of(name));
-        }
-
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
@@ -159,11 +150,23 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

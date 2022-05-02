@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupState;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupAppEngine;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudFunction;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudRun;
+import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupServerlessDeployment;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -53,7 +54,7 @@ import javax.annotation.Nullable;
 public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResource {
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -62,7 +63,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -71,7 +72,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
     }
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -80,7 +81,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -89,7 +90,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
     }
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -98,7 +99,7 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -208,6 +209,22 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      */
     public Output<String> selfLink() {
         return this.selfLink;
+    }
+    /**
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+     * serverlessDeployment may be set.
+     * 
+     */
+    @Export(name="serverlessDeployment", type=RegionNetworkEndpointGroupServerlessDeployment.class, parameters={})
+    private Output</* @Nullable */ RegionNetworkEndpointGroupServerlessDeployment> serverlessDeployment;
+
+    /**
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+     * serverlessDeployment may be set.
+     * 
+     */
+    public Output<Optional<RegionNetworkEndpointGroupServerlessDeployment>> serverlessDeployment() {
+        return Codegen.optional(this.serverlessDeployment);
     }
 
     /**

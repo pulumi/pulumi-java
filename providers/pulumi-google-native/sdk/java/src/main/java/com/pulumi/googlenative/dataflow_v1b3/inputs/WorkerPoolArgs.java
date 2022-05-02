@@ -331,6 +331,29 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     * @deprecated
+     * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     */
+    @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+    @Import(name="workerHarnessContainerImage", required=true)
+    private Output<String> workerHarnessContainerImage;
+
+    /**
+     * @return Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     * @deprecated
+     * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     */
+    @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+    public Output<String> workerHarnessContainerImage() {
+        return this.workerHarnessContainerImage;
+    }
+
+    /**
      * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
@@ -368,6 +391,7 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
         this.subnetwork = $.subnetwork;
         this.taskrunnerSettings = $.taskrunnerSettings;
         this.teardownPolicy = $.teardownPolicy;
+        this.workerHarnessContainerImage = $.workerHarnessContainerImage;
         this.zone = $.zone;
     }
 
@@ -840,6 +864,35 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param workerHarnessContainerImage Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+         * 
+         */
+        @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+        public Builder workerHarnessContainerImage(Output<String> workerHarnessContainerImage) {
+            $.workerHarnessContainerImage = workerHarnessContainerImage;
+            return this;
+        }
+
+        /**
+         * @param workerHarnessContainerImage Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+         * 
+         */
+        @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+        public Builder workerHarnessContainerImage(String workerHarnessContainerImage) {
+            return workerHarnessContainerImage(Output.of(workerHarnessContainerImage));
+        }
+
+        /**
          * @param zone Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
          * 
          * @return builder
@@ -861,6 +914,7 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public WorkerPoolArgs build() {
+            $.workerHarnessContainerImage = Objects.requireNonNull($.workerHarnessContainerImage, "expected parameter 'workerHarnessContainerImage' to be non-null");
             return $;
         }
     }

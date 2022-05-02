@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.inputs.FirewallPolicyRuleMatcherLayer4ConfigArgs;
+import com.pulumi.googlenative.compute_v1.inputs.FirewallPolicyRuleSecureTagArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,12 +67,28 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
         return Optional.ofNullable(this.srcIpRanges);
     }
 
+    /**
+     * List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    @Import(name="srcSecureTags")
+    private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
+
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    public Optional<Output<List<FirewallPolicyRuleSecureTagArgs>>> srcSecureTags() {
+        return Optional.ofNullable(this.srcSecureTags);
+    }
+
     private FirewallPolicyRuleMatcherArgs() {}
 
     private FirewallPolicyRuleMatcherArgs(FirewallPolicyRuleMatcherArgs $) {
         this.destIpRanges = $.destIpRanges;
         this.layer4Configs = $.layer4Configs;
         this.srcIpRanges = $.srcIpRanges;
+        this.srcSecureTags = $.srcSecureTags;
     }
 
     public static Builder builder() {
@@ -183,6 +200,37 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
          */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(@Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
+            $.srcSecureTags = srcSecureTags;
+            return this;
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
+            return srcSecureTags(Output.of(srcSecureTags));
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(FirewallPolicyRuleSecureTagArgs... srcSecureTags) {
+            return srcSecureTags(List.of(srcSecureTags));
         }
 
         public FirewallPolicyRuleMatcherArgs build() {

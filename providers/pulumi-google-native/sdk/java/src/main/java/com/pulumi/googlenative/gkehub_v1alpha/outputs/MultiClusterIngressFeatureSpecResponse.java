@@ -10,16 +10,39 @@ import java.util.Objects;
 @CustomType
 public final class MultiClusterIngressFeatureSpecResponse {
     /**
+     * @return Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     * @deprecated
+     * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     */
+    @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+    private final String billing;
+    /**
      * @return Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
      */
     private final String configMembership;
 
     @CustomType.Constructor
-    private MultiClusterIngressFeatureSpecResponse(@CustomType.Parameter("configMembership") String configMembership) {
+    private MultiClusterIngressFeatureSpecResponse(
+        @CustomType.Parameter("billing") String billing,
+        @CustomType.Parameter("configMembership") String configMembership) {
+        this.billing = billing;
         this.configMembership = configMembership;
     }
 
+    /**
+     * @return Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     * @deprecated
+     * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     */
+    @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+    public String billing() {
+        return this.billing;
+    }
     /**
      * @return Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
@@ -37,6 +60,7 @@ public final class MultiClusterIngressFeatureSpecResponse {
     }
 
     public static final class Builder {
+        private String billing;
         private String configMembership;
 
         public Builder() {
@@ -45,14 +69,19 @@ public final class MultiClusterIngressFeatureSpecResponse {
 
         public Builder(MultiClusterIngressFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.billing = defaults.billing;
     	      this.configMembership = defaults.configMembership;
         }
 
+        public Builder billing(String billing) {
+            this.billing = Objects.requireNonNull(billing);
+            return this;
+        }
         public Builder configMembership(String configMembership) {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }        public MultiClusterIngressFeatureSpecResponse build() {
-            return new MultiClusterIngressFeatureSpecResponse(configMembership);
+            return new MultiClusterIngressFeatureSpecResponse(billing, configMembership);
         }
     }
 }

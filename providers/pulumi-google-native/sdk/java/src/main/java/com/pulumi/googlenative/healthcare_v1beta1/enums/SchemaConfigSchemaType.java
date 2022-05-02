@@ -28,7 +28,12 @@ import java.util.StringJoiner;
          * Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.
          * 
          */
-        Analytics("ANALYTICS");
+        Analytics("ANALYTICS"),
+        /**
+         * Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
+         * 
+         */
+        AnalyticsV2("ANALYTICS_V2");
 
         private final String value;
 

@@ -35,7 +35,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
 
     /**
      * How the intent should be fulfilled, either by running a Lambda function or by
-     * returning the slot data to the client application.
+     * returning the slot data to the client application. Type can be either `ReturnIntent` or `CodeHook`, as documented [here](https://docs.aws.amazon.com/lex/latest/dg/API_FulfillmentActivity.html).
      * 
      */
     @Import(name="type", required=true)
@@ -43,7 +43,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
 
     /**
      * @return How the intent should be fulfilled, either by running a Lambda function or by
-     * returning the slot data to the client application.
+     * returning the slot data to the client application. Type can be either `ReturnIntent` or `CodeHook`, as documented [here](https://docs.aws.amazon.com/lex/latest/dg/API_FulfillmentActivity.html).
      * 
      */
     public Output<String> type() {
@@ -100,7 +100,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
 
         /**
          * @param type How the intent should be fulfilled, either by running a Lambda function or by
-         * returning the slot data to the client application.
+         * returning the slot data to the client application. Type can be either `ReturnIntent` or `CodeHook`, as documented [here](https://docs.aws.amazon.com/lex/latest/dg/API_FulfillmentActivity.html).
          * 
          * @return builder
          * 
@@ -112,7 +112,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
 
         /**
          * @param type How the intent should be fulfilled, either by running a Lambda function or by
-         * returning the slot data to the client application.
+         * returning the slot data to the client application. Type can be either `ReturnIntent` or `CodeHook`, as documented [here](https://docs.aws.amazon.com/lex/latest/dg/API_FulfillmentActivity.html).
          * 
          * @return builder
          * 

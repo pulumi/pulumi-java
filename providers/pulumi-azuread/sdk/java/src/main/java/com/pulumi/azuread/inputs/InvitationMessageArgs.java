@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,21 +20,29 @@ public final class InvitationMessageArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="additionalRecipients")
-      private final @Nullable Output<String> additionalRecipients;
+    private @Nullable Output<String> additionalRecipients;
 
-    public Output<String> additionalRecipients() {
-        return this.additionalRecipients == null ? Codegen.empty() : this.additionalRecipients;
+    /**
+     * @return Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
+     * 
+     */
+    public Optional<Output<String>> additionalRecipients() {
+        return Optional.ofNullable(this.additionalRecipients);
     }
 
     /**
-     * Customized message body you want to send if you don't want to send the default message. Cannot be specified with `language`.
+     * Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    /**
+     * @return Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
+     * 
+     */
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -42,76 +50,108 @@ public final class InvitationMessageArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    /**
+     * @return The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
+     * 
+     */
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
-    public InvitationMessageArgs(
-        @Nullable Output<String> additionalRecipients,
-        @Nullable Output<String> body,
-        @Nullable Output<String> language) {
-        this.additionalRecipients = additionalRecipients;
-        this.body = body;
-        this.language = language;
-    }
+    private InvitationMessageArgs() {}
 
-    private InvitationMessageArgs() {
-        this.additionalRecipients = Codegen.empty();
-        this.body = Codegen.empty();
-        this.language = Codegen.empty();
+    private InvitationMessageArgs(InvitationMessageArgs $) {
+        this.additionalRecipients = $.additionalRecipients;
+        this.body = $.body;
+        this.language = $.language;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalRecipients;
-        private @Nullable Output<String> body;
-        private @Nullable Output<String> language;
+        private InvitationMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationMessageArgs();
         }
 
         public Builder(InvitationMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalRecipients = defaults.additionalRecipients;
-    	      this.body = defaults.body;
-    	      this.language = defaults.language;
+            $ = new InvitationMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalRecipients Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(@Nullable Output<String> additionalRecipients) {
-            this.additionalRecipients = additionalRecipients;
+            $.additionalRecipients = additionalRecipients;
             return this;
         }
-        public Builder additionalRecipients(@Nullable String additionalRecipients) {
-            this.additionalRecipients = Codegen.ofNullable(additionalRecipients);
-            return this;
+
+        /**
+         * @param additionalRecipients Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder additionalRecipients(String additionalRecipients) {
+            return additionalRecipients(Output.of(additionalRecipients));
         }
+
+        /**
+         * @param body Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        /**
+         * @param body Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
+        /**
+         * @param language The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
-        }        public InvitationMessageArgs build() {
-            return new InvitationMessageArgs(additionalRecipients, body, language);
+
+        /**
+         * @param language The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder language(String language) {
+            return language(Output.of(language));
+        }
+
+        public InvitationMessageArgs build() {
+            return $;
         }
     }
+
 }

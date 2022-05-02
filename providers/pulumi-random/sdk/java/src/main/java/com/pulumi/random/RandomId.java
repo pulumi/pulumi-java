@@ -65,14 +65,16 @@ public class RandomId extends com.pulumi.resources.CustomResource {
         return this.b64Std;
     }
     /**
-     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+     * characters `_` and `-`.
      * 
      */
     @Export(name="b64Url", type=String.class, parameters={})
     private Output<String> b64Url;
 
     /**
-     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+     * characters `_` and `-`.
      * 
      */
     public Output<String> b64Url() {
@@ -107,42 +109,48 @@ public class RandomId extends com.pulumi.resources.CustomResource {
         return this.dec;
     }
     /**
-     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+     * length.
      * 
      */
     @Export(name="hex", type=String.class, parameters={})
     private Output<String> hex;
 
     /**
-     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+     * length.
      * 
      */
     public Output<String> hex() {
         return this.hex;
     }
     /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     public Output<Optional<Map<String,Object>>> keepers() {
         return Codegen.optional(this.keepers);
     }
     /**
-     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
-     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     public Output<Optional<String>> prefix() {

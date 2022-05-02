@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.vmmigration_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.vmmigration_v1.outputs.AwsSourceVmDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.CloneJobResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDefaultsResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.CutoverJobResponse;
@@ -18,6 +19,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetMigratingVmResult {
+    /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    private final AwsSourceVmDetailsResponse awsSourceVmDetails;
     /**
      * @return Details of the target VM in Compute Engine.
      * 
@@ -106,6 +112,7 @@ public final class GetMigratingVmResult {
 
     @CustomType.Constructor
     private GetMigratingVmResult(
+        @CustomType.Parameter("awsSourceVmDetails") AwsSourceVmDetailsResponse awsSourceVmDetails,
         @CustomType.Parameter("computeEngineTargetDefaults") ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("currentSyncInfo") ReplicationCycleResponse currentSyncInfo,
@@ -123,6 +130,7 @@ public final class GetMigratingVmResult {
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateTime") String stateTime,
         @CustomType.Parameter("updateTime") String updateTime) {
+        this.awsSourceVmDetails = awsSourceVmDetails;
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
         this.createTime = createTime;
         this.currentSyncInfo = currentSyncInfo;
@@ -142,6 +150,13 @@ public final class GetMigratingVmResult {
         this.updateTime = updateTime;
     }
 
+    /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    public AwsSourceVmDetailsResponse awsSourceVmDetails() {
+        return this.awsSourceVmDetails;
+    }
     /**
      * @return Details of the target VM in Compute Engine.
      * 
@@ -271,6 +286,7 @@ public final class GetMigratingVmResult {
     }
 
     public static final class Builder {
+        private AwsSourceVmDetailsResponse awsSourceVmDetails;
         private ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults;
         private String createTime;
         private ReplicationCycleResponse currentSyncInfo;
@@ -295,6 +311,7 @@ public final class GetMigratingVmResult {
 
         public Builder(GetMigratingVmResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.awsSourceVmDetails = defaults.awsSourceVmDetails;
     	      this.computeEngineTargetDefaults = defaults.computeEngineTargetDefaults;
     	      this.createTime = defaults.createTime;
     	      this.currentSyncInfo = defaults.currentSyncInfo;
@@ -314,6 +331,10 @@ public final class GetMigratingVmResult {
     	      this.updateTime = defaults.updateTime;
         }
 
+        public Builder awsSourceVmDetails(AwsSourceVmDetailsResponse awsSourceVmDetails) {
+            this.awsSourceVmDetails = Objects.requireNonNull(awsSourceVmDetails);
+            return this;
+        }
         public Builder computeEngineTargetDefaults(ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults) {
             this.computeEngineTargetDefaults = Objects.requireNonNull(computeEngineTargetDefaults);
             return this;
@@ -388,7 +409,7 @@ public final class GetMigratingVmResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetMigratingVmResult build() {
-            return new GetMigratingVmResult(computeEngineTargetDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, updateTime);
+            return new GetMigratingVmResult(awsSourceVmDetails, computeEngineTargetDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, updateTime);
         }
     }
 }

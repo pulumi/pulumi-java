@@ -49,11 +49,43 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
         return Optional.ofNullable(this.kind);
     }
 
+    /**
+     * How long to keep generated audit files.
+     * 
+     */
+    @Import(name="retentionInterval")
+    private @Nullable Output<String> retentionInterval;
+
+    /**
+     * @return How long to keep generated audit files.
+     * 
+     */
+    public Optional<Output<String>> retentionInterval() {
+        return Optional.ofNullable(this.retentionInterval);
+    }
+
+    /**
+     * How often to upload generated audit files.
+     * 
+     */
+    @Import(name="uploadInterval")
+    private @Nullable Output<String> uploadInterval;
+
+    /**
+     * @return How often to upload generated audit files.
+     * 
+     */
+    public Optional<Output<String>> uploadInterval() {
+        return Optional.ofNullable(this.uploadInterval);
+    }
+
     private SqlServerAuditConfigArgs() {}
 
     private SqlServerAuditConfigArgs(SqlServerAuditConfigArgs $) {
         this.bucket = $.bucket;
         this.kind = $.kind;
+        this.retentionInterval = $.retentionInterval;
+        this.uploadInterval = $.uploadInterval;
     }
 
     public static Builder builder() {
@@ -114,6 +146,48 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
          */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
+        }
+
+        /**
+         * @param retentionInterval How long to keep generated audit files.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder retentionInterval(@Nullable Output<String> retentionInterval) {
+            $.retentionInterval = retentionInterval;
+            return this;
+        }
+
+        /**
+         * @param retentionInterval How long to keep generated audit files.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder retentionInterval(String retentionInterval) {
+            return retentionInterval(Output.of(retentionInterval));
+        }
+
+        /**
+         * @param uploadInterval How often to upload generated audit files.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder uploadInterval(@Nullable Output<String> uploadInterval) {
+            $.uploadInterval = uploadInterval;
+            return this;
+        }
+
+        /**
+         * @param uploadInterval How often to upload generated audit files.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder uploadInterval(String uploadInterval) {
+            return uploadInterval(Output.of(uploadInterval));
         }
 
         public SqlServerAuditConfigArgs build() {

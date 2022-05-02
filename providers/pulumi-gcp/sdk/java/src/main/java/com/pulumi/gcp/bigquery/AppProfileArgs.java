@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingArgs;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -78,6 +79,23 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+     * clusters are eligible.
+     * 
+     */
+    @Import(name="multiClusterRoutingClusterIds")
+    private @Nullable Output<List<String>> multiClusterRoutingClusterIds;
+
+    /**
+     * @return The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+     * clusters are eligible.
+     * 
+     */
+    public Optional<Output<List<String>>> multiClusterRoutingClusterIds() {
+        return Optional.ofNullable(this.multiClusterRoutingClusterIds);
+    }
+
+    /**
      * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
      * in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
      * consistency to improve availability.
@@ -137,6 +155,7 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.ignoreWarnings = $.ignoreWarnings;
         this.instance = $.instance;
+        this.multiClusterRoutingClusterIds = $.multiClusterRoutingClusterIds;
         this.multiClusterRoutingUseAny = $.multiClusterRoutingUseAny;
         this.project = $.project;
         this.singleClusterRouting = $.singleClusterRouting;
@@ -242,6 +261,40 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
+        }
+
+        /**
+         * @param multiClusterRoutingClusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+         * clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiClusterRoutingClusterIds(@Nullable Output<List<String>> multiClusterRoutingClusterIds) {
+            $.multiClusterRoutingClusterIds = multiClusterRoutingClusterIds;
+            return this;
+        }
+
+        /**
+         * @param multiClusterRoutingClusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+         * clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiClusterRoutingClusterIds(List<String> multiClusterRoutingClusterIds) {
+            return multiClusterRoutingClusterIds(Output.of(multiClusterRoutingClusterIds));
+        }
+
+        /**
+         * @param multiClusterRoutingClusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+         * clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiClusterRoutingClusterIds(String... multiClusterRoutingClusterIds) {
+            return multiClusterRoutingClusterIds(List.of(multiClusterRoutingClusterIds));
         }
 
         /**

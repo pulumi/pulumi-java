@@ -13,26 +13,15 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * Provides an independent configuration resource for S3 bucket [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html).
  * 
+ * &gt; **NOTE:** S3 Buckets only support a single replication configuration. Declaring multiple `aws.s3.BucketReplicationConfig` resources to the same S3 Bucket will cause a perpetual difference in configuration.
+ * 
  * ## Example Usage
- * ## Usage Notes
- * 
- * &gt; **NOTE:** To avoid conflicts always add the following lifecycle object to the `aws.s3.Bucket` resource of the source bucket.
- * 
- * This resource implements the same features that are provided by the `replication_configuration` object of the `aws.s3.Bucket` resource. To avoid conflicts or unexpected apply results, a lifecycle configuration is needed on the `aws.s3.Bucket` to ignore changes to the internal `replication_configuration` object.  Failure to add the `lifecycle` configuration to the `aws.s3.Bucket` will result in conflicting state results.
- * 
- * The `aws.s3.BucketReplicationConfig` resource provides the following features that are not available in the `aws.s3.Bucket` resource:
- * 
- * * `replica_modifications` - Added to the `source_selection_criteria` configuration object documented below
- * * `metrics` - Added to the `destination` configuration object documented below
- * * `replication_time` - Added to the `destination` configuration object documented below
- * * `existing_object_replication` - Added to the replication rule object documented below
- * 
- * Replication for existing objects requires activation by AWS Support.  See [userguide/replication-what-is-isnot-replicated](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-what-is-isnot-replicated.html#existing-object-replication).
  * 
  * ## Import
  * 
@@ -74,18 +63,34 @@ public class BucketReplicationConfig extends com.pulumi.resources.CustomResource
         return this.role;
     }
     /**
-     * Set of configuration blocks describing the rules managing the replication documented below.
+     * List of configuration blocks describing the rules managing the replication documented below.
      * 
      */
     @Export(name="rules", type=List.class, parameters={BucketReplicationConfigRule.class})
     private Output<List<BucketReplicationConfigRule>> rules;
 
     /**
-     * @return Set of configuration blocks describing the rules managing the replication documented below.
+     * @return List of configuration blocks describing the rules managing the replication documented below.
      * 
      */
     public Output<List<BucketReplicationConfigRule>> rules() {
         return this.rules;
+    }
+    /**
+     * A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+     * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+     * 
+     */
+    @Export(name="token", type=String.class, parameters={})
+    private Output</* @Nullable */ String> token;
+
+    /**
+     * @return A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+     * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+     * 
+     */
+    public Output<Optional<String>> token() {
+        return Codegen.optional(this.token);
     }
 
     /**

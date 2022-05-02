@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointKinesisSettings {
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeControlDetails;
     /**
-     * @return Include NULL and empty columns in the target. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeNullAndEmpty;
     /**
-     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     private final @Nullable Boolean includePartitionValue;
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeTableAlterOperations;
     /**
-     * @return Provides detailed transaction information from the source database. The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeTransactionDetails;
     /**
-     * @return Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     private final @Nullable String messageFormat;
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     private final @Nullable Boolean partitionIncludeSchemaTable;
     /**
-     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+     * @return ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     private final @Nullable String serviceAccessRoleArn;
     /**
-     * @return Amazon Resource Name (ARN) of the Kinesis data stream.
+     * @return ARN of the Kinesis data stream.
      * 
      */
     private final @Nullable String streamArn;
@@ -81,63 +81,63 @@ public final class EndpointKinesisSettings {
     }
 
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     public Optional<Boolean> includeControlDetails() {
         return Optional.ofNullable(this.includeControlDetails);
     }
     /**
-     * @return Include NULL and empty columns in the target. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     public Optional<Boolean> includeNullAndEmpty() {
         return Optional.ofNullable(this.includeNullAndEmpty);
     }
     /**
-     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     public Optional<Boolean> includePartitionValue() {
         return Optional.ofNullable(this.includePartitionValue);
     }
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     public Optional<Boolean> includeTableAlterOperations() {
         return Optional.ofNullable(this.includeTableAlterOperations);
     }
     /**
-     * @return Provides detailed transaction information from the source database. The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     public Optional<Boolean> includeTransactionDetails() {
         return Optional.ofNullable(this.includeTransactionDetails);
     }
     /**
-     * @return Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     public Optional<String> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     public Optional<Boolean> partitionIncludeSchemaTable() {
         return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
     /**
-     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+     * @return ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     public Optional<String> serviceAccessRoleArn() {
         return Optional.ofNullable(this.serviceAccessRoleArn);
     }
     /**
-     * @return Amazon Resource Name (ARN) of the Kinesis data stream.
+     * @return ARN of the Kinesis data stream.
      * 
      */
     public Optional<String> streamArn() {

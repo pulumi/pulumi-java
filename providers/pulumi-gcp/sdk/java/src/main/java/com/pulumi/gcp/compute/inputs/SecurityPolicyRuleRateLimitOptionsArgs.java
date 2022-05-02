@@ -71,16 +71,14 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     }
 
     /**
-     * Determines the key to enforce the rate_limit_threshold on.
-     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+     * Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
      * 
      */
     @Import(name="enforceOnKey")
     private @Nullable Output<String> enforceOnKey;
 
     /**
-     * @return Determines the key to enforce the rate_limit_threshold on.
-     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+     * @return Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
      * 
      */
     public Optional<Output<String>> enforceOnKey() {
@@ -88,14 +86,14 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     }
 
     /**
-     * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
     @Import(name="enforceOnKeyName")
     private @Nullable Output<String> enforceOnKeyName;
 
     /**
-     * @return Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * @return Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
     public Optional<Output<String>> enforceOnKeyName() {
@@ -242,8 +240,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
         }
 
         /**
-         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on.
-         * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
          * 
          * @return builder
          * 
@@ -254,8 +251,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
         }
 
         /**
-         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on.
-         * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
          * 
          * @return builder
          * 
@@ -265,7 +261,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
         }
 
         /**
-         * @param enforceOnKeyName Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+         * @param enforceOnKeyName Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
          * 
          * @return builder
          * 
@@ -276,7 +272,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
         }
 
         /**
-         * @param enforceOnKeyName Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+         * @param enforceOnKeyName Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
          * 
          * @return builder
          * 

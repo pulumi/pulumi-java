@@ -24,15 +24,22 @@ public final class WorkflowStepCopyStepDetailsProperties {
      * 
      */
     private final @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting;
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    private final @Nullable String sourceFileLocation;
 
     @CustomType.Constructor
     private WorkflowStepCopyStepDetailsProperties(
         @CustomType.Parameter("destinationFileLocation") @Nullable WorkflowInputFileLocation destinationFileLocation,
         @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("overwriteExisting") @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
+        @CustomType.Parameter("overwriteExisting") @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting,
+        @CustomType.Parameter("sourceFileLocation") @Nullable String sourceFileLocation) {
         this.destinationFileLocation = destinationFileLocation;
         this.name = name;
         this.overwriteExisting = overwriteExisting;
+        this.sourceFileLocation = sourceFileLocation;
     }
 
     public Optional<WorkflowInputFileLocation> destinationFileLocation() {
@@ -52,6 +59,13 @@ public final class WorkflowStepCopyStepDetailsProperties {
     public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<String> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -65,6 +79,7 @@ public final class WorkflowStepCopyStepDetailsProperties {
         private @Nullable WorkflowInputFileLocation destinationFileLocation;
         private @Nullable String name;
         private @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting;
+        private @Nullable String sourceFileLocation;
 
         public Builder() {
     	      // Empty
@@ -75,6 +90,7 @@ public final class WorkflowStepCopyStepDetailsProperties {
     	      this.destinationFileLocation = defaults.destinationFileLocation;
     	      this.name = defaults.name;
     	      this.overwriteExisting = defaults.overwriteExisting;
+    	      this.sourceFileLocation = defaults.sourceFileLocation;
         }
 
         public Builder destinationFileLocation(@Nullable WorkflowInputFileLocation destinationFileLocation) {
@@ -88,8 +104,12 @@ public final class WorkflowStepCopyStepDetailsProperties {
         public Builder overwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
             return this;
+        }
+        public Builder sourceFileLocation(@Nullable String sourceFileLocation) {
+            this.sourceFileLocation = sourceFileLocation;
+            return this;
         }        public WorkflowStepCopyStepDetailsProperties build() {
-            return new WorkflowStepCopyStepDetailsProperties(destinationFileLocation, name, overwriteExisting);
+            return new WorkflowStepCopyStepDetailsProperties(destinationFileLocation, name, overwriteExisting, sourceFileLocation);
         }
     }
 }

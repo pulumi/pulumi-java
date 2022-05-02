@@ -77,9 +77,17 @@ public final class SavedQueryArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Required. The ID to use for the saved query, which must be unique in the specified parent. It will become the final component of the saved query&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the saved query creation, and the `name` field of the `saved_query` will be ignored.
+     * 
+     */
     @Import(name="savedQueryId", required=true)
     private Output<String> savedQueryId;
 
+    /**
+     * @return Required. The ID to use for the saved query, which must be unique in the specified parent. It will become the final component of the saved query&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the saved query creation, and the `name` field of the `saved_query` will be ignored.
+     * 
+     */
     public Output<String> savedQueryId() {
         return this.savedQueryId;
     }
@@ -212,11 +220,23 @@ public final class SavedQueryArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param savedQueryId Required. The ID to use for the saved query, which must be unique in the specified parent. It will become the final component of the saved query&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the saved query creation, and the `name` field of the `saved_query` will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedQueryId(Output<String> savedQueryId) {
             $.savedQueryId = savedQueryId;
             return this;
         }
 
+        /**
+         * @param savedQueryId Required. The ID to use for the saved query, which must be unique in the specified parent. It will become the final component of the saved query&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the saved query creation, and the `name` field of the `saved_query` will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedQueryId(String savedQueryId) {
             return savedQueryId(Output.of(savedQueryId));
         }

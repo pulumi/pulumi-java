@@ -92,14 +92,14 @@ public class Member extends com.pulumi.resources.CustomResource {
      * Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    @Export(name="invitationDisableEmailNotification", type=String.class, parameters={})
-    private Output</* @Nullable */ String> invitationDisableEmailNotification;
+    @Export(name="invitationDisableEmailNotification", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> invitationDisableEmailNotification;
 
     /**
      * @return Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    public Output<Optional<String>> invitationDisableEmailNotification() {
+    public Output<Optional<Boolean>> invitationDisableEmailNotification() {
         return Codegen.optional(this.invitationDisableEmailNotification);
     }
     /**

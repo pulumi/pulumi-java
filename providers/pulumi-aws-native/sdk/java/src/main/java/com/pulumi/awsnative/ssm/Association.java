@@ -169,6 +169,12 @@ public class Association extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> scheduleExpression() {
         return Codegen.optional(this.scheduleExpression);
     }
+    @Export(name="scheduleOffset", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> scheduleOffset;
+
+    public Output<Optional<Integer>> scheduleOffset() {
+        return Codegen.optional(this.scheduleOffset);
+    }
     @Export(name="syncCompliance", type=AssociationSyncCompliance.class, parameters={})
     private Output</* @Nullable */ AssociationSyncCompliance> syncCompliance;
 

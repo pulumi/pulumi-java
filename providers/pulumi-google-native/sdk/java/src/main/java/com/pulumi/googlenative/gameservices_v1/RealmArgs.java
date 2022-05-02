@@ -32,14 +32,14 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ETag of the resource.
+     * Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public Optional<Output<String>> etag() {
@@ -69,14 +69,14 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
      * 
      */
     public Optional<Output<String>> name() {
@@ -90,22 +90,30 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The ID of the realm resource to create.
+     * 
+     */
     @Import(name="realmId", required=true)
     private Output<String> realmId;
 
+    /**
+     * @return Required. The ID of the realm resource to create.
+     * 
+     */
     public Output<String> realmId() {
         return this.realmId;
     }
 
     /**
-     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
      * 
      */
     @Import(name="timeZone", required=true)
     private Output<String> timeZone;
 
     /**
-     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
      * 
      */
     public Output<String> timeZone() {
@@ -165,7 +173,7 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -176,7 +184,7 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -216,7 +224,7 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+         * @param name The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
          * 
          * @return builder
          * 
@@ -227,7 +235,7 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+         * @param name The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
          * 
          * @return builder
          * 
@@ -245,17 +253,29 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param realmId Required. The ID of the realm resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmId(Output<String> realmId) {
             $.realmId = realmId;
             return this;
         }
 
+        /**
+         * @param realmId Required. The ID of the realm resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmId(String realmId) {
             return realmId(Output.of(realmId));
         }
 
         /**
-         * @param timeZone Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+         * @param timeZone Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
          * 
          * @return builder
          * 
@@ -266,7 +286,7 @@ public final class RealmArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param timeZone Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+         * @param timeZone Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
          * 
          * @return builder
          * 

@@ -6,6 +6,7 @@ package com.pulumi.aws.servicecatalog;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.servicecatalog.ProvisionedProductArgs;
 import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductState;
+import com.pulumi.aws.servicecatalog.outputs.ProvisionedProductOutput;
 import com.pulumi.aws.servicecatalog.outputs.ProvisionedProductProvisioningParameter;
 import com.pulumi.aws.servicecatalog.outputs.ProvisionedProductStackSetProvisioningPreferences;
 import com.pulumi.core.Output;
@@ -196,6 +197,20 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<String>>> notificationArns() {
         return Codegen.optional(this.notificationArns);
+    }
+    /**
+     * The set of outputs for the product created.
+     * 
+     */
+    @Export(name="outputs", type=List.class, parameters={ProvisionedProductOutput.class})
+    private Output<List<ProvisionedProductOutput>> outputs;
+
+    /**
+     * @return The set of outputs for the product created.
+     * 
+     */
+    public Output<List<ProvisionedProductOutput>> outputs() {
+        return this.outputs;
     }
     /**
      * Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.

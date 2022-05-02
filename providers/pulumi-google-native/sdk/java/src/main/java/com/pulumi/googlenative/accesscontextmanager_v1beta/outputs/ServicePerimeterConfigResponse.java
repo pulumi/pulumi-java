@@ -27,6 +27,15 @@ public final class ServicePerimeterConfigResponse {
      */
     private final List<String> restrictedServices;
     /**
+     * @return Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard &#34;*&#34;. The wildcard means that unless explicitly specified by &#34;restricted_services&#34; list, any service is treated as unrestricted.
+     * 
+     * @deprecated
+     * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard &#34;*&#34;. The wildcard means that unless explicitly specified by &#34;restricted_services&#34; list, any service is treated as unrestricted.
+     * 
+     */
+    @Deprecated /* Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard ""*"". The wildcard means that unless explicitly specified by ""restricted_services"" list, any service is treated as unrestricted. */
+    private final List<String> unrestrictedServices;
+    /**
      * @return Beta. Configuration for APIs allowed within Perimeter.
      * 
      */
@@ -37,10 +46,12 @@ public final class ServicePerimeterConfigResponse {
         @CustomType.Parameter("accessLevels") List<String> accessLevels,
         @CustomType.Parameter("resources") List<String> resources,
         @CustomType.Parameter("restrictedServices") List<String> restrictedServices,
+        @CustomType.Parameter("unrestrictedServices") List<String> unrestrictedServices,
         @CustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.resources = resources;
         this.restrictedServices = restrictedServices;
+        this.unrestrictedServices = unrestrictedServices;
         this.vpcAccessibleServices = vpcAccessibleServices;
     }
 
@@ -66,6 +77,17 @@ public final class ServicePerimeterConfigResponse {
         return this.restrictedServices;
     }
     /**
+     * @return Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard &#34;*&#34;. The wildcard means that unless explicitly specified by &#34;restricted_services&#34; list, any service is treated as unrestricted.
+     * 
+     * @deprecated
+     * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard &#34;*&#34;. The wildcard means that unless explicitly specified by &#34;restricted_services&#34; list, any service is treated as unrestricted.
+     * 
+     */
+    @Deprecated /* Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated. Must be set to a single wildcard ""*"". The wildcard means that unless explicitly specified by ""restricted_services"" list, any service is treated as unrestricted. */
+    public List<String> unrestrictedServices() {
+        return this.unrestrictedServices;
+    }
+    /**
      * @return Beta. Configuration for APIs allowed within Perimeter.
      * 
      */
@@ -85,6 +107,7 @@ public final class ServicePerimeterConfigResponse {
         private List<String> accessLevels;
         private List<String> resources;
         private List<String> restrictedServices;
+        private List<String> unrestrictedServices;
         private VpcAccessibleServicesResponse vpcAccessibleServices;
 
         public Builder() {
@@ -96,6 +119,7 @@ public final class ServicePerimeterConfigResponse {
     	      this.accessLevels = defaults.accessLevels;
     	      this.resources = defaults.resources;
     	      this.restrictedServices = defaults.restrictedServices;
+    	      this.unrestrictedServices = defaults.unrestrictedServices;
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
@@ -120,11 +144,18 @@ public final class ServicePerimeterConfigResponse {
         public Builder restrictedServices(String... restrictedServices) {
             return restrictedServices(List.of(restrictedServices));
         }
+        public Builder unrestrictedServices(List<String> unrestrictedServices) {
+            this.unrestrictedServices = Objects.requireNonNull(unrestrictedServices);
+            return this;
+        }
+        public Builder unrestrictedServices(String... unrestrictedServices) {
+            return unrestrictedServices(List.of(unrestrictedServices));
+        }
         public Builder vpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }        public ServicePerimeterConfigResponse build() {
-            return new ServicePerimeterConfigResponse(accessLevels, resources, restrictedServices, vpcAccessibleServices);
+            return new ServicePerimeterConfigResponse(accessLevels, resources, restrictedServices, unrestrictedServices, vpcAccessibleServices);
         }
     }
 }

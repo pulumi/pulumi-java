@@ -41,7 +41,7 @@ public final class JobPysparkConfig {
      */
     private final String mainPythonFileUri;
     /**
-     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     private final @Nullable Map<String,String> properties;
@@ -110,7 +110,7 @@ public final class JobPysparkConfig {
         return this.mainPythonFileUri;
     }
     /**
-     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     public Map<String,String> properties() {

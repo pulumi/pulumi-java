@@ -88,6 +88,11 @@ public final class GetInstanceGroupManagerResult {
      */
     private final String kind;
     /**
+     * @return Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+     * 
+     */
+    private final String listManagedInstancesResults;
+    /**
      * @return The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
@@ -183,6 +188,7 @@ public final class GetInstanceGroupManagerResult {
         @CustomType.Parameter("instanceLifecyclePolicy") InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy,
         @CustomType.Parameter("instanceTemplate") String instanceTemplate,
         @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("listManagedInstancesResults") String listManagedInstancesResults,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
         @CustomType.Parameter("region") String region,
@@ -212,6 +218,7 @@ public final class GetInstanceGroupManagerResult {
         this.instanceLifecyclePolicy = instanceLifecyclePolicy;
         this.instanceTemplate = instanceTemplate;
         this.kind = kind;
+        this.listManagedInstancesResults = listManagedInstancesResults;
         this.name = name;
         this.namedPorts = namedPorts;
         this.region = region;
@@ -320,6 +327,13 @@ public final class GetInstanceGroupManagerResult {
      */
     public String kind() {
         return this.kind;
+    }
+    /**
+     * @return Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+     * 
+     */
+    public String listManagedInstancesResults() {
+        return this.listManagedInstancesResults;
     }
     /**
      * @return The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
@@ -456,6 +470,7 @@ public final class GetInstanceGroupManagerResult {
         private InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy;
         private String instanceTemplate;
         private String kind;
+        private String listManagedInstancesResults;
         private String name;
         private List<NamedPortResponse> namedPorts;
         private String region;
@@ -492,6 +507,7 @@ public final class GetInstanceGroupManagerResult {
     	      this.instanceLifecyclePolicy = defaults.instanceLifecyclePolicy;
     	      this.instanceTemplate = defaults.instanceTemplate;
     	      this.kind = defaults.kind;
+    	      this.listManagedInstancesResults = defaults.listManagedInstancesResults;
     	      this.name = defaults.name;
     	      this.namedPorts = defaults.namedPorts;
     	      this.region = defaults.region;
@@ -563,6 +579,10 @@ public final class GetInstanceGroupManagerResult {
         }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
+            return this;
+        }
+        public Builder listManagedInstancesResults(String listManagedInstancesResults) {
+            this.listManagedInstancesResults = Objects.requireNonNull(listManagedInstancesResults);
             return this;
         }
         public Builder name(String name) {
@@ -638,7 +658,7 @@ public final class GetInstanceGroupManagerResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetInstanceGroupManagerResult build() {
-            return new GetInstanceGroupManagerResult(allInstancesConfig, autoHealingPolicies, baseInstanceName, creationTimestamp, currentActions, description, distributionPolicy, failoverAction, fingerprint, instanceGroup, instanceLifecyclePolicy, instanceTemplate, kind, name, namedPorts, region, selfLink, selfLinkWithId, serviceAccount, standbyPolicy, statefulPolicy, status, targetPools, targetSize, targetStoppedSize, targetSuspendedSize, updatePolicy, versions, zone);
+            return new GetInstanceGroupManagerResult(allInstancesConfig, autoHealingPolicies, baseInstanceName, creationTimestamp, currentActions, description, distributionPolicy, failoverAction, fingerprint, instanceGroup, instanceLifecyclePolicy, instanceTemplate, kind, listManagedInstancesResults, name, namedPorts, region, selfLink, selfLinkWithId, serviceAccount, standbyPolicy, statefulPolicy, status, targetPools, targetSize, targetStoppedSize, targetSuspendedSize, updatePolicy, versions, zone);
         }
     }
 }

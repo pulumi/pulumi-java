@@ -182,14 +182,14 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+     * A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
      * 
      */
     @Import(name="instanceTenancy")
     private @Nullable Output<String> instanceTenancy;
 
     /**
-     * @return A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+     * @return A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
      * 
      */
     public Optional<Output<String>> instanceTenancy() {
@@ -228,7 +228,6 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The association ID for the IPv6 CIDR block.
-     * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
      * 
      */
     @Import(name="ipv6AssociationId")
@@ -236,7 +235,6 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The association ID for the IPv6 CIDR block.
-     * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
      * 
      */
     public Optional<Output<String>> ipv6AssociationId() {
@@ -639,7 +637,7 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param instanceTenancy A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+         * @param instanceTenancy A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
          * 
          * @return builder
          * 
@@ -650,7 +648,7 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param instanceTenancy A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+         * @param instanceTenancy A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
          * 
          * @return builder
          * 
@@ -703,7 +701,6 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param ipv6AssociationId The association ID for the IPv6 CIDR block.
-         * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
          * 
          * @return builder
          * 
@@ -715,7 +712,6 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param ipv6AssociationId The association ID for the IPv6 CIDR block.
-         * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
          * 
          * @return builder
          * 

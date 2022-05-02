@@ -6,6 +6,7 @@ package com.pulumi.gcp.compute.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatch;
 import com.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptions;
+import com.pulumi.gcp.compute.outputs.SecurityPolicyRuleRedirectOptions;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,10 +18,11 @@ import javax.annotation.Nullable;
 public final class SecurityPolicyRule {
     /**
      * @return Action to take when `match` matches the request. Valid values:
-     * * &#34;allow&#34; : allow access to target
-     * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-     * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-     * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * * allow: allow access to target.
+     * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+     * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+     * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
      */
     private final String action;
@@ -53,6 +55,12 @@ public final class SecurityPolicyRule {
      * 
      */
     private final @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions;
+    /**
+     * @return )
+     * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
+    private final @Nullable SecurityPolicyRuleRedirectOptions redirectOptions;
 
     @CustomType.Constructor
     private SecurityPolicyRule(
@@ -61,21 +69,24 @@ public final class SecurityPolicyRule {
         @CustomType.Parameter("match") SecurityPolicyRuleMatch match,
         @CustomType.Parameter("preview") @Nullable Boolean preview,
         @CustomType.Parameter("priority") Integer priority,
-        @CustomType.Parameter("rateLimitOptions") @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
+        @CustomType.Parameter("rateLimitOptions") @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions,
+        @CustomType.Parameter("redirectOptions") @Nullable SecurityPolicyRuleRedirectOptions redirectOptions) {
         this.action = action;
         this.description = description;
         this.match = match;
         this.preview = preview;
         this.priority = priority;
         this.rateLimitOptions = rateLimitOptions;
+        this.redirectOptions = redirectOptions;
     }
 
     /**
      * @return Action to take when `match` matches the request. Valid values:
-     * * &#34;allow&#34; : allow access to target
-     * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-     * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-     * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * * allow: allow access to target.
+     * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+     * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+     * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
      */
     public String action() {
@@ -120,6 +131,14 @@ public final class SecurityPolicyRule {
     public Optional<SecurityPolicyRuleRateLimitOptions> rateLimitOptions() {
         return Optional.ofNullable(this.rateLimitOptions);
     }
+    /**
+     * @return )
+     * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
+    public Optional<SecurityPolicyRuleRedirectOptions> redirectOptions() {
+        return Optional.ofNullable(this.redirectOptions);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -136,6 +155,7 @@ public final class SecurityPolicyRule {
         private @Nullable Boolean preview;
         private Integer priority;
         private @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions;
+        private @Nullable SecurityPolicyRuleRedirectOptions redirectOptions;
 
         public Builder() {
     	      // Empty
@@ -149,6 +169,7 @@ public final class SecurityPolicyRule {
     	      this.preview = defaults.preview;
     	      this.priority = defaults.priority;
     	      this.rateLimitOptions = defaults.rateLimitOptions;
+    	      this.redirectOptions = defaults.redirectOptions;
         }
 
         public Builder action(String action) {
@@ -174,8 +195,12 @@ public final class SecurityPolicyRule {
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
+        }
+        public Builder redirectOptions(@Nullable SecurityPolicyRuleRedirectOptions redirectOptions) {
+            this.redirectOptions = redirectOptions;
+            return this;
         }        public SecurityPolicyRule build() {
-            return new SecurityPolicyRule(action, description, match, preview, priority, rateLimitOptions);
+            return new SecurityPolicyRule(action, description, match, preview, priority, rateLimitOptions, redirectOptions);
         }
     }
 }

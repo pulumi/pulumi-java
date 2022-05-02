@@ -37,6 +37,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/fleet:Fleet")
 public class Fleet extends com.pulumi.resources.CustomResource {
     /**
+     * Reserved.
+     * 
+     */
+    @Export(name="context", type=String.class, parameters={})
+    private Output</* @Nullable */ String> context;
+
+    /**
+     * @return Reserved.
+     * 
+     */
+    public Output<Optional<String>> context() {
+        return Codegen.optional(this.context);
+    }
+    /**
      * Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
      * 
      */

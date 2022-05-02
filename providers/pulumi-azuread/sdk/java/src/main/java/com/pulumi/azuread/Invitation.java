@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return A `message` block as documented below, which configures the message being sent to the invited user. If this block is omitted, no message will be sent.
      * 
      */
-    public Output</* @Nullable */ InvitationMessage> message() {
-        return this.message;
+    public Output<Optional<InvitationMessage>> message() {
+        return Codegen.optional(this.message);
     }
     /**
      * The URL the user can use to redeem their invitation.
@@ -87,8 +88,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The display name of the user being invited.
      * 
      */
-    public Output</* @Nullable */ String> userDisplayName() {
-        return this.userDisplayName;
+    public Output<Optional<String>> userDisplayName() {
+        return Codegen.optional(this.userDisplayName);
     }
     /**
      * The email address of the user being invited.
@@ -129,8 +130,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The user type of the user being invited. Must be one of `Guest` or `Member`. Only Global Administrators can invite users as members. Defaults to `Guest`.
      * 
      */
-    public Output</* @Nullable */ String> userType() {
-        return this.userType;
+    public Output<Optional<String>> userType() {
+        return Codegen.optional(this.userType);
     }
 
     /**

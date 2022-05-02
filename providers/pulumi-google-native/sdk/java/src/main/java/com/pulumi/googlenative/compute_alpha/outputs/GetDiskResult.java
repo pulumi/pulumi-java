@@ -5,6 +5,8 @@ package com.pulumi.googlenative.compute_alpha.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
+import com.pulumi.googlenative.compute_alpha.outputs.DiskAsyncReplicationResponse;
+import com.pulumi.googlenative.compute_alpha.outputs.DiskResourceStatusResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,6 +21,16 @@ public final class GetDiskResult {
      * 
      */
     private final String architecture;
+    /**
+     * @return Disk asynchronously replicated into this disk.
+     * 
+     */
+    private final DiskAsyncReplicationResponse asyncPrimaryDisk;
+    /**
+     * @return A list of disks this disk is asynchronously replicated to.
+     * 
+     */
+    private final Map<String,String> asyncSecondaryDisks;
     /**
      * @return Creation timestamp in RFC3339 text format.
      * 
@@ -44,6 +56,15 @@ public final class GetDiskResult {
      * 
      */
     private final List<GuestOsFeatureResponse> guestOsFeatures;
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    private final String interface_;
     /**
      * @return Type of the resource. Always compute#disk for disks.
      * 
@@ -130,6 +151,11 @@ public final class GetDiskResult {
      */
     private final List<String> resourcePolicies;
     /**
+     * @return Status information for the disk resource.
+     * 
+     */
+    private final DiskResourceStatusResponse resourceStatus;
+    /**
      * @return Reserved for future use.
      * 
      */
@@ -149,6 +175,16 @@ public final class GetDiskResult {
      * 
      */
     private final String sizeGb;
+    /**
+     * @return URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    private final String sourceConsistencyGroupPolicy;
+    /**
+     * @return ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    private final String sourceConsistencyGroupPolicyId;
     /**
      * @return The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
      * 
@@ -210,6 +246,15 @@ public final class GetDiskResult {
      */
     private final String status;
     /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    private final String storageType;
+    /**
      * @return URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
      * 
      */
@@ -233,11 +278,14 @@ public final class GetDiskResult {
     @CustomType.Constructor
     private GetDiskResult(
         @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("asyncPrimaryDisk") DiskAsyncReplicationResponse asyncPrimaryDisk,
+        @CustomType.Parameter("asyncSecondaryDisks") Map<String,String> asyncSecondaryDisks,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
         @CustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("labelFingerprint") String labelFingerprint,
         @CustomType.Parameter("labels") Map<String,String> labels,
@@ -255,10 +303,13 @@ public final class GetDiskResult {
         @CustomType.Parameter("region") String region,
         @CustomType.Parameter("replicaZones") List<String> replicaZones,
         @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("resourceStatus") DiskResourceStatusResponse resourceStatus,
         @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
         @CustomType.Parameter("sizeGb") String sizeGb,
+        @CustomType.Parameter("sourceConsistencyGroupPolicy") String sourceConsistencyGroupPolicy,
+        @CustomType.Parameter("sourceConsistencyGroupPolicyId") String sourceConsistencyGroupPolicyId,
         @CustomType.Parameter("sourceDisk") String sourceDisk,
         @CustomType.Parameter("sourceDiskId") String sourceDiskId,
         @CustomType.Parameter("sourceImage") String sourceImage,
@@ -271,16 +322,20 @@ public final class GetDiskResult {
         @CustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
         @CustomType.Parameter("sourceStorageObject") String sourceStorageObject,
         @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageType") String storageType,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("userLicenses") List<String> userLicenses,
         @CustomType.Parameter("users") List<String> users,
         @CustomType.Parameter("zone") String zone) {
         this.architecture = architecture;
+        this.asyncPrimaryDisk = asyncPrimaryDisk;
+        this.asyncSecondaryDisks = asyncSecondaryDisks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.eraseWindowsVssSignature = eraseWindowsVssSignature;
         this.guestOsFeatures = guestOsFeatures;
+        this.interface_ = interface_;
         this.kind = kind;
         this.labelFingerprint = labelFingerprint;
         this.labels = labels;
@@ -298,10 +353,13 @@ public final class GetDiskResult {
         this.region = region;
         this.replicaZones = replicaZones;
         this.resourcePolicies = resourcePolicies;
+        this.resourceStatus = resourceStatus;
         this.satisfiesPzs = satisfiesPzs;
         this.selfLink = selfLink;
         this.selfLinkWithId = selfLinkWithId;
         this.sizeGb = sizeGb;
+        this.sourceConsistencyGroupPolicy = sourceConsistencyGroupPolicy;
+        this.sourceConsistencyGroupPolicyId = sourceConsistencyGroupPolicyId;
         this.sourceDisk = sourceDisk;
         this.sourceDiskId = sourceDiskId;
         this.sourceImage = sourceImage;
@@ -314,6 +372,7 @@ public final class GetDiskResult {
         this.sourceSnapshotId = sourceSnapshotId;
         this.sourceStorageObject = sourceStorageObject;
         this.status = status;
+        this.storageType = storageType;
         this.type = type;
         this.userLicenses = userLicenses;
         this.users = users;
@@ -326,6 +385,20 @@ public final class GetDiskResult {
      */
     public String architecture() {
         return this.architecture;
+    }
+    /**
+     * @return Disk asynchronously replicated into this disk.
+     * 
+     */
+    public DiskAsyncReplicationResponse asyncPrimaryDisk() {
+        return this.asyncPrimaryDisk;
+    }
+    /**
+     * @return A list of disks this disk is asynchronously replicated to.
+     * 
+     */
+    public Map<String,String> asyncSecondaryDisks() {
+        return this.asyncSecondaryDisks;
     }
     /**
      * @return Creation timestamp in RFC3339 text format.
@@ -361,6 +434,17 @@ public final class GetDiskResult {
      */
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
+    }
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    public String interface_() {
+        return this.interface_;
     }
     /**
      * @return Type of the resource. Always compute#disk for disks.
@@ -482,6 +566,13 @@ public final class GetDiskResult {
         return this.resourcePolicies;
     }
     /**
+     * @return Status information for the disk resource.
+     * 
+     */
+    public DiskResourceStatusResponse resourceStatus() {
+        return this.resourceStatus;
+    }
+    /**
      * @return Reserved for future use.
      * 
      */
@@ -508,6 +599,20 @@ public final class GetDiskResult {
      */
     public String sizeGb() {
         return this.sizeGb;
+    }
+    /**
+     * @return URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    public String sourceConsistencyGroupPolicy() {
+        return this.sourceConsistencyGroupPolicy;
+    }
+    /**
+     * @return ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    public String sourceConsistencyGroupPolicyId() {
+        return this.sourceConsistencyGroupPolicyId;
     }
     /**
      * @return The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
@@ -594,6 +699,17 @@ public final class GetDiskResult {
         return this.status;
     }
     /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    public String storageType() {
+        return this.storageType;
+    }
+    /**
      * @return URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
      * 
      */
@@ -632,11 +748,14 @@ public final class GetDiskResult {
 
     public static final class Builder {
         private String architecture;
+        private DiskAsyncReplicationResponse asyncPrimaryDisk;
+        private Map<String,String> asyncSecondaryDisks;
         private String creationTimestamp;
         private String description;
         private CustomerEncryptionKeyResponse diskEncryptionKey;
         private Boolean eraseWindowsVssSignature;
         private List<GuestOsFeatureResponse> guestOsFeatures;
+        private String interface_;
         private String kind;
         private String labelFingerprint;
         private Map<String,String> labels;
@@ -654,10 +773,13 @@ public final class GetDiskResult {
         private String region;
         private List<String> replicaZones;
         private List<String> resourcePolicies;
+        private DiskResourceStatusResponse resourceStatus;
         private Boolean satisfiesPzs;
         private String selfLink;
         private String selfLinkWithId;
         private String sizeGb;
+        private String sourceConsistencyGroupPolicy;
+        private String sourceConsistencyGroupPolicyId;
         private String sourceDisk;
         private String sourceDiskId;
         private String sourceImage;
@@ -670,6 +792,7 @@ public final class GetDiskResult {
         private String sourceSnapshotId;
         private String sourceStorageObject;
         private String status;
+        private String storageType;
         private String type;
         private List<String> userLicenses;
         private List<String> users;
@@ -682,11 +805,14 @@ public final class GetDiskResult {
         public Builder(GetDiskResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.architecture = defaults.architecture;
+    	      this.asyncPrimaryDisk = defaults.asyncPrimaryDisk;
+    	      this.asyncSecondaryDisks = defaults.asyncSecondaryDisks;
     	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.description = defaults.description;
     	      this.diskEncryptionKey = defaults.diskEncryptionKey;
     	      this.eraseWindowsVssSignature = defaults.eraseWindowsVssSignature;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.labelFingerprint = defaults.labelFingerprint;
     	      this.labels = defaults.labels;
@@ -704,10 +830,13 @@ public final class GetDiskResult {
     	      this.region = defaults.region;
     	      this.replicaZones = defaults.replicaZones;
     	      this.resourcePolicies = defaults.resourcePolicies;
+    	      this.resourceStatus = defaults.resourceStatus;
     	      this.satisfiesPzs = defaults.satisfiesPzs;
     	      this.selfLink = defaults.selfLink;
     	      this.selfLinkWithId = defaults.selfLinkWithId;
     	      this.sizeGb = defaults.sizeGb;
+    	      this.sourceConsistencyGroupPolicy = defaults.sourceConsistencyGroupPolicy;
+    	      this.sourceConsistencyGroupPolicyId = defaults.sourceConsistencyGroupPolicyId;
     	      this.sourceDisk = defaults.sourceDisk;
     	      this.sourceDiskId = defaults.sourceDiskId;
     	      this.sourceImage = defaults.sourceImage;
@@ -720,6 +849,7 @@ public final class GetDiskResult {
     	      this.sourceSnapshotId = defaults.sourceSnapshotId;
     	      this.sourceStorageObject = defaults.sourceStorageObject;
     	      this.status = defaults.status;
+    	      this.storageType = defaults.storageType;
     	      this.type = defaults.type;
     	      this.userLicenses = defaults.userLicenses;
     	      this.users = defaults.users;
@@ -728,6 +858,14 @@ public final class GetDiskResult {
 
         public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
+            return this;
+        }
+        public Builder asyncPrimaryDisk(DiskAsyncReplicationResponse asyncPrimaryDisk) {
+            this.asyncPrimaryDisk = Objects.requireNonNull(asyncPrimaryDisk);
+            return this;
+        }
+        public Builder asyncSecondaryDisks(Map<String,String> asyncSecondaryDisks) {
+            this.asyncSecondaryDisks = Objects.requireNonNull(asyncSecondaryDisks);
             return this;
         }
         public Builder creationTimestamp(String creationTimestamp) {
@@ -752,6 +890,10 @@ public final class GetDiskResult {
         }
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
+        }
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
+            return this;
         }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
@@ -833,6 +975,10 @@ public final class GetDiskResult {
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
+        public Builder resourceStatus(DiskResourceStatusResponse resourceStatus) {
+            this.resourceStatus = Objects.requireNonNull(resourceStatus);
+            return this;
+        }
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
@@ -847,6 +993,14 @@ public final class GetDiskResult {
         }
         public Builder sizeGb(String sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
+            return this;
+        }
+        public Builder sourceConsistencyGroupPolicy(String sourceConsistencyGroupPolicy) {
+            this.sourceConsistencyGroupPolicy = Objects.requireNonNull(sourceConsistencyGroupPolicy);
+            return this;
+        }
+        public Builder sourceConsistencyGroupPolicyId(String sourceConsistencyGroupPolicyId) {
+            this.sourceConsistencyGroupPolicyId = Objects.requireNonNull(sourceConsistencyGroupPolicyId);
             return this;
         }
         public Builder sourceDisk(String sourceDisk) {
@@ -897,6 +1051,10 @@ public final class GetDiskResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
+        public Builder storageType(String storageType) {
+            this.storageType = Objects.requireNonNull(storageType);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
@@ -919,7 +1077,7 @@ public final class GetDiskResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetDiskResult build() {
-            return new GetDiskResult(architecture, creationTimestamp, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, locked, multiWriter, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, satisfiesPzs, selfLink, selfLinkWithId, sizeGb, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceInstantSnapshot, sourceInstantSnapshotId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, type, userLicenses, users, zone);
+            return new GetDiskResult(architecture, asyncPrimaryDisk, asyncSecondaryDisks, creationTimestamp, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, interface_, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, locked, multiWriter, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, resourceStatus, satisfiesPzs, selfLink, selfLinkWithId, sizeGb, sourceConsistencyGroupPolicy, sourceConsistencyGroupPolicyId, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceInstantSnapshot, sourceInstantSnapshotId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, storageType, type, userLicenses, users, zone);
         }
     }
 }

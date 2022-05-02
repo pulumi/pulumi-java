@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicyConditionsLocations {
     /**
-     * A list of location IDs excluded from scope of policy.
+     * @return A list of location IDs excluded from scope of policy.
      * 
      */
     private final @Nullable List<String> excludedLocations;
     /**
-     * A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+     * @return A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
      * 
      */
     private final List<String> includedLocations;
@@ -31,16 +31,16 @@ public final class ConditionalAccessPolicyConditionsLocations {
     }
 
     /**
-     * A list of location IDs excluded from scope of policy.
+     * @return A list of location IDs excluded from scope of policy.
      * 
-    */
+     */
     public List<String> excludedLocations() {
         return this.excludedLocations == null ? List.of() : this.excludedLocations;
     }
     /**
-     * A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+     * @return A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
      * 
-    */
+     */
     public List<String> includedLocations() {
         return this.includedLocations;
     }

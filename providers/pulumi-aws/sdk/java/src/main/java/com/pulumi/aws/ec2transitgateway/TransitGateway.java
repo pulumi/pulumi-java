@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -144,6 +145,12 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> dnsSupport() {
         return Codegen.optional(this.dnsSupport);
     }
+    @Export(name="multicastSupport", type=String.class, parameters={})
+    private Output</* @Nullable */ String> multicastSupport;
+
+    public Output<Optional<String>> multicastSupport() {
+        return Codegen.optional(this.multicastSupport);
+    }
     /**
      * Identifier of the AWS account that owns the EC2 Transit Gateway
      * 
@@ -199,6 +206,20 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      */
     public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
+    }
+    /**
+     * One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+     * 
+     */
+    @Export(name="transitGatewayCidrBlocks", type=List.class, parameters={String.class})
+    private Output</* @Nullable */ List<String>> transitGatewayCidrBlocks;
+
+    /**
+     * @return One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+     * 
+     */
+    public Output<Optional<List<String>>> transitGatewayCidrBlocks() {
+        return Codegen.optional(this.transitGatewayCidrBlocks);
     }
     /**
      * Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.

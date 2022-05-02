@@ -10,6 +10,8 @@ import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecGcsDataSink;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecGcsDataSource;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecHttpDataSource;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecObjectConditions;
+import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecPosixDataSink;
+import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecPosixDataSource;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpecTransferOptions;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,6 +50,16 @@ public final class TransferJobTransferSpec {
      */
     private final @Nullable TransferJobTransferSpecObjectConditions objectConditions;
     /**
+     * @return A POSIX data sink. Structure documented below.
+     * 
+     */
+    private final @Nullable TransferJobTransferSpecPosixDataSink posixDataSink;
+    /**
+     * @return A POSIX filesystem data source. Structure documented below.
+     * 
+     */
+    private final @Nullable TransferJobTransferSpecPosixDataSource posixDataSource;
+    /**
      * @return Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
      * 
      */
@@ -61,6 +73,8 @@ public final class TransferJobTransferSpec {
         @CustomType.Parameter("gcsDataSource") @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource,
         @CustomType.Parameter("httpDataSource") @Nullable TransferJobTransferSpecHttpDataSource httpDataSource,
         @CustomType.Parameter("objectConditions") @Nullable TransferJobTransferSpecObjectConditions objectConditions,
+        @CustomType.Parameter("posixDataSink") @Nullable TransferJobTransferSpecPosixDataSink posixDataSink,
+        @CustomType.Parameter("posixDataSource") @Nullable TransferJobTransferSpecPosixDataSource posixDataSource,
         @CustomType.Parameter("transferOptions") @Nullable TransferJobTransferSpecTransferOptions transferOptions) {
         this.awsS3DataSource = awsS3DataSource;
         this.azureBlobStorageDataSource = azureBlobStorageDataSource;
@@ -68,6 +82,8 @@ public final class TransferJobTransferSpec {
         this.gcsDataSource = gcsDataSource;
         this.httpDataSource = httpDataSource;
         this.objectConditions = objectConditions;
+        this.posixDataSink = posixDataSink;
+        this.posixDataSource = posixDataSource;
         this.transferOptions = transferOptions;
     }
 
@@ -114,6 +130,20 @@ public final class TransferJobTransferSpec {
         return Optional.ofNullable(this.objectConditions);
     }
     /**
+     * @return A POSIX data sink. Structure documented below.
+     * 
+     */
+    public Optional<TransferJobTransferSpecPosixDataSink> posixDataSink() {
+        return Optional.ofNullable(this.posixDataSink);
+    }
+    /**
+     * @return A POSIX filesystem data source. Structure documented below.
+     * 
+     */
+    public Optional<TransferJobTransferSpecPosixDataSource> posixDataSource() {
+        return Optional.ofNullable(this.posixDataSource);
+    }
+    /**
      * @return Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
      * 
      */
@@ -136,6 +166,8 @@ public final class TransferJobTransferSpec {
         private @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource;
         private @Nullable TransferJobTransferSpecHttpDataSource httpDataSource;
         private @Nullable TransferJobTransferSpecObjectConditions objectConditions;
+        private @Nullable TransferJobTransferSpecPosixDataSink posixDataSink;
+        private @Nullable TransferJobTransferSpecPosixDataSource posixDataSource;
         private @Nullable TransferJobTransferSpecTransferOptions transferOptions;
 
         public Builder() {
@@ -150,6 +182,8 @@ public final class TransferJobTransferSpec {
     	      this.gcsDataSource = defaults.gcsDataSource;
     	      this.httpDataSource = defaults.httpDataSource;
     	      this.objectConditions = defaults.objectConditions;
+    	      this.posixDataSink = defaults.posixDataSink;
+    	      this.posixDataSource = defaults.posixDataSource;
     	      this.transferOptions = defaults.transferOptions;
         }
 
@@ -177,11 +211,19 @@ public final class TransferJobTransferSpec {
             this.objectConditions = objectConditions;
             return this;
         }
+        public Builder posixDataSink(@Nullable TransferJobTransferSpecPosixDataSink posixDataSink) {
+            this.posixDataSink = posixDataSink;
+            return this;
+        }
+        public Builder posixDataSource(@Nullable TransferJobTransferSpecPosixDataSource posixDataSource) {
+            this.posixDataSource = posixDataSource;
+            return this;
+        }
         public Builder transferOptions(@Nullable TransferJobTransferSpecTransferOptions transferOptions) {
             this.transferOptions = transferOptions;
             return this;
         }        public TransferJobTransferSpec build() {
-            return new TransferJobTransferSpec(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, transferOptions);
+            return new TransferJobTransferSpec(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, posixDataSink, posixDataSource, transferOptions);
         }
     }
 }

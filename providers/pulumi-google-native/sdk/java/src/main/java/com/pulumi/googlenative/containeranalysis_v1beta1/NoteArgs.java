@@ -149,9 +149,17 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.longDescription);
     }
 
+    /**
+     * Required. The ID to use for this note.
+     * 
+     */
     @Import(name="noteId", required=true)
     private Output<String> noteId;
 
+    /**
+     * @return Required. The ID to use for this note.
+     * 
+     */
     public Output<String> noteId() {
         return this.noteId;
     }
@@ -508,11 +516,23 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
             return longDescription(Output.of(longDescription));
         }
 
+        /**
+         * @param noteId Required. The ID to use for this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteId(Output<String> noteId) {
             $.noteId = noteId;
             return this;
         }
 
+        /**
+         * @param noteId Required. The ID to use for this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteId(String noteId) {
             return noteId(Output.of(noteId));
         }

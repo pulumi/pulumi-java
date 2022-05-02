@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,8 +21,12 @@ public final class ConditionalAccessPolicyGrantControlsArgs extends com.pulumi.r
      * 
      */
     @Import(name="builtInControls", required=true)
-      private final Output<List<String>> builtInControls;
+    private Output<List<String>> builtInControls;
 
+    /**
+     * @return List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+     * 
+     */
     public Output<List<String>> builtInControls() {
         return this.builtInControls;
     }
@@ -32,10 +36,14 @@ public final class ConditionalAccessPolicyGrantControlsArgs extends com.pulumi.r
      * 
      */
     @Import(name="customAuthenticationFactors")
-      private final @Nullable Output<List<String>> customAuthenticationFactors;
+    private @Nullable Output<List<String>> customAuthenticationFactors;
 
-    public Output<List<String>> customAuthenticationFactors() {
-        return this.customAuthenticationFactors == null ? Codegen.empty() : this.customAuthenticationFactors;
+    /**
+     * @return List of custom controls IDs required by the policy.
+     * 
+     */
+    public Optional<Output<List<String>>> customAuthenticationFactors() {
+        return Optional.ofNullable(this.customAuthenticationFactors);
     }
 
     /**
@@ -43,8 +51,12 @@ public final class ConditionalAccessPolicyGrantControlsArgs extends com.pulumi.r
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<String> operator;
+    private Output<String> operator;
 
+    /**
+     * @return Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -54,98 +66,162 @@ public final class ConditionalAccessPolicyGrantControlsArgs extends com.pulumi.r
      * 
      */
     @Import(name="termsOfUses")
-      private final @Nullable Output<List<String>> termsOfUses;
+    private @Nullable Output<List<String>> termsOfUses;
 
-    public Output<List<String>> termsOfUses() {
-        return this.termsOfUses == null ? Codegen.empty() : this.termsOfUses;
+    /**
+     * @return List of terms of use IDs required by the policy.
+     * 
+     */
+    public Optional<Output<List<String>>> termsOfUses() {
+        return Optional.ofNullable(this.termsOfUses);
     }
 
-    public ConditionalAccessPolicyGrantControlsArgs(
-        Output<List<String>> builtInControls,
-        @Nullable Output<List<String>> customAuthenticationFactors,
-        Output<String> operator,
-        @Nullable Output<List<String>> termsOfUses) {
-        this.builtInControls = Objects.requireNonNull(builtInControls, "expected parameter 'builtInControls' to be non-null");
-        this.customAuthenticationFactors = customAuthenticationFactors;
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.termsOfUses = termsOfUses;
-    }
+    private ConditionalAccessPolicyGrantControlsArgs() {}
 
-    private ConditionalAccessPolicyGrantControlsArgs() {
-        this.builtInControls = Codegen.empty();
-        this.customAuthenticationFactors = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.termsOfUses = Codegen.empty();
+    private ConditionalAccessPolicyGrantControlsArgs(ConditionalAccessPolicyGrantControlsArgs $) {
+        this.builtInControls = $.builtInControls;
+        this.customAuthenticationFactors = $.customAuthenticationFactors;
+        this.operator = $.operator;
+        this.termsOfUses = $.termsOfUses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyGrantControlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> builtInControls;
-        private @Nullable Output<List<String>> customAuthenticationFactors;
-        private Output<String> operator;
-        private @Nullable Output<List<String>> termsOfUses;
+        private ConditionalAccessPolicyGrantControlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyGrantControlsArgs();
         }
 
         public Builder(ConditionalAccessPolicyGrantControlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builtInControls = defaults.builtInControls;
-    	      this.customAuthenticationFactors = defaults.customAuthenticationFactors;
-    	      this.operator = defaults.operator;
-    	      this.termsOfUses = defaults.termsOfUses;
+            $ = new ConditionalAccessPolicyGrantControlsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builtInControls List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInControls(Output<List<String>> builtInControls) {
-            this.builtInControls = Objects.requireNonNull(builtInControls);
+            $.builtInControls = builtInControls;
             return this;
         }
+
+        /**
+         * @param builtInControls List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInControls(List<String> builtInControls) {
-            this.builtInControls = Output.of(Objects.requireNonNull(builtInControls));
-            return this;
+            return builtInControls(Output.of(builtInControls));
         }
+
+        /**
+         * @param builtInControls List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInControls(String... builtInControls) {
             return builtInControls(List.of(builtInControls));
         }
+
+        /**
+         * @param customAuthenticationFactors List of custom controls IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAuthenticationFactors(@Nullable Output<List<String>> customAuthenticationFactors) {
-            this.customAuthenticationFactors = customAuthenticationFactors;
+            $.customAuthenticationFactors = customAuthenticationFactors;
             return this;
         }
-        public Builder customAuthenticationFactors(@Nullable List<String> customAuthenticationFactors) {
-            this.customAuthenticationFactors = Codegen.ofNullable(customAuthenticationFactors);
-            return this;
+
+        /**
+         * @param customAuthenticationFactors List of custom controls IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customAuthenticationFactors(List<String> customAuthenticationFactors) {
+            return customAuthenticationFactors(Output.of(customAuthenticationFactors));
         }
+
+        /**
+         * @param customAuthenticationFactors List of custom controls IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAuthenticationFactors(String... customAuthenticationFactors) {
             return customAuthenticationFactors(List.of(customAuthenticationFactors));
         }
+
+        /**
+         * @param operator Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
+        /**
+         * @param operator Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
+        /**
+         * @param termsOfUses List of terms of use IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termsOfUses(@Nullable Output<List<String>> termsOfUses) {
-            this.termsOfUses = termsOfUses;
+            $.termsOfUses = termsOfUses;
             return this;
         }
-        public Builder termsOfUses(@Nullable List<String> termsOfUses) {
-            this.termsOfUses = Codegen.ofNullable(termsOfUses);
-            return this;
+
+        /**
+         * @param termsOfUses List of terms of use IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder termsOfUses(List<String> termsOfUses) {
+            return termsOfUses(Output.of(termsOfUses));
         }
+
+        /**
+         * @param termsOfUses List of terms of use IDs required by the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termsOfUses(String... termsOfUses) {
             return termsOfUses(List.of(termsOfUses));
-        }        public ConditionalAccessPolicyGrantControlsArgs build() {
-            return new ConditionalAccessPolicyGrantControlsArgs(builtInControls, customAuthenticationFactors, operator, termsOfUses);
+        }
+
+        public ConditionalAccessPolicyGrantControlsArgs build() {
+            $.builtInControls = Objects.requireNonNull($.builtInControls, "expected parameter 'builtInControls' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

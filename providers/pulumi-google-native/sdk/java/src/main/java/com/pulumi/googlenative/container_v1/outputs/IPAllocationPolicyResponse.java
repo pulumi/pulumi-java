@@ -11,6 +11,15 @@ import java.util.Objects;
 @CustomType
 public final class IPAllocationPolicyResponse {
     /**
+     * @return This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+    private final String clusterIpv4Cidr;
+    /**
      * @return The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
@@ -26,10 +35,28 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean createSubnetwork;
     /**
+     * @return This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+    private final String nodeIpv4Cidr;
+    /**
      * @return The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
     private final String nodeIpv4CidrBlock;
+    /**
+     * @return This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+    private final String servicesIpv4Cidr;
     /**
      * @return The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
@@ -63,20 +90,26 @@ public final class IPAllocationPolicyResponse {
 
     @CustomType.Constructor
     private IPAllocationPolicyResponse(
+        @CustomType.Parameter("clusterIpv4Cidr") String clusterIpv4Cidr,
         @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
         @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
         @CustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
+        @CustomType.Parameter("nodeIpv4Cidr") String nodeIpv4Cidr,
         @CustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
+        @CustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
         @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
         @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
         @CustomType.Parameter("subnetworkName") String subnetworkName,
         @CustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
         @CustomType.Parameter("useIpAliases") Boolean useIpAliases,
         @CustomType.Parameter("useRoutes") Boolean useRoutes) {
+        this.clusterIpv4Cidr = clusterIpv4Cidr;
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.createSubnetwork = createSubnetwork;
+        this.nodeIpv4Cidr = nodeIpv4Cidr;
         this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+        this.servicesIpv4Cidr = servicesIpv4Cidr;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
         this.servicesSecondaryRangeName = servicesSecondaryRangeName;
         this.subnetworkName = subnetworkName;
@@ -85,6 +118,17 @@ public final class IPAllocationPolicyResponse {
         this.useRoutes = useRoutes;
     }
 
+    /**
+     * @return This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+    public String clusterIpv4Cidr() {
+        return this.clusterIpv4Cidr;
+    }
     /**
      * @return The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
@@ -107,11 +151,33 @@ public final class IPAllocationPolicyResponse {
         return this.createSubnetwork;
     }
     /**
+     * @return This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+    public String nodeIpv4Cidr() {
+        return this.nodeIpv4Cidr;
+    }
+    /**
      * @return The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
     public String nodeIpv4CidrBlock() {
         return this.nodeIpv4CidrBlock;
+    }
+    /**
+     * @return This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+    public String servicesIpv4Cidr() {
+        return this.servicesIpv4Cidr;
     }
     /**
      * @return The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
@@ -165,10 +231,13 @@ public final class IPAllocationPolicyResponse {
     }
 
     public static final class Builder {
+        private String clusterIpv4Cidr;
         private String clusterIpv4CidrBlock;
         private String clusterSecondaryRangeName;
         private Boolean createSubnetwork;
+        private String nodeIpv4Cidr;
         private String nodeIpv4CidrBlock;
+        private String servicesIpv4Cidr;
         private String servicesIpv4CidrBlock;
         private String servicesSecondaryRangeName;
         private String subnetworkName;
@@ -182,10 +251,13 @@ public final class IPAllocationPolicyResponse {
 
         public Builder(IPAllocationPolicyResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.clusterIpv4Cidr = defaults.clusterIpv4Cidr;
     	      this.clusterIpv4CidrBlock = defaults.clusterIpv4CidrBlock;
     	      this.clusterSecondaryRangeName = defaults.clusterSecondaryRangeName;
     	      this.createSubnetwork = defaults.createSubnetwork;
+    	      this.nodeIpv4Cidr = defaults.nodeIpv4Cidr;
     	      this.nodeIpv4CidrBlock = defaults.nodeIpv4CidrBlock;
+    	      this.servicesIpv4Cidr = defaults.servicesIpv4Cidr;
     	      this.servicesIpv4CidrBlock = defaults.servicesIpv4CidrBlock;
     	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
     	      this.subnetworkName = defaults.subnetworkName;
@@ -194,6 +266,10 @@ public final class IPAllocationPolicyResponse {
     	      this.useRoutes = defaults.useRoutes;
         }
 
+        public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
+            this.clusterIpv4Cidr = Objects.requireNonNull(clusterIpv4Cidr);
+            return this;
+        }
         public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
@@ -206,8 +282,16 @@ public final class IPAllocationPolicyResponse {
             this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
             return this;
         }
+        public Builder nodeIpv4Cidr(String nodeIpv4Cidr) {
+            this.nodeIpv4Cidr = Objects.requireNonNull(nodeIpv4Cidr);
+            return this;
+        }
         public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
+            return this;
+        }
+        public Builder servicesIpv4Cidr(String servicesIpv4Cidr) {
+            this.servicesIpv4Cidr = Objects.requireNonNull(servicesIpv4Cidr);
             return this;
         }
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
@@ -234,7 +318,7 @@ public final class IPAllocationPolicyResponse {
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
         }        public IPAllocationPolicyResponse build() {
-            return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
+            return new IPAllocationPolicyResponse(clusterIpv4Cidr, clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4Cidr, nodeIpv4CidrBlock, servicesIpv4Cidr, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
         }
     }
 }

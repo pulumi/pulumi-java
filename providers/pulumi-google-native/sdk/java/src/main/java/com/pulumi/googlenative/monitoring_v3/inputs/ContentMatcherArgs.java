@@ -21,14 +21,14 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
     public static final ContentMatcherArgs Empty = new ContentMatcherArgs();
 
     /**
-     * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
      */
     @Import(name="content")
     private @Nullable Output<String> content;
 
     /**
-     * @return String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * @return String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
      */
     public Optional<Output<String>> content() {
@@ -76,7 +76,7 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param content String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+         * @param content String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
          * 
          * @return builder
          * 
@@ -87,7 +87,7 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param content String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+         * @param content String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
          * 
          * @return builder
          * 

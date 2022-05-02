@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import com.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,6 +35,21 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
      */
     public Optional<Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends>> connectionPersistenceOnUnhealthyBackends() {
         return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
+    }
+
+    /**
+     * Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+     * 
+     */
+    @Import(name="enableStrongAffinity")
+    private @Nullable Output<Boolean> enableStrongAffinity;
+
+    /**
+     * @return Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+     * 
+     */
+    public Optional<Output<Boolean>> enableStrongAffinity() {
+        return Optional.ofNullable(this.enableStrongAffinity);
     }
 
     /**
@@ -70,6 +86,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
 
     private BackendServiceConnectionTrackingPolicyArgs(BackendServiceConnectionTrackingPolicyArgs $) {
         this.connectionPersistenceOnUnhealthyBackends = $.connectionPersistenceOnUnhealthyBackends;
+        this.enableStrongAffinity = $.enableStrongAffinity;
         this.idleTimeoutSec = $.idleTimeoutSec;
         this.trackingMode = $.trackingMode;
     }
@@ -111,6 +128,27 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
          */
         public Builder connectionPersistenceOnUnhealthyBackends(BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
             return connectionPersistenceOnUnhealthyBackends(Output.of(connectionPersistenceOnUnhealthyBackends));
+        }
+
+        /**
+         * @param enableStrongAffinity Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableStrongAffinity(@Nullable Output<Boolean> enableStrongAffinity) {
+            $.enableStrongAffinity = enableStrongAffinity;
+            return this;
+        }
+
+        /**
+         * @param enableStrongAffinity Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableStrongAffinity(Boolean enableStrongAffinity) {
+            return enableStrongAffinity(Output.of(enableStrongAffinity));
         }
 
         /**

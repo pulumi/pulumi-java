@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAssociationResponse;
+import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyDdosProtectionConfigResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRecaptchaOptionsConfigResponse;
 import com.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleResponse;
 import java.lang.Integer;
@@ -29,6 +30,7 @@ public final class GetSecurityPolicyResult {
      * 
      */
     private final String creationTimestamp;
+    private final SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig;
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
@@ -71,6 +73,11 @@ public final class GetSecurityPolicyResult {
     private final String parent;
     private final SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig;
     /**
+     * @return URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    private final String region;
+    /**
      * @return Total count of all security policy rule tuples. A security policy can not exceed a set number of tuples.
      * 
      */
@@ -91,7 +98,7 @@ public final class GetSecurityPolicyResult {
      */
     private final String selfLinkWithId;
     /**
-     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * @return The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     private final String type;
@@ -102,6 +109,7 @@ public final class GetSecurityPolicyResult {
         @CustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
         @CustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("ddosProtectionConfig") SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("fingerprint") String fingerprint,
@@ -111,6 +119,7 @@ public final class GetSecurityPolicyResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("parent") String parent,
         @CustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @CustomType.Parameter("region") String region,
         @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
         @CustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
         @CustomType.Parameter("selfLink") String selfLink,
@@ -120,6 +129,7 @@ public final class GetSecurityPolicyResult {
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;
         this.creationTimestamp = creationTimestamp;
+        this.ddosProtectionConfig = ddosProtectionConfig;
         this.description = description;
         this.displayName = displayName;
         this.fingerprint = fingerprint;
@@ -129,6 +139,7 @@ public final class GetSecurityPolicyResult {
         this.name = name;
         this.parent = parent;
         this.recaptchaOptionsConfig = recaptchaOptionsConfig;
+        this.region = region;
         this.ruleTupleCount = ruleTupleCount;
         this.rules = rules;
         this.selfLink = selfLink;
@@ -155,6 +166,9 @@ public final class GetSecurityPolicyResult {
      */
     public String creationTimestamp() {
         return this.creationTimestamp;
+    }
+    public SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig() {
+        return this.ddosProtectionConfig;
     }
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
@@ -216,6 +230,13 @@ public final class GetSecurityPolicyResult {
         return this.recaptchaOptionsConfig;
     }
     /**
+     * @return URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    public String region() {
+        return this.region;
+    }
+    /**
      * @return Total count of all security policy rule tuples. A security policy can not exceed a set number of tuples.
      * 
      */
@@ -244,7 +265,7 @@ public final class GetSecurityPolicyResult {
         return this.selfLinkWithId;
     }
     /**
-     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * @return The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     public String type() {
@@ -264,6 +285,7 @@ public final class GetSecurityPolicyResult {
         private SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig;
         private List<SecurityPolicyAssociationResponse> associations;
         private String creationTimestamp;
+        private SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig;
         private String description;
         private String displayName;
         private String fingerprint;
@@ -273,6 +295,7 @@ public final class GetSecurityPolicyResult {
         private String name;
         private String parent;
         private SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig;
+        private String region;
         private Integer ruleTupleCount;
         private List<SecurityPolicyRuleResponse> rules;
         private String selfLink;
@@ -289,6 +312,7 @@ public final class GetSecurityPolicyResult {
     	      this.advancedOptionsConfig = defaults.advancedOptionsConfig;
     	      this.associations = defaults.associations;
     	      this.creationTimestamp = defaults.creationTimestamp;
+    	      this.ddosProtectionConfig = defaults.ddosProtectionConfig;
     	      this.description = defaults.description;
     	      this.displayName = defaults.displayName;
     	      this.fingerprint = defaults.fingerprint;
@@ -298,6 +322,7 @@ public final class GetSecurityPolicyResult {
     	      this.name = defaults.name;
     	      this.parent = defaults.parent;
     	      this.recaptchaOptionsConfig = defaults.recaptchaOptionsConfig;
+    	      this.region = defaults.region;
     	      this.ruleTupleCount = defaults.ruleTupleCount;
     	      this.rules = defaults.rules;
     	      this.selfLink = defaults.selfLink;
@@ -322,6 +347,10 @@ public final class GetSecurityPolicyResult {
         }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
+            return this;
+        }
+        public Builder ddosProtectionConfig(SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig) {
+            this.ddosProtectionConfig = Objects.requireNonNull(ddosProtectionConfig);
             return this;
         }
         public Builder description(String description) {
@@ -360,6 +389,10 @@ public final class GetSecurityPolicyResult {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
+        public Builder region(String region) {
+            this.region = Objects.requireNonNull(region);
+            return this;
+        }
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
@@ -383,7 +416,7 @@ public final class GetSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetSecurityPolicyResult build() {
-            return new GetSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, creationTimestamp, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
+            return new GetSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, creationTimestamp, ddosProtectionConfig, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, region, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
         }
     }
 }

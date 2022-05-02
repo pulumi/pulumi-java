@@ -11,6 +11,11 @@ import java.util.Objects;
 @CustomType
 public final class AllocationSpecificSKUReservationResponse {
     /**
+     * @return Indicates how many instances are actually usable currently.
+     * 
+     */
+    private final String assuredCount;
+    /**
      * @return Specifies the number of resources that are allocated.
      * 
      */
@@ -28,14 +33,23 @@ public final class AllocationSpecificSKUReservationResponse {
 
     @CustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
+        @CustomType.Parameter("assuredCount") String assuredCount,
         @CustomType.Parameter("count") String count,
         @CustomType.Parameter("inUseCount") String inUseCount,
         @CustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        this.assuredCount = assuredCount;
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;
     }
 
+    /**
+     * @return Indicates how many instances are actually usable currently.
+     * 
+     */
+    public String assuredCount() {
+        return this.assuredCount;
+    }
     /**
      * @return Specifies the number of resources that are allocated.
      * 
@@ -67,6 +81,7 @@ public final class AllocationSpecificSKUReservationResponse {
     }
 
     public static final class Builder {
+        private String assuredCount;
         private String count;
         private String inUseCount;
         private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
@@ -77,11 +92,16 @@ public final class AllocationSpecificSKUReservationResponse {
 
         public Builder(AllocationSpecificSKUReservationResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.assuredCount = defaults.assuredCount;
     	      this.count = defaults.count;
     	      this.inUseCount = defaults.inUseCount;
     	      this.instanceProperties = defaults.instanceProperties;
         }
 
+        public Builder assuredCount(String assuredCount) {
+            this.assuredCount = Objects.requireNonNull(assuredCount);
+            return this;
+        }
         public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
@@ -94,7 +114,7 @@ public final class AllocationSpecificSKUReservationResponse {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }        public AllocationSpecificSKUReservationResponse build() {
-            return new AllocationSpecificSKUReservationResponse(count, inUseCount, instanceProperties);
+            return new AllocationSpecificSKUReservationResponse(assuredCount, count, inUseCount, instanceProperties);
         }
     }
 }

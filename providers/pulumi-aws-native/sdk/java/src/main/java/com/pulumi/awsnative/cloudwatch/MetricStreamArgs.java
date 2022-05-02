@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.cloudwatch;
 
 import com.pulumi.awsnative.cloudwatch.inputs.MetricStreamFilterArgs;
+import com.pulumi.awsnative.cloudwatch.inputs.MetricStreamStatisticsConfigurationArgs;
 import com.pulumi.awsnative.cloudwatch.inputs.MetricStreamTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -109,6 +110,21 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    @Import(name="statisticsConfigurations")
+    private @Nullable Output<List<MetricStreamStatisticsConfigurationArgs>> statisticsConfigurations;
+
+    /**
+     * @return By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    public Optional<Output<List<MetricStreamStatisticsConfigurationArgs>>> statisticsConfigurations() {
+        return Optional.ofNullable(this.statisticsConfigurations);
+    }
+
+    /**
      * A set of tags to assign to the delivery stream.
      * 
      */
@@ -132,6 +148,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
         this.name = $.name;
         this.outputFormat = $.outputFormat;
         this.roleArn = $.roleArn;
+        this.statisticsConfigurations = $.statisticsConfigurations;
         this.tags = $.tags;
     }
 
@@ -297,6 +314,37 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
+        }
+
+        /**
+         * @param statisticsConfigurations By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statisticsConfigurations(@Nullable Output<List<MetricStreamStatisticsConfigurationArgs>> statisticsConfigurations) {
+            $.statisticsConfigurations = statisticsConfigurations;
+            return this;
+        }
+
+        /**
+         * @param statisticsConfigurations By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statisticsConfigurations(List<MetricStreamStatisticsConfigurationArgs> statisticsConfigurations) {
+            return statisticsConfigurations(Output.of(statisticsConfigurations));
+        }
+
+        /**
+         * @param statisticsConfigurations By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statisticsConfigurations(MetricStreamStatisticsConfigurationArgs... statisticsConfigurations) {
+            return statisticsConfigurations(List.of(statisticsConfigurations));
         }
 
         /**

@@ -15,29 +15,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServicePrincipalsResult {
     /**
-     * A list of application IDs (client IDs) of the applications associated with the service principals.
+     * @return A list of application IDs (client IDs) of the applications associated with the service principals.
      * 
      */
     private final List<String> applicationIds;
     /**
-     * A list of display names of the applications associated with the service principals.
+     * @return A list of display names of the applications associated with the service principals.
      * 
      */
     private final List<String> displayNames;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable Boolean ignoreMissing;
     /**
-     * The object IDs of the service principals.
+     * @return The object IDs of the service principals.
      * 
      */
     private final List<String> objectIds;
     private final @Nullable Boolean returnAll;
     /**
-     * A list of service principals. Each `service_principal` object provides the attributes documented below.
+     * @return A list of service principals. Each `service_principal` object provides the attributes documented below.
      * 
      */
     private final List<GetServicePrincipalsServicePrincipal> servicePrincipals;
@@ -61,23 +61,23 @@ public final class GetServicePrincipalsResult {
     }
 
     /**
-     * A list of application IDs (client IDs) of the applications associated with the service principals.
+     * @return A list of application IDs (client IDs) of the applications associated with the service principals.
      * 
-    */
+     */
     public List<String> applicationIds() {
         return this.applicationIds;
     }
     /**
-     * A list of display names of the applications associated with the service principals.
+     * @return A list of display names of the applications associated with the service principals.
      * 
-    */
+     */
     public List<String> displayNames() {
         return this.displayNames;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -85,9 +85,9 @@ public final class GetServicePrincipalsResult {
         return Optional.ofNullable(this.ignoreMissing);
     }
     /**
-     * The object IDs of the service principals.
+     * @return The object IDs of the service principals.
      * 
-    */
+     */
     public List<String> objectIds() {
         return this.objectIds;
     }
@@ -95,9 +95,9 @@ public final class GetServicePrincipalsResult {
         return Optional.ofNullable(this.returnAll);
     }
     /**
-     * A list of service principals. Each `service_principal` object provides the attributes documented below.
+     * @return A list of service principals. Each `service_principal` object provides the attributes documented below.
      * 
-    */
+     */
     public List<GetServicePrincipalsServicePrincipal> servicePrincipals() {
         return this.servicePrincipals;
     }

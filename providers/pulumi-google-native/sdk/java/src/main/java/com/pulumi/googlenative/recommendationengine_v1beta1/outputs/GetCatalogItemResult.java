@@ -34,6 +34,15 @@ public final class GetCatalogItemResult {
      */
     private final String itemGroupId;
     /**
+     * @return Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     * @deprecated
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+    private final String languageCode;
+    /**
      * @return Optional. Metadata specific to retail products.
      * 
      */
@@ -55,6 +64,7 @@ public final class GetCatalogItemResult {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("itemAttributes") GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
         @CustomType.Parameter("itemGroupId") String itemGroupId,
+        @CustomType.Parameter("languageCode") String languageCode,
         @CustomType.Parameter("productMetadata") GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
         @CustomType.Parameter("tags") List<String> tags,
         @CustomType.Parameter("title") String title) {
@@ -62,6 +72,7 @@ public final class GetCatalogItemResult {
         this.description = description;
         this.itemAttributes = itemAttributes;
         this.itemGroupId = itemGroupId;
+        this.languageCode = languageCode;
         this.productMetadata = productMetadata;
         this.tags = tags;
         this.title = title;
@@ -94,6 +105,17 @@ public final class GetCatalogItemResult {
      */
     public String itemGroupId() {
         return this.itemGroupId;
+    }
+    /**
+     * @return Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     * @deprecated
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+    public String languageCode() {
+        return this.languageCode;
     }
     /**
      * @return Optional. Metadata specific to retail products.
@@ -130,6 +152,7 @@ public final class GetCatalogItemResult {
         private String description;
         private GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes;
         private String itemGroupId;
+        private String languageCode;
         private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata;
         private List<String> tags;
         private String title;
@@ -144,6 +167,7 @@ public final class GetCatalogItemResult {
     	      this.description = defaults.description;
     	      this.itemAttributes = defaults.itemAttributes;
     	      this.itemGroupId = defaults.itemGroupId;
+    	      this.languageCode = defaults.languageCode;
     	      this.productMetadata = defaults.productMetadata;
     	      this.tags = defaults.tags;
     	      this.title = defaults.title;
@@ -168,6 +192,10 @@ public final class GetCatalogItemResult {
             this.itemGroupId = Objects.requireNonNull(itemGroupId);
             return this;
         }
+        public Builder languageCode(String languageCode) {
+            this.languageCode = Objects.requireNonNull(languageCode);
+            return this;
+        }
         public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
             this.productMetadata = Objects.requireNonNull(productMetadata);
             return this;
@@ -183,7 +211,7 @@ public final class GetCatalogItemResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }        public GetCatalogItemResult build() {
-            return new GetCatalogItemResult(categoryHierarchies, description, itemAttributes, itemGroupId, productMetadata, tags, title);
+            return new GetCatalogItemResult(categoryHierarchies, description, itemAttributes, itemGroupId, languageCode, productMetadata, tags, title);
         }
     }
 }

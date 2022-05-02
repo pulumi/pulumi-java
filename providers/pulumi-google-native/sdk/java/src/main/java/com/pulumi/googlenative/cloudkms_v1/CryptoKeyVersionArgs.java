@@ -17,11 +17,11 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
 
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 
-    @Import(name="cryptoKeyId", required=true)
-    private Output<String> cryptoKeyId;
+    @Import(name="cryptoKeyId")
+    private @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> cryptoKeyId() {
-        return this.cryptoKeyId;
+    public Optional<Output<String>> cryptoKeyId() {
+        return Optional.ofNullable(this.cryptoKeyId);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
             $ = new CryptoKeyVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cryptoKeyId(Output<String> cryptoKeyId) {
+        public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
             $.cryptoKeyId = cryptoKeyId;
             return this;
         }
@@ -183,7 +183,6 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
         }
 
         public CryptoKeyVersionArgs build() {
-            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
             $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
             return $;
         }

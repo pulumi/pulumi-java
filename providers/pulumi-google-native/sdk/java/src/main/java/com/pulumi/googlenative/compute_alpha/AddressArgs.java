@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.AddressAddressType;
 import com.pulumi.googlenative.compute_alpha.enums.AddressIpVersion;
+import com.pulumi.googlenative.compute_alpha.enums.AddressIpv6EndpointType;
 import com.pulumi.googlenative.compute_alpha.enums.AddressNetworkTier;
 import com.pulumi.googlenative.compute_alpha.enums.AddressPurpose;
 import java.lang.Integer;
@@ -79,6 +80,21 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<AddressIpVersion>> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
+    }
+
+    /**
+     * The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    @Import(name="ipv6EndpointType")
+    private @Nullable Output<AddressIpv6EndpointType> ipv6EndpointType;
+
+    /**
+     * @return The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    public Optional<Output<AddressIpv6EndpointType>> ipv6EndpointType() {
+        return Optional.ofNullable(this.ipv6EndpointType);
     }
 
     /**
@@ -185,9 +201,17 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -214,6 +238,7 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
         this.addressType = $.addressType;
         this.description = $.description;
         this.ipVersion = $.ipVersion;
+        this.ipv6EndpointType = $.ipv6EndpointType;
         this.labels = $.labels;
         this.name = $.name;
         this.network = $.network;
@@ -326,6 +351,27 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder ipVersion(AddressIpVersion ipVersion) {
             return ipVersion(Output.of(ipVersion));
+        }
+
+        /**
+         * @param ipv6EndpointType The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6EndpointType(@Nullable Output<AddressIpv6EndpointType> ipv6EndpointType) {
+            $.ipv6EndpointType = ipv6EndpointType;
+            return this;
+        }
+
+        /**
+         * @param ipv6EndpointType The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6EndpointType(AddressIpv6EndpointType ipv6EndpointType) {
+            return ipv6EndpointType(Output.of(ipv6EndpointType));
         }
 
         /**
@@ -472,11 +518,23 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

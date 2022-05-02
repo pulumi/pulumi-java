@@ -73,6 +73,20 @@ public class Organization extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authorizedNetwork);
     }
     /**
+     * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    @Export(name="billingType", type=String.class, parameters={})
+    private Output<String> billingType;
+
+    /**
+     * @return Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    public Output<String> billingType() {
+        return this.billingType;
+    }
+    /**
      * Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when &#39;RuntimeType&#39;
      * is CLOUD. A base64-encoded string.
      * 

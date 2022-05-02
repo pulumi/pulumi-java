@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.datastream_v1alpha1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.datastream_v1alpha1.outputs.DropLargeObjectsResponse;
 import com.pulumi.googlenative.datastream_v1alpha1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
@@ -15,6 +16,11 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse allowlist;
     /**
+     * @return Drop large object values.
+     * 
+     */
+    private final DropLargeObjectsResponse dropLargeObjects;
+    /**
      * @return Oracle objects to exclude from the stream.
      * 
      */
@@ -23,8 +29,10 @@ public final class OracleSourceConfigResponse {
     @CustomType.Constructor
     private OracleSourceConfigResponse(
         @CustomType.Parameter("allowlist") OracleRdbmsResponse allowlist,
+        @CustomType.Parameter("dropLargeObjects") DropLargeObjectsResponse dropLargeObjects,
         @CustomType.Parameter("rejectlist") OracleRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
+        this.dropLargeObjects = dropLargeObjects;
         this.rejectlist = rejectlist;
     }
 
@@ -34,6 +42,13 @@ public final class OracleSourceConfigResponse {
      */
     public OracleRdbmsResponse allowlist() {
         return this.allowlist;
+    }
+    /**
+     * @return Drop large object values.
+     * 
+     */
+    public DropLargeObjectsResponse dropLargeObjects() {
+        return this.dropLargeObjects;
     }
     /**
      * @return Oracle objects to exclude from the stream.
@@ -53,6 +68,7 @@ public final class OracleSourceConfigResponse {
 
     public static final class Builder {
         private OracleRdbmsResponse allowlist;
+        private DropLargeObjectsResponse dropLargeObjects;
         private OracleRdbmsResponse rejectlist;
 
         public Builder() {
@@ -62,6 +78,7 @@ public final class OracleSourceConfigResponse {
         public Builder(OracleSourceConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowlist = defaults.allowlist;
+    	      this.dropLargeObjects = defaults.dropLargeObjects;
     	      this.rejectlist = defaults.rejectlist;
         }
 
@@ -69,11 +86,15 @@ public final class OracleSourceConfigResponse {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
+        public Builder dropLargeObjects(DropLargeObjectsResponse dropLargeObjects) {
+            this.dropLargeObjects = Objects.requireNonNull(dropLargeObjects);
+            return this;
+        }
         public Builder rejectlist(OracleRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }        public OracleSourceConfigResponse build() {
-            return new OracleSourceConfigResponse(allowlist, rejectlist);
+            return new OracleSourceConfigResponse(allowlist, dropLargeObjects, rejectlist);
         }
     }
 }

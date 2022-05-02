@@ -118,6 +118,15 @@ public final class WorkerPoolResponse {
      */
     private final String teardownPolicy;
     /**
+     * @return Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     * @deprecated
+     * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     */
+    @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+    private final String workerHarnessContainerImage;
+    /**
      * @return Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
@@ -145,6 +154,7 @@ public final class WorkerPoolResponse {
         @CustomType.Parameter("subnetwork") String subnetwork,
         @CustomType.Parameter("taskrunnerSettings") TaskRunnerSettingsResponse taskrunnerSettings,
         @CustomType.Parameter("teardownPolicy") String teardownPolicy,
+        @CustomType.Parameter("workerHarnessContainerImage") String workerHarnessContainerImage,
         @CustomType.Parameter("zone") String zone) {
         this.autoscalingSettings = autoscalingSettings;
         this.dataDisks = dataDisks;
@@ -166,6 +176,7 @@ public final class WorkerPoolResponse {
         this.subnetwork = subnetwork;
         this.taskrunnerSettings = taskrunnerSettings;
         this.teardownPolicy = teardownPolicy;
+        this.workerHarnessContainerImage = workerHarnessContainerImage;
         this.zone = zone;
     }
 
@@ -310,6 +321,17 @@ public final class WorkerPoolResponse {
         return this.teardownPolicy;
     }
     /**
+     * @return Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     * @deprecated
+     * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+     * 
+     */
+    @Deprecated /* Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead. */
+    public String workerHarnessContainerImage() {
+        return this.workerHarnessContainerImage;
+    }
+    /**
      * @return Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
@@ -346,6 +368,7 @@ public final class WorkerPoolResponse {
         private String subnetwork;
         private TaskRunnerSettingsResponse taskrunnerSettings;
         private String teardownPolicy;
+        private String workerHarnessContainerImage;
         private String zone;
 
         public Builder() {
@@ -374,6 +397,7 @@ public final class WorkerPoolResponse {
     	      this.subnetwork = defaults.subnetwork;
     	      this.taskrunnerSettings = defaults.taskrunnerSettings;
     	      this.teardownPolicy = defaults.teardownPolicy;
+    	      this.workerHarnessContainerImage = defaults.workerHarnessContainerImage;
     	      this.zone = defaults.zone;
         }
 
@@ -466,11 +490,15 @@ public final class WorkerPoolResponse {
             this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
             return this;
         }
+        public Builder workerHarnessContainerImage(String workerHarnessContainerImage) {
+            this.workerHarnessContainerImage = Objects.requireNonNull(workerHarnessContainerImage);
+            return this;
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public WorkerPoolResponse build() {
-            return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
+            return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, workerHarnessContainerImage, zone);
         }
     }
 }

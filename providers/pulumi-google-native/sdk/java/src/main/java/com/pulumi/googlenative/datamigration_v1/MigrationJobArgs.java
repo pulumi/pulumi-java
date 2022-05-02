@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datamigration_v1.enums.MigrationJobState;
 import com.pulumi.googlenative.datamigration_v1.enums.MigrationJobType;
 import com.pulumi.googlenative.datamigration_v1.inputs.DatabaseTypeArgs;
+import com.pulumi.googlenative.datamigration_v1.inputs.DumpFlagsArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.ReverseSshConnectivityArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.StaticIpConnectivityArgs;
 import com.pulumi.googlenative.datamigration_v1.inputs.VpcPeeringConnectivityArgs;
@@ -68,14 +69,29 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    @Import(name="dumpFlags")
+    private @Nullable Output<DumpFlagsArgs> dumpFlags;
+
+    /**
+     * @return The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    public Optional<Output<DumpFlagsArgs>> dumpFlags() {
+        return Optional.ofNullable(this.dumpFlags);
+    }
+
+    /**
+     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     @Import(name="dumpPath")
     private @Nullable Output<String> dumpPath;
 
     /**
-     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     public Optional<Output<String>> dumpPath() {
@@ -104,9 +120,17 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * Required. The ID of the instance to create.
+     * 
+     */
     @Import(name="migrationJobId", required=true)
     private Output<String> migrationJobId;
 
+    /**
+     * @return Required. The ID of the instance to create.
+     * 
+     */
     public Output<String> migrationJobId() {
         return this.migrationJobId;
     }
@@ -133,9 +157,17 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -251,6 +283,7 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         this.destination = $.destination;
         this.destinationDatabase = $.destinationDatabase;
         this.displayName = $.displayName;
+        this.dumpFlags = $.dumpFlags;
         this.dumpPath = $.dumpPath;
         this.labels = $.labels;
         this.location = $.location;
@@ -349,7 +382,28 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+         * @param dumpFlags The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dumpFlags(@Nullable Output<DumpFlagsArgs> dumpFlags) {
+            $.dumpFlags = dumpFlags;
+            return this;
+        }
+
+        /**
+         * @param dumpFlags The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dumpFlags(DumpFlagsArgs dumpFlags) {
+            return dumpFlags(Output.of(dumpFlags));
+        }
+
+        /**
+         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
          * 
          * @return builder
          * 
@@ -360,7 +414,7 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
          * 
          * @return builder
          * 
@@ -399,11 +453,23 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migrationJobId Required. The ID of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationJobId(Output<String> migrationJobId) {
             $.migrationJobId = migrationJobId;
             return this;
         }
 
+        /**
+         * @param migrationJobId Required. The ID of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationJobId(String migrationJobId) {
             return migrationJobId(Output.of(migrationJobId));
         }
@@ -438,11 +504,23 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

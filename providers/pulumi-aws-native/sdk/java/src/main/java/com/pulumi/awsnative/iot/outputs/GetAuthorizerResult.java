@@ -6,6 +6,7 @@ package com.pulumi.awsnative.iot.outputs;
 import com.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import com.pulumi.awsnative.iot.outputs.AuthorizerTag;
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,6 +18,7 @@ import javax.annotation.Nullable;
 public final class GetAuthorizerResult {
     private final @Nullable String arn;
     private final @Nullable String authorizerFunctionArn;
+    private final @Nullable Boolean enableCachingForHttp;
     private final @Nullable AuthorizerStatus status;
     private final @Nullable List<AuthorizerTag> tags;
     private final @Nullable String tokenKeyName;
@@ -26,12 +28,14 @@ public final class GetAuthorizerResult {
     private GetAuthorizerResult(
         @CustomType.Parameter("arn") @Nullable String arn,
         @CustomType.Parameter("authorizerFunctionArn") @Nullable String authorizerFunctionArn,
+        @CustomType.Parameter("enableCachingForHttp") @Nullable Boolean enableCachingForHttp,
         @CustomType.Parameter("status") @Nullable AuthorizerStatus status,
         @CustomType.Parameter("tags") @Nullable List<AuthorizerTag> tags,
         @CustomType.Parameter("tokenKeyName") @Nullable String tokenKeyName,
         @CustomType.Parameter("tokenSigningPublicKeys") @Nullable Object tokenSigningPublicKeys) {
         this.arn = arn;
         this.authorizerFunctionArn = authorizerFunctionArn;
+        this.enableCachingForHttp = enableCachingForHttp;
         this.status = status;
         this.tags = tags;
         this.tokenKeyName = tokenKeyName;
@@ -43,6 +47,9 @@ public final class GetAuthorizerResult {
     }
     public Optional<String> authorizerFunctionArn() {
         return Optional.ofNullable(this.authorizerFunctionArn);
+    }
+    public Optional<Boolean> enableCachingForHttp() {
+        return Optional.ofNullable(this.enableCachingForHttp);
     }
     public Optional<AuthorizerStatus> status() {
         return Optional.ofNullable(this.status);
@@ -68,6 +75,7 @@ public final class GetAuthorizerResult {
     public static final class Builder {
         private @Nullable String arn;
         private @Nullable String authorizerFunctionArn;
+        private @Nullable Boolean enableCachingForHttp;
         private @Nullable AuthorizerStatus status;
         private @Nullable List<AuthorizerTag> tags;
         private @Nullable String tokenKeyName;
@@ -81,6 +89,7 @@ public final class GetAuthorizerResult {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
     	      this.authorizerFunctionArn = defaults.authorizerFunctionArn;
+    	      this.enableCachingForHttp = defaults.enableCachingForHttp;
     	      this.status = defaults.status;
     	      this.tags = defaults.tags;
     	      this.tokenKeyName = defaults.tokenKeyName;
@@ -93,6 +102,10 @@ public final class GetAuthorizerResult {
         }
         public Builder authorizerFunctionArn(@Nullable String authorizerFunctionArn) {
             this.authorizerFunctionArn = authorizerFunctionArn;
+            return this;
+        }
+        public Builder enableCachingForHttp(@Nullable Boolean enableCachingForHttp) {
+            this.enableCachingForHttp = enableCachingForHttp;
             return this;
         }
         public Builder status(@Nullable AuthorizerStatus status) {
@@ -114,7 +127,7 @@ public final class GetAuthorizerResult {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }        public GetAuthorizerResult build() {
-            return new GetAuthorizerResult(arn, authorizerFunctionArn, status, tags, tokenKeyName, tokenSigningPublicKeys);
+            return new GetAuthorizerResult(arn, authorizerFunctionArn, enableCachingForHttp, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }
     }
 }

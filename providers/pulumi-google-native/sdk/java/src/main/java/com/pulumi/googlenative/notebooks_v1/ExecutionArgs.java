@@ -31,9 +31,17 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Required. User-defined unique ID of this execution.
+     * 
+     */
     @Import(name="executionId", required=true)
     private Output<String> executionId;
 
+    /**
+     * @return Required. User-defined unique ID of this execution.
+     * 
+     */
     public Output<String> executionId() {
         return this.executionId;
     }
@@ -132,11 +140,23 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionId Required. User-defined unique ID of this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionId(Output<String> executionId) {
             $.executionId = executionId;
             return this;
         }
 
+        /**
+         * @param executionId Required. User-defined unique ID of this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionId(String executionId) {
             return executionId(Output.of(executionId));
         }

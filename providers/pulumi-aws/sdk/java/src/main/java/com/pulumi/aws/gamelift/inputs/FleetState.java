@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.gamelift.inputs;
 
+import com.pulumi.aws.gamelift.inputs.FleetCertificateConfigurationArgs;
 import com.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionArgs;
 import com.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import com.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
@@ -36,18 +37,48 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ID of the Gamelift Build to be deployed on the fleet.
+     * Build ARN.
+     * 
+     */
+    @Import(name="buildArn")
+    private @Nullable Output<String> buildArn;
+
+    /**
+     * @return Build ARN.
+     * 
+     */
+    public Optional<Output<String>> buildArn() {
+        return Optional.ofNullable(this.buildArn);
+    }
+
+    /**
+     * ID of the GameLift Build to be deployed on the fleet.
      * 
      */
     @Import(name="buildId")
     private @Nullable Output<String> buildId;
 
     /**
-     * @return ID of the Gamelift Build to be deployed on the fleet.
+     * @return ID of the GameLift Build to be deployed on the fleet.
      * 
      */
     public Optional<Output<String>> buildId() {
         return Optional.ofNullable(this.buildId);
+    }
+
+    /**
+     * Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+     * 
+     */
+    @Import(name="certificateConfiguration")
+    private @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration;
+
+    /**
+     * @return Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+     * 
+     */
+    public Optional<Output<FleetCertificateConfigurationArgs>> certificateConfiguration() {
+        return Optional.ofNullable(this.certificateConfiguration);
     }
 
     /**
@@ -223,14 +254,44 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Script ARN.
+     * 
+     */
+    @Import(name="scriptArn")
+    private @Nullable Output<String> scriptArn;
+
+    /**
+     * @return Script ARN.
+     * 
+     */
+    public Optional<Output<String>> scriptArn() {
+        return Optional.ofNullable(this.scriptArn);
+    }
+
+    /**
+     * ID of the GameLift Script to be deployed on the fleet.
+     * 
+     */
+    @Import(name="scriptId")
+    private @Nullable Output<String> scriptId;
+
+    /**
+     * @return ID of the GameLift Script to be deployed on the fleet.
+     * 
+     */
+    public Optional<Output<String>> scriptId() {
+        return Optional.ofNullable(this.scriptId);
+    }
+
+    /**
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -238,14 +299,14 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Optional<Output<Map<String,String>>> tagsAll() {
@@ -256,7 +317,9 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
 
     private FleetState(FleetState $) {
         this.arn = $.arn;
+        this.buildArn = $.buildArn;
         this.buildId = $.buildId;
+        this.certificateConfiguration = $.certificateConfiguration;
         this.description = $.description;
         this.ec2InboundPermissions = $.ec2InboundPermissions;
         this.ec2InstanceType = $.ec2InstanceType;
@@ -269,6 +332,8 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         this.operatingSystem = $.operatingSystem;
         this.resourceCreationLimitPolicy = $.resourceCreationLimitPolicy;
         this.runtimeConfiguration = $.runtimeConfiguration;
+        this.scriptArn = $.scriptArn;
+        this.scriptId = $.scriptId;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
     }
@@ -313,7 +378,28 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param buildId ID of the Gamelift Build to be deployed on the fleet.
+         * @param buildArn Build ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildArn(@Nullable Output<String> buildArn) {
+            $.buildArn = buildArn;
+            return this;
+        }
+
+        /**
+         * @param buildArn Build ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildArn(String buildArn) {
+            return buildArn(Output.of(buildArn));
+        }
+
+        /**
+         * @param buildId ID of the GameLift Build to be deployed on the fleet.
          * 
          * @return builder
          * 
@@ -324,13 +410,34 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param buildId ID of the Gamelift Build to be deployed on the fleet.
+         * @param buildId ID of the GameLift Build to be deployed on the fleet.
          * 
          * @return builder
          * 
          */
         public Builder buildId(String buildId) {
             return buildId(Output.of(buildId));
+        }
+
+        /**
+         * @param certificateConfiguration Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateConfiguration(@Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration) {
+            $.certificateConfiguration = certificateConfiguration;
+            return this;
+        }
+
+        /**
+         * @param certificateConfiguration Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateConfiguration(FleetCertificateConfigurationArgs certificateConfiguration) {
+            return certificateConfiguration(Output.of(certificateConfiguration));
         }
 
         /**
@@ -598,7 +705,49 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param scriptArn Script ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptArn(@Nullable Output<String> scriptArn) {
+            $.scriptArn = scriptArn;
+            return this;
+        }
+
+        /**
+         * @param scriptArn Script ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptArn(String scriptArn) {
+            return scriptArn(Output.of(scriptArn));
+        }
+
+        /**
+         * @param scriptId ID of the GameLift Script to be deployed on the fleet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptId(@Nullable Output<String> scriptId) {
+            $.scriptId = scriptId;
+            return this;
+        }
+
+        /**
+         * @param scriptId ID of the GameLift Script to be deployed on the fleet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptId(String scriptId) {
+            return scriptId(Output.of(scriptId));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -609,7 +758,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -619,7 +768,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -630,7 +779,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 

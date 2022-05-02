@@ -116,9 +116,17 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
         return Optional.ofNullable(this.serviceLevelIndicator);
     }
 
+    /**
+     * Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+     * 
+     */
     @Import(name="serviceLevelObjectiveId")
     private @Nullable Output<String> serviceLevelObjectiveId;
 
+    /**
+     * @return Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+     * 
+     */
     public Optional<Output<String>> serviceLevelObjectiveId() {
         return Optional.ofNullable(this.serviceLevelObjectiveId);
     }
@@ -321,11 +329,23 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
             return serviceLevelIndicator(Output.of(serviceLevelIndicator));
         }
 
+        /**
+         * @param serviceLevelObjectiveId Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevelObjectiveId(@Nullable Output<String> serviceLevelObjectiveId) {
             $.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
 
+        /**
+         * @param serviceLevelObjectiveId Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
             return serviceLevelObjectiveId(Output.of(serviceLevelObjectiveId));
         }

@@ -61,14 +61,14 @@ public class Schema extends com.pulumi.resources.CustomResource {
         return this.compatibility;
     }
     /**
-     * The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+     * The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
      * 
      */
     @Export(name="dataFormat", type=String.class, parameters={})
     private Output<String> dataFormat;
 
     /**
-     * @return The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+     * @return The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
      * 
      */
     public Output<String> dataFormat() {

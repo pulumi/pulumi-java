@@ -570,6 +570,24 @@ public class Version extends com.pulumi.resources.CustomResource {
     public Output<VpcAccessConnectorResponse> vpcAccessConnector() {
         return this.vpcAccessConnector;
     }
+    /**
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    @Export(name="zones", type=List.class, parameters={String.class})
+    private Output<List<String>> zones;
+
+    /**
+     * @return The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    public Output<List<String>> zones() {
+        return this.zones;
+    }
 
     /**
      *

@@ -19,13 +19,13 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides an Gamelift Game Session Queue resource.
+ * Provides an GameLift Game Session Queue resource.
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * Gamelift Game Session Queues can be imported by their `name`, e.g.,
+ * GameLift Game Session Queues can be imported by their `name`, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:gamelift/gameSessionQueue:GameSessionQueue example example

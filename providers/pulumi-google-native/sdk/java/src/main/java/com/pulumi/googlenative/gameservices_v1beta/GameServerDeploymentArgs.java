@@ -16,22 +16,30 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
 
     public static final GameServerDeploymentArgs Empty = new GameServerDeploymentArgs();
 
+    /**
+     * Required. The ID of the game server deployment resource to create.
+     * 
+     */
     @Import(name="deploymentId", required=true)
     private Output<String> deploymentId;
 
+    /**
+     * @return Required. The ID of the game server deployment resource to create.
+     * 
+     */
     public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
     /**
-     * Human readable description of the game server delpoyment.
+     * Human readable description of the game server deployment.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Human readable description of the game server delpoyment.
+     * @return Human readable description of the game server deployment.
      * 
      */
     public Optional<Output<String>> description() {
@@ -39,14 +47,14 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * ETag of the resource.
+     * Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public Optional<Output<String>> etag() {
@@ -76,14 +84,14 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     public Optional<Output<String>> name() {
@@ -127,17 +135,29 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
             $ = new GameServerDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentId Required. The ID of the game server deployment resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId Required. The ID of the game server deployment resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
         /**
-         * @param description Human readable description of the game server delpoyment.
+         * @param description Human readable description of the game server deployment.
          * 
          * @return builder
          * 
@@ -148,7 +168,7 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param description Human readable description of the game server delpoyment.
+         * @param description Human readable description of the game server deployment.
          * 
          * @return builder
          * 
@@ -158,7 +178,7 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -169,7 +189,7 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -209,7 +229,7 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+         * @param name The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
          * 
          * @return builder
          * 
@@ -220,7 +240,7 @@ public final class GameServerDeploymentArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+         * @param name The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
          * 
          * @return builder
          * 

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CustomDirectoryRolePermission {
     /**
-     * A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+     * @return A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
      * 
      */
     private final List<String> allowedResourceActions;
@@ -22,9 +22,9 @@ public final class CustomDirectoryRolePermission {
     }
 
     /**
-     * A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+     * @return A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
      * 
-    */
+     */
     public List<String> allowedResourceActions() {
         return this.allowedResourceActions;
     }

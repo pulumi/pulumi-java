@@ -155,14 +155,14 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="network", type=String.class, parameters={})
-    private Output</* @Nullable */ String> network;
+    private Output<String> network;
 
     /**
      * @return Name or self_link of the VPC network. Required if `ip_cidr_range` is set.
      * 
      */
-    public Output<Optional<String>> network() {
-        return Codegen.optional(this.network);
+    public Output<String> network() {
+        return this.network;
     }
     /**
      * The ID of the project in which the resource belongs.

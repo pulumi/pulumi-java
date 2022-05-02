@@ -129,6 +129,21 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.selfLink);
     }
 
+    /**
+     * Type of redirect action.
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<String> type;
+
+    /**
+     * @return Type of redirect action.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     private SecurityPolicyState() {}
 
     private SecurityPolicyState(SecurityPolicyState $) {
@@ -139,6 +154,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         this.project = $.project;
         this.rules = $.rules;
         this.selfLink = $.selfLink;
+        this.type = $.type;
     }
 
     public static Builder builder() {
@@ -322,6 +338,27 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
+        }
+
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public SecurityPolicyState build() {

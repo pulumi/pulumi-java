@@ -5,6 +5,7 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,6 +16,21 @@ import javax.annotation.Nullable;
 public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
+
+    /**
+     * If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+     * 
+     */
+    @Import(name="closeOnDeletion")
+    private @Nullable Output<Boolean> closeOnDeletion;
+
+    /**
+     * @return If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+     * 
+     */
+    public Optional<Output<Boolean>> closeOnDeletion() {
+        return Optional.ofNullable(this.closeOnDeletion);
+    }
 
     /**
      * The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
@@ -92,14 +108,14 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value mapping of resource tags.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value mapping of resource tags.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -109,6 +125,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     private AccountArgs() {}
 
     private AccountArgs(AccountArgs $) {
+        this.closeOnDeletion = $.closeOnDeletion;
         this.email = $.email;
         this.iamUserAccessToBilling = $.iamUserAccessToBilling;
         this.name = $.name;
@@ -133,6 +150,27 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(AccountArgs defaults) {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param closeOnDeletion If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder closeOnDeletion(@Nullable Output<Boolean> closeOnDeletion) {
+            $.closeOnDeletion = closeOnDeletion;
+            return this;
+        }
+
+        /**
+         * @param closeOnDeletion If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder closeOnDeletion(Boolean closeOnDeletion) {
+            return closeOnDeletion(Output.of(closeOnDeletion));
         }
 
         /**
@@ -241,7 +279,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value mapping of resource tags.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -252,7 +290,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value mapping of resource tags.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

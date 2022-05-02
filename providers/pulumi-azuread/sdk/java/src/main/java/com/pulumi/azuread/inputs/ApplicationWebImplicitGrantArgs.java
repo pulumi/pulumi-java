@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class ApplicationWebImplicitGrantArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="accessTokenIssuanceEnabled")
-      private final @Nullable Output<Boolean> accessTokenIssuanceEnabled;
+    private @Nullable Output<Boolean> accessTokenIssuanceEnabled;
 
-    public Output<Boolean> accessTokenIssuanceEnabled() {
-        return this.accessTokenIssuanceEnabled == null ? Codegen.empty() : this.accessTokenIssuanceEnabled;
+    /**
+     * @return Whether this web application can request an access token using OAuth 2.0 implicit flow.
+     * 
+     */
+    public Optional<Output<Boolean>> accessTokenIssuanceEnabled() {
+        return Optional.ofNullable(this.accessTokenIssuanceEnabled);
     }
 
     /**
@@ -31,63 +35,86 @@ public final class ApplicationWebImplicitGrantArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="idTokenIssuanceEnabled")
-      private final @Nullable Output<Boolean> idTokenIssuanceEnabled;
+    private @Nullable Output<Boolean> idTokenIssuanceEnabled;
 
-    public Output<Boolean> idTokenIssuanceEnabled() {
-        return this.idTokenIssuanceEnabled == null ? Codegen.empty() : this.idTokenIssuanceEnabled;
+    /**
+     * @return Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+     * 
+     */
+    public Optional<Output<Boolean>> idTokenIssuanceEnabled() {
+        return Optional.ofNullable(this.idTokenIssuanceEnabled);
     }
 
-    public ApplicationWebImplicitGrantArgs(
-        @Nullable Output<Boolean> accessTokenIssuanceEnabled,
-        @Nullable Output<Boolean> idTokenIssuanceEnabled) {
-        this.accessTokenIssuanceEnabled = accessTokenIssuanceEnabled;
-        this.idTokenIssuanceEnabled = idTokenIssuanceEnabled;
-    }
+    private ApplicationWebImplicitGrantArgs() {}
 
-    private ApplicationWebImplicitGrantArgs() {
-        this.accessTokenIssuanceEnabled = Codegen.empty();
-        this.idTokenIssuanceEnabled = Codegen.empty();
+    private ApplicationWebImplicitGrantArgs(ApplicationWebImplicitGrantArgs $) {
+        this.accessTokenIssuanceEnabled = $.accessTokenIssuanceEnabled;
+        this.idTokenIssuanceEnabled = $.idTokenIssuanceEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationWebImplicitGrantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> accessTokenIssuanceEnabled;
-        private @Nullable Output<Boolean> idTokenIssuanceEnabled;
+        private ApplicationWebImplicitGrantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationWebImplicitGrantArgs();
         }
 
         public Builder(ApplicationWebImplicitGrantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTokenIssuanceEnabled = defaults.accessTokenIssuanceEnabled;
-    	      this.idTokenIssuanceEnabled = defaults.idTokenIssuanceEnabled;
+            $ = new ApplicationWebImplicitGrantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTokenIssuanceEnabled Whether this web application can request an access token using OAuth 2.0 implicit flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenIssuanceEnabled(@Nullable Output<Boolean> accessTokenIssuanceEnabled) {
-            this.accessTokenIssuanceEnabled = accessTokenIssuanceEnabled;
+            $.accessTokenIssuanceEnabled = accessTokenIssuanceEnabled;
             return this;
         }
-        public Builder accessTokenIssuanceEnabled(@Nullable Boolean accessTokenIssuanceEnabled) {
-            this.accessTokenIssuanceEnabled = Codegen.ofNullable(accessTokenIssuanceEnabled);
-            return this;
+
+        /**
+         * @param accessTokenIssuanceEnabled Whether this web application can request an access token using OAuth 2.0 implicit flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessTokenIssuanceEnabled(Boolean accessTokenIssuanceEnabled) {
+            return accessTokenIssuanceEnabled(Output.of(accessTokenIssuanceEnabled));
         }
+
+        /**
+         * @param idTokenIssuanceEnabled Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idTokenIssuanceEnabled(@Nullable Output<Boolean> idTokenIssuanceEnabled) {
-            this.idTokenIssuanceEnabled = idTokenIssuanceEnabled;
+            $.idTokenIssuanceEnabled = idTokenIssuanceEnabled;
             return this;
         }
-        public Builder idTokenIssuanceEnabled(@Nullable Boolean idTokenIssuanceEnabled) {
-            this.idTokenIssuanceEnabled = Codegen.ofNullable(idTokenIssuanceEnabled);
-            return this;
-        }        public ApplicationWebImplicitGrantArgs build() {
-            return new ApplicationWebImplicitGrantArgs(accessTokenIssuanceEnabled, idTokenIssuanceEnabled);
+
+        /**
+         * @param idTokenIssuanceEnabled Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder idTokenIssuanceEnabled(Boolean idTokenIssuanceEnabled) {
+            return idTokenIssuanceEnabled(Output.of(idTokenIssuanceEnabled));
+        }
+
+        public ApplicationWebImplicitGrantArgs build() {
+            return $;
         }
     }
+
 }

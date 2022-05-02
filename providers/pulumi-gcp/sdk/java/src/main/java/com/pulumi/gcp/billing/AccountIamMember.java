@@ -15,11 +15,57 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * Three different resources help you manage IAM policies on billing accounts. Each of these resources serves a different use case:
+ * 
+ * * `gcp.billing.AccountIamPolicy`: Authoritative. Sets the IAM policy for the billing accounts and replaces any existing policy already attached.
+ * * `gcp.billing.AccountIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the table are preserved.
+ * * `gcp.billing.AccountIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role of the billing accounts are preserved.
+ * 
+ * &gt; **Note:** `gcp.billing.AccountIamPolicy` **cannot** be used in conjunction with `gcp.billing.AccountIamBinding` and `gcp.billing.AccountIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the billing account as `gcp.billing.AccountIamPolicy` replaces the entire policy.
+ * 
+ * &gt; **Note:** `gcp.billing.AccountIamBinding` resources **can be** used in conjunction with `gcp.billing.AccountIamMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * ## google\_billing\_account\_iam\_policy
+ * 
+ * ## google\_billing\_account\_iam\_binding
+ * 
+ * ## google\_billing\_account\_iam\_member
+ * 
+ * ## Import
+ * 
+ * Instance IAM resources can be imported using the project, table name, role and/or member.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:billing/accountIamMember:AccountIamMember binding &#34;your-billing-account-id&#34;
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:billing/accountIamMember:AccountIamMember binding &#34;your-billing-account-id roles/billing.user&#34;
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:billing/accountIamMember:AccountIamMember binding &#34;your-billing-account-id roles/billing.user user:jane@example.com&#34;
+ * ```
+ * 
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
+ * 
+ * full name of the custom role, e.g. `organizations/my-org-id/roles/my-custom-role`.
+ * 
+ */
 @ResourceType(type="gcp:billing/accountIamMember:AccountIamMember")
 public class AccountIamMember extends com.pulumi.resources.CustomResource {
+    /**
+     * The billing account id.
+     * 
+     */
     @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
+    /**
+     * @return The billing account id.
+     * 
+     */
     public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
@@ -29,9 +75,17 @@ public class AccountIamMember extends com.pulumi.resources.CustomResource {
     public Output<Optional<AccountIamMemberCondition>> condition() {
         return Codegen.optional(this.condition);
     }
+    /**
+     * (Computed) The etag of the billing account&#39;s IAM policy.
+     * 
+     */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the billing account&#39;s IAM policy.
+     * 
+     */
     public Output<String> etag() {
         return this.etag;
     }
@@ -41,9 +95,21 @@ public class AccountIamMember extends com.pulumi.resources.CustomResource {
     public Output<String> member() {
         return this.member;
     }
+    /**
+     * The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }

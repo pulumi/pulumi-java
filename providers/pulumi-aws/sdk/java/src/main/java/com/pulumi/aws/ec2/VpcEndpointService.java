@@ -84,28 +84,28 @@ public class VpcEndpointService extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The Availability Zones in which the service is available.
+     * A set of Availability Zones in which the service is available.
      * 
      */
     @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
-     * @return The Availability Zones in which the service is available.
+     * @return A set of Availability Zones in which the service is available.
      * 
      */
     public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
-     * The DNS names for the service.
+     * A set of DNS names for the service.
      * 
      */
     @Export(name="baseEndpointDnsNames", type=List.class, parameters={String.class})
     private Output<List<String>> baseEndpointDnsNames;
 
     /**
-     * @return The DNS names for the service.
+     * @return A set of DNS names for the service.
      * 
      */
     public Output<List<String>> baseEndpointDnsNames() {

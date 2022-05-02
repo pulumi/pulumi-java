@@ -6,10 +6,12 @@ package com.pulumi.aws.iam;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.iam.inputs.GetGroupArgs;
 import com.pulumi.aws.iam.inputs.GetInstanceProfileArgs;
+import com.pulumi.aws.iam.inputs.GetOpenidConnectProviderArgs;
 import com.pulumi.aws.iam.inputs.GetPolicyArgs;
 import com.pulumi.aws.iam.inputs.GetPolicyDocumentArgs;
 import com.pulumi.aws.iam.inputs.GetRoleArgs;
 import com.pulumi.aws.iam.inputs.GetRolesArgs;
+import com.pulumi.aws.iam.inputs.GetSamlProviderArgs;
 import com.pulumi.aws.iam.inputs.GetServerCertificateArgs;
 import com.pulumi.aws.iam.inputs.GetSessionContextArgs;
 import com.pulumi.aws.iam.inputs.GetUserArgs;
@@ -18,10 +20,12 @@ import com.pulumi.aws.iam.inputs.GetUsersArgs;
 import com.pulumi.aws.iam.outputs.GetAccountAliasResult;
 import com.pulumi.aws.iam.outputs.GetGroupResult;
 import com.pulumi.aws.iam.outputs.GetInstanceProfileResult;
+import com.pulumi.aws.iam.outputs.GetOpenidConnectProviderResult;
 import com.pulumi.aws.iam.outputs.GetPolicyDocumentResult;
 import com.pulumi.aws.iam.outputs.GetPolicyResult;
 import com.pulumi.aws.iam.outputs.GetRoleResult;
 import com.pulumi.aws.iam.outputs.GetRolesResult;
+import com.pulumi.aws.iam.outputs.GetSamlProviderResult;
 import com.pulumi.aws.iam.outputs.GetServerCertificateResult;
 import com.pulumi.aws.iam.outputs.GetSessionContextResult;
 import com.pulumi.aws.iam.outputs.GetUserResult;
@@ -77,6 +81,23 @@ public final class IamFunctions {
     }
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getInstanceProfile:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can be used to fetch information about a specific
+     * IAM OpenID Connect provider. By using this data source, you can retrieve the
+     * the resource information by either its `arn` or `url`.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider() {
+        return getOpenidConnectProvider(GetOpenidConnectProviderArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args) {
+        return getOpenidConnectProvider(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:iam/getOpenidConnectProvider:getOpenidConnectProvider", TypeShape.of(GetOpenidConnectProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -139,6 +160,20 @@ public final class IamFunctions {
     }
     public static CompletableFuture<GetRolesResult> getRoles(GetRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getRoles:getRoles", TypeShape.of(GetRolesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can be used to fetch information about a specific
+     * IAM SAML provider. This will allow you to easily retrieve the metadata
+     * document of an existing SAML provider.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args) {
+        return getSamlProvider(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:iam/getSamlProvider:getSamlProvider", TypeShape.of(GetSamlProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to lookup information about IAM Server Certificates.

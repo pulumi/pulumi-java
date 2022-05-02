@@ -6,10 +6,16 @@ package com.pulumi.googlenative.apikeys_v2.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.apikeys_v2.outputs.V2RestrictionsResponse;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetKeyResult {
+    /**
+     * @return Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    private final Map<String,String> annotations;
     /**
      * @return A timestamp identifying the time this key was originally created.
      * 
@@ -58,6 +64,7 @@ public final class GetKeyResult {
 
     @CustomType.Constructor
     private GetKeyResult(
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("deleteTime") String deleteTime,
         @CustomType.Parameter("displayName") String displayName,
@@ -67,6 +74,7 @@ public final class GetKeyResult {
         @CustomType.Parameter("restrictions") V2RestrictionsResponse restrictions,
         @CustomType.Parameter("uid") String uid,
         @CustomType.Parameter("updateTime") String updateTime) {
+        this.annotations = annotations;
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;
@@ -78,6 +86,13 @@ public final class GetKeyResult {
         this.updateTime = updateTime;
     }
 
+    /**
+     * @return Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    public Map<String,String> annotations() {
+        return this.annotations;
+    }
     /**
      * @return A timestamp identifying the time this key was originally created.
      * 
@@ -151,6 +166,7 @@ public final class GetKeyResult {
     }
 
     public static final class Builder {
+        private Map<String,String> annotations;
         private String createTime;
         private String deleteTime;
         private String displayName;
@@ -167,6 +183,7 @@ public final class GetKeyResult {
 
         public Builder(GetKeyResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.annotations = defaults.annotations;
     	      this.createTime = defaults.createTime;
     	      this.deleteTime = defaults.deleteTime;
     	      this.displayName = defaults.displayName;
@@ -178,6 +195,10 @@ public final class GetKeyResult {
     	      this.updateTime = defaults.updateTime;
         }
 
+        public Builder annotations(Map<String,String> annotations) {
+            this.annotations = Objects.requireNonNull(annotations);
+            return this;
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
@@ -214,7 +235,7 @@ public final class GetKeyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetKeyResult build() {
-            return new GetKeyResult(createTime, deleteTime, displayName, etag, keyString, name, restrictions, uid, updateTime);
+            return new GetKeyResult(annotations, createTime, deleteTime, displayName, etag, keyString, name, restrictions, uid, updateTime);
         }
     }
 }

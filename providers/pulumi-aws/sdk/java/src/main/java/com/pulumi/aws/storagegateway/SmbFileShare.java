@@ -287,14 +287,14 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.notificationPolicy);
     }
     /**
-     * Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     @Export(name="objectAcl", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectAcl;
 
     /**
-     * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * @return Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     public Output<Optional<String>> objectAcl() {

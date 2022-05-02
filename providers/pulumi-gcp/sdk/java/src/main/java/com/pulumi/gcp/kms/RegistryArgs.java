@@ -22,6 +22,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * List of public key certificates to authenticate devices.
+     * The structure is documented below.
      * 
      */
     @Import(name="credentials")
@@ -29,6 +30,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return List of public key certificates to authenticate devices.
+     * The structure is documented below.
      * 
      */
     public Optional<Output<List<RegistryCredentialArgs>>> credentials() {
@@ -36,14 +38,18 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of configurations for event notifications, such as PubSub topics to publish device events to.
+     * List of configurations for event notifications, such as PubSub topics
+     * to publish device events to.
+     * Structure is documented below.
      * 
      */
     @Import(name="eventNotificationConfigs")
     private @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
 
     /**
-     * @return List of configurations for event notifications, such as PubSub topics to publish device events to.
+     * @return List of configurations for event notifications, such as PubSub topics
+     * to publish device events to.
+     * Structure is documented below.
      * 
      */
     public Optional<Output<List<RegistryEventNotificationConfigItemArgs>>> eventNotificationConfigs() {
@@ -52,6 +58,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Activate or deactivate HTTP.
+     * The structure is documented below.
      * 
      */
     @Import(name="httpConfig")
@@ -59,6 +66,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Activate or deactivate HTTP.
+     * The structure is documented below.
      * 
      */
     public Optional<Output<Map<String,Object>>> httpConfig() {
@@ -66,20 +74,26 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-     * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-     * &#34;DEBUG&#34;]
+     * The default logging verbosity for activity from devices in this
+     * registry. Specifies which events should be written to logs. For
+     * example, if the LogLevel is ERROR, only events that terminate in
+     * errors will be logged. LogLevel is inclusive; enabling INFO logging
+     * will also enable ERROR logging.
+     * Default value is `NONE`.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
     @Import(name="logLevel")
     private @Nullable Output<String> logLevel;
 
     /**
-     * @return The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-     * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-     * &#34;DEBUG&#34;]
+     * @return The default logging verbosity for activity from devices in this
+     * registry. Specifies which events should be written to logs. For
+     * example, if the LogLevel is ERROR, only events that terminate in
+     * errors will be logged. LogLevel is inclusive; enabling INFO logging
+     * will also enable ERROR logging.
+     * Default value is `NONE`.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
     public Optional<Output<String>> logLevel() {
@@ -88,6 +102,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Activate or deactivate MQTT.
+     * The structure is documented below.
      * 
      */
     @Import(name="mqttConfig")
@@ -95,6 +110,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Activate or deactivate MQTT.
+     * The structure is documented below.
      * 
      */
     public Optional<Output<Map<String,Object>>> mqttConfig() {
@@ -116,22 +132,34 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     /**
-     * The region in which the created registry should reside. If it is not provided, the provider region is used.
+     * The region in which the created registry should reside.
+     * If it is not provided, the provider region is used.
      * 
      */
     @Import(name="region")
     private @Nullable Output<String> region;
 
     /**
-     * @return The region in which the created registry should reside. If it is not provided, the provider region is used.
+     * @return The region in which the created registry should reside.
+     * If it is not provided, the provider region is used.
      * 
      */
     public Optional<Output<String>> region() {
@@ -140,6 +168,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A PubSub topic to publish device state updates.
+     * The structure is documented below.
      * 
      */
     @Import(name="stateNotificationConfig")
@@ -147,6 +176,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return A PubSub topic to publish device state updates.
+     * The structure is documented below.
      * 
      */
     public Optional<Output<Map<String,Object>>> stateNotificationConfig() {
@@ -187,6 +217,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param credentials List of public key certificates to authenticate devices.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -198,6 +229,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param credentials List of public key certificates to authenticate devices.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -208,6 +240,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param credentials List of public key certificates to authenticate devices.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -217,7 +250,9 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics to publish device events to.
+         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics
+         * to publish device events to.
+         * Structure is documented below.
          * 
          * @return builder
          * 
@@ -228,7 +263,9 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics to publish device events to.
+         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics
+         * to publish device events to.
+         * Structure is documented below.
          * 
          * @return builder
          * 
@@ -238,7 +275,9 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics to publish device events to.
+         * @param eventNotificationConfigs List of configurations for event notifications, such as PubSub topics
+         * to publish device events to.
+         * Structure is documented below.
          * 
          * @return builder
          * 
@@ -249,6 +288,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param httpConfig Activate or deactivate HTTP.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -260,6 +300,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param httpConfig Activate or deactivate HTTP.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -269,10 +310,13 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logLevel The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-         * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-         * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-         * &#34;DEBUG&#34;]
+         * @param logLevel The default logging verbosity for activity from devices in this
+         * registry. Specifies which events should be written to logs. For
+         * example, if the LogLevel is ERROR, only events that terminate in
+         * errors will be logged. LogLevel is inclusive; enabling INFO logging
+         * will also enable ERROR logging.
+         * Default value is `NONE`.
+         * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
          * 
          * @return builder
          * 
@@ -283,10 +327,13 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logLevel The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-         * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-         * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-         * &#34;DEBUG&#34;]
+         * @param logLevel The default logging verbosity for activity from devices in this
+         * registry. Specifies which events should be written to logs. For
+         * example, if the LogLevel is ERROR, only events that terminate in
+         * errors will be logged. LogLevel is inclusive; enabling INFO logging
+         * will also enable ERROR logging.
+         * Default value is `NONE`.
+         * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
          * 
          * @return builder
          * 
@@ -297,6 +344,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param mqttConfig Activate or deactivate MQTT.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -308,6 +356,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param mqttConfig Activate or deactivate MQTT.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -337,17 +386,32 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
         /**
-         * @param region The region in which the created registry should reside. If it is not provided, the provider region is used.
+         * @param region The region in which the created registry should reside.
+         * If it is not provided, the provider region is used.
          * 
          * @return builder
          * 
@@ -358,7 +422,8 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param region The region in which the created registry should reside. If it is not provided, the provider region is used.
+         * @param region The region in which the created registry should reside.
+         * If it is not provided, the provider region is used.
          * 
          * @return builder
          * 
@@ -369,6 +434,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param stateNotificationConfig A PubSub topic to publish device state updates.
+         * The structure is documented below.
          * 
          * @return builder
          * 
@@ -380,6 +446,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param stateNotificationConfig A PubSub topic to publish device state updates.
+         * The structure is documented below.
          * 
          * @return builder
          * 

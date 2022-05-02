@@ -4,12 +4,22 @@
 package com.pulumi.googlenative.orgpolicy_v2.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2AlternatePolicySpecResponse;
 import com.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetOrganizationPolicyResult {
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    private final GoogleCloudOrgpolicyV2AlternatePolicySpecResponse alternate;
     /**
      * @return Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
@@ -23,12 +33,25 @@ public final class GetOrganizationPolicyResult {
 
     @CustomType.Constructor
     private GetOrganizationPolicyResult(
+        @CustomType.Parameter("alternate") GoogleCloudOrgpolicyV2AlternatePolicySpecResponse alternate,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("spec") GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        this.alternate = alternate;
         this.name = name;
         this.spec = spec;
     }
 
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    public GoogleCloudOrgpolicyV2AlternatePolicySpecResponse alternate() {
+        return this.alternate;
+    }
     /**
      * @return Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
@@ -53,6 +76,7 @@ public final class GetOrganizationPolicyResult {
     }
 
     public static final class Builder {
+        private GoogleCloudOrgpolicyV2AlternatePolicySpecResponse alternate;
         private String name;
         private GoogleCloudOrgpolicyV2PolicySpecResponse spec;
 
@@ -62,10 +86,15 @@ public final class GetOrganizationPolicyResult {
 
         public Builder(GetOrganizationPolicyResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.alternate = defaults.alternate;
     	      this.name = defaults.name;
     	      this.spec = defaults.spec;
         }
 
+        public Builder alternate(GoogleCloudOrgpolicyV2AlternatePolicySpecResponse alternate) {
+            this.alternate = Objects.requireNonNull(alternate);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -74,7 +103,7 @@ public final class GetOrganizationPolicyResult {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }        public GetOrganizationPolicyResult build() {
-            return new GetOrganizationPolicyResult(name, spec);
+            return new GetOrganizationPolicyResult(alternate, name, spec);
         }
     }
 }

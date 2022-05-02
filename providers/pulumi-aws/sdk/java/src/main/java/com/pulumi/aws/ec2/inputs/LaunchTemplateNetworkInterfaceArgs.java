@@ -138,6 +138,36 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     }
 
     /**
+     * The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+     * 
+     */
+    @Import(name="ipv4PrefixCount")
+    private @Nullable Output<Integer> ipv4PrefixCount;
+
+    /**
+     * @return The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+     * 
+     */
+    public Optional<Output<Integer>> ipv4PrefixCount() {
+        return Optional.ofNullable(this.ipv4PrefixCount);
+    }
+
+    /**
+     * One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+     * 
+     */
+    @Import(name="ipv4Prefixes")
+    private @Nullable Output<List<String>> ipv4Prefixes;
+
+    /**
+     * @return One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+     * 
+     */
+    public Optional<Output<List<String>>> ipv4Prefixes() {
+        return Optional.ofNullable(this.ipv4Prefixes);
+    }
+
+    /**
      * The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
      * 
      */
@@ -165,6 +195,36 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      */
     public Optional<Output<List<String>>> ipv6Addresses() {
         return Optional.ofNullable(this.ipv6Addresses);
+    }
+
+    /**
+     * The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+     * 
+     */
+    @Import(name="ipv6PrefixCount")
+    private @Nullable Output<Integer> ipv6PrefixCount;
+
+    /**
+     * @return The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+     * 
+     */
+    public Optional<Output<Integer>> ipv6PrefixCount() {
+        return Optional.ofNullable(this.ipv6PrefixCount);
+    }
+
+    /**
+     * One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+     * 
+     */
+    @Import(name="ipv6Prefixes")
+    private @Nullable Output<List<String>> ipv6Prefixes;
+
+    /**
+     * @return One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+     * 
+     */
+    public Optional<Output<List<String>>> ipv6Prefixes() {
+        return Optional.ofNullable(this.ipv6Prefixes);
     }
 
     /**
@@ -253,8 +313,12 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
         this.interfaceType = $.interfaceType;
         this.ipv4AddressCount = $.ipv4AddressCount;
         this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv4PrefixCount = $.ipv4PrefixCount;
+        this.ipv4Prefixes = $.ipv4Prefixes;
         this.ipv6AddressCount = $.ipv6AddressCount;
         this.ipv6Addresses = $.ipv6Addresses;
+        this.ipv6PrefixCount = $.ipv6PrefixCount;
+        this.ipv6Prefixes = $.ipv6Prefixes;
         this.networkCardIndex = $.networkCardIndex;
         this.networkInterfaceId = $.networkInterfaceId;
         this.privateIpAddress = $.privateIpAddress;
@@ -459,6 +523,58 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
         }
 
         /**
+         * @param ipv4PrefixCount The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4PrefixCount(@Nullable Output<Integer> ipv4PrefixCount) {
+            $.ipv4PrefixCount = ipv4PrefixCount;
+            return this;
+        }
+
+        /**
+         * @param ipv4PrefixCount The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
+            return ipv4PrefixCount(Output.of(ipv4PrefixCount));
+        }
+
+        /**
+         * @param ipv4Prefixes One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4Prefixes(@Nullable Output<List<String>> ipv4Prefixes) {
+            $.ipv4Prefixes = ipv4Prefixes;
+            return this;
+        }
+
+        /**
+         * @param ipv4Prefixes One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4Prefixes(List<String> ipv4Prefixes) {
+            return ipv4Prefixes(Output.of(ipv4Prefixes));
+        }
+
+        /**
+         * @param ipv4Prefixes One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4Prefixes(String... ipv4Prefixes) {
+            return ipv4Prefixes(List.of(ipv4Prefixes));
+        }
+
+        /**
          * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
          * 
          * @return builder
@@ -508,6 +624,58 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
          */
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
+        }
+
+        /**
+         * @param ipv6PrefixCount The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6PrefixCount(@Nullable Output<Integer> ipv6PrefixCount) {
+            $.ipv6PrefixCount = ipv6PrefixCount;
+            return this;
+        }
+
+        /**
+         * @param ipv6PrefixCount The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
+            return ipv6PrefixCount(Output.of(ipv6PrefixCount));
+        }
+
+        /**
+         * @param ipv6Prefixes One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Prefixes(@Nullable Output<List<String>> ipv6Prefixes) {
+            $.ipv6Prefixes = ipv6Prefixes;
+            return this;
+        }
+
+        /**
+         * @param ipv6Prefixes One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Prefixes(List<String> ipv6Prefixes) {
+            return ipv6Prefixes(Output.of(ipv6Prefixes));
+        }
+
+        /**
+         * @param ipv6Prefixes One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Prefixes(String... ipv6Prefixes) {
+            return ipv6Prefixes(List.of(ipv6Prefixes));
         }
 
         /**

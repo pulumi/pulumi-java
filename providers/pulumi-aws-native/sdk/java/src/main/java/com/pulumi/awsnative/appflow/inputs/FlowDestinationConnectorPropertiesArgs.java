@@ -5,8 +5,10 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.awsnative.appflow.inputs.FlowEventBridgeDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowLookoutMetricsDestinationPropertiesArgs;
+import com.pulumi.awsnative.appflow.inputs.FlowMarketoDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowRedshiftDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowS3DestinationPropertiesArgs;
+import com.pulumi.awsnative.appflow.inputs.FlowSAPODataDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowSalesforceDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowSnowflakeDestinationPropertiesArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationPropertiesArgs;
@@ -40,6 +42,13 @@ public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.res
         return Optional.ofNullable(this.lookoutMetrics);
     }
 
+    @Import(name="marketo")
+    private @Nullable Output<FlowMarketoDestinationPropertiesArgs> marketo;
+
+    public Optional<Output<FlowMarketoDestinationPropertiesArgs>> marketo() {
+        return Optional.ofNullable(this.marketo);
+    }
+
     @Import(name="redshift")
     private @Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift;
 
@@ -52,6 +61,13 @@ public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.res
 
     public Optional<Output<FlowS3DestinationPropertiesArgs>> s3() {
         return Optional.ofNullable(this.s3);
+    }
+
+    @Import(name="sAPOData")
+    private @Nullable Output<FlowSAPODataDestinationPropertiesArgs> sAPOData;
+
+    public Optional<Output<FlowSAPODataDestinationPropertiesArgs>> sAPOData() {
+        return Optional.ofNullable(this.sAPOData);
     }
 
     @Import(name="salesforce")
@@ -87,8 +103,10 @@ public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.res
     private FlowDestinationConnectorPropertiesArgs(FlowDestinationConnectorPropertiesArgs $) {
         this.eventBridge = $.eventBridge;
         this.lookoutMetrics = $.lookoutMetrics;
+        this.marketo = $.marketo;
         this.redshift = $.redshift;
         this.s3 = $.s3;
+        this.sAPOData = $.sAPOData;
         this.salesforce = $.salesforce;
         this.snowflake = $.snowflake;
         this.upsolver = $.upsolver;
@@ -131,6 +149,15 @@ public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.res
             return lookoutMetrics(Output.of(lookoutMetrics));
         }
 
+        public Builder marketo(@Nullable Output<FlowMarketoDestinationPropertiesArgs> marketo) {
+            $.marketo = marketo;
+            return this;
+        }
+
+        public Builder marketo(FlowMarketoDestinationPropertiesArgs marketo) {
+            return marketo(Output.of(marketo));
+        }
+
         public Builder redshift(@Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift) {
             $.redshift = redshift;
             return this;
@@ -147,6 +174,15 @@ public final class FlowDestinationConnectorPropertiesArgs extends com.pulumi.res
 
         public Builder s3(FlowS3DestinationPropertiesArgs s3) {
             return s3(Output.of(s3));
+        }
+
+        public Builder sAPOData(@Nullable Output<FlowSAPODataDestinationPropertiesArgs> sAPOData) {
+            $.sAPOData = sAPOData;
+            return this;
+        }
+
+        public Builder sAPOData(FlowSAPODataDestinationPropertiesArgs sAPOData) {
+            return sAPOData(Output.of(sAPOData));
         }
 
         public Builder salesforce(@Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce) {

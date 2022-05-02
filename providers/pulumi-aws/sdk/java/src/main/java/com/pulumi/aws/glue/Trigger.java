@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.glue.TriggerArgs;
 import com.pulumi.aws.glue.inputs.TriggerState;
 import com.pulumi.aws.glue.outputs.TriggerAction;
+import com.pulumi.aws.glue.outputs.TriggerEventBatchingCondition;
 import com.pulumi.aws.glue.outputs.TriggerPredicate;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -90,6 +91,20 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<Boolean>> enabled() {
         return Codegen.optional(this.enabled);
+    }
+    /**
+     * Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+     * 
+     */
+    @Export(name="eventBatchingConditions", type=List.class, parameters={TriggerEventBatchingCondition.class})
+    private Output</* @Nullable */ List<TriggerEventBatchingCondition>> eventBatchingConditions;
+
+    /**
+     * @return Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+     * 
+     */
+    public Output<Optional<List<TriggerEventBatchingCondition>>> eventBatchingConditions() {
+        return Codegen.optional(this.eventBatchingConditions);
     }
     /**
      * The name of the trigger.

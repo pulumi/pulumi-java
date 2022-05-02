@@ -13,6 +13,7 @@ import com.pulumi.googlenative.container_v1.inputs.ClusterAutoscalingArgs;
 import com.pulumi.googlenative.container_v1.inputs.ConfidentialNodesArgs;
 import com.pulumi.googlenative.container_v1.inputs.DatabaseEncryptionArgs;
 import com.pulumi.googlenative.container_v1.inputs.IPAllocationPolicyArgs;
+import com.pulumi.googlenative.container_v1.inputs.IdentityServiceConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.LegacyAbacArgs;
 import com.pulumi.googlenative.container_v1.inputs.LoggingConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.MaintenancePolicyArgs;
@@ -23,7 +24,9 @@ import com.pulumi.googlenative.container_v1.inputs.MeshCertificatesArgs;
 import com.pulumi.googlenative.container_v1.inputs.MonitoringConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NetworkPolicyArgs;
+import com.pulumi.googlenative.container_v1.inputs.NodeConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NodePoolArgs;
+import com.pulumi.googlenative.container_v1.inputs.NodePoolAutoConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.NodePoolDefaultsArgs;
 import com.pulumi.googlenative.container_v1.inputs.NotificationConfigArgs;
 import com.pulumi.googlenative.container_v1.inputs.PrivateClusterConfigArgs;
@@ -34,6 +37,7 @@ import com.pulumi.googlenative.container_v1.inputs.StatusConditionArgs;
 import com.pulumi.googlenative.container_v1.inputs.VerticalPodAutoscalingArgs;
 import com.pulumi.googlenative.container_v1.inputs.WorkloadIdentityConfigArgs;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -152,14 +156,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration of Confidential Nodes
+     * Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
      * 
      */
     @Import(name="confidentialNodes")
     private @Nullable Output<ConfidentialNodesArgs> confidentialNodes;
 
     /**
-     * @return Configuration of Confidential Nodes
+     * @return Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
      * 
      */
     public Optional<Output<ConfidentialNodesArgs>> confidentialNodes() {
@@ -242,6 +246,21 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Configuration for Identity Service component.
+     * 
+     */
+    @Import(name="identityServiceConfig")
+    private @Nullable Output<IdentityServiceConfigArgs> identityServiceConfig;
+
+    /**
+     * @return Configuration for Identity Service component.
+     * 
+     */
+    public Optional<Output<IdentityServiceConfigArgs>> identityServiceConfig() {
+        return Optional.ofNullable(this.identityServiceConfig);
+    }
+
+    /**
      * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
      */
@@ -254,6 +273,52 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> initialClusterVersion() {
         return Optional.ofNullable(this.initialClusterVersion);
+    }
+
+    /**
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     * @deprecated
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+    @Import(name="initialNodeCount")
+    private @Nullable Output<Integer> initialNodeCount;
+
+    /**
+     * @return The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     * @deprecated
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+    public Optional<Output<Integer>> initialNodeCount() {
+        return Optional.ofNullable(this.initialNodeCount);
+    }
+
+    /**
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     * @deprecated
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+    @Import(name="instanceGroupUrls")
+    private @Nullable Output<List<String>> instanceGroupUrls;
+
+    /**
+     * @return Deprecated. Use node_pools.instance_group_urls.
+     * 
+     * @deprecated
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+    public Optional<Output<List<String>>> instanceGroupUrls() {
+        return Optional.ofNullable(this.instanceGroupUrls);
     }
 
     /**
@@ -489,6 +554,44 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     * @deprecated
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+    @Import(name="nodeConfig")
+    private @Nullable Output<NodeConfigArgs> nodeConfig;
+
+    /**
+     * @return Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     * @deprecated
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+    public Optional<Output<NodeConfigArgs>> nodeConfig() {
+        return Optional.ofNullable(this.nodeConfig);
+    }
+
+    /**
+     * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    @Import(name="nodePoolAutoConfig")
+    private @Nullable Output<NodePoolAutoConfigArgs> nodePoolAutoConfig;
+
+    /**
+     * @return Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    public Optional<Output<NodePoolAutoConfigArgs>> nodePoolAutoConfig() {
+        return Optional.ofNullable(this.nodePoolAutoConfig);
+    }
+
+    /**
      * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
      * 
      */
@@ -563,9 +666,25 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.privateClusterConfig);
     }
 
+    /**
+     * Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field. */
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field. */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -675,6 +794,29 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.workloadIdentityConfig);
     }
 
+    /**
+     * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+    @Import(name="zone")
+    private @Nullable Output<String> zone;
+
+    /**
+     * @return Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
+    }
+
     private ClusterArgs() {}
 
     private ClusterArgs(ClusterArgs $) {
@@ -691,7 +833,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.enableKubernetesAlpha = $.enableKubernetesAlpha;
         this.enableTpu = $.enableTpu;
+        this.identityServiceConfig = $.identityServiceConfig;
         this.initialClusterVersion = $.initialClusterVersion;
+        this.initialNodeCount = $.initialNodeCount;
+        this.instanceGroupUrls = $.instanceGroupUrls;
         this.ipAllocationPolicy = $.ipAllocationPolicy;
         this.legacyAbac = $.legacyAbac;
         this.location = $.location;
@@ -708,6 +853,8 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.network = $.network;
         this.networkConfig = $.networkConfig;
         this.networkPolicy = $.networkPolicy;
+        this.nodeConfig = $.nodeConfig;
+        this.nodePoolAutoConfig = $.nodePoolAutoConfig;
         this.nodePoolDefaults = $.nodePoolDefaults;
         this.nodePools = $.nodePools;
         this.notificationConfig = $.notificationConfig;
@@ -721,6 +868,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.subnetwork = $.subnetwork;
         this.verticalPodAutoscaling = $.verticalPodAutoscaling;
         this.workloadIdentityConfig = $.workloadIdentityConfig;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
@@ -899,7 +1047,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param confidentialNodes Configuration of Confidential Nodes
+         * @param confidentialNodes Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
          * 
          * @return builder
          * 
@@ -910,7 +1058,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param confidentialNodes Configuration of Confidential Nodes
+         * @param confidentialNodes Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
          * 
          * @return builder
          * 
@@ -1025,6 +1173,27 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param identityServiceConfig Configuration for Identity Service component.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityServiceConfig(@Nullable Output<IdentityServiceConfigArgs> identityServiceConfig) {
+            $.identityServiceConfig = identityServiceConfig;
+            return this;
+        }
+
+        /**
+         * @param identityServiceConfig Configuration for Identity Service component.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityServiceConfig(IdentityServiceConfigArgs identityServiceConfig) {
+            return identityServiceConfig(Output.of(identityServiceConfig));
+        }
+
+        /**
          * @param initialClusterVersion The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
          * 
          * @return builder
@@ -1043,6 +1212,78 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder initialClusterVersion(String initialClusterVersion) {
             return initialClusterVersion(Output.of(initialClusterVersion));
+        }
+
+        /**
+         * @param initialNodeCount The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+         * 
+         */
+        @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+        public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
+            $.initialNodeCount = initialNodeCount;
+            return this;
+        }
+
+        /**
+         * @param initialNodeCount The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+         * 
+         */
+        @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+        public Builder initialNodeCount(Integer initialNodeCount) {
+            return initialNodeCount(Output.of(initialNodeCount));
+        }
+
+        /**
+         * @param instanceGroupUrls Deprecated. Use node_pools.instance_group_urls.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use node_pools.instance_group_urls.
+         * 
+         */
+        @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+        public Builder instanceGroupUrls(@Nullable Output<List<String>> instanceGroupUrls) {
+            $.instanceGroupUrls = instanceGroupUrls;
+            return this;
+        }
+
+        /**
+         * @param instanceGroupUrls Deprecated. Use node_pools.instance_group_urls.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use node_pools.instance_group_urls.
+         * 
+         */
+        @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
+            return instanceGroupUrls(Output.of(instanceGroupUrls));
+        }
+
+        /**
+         * @param instanceGroupUrls Deprecated. Use node_pools.instance_group_urls.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use node_pools.instance_group_urls.
+         * 
+         */
+        @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
         }
 
         /**
@@ -1380,6 +1621,56 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param nodeConfig Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+         * 
+         */
+        @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+        public Builder nodeConfig(@Nullable Output<NodeConfigArgs> nodeConfig) {
+            $.nodeConfig = nodeConfig;
+            return this;
+        }
+
+        /**
+         * @param nodeConfig Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+         * 
+         */
+        @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+        public Builder nodeConfig(NodeConfigArgs nodeConfig) {
+            return nodeConfig(Output.of(nodeConfig));
+        }
+
+        /**
+         * @param nodePoolAutoConfig Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nodePoolAutoConfig(@Nullable Output<NodePoolAutoConfigArgs> nodePoolAutoConfig) {
+            $.nodePoolAutoConfig = nodePoolAutoConfig;
+            return this;
+        }
+
+        /**
+         * @param nodePoolAutoConfig Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nodePoolAutoConfig(NodePoolAutoConfigArgs nodePoolAutoConfig) {
+            return nodePoolAutoConfig(Output.of(nodePoolAutoConfig));
+        }
+
+        /**
          * @param nodePoolDefaults Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
          * 
          * @return builder
@@ -1494,11 +1785,31 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return privateClusterConfig(Output.of(privateClusterConfig));
         }
 
+        /**
+         * @param project Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field. */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Deprecated. The Google Developers Console [project ID or project number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and replaced by the parent field. */
         public Builder project(String project) {
             return project(Output.of(project));
         }
@@ -1648,6 +1959,35 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder workloadIdentityConfig(WorkloadIdentityConfigArgs workloadIdentityConfig) {
             return workloadIdentityConfig(Output.of(workloadIdentityConfig));
+        }
+
+        /**
+         * @param zone Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+        public Builder zone(@Nullable Output<String> zone) {
+            $.zone = zone;
+            return this;
+        }
+
+        /**
+         * @param zone Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public ClusterArgs build() {

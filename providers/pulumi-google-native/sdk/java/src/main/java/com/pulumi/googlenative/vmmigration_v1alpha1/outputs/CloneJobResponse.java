@@ -6,6 +6,7 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.TargetVMDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,6 +17,15 @@ public final class CloneJobResponse {
      * 
      */
     private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead. */
+    private final TargetVMDetailsResponse computeEngineVmDetails;
     /**
      * @return The time the clone job was created (as an API call, not when it was actually created in the target).
      * 
@@ -41,21 +51,34 @@ public final class CloneJobResponse {
      * 
      */
     private final String stateTime;
+    /**
+     * @return Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead. */
+    private final TargetVMDetailsResponse targetDetails;
 
     @CustomType.Constructor
     private CloneJobResponse(
         @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @CustomType.Parameter("computeEngineVmDetails") TargetVMDetailsResponse computeEngineVmDetails,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("error") StatusResponse error,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("state") String state,
-        @CustomType.Parameter("stateTime") String stateTime) {
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("targetDetails") TargetVMDetailsResponse targetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
+        this.computeEngineVmDetails = computeEngineVmDetails;
         this.createTime = createTime;
         this.error = error;
         this.name = name;
         this.state = state;
         this.stateTime = stateTime;
+        this.targetDetails = targetDetails;
     }
 
     /**
@@ -64,6 +87,17 @@ public final class CloneJobResponse {
      */
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
+    }
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead. */
+    public TargetVMDetailsResponse computeEngineVmDetails() {
+        return this.computeEngineVmDetails;
     }
     /**
      * @return The time the clone job was created (as an API call, not when it was actually created in the target).
@@ -100,6 +134,17 @@ public final class CloneJobResponse {
     public String stateTime() {
         return this.stateTime;
     }
+    /**
+     * @return Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead. */
+    public TargetVMDetailsResponse targetDetails() {
+        return this.targetDetails;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -111,11 +156,13 @@ public final class CloneJobResponse {
 
     public static final class Builder {
         private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+        private TargetVMDetailsResponse computeEngineVmDetails;
         private String createTime;
         private StatusResponse error;
         private String name;
         private String state;
         private String stateTime;
+        private TargetVMDetailsResponse targetDetails;
 
         public Builder() {
     	      // Empty
@@ -124,15 +171,21 @@ public final class CloneJobResponse {
         public Builder(CloneJobResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
+    	      this.computeEngineVmDetails = defaults.computeEngineVmDetails;
     	      this.createTime = defaults.createTime;
     	      this.error = defaults.error;
     	      this.name = defaults.name;
     	      this.state = defaults.state;
     	      this.stateTime = defaults.stateTime;
+    	      this.targetDetails = defaults.targetDetails;
         }
 
         public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
+            return this;
+        }
+        public Builder computeEngineVmDetails(TargetVMDetailsResponse computeEngineVmDetails) {
+            this.computeEngineVmDetails = Objects.requireNonNull(computeEngineVmDetails);
             return this;
         }
         public Builder createTime(String createTime) {
@@ -154,8 +207,12 @@ public final class CloneJobResponse {
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
+        }
+        public Builder targetDetails(TargetVMDetailsResponse targetDetails) {
+            this.targetDetails = Objects.requireNonNull(targetDetails);
+            return this;
         }        public CloneJobResponse build() {
-            return new CloneJobResponse(computeEngineTargetDetails, createTime, error, name, state, stateTime);
+            return new CloneJobResponse(computeEngineTargetDetails, computeEngineVmDetails, createTime, error, name, state, stateTime, targetDetails);
         }
     }
 }

@@ -33,14 +33,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+     * Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     @Import(name="includeControlDetails")
     private @Nullable Output<Boolean> includeControlDetails;
 
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeControlDetails() {
@@ -48,14 +48,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+     * Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     @Import(name="includeNullAndEmpty")
     private @Nullable Output<Boolean> includeNullAndEmpty;
 
     /**
-     * @return Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeNullAndEmpty() {
@@ -63,14 +63,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+     * Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     @Import(name="includePartitionValue")
     private @Nullable Output<Boolean> includePartitionValue;
 
     /**
-     * @return Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includePartitionValue() {
@@ -78,14 +78,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+     * Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     @Import(name="includeTableAlterOperations")
     private @Nullable Output<Boolean> includeTableAlterOperations;
 
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeTableAlterOperations() {
@@ -93,14 +93,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+     * Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     @Import(name="includeTransactionDetails")
     private @Nullable Output<Boolean> includeTransactionDetails;
 
     /**
-     * @return Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeTransactionDetails() {
@@ -108,14 +108,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     * Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     @Import(name="messageFormat")
     private @Nullable Output<String> messageFormat;
 
     /**
-     * @return The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     public Optional<Output<String>> messageFormat() {
@@ -123,14 +123,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+     * Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
      * 
      */
     @Import(name="messageMaxBytes")
     private @Nullable Output<Integer> messageMaxBytes;
 
     /**
-     * @return The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+     * @return Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
      * 
      */
     public Optional<Output<Integer>> messageMaxBytes() {
@@ -153,14 +153,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+     * Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     @Import(name="partitionIncludeSchemaTable")
     private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
@@ -168,14 +168,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     @Import(name="saslPassword")
     private @Nullable Output<String> saslPassword;
 
     /**
-     * @return The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     public Optional<Output<String>> saslPassword() {
@@ -183,14 +183,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     @Import(name="saslUsername")
     private @Nullable Output<String> saslUsername;
 
     /**
-     * @return The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     public Optional<Output<String>> saslUsername() {
@@ -213,14 +213,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+     * ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
      */
     @Import(name="sslCaCertificateArn")
     private @Nullable Output<String> sslCaCertificateArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+     * @return ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
      */
     public Optional<Output<String>> sslCaCertificateArn() {
@@ -228,14 +228,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+     * ARN of the client certificate used to securely connect to a Kafka target endpoint.
      * 
      */
     @Import(name="sslClientCertificateArn")
     private @Nullable Output<String> sslClientCertificateArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+     * @return ARN of the client certificate used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<Output<String>> sslClientCertificateArn() {
@@ -243,14 +243,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+     * ARN for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     @Import(name="sslClientKeyArn")
     private @Nullable Output<String> sslClientKeyArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+     * @return ARN for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<Output<String>> sslClientKeyArn() {
@@ -258,14 +258,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The password for the client private key used to securely connect to a Kafka target endpoint.
+     * Password for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     @Import(name="sslClientKeyPassword")
     private @Nullable Output<String> sslClientKeyPassword;
 
     /**
-     * @return The password for the client private key used to securely connect to a Kafka target endpoint.
+     * @return Password for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<Output<String>> sslClientKeyPassword() {
@@ -273,14 +273,14 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Kafka topic for migration. Defaults to `kafka-default-topic`.
+     * Kafka topic for migration. Default is `kafka-default-topic`.
      * 
      */
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
     /**
-     * @return Kafka topic for migration. Defaults to `kafka-default-topic`.
+     * @return Kafka topic for migration. Default is `kafka-default-topic`.
      * 
      */
     public Optional<Output<String>> topic() {
@@ -350,7 +350,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
          * 
          * @return builder
          * 
@@ -361,7 +361,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. Default is `false`.
          * 
          * @return builder
          * 
@@ -382,7 +382,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. Default is `false`.
          * 
          * @return builder
          * 
@@ -392,7 +392,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includePartitionValue Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includePartitionValue Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
          * 
          * @return builder
          * 
@@ -434,7 +434,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeTransactionDetails Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. Default is `false`.
          * 
          * @return builder
          * 
@@ -445,7 +445,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param includeTransactionDetails Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. Default is `false`.
          * 
          * @return builder
          * 
@@ -455,7 +455,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param messageFormat The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+         * @param messageFormat Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
          * 
          * @return builder
          * 
@@ -466,7 +466,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param messageFormat The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+         * @param messageFormat Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
          * 
          * @return builder
          * 
@@ -476,7 +476,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param messageMaxBytes The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+         * @param messageMaxBytes Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
          * 
          * @return builder
          * 
@@ -487,7 +487,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param messageMaxBytes The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+         * @param messageMaxBytes Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
          * 
          * @return builder
          * 
@@ -518,7 +518,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -529,7 +529,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -539,7 +539,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param saslPassword The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * @param saslPassword Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
          * 
          * @return builder
          * 
@@ -550,7 +550,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param saslPassword The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * @param saslPassword Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
          * 
          * @return builder
          * 
@@ -560,7 +560,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param saslUsername The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * @param saslUsername Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
          * 
          * @return builder
          * 
@@ -571,7 +571,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param saslUsername The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * @param saslUsername Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
          * 
          * @return builder
          * 
@@ -602,7 +602,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+         * @param sslCaCertificateArn ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -613,7 +613,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+         * @param sslCaCertificateArn ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -623,7 +623,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientCertificateArn The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+         * @param sslClientCertificateArn ARN of the client certificate used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -634,7 +634,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientCertificateArn The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+         * @param sslClientCertificateArn ARN of the client certificate used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -644,7 +644,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientKeyArn The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+         * @param sslClientKeyArn ARN for the client private key used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -655,7 +655,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientKeyArn The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+         * @param sslClientKeyArn ARN for the client private key used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -665,7 +665,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientKeyPassword The password for the client private key used to securely connect to a Kafka target endpoint.
+         * @param sslClientKeyPassword Password for the client private key used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -676,7 +676,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param sslClientKeyPassword The password for the client private key used to securely connect to a Kafka target endpoint.
+         * @param sslClientKeyPassword Password for the client private key used to securely connect to a Kafka target endpoint.
          * 
          * @return builder
          * 
@@ -686,7 +686,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param topic Kafka topic for migration. Defaults to `kafka-default-topic`.
+         * @param topic Kafka topic for migration. Default is `kafka-default-topic`.
          * 
          * @return builder
          * 
@@ -697,7 +697,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param topic Kafka topic for migration. Defaults to `kafka-default-topic`.
+         * @param topic Kafka topic for migration. Default is `kafka-default-topic`.
          * 
          * @return builder
          * 

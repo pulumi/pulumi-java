@@ -16,6 +16,54 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     public static final EnvironmentState Empty = new EnvironmentState();
 
     /**
+     * Optional. API Proxy type supported by the environment. The type can be set when creating
+     * the Environment and cannot be changed.
+     * Possible values are `API_PROXY_TYPE_UNSPECIFIED`, `PROGRAMMABLE`, and `CONFIGURABLE`.
+     * 
+     */
+    @Import(name="apiProxyType")
+    private @Nullable Output<String> apiProxyType;
+
+    /**
+     * @return Optional. API Proxy type supported by the environment. The type can be set when creating
+     * the Environment and cannot be changed.
+     * Possible values are `API_PROXY_TYPE_UNSPECIFIED`, `PROGRAMMABLE`, and `CONFIGURABLE`.
+     * 
+     */
+    public Optional<Output<String>> apiProxyType() {
+        return Optional.ofNullable(this.apiProxyType);
+    }
+
+    /**
+     * Optional. Deployment type supported by the environment. The deployment type can be
+     * set when creating the environment and cannot be changed. When you enable archive
+     * deployment, you will be prevented from performing a subset of actions within the
+     * environment, including:
+     * Managing the deployment of API proxy or shared flow revisions;
+     * Creating, updating, or deleting resource files;
+     * Creating, updating, or deleting target servers.
+     * Possible values are `DEPLOYMENT_TYPE_UNSPECIFIED`, `PROXY`, and `ARCHIVE`.
+     * 
+     */
+    @Import(name="deploymentType")
+    private @Nullable Output<String> deploymentType;
+
+    /**
+     * @return Optional. Deployment type supported by the environment. The deployment type can be
+     * set when creating the environment and cannot be changed. When you enable archive
+     * deployment, you will be prevented from performing a subset of actions within the
+     * environment, including:
+     * Managing the deployment of API proxy or shared flow revisions;
+     * Creating, updating, or deleting resource files;
+     * Creating, updating, or deleting target servers.
+     * Possible values are `DEPLOYMENT_TYPE_UNSPECIFIED`, `PROXY`, and `ARCHIVE`.
+     * 
+     */
+    public Optional<Output<String>> deploymentType() {
+        return Optional.ofNullable(this.deploymentType);
+    }
+
+    /**
      * Description of the environment.
      * 
      */
@@ -80,6 +128,8 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     private EnvironmentState() {}
 
     private EnvironmentState(EnvironmentState $) {
+        this.apiProxyType = $.apiProxyType;
+        this.deploymentType = $.deploymentType;
         this.description = $.description;
         this.displayName = $.displayName;
         this.name = $.name;
@@ -102,6 +152,66 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
 
         public Builder(EnvironmentState defaults) {
             $ = new EnvironmentState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param apiProxyType Optional. API Proxy type supported by the environment. The type can be set when creating
+         * the Environment and cannot be changed.
+         * Possible values are `API_PROXY_TYPE_UNSPECIFIED`, `PROGRAMMABLE`, and `CONFIGURABLE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiProxyType(@Nullable Output<String> apiProxyType) {
+            $.apiProxyType = apiProxyType;
+            return this;
+        }
+
+        /**
+         * @param apiProxyType Optional. API Proxy type supported by the environment. The type can be set when creating
+         * the Environment and cannot be changed.
+         * Possible values are `API_PROXY_TYPE_UNSPECIFIED`, `PROGRAMMABLE`, and `CONFIGURABLE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiProxyType(String apiProxyType) {
+            return apiProxyType(Output.of(apiProxyType));
+        }
+
+        /**
+         * @param deploymentType Optional. Deployment type supported by the environment. The deployment type can be
+         * set when creating the environment and cannot be changed. When you enable archive
+         * deployment, you will be prevented from performing a subset of actions within the
+         * environment, including:
+         * Managing the deployment of API proxy or shared flow revisions;
+         * Creating, updating, or deleting resource files;
+         * Creating, updating, or deleting target servers.
+         * Possible values are `DEPLOYMENT_TYPE_UNSPECIFIED`, `PROXY`, and `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentType(@Nullable Output<String> deploymentType) {
+            $.deploymentType = deploymentType;
+            return this;
+        }
+
+        /**
+         * @param deploymentType Optional. Deployment type supported by the environment. The deployment type can be
+         * set when creating the environment and cannot be changed. When you enable archive
+         * deployment, you will be prevented from performing a subset of actions within the
+         * environment, including:
+         * Managing the deployment of API proxy or shared flow revisions;
+         * Creating, updating, or deleting resource files;
+         * Creating, updating, or deleting target servers.
+         * Possible values are `DEPLOYMENT_TYPE_UNSPECIFIED`, `PROXY`, and `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentType(String deploymentType) {
+            return deploymentType(Output.of(deploymentType));
         }
 
         /**

@@ -7,13 +7,25 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
+import com.pulumi.googlenative.baremetalsolution_v2.inputs.GetProvisioningConfigArgs;
 import com.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotArgs;
 import com.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotSchedulePolicyArgs;
+import com.pulumi.googlenative.baremetalsolution_v2.outputs.GetProvisioningConfigResult;
 import com.pulumi.googlenative.baremetalsolution_v2.outputs.GetSnapshotResult;
 import com.pulumi.googlenative.baremetalsolution_v2.outputs.GetSnapshotSchedulePolicyResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class Baremetalsolution_v2Functions {
+    /**
+     * Get ProvisioningConfig by name.
+     * 
+     */
+    public static CompletableFuture<GetProvisioningConfigResult> getProvisioningConfig(GetProvisioningConfigArgs args) {
+        return getProvisioningConfig(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetProvisioningConfigResult> getProvisioningConfig(GetProvisioningConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getProvisioningConfig", TypeShape.of(GetProvisioningConfigResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Get details of a single storage volume snapshot.
      * 

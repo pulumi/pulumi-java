@@ -218,6 +218,15 @@ public final class GetVersionResult {
      * 
      */
     private final VpcAccessConnectorResponse vpcAccessConnector;
+    /**
+     * @return The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    private final List<String> zones;
 
     @CustomType.Constructor
     private GetVersionResult(
@@ -258,7 +267,8 @@ public final class GetVersionResult {
         @CustomType.Parameter("threadsafe") Boolean threadsafe,
         @CustomType.Parameter("versionUrl") String versionUrl,
         @CustomType.Parameter("vm") Boolean vm,
-        @CustomType.Parameter("vpcAccessConnector") VpcAccessConnectorResponse vpcAccessConnector) {
+        @CustomType.Parameter("vpcAccessConnector") VpcAccessConnectorResponse vpcAccessConnector,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.apiConfig = apiConfig;
         this.appEngineApis = appEngineApis;
         this.automaticScaling = automaticScaling;
@@ -297,6 +307,7 @@ public final class GetVersionResult {
         this.versionUrl = versionUrl;
         this.vm = vm;
         this.vpcAccessConnector = vpcAccessConnector;
+        this.zones = zones;
     }
 
     /**
@@ -565,6 +576,17 @@ public final class GetVersionResult {
     public VpcAccessConnectorResponse vpcAccessConnector() {
         return this.vpcAccessConnector;
     }
+    /**
+     * @return The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    public List<String> zones() {
+        return this.zones;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -613,6 +635,7 @@ public final class GetVersionResult {
         private String versionUrl;
         private Boolean vm;
         private VpcAccessConnectorResponse vpcAccessConnector;
+        private List<String> zones;
 
         public Builder() {
     	      // Empty
@@ -658,6 +681,7 @@ public final class GetVersionResult {
     	      this.versionUrl = defaults.versionUrl;
     	      this.vm = defaults.vm;
     	      this.vpcAccessConnector = defaults.vpcAccessConnector;
+    	      this.zones = defaults.zones;
         }
 
         public Builder apiConfig(ApiConfigHandlerResponse apiConfig) {
@@ -823,8 +847,15 @@ public final class GetVersionResult {
         public Builder vpcAccessConnector(VpcAccessConnectorResponse vpcAccessConnector) {
             this.vpcAccessConnector = Objects.requireNonNull(vpcAccessConnector);
             return this;
+        }
+        public Builder zones(List<String> zones) {
+            this.zones = Objects.requireNonNull(zones);
+            return this;
+        }
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
         }        public GetVersionResult build() {
-            return new GetVersionResult(apiConfig, appEngineApis, automaticScaling, basicScaling, betaSettings, buildEnvVariables, createTime, createdBy, defaultExpiration, deployment, diskUsageBytes, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, name, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, servingStatus, threadsafe, versionUrl, vm, vpcAccessConnector);
+            return new GetVersionResult(apiConfig, appEngineApis, automaticScaling, basicScaling, betaSettings, buildEnvVariables, createTime, createdBy, defaultExpiration, deployment, diskUsageBytes, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, name, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, servingStatus, threadsafe, versionUrl, vm, vpcAccessConnector, zones);
         }
     }
 }

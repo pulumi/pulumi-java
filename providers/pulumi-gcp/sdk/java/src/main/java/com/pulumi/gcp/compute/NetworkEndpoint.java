@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.NetworkEndpointArgs;
 import com.pulumi.gcp.compute.inputs.NetworkEndpointState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,7 +60,7 @@ public class NetworkEndpoint extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="instance", type=String.class, parameters={})
-    private Output<String> instance;
+    private Output</* @Nullable */ String> instance;
 
     /**
      * @return The name for a specific VM instance that the IP address belongs to.
@@ -67,8 +68,8 @@ public class NetworkEndpoint extends com.pulumi.resources.CustomResource {
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    public Output<String> instance() {
-        return this.instance;
+    public Output<Optional<String>> instance() {
+        return Codegen.optional(this.instance);
     }
     /**
      * IPv4 address of network endpoint. The IP address must belong

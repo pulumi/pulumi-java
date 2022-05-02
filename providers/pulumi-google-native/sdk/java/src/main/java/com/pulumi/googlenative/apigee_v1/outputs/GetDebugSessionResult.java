@@ -16,6 +16,11 @@ public final class GetDebugSessionResult {
      */
     private final Integer count;
     /**
+     * @return The first transaction creation timestamp, recorded by UAP.
+     * 
+     */
+    private final String createTime;
+    /**
      * @return Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
      */
@@ -44,12 +49,14 @@ public final class GetDebugSessionResult {
     @CustomType.Constructor
     private GetDebugSessionResult(
         @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("filter") String filter,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("timeout") String timeout,
         @CustomType.Parameter("tracesize") Integer tracesize,
         @CustomType.Parameter("validity") Integer validity) {
         this.count = count;
+        this.createTime = createTime;
         this.filter = filter;
         this.name = name;
         this.timeout = timeout;
@@ -63,6 +70,13 @@ public final class GetDebugSessionResult {
      */
     public Integer count() {
         return this.count;
+    }
+    /**
+     * @return The first transaction creation timestamp, recorded by UAP.
+     * 
+     */
+    public String createTime() {
+        return this.createTime;
     }
     /**
      * @return Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
@@ -110,6 +124,7 @@ public final class GetDebugSessionResult {
 
     public static final class Builder {
         private Integer count;
+        private String createTime;
         private String filter;
         private String name;
         private String timeout;
@@ -123,6 +138,7 @@ public final class GetDebugSessionResult {
         public Builder(GetDebugSessionResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.count = defaults.count;
+    	      this.createTime = defaults.createTime;
     	      this.filter = defaults.filter;
     	      this.name = defaults.name;
     	      this.timeout = defaults.timeout;
@@ -132,6 +148,10 @@ public final class GetDebugSessionResult {
 
         public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
+            return this;
+        }
+        public Builder createTime(String createTime) {
+            this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
         public Builder filter(String filter) {
@@ -154,7 +174,7 @@ public final class GetDebugSessionResult {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }        public GetDebugSessionResult build() {
-            return new GetDebugSessionResult(count, filter, name, timeout, tracesize, validity);
+            return new GetDebugSessionResult(count, createTime, filter, name, timeout, tracesize, validity);
         }
     }
 }

@@ -32,21 +32,6 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    @Import(name="endpointFilter")
-    private @Nullable Output<String> endpointFilter;
-
-    /**
-     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    public Optional<Output<String>> endpointFilter() {
-        return Optional.ofNullable(this.endpointFilter);
-    }
-
-    /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
@@ -105,9 +90,17 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
         return this.service;
     }
 
+    /**
+     * Required. Short name of the ServiceBinding resource to be created.
+     * 
+     */
     @Import(name="serviceBindingId", required=true)
     private Output<String> serviceBindingId;
 
+    /**
+     * @return Required. Short name of the ServiceBinding resource to be created.
+     * 
+     */
     public Output<String> serviceBindingId() {
         return this.serviceBindingId;
     }
@@ -116,7 +109,6 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
 
     private ServiceBindingArgs(ServiceBindingArgs $) {
         this.description = $.description;
-        this.endpointFilter = $.endpointFilter;
         this.labels = $.labels;
         this.location = $.location;
         this.name = $.name;
@@ -162,27 +154,6 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder description(String description) {
             return description(Output.of(description));
-        }
-
-        /**
-         * @param endpointFilter Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-         * 
-         * @return builder
-         * 
-         */
-        public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
-            $.endpointFilter = endpointFilter;
-            return this;
-        }
-
-        /**
-         * @param endpointFilter Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-         * 
-         * @return builder
-         * 
-         */
-        public Builder endpointFilter(String endpointFilter) {
-            return endpointFilter(Output.of(endpointFilter));
         }
 
         /**
@@ -266,11 +237,23 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
             return service(Output.of(service));
         }
 
+        /**
+         * @param serviceBindingId Required. Short name of the ServiceBinding resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBindingId(Output<String> serviceBindingId) {
             $.serviceBindingId = serviceBindingId;
             return this;
         }
 
+        /**
+         * @param serviceBindingId Required. Short name of the ServiceBinding resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBindingId(String serviceBindingId) {
             return serviceBindingId(Output.of(serviceBindingId));
         }

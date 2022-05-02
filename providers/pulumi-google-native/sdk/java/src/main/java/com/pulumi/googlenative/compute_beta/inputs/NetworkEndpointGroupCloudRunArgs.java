@@ -50,14 +50,14 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
     }
 
     /**
-     * A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+     * A template to parse &lt;service&gt; and &lt;tag&gt; fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;&lt;tag&gt;.domain.com/&lt;service&gt;&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
      * 
      */
     @Import(name="urlMask")
     private @Nullable Output<String> urlMask;
 
     /**
-     * @return A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+     * @return A template to parse &lt;service&gt; and &lt;tag&gt; fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;&lt;tag&gt;.domain.com/&lt;service&gt;&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
      * 
      */
     public Optional<Output<String>> urlMask() {
@@ -133,7 +133,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
         }
 
         /**
-         * @param urlMask A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+         * @param urlMask A template to parse &lt;service&gt; and &lt;tag&gt; fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;&lt;tag&gt;.domain.com/&lt;service&gt;&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
          * 
          * @return builder
          * 
@@ -144,7 +144,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
         }
 
         /**
-         * @param urlMask A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+         * @param urlMask A template to parse &lt;service&gt; and &lt;tag&gt; fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;&lt;tag&gt;.domain.com/&lt;service&gt;&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
          * 
          * @return builder
          * 

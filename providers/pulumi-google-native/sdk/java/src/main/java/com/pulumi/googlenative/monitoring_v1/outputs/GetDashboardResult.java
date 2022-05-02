@@ -5,10 +5,12 @@ package com.pulumi.googlenative.monitoring_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
+import com.pulumi.googlenative.monitoring_v1.outputs.DashboardFilterResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.GridLayoutResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.MosaicLayoutResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.RowLayoutResponse;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -19,6 +21,11 @@ public final class GetDashboardResult {
      * 
      */
     private final ColumnLayoutResponse columnLayout;
+    /**
+     * @return Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    private final List<DashboardFilterResponse> dashboardFilters;
     /**
      * @return The mutable, human-readable name.
      * 
@@ -58,6 +65,7 @@ public final class GetDashboardResult {
     @CustomType.Constructor
     private GetDashboardResult(
         @CustomType.Parameter("columnLayout") ColumnLayoutResponse columnLayout,
+        @CustomType.Parameter("dashboardFilters") List<DashboardFilterResponse> dashboardFilters,
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("etag") String etag,
         @CustomType.Parameter("gridLayout") GridLayoutResponse gridLayout,
@@ -66,6 +74,7 @@ public final class GetDashboardResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("rowLayout") RowLayoutResponse rowLayout) {
         this.columnLayout = columnLayout;
+        this.dashboardFilters = dashboardFilters;
         this.displayName = displayName;
         this.etag = etag;
         this.gridLayout = gridLayout;
@@ -81,6 +90,13 @@ public final class GetDashboardResult {
      */
     public ColumnLayoutResponse columnLayout() {
         return this.columnLayout;
+    }
+    /**
+     * @return Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    public List<DashboardFilterResponse> dashboardFilters() {
+        return this.dashboardFilters;
     }
     /**
      * @return The mutable, human-readable name.
@@ -142,6 +158,7 @@ public final class GetDashboardResult {
 
     public static final class Builder {
         private ColumnLayoutResponse columnLayout;
+        private List<DashboardFilterResponse> dashboardFilters;
         private String displayName;
         private String etag;
         private GridLayoutResponse gridLayout;
@@ -157,6 +174,7 @@ public final class GetDashboardResult {
         public Builder(GetDashboardResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.columnLayout = defaults.columnLayout;
+    	      this.dashboardFilters = defaults.dashboardFilters;
     	      this.displayName = defaults.displayName;
     	      this.etag = defaults.etag;
     	      this.gridLayout = defaults.gridLayout;
@@ -169,6 +187,13 @@ public final class GetDashboardResult {
         public Builder columnLayout(ColumnLayoutResponse columnLayout) {
             this.columnLayout = Objects.requireNonNull(columnLayout);
             return this;
+        }
+        public Builder dashboardFilters(List<DashboardFilterResponse> dashboardFilters) {
+            this.dashboardFilters = Objects.requireNonNull(dashboardFilters);
+            return this;
+        }
+        public Builder dashboardFilters(DashboardFilterResponse... dashboardFilters) {
+            return dashboardFilters(List.of(dashboardFilters));
         }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
@@ -198,7 +223,7 @@ public final class GetDashboardResult {
             this.rowLayout = Objects.requireNonNull(rowLayout);
             return this;
         }        public GetDashboardResult build() {
-            return new GetDashboardResult(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, rowLayout);
+            return new GetDashboardResult(columnLayout, dashboardFilters, displayName, etag, gridLayout, labels, mosaicLayout, name, rowLayout);
         }
     }
 }

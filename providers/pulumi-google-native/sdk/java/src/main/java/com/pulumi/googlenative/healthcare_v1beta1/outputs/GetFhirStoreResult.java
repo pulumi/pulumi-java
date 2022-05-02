@@ -52,7 +52,7 @@ public final class GetFhirStoreResult {
      */
     private final NotificationConfigResponse notificationConfig;
     /**
-     * @return Configuration for how FHIR resource can be searched.
+     * @return Configuration for how FHIR resources can be searched.
      * 
      */
     private final SearchConfigResponse searchConfig;
@@ -148,7 +148,7 @@ public final class GetFhirStoreResult {
         return this.notificationConfig;
     }
     /**
-     * @return Configuration for how FHIR resource can be searched.
+     * @return Configuration for how FHIR resources can be searched.
      * 
      */
     public SearchConfigResponse searchConfig() {

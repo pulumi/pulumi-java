@@ -308,14 +308,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.readEndpointPort;
     }
     /**
-     * Optional. Read replica mode. Can only be specified when trying to create the instance.
+     * Optional. Read replicas mode for the instance. Defaults to READ_REPLICAS_DISABLED.
      * 
      */
     @Export(name="readReplicasMode", type=String.class, parameters={})
     private Output<String> readReplicasMode;
 
     /**
-     * @return Optional. Read replica mode. Can only be specified when trying to create the instance.
+     * @return Optional. Read replicas mode for the instance. Defaults to READ_REPLICAS_DISABLED.
      * 
      */
     public Output<String> readReplicasMode() {
@@ -378,14 +378,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.reservedIpRange;
     }
     /**
-     * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
+     * Optional. Additional IP range for node placement. Required when enabling read replicas on an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated with the private service access connection, or &#34;auto&#34;.
      * 
      */
     @Export(name="secondaryIpRange", type=String.class, parameters={})
     private Output<String> secondaryIpRange;
 
     /**
-     * @return Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
+     * @return Optional. Additional IP range for node placement. Required when enabling read replicas on an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated with the private service access connection, or &#34;auto&#34;.
      * 
      */
     public Output<String> secondaryIpRange() {

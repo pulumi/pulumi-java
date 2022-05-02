@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.outputs;
 
 import com.pulumi.awsnative.sagemaker.outputs.UserProfileJupyterServerAppSettings;
 import com.pulumi.awsnative.sagemaker.outputs.UserProfileKernelGatewayAppSettings;
+import com.pulumi.awsnative.sagemaker.outputs.UserProfileRStudioServerProAppSettings;
 import com.pulumi.awsnative.sagemaker.outputs.UserProfileSharingSettings;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -30,6 +31,7 @@ public final class UserProfileUserSettings {
      * 
      */
     private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
+    private final @Nullable UserProfileRStudioServerProAppSettings rStudioServerProAppSettings;
     /**
      * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
@@ -46,11 +48,13 @@ public final class UserProfileUserSettings {
         @CustomType.Parameter("executionRole") @Nullable String executionRole,
         @CustomType.Parameter("jupyterServerAppSettings") @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
         @CustomType.Parameter("kernelGatewayAppSettings") @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
+        @CustomType.Parameter("rStudioServerProAppSettings") @Nullable UserProfileRStudioServerProAppSettings rStudioServerProAppSettings,
         @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
         @CustomType.Parameter("sharingSettings") @Nullable UserProfileSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
+        this.rStudioServerProAppSettings = rStudioServerProAppSettings;
         this.securityGroups = securityGroups;
         this.sharingSettings = sharingSettings;
     }
@@ -75,6 +79,9 @@ public final class UserProfileUserSettings {
      */
     public Optional<UserProfileKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
+    }
+    public Optional<UserProfileRStudioServerProAppSettings> rStudioServerProAppSettings() {
+        return Optional.ofNullable(this.rStudioServerProAppSettings);
     }
     /**
      * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
@@ -103,6 +110,7 @@ public final class UserProfileUserSettings {
         private @Nullable String executionRole;
         private @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
         private @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
+        private @Nullable UserProfileRStudioServerProAppSettings rStudioServerProAppSettings;
         private @Nullable List<String> securityGroups;
         private @Nullable UserProfileSharingSettings sharingSettings;
 
@@ -115,6 +123,7 @@ public final class UserProfileUserSettings {
     	      this.executionRole = defaults.executionRole;
     	      this.jupyterServerAppSettings = defaults.jupyterServerAppSettings;
     	      this.kernelGatewayAppSettings = defaults.kernelGatewayAppSettings;
+    	      this.rStudioServerProAppSettings = defaults.rStudioServerProAppSettings;
     	      this.securityGroups = defaults.securityGroups;
     	      this.sharingSettings = defaults.sharingSettings;
         }
@@ -131,6 +140,10 @@ public final class UserProfileUserSettings {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
+        public Builder rStudioServerProAppSettings(@Nullable UserProfileRStudioServerProAppSettings rStudioServerProAppSettings) {
+            this.rStudioServerProAppSettings = rStudioServerProAppSettings;
+            return this;
+        }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
@@ -142,7 +155,7 @@ public final class UserProfileUserSettings {
             this.sharingSettings = sharingSettings;
             return this;
         }        public UserProfileUserSettings build() {
-            return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
+            return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, rStudioServerProAppSettings, securityGroups, sharingSettings);
         }
     }
 }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetImageVersionsImageVersion {
     /**
-     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b.c&#34;
      * 
      */
     private final String imageVersionId;
@@ -30,7 +30,7 @@ public final class GetImageVersionsImageVersion {
     }
 
     /**
-     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b.c&#34;
      * 
      */
     public String imageVersionId() {

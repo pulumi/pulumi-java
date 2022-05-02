@@ -3,10 +3,14 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
+import com.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class ImageRecipeComponentArgs extends com.pulumi.resources.ResourceArgs {
@@ -28,10 +32,26 @@ public final class ImageRecipeComponentArgs extends com.pulumi.resources.Resourc
         return this.componentArn;
     }
 
+    /**
+     * Configuration block(s) for parameters to configure the component. Detailed below.
+     * 
+     */
+    @Import(name="parameters")
+    private @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
+
+    /**
+     * @return Configuration block(s) for parameters to configure the component. Detailed below.
+     * 
+     */
+    public Optional<Output<List<ImageRecipeComponentParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
+    }
+
     private ImageRecipeComponentArgs() {}
 
     private ImageRecipeComponentArgs(ImageRecipeComponentArgs $) {
         this.componentArn = $.componentArn;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
@@ -71,6 +91,37 @@ public final class ImageRecipeComponentArgs extends com.pulumi.resources.Resourc
          */
         public Builder componentArn(String componentArn) {
             return componentArn(Output.of(componentArn));
+        }
+
+        /**
+         * @param parameters Configuration block(s) for parameters to configure the component. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
+            $.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * @param parameters Configuration block(s) for parameters to configure the component. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(List<ImageRecipeComponentParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        /**
+         * @param parameters Configuration block(s) for parameters to configure the component. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(ImageRecipeComponentParameterArgs... parameters) {
+            return parameters(List.of(parameters));
         }
 
         public ImageRecipeComponentArgs build() {

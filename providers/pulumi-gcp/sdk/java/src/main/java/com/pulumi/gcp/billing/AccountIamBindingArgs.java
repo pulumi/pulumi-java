@@ -17,9 +17,17 @@ public final class AccountIamBindingArgs extends com.pulumi.resources.ResourceAr
 
     public static final AccountIamBindingArgs Empty = new AccountIamBindingArgs();
 
+    /**
+     * The billing account id.
+     * 
+     */
     @Import(name="billingAccountId", required=true)
     private Output<String> billingAccountId;
 
+    /**
+     * @return The billing account id.
+     * 
+     */
     public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
@@ -38,9 +46,21 @@ public final class AccountIamBindingArgs extends com.pulumi.resources.ResourceAr
         return this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -72,11 +92,23 @@ public final class AccountIamBindingArgs extends com.pulumi.resources.ResourceAr
             $ = new AccountIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             return billingAccountId(Output.of(billingAccountId));
         }
@@ -103,11 +135,27 @@ public final class AccountIamBindingArgs extends com.pulumi.resources.ResourceAr
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.billing.AccountIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

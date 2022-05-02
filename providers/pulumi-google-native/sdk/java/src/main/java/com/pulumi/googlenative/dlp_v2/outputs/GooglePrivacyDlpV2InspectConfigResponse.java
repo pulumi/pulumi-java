@@ -16,6 +16,15 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2InspectConfigResponse {
     /**
+     * @return Deprecated and unused.
+     * 
+     * @deprecated
+     * Deprecated and unused.
+     * 
+     */
+    @Deprecated /* Deprecated and unused. */
+    private final List<String> contentOptions;
+    /**
      * @return CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
      * 
      */
@@ -53,6 +62,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
 
     @CustomType.Constructor
     private GooglePrivacyDlpV2InspectConfigResponse(
+        @CustomType.Parameter("contentOptions") List<String> contentOptions,
         @CustomType.Parameter("customInfoTypes") List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
         @CustomType.Parameter("excludeInfoTypes") Boolean excludeInfoTypes,
         @CustomType.Parameter("includeQuote") Boolean includeQuote,
@@ -60,6 +70,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
         @CustomType.Parameter("limits") GooglePrivacyDlpV2FindingLimitsResponse limits,
         @CustomType.Parameter("minLikelihood") String minLikelihood,
         @CustomType.Parameter("ruleSet") List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
+        this.contentOptions = contentOptions;
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;
         this.includeQuote = includeQuote;
@@ -69,6 +80,17 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
         this.ruleSet = ruleSet;
     }
 
+    /**
+     * @return Deprecated and unused.
+     * 
+     * @deprecated
+     * Deprecated and unused.
+     * 
+     */
+    @Deprecated /* Deprecated and unused. */
+    public List<String> contentOptions() {
+        return this.contentOptions;
+    }
     /**
      * @return CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
      * 
@@ -128,6 +150,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
     }
 
     public static final class Builder {
+        private List<String> contentOptions;
         private List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
         private Boolean excludeInfoTypes;
         private Boolean includeQuote;
@@ -142,6 +165,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
 
         public Builder(GooglePrivacyDlpV2InspectConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.contentOptions = defaults.contentOptions;
     	      this.customInfoTypes = defaults.customInfoTypes;
     	      this.excludeInfoTypes = defaults.excludeInfoTypes;
     	      this.includeQuote = defaults.includeQuote;
@@ -151,6 +175,13 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
     	      this.ruleSet = defaults.ruleSet;
         }
 
+        public Builder contentOptions(List<String> contentOptions) {
+            this.contentOptions = Objects.requireNonNull(contentOptions);
+            return this;
+        }
+        public Builder contentOptions(String... contentOptions) {
+            return contentOptions(List.of(contentOptions));
+        }
         public Builder customInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes) {
             this.customInfoTypes = Objects.requireNonNull(customInfoTypes);
             return this;
@@ -188,7 +219,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
         public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetResponse... ruleSet) {
             return ruleSet(List.of(ruleSet));
         }        public GooglePrivacyDlpV2InspectConfigResponse build() {
-            return new GooglePrivacyDlpV2InspectConfigResponse(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
+            return new GooglePrivacyDlpV2InspectConfigResponse(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }
     }
 }

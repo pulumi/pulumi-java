@@ -4,6 +4,7 @@
 package com.pulumi.aws.iot.outputs;
 
 import com.pulumi.aws.iot.outputs.TopicRuleErrorActionCloudwatchAlarm;
+import com.pulumi.aws.iot.outputs.TopicRuleErrorActionCloudwatchLogs;
 import com.pulumi.aws.iot.outputs.TopicRuleErrorActionCloudwatchMetric;
 import com.pulumi.aws.iot.outputs.TopicRuleErrorActionDynamodb;
 import com.pulumi.aws.iot.outputs.TopicRuleErrorActionDynamodbv2;
@@ -26,6 +27,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopicRuleErrorAction {
     private final @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm;
+    private final @Nullable TopicRuleErrorActionCloudwatchLogs cloudwatchLogs;
     private final @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric;
     private final @Nullable TopicRuleErrorActionDynamodb dynamodb;
     private final @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2;
@@ -44,6 +46,7 @@ public final class TopicRuleErrorAction {
     @CustomType.Constructor
     private TopicRuleErrorAction(
         @CustomType.Parameter("cloudwatchAlarm") @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm,
+        @CustomType.Parameter("cloudwatchLogs") @Nullable TopicRuleErrorActionCloudwatchLogs cloudwatchLogs,
         @CustomType.Parameter("cloudwatchMetric") @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric,
         @CustomType.Parameter("dynamodb") @Nullable TopicRuleErrorActionDynamodb dynamodb,
         @CustomType.Parameter("dynamodbv2") @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2,
@@ -59,6 +62,7 @@ public final class TopicRuleErrorAction {
         @CustomType.Parameter("sqs") @Nullable TopicRuleErrorActionSqs sqs,
         @CustomType.Parameter("stepFunctions") @Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
         this.cloudwatchAlarm = cloudwatchAlarm;
+        this.cloudwatchLogs = cloudwatchLogs;
         this.cloudwatchMetric = cloudwatchMetric;
         this.dynamodb = dynamodb;
         this.dynamodbv2 = dynamodbv2;
@@ -77,6 +81,9 @@ public final class TopicRuleErrorAction {
 
     public Optional<TopicRuleErrorActionCloudwatchAlarm> cloudwatchAlarm() {
         return Optional.ofNullable(this.cloudwatchAlarm);
+    }
+    public Optional<TopicRuleErrorActionCloudwatchLogs> cloudwatchLogs() {
+        return Optional.ofNullable(this.cloudwatchLogs);
     }
     public Optional<TopicRuleErrorActionCloudwatchMetric> cloudwatchMetric() {
         return Optional.ofNullable(this.cloudwatchMetric);
@@ -131,6 +138,7 @@ public final class TopicRuleErrorAction {
 
     public static final class Builder {
         private @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm;
+        private @Nullable TopicRuleErrorActionCloudwatchLogs cloudwatchLogs;
         private @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric;
         private @Nullable TopicRuleErrorActionDynamodb dynamodb;
         private @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2;
@@ -153,6 +161,7 @@ public final class TopicRuleErrorAction {
         public Builder(TopicRuleErrorAction defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cloudwatchAlarm = defaults.cloudwatchAlarm;
+    	      this.cloudwatchLogs = defaults.cloudwatchLogs;
     	      this.cloudwatchMetric = defaults.cloudwatchMetric;
     	      this.dynamodb = defaults.dynamodb;
     	      this.dynamodbv2 = defaults.dynamodbv2;
@@ -171,6 +180,10 @@ public final class TopicRuleErrorAction {
 
         public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm) {
             this.cloudwatchAlarm = cloudwatchAlarm;
+            return this;
+        }
+        public Builder cloudwatchLogs(@Nullable TopicRuleErrorActionCloudwatchLogs cloudwatchLogs) {
+            this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
         public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
@@ -229,7 +242,7 @@ public final class TopicRuleErrorAction {
             this.stepFunctions = stepFunctions;
             return this;
         }        public TopicRuleErrorAction build() {
-            return new TopicRuleErrorAction(cloudwatchAlarm, cloudwatchMetric, dynamodb, dynamodbv2, elasticsearch, firehose, iotAnalytics, iotEvents, kinesis, lambda, republish, s3, sns, sqs, stepFunctions);
+            return new TopicRuleErrorAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamodb, dynamodbv2, elasticsearch, firehose, iotAnalytics, iotEvents, kinesis, lambda, republish, s3, sns, sqs, stepFunctions);
         }
     }
 }

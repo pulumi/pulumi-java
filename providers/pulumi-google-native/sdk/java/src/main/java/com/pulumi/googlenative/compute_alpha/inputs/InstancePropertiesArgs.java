@@ -141,14 +141,14 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * KeyRevocationActionType of the instance.
+     * KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     @Import(name="keyRevocationActionType")
     private @Nullable Output<InstancePropertiesKeyRevocationActionType> keyRevocationActionType;
 
     /**
-     * @return KeyRevocationActionType of the instance.
+     * @return KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     public Optional<Output<InstancePropertiesKeyRevocationActionType>> keyRevocationActionType() {
@@ -626,7 +626,7 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param keyRevocationActionType KeyRevocationActionType of the instance.
+         * @param keyRevocationActionType KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
          * 
          * @return builder
          * 
@@ -637,7 +637,7 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param keyRevocationActionType KeyRevocationActionType of the instance.
+         * @param keyRevocationActionType KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
          * 
          * @return builder
          * 

@@ -32,14 +32,14 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+     * Whether SES should include original email headers in SNS notifications of this type. `false` by default.
      * 
      */
     @Import(name="includeOriginalHeaders")
     private @Nullable Output<Boolean> includeOriginalHeaders;
 
     /**
-     * @return Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+     * @return Whether SES should include original email headers in SNS notifications of this type. `false` by default.
      * 
      */
     public Optional<Output<Boolean>> includeOriginalHeaders() {
@@ -47,14 +47,14 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+     * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
      * 
      */
     @Import(name="notificationType", required=true)
     private Output<String> notificationType;
 
     /**
-     * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+     * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
      * 
      */
     public Output<String> notificationType() {
@@ -62,14 +62,14 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
      * 
      */
     @Import(name="topicArn")
     private @Nullable Output<String> topicArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
      * 
      */
     public Optional<Output<String>> topicArn() {
@@ -125,7 +125,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. `false` by default.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. `false` by default.
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
          * 
          * @return builder
          * 

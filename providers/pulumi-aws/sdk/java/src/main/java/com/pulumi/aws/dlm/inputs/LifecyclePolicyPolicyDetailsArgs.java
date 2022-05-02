@@ -3,6 +3,9 @@
 
 package com.pulumi.aws.dlm.inputs;
 
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsActionArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsEventSourceArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsParametersArgs;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -10,6 +13,8 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources.ResourceArgs {
@@ -17,53 +22,133 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
     public static final LifecyclePolicyPolicyDetailsArgs Empty = new LifecyclePolicyPolicyDetailsArgs();
 
     /**
-     * A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+     * The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `action` configuration block.
      * 
      */
-    @Import(name="resourceTypes", required=true)
-    private Output<List<String>> resourceTypes;
+    @Import(name="action")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsActionArgs> action;
 
     /**
-     * @return A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+     * @return The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `action` configuration block.
      * 
      */
-    public Output<List<String>> resourceTypes() {
-        return this.resourceTypes;
+    public Optional<Output<LifecyclePolicyPolicyDetailsActionArgs>> action() {
+        return Optional.ofNullable(this.action);
+    }
+
+    /**
+     * The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `event_source` configuration block.
+     * 
+     */
+    @Import(name="eventSource")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsEventSourceArgs> eventSource;
+
+    /**
+     * @return The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `event_source` configuration block.
+     * 
+     */
+    public Optional<Output<LifecyclePolicyPolicyDetailsEventSourceArgs>> eventSource() {
+        return Optional.ofNullable(this.eventSource);
+    }
+
+    /**
+     * Information about the event. See the `parameters` configuration block.
+     * 
+     */
+    @Import(name="parameters")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsParametersArgs> parameters;
+
+    /**
+     * @return Information about the event. See the `parameters` configuration block.
+     * 
+     */
+    public Optional<Output<LifecyclePolicyPolicyDetailsParametersArgs>> parameters() {
+        return Optional.ofNullable(this.parameters);
+    }
+
+    /**
+     * The valid target resource types and actions a policy can manage. Specify `EBS_SNAPSHOT_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify `IMAGE_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify `EVENT_BASED_POLICY` to create an event-based policy that performs specific actions when a defined event occurs in your AWS account. Default value is `EBS_SNAPSHOT_MANAGEMENT`.
+     * 
+     */
+    @Import(name="policyType")
+    private @Nullable Output<String> policyType;
+
+    /**
+     * @return The valid target resource types and actions a policy can manage. Specify `EBS_SNAPSHOT_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify `IMAGE_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify `EVENT_BASED_POLICY` to create an event-based policy that performs specific actions when a defined event occurs in your AWS account. Default value is `EBS_SNAPSHOT_MANAGEMENT`.
+     * 
+     */
+    public Optional<Output<String>> policyType() {
+        return Optional.ofNullable(this.policyType);
+    }
+
+    /**
+     * The location of the resources to backup. If the source resources are located in an AWS Region, specify `CLOUD`. If the source resources are located on an Outpost in your account, specify `OUTPOST`. If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account. Valid values are `CLOUD` and `OUTPOST`.
+     * 
+     */
+    @Import(name="resourceLocations")
+    private @Nullable Output<String> resourceLocations;
+
+    /**
+     * @return The location of the resources to backup. If the source resources are located in an AWS Region, specify `CLOUD`. If the source resources are located on an Outpost in your account, specify `OUTPOST`. If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account. Valid values are `CLOUD` and `OUTPOST`.
+     * 
+     */
+    public Optional<Output<String>> resourceLocations() {
+        return Optional.ofNullable(this.resourceLocations);
+    }
+
+    /**
+     * A list of resource types that should be targeted by the lifecycle policy. Valid values are `VOLUME` and `INSTANCE`.
+     * 
+     */
+    @Import(name="resourceTypes")
+    private @Nullable Output<List<String>> resourceTypes;
+
+    /**
+     * @return A list of resource types that should be targeted by the lifecycle policy. Valid values are `VOLUME` and `INSTANCE`.
+     * 
+     */
+    public Optional<Output<List<String>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     /**
      * See the `schedule` configuration block.
      * 
      */
-    @Import(name="schedules", required=true)
-    private Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules;
+    @Import(name="schedules")
+    private @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules;
 
     /**
      * @return See the `schedule` configuration block.
      * 
      */
-    public Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules() {
-        return this.schedules;
+    public Optional<Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>>> schedules() {
+        return Optional.ofNullable(this.schedules);
     }
 
     /**
      * A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
      * 
      */
-    @Import(name="targetTags", required=true)
-    private Output<Map<String,String>> targetTags;
+    @Import(name="targetTags")
+    private @Nullable Output<Map<String,String>> targetTags;
 
     /**
      * @return A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
      * 
      */
-    public Output<Map<String,String>> targetTags() {
-        return this.targetTags;
+    public Optional<Output<Map<String,String>>> targetTags() {
+        return Optional.ofNullable(this.targetTags);
     }
 
     private LifecyclePolicyPolicyDetailsArgs() {}
 
     private LifecyclePolicyPolicyDetailsArgs(LifecyclePolicyPolicyDetailsArgs $) {
+        this.action = $.action;
+        this.eventSource = $.eventSource;
+        this.parameters = $.parameters;
+        this.policyType = $.policyType;
+        this.resourceLocations = $.resourceLocations;
         this.resourceTypes = $.resourceTypes;
         this.schedules = $.schedules;
         this.targetTags = $.targetTags;
@@ -88,18 +173,123 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * @param action The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `action` configuration block.
          * 
          * @return builder
          * 
          */
-        public Builder resourceTypes(Output<List<String>> resourceTypes) {
+        public Builder action(@Nullable Output<LifecyclePolicyPolicyDetailsActionArgs> action) {
+            $.action = action;
+            return this;
+        }
+
+        /**
+         * @param action The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `action` configuration block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder action(LifecyclePolicyPolicyDetailsActionArgs action) {
+            return action(Output.of(action));
+        }
+
+        /**
+         * @param eventSource The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `event_source` configuration block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSource(@Nullable Output<LifecyclePolicyPolicyDetailsEventSourceArgs> eventSource) {
+            $.eventSource = eventSource;
+            return this;
+        }
+
+        /**
+         * @param eventSource The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the `event_source` configuration block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSource(LifecyclePolicyPolicyDetailsEventSourceArgs eventSource) {
+            return eventSource(Output.of(eventSource));
+        }
+
+        /**
+         * @param parameters Information about the event. See the `parameters` configuration block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(@Nullable Output<LifecyclePolicyPolicyDetailsParametersArgs> parameters) {
+            $.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * @param parameters Information about the event. See the `parameters` configuration block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(LifecyclePolicyPolicyDetailsParametersArgs parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        /**
+         * @param policyType The valid target resource types and actions a policy can manage. Specify `EBS_SNAPSHOT_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify `IMAGE_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify `EVENT_BASED_POLICY` to create an event-based policy that performs specific actions when a defined event occurs in your AWS account. Default value is `EBS_SNAPSHOT_MANAGEMENT`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyType(@Nullable Output<String> policyType) {
+            $.policyType = policyType;
+            return this;
+        }
+
+        /**
+         * @param policyType The valid target resource types and actions a policy can manage. Specify `EBS_SNAPSHOT_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify `IMAGE_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify `EVENT_BASED_POLICY` to create an event-based policy that performs specific actions when a defined event occurs in your AWS account. Default value is `EBS_SNAPSHOT_MANAGEMENT`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyType(String policyType) {
+            return policyType(Output.of(policyType));
+        }
+
+        /**
+         * @param resourceLocations The location of the resources to backup. If the source resources are located in an AWS Region, specify `CLOUD`. If the source resources are located on an Outpost in your account, specify `OUTPOST`. If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account. Valid values are `CLOUD` and `OUTPOST`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceLocations(@Nullable Output<String> resourceLocations) {
+            $.resourceLocations = resourceLocations;
+            return this;
+        }
+
+        /**
+         * @param resourceLocations The location of the resources to backup. If the source resources are located in an AWS Region, specify `CLOUD`. If the source resources are located on an Outpost in your account, specify `OUTPOST`. If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account. Valid values are `CLOUD` and `OUTPOST`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceLocations(String resourceLocations) {
+            return resourceLocations(Output.of(resourceLocations));
+        }
+
+        /**
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. Valid values are `VOLUME` and `INSTANCE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
         /**
-         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. Valid values are `VOLUME` and `INSTANCE`.
          * 
          * @return builder
          * 
@@ -109,7 +299,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. Valid values are `VOLUME` and `INSTANCE`.
          * 
          * @return builder
          * 
@@ -124,7 +314,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder schedules(Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules) {
             $.schedules = schedules;
             return this;
         }
@@ -155,7 +345,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder targetTags(Output<Map<String,String>> targetTags) {
+        public Builder targetTags(@Nullable Output<Map<String,String>> targetTags) {
             $.targetTags = targetTags;
             return this;
         }
@@ -171,9 +361,6 @@ public final class LifecyclePolicyPolicyDetailsArgs extends com.pulumi.resources
         }
 
         public LifecyclePolicyPolicyDetailsArgs build() {
-            $.resourceTypes = Objects.requireNonNull($.resourceTypes, "expected parameter 'resourceTypes' to be non-null");
-            $.schedules = Objects.requireNonNull($.schedules, "expected parameter 'schedules' to be non-null");
-            $.targetTags = Objects.requireNonNull($.targetTags, "expected parameter 'targetTags' to be non-null");
             return $;
         }
     }

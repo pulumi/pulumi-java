@@ -32,10 +32,6 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:orgpolicy/policy:Policy default {{parent}}/policies/{{name}}
  * ```
  * 
- * ```sh
- *  $ pulumi import gcp:orgpolicy/policy:Policy default {{parent}}/{{name}}
- * ```
- * 
  */
 @ResourceType(type="gcp:orgpolicy/policy:Policy")
 public class Policy extends com.pulumi.resources.CustomResource {

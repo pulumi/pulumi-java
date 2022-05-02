@@ -15,16 +15,32 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
 
     public static final SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs Empty = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs();
 
+    /**
+     * External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+     * 
+     */
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
 
+    /**
+     * Type of redirect action.
+     * 
+     */
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of redirect action.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -54,20 +70,44 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
             $ = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

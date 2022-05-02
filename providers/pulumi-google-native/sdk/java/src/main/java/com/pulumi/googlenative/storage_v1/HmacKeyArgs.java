@@ -22,16 +22,32 @@ public final class HmacKeyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Email address of the service account.
+     * 
+     */
     @Import(name="serviceAccountEmail", required=true)
     private Output<String> serviceAccountEmail;
 
+    /**
+     * @return Email address of the service account.
+     * 
+     */
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
+    /**
+     * The project to be billed for this request.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -71,20 +87,44 @@ public final class HmacKeyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceAccountEmail Email address of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail Email address of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
 
+        /**
+         * @param userProject The project to be billed for this request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

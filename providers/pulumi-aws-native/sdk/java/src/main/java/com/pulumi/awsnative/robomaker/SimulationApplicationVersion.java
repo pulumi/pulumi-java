@@ -14,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * An example resource schema demonstrating some basic constructs and validation rules.
+ * AWS::RoboMaker::SimulationApplicationVersion resource creates an AWS RoboMaker SimulationApplicationVersion. This helps you control which code your simulation uses.
  * 
  */
 @ResourceType(type="aws-native:robomaker:SimulationApplicationVersion")

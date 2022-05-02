@@ -18,9 +18,17 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
 
     public static final ResponsePolicyArgs Empty = new ResponsePolicyArgs();
 
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     @Import(name="clientOperationId")
     private @Nullable Output<String> clientOperationId;
 
+    /**
+     * @return For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
@@ -53,21 +61,6 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      */
     public Optional<Output<List<ResponsePolicyGKEClusterArgs>>> gkeClusters() {
         return Optional.ofNullable(this.gkeClusters);
-    }
-
-    /**
-     * Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    @Import(name="id")
-    private @Nullable Output<String> id;
-
-    /**
-     * @return Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    public Optional<Output<String>> id() {
-        return Optional.ofNullable(this.id);
     }
 
     @Import(name="kind")
@@ -120,7 +113,6 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
         this.clientOperationId = $.clientOperationId;
         this.description = $.description;
         this.gkeClusters = $.gkeClusters;
-        this.id = $.id;
         this.kind = $.kind;
         this.networks = $.networks;
         this.project = $.project;
@@ -145,11 +137,23 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ResponsePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }
@@ -204,27 +208,6 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder gkeClusters(ResponsePolicyGKEClusterArgs... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(@Nullable Output<String> id) {
-            $.id = id;
-            return this;
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(String id) {
-            return id(Output.of(id));
         }
 
         public Builder kind(@Nullable Output<String> kind) {

@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentInstanceFilterInventoryResponse;
 import com.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentLabelSetResponse;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
@@ -32,17 +33,28 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
      * 
      */
     private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
+    /**
+     * @return Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+    private final List<String> osShortNames;
 
     @CustomType.Constructor
     private OSPolicyAssignmentInstanceFilterResponse(
         @CustomType.Parameter("all") Boolean all,
         @CustomType.Parameter("exclusionLabels") List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
         @CustomType.Parameter("inclusionLabels") List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
-        @CustomType.Parameter("inventories") List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
+        @CustomType.Parameter("inventories") List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories,
+        @CustomType.Parameter("osShortNames") List<String> osShortNames) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;
         this.inventories = inventories;
+        this.osShortNames = osShortNames;
     }
 
     /**
@@ -73,6 +85,17 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
     public List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories() {
         return this.inventories;
     }
+    /**
+     * @return Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+    public List<String> osShortNames() {
+        return this.osShortNames;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +110,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
         private List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
         private List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
         private List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
+        private List<String> osShortNames;
 
         public Builder() {
     	      // Empty
@@ -98,6 +122,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
     	      this.exclusionLabels = defaults.exclusionLabels;
     	      this.inclusionLabels = defaults.inclusionLabels;
     	      this.inventories = defaults.inventories;
+    	      this.osShortNames = defaults.osShortNames;
         }
 
         public Builder all(Boolean all) {
@@ -124,8 +149,15 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
         }
         public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryResponse... inventories) {
             return inventories(List.of(inventories));
+        }
+        public Builder osShortNames(List<String> osShortNames) {
+            this.osShortNames = Objects.requireNonNull(osShortNames);
+            return this;
+        }
+        public Builder osShortNames(String... osShortNames) {
+            return osShortNames(List.of(osShortNames));
         }        public OSPolicyAssignmentInstanceFilterResponse build() {
-            return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
+            return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories, osShortNames);
         }
     }
 }

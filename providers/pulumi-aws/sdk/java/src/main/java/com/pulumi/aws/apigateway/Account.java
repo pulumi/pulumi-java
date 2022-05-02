@@ -6,12 +6,13 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.apigateway.AccountArgs;
 import com.pulumi.aws.apigateway.inputs.AccountState;
-import com.pulumi.aws.apigateway.outputs.AccountThrottleSettings;
+import com.pulumi.aws.apigateway.outputs.AccountThrottleSetting;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -51,14 +52,14 @@ public class Account extends com.pulumi.resources.CustomResource {
      * Account-Level throttle settings. See exported fields below.
      * 
      */
-    @Export(name="throttleSettings", type=AccountThrottleSettings.class, parameters={})
-    private Output<AccountThrottleSettings> throttleSettings;
+    @Export(name="throttleSettings", type=List.class, parameters={AccountThrottleSetting.class})
+    private Output<List<AccountThrottleSetting>> throttleSettings;
 
     /**
      * @return Account-Level throttle settings. See exported fields below.
      * 
      */
-    public Output<AccountThrottleSettings> throttleSettings() {
+    public Output<List<AccountThrottleSetting>> throttleSettings() {
         return this.throttleSettings;
     }
 

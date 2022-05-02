@@ -47,6 +47,20 @@ public class EnvgroupAttachment extends com.pulumi.resources.CustomResource {
         return this.environment;
     }
     /**
+     * ID of the environment group.
+     * 
+     */
+    @Export(name="environmentGroupId", type=String.class, parameters={})
+    private Output<String> environmentGroupId;
+
+    /**
+     * @return ID of the environment group.
+     * 
+     */
+    public Output<String> environmentGroupId() {
+        return this.environmentGroupId;
+    }
+    /**
      * ID of the environment group attachment.
      * 
      */

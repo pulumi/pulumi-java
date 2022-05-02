@@ -55,6 +55,34 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
+     * The ARN of the core network.
+     * 
+     */
+    @Export(name="coreNetworkArn", type=String.class, parameters={})
+    private Output<String> coreNetworkArn;
+
+    /**
+     * @return The ARN of the core network.
+     * 
+     */
+    public Output<String> coreNetworkArn() {
+        return this.coreNetworkArn;
+    }
+    /**
+     * The ARN of the core network attachment.
+     * 
+     */
+    @Export(name="coreNetworkAttachmentArn", type=String.class, parameters={})
+    private Output<String> coreNetworkAttachmentArn;
+
+    /**
+     * @return The ARN of the core network attachment.
+     * 
+     */
+    public Output<String> coreNetworkAttachmentArn() {
+        return this.coreNetworkAttachmentArn;
+    }
+    /**
      * The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).
      * 
      */

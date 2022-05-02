@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class ConditionalAccessPolicySessionControlsArgs extends com.pulumi
      * 
      */
     @Import(name="applicationEnforcedRestrictionsEnabled")
-      private final @Nullable Output<Boolean> applicationEnforcedRestrictionsEnabled;
+    private @Nullable Output<Boolean> applicationEnforcedRestrictionsEnabled;
 
-    public Output<Boolean> applicationEnforcedRestrictionsEnabled() {
-        return this.applicationEnforcedRestrictionsEnabled == null ? Codegen.empty() : this.applicationEnforcedRestrictionsEnabled;
+    /**
+     * @return Whether or not application enforced restrictions are enabled. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> applicationEnforcedRestrictionsEnabled() {
+        return Optional.ofNullable(this.applicationEnforcedRestrictionsEnabled);
     }
 
     /**
@@ -33,10 +37,14 @@ public final class ConditionalAccessPolicySessionControlsArgs extends com.pulumi
      * 
      */
     @Import(name="cloudAppSecurityPolicy")
-      private final @Nullable Output<String> cloudAppSecurityPolicy;
+    private @Nullable Output<String> cloudAppSecurityPolicy;
 
-    public Output<String> cloudAppSecurityPolicy() {
-        return this.cloudAppSecurityPolicy == null ? Codegen.empty() : this.cloudAppSecurityPolicy;
+    /**
+     * @return Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
+     * 
+     */
+    public Optional<Output<String>> cloudAppSecurityPolicy() {
+        return Optional.ofNullable(this.cloudAppSecurityPolicy);
     }
 
     /**
@@ -44,10 +52,14 @@ public final class ConditionalAccessPolicySessionControlsArgs extends com.pulumi
      * 
      */
     @Import(name="persistentBrowserMode")
-      private final @Nullable Output<String> persistentBrowserMode;
+    private @Nullable Output<String> persistentBrowserMode;
 
-    public Output<String> persistentBrowserMode() {
-        return this.persistentBrowserMode == null ? Codegen.empty() : this.persistentBrowserMode;
+    /**
+     * @return Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
+     * 
+     */
+    public Optional<Output<String>> persistentBrowserMode() {
+        return Optional.ofNullable(this.persistentBrowserMode);
     }
 
     /**
@@ -55,10 +67,14 @@ public final class ConditionalAccessPolicySessionControlsArgs extends com.pulumi
      * 
      */
     @Import(name="signInFrequency")
-      private final @Nullable Output<Integer> signInFrequency;
+    private @Nullable Output<Integer> signInFrequency;
 
-    public Output<Integer> signInFrequency() {
-        return this.signInFrequency == null ? Codegen.empty() : this.signInFrequency;
+    /**
+     * @return Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<Integer>> signInFrequency() {
+        return Optional.ofNullable(this.signInFrequency);
     }
 
     /**
@@ -66,102 +82,152 @@ public final class ConditionalAccessPolicySessionControlsArgs extends com.pulumi
      * 
      */
     @Import(name="signInFrequencyPeriod")
-      private final @Nullable Output<String> signInFrequencyPeriod;
+    private @Nullable Output<String> signInFrequencyPeriod;
 
-    public Output<String> signInFrequencyPeriod() {
-        return this.signInFrequencyPeriod == null ? Codegen.empty() : this.signInFrequencyPeriod;
+    /**
+     * @return The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> signInFrequencyPeriod() {
+        return Optional.ofNullable(this.signInFrequencyPeriod);
     }
 
-    public ConditionalAccessPolicySessionControlsArgs(
-        @Nullable Output<Boolean> applicationEnforcedRestrictionsEnabled,
-        @Nullable Output<String> cloudAppSecurityPolicy,
-        @Nullable Output<String> persistentBrowserMode,
-        @Nullable Output<Integer> signInFrequency,
-        @Nullable Output<String> signInFrequencyPeriod) {
-        this.applicationEnforcedRestrictionsEnabled = applicationEnforcedRestrictionsEnabled;
-        this.cloudAppSecurityPolicy = cloudAppSecurityPolicy;
-        this.persistentBrowserMode = persistentBrowserMode;
-        this.signInFrequency = signInFrequency;
-        this.signInFrequencyPeriod = signInFrequencyPeriod;
-    }
+    private ConditionalAccessPolicySessionControlsArgs() {}
 
-    private ConditionalAccessPolicySessionControlsArgs() {
-        this.applicationEnforcedRestrictionsEnabled = Codegen.empty();
-        this.cloudAppSecurityPolicy = Codegen.empty();
-        this.persistentBrowserMode = Codegen.empty();
-        this.signInFrequency = Codegen.empty();
-        this.signInFrequencyPeriod = Codegen.empty();
+    private ConditionalAccessPolicySessionControlsArgs(ConditionalAccessPolicySessionControlsArgs $) {
+        this.applicationEnforcedRestrictionsEnabled = $.applicationEnforcedRestrictionsEnabled;
+        this.cloudAppSecurityPolicy = $.cloudAppSecurityPolicy;
+        this.persistentBrowserMode = $.persistentBrowserMode;
+        this.signInFrequency = $.signInFrequency;
+        this.signInFrequencyPeriod = $.signInFrequencyPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicySessionControlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applicationEnforcedRestrictionsEnabled;
-        private @Nullable Output<String> cloudAppSecurityPolicy;
-        private @Nullable Output<String> persistentBrowserMode;
-        private @Nullable Output<Integer> signInFrequency;
-        private @Nullable Output<String> signInFrequencyPeriod;
+        private ConditionalAccessPolicySessionControlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicySessionControlsArgs();
         }
 
         public Builder(ConditionalAccessPolicySessionControlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationEnforcedRestrictionsEnabled = defaults.applicationEnforcedRestrictionsEnabled;
-    	      this.cloudAppSecurityPolicy = defaults.cloudAppSecurityPolicy;
-    	      this.persistentBrowserMode = defaults.persistentBrowserMode;
-    	      this.signInFrequency = defaults.signInFrequency;
-    	      this.signInFrequencyPeriod = defaults.signInFrequencyPeriod;
+            $ = new ConditionalAccessPolicySessionControlsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationEnforcedRestrictionsEnabled Whether or not application enforced restrictions are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationEnforcedRestrictionsEnabled(@Nullable Output<Boolean> applicationEnforcedRestrictionsEnabled) {
-            this.applicationEnforcedRestrictionsEnabled = applicationEnforcedRestrictionsEnabled;
+            $.applicationEnforcedRestrictionsEnabled = applicationEnforcedRestrictionsEnabled;
             return this;
         }
-        public Builder applicationEnforcedRestrictionsEnabled(@Nullable Boolean applicationEnforcedRestrictionsEnabled) {
-            this.applicationEnforcedRestrictionsEnabled = Codegen.ofNullable(applicationEnforcedRestrictionsEnabled);
-            return this;
+
+        /**
+         * @param applicationEnforcedRestrictionsEnabled Whether or not application enforced restrictions are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationEnforcedRestrictionsEnabled(Boolean applicationEnforcedRestrictionsEnabled) {
+            return applicationEnforcedRestrictionsEnabled(Output.of(applicationEnforcedRestrictionsEnabled));
         }
+
+        /**
+         * @param cloudAppSecurityPolicy Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAppSecurityPolicy(@Nullable Output<String> cloudAppSecurityPolicy) {
-            this.cloudAppSecurityPolicy = cloudAppSecurityPolicy;
+            $.cloudAppSecurityPolicy = cloudAppSecurityPolicy;
             return this;
         }
-        public Builder cloudAppSecurityPolicy(@Nullable String cloudAppSecurityPolicy) {
-            this.cloudAppSecurityPolicy = Codegen.ofNullable(cloudAppSecurityPolicy);
-            return this;
+
+        /**
+         * @param cloudAppSecurityPolicy Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudAppSecurityPolicy(String cloudAppSecurityPolicy) {
+            return cloudAppSecurityPolicy(Output.of(cloudAppSecurityPolicy));
         }
+
+        /**
+         * @param persistentBrowserMode Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentBrowserMode(@Nullable Output<String> persistentBrowserMode) {
-            this.persistentBrowserMode = persistentBrowserMode;
+            $.persistentBrowserMode = persistentBrowserMode;
             return this;
         }
-        public Builder persistentBrowserMode(@Nullable String persistentBrowserMode) {
-            this.persistentBrowserMode = Codegen.ofNullable(persistentBrowserMode);
-            return this;
+
+        /**
+         * @param persistentBrowserMode Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder persistentBrowserMode(String persistentBrowserMode) {
+            return persistentBrowserMode(Output.of(persistentBrowserMode));
         }
+
+        /**
+         * @param signInFrequency Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signInFrequency(@Nullable Output<Integer> signInFrequency) {
-            this.signInFrequency = signInFrequency;
+            $.signInFrequency = signInFrequency;
             return this;
         }
-        public Builder signInFrequency(@Nullable Integer signInFrequency) {
-            this.signInFrequency = Codegen.ofNullable(signInFrequency);
-            return this;
+
+        /**
+         * @param signInFrequency Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signInFrequency(Integer signInFrequency) {
+            return signInFrequency(Output.of(signInFrequency));
         }
+
+        /**
+         * @param signInFrequencyPeriod The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signInFrequencyPeriod(@Nullable Output<String> signInFrequencyPeriod) {
-            this.signInFrequencyPeriod = signInFrequencyPeriod;
+            $.signInFrequencyPeriod = signInFrequencyPeriod;
             return this;
         }
-        public Builder signInFrequencyPeriod(@Nullable String signInFrequencyPeriod) {
-            this.signInFrequencyPeriod = Codegen.ofNullable(signInFrequencyPeriod);
-            return this;
-        }        public ConditionalAccessPolicySessionControlsArgs build() {
-            return new ConditionalAccessPolicySessionControlsArgs(applicationEnforcedRestrictionsEnabled, cloudAppSecurityPolicy, persistentBrowserMode, signInFrequency, signInFrequencyPeriod);
+
+        /**
+         * @param signInFrequencyPeriod The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signInFrequencyPeriod(String signInFrequencyPeriod) {
+            return signInFrequencyPeriod(Output.of(signInFrequencyPeriod));
+        }
+
+        public ConditionalAccessPolicySessionControlsArgs build() {
+            return $;
         }
     }
+
 }

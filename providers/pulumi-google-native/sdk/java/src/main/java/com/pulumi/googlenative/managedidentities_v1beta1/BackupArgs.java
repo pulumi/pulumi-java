@@ -16,9 +16,17 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
+    /**
+     * Required. Backup Id, unique name to identify the backups with the following restrictions: * Must be lowercase letters, numbers, and hyphens * Must start with a letter. * Must contain between 1-63 characters. * Must end with a number or a letter. * Must be unique within the domain.
+     * 
+     */
     @Import(name="backupId", required=true)
     private Output<String> backupId;
 
+    /**
+     * @return Required. Backup Id, unique name to identify the backups with the following restrictions: * Must be lowercase letters, numbers, and hyphens * Must start with a letter. * Must contain between 1-63 characters. * Must end with a number or a letter. * Must be unique within the domain.
+     * 
+     */
     public Output<String> backupId() {
         return this.backupId;
     }
@@ -79,11 +87,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupId Required. Backup Id, unique name to identify the backups with the following restrictions: * Must be lowercase letters, numbers, and hyphens * Must start with a letter. * Must contain between 1-63 characters. * Must end with a number or a letter. * Must be unique within the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupId Required. Backup Id, unique name to identify the backups with the following restrictions: * Must be lowercase letters, numbers, and hyphens * Must start with a letter. * Must contain between 1-63 characters. * Must end with a number or a letter. * Must be unique within the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(String backupId) {
             return backupId(Output.of(backupId));
         }

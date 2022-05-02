@@ -5,10 +5,14 @@ package com.pulumi.aws.ssm;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ssm.inputs.GetDocumentArgs;
+import com.pulumi.aws.ssm.inputs.GetInstancesArgs;
+import com.pulumi.aws.ssm.inputs.GetMaintenanceWindowsArgs;
 import com.pulumi.aws.ssm.inputs.GetParameterArgs;
 import com.pulumi.aws.ssm.inputs.GetParametersByPathArgs;
 import com.pulumi.aws.ssm.inputs.GetPatchBaselineArgs;
 import com.pulumi.aws.ssm.outputs.GetDocumentResult;
+import com.pulumi.aws.ssm.outputs.GetInstancesResult;
+import com.pulumi.aws.ssm.outputs.GetMaintenanceWindowsResult;
 import com.pulumi.aws.ssm.outputs.GetParameterResult;
 import com.pulumi.aws.ssm.outputs.GetParametersByPathResult;
 import com.pulumi.aws.ssm.outputs.GetPatchBaselineResult;
@@ -29,6 +33,36 @@ public final class SsmFunctions {
     }
     public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getDocument:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the instance IDs of SSM managed instances.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstancesResult> getInstances() {
+        return getInstances(GetInstancesArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args) {
+        return getInstances(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ssm/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the window IDs of SSM maintenance windows.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows() {
+        return getMaintenanceWindows(GetMaintenanceWindowsArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args) {
+        return getMaintenanceWindows(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ssm/getMaintenanceWindows:getMaintenanceWindows", TypeShape.of(GetMaintenanceWindowsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides an SSM Parameter data source.

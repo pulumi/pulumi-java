@@ -6,10 +6,12 @@ package com.pulumi.googlenative.monitoring_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
+import com.pulumi.googlenative.monitoring_v1.inputs.DashboardFilterArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.MosaicLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.RowLayoutArgs;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,6 +35,21 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<ColumnLayoutArgs>> columnLayout() {
         return Optional.ofNullable(this.columnLayout);
+    }
+
+    /**
+     * Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    @Import(name="dashboardFilters")
+    private @Nullable Output<List<DashboardFilterArgs>> dashboardFilters;
+
+    /**
+     * @return Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    public Optional<Output<List<DashboardFilterArgs>>> dashboardFilters() {
+        return Optional.ofNullable(this.dashboardFilters);
     }
 
     /**
@@ -147,9 +164,17 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.rowLayout);
     }
 
+    /**
+     * If set, validate the request and preview the review, but do not actually save it.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return If set, validate the request and preview the review, but do not actually save it.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -158,6 +183,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
 
     private DashboardArgs(DashboardArgs $) {
         this.columnLayout = $.columnLayout;
+        this.dashboardFilters = $.dashboardFilters;
         this.displayName = $.displayName;
         this.etag = $.etag;
         this.gridLayout = $.gridLayout;
@@ -206,6 +232,37 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder columnLayout(ColumnLayoutArgs columnLayout) {
             return columnLayout(Output.of(columnLayout));
+        }
+
+        /**
+         * @param dashboardFilters Filters to reduce the amount of data charted based on the filter criteria.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardFilters(@Nullable Output<List<DashboardFilterArgs>> dashboardFilters) {
+            $.dashboardFilters = dashboardFilters;
+            return this;
+        }
+
+        /**
+         * @param dashboardFilters Filters to reduce the amount of data charted based on the filter criteria.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardFilters(List<DashboardFilterArgs> dashboardFilters) {
+            return dashboardFilters(Output.of(dashboardFilters));
+        }
+
+        /**
+         * @param dashboardFilters Filters to reduce the amount of data charted based on the filter criteria.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardFilters(DashboardFilterArgs... dashboardFilters) {
+            return dashboardFilters(List.of(dashboardFilters));
         }
 
         /**
@@ -364,11 +421,23 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             return rowLayout(Output.of(rowLayout));
         }
 
+        /**
+         * @param validateOnly If set, validate the request and preview the review, but do not actually save it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If set, validate the request and preview the review, but do not actually save it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

@@ -19,7 +19,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     /**
      * The lower bound for the
      * difference between the alarm threshold and the CloudWatch metric.
-     * Without a value, AWS will treat this bound as infinity.
+     * Without a value, AWS will treat this bound as negative infinity.
      * 
      */
     @Import(name="metricIntervalLowerBound")
@@ -28,7 +28,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     /**
      * @return The lower bound for the
      * difference between the alarm threshold and the CloudWatch metric.
-     * Without a value, AWS will treat this bound as infinity.
+     * Without a value, AWS will treat this bound as negative infinity.
      * 
      */
     public Optional<Output<String>> metricIntervalLowerBound() {
@@ -38,7 +38,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     /**
      * The upper bound for the
      * difference between the alarm threshold and the CloudWatch metric.
-     * Without a value, AWS will treat this bound as infinity. The upper bound
+     * Without a value, AWS will treat this bound as positive infinity. The upper bound
      * must be greater than the lower bound.
      * 
      */
@@ -48,7 +48,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     /**
      * @return The upper bound for the
      * difference between the alarm threshold and the CloudWatch metric.
-     * Without a value, AWS will treat this bound as infinity. The upper bound
+     * Without a value, AWS will treat this bound as positive infinity. The upper bound
      * must be greater than the lower bound.
      * 
      */
@@ -104,7 +104,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
         /**
          * @param metricIntervalLowerBound The lower bound for the
          * difference between the alarm threshold and the CloudWatch metric.
-         * Without a value, AWS will treat this bound as infinity.
+         * Without a value, AWS will treat this bound as negative infinity.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
         /**
          * @param metricIntervalLowerBound The lower bound for the
          * difference between the alarm threshold and the CloudWatch metric.
-         * Without a value, AWS will treat this bound as infinity.
+         * Without a value, AWS will treat this bound as negative infinity.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
         /**
          * @param metricIntervalUpperBound The upper bound for the
          * difference between the alarm threshold and the CloudWatch metric.
-         * Without a value, AWS will treat this bound as infinity. The upper bound
+         * Without a value, AWS will treat this bound as positive infinity. The upper bound
          * must be greater than the lower bound.
          * 
          * @return builder
@@ -143,7 +143,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
         /**
          * @param metricIntervalUpperBound The upper bound for the
          * difference between the alarm threshold and the CloudWatch metric.
-         * Without a value, AWS will treat this bound as infinity. The upper bound
+         * Without a value, AWS will treat this bound as positive infinity. The upper bound
          * must be greater than the lower bound.
          * 
          * @return builder

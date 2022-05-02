@@ -21,10 +21,14 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="applicationIds")
-      private final @Nullable List<String> applicationIds;
+    private @Nullable List<String> applicationIds;
 
-    public List<String> applicationIds() {
-        return this.applicationIds == null ? List.of() : this.applicationIds;
+    /**
+     * @return A list of application IDs (client IDs) of the applications associated with the service principals.
+     * 
+     */
+    public Optional<List<String>> applicationIds() {
+        return Optional.ofNullable(this.applicationIds);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayNames")
-      private final @Nullable List<String> displayNames;
+    private @Nullable List<String> displayNames;
 
-    public List<String> displayNames() {
-        return this.displayNames == null ? List.of() : this.displayNames;
+    /**
+     * @return A list of display names of the applications associated with the service principals.
+     * 
+     */
+    public Optional<List<String>> displayNames() {
+        return Optional.ofNullable(this.displayNames);
     }
 
     /**
@@ -43,10 +51,14 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ignoreMissing")
-      private final @Nullable Boolean ignoreMissing;
+    private @Nullable Boolean ignoreMissing;
 
+    /**
+     * @return Ignore missing service principals and return all service principals that are found. The data source will still fail if no service principals are found. Defaults to false.
+     * 
+     */
     public Optional<Boolean> ignoreMissing() {
-        return this.ignoreMissing == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissing);
+        return Optional.ofNullable(this.ignoreMissing);
     }
 
     /**
@@ -54,10 +66,14 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="objectIds")
-      private final @Nullable List<String> objectIds;
+    private @Nullable List<String> objectIds;
 
-    public List<String> objectIds() {
-        return this.objectIds == null ? List.of() : this.objectIds;
+    /**
+     * @return The object IDs of the service principals.
+     * 
+     */
+    public Optional<List<String>> objectIds() {
+        return Optional.ofNullable(this.objectIds);
     }
 
     /**
@@ -65,91 +81,132 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="returnAll")
-      private final @Nullable Boolean returnAll;
+    private @Nullable Boolean returnAll;
 
+    /**
+     * @return When `true`, the data source will return all service principals. Cannot be used with `ignore_missing`. Defaults to false.
+     * 
+     */
     public Optional<Boolean> returnAll() {
-        return this.returnAll == null ? Optional.empty() : Optional.ofNullable(this.returnAll);
+        return Optional.ofNullable(this.returnAll);
     }
 
-    public GetServicePrincipalsArgs(
-        @Nullable List<String> applicationIds,
-        @Nullable List<String> displayNames,
-        @Nullable Boolean ignoreMissing,
-        @Nullable List<String> objectIds,
-        @Nullable Boolean returnAll) {
-        this.applicationIds = applicationIds;
-        this.displayNames = displayNames;
-        this.ignoreMissing = ignoreMissing;
-        this.objectIds = objectIds;
-        this.returnAll = returnAll;
-    }
+    private GetServicePrincipalsArgs() {}
 
-    private GetServicePrincipalsArgs() {
-        this.applicationIds = List.of();
-        this.displayNames = List.of();
-        this.ignoreMissing = null;
-        this.objectIds = List.of();
-        this.returnAll = null;
+    private GetServicePrincipalsArgs(GetServicePrincipalsArgs $) {
+        this.applicationIds = $.applicationIds;
+        this.displayNames = $.displayNames;
+        this.ignoreMissing = $.ignoreMissing;
+        this.objectIds = $.objectIds;
+        this.returnAll = $.returnAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServicePrincipalsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> applicationIds;
-        private @Nullable List<String> displayNames;
-        private @Nullable Boolean ignoreMissing;
-        private @Nullable List<String> objectIds;
-        private @Nullable Boolean returnAll;
+        private GetServicePrincipalsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServicePrincipalsArgs();
         }
 
         public Builder(GetServicePrincipalsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIds = defaults.applicationIds;
-    	      this.displayNames = defaults.displayNames;
-    	      this.ignoreMissing = defaults.ignoreMissing;
-    	      this.objectIds = defaults.objectIds;
-    	      this.returnAll = defaults.returnAll;
+            $ = new GetServicePrincipalsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationIds A list of application IDs (client IDs) of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationIds(@Nullable List<String> applicationIds) {
-            this.applicationIds = applicationIds;
+            $.applicationIds = applicationIds;
             return this;
         }
+
+        /**
+         * @param applicationIds A list of application IDs (client IDs) of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationIds(String... applicationIds) {
             return applicationIds(List.of(applicationIds));
         }
+
+        /**
+         * @param displayNames A list of display names of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNames(@Nullable List<String> displayNames) {
-            this.displayNames = displayNames;
+            $.displayNames = displayNames;
             return this;
         }
+
+        /**
+         * @param displayNames A list of display names of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNames(String... displayNames) {
             return displayNames(List.of(displayNames));
         }
+
+        /**
+         * @param ignoreMissing Ignore missing service principals and return all service principals that are found. The data source will still fail if no service principals are found. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
-            this.ignoreMissing = ignoreMissing;
+            $.ignoreMissing = ignoreMissing;
             return this;
         }
+
+        /**
+         * @param objectIds The object IDs of the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIds(@Nullable List<String> objectIds) {
-            this.objectIds = objectIds;
+            $.objectIds = objectIds;
             return this;
         }
+
+        /**
+         * @param objectIds The object IDs of the service principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIds(String... objectIds) {
             return objectIds(List.of(objectIds));
         }
+
+        /**
+         * @param returnAll When `true`, the data source will return all service principals. Cannot be used with `ignore_missing`. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnAll(@Nullable Boolean returnAll) {
-            this.returnAll = returnAll;
+            $.returnAll = returnAll;
             return this;
-        }        public GetServicePrincipalsArgs build() {
-            return new GetServicePrincipalsArgs(applicationIds, displayNames, ignoreMissing, objectIds, returnAll);
+        }
+
+        public GetServicePrincipalsArgs build() {
+            return $;
         }
     }
+
 }

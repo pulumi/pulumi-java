@@ -63,42 +63,42 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.annotations);
     }
     /**
-     * Required. Configuration related to the cluster RBAC settings.
+     * Configuration related to the cluster RBAC settings.
      * 
      */
     @Export(name="authorization", type=AwsClusterAuthorization.class, parameters={})
     private Output<AwsClusterAuthorization> authorization;
 
     /**
-     * @return Required. Configuration related to the cluster RBAC settings.
+     * @return Configuration related to the cluster RBAC settings.
      * 
      */
     public Output<AwsClusterAuthorization> authorization() {
         return this.authorization;
     }
     /**
-     * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+     * The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
     @Export(name="awsRegion", type=String.class, parameters={})
     private Output<String> awsRegion;
 
     /**
-     * @return Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+     * @return The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
     public Output<String> awsRegion() {
         return this.awsRegion;
     }
     /**
-     * Required. Configuration related to the cluster control plane.
+     * Configuration related to the cluster control plane.
      * 
      */
     @Export(name="controlPlane", type=AwsClusterControlPlane.class, parameters={})
     private Output<AwsClusterControlPlane> controlPlane;
 
     /**
-     * @return Required. Configuration related to the cluster control plane.
+     * @return Configuration related to the cluster control plane.
      * 
      */
     public Output<AwsClusterControlPlane> controlPlane() {
@@ -205,14 +205,14 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Required. Cluster-wide networking configuration.
+     * Cluster-wide networking configuration.
      * 
      */
     @Export(name="networking", type=AwsClusterNetworking.class, parameters={})
     private Output<AwsClusterNetworking> networking;
 
     /**
-     * @return Required. Cluster-wide networking configuration.
+     * @return Cluster-wide networking configuration.
      * 
      */
     public Output<AwsClusterNetworking> networking() {

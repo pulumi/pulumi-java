@@ -38,98 +38,98 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:dms/endpoint:Endpoint")
 public class Endpoint extends com.pulumi.resources.CustomResource {
     /**
-     * The Amazon Resource Name (ARN) for the certificate.
+     * ARN for the certificate.
      * 
      */
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the certificate.
+     * @return ARN for the certificate.
      * 
      */
     public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
-     * The name of the endpoint database.
+     * Name of the endpoint database.
      * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
-     * @return The name of the endpoint database.
+     * @return Name of the endpoint database.
      * 
      */
     public Output<Optional<String>> databaseName() {
         return Codegen.optional(this.databaseName);
     }
     /**
-     * Configuration block with Elasticsearch settings. Detailed below.
+     * Configuration block for OpenSearch settings. See below.
      * 
      */
     @Export(name="elasticsearchSettings", type=EndpointElasticsearchSettings.class, parameters={})
     private Output</* @Nullable */ EndpointElasticsearchSettings> elasticsearchSettings;
 
     /**
-     * @return Configuration block with Elasticsearch settings. Detailed below.
+     * @return Configuration block for OpenSearch settings. See below.
      * 
      */
     public Output<Optional<EndpointElasticsearchSettings>> elasticsearchSettings() {
         return Codegen.optional(this.elasticsearchSettings);
     }
     /**
-     * The Amazon Resource Name (ARN) for the endpoint.
+     * ARN for the endpoint.
      * 
      */
     @Export(name="endpointArn", type=String.class, parameters={})
     private Output<String> endpointArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the endpoint.
+     * @return ARN for the endpoint.
      * 
      */
     public Output<String> endpointArn() {
         return this.endpointArn;
     }
     /**
-     * The database endpoint identifier.
+     * Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
      * 
      */
     @Export(name="endpointId", type=String.class, parameters={})
     private Output<String> endpointId;
 
     /**
-     * @return The database endpoint identifier.
+     * @return Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
      * 
      */
     public Output<String> endpointId() {
         return this.endpointId;
     }
     /**
-     * The type of endpoint. Can be one of `source | target`.
+     * Type of endpoint. Valid values are `source`, `target`.
      * 
      */
     @Export(name="endpointType", type=String.class, parameters={})
     private Output<String> endpointType;
 
     /**
-     * @return The type of endpoint. Can be one of `source | target`.
+     * @return Type of endpoint. Valid values are `source`, `target`.
      * 
      */
     public Output<String> endpointType() {
         return this.endpointType;
     }
     /**
-     * The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+     * Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
      * 
      */
     @Export(name="engineName", type=String.class, parameters={})
     private Output<String> engineName;
 
     /**
-     * @return The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+     * @return Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
      * 
      */
     public Output<String> engineName() {
@@ -150,210 +150,210 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.extraConnectionAttributes;
     }
     /**
-     * Configuration block with Kafka settings. Detailed below.
+     * Configuration block for Kafka settings. See below.
      * 
      */
     @Export(name="kafkaSettings", type=EndpointKafkaSettings.class, parameters={})
     private Output</* @Nullable */ EndpointKafkaSettings> kafkaSettings;
 
     /**
-     * @return Configuration block with Kafka settings. Detailed below.
+     * @return Configuration block for Kafka settings. See below.
      * 
      */
     public Output<Optional<EndpointKafkaSettings>> kafkaSettings() {
         return Codegen.optional(this.kafkaSettings);
     }
     /**
-     * Configuration block with Kinesis settings. Detailed below.
+     * Configuration block for Kinesis settings. See below.
      * 
      */
     @Export(name="kinesisSettings", type=EndpointKinesisSettings.class, parameters={})
     private Output</* @Nullable */ EndpointKinesisSettings> kinesisSettings;
 
     /**
-     * @return Configuration block with Kinesis settings. Detailed below.
+     * @return Configuration block for Kinesis settings. See below.
      * 
      */
     public Output<Optional<EndpointKinesisSettings>> kinesisSettings() {
         return Codegen.optional(this.kinesisSettings);
     }
     /**
-     * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+     * ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
     @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output<String> kmsKeyArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+     * @return ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
     public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
-     * Configuration block with MongoDB settings. Detailed below.
+     * Configuration block for MongoDB settings. See below.
      * 
      */
     @Export(name="mongodbSettings", type=EndpointMongodbSettings.class, parameters={})
     private Output</* @Nullable */ EndpointMongodbSettings> mongodbSettings;
 
     /**
-     * @return Configuration block with MongoDB settings. Detailed below.
+     * @return Configuration block for MongoDB settings. See below.
      * 
      */
     public Output<Optional<EndpointMongodbSettings>> mongodbSettings() {
         return Codegen.optional(this.mongodbSettings);
     }
     /**
-     * The password to be used to login to the endpoint database.
+     * Password to be used to login to the endpoint database.
      * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
-     * @return The password to be used to login to the endpoint database.
+     * @return Password to be used to login to the endpoint database.
      * 
      */
     public Output<Optional<String>> password() {
         return Codegen.optional(this.password);
     }
     /**
-     * The port used by the endpoint database.
+     * Port used by the endpoint database.
      * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
-     * @return The port used by the endpoint database.
+     * @return Port used by the endpoint database.
      * 
      */
     public Output<Optional<Integer>> port() {
         return Codegen.optional(this.port);
     }
     /**
-     * Configuration block with S3 settings. Detailed below.
+     * Configuration block for S3 settings. See below.
      * 
      */
     @Export(name="s3Settings", type=EndpointS3Settings.class, parameters={})
     private Output</* @Nullable */ EndpointS3Settings> s3Settings;
 
     /**
-     * @return Configuration block with S3 settings. Detailed below.
+     * @return Configuration block for S3 settings. See below.
      * 
      */
     public Output<Optional<EndpointS3Settings>> s3Settings() {
         return Codegen.optional(this.s3Settings);
     }
     /**
-     * Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+     * ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
     @Export(name="secretsManagerAccessRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsManagerAccessRoleArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+     * @return ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
     public Output<Optional<String>> secretsManagerAccessRoleArn() {
         return Codegen.optional(this.secretsManagerAccessRoleArn);
     }
     /**
-     * The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+     * Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
     @Export(name="secretsManagerArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsManagerArn;
 
     /**
-     * @return The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+     * @return Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
     public Output<Optional<String>> secretsManagerArn() {
         return Codegen.optional(this.secretsManagerArn);
     }
     /**
-     * The host name of the server.
+     * Host name of the server.
      * 
      */
     @Export(name="serverName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverName;
 
     /**
-     * @return The host name of the server.
+     * @return Host name of the server.
      * 
      */
     public Output<Optional<String>> serverName() {
         return Codegen.optional(this.serverName);
     }
     /**
-     * The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+     * ARN used by the service access IAM role for dynamodb endpoints.
      * 
      */
     @Export(name="serviceAccessRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccessRole;
 
     /**
-     * @return The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+     * @return ARN used by the service access IAM role for dynamodb endpoints.
      * 
      */
     public Output<Optional<String>> serviceAccessRole() {
         return Codegen.optional(this.serviceAccessRole);
     }
     /**
-     * The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+     * SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
      * 
      */
     @Export(name="sslMode", type=String.class, parameters={})
     private Output<String> sslMode;
 
     /**
-     * @return The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+     * @return SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
      * 
      */
     public Output<String> sslMode() {
         return this.sslMode;
     }
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
-     * The user name to be used to login to the endpoint database.
+     * User name to be used to login to the endpoint database.
      * 
      */
     @Export(name="username", type=String.class, parameters={})
     private Output</* @Nullable */ String> username;
 
     /**
-     * @return The user name to be used to login to the endpoint database.
+     * @return User name to be used to login to the endpoint database.
      * 
      */
     public Output<Optional<String>> username() {

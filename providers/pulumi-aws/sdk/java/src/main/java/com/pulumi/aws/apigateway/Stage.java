@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.apigateway.StageArgs;
 import com.pulumi.aws.apigateway.inputs.StageState;
 import com.pulumi.aws.apigateway.outputs.StageAccessLogSettings;
+import com.pulumi.aws.apigateway.outputs.StageCanarySettings;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -34,14 +35,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:apigateway/stage:Stage")
 public class Stage extends com.pulumi.resources.CustomResource {
     /**
-     * Enables access logs for the API stage. Detailed below.
+     * Enables access logs for the API stage. See Access Log Settings below.
      * 
      */
     @Export(name="accessLogSettings", type=StageAccessLogSettings.class, parameters={})
     private Output</* @Nullable */ StageAccessLogSettings> accessLogSettings;
 
     /**
-     * @return Enables access logs for the API stage. Detailed below.
+     * @return Enables access logs for the API stage. See Access Log Settings below.
      * 
      */
     public Output<Optional<StageAccessLogSettings>> accessLogSettings() {
@@ -90,6 +91,20 @@ public class Stage extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.cacheClusterSize);
     }
     /**
+     * Configuration settings of a canary deployment. See Canary Settings below.
+     * 
+     */
+    @Export(name="canarySettings", type=StageCanarySettings.class, parameters={})
+    private Output</* @Nullable */ StageCanarySettings> canarySettings;
+
+    /**
+     * @return Configuration settings of a canary deployment. See Canary Settings below.
+     * 
+     */
+    public Output<Optional<StageCanarySettings>> canarySettings() {
+        return Codegen.optional(this.canarySettings);
+    }
+    /**
      * The identifier of a client certificate for the stage.
      * 
      */
@@ -118,14 +133,14 @@ public class Stage extends com.pulumi.resources.CustomResource {
         return this.deployment;
     }
     /**
-     * The description of the stage
+     * The description of the stage.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The description of the stage
+     * @return The description of the stage.
      * 
      */
     public Output<Optional<String>> description() {

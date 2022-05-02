@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @EnumType
@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         GidUnspecified("GID_UNSPECIFIED"),
         /**
-         * Skip GID during a transfer job.
+         * Do not preserve GID during a transfer job.
          * 
          */
         GidSkip("GID_SKIP"),

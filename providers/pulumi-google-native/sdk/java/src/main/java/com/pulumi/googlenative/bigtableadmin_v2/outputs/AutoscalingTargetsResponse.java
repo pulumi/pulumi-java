@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AutoscalingTargetsResponse {
     /**
-     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
      * 
      */
     private final Integer cpuUtilizationPercent;
@@ -21,7 +21,7 @@ public final class AutoscalingTargetsResponse {
     }
 
     /**
-     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
      * 
      */
     public Integer cpuUtilizationPercent() {

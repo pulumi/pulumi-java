@@ -18,14 +18,16 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
     public static final RandomUuidArgs Empty = new RandomUuidArgs();
 
     /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
     /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     public Optional<Output<Map<String,Object>>> keepers() {
@@ -57,7 +59,8 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -68,7 +71,8 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 

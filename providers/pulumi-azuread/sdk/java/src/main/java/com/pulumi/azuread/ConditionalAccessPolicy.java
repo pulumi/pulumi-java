@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -93,8 +94,8 @@ public class ConditionalAccessPolicy extends com.pulumi.resources.CustomResource
      * @return A `session_controls` block as documented below, which specifies the session controls that are enforced after sign-in.
      * 
      */
-    public Output</* @Nullable */ ConditionalAccessPolicySessionControls> sessionControls() {
-        return this.sessionControls;
+    public Output<Optional<ConditionalAccessPolicySessionControls>> sessionControls() {
+        return Codegen.optional(this.sessionControls);
     }
     /**
      * Specifies the state of the policy object. Possible values are: `enabled`, `disabled` and `enabledForReportingButNotEnforced`

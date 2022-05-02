@@ -250,14 +250,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.securityConfiguration);
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
@@ -278,18 +278,18 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * The job timeout in minutes. The default is 2880 minutes (48 hours).
+     * The job timeout in minutes. The default is 2880 minutes (48 hours) for `glueetl` and `pythonshell` jobs, and null (unlimted) for `gluestreaming` jobs.
      * 
      */
     @Export(name="timeout", type=Integer.class, parameters={})
-    private Output</* @Nullable */ Integer> timeout;
+    private Output<Integer> timeout;
 
     /**
-     * @return The job timeout in minutes. The default is 2880 minutes (48 hours).
+     * @return The job timeout in minutes. The default is 2880 minutes (48 hours) for `glueetl` and `pythonshell` jobs, and null (unlimted) for `gluestreaming` jobs.
      * 
      */
-    public Output<Optional<Integer>> timeout() {
-        return Codegen.optional(this.timeout);
+    public Output<Integer> timeout() {
+        return this.timeout;
     }
     /**
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.

@@ -107,14 +107,14 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
         return this.downloadBytes;
     }
     /**
-     * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     @Export(name="guestFlush", type=Boolean.class, parameters={})
     private Output<Boolean> guestFlush;
 
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     public Output<Boolean> guestFlush() {

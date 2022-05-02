@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lambda;
 
 import com.pulumi.awsnative.lambda.enums.EventSourceMappingFunctionResponseTypesItem;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingDestinationConfigArgs;
+import com.pulumi.awsnative.lambda.inputs.EventSourceMappingFilterCriteriaArgs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingSelfManagedEventSourceArgs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
-import com.pulumi.awsnative.lambda.inputs.FilterCriteriaPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -104,13 +104,13 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filterCriteria")
-    private @Nullable Output<FilterCriteriaPropertiesArgs> filterCriteria;
+    private @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
 
     /**
      * @return The filter criteria to control event filtering.
      * 
      */
-    public Optional<Output<FilterCriteriaPropertiesArgs>> filterCriteria() {
+    public Optional<Output<EventSourceMappingFilterCriteriaArgs>> filterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
 
@@ -462,7 +462,7 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder filterCriteria(@Nullable Output<FilterCriteriaPropertiesArgs> filterCriteria) {
+        public Builder filterCriteria(@Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria) {
             $.filterCriteria = filterCriteria;
             return this;
         }
@@ -473,7 +473,7 @@ public final class EventSourceMappingArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder filterCriteria(FilterCriteriaPropertiesArgs filterCriteria) {
+        public Builder filterCriteria(EventSourceMappingFilterCriteriaArgs filterCriteria) {
             return filterCriteria(Output.of(filterCriteria));
         }
 

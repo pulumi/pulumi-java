@@ -5,12 +5,22 @@ package com.pulumi.googlenative.containeranalysis_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.containeranalysis_v1.outputs.BuildProvenanceResponse;
+import com.pulumi.googlenative.containeranalysis_v1.outputs.InTotoProvenanceResponse;
 import com.pulumi.googlenative.containeranalysis_v1.outputs.InTotoStatementResponse;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class BuildOccurrenceResponse {
+    /**
+     * @return Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     * @deprecated
+     * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     */
+    @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+    private final InTotoProvenanceResponse intotoProvenance;
     /**
      * @return In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
@@ -29,14 +39,27 @@ public final class BuildOccurrenceResponse {
 
     @CustomType.Constructor
     private BuildOccurrenceResponse(
+        @CustomType.Parameter("intotoProvenance") InTotoProvenanceResponse intotoProvenance,
         @CustomType.Parameter("intotoStatement") InTotoStatementResponse intotoStatement,
         @CustomType.Parameter("provenance") BuildProvenanceResponse provenance,
         @CustomType.Parameter("provenanceBytes") String provenanceBytes) {
+        this.intotoProvenance = intotoProvenance;
         this.intotoStatement = intotoStatement;
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;
     }
 
+    /**
+     * @return Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     * @deprecated
+     * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     */
+    @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+    public InTotoProvenanceResponse intotoProvenance() {
+        return this.intotoProvenance;
+    }
     /**
      * @return In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
@@ -68,6 +91,7 @@ public final class BuildOccurrenceResponse {
     }
 
     public static final class Builder {
+        private InTotoProvenanceResponse intotoProvenance;
         private InTotoStatementResponse intotoStatement;
         private BuildProvenanceResponse provenance;
         private String provenanceBytes;
@@ -78,11 +102,16 @@ public final class BuildOccurrenceResponse {
 
         public Builder(BuildOccurrenceResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.intotoProvenance = defaults.intotoProvenance;
     	      this.intotoStatement = defaults.intotoStatement;
     	      this.provenance = defaults.provenance;
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
+        public Builder intotoProvenance(InTotoProvenanceResponse intotoProvenance) {
+            this.intotoProvenance = Objects.requireNonNull(intotoProvenance);
+            return this;
+        }
         public Builder intotoStatement(InTotoStatementResponse intotoStatement) {
             this.intotoStatement = Objects.requireNonNull(intotoStatement);
             return this;
@@ -95,7 +124,7 @@ public final class BuildOccurrenceResponse {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }        public BuildOccurrenceResponse build() {
-            return new BuildOccurrenceResponse(intotoStatement, provenance, provenanceBytes);
+            return new BuildOccurrenceResponse(intotoProvenance, intotoStatement, provenance, provenanceBytes);
         }
     }
 }

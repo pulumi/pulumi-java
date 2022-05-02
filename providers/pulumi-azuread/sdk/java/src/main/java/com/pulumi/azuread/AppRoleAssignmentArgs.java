@@ -5,7 +5,6 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,8 +18,12 @@ public final class AppRoleAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="appRoleId", required=true)
-      private final Output<String> appRoleId;
+    private Output<String> appRoleId;
 
+    /**
+     * @return The ID of the app role to be assigned. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> appRoleId() {
         return this.appRoleId;
     }
@@ -30,8 +33,12 @@ public final class AppRoleAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="principalObjectId", required=true)
-      private final Output<String> principalObjectId;
+    private Output<String> principalObjectId;
 
+    /**
+     * @return The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> principalObjectId() {
         return this.principalObjectId;
     }
@@ -41,76 +48,111 @@ public final class AppRoleAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceObjectId", required=true)
-      private final Output<String> resourceObjectId;
+    private Output<String> resourceObjectId;
 
+    /**
+     * @return The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> resourceObjectId() {
         return this.resourceObjectId;
     }
 
-    public AppRoleAssignmentArgs(
-        Output<String> appRoleId,
-        Output<String> principalObjectId,
-        Output<String> resourceObjectId) {
-        this.appRoleId = Objects.requireNonNull(appRoleId, "expected parameter 'appRoleId' to be non-null");
-        this.principalObjectId = Objects.requireNonNull(principalObjectId, "expected parameter 'principalObjectId' to be non-null");
-        this.resourceObjectId = Objects.requireNonNull(resourceObjectId, "expected parameter 'resourceObjectId' to be non-null");
-    }
+    private AppRoleAssignmentArgs() {}
 
-    private AppRoleAssignmentArgs() {
-        this.appRoleId = Codegen.empty();
-        this.principalObjectId = Codegen.empty();
-        this.resourceObjectId = Codegen.empty();
+    private AppRoleAssignmentArgs(AppRoleAssignmentArgs $) {
+        this.appRoleId = $.appRoleId;
+        this.principalObjectId = $.principalObjectId;
+        this.resourceObjectId = $.resourceObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppRoleAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appRoleId;
-        private Output<String> principalObjectId;
-        private Output<String> resourceObjectId;
+        private AppRoleAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppRoleAssignmentArgs();
         }
 
         public Builder(AppRoleAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appRoleId = defaults.appRoleId;
-    	      this.principalObjectId = defaults.principalObjectId;
-    	      this.resourceObjectId = defaults.resourceObjectId;
+            $ = new AppRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appRoleId The ID of the app role to be assigned. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoleId(Output<String> appRoleId) {
-            this.appRoleId = Objects.requireNonNull(appRoleId);
+            $.appRoleId = appRoleId;
             return this;
         }
+
+        /**
+         * @param appRoleId The ID of the app role to be assigned. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoleId(String appRoleId) {
-            this.appRoleId = Output.of(Objects.requireNonNull(appRoleId));
-            return this;
+            return appRoleId(Output.of(appRoleId));
         }
+
+        /**
+         * @param principalObjectId The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalObjectId(Output<String> principalObjectId) {
-            this.principalObjectId = Objects.requireNonNull(principalObjectId);
+            $.principalObjectId = principalObjectId;
             return this;
         }
+
+        /**
+         * @param principalObjectId The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalObjectId(String principalObjectId) {
-            this.principalObjectId = Output.of(Objects.requireNonNull(principalObjectId));
-            return this;
+            return principalObjectId(Output.of(principalObjectId));
         }
+
+        /**
+         * @param resourceObjectId The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceObjectId(Output<String> resourceObjectId) {
-            this.resourceObjectId = Objects.requireNonNull(resourceObjectId);
+            $.resourceObjectId = resourceObjectId;
             return this;
         }
+
+        /**
+         * @param resourceObjectId The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceObjectId(String resourceObjectId) {
-            this.resourceObjectId = Output.of(Objects.requireNonNull(resourceObjectId));
-            return this;
-        }        public AppRoleAssignmentArgs build() {
-            return new AppRoleAssignmentArgs(appRoleId, principalObjectId, resourceObjectId);
+            return resourceObjectId(Output.of(resourceObjectId));
+        }
+
+        public AppRoleAssignmentArgs build() {
+            $.appRoleId = Objects.requireNonNull($.appRoleId, "expected parameter 'appRoleId' to be non-null");
+            $.principalObjectId = Objects.requireNonNull($.principalObjectId, "expected parameter 'principalObjectId' to be non-null");
+            $.resourceObjectId = Objects.requireNonNull($.resourceObjectId, "expected parameter 'resourceObjectId' to be non-null");
+            return $;
         }
     }
+
 }

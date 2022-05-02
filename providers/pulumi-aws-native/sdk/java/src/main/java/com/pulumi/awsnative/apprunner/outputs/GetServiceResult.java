@@ -5,6 +5,8 @@ package com.pulumi.awsnative.apprunner.outputs;
 
 import com.pulumi.awsnative.apprunner.outputs.ServiceHealthCheckConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
+import com.pulumi.awsnative.apprunner.outputs.ServiceNetworkConfiguration;
+import com.pulumi.awsnative.apprunner.outputs.ServiceObservabilityConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -16,6 +18,8 @@ import javax.annotation.Nullable;
 public final class GetServiceResult {
     private final @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration;
     private final @Nullable ServiceInstanceConfiguration instanceConfiguration;
+    private final @Nullable ServiceNetworkConfiguration networkConfiguration;
+    private final @Nullable ServiceObservabilityConfiguration observabilityConfiguration;
     /**
      * @return The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
@@ -42,6 +46,8 @@ public final class GetServiceResult {
     private GetServiceResult(
         @CustomType.Parameter("healthCheckConfiguration") @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
         @CustomType.Parameter("instanceConfiguration") @Nullable ServiceInstanceConfiguration instanceConfiguration,
+        @CustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
+        @CustomType.Parameter("observabilityConfiguration") @Nullable ServiceObservabilityConfiguration observabilityConfiguration,
         @CustomType.Parameter("serviceArn") @Nullable String serviceArn,
         @CustomType.Parameter("serviceId") @Nullable String serviceId,
         @CustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
@@ -49,6 +55,8 @@ public final class GetServiceResult {
         @CustomType.Parameter("status") @Nullable String status) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         this.instanceConfiguration = instanceConfiguration;
+        this.networkConfiguration = networkConfiguration;
+        this.observabilityConfiguration = observabilityConfiguration;
         this.serviceArn = serviceArn;
         this.serviceId = serviceId;
         this.serviceUrl = serviceUrl;
@@ -61,6 +69,12 @@ public final class GetServiceResult {
     }
     public Optional<ServiceInstanceConfiguration> instanceConfiguration() {
         return Optional.ofNullable(this.instanceConfiguration);
+    }
+    public Optional<ServiceNetworkConfiguration> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
+    }
+    public Optional<ServiceObservabilityConfiguration> observabilityConfiguration() {
+        return Optional.ofNullable(this.observabilityConfiguration);
     }
     /**
      * @return The Amazon Resource Name (ARN) of the AppRunner Service.
@@ -105,6 +119,8 @@ public final class GetServiceResult {
     public static final class Builder {
         private @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration;
         private @Nullable ServiceInstanceConfiguration instanceConfiguration;
+        private @Nullable ServiceNetworkConfiguration networkConfiguration;
+        private @Nullable ServiceObservabilityConfiguration observabilityConfiguration;
         private @Nullable String serviceArn;
         private @Nullable String serviceId;
         private @Nullable String serviceUrl;
@@ -119,6 +135,8 @@ public final class GetServiceResult {
     	      Objects.requireNonNull(defaults);
     	      this.healthCheckConfiguration = defaults.healthCheckConfiguration;
     	      this.instanceConfiguration = defaults.instanceConfiguration;
+    	      this.networkConfiguration = defaults.networkConfiguration;
+    	      this.observabilityConfiguration = defaults.observabilityConfiguration;
     	      this.serviceArn = defaults.serviceArn;
     	      this.serviceId = defaults.serviceId;
     	      this.serviceUrl = defaults.serviceUrl;
@@ -132,6 +150,14 @@ public final class GetServiceResult {
         }
         public Builder instanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
+            return this;
+        }
+        public Builder networkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
+            this.networkConfiguration = networkConfiguration;
+            return this;
+        }
+        public Builder observabilityConfiguration(@Nullable ServiceObservabilityConfiguration observabilityConfiguration) {
+            this.observabilityConfiguration = observabilityConfiguration;
             return this;
         }
         public Builder serviceArn(@Nullable String serviceArn) {
@@ -154,7 +180,7 @@ public final class GetServiceResult {
             this.status = status;
             return this;
         }        public GetServiceResult build() {
-            return new GetServiceResult(healthCheckConfiguration, instanceConfiguration, serviceArn, serviceId, serviceUrl, sourceConfiguration, status);
+            return new GetServiceResult(healthCheckConfiguration, instanceConfiguration, networkConfiguration, observabilityConfiguration, serviceArn, serviceId, serviceUrl, sourceConfiguration, status);
         }
     }
 }

@@ -4,11 +4,17 @@
 package com.pulumi.googlenative.datastream_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.datastream_v1.outputs.DropLargeObjectsResponse;
 import com.pulumi.googlenative.datastream_v1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
 @CustomType
 public final class OracleSourceConfigResponse {
+    /**
+     * @return Drop large object values.
+     * 
+     */
+    private final DropLargeObjectsResponse dropLargeObjects;
     /**
      * @return Oracle objects to exclude from the stream.
      * 
@@ -22,12 +28,21 @@ public final class OracleSourceConfigResponse {
 
     @CustomType.Constructor
     private OracleSourceConfigResponse(
+        @CustomType.Parameter("dropLargeObjects") DropLargeObjectsResponse dropLargeObjects,
         @CustomType.Parameter("excludeObjects") OracleRdbmsResponse excludeObjects,
         @CustomType.Parameter("includeObjects") OracleRdbmsResponse includeObjects) {
+        this.dropLargeObjects = dropLargeObjects;
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }
 
+    /**
+     * @return Drop large object values.
+     * 
+     */
+    public DropLargeObjectsResponse dropLargeObjects() {
+        return this.dropLargeObjects;
+    }
     /**
      * @return Oracle objects to exclude from the stream.
      * 
@@ -52,6 +67,7 @@ public final class OracleSourceConfigResponse {
     }
 
     public static final class Builder {
+        private DropLargeObjectsResponse dropLargeObjects;
         private OracleRdbmsResponse excludeObjects;
         private OracleRdbmsResponse includeObjects;
 
@@ -61,10 +77,15 @@ public final class OracleSourceConfigResponse {
 
         public Builder(OracleSourceConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.dropLargeObjects = defaults.dropLargeObjects;
     	      this.excludeObjects = defaults.excludeObjects;
     	      this.includeObjects = defaults.includeObjects;
         }
 
+        public Builder dropLargeObjects(DropLargeObjectsResponse dropLargeObjects) {
+            this.dropLargeObjects = Objects.requireNonNull(dropLargeObjects);
+            return this;
+        }
         public Builder excludeObjects(OracleRdbmsResponse excludeObjects) {
             this.excludeObjects = Objects.requireNonNull(excludeObjects);
             return this;
@@ -73,7 +94,7 @@ public final class OracleSourceConfigResponse {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }        public OracleSourceConfigResponse build() {
-            return new OracleSourceConfigResponse(excludeObjects, includeObjects);
+            return new OracleSourceConfigResponse(dropLargeObjects, excludeObjects, includeObjects);
         }
     }
 }

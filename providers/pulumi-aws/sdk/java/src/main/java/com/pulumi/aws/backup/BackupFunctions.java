@@ -4,10 +4,14 @@
 package com.pulumi.aws.backup;
 
 import com.pulumi.aws.Utilities;
+import com.pulumi.aws.backup.inputs.GetFrameworkArgs;
 import com.pulumi.aws.backup.inputs.GetPlanArgs;
+import com.pulumi.aws.backup.inputs.GetReportPlanArgs;
 import com.pulumi.aws.backup.inputs.GetSelectionArgs;
 import com.pulumi.aws.backup.inputs.GetVaultArgs;
+import com.pulumi.aws.backup.outputs.GetFrameworkResult;
 import com.pulumi.aws.backup.outputs.GetPlanResult;
+import com.pulumi.aws.backup.outputs.GetReportPlanResult;
 import com.pulumi.aws.backup.outputs.GetSelectionResult;
 import com.pulumi.aws.backup.outputs.GetVaultResult;
 import com.pulumi.core.TypeShape;
@@ -16,6 +20,18 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class BackupFunctions {
+    /**
+     * Use this data source to get information on an existing backup framework.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
+        return getFramework(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:backup/getFramework:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Use this data source to get information on an existing backup plan.
      * 
@@ -27,6 +43,18 @@ public final class BackupFunctions {
     }
     public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getPlan:getPlan", TypeShape.of(GetPlanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information on an existing backup report plan.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
+        return getReportPlan(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:backup/getReportPlan:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing backup selection.

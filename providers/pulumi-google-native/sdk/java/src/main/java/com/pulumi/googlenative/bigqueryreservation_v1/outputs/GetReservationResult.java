@@ -11,6 +11,11 @@ import java.util.Objects;
 @CustomType
 public final class GetReservationResult {
     /**
+     * @return Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    private final String concurrency;
+    /**
      * @return Creation time of the reservation.
      * 
      */
@@ -21,7 +26,12 @@ public final class GetReservationResult {
      */
     private final Boolean ignoreIdleSlots;
     /**
-     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * @return Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    private final Boolean multiRegionAuxiliary;
+    /**
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     private final String name;
@@ -38,18 +48,29 @@ public final class GetReservationResult {
 
     @CustomType.Constructor
     private GetReservationResult(
+        @CustomType.Parameter("concurrency") String concurrency,
         @CustomType.Parameter("creationTime") String creationTime,
         @CustomType.Parameter("ignoreIdleSlots") Boolean ignoreIdleSlots,
+        @CustomType.Parameter("multiRegionAuxiliary") Boolean multiRegionAuxiliary,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("slotCapacity") String slotCapacity,
         @CustomType.Parameter("updateTime") String updateTime) {
+        this.concurrency = concurrency;
         this.creationTime = creationTime;
         this.ignoreIdleSlots = ignoreIdleSlots;
+        this.multiRegionAuxiliary = multiRegionAuxiliary;
         this.name = name;
         this.slotCapacity = slotCapacity;
         this.updateTime = updateTime;
     }
 
+    /**
+     * @return Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    public String concurrency() {
+        return this.concurrency;
+    }
     /**
      * @return Creation time of the reservation.
      * 
@@ -65,7 +86,14 @@ public final class GetReservationResult {
         return this.ignoreIdleSlots;
     }
     /**
-     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * @return Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    public Boolean multiRegionAuxiliary() {
+        return this.multiRegionAuxiliary;
+    }
+    /**
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public String name() {
@@ -95,8 +123,10 @@ public final class GetReservationResult {
     }
 
     public static final class Builder {
+        private String concurrency;
         private String creationTime;
         private Boolean ignoreIdleSlots;
+        private Boolean multiRegionAuxiliary;
         private String name;
         private String slotCapacity;
         private String updateTime;
@@ -107,19 +137,29 @@ public final class GetReservationResult {
 
         public Builder(GetReservationResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.concurrency = defaults.concurrency;
     	      this.creationTime = defaults.creationTime;
     	      this.ignoreIdleSlots = defaults.ignoreIdleSlots;
+    	      this.multiRegionAuxiliary = defaults.multiRegionAuxiliary;
     	      this.name = defaults.name;
     	      this.slotCapacity = defaults.slotCapacity;
     	      this.updateTime = defaults.updateTime;
         }
 
+        public Builder concurrency(String concurrency) {
+            this.concurrency = Objects.requireNonNull(concurrency);
+            return this;
+        }
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
         public Builder ignoreIdleSlots(Boolean ignoreIdleSlots) {
             this.ignoreIdleSlots = Objects.requireNonNull(ignoreIdleSlots);
+            return this;
+        }
+        public Builder multiRegionAuxiliary(Boolean multiRegionAuxiliary) {
+            this.multiRegionAuxiliary = Objects.requireNonNull(multiRegionAuxiliary);
             return this;
         }
         public Builder name(String name) {
@@ -134,7 +174,7 @@ public final class GetReservationResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetReservationResult build() {
-            return new GetReservationResult(creationTime, ignoreIdleSlots, name, slotCapacity, updateTime);
+            return new GetReservationResult(concurrency, creationTime, ignoreIdleSlots, multiRegionAuxiliary, name, slotCapacity, updateTime);
         }
     }
 }

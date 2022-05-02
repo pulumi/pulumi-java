@@ -47,6 +47,29 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+    @Import(name="etag")
+    private @Nullable Output<String> etag;
+
+    /**
+     * @return This field is deprecated and will be removed from a future version of the API.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
+    }
+
+    /**
      * The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
@@ -133,6 +156,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     private DatabaseArgs(DatabaseArgs $) {
         this.charset = $.charset;
         this.collation = $.collation;
+        this.etag = $.etag;
         this.instance = $.instance;
         this.kind = $.kind;
         this.name = $.name;
@@ -199,6 +223,35 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
+        }
+
+        /**
+         * @param etag This field is deprecated and will be removed from a future version of the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated and will be removed from a future version of the API.
+         * 
+         */
+        @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+        public Builder etag(@Nullable Output<String> etag) {
+            $.etag = etag;
+            return this;
+        }
+
+        /**
+         * @param etag This field is deprecated and will be removed from a future version of the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated and will be removed from a future version of the API.
+         * 
+         */
+        @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
 
         /**

@@ -15,7 +15,7 @@ public final class SigningJobSourceS3 {
      */
     private final String bucket;
     /**
-     * @return Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the object that contains your unsigned code.
      * 
      */
     private final String key;
@@ -43,7 +43,7 @@ public final class SigningJobSourceS3 {
         return this.bucket;
     }
     /**
-     * @return Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the object that contains your unsigned code.
      * 
      */
     public String key() {

@@ -64,6 +64,13 @@ public final class GlobalTableReplicaSpecificationArgs extends com.pulumi.resour
         return Optional.ofNullable(this.sSESpecification);
     }
 
+    @Import(name="tableClass")
+    private @Nullable Output<String> tableClass;
+
+    public Optional<Output<String>> tableClass() {
+        return Optional.ofNullable(this.tableClass);
+    }
+
     @Import(name="tags")
     private @Nullable Output<List<GlobalTableTagArgs>> tags;
 
@@ -80,6 +87,7 @@ public final class GlobalTableReplicaSpecificationArgs extends com.pulumi.resour
         this.readProvisionedThroughputSettings = $.readProvisionedThroughputSettings;
         this.region = $.region;
         this.sSESpecification = $.sSESpecification;
+        this.tableClass = $.tableClass;
         this.tags = $.tags;
     }
 
@@ -157,6 +165,15 @@ public final class GlobalTableReplicaSpecificationArgs extends com.pulumi.resour
 
         public Builder sSESpecification(GlobalTableReplicaSSESpecificationArgs sSESpecification) {
             return sSESpecification(Output.of(sSESpecification));
+        }
+
+        public Builder tableClass(@Nullable Output<String> tableClass) {
+            $.tableClass = tableClass;
+            return this;
+        }
+
+        public Builder tableClass(String tableClass) {
+            return tableClass(Output.of(tableClass));
         }
 
         public Builder tags(@Nullable Output<List<GlobalTableTagArgs>> tags) {

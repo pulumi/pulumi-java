@@ -6,6 +6,7 @@ package com.pulumi.awsnative.amplifyuibuilder.outputs;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentBindingProperties;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentChild;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentCollectionProperties;
+import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentEvents;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentOverrides;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariant;
@@ -23,13 +24,13 @@ public final class GetComponentResult {
     private final @Nullable List<ComponentChild> children;
     private final @Nullable ComponentCollectionProperties collectionProperties;
     private final @Nullable String componentType;
-    private final @Nullable String createdAt;
     private final @Nullable String environmentName;
+    private final @Nullable ComponentEvents events;
     private final @Nullable String id;
-    private final @Nullable String modifiedAt;
     private final @Nullable String name;
     private final @Nullable ComponentOverrides overrides;
     private final @Nullable ComponentProperties properties;
+    private final @Nullable String schemaVersion;
     private final @Nullable String sourceId;
     private final @Nullable List<ComponentVariant> variants;
 
@@ -40,13 +41,13 @@ public final class GetComponentResult {
         @CustomType.Parameter("children") @Nullable List<ComponentChild> children,
         @CustomType.Parameter("collectionProperties") @Nullable ComponentCollectionProperties collectionProperties,
         @CustomType.Parameter("componentType") @Nullable String componentType,
-        @CustomType.Parameter("createdAt") @Nullable String createdAt,
         @CustomType.Parameter("environmentName") @Nullable String environmentName,
+        @CustomType.Parameter("events") @Nullable ComponentEvents events,
         @CustomType.Parameter("id") @Nullable String id,
-        @CustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
         @CustomType.Parameter("name") @Nullable String name,
         @CustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
         @CustomType.Parameter("properties") @Nullable ComponentProperties properties,
+        @CustomType.Parameter("schemaVersion") @Nullable String schemaVersion,
         @CustomType.Parameter("sourceId") @Nullable String sourceId,
         @CustomType.Parameter("variants") @Nullable List<ComponentVariant> variants) {
         this.appId = appId;
@@ -54,13 +55,13 @@ public final class GetComponentResult {
         this.children = children;
         this.collectionProperties = collectionProperties;
         this.componentType = componentType;
-        this.createdAt = createdAt;
         this.environmentName = environmentName;
+        this.events = events;
         this.id = id;
-        this.modifiedAt = modifiedAt;
         this.name = name;
         this.overrides = overrides;
         this.properties = properties;
+        this.schemaVersion = schemaVersion;
         this.sourceId = sourceId;
         this.variants = variants;
     }
@@ -80,17 +81,14 @@ public final class GetComponentResult {
     public Optional<String> componentType() {
         return Optional.ofNullable(this.componentType);
     }
-    public Optional<String> createdAt() {
-        return Optional.ofNullable(this.createdAt);
-    }
     public Optional<String> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
+    public Optional<ComponentEvents> events() {
+        return Optional.ofNullable(this.events);
+    }
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
-    }
-    public Optional<String> modifiedAt() {
-        return Optional.ofNullable(this.modifiedAt);
     }
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
@@ -100,6 +98,9 @@ public final class GetComponentResult {
     }
     public Optional<ComponentProperties> properties() {
         return Optional.ofNullable(this.properties);
+    }
+    public Optional<String> schemaVersion() {
+        return Optional.ofNullable(this.schemaVersion);
     }
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
@@ -122,13 +123,13 @@ public final class GetComponentResult {
         private @Nullable List<ComponentChild> children;
         private @Nullable ComponentCollectionProperties collectionProperties;
         private @Nullable String componentType;
-        private @Nullable String createdAt;
         private @Nullable String environmentName;
+        private @Nullable ComponentEvents events;
         private @Nullable String id;
-        private @Nullable String modifiedAt;
         private @Nullable String name;
         private @Nullable ComponentOverrides overrides;
         private @Nullable ComponentProperties properties;
+        private @Nullable String schemaVersion;
         private @Nullable String sourceId;
         private @Nullable List<ComponentVariant> variants;
 
@@ -143,13 +144,13 @@ public final class GetComponentResult {
     	      this.children = defaults.children;
     	      this.collectionProperties = defaults.collectionProperties;
     	      this.componentType = defaults.componentType;
-    	      this.createdAt = defaults.createdAt;
     	      this.environmentName = defaults.environmentName;
+    	      this.events = defaults.events;
     	      this.id = defaults.id;
-    	      this.modifiedAt = defaults.modifiedAt;
     	      this.name = defaults.name;
     	      this.overrides = defaults.overrides;
     	      this.properties = defaults.properties;
+    	      this.schemaVersion = defaults.schemaVersion;
     	      this.sourceId = defaults.sourceId;
     	      this.variants = defaults.variants;
         }
@@ -177,20 +178,16 @@ public final class GetComponentResult {
             this.componentType = componentType;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = id;
+        public Builder events(@Nullable ComponentEvents events) {
+            this.events = events;
             return this;
         }
-        public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = modifiedAt;
+        public Builder id(@Nullable String id) {
+            this.id = id;
             return this;
         }
         public Builder name(@Nullable String name) {
@@ -205,6 +202,10 @@ public final class GetComponentResult {
             this.properties = properties;
             return this;
         }
+        public Builder schemaVersion(@Nullable String schemaVersion) {
+            this.schemaVersion = schemaVersion;
+            return this;
+        }
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
@@ -216,7 +217,7 @@ public final class GetComponentResult {
         public Builder variants(ComponentVariant... variants) {
             return variants(List.of(variants));
         }        public GetComponentResult build() {
-            return new GetComponentResult(appId, bindingProperties, children, collectionProperties, componentType, createdAt, environmentName, id, modifiedAt, name, overrides, properties, sourceId, variants);
+            return new GetComponentResult(appId, bindingProperties, children, collectionProperties, componentType, environmentName, events, id, name, overrides, properties, schemaVersion, sourceId, variants);
         }
     }
 }

@@ -4,10 +4,13 @@
 package com.pulumi.docker;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.ProviderArgs;
 import com.pulumi.docker.Utilities;
+import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -19,6 +22,77 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="pulumi:providers:docker")
 public class Provider extends com.pulumi.resources.ProviderResource {
+    /**
+     * PEM-encoded content of Docker host CA certificate
+     * 
+     */
+    @Export(name="caMaterial", type=String.class, parameters={})
+    private Output</* @Nullable */ String> caMaterial;
+
+    /**
+     * @return PEM-encoded content of Docker host CA certificate
+     * 
+     */
+    public Output<Optional<String>> caMaterial() {
+        return Codegen.optional(this.caMaterial);
+    }
+    /**
+     * PEM-encoded content of Docker client certificate
+     * 
+     */
+    @Export(name="certMaterial", type=String.class, parameters={})
+    private Output</* @Nullable */ String> certMaterial;
+
+    /**
+     * @return PEM-encoded content of Docker client certificate
+     * 
+     */
+    public Output<Optional<String>> certMaterial() {
+        return Codegen.optional(this.certMaterial);
+    }
+    /**
+     * Path to directory with Docker TLS config
+     * 
+     */
+    @Export(name="certPath", type=String.class, parameters={})
+    private Output</* @Nullable */ String> certPath;
+
+    /**
+     * @return Path to directory with Docker TLS config
+     * 
+     */
+    public Output<Optional<String>> certPath() {
+        return Codegen.optional(this.certPath);
+    }
+    /**
+     * The Docker daemon address
+     * 
+     */
+    @Export(name="host", type=String.class, parameters={})
+    private Output</* @Nullable */ String> host;
+
+    /**
+     * @return The Docker daemon address
+     * 
+     */
+    public Output<Optional<String>> host() {
+        return Codegen.optional(this.host);
+    }
+    /**
+     * PEM-encoded content of Docker client private key
+     * 
+     */
+    @Export(name="keyMaterial", type=String.class, parameters={})
+    private Output</* @Nullable */ String> keyMaterial;
+
+    /**
+     * @return PEM-encoded content of Docker client private key
+     * 
+     */
+    public Output<Optional<String>> keyMaterial() {
+        return Codegen.optional(this.keyMaterial);
+    }
+
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,8 +22,12 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowedMemberTypes", required=true)
-      private final Output<List<String>> allowedMemberTypes;
+    private Output<List<String>> allowedMemberTypes;
 
+    /**
+     * @return Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+     * 
+     */
     public Output<List<String>> allowedMemberTypes() {
         return this.allowedMemberTypes;
     }
@@ -33,8 +37,12 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
+    /**
+     * @return Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -44,8 +52,12 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -55,10 +67,14 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    /**
+     * @return Determines if the app role is enabled. Defaults to `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -66,8 +82,12 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
+    /**
+     * @return The unique identifier of the app role. Must be a valid UUID.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -77,118 +97,188 @@ public final class ApplicationAppRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    /**
+     * @return The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+     * 
+     */
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApplicationAppRoleArgs(
-        Output<List<String>> allowedMemberTypes,
-        Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        Output<String> id,
-        @Nullable Output<String> value) {
-        this.allowedMemberTypes = Objects.requireNonNull(allowedMemberTypes, "expected parameter 'allowedMemberTypes' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = enabled;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.value = value;
-    }
+    private ApplicationAppRoleArgs() {}
 
-    private ApplicationAppRoleArgs() {
-        this.allowedMemberTypes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.id = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApplicationAppRoleArgs(ApplicationAppRoleArgs $) {
+        this.allowedMemberTypes = $.allowedMemberTypes;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAppRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedMemberTypes;
-        private Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> id;
-        private @Nullable Output<String> value;
+        private ApplicationAppRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAppRoleArgs();
         }
 
         public Builder(ApplicationAppRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedMemberTypes = defaults.allowedMemberTypes;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.value = defaults.value;
+            $ = new ApplicationAppRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMemberTypes(Output<List<String>> allowedMemberTypes) {
-            this.allowedMemberTypes = Objects.requireNonNull(allowedMemberTypes);
+            $.allowedMemberTypes = allowedMemberTypes;
             return this;
         }
+
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMemberTypes(List<String> allowedMemberTypes) {
-            this.allowedMemberTypes = Output.of(Objects.requireNonNull(allowedMemberTypes));
-            return this;
+            return allowedMemberTypes(Output.of(allowedMemberTypes));
         }
+
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMemberTypes(String... allowedMemberTypes) {
             return allowedMemberTypes(List.of(allowedMemberTypes));
         }
+
+        /**
+         * @param description Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
+        /**
+         * @param description Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName Display name for the app role that appears during app role assignment and in consent experiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName Display name for the app role that appears during app role assignment and in consent experiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param enabled Determines if the app role is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        /**
+         * @param enabled Determines if the app role is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param id The unique identifier of the app role. Must be a valid UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
+        /**
+         * @param id The unique identifier of the app role. Must be a valid UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
+        /**
+         * @param value The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApplicationAppRoleArgs build() {
-            return new ApplicationAppRoleArgs(allowedMemberTypes, description, displayName, enabled, id, value);
+
+        /**
+         * @param value The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApplicationAppRoleArgs build() {
+            $.allowedMemberTypes = Objects.requireNonNull($.allowedMemberTypes, "expected parameter 'allowedMemberTypes' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,6 +19,11 @@ public final class WorkflowStepTagStepDetailsProperties {
      */
     private final @Nullable String name;
     /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    private final @Nullable String sourceFileLocation;
+    /**
      * @return Array that contains from 1 to 10 key/value pairs.
      * 
      */
@@ -27,8 +32,10 @@ public final class WorkflowStepTagStepDetailsProperties {
     @CustomType.Constructor
     private WorkflowStepTagStepDetailsProperties(
         @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceFileLocation") @Nullable String sourceFileLocation,
         @CustomType.Parameter("tags") @Nullable List<WorkflowS3Tag> tags) {
         this.name = name;
+        this.sourceFileLocation = sourceFileLocation;
         this.tags = tags;
     }
 
@@ -38,6 +45,13 @@ public final class WorkflowStepTagStepDetailsProperties {
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<String> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
     }
     /**
      * @return Array that contains from 1 to 10 key/value pairs.
@@ -57,6 +71,7 @@ public final class WorkflowStepTagStepDetailsProperties {
 
     public static final class Builder {
         private @Nullable String name;
+        private @Nullable String sourceFileLocation;
         private @Nullable List<WorkflowS3Tag> tags;
 
         public Builder() {
@@ -66,11 +81,16 @@ public final class WorkflowStepTagStepDetailsProperties {
         public Builder(WorkflowStepTagStepDetailsProperties defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.name = defaults.name;
+    	      this.sourceFileLocation = defaults.sourceFileLocation;
     	      this.tags = defaults.tags;
         }
 
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+        public Builder sourceFileLocation(@Nullable String sourceFileLocation) {
+            this.sourceFileLocation = sourceFileLocation;
             return this;
         }
         public Builder tags(@Nullable List<WorkflowS3Tag> tags) {
@@ -80,7 +100,7 @@ public final class WorkflowStepTagStepDetailsProperties {
         public Builder tags(WorkflowS3Tag... tags) {
             return tags(List.of(tags));
         }        public WorkflowStepTagStepDetailsProperties build() {
-            return new WorkflowStepTagStepDetailsProperties(name, tags);
+            return new WorkflowStepTagStepDetailsProperties(name, sourceFileLocation, tags);
         }
     }
 }

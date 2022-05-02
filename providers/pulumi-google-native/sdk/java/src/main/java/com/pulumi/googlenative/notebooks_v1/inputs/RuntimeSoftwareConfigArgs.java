@@ -84,14 +84,14 @@ public final class RuntimeSoftwareConfigArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Install Nvidia Driver automatically.
+     * Install Nvidia Driver automatically. Default: True
      * 
      */
     @Import(name="installGpuDriver")
     private @Nullable Output<Boolean> installGpuDriver;
 
     /**
-     * @return Install Nvidia Driver automatically.
+     * @return Install Nvidia Driver automatically. Default: True
      * 
      */
     public Optional<Output<Boolean>> installGpuDriver() {
@@ -259,7 +259,7 @@ public final class RuntimeSoftwareConfigArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param installGpuDriver Install Nvidia Driver automatically.
+         * @param installGpuDriver Install Nvidia Driver automatically. Default: True
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class RuntimeSoftwareConfigArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param installGpuDriver Install Nvidia Driver automatically.
+         * @param installGpuDriver Install Nvidia Driver automatically. Default: True
          * 
          * @return builder
          * 

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NetworkEndpointGroupServerlessDeploymentResponse {
     /**
-     * @return The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+     * @return The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
      * 
      */
     private final String platform;
@@ -43,7 +43,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
     }
 
     /**
-     * @return The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+     * @return The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
      * 
      */
     public String platform() {

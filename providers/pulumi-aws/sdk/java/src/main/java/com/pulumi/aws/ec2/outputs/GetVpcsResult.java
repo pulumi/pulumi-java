@@ -20,7 +20,7 @@ public final class GetVpcsResult {
      */
     private final String id;
     /**
-     * @return A list of all the VPC Ids found. This data source will fail if none are found.
+     * @return A list of all the VPC Ids found.
      * 
      */
     private final List<String> ids;
@@ -49,7 +49,7 @@ public final class GetVpcsResult {
         return this.id;
     }
     /**
-     * @return A list of all the VPC Ids found. This data source will fail if none are found.
+     * @return A list of all the VPC Ids found.
      * 
      */
     public List<String> ids() {

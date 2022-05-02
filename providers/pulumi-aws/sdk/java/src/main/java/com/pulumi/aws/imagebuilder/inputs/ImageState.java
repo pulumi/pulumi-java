@@ -36,6 +36,21 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    @Import(name="containerRecipeArn")
+    private @Nullable Output<String> containerRecipeArn;
+
+    /**
+     * @return - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public Optional<Output<String>> containerRecipeArn() {
+        return Optional.ofNullable(this.containerRecipeArn);
+    }
+
+    /**
      * Date the image was created.
      * 
      */
@@ -81,14 +96,14 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     @Import(name="imageRecipeArn")
     private @Nullable Output<String> imageRecipeArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     public Optional<Output<String>> imageRecipeArn() {
@@ -234,6 +249,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
 
     private ImageState(ImageState $) {
         this.arn = $.arn;
+        this.containerRecipeArn = $.containerRecipeArn;
         this.dateCreated = $.dateCreated;
         this.distributionConfigurationArn = $.distributionConfigurationArn;
         this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
@@ -286,6 +302,27 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
+        }
+
+        /**
+         * @param containerRecipeArn - Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
+            $.containerRecipeArn = containerRecipeArn;
+            return this;
+        }
+
+        /**
+         * @param containerRecipeArn - Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(String containerRecipeArn) {
+            return containerRecipeArn(Output.of(containerRecipeArn));
         }
 
         /**
@@ -352,7 +389,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 
@@ -363,7 +400,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 

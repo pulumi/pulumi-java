@@ -16,14 +16,14 @@ public final class AliasRoutingStrategyArgs extends com.pulumi.resources.Resourc
     public static final AliasRoutingStrategyArgs Empty = new AliasRoutingStrategyArgs();
 
     /**
-     * ID of the Gamelift Fleet to point the alias to.
+     * ID of the GameLift Fleet to point the alias to.
      * 
      */
     @Import(name="fleetId")
     private @Nullable Output<String> fleetId;
 
     /**
-     * @return ID of the Gamelift Fleet to point the alias to.
+     * @return ID of the GameLift Fleet to point the alias to.
      * 
      */
     public Optional<Output<String>> fleetId() {
@@ -87,7 +87,7 @@ public final class AliasRoutingStrategyArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fleetId ID of the Gamelift Fleet to point the alias to.
+         * @param fleetId ID of the GameLift Fleet to point the alias to.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class AliasRoutingStrategyArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fleetId ID of the Gamelift Fleet to point the alias to.
+         * @param fleetId ID of the GameLift Fleet to point the alias to.
          * 
          * @return builder
          * 

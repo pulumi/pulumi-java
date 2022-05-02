@@ -15,14 +15,14 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
     public static final WebAclVisibilityConfigArgs Empty = new WebAclVisibilityConfigArgs();
 
     /**
-     * A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+     * Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
      * 
      */
     @Import(name="cloudwatchMetricsEnabled", required=true)
     private Output<Boolean> cloudwatchMetricsEnabled;
 
     /**
-     * @return A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+     * @return Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
      * 
      */
     public Output<Boolean> cloudwatchMetricsEnabled() {
@@ -45,14 +45,14 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+     * Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
      * 
      */
     @Import(name="sampledRequestsEnabled", required=true)
     private Output<Boolean> sampledRequestsEnabled;
 
     /**
-     * @return A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+     * @return Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
      * 
      */
     public Output<Boolean> sampledRequestsEnabled() {
@@ -86,7 +86,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param cloudwatchMetricsEnabled A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+         * @param cloudwatchMetricsEnabled Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
          * 
          * @return builder
          * 
@@ -97,7 +97,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param cloudwatchMetricsEnabled A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+         * @param cloudwatchMetricsEnabled Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param sampledRequestsEnabled A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+         * @param sampledRequestsEnabled Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param sampledRequestsEnabled A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+         * @param sampledRequestsEnabled Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
          * 
          * @return builder
          * 

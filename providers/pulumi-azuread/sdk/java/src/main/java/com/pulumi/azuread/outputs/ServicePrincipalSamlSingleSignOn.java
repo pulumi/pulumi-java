@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePrincipalSamlSingleSignOn {
     /**
-     * The relative URI the service provider would redirect to after completion of the single sign-on flow.
+     * @return The relative URI the service provider would redirect to after completion of the single sign-on flow.
      * 
      */
     private final @Nullable String relayState;
@@ -23,9 +23,9 @@ public final class ServicePrincipalSamlSingleSignOn {
     }
 
     /**
-     * The relative URI the service provider would redirect to after completion of the single sign-on flow.
+     * @return The relative URI the service provider would redirect to after completion of the single sign-on flow.
      * 
-    */
+     */
     public Optional<String> relayState() {
         return Optional.ofNullable(this.relayState);
     }

@@ -14,14 +14,14 @@ public final class WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs 
     public static final WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs Empty = new WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs();
 
     /**
-     * The name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
+     * Name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
+     * @return Name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
      * 
      */
     public Output<String> name() {
@@ -53,7 +53,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs 
         }
 
         /**
-         * @param name The name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
+         * @param name Name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
          * 
          * @return builder
          * 
@@ -64,7 +64,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs 
         }
 
         /**
-         * @param name The name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
+         * @param name Name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
          * 
          * @return builder
          * 

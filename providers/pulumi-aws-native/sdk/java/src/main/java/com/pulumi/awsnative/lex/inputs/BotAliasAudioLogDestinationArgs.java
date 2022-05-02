@@ -7,8 +7,6 @@ import com.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 /**
@@ -19,11 +17,11 @@ public final class BotAliasAudioLogDestinationArgs extends com.pulumi.resources.
 
     public static final BotAliasAudioLogDestinationArgs Empty = new BotAliasAudioLogDestinationArgs();
 
-    @Import(name="s3Bucket")
-    private @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
+    @Import(name="s3Bucket", required=true)
+    private Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
-    public Optional<Output<BotAliasS3BucketLogDestinationArgs>> s3Bucket() {
-        return Optional.ofNullable(this.s3Bucket);
+    public Output<BotAliasS3BucketLogDestinationArgs> s3Bucket() {
+        return this.s3Bucket;
     }
 
     private BotAliasAudioLogDestinationArgs() {}
@@ -50,7 +48,7 @@ public final class BotAliasAudioLogDestinationArgs extends com.pulumi.resources.
             $ = new BotAliasAudioLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder s3Bucket(@Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
+        public Builder s3Bucket(Output<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;
         }
@@ -60,6 +58,7 @@ public final class BotAliasAudioLogDestinationArgs extends com.pulumi.resources.
         }
 
         public BotAliasAudioLogDestinationArgs build() {
+            $.s3Bucket = Objects.requireNonNull($.s3Bucket, "expected parameter 's3Bucket' to be non-null");
             return $;
         }
     }

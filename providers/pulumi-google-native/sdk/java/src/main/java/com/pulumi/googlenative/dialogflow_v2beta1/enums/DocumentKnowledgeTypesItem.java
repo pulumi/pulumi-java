@@ -31,6 +31,11 @@ import java.util.StringJoiner;
          */
         ArticleSuggestion("ARTICLE_SUGGESTION"),
         /**
+         * The document contains agent-facing Smart Reply entries.
+         * 
+         */
+        AgentFacingSmartReply("AGENT_FACING_SMART_REPLY"),
+        /**
          * The legacy enum for agent-facing smart reply feature.
          * 
          */

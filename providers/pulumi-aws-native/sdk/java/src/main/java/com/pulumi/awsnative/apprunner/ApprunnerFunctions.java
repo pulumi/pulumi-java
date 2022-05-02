@@ -4,8 +4,10 @@
 package com.pulumi.awsnative.apprunner;
 
 import com.pulumi.awsnative.Utilities;
+import com.pulumi.awsnative.apprunner.inputs.GetObservabilityConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.GetServiceArgs;
 import com.pulumi.awsnative.apprunner.inputs.GetVpcConnectorArgs;
+import com.pulumi.awsnative.apprunner.outputs.GetObservabilityConfigurationResult;
 import com.pulumi.awsnative.apprunner.outputs.GetServiceResult;
 import com.pulumi.awsnative.apprunner.outputs.GetVpcConnectorResult;
 import com.pulumi.core.TypeShape;
@@ -14,6 +16,16 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class ApprunnerFunctions {
+    /**
+     * The AWS::AppRunner::ObservabilityConfiguration resource  is an AWS App Runner resource type that specifies an App Runner observability configuration
+     * 
+     */
+    public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args) {
+        return getObservabilityConfiguration(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:apprunner:getObservabilityConfiguration", TypeShape.of(GetObservabilityConfigurationResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * The AWS::AppRunner::Service resource specifies an AppRunner Service.
      * 

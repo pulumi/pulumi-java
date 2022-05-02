@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.ec2.TransitGatewayPeeringAttachmentArgs;
-import com.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentOptions;
 import com.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentPeeringAttachmentStatus;
 import com.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentTag;
 import com.pulumi.core.Output;
@@ -36,20 +35,6 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      */
     public Output<String> creationTime() {
         return this.creationTime;
-    }
-    /**
-     * Options for transit gateway peering attachment
-     * 
-     */
-    @Export(name="options", type=TransitGatewayPeeringAttachmentOptions.class, parameters={})
-    private Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> options;
-
-    /**
-     * @return Options for transit gateway peering attachment
-     * 
-     */
-    public Output<Optional<TransitGatewayPeeringAttachmentOptions>> options() {
-        return Codegen.optional(this.options);
     }
     /**
      * The ID of the peer account

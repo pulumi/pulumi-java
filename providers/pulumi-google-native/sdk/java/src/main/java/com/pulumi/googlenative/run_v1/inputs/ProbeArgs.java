@@ -68,14 +68,14 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     @Import(name="initialDelaySeconds")
     private @Nullable Output<Integer> initialDelaySeconds;
 
     /**
-     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     public Optional<Output<Integer>> initialDelaySeconds() {
@@ -83,14 +83,14 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
      * 
      */
     @Import(name="periodSeconds")
     private @Nullable Output<Integer> periodSeconds;
 
     /**
-     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
      * 
      */
     public Optional<Output<Integer>> periodSeconds() {
@@ -98,14 +98,14 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
      * 
      */
     @Import(name="successThreshold")
     private @Nullable Output<Integer> successThreshold;
 
     /**
-     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
      * 
      */
     public Optional<Output<Integer>> successThreshold() {
@@ -128,14 +128,14 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
     /**
-     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     public Optional<Output<Integer>> timeoutSeconds() {
@@ -237,7 +237,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
          * 
          * @return builder
          * 
@@ -290,7 +290,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
          * 
          * @return builder
          * 
@@ -332,7 +332,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
          * 
          * @return builder
          * 

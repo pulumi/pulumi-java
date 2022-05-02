@@ -20,9 +20,17 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
 
     public static final TransferConfigArgs Empty = new TransferConfigArgs();
 
+    /**
+     * Optional OAuth2 authorization code to use with this transfer configuration. This is required only if `transferConfig.dataSourceId` is &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     * 
+     */
     @Import(name="authorizationCode")
     private @Nullable Output<String> authorizationCode;
 
+    /**
+     * @return Optional OAuth2 authorization code to use with this transfer configuration. This is required only if `transferConfig.dataSourceId` is &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     * 
+     */
     public Optional<Output<String>> authorizationCode() {
         return Optional.ofNullable(this.authorizationCode);
     }
@@ -206,16 +214,55 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.scheduleOptions);
     }
 
+    /**
+     * Optional service account name. If this field is set, transfer config will be created with this service account credential. It requires that requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating transfer config. Please refer to this public guide for the latest list of data sources with service account support: https://cloud.google.com/bigquery-transfer/docs/use-service-accounts
+     * 
+     */
     @Import(name="serviceAccountName")
     private @Nullable Output<String> serviceAccountName;
 
+    /**
+     * @return Optional service account name. If this field is set, transfer config will be created with this service account credential. It requires that requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating transfer config. Please refer to this public guide for the latest list of data sources with service account support: https://cloud.google.com/bigquery-transfer/docs/use-service-accounts
+     * 
+     */
     public Optional<Output<String>> serviceAccountName() {
         return Optional.ofNullable(this.serviceAccountName);
     }
 
+    /**
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     * @deprecated
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+    @Import(name="userId")
+    private @Nullable Output<String> userId;
+
+    /**
+     * @return Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     * @deprecated
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
+    }
+
+    /**
+     * Optional version info. This is required only if `transferConfig.dataSourceId` is anything else but &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     * 
+     */
     @Import(name="versionInfo")
     private @Nullable Output<String> versionInfo;
 
+    /**
+     * @return Optional version info. This is required only if `transferConfig.dataSourceId` is anything else but &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     * 
+     */
     public Optional<Output<String>> versionInfo() {
         return Optional.ofNullable(this.versionInfo);
     }
@@ -238,6 +285,7 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
         this.schedule = $.schedule;
         this.scheduleOptions = $.scheduleOptions;
         this.serviceAccountName = $.serviceAccountName;
+        this.userId = $.userId;
         this.versionInfo = $.versionInfo;
     }
 
@@ -259,11 +307,23 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TransferConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationCode Optional OAuth2 authorization code to use with this transfer configuration. This is required only if `transferConfig.dataSourceId` is &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationCode(@Nullable Output<String> authorizationCode) {
             $.authorizationCode = authorizationCode;
             return this;
         }
 
+        /**
+         * @param authorizationCode Optional OAuth2 authorization code to use with this transfer configuration. This is required only if `transferConfig.dataSourceId` is &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationCode(String authorizationCode) {
             return authorizationCode(Output.of(authorizationCode));
         }
@@ -517,20 +577,73 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
             return scheduleOptions(Output.of(scheduleOptions));
         }
 
+        /**
+         * @param serviceAccountName Optional service account name. If this field is set, transfer config will be created with this service account credential. It requires that requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating transfer config. Please refer to this public guide for the latest list of data sources with service account support: https://cloud.google.com/bigquery-transfer/docs/use-service-accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             $.serviceAccountName = serviceAccountName;
             return this;
         }
 
+        /**
+         * @param serviceAccountName Optional service account name. If this field is set, transfer config will be created with this service account credential. It requires that requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating transfer config. Please refer to this public guide for the latest list of data sources with service account support: https://cloud.google.com/bigquery-transfer/docs/use-service-accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(String serviceAccountName) {
             return serviceAccountName(Output.of(serviceAccountName));
         }
 
+        /**
+         * @param userId Deprecated. Unique ID of the user on whose behalf transfer is done.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Unique ID of the user on whose behalf transfer is done.
+         * 
+         */
+        @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+        public Builder userId(@Nullable Output<String> userId) {
+            $.userId = userId;
+            return this;
+        }
+
+        /**
+         * @param userId Deprecated. Unique ID of the user on whose behalf transfer is done.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Unique ID of the user on whose behalf transfer is done.
+         * 
+         */
+        @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
+        }
+
+        /**
+         * @param versionInfo Optional version info. This is required only if `transferConfig.dataSourceId` is anything else but &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionInfo(@Nullable Output<String> versionInfo) {
             $.versionInfo = versionInfo;
             return this;
         }
 
+        /**
+         * @param versionInfo Optional version info. This is required only if `transferConfig.dataSourceId` is anything else but &#39;youtube_channel&#39; and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=&amp;scope=&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionInfo(String versionInfo) {
             return versionInfo(Output.of(versionInfo));
         }

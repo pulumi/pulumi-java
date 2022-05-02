@@ -76,16 +76,32 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * If set, validate the request and preview the response, but do not actually post it.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return If set, validate the request and preview the response, but do not actually post it.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
 
+    /**
+     * Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     @Import(name="workerPoolId", required=true)
     private Output<String> workerPoolId;
 
+    /**
+     * @return Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
@@ -201,20 +217,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param validateOnly If set, validate the request and preview the response, but do not actually post it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If set, validate the request and preview the response, but do not actually post it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }
 
+        /**
+         * @param workerPoolId Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPoolId(Output<String> workerPoolId) {
             $.workerPoolId = workerPoolId;
             return this;
         }
 
+        /**
+         * @param workerPoolId Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPoolId(String workerPoolId) {
             return workerPoolId(Output.of(workerPoolId));
         }

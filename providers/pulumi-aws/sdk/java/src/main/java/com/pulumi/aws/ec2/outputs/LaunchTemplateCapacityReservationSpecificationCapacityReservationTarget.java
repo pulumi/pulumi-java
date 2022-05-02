@@ -12,22 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget {
     /**
-     * @return The ID of the Capacity Reservation to target.
+     * @return The ID of the Capacity Reservation in which to run the instance.
      * 
      */
     private final @Nullable String capacityReservationId;
+    /**
+     * @return The ARN of the Capacity Reservation resource group in which to run the instance.
+     * 
+     */
+    private final @Nullable String capacityReservationResourceGroupArn;
 
     @CustomType.Constructor
-    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(@CustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
+    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(
+        @CustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId,
+        @CustomType.Parameter("capacityReservationResourceGroupArn") @Nullable String capacityReservationResourceGroupArn) {
         this.capacityReservationId = capacityReservationId;
+        this.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
     }
 
     /**
-     * @return The ID of the Capacity Reservation to target.
+     * @return The ID of the Capacity Reservation in which to run the instance.
      * 
      */
     public Optional<String> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
+    }
+    /**
+     * @return The ARN of the Capacity Reservation resource group in which to run the instance.
+     * 
+     */
+    public Optional<String> capacityReservationResourceGroupArn() {
+        return Optional.ofNullable(this.capacityReservationResourceGroupArn);
     }
 
     public static Builder builder() {
@@ -40,6 +55,7 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
 
     public static final class Builder {
         private @Nullable String capacityReservationId;
+        private @Nullable String capacityReservationResourceGroupArn;
 
         public Builder() {
     	      // Empty
@@ -48,13 +64,18 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
         public Builder(LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.capacityReservationId = defaults.capacityReservationId;
+    	      this.capacityReservationResourceGroupArn = defaults.capacityReservationResourceGroupArn;
         }
 
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
+        }
+        public Builder capacityReservationResourceGroupArn(@Nullable String capacityReservationResourceGroupArn) {
+            this.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
+            return this;
         }        public LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget build() {
-            return new LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(capacityReservationId);
+            return new LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(capacityReservationId, capacityReservationResourceGroupArn);
         }
     }
 }

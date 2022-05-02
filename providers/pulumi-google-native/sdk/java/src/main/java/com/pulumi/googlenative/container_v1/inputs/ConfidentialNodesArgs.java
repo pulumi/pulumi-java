@@ -20,14 +20,14 @@ public final class ConfidentialNodesArgs extends com.pulumi.resources.ResourceAr
     public static final ConfidentialNodesArgs Empty = new ConfidentialNodesArgs();
 
     /**
-     * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+     * Whether Confidential Nodes feature is enabled.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+     * @return Whether Confidential Nodes feature is enabled.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -59,7 +59,7 @@ public final class ConfidentialNodesArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param enabled Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+         * @param enabled Whether Confidential Nodes feature is enabled.
          * 
          * @return builder
          * 
@@ -70,7 +70,7 @@ public final class ConfidentialNodesArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param enabled Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+         * @param enabled Whether Confidential Nodes feature is enabled.
          * 
          * @return builder
          * 

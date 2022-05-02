@@ -13,16 +13,32 @@ public final class DomainTagArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DomainTagArgs Empty = new DomainTagArgs();
 
+    /**
+     * The value of the tag.
+     * 
+     */
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The value of the tag.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
 
+    /**
+     * The key of the tag.
+     * 
+     */
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The key of the tag.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -52,20 +68,44 @@ public final class DomainTagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The key of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The key of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

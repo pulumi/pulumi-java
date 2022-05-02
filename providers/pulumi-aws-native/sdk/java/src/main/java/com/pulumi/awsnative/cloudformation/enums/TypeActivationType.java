@@ -15,7 +15,8 @@ import java.util.StringJoiner;
     @EnumType
     public enum TypeActivationType {
         Resource("RESOURCE"),
-        Module("MODULE");
+        Module("MODULE"),
+        Hook("HOOK");
 
         private final String value;
 

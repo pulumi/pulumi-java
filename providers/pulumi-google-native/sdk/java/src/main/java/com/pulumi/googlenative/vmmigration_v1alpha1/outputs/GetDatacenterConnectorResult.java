@@ -4,12 +4,29 @@
 package com.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.AvailableUpdatesResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.UpgradeStatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetDatacenterConnectorResult {
+    /**
+     * @return Appliance OVA version. This is the OVA which is manually installed by the user and contains the infrastructure for the automatically updatable components on the appliance.
+     * 
+     */
+    private final String applianceInfrastructureVersion;
+    /**
+     * @return Appliance last installed update bundle version. This is the version of the automatically updatable components on the appliance.
+     * 
+     */
+    private final String applianceSoftwareVersion;
+    /**
+     * @return The available versions for updating this appliance.
+     * 
+     */
+    private final AvailableUpdatesResponse availableVersions;
     /**
      * @return The communication channel between the datacenter connector and GCP.
      * 
@@ -56,6 +73,11 @@ public final class GetDatacenterConnectorResult {
      */
     private final String updateTime;
     /**
+     * @return The status of the current / last upgradeAppliance operation.
+     * 
+     */
+    private final UpgradeStatusResponse upgradeStatus;
+    /**
      * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
      */
@@ -63,6 +85,9 @@ public final class GetDatacenterConnectorResult {
 
     @CustomType.Constructor
     private GetDatacenterConnectorResult(
+        @CustomType.Parameter("applianceInfrastructureVersion") String applianceInfrastructureVersion,
+        @CustomType.Parameter("applianceSoftwareVersion") String applianceSoftwareVersion,
+        @CustomType.Parameter("availableVersions") AvailableUpdatesResponse availableVersions,
         @CustomType.Parameter("bucket") String bucket,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("error") StatusResponse error,
@@ -72,7 +97,11 @@ public final class GetDatacenterConnectorResult {
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateTime") String stateTime,
         @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("upgradeStatus") UpgradeStatusResponse upgradeStatus,
         @CustomType.Parameter("version") String version) {
+        this.applianceInfrastructureVersion = applianceInfrastructureVersion;
+        this.applianceSoftwareVersion = applianceSoftwareVersion;
+        this.availableVersions = availableVersions;
         this.bucket = bucket;
         this.createTime = createTime;
         this.error = error;
@@ -82,9 +111,31 @@ public final class GetDatacenterConnectorResult {
         this.state = state;
         this.stateTime = stateTime;
         this.updateTime = updateTime;
+        this.upgradeStatus = upgradeStatus;
         this.version = version;
     }
 
+    /**
+     * @return Appliance OVA version. This is the OVA which is manually installed by the user and contains the infrastructure for the automatically updatable components on the appliance.
+     * 
+     */
+    public String applianceInfrastructureVersion() {
+        return this.applianceInfrastructureVersion;
+    }
+    /**
+     * @return Appliance last installed update bundle version. This is the version of the automatically updatable components on the appliance.
+     * 
+     */
+    public String applianceSoftwareVersion() {
+        return this.applianceSoftwareVersion;
+    }
+    /**
+     * @return The available versions for updating this appliance.
+     * 
+     */
+    public AvailableUpdatesResponse availableVersions() {
+        return this.availableVersions;
+    }
     /**
      * @return The communication channel between the datacenter connector and GCP.
      * 
@@ -149,6 +200,13 @@ public final class GetDatacenterConnectorResult {
         return this.updateTime;
     }
     /**
+     * @return The status of the current / last upgradeAppliance operation.
+     * 
+     */
+    public UpgradeStatusResponse upgradeStatus() {
+        return this.upgradeStatus;
+    }
+    /**
      * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
      */
@@ -165,6 +223,9 @@ public final class GetDatacenterConnectorResult {
     }
 
     public static final class Builder {
+        private String applianceInfrastructureVersion;
+        private String applianceSoftwareVersion;
+        private AvailableUpdatesResponse availableVersions;
         private String bucket;
         private String createTime;
         private StatusResponse error;
@@ -174,6 +235,7 @@ public final class GetDatacenterConnectorResult {
         private String state;
         private String stateTime;
         private String updateTime;
+        private UpgradeStatusResponse upgradeStatus;
         private String version;
 
         public Builder() {
@@ -182,6 +244,9 @@ public final class GetDatacenterConnectorResult {
 
         public Builder(GetDatacenterConnectorResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.applianceInfrastructureVersion = defaults.applianceInfrastructureVersion;
+    	      this.applianceSoftwareVersion = defaults.applianceSoftwareVersion;
+    	      this.availableVersions = defaults.availableVersions;
     	      this.bucket = defaults.bucket;
     	      this.createTime = defaults.createTime;
     	      this.error = defaults.error;
@@ -191,9 +256,22 @@ public final class GetDatacenterConnectorResult {
     	      this.state = defaults.state;
     	      this.stateTime = defaults.stateTime;
     	      this.updateTime = defaults.updateTime;
+    	      this.upgradeStatus = defaults.upgradeStatus;
     	      this.version = defaults.version;
         }
 
+        public Builder applianceInfrastructureVersion(String applianceInfrastructureVersion) {
+            this.applianceInfrastructureVersion = Objects.requireNonNull(applianceInfrastructureVersion);
+            return this;
+        }
+        public Builder applianceSoftwareVersion(String applianceSoftwareVersion) {
+            this.applianceSoftwareVersion = Objects.requireNonNull(applianceSoftwareVersion);
+            return this;
+        }
+        public Builder availableVersions(AvailableUpdatesResponse availableVersions) {
+            this.availableVersions = Objects.requireNonNull(availableVersions);
+            return this;
+        }
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
@@ -230,11 +308,15 @@ public final class GetDatacenterConnectorResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
+        public Builder upgradeStatus(UpgradeStatusResponse upgradeStatus) {
+            this.upgradeStatus = Objects.requireNonNull(upgradeStatus);
+            return this;
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public GetDatacenterConnectorResult build() {
-            return new GetDatacenterConnectorResult(bucket, createTime, error, name, registrationId, serviceAccount, state, stateTime, updateTime, version);
+            return new GetDatacenterConnectorResult(applianceInfrastructureVersion, applianceSoftwareVersion, availableVersions, bucket, createTime, error, name, registrationId, serviceAccount, state, stateTime, updateTime, upgradeStatus, version);
         }
     }
 }

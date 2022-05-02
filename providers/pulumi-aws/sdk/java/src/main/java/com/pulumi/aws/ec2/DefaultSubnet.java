@@ -17,11 +17,14 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides a resource to manage a [default AWS VPC subnet](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics) in the current region.
+ * Provides a resource to manage a [default subnet](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics) in the current region.
  * 
- * The `aws.ec2.DefaultSubnet` behaves differently from normal resources, in that this provider does not _create_ this resource but instead &#34;adopts&#34; it into management.
+ * **This is an advanced resource** and has special caveats to be aware of when using it. Please read this document in its entirety before using this resource.
  * 
- * The `aws.ec2.DefaultSubnet` resource allows you to manage a region&#39;s default VPC subnet but this provider cannot destroy it. Removing this resource from your configuration will remove it from your statefile and the provider management.
+ * The `aws.ec2.DefaultSubnet` resource behaves differently from normal resources in that if a default subnet exists in the specified Availability Zone, this provider does not _create_ this resource, but instead &#34;adopts&#34; it into management.
+ * If no default subnet exists, this provider creates a new default subnet.
+ * By default, `pulumi destroy` does not delete the default subnet but does remove the resource from the state.
+ * Set the `force_destroy` argument to `true` to delete the default subnet.
  * 
  * ## Example Usage
  * 
@@ -36,65 +39,59 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:ec2/defaultSubnet:DefaultSubnet")
 public class DefaultSubnet extends com.pulumi.resources.CustomResource {
-    /**
-     * ARN for the subnet.
-     * 
-     */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    /**
-     * @return ARN for the subnet.
-     * 
-     */
     public Output<String> arn() {
         return this.arn;
     }
-    /**
-     * Whether IPv6 addresses are assigned on creation.
-     * * `availability_zone_id`- AZ ID of the subnet.
-     * 
-     */
     @Export(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
-    private Output<Boolean> assignIpv6AddressOnCreation;
+    private Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation;
 
-    /**
-     * @return Whether IPv6 addresses are assigned on creation.
-     * * `availability_zone_id`- AZ ID of the subnet.
-     * 
-     */
-    public Output<Boolean> assignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation;
+    public Output<Optional<Boolean>> assignIpv6AddressOnCreation() {
+        return Codegen.optional(this.assignIpv6AddressOnCreation);
     }
     /**
-     * AZ for the subnet.
+     * is required
+     * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+     * * The default value for `map_public_ip_on_launch` is `true`
      * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
-     * @return AZ for the subnet.
+     * @return is required
+     * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+     * * The default value for `map_public_ip_on_launch` is `true`
      * 
      */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
+    /**
+     * The AZ ID of the subnet
+     * 
+     */
     @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
+    /**
+     * @return The AZ ID of the subnet
+     * 
+     */
     public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * CIDR block for the subnet.
+     * The IPv4 CIDR block assigned to the subnet
      * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
-     * @return CIDR block for the subnet.
+     * @return The IPv4 CIDR block assigned to the subnet
      * 
      */
     public Output<String> cidrBlock() {
@@ -124,17 +121,29 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     public Output<Optional<Boolean>> enableResourceNameDnsAaaaRecordOnLaunch() {
         return Codegen.optional(this.enableResourceNameDnsAaaaRecordOnLaunch);
     }
+    @Export(name="existingDefaultSubnet", type=Boolean.class, parameters={})
+    private Output<Boolean> existingDefaultSubnet;
+
+    public Output<Boolean> existingDefaultSubnet() {
+        return this.existingDefaultSubnet;
+    }
     /**
-     * IPv6 CIDR block.
+     * Whether destroying the resource deletes the default subnet. Default: `false`
      * 
      */
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> forceDestroy;
+
+    /**
+     * @return Whether destroying the resource deletes the default subnet. Default: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
+    }
     @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output<String> ipv6CidrBlock;
 
-    /**
-     * @return IPv6 CIDR block.
-     * 
-     */
     public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
@@ -156,37 +165,21 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     public Output<Optional<Boolean>> mapCustomerOwnedIpOnLaunch() {
         return Codegen.optional(this.mapCustomerOwnedIpOnLaunch);
     }
-    /**
-     * Whether instances launched into the subnet should be assigned a public IP address.
-     * 
-     */
     @Export(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
-    private Output<Boolean> mapPublicIpOnLaunch;
+    private Output</* @Nullable */ Boolean> mapPublicIpOnLaunch;
 
-    /**
-     * @return Whether instances launched into the subnet should be assigned a public IP address.
-     * 
-     */
-    public Output<Boolean> mapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch;
+    public Output<Optional<Boolean>> mapPublicIpOnLaunch() {
+        return Codegen.optional(this.mapPublicIpOnLaunch);
     }
     @Export(name="outpostArn", type=String.class, parameters={})
-    private Output</* @Nullable */ String> outpostArn;
+    private Output<String> outpostArn;
 
-    public Output<Optional<String>> outpostArn() {
-        return Codegen.optional(this.outpostArn);
+    public Output<String> outpostArn() {
+        return this.outpostArn;
     }
-    /**
-     * ID of the AWS account that owns the subnet.
-     * 
-     */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
-    /**
-     * @return ID of the AWS account that owns the subnet.
-     * 
-     */
     public Output<String> ownerId() {
         return this.ownerId;
     }
@@ -196,17 +189,9 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     public Output<String> privateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }
-    /**
-     * Map of tags to assign to the resource.
-     * 
-     */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Map of tags to assign to the resource.
-     * 
-     */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
@@ -217,14 +202,14 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * VPC ID.
+     * The ID of the VPC the subnet is in
      * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
-     * @return VPC ID.
+     * @return The ID of the VPC the subnet is in
      * 
      */
     public Output<String> vpcId() {

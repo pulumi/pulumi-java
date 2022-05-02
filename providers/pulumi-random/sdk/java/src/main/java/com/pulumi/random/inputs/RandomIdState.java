@@ -34,14 +34,16 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+     * characters `_` and `-`.
      * 
      */
     @Import(name="b64Url")
     private @Nullable Output<String> b64Url;
 
     /**
-     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+     * characters `_` and `-`.
      * 
      */
     public Optional<Output<String>> b64Url() {
@@ -79,14 +81,16 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+     * length.
      * 
      */
     @Import(name="hex")
     private @Nullable Output<String> hex;
 
     /**
-     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+     * length.
      * 
      */
     public Optional<Output<String>> hex() {
@@ -94,14 +98,16 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
     /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     public Optional<Output<Map<String,Object>>> keepers() {
@@ -109,14 +115,16 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
     /**
-     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     public Optional<Output<String>> prefix() {
@@ -175,7 +183,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+         * characters `_` and `-`.
          * 
          * @return builder
          * 
@@ -186,7 +195,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the
+         * characters `_` and `-`.
          * 
          * @return builder
          * 
@@ -238,7 +248,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+         * length.
          * 
          * @return builder
          * 
@@ -249,7 +260,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte
+         * length.
          * 
          * @return builder
          * 
@@ -259,7 +271,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -270,7 +283,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -280,7 +294,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+         * URL-safe or base64 encoded.
          * 
          * @return builder
          * 
@@ -291,7 +306,8 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+         * URL-safe or base64 encoded.
          * 
          * @return builder
          * 

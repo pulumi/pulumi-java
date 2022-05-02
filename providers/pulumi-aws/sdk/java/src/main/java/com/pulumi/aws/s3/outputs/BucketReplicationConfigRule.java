@@ -33,7 +33,7 @@ public final class BucketReplicationConfigRule {
      */
     private final @Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication;
     /**
-     * @return Filter that identifies subset of objects to which the replication rule applies documented below.
+     * @return Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
      * 
      */
     private final @Nullable BucketReplicationConfigRuleFilter filter;
@@ -43,9 +43,13 @@ public final class BucketReplicationConfigRule {
      */
     private final @Nullable String id;
     /**
-     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
+     * 
+     * @deprecated
+     * Use filter instead
      * 
      */
+    @Deprecated /* Use filter instead */
     private final @Nullable String prefix;
     /**
      * @return The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
@@ -107,7 +111,7 @@ public final class BucketReplicationConfigRule {
         return Optional.ofNullable(this.existingObjectReplication);
     }
     /**
-     * @return Filter that identifies subset of objects to which the replication rule applies documented below.
+     * @return Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
      * 
      */
     public Optional<BucketReplicationConfigRuleFilter> filter() {
@@ -121,9 +125,13 @@ public final class BucketReplicationConfigRule {
         return Optional.ofNullable(this.id);
     }
     /**
-     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
+     * 
+     * @deprecated
+     * Use filter instead
      * 
      */
+    @Deprecated /* Use filter instead */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

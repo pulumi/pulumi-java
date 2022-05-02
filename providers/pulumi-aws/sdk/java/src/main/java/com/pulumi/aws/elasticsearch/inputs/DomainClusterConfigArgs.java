@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticsearch.inputs;
 
+import com.pulumi.aws.elasticsearch.inputs.DomainClusterConfigColdStorageOptionsArgs;
 import com.pulumi.aws.elasticsearch.inputs.DomainClusterConfigZoneAwarenessConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -17,6 +18,21 @@ import javax.annotation.Nullable;
 public final class DomainClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DomainClusterConfigArgs Empty = new DomainClusterConfigArgs();
+
+    /**
+     * Configuration block containing cold storage configuration. Detailed below.
+     * 
+     */
+    @Import(name="coldStorageOptions")
+    private @Nullable Output<DomainClusterConfigColdStorageOptionsArgs> coldStorageOptions;
+
+    /**
+     * @return Configuration block containing cold storage configuration. Detailed below.
+     * 
+     */
+    public Optional<Output<DomainClusterConfigColdStorageOptionsArgs>> coldStorageOptions() {
+        return Optional.ofNullable(this.coldStorageOptions);
+    }
 
     /**
      * Number of dedicated main nodes in the cluster.
@@ -171,6 +187,7 @@ public final class DomainClusterConfigArgs extends com.pulumi.resources.Resource
     private DomainClusterConfigArgs() {}
 
     private DomainClusterConfigArgs(DomainClusterConfigArgs $) {
+        this.coldStorageOptions = $.coldStorageOptions;
         this.dedicatedMasterCount = $.dedicatedMasterCount;
         this.dedicatedMasterEnabled = $.dedicatedMasterEnabled;
         this.dedicatedMasterType = $.dedicatedMasterType;
@@ -199,6 +216,27 @@ public final class DomainClusterConfigArgs extends com.pulumi.resources.Resource
 
         public Builder(DomainClusterConfigArgs defaults) {
             $ = new DomainClusterConfigArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param coldStorageOptions Configuration block containing cold storage configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coldStorageOptions(@Nullable Output<DomainClusterConfigColdStorageOptionsArgs> coldStorageOptions) {
+            $.coldStorageOptions = coldStorageOptions;
+            return this;
+        }
+
+        /**
+         * @param coldStorageOptions Configuration block containing cold storage configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coldStorageOptions(DomainClusterConfigColdStorageOptionsArgs coldStorageOptions) {
+            return coldStorageOptions(Output.of(coldStorageOptions));
         }
 
         /**

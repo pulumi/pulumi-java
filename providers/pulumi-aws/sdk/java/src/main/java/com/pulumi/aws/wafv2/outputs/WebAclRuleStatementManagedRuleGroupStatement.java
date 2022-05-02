@@ -20,7 +20,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
      */
     private final @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules;
     /**
-     * @return The name of the managed rule group.
+     * @return Name of the managed rule group.
      * 
      */
     private final String name;
@@ -30,21 +30,28 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
      */
     private final @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement;
     /**
-     * @return The name of the managed rule group vendor.
+     * @return Name of the managed rule group vendor.
      * 
      */
     private final String vendorName;
+    /**
+     * @return Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+     * 
+     */
+    private final @Nullable String version;
 
     @CustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatement(
         @CustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
-        @CustomType.Parameter("vendorName") String vendorName) {
+        @CustomType.Parameter("vendorName") String vendorName,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;
         this.vendorName = vendorName;
+        this.version = version;
     }
 
     /**
@@ -55,7 +62,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
     /**
-     * @return The name of the managed rule group.
+     * @return Name of the managed rule group.
      * 
      */
     public String name() {
@@ -69,11 +76,18 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
         return Optional.ofNullable(this.scopeDownStatement);
     }
     /**
-     * @return The name of the managed rule group vendor.
+     * @return Name of the managed rule group vendor.
      * 
      */
     public String vendorName() {
         return this.vendorName;
+    }
+    /**
+     * @return Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+     * 
+     */
+    public Optional<String> version() {
+        return Optional.ofNullable(this.version);
     }
 
     public static Builder builder() {
@@ -89,6 +103,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
         private String name;
         private @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement;
         private String vendorName;
+        private @Nullable String version;
 
         public Builder() {
     	      // Empty
@@ -100,6 +115,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
     	      this.name = defaults.name;
     	      this.scopeDownStatement = defaults.scopeDownStatement;
     	      this.vendorName = defaults.vendorName;
+    	      this.version = defaults.version;
         }
 
         public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules) {
@@ -120,8 +136,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
         public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
+        }
+        public Builder version(@Nullable String version) {
+            this.version = version;
+            return this;
         }        public WebAclRuleStatementManagedRuleGroupStatement build() {
-            return new WebAclRuleStatementManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName);
+            return new WebAclRuleStatementManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName, version);
         }
     }
 }

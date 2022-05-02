@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigEphemeralStorageConfig;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigGcfsConfig;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigGuestAccelerator;
+import com.pulumi.gcp.container.outputs.NodePoolNodeConfigGvnic;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigKubeletConfig;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigLinuxNodeConfig;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfigSandboxConfig;
@@ -30,6 +31,7 @@ public final class NodePoolNodeConfig {
     private final @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig;
     private final @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig;
     private final @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators;
+    private final @Nullable NodePoolNodeConfigGvnic gvnic;
     private final @Nullable String imageType;
     private final @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig;
     private final @Nullable Map<String,String> labels;
@@ -57,6 +59,7 @@ public final class NodePoolNodeConfig {
         @CustomType.Parameter("ephemeralStorageConfig") @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
         @CustomType.Parameter("gcfsConfig") @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig,
         @CustomType.Parameter("guestAccelerators") @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("gvnic") @Nullable NodePoolNodeConfigGvnic gvnic,
         @CustomType.Parameter("imageType") @Nullable String imageType,
         @CustomType.Parameter("kubeletConfig") @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig,
         @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
@@ -81,6 +84,7 @@ public final class NodePoolNodeConfig {
         this.ephemeralStorageConfig = ephemeralStorageConfig;
         this.gcfsConfig = gcfsConfig;
         this.guestAccelerators = guestAccelerators;
+        this.gvnic = gvnic;
         this.imageType = imageType;
         this.kubeletConfig = kubeletConfig;
         this.labels = labels;
@@ -118,6 +122,9 @@ public final class NodePoolNodeConfig {
     }
     public List<NodePoolNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
+    }
+    public Optional<NodePoolNodeConfigGvnic> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
     public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
@@ -189,6 +196,7 @@ public final class NodePoolNodeConfig {
         private @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig;
         private @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig;
         private @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators;
+        private @Nullable NodePoolNodeConfigGvnic gvnic;
         private @Nullable String imageType;
         private @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig;
         private @Nullable Map<String,String> labels;
@@ -220,6 +228,7 @@ public final class NodePoolNodeConfig {
     	      this.ephemeralStorageConfig = defaults.ephemeralStorageConfig;
     	      this.gcfsConfig = defaults.gcfsConfig;
     	      this.guestAccelerators = defaults.guestAccelerators;
+    	      this.gvnic = defaults.gvnic;
     	      this.imageType = defaults.imageType;
     	      this.kubeletConfig = defaults.kubeletConfig;
     	      this.labels = defaults.labels;
@@ -266,6 +275,10 @@ public final class NodePoolNodeConfig {
         }
         public Builder guestAccelerators(NodePoolNodeConfigGuestAccelerator... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+        public Builder gvnic(@Nullable NodePoolNodeConfigGvnic gvnic) {
+            this.gvnic = gvnic;
+            return this;
         }
         public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
@@ -348,7 +361,7 @@ public final class NodePoolNodeConfig {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }        public NodePoolNodeConfig build() {
-            return new NodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
+            return new NodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }
 }

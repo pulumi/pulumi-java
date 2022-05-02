@@ -18,14 +18,22 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     /**
      * The ARN of an ALB Target Group.
      * 
+     * @deprecated
+     * Use lb_target_group_arn instead
+     * 
      */
+    @Deprecated /* Use lb_target_group_arn instead */
     @Import(name="albTargetGroupArn")
     private @Nullable Output<String> albTargetGroupArn;
 
     /**
      * @return The ARN of an ALB Target Group.
      * 
+     * @deprecated
+     * Use lb_target_group_arn instead
+     * 
      */
+    @Deprecated /* Use lb_target_group_arn instead */
     public Optional<Output<String>> albTargetGroupArn() {
         return Optional.ofNullable(this.albTargetGroupArn);
     }
@@ -60,12 +68,28 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.elb);
     }
 
+    /**
+     * The ARN of a load balancer target group.
+     * 
+     */
+    @Import(name="lbTargetGroupArn")
+    private @Nullable Output<String> lbTargetGroupArn;
+
+    /**
+     * @return The ARN of a load balancer target group.
+     * 
+     */
+    public Optional<Output<String>> lbTargetGroupArn() {
+        return Optional.ofNullable(this.lbTargetGroupArn);
+    }
+
     private AttachmentState() {}
 
     private AttachmentState(AttachmentState $) {
         this.albTargetGroupArn = $.albTargetGroupArn;
         this.autoscalingGroupName = $.autoscalingGroupName;
         this.elb = $.elb;
+        this.lbTargetGroupArn = $.lbTargetGroupArn;
     }
 
     public static Builder builder() {
@@ -91,7 +115,11 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use lb_target_group_arn instead
+         * 
          */
+        @Deprecated /* Use lb_target_group_arn instead */
         public Builder albTargetGroupArn(@Nullable Output<String> albTargetGroupArn) {
             $.albTargetGroupArn = albTargetGroupArn;
             return this;
@@ -102,7 +130,11 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use lb_target_group_arn instead
+         * 
          */
+        @Deprecated /* Use lb_target_group_arn instead */
         public Builder albTargetGroupArn(String albTargetGroupArn) {
             return albTargetGroupArn(Output.of(albTargetGroupArn));
         }
@@ -147,6 +179,27 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder elb(String elb) {
             return elb(Output.of(elb));
+        }
+
+        /**
+         * @param lbTargetGroupArn The ARN of a load balancer target group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lbTargetGroupArn(@Nullable Output<String> lbTargetGroupArn) {
+            $.lbTargetGroupArn = lbTargetGroupArn;
+            return this;
+        }
+
+        /**
+         * @param lbTargetGroupArn The ARN of a load balancer target group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lbTargetGroupArn(String lbTargetGroupArn) {
+            return lbTargetGroupArn(Output.of(lbTargetGroupArn));
         }
 
         public AttachmentState build() {

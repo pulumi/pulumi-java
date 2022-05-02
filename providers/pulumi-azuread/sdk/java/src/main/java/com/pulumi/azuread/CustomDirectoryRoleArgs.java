@@ -6,11 +6,11 @@ package com.pulumi.azuread;
 import com.pulumi.azuread.inputs.CustomDirectoryRolePermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,14 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return The description of the custom directory role.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,8 +38,12 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return The display name of the custom directory role.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -45,8 +53,12 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether the role is enabled for assignment.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -56,8 +68,12 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<List<CustomDirectoryRolePermissionArgs>> permissions;
+    private Output<List<CustomDirectoryRolePermissionArgs>> permissions;
 
+    /**
+     * @return A collection of `permissions` blocks as documented below.
+     * 
+     */
     public Output<List<CustomDirectoryRolePermissionArgs>> permissions() {
         return this.permissions;
     }
@@ -67,10 +83,14 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    /**
+     * @return Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
@@ -78,118 +98,188 @@ public final class CustomDirectoryRoleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
+    /**
+     * @return - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
 
-    public CustomDirectoryRoleArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<Boolean> enabled,
-        Output<List<CustomDirectoryRolePermissionArgs>> permissions,
-        @Nullable Output<String> templateId,
-        Output<String> version) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.templateId = templateId;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private CustomDirectoryRoleArgs() {}
 
-    private CustomDirectoryRoleArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.version = Codegen.empty();
+    private CustomDirectoryRoleArgs(CustomDirectoryRoleArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.permissions = $.permissions;
+        this.templateId = $.templateId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDirectoryRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<Boolean> enabled;
-        private Output<List<CustomDirectoryRolePermissionArgs>> permissions;
-        private @Nullable Output<String> templateId;
-        private Output<String> version;
+        private CustomDirectoryRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDirectoryRoleArgs();
         }
 
         public Builder(CustomDirectoryRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.permissions = defaults.permissions;
-    	      this.templateId = defaults.templateId;
-    	      this.version = defaults.version;
+            $ = new CustomDirectoryRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description The description of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName The display name of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName The display name of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param enabled Indicates whether the role is enabled for assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
+        /**
+         * @param enabled Indicates whether the role is enabled for assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Output<List<CustomDirectoryRolePermissionArgs>> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<CustomDirectoryRolePermissionArgs> permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
+            return permissions(Output.of(permissions));
         }
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(CustomDirectoryRolePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
+        /**
+         * @param templateId Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        /**
+         * @param templateId Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
+        /**
+         * @param version - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
+        /**
+         * @param version - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public CustomDirectoryRoleArgs build() {
-            return new CustomDirectoryRoleArgs(description, displayName, enabled, permissions, templateId, version);
+            return version(Output.of(version));
+        }
+
+        public CustomDirectoryRoleArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

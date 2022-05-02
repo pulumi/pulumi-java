@@ -10,6 +10,7 @@ import com.pulumi.googlenative.dataflow_v1b3.enums.JobRequestedState;
 import com.pulumi.googlenative.dataflow_v1b3.enums.JobType;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.EnvironmentArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageStateArgs;
+import com.pulumi.googlenative.dataflow_v1b3.inputs.JobExecutionInfoArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.JobMetadataArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.PipelineDescriptionArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.StepArgs;
@@ -114,6 +115,29 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<EnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
+    }
+
+    /**
+     * Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    @Import(name="executionInfo")
+    private @Nullable Output<JobExecutionInfoArgs> executionInfo;
+
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    public Optional<Output<JobExecutionInfoArgs>> executionInfo() {
+        return Optional.ofNullable(this.executionInfo);
     }
 
     /**
@@ -386,9 +410,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The level of information requested in response.
+     * 
+     */
     @Import(name="view")
     private @Nullable Output<String> view;
 
+    /**
+     * @return The level of information requested in response.
+     * 
+     */
     public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
@@ -402,6 +434,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         this.currentState = $.currentState;
         this.currentStateTime = $.currentStateTime;
         this.environment = $.environment;
+        this.executionInfo = $.executionInfo;
         this.id = $.id;
         this.jobMetadata = $.jobMetadata;
         this.labels = $.labels;
@@ -565,6 +598,35 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder environment(EnvironmentArgs environment) {
             return environment(Output.of(environment));
+        }
+
+        /**
+         * @param executionInfo Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder executionInfo(@Nullable Output<JobExecutionInfoArgs> executionInfo) {
+            $.executionInfo = executionInfo;
+            return this;
+        }
+
+        /**
+         * @param executionInfo Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder executionInfo(JobExecutionInfoArgs executionInfo) {
+            return executionInfo(Output.of(executionInfo));
         }
 
         /**
@@ -975,11 +1037,23 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        /**
+         * @param view The level of information requested in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
         }
 
+        /**
+         * @param view The level of information requested in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(String view) {
             return view(Output.of(view));
         }

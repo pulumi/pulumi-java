@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicyGrantControls {
     /**
-     * List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+     * @return List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
      * 
      */
     private final List<String> builtInControls;
     /**
-     * List of custom controls IDs required by the policy.
+     * @return List of custom controls IDs required by the policy.
      * 
      */
     private final @Nullable List<String> customAuthenticationFactors;
     /**
-     * Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
+     * @return Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
      * 
      */
     private final String operator;
     /**
-     * List of terms of use IDs required by the policy.
+     * @return List of terms of use IDs required by the policy.
      * 
      */
     private final @Nullable List<String> termsOfUses;
@@ -45,30 +45,30 @@ public final class ConditionalAccessPolicyGrantControls {
     }
 
     /**
-     * List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
+     * @return List of built-in controls required by the policy. Possible values are: `block`, `mfa`, `approvedApplication`, `compliantApplication`, `compliantDevice`, `domainJoinedDevice`, `passwordChange` or `unknownFutureValue`.
      * 
-    */
+     */
     public List<String> builtInControls() {
         return this.builtInControls;
     }
     /**
-     * List of custom controls IDs required by the policy.
+     * @return List of custom controls IDs required by the policy.
      * 
-    */
+     */
     public List<String> customAuthenticationFactors() {
         return this.customAuthenticationFactors == null ? List.of() : this.customAuthenticationFactors;
     }
     /**
-     * Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
+     * @return Defines the relationship of the grant controls. Possible values are: `AND`, `OR`.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * List of terms of use IDs required by the policy.
+     * @return List of terms of use IDs required by the policy.
      * 
-    */
+     */
     public List<String> termsOfUses() {
         return this.termsOfUses == null ? List.of() : this.termsOfUses;
     }

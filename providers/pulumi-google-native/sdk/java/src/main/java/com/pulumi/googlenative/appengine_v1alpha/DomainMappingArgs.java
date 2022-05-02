@@ -38,16 +38,32 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manaually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated.
+     * 
+     */
     @Import(name="noManagedCertificate")
     private @Nullable Output<String> noManagedCertificate;
 
+    /**
+     * @return Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manaually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated.
+     * 
+     */
     public Optional<Output<String>> noManagedCertificate() {
         return Optional.ofNullable(this.noManagedCertificate);
     }
 
+    /**
+     * Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+     * 
+     */
     @Import(name="overrideStrategy")
     private @Nullable Output<String> overrideStrategy;
 
+    /**
+     * @return Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+     * 
+     */
     public Optional<Output<String>> overrideStrategy() {
         return Optional.ofNullable(this.overrideStrategy);
     }
@@ -125,20 +141,44 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return id(Output.of(id));
         }
 
+        /**
+         * @param noManagedCertificate Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manaually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noManagedCertificate(@Nullable Output<String> noManagedCertificate) {
             $.noManagedCertificate = noManagedCertificate;
             return this;
         }
 
+        /**
+         * @param noManagedCertificate Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manaually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noManagedCertificate(String noManagedCertificate) {
             return noManagedCertificate(Output.of(noManagedCertificate));
         }
 
+        /**
+         * @param overrideStrategy Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             $.overrideStrategy = overrideStrategy;
             return this;
         }
 
+        /**
+         * @param overrideStrategy Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideStrategy(String overrideStrategy) {
             return overrideStrategy(Output.of(overrideStrategy));
         }

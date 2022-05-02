@@ -5,6 +5,7 @@ package com.pulumi.awsnative.evidently;
 
 import com.pulumi.awsnative.evidently.inputs.ExperimentMetricGoalObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentOnlineAbConfigObjectArgs;
+import com.pulumi.awsnative.evidently.inputs.ExperimentRunningStatusObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
 import com.pulumi.core.Output;
@@ -63,6 +64,21 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.randomizationSalt);
     }
 
+    /**
+     * Start Experiment. Default is False
+     * 
+     */
+    @Import(name="runningStatus")
+    private @Nullable Output<ExperimentRunningStatusObjectArgs> runningStatus;
+
+    /**
+     * @return Start Experiment. Default is False
+     * 
+     */
+    public Optional<Output<ExperimentRunningStatusObjectArgs>> runningStatus() {
+        return Optional.ofNullable(this.runningStatus);
+    }
+
     @Import(name="samplingRate")
     private @Nullable Output<Integer> samplingRate;
 
@@ -101,6 +117,7 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
         this.onlineAbConfig = $.onlineAbConfig;
         this.project = $.project;
         this.randomizationSalt = $.randomizationSalt;
+        this.runningStatus = $.runningStatus;
         this.samplingRate = $.samplingRate;
         this.tags = $.tags;
         this.treatments = $.treatments;
@@ -180,6 +197,27 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder randomizationSalt(String randomizationSalt) {
             return randomizationSalt(Output.of(randomizationSalt));
+        }
+
+        /**
+         * @param runningStatus Start Experiment. Default is False
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runningStatus(@Nullable Output<ExperimentRunningStatusObjectArgs> runningStatus) {
+            $.runningStatus = runningStatus;
+            return this;
+        }
+
+        /**
+         * @param runningStatus Start Experiment. Default is False
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runningStatus(ExperimentRunningStatusObjectArgs runningStatus) {
+            return runningStatus(Output.of(runningStatus));
         }
 
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {

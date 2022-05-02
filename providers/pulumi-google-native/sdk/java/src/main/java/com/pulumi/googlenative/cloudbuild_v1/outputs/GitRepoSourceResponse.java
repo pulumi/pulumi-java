@@ -10,6 +10,16 @@ import java.util.Objects;
 @CustomType
 public final class GitRepoSourceResponse {
     /**
+     * @return The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    private final String bitbucketServerConfig;
+    /**
+     * @return The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    private final String githubEnterpriseConfig;
+    /**
      * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
      */
@@ -20,21 +30,39 @@ public final class GitRepoSourceResponse {
      */
     private final String repoType;
     /**
-     * @return The URI of the repo (required).
+     * @return The URI of the repo. Either uri or repository can be specified and is required.
      * 
      */
     private final String uri;
 
     @CustomType.Constructor
     private GitRepoSourceResponse(
+        @CustomType.Parameter("bitbucketServerConfig") String bitbucketServerConfig,
+        @CustomType.Parameter("githubEnterpriseConfig") String githubEnterpriseConfig,
         @CustomType.Parameter("ref") String ref,
         @CustomType.Parameter("repoType") String repoType,
         @CustomType.Parameter("uri") String uri) {
+        this.bitbucketServerConfig = bitbucketServerConfig;
+        this.githubEnterpriseConfig = githubEnterpriseConfig;
         this.ref = ref;
         this.repoType = repoType;
         this.uri = uri;
     }
 
+    /**
+     * @return The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    public String bitbucketServerConfig() {
+        return this.bitbucketServerConfig;
+    }
+    /**
+     * @return The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    public String githubEnterpriseConfig() {
+        return this.githubEnterpriseConfig;
+    }
     /**
      * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
@@ -50,7 +78,7 @@ public final class GitRepoSourceResponse {
         return this.repoType;
     }
     /**
-     * @return The URI of the repo (required).
+     * @return The URI of the repo. Either uri or repository can be specified and is required.
      * 
      */
     public String uri() {
@@ -66,6 +94,8 @@ public final class GitRepoSourceResponse {
     }
 
     public static final class Builder {
+        private String bitbucketServerConfig;
+        private String githubEnterpriseConfig;
         private String ref;
         private String repoType;
         private String uri;
@@ -76,11 +106,21 @@ public final class GitRepoSourceResponse {
 
         public Builder(GitRepoSourceResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.bitbucketServerConfig = defaults.bitbucketServerConfig;
+    	      this.githubEnterpriseConfig = defaults.githubEnterpriseConfig;
     	      this.ref = defaults.ref;
     	      this.repoType = defaults.repoType;
     	      this.uri = defaults.uri;
         }
 
+        public Builder bitbucketServerConfig(String bitbucketServerConfig) {
+            this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
+            return this;
+        }
+        public Builder githubEnterpriseConfig(String githubEnterpriseConfig) {
+            this.githubEnterpriseConfig = Objects.requireNonNull(githubEnterpriseConfig);
+            return this;
+        }
         public Builder ref(String ref) {
             this.ref = Objects.requireNonNull(ref);
             return this;
@@ -93,7 +133,7 @@ public final class GitRepoSourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }        public GitRepoSourceResponse build() {
-            return new GitRepoSourceResponse(ref, repoType, uri);
+            return new GitRepoSourceResponse(bitbucketServerConfig, githubEnterpriseConfig, ref, repoType, uri);
         }
     }
 }

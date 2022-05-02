@@ -5,11 +5,10 @@ package com.pulumi.awsnative.lambda.outputs;
 
 import com.pulumi.awsnative.lambda.enums.EventSourceMappingFunctionResponseTypesItem;
 import com.pulumi.awsnative.lambda.outputs.EventSourceMappingDestinationConfig;
+import com.pulumi.awsnative.lambda.outputs.EventSourceMappingFilterCriteria;
 import com.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
-import com.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +42,7 @@ public final class GetEventSourceMappingResult {
      * @return The filter criteria to control event filtering.
      * 
      */
-    private final @Nullable FilterCriteriaProperties filterCriteria;
+    private final @Nullable EventSourceMappingFilterCriteria filterCriteria;
     /**
      * @return The name of the Lambda function.
      * 
@@ -90,11 +89,6 @@ public final class GetEventSourceMappingResult {
      */
     private final @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations;
     /**
-     * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
-     * 
-     */
-    private final @Nullable Double startingPositionTimestamp;
-    /**
      * @return (Kafka) A list of Kafka topics.
      * 
      */
@@ -111,7 +105,7 @@ public final class GetEventSourceMappingResult {
         @CustomType.Parameter("bisectBatchOnFunctionError") @Nullable Boolean bisectBatchOnFunctionError,
         @CustomType.Parameter("destinationConfig") @Nullable EventSourceMappingDestinationConfig destinationConfig,
         @CustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @CustomType.Parameter("filterCriteria") @Nullable FilterCriteriaProperties filterCriteria,
+        @CustomType.Parameter("filterCriteria") @Nullable EventSourceMappingFilterCriteria filterCriteria,
         @CustomType.Parameter("functionName") @Nullable String functionName,
         @CustomType.Parameter("functionResponseTypes") @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes,
         @CustomType.Parameter("id") @Nullable String id,
@@ -121,7 +115,6 @@ public final class GetEventSourceMappingResult {
         @CustomType.Parameter("parallelizationFactor") @Nullable Integer parallelizationFactor,
         @CustomType.Parameter("queues") @Nullable List<String> queues,
         @CustomType.Parameter("sourceAccessConfigurations") @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations,
-        @CustomType.Parameter("startingPositionTimestamp") @Nullable Double startingPositionTimestamp,
         @CustomType.Parameter("topics") @Nullable List<String> topics,
         @CustomType.Parameter("tumblingWindowInSeconds") @Nullable Integer tumblingWindowInSeconds) {
         this.batchSize = batchSize;
@@ -138,7 +131,6 @@ public final class GetEventSourceMappingResult {
         this.parallelizationFactor = parallelizationFactor;
         this.queues = queues;
         this.sourceAccessConfigurations = sourceAccessConfigurations;
-        this.startingPositionTimestamp = startingPositionTimestamp;
         this.topics = topics;
         this.tumblingWindowInSeconds = tumblingWindowInSeconds;
     }
@@ -175,7 +167,7 @@ public final class GetEventSourceMappingResult {
      * @return The filter criteria to control event filtering.
      * 
      */
-    public Optional<FilterCriteriaProperties> filterCriteria() {
+    public Optional<EventSourceMappingFilterCriteria> filterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
@@ -242,13 +234,6 @@ public final class GetEventSourceMappingResult {
         return this.sourceAccessConfigurations == null ? List.of() : this.sourceAccessConfigurations;
     }
     /**
-     * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
-     * 
-     */
-    public Optional<Double> startingPositionTimestamp() {
-        return Optional.ofNullable(this.startingPositionTimestamp);
-    }
-    /**
      * @return (Kafka) A list of Kafka topics.
      * 
      */
@@ -276,7 +261,7 @@ public final class GetEventSourceMappingResult {
         private @Nullable Boolean bisectBatchOnFunctionError;
         private @Nullable EventSourceMappingDestinationConfig destinationConfig;
         private @Nullable Boolean enabled;
-        private @Nullable FilterCriteriaProperties filterCriteria;
+        private @Nullable EventSourceMappingFilterCriteria filterCriteria;
         private @Nullable String functionName;
         private @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes;
         private @Nullable String id;
@@ -286,7 +271,6 @@ public final class GetEventSourceMappingResult {
         private @Nullable Integer parallelizationFactor;
         private @Nullable List<String> queues;
         private @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations;
-        private @Nullable Double startingPositionTimestamp;
         private @Nullable List<String> topics;
         private @Nullable Integer tumblingWindowInSeconds;
 
@@ -310,7 +294,6 @@ public final class GetEventSourceMappingResult {
     	      this.parallelizationFactor = defaults.parallelizationFactor;
     	      this.queues = defaults.queues;
     	      this.sourceAccessConfigurations = defaults.sourceAccessConfigurations;
-    	      this.startingPositionTimestamp = defaults.startingPositionTimestamp;
     	      this.topics = defaults.topics;
     	      this.tumblingWindowInSeconds = defaults.tumblingWindowInSeconds;
         }
@@ -331,7 +314,7 @@ public final class GetEventSourceMappingResult {
             this.enabled = enabled;
             return this;
         }
-        public Builder filterCriteria(@Nullable FilterCriteriaProperties filterCriteria) {
+        public Builder filterCriteria(@Nullable EventSourceMappingFilterCriteria filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
@@ -380,10 +363,6 @@ public final class GetEventSourceMappingResult {
         public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfiguration... sourceAccessConfigurations) {
             return sourceAccessConfigurations(List.of(sourceAccessConfigurations));
         }
-        public Builder startingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
-            this.startingPositionTimestamp = startingPositionTimestamp;
-            return this;
-        }
         public Builder topics(@Nullable List<String> topics) {
             this.topics = topics;
             return this;
@@ -395,7 +374,7 @@ public final class GetEventSourceMappingResult {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }        public GetEventSourceMappingResult build() {
-            return new GetEventSourceMappingResult(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, filterCriteria, functionName, functionResponseTypes, id, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, sourceAccessConfigurations, startingPositionTimestamp, topics, tumblingWindowInSeconds);
+            return new GetEventSourceMappingResult(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, filterCriteria, functionName, functionResponseTypes, id, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, sourceAccessConfigurations, topics, tumblingWindowInSeconds);
         }
     }
 }

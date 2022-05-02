@@ -12,6 +12,7 @@ import com.pulumi.googlenative.compute_v1.inputs.AttachedDiskArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ConfidentialInstanceConfigArgs;
 import com.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.DisplayDeviceArgs;
+import com.pulumi.googlenative.compute_v1.inputs.InstanceParamsArgs;
 import com.pulumi.googlenative.compute_v1.inputs.MetadataArgs;
 import com.pulumi.googlenative.compute_v1.inputs.NetworkInterfaceArgs;
 import com.pulumi.googlenative.compute_v1.inputs.NetworkPerformanceConfigArgs;
@@ -259,6 +260,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    @Import(name="params")
+    private @Nullable Output<InstanceParamsArgs> params;
+
+    /**
+     * @return Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    public Optional<Output<InstanceParamsArgs>> params() {
+        return Optional.ofNullable(this.params);
+    }
+
+    /**
      * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
      * 
      */
@@ -280,9 +296,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -361,9 +385,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.shieldedInstanceIntegrityPolicy);
     }
 
+    /**
+     * Specifies instance template to create the instance. This field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate
+     * 
+     */
     @Import(name="sourceInstanceTemplate")
     private @Nullable Output<String> sourceInstanceTemplate;
 
+    /**
+     * @return Specifies instance template to create the instance. This field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate
+     * 
+     */
     public Optional<Output<String>> sourceInstanceTemplate() {
         return Optional.ofNullable(this.sourceInstanceTemplate);
     }
@@ -439,6 +471,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         this.name = $.name;
         this.networkInterfaces = $.networkInterfaces;
         this.networkPerformanceConfig = $.networkPerformanceConfig;
+        this.params = $.params;
         this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
         this.project = $.project;
         this.requestId = $.requestId;
@@ -816,6 +849,27 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param params Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder params(@Nullable Output<InstanceParamsArgs> params) {
+            $.params = params;
+            return this;
+        }
+
+        /**
+         * @param params Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder params(InstanceParamsArgs params) {
+            return params(Output.of(params));
+        }
+
+        /**
          * @param privateIpv6GoogleAccess The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
          * 
          * @return builder
@@ -845,11 +899,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -976,11 +1042,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return shieldedInstanceIntegrityPolicy(Output.of(shieldedInstanceIntegrityPolicy));
         }
 
+        /**
+         * @param sourceInstanceTemplate Specifies instance template to create the instance. This field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceTemplate(@Nullable Output<String> sourceInstanceTemplate) {
             $.sourceInstanceTemplate = sourceInstanceTemplate;
             return this;
         }
 
+        /**
+         * @param sourceInstanceTemplate Specifies instance template to create the instance. This field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceTemplate(String sourceInstanceTemplate) {
             return sourceInstanceTemplate(Output.of(sourceInstanceTemplate));
         }

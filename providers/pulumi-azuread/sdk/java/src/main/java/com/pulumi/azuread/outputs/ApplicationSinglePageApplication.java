@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSinglePageApplication {
     /**
-     * A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
      * 
      */
     private final @Nullable List<String> redirectUris;
@@ -23,9 +23,9 @@ public final class ApplicationSinglePageApplication {
     }
 
     /**
-     * A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
      * 
-    */
+     */
     public List<String> redirectUris() {
         return this.redirectUris == null ? List.of() : this.redirectUris;
     }

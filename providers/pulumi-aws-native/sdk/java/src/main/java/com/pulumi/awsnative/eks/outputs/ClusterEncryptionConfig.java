@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.eks.outputs;
 
-import com.pulumi.awsnative.eks.outputs.ClusterEncryptionConfigProviderProperties;
+import com.pulumi.awsnative.eks.outputs.ClusterProvider;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class ClusterEncryptionConfig {
      * @return The encryption provider for the cluster.
      * 
      */
-    private final @Nullable ClusterEncryptionConfigProviderProperties provider;
+    private final @Nullable ClusterProvider provider;
     /**
      * @return Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
@@ -26,7 +26,7 @@ public final class ClusterEncryptionConfig {
 
     @CustomType.Constructor
     private ClusterEncryptionConfig(
-        @CustomType.Parameter("provider") @Nullable ClusterEncryptionConfigProviderProperties provider,
+        @CustomType.Parameter("provider") @Nullable ClusterProvider provider,
         @CustomType.Parameter("resources") @Nullable List<String> resources) {
         this.provider = provider;
         this.resources = resources;
@@ -36,7 +36,7 @@ public final class ClusterEncryptionConfig {
      * @return The encryption provider for the cluster.
      * 
      */
-    public Optional<ClusterEncryptionConfigProviderProperties> provider() {
+    public Optional<ClusterProvider> provider() {
         return Optional.ofNullable(this.provider);
     }
     /**
@@ -56,7 +56,7 @@ public final class ClusterEncryptionConfig {
     }
 
     public static final class Builder {
-        private @Nullable ClusterEncryptionConfigProviderProperties provider;
+        private @Nullable ClusterProvider provider;
         private @Nullable List<String> resources;
 
         public Builder() {
@@ -69,7 +69,7 @@ public final class ClusterEncryptionConfig {
     	      this.resources = defaults.resources;
         }
 
-        public Builder provider(@Nullable ClusterEncryptionConfigProviderProperties provider) {
+        public Builder provider(@Nullable ClusterProvider provider) {
             this.provider = provider;
             return this;
         }

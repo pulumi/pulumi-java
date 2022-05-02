@@ -52,17 +52,9 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:iam/userLoginProfile:UserLoginProfile")
 public class UserLoginProfile extends com.pulumi.resources.CustomResource {
-    /**
-     * The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-     * 
-     */
     @Export(name="encryptedPassword", type=String.class, parameters={})
     private Output<String> encryptedPassword;
 
-    /**
-     * @return The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-     * 
-     */
     public Output<String> encryptedPassword() {
         return this.encryptedPassword;
     }
@@ -81,46 +73,60 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
         return this.keyFingerprint;
     }
     /**
-     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * The plain text password, only available when `pgp_key` is not provided.
+     * 
+     */
+    @Export(name="password", type=String.class, parameters={})
+    private Output<String> password;
+
+    /**
+     * @return The plain text password, only available when `pgp_key` is not provided.
+     * 
+     */
+    public Output<String> password() {
+        return this.password;
+    }
+    /**
+     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     @Export(name="passwordLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> passwordLength;
 
     /**
-     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     public Output<Optional<Integer>> passwordLength() {
         return Codegen.optional(this.passwordLength);
     }
     /**
-     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
     @Export(name="passwordResetRequired", type=Boolean.class, parameters={})
-    private Output</* @Nullable */ Boolean> passwordResetRequired;
+    private Output<Boolean> passwordResetRequired;
 
     /**
-     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
-    public Output<Optional<Boolean>> passwordResetRequired() {
-        return Codegen.optional(this.passwordResetRequired);
+    public Output<Boolean> passwordResetRequired() {
+        return this.passwordResetRequired;
     }
     /**
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
     @Export(name="pgpKey", type=String.class, parameters={})
-    private Output<String> pgpKey;
+    private Output</* @Nullable */ String> pgpKey;
 
     /**
      * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output<String> pgpKey() {
-        return this.pgpKey;
+    public Output<Optional<String>> pgpKey() {
+        return Codegen.optional(this.pgpKey);
     }
     /**
      * The IAM user&#39;s name.

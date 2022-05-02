@@ -31,9 +31,17 @@ public final class BitbucketServerConfigArgs extends com.pulumi.resources.Resour
         return this.apiKey;
     }
 
+    /**
+     * Optional. The ID to use for the BitbucketServerConfig, which will become the final component of the BitbucketServerConfig&#39;s resource name. bitbucket_server_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+     * 
+     */
     @Import(name="bitbucketServerConfigId")
     private @Nullable Output<String> bitbucketServerConfigId;
 
+    /**
+     * @return Optional. The ID to use for the BitbucketServerConfig, which will become the final component of the BitbucketServerConfig&#39;s resource name. bitbucket_server_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+     * 
+     */
     public Optional<Output<String>> bitbucketServerConfigId() {
         return Optional.ofNullable(this.bitbucketServerConfigId);
     }
@@ -212,11 +220,23 @@ public final class BitbucketServerConfigArgs extends com.pulumi.resources.Resour
             return apiKey(Output.of(apiKey));
         }
 
+        /**
+         * @param bitbucketServerConfigId Optional. The ID to use for the BitbucketServerConfig, which will become the final component of the BitbucketServerConfig&#39;s resource name. bitbucket_server_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitbucketServerConfigId(@Nullable Output<String> bitbucketServerConfigId) {
             $.bitbucketServerConfigId = bitbucketServerConfigId;
             return this;
         }
 
+        /**
+         * @param bitbucketServerConfigId Optional. The ID to use for the BitbucketServerConfig, which will become the final component of the BitbucketServerConfig&#39;s resource name. bitbucket_server_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitbucketServerConfigId(String bitbucketServerConfigId) {
             return bitbucketServerConfigId(Output.of(bitbucketServerConfigId));
         }

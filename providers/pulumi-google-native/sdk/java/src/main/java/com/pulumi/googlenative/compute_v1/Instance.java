@@ -15,6 +15,7 @@ import com.pulumi.googlenative.compute_v1.outputs.AttachedDiskResponse;
 import com.pulumi.googlenative.compute_v1.outputs.ConfidentialInstanceConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import com.pulumi.googlenative.compute_v1.outputs.DisplayDeviceResponse;
+import com.pulumi.googlenative.compute_v1.outputs.InstanceParamsResponse;
 import com.pulumi.googlenative.compute_v1.outputs.MetadataResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkInterfaceResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkPerformanceConfigResponse;
@@ -355,6 +356,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     public Output<NetworkPerformanceConfigResponse> networkPerformanceConfig() {
         return this.networkPerformanceConfig;
+    }
+    /**
+     * Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    @Export(name="params", type=InstanceParamsResponse.class, parameters={})
+    private Output<InstanceParamsResponse> params;
+
+    /**
+     * @return Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    public Output<InstanceParamsResponse> params() {
+        return this.params;
     }
     /**
      * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.

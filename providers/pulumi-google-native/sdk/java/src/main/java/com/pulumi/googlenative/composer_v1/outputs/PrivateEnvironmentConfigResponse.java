@@ -12,6 +12,11 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEnvironmentConfigResponse {
     /**
+     * @return Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+     * 
+     */
+    private final String cloudComposerConnectionSubnetwork;
+    /**
      * @return Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
@@ -49,6 +54,7 @@ public final class PrivateEnvironmentConfigResponse {
 
     @CustomType.Constructor
     private PrivateEnvironmentConfigResponse(
+        @CustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
         @CustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
         @CustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
         @CustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
@@ -56,6 +62,7 @@ public final class PrivateEnvironmentConfigResponse {
         @CustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
         @CustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
         @CustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
+        this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
@@ -65,6 +72,13 @@ public final class PrivateEnvironmentConfigResponse {
         this.webServerIpv4ReservedRange = webServerIpv4ReservedRange;
     }
 
+    /**
+     * @return Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+     * 
+     */
+    public String cloudComposerConnectionSubnetwork() {
+        return this.cloudComposerConnectionSubnetwork;
+    }
     /**
      * @return Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
@@ -124,6 +138,7 @@ public final class PrivateEnvironmentConfigResponse {
     }
 
     public static final class Builder {
+        private String cloudComposerConnectionSubnetwork;
         private String cloudComposerNetworkIpv4CidrBlock;
         private String cloudComposerNetworkIpv4ReservedRange;
         private String cloudSqlIpv4CidrBlock;
@@ -138,6 +153,7 @@ public final class PrivateEnvironmentConfigResponse {
 
         public Builder(PrivateEnvironmentConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.cloudComposerConnectionSubnetwork = defaults.cloudComposerConnectionSubnetwork;
     	      this.cloudComposerNetworkIpv4CidrBlock = defaults.cloudComposerNetworkIpv4CidrBlock;
     	      this.cloudComposerNetworkIpv4ReservedRange = defaults.cloudComposerNetworkIpv4ReservedRange;
     	      this.cloudSqlIpv4CidrBlock = defaults.cloudSqlIpv4CidrBlock;
@@ -147,6 +163,10 @@ public final class PrivateEnvironmentConfigResponse {
     	      this.webServerIpv4ReservedRange = defaults.webServerIpv4ReservedRange;
         }
 
+        public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
+            this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
+            return this;
+        }
         public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
             return this;
@@ -175,7 +195,7 @@ public final class PrivateEnvironmentConfigResponse {
             this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange);
             return this;
         }        public PrivateEnvironmentConfigResponse build() {
-            return new PrivateEnvironmentConfigResponse(cloudComposerNetworkIpv4CidrBlock, cloudComposerNetworkIpv4ReservedRange, cloudSqlIpv4CidrBlock, enablePrivateEnvironment, privateClusterConfig, webServerIpv4CidrBlock, webServerIpv4ReservedRange);
+            return new PrivateEnvironmentConfigResponse(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudComposerNetworkIpv4ReservedRange, cloudSqlIpv4CidrBlock, enablePrivateEnvironment, privateClusterConfig, webServerIpv4CidrBlock, webServerIpv4ReservedRange);
         }
     }
 }

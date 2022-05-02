@@ -28,17 +28,17 @@ public final class ProbeResponse {
      */
     private final HTTPGetActionResponse httpGet;
     /**
-     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     private final Integer initialDelaySeconds;
     /**
-     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
      * 
      */
     private final Integer periodSeconds;
     /**
-     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
      * 
      */
     private final Integer successThreshold;
@@ -48,7 +48,7 @@ public final class ProbeResponse {
      */
     private final TCPSocketActionResponse tcpSocket;
     /**
-     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     private final Integer timeoutSeconds;
@@ -95,21 +95,21 @@ public final class ProbeResponse {
         return this.httpGet;
     }
     /**
-     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     public Integer initialDelaySeconds() {
         return this.initialDelaySeconds;
     }
     /**
-     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or equal than timeout_seconds.
      * 
      */
     public Integer periodSeconds() {
         return this.periodSeconds;
     }
     /**
-     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
      * 
      */
     public Integer successThreshold() {
@@ -123,7 +123,7 @@ public final class ProbeResponse {
         return this.tcpSocket;
     }
     /**
-     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
     public Integer timeoutSeconds() {

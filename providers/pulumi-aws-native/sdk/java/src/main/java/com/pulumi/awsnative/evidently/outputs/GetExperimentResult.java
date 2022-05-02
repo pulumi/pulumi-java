@@ -5,6 +5,7 @@ package com.pulumi.awsnative.evidently.outputs;
 
 import com.pulumi.awsnative.evidently.outputs.ExperimentMetricGoalObject;
 import com.pulumi.awsnative.evidently.outputs.ExperimentOnlineAbConfigObject;
+import com.pulumi.awsnative.evidently.outputs.ExperimentRunningStatusObject;
 import com.pulumi.awsnative.evidently.outputs.ExperimentTag;
 import com.pulumi.awsnative.evidently.outputs.ExperimentTreatmentObject;
 import com.pulumi.core.annotations.CustomType;
@@ -22,6 +23,11 @@ public final class GetExperimentResult {
     private final @Nullable List<ExperimentMetricGoalObject> metricGoals;
     private final @Nullable ExperimentOnlineAbConfigObject onlineAbConfig;
     private final @Nullable String randomizationSalt;
+    /**
+     * @return Start Experiment. Default is False
+     * 
+     */
+    private final @Nullable ExperimentRunningStatusObject runningStatus;
     private final @Nullable Integer samplingRate;
     /**
      * @return An array of key-value pairs to apply to this resource.
@@ -37,6 +43,7 @@ public final class GetExperimentResult {
         @CustomType.Parameter("metricGoals") @Nullable List<ExperimentMetricGoalObject> metricGoals,
         @CustomType.Parameter("onlineAbConfig") @Nullable ExperimentOnlineAbConfigObject onlineAbConfig,
         @CustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
+        @CustomType.Parameter("runningStatus") @Nullable ExperimentRunningStatusObject runningStatus,
         @CustomType.Parameter("samplingRate") @Nullable Integer samplingRate,
         @CustomType.Parameter("tags") @Nullable List<ExperimentTag> tags,
         @CustomType.Parameter("treatments") @Nullable List<ExperimentTreatmentObject> treatments) {
@@ -45,6 +52,7 @@ public final class GetExperimentResult {
         this.metricGoals = metricGoals;
         this.onlineAbConfig = onlineAbConfig;
         this.randomizationSalt = randomizationSalt;
+        this.runningStatus = runningStatus;
         this.samplingRate = samplingRate;
         this.tags = tags;
         this.treatments = treatments;
@@ -64,6 +72,13 @@ public final class GetExperimentResult {
     }
     public Optional<String> randomizationSalt() {
         return Optional.ofNullable(this.randomizationSalt);
+    }
+    /**
+     * @return Start Experiment. Default is False
+     * 
+     */
+    public Optional<ExperimentRunningStatusObject> runningStatus() {
+        return Optional.ofNullable(this.runningStatus);
     }
     public Optional<Integer> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
@@ -93,6 +108,7 @@ public final class GetExperimentResult {
         private @Nullable List<ExperimentMetricGoalObject> metricGoals;
         private @Nullable ExperimentOnlineAbConfigObject onlineAbConfig;
         private @Nullable String randomizationSalt;
+        private @Nullable ExperimentRunningStatusObject runningStatus;
         private @Nullable Integer samplingRate;
         private @Nullable List<ExperimentTag> tags;
         private @Nullable List<ExperimentTreatmentObject> treatments;
@@ -108,6 +124,7 @@ public final class GetExperimentResult {
     	      this.metricGoals = defaults.metricGoals;
     	      this.onlineAbConfig = defaults.onlineAbConfig;
     	      this.randomizationSalt = defaults.randomizationSalt;
+    	      this.runningStatus = defaults.runningStatus;
     	      this.samplingRate = defaults.samplingRate;
     	      this.tags = defaults.tags;
     	      this.treatments = defaults.treatments;
@@ -136,6 +153,10 @@ public final class GetExperimentResult {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
+        public Builder runningStatus(@Nullable ExperimentRunningStatusObject runningStatus) {
+            this.runningStatus = runningStatus;
+            return this;
+        }
         public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
@@ -154,7 +175,7 @@ public final class GetExperimentResult {
         public Builder treatments(ExperimentTreatmentObject... treatments) {
             return treatments(List.of(treatments));
         }        public GetExperimentResult build() {
-            return new GetExperimentResult(arn, description, metricGoals, onlineAbConfig, randomizationSalt, samplingRate, tags, treatments);
+            return new GetExperimentResult(arn, description, metricGoals, onlineAbConfig, randomizationSalt, runningStatus, samplingRate, tags, treatments);
         }
     }
 }

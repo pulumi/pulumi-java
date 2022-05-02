@@ -17,7 +17,7 @@ public final class Vp9CodecSettingsResponse {
      */
     private final Integer bitrateBps;
     /**
-     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
      * 
      */
     private final Integer crfLevel;
@@ -94,7 +94,7 @@ public final class Vp9CodecSettingsResponse {
         return this.bitrateBps;
     }
     /**
-     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
      * 
      */
     public Integer crfLevel() {

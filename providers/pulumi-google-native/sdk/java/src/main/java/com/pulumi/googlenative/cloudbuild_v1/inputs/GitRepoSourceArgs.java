@@ -21,6 +21,36 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final GitRepoSourceArgs Empty = new GitRepoSourceArgs();
 
     /**
+     * The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    @Import(name="bitbucketServerConfig")
+    private @Nullable Output<String> bitbucketServerConfig;
+
+    /**
+     * @return The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    public Optional<Output<String>> bitbucketServerConfig() {
+        return Optional.ofNullable(this.bitbucketServerConfig);
+    }
+
+    /**
+     * The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    @Import(name="githubEnterpriseConfig")
+    private @Nullable Output<String> githubEnterpriseConfig;
+
+    /**
+     * @return The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    public Optional<Output<String>> githubEnterpriseConfig() {
+        return Optional.ofNullable(this.githubEnterpriseConfig);
+    }
+
+    /**
      * The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
      */
@@ -51,14 +81,14 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URI of the repo (required).
+     * The URI of the repo. Either uri or repository can be specified and is required.
      * 
      */
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
     /**
-     * @return The URI of the repo (required).
+     * @return The URI of the repo. Either uri or repository can be specified and is required.
      * 
      */
     public Optional<Output<String>> uri() {
@@ -68,6 +98,8 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     private GitRepoSourceArgs() {}
 
     private GitRepoSourceArgs(GitRepoSourceArgs $) {
+        this.bitbucketServerConfig = $.bitbucketServerConfig;
+        this.githubEnterpriseConfig = $.githubEnterpriseConfig;
         this.ref = $.ref;
         this.repoType = $.repoType;
         this.uri = $.uri;
@@ -89,6 +121,48 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(GitRepoSourceArgs defaults) {
             $ = new GitRepoSourceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param bitbucketServerConfig The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bitbucketServerConfig(@Nullable Output<String> bitbucketServerConfig) {
+            $.bitbucketServerConfig = bitbucketServerConfig;
+            return this;
+        }
+
+        /**
+         * @param bitbucketServerConfig The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bitbucketServerConfig(String bitbucketServerConfig) {
+            return bitbucketServerConfig(Output.of(bitbucketServerConfig));
+        }
+
+        /**
+         * @param githubEnterpriseConfig The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder githubEnterpriseConfig(@Nullable Output<String> githubEnterpriseConfig) {
+            $.githubEnterpriseConfig = githubEnterpriseConfig;
+            return this;
+        }
+
+        /**
+         * @param githubEnterpriseConfig The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder githubEnterpriseConfig(String githubEnterpriseConfig) {
+            return githubEnterpriseConfig(Output.of(githubEnterpriseConfig));
         }
 
         /**
@@ -134,7 +208,7 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param uri The URI of the repo (required).
+         * @param uri The URI of the repo. Either uri or repository can be specified and is required.
          * 
          * @return builder
          * 
@@ -145,7 +219,7 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param uri The URI of the repo (required).
+         * @param uri The URI of the repo. Either uri or repository can be specified and is required.
          * 
          * @return builder
          * 

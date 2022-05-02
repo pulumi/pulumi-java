@@ -52,14 +52,14 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
         return this.bandwidth;
     }
     /**
-     * Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * This field is not available.
      * 
      */
     @Export(name="candidateIpv6Subnets", type=List.class, parameters={String.class})
     private Output<List<String>> candidateIpv6Subnets;
 
     /**
-     * @return Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * @return This field is not available.
      * 
      */
     public Output<List<String>> candidateIpv6Subnets() {
@@ -108,14 +108,14 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
         return this.cloudRouterIpv6Address;
     }
     /**
-     * If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * This field is not available.
      * 
      */
     @Export(name="cloudRouterIpv6InterfaceId", type=String.class, parameters={})
     private Output<String> cloudRouterIpv6InterfaceId;
 
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public Output<String> cloudRouterIpv6InterfaceId() {
@@ -164,28 +164,28 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
         return this.customerRouterIpv6Address;
     }
     /**
-     * If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * This field is not available.
      * 
      */
     @Export(name="customerRouterIpv6InterfaceId", type=String.class, parameters={})
     private Output<String> customerRouterIpv6InterfaceId;
 
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public Output<String> customerRouterIpv6InterfaceId() {
         return this.customerRouterIpv6InterfaceId;
     }
     /**
-     * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
+     * Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
      * 
      */
     @Export(name="dataplaneVersion", type=Integer.class, parameters={})
     private Output<Integer> dataplaneVersion;
 
     /**
-     * @return [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
+     * @return Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
      * 
      */
     public Output<Integer> dataplaneVersion() {
@@ -232,6 +232,24 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      */
     public Output<String> encryption() {
         return this.encryption;
+    }
+    /**
+     * Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     * @deprecated
+     * [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     */
+    @Deprecated /* [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used. */
+    @Export(name="googleReferenceId", type=String.class, parameters={})
+    private Output<String> googleReferenceId;
+
+    /**
+     * @return Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     */
+    public Output<String> googleReferenceId() {
+        return this.googleReferenceId;
     }
     /**
      * URL of the underlying Interconnect object that this attachment&#39;s traffic will traverse through.

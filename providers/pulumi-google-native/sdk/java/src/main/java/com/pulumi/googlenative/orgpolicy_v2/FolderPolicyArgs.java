@@ -5,6 +5,7 @@ package com.pulumi.googlenative.orgpolicy_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2AlternatePolicySpecArgs;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,29 @@ import javax.annotation.Nullable;
 public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final FolderPolicyArgs Empty = new FolderPolicyArgs();
+
+    /**
+     * Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    @Import(name="alternate")
+    private @Nullable Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs> alternate;
+
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    public Optional<Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs>> alternate() {
+        return Optional.ofNullable(this.alternate);
+    }
 
     @Import(name="folderId", required=true)
     private Output<String> folderId;
@@ -56,6 +80,7 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
     private FolderPolicyArgs() {}
 
     private FolderPolicyArgs(FolderPolicyArgs $) {
+        this.alternate = $.alternate;
         this.folderId = $.folderId;
         this.name = $.name;
         this.spec = $.spec;
@@ -77,6 +102,35 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(FolderPolicyArgs defaults) {
             $ = new FolderPolicyArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param alternate Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder alternate(@Nullable Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs> alternate) {
+            $.alternate = alternate;
+            return this;
+        }
+
+        /**
+         * @param alternate Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder alternate(GoogleCloudOrgpolicyV2AlternatePolicySpecArgs alternate) {
+            return alternate(Output.of(alternate));
         }
 
         public Builder folderId(Output<String> folderId) {

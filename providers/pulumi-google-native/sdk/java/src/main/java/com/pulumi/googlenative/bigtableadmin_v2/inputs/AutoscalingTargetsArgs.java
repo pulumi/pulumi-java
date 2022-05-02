@@ -20,14 +20,14 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
     public static final AutoscalingTargetsArgs Empty = new AutoscalingTargetsArgs();
 
     /**
-     * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
      * 
      */
     @Import(name="cpuUtilizationPercent")
     private @Nullable Output<Integer> cpuUtilizationPercent;
 
     /**
-     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
      * 
      */
     public Optional<Output<Integer>> cpuUtilizationPercent() {
@@ -59,7 +59,7 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
          * 
          * @return builder
          * 
@@ -70,7 +70,7 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise it will return INVALID_ARGUMENT error.
          * 
          * @return builder
          * 

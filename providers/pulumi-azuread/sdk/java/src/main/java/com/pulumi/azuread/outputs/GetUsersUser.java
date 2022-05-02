@@ -11,52 +11,52 @@ import java.util.Objects;
 @CustomType
 public final class GetUsersUser {
     /**
-     * Whether or not the account is enabled.
+     * @return Whether or not the account is enabled.
      * 
      */
     private final Boolean accountEnabled;
     /**
-     * The display name of the user.
+     * @return The display name of the user.
      * 
      */
     private final String displayName;
     /**
-     * The primary email address of the user.
+     * @return The primary email address of the user.
      * 
      */
     private final String mail;
     /**
-     * The email alias of the user.
+     * @return The email alias of the user.
      * 
      */
     private final String mailNickname;
     /**
-     * The object ID of the user.
+     * @return The object ID of the user.
      * 
      */
     private final String objectId;
     /**
-     * The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+     * @return The value used to associate an on-premises Active Directory user account with their Azure AD user object.
      * 
      */
     private final String onpremisesImmutableId;
     /**
-     * The on-premise SAM account name of the user.
+     * @return The on-premise SAM account name of the user.
      * 
      */
     private final String onpremisesSamAccountName;
     /**
-     * The on-premise user principal name of the user.
+     * @return The on-premise user principal name of the user.
      * 
      */
     private final String onpremisesUserPrincipalName;
     /**
-     * The usage location of the user.
+     * @return The usage location of the user.
      * 
      */
     private final String usageLocation;
     /**
-     * The user principal name (UPN) of the user.
+     * @return The user principal name (UPN) of the user.
      * 
      */
     private final String userPrincipalName;
@@ -86,72 +86,72 @@ public final class GetUsersUser {
     }
 
     /**
-     * Whether or not the account is enabled.
+     * @return Whether or not the account is enabled.
      * 
-    */
+     */
     public Boolean accountEnabled() {
         return this.accountEnabled;
     }
     /**
-     * The display name of the user.
+     * @return The display name of the user.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The primary email address of the user.
+     * @return The primary email address of the user.
      * 
-    */
+     */
     public String mail() {
         return this.mail;
     }
     /**
-     * The email alias of the user.
+     * @return The email alias of the user.
      * 
-    */
+     */
     public String mailNickname() {
         return this.mailNickname;
     }
     /**
-     * The object ID of the user.
+     * @return The object ID of the user.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+     * @return The value used to associate an on-premises Active Directory user account with their Azure AD user object.
      * 
-    */
+     */
     public String onpremisesImmutableId() {
         return this.onpremisesImmutableId;
     }
     /**
-     * The on-premise SAM account name of the user.
+     * @return The on-premise SAM account name of the user.
      * 
-    */
+     */
     public String onpremisesSamAccountName() {
         return this.onpremisesSamAccountName;
     }
     /**
-     * The on-premise user principal name of the user.
+     * @return The on-premise user principal name of the user.
      * 
-    */
+     */
     public String onpremisesUserPrincipalName() {
         return this.onpremisesUserPrincipalName;
     }
     /**
-     * The usage location of the user.
+     * @return The usage location of the user.
      * 
-    */
+     */
     public String usageLocation() {
         return this.usageLocation;
     }
     /**
-     * The user principal name (UPN) of the user.
+     * @return The user principal name (UPN) of the user.
      * 
-    */
+     */
     public String userPrincipalName() {
         return this.userPrincipalName;
     }

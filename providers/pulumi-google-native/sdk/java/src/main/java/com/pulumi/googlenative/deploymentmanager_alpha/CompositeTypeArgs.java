@@ -5,7 +5,6 @@ package com.pulumi.googlenative.deploymentmanager_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.googlenative.deploymentmanager_alpha.enums.CompositeTypeStatus;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.CompositeTypeLabelEntryArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.TemplateContentsArgs;
 import java.lang.String;
@@ -78,13 +77,6 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
-    @Import(name="status")
-    private @Nullable Output<CompositeTypeStatus> status;
-
-    public Optional<Output<CompositeTypeStatus>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
     /**
      * Files for the template type.
      * 
@@ -108,7 +100,6 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
         this.labels = $.labels;
         this.name = $.name;
         this.project = $.project;
-        this.status = $.status;
         this.templateContents = $.templateContents;
     }
 
@@ -219,15 +210,6 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder project(String project) {
             return project(Output.of(project));
-        }
-
-        public Builder status(@Nullable Output<CompositeTypeStatus> status) {
-            $.status = status;
-            return this;
-        }
-
-        public Builder status(CompositeTypeStatus status) {
-            return status(Output.of(status));
         }
 
         /**

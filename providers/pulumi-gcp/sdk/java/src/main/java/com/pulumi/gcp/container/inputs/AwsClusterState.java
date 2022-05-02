@@ -39,14 +39,14 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Configuration related to the cluster RBAC settings.
+     * Configuration related to the cluster RBAC settings.
      * 
      */
     @Import(name="authorization")
     private @Nullable Output<AwsClusterAuthorizationArgs> authorization;
 
     /**
-     * @return Required. Configuration related to the cluster RBAC settings.
+     * @return Configuration related to the cluster RBAC settings.
      * 
      */
     public Optional<Output<AwsClusterAuthorizationArgs>> authorization() {
@@ -54,14 +54,14 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+     * The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
     @Import(name="awsRegion")
     private @Nullable Output<String> awsRegion;
 
     /**
-     * @return Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+     * @return The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
     public Optional<Output<String>> awsRegion() {
@@ -69,14 +69,14 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Configuration related to the cluster control plane.
+     * Configuration related to the cluster control plane.
      * 
      */
     @Import(name="controlPlane")
     private @Nullable Output<AwsClusterControlPlaneArgs> controlPlane;
 
     /**
-     * @return Required. Configuration related to the cluster control plane.
+     * @return Configuration related to the cluster control plane.
      * 
      */
     public Optional<Output<AwsClusterControlPlaneArgs>> controlPlane() {
@@ -191,14 +191,14 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Cluster-wide networking configuration.
+     * Cluster-wide networking configuration.
      * 
      */
     @Import(name="networking")
     private @Nullable Output<AwsClusterNetworkingArgs> networking;
 
     /**
-     * @return Required. Cluster-wide networking configuration.
+     * @return Cluster-wide networking configuration.
      * 
      */
     public Optional<Output<AwsClusterNetworkingArgs>> networking() {
@@ -360,7 +360,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * @param authorization Configuration related to the cluster RBAC settings.
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * @param authorization Configuration related to the cluster RBAC settings.
          * 
          * @return builder
          * 
@@ -381,7 +381,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param awsRegion Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+         * @param awsRegion The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
          * 
          * @return builder
          * 
@@ -392,7 +392,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param awsRegion Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
+         * @param awsRegion The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
          * 
          * @return builder
          * 
@@ -402,7 +402,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * @param controlPlane Configuration related to the cluster control plane.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * @param controlPlane Configuration related to the cluster control plane.
          * 
          * @return builder
          * 
@@ -572,7 +572,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networking Required. Cluster-wide networking configuration.
+         * @param networking Cluster-wide networking configuration.
          * 
          * @return builder
          * 
@@ -583,7 +583,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networking Required. Cluster-wide networking configuration.
+         * @param networking Cluster-wide networking configuration.
          * 
          * @return builder
          * 

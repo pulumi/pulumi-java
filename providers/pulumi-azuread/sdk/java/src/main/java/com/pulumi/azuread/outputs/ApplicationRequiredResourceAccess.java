@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationRequiredResourceAccess {
     /**
-     * A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+     * @return A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
      * 
      */
     private final List<ApplicationRequiredResourceAccessResourceAccess> resourceAccesses;
     /**
-     * The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
+     * @return The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
      * 
      */
     private final String resourceAppId;
@@ -31,16 +31,16 @@ public final class ApplicationRequiredResourceAccess {
     }
 
     /**
-     * A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+     * @return A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
      * 
-    */
+     */
     public List<ApplicationRequiredResourceAccessResourceAccess> resourceAccesses() {
         return this.resourceAccesses;
     }
     /**
-     * The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
+     * @return The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
      * 
-    */
+     */
     public String resourceAppId() {
         return this.resourceAppId;
     }

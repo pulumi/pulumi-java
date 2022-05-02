@@ -116,9 +116,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.network);
     }
 
+    /**
+     * The unqualified resource name.
+     * 
+     */
     @Import(name="nodeId")
     private @Nullable Output<String> nodeId;
 
+    /**
+     * @return The unqualified resource name.
+     * 
+     */
     public Optional<Output<String>> nodeId() {
         return Optional.ofNullable(this.nodeId);
     }
@@ -130,9 +138,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Idempotent request UUID.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Idempotent request UUID.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -353,11 +369,23 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(@Nullable Output<String> nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             return nodeId(Output.of(nodeId));
         }
@@ -371,11 +399,23 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

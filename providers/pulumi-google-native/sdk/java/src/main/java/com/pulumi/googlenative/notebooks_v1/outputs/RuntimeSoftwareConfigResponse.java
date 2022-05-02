@@ -34,7 +34,7 @@ public final class RuntimeSoftwareConfigResponse {
      */
     private final Integer idleShutdownTimeout;
     /**
-     * @return Install Nvidia Driver automatically.
+     * @return Install Nvidia Driver automatically. Default: True
      * 
      */
     private final Boolean installGpuDriver;
@@ -53,6 +53,11 @@ public final class RuntimeSoftwareConfigResponse {
      * 
      */
     private final String postStartupScript;
+    /**
+     * @return Bool indicating whether an newer image is available in an image family.
+     * 
+     */
+    private final Boolean upgradeable;
 
     @CustomType.Constructor
     private RuntimeSoftwareConfigResponse(
@@ -63,7 +68,8 @@ public final class RuntimeSoftwareConfigResponse {
         @CustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
         @CustomType.Parameter("kernels") List<ContainerImageResponse> kernels,
         @CustomType.Parameter("notebookUpgradeSchedule") String notebookUpgradeSchedule,
-        @CustomType.Parameter("postStartupScript") String postStartupScript) {
+        @CustomType.Parameter("postStartupScript") String postStartupScript,
+        @CustomType.Parameter("upgradeable") Boolean upgradeable) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;
@@ -72,6 +78,7 @@ public final class RuntimeSoftwareConfigResponse {
         this.kernels = kernels;
         this.notebookUpgradeSchedule = notebookUpgradeSchedule;
         this.postStartupScript = postStartupScript;
+        this.upgradeable = upgradeable;
     }
 
     /**
@@ -103,7 +110,7 @@ public final class RuntimeSoftwareConfigResponse {
         return this.idleShutdownTimeout;
     }
     /**
-     * @return Install Nvidia Driver automatically.
+     * @return Install Nvidia Driver automatically. Default: True
      * 
      */
     public Boolean installGpuDriver() {
@@ -130,6 +137,13 @@ public final class RuntimeSoftwareConfigResponse {
     public String postStartupScript() {
         return this.postStartupScript;
     }
+    /**
+     * @return Bool indicating whether an newer image is available in an image family.
+     * 
+     */
+    public Boolean upgradeable() {
+        return this.upgradeable;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -148,6 +162,7 @@ public final class RuntimeSoftwareConfigResponse {
         private List<ContainerImageResponse> kernels;
         private String notebookUpgradeSchedule;
         private String postStartupScript;
+        private Boolean upgradeable;
 
         public Builder() {
     	      // Empty
@@ -163,6 +178,7 @@ public final class RuntimeSoftwareConfigResponse {
     	      this.kernels = defaults.kernels;
     	      this.notebookUpgradeSchedule = defaults.notebookUpgradeSchedule;
     	      this.postStartupScript = defaults.postStartupScript;
+    	      this.upgradeable = defaults.upgradeable;
         }
 
         public Builder customGpuDriverPath(String customGpuDriverPath) {
@@ -199,8 +215,12 @@ public final class RuntimeSoftwareConfigResponse {
         public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
+        }
+        public Builder upgradeable(Boolean upgradeable) {
+            this.upgradeable = Objects.requireNonNull(upgradeable);
+            return this;
         }        public RuntimeSoftwareConfigResponse build() {
-            return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
+            return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript, upgradeable);
         }
     }
 }

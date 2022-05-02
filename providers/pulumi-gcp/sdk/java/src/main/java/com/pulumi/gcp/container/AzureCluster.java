@@ -63,56 +63,56 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.annotations);
     }
     /**
-     * Required. Configuration related to the cluster RBAC settings.
+     * Configuration related to the cluster RBAC settings.
      * 
      */
     @Export(name="authorization", type=AzureClusterAuthorization.class, parameters={})
     private Output<AzureClusterAuthorization> authorization;
 
     /**
-     * @return Required. Configuration related to the cluster RBAC settings.
+     * @return Configuration related to the cluster RBAC settings.
      * 
      */
     public Output<AzureClusterAuthorization> authorization() {
         return this.authorization;
     }
     /**
-     * Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
     @Export(name="azureRegion", type=String.class, parameters={})
     private Output<String> azureRegion;
 
     /**
-     * @return Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * @return The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
     public Output<String> azureRegion() {
         return this.azureRegion;
     }
     /**
-     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     @Export(name="client", type=String.class, parameters={})
     private Output<String> client;
 
     /**
-     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * @return Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     public Output<String> client() {
         return this.client;
     }
     /**
-     * Required. Configuration related to the cluster control plane.
+     * Configuration related to the cluster control plane.
      * 
      */
     @Export(name="controlPlane", type=AzureClusterControlPlane.class, parameters={})
     private Output<AzureClusterControlPlane> controlPlane;
 
     /**
-     * @return Required. Configuration related to the cluster control plane.
+     * @return Configuration related to the cluster control plane.
      * 
      */
     public Output<AzureClusterControlPlane> controlPlane() {
@@ -219,14 +219,14 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Required. Cluster-wide networking configuration.
+     * Cluster-wide networking configuration.
      * 
      */
     @Export(name="networking", type=AzureClusterNetworking.class, parameters={})
     private Output<AzureClusterNetworking> networking;
 
     /**
-     * @return Required. Cluster-wide networking configuration.
+     * @return Cluster-wide networking configuration.
      * 
      */
     public Output<AzureClusterNetworking> networking() {

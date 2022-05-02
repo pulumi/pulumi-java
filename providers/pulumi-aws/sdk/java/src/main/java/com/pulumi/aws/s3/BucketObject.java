@@ -18,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides a S3 bucket object resource.
+ * Provides an S3 object resource.
  * 
  * ## Example Usage
  * 

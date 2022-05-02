@@ -38,14 +38,22 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     /**
      * List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     @Import(name="capacityProviders")
     private @Nullable Output<List<String>> capacityProviders;
 
     /**
      * @return List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     public Optional<Output<List<String>>> capacityProviders() {
         return Optional.ofNullable(this.capacityProviders);
     }
@@ -68,14 +76,22 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     /**
      * Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     @Import(name="defaultCapacityProviderStrategies")
     private @Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     /**
      * @return Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     public Optional<Output<List<ClusterDefaultCapacityProviderStrategyArgs>>> defaultCapacityProviderStrategies() {
         return Optional.ofNullable(this.defaultCapacityProviderStrategies);
     }
@@ -125,9 +141,17 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -189,7 +213,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder capacityProviders(@Nullable Output<List<String>> capacityProviders) {
             $.capacityProviders = capacityProviders;
             return this;
@@ -200,7 +228,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder capacityProviders(List<String> capacityProviders) {
             return capacityProviders(Output.of(capacityProviders));
         }
@@ -210,7 +242,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder capacityProviders(String... capacityProviders) {
             return capacityProviders(List.of(capacityProviders));
         }
@@ -241,7 +277,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies) {
             $.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
@@ -252,7 +292,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder defaultCapacityProviderStrategies(List<ClusterDefaultCapacityProviderStrategyArgs> defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(Output.of(defaultCapacityProviderStrategies));
         }
@@ -262,7 +306,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_ecs_cluster_capacity_providers resource instead
+         * 
          */
+        @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
         public Builder defaultCapacityProviderStrategies(ClusterDefaultCapacityProviderStrategyArgs... defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
         }
@@ -340,11 +388,23 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

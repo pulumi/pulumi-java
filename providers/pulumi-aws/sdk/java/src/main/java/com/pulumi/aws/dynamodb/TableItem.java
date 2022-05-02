@@ -44,16 +44,14 @@ public class TableItem extends com.pulumi.resources.CustomResource {
         return this.hashKey;
     }
     /**
-     * JSON representation of a map of attribute name/value pairs, one for each attribute.
-     * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+     * JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
     @Export(name="item", type=String.class, parameters={})
     private Output<String> item;
 
     /**
-     * @return JSON representation of a map of attribute name/value pairs, one for each attribute.
-     * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+     * @return JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
     public Output<String> item() {
@@ -74,14 +72,14 @@ public class TableItem extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.rangeKey);
     }
     /**
-     * The name of the table to contain the item.
+     * Name of the table to contain the item.
      * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
-     * @return The name of the table to contain the item.
+     * @return Name of the table to contain the item.
      * 
      */
     public Output<String> tableName() {

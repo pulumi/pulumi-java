@@ -5,6 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.bigquery.inputs.DatasetAccessAuthorizedDatasetArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,6 +33,23 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
      */
     public Optional<Output<Boolean>> apiUpdatedMember() {
         return Optional.ofNullable(this.apiUpdatedMember);
+    }
+
+    /**
+     * The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="authorizedDataset")
+    private @Nullable Output<DatasetAccessAuthorizedDatasetArgs> authorizedDataset;
+
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<DatasetAccessAuthorizedDatasetArgs>> authorizedDataset() {
+        return Optional.ofNullable(this.authorizedDataset);
     }
 
     /**
@@ -201,6 +219,7 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
 
     private DatasetAccessState(DatasetAccessState $) {
         this.apiUpdatedMember = $.apiUpdatedMember;
+        this.authorizedDataset = $.authorizedDataset;
         this.datasetId = $.datasetId;
         this.domain = $.domain;
         this.groupByEmail = $.groupByEmail;
@@ -251,6 +270,29 @@ public final class DatasetAccessState extends com.pulumi.resources.ResourceArgs 
          */
         public Builder apiUpdatedMember(Boolean apiUpdatedMember) {
             return apiUpdatedMember(Output.of(apiUpdatedMember));
+        }
+
+        /**
+         * @param authorizedDataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizedDataset(@Nullable Output<DatasetAccessAuthorizedDatasetArgs> authorizedDataset) {
+            $.authorizedDataset = authorizedDataset;
+            return this;
+        }
+
+        /**
+         * @param authorizedDataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizedDataset(DatasetAccessAuthorizedDatasetArgs authorizedDataset) {
+            return authorizedDataset(Output.of(authorizedDataset));
         }
 
         /**

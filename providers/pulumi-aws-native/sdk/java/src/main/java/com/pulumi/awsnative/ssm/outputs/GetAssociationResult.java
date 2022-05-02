@@ -61,6 +61,7 @@ public final class GetAssociationResult {
      * 
      */
     private final @Nullable String scheduleExpression;
+    private final @Nullable Integer scheduleOffset;
     private final @Nullable AssociationSyncCompliance syncCompliance;
     /**
      * @return The targets that the SSM document sends commands to.
@@ -85,6 +86,7 @@ public final class GetAssociationResult {
         @CustomType.Parameter("outputLocation") @Nullable AssociationInstanceAssociationOutputLocation outputLocation,
         @CustomType.Parameter("parameters") @Nullable Object parameters,
         @CustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
+        @CustomType.Parameter("scheduleOffset") @Nullable Integer scheduleOffset,
         @CustomType.Parameter("syncCompliance") @Nullable AssociationSyncCompliance syncCompliance,
         @CustomType.Parameter("targets") @Nullable List<AssociationTarget> targets,
         @CustomType.Parameter("waitForSuccessTimeoutSeconds") @Nullable Integer waitForSuccessTimeoutSeconds) {
@@ -102,6 +104,7 @@ public final class GetAssociationResult {
         this.outputLocation = outputLocation;
         this.parameters = parameters;
         this.scheduleExpression = scheduleExpression;
+        this.scheduleOffset = scheduleOffset;
         this.syncCompliance = syncCompliance;
         this.targets = targets;
         this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
@@ -177,6 +180,9 @@ public final class GetAssociationResult {
     public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
+    public Optional<Integer> scheduleOffset() {
+        return Optional.ofNullable(this.scheduleOffset);
+    }
     public Optional<AssociationSyncCompliance> syncCompliance() {
         return Optional.ofNullable(this.syncCompliance);
     }
@@ -214,6 +220,7 @@ public final class GetAssociationResult {
         private @Nullable AssociationInstanceAssociationOutputLocation outputLocation;
         private @Nullable Object parameters;
         private @Nullable String scheduleExpression;
+        private @Nullable Integer scheduleOffset;
         private @Nullable AssociationSyncCompliance syncCompliance;
         private @Nullable List<AssociationTarget> targets;
         private @Nullable Integer waitForSuccessTimeoutSeconds;
@@ -238,6 +245,7 @@ public final class GetAssociationResult {
     	      this.outputLocation = defaults.outputLocation;
     	      this.parameters = defaults.parameters;
     	      this.scheduleExpression = defaults.scheduleExpression;
+    	      this.scheduleOffset = defaults.scheduleOffset;
     	      this.syncCompliance = defaults.syncCompliance;
     	      this.targets = defaults.targets;
     	      this.waitForSuccessTimeoutSeconds = defaults.waitForSuccessTimeoutSeconds;
@@ -302,6 +310,10 @@ public final class GetAssociationResult {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
+        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
+            this.scheduleOffset = scheduleOffset;
+            return this;
+        }
         public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
@@ -317,7 +329,7 @@ public final class GetAssociationResult {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }        public GetAssociationResult build() {
-            return new GetAssociationResult(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
+            return new GetAssociationResult(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, scheduleOffset, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }
     }
 }

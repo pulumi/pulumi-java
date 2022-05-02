@@ -45,9 +45,17 @@ public final class StudyArgs extends com.pulumi.resources.ResourceArgs {
         return this.studyConfig;
     }
 
+    /**
+     * Required. The ID to use for the study, which will become the final component of the study&#39;s resource name.
+     * 
+     */
     @Import(name="studyId", required=true)
     private Output<String> studyId;
 
+    /**
+     * @return Required. The ID to use for the study, which will become the final component of the study&#39;s resource name.
+     * 
+     */
     public Output<String> studyId() {
         return this.studyId;
     }
@@ -118,11 +126,23 @@ public final class StudyArgs extends com.pulumi.resources.ResourceArgs {
             return studyConfig(Output.of(studyConfig));
         }
 
+        /**
+         * @param studyId Required. The ID to use for the study, which will become the final component of the study&#39;s resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studyId(Output<String> studyId) {
             $.studyId = studyId;
             return this;
         }
 
+        /**
+         * @param studyId Required. The ID to use for the study, which will become the final component of the study&#39;s resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studyId(String studyId) {
             return studyId(Output.of(studyId));
         }

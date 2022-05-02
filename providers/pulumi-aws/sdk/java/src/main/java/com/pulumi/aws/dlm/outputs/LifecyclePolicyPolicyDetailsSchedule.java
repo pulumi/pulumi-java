@@ -5,7 +5,10 @@ package com.pulumi.aws.dlm.outputs;
 
 import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCreateRule;
 import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule;
+import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleDeprecateRule;
+import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleFastRestoreRule;
 import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleRetainRule;
+import com.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleShareRule;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,6 +36,16 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
      */
     private final @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules;
     /**
+     * @return The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+     * 
+     */
+    private final @Nullable LifecyclePolicyPolicyDetailsScheduleDeprecateRule deprecateRule;
+    /**
+     * @return See the `fast_restore_rule` block. Max of 1 per schedule.
+     * 
+     */
+    private final @Nullable LifecyclePolicyPolicyDetailsScheduleFastRestoreRule fastRestoreRule;
+    /**
      * @return A name for the schedule.
      * 
      */
@@ -43,25 +56,43 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
      */
     private final LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule;
     /**
+     * @return See the `share_rule` block. Max of 1 per schedule.
+     * 
+     */
+    private final @Nullable LifecyclePolicyPolicyDetailsScheduleShareRule shareRule;
+    /**
      * @return A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
      */
     private final @Nullable Map<String,String> tagsToAdd;
+    /**
+     * @return A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+     * 
+     */
+    private final @Nullable Map<String,String> variableTags;
 
     @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsSchedule(
         @CustomType.Parameter("copyTags") @Nullable Boolean copyTags,
         @CustomType.Parameter("createRule") LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
         @CustomType.Parameter("crossRegionCopyRules") @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
+        @CustomType.Parameter("deprecateRule") @Nullable LifecyclePolicyPolicyDetailsScheduleDeprecateRule deprecateRule,
+        @CustomType.Parameter("fastRestoreRule") @Nullable LifecyclePolicyPolicyDetailsScheduleFastRestoreRule fastRestoreRule,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("retainRule") LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
-        @CustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd) {
+        @CustomType.Parameter("shareRule") @Nullable LifecyclePolicyPolicyDetailsScheduleShareRule shareRule,
+        @CustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd,
+        @CustomType.Parameter("variableTags") @Nullable Map<String,String> variableTags) {
         this.copyTags = copyTags;
         this.createRule = createRule;
         this.crossRegionCopyRules = crossRegionCopyRules;
+        this.deprecateRule = deprecateRule;
+        this.fastRestoreRule = fastRestoreRule;
         this.name = name;
         this.retainRule = retainRule;
+        this.shareRule = shareRule;
         this.tagsToAdd = tagsToAdd;
+        this.variableTags = variableTags;
     }
 
     /**
@@ -86,6 +117,20 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
         return this.crossRegionCopyRules == null ? List.of() : this.crossRegionCopyRules;
     }
     /**
+     * @return The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+     * 
+     */
+    public Optional<LifecyclePolicyPolicyDetailsScheduleDeprecateRule> deprecateRule() {
+        return Optional.ofNullable(this.deprecateRule);
+    }
+    /**
+     * @return See the `fast_restore_rule` block. Max of 1 per schedule.
+     * 
+     */
+    public Optional<LifecyclePolicyPolicyDetailsScheduleFastRestoreRule> fastRestoreRule() {
+        return Optional.ofNullable(this.fastRestoreRule);
+    }
+    /**
      * @return A name for the schedule.
      * 
      */
@@ -100,11 +145,25 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
         return this.retainRule;
     }
     /**
+     * @return See the `share_rule` block. Max of 1 per schedule.
+     * 
+     */
+    public Optional<LifecyclePolicyPolicyDetailsScheduleShareRule> shareRule() {
+        return Optional.ofNullable(this.shareRule);
+    }
+    /**
      * @return A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
      */
     public Map<String,String> tagsToAdd() {
         return this.tagsToAdd == null ? Map.of() : this.tagsToAdd;
+    }
+    /**
+     * @return A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+     * 
+     */
+    public Map<String,String> variableTags() {
+        return this.variableTags == null ? Map.of() : this.variableTags;
     }
 
     public static Builder builder() {
@@ -119,9 +178,13 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
         private @Nullable Boolean copyTags;
         private LifecyclePolicyPolicyDetailsScheduleCreateRule createRule;
         private @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules;
+        private @Nullable LifecyclePolicyPolicyDetailsScheduleDeprecateRule deprecateRule;
+        private @Nullable LifecyclePolicyPolicyDetailsScheduleFastRestoreRule fastRestoreRule;
         private String name;
         private LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule;
+        private @Nullable LifecyclePolicyPolicyDetailsScheduleShareRule shareRule;
         private @Nullable Map<String,String> tagsToAdd;
+        private @Nullable Map<String,String> variableTags;
 
         public Builder() {
     	      // Empty
@@ -132,9 +195,13 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
     	      this.copyTags = defaults.copyTags;
     	      this.createRule = defaults.createRule;
     	      this.crossRegionCopyRules = defaults.crossRegionCopyRules;
+    	      this.deprecateRule = defaults.deprecateRule;
+    	      this.fastRestoreRule = defaults.fastRestoreRule;
     	      this.name = defaults.name;
     	      this.retainRule = defaults.retainRule;
+    	      this.shareRule = defaults.shareRule;
     	      this.tagsToAdd = defaults.tagsToAdd;
+    	      this.variableTags = defaults.variableTags;
         }
 
         public Builder copyTags(@Nullable Boolean copyTags) {
@@ -152,6 +219,14 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
         public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule... crossRegionCopyRules) {
             return crossRegionCopyRules(List.of(crossRegionCopyRules));
         }
+        public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleDeprecateRule deprecateRule) {
+            this.deprecateRule = deprecateRule;
+            return this;
+        }
+        public Builder fastRestoreRule(@Nullable LifecyclePolicyPolicyDetailsScheduleFastRestoreRule fastRestoreRule) {
+            this.fastRestoreRule = fastRestoreRule;
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -160,11 +235,19 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
+        public Builder shareRule(@Nullable LifecyclePolicyPolicyDetailsScheduleShareRule shareRule) {
+            this.shareRule = shareRule;
+            return this;
+        }
         public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
+        }
+        public Builder variableTags(@Nullable Map<String,String> variableTags) {
+            this.variableTags = variableTags;
+            return this;
         }        public LifecyclePolicyPolicyDetailsSchedule build() {
-            return new LifecyclePolicyPolicyDetailsSchedule(copyTags, createRule, crossRegionCopyRules, name, retainRule, tagsToAdd);
+            return new LifecyclePolicyPolicyDetailsSchedule(copyTags, createRule, crossRegionCopyRules, deprecateRule, fastRestoreRule, name, retainRule, shareRule, tagsToAdd, variableTags);
         }
     }
 }

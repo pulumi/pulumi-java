@@ -5,7 +5,6 @@ package com.pulumi.awsnative.athena.outputs;
 
 import com.pulumi.awsnative.athena.enums.WorkGroupState;
 import com.pulumi.awsnative.athena.outputs.WorkGroupConfiguration;
-import com.pulumi.awsnative.athena.outputs.WorkGroupConfigurationUpdates;
 import com.pulumi.awsnative.athena.outputs.WorkGroupTag;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -47,11 +46,6 @@ public final class GetWorkGroupResult {
      * 
      */
     private final @Nullable WorkGroupConfiguration workGroupConfiguration;
-    /**
-     * @return The workgroup configuration update object
-     * 
-     */
-    private final @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
     @CustomType.Constructor
     private GetWorkGroupResult(
@@ -60,15 +54,13 @@ public final class GetWorkGroupResult {
         @CustomType.Parameter("recursiveDeleteOption") @Nullable Boolean recursiveDeleteOption,
         @CustomType.Parameter("state") @Nullable WorkGroupState state,
         @CustomType.Parameter("tags") @Nullable List<WorkGroupTag> tags,
-        @CustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration,
-        @CustomType.Parameter("workGroupConfigurationUpdates") @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
+        @CustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration) {
         this.creationTime = creationTime;
         this.description = description;
         this.recursiveDeleteOption = recursiveDeleteOption;
         this.state = state;
         this.tags = tags;
         this.workGroupConfiguration = workGroupConfiguration;
-        this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
     }
 
     /**
@@ -113,13 +105,6 @@ public final class GetWorkGroupResult {
     public Optional<WorkGroupConfiguration> workGroupConfiguration() {
         return Optional.ofNullable(this.workGroupConfiguration);
     }
-    /**
-     * @return The workgroup configuration update object
-     * 
-     */
-    public Optional<WorkGroupConfigurationUpdates> workGroupConfigurationUpdates() {
-        return Optional.ofNullable(this.workGroupConfigurationUpdates);
-    }
 
     public static Builder builder() {
         return new Builder();
@@ -136,7 +121,6 @@ public final class GetWorkGroupResult {
         private @Nullable WorkGroupState state;
         private @Nullable List<WorkGroupTag> tags;
         private @Nullable WorkGroupConfiguration workGroupConfiguration;
-        private @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
         public Builder() {
     	      // Empty
@@ -150,7 +134,6 @@ public final class GetWorkGroupResult {
     	      this.state = defaults.state;
     	      this.tags = defaults.tags;
     	      this.workGroupConfiguration = defaults.workGroupConfiguration;
-    	      this.workGroupConfigurationUpdates = defaults.workGroupConfigurationUpdates;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
@@ -179,12 +162,8 @@ public final class GetWorkGroupResult {
         public Builder workGroupConfiguration(@Nullable WorkGroupConfiguration workGroupConfiguration) {
             this.workGroupConfiguration = workGroupConfiguration;
             return this;
-        }
-        public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
-            this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
-            return this;
         }        public GetWorkGroupResult build() {
-            return new GetWorkGroupResult(creationTime, description, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
+            return new GetWorkGroupResult(creationTime, description, recursiveDeleteOption, state, tags, workGroupConfiguration);
         }
     }
 }

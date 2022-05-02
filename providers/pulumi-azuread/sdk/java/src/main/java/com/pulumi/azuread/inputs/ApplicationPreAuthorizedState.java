@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ApplicationPreAuthorizedState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="applicationObjectId")
-      private final @Nullable Output<String> applicationObjectId;
+    private @Nullable Output<String> applicationObjectId;
 
-    public Output<String> applicationObjectId() {
-        return this.applicationObjectId == null ? Codegen.empty() : this.applicationObjectId;
+    /**
+     * @return The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> applicationObjectId() {
+        return Optional.ofNullable(this.applicationObjectId);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class ApplicationPreAuthorizedState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="authorizedAppId")
-      private final @Nullable Output<String> authorizedAppId;
+    private @Nullable Output<String> authorizedAppId;
 
-    public Output<String> authorizedAppId() {
-        return this.authorizedAppId == null ? Codegen.empty() : this.authorizedAppId;
+    /**
+     * @return The application ID of the pre-authorized application
+     * 
+     */
+    public Optional<Output<String>> authorizedAppId() {
+        return Optional.ofNullable(this.authorizedAppId);
     }
 
     /**
@@ -43,79 +51,118 @@ public final class ApplicationPreAuthorizedState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="permissionIds")
-      private final @Nullable Output<List<String>> permissionIds;
+    private @Nullable Output<List<String>> permissionIds;
 
-    public Output<List<String>> permissionIds() {
-        return this.permissionIds == null ? Codegen.empty() : this.permissionIds;
+    /**
+     * @return A set of permission scope IDs required by the authorized application.
+     * 
+     */
+    public Optional<Output<List<String>>> permissionIds() {
+        return Optional.ofNullable(this.permissionIds);
     }
 
-    public ApplicationPreAuthorizedState(
-        @Nullable Output<String> applicationObjectId,
-        @Nullable Output<String> authorizedAppId,
-        @Nullable Output<List<String>> permissionIds) {
-        this.applicationObjectId = applicationObjectId;
-        this.authorizedAppId = authorizedAppId;
-        this.permissionIds = permissionIds;
-    }
+    private ApplicationPreAuthorizedState() {}
 
-    private ApplicationPreAuthorizedState() {
-        this.applicationObjectId = Codegen.empty();
-        this.authorizedAppId = Codegen.empty();
-        this.permissionIds = Codegen.empty();
+    private ApplicationPreAuthorizedState(ApplicationPreAuthorizedState $) {
+        this.applicationObjectId = $.applicationObjectId;
+        this.authorizedAppId = $.authorizedAppId;
+        this.permissionIds = $.permissionIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPreAuthorizedState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationObjectId;
-        private @Nullable Output<String> authorizedAppId;
-        private @Nullable Output<List<String>> permissionIds;
+        private ApplicationPreAuthorizedState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPreAuthorizedState();
         }
 
         public Builder(ApplicationPreAuthorizedState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationObjectId = defaults.applicationObjectId;
-    	      this.authorizedAppId = defaults.authorizedAppId;
-    	      this.permissionIds = defaults.permissionIds;
+            $ = new ApplicationPreAuthorizedState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationObjectId The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(@Nullable Output<String> applicationObjectId) {
-            this.applicationObjectId = applicationObjectId;
+            $.applicationObjectId = applicationObjectId;
             return this;
         }
-        public Builder applicationObjectId(@Nullable String applicationObjectId) {
-            this.applicationObjectId = Codegen.ofNullable(applicationObjectId);
-            return this;
+
+        /**
+         * @param applicationObjectId The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationObjectId(String applicationObjectId) {
+            return applicationObjectId(Output.of(applicationObjectId));
         }
+
+        /**
+         * @param authorizedAppId The application ID of the pre-authorized application
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAppId(@Nullable Output<String> authorizedAppId) {
-            this.authorizedAppId = authorizedAppId;
+            $.authorizedAppId = authorizedAppId;
             return this;
         }
-        public Builder authorizedAppId(@Nullable String authorizedAppId) {
-            this.authorizedAppId = Codegen.ofNullable(authorizedAppId);
-            return this;
+
+        /**
+         * @param authorizedAppId The application ID of the pre-authorized application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizedAppId(String authorizedAppId) {
+            return authorizedAppId(Output.of(authorizedAppId));
         }
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionIds(@Nullable Output<List<String>> permissionIds) {
-            this.permissionIds = permissionIds;
+            $.permissionIds = permissionIds;
             return this;
         }
-        public Builder permissionIds(@Nullable List<String> permissionIds) {
-            this.permissionIds = Codegen.ofNullable(permissionIds);
-            return this;
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissionIds(List<String> permissionIds) {
+            return permissionIds(Output.of(permissionIds));
         }
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionIds(String... permissionIds) {
             return permissionIds(List.of(permissionIds));
-        }        public ApplicationPreAuthorizedState build() {
-            return new ApplicationPreAuthorizedState(applicationObjectId, authorizedAppId, permissionIds);
+        }
+
+        public ApplicationPreAuthorizedState build() {
+            return $;
         }
     }
+
 }

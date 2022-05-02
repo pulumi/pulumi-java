@@ -5,9 +5,12 @@ package com.pulumi.gcp.cloudbuild;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerApprovalConfigArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerGitFileSourceArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerGithubArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerSourceToBuildArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerTriggerTemplateArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerWebhookConfigArgs;
 import java.lang.Boolean;
@@ -22,6 +25,27 @@ import javax.annotation.Nullable;
 public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
+
+    /**
+     * Configuration for manual approval to start a build invocation of this BuildTrigger.
+     * Builds created by this trigger will require approval before they execute.
+     * Any user with a Cloud Build Approver role for the project can approve a build.
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="approvalConfig")
+    private @Nullable Output<TriggerApprovalConfigArgs> approvalConfig;
+
+    /**
+     * @return Configuration for manual approval to start a build invocation of this BuildTrigger.
+     * Builds created by this trigger will require approval before they execute.
+     * Any user with a Cloud Build Approver role for the project can approve a build.
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<TriggerApprovalConfigArgs>> approvalConfig() {
+        return Optional.ofNullable(this.approvalConfig);
+    }
 
     /**
      * Contents of the build template. Either a filename or build template must be provided.
@@ -71,18 +95,54 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+     * Path, from the source root, to a file whose contents is used for the template.
+     * Either a filename or build template must be provided. Set this only when using trigger_template or github.
+     * When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
      * 
      */
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
     /**
-     * @return Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+     * @return Path, from the source root, to a file whose contents is used for the template.
+     * Either a filename or build template must be provided. Set this only when using trigger_template or github.
+     * When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
      * 
      */
     public Optional<Output<String>> filename() {
         return Optional.ofNullable(this.filename);
+    }
+
+    /**
+     * A Common Expression Language string. Used only with Pub/Sub and Webhook.
+     * 
+     */
+    @Import(name="filter")
+    private @Nullable Output<String> filter;
+
+    /**
+     * @return A Common Expression Language string. Used only with Pub/Sub and Webhook.
+     * 
+     */
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
+    }
+
+    /**
+     * The file source describing the local or remote Build template.
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="gitFileSource")
+    private @Nullable Output<TriggerGitFileSourceArgs> gitFileSource;
+
+    /**
+     * @return The file source describing the local or remote Build template.
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<TriggerGitFileSourceArgs>> gitFileSource() {
+        return Optional.ofNullable(this.gitFileSource);
     }
 
     /**
@@ -201,7 +261,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * PubsubConfig describes the configuration of a trigger that creates
      * a build whenever a Pub/Sub message is published.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -211,7 +271,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * @return PubsubConfig describes the configuration of a trigger that creates
      * a build whenever a Pub/Sub message is published.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -240,6 +300,31 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
+    }
+
+    /**
+     * The repo and ref of the repository from which to build.
+     * This field is used only for those triggers that do not respond to SCM events.
+     * Triggers that respond to such events build source at whatever commit caused the event.
+     * This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="sourceToBuild")
+    private @Nullable Output<TriggerSourceToBuildArgs> sourceToBuild;
+
+    /**
+     * @return The repo and ref of the repository from which to build.
+     * This field is used only for those triggers that do not respond to SCM events.
+     * Triggers that respond to such events build source at whatever commit caused the event.
+     * This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<TriggerSourceToBuildArgs>> sourceToBuild() {
+        return Optional.ofNullable(this.sourceToBuild);
     }
 
     /**
@@ -277,7 +362,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * Branch and tag names in trigger templates are interpreted as regular
      * expressions. Any branch or tag change that matches that regular
      * expression will trigger a build.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config`, `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -289,7 +374,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * Branch and tag names in trigger templates are interpreted as regular
      * expressions. Any branch or tag change that matches that regular
      * expression will trigger a build.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config`, `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -300,7 +385,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * WebhookConfig describes the configuration of a trigger that creates
      * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -310,7 +395,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * @return WebhookConfig describes the configuration of a trigger that creates
      * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
-     * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+     * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
      * Structure is documented below.
      * 
      */
@@ -321,10 +406,13 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     private TriggerArgs() {}
 
     private TriggerArgs(TriggerArgs $) {
+        this.approvalConfig = $.approvalConfig;
         this.build = $.build;
         this.description = $.description;
         this.disabled = $.disabled;
         this.filename = $.filename;
+        this.filter = $.filter;
+        this.gitFileSource = $.gitFileSource;
         this.github = $.github;
         this.ignoredFiles = $.ignoredFiles;
         this.includedFiles = $.includedFiles;
@@ -332,6 +420,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.pubsubConfig = $.pubsubConfig;
         this.serviceAccount = $.serviceAccount;
+        this.sourceToBuild = $.sourceToBuild;
         this.substitutions = $.substitutions;
         this.tags = $.tags;
         this.triggerTemplate = $.triggerTemplate;
@@ -354,6 +443,33 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(TriggerArgs defaults) {
             $ = new TriggerArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param approvalConfig Configuration for manual approval to start a build invocation of this BuildTrigger.
+         * Builds created by this trigger will require approval before they execute.
+         * Any user with a Cloud Build Approver role for the project can approve a build.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder approvalConfig(@Nullable Output<TriggerApprovalConfigArgs> approvalConfig) {
+            $.approvalConfig = approvalConfig;
+            return this;
+        }
+
+        /**
+         * @param approvalConfig Configuration for manual approval to start a build invocation of this BuildTrigger.
+         * Builds created by this trigger will require approval before they execute.
+         * Any user with a Cloud Build Approver role for the project can approve a build.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder approvalConfig(TriggerApprovalConfigArgs approvalConfig) {
+            return approvalConfig(Output.of(approvalConfig));
         }
 
         /**
@@ -422,7 +538,9 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param filename Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+         * @param filename Path, from the source root, to a file whose contents is used for the template.
+         * Either a filename or build template must be provided. Set this only when using trigger_template or github.
+         * When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
          * 
          * @return builder
          * 
@@ -433,13 +551,59 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param filename Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+         * @param filename Path, from the source root, to a file whose contents is used for the template.
+         * Either a filename or build template must be provided. Set this only when using trigger_template or github.
+         * When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
          * 
          * @return builder
          * 
          */
         public Builder filename(String filename) {
             return filename(Output.of(filename));
+        }
+
+        /**
+         * @param filter A Common Expression Language string. Used only with Pub/Sub and Webhook.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(@Nullable Output<String> filter) {
+            $.filter = filter;
+            return this;
+        }
+
+        /**
+         * @param filter A Common Expression Language string. Used only with Pub/Sub and Webhook.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param gitFileSource The file source describing the local or remote Build template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gitFileSource(@Nullable Output<TriggerGitFileSourceArgs> gitFileSource) {
+            $.gitFileSource = gitFileSource;
+            return this;
+        }
+
+        /**
+         * @param gitFileSource The file source describing the local or remote Build template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gitFileSource(TriggerGitFileSourceArgs gitFileSource) {
+            return gitFileSource(Output.of(gitFileSource));
         }
 
         /**
@@ -622,7 +786,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param pubsubConfig PubsubConfig describes the configuration of a trigger that creates
          * a build whenever a Pub/Sub message is published.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder
@@ -636,7 +800,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param pubsubConfig PubsubConfig describes the configuration of a trigger that creates
          * a build whenever a Pub/Sub message is published.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder
@@ -673,6 +837,37 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
+        }
+
+        /**
+         * @param sourceToBuild The repo and ref of the repository from which to build.
+         * This field is used only for those triggers that do not respond to SCM events.
+         * Triggers that respond to such events build source at whatever commit caused the event.
+         * This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceToBuild(@Nullable Output<TriggerSourceToBuildArgs> sourceToBuild) {
+            $.sourceToBuild = sourceToBuild;
+            return this;
+        }
+
+        /**
+         * @param sourceToBuild The repo and ref of the repository from which to build.
+         * This field is used only for those triggers that do not respond to SCM events.
+         * Triggers that respond to such events build source at whatever commit caused the event.
+         * This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceToBuild(TriggerSourceToBuildArgs sourceToBuild) {
+            return sourceToBuild(Output.of(sourceToBuild));
         }
 
         /**
@@ -732,7 +927,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
          * Branch and tag names in trigger templates are interpreted as regular
          * expressions. Any branch or tag change that matches that regular
          * expression will trigger a build.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config`, `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder
@@ -748,7 +943,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
          * Branch and tag names in trigger templates are interpreted as regular
          * expressions. Any branch or tag change that matches that regular
          * expression will trigger a build.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config`, `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder
@@ -761,7 +956,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param webhookConfig WebhookConfig describes the configuration of a trigger that creates
          * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder
@@ -775,7 +970,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param webhookConfig WebhookConfig describes the configuration of a trigger that creates
          * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
-         * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+         * One of `trigger_template`, `github`, `pubsub_config` `webhook_config` or `source_to_build` must be provided.
          * Structure is documented below.
          * 
          * @return builder

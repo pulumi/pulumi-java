@@ -13,6 +13,11 @@ import java.util.Objects;
 @CustomType
 public final class GetHoursOfOperationResult {
     /**
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    private final String arn;
+    /**
      * @return Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
      * 
      */
@@ -23,9 +28,13 @@ public final class GetHoursOfOperationResult {
      */
     private final String description;
     /**
-     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     * @deprecated
+     * use &#39;arn&#39; attribute instead
      * 
      */
+    @Deprecated /* use 'arn' attribute instead */
     private final String hoursOfOperationArn;
     /**
      * @return The identifier for the hours of operation.
@@ -48,7 +57,7 @@ public final class GetHoursOfOperationResult {
      */
     private final String name;
     /**
-     * @return A the map of tags to assign to the Hours of Operation.
+     * @return A map of tags to assign to the Hours of Operation.
      * 
      */
     private final Map<String,String> tags;
@@ -60,6 +69,7 @@ public final class GetHoursOfOperationResult {
 
     @CustomType.Constructor
     private GetHoursOfOperationResult(
+        @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("configs") List<GetHoursOfOperationConfig> configs,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("hoursOfOperationArn") String hoursOfOperationArn,
@@ -69,6 +79,7 @@ public final class GetHoursOfOperationResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("tags") Map<String,String> tags,
         @CustomType.Parameter("timeZone") String timeZone) {
+        this.arn = arn;
         this.configs = configs;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;
@@ -80,6 +91,13 @@ public final class GetHoursOfOperationResult {
         this.timeZone = timeZone;
     }
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    public String arn() {
+        return this.arn;
+    }
     /**
      * @return Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
      * 
@@ -95,9 +113,13 @@ public final class GetHoursOfOperationResult {
         return this.description;
     }
     /**
-     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     * @deprecated
+     * use &#39;arn&#39; attribute instead
      * 
      */
+    @Deprecated /* use 'arn' attribute instead */
     public String hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
@@ -130,7 +152,7 @@ public final class GetHoursOfOperationResult {
         return this.name;
     }
     /**
-     * @return A the map of tags to assign to the Hours of Operation.
+     * @return A map of tags to assign to the Hours of Operation.
      * 
      */
     public Map<String,String> tags() {
@@ -153,6 +175,7 @@ public final class GetHoursOfOperationResult {
     }
 
     public static final class Builder {
+        private String arn;
         private List<GetHoursOfOperationConfig> configs;
         private String description;
         private String hoursOfOperationArn;
@@ -169,6 +192,7 @@ public final class GetHoursOfOperationResult {
 
         public Builder(GetHoursOfOperationResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.arn = defaults.arn;
     	      this.configs = defaults.configs;
     	      this.description = defaults.description;
     	      this.hoursOfOperationArn = defaults.hoursOfOperationArn;
@@ -180,6 +204,10 @@ public final class GetHoursOfOperationResult {
     	      this.timeZone = defaults.timeZone;
         }
 
+        public Builder arn(String arn) {
+            this.arn = Objects.requireNonNull(arn);
+            return this;
+        }
         public Builder configs(List<GetHoursOfOperationConfig> configs) {
             this.configs = Objects.requireNonNull(configs);
             return this;
@@ -219,7 +247,7 @@ public final class GetHoursOfOperationResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }        public GetHoursOfOperationResult build() {
-            return new GetHoursOfOperationResult(configs, description, hoursOfOperationArn, hoursOfOperationId, id, instanceId, name, tags, timeZone);
+            return new GetHoursOfOperationResult(arn, configs, description, hoursOfOperationArn, hoursOfOperationId, id, instanceId, name, tags, timeZone);
         }
     }
 }

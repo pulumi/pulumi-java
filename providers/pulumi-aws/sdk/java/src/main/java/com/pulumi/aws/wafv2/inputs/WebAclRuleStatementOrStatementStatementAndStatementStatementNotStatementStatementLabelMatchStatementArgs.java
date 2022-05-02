@@ -14,14 +14,14 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
     public static final WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementLabelMatchStatementArgs Empty = new WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementLabelMatchStatementArgs();
 
     /**
-     * The string to match against.
+     * String to match against.
      * 
      */
     @Import(name="key", required=true)
     private Output<String> key;
 
     /**
-     * @return The string to match against.
+     * @return String to match against.
      * 
      */
     public Output<String> key() {
@@ -69,7 +69,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
         }
 
         /**
-         * @param key The string to match against.
+         * @param key String to match against.
          * 
          * @return builder
          * 
@@ -80,7 +80,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
         }
 
         /**
-         * @param key The string to match against.
+         * @param key String to match against.
          * 
          * @return builder
          * 

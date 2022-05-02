@@ -17,6 +17,21 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ReservationArgs Empty = new ReservationArgs();
 
     /**
+     * Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    @Import(name="concurrency")
+    private @Nullable Output<String> concurrency;
+
+    /**
+     * @return Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    public Optional<Output<String>> concurrency() {
+        return Optional.ofNullable(this.concurrency);
+    }
+
+    /**
      * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
      * 
      */
@@ -39,14 +54,29 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    @Import(name="multiRegionAuxiliary")
+    private @Nullable Output<Boolean> multiRegionAuxiliary;
+
+    /**
+     * @return Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    public Optional<Output<Boolean>> multiRegionAuxiliary() {
+        return Optional.ofNullable(this.multiRegionAuxiliary);
+    }
+
+    /**
+     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public Optional<Output<String>> name() {
@@ -60,9 +90,17 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * The reservation ID. It must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * 
+     */
     @Import(name="reservationId")
     private @Nullable Output<String> reservationId;
 
+    /**
+     * @return The reservation ID. It must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * 
+     */
     public Optional<Output<String>> reservationId() {
         return Optional.ofNullable(this.reservationId);
     }
@@ -85,8 +123,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     private ReservationArgs() {}
 
     private ReservationArgs(ReservationArgs $) {
+        this.concurrency = $.concurrency;
         this.ignoreIdleSlots = $.ignoreIdleSlots;
         this.location = $.location;
+        this.multiRegionAuxiliary = $.multiRegionAuxiliary;
         this.name = $.name;
         this.project = $.project;
         this.reservationId = $.reservationId;
@@ -109,6 +149,27 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ReservationArgs defaults) {
             $ = new ReservationArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param concurrency Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder concurrency(@Nullable Output<String> concurrency) {
+            $.concurrency = concurrency;
+            return this;
+        }
+
+        /**
+         * @param concurrency Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder concurrency(String concurrency) {
+            return concurrency(Output.of(concurrency));
         }
 
         /**
@@ -142,7 +203,28 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+         * @param multiRegionAuxiliary Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiRegionAuxiliary(@Nullable Output<Boolean> multiRegionAuxiliary) {
+            $.multiRegionAuxiliary = multiRegionAuxiliary;
+            return this;
+        }
+
+        /**
+         * @param multiRegionAuxiliary Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiRegionAuxiliary(Boolean multiRegionAuxiliary) {
+            return multiRegionAuxiliary(Output.of(multiRegionAuxiliary));
+        }
+
+        /**
+         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
          * 
          * @return builder
          * 
@@ -153,7 +235,7 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
          * 
          * @return builder
          * 
@@ -171,11 +253,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationId The reservation ID. It must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationId(@Nullable Output<String> reservationId) {
             $.reservationId = reservationId;
             return this;
         }
 
+        /**
+         * @param reservationId The reservation ID. It must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationId(String reservationId) {
             return reservationId(Output.of(reservationId));
         }

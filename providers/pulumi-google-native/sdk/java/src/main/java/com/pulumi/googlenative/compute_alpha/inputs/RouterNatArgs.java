@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.compute_alpha.enums.RouterNatEndpointTypesItem;
 import com.pulumi.googlenative.compute_alpha.enums.RouterNatNatIpAllocateOption;
 import com.pulumi.googlenative.compute_alpha.enums.RouterNatSourceSubnetworkIpRangesToNat;
 import com.pulumi.googlenative.compute_alpha.enums.RouterNatType;
@@ -63,6 +64,21 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<Boolean>> enableEndpointIndependentMapping() {
         return Optional.ofNullable(this.enableEndpointIndependentMapping);
+    }
+
+    /**
+     * List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+     * 
+     */
+    @Import(name="endpointTypes")
+    private @Nullable Output<List<RouterNatEndpointTypesItem>> endpointTypes;
+
+    /**
+     * @return List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+     * 
+     */
+    public Optional<Output<List<RouterNatEndpointTypesItem>>> endpointTypes() {
+        return Optional.ofNullable(this.endpointTypes);
     }
 
     /**
@@ -296,6 +312,7 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
         this.drainNatIps = $.drainNatIps;
         this.enableDynamicPortAllocation = $.enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = $.enableEndpointIndependentMapping;
+        this.endpointTypes = $.endpointTypes;
         this.icmpIdleTimeoutSec = $.icmpIdleTimeoutSec;
         this.logConfig = $.logConfig;
         this.maxPortsPerVm = $.maxPortsPerVm;
@@ -390,6 +407,37 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder enableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
             return enableEndpointIndependentMapping(Output.of(enableEndpointIndependentMapping));
+        }
+
+        /**
+         * @param endpointTypes List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointTypes(@Nullable Output<List<RouterNatEndpointTypesItem>> endpointTypes) {
+            $.endpointTypes = endpointTypes;
+            return this;
+        }
+
+        /**
+         * @param endpointTypes List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointTypes(List<RouterNatEndpointTypesItem> endpointTypes) {
+            return endpointTypes(Output.of(endpointTypes));
+        }
+
+        /**
+         * @param endpointTypes List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointTypes(RouterNatEndpointTypesItem... endpointTypes) {
+            return endpointTypes(List.of(endpointTypes));
         }
 
         /**

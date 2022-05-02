@@ -6,6 +6,7 @@ package com.pulumi.googlenative.cloudsupport_v2beta;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.cloudsupport_v2beta.enums.CasePriority;
+import com.pulumi.googlenative.cloudsupport_v2beta.enums.CaseSeverity;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.ActorArgs;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.CaseClassificationArgs;
 import java.lang.Boolean;
@@ -126,6 +127,29 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     * @deprecated
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+    @Import(name="severity")
+    private @Nullable Output<CaseSeverity> severity;
+
+    /**
+     * @return The severity of this case. Deprecated. Use priority instead.
+     * 
+     * @deprecated
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+    public Optional<Output<CaseSeverity>> severity() {
+        return Optional.ofNullable(this.severity);
+    }
+
+    /**
      * The email addresses to receive updates on this case.
      * 
      */
@@ -194,6 +218,7 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
         this.escalated = $.escalated;
         this.name = $.name;
         this.priority = $.priority;
+        this.severity = $.severity;
         this.subscriberEmailAddresses = $.subscriberEmailAddresses;
         this.testCase = $.testCase;
         this.timeZone = $.timeZone;
@@ -364,6 +389,35 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder priority(CasePriority priority) {
             return priority(Output.of(priority));
+        }
+
+        /**
+         * @param severity The severity of this case. Deprecated. Use priority instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The severity of this case. Deprecated. Use priority instead.
+         * 
+         */
+        @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+        public Builder severity(@Nullable Output<CaseSeverity> severity) {
+            $.severity = severity;
+            return this;
+        }
+
+        /**
+         * @param severity The severity of this case. Deprecated. Use priority instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The severity of this case. Deprecated. Use priority instead.
+         * 
+         */
+        @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+        public Builder severity(CaseSeverity severity) {
+            return severity(Output.of(severity));
         }
 
         /**

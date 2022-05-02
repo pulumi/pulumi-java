@@ -19,9 +19,13 @@ public final class GetOrganizationResult {
      */
     private final GoogleCloudApigeeV1AddonsConfigResponse addonsConfig;
     /**
-     * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * @return DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     * @deprecated
+     * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
+    @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
     private final String analyticsRegion;
     /**
      * @return Not used by Apigee.
@@ -114,6 +118,15 @@ public final class GetOrganizationResult {
      */
     private final String state;
     /**
+     * @return DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/).
+     * 
+     * @deprecated
+     * Output only. DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/).
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/). */
+    private final String subscriptionType;
+    /**
      * @return Not used by Apigee.
      * 
      */
@@ -141,6 +154,7 @@ public final class GetOrganizationResult {
         @CustomType.Parameter("runtimeDatabaseEncryptionKeyName") String runtimeDatabaseEncryptionKeyName,
         @CustomType.Parameter("runtimeType") String runtimeType,
         @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subscriptionType") String subscriptionType,
         @CustomType.Parameter("type") String type) {
         this.addonsConfig = addonsConfig;
         this.analyticsRegion = analyticsRegion;
@@ -162,6 +176,7 @@ public final class GetOrganizationResult {
         this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
         this.runtimeType = runtimeType;
         this.state = state;
+        this.subscriptionType = subscriptionType;
         this.type = type;
     }
 
@@ -173,9 +188,13 @@ public final class GetOrganizationResult {
         return this.addonsConfig;
     }
     /**
-     * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * @return DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     * @deprecated
+     * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
+    @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
     public String analyticsRegion() {
         return this.analyticsRegion;
     }
@@ -306,6 +325,17 @@ public final class GetOrganizationResult {
         return this.state;
     }
     /**
+     * @return DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/).
+     * 
+     * @deprecated
+     * Output only. DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/).
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED: This will eventually be replaced by BillingType. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased). See [Apigee pricing](https://cloud.google.com/apigee/pricing/). */
+    public String subscriptionType() {
+        return this.subscriptionType;
+    }
+    /**
      * @return Not used by Apigee.
      * 
      */
@@ -342,6 +372,7 @@ public final class GetOrganizationResult {
         private String runtimeDatabaseEncryptionKeyName;
         private String runtimeType;
         private String state;
+        private String subscriptionType;
         private String type;
 
         public Builder() {
@@ -370,6 +401,7 @@ public final class GetOrganizationResult {
     	      this.runtimeDatabaseEncryptionKeyName = defaults.runtimeDatabaseEncryptionKeyName;
     	      this.runtimeType = defaults.runtimeType;
     	      this.state = defaults.state;
+    	      this.subscriptionType = defaults.subscriptionType;
     	      this.type = defaults.type;
         }
 
@@ -459,11 +491,15 @@ public final class GetOrganizationResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
+        public Builder subscriptionType(String subscriptionType) {
+            this.subscriptionType = Objects.requireNonNull(subscriptionType);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetOrganizationResult build() {
-            return new GetOrganizationResult(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, caCertificate, createdAt, customerName, description, displayName, environments, expiresAt, lastModifiedAt, name, portalDisabled, project, properties, runtimeDatabaseEncryptionKeyName, runtimeType, state, type);
+            return new GetOrganizationResult(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, caCertificate, createdAt, customerName, description, displayName, environments, expiresAt, lastModifiedAt, name, portalDisabled, project, properties, runtimeDatabaseEncryptionKeyName, runtimeType, state, subscriptionType, type);
         }
     }
 }

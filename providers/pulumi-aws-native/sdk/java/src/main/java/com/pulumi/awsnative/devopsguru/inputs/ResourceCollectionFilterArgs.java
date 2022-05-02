@@ -4,8 +4,10 @@
 package com.pulumi.awsnative.devopsguru.inputs;
 
 import com.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilterArgs;
+import com.pulumi.awsnative.devopsguru.inputs.ResourceCollectionTagCollectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,10 +28,18 @@ public final class ResourceCollectionFilterArgs extends com.pulumi.resources.Res
         return Optional.ofNullable(this.cloudFormation);
     }
 
+    @Import(name="tags")
+    private @Nullable Output<List<ResourceCollectionTagCollectionArgs>> tags;
+
+    public Optional<Output<List<ResourceCollectionTagCollectionArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
+    }
+
     private ResourceCollectionFilterArgs() {}
 
     private ResourceCollectionFilterArgs(ResourceCollectionFilterArgs $) {
         this.cloudFormation = $.cloudFormation;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
@@ -57,6 +67,19 @@ public final class ResourceCollectionFilterArgs extends com.pulumi.resources.Res
 
         public Builder cloudFormation(ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
             return cloudFormation(Output.of(cloudFormation));
+        }
+
+        public Builder tags(@Nullable Output<List<ResourceCollectionTagCollectionArgs>> tags) {
+            $.tags = tags;
+            return this;
+        }
+
+        public Builder tags(List<ResourceCollectionTagCollectionArgs> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public Builder tags(ResourceCollectionTagCollectionArgs... tags) {
+            return tags(List.of(tags));
         }
 
         public ResourceCollectionFilterArgs build() {

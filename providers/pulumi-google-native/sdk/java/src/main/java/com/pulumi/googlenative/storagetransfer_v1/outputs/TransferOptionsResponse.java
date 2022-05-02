@@ -6,6 +6,7 @@ package com.pulumi.googlenative.storagetransfer_v1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.storagetransfer_v1.outputs.MetadataOptionsResponse;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -21,7 +22,7 @@ public final class TransferOptionsResponse {
      */
     private final Boolean deleteObjectsUniqueInSink;
     /**
-     * @return Represents the selected metadata options for a transfer job.
+     * @return Represents the selected metadata options for a transfer job. This feature is in Preview.
      * 
      */
     private final MetadataOptionsResponse metadataOptions;
@@ -30,17 +31,24 @@ public final class TransferOptionsResponse {
      * 
      */
     private final Boolean overwriteObjectsAlreadyExistingInSink;
+    /**
+     * @return When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+     * 
+     */
+    private final String overwriteWhen;
 
     @CustomType.Constructor
     private TransferOptionsResponse(
         @CustomType.Parameter("deleteObjectsFromSourceAfterTransfer") Boolean deleteObjectsFromSourceAfterTransfer,
         @CustomType.Parameter("deleteObjectsUniqueInSink") Boolean deleteObjectsUniqueInSink,
         @CustomType.Parameter("metadataOptions") MetadataOptionsResponse metadataOptions,
-        @CustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink) {
+        @CustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink,
+        @CustomType.Parameter("overwriteWhen") String overwriteWhen) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.metadataOptions = metadataOptions;
         this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
+        this.overwriteWhen = overwriteWhen;
     }
 
     /**
@@ -58,7 +66,7 @@ public final class TransferOptionsResponse {
         return this.deleteObjectsUniqueInSink;
     }
     /**
-     * @return Represents the selected metadata options for a transfer job.
+     * @return Represents the selected metadata options for a transfer job. This feature is in Preview.
      * 
      */
     public MetadataOptionsResponse metadataOptions() {
@@ -70,6 +78,13 @@ public final class TransferOptionsResponse {
      */
     public Boolean overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
+    }
+    /**
+     * @return When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+     * 
+     */
+    public String overwriteWhen() {
+        return this.overwriteWhen;
     }
 
     public static Builder builder() {
@@ -85,6 +100,7 @@ public final class TransferOptionsResponse {
         private Boolean deleteObjectsUniqueInSink;
         private MetadataOptionsResponse metadataOptions;
         private Boolean overwriteObjectsAlreadyExistingInSink;
+        private String overwriteWhen;
 
         public Builder() {
     	      // Empty
@@ -96,6 +112,7 @@ public final class TransferOptionsResponse {
     	      this.deleteObjectsUniqueInSink = defaults.deleteObjectsUniqueInSink;
     	      this.metadataOptions = defaults.metadataOptions;
     	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
+    	      this.overwriteWhen = defaults.overwriteWhen;
         }
 
         public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
@@ -113,8 +130,12 @@ public final class TransferOptionsResponse {
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
+        }
+        public Builder overwriteWhen(String overwriteWhen) {
+            this.overwriteWhen = Objects.requireNonNull(overwriteWhen);
+            return this;
         }        public TransferOptionsResponse build() {
-            return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
+            return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink, overwriteWhen);
         }
     }
 }

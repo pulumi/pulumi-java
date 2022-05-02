@@ -323,32 +323,14 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="instanceInterruptionBehavior", type=String.class, parameters={})
-    private Output<String> instanceInterruptionBehavior;
+    private Output</* @Nullable */ String> instanceInterruptionBehavior;
 
     /**
      * @return Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
      * 
      */
-    public Output<String> instanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior;
-    }
-    /**
-     * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-     * 
-     * @deprecated
-     * Use the parameter &#34;instance_interruption_behavior&#34; instead.
-     * 
-     */
-    @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-    @Export(name="instanceInterruptionBehaviour", type=String.class, parameters={})
-    private Output<String> instanceInterruptionBehaviour;
-
-    /**
-     * @return Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-     * 
-     */
-    public Output<String> instanceInterruptionBehaviour() {
-        return this.instanceInterruptionBehaviour;
+    public Output<Optional<String>> instanceInterruptionBehavior() {
+        return Codegen.optional(this.instanceInterruptionBehavior);
     }
     @Export(name="instanceState", type=String.class, parameters={})
     private Output<String> instanceState;
@@ -783,32 +765,46 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
         return this.tenancy;
     }
     /**
-     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Export(name="userData", type=String.class, parameters={})
     private Output<String> userData;
 
     /**
-     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Output<String> userData() {
         return this.userData;
     }
     /**
-     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Export(name="userDataBase64", type=String.class, parameters={})
     private Output<String> userDataBase64;
 
     /**
-     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Output<String> userDataBase64() {
         return this.userDataBase64;
+    }
+    /**
+     * When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    @Export(name="userDataReplaceOnChange", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> userDataReplaceOnChange;
+
+    /**
+     * @return When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    public Output<Optional<Boolean>> userDataReplaceOnChange() {
+        return Codegen.optional(this.userDataReplaceOnChange);
     }
     /**
      * The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.

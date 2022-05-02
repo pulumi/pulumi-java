@@ -24,9 +24,17 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
+    /**
+     * The ID of the DICOM store that is being created. Any string value up to 256 characters in length.
+     * 
+     */
     @Import(name="dicomStoreId")
     private @Nullable Output<String> dicomStoreId;
 
+    /**
+     * @return The ID of the DICOM store that is being created. Any string value up to 256 characters in length.
+     * 
+     */
     public Optional<Output<String>> dicomStoreId() {
         return Optional.ofNullable(this.dicomStoreId);
     }
@@ -129,11 +137,23 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param dicomStoreId The ID of the DICOM store that is being created. Any string value up to 256 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
             $.dicomStoreId = dicomStoreId;
             return this;
         }
 
+        /**
+         * @param dicomStoreId The ID of the DICOM store that is being created. Any string value up to 256 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dicomStoreId(String dicomStoreId) {
             return dicomStoreId(Output.of(dicomStoreId));
         }

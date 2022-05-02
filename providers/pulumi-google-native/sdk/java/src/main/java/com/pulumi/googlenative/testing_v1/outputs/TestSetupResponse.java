@@ -8,6 +8,7 @@ import com.pulumi.googlenative.testing_v1.outputs.AccountResponse;
 import com.pulumi.googlenative.testing_v1.outputs.ApkResponse;
 import com.pulumi.googlenative.testing_v1.outputs.DeviceFileResponse;
 import com.pulumi.googlenative.testing_v1.outputs.EnvironmentVariableResponse;
+import com.pulumi.googlenative.testing_v1.outputs.SystraceSetupResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,6 +51,15 @@ public final class TestSetupResponse {
      * 
      */
     private final String networkProfile;
+    /**
+     * @return Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     * @deprecated
+     * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     */
+    @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+    private final SystraceSetupResponse systrace;
 
     @CustomType.Constructor
     private TestSetupResponse(
@@ -59,7 +69,8 @@ public final class TestSetupResponse {
         @CustomType.Parameter("dontAutograntPermissions") Boolean dontAutograntPermissions,
         @CustomType.Parameter("environmentVariables") List<EnvironmentVariableResponse> environmentVariables,
         @CustomType.Parameter("filesToPush") List<DeviceFileResponse> filesToPush,
-        @CustomType.Parameter("networkProfile") String networkProfile) {
+        @CustomType.Parameter("networkProfile") String networkProfile,
+        @CustomType.Parameter("systrace") SystraceSetupResponse systrace) {
         this.account = account;
         this.additionalApks = additionalApks;
         this.directoriesToPull = directoriesToPull;
@@ -67,6 +78,7 @@ public final class TestSetupResponse {
         this.environmentVariables = environmentVariables;
         this.filesToPush = filesToPush;
         this.networkProfile = networkProfile;
+        this.systrace = systrace;
     }
 
     /**
@@ -118,6 +130,17 @@ public final class TestSetupResponse {
     public String networkProfile() {
         return this.networkProfile;
     }
+    /**
+     * @return Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     * @deprecated
+     * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     */
+    @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+    public SystraceSetupResponse systrace() {
+        return this.systrace;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -135,6 +158,7 @@ public final class TestSetupResponse {
         private List<EnvironmentVariableResponse> environmentVariables;
         private List<DeviceFileResponse> filesToPush;
         private String networkProfile;
+        private SystraceSetupResponse systrace;
 
         public Builder() {
     	      // Empty
@@ -149,6 +173,7 @@ public final class TestSetupResponse {
     	      this.environmentVariables = defaults.environmentVariables;
     	      this.filesToPush = defaults.filesToPush;
     	      this.networkProfile = defaults.networkProfile;
+    	      this.systrace = defaults.systrace;
         }
 
         public Builder account(AccountResponse account) {
@@ -190,8 +215,12 @@ public final class TestSetupResponse {
         public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
+        }
+        public Builder systrace(SystraceSetupResponse systrace) {
+            this.systrace = Objects.requireNonNull(systrace);
+            return this;
         }        public TestSetupResponse build() {
-            return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
+            return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile, systrace);
         }
     }
 }

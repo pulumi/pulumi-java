@@ -160,6 +160,20 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
+     * The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    @Export(name="type", type=String.class, parameters={})
+    private Output</* @Nullable */ String> type;
+
+    /**
+     * @return The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
+    }
+    /**
      * A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */

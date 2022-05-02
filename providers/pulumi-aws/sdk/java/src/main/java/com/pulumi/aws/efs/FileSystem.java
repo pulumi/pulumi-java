@@ -145,15 +145,15 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    @Export(name="lifecyclePolicy", type=FileSystemLifecyclePolicy.class, parameters={})
-    private Output</* @Nullable */ FileSystemLifecyclePolicy> lifecyclePolicy;
+    @Export(name="lifecyclePolicies", type=List.class, parameters={FileSystemLifecyclePolicy.class})
+    private Output</* @Nullable */ List<FileSystemLifecyclePolicy>> lifecyclePolicies;
 
     /**
      * @return A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    public Output<Optional<FileSystemLifecyclePolicy>> lifecyclePolicy() {
-        return Codegen.optional(this.lifecyclePolicy);
+    public Output<Optional<List<FileSystemLifecyclePolicy>>> lifecyclePolicies() {
+        return Codegen.optional(this.lifecyclePolicies);
     }
     /**
      * The current number of mount targets that the file system has.

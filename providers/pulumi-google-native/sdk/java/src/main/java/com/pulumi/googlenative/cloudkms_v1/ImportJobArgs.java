@@ -17,11 +17,19 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ImportJobArgs Empty = new ImportJobArgs();
 
-    @Import(name="importJobId", required=true)
-    private Output<String> importJobId;
+    /**
+     * Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    @Import(name="importJobId")
+    private @Nullable Output<String> importJobId;
 
-    public Output<String> importJobId() {
-        return this.importJobId;
+    /**
+     * @return Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    public Optional<Output<String>> importJobId() {
+        return Optional.ofNullable(this.importJobId);
     }
 
     /**
@@ -104,11 +112,23 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImportJobArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder importJobId(Output<String> importJobId) {
+        /**
+         * @param importJobId Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder importJobId(@Nullable Output<String> importJobId) {
             $.importJobId = importJobId;
             return this;
         }
 
+        /**
+         * @param importJobId Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder importJobId(String importJobId) {
             return importJobId(Output.of(importJobId));
         }
@@ -183,7 +203,6 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ImportJobArgs build() {
-            $.importJobId = Objects.requireNonNull($.importJobId, "expected parameter 'importJobId' to be non-null");
             $.importMethod = Objects.requireNonNull($.importMethod, "expected parameter 'importMethod' to be non-null");
             $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
             $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");

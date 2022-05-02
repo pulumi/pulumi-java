@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixPdpScope;
 import com.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixStatus;
 import java.lang.String;
 import java.util.Objects;
@@ -76,6 +77,21 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+     * 
+     */
+    @Import(name="pdpScope")
+    private @Nullable Output<PublicAdvertisedPrefixPdpScope> pdpScope;
+
+    /**
+     * @return Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+     * 
+     */
+    public Optional<Output<PublicAdvertisedPrefixPdpScope>> pdpScope() {
+        return Optional.ofNullable(this.pdpScope);
+    }
+
     @Import(name="project")
     private @Nullable Output<String> project;
 
@@ -83,9 +99,17 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -112,6 +136,7 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
         this.dnsVerificationIp = $.dnsVerificationIp;
         this.ipCidrRange = $.ipCidrRange;
         this.name = $.name;
+        this.pdpScope = $.pdpScope;
         this.project = $.project;
         this.requestId = $.requestId;
         this.status = $.status;
@@ -219,6 +244,27 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
             return name(Output.of(name));
         }
 
+        /**
+         * @param pdpScope Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pdpScope(@Nullable Output<PublicAdvertisedPrefixPdpScope> pdpScope) {
+            $.pdpScope = pdpScope;
+            return this;
+        }
+
+        /**
+         * @param pdpScope Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pdpScope(PublicAdvertisedPrefixPdpScope pdpScope) {
+            return pdpScope(Output.of(pdpScope));
+        }
+
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
@@ -228,11 +274,23 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

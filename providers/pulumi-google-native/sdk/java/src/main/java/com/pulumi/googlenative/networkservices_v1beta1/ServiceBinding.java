@@ -48,20 +48,6 @@ public class ServiceBinding extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    @Export(name="endpointFilter", type=String.class, parameters={})
-    private Output<String> endpointFilter;
-
-    /**
-     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    public Output<String> endpointFilter() {
-        return this.endpointFilter;
-    }
-    /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */

@@ -116,9 +116,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.network);
     }
 
+    /**
+     * The unqualified resource name.
+     * 
+     */
     @Import(name="nodeId")
     private @Nullable Output<String> nodeId;
 
+    /**
+     * @return The unqualified resource name.
+     * 
+     */
     public Optional<Output<String>> nodeId() {
         return Optional.ofNullable(this.nodeId);
     }
@@ -345,11 +353,23 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(@Nullable Output<String> nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             return nodeId(Output.of(nodeId));
         }

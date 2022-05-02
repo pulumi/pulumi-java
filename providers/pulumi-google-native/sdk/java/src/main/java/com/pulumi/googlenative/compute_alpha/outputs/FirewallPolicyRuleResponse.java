@@ -55,6 +55,11 @@ public final class FirewallPolicyRuleResponse {
      */
     private final Integer priority;
     /**
+     * @return An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    private final String ruleName;
+    /**
      * @return Calculation of the complexity of a single firewall policy rule.
      * 
      */
@@ -85,6 +90,7 @@ public final class FirewallPolicyRuleResponse {
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
         @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleName") String ruleName,
         @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
         @CustomType.Parameter("targetResources") List<String> targetResources,
         @CustomType.Parameter("targetSecureTags") List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
@@ -97,6 +103,7 @@ public final class FirewallPolicyRuleResponse {
         this.kind = kind;
         this.match = match;
         this.priority = priority;
+        this.ruleName = ruleName;
         this.ruleTupleCount = ruleTupleCount;
         this.targetResources = targetResources;
         this.targetSecureTags = targetSecureTags;
@@ -160,6 +167,13 @@ public final class FirewallPolicyRuleResponse {
         return this.priority;
     }
     /**
+     * @return An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    public String ruleName() {
+        return this.ruleName;
+    }
+    /**
      * @return Calculation of the complexity of a single firewall policy rule.
      * 
      */
@@ -205,6 +219,7 @@ public final class FirewallPolicyRuleResponse {
         private String kind;
         private FirewallPolicyRuleMatcherResponse match;
         private Integer priority;
+        private String ruleName;
         private Integer ruleTupleCount;
         private List<String> targetResources;
         private List<FirewallPolicyRuleSecureTagResponse> targetSecureTags;
@@ -224,6 +239,7 @@ public final class FirewallPolicyRuleResponse {
     	      this.kind = defaults.kind;
     	      this.match = defaults.match;
     	      this.priority = defaults.priority;
+    	      this.ruleName = defaults.ruleName;
     	      this.ruleTupleCount = defaults.ruleTupleCount;
     	      this.targetResources = defaults.targetResources;
     	      this.targetSecureTags = defaults.targetSecureTags;
@@ -262,6 +278,10 @@ public final class FirewallPolicyRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
+        public Builder ruleName(String ruleName) {
+            this.ruleName = Objects.requireNonNull(ruleName);
+            return this;
+        }
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
@@ -287,7 +307,7 @@ public final class FirewallPolicyRuleResponse {
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }        public FirewallPolicyRuleResponse build() {
-            return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetSecureTags, targetServiceAccounts);
+            return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleName, ruleTupleCount, targetResources, targetSecureTags, targetServiceAccounts);
         }
     }
 }

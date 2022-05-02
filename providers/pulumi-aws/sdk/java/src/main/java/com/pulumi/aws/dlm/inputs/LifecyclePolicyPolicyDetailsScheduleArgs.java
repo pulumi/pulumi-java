@@ -5,7 +5,10 @@ package com.pulumi.aws.dlm.inputs;
 
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleDeprecateRuleArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleFastRestoreRuleArgs;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleShareRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -67,6 +70,36 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     }
 
     /**
+     * The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+     * 
+     */
+    @Import(name="deprecateRule")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleDeprecateRuleArgs> deprecateRule;
+
+    /**
+     * @return The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+     * 
+     */
+    public Optional<Output<LifecyclePolicyPolicyDetailsScheduleDeprecateRuleArgs>> deprecateRule() {
+        return Optional.ofNullable(this.deprecateRule);
+    }
+
+    /**
+     * See the `fast_restore_rule` block. Max of 1 per schedule.
+     * 
+     */
+    @Import(name="fastRestoreRule")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleFastRestoreRuleArgs> fastRestoreRule;
+
+    /**
+     * @return See the `fast_restore_rule` block. Max of 1 per schedule.
+     * 
+     */
+    public Optional<Output<LifecyclePolicyPolicyDetailsScheduleFastRestoreRuleArgs>> fastRestoreRule() {
+        return Optional.ofNullable(this.fastRestoreRule);
+    }
+
+    /**
      * A name for the schedule.
      * 
      */
@@ -97,6 +130,21 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     }
 
     /**
+     * See the `share_rule` block. Max of 1 per schedule.
+     * 
+     */
+    @Import(name="shareRule")
+    private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleShareRuleArgs> shareRule;
+
+    /**
+     * @return See the `share_rule` block. Max of 1 per schedule.
+     * 
+     */
+    public Optional<Output<LifecyclePolicyPolicyDetailsScheduleShareRuleArgs>> shareRule() {
+        return Optional.ofNullable(this.shareRule);
+    }
+
+    /**
      * A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
      */
@@ -111,15 +159,34 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
         return Optional.ofNullable(this.tagsToAdd);
     }
 
+    /**
+     * A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+     * 
+     */
+    @Import(name="variableTags")
+    private @Nullable Output<Map<String,String>> variableTags;
+
+    /**
+     * @return A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> variableTags() {
+        return Optional.ofNullable(this.variableTags);
+    }
+
     private LifecyclePolicyPolicyDetailsScheduleArgs() {}
 
     private LifecyclePolicyPolicyDetailsScheduleArgs(LifecyclePolicyPolicyDetailsScheduleArgs $) {
         this.copyTags = $.copyTags;
         this.createRule = $.createRule;
         this.crossRegionCopyRules = $.crossRegionCopyRules;
+        this.deprecateRule = $.deprecateRule;
+        this.fastRestoreRule = $.fastRestoreRule;
         this.name = $.name;
         this.retainRule = $.retainRule;
+        this.shareRule = $.shareRule;
         this.tagsToAdd = $.tagsToAdd;
+        this.variableTags = $.variableTags;
     }
 
     public static Builder builder() {
@@ -214,6 +281,48 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
         }
 
         /**
+         * @param deprecateRule The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deprecateRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleDeprecateRuleArgs> deprecateRule) {
+            $.deprecateRule = deprecateRule;
+            return this;
+        }
+
+        /**
+         * @param deprecateRule The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deprecateRule(LifecyclePolicyPolicyDetailsScheduleDeprecateRuleArgs deprecateRule) {
+            return deprecateRule(Output.of(deprecateRule));
+        }
+
+        /**
+         * @param fastRestoreRule See the `fast_restore_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fastRestoreRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleFastRestoreRuleArgs> fastRestoreRule) {
+            $.fastRestoreRule = fastRestoreRule;
+            return this;
+        }
+
+        /**
+         * @param fastRestoreRule See the `fast_restore_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fastRestoreRule(LifecyclePolicyPolicyDetailsScheduleFastRestoreRuleArgs fastRestoreRule) {
+            return fastRestoreRule(Output.of(fastRestoreRule));
+        }
+
+        /**
          * @param name A name for the schedule.
          * 
          * @return builder
@@ -256,6 +365,27 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
         }
 
         /**
+         * @param shareRule See the `share_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleShareRuleArgs> shareRule) {
+            $.shareRule = shareRule;
+            return this;
+        }
+
+        /**
+         * @param shareRule See the `share_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareRule(LifecyclePolicyPolicyDetailsScheduleShareRuleArgs shareRule) {
+            return shareRule(Output.of(shareRule));
+        }
+
+        /**
          * @param tagsToAdd A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
          * 
          * @return builder
@@ -274,6 +404,27 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
          */
         public Builder tagsToAdd(Map<String,String> tagsToAdd) {
             return tagsToAdd(Output.of(tagsToAdd));
+        }
+
+        /**
+         * @param variableTags A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder variableTags(@Nullable Output<Map<String,String>> variableTags) {
+            $.variableTags = variableTags;
+            return this;
+        }
+
+        /**
+         * @param variableTags A map of tag keys and variable values, where the values are determined when the policy is executed. Only `$(instance-id)` or `$(timestamp)` are valid values. Can only be used when `resource_types` is `INSTANCE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder variableTags(Map<String,String> variableTags) {
+            return variableTags(Output.of(variableTags));
         }
 
         public LifecyclePolicyPolicyDetailsScheduleArgs build() {

@@ -20,14 +20,14 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
     public static final NetworkEndpointGroupServerlessDeploymentArgs Empty = new NetworkEndpointGroupServerlessDeploymentArgs();
 
     /**
-     * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+     * The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
      * 
      */
     @Import(name="platform")
     private @Nullable Output<String> platform;
 
     /**
-     * @return The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+     * @return The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
      * 
      */
     public Optional<Output<String>> platform() {
@@ -107,7 +107,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
         }
 
         /**
-         * @param platform The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+         * @param platform The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
          * 
          * @return builder
          * 
@@ -118,7 +118,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
         }
 
         /**
-         * @param platform The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+         * @param platform The platform of the backend target(s) of this NEG. The only supported value is API Gateway: apigateway.googleapis.com.
          * 
          * @return builder
          * 

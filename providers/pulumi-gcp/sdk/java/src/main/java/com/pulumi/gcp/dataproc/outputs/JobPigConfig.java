@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobPigConfig {
     /**
-     * @return Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * @return Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
      */
     private final @Nullable Boolean continueOnFailure;
@@ -27,7 +27,7 @@ public final class JobPigConfig {
     private final @Nullable List<String> jarFileUris;
     private final @Nullable JobPigConfigLoggingConfig loggingConfig;
     /**
-     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     private final @Nullable Map<String,String> properties;
@@ -68,7 +68,7 @@ public final class JobPigConfig {
     }
 
     /**
-     * @return Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * @return Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
      */
     public Optional<Boolean> continueOnFailure() {
@@ -85,7 +85,7 @@ public final class JobPigConfig {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
-     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     public Map<String,String> properties() {

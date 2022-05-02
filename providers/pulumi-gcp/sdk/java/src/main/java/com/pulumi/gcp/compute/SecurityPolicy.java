@@ -131,6 +131,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
     public Output<String> selfLink() {
         return this.selfLink;
     }
+    /**
+     * Type of redirect action.
+     * 
+     */
+    @Export(name="type", type=String.class, parameters={})
+    private Output<String> type;
+
+    /**
+     * @return Type of redirect action.
+     * 
+     */
+    public Output<String> type() {
+        return this.type;
+    }
 
     /**
      *

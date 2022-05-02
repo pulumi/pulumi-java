@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FleetConfigResponse {
     /**
-     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * @return Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
      * 
      */
     private final String fleetSpec;
@@ -29,7 +29,7 @@ public final class FleetConfigResponse {
     }
 
     /**
-     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * @return Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
      * 
      */
     public String fleetSpec() {

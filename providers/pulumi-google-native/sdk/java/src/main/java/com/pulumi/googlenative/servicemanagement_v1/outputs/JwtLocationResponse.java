@@ -10,6 +10,11 @@ import java.util.Objects;
 @CustomType
 public final class JwtLocationResponse {
     /**
+     * @return Specifies cookie name to extract JWT token.
+     * 
+     */
+    private final String cookie;
+    /**
      * @return Specifies HTTP header name to extract JWT token.
      * 
      */
@@ -27,14 +32,23 @@ public final class JwtLocationResponse {
 
     @CustomType.Constructor
     private JwtLocationResponse(
+        @CustomType.Parameter("cookie") String cookie,
         @CustomType.Parameter("header") String header,
         @CustomType.Parameter("query") String query,
         @CustomType.Parameter("valuePrefix") String valuePrefix) {
+        this.cookie = cookie;
         this.header = header;
         this.query = query;
         this.valuePrefix = valuePrefix;
     }
 
+    /**
+     * @return Specifies cookie name to extract JWT token.
+     * 
+     */
+    public String cookie() {
+        return this.cookie;
+    }
     /**
      * @return Specifies HTTP header name to extract JWT token.
      * 
@@ -66,6 +80,7 @@ public final class JwtLocationResponse {
     }
 
     public static final class Builder {
+        private String cookie;
         private String header;
         private String query;
         private String valuePrefix;
@@ -76,11 +91,16 @@ public final class JwtLocationResponse {
 
         public Builder(JwtLocationResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.cookie = defaults.cookie;
     	      this.header = defaults.header;
     	      this.query = defaults.query;
     	      this.valuePrefix = defaults.valuePrefix;
         }
 
+        public Builder cookie(String cookie) {
+            this.cookie = Objects.requireNonNull(cookie);
+            return this;
+        }
         public Builder header(String header) {
             this.header = Objects.requireNonNull(header);
             return this;
@@ -93,7 +113,7 @@ public final class JwtLocationResponse {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
         }        public JwtLocationResponse build() {
-            return new JwtLocationResponse(header, query, valuePrefix);
+            return new JwtLocationResponse(cookie, header, query, valuePrefix);
         }
     }
 }

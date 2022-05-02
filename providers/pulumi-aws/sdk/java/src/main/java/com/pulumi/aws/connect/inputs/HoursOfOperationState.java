@@ -19,6 +19,21 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     public static final HoursOfOperationState Empty = new HoursOfOperationState();
 
     /**
+     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    @Import(name="arn")
+    private @Nullable Output<String> arn;
+
+    /**
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
+    }
+
+    /**
      * One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
@@ -49,16 +64,24 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     * @deprecated
+     * use &#39;arn&#39; attribute instead
      * 
      */
+    @Deprecated /* use 'arn' attribute instead */
     @Import(name="hoursOfOperationArn")
     private @Nullable Output<String> hoursOfOperationArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     * @deprecated
+     * use &#39;arn&#39; attribute instead
      * 
      */
+    @Deprecated /* use 'arn' attribute instead */
     public Optional<Output<String>> hoursOfOperationArn() {
         return Optional.ofNullable(this.hoursOfOperationArn);
     }
@@ -156,6 +179,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     private HoursOfOperationState() {}
 
     private HoursOfOperationState(HoursOfOperationState $) {
+        this.arn = $.arn;
         this.configs = $.configs;
         this.description = $.description;
         this.hoursOfOperationArn = $.hoursOfOperationArn;
@@ -183,6 +207,27 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
 
         public Builder(HoursOfOperationState defaults) {
             $ = new HoursOfOperationState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable Output<String> arn) {
+            $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         /**
@@ -238,22 +283,30 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hoursOfOperationArn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * @param hoursOfOperationArn (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
          * 
          * @return builder
          * 
+         * @deprecated
+         * use &#39;arn&#39; attribute instead
+         * 
          */
+        @Deprecated /* use 'arn' attribute instead */
         public Builder hoursOfOperationArn(@Nullable Output<String> hoursOfOperationArn) {
             $.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
 
         /**
-         * @param hoursOfOperationArn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * @param hoursOfOperationArn (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
          * 
          * @return builder
          * 
+         * @deprecated
+         * use &#39;arn&#39; attribute instead
+         * 
          */
+        @Deprecated /* use 'arn' attribute instead */
         public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             return hoursOfOperationArn(Output.of(hoursOfOperationArn));
         }

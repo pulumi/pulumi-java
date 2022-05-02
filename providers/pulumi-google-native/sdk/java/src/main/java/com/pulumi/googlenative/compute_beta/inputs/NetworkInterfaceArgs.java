@@ -56,6 +56,21 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * The prefix length of the primary internal IPv6 range.
+     * 
+     */
+    @Import(name="internalIpv6PrefixLength")
+    private @Nullable Output<Integer> internalIpv6PrefixLength;
+
+    /**
+     * @return The prefix length of the primary internal IPv6 range.
+     * 
+     */
+    public Optional<Output<Integer>> internalIpv6PrefixLength() {
+        return Optional.ofNullable(this.internalIpv6PrefixLength);
+    }
+
+    /**
      * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access.
      * 
      */
@@ -180,6 +195,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
         this.accessConfigs = $.accessConfigs;
         this.aliasIpRanges = $.aliasIpRanges;
+        this.internalIpv6PrefixLength = $.internalIpv6PrefixLength;
         this.ipv6AccessConfigs = $.ipv6AccessConfigs;
         this.ipv6Address = $.ipv6Address;
         this.network = $.network;
@@ -268,6 +284,27 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder aliasIpRanges(AliasIpRangeArgs... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
+        }
+
+        /**
+         * @param internalIpv6PrefixLength The prefix length of the primary internal IPv6 range.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalIpv6PrefixLength(@Nullable Output<Integer> internalIpv6PrefixLength) {
+            $.internalIpv6PrefixLength = internalIpv6PrefixLength;
+            return this;
+        }
+
+        /**
+         * @param internalIpv6PrefixLength The prefix length of the primary internal IPv6 range.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalIpv6PrefixLength(Integer internalIpv6PrefixLength) {
+            return internalIpv6PrefixLength(Output.of(internalIpv6PrefixLength));
         }
 
         /**

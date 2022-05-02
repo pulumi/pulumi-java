@@ -266,7 +266,21 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.customerOwnedIpEnabled);
     }
     /**
-     * Name of `DB subnet group`. DB instance will
+     * The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
+     * 
+     */
+    @Export(name="dbName", type=String.class, parameters={})
+    private Output<String> dbName;
+
+    /**
+     * @return The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
+     * 
+     */
+    public Output<String> dbName() {
+        return this.dbName;
+    }
+    /**
+     * Name of DB subnet group. DB instance will
      * be created in the VPC associated with the DB subnet group. If unspecified, will
      * be created in the `default` VPC, or in EC2 Classic, if available. When working
      * with read replicas, it should be specified only if the source database
@@ -279,7 +293,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     private Output<String> dbSubnetGroupName;
 
     /**
-     * @return Name of `DB subnet group`. DB instance will
+     * @return Name of DB subnet group. DB instance will
      * be created in the VPC associated with the DB subnet group. If unspecified, will
      * be created in the `default` VPC, or in EC2 Classic, if available. When working
      * with read replicas, it should be specified only if the source database
@@ -377,8 +391,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * (Required unless a `snapshot_identifier` or `replicate_source_db`
-     * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine must match the `DB cluster`&#39;s engine&#39;.
+     * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html). Cannot be specified for a replica.
+     * Note that for Amazon Aurora instances the engine must match the DB cluster&#39;s engine&#39;.
      * For information on the difference between the available Aurora MySQL engines
      * see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
      * in the Amazon RDS User Guide.
@@ -389,8 +403,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return (Required unless a `snapshot_identifier` or `replicate_source_db`
-     * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine must match the `DB cluster`&#39;s engine&#39;.
+     * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html). Cannot be specified for a replica.
+     * Note that for Amazon Aurora instances the engine must match the DB cluster&#39;s engine&#39;.
      * For information on the difference between the available Aurora MySQL engines
      * see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
      * in the Amazon RDS User Guide.
@@ -402,9 +416,9 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * The engine version to use. If `auto_minor_version_upgrade`
      * is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
-     * The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
      * For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`&#39;s engine version&#39;.
+     * Note that for Amazon Aurora instances the engine version must match the DB cluster&#39;s engine version&#39;. Cannot be specified for a replica.
      * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
@@ -413,9 +427,9 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * @return The engine version to use. If `auto_minor_version_upgrade`
      * is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
-     * The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
      * For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`&#39;s engine version&#39;.
+     * Note that for Amazon Aurora instances the engine version must match the DB cluster&#39;s engine version&#39;. Cannot be specified for a replica.
      * 
      */
     public Output<String> engineVersion() {
@@ -688,14 +702,18 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.multiAz;
     }
     /**
-     * The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+     * The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
+     * 
+     * @deprecated
+     * Use db_name instead
      * 
      */
+    @Deprecated /* Use db_name instead */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+     * @return The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
      * 
      */
     public Output<String> name() {
@@ -843,15 +861,15 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="replicaMode", type=String.class, parameters={})
-    private Output</* @Nullable */ String> replicaMode;
+    private Output<String> replicaMode;
 
     /**
      * @return Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
      * is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
      * 
      */
-    public Output<Optional<String>> replicaMode() {
-        return Codegen.optional(this.replicaMode);
+    public Output<String> replicaMode() {
+        return this.replicaMode;
     }
     @Export(name="replicas", type=List.class, parameters={String.class})
     private Output<List<String>> replicas;
@@ -1093,7 +1111,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * (Required unless a `snapshot_identifier` or `replicate_source_db`
-     * is provided) Username for the master DB user.
+     * is provided) Username for the master DB user. Cannot be specified for a replica.
      * 
      */
     @Export(name="username", type=String.class, parameters={})
@@ -1101,7 +1119,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return (Required unless a `snapshot_identifier` or `replicate_source_db`
-     * is provided) Username for the master DB user.
+     * is provided) Username for the master DB user. Cannot be specified for a replica.
      * 
      */
     public Output<String> username() {

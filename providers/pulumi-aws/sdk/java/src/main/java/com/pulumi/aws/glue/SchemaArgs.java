@@ -32,14 +32,14 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+     * The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
      * 
      */
     @Import(name="dataFormat", required=true)
     private Output<String> dataFormat;
 
     /**
-     * @return The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+     * @return The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
      * 
      */
     public Output<String> dataFormat() {
@@ -173,7 +173,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataFormat The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+         * @param dataFormat The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataFormat The data format of the schema definition. Valid values are `AVRO` and `JSON`.
+         * @param dataFormat The data format of the schema definition. Valid values are `AVRO`, `JSON` and `PROTOBUF`.
          * 
          * @return builder
          * 

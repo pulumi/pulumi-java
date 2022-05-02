@@ -37,14 +37,14 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+     * Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
     @Import(name="defaultAction", required=true)
     private Output<WebAclDefaultActionArgs> defaultAction;
 
     /**
-     * @return The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+     * @return Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
     public Output<WebAclDefaultActionArgs> defaultAction() {
@@ -52,14 +52,14 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A friendly description of the WebACL.
+     * Friendly description of the WebACL.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return A friendly description of the WebACL.
+     * @return Friendly description of the WebACL.
      * 
      */
     public Optional<Output<String>> description() {
@@ -67,14 +67,14 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The label string.
+     * Label string.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The label string.
+     * @return Label string.
      * 
      */
     public Optional<Output<String>> name() {
@@ -82,14 +82,14 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+     * Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
     @Import(name="rules")
     private @Nullable Output<List<WebAclRuleArgs>> rules;
 
     /**
-     * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+     * @return Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
     public Optional<Output<List<WebAclRuleArgs>>> rules() {
@@ -112,33 +112,18 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
-    }
-
-    /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
-     * 
-     */
-    @Import(name="tagsAll")
-    private @Nullable Output<Map<String,String>> tagsAll;
-
-    /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
-     * 
-     */
-    public Optional<Output<Map<String,String>>> tagsAll() {
-        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -166,7 +151,6 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         this.rules = $.rules;
         this.scope = $.scope;
         this.tags = $.tags;
-        this.tagsAll = $.tagsAll;
         this.visibilityConfig = $.visibilityConfig;
     }
 
@@ -220,7 +204,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param defaultAction The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+         * @param defaultAction Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
          * 
          * @return builder
          * 
@@ -231,7 +215,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param defaultAction The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+         * @param defaultAction Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
          * 
          * @return builder
          * 
@@ -241,7 +225,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A friendly description of the WebACL.
+         * @param description Friendly description of the WebACL.
          * 
          * @return builder
          * 
@@ -252,7 +236,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A friendly description of the WebACL.
+         * @param description Friendly description of the WebACL.
          * 
          * @return builder
          * 
@@ -262,7 +246,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The label string.
+         * @param name Label string.
          * 
          * @return builder
          * 
@@ -273,7 +257,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The label string.
+         * @param name Label string.
          * 
          * @return builder
          * 
@@ -283,7 +267,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * @param rules Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
          * 
          * @return builder
          * 
@@ -294,7 +278,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * @param rules Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
          * 
          * @return builder
          * 
@@ -304,7 +288,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * @param rules Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
          * 
          * @return builder
          * 
@@ -335,7 +319,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -346,34 +330,13 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
          */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
-        }
-
-        /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            $.tagsAll = tagsAll;
-            return this;
-        }
-
-        /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tagsAll(Map<String,String> tagsAll) {
-            return tagsAll(Output.of(tagsAll));
         }
 
         /**

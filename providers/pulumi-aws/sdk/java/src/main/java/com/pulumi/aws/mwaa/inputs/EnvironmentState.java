@@ -286,6 +286,21 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+     * 
+     */
+    @Import(name="schedulers")
+    private @Nullable Output<Integer> schedulers;
+
+    /**
+     * @return The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+     * 
+     */
+    public Optional<Output<Integer>> schedulers() {
+        return Optional.ofNullable(this.schedulers);
+    }
+
+    /**
      * The Service Role ARN of the Amazon MWAA Environment
      * 
      */
@@ -426,6 +441,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
         this.pluginsS3Path = $.pluginsS3Path;
         this.requirementsS3ObjectVersion = $.requirementsS3ObjectVersion;
         this.requirementsS3Path = $.requirementsS3Path;
+        this.schedulers = $.schedulers;
         this.serviceRoleArn = $.serviceRoleArn;
         this.sourceBucketArn = $.sourceBucketArn;
         this.status = $.status;
@@ -824,6 +840,27 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder requirementsS3Path(String requirementsS3Path) {
             return requirementsS3Path(Output.of(requirementsS3Path));
+        }
+
+        /**
+         * @param schedulers The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schedulers(@Nullable Output<Integer> schedulers) {
+            $.schedulers = schedulers;
+            return this;
+        }
+
+        /**
+         * @param schedulers The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schedulers(Integer schedulers) {
+            return schedulers(Output.of(schedulers));
         }
 
         /**

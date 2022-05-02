@@ -49,6 +49,11 @@ public final class GetAgentResult {
      */
     private final Boolean enableStackdriverLogging;
     /**
+     * @return Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    private final Boolean locked;
+    /**
      * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */
@@ -88,6 +93,7 @@ public final class GetAgentResult {
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("enableSpellCorrection") Boolean enableSpellCorrection,
         @CustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @CustomType.Parameter("locked") Boolean locked,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("securitySettings") String securitySettings,
         @CustomType.Parameter("speechToTextSettings") GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings,
@@ -101,6 +107,7 @@ public final class GetAgentResult {
         this.displayName = displayName;
         this.enableSpellCorrection = enableSpellCorrection;
         this.enableStackdriverLogging = enableStackdriverLogging;
+        this.locked = locked;
         this.name = name;
         this.securitySettings = securitySettings;
         this.speechToTextSettings = speechToTextSettings;
@@ -157,6 +164,13 @@ public final class GetAgentResult {
      */
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
+    }
+    /**
+     * @return Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    public Boolean locked() {
+        return this.locked;
     }
     /**
      * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
@@ -217,6 +231,7 @@ public final class GetAgentResult {
         private String displayName;
         private Boolean enableSpellCorrection;
         private Boolean enableStackdriverLogging;
+        private Boolean locked;
         private String name;
         private String securitySettings;
         private GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings;
@@ -237,6 +252,7 @@ public final class GetAgentResult {
     	      this.displayName = defaults.displayName;
     	      this.enableSpellCorrection = defaults.enableSpellCorrection;
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
+    	      this.locked = defaults.locked;
     	      this.name = defaults.name;
     	      this.securitySettings = defaults.securitySettings;
     	      this.speechToTextSettings = defaults.speechToTextSettings;
@@ -273,6 +289,10 @@ public final class GetAgentResult {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
+        public Builder locked(Boolean locked) {
+            this.locked = Objects.requireNonNull(locked);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -300,7 +320,7 @@ public final class GetAgentResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }        public GetAgentResult build() {
-            return new GetAgentResult(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, name, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
+            return new GetAgentResult(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, locked, name, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }
     }
 }

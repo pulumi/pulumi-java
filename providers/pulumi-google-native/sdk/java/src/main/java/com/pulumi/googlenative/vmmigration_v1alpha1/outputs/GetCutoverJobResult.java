@@ -6,6 +6,7 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.TargetVMDetailsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,6 +18,15 @@ public final class GetCutoverJobResult {
      * 
      */
     private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead. */
+    private final TargetVMDetailsResponse computeEngineVmDetails;
     /**
      * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
@@ -57,10 +67,20 @@ public final class GetCutoverJobResult {
      * 
      */
     private final String stateTime;
+    /**
+     * @return Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead. */
+    private final TargetVMDetailsResponse targetDetails;
 
     @CustomType.Constructor
     private GetCutoverJobResult(
         @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @CustomType.Parameter("computeEngineVmDetails") TargetVMDetailsResponse computeEngineVmDetails,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("error") StatusResponse error,
         @CustomType.Parameter("name") String name,
@@ -68,8 +88,10 @@ public final class GetCutoverJobResult {
         @CustomType.Parameter("progressPercent") Integer progressPercent,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateMessage") String stateMessage,
-        @CustomType.Parameter("stateTime") String stateTime) {
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("targetDetails") TargetVMDetailsResponse targetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
+        this.computeEngineVmDetails = computeEngineVmDetails;
         this.createTime = createTime;
         this.error = error;
         this.name = name;
@@ -78,6 +100,7 @@ public final class GetCutoverJobResult {
         this.state = state;
         this.stateMessage = stateMessage;
         this.stateTime = stateTime;
+        this.targetDetails = targetDetails;
     }
 
     /**
@@ -86,6 +109,17 @@ public final class GetCutoverJobResult {
      */
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
+    }
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead. */
+    public TargetVMDetailsResponse computeEngineVmDetails() {
+        return this.computeEngineVmDetails;
     }
     /**
      * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
@@ -143,6 +177,17 @@ public final class GetCutoverJobResult {
     public String stateTime() {
         return this.stateTime;
     }
+    /**
+     * @return Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM to create as the target of this cutover job. Deprecated: Use compute_engine_target_details instead. */
+    public TargetVMDetailsResponse targetDetails() {
+        return this.targetDetails;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -154,6 +199,7 @@ public final class GetCutoverJobResult {
 
     public static final class Builder {
         private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+        private TargetVMDetailsResponse computeEngineVmDetails;
         private String createTime;
         private StatusResponse error;
         private String name;
@@ -162,6 +208,7 @@ public final class GetCutoverJobResult {
         private String state;
         private String stateMessage;
         private String stateTime;
+        private TargetVMDetailsResponse targetDetails;
 
         public Builder() {
     	      // Empty
@@ -170,6 +217,7 @@ public final class GetCutoverJobResult {
         public Builder(GetCutoverJobResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
+    	      this.computeEngineVmDetails = defaults.computeEngineVmDetails;
     	      this.createTime = defaults.createTime;
     	      this.error = defaults.error;
     	      this.name = defaults.name;
@@ -178,10 +226,15 @@ public final class GetCutoverJobResult {
     	      this.state = defaults.state;
     	      this.stateMessage = defaults.stateMessage;
     	      this.stateTime = defaults.stateTime;
+    	      this.targetDetails = defaults.targetDetails;
         }
 
         public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
+            return this;
+        }
+        public Builder computeEngineVmDetails(TargetVMDetailsResponse computeEngineVmDetails) {
+            this.computeEngineVmDetails = Objects.requireNonNull(computeEngineVmDetails);
             return this;
         }
         public Builder createTime(String createTime) {
@@ -215,8 +268,12 @@ public final class GetCutoverJobResult {
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
+        }
+        public Builder targetDetails(TargetVMDetailsResponse targetDetails) {
+            this.targetDetails = Objects.requireNonNull(targetDetails);
+            return this;
         }        public GetCutoverJobResult build() {
-            return new GetCutoverJobResult(computeEngineTargetDetails, createTime, error, name, progress, progressPercent, state, stateMessage, stateTime);
+            return new GetCutoverJobResult(computeEngineTargetDetails, computeEngineVmDetails, createTime, error, name, progress, progressPercent, state, stateMessage, stateTime, targetDetails);
         }
     }
 }

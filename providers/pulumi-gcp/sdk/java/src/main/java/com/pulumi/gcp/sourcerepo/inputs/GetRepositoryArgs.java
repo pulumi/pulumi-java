@@ -14,16 +14,32 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
+    /**
+     * Resource name of the repository. The repo name may contain slashes. eg, `name/with/slash`
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name of the repository. The repo name may contain slashes. eg, `name/with/slash`
+     * 
+     */
     public String name() {
         return this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -53,11 +69,23 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name of the repository. The repo name may contain slashes. eg, `name/with/slash`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

@@ -130,9 +130,17 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
         return this.source;
     }
 
+    /**
+     * Required. The logical name of the Connectivity Test in your project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer project
+     * 
+     */
     @Import(name="testId", required=true)
     private Output<String> testId;
 
+    /**
+     * @return Required. The logical name of the Connectivity Test in your project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer project
+     * 
+     */
     public Output<String> testId() {
         return this.testId;
     }
@@ -335,11 +343,23 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
             return source(Output.of(source));
         }
 
+        /**
+         * @param testId Required. The logical name of the Connectivity Test in your project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer project
+         * 
+         * @return builder
+         * 
+         */
         public Builder testId(Output<String> testId) {
             $.testId = testId;
             return this;
         }
 
+        /**
+         * @param testId Required. The logical name of the Connectivity Test in your project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer project
+         * 
+         * @return builder
+         * 
+         */
         public Builder testId(String testId) {
             return testId(Output.of(testId));
         }

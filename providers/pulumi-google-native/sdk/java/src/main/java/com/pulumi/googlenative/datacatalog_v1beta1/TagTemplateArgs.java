@@ -75,9 +75,17 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The id of the tag template to create.
+     * 
+     */
     @Import(name="tagTemplateId", required=true)
     private Output<String> tagTemplateId;
 
+    /**
+     * @return Required. The id of the tag template to create.
+     * 
+     */
     public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
@@ -192,11 +200,23 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tagTemplateId Required. The id of the tag template to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagTemplateId(Output<String> tagTemplateId) {
             $.tagTemplateId = tagTemplateId;
             return this;
         }
 
+        /**
+         * @param tagTemplateId Required. The id of the tag template to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagTemplateId(String tagTemplateId) {
             return tagTemplateId(Output.of(tagTemplateId));
         }

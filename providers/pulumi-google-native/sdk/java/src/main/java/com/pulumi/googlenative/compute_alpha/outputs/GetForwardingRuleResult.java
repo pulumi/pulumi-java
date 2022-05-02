@@ -110,6 +110,11 @@ public final class GetForwardingRuleResult {
      */
     private final String networkTier;
     /**
+     * @return This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+     * 
+     */
+    private final Boolean noAutomateDnsZone;
+    /**
      * @return This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?
      * 
      */
@@ -188,6 +193,7 @@ public final class GetForwardingRuleResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("noAutomateDnsZone") Boolean noAutomateDnsZone,
         @CustomType.Parameter("portRange") String portRange,
         @CustomType.Parameter("ports") List<String> ports,
         @CustomType.Parameter("pscConnectionId") String pscConnectionId,
@@ -220,6 +226,7 @@ public final class GetForwardingRuleResult {
         this.name = name;
         this.network = network;
         this.networkTier = networkTier;
+        this.noAutomateDnsZone = noAutomateDnsZone;
         this.portRange = portRange;
         this.ports = ports;
         this.pscConnectionId = pscConnectionId;
@@ -369,6 +376,13 @@ public final class GetForwardingRuleResult {
         return this.networkTier;
     }
     /**
+     * @return This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+     * 
+     */
+    public Boolean noAutomateDnsZone() {
+        return this.noAutomateDnsZone;
+    }
+    /**
      * @return This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?
      * 
      */
@@ -480,6 +494,7 @@ public final class GetForwardingRuleResult {
         private String name;
         private String network;
         private String networkTier;
+        private Boolean noAutomateDnsZone;
         private String portRange;
         private List<String> ports;
         private String pscConnectionId;
@@ -519,6 +534,7 @@ public final class GetForwardingRuleResult {
     	      this.name = defaults.name;
     	      this.network = defaults.network;
     	      this.networkTier = defaults.networkTier;
+    	      this.noAutomateDnsZone = defaults.noAutomateDnsZone;
     	      this.portRange = defaults.portRange;
     	      this.ports = defaults.ports;
     	      this.pscConnectionId = defaults.pscConnectionId;
@@ -613,6 +629,10 @@ public final class GetForwardingRuleResult {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
+        public Builder noAutomateDnsZone(Boolean noAutomateDnsZone) {
+            this.noAutomateDnsZone = Objects.requireNonNull(noAutomateDnsZone);
+            return this;
+        }
         public Builder portRange(String portRange) {
             this.portRange = Objects.requireNonNull(portRange);
             return this;
@@ -674,7 +694,7 @@ public final class GetForwardingRuleResult {
             this.target = Objects.requireNonNull(target);
             return this;
         }        public GetForwardingRuleResult build() {
-            return new GetForwardingRuleResult(allPorts, allowGlobalAccess, allowPscGlobalAccess, backendService, creationTimestamp, description, fingerprint, ipAddress, ipProtocol, ipVersion, isMirroringCollector, kind, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, portRange, ports, pscConnectionId, pscConnectionStatus, region, selfLink, selfLinkWithId, serviceDirectoryRegistrations, serviceLabel, serviceName, sourceIpRanges, subnetwork, target);
+            return new GetForwardingRuleResult(allPorts, allowGlobalAccess, allowPscGlobalAccess, backendService, creationTimestamp, description, fingerprint, ipAddress, ipProtocol, ipVersion, isMirroringCollector, kind, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, noAutomateDnsZone, portRange, ports, pscConnectionId, pscConnectionStatus, region, selfLink, selfLinkWithId, serviceDirectoryRegistrations, serviceLabel, serviceName, sourceIpRanges, subnetwork, target);
         }
     }
 }

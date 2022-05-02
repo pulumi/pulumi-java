@@ -28,13 +28,6 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
         return this.notification;
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable String provisionalUserProject;
-
-    public Optional<String> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     @Import(name="userProject")
     private @Nullable String userProject;
 
@@ -47,7 +40,6 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
     private GetNotificationArgs(GetNotificationArgs $) {
         this.bucket = $.bucket;
         this.notification = $.notification;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.userProject = $.userProject;
     }
 
@@ -76,11 +68,6 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
 
         public Builder notification(String notification) {
             $.notification = notification;
-            return this;
-        }
-
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
 

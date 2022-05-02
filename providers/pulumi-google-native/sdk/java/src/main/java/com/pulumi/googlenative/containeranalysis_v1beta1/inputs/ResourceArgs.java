@@ -5,8 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.HashArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 /**
@@ -16,6 +19,52 @@ import java.util.Objects;
 public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ResourceArgs Empty = new ResourceArgs();
+
+    /**
+     * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+    @Import(name="contentHash")
+    private @Nullable Output<HashArgs> contentHash;
+
+    /**
+     * @return Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+    public Optional<Output<HashArgs>> contentHash() {
+        return Optional.ofNullable(this.contentHash);
+    }
+
+    /**
+     * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
 
     /**
      * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
@@ -35,6 +84,8 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     private ResourceArgs() {}
 
     private ResourceArgs(ResourceArgs $) {
+        this.contentHash = $.contentHash;
+        this.name = $.name;
         this.uri = $.uri;
     }
 
@@ -54,6 +105,64 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ResourceArgs defaults) {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param contentHash Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+         * 
+         */
+        @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+        public Builder contentHash(@Nullable Output<HashArgs> contentHash) {
+            $.contentHash = contentHash;
+            return this;
+        }
+
+        /**
+         * @param contentHash Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+         * 
+         */
+        @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+        public Builder contentHash(HashArgs contentHash) {
+            return contentHash(Output.of(contentHash));
+        }
+
+        /**
+         * @param name Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+         * 
+         */
+        @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+         * 
+         */
+        @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         /**

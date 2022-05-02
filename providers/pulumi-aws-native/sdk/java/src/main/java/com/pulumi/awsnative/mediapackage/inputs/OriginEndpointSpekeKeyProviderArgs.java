@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediapackage.inputs;
 
+import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointEncryptionContractConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -33,6 +34,13 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      */
     public Optional<Output<String>> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
+    }
+
+    @Import(name="encryptionContractConfiguration")
+    private @Nullable Output<OriginEndpointEncryptionContractConfigurationArgs> encryptionContractConfiguration;
+
+    public Optional<Output<OriginEndpointEncryptionContractConfigurationArgs>> encryptionContractConfiguration() {
+        return Optional.ofNullable(this.encryptionContractConfiguration);
     }
 
     /**
@@ -99,6 +107,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
 
     private OriginEndpointSpekeKeyProviderArgs(OriginEndpointSpekeKeyProviderArgs $) {
         this.certificateArn = $.certificateArn;
+        this.encryptionContractConfiguration = $.encryptionContractConfiguration;
         this.resourceId = $.resourceId;
         this.roleArn = $.roleArn;
         this.systemIds = $.systemIds;
@@ -142,6 +151,15 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
          */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
+        }
+
+        public Builder encryptionContractConfiguration(@Nullable Output<OriginEndpointEncryptionContractConfigurationArgs> encryptionContractConfiguration) {
+            $.encryptionContractConfiguration = encryptionContractConfiguration;
+            return this;
+        }
+
+        public Builder encryptionContractConfiguration(OriginEndpointEncryptionContractConfigurationArgs encryptionContractConfiguration) {
+            return encryptionContractConfiguration(Output.of(encryptionContractConfiguration));
         }
 
         /**

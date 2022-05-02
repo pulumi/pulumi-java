@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.EdgeLocationResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyDistributionResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.StatusResponse;
@@ -18,6 +19,11 @@ public final class ProbingDetailsResponse {
      * 
      */
     private final String abortCause;
+    /**
+     * @return The EdgeLocation from which a packet destined for/originating from the internet will egress/ingress the Google network. This will only be populated for a connectivity test which has an internet destination/source address. The absence of this field *must not* be used as an indication that the destination/source is part of the Google network.
+     * 
+     */
+    private final EdgeLocationResponse destinationEgressLocation;
     /**
      * @return The source and destination endpoints derived from the test input and used for active probing.
      * 
@@ -57,6 +63,7 @@ public final class ProbingDetailsResponse {
     @CustomType.Constructor
     private ProbingDetailsResponse(
         @CustomType.Parameter("abortCause") String abortCause,
+        @CustomType.Parameter("destinationEgressLocation") EdgeLocationResponse destinationEgressLocation,
         @CustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
         @CustomType.Parameter("error") StatusResponse error,
         @CustomType.Parameter("probingLatency") LatencyDistributionResponse probingLatency,
@@ -65,6 +72,7 @@ public final class ProbingDetailsResponse {
         @CustomType.Parameter("successfulProbeCount") Integer successfulProbeCount,
         @CustomType.Parameter("verifyTime") String verifyTime) {
         this.abortCause = abortCause;
+        this.destinationEgressLocation = destinationEgressLocation;
         this.endpointInfo = endpointInfo;
         this.error = error;
         this.probingLatency = probingLatency;
@@ -80,6 +88,13 @@ public final class ProbingDetailsResponse {
      */
     public String abortCause() {
         return this.abortCause;
+    }
+    /**
+     * @return The EdgeLocation from which a packet destined for/originating from the internet will egress/ingress the Google network. This will only be populated for a connectivity test which has an internet destination/source address. The absence of this field *must not* be used as an indication that the destination/source is part of the Google network.
+     * 
+     */
+    public EdgeLocationResponse destinationEgressLocation() {
+        return this.destinationEgressLocation;
     }
     /**
      * @return The source and destination endpoints derived from the test input and used for active probing.
@@ -141,6 +156,7 @@ public final class ProbingDetailsResponse {
 
     public static final class Builder {
         private String abortCause;
+        private EdgeLocationResponse destinationEgressLocation;
         private EndpointInfoResponse endpointInfo;
         private StatusResponse error;
         private LatencyDistributionResponse probingLatency;
@@ -156,6 +172,7 @@ public final class ProbingDetailsResponse {
         public Builder(ProbingDetailsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.abortCause = defaults.abortCause;
+    	      this.destinationEgressLocation = defaults.destinationEgressLocation;
     	      this.endpointInfo = defaults.endpointInfo;
     	      this.error = defaults.error;
     	      this.probingLatency = defaults.probingLatency;
@@ -167,6 +184,10 @@ public final class ProbingDetailsResponse {
 
         public Builder abortCause(String abortCause) {
             this.abortCause = Objects.requireNonNull(abortCause);
+            return this;
+        }
+        public Builder destinationEgressLocation(EdgeLocationResponse destinationEgressLocation) {
+            this.destinationEgressLocation = Objects.requireNonNull(destinationEgressLocation);
             return this;
         }
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
@@ -197,7 +218,7 @@ public final class ProbingDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }        public ProbingDetailsResponse build() {
-            return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
+            return new ProbingDetailsResponse(abortCause, destinationEgressLocation, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }
     }
 }

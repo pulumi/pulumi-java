@@ -19,14 +19,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     public static final DomainNameState Empty = new DomainNameState();
 
     /**
-     * Amazon Resource Name (ARN)
+     * ARN of domain name.
      * 
      */
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
     /**
-     * @return Amazon Resource Name (ARN)
+     * @return ARN of domain name.
      * 
      */
     public Optional<Output<String>> arn() {
@@ -34,14 +34,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
     /**
-     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Optional<Output<String>> certificateArn() {
@@ -49,18 +49,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate issued for the domain name
-     * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`.
+     * Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Import(name="certificateBody")
     private @Nullable Output<String> certificateBody;
 
     /**
-     * @return The certificate issued for the domain name
-     * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`.
+     * @return Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Optional<Output<String>> certificateBody() {
@@ -68,20 +64,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate for the CA that issued the
-     * certificate, along with any intermediate CA certificates required to
-     * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-     * `regional_certificate_arn`, and `regional_certificate_name`.
+     * Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
     /**
-     * @return The certificate for the CA that issued the
-     * certificate, along with any intermediate CA certificates required to
-     * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-     * `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Optional<Output<String>> certificateChain() {
@@ -89,18 +79,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique name to use when registering this
-     * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`. Required if `certificate_arn` is not set.
+     * Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
     /**
-     * @return The unique name to use when registering this
-     * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`. Required if `certificate_arn` is not set.
+     * @return Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
     public Optional<Output<String>> certificateName() {
@@ -108,16 +94,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The private key associated with the
-     * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Import(name="certificatePrivateKey")
     private @Nullable Output<String> certificatePrivateKey;
 
     /**
-     * @return The private key associated with the
-     * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Optional<Output<String>> certificatePrivateKey() {
@@ -125,14 +109,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload date associated with the domain certificate.
+     * Upload date associated with the domain certificate.
      * 
      */
     @Import(name="certificateUploadDate")
     private @Nullable Output<String> certificateUploadDate;
 
     /**
-     * @return The upload date associated with the domain certificate.
+     * @return Upload date associated with the domain certificate.
      * 
      */
     public Optional<Output<String>> certificateUploadDate() {
@@ -140,16 +124,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The hostname created by Cloudfront to represent
-     * the distribution that implements this domain name mapping.
+     * Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
      */
     @Import(name="cloudfrontDomainName")
     private @Nullable Output<String> cloudfrontDomainName;
 
     /**
-     * @return The hostname created by Cloudfront to represent
-     * the distribution that implements this domain name mapping.
+     * @return Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
      */
     public Optional<Output<String>> cloudfrontDomainName() {
@@ -157,16 +139,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-     * that can be used to create a Route53 alias record for the distribution.
+     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
      */
     @Import(name="cloudfrontZoneId")
     private @Nullable Output<String> cloudfrontZoneId;
 
     /**
-     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-     * that can be used to create a Route53 alias record for the distribution.
+     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
      */
     public Optional<Output<String>> cloudfrontZoneId() {
@@ -174,14 +154,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The fully-qualified domain name to register
+     * Fully-qualified domain name to register.
      * 
      */
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
     /**
-     * @return The fully-qualified domain name to register
+     * @return Fully-qualified domain name to register.
      * 
      */
     public Optional<Output<String>> domainName() {
@@ -189,14 +169,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block defining API endpoint information including type. Defined below.
+     * Configuration block defining API endpoint information including type. See below.
      * 
      */
     @Import(name="endpointConfiguration")
     private @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
     /**
-     * @return Configuration block defining API endpoint information including type. Defined below.
+     * @return Configuration block defining API endpoint information including type. See below.
      * 
      */
     public Optional<Output<DomainNameEndpointConfigurationArgs>> endpointConfiguration() {
@@ -204,14 +184,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The mutual TLS authentication configuration for the domain name. Defined below.
+     * Mutual TLS authentication configuration for the domain name. See below.
      * 
      */
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     /**
-     * @return The mutual TLS authentication configuration for the domain name. Defined below.
+     * @return Mutual TLS authentication configuration for the domain name. See below.
      * 
      */
     public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
@@ -219,14 +199,29 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+     * ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    @Import(name="ownershipVerificationCertificateArn")
+    private @Nullable Output<String> ownershipVerificationCertificateArn;
+
+    /**
+     * @return ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    public Optional<Output<String>> ownershipVerificationCertificateArn() {
+        return Optional.ofNullable(this.ownershipVerificationCertificateArn);
+    }
+
+    /**
+     * ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     @Import(name="regionalCertificateArn")
     private @Nullable Output<String> regionalCertificateArn;
 
     /**
-     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+     * @return ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     public Optional<Output<String>> regionalCertificateArn() {
@@ -234,16 +229,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-     * `certificate_private_key`.
+     * User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     @Import(name="regionalCertificateName")
     private @Nullable Output<String> regionalCertificateName;
 
     /**
-     * @return The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-     * `certificate_private_key`.
+     * @return User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     public Optional<Output<String>> regionalCertificateName() {
@@ -251,14 +244,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The hostname for the custom domain&#39;s regional endpoint.
+     * Hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     @Import(name="regionalDomainName")
     private @Nullable Output<String> regionalDomainName;
 
     /**
-     * @return The hostname for the custom domain&#39;s regional endpoint.
+     * @return Hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     public Optional<Output<String>> regionalDomainName() {
@@ -266,14 +259,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
     @Import(name="regionalZoneId")
     private @Nullable Output<String> regionalZoneId;
 
     /**
-     * @return The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * @return Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
     public Optional<Output<String>> regionalZoneId() {
@@ -281,14 +274,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+     * Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
     @Import(name="securityPolicy")
     private @Nullable Output<String> securityPolicy;
 
     /**
-     * @return The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+     * @return Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
     public Optional<Output<String>> securityPolicy() {
@@ -296,14 +289,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -311,14 +304,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Optional<Output<Map<String,String>>> tagsAll() {
@@ -340,6 +333,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         this.domainName = $.domainName;
         this.endpointConfiguration = $.endpointConfiguration;
         this.mutualTlsAuthentication = $.mutualTlsAuthentication;
+        this.ownershipVerificationCertificateArn = $.ownershipVerificationCertificateArn;
         this.regionalCertificateArn = $.regionalCertificateArn;
         this.regionalCertificateName = $.regionalCertificateName;
         this.regionalDomainName = $.regionalDomainName;
@@ -368,7 +362,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param arn Amazon Resource Name (ARN)
+         * @param arn ARN of domain name.
          * 
          * @return builder
          * 
@@ -379,7 +373,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param arn Amazon Resource Name (ARN)
+         * @param arn ARN of domain name.
          * 
          * @return builder
          * 
@@ -389,7 +383,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificateArn ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -400,7 +394,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificateArn ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -410,9 +404,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateBody The certificate issued for the domain name
-         * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-         * `regional_certificate_name`.
+         * @param certificateBody Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -423,9 +415,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateBody The certificate issued for the domain name
-         * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-         * `regional_certificate_name`.
+         * @param certificateBody Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -435,10 +425,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateChain The certificate for the CA that issued the
-         * certificate, along with any intermediate CA certificates required to
-         * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-         * `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificateChain Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -449,10 +436,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateChain The certificate for the CA that issued the
-         * certificate, along with any intermediate CA certificates required to
-         * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-         * `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificateChain Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -462,9 +446,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateName The unique name to use when registering this
-         * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-         * `regional_certificate_name`. Required if `certificate_arn` is not set.
+         * @param certificateName Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
          * 
          * @return builder
          * 
@@ -475,9 +457,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateName The unique name to use when registering this
-         * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-         * `regional_certificate_name`. Required if `certificate_arn` is not set.
+         * @param certificateName Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
          * 
          * @return builder
          * 
@@ -487,8 +467,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificatePrivateKey The private key associated with the
-         * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificatePrivateKey Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -499,8 +478,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificatePrivateKey The private key associated with the
-         * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * @param certificatePrivateKey Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
          * 
          * @return builder
          * 
@@ -510,7 +488,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateUploadDate The upload date associated with the domain certificate.
+         * @param certificateUploadDate Upload date associated with the domain certificate.
          * 
          * @return builder
          * 
@@ -521,7 +499,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateUploadDate The upload date associated with the domain certificate.
+         * @param certificateUploadDate Upload date associated with the domain certificate.
          * 
          * @return builder
          * 
@@ -531,8 +509,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudfrontDomainName The hostname created by Cloudfront to represent
-         * the distribution that implements this domain name mapping.
+         * @param cloudfrontDomainName Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
          * 
          * @return builder
          * 
@@ -543,8 +520,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudfrontDomainName The hostname created by Cloudfront to represent
-         * the distribution that implements this domain name mapping.
+         * @param cloudfrontDomainName Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
          * 
          * @return builder
          * 
@@ -554,8 +530,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudfrontZoneId For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-         * that can be used to create a Route53 alias record for the distribution.
+         * @param cloudfrontZoneId For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
          * 
          * @return builder
          * 
@@ -566,8 +541,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudfrontZoneId For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-         * that can be used to create a Route53 alias record for the distribution.
+         * @param cloudfrontZoneId For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
          * 
          * @return builder
          * 
@@ -577,7 +551,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The fully-qualified domain name to register
+         * @param domainName Fully-qualified domain name to register.
          * 
          * @return builder
          * 
@@ -588,7 +562,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The fully-qualified domain name to register
+         * @param domainName Fully-qualified domain name to register.
          * 
          * @return builder
          * 
@@ -598,7 +572,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointConfiguration Configuration block defining API endpoint information including type. Defined below.
+         * @param endpointConfiguration Configuration block defining API endpoint information including type. See below.
          * 
          * @return builder
          * 
@@ -609,7 +583,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointConfiguration Configuration block defining API endpoint information including type. Defined below.
+         * @param endpointConfiguration Configuration block defining API endpoint information including type. See below.
          * 
          * @return builder
          * 
@@ -619,7 +593,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name. Defined below.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name. See below.
          * 
          * @return builder
          * 
@@ -630,7 +604,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name. Defined below.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name. See below.
          * 
          * @return builder
          * 
@@ -640,7 +614,28 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalCertificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+         * @param ownershipVerificationCertificateArn ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownershipVerificationCertificateArn(@Nullable Output<String> ownershipVerificationCertificateArn) {
+            $.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+            return this;
+        }
+
+        /**
+         * @param ownershipVerificationCertificateArn ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+            return ownershipVerificationCertificateArn(Output.of(ownershipVerificationCertificateArn));
+        }
+
+        /**
+         * @param regionalCertificateArn ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
          * 
          * @return builder
          * 
@@ -651,7 +646,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalCertificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+         * @param regionalCertificateArn ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
          * 
          * @return builder
          * 
@@ -661,8 +656,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalCertificateName The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-         * `certificate_private_key`.
+         * @param regionalCertificateName User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
          * 
          * @return builder
          * 
@@ -673,8 +667,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalCertificateName The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-         * `certificate_private_key`.
+         * @param regionalCertificateName User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
          * 
          * @return builder
          * 
@@ -684,7 +677,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalDomainName The hostname for the custom domain&#39;s regional endpoint.
+         * @param regionalDomainName Hostname for the custom domain&#39;s regional endpoint.
          * 
          * @return builder
          * 
@@ -695,7 +688,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalDomainName The hostname for the custom domain&#39;s regional endpoint.
+         * @param regionalDomainName Hostname for the custom domain&#39;s regional endpoint.
          * 
          * @return builder
          * 
@@ -705,7 +698,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalZoneId The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+         * @param regionalZoneId Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
          * 
          * @return builder
          * 
@@ -716,7 +709,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param regionalZoneId The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+         * @param regionalZoneId Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
          * 
          * @return builder
          * 
@@ -726,7 +719,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+         * @param securityPolicy Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
          * 
          * @return builder
          * 
@@ -737,7 +730,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+         * @param securityPolicy Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
          * 
          * @return builder
          * 
@@ -747,7 +740,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -758,7 +751,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -768,7 +761,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -779,7 +772,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 

@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.elasticache.ClusterArgs;
 import com.pulumi.aws.elasticache.inputs.ClusterState;
 import com.pulumi.aws.elasticache.outputs.ClusterCacheNode;
+import com.pulumi.aws.elasticache.outputs.ClusterLogDeliveryConfiguration;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -80,6 +81,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<String> arn() {
         return this.arn;
+    }
+    /**
+     * Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
+     * 
+     */
+    @Export(name="autoMinorVersionUpgrade", type=String.class, parameters={})
+    private Output</* @Nullable */ String> autoMinorVersionUpgrade;
+
+    /**
+     * @return Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
+     * 
+     */
+    public Output<Optional<String>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
@@ -181,8 +200,9 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     }
     /**
      * Version number of the cache engine to be used.
+     * If not set, defaults to the latest version.
      * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
@@ -190,8 +210,9 @@ public class Cluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Version number of the cache engine to be used.
+     * If not set, defaults to the latest version.
      * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     public Output<String> engineVersion() {
@@ -224,6 +245,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> finalSnapshotIdentifier() {
         return Codegen.optional(this.finalSnapshotIdentifier);
+    }
+    /**
+     * Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+     * 
+     */
+    @Export(name="logDeliveryConfigurations", type=List.class, parameters={ClusterLogDeliveryConfiguration.class})
+    private Output</* @Nullable */ List<ClusterLogDeliveryConfiguration>> logDeliveryConfigurations;
+
+    /**
+     * @return Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+     * 
+     */
+    public Output<Optional<List<ClusterLogDeliveryConfiguration>>> logDeliveryConfigurations() {
+        return Codegen.optional(this.logDeliveryConfigurations);
     }
     /**
      * Specifies the weekly time range for when maintenance

@@ -16,14 +16,14 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends c
     public static final AwsClusterControlPlaneAwsServicesAuthenticationArgs Empty = new AwsClusterControlPlaneAwsServicesAuthenticationArgs();
 
     /**
-     * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
     /**
-     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * @return The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
     public Output<String> roleArn() {
@@ -71,7 +71,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends c
         }
 
         /**
-         * @param roleArn Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+         * @param roleArn The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends c
         }
 
         /**
-         * @param roleArn Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+         * @param roleArn The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
          * 
          * @return builder
          * 

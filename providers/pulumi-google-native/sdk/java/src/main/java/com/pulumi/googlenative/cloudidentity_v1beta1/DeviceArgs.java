@@ -32,6 +32,21 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Unique identifier for the device.
+     * 
+     */
+    @Import(name="deviceId")
+    private @Nullable Output<String> deviceId;
+
+    /**
+     * @return Unique identifier for the device.
+     * 
+     */
+    public Optional<Output<String>> deviceId() {
+        return Optional.ofNullable(this.deviceId);
+    }
+
+    /**
      * Most recent time when device synced with this service.
      * 
      */
@@ -80,6 +95,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
     private DeviceArgs(DeviceArgs $) {
         this.assetTag = $.assetTag;
+        this.deviceId = $.deviceId;
         this.lastSyncTime = $.lastSyncTime;
         this.serialNumber = $.serialNumber;
         this.wifiMacAddresses = $.wifiMacAddresses;
@@ -122,6 +138,27 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder assetTag(String assetTag) {
             return assetTag(Output.of(assetTag));
+        }
+
+        /**
+         * @param deviceId Unique identifier for the device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(@Nullable Output<String> deviceId) {
+            $.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * @param deviceId Unique identifier for the device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
         }
 
         /**

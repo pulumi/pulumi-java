@@ -9,6 +9,7 @@ import com.pulumi.aws.apprunner.inputs.ServiceState;
 import com.pulumi.aws.apprunner.outputs.ServiceEncryptionConfiguration;
 import com.pulumi.aws.apprunner.outputs.ServiceHealthCheckConfiguration;
 import com.pulumi.aws.apprunner.outputs.ServiceInstanceConfiguration;
+import com.pulumi.aws.apprunner.outputs.ServiceNetworkConfiguration;
 import com.pulumi.aws.apprunner.outputs.ServiceSourceConfiguration;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -106,6 +107,20 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.instanceConfiguration;
     }
     /**
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * 
+     */
+    @Export(name="networkConfiguration", type=ServiceNetworkConfiguration.class, parameters={})
+    private Output<ServiceNetworkConfiguration> networkConfiguration;
+
+    /**
+     * @return Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * 
+     */
+    public Output<ServiceNetworkConfiguration> networkConfiguration() {
+        return this.networkConfiguration;
+    }
+    /**
      * An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
      * 
      */
@@ -176,14 +191,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

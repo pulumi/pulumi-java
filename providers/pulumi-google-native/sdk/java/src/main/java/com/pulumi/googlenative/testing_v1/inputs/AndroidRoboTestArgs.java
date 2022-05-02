@@ -10,6 +10,7 @@ import com.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RoboDirectiveArgs;
 import com.pulumi.googlenative.testing_v1.inputs.RoboStartingIntentArgs;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -86,6 +87,36 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+     * 
+     */
+    @Import(name="maxDepth")
+    private @Nullable Output<Integer> maxDepth;
+
+    /**
+     * @return The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+     * 
+     */
+    public Optional<Output<Integer>> maxDepth() {
+        return Optional.ofNullable(this.maxDepth);
+    }
+
+    /**
+     * The max number of steps Robo can execute. Default is no limit.
+     * 
+     */
+    @Import(name="maxSteps")
+    private @Nullable Output<Integer> maxSteps;
+
+    /**
+     * @return The max number of steps Robo can execute. Default is no limit.
+     * 
+     */
+    public Optional<Output<Integer>> maxSteps() {
+        return Optional.ofNullable(this.maxSteps);
+    }
+
+    /**
      * A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
      * 
      */
@@ -152,6 +183,8 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
         this.appBundle = $.appBundle;
         this.appInitialActivity = $.appInitialActivity;
         this.appPackageId = $.appPackageId;
+        this.maxDepth = $.maxDepth;
+        this.maxSteps = $.maxSteps;
         this.roboDirectives = $.roboDirectives;
         this.roboMode = $.roboMode;
         this.roboScript = $.roboScript;
@@ -258,6 +291,48 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder appPackageId(String appPackageId) {
             return appPackageId(Output.of(appPackageId));
+        }
+
+        /**
+         * @param maxDepth The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
+            $.maxDepth = maxDepth;
+            return this;
+        }
+
+        /**
+         * @param maxDepth The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxDepth(Integer maxDepth) {
+            return maxDepth(Output.of(maxDepth));
+        }
+
+        /**
+         * @param maxSteps The max number of steps Robo can execute. Default is no limit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxSteps(@Nullable Output<Integer> maxSteps) {
+            $.maxSteps = maxSteps;
+            return this;
+        }
+
+        /**
+         * @param maxSteps The max number of steps Robo can execute. Default is no limit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxSteps(Integer maxSteps) {
+            return maxSteps(Output.of(maxSteps));
         }
 
         /**

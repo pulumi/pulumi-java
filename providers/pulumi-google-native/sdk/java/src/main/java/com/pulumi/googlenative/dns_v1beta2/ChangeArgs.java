@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dns_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.googlenative.dns_v1beta2.enums.ChangeStatus;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,9 +33,17 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.additions);
     }
 
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     @Import(name="clientOperationId")
     private @Nullable Output<String> clientOperationId;
 
+    /**
+     * @return For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
@@ -54,21 +61,6 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<List<ResourceRecordSetArgs>>> deletions() {
         return Optional.ofNullable(this.deletions);
-    }
-
-    /**
-     * Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    @Import(name="id")
-    private @Nullable Output<String> id;
-
-    /**
-     * @return Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    public Optional<Output<String>> id() {
-        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -107,49 +99,16 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
-    /**
-     * The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     * 
-     */
-    @Import(name="startTime")
-    private @Nullable Output<String> startTime;
-
-    /**
-     * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     * 
-     */
-    public Optional<Output<String>> startTime() {
-        return Optional.ofNullable(this.startTime);
-    }
-
-    /**
-     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<ChangeStatus> status;
-
-    /**
-     * @return Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     * 
-     */
-    public Optional<Output<ChangeStatus>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
     private ChangeArgs() {}
 
     private ChangeArgs(ChangeArgs $) {
         this.additions = $.additions;
         this.clientOperationId = $.clientOperationId;
         this.deletions = $.deletions;
-        this.id = $.id;
         this.isServing = $.isServing;
         this.kind = $.kind;
         this.managedZone = $.managedZone;
         this.project = $.project;
-        this.startTime = $.startTime;
-        this.status = $.status;
     }
 
     public static Builder builder() {
@@ -201,11 +160,23 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
             return additions(List.of(additions));
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }
@@ -239,27 +210,6 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder deletions(ResourceRecordSetArgs... deletions) {
             return deletions(List.of(deletions));
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(@Nullable Output<String> id) {
-            $.id = id;
-            return this;
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(String id) {
-            return id(Output.of(id));
         }
 
         /**
@@ -308,48 +258,6 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder project(String project) {
             return project(Output.of(project));
-        }
-
-        /**
-         * @param startTime The time that this operation was started by the server (output only). This is in RFC3339 text format.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder startTime(@Nullable Output<String> startTime) {
-            $.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * @param startTime The time that this operation was started by the server (output only). This is in RFC3339 text format.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder startTime(String startTime) {
-            return startTime(Output.of(startTime));
-        }
-
-        /**
-         * @param status Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<ChangeStatus> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(ChangeStatus status) {
-            return status(Output.of(status));
         }
 
         public ChangeArgs build() {

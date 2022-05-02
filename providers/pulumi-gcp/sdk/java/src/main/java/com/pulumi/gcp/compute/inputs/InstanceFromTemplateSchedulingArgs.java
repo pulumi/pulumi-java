@@ -54,6 +54,13 @@ public final class InstanceFromTemplateSchedulingArgs extends com.pulumi.resourc
         return Optional.ofNullable(this.preemptible);
     }
 
+    @Import(name="provisioningModel")
+    private @Nullable Output<String> provisioningModel;
+
+    public Optional<Output<String>> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
+    }
+
     private InstanceFromTemplateSchedulingArgs() {}
 
     private InstanceFromTemplateSchedulingArgs(InstanceFromTemplateSchedulingArgs $) {
@@ -62,6 +69,7 @@ public final class InstanceFromTemplateSchedulingArgs extends com.pulumi.resourc
         this.nodeAffinities = $.nodeAffinities;
         this.onHostMaintenance = $.onHostMaintenance;
         this.preemptible = $.preemptible;
+        this.provisioningModel = $.provisioningModel;
     }
 
     public static Builder builder() {
@@ -129,6 +137,15 @@ public final class InstanceFromTemplateSchedulingArgs extends com.pulumi.resourc
 
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
+        }
+
+        public Builder provisioningModel(@Nullable Output<String> provisioningModel) {
+            $.provisioningModel = provisioningModel;
+            return this;
+        }
+
+        public Builder provisioningModel(String provisioningModel) {
+            return provisioningModel(Output.of(provisioningModel));
         }
 
         public InstanceFromTemplateSchedulingArgs build() {

@@ -164,6 +164,21 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    @Import(name="maxTimeTravelHours")
+    private @Nullable Output<String> maxTimeTravelHours;
+
+    /**
+     * @return [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    public Optional<Output<String>> maxTimeTravelHours() {
+        return Optional.ofNullable(this.maxTimeTravelHours);
+    }
+
     @Import(name="project")
     private @Nullable Output<String> project;
 
@@ -199,6 +214,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
         this.isCaseInsensitive = $.isCaseInsensitive;
         this.labels = $.labels;
         this.location = $.location;
+        this.maxTimeTravelHours = $.maxTimeTravelHours;
         this.project = $.project;
         this.tags = $.tags;
     }
@@ -427,6 +443,27 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder location(String location) {
             return location(Output.of(location));
+        }
+
+        /**
+         * @param maxTimeTravelHours [Optional] Number of hours for the max time travel for all tables in the dataset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxTimeTravelHours(@Nullable Output<String> maxTimeTravelHours) {
+            $.maxTimeTravelHours = maxTimeTravelHours;
+            return this;
+        }
+
+        /**
+         * @param maxTimeTravelHours [Optional] Number of hours for the max time travel for all tables in the dataset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxTimeTravelHours(String maxTimeTravelHours) {
+            return maxTimeTravelHours(Output.of(maxTimeTravelHours));
         }
 
         public Builder project(@Nullable Output<String> project) {

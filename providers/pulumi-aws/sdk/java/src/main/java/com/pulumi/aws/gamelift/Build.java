@@ -17,26 +17,30 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides an Gamelift Build resource.
+ * Provides an GameLift Build resource.
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * Gamelift Builds cannot be imported at this time.
+ * GameLift Builds can be imported using the ID, e.g.,
+ * 
+ * ```sh
+ *  $ pulumi import aws:gamelift/build:Build example &lt;build-id&gt;
+ * ```
  * 
  */
 @ResourceType(type="aws:gamelift/build:Build")
 public class Build extends com.pulumi.resources.CustomResource {
     /**
-     * Gamelift Build ARN.
+     * GameLift Build ARN.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return Gamelift Build ARN.
+     * @return GameLift Build ARN.
      * 
      */
     public Output<String> arn() {
@@ -99,14 +103,14 @@ public class Build extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

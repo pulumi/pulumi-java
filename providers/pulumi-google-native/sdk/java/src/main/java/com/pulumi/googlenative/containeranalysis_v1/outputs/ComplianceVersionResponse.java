@@ -10,6 +10,11 @@ import java.util.Objects;
 @CustomType
 public final class ComplianceVersionResponse {
     /**
+     * @return The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+     * 
+     */
+    private final String benchmarkDocument;
+    /**
      * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
      */
@@ -22,12 +27,21 @@ public final class ComplianceVersionResponse {
 
     @CustomType.Constructor
     private ComplianceVersionResponse(
+        @CustomType.Parameter("benchmarkDocument") String benchmarkDocument,
         @CustomType.Parameter("cpeUri") String cpeUri,
         @CustomType.Parameter("version") String version) {
+        this.benchmarkDocument = benchmarkDocument;
         this.cpeUri = cpeUri;
         this.version = version;
     }
 
+    /**
+     * @return The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+     * 
+     */
+    public String benchmarkDocument() {
+        return this.benchmarkDocument;
+    }
     /**
      * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
@@ -52,6 +66,7 @@ public final class ComplianceVersionResponse {
     }
 
     public static final class Builder {
+        private String benchmarkDocument;
         private String cpeUri;
         private String version;
 
@@ -61,10 +76,15 @@ public final class ComplianceVersionResponse {
 
         public Builder(ComplianceVersionResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.benchmarkDocument = defaults.benchmarkDocument;
     	      this.cpeUri = defaults.cpeUri;
     	      this.version = defaults.version;
         }
 
+        public Builder benchmarkDocument(String benchmarkDocument) {
+            this.benchmarkDocument = Objects.requireNonNull(benchmarkDocument);
+            return this;
+        }
         public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
@@ -73,7 +93,7 @@ public final class ComplianceVersionResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public ComplianceVersionResponse build() {
-            return new ComplianceVersionResponse(cpeUri, version);
+            return new ComplianceVersionResponse(benchmarkDocument, cpeUri, version);
         }
     }
 }

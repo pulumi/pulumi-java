@@ -14,14 +14,14 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
     public static final AzureNodePoolAutoscalingArgs Empty = new AzureNodePoolAutoscalingArgs();
 
     /**
-     * Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+     * Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
      * 
      */
     @Import(name="maxNodeCount", required=true)
     private Output<Integer> maxNodeCount;
 
     /**
-     * @return Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+     * @return Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
      * 
      */
     public Output<Integer> maxNodeCount() {
@@ -29,14 +29,14 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+     * Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     @Import(name="minNodeCount", required=true)
     private Output<Integer> minNodeCount;
 
     /**
-     * @return Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+     * @return Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     public Output<Integer> minNodeCount() {
@@ -69,7 +69,7 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param maxNodeCount Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+         * @param maxNodeCount Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
          * 
          * @return builder
          * 
@@ -80,7 +80,7 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param maxNodeCount Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+         * @param maxNodeCount Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
          * 
          * @return builder
          * 
@@ -90,7 +90,7 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param minNodeCount Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+         * @param minNodeCount Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param minNodeCount Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+         * @param minNodeCount Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
          * 
          * @return builder
          * 

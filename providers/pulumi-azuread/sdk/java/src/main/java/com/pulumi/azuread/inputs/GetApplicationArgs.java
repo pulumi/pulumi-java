@@ -19,10 +19,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
+    /**
+     * @return Specifies the Application ID (also called Client ID).
+     * 
+     */
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -30,10 +34,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
+    /**
+     * @return Specifies the display name of the application.
+     * 
+     */
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -41,64 +49,78 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
+    /**
+     * @return Specifies the Object ID of the application.
+     * 
+     */
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
-    public GetApplicationArgs(
-        @Nullable String applicationId,
-        @Nullable String displayName,
-        @Nullable String objectId) {
-        this.applicationId = applicationId;
-        this.displayName = displayName;
-        this.objectId = objectId;
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationId = null;
-        this.displayName = null;
-        this.objectId = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationId = $.applicationId;
+        this.displayName = $.displayName;
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String displayName;
-        private @Nullable String objectId;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.displayName = defaults.displayName;
-    	      this.objectId = defaults.objectId;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId Specifies the Application ID (also called Client ID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
+        /**
+         * @param displayName Specifies the display name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param objectId Specifies the Object ID of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationId, displayName, objectId);
+        }
+
+        public GetApplicationArgs build() {
+            return $;
         }
     }
+
 }

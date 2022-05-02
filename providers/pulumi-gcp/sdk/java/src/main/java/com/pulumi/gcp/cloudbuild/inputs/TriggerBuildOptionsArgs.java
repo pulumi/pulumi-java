@@ -99,7 +99,7 @@ public final class TriggerBuildOptionsArgs extends com.pulumi.resources.Resource
 
     /**
      * Option to specify the logging mode, which determines if and where build logs are stored.
-     * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+     * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, `CLOUD_LOGGING_ONLY`, and `NONE`.
      * 
      */
     @Import(name="logging")
@@ -107,7 +107,7 @@ public final class TriggerBuildOptionsArgs extends com.pulumi.resources.Resource
 
     /**
      * @return Option to specify the logging mode, which determines if and where build logs are stored.
-     * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+     * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, `CLOUD_LOGGING_ONLY`, and `NONE`.
      * 
      */
     public Optional<Output<String>> logging() {
@@ -401,7 +401,7 @@ public final class TriggerBuildOptionsArgs extends com.pulumi.resources.Resource
 
         /**
          * @param logging Option to specify the logging mode, which determines if and where build logs are stored.
-         * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+         * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, `CLOUD_LOGGING_ONLY`, and `NONE`.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class TriggerBuildOptionsArgs extends com.pulumi.resources.Resource
 
         /**
          * @param logging Option to specify the logging mode, which determines if and where build logs are stored.
-         * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+         * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, `CLOUD_LOGGING_ONLY`, and `NONE`.
          * 
          * @return builder
          * 

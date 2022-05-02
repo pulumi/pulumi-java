@@ -12,6 +12,15 @@ import java.util.Objects;
 @CustomType
 public final class DiskResponse {
     /**
+     * @return Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     * @deprecated
+     * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     */
+    @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+    private final Boolean autoDelete;
+    /**
      * @return Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
      * 
      */
@@ -44,12 +53,14 @@ public final class DiskResponse {
 
     @CustomType.Constructor
     private DiskResponse(
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
         @CustomType.Parameter("mountPoint") String mountPoint,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("readOnly") Boolean readOnly,
         @CustomType.Parameter("sizeGb") Integer sizeGb,
         @CustomType.Parameter("source") String source,
         @CustomType.Parameter("type") String type) {
+        this.autoDelete = autoDelete;
         this.mountPoint = mountPoint;
         this.name = name;
         this.readOnly = readOnly;
@@ -58,6 +69,17 @@ public final class DiskResponse {
         this.type = type;
     }
 
+    /**
+     * @return Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     * @deprecated
+     * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     */
+    @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+    public Boolean autoDelete() {
+        return this.autoDelete;
+    }
     /**
      * @return Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
      * 
@@ -110,6 +132,7 @@ public final class DiskResponse {
     }
 
     public static final class Builder {
+        private Boolean autoDelete;
         private String mountPoint;
         private String name;
         private Boolean readOnly;
@@ -123,6 +146,7 @@ public final class DiskResponse {
 
         public Builder(DiskResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.autoDelete = defaults.autoDelete;
     	      this.mountPoint = defaults.mountPoint;
     	      this.name = defaults.name;
     	      this.readOnly = defaults.readOnly;
@@ -131,6 +155,10 @@ public final class DiskResponse {
     	      this.type = defaults.type;
         }
 
+        public Builder autoDelete(Boolean autoDelete) {
+            this.autoDelete = Objects.requireNonNull(autoDelete);
+            return this;
+        }
         public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
@@ -155,7 +183,7 @@ public final class DiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public DiskResponse build() {
-            return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
+            return new DiskResponse(autoDelete, mountPoint, name, readOnly, sizeGb, source, type);
         }
     }
 }

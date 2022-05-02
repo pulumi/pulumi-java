@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigConfigConnectorCon
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigDnsCacheConfig;
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig;
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigGcpFilestoreCsiDriverConfig;
+import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigGkeBackupAgentConfig;
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigHorizontalPodAutoscaling;
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigHttpLoadBalancing;
 import com.pulumi.gcp.container.outputs.GetClusterAddonsConfigIstioConfig;
@@ -24,6 +25,7 @@ public final class GetClusterAddonsConfig {
     private final List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
     private final List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
     private final List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
+    private final List<GetClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfigs;
     private final List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
     private final List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
     private final List<GetClusterAddonsConfigIstioConfig> istioConfigs;
@@ -37,6 +39,7 @@ public final class GetClusterAddonsConfig {
         @CustomType.Parameter("dnsCacheConfigs") List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs,
         @CustomType.Parameter("gcePersistentDiskCsiDriverConfigs") List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs,
         @CustomType.Parameter("gcpFilestoreCsiDriverConfigs") List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs,
+        @CustomType.Parameter("gkeBackupAgentConfigs") List<GetClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfigs,
         @CustomType.Parameter("horizontalPodAutoscalings") List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings,
         @CustomType.Parameter("httpLoadBalancings") List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings,
         @CustomType.Parameter("istioConfigs") List<GetClusterAddonsConfigIstioConfig> istioConfigs,
@@ -47,6 +50,7 @@ public final class GetClusterAddonsConfig {
         this.dnsCacheConfigs = dnsCacheConfigs;
         this.gcePersistentDiskCsiDriverConfigs = gcePersistentDiskCsiDriverConfigs;
         this.gcpFilestoreCsiDriverConfigs = gcpFilestoreCsiDriverConfigs;
+        this.gkeBackupAgentConfigs = gkeBackupAgentConfigs;
         this.horizontalPodAutoscalings = horizontalPodAutoscalings;
         this.httpLoadBalancings = httpLoadBalancings;
         this.istioConfigs = istioConfigs;
@@ -68,6 +72,9 @@ public final class GetClusterAddonsConfig {
     }
     public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs() {
         return this.gcpFilestoreCsiDriverConfigs;
+    }
+    public List<GetClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfigs() {
+        return this.gkeBackupAgentConfigs;
     }
     public List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings() {
         return this.horizontalPodAutoscalings;
@@ -99,6 +106,7 @@ public final class GetClusterAddonsConfig {
         private List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
         private List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
         private List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
+        private List<GetClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfigs;
         private List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
         private List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
         private List<GetClusterAddonsConfigIstioConfig> istioConfigs;
@@ -116,6 +124,7 @@ public final class GetClusterAddonsConfig {
     	      this.dnsCacheConfigs = defaults.dnsCacheConfigs;
     	      this.gcePersistentDiskCsiDriverConfigs = defaults.gcePersistentDiskCsiDriverConfigs;
     	      this.gcpFilestoreCsiDriverConfigs = defaults.gcpFilestoreCsiDriverConfigs;
+    	      this.gkeBackupAgentConfigs = defaults.gkeBackupAgentConfigs;
     	      this.horizontalPodAutoscalings = defaults.horizontalPodAutoscalings;
     	      this.httpLoadBalancings = defaults.httpLoadBalancings;
     	      this.istioConfigs = defaults.istioConfigs;
@@ -158,6 +167,13 @@ public final class GetClusterAddonsConfig {
         public Builder gcpFilestoreCsiDriverConfigs(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig... gcpFilestoreCsiDriverConfigs) {
             return gcpFilestoreCsiDriverConfigs(List.of(gcpFilestoreCsiDriverConfigs));
         }
+        public Builder gkeBackupAgentConfigs(List<GetClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfigs) {
+            this.gkeBackupAgentConfigs = Objects.requireNonNull(gkeBackupAgentConfigs);
+            return this;
+        }
+        public Builder gkeBackupAgentConfigs(GetClusterAddonsConfigGkeBackupAgentConfig... gkeBackupAgentConfigs) {
+            return gkeBackupAgentConfigs(List.of(gkeBackupAgentConfigs));
+        }
         public Builder horizontalPodAutoscalings(List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings) {
             this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings);
             return this;
@@ -193,7 +209,7 @@ public final class GetClusterAddonsConfig {
         public Builder networkPolicyConfigs(GetClusterAddonsConfigNetworkPolicyConfig... networkPolicyConfigs) {
             return networkPolicyConfigs(List.of(networkPolicyConfigs));
         }        public GetClusterAddonsConfig build() {
-            return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
+            return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, gkeBackupAgentConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
         }
     }
 }

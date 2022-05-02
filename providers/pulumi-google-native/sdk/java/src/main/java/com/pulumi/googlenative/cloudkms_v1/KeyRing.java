@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Create a new KeyRing in a given Project and Location.
- * Auto-naming is currently not supported for this resource.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
@@ -62,7 +61,7 @@ public class KeyRing extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public KeyRing(String name, KeyRingArgs args) {
+    public KeyRing(String name, @Nullable KeyRingArgs args) {
         this(name, args, null);
     }
     /**
@@ -71,7 +70,7 @@ public class KeyRing extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public KeyRing(String name, KeyRingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public KeyRing(String name, @Nullable KeyRingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudkms/v1:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

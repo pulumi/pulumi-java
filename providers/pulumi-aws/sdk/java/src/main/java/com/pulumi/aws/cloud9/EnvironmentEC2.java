@@ -53,6 +53,20 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.automaticStopTimeMinutes);
     }
     /**
+     * The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+     * 
+     */
+    @Export(name="connectionType", type=String.class, parameters={})
+    private Output</* @Nullable */ String> connectionType;
+
+    /**
+     * @return The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+     * 
+     */
+    public Output<Optional<String>> connectionType() {
+        return Codegen.optional(this.connectionType);
+    }
+    /**
      * The description of the environment.
      * 
      */
@@ -65,6 +79,32 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
+    }
+    /**
+     * The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+     * * `amazonlinux-1-x86_64`
+     * * `amazonlinux-2-x86_64`
+     * * `ubuntu-18.04-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+     * 
+     */
+    @Export(name="imageId", type=String.class, parameters={})
+    private Output</* @Nullable */ String> imageId;
+
+    /**
+     * @return The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+     * * `amazonlinux-1-x86_64`
+     * * `amazonlinux-2-x86_64`
+     * * `ubuntu-18.04-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+     * 
+     */
+    public Output<Optional<String>> imageId() {
+        return Codegen.optional(this.imageId);
     }
     /**
      * The type of instance to connect to the environment, e.g., `t2.micro`.

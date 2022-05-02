@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigquery_v2.TableArgs;
+import com.pulumi.googlenative.bigquery_v2.outputs.CloneDefinitionResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.ExternalDataConfigurationResponse;
@@ -33,6 +34,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:bigquery/v2:Table")
 public class Table extends com.pulumi.resources.CustomResource {
+    /**
+     * Clone definition.
+     * 
+     */
+    @Export(name="cloneDefinition", type=CloneDefinitionResponse.class, parameters={})
+    private Output<CloneDefinitionResponse> cloneDefinition;
+
+    /**
+     * @return Clone definition.
+     * 
+     */
+    public Output<CloneDefinitionResponse> cloneDefinition() {
+        return this.cloneDefinition;
+    }
     /**
      * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
@@ -244,6 +259,34 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.model;
     }
     /**
+     * Number of logical bytes that are less than 90 days old.
+     * 
+     */
+    @Export(name="numActiveLogicalBytes", type=String.class, parameters={})
+    private Output<String> numActiveLogicalBytes;
+
+    /**
+     * @return Number of logical bytes that are less than 90 days old.
+     * 
+     */
+    public Output<String> numActiveLogicalBytes() {
+        return this.numActiveLogicalBytes;
+    }
+    /**
+     * Number of physical bytes less than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    @Export(name="numActivePhysicalBytes", type=String.class, parameters={})
+    private Output<String> numActivePhysicalBytes;
+
+    /**
+     * @return Number of physical bytes less than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public Output<String> numActivePhysicalBytes() {
+        return this.numActivePhysicalBytes;
+    }
+    /**
      * The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
@@ -272,6 +315,48 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.numLongTermBytes;
     }
     /**
+     * Number of logical bytes that are more than 90 days old.
+     * 
+     */
+    @Export(name="numLongTermLogicalBytes", type=String.class, parameters={})
+    private Output<String> numLongTermLogicalBytes;
+
+    /**
+     * @return Number of logical bytes that are more than 90 days old.
+     * 
+     */
+    public Output<String> numLongTermLogicalBytes() {
+        return this.numLongTermLogicalBytes;
+    }
+    /**
+     * Number of physical bytes more than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    @Export(name="numLongTermPhysicalBytes", type=String.class, parameters={})
+    private Output<String> numLongTermPhysicalBytes;
+
+    /**
+     * @return Number of physical bytes more than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public Output<String> numLongTermPhysicalBytes() {
+        return this.numLongTermPhysicalBytes;
+    }
+    /**
+     * The number of partitions present in the table or materialized view. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    @Export(name="numPartitions", type=String.class, parameters={})
+    private Output<String> numPartitions;
+
+    /**
+     * @return The number of partitions present in the table or materialized view. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public Output<String> numPartitions() {
+        return this.numPartitions;
+    }
+    /**
      * [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.
      * 
      */
@@ -298,6 +383,48 @@ public class Table extends com.pulumi.resources.CustomResource {
      */
     public Output<String> numRows() {
         return this.numRows;
+    }
+    /**
+     * Number of physical bytes used by time travel storage (deleted or changed data). This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    @Export(name="numTimeTravelPhysicalBytes", type=String.class, parameters={})
+    private Output<String> numTimeTravelPhysicalBytes;
+
+    /**
+     * @return Number of physical bytes used by time travel storage (deleted or changed data). This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public Output<String> numTimeTravelPhysicalBytes() {
+        return this.numTimeTravelPhysicalBytes;
+    }
+    /**
+     * Total number of logical bytes in the table or materialized view.
+     * 
+     */
+    @Export(name="numTotalLogicalBytes", type=String.class, parameters={})
+    private Output<String> numTotalLogicalBytes;
+
+    /**
+     * @return Total number of logical bytes in the table or materialized view.
+     * 
+     */
+    public Output<String> numTotalLogicalBytes() {
+        return this.numTotalLogicalBytes;
+    }
+    /**
+     * The physical size of this table in bytes. This also includes storage used for time travel. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    @Export(name="numTotalPhysicalBytes", type=String.class, parameters={})
+    private Output<String> numTotalPhysicalBytes;
+
+    /**
+     * @return The physical size of this table in bytes. This also includes storage used for time travel. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public Output<String> numTotalPhysicalBytes() {
+        return this.numTotalPhysicalBytes;
     }
     /**
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.

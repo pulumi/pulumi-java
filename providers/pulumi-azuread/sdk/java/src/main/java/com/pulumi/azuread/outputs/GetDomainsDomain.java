@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetDomainsDomain {
     /**
-     * Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+     * @return Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
      * 
      */
     private final Boolean adminManaged;
     /**
-     * The authentication type of the domain. Possible values include `Managed` or `Federated`.
+     * @return The authentication type of the domain. Possible values include `Managed` or `Federated`.
      * 
      */
     private final String authenticationType;
     /**
-     * Whether this is the default domain that is used for user creation.
+     * @return Whether this is the default domain that is used for user creation.
      * 
      */
     private final Boolean default_;
     /**
-     * The name of the domain.
+     * @return The name of the domain.
      * 
      */
     private final String domainName;
     /**
-     * Whether this is the initial domain created by Azure Active Directory.
+     * @return Whether this is the initial domain created by Azure Active Directory.
      * 
      */
     private final Boolean initial;
     /**
-     * Whether the domain is a verified root domain (not a subdomain).
+     * @return Whether the domain is a verified root domain (not a subdomain).
      * 
      */
     private final Boolean root;
     /**
-     * A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+     * @return A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
      * 
      */
     private final List<String> supportedServices;
     /**
-     * Whether the domain has completed domain ownership verification.
+     * @return Whether the domain has completed domain ownership verification.
      * 
      */
     private final Boolean verified;
@@ -73,58 +73,58 @@ public final class GetDomainsDomain {
     }
 
     /**
-     * Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+     * @return Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
      * 
-    */
+     */
     public Boolean adminManaged() {
         return this.adminManaged;
     }
     /**
-     * The authentication type of the domain. Possible values include `Managed` or `Federated`.
+     * @return The authentication type of the domain. Possible values include `Managed` or `Federated`.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * Whether this is the default domain that is used for user creation.
+     * @return Whether this is the default domain that is used for user creation.
      * 
-    */
+     */
     public Boolean default_() {
         return this.default_;
     }
     /**
-     * The name of the domain.
+     * @return The name of the domain.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * Whether this is the initial domain created by Azure Active Directory.
+     * @return Whether this is the initial domain created by Azure Active Directory.
      * 
-    */
+     */
     public Boolean initial() {
         return this.initial;
     }
     /**
-     * Whether the domain is a verified root domain (not a subdomain).
+     * @return Whether the domain is a verified root domain (not a subdomain).
      * 
-    */
+     */
     public Boolean root() {
         return this.root;
     }
     /**
-     * A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+     * @return A list of capabilities / services supported by the domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
      * 
-    */
+     */
     public List<String> supportedServices() {
         return this.supportedServices;
     }
     /**
-     * Whether the domain has completed domain ownership verification.
+     * @return Whether the domain has completed domain ownership verification.
      * 
-    */
+     */
     public Boolean verified() {
         return this.verified;
     }

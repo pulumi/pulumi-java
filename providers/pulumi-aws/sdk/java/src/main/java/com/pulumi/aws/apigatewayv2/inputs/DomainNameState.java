@@ -19,14 +19,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     public static final DomainNameState Empty = new DomainNameState();
 
     /**
-     * The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+     * [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
     @Import(name="apiMappingSelectionExpression")
     private @Nullable Output<String> apiMappingSelectionExpression;
 
     /**
-     * @return The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+     * @return [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
     public Optional<Output<String>> apiMappingSelectionExpression() {
@@ -34,14 +34,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of the domain name.
+     * ARN of the domain name.
      * 
      */
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
     /**
-     * @return The ARN of the domain name.
+     * @return ARN of the domain name.
      * 
      */
     public Optional<Output<String>> arn() {
@@ -49,14 +49,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The domain name. Must be between 1 and 512 characters in length.
+     * Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
     /**
-     * @return The domain name. Must be between 1 and 512 characters in length.
+     * @return Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     public Optional<Output<String>> domainName() {
@@ -64,14 +64,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The domain name configuration.
+     * Domain name configuration. See below.
      * 
      */
     @Import(name="domainNameConfiguration")
     private @Nullable Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
     /**
-     * @return The domain name configuration.
+     * @return Domain name configuration. See below.
      * 
      */
     public Optional<Output<DomainNameDomainNameConfigurationArgs>> domainNameConfiguration() {
@@ -79,14 +79,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The mutual TLS authentication configuration for the domain name.
+     * Mutual TLS authentication configuration for the domain name.
      * 
      */
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     /**
-     * @return The mutual TLS authentication configuration for the domain name.
+     * @return Mutual TLS authentication configuration for the domain name.
      * 
      */
     public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
@@ -94,14 +94,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -109,14 +109,14 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Optional<Output<Map<String,String>>> tagsAll() {
@@ -154,7 +154,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param apiMappingSelectionExpression The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+         * @param apiMappingSelectionExpression [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param apiMappingSelectionExpression The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+         * @param apiMappingSelectionExpression [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param arn The ARN of the domain name.
+         * @param arn ARN of the domain name.
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param arn The ARN of the domain name.
+         * @param arn ARN of the domain name.
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * @param domainName Domain name. Must be between 1 and 512 characters in length.
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * @param domainName Domain name. Must be between 1 and 512 characters in length.
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainNameConfiguration The domain name configuration.
+         * @param domainNameConfiguration Domain name configuration. See below.
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainNameConfiguration The domain name configuration.
+         * @param domainNameConfiguration Domain name configuration. See below.
          * 
          * @return builder
          * 
@@ -238,7 +238,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name.
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name.
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -280,7 +280,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -291,7 +291,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 

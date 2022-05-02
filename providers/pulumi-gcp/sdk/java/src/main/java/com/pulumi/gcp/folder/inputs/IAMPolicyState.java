@@ -15,23 +15,51 @@ public final class IAMPolicyState extends com.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
+    /**
+     * (Computed) The etag of the folder&#39;s IAM policy.
+     * 
+     */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the folder&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
 
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
+    /**
+     * The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the folder. The policy will be
+     * merged with any existing policy applied to the folder.
+     * 
+     */
     @Import(name="policyData")
     private @Nullable Output<String> policyData;
 
+    /**
+     * @return The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the folder. The policy will be
+     * merged with any existing policy applied to the folder.
+     * 
+     */
     public Optional<Output<String>> policyData() {
         return Optional.ofNullable(this.policyData);
     }
@@ -62,29 +90,69 @@ public final class IAMPolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new IAMPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag (Computed) The etag of the folder&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the folder&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the folder. The policy will be
+         * merged with any existing policy applied to the folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(@Nullable Output<String> policyData) {
             $.policyData = policyData;
             return this;
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the folder. The policy will be
+         * merged with any existing policy applied to the folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(String policyData) {
             return policyData(Output.of(policyData));
         }

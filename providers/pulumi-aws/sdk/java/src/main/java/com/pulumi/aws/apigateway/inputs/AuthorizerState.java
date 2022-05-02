@@ -18,6 +18,21 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     public static final AuthorizerState Empty = new AuthorizerState();
 
     /**
+     * Amazon Resource Name (ARN) of the API Gateway Authorizer
+     * 
+     */
+    @Import(name="arn")
+    private @Nullable Output<String> arn;
+
+    /**
+     * @return Amazon Resource Name (ARN) of the API Gateway Authorizer
+     * 
+     */
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
+    }
+
+    /**
      * The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
      * 
      */
@@ -157,6 +172,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     private AuthorizerState() {}
 
     private AuthorizerState(AuthorizerState $) {
+        this.arn = $.arn;
         this.authorizerCredentials = $.authorizerCredentials;
         this.authorizerResultTtlInSeconds = $.authorizerResultTtlInSeconds;
         this.authorizerUri = $.authorizerUri;
@@ -184,6 +200,27 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
 
         public Builder(AuthorizerState defaults) {
             $ = new AuthorizerState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the API Gateway Authorizer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable Output<String> arn) {
+            $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the API Gateway Authorizer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         /**

@@ -73,6 +73,15 @@ public final class GetIntentResult {
      */
     private final Boolean mlDisabled;
     /**
+     * @return Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     * @deprecated
+     * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     */
+    @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+    private final Boolean mlEnabled;
+    /**
      * @return Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Supported formats: - `projects//agent/intents/` - `projects//locations//agent/intents/`
      * 
      */
@@ -131,6 +140,7 @@ public final class GetIntentResult {
         @CustomType.Parameter("liveAgentHandoff") Boolean liveAgentHandoff,
         @CustomType.Parameter("messages") List<GoogleCloudDialogflowV2beta1IntentMessageResponse> messages,
         @CustomType.Parameter("mlDisabled") Boolean mlDisabled,
+        @CustomType.Parameter("mlEnabled") Boolean mlEnabled,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("outputContexts") List<GoogleCloudDialogflowV2beta1ContextResponse> outputContexts,
         @CustomType.Parameter("parameters") List<GoogleCloudDialogflowV2beta1IntentParameterResponse> parameters,
@@ -151,6 +161,7 @@ public final class GetIntentResult {
         this.liveAgentHandoff = liveAgentHandoff;
         this.messages = messages;
         this.mlDisabled = mlDisabled;
+        this.mlEnabled = mlEnabled;
         this.name = name;
         this.outputContexts = outputContexts;
         this.parameters = parameters;
@@ -240,6 +251,17 @@ public final class GetIntentResult {
         return this.mlDisabled;
     }
     /**
+     * @return Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     * @deprecated
+     * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     */
+    @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+    public Boolean mlEnabled() {
+        return this.mlEnabled;
+    }
+    /**
      * @return Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Supported formats: - `projects//agent/intents/` - `projects//locations//agent/intents/`
      * 
      */
@@ -323,6 +345,7 @@ public final class GetIntentResult {
         private Boolean liveAgentHandoff;
         private List<GoogleCloudDialogflowV2beta1IntentMessageResponse> messages;
         private Boolean mlDisabled;
+        private Boolean mlEnabled;
         private String name;
         private List<GoogleCloudDialogflowV2beta1ContextResponse> outputContexts;
         private List<GoogleCloudDialogflowV2beta1IntentParameterResponse> parameters;
@@ -350,6 +373,7 @@ public final class GetIntentResult {
     	      this.liveAgentHandoff = defaults.liveAgentHandoff;
     	      this.messages = defaults.messages;
     	      this.mlDisabled = defaults.mlDisabled;
+    	      this.mlEnabled = defaults.mlEnabled;
     	      this.name = defaults.name;
     	      this.outputContexts = defaults.outputContexts;
     	      this.parameters = defaults.parameters;
@@ -420,6 +444,10 @@ public final class GetIntentResult {
             this.mlDisabled = Objects.requireNonNull(mlDisabled);
             return this;
         }
+        public Builder mlEnabled(Boolean mlEnabled) {
+            this.mlEnabled = Objects.requireNonNull(mlEnabled);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -465,7 +493,7 @@ public final class GetIntentResult {
             this.webhookState = Objects.requireNonNull(webhookState);
             return this;
         }        public GetIntentResult build() {
-            return new GetIntentResult(action, defaultResponsePlatforms, displayName, endInteraction, events, followupIntentInfo, inputContextNames, isFallback, liveAgentHandoff, messages, mlDisabled, name, outputContexts, parameters, parentFollowupIntentName, priority, resetContexts, rootFollowupIntentName, trainingPhrases, webhookState);
+            return new GetIntentResult(action, defaultResponsePlatforms, displayName, endInteraction, events, followupIntentInfo, inputContextNames, isFallback, liveAgentHandoff, messages, mlDisabled, mlEnabled, name, outputContexts, parameters, parentFollowupIntentName, priority, resetContexts, rootFollowupIntentName, trainingPhrases, webhookState);
         }
     }
 }

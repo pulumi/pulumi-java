@@ -4,6 +4,7 @@
 package com.pulumi.aws.cloudformation;
 
 import com.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentArgs;
+import com.pulumi.aws.cloudformation.inputs.StackSetOperationPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -46,6 +47,21 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<StackSetAutoDeploymentArgs>> autoDeployment() {
         return Optional.ofNullable(this.autoDeployment);
+    }
+
+    /**
+     * Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    @Import(name="callAs")
+    private @Nullable Output<String> callAs;
+
+    /**
+     * @return Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    public Optional<Output<String>> callAs() {
+        return Optional.ofNullable(this.callAs);
     }
 
     /**
@@ -109,6 +125,21 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Preferences for how AWS CloudFormation performs a stack set update.
+     * 
+     */
+    @Import(name="operationPreferences")
+    private @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
+
+    /**
+     * @return Preferences for how AWS CloudFormation performs a stack set update.
+     * 
+     */
+    public Optional<Output<StackSetOperationPreferencesArgs>> operationPreferences() {
+        return Optional.ofNullable(this.operationPreferences);
+    }
+
+    /**
      * Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
      * 
      */
@@ -139,14 +170,14 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -188,10 +219,12 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     private StackSetArgs(StackSetArgs $) {
         this.administrationRoleArn = $.administrationRoleArn;
         this.autoDeployment = $.autoDeployment;
+        this.callAs = $.callAs;
         this.capabilities = $.capabilities;
         this.description = $.description;
         this.executionRoleName = $.executionRoleName;
         this.name = $.name;
+        this.operationPreferences = $.operationPreferences;
         this.parameters = $.parameters;
         this.permissionModel = $.permissionModel;
         this.tags = $.tags;
@@ -257,6 +290,27 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder autoDeployment(StackSetAutoDeploymentArgs autoDeployment) {
             return autoDeployment(Output.of(autoDeployment));
+        }
+
+        /**
+         * @param callAs Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder callAs(@Nullable Output<String> callAs) {
+            $.callAs = callAs;
+            return this;
+        }
+
+        /**
+         * @param callAs Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder callAs(String callAs) {
+            return callAs(Output.of(callAs));
         }
 
         /**
@@ -354,6 +408,27 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param operationPreferences Preferences for how AWS CloudFormation performs a stack set update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationPreferences(@Nullable Output<StackSetOperationPreferencesArgs> operationPreferences) {
+            $.operationPreferences = operationPreferences;
+            return this;
+        }
+
+        /**
+         * @param operationPreferences Preferences for how AWS CloudFormation performs a stack set update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationPreferences(StackSetOperationPreferencesArgs operationPreferences) {
+            return operationPreferences(Output.of(operationPreferences));
+        }
+
+        /**
          * @param parameters Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
          * 
          * @return builder
@@ -396,7 +471,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -407,7 +482,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

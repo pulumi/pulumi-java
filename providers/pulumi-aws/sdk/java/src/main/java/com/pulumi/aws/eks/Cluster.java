@@ -55,11 +55,25 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
+    @Export(name="certificateAuthorities", type=List.class, parameters={ClusterCertificateAuthority.class})
+    private Output<List<ClusterCertificateAuthority>> certificateAuthorities;
+
+    /**
+     * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+     * 
+     */
+    public Output<List<ClusterCertificateAuthority>> certificateAuthorities() {
+        return this.certificateAuthorities;
+    }
+    /**
+     * The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
+     * 
+     */
     @Export(name="certificateAuthority", type=ClusterCertificateAuthority.class, parameters={})
     private Output<ClusterCertificateAuthority> certificateAuthority;
 
     /**
-     * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+     * @return The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
      * 
      */
     public Output<ClusterCertificateAuthority> certificateAuthority() {

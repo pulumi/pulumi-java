@@ -66,14 +66,14 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+     * - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
      * 
      */
     @Import(name="deploymentType")
     private @Nullable Output<String> deploymentType;
 
     /**
-     * @return - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+     * @return - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
      * 
      */
     public Optional<Output<String>> deploymentType() {
@@ -276,14 +276,14 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+     * A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
      * 
      */
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
     /**
-     * @return A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+     * @return A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
      * 
      */
     public Optional<Output<List<String>>> subnetIds() {
@@ -320,9 +320,17 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.tagsAll);
     }
 
+    /**
+     * Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+     * 
+     */
     @Import(name="throughputCapacity")
     private @Nullable Output<Integer> throughputCapacity;
 
+    /**
+     * @return Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+     * 
+     */
     public Optional<Output<Integer>> throughputCapacity() {
         return Optional.ofNullable(this.throughputCapacity);
     }
@@ -467,7 +475,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param deploymentType - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+         * @param deploymentType - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
          * 
          * @return builder
          * 
@@ -478,7 +486,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param deploymentType - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+         * @param deploymentType - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
          * 
          * @return builder
          * 
@@ -801,7 +809,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
          * 
          * @return builder
          * 
@@ -812,7 +820,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
          * 
          * @return builder
          * 
@@ -822,7 +830,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
          * 
          * @return builder
          * 
@@ -873,11 +881,23 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param throughputCapacity Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
             $.throughputCapacity = throughputCapacity;
             return this;
         }
 
+        /**
+         * @param throughputCapacity Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(Integer throughputCapacity) {
             return throughputCapacity(Output.of(throughputCapacity));
         }

@@ -7,12 +7,18 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleEndDate;
 import com.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleStartDate;
 import com.pulumi.gcp.storage.outputs.TransferJobScheduleStartTimeOfDay;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class TransferJobSchedule {
+    /**
+     * @return Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
+    private final @Nullable String repeatInterval;
     /**
      * @return The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
      * 
@@ -31,14 +37,23 @@ public final class TransferJobSchedule {
 
     @CustomType.Constructor
     private TransferJobSchedule(
+        @CustomType.Parameter("repeatInterval") @Nullable String repeatInterval,
         @CustomType.Parameter("scheduleEndDate") @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
         @CustomType.Parameter("scheduleStartDate") TransferJobScheduleScheduleStartDate scheduleStartDate,
         @CustomType.Parameter("startTimeOfDay") @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        this.repeatInterval = repeatInterval;
         this.scheduleEndDate = scheduleEndDate;
         this.scheduleStartDate = scheduleStartDate;
         this.startTimeOfDay = startTimeOfDay;
     }
 
+    /**
+     * @return Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
+    public Optional<String> repeatInterval() {
+        return Optional.ofNullable(this.repeatInterval);
+    }
     /**
      * @return The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
      * 
@@ -70,6 +85,7 @@ public final class TransferJobSchedule {
     }
 
     public static final class Builder {
+        private @Nullable String repeatInterval;
         private @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate;
         private TransferJobScheduleScheduleStartDate scheduleStartDate;
         private @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay;
@@ -80,11 +96,16 @@ public final class TransferJobSchedule {
 
         public Builder(TransferJobSchedule defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.repeatInterval = defaults.repeatInterval;
     	      this.scheduleEndDate = defaults.scheduleEndDate;
     	      this.scheduleStartDate = defaults.scheduleStartDate;
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
+        public Builder repeatInterval(@Nullable String repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
         public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDate scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
@@ -97,7 +118,7 @@ public final class TransferJobSchedule {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }        public TransferJobSchedule build() {
-            return new TransferJobSchedule(scheduleEndDate, scheduleStartDate, startTimeOfDay);
+            return new TransferJobSchedule(repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }
     }
 }

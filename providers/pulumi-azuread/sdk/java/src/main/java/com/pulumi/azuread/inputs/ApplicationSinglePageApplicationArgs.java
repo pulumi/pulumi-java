@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,74 @@ public final class ApplicationSinglePageApplicationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="redirectUris")
-      private final @Nullable Output<List<String>> redirectUris;
+    private @Nullable Output<List<String>> redirectUris;
 
-    public Output<List<String>> redirectUris() {
-        return this.redirectUris == null ? Codegen.empty() : this.redirectUris;
+    /**
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+     * 
+     */
+    public Optional<Output<List<String>>> redirectUris() {
+        return Optional.ofNullable(this.redirectUris);
     }
 
-    public ApplicationSinglePageApplicationArgs(@Nullable Output<List<String>> redirectUris) {
-        this.redirectUris = redirectUris;
-    }
+    private ApplicationSinglePageApplicationArgs() {}
 
-    private ApplicationSinglePageApplicationArgs() {
-        this.redirectUris = Codegen.empty();
+    private ApplicationSinglePageApplicationArgs(ApplicationSinglePageApplicationArgs $) {
+        this.redirectUris = $.redirectUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSinglePageApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> redirectUris;
+        private ApplicationSinglePageApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSinglePageApplicationArgs();
         }
 
         public Builder(ApplicationSinglePageApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectUris = defaults.redirectUris;
+            $ = new ApplicationSinglePageApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(@Nullable Output<List<String>> redirectUris) {
-            this.redirectUris = redirectUris;
+            $.redirectUris = redirectUris;
             return this;
         }
-        public Builder redirectUris(@Nullable List<String> redirectUris) {
-            this.redirectUris = Codegen.ofNullable(redirectUris);
-            return this;
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirectUris(List<String> redirectUris) {
+            return redirectUris(Output.of(redirectUris));
         }
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(String... redirectUris) {
             return redirectUris(List.of(redirectUris));
-        }        public ApplicationSinglePageApplicationArgs build() {
-            return new ApplicationSinglePageApplicationArgs(redirectUris);
+        }
+
+        public ApplicationSinglePageApplicationArgs build() {
+            return $;
         }
     }
+
 }

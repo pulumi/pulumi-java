@@ -18,16 +18,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * A Cloud Spanner Database which is hosted on a Spanner instance.
- * 
- * To get more information about Database, see:
- * 
- * * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases)
- * * How-to Guides
- *     * [Official Documentation](https://cloud.google.com/spanner/)
- * 
- * &gt; **Warning:** It is strongly recommended to set `lifecycle { prevent_destroy = true }` on databases in order to prevent accidental data loss.
- * 
  * ## Example Usage
  * 
  * ## Import
@@ -53,6 +43,26 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:spanner/database:Database")
 public class Database extends com.pulumi.resources.CustomResource {
+    /**
+     * The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+     * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+     * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+     * &#34;POSTGRESQL&#34;]
+     * 
+     */
+    @Export(name="databaseDialect", type=String.class, parameters={})
+    private Output<String> databaseDialect;
+
+    /**
+     * @return The dialect of the Cloud Spanner Database. If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Note: Databases
+     * that are created with POSTGRESQL dialect do not support extra DDL statements in the &#39;CreateDatabase&#39; call. You must
+     * therefore re-apply terraform with ddl on the same database after creation. Possible values: [&#34;GOOGLE_STANDARD_SQL&#34;,
+     * &#34;POSTGRESQL&#34;]
+     * 
+     */
+    public Output<String> databaseDialect() {
+        return this.databaseDialect;
+    }
     /**
      * An optional list of DDL statements to run inside the newly created
      * database. Statements can create tables, indexes, etc. These statements

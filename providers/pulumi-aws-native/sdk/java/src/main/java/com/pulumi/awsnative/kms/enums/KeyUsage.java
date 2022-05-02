@@ -9,13 +9,14 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
      * 
      */
     @EnumType
     public enum KeyUsage {
         EncryptDecrypt("ENCRYPT_DECRYPT"),
-        SignVerify("SIGN_VERIFY");
+        SignVerify("SIGN_VERIFY"),
+        GenerateVerifyMac("GENERATE_VERIFY_MAC");
 
         private final String value;
 

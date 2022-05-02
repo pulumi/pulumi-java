@@ -90,28 +90,28 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    @Export(name="icmpCode", type=String.class, parameters={})
-    private Output</* @Nullable */ String> icmpCode;
+    @Export(name="icmpCode", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> icmpCode;
 
     /**
      * @return ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output<Optional<String>> icmpCode() {
+    public Output<Optional<Integer>> icmpCode() {
         return Codegen.optional(this.icmpCode);
     }
     /**
      * ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    @Export(name="icmpType", type=String.class, parameters={})
-    private Output</* @Nullable */ String> icmpType;
+    @Export(name="icmpType", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> icmpType;
 
     /**
      * @return ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output<Optional<String>> icmpType() {
+    public Output<Optional<Integer>> icmpType() {
         return Codegen.optional(this.icmpType);
     }
     /**

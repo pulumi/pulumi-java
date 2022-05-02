@@ -8,6 +8,7 @@ import com.pulumi.awsnative.lambda.enums.FunctionPackageType;
 import com.pulumi.awsnative.lambda.inputs.FunctionCodeArgs;
 import com.pulumi.awsnative.lambda.inputs.FunctionDeadLetterConfigArgs;
 import com.pulumi.awsnative.lambda.inputs.FunctionEnvironmentArgs;
+import com.pulumi.awsnative.lambda.inputs.FunctionEphemeralStorageArgs;
 import com.pulumi.awsnative.lambda.inputs.FunctionFileSystemConfigArgs;
 import com.pulumi.awsnative.lambda.inputs.FunctionImageConfigArgs;
 import com.pulumi.awsnative.lambda.inputs.FunctionTagArgs;
@@ -107,6 +108,21 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<FunctionEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
+    }
+
+    /**
+     * A function&#39;s ephemeral storage settings.
+     * 
+     */
+    @Import(name="ephemeralStorage")
+    private @Nullable Output<FunctionEphemeralStorageArgs> ephemeralStorage;
+
+    /**
+     * @return A function&#39;s ephemeral storage settings.
+     * 
+     */
+    public Optional<Output<FunctionEphemeralStorageArgs>> ephemeralStorage() {
+        return Optional.ofNullable(this.ephemeralStorage);
     }
 
     /**
@@ -343,6 +359,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
         this.deadLetterConfig = $.deadLetterConfig;
         this.description = $.description;
         this.environment = $.environment;
+        this.ephemeralStorage = $.ephemeralStorage;
         this.fileSystemConfigs = $.fileSystemConfigs;
         this.functionName = $.functionName;
         this.handler = $.handler;
@@ -494,6 +511,27 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder environment(FunctionEnvironmentArgs environment) {
             return environment(Output.of(environment));
+        }
+
+        /**
+         * @param ephemeralStorage A function&#39;s ephemeral storage settings.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ephemeralStorage(@Nullable Output<FunctionEphemeralStorageArgs> ephemeralStorage) {
+            $.ephemeralStorage = ephemeralStorage;
+            return this;
+        }
+
+        /**
+         * @param ephemeralStorage A function&#39;s ephemeral storage settings.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ephemeralStorage(FunctionEphemeralStorageArgs ephemeralStorage) {
+            return ephemeralStorage(Output.of(ephemeralStorage));
         }
 
         /**

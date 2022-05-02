@@ -81,14 +81,14 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * @return Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
      * 
      */
     public Optional<Output<String>> name() {
@@ -96,14 +96,14 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
     /**
-     * @return UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * @return UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
     public Optional<Output<String>> uid() {
@@ -224,7 +224,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param name Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param name Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param uid UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * @param uid UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
          * 
          * @return builder
          * 
@@ -256,7 +256,7 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param uid UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * @param uid UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
          * 
          * @return builder
          * 

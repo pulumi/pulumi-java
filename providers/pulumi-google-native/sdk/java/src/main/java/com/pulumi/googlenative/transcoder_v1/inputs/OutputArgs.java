@@ -20,14 +20,14 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     public static final OutputArgs Empty = new OutputArgs();
 
     /**
-     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
      * 
      */
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
     /**
-     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
      * 
      */
     public Optional<Output<String>> uri() {
@@ -59,7 +59,7 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param uri URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+         * @param uri URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
          * 
          * @return builder
          * 
@@ -70,7 +70,7 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param uri URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+         * @param uri URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
          * 
          * @return builder
          * 

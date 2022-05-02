@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InvitationMessage {
     /**
-     * Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
+     * @return Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
      * 
      */
     private final @Nullable String additionalRecipients;
     /**
-     * Customized message body you want to send if you don't want to send the default message. Cannot be specified with `language`.
+     * @return Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
      * 
      */
     private final @Nullable String body;
     /**
-     * The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
+     * @return The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
      * 
      */
     private final @Nullable String language;
@@ -38,23 +38,23 @@ public final class InvitationMessage {
     }
 
     /**
-     * Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
+     * @return Email addresses of additional recipients the invitation message should be sent to. Only 1 additional recipient is currently supported by Azure.
      * 
-    */
+     */
     public Optional<String> additionalRecipients() {
         return Optional.ofNullable(this.additionalRecipients);
     }
     /**
-     * Customized message body you want to send if you don't want to send the default message. Cannot be specified with `language`.
+     * @return Customized message body you want to send if you don&#39;t want to send the default message. Cannot be specified with `language`.
      * 
-    */
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
+     * @return The language you want to send the default message in. The value specified must be in ISO 639 format. Defaults to `en-US`. Cannot be specified with `body`.
      * 
-    */
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }

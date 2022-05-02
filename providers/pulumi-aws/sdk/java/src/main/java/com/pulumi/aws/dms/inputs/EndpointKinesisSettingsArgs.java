@@ -17,14 +17,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     public static final EndpointKinesisSettingsArgs Empty = new EndpointKinesisSettingsArgs();
 
     /**
-     * Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+     * Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     @Import(name="includeControlDetails")
     private @Nullable Output<Boolean> includeControlDetails;
 
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeControlDetails() {
@@ -32,14 +32,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Include NULL and empty columns in the target. The default is `false`.
+     * Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     @Import(name="includeNullAndEmpty")
     private @Nullable Output<Boolean> includeNullAndEmpty;
 
     /**
-     * @return Include NULL and empty columns in the target. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeNullAndEmpty() {
@@ -47,14 +47,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+     * Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     @Import(name="includePartitionValue")
     private @Nullable Output<Boolean> includePartitionValue;
 
     /**
-     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includePartitionValue() {
@@ -62,14 +62,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+     * Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     @Import(name="includeTableAlterOperations")
     private @Nullable Output<Boolean> includeTableAlterOperations;
 
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeTableAlterOperations() {
@@ -77,14 +77,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Provides detailed transaction information from the source database. The default is `false`.
+     * Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     @Import(name="includeTransactionDetails")
     private @Nullable Output<Boolean> includeTransactionDetails;
 
     /**
-     * @return Provides detailed transaction information from the source database. The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> includeTransactionDetails() {
@@ -92,14 +92,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+     * Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     @Import(name="messageFormat")
     private @Nullable Output<String> messageFormat;
 
     /**
-     * @return Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     public Optional<Output<String>> messageFormat() {
@@ -107,14 +107,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+     * Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     @Import(name="partitionIncludeSchemaTable")
     private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
@@ -122,14 +122,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+     * ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     @Import(name="serviceAccessRoleArn")
     private @Nullable Output<String> serviceAccessRoleArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+     * @return ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     public Optional<Output<String>> serviceAccessRoleArn() {
@@ -137,14 +137,14 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Amazon Resource Name (ARN) of the Kinesis data stream.
+     * ARN of the Kinesis data stream.
      * 
      */
     @Import(name="streamArn")
     private @Nullable Output<String> streamArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the Kinesis data stream.
+     * @return ARN of the Kinesis data stream.
      * 
      */
     public Optional<Output<String>> streamArn() {
@@ -184,7 +184,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeNullAndEmpty Include NULL and empty columns in the target. The default is `false`.
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. Default is `false`.
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeNullAndEmpty Include NULL and empty columns in the target. The default is `false`.
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. Default is `false`.
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeTransactionDetails Provides detailed transaction information from the source database. The default is `false`.
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. Default is `false`.
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param includeTransactionDetails Provides detailed transaction information from the source database. The default is `false`.
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. Default is `false`.
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param messageFormat Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+         * @param messageFormat Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param messageFormat Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+         * @param messageFormat Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param streamArn Amazon Resource Name (ARN) of the Kinesis data stream.
+         * @param streamArn ARN of the Kinesis data stream.
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param streamArn Amazon Resource Name (ARN) of the Kinesis data stream.
+         * @param streamArn ARN of the Kinesis data stream.
          * 
          * @return builder
          * 

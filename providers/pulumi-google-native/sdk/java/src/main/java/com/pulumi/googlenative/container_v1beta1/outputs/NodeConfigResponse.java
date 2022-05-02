@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1beta1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.container_v1beta1.outputs.AcceleratorConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.AdvancedMachineFeaturesResponse;
+import com.pulumi.googlenative.container_v1beta1.outputs.ConfidentialNodesResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.EphemeralStorageConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.GcfsConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.LinuxNodeConfigResponse;
@@ -40,6 +41,11 @@ public final class NodeConfigResponse {
      * 
      */
     private final String bootDiskKmsKey;
+    /**
+     * @return Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+     * 
+     */
+    private final ConfidentialNodesResponse confidentialNodes;
     /**
      * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
      * 
@@ -166,6 +172,7 @@ public final class NodeConfigResponse {
         @CustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
         @CustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
         @CustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @CustomType.Parameter("confidentialNodes") ConfidentialNodesResponse confidentialNodes,
         @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
         @CustomType.Parameter("diskType") String diskType,
         @CustomType.Parameter("ephemeralStorageConfig") EphemeralStorageConfigResponse ephemeralStorageConfig,
@@ -193,6 +200,7 @@ public final class NodeConfigResponse {
         this.accelerators = accelerators;
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.bootDiskKmsKey = bootDiskKmsKey;
+        this.confidentialNodes = confidentialNodes;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
         this.ephemeralStorageConfig = ephemeralStorageConfig;
@@ -239,6 +247,13 @@ public final class NodeConfigResponse {
      */
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
+    }
+    /**
+     * @return Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+     * 
+     */
+    public ConfidentialNodesResponse confidentialNodes() {
+        return this.confidentialNodes;
     }
     /**
      * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
@@ -421,6 +436,7 @@ public final class NodeConfigResponse {
         private List<AcceleratorConfigResponse> accelerators;
         private AdvancedMachineFeaturesResponse advancedMachineFeatures;
         private String bootDiskKmsKey;
+        private ConfidentialNodesResponse confidentialNodes;
         private Integer diskSizeGb;
         private String diskType;
         private EphemeralStorageConfigResponse ephemeralStorageConfig;
@@ -455,6 +471,7 @@ public final class NodeConfigResponse {
     	      this.accelerators = defaults.accelerators;
     	      this.advancedMachineFeatures = defaults.advancedMachineFeatures;
     	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
+    	      this.confidentialNodes = defaults.confidentialNodes;
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
     	      this.ephemeralStorageConfig = defaults.ephemeralStorageConfig;
@@ -494,6 +511,10 @@ public final class NodeConfigResponse {
         }
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
+            return this;
+        }
+        public Builder confidentialNodes(ConfidentialNodesResponse confidentialNodes) {
+            this.confidentialNodes = Objects.requireNonNull(confidentialNodes);
             return this;
         }
         public Builder diskSizeGb(Integer diskSizeGb) {
@@ -601,7 +622,7 @@ public final class NodeConfigResponse {
             this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
             return this;
         }        public NodeConfigResponse build() {
-            return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
+            return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, confidentialNodes, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }
 }

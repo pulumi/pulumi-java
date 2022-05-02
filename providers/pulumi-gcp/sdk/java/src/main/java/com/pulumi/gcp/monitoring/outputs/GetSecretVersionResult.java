@@ -10,17 +10,38 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSecretVersionResult {
+    /**
+     * @return The time at which the Secret was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     private final String destroyTime;
+    /**
+     * @return True if the current state of the SecretVersion is enabled.
+     * 
+     */
     private final Boolean enabled;
     /**
      * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
+    /**
+     * @return The resource name of the SecretVersion. Format:
+     * `projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}`
+     * 
+     */
     private final String name;
     private final String project;
     private final String secret;
+    /**
+     * @return The secret data. No larger than 64KiB.
+     * 
+     */
     private final String secretData;
     private final String version;
 
@@ -46,12 +67,24 @@ public final class GetSecretVersionResult {
         this.version = version;
     }
 
+    /**
+     * @return The time at which the Secret was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
+    /**
+     * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     public String destroyTime() {
         return this.destroyTime;
     }
+    /**
+     * @return True if the current state of the SecretVersion is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -62,6 +95,11 @@ public final class GetSecretVersionResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The resource name of the SecretVersion. Format:
+     * `projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}`
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,6 +109,10 @@ public final class GetSecretVersionResult {
     public String secret() {
         return this.secret;
     }
+    /**
+     * @return The secret data. No larger than 64KiB.
+     * 
+     */
     public String secretData() {
         return this.secretData;
     }

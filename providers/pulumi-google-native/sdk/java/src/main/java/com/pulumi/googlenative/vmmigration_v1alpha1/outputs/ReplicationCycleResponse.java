@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class ReplicationCycleResponse {
     /**
-     * @return The time the replication cycle has ended.
-     * 
-     */
-    private final String endTime;
-    /**
      * @return The current progress in percentage of this cycle.
      * 
      */
@@ -33,7 +28,7 @@ public final class ReplicationCycleResponse {
      */
     private final String startTime;
     /**
-     * @return The cycle&#39;s steps list reflecting its progress.
+     * @return The cycle&#39;s steps list representing its progress.
      * 
      */
     private final List<CycleStepResponse> steps;
@@ -45,13 +40,11 @@ public final class ReplicationCycleResponse {
 
     @CustomType.Constructor
     private ReplicationCycleResponse(
-        @CustomType.Parameter("endTime") String endTime,
         @CustomType.Parameter("progress") Integer progress,
         @CustomType.Parameter("progressPercent") Integer progressPercent,
         @CustomType.Parameter("startTime") String startTime,
         @CustomType.Parameter("steps") List<CycleStepResponse> steps,
         @CustomType.Parameter("totalPauseDuration") String totalPauseDuration) {
-        this.endTime = endTime;
         this.progress = progress;
         this.progressPercent = progressPercent;
         this.startTime = startTime;
@@ -59,13 +52,6 @@ public final class ReplicationCycleResponse {
         this.totalPauseDuration = totalPauseDuration;
     }
 
-    /**
-     * @return The time the replication cycle has ended.
-     * 
-     */
-    public String endTime() {
-        return this.endTime;
-    }
     /**
      * @return The current progress in percentage of this cycle.
      * 
@@ -88,7 +74,7 @@ public final class ReplicationCycleResponse {
         return this.startTime;
     }
     /**
-     * @return The cycle&#39;s steps list reflecting its progress.
+     * @return The cycle&#39;s steps list representing its progress.
      * 
      */
     public List<CycleStepResponse> steps() {
@@ -111,7 +97,6 @@ public final class ReplicationCycleResponse {
     }
 
     public static final class Builder {
-        private String endTime;
         private Integer progress;
         private Integer progressPercent;
         private String startTime;
@@ -124,7 +109,6 @@ public final class ReplicationCycleResponse {
 
         public Builder(ReplicationCycleResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
     	      this.progress = defaults.progress;
     	      this.progressPercent = defaults.progressPercent;
     	      this.startTime = defaults.startTime;
@@ -132,10 +116,6 @@ public final class ReplicationCycleResponse {
     	      this.totalPauseDuration = defaults.totalPauseDuration;
         }
 
-        public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
-            return this;
-        }
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
@@ -159,7 +139,7 @@ public final class ReplicationCycleResponse {
             this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
             return this;
         }        public ReplicationCycleResponse build() {
-            return new ReplicationCycleResponse(endTime, progress, progressPercent, startTime, steps, totalPauseDuration);
+            return new ReplicationCycleResponse(progress, progressPercent, startTime, steps, totalPauseDuration);
         }
     }
 }

@@ -31,9 +31,17 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.cloudSql);
     }
 
+    /**
+     * Optional. Connection id that should be assigned to the created connection.
+     * 
+     */
     @Import(name="connectionId")
     private @Nullable Output<String> connectionId;
 
+    /**
+     * @return Optional. Connection id that should be assigned to the created connection.
+     * 
+     */
     public Optional<Output<String>> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
@@ -148,11 +156,23 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return cloudSql(Output.of(cloudSql));
         }
 
+        /**
+         * @param connectionId Optional. Connection id that should be assigned to the created connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(@Nullable Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId Optional. Connection id that should be assigned to the created connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }

@@ -94,6 +94,24 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
         return this.guestOsFeatures;
     }
     /**
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    @Export(name="interface", type=String.class, parameters={})
+    private Output<String> interface_;
+
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    public Output<String> interface_() {
+        return this.interface_;
+    }
+    /**
      * Type of the resource. Always compute#disk for disks.
      * 
      */
@@ -512,6 +530,24 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      */
     public Output<String> status() {
         return this.status;
+    }
+    /**
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    @Export(name="storageType", type=String.class, parameters={})
+    private Output<String> storageType;
+
+    /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    public Output<String> storageType() {
+        return this.storageType;
     }
     /**
      * URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.

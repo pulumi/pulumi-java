@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:gameservices/v1:GameServerCluster")
 public class GameServerCluster extends com.pulumi.resources.CustomResource {
     /**
-     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+     * The state of the Kubernetes cluster in preview. This will be available if view is set to FULL in the relevant list/get/preview request.
      * 
      */
     @Export(name="clusterState", type=KubernetesClusterStateResponse.class, parameters={})
     private Output<KubernetesClusterStateResponse> clusterState;
 
     /**
-     * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+     * @return The state of the Kubernetes cluster in preview. This will be available if view is set to FULL in the relevant list/get/preview request.
      * 
      */
     public Output<KubernetesClusterStateResponse> clusterState() {
@@ -78,14 +78,14 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * ETag of the resource.
+     * Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public Output<String> etag() {
@@ -106,14 +106,14 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     public Output<String> name() {

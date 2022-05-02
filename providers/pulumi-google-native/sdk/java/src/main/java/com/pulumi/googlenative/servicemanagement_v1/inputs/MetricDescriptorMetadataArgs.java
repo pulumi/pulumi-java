@@ -5,6 +5,7 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.servicemanagement_v1.enums.MetricDescriptorMetadataLaunchStage;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,6 +36,29 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
     }
 
     /**
+     * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     * @deprecated
+     * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     */
+    @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+    @Import(name="launchStage")
+    private @Nullable Output<MetricDescriptorMetadataLaunchStage> launchStage;
+
+    /**
+     * @return Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     * @deprecated
+     * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     */
+    @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+    public Optional<Output<MetricDescriptorMetadataLaunchStage>> launchStage() {
+        return Optional.ofNullable(this.launchStage);
+    }
+
+    /**
      * The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
      * 
      */
@@ -53,6 +77,7 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
 
     private MetricDescriptorMetadataArgs(MetricDescriptorMetadataArgs $) {
         this.ingestDelay = $.ingestDelay;
+        this.launchStage = $.launchStage;
         this.samplePeriod = $.samplePeriod;
     }
 
@@ -93,6 +118,35 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
          */
         public Builder ingestDelay(String ingestDelay) {
             return ingestDelay(Output.of(ingestDelay));
+        }
+
+        /**
+         * @param launchStage Deprecated. Must use the MetricDescriptor.launch_stage instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+         * 
+         */
+        @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+        public Builder launchStage(@Nullable Output<MetricDescriptorMetadataLaunchStage> launchStage) {
+            $.launchStage = launchStage;
+            return this;
+        }
+
+        /**
+         * @param launchStage Deprecated. Must use the MetricDescriptor.launch_stage instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+         * 
+         */
+        @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+        public Builder launchStage(MetricDescriptorMetadataLaunchStage launchStage) {
+            return launchStage(Output.of(launchStage));
         }
 
         /**

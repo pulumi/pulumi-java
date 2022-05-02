@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Whether or not the account should be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> accountEnabled() {
-        return this.accountEnabled;
+    public Output<Optional<Boolean>> accountEnabled() {
+        return Codegen.optional(this.accountEnabled);
     }
     /**
      * The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`. Omit this property or specify a blank string to unset.
@@ -78,8 +79,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`. Omit this property or specify a blank string to unset.
      * 
      */
-    public Output</* @Nullable */ String> ageGroup() {
-        return this.ageGroup;
+    public Output<Optional<String>> ageGroup() {
+        return Codegen.optional(this.ageGroup);
     }
     /**
      * A list of telephone numbers for the user. Only one number can be set for this property. Read-only for users synced with Azure AD Connect.
@@ -106,8 +107,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The city in which the user is located.
      * 
      */
-    public Output</* @Nullable */ String> city() {
-        return this.city;
+    public Output<Optional<String>> city() {
+        return Codegen.optional(this.city);
     }
     /**
      * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
@@ -120,8 +121,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
      * 
      */
-    public Output</* @Nullable */ String> companyName() {
-        return this.companyName;
+    public Output<Optional<String>> companyName() {
+        return Codegen.optional(this.companyName);
     }
     /**
      * Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
@@ -134,8 +135,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
      * 
      */
-    public Output</* @Nullable */ String> consentProvidedForMinor() {
-        return this.consentProvidedForMinor;
+    public Output<Optional<String>> consentProvidedForMinor() {
+        return Codegen.optional(this.consentProvidedForMinor);
     }
     /**
      * The cost center associated with the user.
@@ -148,8 +149,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The cost center associated with the user.
      * 
      */
-    public Output</* @Nullable */ String> costCenter() {
-        return this.costCenter;
+    public Output<Optional<String>> costCenter() {
+        return Codegen.optional(this.costCenter);
     }
     /**
      * The country/region in which the user is located, e.g. `US` or `UK`.
@@ -162,8 +163,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The country/region in which the user is located, e.g. `US` or `UK`.
      * 
      */
-    public Output</* @Nullable */ String> country() {
-        return this.country;
+    public Output<Optional<String>> country() {
+        return Codegen.optional(this.country);
     }
     /**
      * Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
@@ -190,22 +191,22 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The name for the department in which the user works.
      * 
      */
-    public Output</* @Nullable */ String> department() {
-        return this.department;
+    public Output<Optional<String>> department() {
+        return Codegen.optional(this.department);
     }
     /**
-     * Whether the user's password is exempt from expiring. Defaults to `false`.
+     * Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
      * 
      */
     @Export(name="disablePasswordExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disablePasswordExpiration;
 
     /**
-     * @return Whether the user's password is exempt from expiring. Defaults to `false`.
+     * @return Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> disablePasswordExpiration() {
-        return this.disablePasswordExpiration;
+    public Output<Optional<Boolean>> disablePasswordExpiration() {
+        return Codegen.optional(this.disablePasswordExpiration);
     }
     /**
      * Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
@@ -218,8 +219,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableStrongPassword() {
-        return this.disableStrongPassword;
+    public Output<Optional<Boolean>> disableStrongPassword() {
+        return Codegen.optional(this.disableStrongPassword);
     }
     /**
      * The name to display in the address book for the user.
@@ -246,8 +247,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The name of the division in which the user works.
      * 
      */
-    public Output</* @Nullable */ String> division() {
-        return this.division;
+    public Output<Optional<String>> division() {
+        return Codegen.optional(this.division);
     }
     /**
      * The employee identifier assigned to the user by the organisation.
@@ -260,8 +261,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The employee identifier assigned to the user by the organisation.
      * 
      */
-    public Output</* @Nullable */ String> employeeId() {
-        return this.employeeId;
+    public Output<Optional<String>> employeeId() {
+        return Codegen.optional(this.employeeId);
     }
     /**
      * Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
@@ -274,18 +275,18 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
      * 
      */
-    public Output</* @Nullable */ String> employeeType() {
-        return this.employeeType;
+    public Output<Optional<String>> employeeType() {
+        return Codegen.optional(this.employeeType);
     }
     /**
-     * For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
      * 
      */
     @Export(name="externalUserState", type=String.class, parameters={})
     private Output<String> externalUserState;
 
     /**
-     * @return For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * @return For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
      * 
      */
     public Output<String> externalUserState() {
@@ -302,8 +303,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The fax number of the user.
      * 
      */
-    public Output</* @Nullable */ String> faxNumber() {
-        return this.faxNumber;
+    public Output<Optional<String>> faxNumber() {
+        return Codegen.optional(this.faxNumber);
     }
     /**
      * Whether the user is forced to change the password during the next sign-in. Only takes effect when also changing the password. Defaults to `false`.
@@ -316,8 +317,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Whether the user is forced to change the password during the next sign-in. Only takes effect when also changing the password. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> forcePasswordChange() {
-        return this.forcePasswordChange;
+    public Output<Optional<Boolean>> forcePasswordChange() {
+        return Codegen.optional(this.forcePasswordChange);
     }
     /**
      * The given name (first name) of the user.
@@ -330,8 +331,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The given name (first name) of the user.
      * 
      */
-    public Output</* @Nullable */ String> givenName() {
-        return this.givenName;
+    public Output<Optional<String>> givenName() {
+        return Codegen.optional(this.givenName);
     }
     /**
      * A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
@@ -358,8 +359,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The user’s job title.
      * 
      */
-    public Output</* @Nullable */ String> jobTitle() {
-        return this.jobTitle;
+    public Output<Optional<String>> jobTitle() {
+        return Codegen.optional(this.jobTitle);
     }
     /**
      * The SMTP address for the user. This property cannot be unset once specified.
@@ -390,18 +391,18 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.mailNickname;
     }
     /**
-     * The object ID of the user's manager.
+     * The object ID of the user&#39;s manager.
      * 
      */
     @Export(name="managerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managerId;
 
     /**
-     * @return The object ID of the user's manager.
+     * @return The object ID of the user&#39;s manager.
      * 
      */
-    public Output</* @Nullable */ String> managerId() {
-        return this.managerId;
+    public Output<Optional<String>> managerId() {
+        return Codegen.optional(this.managerId);
     }
     /**
      * The primary cellular telephone number for the user.
@@ -414,8 +415,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The primary cellular telephone number for the user.
      * 
      */
-    public Output</* @Nullable */ String> mobilePhone() {
-        return this.mobilePhone;
+    public Output<Optional<String>> mobilePhone() {
+        return Codegen.optional(this.mobilePhone);
     }
     /**
      * The object ID of the user.
@@ -432,18 +433,18 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.objectId;
     }
     /**
-     * The office location in the user's place of business.
+     * The office location in the user&#39;s place of business.
      * 
      */
     @Export(name="officeLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> officeLocation;
 
     /**
-     * @return The office location in the user's place of business.
+     * @return The office location in the user&#39;s place of business.
      * 
      */
-    public Output</* @Nullable */ String> officeLocation() {
-        return this.officeLocation;
+    public Output<Optional<String>> officeLocation() {
+        return Codegen.optional(this.officeLocation);
     }
     /**
      * The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
@@ -474,14 +475,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.onpremisesDomainName;
     }
     /**
-     * The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's `user_principal_name` property when creating a new user account.
+     * The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
      * 
      */
     @Export(name="onpremisesImmutableId", type=String.class, parameters={})
     private Output<String> onpremisesImmutableId;
 
     /**
-     * @return The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's `user_principal_name` property when creating a new user account.
+     * @return The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
      * 
      */
     public Output<String> onpremisesImmutableId() {
@@ -554,8 +555,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return A list of additional email addresses for the user.
      * 
      */
-    public Output</* @Nullable */ List<String>> otherMails() {
-        return this.otherMails;
+    public Output<Optional<List<String>>> otherMails() {
+        return Codegen.optional(this.otherMails);
     }
     /**
      * The password for the user. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. This property is required when creating a new user.
@@ -572,32 +573,32 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.password;
     }
     /**
-     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+     * The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
      * 
      */
     @Export(name="postalCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> postalCode;
 
     /**
-     * @return The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+     * @return The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
      * 
      */
-    public Output</* @Nullable */ String> postalCode() {
-        return this.postalCode;
+    public Output<Optional<String>> postalCode() {
+        return Codegen.optional(this.postalCode);
     }
     /**
-     * The user's preferred language, in ISO 639-1 notation.
+     * The user&#39;s preferred language, in ISO 639-1 notation.
      * 
      */
     @Export(name="preferredLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredLanguage;
 
     /**
-     * @return The user's preferred language, in ISO 639-1 notation.
+     * @return The user&#39;s preferred language, in ISO 639-1 notation.
      * 
      */
-    public Output</* @Nullable */ String> preferredLanguage() {
-        return this.preferredLanguage;
+    public Output<Optional<String>> preferredLanguage() {
+        return Codegen.optional(this.preferredLanguage);
     }
     /**
      * List of email addresses for the user that direct to the same mailbox.
@@ -624,50 +625,50 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Whether or not the Outlook global address list should include this user. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> showInAddressList() {
-        return this.showInAddressList;
+    public Output<Optional<Boolean>> showInAddressList() {
+        return Codegen.optional(this.showInAddressList);
     }
     /**
-     * The state or province in the user's address.
+     * The state or province in the user&#39;s address.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
-     * @return The state or province in the user's address.
+     * @return The state or province in the user&#39;s address.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
-     * The street address of the user's place of business.
+     * The street address of the user&#39;s place of business.
      * 
      */
     @Export(name="streetAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> streetAddress;
 
     /**
-     * @return The street address of the user's place of business.
+     * @return The street address of the user&#39;s place of business.
      * 
      */
-    public Output</* @Nullable */ String> streetAddress() {
-        return this.streetAddress;
+    public Output<Optional<String>> streetAddress() {
+        return Codegen.optional(this.streetAddress);
     }
     /**
-     * The user's surname (family name or last name).
+     * The user&#39;s surname (family name or last name).
      * 
      */
     @Export(name="surname", type=String.class, parameters={})
     private Output</* @Nullable */ String> surname;
 
     /**
-     * @return The user's surname (family name or last name).
+     * @return The user&#39;s surname (family name or last name).
      * 
      */
-    public Output</* @Nullable */ String> surname() {
-        return this.surname;
+    public Output<Optional<String>> surname() {
+        return Codegen.optional(this.surname);
     }
     /**
      * The usage location of the user. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
@@ -680,8 +681,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The usage location of the user. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
      * 
      */
-    public Output</* @Nullable */ String> usageLocation() {
-        return this.usageLocation;
+    public Output<Optional<String>> usageLocation() {
+        return Codegen.optional(this.usageLocation);
     }
     /**
      * The user principal name (UPN) of the user.

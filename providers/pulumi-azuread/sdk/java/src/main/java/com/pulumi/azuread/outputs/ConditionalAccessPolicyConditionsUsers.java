@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicyConditionsUsers {
     /**
-     * A list of group IDs excluded from scope of policy.
+     * @return A list of group IDs excluded from scope of policy.
      * 
      */
     private final @Nullable List<String> excludedGroups;
     /**
-     * A list of role IDs excluded from scope of policy.
+     * @return A list of role IDs excluded from scope of policy.
      * 
      */
     private final @Nullable List<String> excludedRoles;
     /**
-     * A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+     * @return A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
      * 
      */
     private final @Nullable List<String> excludedUsers;
     /**
-     * A list of group IDs in scope of policy unless explicitly excluded.
+     * @return A list of group IDs in scope of policy unless explicitly excluded.
      * 
      */
     private final @Nullable List<String> includedGroups;
     /**
-     * A list of role IDs in scope of policy unless explicitly excluded.
+     * @return A list of role IDs in scope of policy unless explicitly excluded.
      * 
      */
     private final @Nullable List<String> includedRoles;
     /**
-     * A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+     * @return A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
      * 
      */
     private final @Nullable List<String> includedUsers;
@@ -59,44 +59,44 @@ public final class ConditionalAccessPolicyConditionsUsers {
     }
 
     /**
-     * A list of group IDs excluded from scope of policy.
+     * @return A list of group IDs excluded from scope of policy.
      * 
-    */
+     */
     public List<String> excludedGroups() {
         return this.excludedGroups == null ? List.of() : this.excludedGroups;
     }
     /**
-     * A list of role IDs excluded from scope of policy.
+     * @return A list of role IDs excluded from scope of policy.
      * 
-    */
+     */
     public List<String> excludedRoles() {
         return this.excludedRoles == null ? List.of() : this.excludedRoles;
     }
     /**
-     * A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+     * @return A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
      * 
-    */
+     */
     public List<String> excludedUsers() {
         return this.excludedUsers == null ? List.of() : this.excludedUsers;
     }
     /**
-     * A list of group IDs in scope of policy unless explicitly excluded.
+     * @return A list of group IDs in scope of policy unless explicitly excluded.
      * 
-    */
+     */
     public List<String> includedGroups() {
         return this.includedGroups == null ? List.of() : this.includedGroups;
     }
     /**
-     * A list of role IDs in scope of policy unless explicitly excluded.
+     * @return A list of role IDs in scope of policy unless explicitly excluded.
      * 
-    */
+     */
     public List<String> includedRoles() {
         return this.includedRoles == null ? List.of() : this.includedRoles;
     }
     /**
-     * A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+     * @return A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
      * 
-    */
+     */
     public List<String> includedUsers() {
         return this.includedUsers == null ? List.of() : this.includedUsers;
     }

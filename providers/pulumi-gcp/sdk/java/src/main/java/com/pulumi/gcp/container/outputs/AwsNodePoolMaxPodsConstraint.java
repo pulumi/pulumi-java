@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AwsNodePoolMaxPodsConstraint {
     /**
-     * @return Required. The maximum number of pods to schedule on a single node.
+     * @return The maximum number of pods to schedule on a single node.
      * 
      */
     private final Integer maxPodsPerNode;
@@ -21,7 +21,7 @@ public final class AwsNodePoolMaxPodsConstraint {
     }
 
     /**
-     * @return Required. The maximum number of pods to schedule on a single node.
+     * @return The maximum number of pods to schedule on a single node.
      * 
      */
     public Integer maxPodsPerNode() {

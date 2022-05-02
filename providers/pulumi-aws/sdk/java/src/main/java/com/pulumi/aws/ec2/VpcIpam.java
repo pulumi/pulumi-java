@@ -11,6 +11,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,6 +48,20 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      */
     public Output<String> arn() {
         return this.arn;
+    }
+    /**
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+     * 
+     */
+    @Export(name="cascade", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> cascade;
+
+    /**
+     * @return Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+     * 
+     */
+    public Output<Optional<Boolean>> cascade() {
+        return Codegen.optional(this.cascade);
     }
     /**
      * A description for the IPAM.

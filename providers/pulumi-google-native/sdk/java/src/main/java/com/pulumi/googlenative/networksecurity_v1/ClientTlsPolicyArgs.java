@@ -34,9 +34,17 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.clientCertificate);
     }
 
+    /**
+     * Required. Short name of the ClientTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;client_mtls_policy&#34;.
+     * 
+     */
     @Import(name="clientTlsPolicyId", required=true)
     private Output<String> clientTlsPolicyId;
 
+    /**
+     * @return Required. Short name of the ClientTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;client_mtls_policy&#34;.
+     * 
+     */
     public Output<String> clientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
@@ -183,11 +191,23 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientTlsPolicyId Required. Short name of the ClientTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;client_mtls_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTlsPolicyId(Output<String> clientTlsPolicyId) {
             $.clientTlsPolicyId = clientTlsPolicyId;
             return this;
         }
 
+        /**
+         * @param clientTlsPolicyId Required. Short name of the ClientTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;client_mtls_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTlsPolicyId(String clientTlsPolicyId) {
             return clientTlsPolicyId(Output.of(clientTlsPolicyId));
         }

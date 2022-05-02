@@ -12,6 +12,7 @@ import com.pulumi.googlenative.compute_beta.NetworkEndpointGroupArgs;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupAppEngineResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupCloudFunctionResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupCloudRunResponse;
+import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupLbNetworkEndpointGroupResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupServerlessDeploymentResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -137,6 +138,24 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+    @Export(name="loadBalancer", type=NetworkEndpointGroupLbNetworkEndpointGroupResponse.class, parameters={})
+    private Output<NetworkEndpointGroupLbNetworkEndpointGroupResponse> loadBalancer;
+
+    /**
+     * @return This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    public Output<NetworkEndpointGroupLbNetworkEndpointGroupResponse> loadBalancer() {
+        return this.loadBalancer;
+    }
+    /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
@@ -165,14 +184,14 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.network;
     }
     /**
-     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     @Export(name="networkEndpointType", type=String.class, parameters={})
     private Output<String> networkEndpointType;
 
     /**
-     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     public Output<String> networkEndpointType() {

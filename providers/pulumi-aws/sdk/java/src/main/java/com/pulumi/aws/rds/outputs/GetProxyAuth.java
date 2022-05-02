@@ -13,17 +13,20 @@ public final class GetProxyAuth {
     private final String description;
     private final String iamAuth;
     private final String secretArn;
+    private final String username;
 
     @CustomType.Constructor
     private GetProxyAuth(
         @CustomType.Parameter("authScheme") String authScheme,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("iamAuth") String iamAuth,
-        @CustomType.Parameter("secretArn") String secretArn) {
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("username") String username) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;
         this.secretArn = secretArn;
+        this.username = username;
     }
 
     public String authScheme() {
@@ -37,6 +40,9 @@ public final class GetProxyAuth {
     }
     public String secretArn() {
         return this.secretArn;
+    }
+    public String username() {
+        return this.username;
     }
 
     public static Builder builder() {
@@ -52,6 +58,7 @@ public final class GetProxyAuth {
         private String description;
         private String iamAuth;
         private String secretArn;
+        private String username;
 
         public Builder() {
     	      // Empty
@@ -63,6 +70,7 @@ public final class GetProxyAuth {
     	      this.description = defaults.description;
     	      this.iamAuth = defaults.iamAuth;
     	      this.secretArn = defaults.secretArn;
+    	      this.username = defaults.username;
         }
 
         public Builder authScheme(String authScheme) {
@@ -80,8 +88,12 @@ public final class GetProxyAuth {
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
+        }
+        public Builder username(String username) {
+            this.username = Objects.requireNonNull(username);
+            return this;
         }        public GetProxyAuth build() {
-            return new GetProxyAuth(authScheme, description, iamAuth, secretArn);
+            return new GetProxyAuth(authScheme, description, iamAuth, secretArn, username);
         }
     }
 }

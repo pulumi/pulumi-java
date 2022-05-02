@@ -46,6 +46,20 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
         return this.columnFamily;
     }
     /**
+     * Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+     * 
+     */
+    @Export(name="gcRules", type=String.class, parameters={})
+    private Output</* @Nullable */ String> gcRules;
+
+    /**
+     * @return Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+     * 
+     */
+    public Output<Optional<String>> gcRules() {
+        return Codegen.optional(this.gcRules);
+    }
+    /**
      * The name of the Bigtable instance.
      * 
      */

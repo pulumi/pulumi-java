@@ -15,6 +15,9 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * ## Example IPv6 Usage
+ * 
  * ## Import
  * 
  * Individual routes can be imported using `ROUTETABLEID_DESTINATION`. For example, import a route in route table `rtb-656C65616E6F72` with an IPv4 destination CIDR of `10.42.0.0/16` like thisconsole
@@ -51,6 +54,20 @@ public class Route extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> carrierGatewayId() {
         return Codegen.optional(this.carrierGatewayId);
+    }
+    /**
+     * The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    @Export(name="coreNetworkArn", type=String.class, parameters={})
+    private Output</* @Nullable */ String> coreNetworkArn;
+
+    /**
+     * @return The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    public Output<Optional<String>> coreNetworkArn() {
+        return Codegen.optional(this.coreNetworkArn);
     }
     /**
      * The destination CIDR block.
@@ -125,7 +142,11 @@ public class Route extends com.pulumi.resources.CustomResource {
     /**
      * Identifier of an EC2 instance.
      * 
+     * @deprecated
+     * Use network_interface_id instead
+     * 
      */
+    @Deprecated /* Use network_interface_id instead */
     @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 

@@ -57,12 +57,36 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends com.p
         return Optional.ofNullable(this.numInstances);
     }
 
+    /**
+     * Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+     * Accepted values are:
+     * * PREEMPTIBILITY_UNSPECIFIED
+     * * NON_PREEMPTIBLE
+     * * PREEMPTIBLE
+     * 
+     */
+    @Import(name="preemptibility")
+    private @Nullable Output<String> preemptibility;
+
+    /**
+     * @return Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+     * Accepted values are:
+     * * PREEMPTIBILITY_UNSPECIFIED
+     * * NON_PREEMPTIBLE
+     * * PREEMPTIBLE
+     * 
+     */
+    public Optional<Output<String>> preemptibility() {
+        return Optional.ofNullable(this.preemptibility);
+    }
+
     private ClusterClusterConfigPreemptibleWorkerConfigArgs() {}
 
     private ClusterClusterConfigPreemptibleWorkerConfigArgs(ClusterClusterConfigPreemptibleWorkerConfigArgs $) {
         this.diskConfig = $.diskConfig;
         this.instanceNames = $.instanceNames;
         this.numInstances = $.numInstances;
+        this.preemptibility = $.preemptibility;
     }
 
     public static Builder builder() {
@@ -138,6 +162,35 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends com.p
          */
         public Builder numInstances(Integer numInstances) {
             return numInstances(Output.of(numInstances));
+        }
+
+        /**
+         * @param preemptibility Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+         * Accepted values are:
+         * * PREEMPTIBILITY_UNSPECIFIED
+         * * NON_PREEMPTIBLE
+         * * PREEMPTIBLE
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preemptibility(@Nullable Output<String> preemptibility) {
+            $.preemptibility = preemptibility;
+            return this;
+        }
+
+        /**
+         * @param preemptibility Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+         * Accepted values are:
+         * * PREEMPTIBILITY_UNSPECIFIED
+         * * NON_PREEMPTIBLE
+         * * PREEMPTIBLE
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preemptibility(String preemptibility) {
+            return preemptibility(Output.of(preemptibility));
         }
 
         public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {

@@ -45,7 +45,7 @@ public final class DomainSamlOptionsSamlOptions {
      */
     private final @Nullable Integer sessionTimeoutMinutes;
     /**
-     * @return Element of the SAML assertion to use for username. Default is NameID.
+     * @return Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
      * 
      */
     private final @Nullable String subjectKey;
@@ -111,7 +111,7 @@ public final class DomainSamlOptionsSamlOptions {
         return Optional.ofNullable(this.sessionTimeoutMinutes);
     }
     /**
-     * @return Element of the SAML assertion to use for username. Default is NameID.
+     * @return Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
      * 
      */
     public Optional<String> subjectKey() {

@@ -6,7 +6,6 @@ package com.pulumi.azuread.inputs;
 import com.pulumi.azuread.inputs.ApplicationRequiredResourceAccessResourceAccessArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,8 +20,12 @@ public final class ApplicationRequiredResourceAccessArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceAccesses", required=true)
-      private final Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses;
+    private Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses;
 
+    /**
+     * @return A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+     * 
+     */
     public Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses() {
         return this.resourceAccesses;
     }
@@ -32,66 +35,98 @@ public final class ApplicationRequiredResourceAccessArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceAppId", required=true)
-      private final Output<String> resourceAppId;
+    private Output<String> resourceAppId;
 
+    /**
+     * @return The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
+     * 
+     */
     public Output<String> resourceAppId() {
         return this.resourceAppId;
     }
 
-    public ApplicationRequiredResourceAccessArgs(
-        Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses,
-        Output<String> resourceAppId) {
-        this.resourceAccesses = Objects.requireNonNull(resourceAccesses, "expected parameter 'resourceAccesses' to be non-null");
-        this.resourceAppId = Objects.requireNonNull(resourceAppId, "expected parameter 'resourceAppId' to be non-null");
-    }
+    private ApplicationRequiredResourceAccessArgs() {}
 
-    private ApplicationRequiredResourceAccessArgs() {
-        this.resourceAccesses = Codegen.empty();
-        this.resourceAppId = Codegen.empty();
+    private ApplicationRequiredResourceAccessArgs(ApplicationRequiredResourceAccessArgs $) {
+        this.resourceAccesses = $.resourceAccesses;
+        this.resourceAppId = $.resourceAppId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationRequiredResourceAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses;
-        private Output<String> resourceAppId;
+        private ApplicationRequiredResourceAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationRequiredResourceAccessArgs();
         }
 
         public Builder(ApplicationRequiredResourceAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceAccesses = defaults.resourceAccesses;
-    	      this.resourceAppId = defaults.resourceAppId;
+            $ = new ApplicationRequiredResourceAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceAccesses A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccesses(Output<List<ApplicationRequiredResourceAccessResourceAccessArgs>> resourceAccesses) {
-            this.resourceAccesses = Objects.requireNonNull(resourceAccesses);
+            $.resourceAccesses = resourceAccesses;
             return this;
         }
+
+        /**
+         * @param resourceAccesses A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccesses(List<ApplicationRequiredResourceAccessResourceAccessArgs> resourceAccesses) {
-            this.resourceAccesses = Output.of(Objects.requireNonNull(resourceAccesses));
-            return this;
+            return resourceAccesses(Output.of(resourceAccesses));
         }
+
+        /**
+         * @param resourceAccesses A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccesses(ApplicationRequiredResourceAccessResourceAccessArgs... resourceAccesses) {
             return resourceAccesses(List.of(resourceAccesses));
         }
+
+        /**
+         * @param resourceAppId The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAppId(Output<String> resourceAppId) {
-            this.resourceAppId = Objects.requireNonNull(resourceAppId);
+            $.resourceAppId = resourceAppId;
             return this;
         }
+
+        /**
+         * @param resourceAppId The unique identifier for the resource that the application requires access to. This should be the Application ID of the target application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAppId(String resourceAppId) {
-            this.resourceAppId = Output.of(Objects.requireNonNull(resourceAppId));
-            return this;
-        }        public ApplicationRequiredResourceAccessArgs build() {
-            return new ApplicationRequiredResourceAccessArgs(resourceAccesses, resourceAppId);
+            return resourceAppId(Output.of(resourceAppId));
+        }
+
+        public ApplicationRequiredResourceAccessArgs build() {
+            $.resourceAccesses = Objects.requireNonNull($.resourceAccesses, "expected parameter 'resourceAccesses' to be non-null");
+            $.resourceAppId = Objects.requireNonNull($.resourceAppId, "expected parameter 'resourceAppId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,6 +20,12 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * Provides an ECS cluster.
+ * 
+ * &gt; **NOTE on Clusters and Cluster Capacity Providers:** this provider provides both a standalone `aws.ecs.ClusterCapacityProviders` resource, as well as allowing the capacity providers and default strategies to be managed in-line by the `aws.ecs.Cluster` resource. You cannot use a Cluster with in-line capacity providers in conjunction with the Capacity Providers resource, nor use more than one Capacity Providers resource with a single Cluster, as doing so will cause a conflict and will lead to mutual overwrites.
+ * 
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * ECS clusters can be imported using the `name`, e.g.,
@@ -48,7 +54,11 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     /**
      * List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output<List<String>> capacityProviders;
 
@@ -76,7 +86,11 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     /**
      * Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
+     * @deprecated
+     * Use the aws_ecs_cluster_capacity_providers resource instead
+     * 
      */
+    @Deprecated /* Use the aws_ecs_cluster_capacity_providers resource instead */
     @Export(name="defaultCapacityProviderStrategies", type=List.class, parameters={ClusterDefaultCapacityProviderStrategy.class})
     private Output<List<ClusterDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies;
 
@@ -129,9 +143,17 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
+    /**
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }

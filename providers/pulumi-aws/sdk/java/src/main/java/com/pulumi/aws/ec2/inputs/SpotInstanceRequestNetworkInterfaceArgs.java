@@ -48,6 +48,21 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
     }
 
     /**
+     * Integer index of the network card. Limited by instance type. The default index is `0`.
+     * 
+     */
+    @Import(name="networkCardIndex")
+    private @Nullable Output<Integer> networkCardIndex;
+
+    /**
+     * @return Integer index of the network card. Limited by instance type. The default index is `0`.
+     * 
+     */
+    public Optional<Output<Integer>> networkCardIndex() {
+        return Optional.ofNullable(this.networkCardIndex);
+    }
+
+    /**
      * ID of the network interface to attach.
      * 
      */
@@ -67,6 +82,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
     private SpotInstanceRequestNetworkInterfaceArgs(SpotInstanceRequestNetworkInterfaceArgs $) {
         this.deleteOnTermination = $.deleteOnTermination;
         this.deviceIndex = $.deviceIndex;
+        this.networkCardIndex = $.networkCardIndex;
         this.networkInterfaceId = $.networkInterfaceId;
     }
 
@@ -128,6 +144,27 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
          */
         public Builder deviceIndex(Integer deviceIndex) {
             return deviceIndex(Output.of(deviceIndex));
+        }
+
+        /**
+         * @param networkCardIndex Integer index of the network card. Limited by instance type. The default index is `0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkCardIndex(@Nullable Output<Integer> networkCardIndex) {
+            $.networkCardIndex = networkCardIndex;
+            return this;
+        }
+
+        /**
+         * @param networkCardIndex Integer index of the network card. Limited by instance type. The default index is `0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkCardIndex(Integer networkCardIndex) {
+            return networkCardIndex(Output.of(networkCardIndex));
         }
 
         /**

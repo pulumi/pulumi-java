@@ -43,6 +43,11 @@ public final class GetInstanceTemplateScheduling {
      * 
      */
     private final Boolean preemptible;
+    /**
+     * @return (Beta) Describe the type of preemptible VM.
+     * 
+     */
+    private final String provisioningModel;
 
     @CustomType.Constructor
     private GetInstanceTemplateScheduling(
@@ -50,12 +55,14 @@ public final class GetInstanceTemplateScheduling {
         @CustomType.Parameter("minNodeCpus") Integer minNodeCpus,
         @CustomType.Parameter("nodeAffinities") List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities,
         @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @CustomType.Parameter("preemptible") Boolean preemptible) {
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("provisioningModel") String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;
         this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     /**
@@ -98,6 +105,13 @@ public final class GetInstanceTemplateScheduling {
     public Boolean preemptible() {
         return this.preemptible;
     }
+    /**
+     * @return (Beta) Describe the type of preemptible VM.
+     * 
+     */
+    public String provisioningModel() {
+        return this.provisioningModel;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -113,6 +127,7 @@ public final class GetInstanceTemplateScheduling {
         private List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
         private String onHostMaintenance;
         private Boolean preemptible;
+        private String provisioningModel;
 
         public Builder() {
     	      // Empty
@@ -125,6 +140,7 @@ public final class GetInstanceTemplateScheduling {
     	      this.nodeAffinities = defaults.nodeAffinities;
     	      this.onHostMaintenance = defaults.onHostMaintenance;
     	      this.preemptible = defaults.preemptible;
+    	      this.provisioningModel = defaults.provisioningModel;
         }
 
         public Builder automaticRestart(Boolean automaticRestart) {
@@ -149,8 +165,12 @@ public final class GetInstanceTemplateScheduling {
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
+        }
+        public Builder provisioningModel(String provisioningModel) {
+            this.provisioningModel = Objects.requireNonNull(provisioningModel);
+            return this;
         }        public GetInstanceTemplateScheduling build() {
-            return new GetInstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+            return new GetInstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }
     }
 }

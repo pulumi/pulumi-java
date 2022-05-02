@@ -36,14 +36,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     }
 
     /**
-     * Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
      * 
      */
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
     /**
-     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
      * 
      */
     public Optional<Output<String>> resourceId() {
@@ -113,7 +113,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
         }
 
         /**
-         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
         }
 
         /**
-         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
          * 
          * @return builder
          * 

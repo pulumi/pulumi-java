@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * A MWAA Environment requires an IAM role (`aws.iam.Role`), two subnets in the private zone (`aws.ec2.Subnet`) and a versioned S3 bucket (`aws.s3.Bucket`).
+ * A MWAA Environment requires an IAM role (`aws.iam.Role`), two subnets in the private zone (`aws.ec2.Subnet`) and a versioned S3 bucket (`aws.s3.BucketV2`).
  * 
  * ## Import
  * 
@@ -283,6 +283,20 @@ public class Environment extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> requirementsS3Path() {
         return Codegen.optional(this.requirementsS3Path);
+    }
+    /**
+     * The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+     * 
+     */
+    @Export(name="schedulers", type=Integer.class, parameters={})
+    private Output<Integer> schedulers;
+
+    /**
+     * @return The number of schedulers that you want to run in your environment. v2.0.2 and above accepts `2` - `5`, default `2`. v1.10.12 accepts `1`.
+     * 
+     */
+    public Output<Integer> schedulers() {
+        return this.schedulers;
     }
     /**
      * The Service Role ARN of the Amazon MWAA Environment

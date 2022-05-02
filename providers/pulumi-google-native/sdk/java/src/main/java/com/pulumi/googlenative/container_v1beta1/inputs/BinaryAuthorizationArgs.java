@@ -20,14 +20,14 @@ public final class BinaryAuthorizationArgs extends com.pulumi.resources.Resource
     public static final BinaryAuthorizationArgs Empty = new BinaryAuthorizationArgs();
 
     /**
-     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -59,7 +59,7 @@ public final class BinaryAuthorizationArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param enabled Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+         * @param enabled Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
          * 
          * @return builder
          * 
@@ -70,7 +70,7 @@ public final class BinaryAuthorizationArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param enabled Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+         * @param enabled Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
          * 
          * @return builder
          * 

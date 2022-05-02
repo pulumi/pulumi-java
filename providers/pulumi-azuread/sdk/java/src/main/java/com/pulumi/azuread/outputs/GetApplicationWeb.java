@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationWeb {
     /**
-     * Home page or landing page of the application.
+     * @return Home page or landing page of the application.
      * 
      */
     private final String homepageUrl;
     /**
-     * An `implicit_grant` block as documented above.
+     * @return An `implicit_grant` block as documented above.
      * 
      */
     private final List<GetApplicationWebImplicitGrant> implicitGrants;
     /**
-     * The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
      * 
      */
     private final String logoutUrl;
     /**
-     * A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * @return A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * 
      */
     private final List<String> redirectUris;
@@ -45,30 +45,30 @@ public final class GetApplicationWeb {
     }
 
     /**
-     * Home page or landing page of the application.
+     * @return Home page or landing page of the application.
      * 
-    */
+     */
     public String homepageUrl() {
         return this.homepageUrl;
     }
     /**
-     * An `implicit_grant` block as documented above.
+     * @return An `implicit_grant` block as documented above.
      * 
-    */
+     */
     public List<GetApplicationWebImplicitGrant> implicitGrants() {
         return this.implicitGrants;
     }
     /**
-     * The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
      * 
-    */
+     */
     public String logoutUrl() {
         return this.logoutUrl;
     }
     /**
-     * A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * @return A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * 
-    */
+     */
     public List<String> redirectUris() {
         return this.redirectUris;
     }

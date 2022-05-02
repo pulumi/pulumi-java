@@ -125,14 +125,14 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
         return this.notificationConfig;
     }
     /**
-     * Configuration for how FHIR resource can be searched.
+     * Configuration for how FHIR resources can be searched.
      * 
      */
     @Export(name="searchConfig", type=SearchConfigResponse.class, parameters={})
     private Output<SearchConfigResponse> searchConfig;
 
     /**
-     * @return Configuration for how FHIR resource can be searched.
+     * @return Configuration for how FHIR resources can be searched.
      * 
      */
     public Output<SearchConfigResponse> searchConfig() {

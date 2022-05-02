@@ -17,6 +17,11 @@ public final class GetRolloutResult {
      */
     private final String createTime;
     /**
+     * @return The user who created the Rollout. Readonly.
+     * 
+     */
+    private final String createdBy;
+    /**
      * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
      * 
      */
@@ -45,12 +50,14 @@ public final class GetRolloutResult {
     @CustomType.Constructor
     private GetRolloutResult(
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("createdBy") String createdBy,
         @CustomType.Parameter("deleteServiceStrategy") DeleteServiceStrategyResponse deleteServiceStrategy,
         @CustomType.Parameter("rolloutId") String rolloutId,
         @CustomType.Parameter("serviceName") String serviceName,
         @CustomType.Parameter("status") String status,
         @CustomType.Parameter("trafficPercentStrategy") TrafficPercentStrategyResponse trafficPercentStrategy) {
         this.createTime = createTime;
+        this.createdBy = createdBy;
         this.deleteServiceStrategy = deleteServiceStrategy;
         this.rolloutId = rolloutId;
         this.serviceName = serviceName;
@@ -64,6 +71,13 @@ public final class GetRolloutResult {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return The user who created the Rollout. Readonly.
+     * 
+     */
+    public String createdBy() {
+        return this.createdBy;
     }
     /**
      * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
@@ -111,6 +125,7 @@ public final class GetRolloutResult {
 
     public static final class Builder {
         private String createTime;
+        private String createdBy;
         private DeleteServiceStrategyResponse deleteServiceStrategy;
         private String rolloutId;
         private String serviceName;
@@ -124,6 +139,7 @@ public final class GetRolloutResult {
         public Builder(GetRolloutResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.createTime = defaults.createTime;
+    	      this.createdBy = defaults.createdBy;
     	      this.deleteServiceStrategy = defaults.deleteServiceStrategy;
     	      this.rolloutId = defaults.rolloutId;
     	      this.serviceName = defaults.serviceName;
@@ -133,6 +149,10 @@ public final class GetRolloutResult {
 
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder createdBy(String createdBy) {
+            this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
         public Builder deleteServiceStrategy(DeleteServiceStrategyResponse deleteServiceStrategy) {
@@ -155,7 +175,7 @@ public final class GetRolloutResult {
             this.trafficPercentStrategy = Objects.requireNonNull(trafficPercentStrategy);
             return this;
         }        public GetRolloutResult build() {
-            return new GetRolloutResult(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
+            return new GetRolloutResult(createTime, createdBy, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
         }
     }
 }

@@ -3,8 +3,8 @@
 
 package com.pulumi.awsnative.imagebuilder.outputs;
 
-import com.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationProperties;
-import com.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfigurationProperties;
+import com.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationAmiDistributionConfiguration;
+import com.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationContainerDistributionConfiguration;
 import com.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationLaunchTemplateConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -15,16 +15,8 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionConfigurationDistribution {
-    /**
-     * @return The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
-     */
-    private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
-    /**
-     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
-     */
-    private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
+    private final @Nullable DistributionConfigurationAmiDistributionConfiguration amiDistributionConfiguration;
+    private final @Nullable DistributionConfigurationContainerDistributionConfiguration containerDistributionConfiguration;
     /**
      * @return A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
@@ -43,8 +35,8 @@ public final class DistributionConfigurationDistribution {
 
     @CustomType.Constructor
     private DistributionConfigurationDistribution(
-        @CustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
-        @CustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
+        @CustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationAmiDistributionConfiguration amiDistributionConfiguration,
+        @CustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationContainerDistributionConfiguration containerDistributionConfiguration,
         @CustomType.Parameter("launchTemplateConfigurations") @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
         @CustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
         @CustomType.Parameter("region") String region) {
@@ -55,18 +47,10 @@ public final class DistributionConfigurationDistribution {
         this.region = region;
     }
 
-    /**
-     * @return The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
-     */
-    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> amiDistributionConfiguration() {
+    public Optional<DistributionConfigurationAmiDistributionConfiguration> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
-    /**
-     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
-     */
-    public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> containerDistributionConfiguration() {
+    public Optional<DistributionConfigurationContainerDistributionConfiguration> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
@@ -100,8 +84,8 @@ public final class DistributionConfigurationDistribution {
     }
 
     public static final class Builder {
-        private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
-        private @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
+        private @Nullable DistributionConfigurationAmiDistributionConfiguration amiDistributionConfiguration;
+        private @Nullable DistributionConfigurationContainerDistributionConfiguration containerDistributionConfiguration;
         private @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
         private @Nullable List<String> licenseConfigurationArns;
         private String region;
@@ -119,11 +103,11 @@ public final class DistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationAmiDistributionConfiguration amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationContainerDistributionConfiguration containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }

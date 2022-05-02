@@ -560,6 +560,29 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.vpcAccessConnector);
     }
 
+    /**
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    @Import(name="zones")
+    private @Nullable Output<List<String>> zones;
+
+    /**
+     * @return The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
+    }
+
     private VersionArgs() {}
 
     private VersionArgs(VersionArgs $) {
@@ -599,6 +622,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
         this.threadsafe = $.threadsafe;
         this.vm = $.vm;
         this.vpcAccessConnector = $.vpcAccessConnector;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
@@ -1389,6 +1413,49 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder vpcAccessConnector(VpcAccessConnectorArgs vpcAccessConnector) {
             return vpcAccessConnector(Output.of(vpcAccessConnector));
+        }
+
+        /**
+         * @param zones The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         */
+        @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+        public Builder zones(@Nullable Output<List<String>> zones) {
+            $.zones = zones;
+            return this;
+        }
+
+        /**
+         * @param zones The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         */
+        @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
+        }
+
+        /**
+         * @param zones The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+         * 
+         */
+        @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
         }
 
         public VersionArgs build() {
