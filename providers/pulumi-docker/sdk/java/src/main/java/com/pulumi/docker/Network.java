@@ -25,47 +25,6 @@ import javax.annotation.Nullable;
  * `docker.Network` provides details about a specific Docker Network.
  * 
  * ## Example Usage
- * ## Schema
- * 
- * ### Required
- * 
- * - **name** (String) The name of the Docker network.
- * 
- * ### Optional
- * 
- * - **attachable** (Boolean) Enable manual container attachment to the network.
- * - **check_duplicate** (Boolean) Requests daemon to check for networks with same name.
- * - **driver** (String) The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
- * - **id** (String) The ID of this resource.
- * - **ingress** (Boolean) Create swarm routing-mesh network. Defaults to `false`.
- * - **internal** (Boolean) Whether the network is internal.
- * - **ipam_config** (Block Set) The IPAM configuration options (see below for nested schema)
- * - **ipam_driver** (String) Driver used by the custom IP scheme of the network. Defaults to `default`
- * - **ipv6** (Boolean) Enable IPv6 networking. Defaults to `false`.
- * - **labels** (Block Set) User-defined key/value metadata (see below for nested schema)
- * - **options** (Map of String) Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
- * 
- * ### Read-Only
- * 
- * - **scope** (String) Scope of the network. One of `swarm`, `global`, or `local`.
- * 
- * &lt;a id=&#34;nestedblock--ipam_config&#34;&gt;&lt;/a&gt;
- * ### Nested Schema for `ipam_config`
- * 
- * Optional:
- * 
- * - **aux_address** (Map of String) Auxiliary IPv4 or IPv6 addresses used by Network driver
- * - **gateway** (String) The IP address of the gateway
- * - **ip_range** (String) The ip range in CIDR form
- * - **subnet** (String) The subnet in CIDR form
- * 
- * &lt;a id=&#34;nestedblock--labels&#34;&gt;&lt;/a&gt;
- * ### Nested Schema for `labels`
- * 
- * Required:
- * 
- * - **label** (String) Name of the label
- * - **value** (String) Value of the label
  * 
  * ## Import
  * 
@@ -109,16 +68,14 @@ public class Network extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.checkDuplicate);
     }
     /**
-     * The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network
-     * docs](https://docs.docker.com/network/#network-drivers) for more details.
+     * The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
      * 
      */
     @Export(name="driver", type=String.class, parameters={})
     private Output<String> driver;
 
     /**
-     * @return The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network
-     * docs](https://docs.docker.com/network/#network-drivers) for more details.
+     * @return The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
      * 
      */
     public Output<String> driver() {
@@ -223,16 +180,14 @@ public class Network extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Only available with bridge networks. See [bridge options
-     * docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
+     * Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * 
      */
     @Export(name="options", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> options;
 
     /**
-     * @return Only available with bridge networks. See [bridge options
-     * docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
+     * @return Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * 
      */
     public Output<Map<String,Object>> options() {
