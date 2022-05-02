@@ -20,6 +20,16 @@ public final class GetSchemaResult {
      */
     private final String name;
     /**
+     * @return The timestamp that the revision was created.
+     * 
+     */
+    private final String revisionCreateTime;
+    /**
+     * @return Immutable. The revision ID of the schema.
+     * 
+     */
+    private final String revisionId;
+    /**
      * @return The type of the schema definition.
      * 
      */
@@ -29,9 +39,13 @@ public final class GetSchemaResult {
     private GetSchemaResult(
         @CustomType.Parameter("definition") String definition,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @CustomType.Parameter("revisionId") String revisionId,
         @CustomType.Parameter("type") String type) {
         this.definition = definition;
         this.name = name;
+        this.revisionCreateTime = revisionCreateTime;
+        this.revisionId = revisionId;
         this.type = type;
     }
 
@@ -48,6 +62,20 @@ public final class GetSchemaResult {
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The timestamp that the revision was created.
+     * 
+     */
+    public String revisionCreateTime() {
+        return this.revisionCreateTime;
+    }
+    /**
+     * @return Immutable. The revision ID of the schema.
+     * 
+     */
+    public String revisionId() {
+        return this.revisionId;
     }
     /**
      * @return The type of the schema definition.
@@ -68,6 +96,8 @@ public final class GetSchemaResult {
     public static final class Builder {
         private String definition;
         private String name;
+        private String revisionCreateTime;
+        private String revisionId;
         private String type;
 
         public Builder() {
@@ -78,6 +108,8 @@ public final class GetSchemaResult {
     	      Objects.requireNonNull(defaults);
     	      this.definition = defaults.definition;
     	      this.name = defaults.name;
+    	      this.revisionCreateTime = defaults.revisionCreateTime;
+    	      this.revisionId = defaults.revisionId;
     	      this.type = defaults.type;
         }
 
@@ -89,11 +121,19 @@ public final class GetSchemaResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder revisionCreateTime(String revisionCreateTime) {
+            this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
+            return this;
+        }
+        public Builder revisionId(String revisionId) {
+            this.revisionId = Objects.requireNonNull(revisionId);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetSchemaResult build() {
-            return new GetSchemaResult(definition, name, type);
+            return new GetSchemaResult(definition, name, revisionCreateTime, revisionId, type);
         }
     }
 }

@@ -48,9 +48,17 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.authorizedNetworks);
     }
 
+    /**
+     * The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * Must be unique within the project. * First segment length (mydomain form example above) shouldn&#39;t exceed 15 chars. * The last segment cannot be fully numeric.
+     * 
+     */
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * Must be unique within the project. * First segment length (mydomain form example above) shouldn&#39;t exceed 15 chars. * The last segment cannot be fully numeric.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -205,11 +213,23 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
 
+        /**
+         * @param domainName The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * Must be unique within the project. * First segment length (mydomain form example above) shouldn&#39;t exceed 15 chars. * The last segment cannot be fully numeric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * Must be unique within the project. * First segment length (mydomain form example above) shouldn&#39;t exceed 15 chars. * The last segment cannot be fully numeric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }

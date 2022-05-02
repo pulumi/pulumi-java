@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_v1.SecurityPolicyArgs;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
+import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyDdosProtectionConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRecaptchaOptionsConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRuleResponse;
 import java.lang.String;
@@ -48,6 +49,12 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<String> creationTimestamp() {
         return this.creationTimestamp;
+    }
+    @Export(name="ddosProtectionConfig", type=SecurityPolicyDdosProtectionConfigResponse.class, parameters={})
+    private Output<SecurityPolicyDdosProtectionConfigResponse> ddosProtectionConfig;
+
+    public Output<SecurityPolicyDdosProtectionConfigResponse> ddosProtectionConfig() {
+        return this.ddosProtectionConfig;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
@@ -112,6 +119,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.recaptchaOptionsConfig;
     }
     /**
+     * URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    @Export(name="region", type=String.class, parameters={})
+    private Output<String> region;
+
+    /**
+     * @return URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    public Output<String> region() {
+        return this.region;
+    }
+    /**
      * A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
      * 
      */
@@ -140,14 +161,14 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.selfLink;
     }
     /**
-     * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * @return The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     public Output<String> type() {

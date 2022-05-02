@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1PageResponse {
     /**
-     * @return The human-readable name of the page, unique within the agent.
+     * @return The human-readable name of the page, unique within the flow.
      * 
      */
     private final String displayName;
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse {
     }
 
     /**
-     * @return The human-readable name of the page, unique within the agent.
+     * @return The human-readable name of the page, unique within the flow.
      * 
      */
     public String displayName() {

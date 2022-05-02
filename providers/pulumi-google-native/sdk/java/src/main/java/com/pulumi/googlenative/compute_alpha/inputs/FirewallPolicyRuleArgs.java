@@ -131,6 +131,21 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    @Import(name="ruleName")
+    private @Nullable Output<String> ruleName;
+
+    /**
+     * @return An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
+    }
+
+    /**
      * A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
      * 
      */
@@ -185,6 +200,7 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
         this.enableLogging = $.enableLogging;
         this.match = $.match;
         this.priority = $.priority;
+        this.ruleName = $.ruleName;
         this.targetResources = $.targetResources;
         this.targetSecureTags = $.targetSecureTags;
         this.targetServiceAccounts = $.targetServiceAccounts;
@@ -353,6 +369,27 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
          */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
+        }
+
+        /**
+         * @param ruleName An optional name for the rule. This field is not a unique identifier and can be updated.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(@Nullable Output<String> ruleName) {
+            $.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * @param ruleName An optional name for the rule. This field is not a unique identifier and can be updated.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
 
         /**

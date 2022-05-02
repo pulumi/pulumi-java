@@ -96,9 +96,17 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Optional. Create the stream without validating it.
+     * 
+     */
     @Import(name="force")
     private @Nullable Output<String> force;
 
+    /**
+     * @return Optional. Create the stream without validating it.
+     * 
+     */
     public Optional<Output<String>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -132,9 +140,17 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -169,16 +185,32 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.state);
     }
 
+    /**
+     * Required. The stream identifier.
+     * 
+     */
     @Import(name="streamId", required=true)
     private Output<String> streamId;
 
+    /**
+     * @return Required. The stream identifier.
+     * 
+     */
     public Output<String> streamId() {
         return this.streamId;
     }
 
+    /**
+     * Optional. Only validate the stream, but do not create any resources. The default is false.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Optional. Only validate the stream, but do not create any resources. The default is false.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -325,11 +357,23 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param force Optional. Create the stream without validating it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<String> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force Optional. Create the stream without validating it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(String force) {
             return force(Output.of(force));
         }
@@ -373,11 +417,23 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -424,20 +480,44 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        /**
+         * @param streamId Required. The stream identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamId(Output<String> streamId) {
             $.streamId = streamId;
             return this;
         }
 
+        /**
+         * @param streamId Required. The stream identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamId(String streamId) {
             return streamId(Output.of(streamId));
         }
 
+        /**
+         * @param validateOnly Optional. Only validate the stream, but do not create any resources. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Optional. Only validate the stream, but do not create any resources. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

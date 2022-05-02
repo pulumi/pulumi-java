@@ -9,7 +9,6 @@ import com.pulumi.googlenative.storage_v1.inputs.BucketAccessControlArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketAutoclassArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketBillingArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketCorsItemArgs;
-import com.pulumi.googlenative.storage_v1.inputs.BucketCustomPlacementConfigArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketEncryptionArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketLifecycleArgs;
@@ -90,21 +89,6 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<List<BucketCorsItemArgs>>> cors() {
         return Optional.ofNullable(this.cors);
-    }
-
-    /**
-     * The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    @Import(name="customPlacementConfig")
-    private @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
-
-    /**
-     * @return The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    public Optional<Output<BucketCustomPlacementConfigArgs>> customPlacementConfig() {
-        return Optional.ofNullable(this.customPlacementConfig);
     }
 
     /**
@@ -332,23 +316,47 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.owner);
     }
 
+    /**
+     * Apply a predefined set of access controls to this bucket.
+     * 
+     */
     @Import(name="predefinedAcl")
     private @Nullable Output<String> predefinedAcl;
 
+    /**
+     * @return Apply a predefined set of access controls to this bucket.
+     * 
+     */
     public Optional<Output<String>> predefinedAcl() {
         return Optional.ofNullable(this.predefinedAcl);
     }
 
+    /**
+     * Apply a predefined set of default object access controls to this bucket.
+     * 
+     */
     @Import(name="predefinedDefaultObjectAcl")
     private @Nullable Output<String> predefinedDefaultObjectAcl;
 
+    /**
+     * @return Apply a predefined set of default object access controls to this bucket.
+     * 
+     */
     public Optional<Output<String>> predefinedDefaultObjectAcl() {
         return Optional.ofNullable(this.predefinedDefaultObjectAcl);
     }
 
+    /**
+     * A valid API project identifier.
+     * 
+     */
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return A valid API project identifier.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -368,18 +376,19 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.projectNumber);
     }
 
+    /**
+     * Set of properties to return. Defaults to noAcl, unless the bucket resource specifies acl or defaultObjectAcl properties, when it defaults to full.
+     * 
+     */
     @Import(name="projection")
     private @Nullable Output<String> projection;
 
+    /**
+     * @return Set of properties to return. Defaults to noAcl, unless the bucket resource specifies acl or defaultObjectAcl properties, when it defaults to full.
+     * 
+     */
     public Optional<Output<String>> projection() {
         return Optional.ofNullable(this.projection);
-    }
-
-    @Import(name="provisionalUserProject")
-    private @Nullable Output<String> provisionalUserProject;
-
-    public Optional<Output<String>> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -487,9 +496,17 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.updated);
     }
 
+    /**
+     * The project to be billed for this request.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -531,7 +548,6 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
         this.autoclass = $.autoclass;
         this.billing = $.billing;
         this.cors = $.cors;
-        this.customPlacementConfig = $.customPlacementConfig;
         this.defaultEventBasedHold = $.defaultEventBasedHold;
         this.defaultObjectAcl = $.defaultObjectAcl;
         this.encryption = $.encryption;
@@ -552,7 +568,6 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.projectNumber = $.projectNumber;
         this.projection = $.projection;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.retentionPolicy = $.retentionPolicy;
         this.rpo = $.rpo;
         this.satisfiesPZS = $.satisfiesPZS;
@@ -685,27 +700,6 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder cors(BucketCorsItemArgs... cors) {
             return cors(List.of(cors));
-        }
-
-        /**
-         * @param customPlacementConfig The bucket&#39;s custom placement configuration for Custom Dual Regions.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder customPlacementConfig(@Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig) {
-            $.customPlacementConfig = customPlacementConfig;
-            return this;
-        }
-
-        /**
-         * @param customPlacementConfig The bucket&#39;s custom placement configuration for Custom Dual Regions.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder customPlacementConfig(BucketCustomPlacementConfigArgs customPlacementConfig) {
-            return customPlacementConfig(Output.of(customPlacementConfig));
         }
 
         /**
@@ -1033,29 +1027,65 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param predefinedAcl Apply a predefined set of access controls to this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             $.predefinedAcl = predefinedAcl;
             return this;
         }
 
+        /**
+         * @param predefinedAcl Apply a predefined set of access controls to this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(String predefinedAcl) {
             return predefinedAcl(Output.of(predefinedAcl));
         }
 
+        /**
+         * @param predefinedDefaultObjectAcl Apply a predefined set of default object access controls to this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedDefaultObjectAcl(@Nullable Output<String> predefinedDefaultObjectAcl) {
             $.predefinedDefaultObjectAcl = predefinedDefaultObjectAcl;
             return this;
         }
 
+        /**
+         * @param predefinedDefaultObjectAcl Apply a predefined set of default object access controls to this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedDefaultObjectAcl(String predefinedDefaultObjectAcl) {
             return predefinedDefaultObjectAcl(Output.of(predefinedDefaultObjectAcl));
         }
 
+        /**
+         * @param project A valid API project identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project A valid API project identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
@@ -1081,22 +1111,25 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return projectNumber(Output.of(projectNumber));
         }
 
+        /**
+         * @param projection Set of properties to return. Defaults to noAcl, unless the bucket resource specifies acl or defaultObjectAcl properties, when it defaults to full.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projection(@Nullable Output<String> projection) {
             $.projection = projection;
             return this;
         }
 
+        /**
+         * @param projection Set of properties to return. Defaults to noAcl, unless the bucket resource specifies acl or defaultObjectAcl properties, when it defaults to full.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projection(String projection) {
             return projection(Output.of(projection));
-        }
-
-        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
-            return this;
-        }
-
-        public Builder provisionalUserProject(String provisionalUserProject) {
-            return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
         /**
@@ -1246,11 +1279,23 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return updated(Output.of(updated));
         }
 
+        /**
+         * @param userProject The project to be billed for this request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

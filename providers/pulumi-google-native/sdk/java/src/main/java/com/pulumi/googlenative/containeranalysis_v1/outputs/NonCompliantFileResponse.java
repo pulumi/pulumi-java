@@ -15,7 +15,7 @@ public final class NonCompliantFileResponse {
      */
     private final String displayCommand;
     /**
-     * @return display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+     * @return Empty if `display_command` is set.
      * 
      */
     private final String path;
@@ -43,7 +43,7 @@ public final class NonCompliantFileResponse {
         return this.displayCommand;
     }
     /**
-     * @return display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+     * @return Empty if `display_command` is set.
      * 
      */
     public String path() {

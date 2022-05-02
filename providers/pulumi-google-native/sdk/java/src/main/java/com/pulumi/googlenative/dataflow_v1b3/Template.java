@@ -16,7 +16,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a Cloud Dataflow job from a template.
+ * Creates a Cloud Dataflow job from a template. Do not enter confidential information when you supply string values using the API.
  * Auto-naming is currently not supported for this resource.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.

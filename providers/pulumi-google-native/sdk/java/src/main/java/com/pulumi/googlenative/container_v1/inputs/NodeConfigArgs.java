@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Parameters that describe the nodes in a cluster.
+ * Parameters that describe the nodes in a cluster. *Note: *GKE Autopilot clusters do not recognize parameters in `NodeConfig`. Use AutoprovisioningNodePoolDefaults instead.
  * 
  */
 public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
@@ -365,6 +365,21 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+     * 
+     */
+    @Import(name="spot")
+    private @Nullable Output<Boolean> spot;
+
+    /**
+     * @return Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+     * 
+     */
+    public Optional<Output<Boolean>> spot() {
+        return Optional.ofNullable(this.spot);
+    }
+
+    /**
      * The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
      * 
      */
@@ -434,6 +449,7 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
         this.sandboxConfig = $.sandboxConfig;
         this.serviceAccount = $.serviceAccount;
         this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.spot = $.spot;
         this.tags = $.tags;
         this.taints = $.taints;
         this.workloadMetadataConfig = $.workloadMetadataConfig;
@@ -937,6 +953,27 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
+        }
+
+        /**
+         * @param spot Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spot(@Nullable Output<Boolean> spot) {
+            $.spot = spot;
+            return this;
+        }
+
+        /**
+         * @param spot Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spot(Boolean spot) {
+            return spot(Output.of(spot));
         }
 
         /**

@@ -22,7 +22,7 @@ public final class TimeSeriesQueryResponse {
      */
     private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
     /**
-     * @return A query used to fetch time series.
+     * @return A query used to fetch time series with MQL.
      * 
      */
     private final String timeSeriesQueryLanguage;
@@ -59,7 +59,7 @@ public final class TimeSeriesQueryResponse {
         return this.timeSeriesFilterRatio;
     }
     /**
-     * @return A query used to fetch time series.
+     * @return A query used to fetch time series with MQL.
      * 
      */
     public String timeSeriesQueryLanguage() {

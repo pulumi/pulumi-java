@@ -20,14 +20,14 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
     public static final CircuitBreakersArgs Empty = new CircuitBreakersArgs();
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     @Import(name="maxConnections")
     private @Nullable Output<Integer> maxConnections;
 
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     public Optional<Output<Integer>> maxConnections() {
@@ -35,14 +35,14 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     @Import(name="maxPendingRequests")
     private @Nullable Output<Integer> maxPendingRequests;
 
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     public Optional<Output<Integer>> maxPendingRequests() {
@@ -65,14 +65,14 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     @Import(name="maxRequestsPerConnection")
     private @Nullable Output<Integer> maxRequestsPerConnection;
 
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     public Optional<Output<Integer>> maxRequestsPerConnection() {
@@ -80,14 +80,14 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     @Import(name="maxRetries")
     private @Nullable Output<Integer> maxRetries;
 
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
     public Optional<Output<Integer>> maxRetries() {
@@ -123,7 +123,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxConnections Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxConnections The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxConnections Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxConnections The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -144,7 +144,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxPendingRequests Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxPendingRequests The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxPendingRequests Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxPendingRequests The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxRequestsPerConnection Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxRequestsPerConnection Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxRequestsPerConnection Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxRequestsPerConnection Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxRetries Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxRetries The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class CircuitBreakersArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param maxRetries Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * @param maxRetries The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
          * 

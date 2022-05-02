@@ -9,18 +9,18 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @EnumType
     public enum MetadataOptionsSymlink {
         /**
-         * Symlink behavior is unspecified. The default behavior is to skip symlinks during a transfer job.
+         * Symlink behavior is unspecified.
          * 
          */
         SymlinkUnspecified("SYMLINK_UNSPECIFIED"),
         /**
-         * Skip symlinks during a transfer job.
+         * Do not preserve symlinks during a transfer job.
          * 
          */
         SymlinkSkip("SYMLINK_SKIP"),

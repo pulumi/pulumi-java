@@ -10,6 +10,16 @@ import java.util.Objects;
 @CustomType
 public final class GitFileSourceResponse {
     /**
+     * @return The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    private final String bitbucketServerConfig;
+    /**
+     * @return The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    private final String githubEnterpriseConfig;
+    /**
      * @return The path of the file, with the repo root as the root of the path.
      * 
      */
@@ -25,23 +35,41 @@ public final class GitFileSourceResponse {
      */
     private final String revision;
     /**
-     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * @return The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
      */
     private final String uri;
 
     @CustomType.Constructor
     private GitFileSourceResponse(
+        @CustomType.Parameter("bitbucketServerConfig") String bitbucketServerConfig,
+        @CustomType.Parameter("githubEnterpriseConfig") String githubEnterpriseConfig,
         @CustomType.Parameter("path") String path,
         @CustomType.Parameter("repoType") String repoType,
         @CustomType.Parameter("revision") String revision,
         @CustomType.Parameter("uri") String uri) {
+        this.bitbucketServerConfig = bitbucketServerConfig;
+        this.githubEnterpriseConfig = githubEnterpriseConfig;
         this.path = path;
         this.repoType = repoType;
         this.revision = revision;
         this.uri = uri;
     }
 
+    /**
+     * @return The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+     * 
+     */
+    public String bitbucketServerConfig() {
+        return this.bitbucketServerConfig;
+    }
+    /**
+     * @return The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.
+     * 
+     */
+    public String githubEnterpriseConfig() {
+        return this.githubEnterpriseConfig;
+    }
     /**
      * @return The path of the file, with the repo root as the root of the path.
      * 
@@ -64,7 +92,7 @@ public final class GitFileSourceResponse {
         return this.revision;
     }
     /**
-     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * @return The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
      */
     public String uri() {
@@ -80,6 +108,8 @@ public final class GitFileSourceResponse {
     }
 
     public static final class Builder {
+        private String bitbucketServerConfig;
+        private String githubEnterpriseConfig;
         private String path;
         private String repoType;
         private String revision;
@@ -91,12 +121,22 @@ public final class GitFileSourceResponse {
 
         public Builder(GitFileSourceResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.bitbucketServerConfig = defaults.bitbucketServerConfig;
+    	      this.githubEnterpriseConfig = defaults.githubEnterpriseConfig;
     	      this.path = defaults.path;
     	      this.repoType = defaults.repoType;
     	      this.revision = defaults.revision;
     	      this.uri = defaults.uri;
         }
 
+        public Builder bitbucketServerConfig(String bitbucketServerConfig) {
+            this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
+            return this;
+        }
+        public Builder githubEnterpriseConfig(String githubEnterpriseConfig) {
+            this.githubEnterpriseConfig = Objects.requireNonNull(githubEnterpriseConfig);
+            return this;
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
@@ -113,7 +153,7 @@ public final class GitFileSourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }        public GitFileSourceResponse build() {
-            return new GitFileSourceResponse(path, repoType, revision, uri);
+            return new GitFileSourceResponse(bitbucketServerConfig, githubEnterpriseConfig, path, repoType, revision, uri);
         }
     }
 }

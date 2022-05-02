@@ -79,9 +79,17 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
         return this.endpointMatcher;
     }
 
+    /**
+     * Required. Short name of the EndpointPolicy resource to be created. E.g. &#34;CustomECS&#34;.
+     * 
+     */
     @Import(name="endpointPolicyId", required=true)
     private Output<String> endpointPolicyId;
 
+    /**
+     * @return Required. Short name of the EndpointPolicy resource to be created. E.g. &#34;CustomECS&#34;.
+     * 
+     */
     public Output<String> endpointPolicyId() {
         return this.endpointPolicyId;
     }
@@ -294,11 +302,23 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return endpointMatcher(Output.of(endpointMatcher));
         }
 
+        /**
+         * @param endpointPolicyId Required. Short name of the EndpointPolicy resource to be created. E.g. &#34;CustomECS&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPolicyId(Output<String> endpointPolicyId) {
             $.endpointPolicyId = endpointPolicyId;
             return this;
         }
 
+        /**
+         * @param endpointPolicyId Required. Short name of the EndpointPolicy resource to be created. E.g. &#34;CustomECS&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPolicyId(String endpointPolicyId) {
             return endpointPolicyId(Output.of(endpointPolicyId));
         }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_v1.outputs.FirewallPolicyRuleMatcherLayer4ConfigResponse;
+import com.pulumi.googlenative.compute_v1.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,15 +27,22 @@ public final class FirewallPolicyRuleMatcherResponse {
      * 
      */
     private final List<String> srcIpRanges;
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
     @CustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
         @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
         @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
+        @CustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;
+        this.srcSecureTags = srcSecureTags;
     }
 
     /**
@@ -58,6 +66,13 @@ public final class FirewallPolicyRuleMatcherResponse {
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
+        return this.srcSecureTags;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -71,6 +86,7 @@ public final class FirewallPolicyRuleMatcherResponse {
         private List<String> destIpRanges;
         private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
         private List<String> srcIpRanges;
+        private List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
         public Builder() {
     	      // Empty
@@ -81,6 +97,7 @@ public final class FirewallPolicyRuleMatcherResponse {
     	      this.destIpRanges = defaults.destIpRanges;
     	      this.layer4Configs = defaults.layer4Configs;
     	      this.srcIpRanges = defaults.srcIpRanges;
+    	      this.srcSecureTags = defaults.srcSecureTags;
         }
 
         public Builder destIpRanges(List<String> destIpRanges) {
@@ -103,8 +120,15 @@ public final class FirewallPolicyRuleMatcherResponse {
         }
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
+        }
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+            this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
+            return this;
+        }
+        public Builder srcSecureTags(FirewallPolicyRuleSecureTagResponse... srcSecureTags) {
+            return srcSecureTags(List.of(srcSecureTags));
         }        public FirewallPolicyRuleMatcherResponse build() {
-            return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
+            return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges, srcSecureTags);
         }
     }
 }

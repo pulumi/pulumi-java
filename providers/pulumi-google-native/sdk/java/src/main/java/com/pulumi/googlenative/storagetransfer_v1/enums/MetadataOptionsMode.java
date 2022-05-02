@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @EnumType
@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         ModeUnspecified("MODE_UNSPECIFIED"),
         /**
-         * Skip mode during a transfer job.
+         * Do not preserve mode during a transfer job.
          * 
          */
         ModeSkip("MODE_SKIP"),

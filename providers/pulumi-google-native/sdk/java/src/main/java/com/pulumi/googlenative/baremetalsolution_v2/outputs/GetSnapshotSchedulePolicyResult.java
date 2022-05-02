@@ -32,17 +32,24 @@ public final class GetSnapshotSchedulePolicyResult {
      * 
      */
     private final List<ScheduleResponse> schedules;
+    /**
+     * @return The state of the snapshot schedule policy.
+     * 
+     */
+    private final String state;
 
     @CustomType.Constructor
     private GetSnapshotSchedulePolicyResult(
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("schedules") List<ScheduleResponse> schedules) {
+        @CustomType.Parameter("schedules") List<ScheduleResponse> schedules,
+        @CustomType.Parameter("state") String state) {
         this.description = description;
         this.labels = labels;
         this.name = name;
         this.schedules = schedules;
+        this.state = state;
     }
 
     /**
@@ -73,6 +80,13 @@ public final class GetSnapshotSchedulePolicyResult {
     public List<ScheduleResponse> schedules() {
         return this.schedules;
     }
+    /**
+     * @return The state of the snapshot schedule policy.
+     * 
+     */
+    public String state() {
+        return this.state;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +101,7 @@ public final class GetSnapshotSchedulePolicyResult {
         private Map<String,String> labels;
         private String name;
         private List<ScheduleResponse> schedules;
+        private String state;
 
         public Builder() {
     	      // Empty
@@ -98,6 +113,7 @@ public final class GetSnapshotSchedulePolicyResult {
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
     	      this.schedules = defaults.schedules;
+    	      this.state = defaults.state;
         }
 
         public Builder description(String description) {
@@ -118,8 +134,12 @@ public final class GetSnapshotSchedulePolicyResult {
         }
         public Builder schedules(ScheduleResponse... schedules) {
             return schedules(List.of(schedules));
+        }
+        public Builder state(String state) {
+            this.state = Objects.requireNonNull(state);
+            return this;
         }        public GetSnapshotSchedulePolicyResult build() {
-            return new GetSnapshotSchedulePolicyResult(description, labels, name, schedules);
+            return new GetSnapshotSchedulePolicyResult(description, labels, name, schedules, state);
         }
     }
 }

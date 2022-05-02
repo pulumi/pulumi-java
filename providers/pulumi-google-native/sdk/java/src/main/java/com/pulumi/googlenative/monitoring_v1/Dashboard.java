@@ -10,10 +10,12 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.monitoring_v1.DashboardArgs;
 import com.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
+import com.pulumi.googlenative.monitoring_v1.outputs.DashboardFilterResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.GridLayoutResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.MosaicLayoutResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.RowLayoutResponse;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
@@ -36,6 +38,20 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      */
     public Output<ColumnLayoutResponse> columnLayout() {
         return this.columnLayout;
+    }
+    /**
+     * Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    @Export(name="dashboardFilters", type=List.class, parameters={DashboardFilterResponse.class})
+    private Output<List<DashboardFilterResponse>> dashboardFilters;
+
+    /**
+     * @return Filters to reduce the amount of data charted based on the filter criteria.
+     * 
+     */
+    public Output<List<DashboardFilterResponse>> dashboardFilters() {
+        return this.dashboardFilters;
     }
     /**
      * The mutable, human-readable name.

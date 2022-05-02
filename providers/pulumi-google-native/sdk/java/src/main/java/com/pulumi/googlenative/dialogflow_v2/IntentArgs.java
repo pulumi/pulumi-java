@@ -114,9 +114,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.inputContextNames);
     }
 
+    /**
+     * Optional. The resource view to apply to the returned intent.
+     * 
+     */
     @Import(name="intentView")
     private @Nullable Output<String> intentView;
 
+    /**
+     * @return Optional. The resource view to apply to the returned intent.
+     * 
+     */
     public Optional<Output<String>> intentView() {
         return Optional.ofNullable(this.intentView);
     }
@@ -136,9 +144,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.isFallback);
     }
 
+    /**
+     * Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -523,11 +539,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return inputContextNames(List.of(inputContextNames));
         }
 
+        /**
+         * @param intentView Optional. The resource view to apply to the returned intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentView(@Nullable Output<String> intentView) {
             $.intentView = intentView;
             return this;
         }
 
+        /**
+         * @param intentView Optional. The resource view to apply to the returned intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentView(String intentView) {
             return intentView(Output.of(intentView));
         }
@@ -553,11 +581,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return isFallback(Output.of(isFallback));
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }

@@ -67,9 +67,17 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The ID to use for the snapshot. The ID must be unique within the specified instance. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * 
+     */
     @Import(name="snapshotId", required=true)
     private Output<String> snapshotId;
 
+    /**
+     * @return Required. The ID to use for the snapshot. The ID must be unique within the specified instance. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * 
+     */
     public Output<String> snapshotId() {
         return this.snapshotId;
     }
@@ -172,11 +180,23 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param snapshotId Required. The ID to use for the snapshot. The ID must be unique within the specified instance. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param snapshotId Required. The ID to use for the snapshot. The ID must be unique within the specified instance. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             return snapshotId(Output.of(snapshotId));
         }

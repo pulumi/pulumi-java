@@ -5,6 +5,7 @@ package com.pulumi.googlenative.cloudfunctions_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.cloudfunctions_v1.enums.FunctionDockerRegistry;
 import com.pulumi.googlenative.cloudfunctions_v1.enums.FunctionIngressSettings;
 import com.pulumi.googlenative.cloudfunctions_v1.enums.FunctionVpcConnectorEgressSettings;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.EventTriggerArgs;
@@ -83,6 +84,21 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * 
+     */
+    @Import(name="dockerRegistry")
+    private @Nullable Output<FunctionDockerRegistry> dockerRegistry;
+
+    /**
+     * @return Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * 
+     */
+    public Optional<Output<FunctionDockerRegistry>> dockerRegistry() {
+        return Optional.ofNullable(this.dockerRegistry);
     }
 
     /**
@@ -451,6 +467,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
         this.buildEnvironmentVariables = $.buildEnvironmentVariables;
         this.buildWorkerPool = $.buildWorkerPool;
         this.description = $.description;
+        this.dockerRegistry = $.dockerRegistry;
         this.dockerRepository = $.dockerRepository;
         this.entryPoint = $.entryPoint;
         this.environmentVariables = $.environmentVariables;
@@ -578,6 +595,27 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param dockerRegistry Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dockerRegistry(@Nullable Output<FunctionDockerRegistry> dockerRegistry) {
+            $.dockerRegistry = dockerRegistry;
+            return this;
+        }
+
+        /**
+         * @param dockerRegistry Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dockerRegistry(FunctionDockerRegistry dockerRegistry) {
+            return dockerRegistry(Output.of(dockerRegistry));
         }
 
         /**

@@ -15,6 +15,11 @@ import java.util.StringJoiner;
     @EnumType
     public enum PublicAdvertisedPrefixStatus {
         /**
+         * The prefix is announced to Internet.
+         * 
+         */
+        AnnouncedToInternet("ANNOUNCED_TO_INTERNET"),
+        /**
          * RPKI validation is complete.
          * 
          */
@@ -39,6 +44,11 @@ import java.util.StringJoiner;
          * 
          */
         PtrConfigured("PTR_CONFIGURED"),
+        /**
+         * The prefix is currently withdrawn but ready to be announced.
+         * 
+         */
+        ReadyToAnnounce("READY_TO_ANNOUNCE"),
         /**
          * Reverse DNS lookup failed.
          * 

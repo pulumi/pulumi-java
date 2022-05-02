@@ -50,6 +50,15 @@ public final class GetRegionNetworkResult {
      */
     private final String internalIpv6Range;
     /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    private final String ipv4Range;
+    /**
      * @return Type of the resource. Always compute#network for networks.
      * 
      */
@@ -64,6 +73,10 @@ public final class GetRegionNetworkResult {
      * 
      */
     private final String name;
+    /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     private final String networkFirewallPolicyEnforcementOrder;
     /**
      * @return A list of network peerings for the resource.
@@ -105,6 +118,7 @@ public final class GetRegionNetworkResult {
         @CustomType.Parameter("firewallPolicy") String firewallPolicy,
         @CustomType.Parameter("gatewayIPv4") String gatewayIPv4,
         @CustomType.Parameter("internalIpv6Range") String internalIpv6Range,
+        @CustomType.Parameter("ipv4Range") String ipv4Range,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("mtu") Integer mtu,
         @CustomType.Parameter("name") String name,
@@ -122,6 +136,7 @@ public final class GetRegionNetworkResult {
         this.firewallPolicy = firewallPolicy;
         this.gatewayIPv4 = gatewayIPv4;
         this.internalIpv6Range = internalIpv6Range;
+        this.ipv4Range = ipv4Range;
         this.kind = kind;
         this.mtu = mtu;
         this.name = name;
@@ -184,6 +199,17 @@ public final class GetRegionNetworkResult {
         return this.internalIpv6Range;
     }
     /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    public String ipv4Range() {
+        return this.ipv4Range;
+    }
+    /**
      * @return Type of the resource. Always compute#network for networks.
      * 
      */
@@ -204,6 +230,10 @@ public final class GetRegionNetworkResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     public String networkFirewallPolicyEnforcementOrder() {
         return this.networkFirewallPolicyEnforcementOrder;
     }
@@ -266,6 +296,7 @@ public final class GetRegionNetworkResult {
         private String firewallPolicy;
         private String gatewayIPv4;
         private String internalIpv6Range;
+        private String ipv4Range;
         private String kind;
         private Integer mtu;
         private String name;
@@ -290,6 +321,7 @@ public final class GetRegionNetworkResult {
     	      this.firewallPolicy = defaults.firewallPolicy;
     	      this.gatewayIPv4 = defaults.gatewayIPv4;
     	      this.internalIpv6Range = defaults.internalIpv6Range;
+    	      this.ipv4Range = defaults.ipv4Range;
     	      this.kind = defaults.kind;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
@@ -328,6 +360,10 @@ public final class GetRegionNetworkResult {
         }
         public Builder internalIpv6Range(String internalIpv6Range) {
             this.internalIpv6Range = Objects.requireNonNull(internalIpv6Range);
+            return this;
+        }
+        public Builder ipv4Range(String ipv4Range) {
+            this.ipv4Range = Objects.requireNonNull(ipv4Range);
             return this;
         }
         public Builder kind(String kind) {
@@ -376,7 +412,7 @@ public final class GetRegionNetworkResult {
         public Builder subnetworks(String... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }        public GetRegionNetworkResult build() {
-            return new GetRegionNetworkResult(autoCreateSubnetworks, creationTimestamp, description, enableUlaInternalIpv6, firewallPolicy, gatewayIPv4, internalIpv6Range, kind, mtu, name, networkFirewallPolicyEnforcementOrder, peerings, region, routingConfig, selfLink, selfLinkWithId, subnetworks);
+            return new GetRegionNetworkResult(autoCreateSubnetworks, creationTimestamp, description, enableUlaInternalIpv6, firewallPolicy, gatewayIPv4, internalIpv6Range, ipv4Range, kind, mtu, name, networkFirewallPolicyEnforcementOrder, peerings, region, routingConfig, selfLink, selfLinkWithId, subnetworks);
         }
     }
 }

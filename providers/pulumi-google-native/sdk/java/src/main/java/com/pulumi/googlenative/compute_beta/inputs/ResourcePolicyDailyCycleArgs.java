@@ -21,14 +21,14 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
     public static final ResourcePolicyDailyCycleArgs Empty = new ResourcePolicyDailyCycleArgs();
 
     /**
-     * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
      * 
      */
     @Import(name="daysInCycle")
     private @Nullable Output<Integer> daysInCycle;
 
     /**
-     * @return Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * @return Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
      * 
      */
     public Optional<Output<Integer>> daysInCycle() {
@@ -76,7 +76,7 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param daysInCycle Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+         * @param daysInCycle Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
          * 
          * @return builder
          * 
@@ -87,7 +87,7 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param daysInCycle Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+         * @param daysInCycle Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
          * 
          * @return builder
          * 

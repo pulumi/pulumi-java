@@ -5,6 +5,7 @@ package com.pulumi.googlenative.logging_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.logging_v2.enums.BillingAccountSinkOutputVersionFormat;
 import com.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import com.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;
@@ -146,9 +147,40 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Deprecated. This field is unused.
+     * 
+     * @deprecated
+     * Deprecated. This field is unused.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is unused. */
+    @Import(name="outputVersionFormat")
+    private @Nullable Output<BillingAccountSinkOutputVersionFormat> outputVersionFormat;
+
+    /**
+     * @return Deprecated. This field is unused.
+     * 
+     * @deprecated
+     * Deprecated. This field is unused.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is unused. */
+    public Optional<Output<BillingAccountSinkOutputVersionFormat>> outputVersionFormat() {
+        return Optional.ofNullable(this.outputVersionFormat);
+    }
+
+    /**
+     * Optional. Determines the kind of IAM identity returned as writer_identity in the new sink. If this value is omitted or set to false, and if the sink&#39;s parent is a project, then the value returned as writer_identity is the same group or service account used by Cloud Logging before the addition of writer identities to this API. The sink&#39;s destination must be in the same project as the sink itself.If this field is set to true, or if the sink is owned by a non-project resource such as an organization, then the value of writer_identity will be a unique service account used only for exports from the new sink. For more information, see writer_identity in LogSink.
+     * 
+     */
     @Import(name="uniqueWriterIdentity")
     private @Nullable Output<String> uniqueWriterIdentity;
 
+    /**
+     * @return Optional. Determines the kind of IAM identity returned as writer_identity in the new sink. If this value is omitted or set to false, and if the sink&#39;s parent is a project, then the value returned as writer_identity is the same group or service account used by Cloud Logging before the addition of writer identities to this API. The sink&#39;s destination must be in the same project as the sink itself.If this field is set to true, or if the sink is owned by a non-project resource such as an organization, then the value of writer_identity will be a unique service account used only for exports from the new sink. For more information, see writer_identity in LogSink.
+     * 
+     */
     public Optional<Output<String>> uniqueWriterIdentity() {
         return Optional.ofNullable(this.uniqueWriterIdentity);
     }
@@ -165,6 +197,7 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
         this.filter = $.filter;
         this.includeChildren = $.includeChildren;
         this.name = $.name;
+        this.outputVersionFormat = $.outputVersionFormat;
         this.uniqueWriterIdentity = $.uniqueWriterIdentity;
     }
 
@@ -373,11 +406,52 @@ public final class BillingAccountSinkArgs extends com.pulumi.resources.ResourceA
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputVersionFormat Deprecated. This field is unused.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field is unused.
+         * 
+         */
+        @Deprecated /* Deprecated. This field is unused. */
+        public Builder outputVersionFormat(@Nullable Output<BillingAccountSinkOutputVersionFormat> outputVersionFormat) {
+            $.outputVersionFormat = outputVersionFormat;
+            return this;
+        }
+
+        /**
+         * @param outputVersionFormat Deprecated. This field is unused.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field is unused.
+         * 
+         */
+        @Deprecated /* Deprecated. This field is unused. */
+        public Builder outputVersionFormat(BillingAccountSinkOutputVersionFormat outputVersionFormat) {
+            return outputVersionFormat(Output.of(outputVersionFormat));
+        }
+
+        /**
+         * @param uniqueWriterIdentity Optional. Determines the kind of IAM identity returned as writer_identity in the new sink. If this value is omitted or set to false, and if the sink&#39;s parent is a project, then the value returned as writer_identity is the same group or service account used by Cloud Logging before the addition of writer identities to this API. The sink&#39;s destination must be in the same project as the sink itself.If this field is set to true, or if the sink is owned by a non-project resource such as an organization, then the value of writer_identity will be a unique service account used only for exports from the new sink. For more information, see writer_identity in LogSink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueWriterIdentity(@Nullable Output<String> uniqueWriterIdentity) {
             $.uniqueWriterIdentity = uniqueWriterIdentity;
             return this;
         }
 
+        /**
+         * @param uniqueWriterIdentity Optional. Determines the kind of IAM identity returned as writer_identity in the new sink. If this value is omitted or set to false, and if the sink&#39;s parent is a project, then the value returned as writer_identity is the same group or service account used by Cloud Logging before the addition of writer identities to this API. The sink&#39;s destination must be in the same project as the sink itself.If this field is set to true, or if the sink is owned by a non-project resource such as an organization, then the value of writer_identity will be a unique service account used only for exports from the new sink. For more information, see writer_identity in LogSink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueWriterIdentity(String uniqueWriterIdentity) {
             return uniqueWriterIdentity(Output.of(uniqueWriterIdentity));
         }

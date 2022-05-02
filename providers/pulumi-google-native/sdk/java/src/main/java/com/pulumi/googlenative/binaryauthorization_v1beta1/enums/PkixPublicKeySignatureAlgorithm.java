@@ -25,20 +25,40 @@ import java.util.StringJoiner;
          */
         RsaPss2048Sha256("RSA_PSS_2048_SHA256"),
         /**
+         * RSASSA-PSS 2048 bit key with a SHA256 digest.
+         * 
+         */
+        RsaSignPss2048Sha256("RSA_SIGN_PSS_2048_SHA256"),
+        /**
          * RSASSA-PSS 3072 bit key with a SHA256 digest.
          * 
          */
         RsaPss3072Sha256("RSA_PSS_3072_SHA256"),
+        /**
+         * RSASSA-PSS 3072 bit key with a SHA256 digest.
+         * 
+         */
+        RsaSignPss3072Sha256("RSA_SIGN_PSS_3072_SHA256"),
         /**
          * RSASSA-PSS 4096 bit key with a SHA256 digest.
          * 
          */
         RsaPss4096Sha256("RSA_PSS_4096_SHA256"),
         /**
+         * RSASSA-PSS 4096 bit key with a SHA256 digest.
+         * 
+         */
+        RsaSignPss4096Sha256("RSA_SIGN_PSS_4096_SHA256"),
+        /**
          * RSASSA-PSS 4096 bit key with a SHA512 digest.
          * 
          */
         RsaPss4096Sha512("RSA_PSS_4096_SHA512"),
+        /**
+         * RSASSA-PSS 4096 bit key with a SHA512 digest.
+         * 
+         */
+        RsaSignPss4096Sha512("RSA_SIGN_PSS_4096_SHA512"),
         /**
          * RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.
          * 

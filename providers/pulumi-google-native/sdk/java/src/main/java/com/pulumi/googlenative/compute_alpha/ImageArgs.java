@@ -116,9 +116,17 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.family);
     }
 
+    /**
+     * Force image creation if true.
+     * 
+     */
     @Import(name="forceCreate")
     private @Nullable Output<String> forceCreate;
 
+    /**
+     * @return Force image creation if true.
+     * 
+     */
     public Optional<Output<String>> forceCreate() {
         return Optional.ofNullable(this.forceCreate);
     }
@@ -250,9 +258,17 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.rawDisk);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -599,11 +615,23 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return family(Output.of(family));
         }
 
+        /**
+         * @param forceCreate Force image creation if true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceCreate(@Nullable Output<String> forceCreate) {
             $.forceCreate = forceCreate;
             return this;
         }
 
+        /**
+         * @param forceCreate Force image creation if true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceCreate(String forceCreate) {
             return forceCreate(Output.of(forceCreate));
         }
@@ -815,11 +843,23 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return rawDisk(Output.of(rawDisk));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

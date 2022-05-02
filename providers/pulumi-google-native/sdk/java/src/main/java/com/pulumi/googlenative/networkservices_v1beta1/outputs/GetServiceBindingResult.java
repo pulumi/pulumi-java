@@ -21,11 +21,6 @@ public final class GetServiceBindingResult {
      */
     private final String description;
     /**
-     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    private final String endpointFilter;
-    /**
      * @return Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
@@ -50,14 +45,12 @@ public final class GetServiceBindingResult {
     private GetServiceBindingResult(
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("description") String description,
-        @CustomType.Parameter("endpointFilter") String endpointFilter,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("service") String service,
         @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
-        this.endpointFilter = endpointFilter;
         this.labels = labels;
         this.name = name;
         this.service = service;
@@ -77,13 +70,6 @@ public final class GetServiceBindingResult {
      */
     public String description() {
         return this.description;
-    }
-    /**
-     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
-     */
-    public String endpointFilter() {
-        return this.endpointFilter;
     }
     /**
      * @return Optional. Set of label tags associated with the ServiceBinding resource.
@@ -125,7 +111,6 @@ public final class GetServiceBindingResult {
     public static final class Builder {
         private String createTime;
         private String description;
-        private String endpointFilter;
         private Map<String,String> labels;
         private String name;
         private String service;
@@ -139,7 +124,6 @@ public final class GetServiceBindingResult {
     	      Objects.requireNonNull(defaults);
     	      this.createTime = defaults.createTime;
     	      this.description = defaults.description;
-    	      this.endpointFilter = defaults.endpointFilter;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
     	      this.service = defaults.service;
@@ -152,10 +136,6 @@ public final class GetServiceBindingResult {
         }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
-            return this;
-        }
-        public Builder endpointFilter(String endpointFilter) {
-            this.endpointFilter = Objects.requireNonNull(endpointFilter);
             return this;
         }
         public Builder labels(Map<String,String> labels) {
@@ -174,7 +154,7 @@ public final class GetServiceBindingResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetServiceBindingResult build() {
-            return new GetServiceBindingResult(createTime, description, endpointFilter, labels, name, service, updateTime);
+            return new GetServiceBindingResult(createTime, description, labels, name, service, updateTime);
         }
     }
 }

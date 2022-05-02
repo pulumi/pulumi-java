@@ -9,6 +9,7 @@ import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceCdnPolicyResp
 import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceConnectionTrackingPolicyResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceFailoverPolicyResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceIAPResponse;
+import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceLocalityLoadBalancingPolicyConfigResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.BackendServiceLogConfigResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.CircuitBreakersResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.ConnectionDrainingResponse;
@@ -118,6 +119,11 @@ public final class GetRegionBackendServiceResult {
      */
     private final String loadBalancingScheme;
     /**
+     * @return A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
+    private final List<BackendServiceLocalityLoadBalancingPolicyConfigResponse> localityLbPolicies;
+    /**
      * @return The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
@@ -147,6 +153,15 @@ public final class GetRegionBackendServiceResult {
      * 
      */
     private final OutlierDetectionResponse outlierDetection;
+    /**
+     * @return Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     * @deprecated
+     * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+    private final Integer port;
     /**
      * @return A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
      * 
@@ -199,7 +214,7 @@ public final class GetRegionBackendServiceResult {
     private final String sessionAffinity;
     private final SubsettingResponse subsetting;
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+     * @return The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
      * 
      */
     private final Integer timeoutSec;
@@ -226,12 +241,14 @@ public final class GetRegionBackendServiceResult {
         @CustomType.Parameter("iap") BackendServiceIAPResponse iap,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("localityLbPolicies") List<BackendServiceLocalityLoadBalancingPolicyConfigResponse> localityLbPolicies,
         @CustomType.Parameter("localityLbPolicy") String localityLbPolicy,
         @CustomType.Parameter("logConfig") BackendServiceLogConfigResponse logConfig,
         @CustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("outlierDetection") OutlierDetectionResponse outlierDetection,
+        @CustomType.Parameter("port") Integer port,
         @CustomType.Parameter("portName") String portName,
         @CustomType.Parameter("protocol") String protocol,
         @CustomType.Parameter("region") String region,
@@ -264,12 +281,14 @@ public final class GetRegionBackendServiceResult {
         this.iap = iap;
         this.kind = kind;
         this.loadBalancingScheme = loadBalancingScheme;
+        this.localityLbPolicies = localityLbPolicies;
         this.localityLbPolicy = localityLbPolicy;
         this.logConfig = logConfig;
         this.maxStreamDuration = maxStreamDuration;
         this.name = name;
         this.network = network;
         this.outlierDetection = outlierDetection;
+        this.port = port;
         this.portName = portName;
         this.protocol = protocol;
         this.region = region;
@@ -417,6 +436,13 @@ public final class GetRegionBackendServiceResult {
         return this.loadBalancingScheme;
     }
     /**
+     * @return A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
+    public List<BackendServiceLocalityLoadBalancingPolicyConfigResponse> localityLbPolicies() {
+        return this.localityLbPolicies;
+    }
+    /**
      * @return The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
@@ -457,6 +483,17 @@ public final class GetRegionBackendServiceResult {
      */
     public OutlierDetectionResponse outlierDetection() {
         return this.outlierDetection;
+    }
+    /**
+     * @return Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     * @deprecated
+     * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+    public Integer port() {
+        return this.port;
     }
     /**
      * @return A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
@@ -532,7 +569,7 @@ public final class GetRegionBackendServiceResult {
         return this.subsetting;
     }
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+     * @return The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
      * 
      */
     public Integer timeoutSec() {
@@ -568,12 +605,14 @@ public final class GetRegionBackendServiceResult {
         private BackendServiceIAPResponse iap;
         private String kind;
         private String loadBalancingScheme;
+        private List<BackendServiceLocalityLoadBalancingPolicyConfigResponse> localityLbPolicies;
         private String localityLbPolicy;
         private BackendServiceLogConfigResponse logConfig;
         private DurationResponse maxStreamDuration;
         private String name;
         private String network;
         private OutlierDetectionResponse outlierDetection;
+        private Integer port;
         private String portName;
         private String protocol;
         private String region;
@@ -613,12 +652,14 @@ public final class GetRegionBackendServiceResult {
     	      this.iap = defaults.iap;
     	      this.kind = defaults.kind;
     	      this.loadBalancingScheme = defaults.loadBalancingScheme;
+    	      this.localityLbPolicies = defaults.localityLbPolicies;
     	      this.localityLbPolicy = defaults.localityLbPolicy;
     	      this.logConfig = defaults.logConfig;
     	      this.maxStreamDuration = defaults.maxStreamDuration;
     	      this.name = defaults.name;
     	      this.network = defaults.network;
     	      this.outlierDetection = defaults.outlierDetection;
+    	      this.port = defaults.port;
     	      this.portName = defaults.portName;
     	      this.protocol = defaults.protocol;
     	      this.region = defaults.region;
@@ -725,6 +766,13 @@ public final class GetRegionBackendServiceResult {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
+        public Builder localityLbPolicies(List<BackendServiceLocalityLoadBalancingPolicyConfigResponse> localityLbPolicies) {
+            this.localityLbPolicies = Objects.requireNonNull(localityLbPolicies);
+            return this;
+        }
+        public Builder localityLbPolicies(BackendServiceLocalityLoadBalancingPolicyConfigResponse... localityLbPolicies) {
+            return localityLbPolicies(List.of(localityLbPolicies));
+        }
         public Builder localityLbPolicy(String localityLbPolicy) {
             this.localityLbPolicy = Objects.requireNonNull(localityLbPolicy);
             return this;
@@ -747,6 +795,10 @@ public final class GetRegionBackendServiceResult {
         }
         public Builder outlierDetection(OutlierDetectionResponse outlierDetection) {
             this.outlierDetection = Objects.requireNonNull(outlierDetection);
+            return this;
+        }
+        public Builder port(Integer port) {
+            this.port = Objects.requireNonNull(port);
             return this;
         }
         public Builder portName(String portName) {
@@ -800,7 +852,7 @@ public final class GetRegionBackendServiceResult {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }        public GetRegionBackendServiceResult build() {
-            return new GetRegionBackendServiceResult(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, compressionMode, connectionDraining, connectionTrackingPolicy, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, edgeSecurityPolicy, enableCDN, failoverPolicy, fingerprint, healthChecks, iap, kind, loadBalancingScheme, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, portName, protocol, region, securityPolicy, securitySettings, selfLink, selfLinkWithId, serviceBindings, serviceLbPolicy, sessionAffinity, subsetting, timeoutSec);
+            return new GetRegionBackendServiceResult(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, compressionMode, connectionDraining, connectionTrackingPolicy, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, edgeSecurityPolicy, enableCDN, failoverPolicy, fingerprint, healthChecks, iap, kind, loadBalancingScheme, localityLbPolicies, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, port, portName, protocol, region, securityPolicy, securitySettings, selfLink, selfLinkWithId, serviceBindings, serviceLbPolicy, sessionAffinity, subsetting, timeoutSec);
         }
     }
 }

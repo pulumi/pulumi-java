@@ -122,14 +122,14 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
         return this.downloadBytes;
     }
     /**
-     * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     @Export(name="guestFlush", type=Boolean.class, parameters={})
     private Output<Boolean> guestFlush;
 
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     public Output<Boolean> guestFlush() {
@@ -386,6 +386,34 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      */
     public Output<String> sourceInstantSnapshotId() {
         return this.sourceInstantSnapshotId;
+    }
+    /**
+     * URL of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    @Export(name="sourceSnapshotSchedulePolicy", type=String.class, parameters={})
+    private Output<String> sourceSnapshotSchedulePolicy;
+
+    /**
+     * @return URL of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    public Output<String> sourceSnapshotSchedulePolicy() {
+        return this.sourceSnapshotSchedulePolicy;
+    }
+    /**
+     * ID of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    @Export(name="sourceSnapshotSchedulePolicyId", type=String.class, parameters={})
+    private Output<String> sourceSnapshotSchedulePolicyId;
+
+    /**
+     * @return ID of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    public Output<String> sourceSnapshotSchedulePolicyId() {
+        return this.sourceSnapshotSchedulePolicyId;
     }
     /**
      * The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.

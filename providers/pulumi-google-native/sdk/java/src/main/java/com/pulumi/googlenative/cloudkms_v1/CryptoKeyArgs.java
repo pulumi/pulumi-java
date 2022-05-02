@@ -34,11 +34,19 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.cryptoKeyBackend);
     }
 
-    @Import(name="cryptoKeyId", required=true)
-    private Output<String> cryptoKeyId;
+    /**
+     * Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    @Import(name="cryptoKeyId")
+    private @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> cryptoKeyId() {
-        return this.cryptoKeyId;
+    /**
+     * @return Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    public Optional<Output<String>> cryptoKeyId() {
+        return Optional.ofNullable(this.cryptoKeyId);
     }
 
     /**
@@ -152,9 +160,17 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.rotationPeriod);
     }
 
+    /**
+     * If set to true, the request will create a CryptoKey without any CryptoKeyVersions. You must manually call CreateCryptoKeyVersion or ImportCryptoKeyVersion before you can use this CryptoKey.
+     * 
+     */
     @Import(name="skipInitialVersionCreation")
     private @Nullable Output<String> skipInitialVersionCreation;
 
+    /**
+     * @return If set to true, the request will create a CryptoKey without any CryptoKeyVersions. You must manually call CreateCryptoKeyVersion or ImportCryptoKeyVersion before you can use this CryptoKey.
+     * 
+     */
     public Optional<Output<String>> skipInitialVersionCreation() {
         return Optional.ofNullable(this.skipInitialVersionCreation);
     }
@@ -231,11 +247,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return cryptoKeyBackend(Output.of(cryptoKeyBackend));
         }
 
-        public Builder cryptoKeyId(Output<String> cryptoKeyId) {
+        /**
+         * @param cryptoKeyId Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
             $.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
+        /**
+         * @param cryptoKeyId Required. It must be unique within a KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyId(String cryptoKeyId) {
             return cryptoKeyId(Output.of(cryptoKeyId));
         }
@@ -393,11 +421,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return rotationPeriod(Output.of(rotationPeriod));
         }
 
+        /**
+         * @param skipInitialVersionCreation If set to true, the request will create a CryptoKey without any CryptoKeyVersions. You must manually call CreateCryptoKeyVersion or ImportCryptoKeyVersion before you can use this CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipInitialVersionCreation(@Nullable Output<String> skipInitialVersionCreation) {
             $.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
 
+        /**
+         * @param skipInitialVersionCreation If set to true, the request will create a CryptoKey without any CryptoKeyVersions. You must manually call CreateCryptoKeyVersion or ImportCryptoKeyVersion before you can use this CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipInitialVersionCreation(String skipInitialVersionCreation) {
             return skipInitialVersionCreation(Output.of(skipInitialVersionCreation));
         }
@@ -424,7 +464,6 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public CryptoKeyArgs build() {
-            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
             $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
             return $;
         }

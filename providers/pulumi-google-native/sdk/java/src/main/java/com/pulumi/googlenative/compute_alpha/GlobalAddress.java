@@ -92,6 +92,20 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
         return this.ipVersion;
     }
     /**
+     * The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    @Export(name="ipv6EndpointType", type=String.class, parameters={})
+    private Output<String> ipv6EndpointType;
+
+    /**
+     * @return The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    public Output<String> ipv6EndpointType() {
+        return this.ipv6EndpointType;
+    }
+    /**
      * Type of the resource. Always compute#address for addresses.
      * 
      */

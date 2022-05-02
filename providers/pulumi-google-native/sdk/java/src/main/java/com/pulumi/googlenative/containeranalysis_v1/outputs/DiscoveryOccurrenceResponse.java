@@ -21,6 +21,11 @@ public final class DiscoveryOccurrenceResponse {
      */
     private final StatusResponse analysisStatusError;
     /**
+     * @return The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    private final String archiveTime;
+    /**
      * @return Whether the resource is continuously analyzed.
      * 
      */
@@ -40,11 +45,13 @@ public final class DiscoveryOccurrenceResponse {
     private DiscoveryOccurrenceResponse(
         @CustomType.Parameter("analysisStatus") String analysisStatus,
         @CustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @CustomType.Parameter("archiveTime") String archiveTime,
         @CustomType.Parameter("continuousAnalysis") String continuousAnalysis,
         @CustomType.Parameter("cpe") String cpe,
         @CustomType.Parameter("lastScanTime") String lastScanTime) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
+        this.archiveTime = archiveTime;
         this.continuousAnalysis = continuousAnalysis;
         this.cpe = cpe;
         this.lastScanTime = lastScanTime;
@@ -63,6 +70,13 @@ public final class DiscoveryOccurrenceResponse {
      */
     public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
+    }
+    /**
+     * @return The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    public String archiveTime() {
+        return this.archiveTime;
     }
     /**
      * @return Whether the resource is continuously analyzed.
@@ -97,6 +111,7 @@ public final class DiscoveryOccurrenceResponse {
     public static final class Builder {
         private String analysisStatus;
         private StatusResponse analysisStatusError;
+        private String archiveTime;
         private String continuousAnalysis;
         private String cpe;
         private String lastScanTime;
@@ -109,6 +124,7 @@ public final class DiscoveryOccurrenceResponse {
     	      Objects.requireNonNull(defaults);
     	      this.analysisStatus = defaults.analysisStatus;
     	      this.analysisStatusError = defaults.analysisStatusError;
+    	      this.archiveTime = defaults.archiveTime;
     	      this.continuousAnalysis = defaults.continuousAnalysis;
     	      this.cpe = defaults.cpe;
     	      this.lastScanTime = defaults.lastScanTime;
@@ -120,6 +136,10 @@ public final class DiscoveryOccurrenceResponse {
         }
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
+            return this;
+        }
+        public Builder archiveTime(String archiveTime) {
+            this.archiveTime = Objects.requireNonNull(archiveTime);
             return this;
         }
         public Builder continuousAnalysis(String continuousAnalysis) {
@@ -134,7 +154,7 @@ public final class DiscoveryOccurrenceResponse {
             this.lastScanTime = Objects.requireNonNull(lastScanTime);
             return this;
         }        public DiscoveryOccurrenceResponse build() {
-            return new DiscoveryOccurrenceResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
+            return new DiscoveryOccurrenceResponse(analysisStatus, analysisStatusError, archiveTime, continuousAnalysis, cpe, lastScanTime);
         }
     }
 }

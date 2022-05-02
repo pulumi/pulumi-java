@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupAppEngineResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupCloudFunctionResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupCloudRunResponse;
+import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupLbNetworkEndpointGroupResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NetworkEndpointGroupServerlessDeploymentResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,6 +57,15 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final String kind;
     /**
+     * @return This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+    private final NetworkEndpointGroupLbNetworkEndpointGroupResponse loadBalancer;
+    /**
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
@@ -66,7 +76,7 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final String network;
     /**
-     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     private final String networkEndpointType;
@@ -116,6 +126,7 @@ public final class GetNetworkEndpointGroupResult {
         @CustomType.Parameter("defaultPort") Integer defaultPort,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("loadBalancer") NetworkEndpointGroupLbNetworkEndpointGroupResponse loadBalancer,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("networkEndpointType") String networkEndpointType,
@@ -134,6 +145,7 @@ public final class GetNetworkEndpointGroupResult {
         this.defaultPort = defaultPort;
         this.description = description;
         this.kind = kind;
+        this.loadBalancer = loadBalancer;
         this.name = name;
         this.network = network;
         this.networkEndpointType = networkEndpointType;
@@ -203,6 +215,17 @@ public final class GetNetworkEndpointGroupResult {
         return this.kind;
     }
     /**
+     * @return This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+    public NetworkEndpointGroupLbNetworkEndpointGroupResponse loadBalancer() {
+        return this.loadBalancer;
+    }
+    /**
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
@@ -217,7 +240,7 @@ public final class GetNetworkEndpointGroupResult {
         return this.network;
     }
     /**
-     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     public String networkEndpointType() {
@@ -290,6 +313,7 @@ public final class GetNetworkEndpointGroupResult {
         private Integer defaultPort;
         private String description;
         private String kind;
+        private NetworkEndpointGroupLbNetworkEndpointGroupResponse loadBalancer;
         private String name;
         private String network;
         private String networkEndpointType;
@@ -315,6 +339,7 @@ public final class GetNetworkEndpointGroupResult {
     	      this.defaultPort = defaults.defaultPort;
     	      this.description = defaults.description;
     	      this.kind = defaults.kind;
+    	      this.loadBalancer = defaults.loadBalancer;
     	      this.name = defaults.name;
     	      this.network = defaults.network;
     	      this.networkEndpointType = defaults.networkEndpointType;
@@ -359,6 +384,10 @@ public final class GetNetworkEndpointGroupResult {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
+        public Builder loadBalancer(NetworkEndpointGroupLbNetworkEndpointGroupResponse loadBalancer) {
+            this.loadBalancer = Objects.requireNonNull(loadBalancer);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -399,7 +428,7 @@ public final class GetNetworkEndpointGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetNetworkEndpointGroupResult build() {
-            return new GetNetworkEndpointGroupResult(annotations, appEngine, cloudFunction, cloudRun, creationTimestamp, defaultPort, description, kind, name, network, networkEndpointType, pscTargetService, region, selfLink, serverlessDeployment, size, subnetwork, zone);
+            return new GetNetworkEndpointGroupResult(annotations, appEngine, cloudFunction, cloudRun, creationTimestamp, defaultPort, description, kind, loadBalancer, name, network, networkEndpointType, pscTargetService, region, selfLink, serverlessDeployment, size, subnetwork, zone);
         }
     }
 }

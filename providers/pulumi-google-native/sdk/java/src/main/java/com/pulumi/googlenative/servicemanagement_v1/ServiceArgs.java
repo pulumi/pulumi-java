@@ -31,14 +31,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
     /**
-     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     public Optional<Output<String>> serviceName() {
@@ -92,7 +92,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serviceName The name of the service. See the [overview](/service-management/overview) for naming requirements.
+         * @param serviceName The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serviceName The name of the service. See the [overview](/service-management/overview) for naming requirements.
+         * @param serviceName The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
          * 
          * @return builder
          * 

@@ -21,6 +21,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:firebase/v1beta1:IosApp")
 public class IosApp extends com.pulumi.resources.CustomResource {
     /**
+     * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    @Export(name="apiKeyId", type=String.class, parameters={})
+    private Output<String> apiKeyId;
+
+    /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    public Output<String> apiKeyId() {
+        return this.apiKeyId;
+    }
+    /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */

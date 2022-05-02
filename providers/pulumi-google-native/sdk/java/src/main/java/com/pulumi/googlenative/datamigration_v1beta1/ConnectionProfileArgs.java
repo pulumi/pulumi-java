@@ -35,9 +35,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.cloudsql);
     }
 
+    /**
+     * Required. The connection profile identifier.
+     * 
+     */
     @Import(name="connectionProfileId", required=true)
     private Output<String> connectionProfileId;
 
+    /**
+     * @return Required. The connection profile identifier.
+     * 
+     */
     public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
@@ -131,9 +139,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.provider);
     }
 
+    /**
+     * A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -208,11 +224,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return cloudsql(Output.of(cloudsql));
         }
 
+        /**
+         * @param connectionProfileId Required. The connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProfileId(Output<String> connectionProfileId) {
             $.connectionProfileId = connectionProfileId;
             return this;
         }
 
+        /**
+         * @param connectionProfileId Required. The connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProfileId(String connectionProfileId) {
             return connectionProfileId(Output.of(connectionProfileId));
         }
@@ -340,11 +368,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return provider(Output.of(provider));
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

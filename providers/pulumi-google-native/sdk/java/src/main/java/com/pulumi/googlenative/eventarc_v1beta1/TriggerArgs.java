@@ -108,16 +108,32 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.serviceAccount);
     }
 
+    /**
+     * Required. The user-provided ID to be assigned to the trigger.
+     * 
+     */
     @Import(name="triggerId", required=true)
     private Output<String> triggerId;
 
+    /**
+     * @return Required. The user-provided ID to be assigned to the trigger.
+     * 
+     */
     public Output<String> triggerId() {
         return this.triggerId;
     }
 
+    /**
+     * Required. If set, validate the request and preview the review, but do not actually post it.
+     * 
+     */
     @Import(name="validateOnly", required=true)
     private Output<String> validateOnly;
 
+    /**
+     * @return Required. If set, validate the request and preview the review, but do not actually post it.
+     * 
+     */
     public Output<String> validateOnly() {
         return this.validateOnly;
     }
@@ -287,20 +303,44 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param triggerId Required. The user-provided ID to be assigned to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerId(Output<String> triggerId) {
             $.triggerId = triggerId;
             return this;
         }
 
+        /**
+         * @param triggerId Required. The user-provided ID to be assigned to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerId(String triggerId) {
             return triggerId(Output.of(triggerId));
         }
 
+        /**
+         * @param validateOnly Required. If set, validate the request and preview the review, but do not actually post it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Required. If set, validate the request and preview the review, but do not actually post it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

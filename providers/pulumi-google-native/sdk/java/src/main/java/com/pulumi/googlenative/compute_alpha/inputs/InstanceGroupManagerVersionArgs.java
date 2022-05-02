@@ -47,6 +47,29 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     }
 
     /**
+     * Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+     * 
+     * @deprecated
+     * Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+     * 
+     */
+    @Deprecated /* Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'. */
+    @Import(name="tag")
+    private @Nullable Output<String> tag;
+
+    /**
+     * @return Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+     * 
+     * @deprecated
+     * Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+     * 
+     */
+    @Deprecated /* Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'. */
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
+    }
+
+    /**
      * Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
      * 
      */
@@ -66,6 +89,7 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     private InstanceGroupManagerVersionArgs(InstanceGroupManagerVersionArgs $) {
         this.instanceTemplate = $.instanceTemplate;
         this.name = $.name;
+        this.tag = $.tag;
         this.targetSize = $.targetSize;
     }
 
@@ -127,6 +151,35 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param tag Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+         * 
+         */
+        @Deprecated /* Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'. */
+        public Builder tag(@Nullable Output<String> tag) {
+            $.tag = tag;
+            return this;
+        }
+
+        /**
+         * @param tag Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of &#39;name&#39;.
+         * 
+         */
+        @Deprecated /* Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'. */
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
         }
 
         /**

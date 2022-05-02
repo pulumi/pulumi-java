@@ -129,16 +129,32 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. ID of the `Release`.
+     * 
+     */
     @Import(name="releaseId", required=true)
     private Output<String> releaseId;
 
+    /**
+     * @return Required. ID of the `Release`.
+     * 
+     */
     public Output<String> releaseId() {
         return this.releaseId;
     }
 
+    /**
+     * Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -188,9 +204,17 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.skaffoldVersion);
     }
 
+    /**
+     * Optional. If set to true, the request is validated and the user is provided with an expected result, but no actual change is made.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Optional. If set to true, the request is validated and the user is provided with an expected result, but no actual change is made.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -396,20 +420,44 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param releaseId Required. ID of the `Release`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseId(Output<String> releaseId) {
             $.releaseId = releaseId;
             return this;
         }
 
+        /**
+         * @param releaseId Required. ID of the `Release`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseId(String releaseId) {
             return releaseId(Output.of(releaseId));
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -477,11 +525,23 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return skaffoldVersion(Output.of(skaffoldVersion));
         }
 
+        /**
+         * @param validateOnly Optional. If set to true, the request is validated and the user is provided with an expected result, but no actual change is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Optional. If set to true, the request is validated and the user is provided with an expected result, but no actual change is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

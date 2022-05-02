@@ -104,9 +104,17 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * Required. The ID of the instance to create.
+     * 
+     */
     @Import(name="migrationJobId", required=true)
     private Output<String> migrationJobId;
 
+    /**
+     * @return Required. The ID of the instance to create.
+     * 
+     */
     public Output<String> migrationJobId() {
         return this.migrationJobId;
     }
@@ -133,9 +141,17 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -399,11 +415,23 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migrationJobId Required. The ID of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationJobId(Output<String> migrationJobId) {
             $.migrationJobId = migrationJobId;
             return this;
         }
 
+        /**
+         * @param migrationJobId Required. The ID of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationJobId(String migrationJobId) {
             return migrationJobId(Output.of(migrationJobId));
         }
@@ -438,11 +466,23 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A unique id used to identify the request. If the server receives two requests with the same id, then the second request will be ignored. It is recommended to always set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

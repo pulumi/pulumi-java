@@ -30,14 +30,14 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
     public static final EnvironmentConfigArgs Empty = new EnvironmentConfigArgs();
 
     /**
-     * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
      * 
      */
     @Import(name="databaseConfig")
     private @Nullable Output<DatabaseConfigArgs> databaseConfig;
 
     /**
-     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
      * 
      */
     public Optional<Output<DatabaseConfigArgs>> databaseConfig() {
@@ -229,7 +229,7 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param databaseConfig Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * @param databaseConfig Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param databaseConfig Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * @param databaseConfig Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
          * 
          * @return builder
          * 

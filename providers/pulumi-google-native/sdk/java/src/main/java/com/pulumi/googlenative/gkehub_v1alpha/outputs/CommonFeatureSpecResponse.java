@@ -4,13 +4,20 @@
 package com.pulumi.googlenative.gkehub_v1alpha.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.gkehub_v1alpha.outputs.AnthosObservabilityFeatureSpecResponse;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.AppDevExperienceFeatureSpecResponse;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.CloudAuditLoggingFeatureSpecResponse;
+import com.pulumi.googlenative.gkehub_v1alpha.outputs.FeatureSpecResponse;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.MultiClusterIngressFeatureSpecResponse;
 import java.util.Objects;
 
 @CustomType
 public final class CommonFeatureSpecResponse {
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    private final AnthosObservabilityFeatureSpecResponse anthosobservability;
     /**
      * @return Appdevexperience specific spec.
      * 
@@ -26,17 +33,33 @@ public final class CommonFeatureSpecResponse {
      * 
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
+    /**
+     * @return Workload Certificate spec.
+     * 
+     */
+    private final FeatureSpecResponse workloadcertificate;
 
     @CustomType.Constructor
     private CommonFeatureSpecResponse(
+        @CustomType.Parameter("anthosobservability") AnthosObservabilityFeatureSpecResponse anthosobservability,
         @CustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
         @CustomType.Parameter("cloudauditlogging") CloudAuditLoggingFeatureSpecResponse cloudauditlogging,
-        @CustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        @CustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress,
+        @CustomType.Parameter("workloadcertificate") FeatureSpecResponse workloadcertificate) {
+        this.anthosobservability = anthosobservability;
         this.appdevexperience = appdevexperience;
         this.cloudauditlogging = cloudauditlogging;
         this.multiclusteringress = multiclusteringress;
+        this.workloadcertificate = workloadcertificate;
     }
 
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    public AnthosObservabilityFeatureSpecResponse anthosobservability() {
+        return this.anthosobservability;
+    }
     /**
      * @return Appdevexperience specific spec.
      * 
@@ -58,6 +81,13 @@ public final class CommonFeatureSpecResponse {
     public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }
+    /**
+     * @return Workload Certificate spec.
+     * 
+     */
+    public FeatureSpecResponse workloadcertificate() {
+        return this.workloadcertificate;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -68,9 +98,11 @@ public final class CommonFeatureSpecResponse {
     }
 
     public static final class Builder {
+        private AnthosObservabilityFeatureSpecResponse anthosobservability;
         private AppDevExperienceFeatureSpecResponse appdevexperience;
         private CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
         private MultiClusterIngressFeatureSpecResponse multiclusteringress;
+        private FeatureSpecResponse workloadcertificate;
 
         public Builder() {
     	      // Empty
@@ -78,11 +110,17 @@ public final class CommonFeatureSpecResponse {
 
         public Builder(CommonFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.anthosobservability = defaults.anthosobservability;
     	      this.appdevexperience = defaults.appdevexperience;
     	      this.cloudauditlogging = defaults.cloudauditlogging;
     	      this.multiclusteringress = defaults.multiclusteringress;
+    	      this.workloadcertificate = defaults.workloadcertificate;
         }
 
+        public Builder anthosobservability(AnthosObservabilityFeatureSpecResponse anthosobservability) {
+            this.anthosobservability = Objects.requireNonNull(anthosobservability);
+            return this;
+        }
         public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
@@ -94,8 +132,12 @@ public final class CommonFeatureSpecResponse {
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
+        }
+        public Builder workloadcertificate(FeatureSpecResponse workloadcertificate) {
+            this.workloadcertificate = Objects.requireNonNull(workloadcertificate);
+            return this;
         }        public CommonFeatureSpecResponse build() {
-            return new CommonFeatureSpecResponse(appdevexperience, cloudauditlogging, multiclusteringress);
+            return new CommonFeatureSpecResponse(anthosobservability, appdevexperience, cloudauditlogging, multiclusteringress, workloadcertificate);
         }
     }
 }

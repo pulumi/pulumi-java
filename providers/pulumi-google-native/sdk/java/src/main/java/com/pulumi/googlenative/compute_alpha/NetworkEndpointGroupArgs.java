@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_alpha.enums.NetworkEndpointGroupType;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupAppEngineArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupCloudFunctionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupCloudRunArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupLbNetworkEndpointGroupArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupServerlessDeploymentArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -114,6 +115,29 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+    @Import(name="loadBalancer")
+    private @Nullable Output<NetworkEndpointGroupLbNetworkEndpointGroupArgs> loadBalancer;
+
+    /**
+     * @return This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+    public Optional<Output<NetworkEndpointGroupLbNetworkEndpointGroupArgs>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
+    }
+
+    /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
@@ -144,14 +168,14 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     @Import(name="networkEndpointType")
     private @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
     /**
-     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
     public Optional<Output<NetworkEndpointGroupNetworkEndpointType>> networkEndpointType() {
@@ -180,9 +204,17 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
         return Optional.ofNullable(this.pscTargetService);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -248,6 +280,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
         this.cloudRun = $.cloudRun;
         this.defaultPort = $.defaultPort;
         this.description = $.description;
+        this.loadBalancer = $.loadBalancer;
         this.name = $.name;
         this.network = $.network;
         this.networkEndpointType = $.networkEndpointType;
@@ -405,6 +438,35 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
         }
 
         /**
+         * @param loadBalancer This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+         * 
+         */
+        @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+        public Builder loadBalancer(@Nullable Output<NetworkEndpointGroupLbNetworkEndpointGroupArgs> loadBalancer) {
+            $.loadBalancer = loadBalancer;
+            return this;
+        }
+
+        /**
+         * @param loadBalancer This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.
+         * 
+         */
+        @Deprecated /* This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated. */
+        public Builder loadBalancer(NetworkEndpointGroupLbNetworkEndpointGroupArgs loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
+        }
+
+        /**
          * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
          * 
          * @return builder
@@ -447,7 +509,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param networkEndpointType Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+         * @param networkEndpointType Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
          * 
          * @return builder
          * 
@@ -458,7 +520,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param networkEndpointType Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+         * @param networkEndpointType Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
          * 
          * @return builder
          * 
@@ -497,11 +559,23 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
             return pscTargetService(Output.of(pscTargetService));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

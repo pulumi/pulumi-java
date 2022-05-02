@@ -116,14 +116,14 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
+     * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service servicedirectory_service
      * 
      */
     @Import(name="monitoredResource")
     private @Nullable Output<MonitoredResourceArgs> monitoredResource;
 
     /**
-     * @return The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
+     * @return The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service servicedirectory_service
      * 
      */
     public Optional<Output<MonitoredResourceArgs>> monitoredResource() {
@@ -411,7 +411,7 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param monitoredResource The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
+         * @param monitoredResource The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service servicedirectory_service
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param monitoredResource The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
+         * @param monitoredResource The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service servicedirectory_service
          * 
          * @return builder
          * 

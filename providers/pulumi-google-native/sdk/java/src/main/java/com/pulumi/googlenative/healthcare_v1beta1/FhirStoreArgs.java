@@ -90,9 +90,17 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.enableUpdateCreate);
     }
 
+    /**
+     * The ID of the FHIR store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     @Import(name="fhirStoreId")
     private @Nullable Output<String> fhirStoreId;
 
+    /**
+     * @return The ID of the FHIR store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     public Optional<Output<String>> fhirStoreId() {
         return Optional.ofNullable(this.fhirStoreId);
     }
@@ -142,14 +150,14 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration for how FHIR resource can be searched.
+     * Configuration for how FHIR resources can be searched.
      * 
      */
     @Import(name="searchConfig")
     private @Nullable Output<SearchConfigArgs> searchConfig;
 
     /**
-     * @return Configuration for how FHIR resource can be searched.
+     * @return Configuration for how FHIR resources can be searched.
      * 
      */
     public Optional<Output<SearchConfigArgs>> searchConfig() {
@@ -331,11 +339,23 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
             return enableUpdateCreate(Output.of(enableUpdateCreate));
         }
 
+        /**
+         * @param fhirStoreId The ID of the FHIR store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             $.fhirStoreId = fhirStoreId;
             return this;
         }
 
+        /**
+         * @param fhirStoreId The ID of the FHIR store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirStoreId(String fhirStoreId) {
             return fhirStoreId(Output.of(fhirStoreId));
         }
@@ -401,7 +421,7 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param searchConfig Configuration for how FHIR resource can be searched.
+         * @param searchConfig Configuration for how FHIR resources can be searched.
          * 
          * @return builder
          * 
@@ -412,7 +432,7 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param searchConfig Configuration for how FHIR resource can be searched.
+         * @param searchConfig Configuration for how FHIR resources can be searched.
          * 
          * @return builder
          * 

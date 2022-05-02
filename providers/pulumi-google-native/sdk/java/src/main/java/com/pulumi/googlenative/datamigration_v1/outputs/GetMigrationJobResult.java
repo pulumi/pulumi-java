@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datamigration_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.datamigration_v1.outputs.DatabaseTypeResponse;
+import com.pulumi.googlenative.datamigration_v1.outputs.DumpFlagsResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.ReverseSshConnectivityResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.StaticIpConnectivityResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.StatusResponse;
@@ -36,7 +37,12 @@ public final class GetMigrationJobResult {
      */
     private final String displayName;
     /**
-     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * @return The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    private final DumpFlagsResponse dumpFlags;
+    /**
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     private final String dumpPath;
@@ -117,6 +123,7 @@ public final class GetMigrationJobResult {
         @CustomType.Parameter("destination") String destination,
         @CustomType.Parameter("destinationDatabase") DatabaseTypeResponse destinationDatabase,
         @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("dumpFlags") DumpFlagsResponse dumpFlags,
         @CustomType.Parameter("dumpPath") String dumpPath,
         @CustomType.Parameter("duration") String duration,
         @CustomType.Parameter("endTime") String endTime,
@@ -136,6 +143,7 @@ public final class GetMigrationJobResult {
         this.destination = destination;
         this.destinationDatabase = destinationDatabase;
         this.displayName = displayName;
+        this.dumpFlags = dumpFlags;
         this.dumpPath = dumpPath;
         this.duration = duration;
         this.endTime = endTime;
@@ -182,7 +190,14 @@ public final class GetMigrationJobResult {
         return this.displayName;
     }
     /**
-     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * @return The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    public DumpFlagsResponse dumpFlags() {
+        return this.dumpFlags;
+    }
+    /**
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     public String dumpPath() {
@@ -300,6 +315,7 @@ public final class GetMigrationJobResult {
         private String destination;
         private DatabaseTypeResponse destinationDatabase;
         private String displayName;
+        private DumpFlagsResponse dumpFlags;
         private String dumpPath;
         private String duration;
         private String endTime;
@@ -326,6 +342,7 @@ public final class GetMigrationJobResult {
     	      this.destination = defaults.destination;
     	      this.destinationDatabase = defaults.destinationDatabase;
     	      this.displayName = defaults.displayName;
+    	      this.dumpFlags = defaults.dumpFlags;
     	      this.dumpPath = defaults.dumpPath;
     	      this.duration = defaults.duration;
     	      this.endTime = defaults.endTime;
@@ -357,6 +374,10 @@ public final class GetMigrationJobResult {
         }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
+            return this;
+        }
+        public Builder dumpFlags(DumpFlagsResponse dumpFlags) {
+            this.dumpFlags = Objects.requireNonNull(dumpFlags);
             return this;
         }
         public Builder dumpPath(String dumpPath) {
@@ -419,7 +440,7 @@ public final class GetMigrationJobResult {
             this.vpcPeeringConnectivity = Objects.requireNonNull(vpcPeeringConnectivity);
             return this;
         }        public GetMigrationJobResult build() {
-            return new GetMigrationJobResult(createTime, destination, destinationDatabase, displayName, dumpPath, duration, endTime, error, labels, name, phase, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, updateTime, vpcPeeringConnectivity);
+            return new GetMigrationJobResult(createTime, destination, destinationDatabase, displayName, dumpFlags, dumpPath, duration, endTime, error, labels, name, phase, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, updateTime, vpcPeeringConnectivity);
         }
     }
 }

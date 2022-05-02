@@ -30,13 +30,6 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
         return Optional.ofNullable(this.description);
     }
 
-    @Import(name="kind")
-    private @Nullable Output<String> kind;
-
-    public Optional<Output<String>> kind() {
-        return Optional.ofNullable(this.kind);
-    }
-
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
@@ -66,9 +59,17 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -88,9 +89,17 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
         return Optional.ofNullable(this.securityPolicy);
     }
 
+    /**
+     * If true, the request will not be committed.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return If true, the request will not be committed.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -99,7 +108,6 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
 
     private NetworkEdgeSecurityServiceArgs(NetworkEdgeSecurityServiceArgs $) {
         this.description = $.description;
-        this.kind = $.kind;
         this.name = $.name;
         this.project = $.project;
         this.region = $.region;
@@ -147,15 +155,6 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
             return description(Output.of(description));
         }
 
-        public Builder kind(@Nullable Output<String> kind) {
-            $.kind = kind;
-            return this;
-        }
-
-        public Builder kind(String kind) {
-            return kind(Output.of(kind));
-        }
-
         /**
          * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
          * 
@@ -195,11 +194,23 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -225,11 +236,23 @@ public final class NetworkEdgeSecurityServiceArgs extends com.pulumi.resources.R
             return securityPolicy(Output.of(securityPolicy));
         }
 
+        /**
+         * @param validateOnly If true, the request will not be committed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, the request will not be committed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

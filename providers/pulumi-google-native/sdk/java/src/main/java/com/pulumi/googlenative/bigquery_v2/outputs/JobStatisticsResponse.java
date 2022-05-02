@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.bigquery_v2.outputs.JobStatistics2Response;
 import com.pulumi.googlenative.bigquery_v2.outputs.JobStatistics3Response;
 import com.pulumi.googlenative.bigquery_v2.outputs.JobStatistics4Response;
+import com.pulumi.googlenative.bigquery_v2.outputs.JobStatistics5Response;
 import com.pulumi.googlenative.bigquery_v2.outputs.JobStatisticsReservationUsageItemResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.RowLevelSecurityStatisticsResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.ScriptStatisticsResponse;
@@ -24,6 +25,11 @@ public final class JobStatisticsResponse {
      * 
      */
     private final Double completionRatio;
+    /**
+     * @return Statistics for a copy job.
+     * 
+     */
+    private final JobStatistics5Response copy;
     /**
      * @return Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
      * 
@@ -95,6 +101,15 @@ public final class JobStatisticsResponse {
      */
     private final String startTime;
     /**
+     * @return [Deprecated] Use the bytes processed in the query statistics instead.
+     * 
+     * @deprecated
+     * [Output-only] [Deprecated] Use the bytes processed in the query statistics instead.
+     * 
+     */
+    @Deprecated /* [Output-only] [Deprecated] Use the bytes processed in the query statistics instead. */
+    private final String totalBytesProcessed;
+    /**
      * @return Slot-milliseconds for the job.
      * 
      */
@@ -108,6 +123,7 @@ public final class JobStatisticsResponse {
     @CustomType.Constructor
     private JobStatisticsResponse(
         @CustomType.Parameter("completionRatio") Double completionRatio,
+        @CustomType.Parameter("copy") JobStatistics5Response copy,
         @CustomType.Parameter("creationTime") String creationTime,
         @CustomType.Parameter("endTime") String endTime,
         @CustomType.Parameter("extract") JobStatistics4Response extract,
@@ -122,9 +138,11 @@ public final class JobStatisticsResponse {
         @CustomType.Parameter("scriptStatistics") ScriptStatisticsResponse scriptStatistics,
         @CustomType.Parameter("sessionInfo") SessionInfoResponse sessionInfo,
         @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("totalBytesProcessed") String totalBytesProcessed,
         @CustomType.Parameter("totalSlotMs") String totalSlotMs,
         @CustomType.Parameter("transactionInfo") TransactionInfoResponse transactionInfo) {
         this.completionRatio = completionRatio;
+        this.copy = copy;
         this.creationTime = creationTime;
         this.endTime = endTime;
         this.extract = extract;
@@ -139,6 +157,7 @@ public final class JobStatisticsResponse {
         this.scriptStatistics = scriptStatistics;
         this.sessionInfo = sessionInfo;
         this.startTime = startTime;
+        this.totalBytesProcessed = totalBytesProcessed;
         this.totalSlotMs = totalSlotMs;
         this.transactionInfo = transactionInfo;
     }
@@ -149,6 +168,13 @@ public final class JobStatisticsResponse {
      */
     public Double completionRatio() {
         return this.completionRatio;
+    }
+    /**
+     * @return Statistics for a copy job.
+     * 
+     */
+    public JobStatistics5Response copy() {
+        return this.copy;
     }
     /**
      * @return Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
@@ -249,6 +275,17 @@ public final class JobStatisticsResponse {
         return this.startTime;
     }
     /**
+     * @return [Deprecated] Use the bytes processed in the query statistics instead.
+     * 
+     * @deprecated
+     * [Output-only] [Deprecated] Use the bytes processed in the query statistics instead.
+     * 
+     */
+    @Deprecated /* [Output-only] [Deprecated] Use the bytes processed in the query statistics instead. */
+    public String totalBytesProcessed() {
+        return this.totalBytesProcessed;
+    }
+    /**
      * @return Slot-milliseconds for the job.
      * 
      */
@@ -273,6 +310,7 @@ public final class JobStatisticsResponse {
 
     public static final class Builder {
         private Double completionRatio;
+        private JobStatistics5Response copy;
         private String creationTime;
         private String endTime;
         private JobStatistics4Response extract;
@@ -287,6 +325,7 @@ public final class JobStatisticsResponse {
         private ScriptStatisticsResponse scriptStatistics;
         private SessionInfoResponse sessionInfo;
         private String startTime;
+        private String totalBytesProcessed;
         private String totalSlotMs;
         private TransactionInfoResponse transactionInfo;
 
@@ -297,6 +336,7 @@ public final class JobStatisticsResponse {
         public Builder(JobStatisticsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.completionRatio = defaults.completionRatio;
+    	      this.copy = defaults.copy;
     	      this.creationTime = defaults.creationTime;
     	      this.endTime = defaults.endTime;
     	      this.extract = defaults.extract;
@@ -311,12 +351,17 @@ public final class JobStatisticsResponse {
     	      this.scriptStatistics = defaults.scriptStatistics;
     	      this.sessionInfo = defaults.sessionInfo;
     	      this.startTime = defaults.startTime;
+    	      this.totalBytesProcessed = defaults.totalBytesProcessed;
     	      this.totalSlotMs = defaults.totalSlotMs;
     	      this.transactionInfo = defaults.transactionInfo;
         }
 
         public Builder completionRatio(Double completionRatio) {
             this.completionRatio = Objects.requireNonNull(completionRatio);
+            return this;
+        }
+        public Builder copy(JobStatistics5Response copy) {
+            this.copy = Objects.requireNonNull(copy);
             return this;
         }
         public Builder creationTime(String creationTime) {
@@ -381,6 +426,10 @@ public final class JobStatisticsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
+        public Builder totalBytesProcessed(String totalBytesProcessed) {
+            this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
+            return this;
+        }
         public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
@@ -389,7 +438,7 @@ public final class JobStatisticsResponse {
             this.transactionInfo = Objects.requireNonNull(transactionInfo);
             return this;
         }        public JobStatisticsResponse build() {
-            return new JobStatisticsResponse(completionRatio, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalSlotMs, transactionInfo);
+            return new JobStatisticsResponse(completionRatio, copy, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalBytesProcessed, totalSlotMs, transactionInfo);
         }
     }
 }

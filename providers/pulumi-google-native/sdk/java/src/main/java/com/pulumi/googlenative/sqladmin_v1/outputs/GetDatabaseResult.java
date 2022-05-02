@@ -21,6 +21,15 @@ public final class GetDatabaseResult {
      */
     private final String collation;
     /**
+     * @return This field is deprecated and will be removed from a future version of the API.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+    private final String etag;
+    /**
      * @return The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
@@ -51,6 +60,7 @@ public final class GetDatabaseResult {
     private GetDatabaseResult(
         @CustomType.Parameter("charset") String charset,
         @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("etag") String etag,
         @CustomType.Parameter("instance") String instance,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("name") String name,
@@ -59,6 +69,7 @@ public final class GetDatabaseResult {
         @CustomType.Parameter("sqlserverDatabaseDetails") SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
         this.charset = charset;
         this.collation = collation;
+        this.etag = etag;
         this.instance = instance;
         this.kind = kind;
         this.name = name;
@@ -80,6 +91,17 @@ public final class GetDatabaseResult {
      */
     public String collation() {
         return this.collation;
+    }
+    /**
+     * @return This field is deprecated and will be removed from a future version of the API.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+    public String etag() {
+        return this.etag;
     }
     /**
      * @return The name of the Cloud SQL instance. This does not include the project ID.
@@ -131,6 +153,7 @@ public final class GetDatabaseResult {
     public static final class Builder {
         private String charset;
         private String collation;
+        private String etag;
         private String instance;
         private String kind;
         private String name;
@@ -146,6 +169,7 @@ public final class GetDatabaseResult {
     	      Objects.requireNonNull(defaults);
     	      this.charset = defaults.charset;
     	      this.collation = defaults.collation;
+    	      this.etag = defaults.etag;
     	      this.instance = defaults.instance;
     	      this.kind = defaults.kind;
     	      this.name = defaults.name;
@@ -160,6 +184,10 @@ public final class GetDatabaseResult {
         }
         public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
+            return this;
+        }
+        public Builder etag(String etag) {
+            this.etag = Objects.requireNonNull(etag);
             return this;
         }
         public Builder instance(String instance) {
@@ -186,7 +214,7 @@ public final class GetDatabaseResult {
             this.sqlserverDatabaseDetails = Objects.requireNonNull(sqlserverDatabaseDetails);
             return this;
         }        public GetDatabaseResult build() {
-            return new GetDatabaseResult(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
+            return new GetDatabaseResult(charset, collation, etag, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
         }
     }
 }

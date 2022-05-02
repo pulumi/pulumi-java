@@ -17,9 +17,17 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AppProfileArgs Empty = new AppProfileArgs();
 
+    /**
+     * Required. The ID to be used when referring to the new app profile within its instance, e.g., just `myprofile` rather than `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+     * 
+     */
     @Import(name="appProfileId", required=true)
     private Output<String> appProfileId;
 
+    /**
+     * @return Required. The ID to be used when referring to the new app profile within its instance, e.g., just `myprofile` rather than `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+     * 
+     */
     public Output<String> appProfileId() {
         return this.appProfileId;
     }
@@ -54,9 +62,17 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.etag);
     }
 
+    /**
+     * If true, ignore safety checks when creating the app profile.
+     * 
+     */
     @Import(name="ignoreWarnings")
     private @Nullable Output<String> ignoreWarnings;
 
+    /**
+     * @return If true, ignore safety checks when creating the app profile.
+     * 
+     */
     public Optional<Output<String>> ignoreWarnings() {
         return Optional.ofNullable(this.ignoreWarnings);
     }
@@ -152,11 +168,23 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appProfileId Required. The ID to be used when referring to the new app profile within its instance, e.g., just `myprofile` rather than `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appProfileId(Output<String> appProfileId) {
             $.appProfileId = appProfileId;
             return this;
         }
 
+        /**
+         * @param appProfileId Required. The ID to be used when referring to the new app profile within its instance, e.g., just `myprofile` rather than `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appProfileId(String appProfileId) {
             return appProfileId(Output.of(appProfileId));
         }
@@ -203,11 +231,23 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param ignoreWarnings If true, ignore safety checks when creating the app profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreWarnings(@Nullable Output<String> ignoreWarnings) {
             $.ignoreWarnings = ignoreWarnings;
             return this;
         }
 
+        /**
+         * @param ignoreWarnings If true, ignore safety checks when creating the app profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreWarnings(String ignoreWarnings) {
             return ignoreWarnings(Output.of(ignoreWarnings));
         }

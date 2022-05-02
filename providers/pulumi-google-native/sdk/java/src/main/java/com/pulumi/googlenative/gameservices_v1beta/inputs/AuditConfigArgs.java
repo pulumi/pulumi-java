@@ -36,13 +36,6 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.auditLogConfigs);
     }
 
-    @Import(name="exemptedMembers")
-    private @Nullable Output<List<String>> exemptedMembers;
-
-    public Optional<Output<List<String>>> exemptedMembers() {
-        return Optional.ofNullable(this.exemptedMembers);
-    }
-
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
@@ -62,7 +55,6 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
 
     private AuditConfigArgs(AuditConfigArgs $) {
         this.auditLogConfigs = $.auditLogConfigs;
-        this.exemptedMembers = $.exemptedMembers;
         this.service = $.service;
     }
 
@@ -113,19 +105,6 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder auditLogConfigs(AuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
-        }
-
-        public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
-            $.exemptedMembers = exemptedMembers;
-            return this;
-        }
-
-        public Builder exemptedMembers(List<String> exemptedMembers) {
-            return exemptedMembers(Output.of(exemptedMembers));
-        }
-
-        public Builder exemptedMembers(String... exemptedMembers) {
-            return exemptedMembers(List.of(exemptedMembers));
         }
 
         /**

@@ -55,14 +55,14 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+     * Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is used to define which VPC flow logs should be exported to Cloud Logging.
      * 
      */
     @Import(name="filterExpr")
     private @Nullable Output<String> filterExpr;
 
     /**
-     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is used to define which VPC flow logs should be exported to Cloud Logging.
      * 
      */
     public Optional<Output<String>> filterExpr() {
@@ -186,7 +186,7 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is used to define which VPC flow logs should be exported to Cloud Logging.
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is used to define which VPC flow logs should be exported to Cloud Logging.
          * 
          * @return builder
          * 

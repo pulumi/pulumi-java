@@ -65,12 +65,36 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.packageType);
     }
 
+    /**
+     * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     * @deprecated
+     * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     */
+    @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+    @Import(name="severityName")
+    private @Nullable Output<String> severityName;
+
+    /**
+     * @return Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     * @deprecated
+     * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     */
+    @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+    public Optional<Output<String>> severityName() {
+        return Optional.ofNullable(this.severityName);
+    }
+
     private PackageIssueArgs() {}
 
     private PackageIssueArgs(PackageIssueArgs $) {
         this.affectedLocation = $.affectedLocation;
         this.fixedLocation = $.fixedLocation;
         this.packageType = $.packageType;
+        this.severityName = $.severityName;
     }
 
     public static Builder builder() {
@@ -152,6 +176,35 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder packageType(String packageType) {
             return packageType(Output.of(packageType));
+        }
+
+        /**
+         * @param severityName Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+         * 
+         */
+        @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+        public Builder severityName(@Nullable Output<String> severityName) {
+            $.severityName = severityName;
+            return this;
+        }
+
+        /**
+         * @param severityName Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+         * 
+         */
+        @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+        public Builder severityName(String severityName) {
+            return severityName(Output.of(severityName));
         }
 
         public PackageIssueArgs build() {

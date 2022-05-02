@@ -46,9 +46,17 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Required. Identifier to assign to the Gateway. Must be unique within scope of the parent resource.
+     * 
+     */
     @Import(name="gatewayId", required=true)
     private Output<String> gatewayId;
 
+    /**
+     * @return Required. Identifier to assign to the Gateway. Must be unique within scope of the parent resource.
+     * 
+     */
     public Output<String> gatewayId() {
         return this.gatewayId;
     }
@@ -153,11 +161,23 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gatewayId Required. Identifier to assign to the Gateway. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Required. Identifier to assign to the Gateway. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }

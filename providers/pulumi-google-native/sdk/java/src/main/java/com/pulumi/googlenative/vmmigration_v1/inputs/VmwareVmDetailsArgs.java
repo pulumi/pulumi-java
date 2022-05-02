@@ -112,14 +112,14 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * The VM&#39;s OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
      */
     @Import(name="guestDescription")
     private @Nullable Output<String> guestDescription;
 
     /**
-     * @return The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * @return The VM&#39;s OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
      */
     public Optional<Output<String>> guestDescription() {
@@ -347,7 +347,7 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param guestDescription The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+         * @param guestDescription The VM&#39;s OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
          * 
          * @return builder
          * 
@@ -358,7 +358,7 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param guestDescription The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+         * @param guestDescription The VM&#39;s OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
          * 
          * @return builder
          * 

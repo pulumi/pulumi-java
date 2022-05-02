@@ -15,6 +15,7 @@ import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1Bu
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DataSourceResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DatabaseTableSpecResponse;
+import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1FilesetSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1GcsFilesetSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1PersonalDetailsResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1RoutineSpecResponse;
@@ -61,14 +62,14 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.bigqueryTableSpec;
     }
     /**
-     * Business Context of the entry.
+     * Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     @Export(name="businessContext", type=GoogleCloudDatacatalogV1BusinessContextResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1BusinessContextResponse> businessContext;
 
     /**
-     * @return Business Context of the entry.
+     * @return Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     public Output<GoogleCloudDatacatalogV1BusinessContextResponse> businessContext() {
@@ -143,6 +144,20 @@ public class Entry extends com.pulumi.resources.CustomResource {
      */
     public Output<String> displayName() {
         return this.displayName;
+    }
+    /**
+     * Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    @Export(name="filesetSpec", type=GoogleCloudDatacatalogV1FilesetSpecResponse.class, parameters={})
+    private Output<GoogleCloudDatacatalogV1FilesetSpecResponse> filesetSpec;
+
+    /**
+     * @return Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    public Output<GoogleCloudDatacatalogV1FilesetSpecResponse> filesetSpec() {
+        return this.filesetSpec;
     }
     /**
      * Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`

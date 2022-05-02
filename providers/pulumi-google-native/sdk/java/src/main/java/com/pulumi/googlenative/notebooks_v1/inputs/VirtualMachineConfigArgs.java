@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.VirtualMachineConfigNicType;
+import com.pulumi.googlenative.notebooks_v1.inputs.BootImageArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.EncryptionConfigArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.LocalDiskArgs;
@@ -41,6 +42,21 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
      */
     public Optional<Output<RuntimeAcceleratorConfigArgs>> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
+    }
+
+    /**
+     * Optional. Boot image metadata used for runtime upgradeability.
+     * 
+     */
+    @Import(name="bootImage")
+    private @Nullable Output<BootImageArgs> bootImage;
+
+    /**
+     * @return Optional. Boot image metadata used for runtime upgradeability.
+     * 
+     */
+    public Optional<Output<BootImageArgs>> bootImage() {
+        return Optional.ofNullable(this.bootImage);
     }
 
     /**
@@ -179,6 +195,21 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+     * 
+     */
+    @Import(name="reservedIpRange")
+    private @Nullable Output<String> reservedIpRange;
+
+    /**
+     * @return Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+     * 
+     */
+    public Optional<Output<String>> reservedIpRange() {
+        return Optional.ofNullable(this.reservedIpRange);
+    }
+
+    /**
      * Optional. Shielded VM Instance configuration settings.
      * 
      */
@@ -227,6 +258,7 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
 
     private VirtualMachineConfigArgs(VirtualMachineConfigArgs $) {
         this.acceleratorConfig = $.acceleratorConfig;
+        this.bootImage = $.bootImage;
         this.containerImages = $.containerImages;
         this.dataDisk = $.dataDisk;
         this.encryptionConfig = $.encryptionConfig;
@@ -236,6 +268,7 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
         this.metadata = $.metadata;
         this.network = $.network;
         this.nicType = $.nicType;
+        this.reservedIpRange = $.reservedIpRange;
         this.shieldedInstanceConfig = $.shieldedInstanceConfig;
         this.subnet = $.subnet;
         this.tags = $.tags;
@@ -278,6 +311,27 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
          */
         public Builder acceleratorConfig(RuntimeAcceleratorConfigArgs acceleratorConfig) {
             return acceleratorConfig(Output.of(acceleratorConfig));
+        }
+
+        /**
+         * @param bootImage Optional. Boot image metadata used for runtime upgradeability.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootImage(@Nullable Output<BootImageArgs> bootImage) {
+            $.bootImage = bootImage;
+            return this;
+        }
+
+        /**
+         * @param bootImage Optional. Boot image metadata used for runtime upgradeability.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootImage(BootImageArgs bootImage) {
+            return bootImage(Output.of(bootImage));
         }
 
         /**
@@ -477,6 +531,27 @@ public final class VirtualMachineConfigArgs extends com.pulumi.resources.Resourc
          */
         public Builder nicType(VirtualMachineConfigNicType nicType) {
             return nicType(Output.of(nicType));
+        }
+
+        /**
+         * @param reservedIpRange Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
+            $.reservedIpRange = reservedIpRange;
+            return this;
+        }
+
+        /**
+         * @param reservedIpRange Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reservedIpRange(String reservedIpRange) {
+            return reservedIpRange(Output.of(reservedIpRange));
         }
 
         /**

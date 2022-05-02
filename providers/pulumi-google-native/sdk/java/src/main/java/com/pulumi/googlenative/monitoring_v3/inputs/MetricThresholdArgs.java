@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v3.enums.MetricThresholdComparison;
+import com.pulumi.googlenative.monitoring_v3.enums.MetricThresholdEvaluationMissingData;
 import com.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.Double;
@@ -100,6 +101,21 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    @Import(name="evaluationMissingData")
+    private @Nullable Output<MetricThresholdEvaluationMissingData> evaluationMissingData;
+
+    /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    public Optional<Output<MetricThresholdEvaluationMissingData>> evaluationMissingData() {
+        return Optional.ofNullable(this.evaluationMissingData);
+    }
+
+    /**
      * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.
      * 
      */
@@ -152,6 +168,7 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
         this.denominatorAggregations = $.denominatorAggregations;
         this.denominatorFilter = $.denominatorFilter;
         this.duration = $.duration;
+        this.evaluationMissingData = $.evaluationMissingData;
         this.filter = $.filter;
         this.thresholdValue = $.thresholdValue;
         this.trigger = $.trigger;
@@ -298,6 +315,27 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
+        }
+
+        /**
+         * @param evaluationMissingData A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder evaluationMissingData(@Nullable Output<MetricThresholdEvaluationMissingData> evaluationMissingData) {
+            $.evaluationMissingData = evaluationMissingData;
+            return this;
+        }
+
+        /**
+         * @param evaluationMissingData A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder evaluationMissingData(MetricThresholdEvaluationMissingData evaluationMissingData) {
+            return evaluationMissingData(Output.of(evaluationMissingData));
         }
 
         /**

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * KeyRevocationActionType of the instance.
+     * KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     @EnumType

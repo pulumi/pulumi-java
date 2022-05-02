@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.AwsSourceVmDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.CloneJobResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDefaultsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.CutoverJobResponse;
@@ -11,6 +12,7 @@ import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicationCycleResp
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicationSyncResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.SchedulePolicyResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.TargetVMDetailsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,10 +21,24 @@ import java.util.Objects;
 @CustomType
 public final class GetMigratingVmResult {
     /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    private final AwsSourceVmDetailsResponse awsSourceVmDetails;
+    /**
      * @return Details of the target VM in Compute Engine.
      * 
      */
     private final ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults;
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+    private final TargetVMDetailsResponse computeEngineVmDefaults;
     /**
      * @return The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
      * 
@@ -99,6 +115,15 @@ public final class GetMigratingVmResult {
      */
     private final String stateTime;
     /**
+     * @return The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+    private final TargetVMDetailsResponse targetDefaults;
+    /**
      * @return The last time the migrating VM resource was updated.
      * 
      */
@@ -106,7 +131,9 @@ public final class GetMigratingVmResult {
 
     @CustomType.Constructor
     private GetMigratingVmResult(
+        @CustomType.Parameter("awsSourceVmDetails") AwsSourceVmDetailsResponse awsSourceVmDetails,
         @CustomType.Parameter("computeEngineTargetDefaults") ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
+        @CustomType.Parameter("computeEngineVmDefaults") TargetVMDetailsResponse computeEngineVmDefaults,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("currentSyncInfo") ReplicationCycleResponse currentSyncInfo,
         @CustomType.Parameter("description") String description,
@@ -122,8 +149,11 @@ public final class GetMigratingVmResult {
         @CustomType.Parameter("sourceVmId") String sourceVmId,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("targetDefaults") TargetVMDetailsResponse targetDefaults,
         @CustomType.Parameter("updateTime") String updateTime) {
+        this.awsSourceVmDetails = awsSourceVmDetails;
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
+        this.computeEngineVmDefaults = computeEngineVmDefaults;
         this.createTime = createTime;
         this.currentSyncInfo = currentSyncInfo;
         this.description = description;
@@ -139,15 +169,34 @@ public final class GetMigratingVmResult {
         this.sourceVmId = sourceVmId;
         this.state = state;
         this.stateTime = stateTime;
+        this.targetDefaults = targetDefaults;
         this.updateTime = updateTime;
     }
 
+    /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    public AwsSourceVmDetailsResponse awsSourceVmDetails() {
+        return this.awsSourceVmDetails;
+    }
     /**
      * @return Details of the target VM in Compute Engine.
      * 
      */
     public ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults;
+    }
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+    public TargetVMDetailsResponse computeEngineVmDefaults() {
+        return this.computeEngineVmDefaults;
     }
     /**
      * @return The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
@@ -255,6 +304,17 @@ public final class GetMigratingVmResult {
         return this.stateTime;
     }
     /**
+     * @return The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+    public TargetVMDetailsResponse targetDefaults() {
+        return this.targetDefaults;
+    }
+    /**
      * @return The last time the migrating VM resource was updated.
      * 
      */
@@ -271,7 +331,9 @@ public final class GetMigratingVmResult {
     }
 
     public static final class Builder {
+        private AwsSourceVmDetailsResponse awsSourceVmDetails;
         private ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults;
+        private TargetVMDetailsResponse computeEngineVmDefaults;
         private String createTime;
         private ReplicationCycleResponse currentSyncInfo;
         private String description;
@@ -287,6 +349,7 @@ public final class GetMigratingVmResult {
         private String sourceVmId;
         private String state;
         private String stateTime;
+        private TargetVMDetailsResponse targetDefaults;
         private String updateTime;
 
         public Builder() {
@@ -295,7 +358,9 @@ public final class GetMigratingVmResult {
 
         public Builder(GetMigratingVmResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.awsSourceVmDetails = defaults.awsSourceVmDetails;
     	      this.computeEngineTargetDefaults = defaults.computeEngineTargetDefaults;
+    	      this.computeEngineVmDefaults = defaults.computeEngineVmDefaults;
     	      this.createTime = defaults.createTime;
     	      this.currentSyncInfo = defaults.currentSyncInfo;
     	      this.description = defaults.description;
@@ -311,11 +376,20 @@ public final class GetMigratingVmResult {
     	      this.sourceVmId = defaults.sourceVmId;
     	      this.state = defaults.state;
     	      this.stateTime = defaults.stateTime;
+    	      this.targetDefaults = defaults.targetDefaults;
     	      this.updateTime = defaults.updateTime;
         }
 
+        public Builder awsSourceVmDetails(AwsSourceVmDetailsResponse awsSourceVmDetails) {
+            this.awsSourceVmDetails = Objects.requireNonNull(awsSourceVmDetails);
+            return this;
+        }
         public Builder computeEngineTargetDefaults(ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults) {
             this.computeEngineTargetDefaults = Objects.requireNonNull(computeEngineTargetDefaults);
+            return this;
+        }
+        public Builder computeEngineVmDefaults(TargetVMDetailsResponse computeEngineVmDefaults) {
+            this.computeEngineVmDefaults = Objects.requireNonNull(computeEngineVmDefaults);
             return this;
         }
         public Builder createTime(String createTime) {
@@ -384,11 +458,15 @@ public final class GetMigratingVmResult {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
+        public Builder targetDefaults(TargetVMDetailsResponse targetDefaults) {
+            this.targetDefaults = Objects.requireNonNull(targetDefaults);
+            return this;
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetMigratingVmResult build() {
-            return new GetMigratingVmResult(computeEngineTargetDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, updateTime);
+            return new GetMigratingVmResult(awsSourceVmDetails, computeEngineTargetDefaults, computeEngineVmDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, targetDefaults, updateTime);
         }
     }
 }

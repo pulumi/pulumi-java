@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetTransitionRouteGroupResult {
     /**
-     * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * @return The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     private final String displayName;
@@ -38,7 +38,7 @@ public final class GetTransitionRouteGroupResult {
     }
 
     /**
-     * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * @return The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     public String displayName() {

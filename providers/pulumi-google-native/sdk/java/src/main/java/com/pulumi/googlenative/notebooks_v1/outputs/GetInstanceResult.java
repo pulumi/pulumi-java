@@ -35,6 +35,11 @@ public final class GetInstanceResult {
      */
     private final String bootDiskType;
     /**
+     * @return Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    private final Boolean canIpForward;
+    /**
      * @return Use a container image to start the notebook instance.
      * 
      */
@@ -44,6 +49,11 @@ public final class GetInstanceResult {
      * 
      */
     private final String createTime;
+    /**
+     * @return Email address of entity that sent original CreateInstance request.
+     * 
+     */
+    private final String creator;
     /**
      * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
@@ -195,8 +205,10 @@ public final class GetInstanceResult {
         @CustomType.Parameter("acceleratorConfig") AcceleratorConfigResponse acceleratorConfig,
         @CustomType.Parameter("bootDiskSizeGb") String bootDiskSizeGb,
         @CustomType.Parameter("bootDiskType") String bootDiskType,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
         @CustomType.Parameter("containerImage") ContainerImageResponse containerImage,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") String creator,
         @CustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
         @CustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
         @CustomType.Parameter("dataDiskType") String dataDiskType,
@@ -229,8 +241,10 @@ public final class GetInstanceResult {
         this.acceleratorConfig = acceleratorConfig;
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
+        this.canIpForward = canIpForward;
         this.containerImage = containerImage;
         this.createTime = createTime;
+        this.creator = creator;
         this.customGpuDriverPath = customGpuDriverPath;
         this.dataDiskSizeGb = dataDiskSizeGb;
         this.dataDiskType = dataDiskType;
@@ -284,6 +298,13 @@ public final class GetInstanceResult {
         return this.bootDiskType;
     }
     /**
+     * @return Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    public Boolean canIpForward() {
+        return this.canIpForward;
+    }
+    /**
      * @return Use a container image to start the notebook instance.
      * 
      */
@@ -296,6 +317,13 @@ public final class GetInstanceResult {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return Email address of entity that sent original CreateInstance request.
+     * 
+     */
+    public String creator() {
+        return this.creator;
     }
     /**
      * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
@@ -513,8 +541,10 @@ public final class GetInstanceResult {
         private AcceleratorConfigResponse acceleratorConfig;
         private String bootDiskSizeGb;
         private String bootDiskType;
+        private Boolean canIpForward;
         private ContainerImageResponse containerImage;
         private String createTime;
+        private String creator;
         private String customGpuDriverPath;
         private String dataDiskSizeGb;
         private String dataDiskType;
@@ -554,8 +584,10 @@ public final class GetInstanceResult {
     	      this.acceleratorConfig = defaults.acceleratorConfig;
     	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
     	      this.bootDiskType = defaults.bootDiskType;
+    	      this.canIpForward = defaults.canIpForward;
     	      this.containerImage = defaults.containerImage;
     	      this.createTime = defaults.createTime;
+    	      this.creator = defaults.creator;
     	      this.customGpuDriverPath = defaults.customGpuDriverPath;
     	      this.dataDiskSizeGb = defaults.dataDiskSizeGb;
     	      this.dataDiskType = defaults.dataDiskType;
@@ -599,12 +631,20 @@ public final class GetInstanceResult {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
+        public Builder canIpForward(Boolean canIpForward) {
+            this.canIpForward = Objects.requireNonNull(canIpForward);
+            return this;
+        }
         public Builder containerImage(ContainerImageResponse containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder creator(String creator) {
+            this.creator = Objects.requireNonNull(creator);
             return this;
         }
         public Builder customGpuDriverPath(String customGpuDriverPath) {
@@ -738,7 +778,7 @@ public final class GetInstanceResult {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, createTime, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, disks, installGpuDriver, instanceOwners, kmsKey, labels, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, proxyUri, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, state, subnet, tags, updateTime, upgradeHistory, vmImage);
+            return new GetInstanceResult(acceleratorConfig, bootDiskSizeGb, bootDiskType, canIpForward, containerImage, createTime, creator, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, disks, installGpuDriver, instanceOwners, kmsKey, labels, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, proxyUri, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, state, subnet, tags, updateTime, upgradeHistory, vmImage);
         }
     }
 }

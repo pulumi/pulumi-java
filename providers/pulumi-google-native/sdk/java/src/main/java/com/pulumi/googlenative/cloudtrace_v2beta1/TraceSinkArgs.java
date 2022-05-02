@@ -17,14 +17,14 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
     public static final TraceSinkArgs Empty = new TraceSinkArgs();
 
     /**
-     * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+     * The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+     * @return The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
      */
     public Optional<Output<String>> name() {
@@ -80,7 +80,7 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+         * @param name The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+         * @param name The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
          * 
          * @return builder
          * 

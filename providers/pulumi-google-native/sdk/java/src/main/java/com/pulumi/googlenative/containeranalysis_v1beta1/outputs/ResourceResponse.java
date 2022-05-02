@@ -4,11 +4,30 @@
 package com.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.containeranalysis_v1beta1.outputs.HashResponse;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class ResourceResponse {
+    /**
+     * @return Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+    private final HashResponse contentHash;
+    /**
+     * @return Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+    private final String name;
     /**
      * @return The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
      * 
@@ -16,10 +35,37 @@ public final class ResourceResponse {
     private final String uri;
 
     @CustomType.Constructor
-    private ResourceResponse(@CustomType.Parameter("uri") String uri) {
+    private ResourceResponse(
+        @CustomType.Parameter("contentHash") HashResponse contentHash,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uri") String uri) {
+        this.contentHash = contentHash;
+        this.name = name;
         this.uri = uri;
     }
 
+    /**
+     * @return Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest. */
+    public HashResponse contentHash() {
+        return this.contentHash;
+    }
+    /**
+     * @return Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     * @deprecated
+     * Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
+    @Deprecated /* Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - ""Debian"". */
+    public String name() {
+        return this.name;
+    }
     /**
      * @return The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
      * 
@@ -37,6 +83,8 @@ public final class ResourceResponse {
     }
 
     public static final class Builder {
+        private HashResponse contentHash;
+        private String name;
         private String uri;
 
         public Builder() {
@@ -45,14 +93,24 @@ public final class ResourceResponse {
 
         public Builder(ResourceResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.contentHash = defaults.contentHash;
+    	      this.name = defaults.name;
     	      this.uri = defaults.uri;
         }
 
+        public Builder contentHash(HashResponse contentHash) {
+            this.contentHash = Objects.requireNonNull(contentHash);
+            return this;
+        }
+        public Builder name(String name) {
+            this.name = Objects.requireNonNull(name);
+            return this;
+        }
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }        public ResourceResponse build() {
-            return new ResourceResponse(uri);
+            return new ResourceResponse(contentHash, name, uri);
         }
     }
 }

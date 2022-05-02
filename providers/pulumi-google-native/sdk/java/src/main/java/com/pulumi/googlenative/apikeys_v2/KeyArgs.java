@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2RestrictionsArgs;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,6 +16,21 @@ import javax.annotation.Nullable;
 public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
+
+    /**
+     * Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    @Import(name="annotations")
+    private @Nullable Output<Map<String,String>> annotations;
+
+    /**
+     * @return Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
+    }
 
     /**
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
@@ -31,9 +47,17 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * User specified key id (optional). If specified, it will become the final component of the key resource name. The id must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the id must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`. The id must NOT be a UUID-like string.
+     * 
+     */
     @Import(name="keyId")
     private @Nullable Output<String> keyId;
 
+    /**
+     * @return User specified key id (optional). If specified, it will become the final component of the key resource name. The id must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the id must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`. The id must NOT be a UUID-like string.
+     * 
+     */
     public Optional<Output<String>> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -70,6 +94,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     private KeyArgs() {}
 
     private KeyArgs(KeyArgs $) {
+        this.annotations = $.annotations;
         this.displayName = $.displayName;
         this.keyId = $.keyId;
         this.location = $.location;
@@ -96,6 +121,27 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param annotations Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
+            $.annotations = annotations;
+            return this;
+        }
+
+        /**
+         * @param annotations Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
+        }
+
+        /**
          * @param displayName Human-readable display name of this key that you can modify. The maximum length is 63 characters.
          * 
          * @return builder
@@ -116,11 +162,23 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param keyId User specified key id (optional). If specified, it will become the final component of the key resource name. The id must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the id must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`. The id must NOT be a UUID-like string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId User specified key id (optional). If specified, it will become the final component of the key resource name. The id must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the id must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`. The id must NOT be a UUID-like string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }

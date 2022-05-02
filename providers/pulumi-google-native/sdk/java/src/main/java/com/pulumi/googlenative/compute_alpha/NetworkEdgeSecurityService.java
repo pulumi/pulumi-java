@@ -60,9 +60,17 @@ public class NetworkEdgeSecurityService extends com.pulumi.resources.CustomResou
     public Output<String> fingerprint() {
         return this.fingerprint;
     }
+    /**
+     * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for NetworkEdgeSecurityServices
+     * 
+     */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return [Output only] Type of the resource. Always compute#networkEdgeSecurityService for NetworkEdgeSecurityServices
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }

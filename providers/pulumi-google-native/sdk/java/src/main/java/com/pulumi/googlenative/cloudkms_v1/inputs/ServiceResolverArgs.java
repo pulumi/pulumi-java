@@ -52,14 +52,14 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
      * 
      */
     @Import(name="serverCertificates", required=true)
     private Output<List<CertificateArgs>> serverCertificates;
 
     /**
-     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
      * 
      */
     public Output<List<CertificateArgs>> serverCertificates() {
@@ -151,7 +151,7 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
          * 
          * @return builder
          * 

@@ -22,14 +22,14 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
     public static final OracleTableArgs Empty = new OracleTableArgs();
 
     /**
-     * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     @Import(name="oracleColumns")
     private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
     /**
-     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * @return Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     public Optional<Output<List<OracleColumnArgs>>> oracleColumns() {
@@ -77,7 +77,7 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 
@@ -88,7 +88,7 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 

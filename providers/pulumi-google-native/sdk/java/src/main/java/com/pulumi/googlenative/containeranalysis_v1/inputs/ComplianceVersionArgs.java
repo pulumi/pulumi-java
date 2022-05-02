@@ -20,6 +20,21 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
     public static final ComplianceVersionArgs Empty = new ComplianceVersionArgs();
 
     /**
+     * The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+     * 
+     */
+    @Import(name="benchmarkDocument")
+    private @Nullable Output<String> benchmarkDocument;
+
+    /**
+     * @return The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+     * 
+     */
+    public Optional<Output<String>> benchmarkDocument() {
+        return Optional.ofNullable(this.benchmarkDocument);
+    }
+
+    /**
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
      */
@@ -52,6 +67,7 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
     private ComplianceVersionArgs() {}
 
     private ComplianceVersionArgs(ComplianceVersionArgs $) {
+        this.benchmarkDocument = $.benchmarkDocument;
         this.cpeUri = $.cpeUri;
         this.version = $.version;
     }
@@ -72,6 +88,27 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
 
         public Builder(ComplianceVersionArgs defaults) {
             $ = new ComplianceVersionArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param benchmarkDocument The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder benchmarkDocument(@Nullable Output<String> benchmarkDocument) {
+            $.benchmarkDocument = benchmarkDocument;
+            return this;
+        }
+
+        /**
+         * @param benchmarkDocument The name of the document that defines this benchmark, e.g. &#34;CIS Container-Optimized OS&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder benchmarkDocument(String benchmarkDocument) {
+            return benchmarkDocument(Output.of(benchmarkDocument));
         }
 
         /**

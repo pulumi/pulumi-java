@@ -112,6 +112,15 @@ public final class GetInstanceResult {
      */
     private final Boolean privateInstance;
     /**
+     * @return Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     * @deprecated
+     * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     */
+    @Deprecated /* Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID. */
+    private final String serviceAccount;
+    /**
      * @return Endpoint on which the Data Fusion UI is accessible.
      * 
      */
@@ -173,6 +182,7 @@ public final class GetInstanceResult {
         @CustomType.Parameter("options") Map<String,String> options,
         @CustomType.Parameter("p4ServiceAccount") String p4ServiceAccount,
         @CustomType.Parameter("privateInstance") Boolean privateInstance,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
         @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateMessage") String stateMessage,
@@ -200,6 +210,7 @@ public final class GetInstanceResult {
         this.options = options;
         this.p4ServiceAccount = p4ServiceAccount;
         this.privateInstance = privateInstance;
+        this.serviceAccount = serviceAccount;
         this.serviceEndpoint = serviceEndpoint;
         this.state = state;
         this.stateMessage = stateMessage;
@@ -344,6 +355,17 @@ public final class GetInstanceResult {
         return this.privateInstance;
     }
     /**
+     * @return Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     * @deprecated
+     * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     */
+    @Deprecated /* Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID. */
+    public String serviceAccount() {
+        return this.serviceAccount;
+    }
+    /**
      * @return Endpoint on which the Data Fusion UI is accessible.
      * 
      */
@@ -428,6 +450,7 @@ public final class GetInstanceResult {
         private Map<String,String> options;
         private String p4ServiceAccount;
         private Boolean privateInstance;
+        private String serviceAccount;
         private String serviceEndpoint;
         private String state;
         private String stateMessage;
@@ -462,6 +485,7 @@ public final class GetInstanceResult {
     	      this.options = defaults.options;
     	      this.p4ServiceAccount = defaults.p4ServiceAccount;
     	      this.privateInstance = defaults.privateInstance;
+    	      this.serviceAccount = defaults.serviceAccount;
     	      this.serviceEndpoint = defaults.serviceEndpoint;
     	      this.state = defaults.state;
     	      this.stateMessage = defaults.stateMessage;
@@ -557,6 +581,10 @@ public final class GetInstanceResult {
             this.privateInstance = Objects.requireNonNull(privateInstance);
             return this;
         }
+        public Builder serviceAccount(String serviceAccount) {
+            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            return this;
+        }
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
@@ -589,7 +617,7 @@ public final class GetInstanceResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(accelerators, apiEndpoint, availableVersion, createTime, cryptoKeyConfig, dataprocServiceAccount, description, disabledReason, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, gcsBucket, labels, name, networkConfig, options, p4ServiceAccount, privateInstance, serviceEndpoint, state, stateMessage, tenantProjectId, type, updateTime, version, zone);
+            return new GetInstanceResult(accelerators, apiEndpoint, availableVersion, createTime, cryptoKeyConfig, dataprocServiceAccount, description, disabledReason, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, gcsBucket, labels, name, networkConfig, options, p4ServiceAccount, privateInstance, serviceAccount, serviceEndpoint, state, stateMessage, tenantProjectId, type, updateTime, version, zone);
         }
     }
 }

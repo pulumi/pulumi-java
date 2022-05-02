@@ -15,9 +15,17 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
 
     public static final DatacenterConnectorArgs Empty = new DatacenterConnectorArgs();
 
+    /**
+     * Required. The datacenterConnector identifier.
+     * 
+     */
     @Import(name="datacenterConnectorId", required=true)
     private Output<String> datacenterConnectorId;
 
+    /**
+     * @return Required. The datacenterConnector identifier.
+     * 
+     */
     public Output<String> datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
@@ -51,9 +59,17 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.registrationId);
     }
 
+    /**
+     * A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -126,11 +142,23 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
             $ = new DatacenterConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datacenterConnectorId Required. The datacenterConnector identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterConnectorId(Output<String> datacenterConnectorId) {
             $.datacenterConnectorId = datacenterConnectorId;
             return this;
         }
 
+        /**
+         * @param datacenterConnectorId Required. The datacenterConnector identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterConnectorId(String datacenterConnectorId) {
             return datacenterConnectorId(Output.of(datacenterConnectorId));
         }
@@ -174,11 +202,23 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
             return registrationId(Output.of(registrationId));
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

@@ -214,6 +214,20 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
+     * Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+     * 
+     */
+    @Export(name="listManagedInstancesResults", type=String.class, parameters={})
+    private Output<String> listManagedInstancesResults;
+
+    /**
+     * @return Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+     * 
+     */
+    public Output<String> listManagedInstancesResults() {
+        return this.listManagedInstancesResults;
+    }
+    /**
      * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */

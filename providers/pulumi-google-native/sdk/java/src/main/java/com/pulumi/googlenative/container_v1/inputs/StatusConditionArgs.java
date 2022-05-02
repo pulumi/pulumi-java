@@ -6,6 +6,7 @@ package com.pulumi.googlenative.container_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1.enums.StatusConditionCanonicalCode;
+import com.pulumi.googlenative.container_v1.enums.StatusConditionCode;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,6 +37,29 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     * @deprecated
+     * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     */
+    @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+    @Import(name="code")
+    private @Nullable Output<StatusConditionCode> code;
+
+    /**
+     * @return Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     * @deprecated
+     * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     */
+    @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+    public Optional<Output<StatusConditionCode>> code() {
+        return Optional.ofNullable(this.code);
+    }
+
+    /**
      * Human-friendly representation of the condition
      * 
      */
@@ -54,6 +78,7 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
 
     private StatusConditionArgs(StatusConditionArgs $) {
         this.canonicalCode = $.canonicalCode;
+        this.code = $.code;
         this.message = $.message;
     }
 
@@ -94,6 +119,35 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder canonicalCode(StatusConditionCanonicalCode canonicalCode) {
             return canonicalCode(Output.of(canonicalCode));
+        }
+
+        /**
+         * @param code Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+         * 
+         */
+        @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+        public Builder code(@Nullable Output<StatusConditionCode> code) {
+            $.code = code;
+            return this;
+        }
+
+        /**
+         * @param code Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+         * 
+         */
+        @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+        public Builder code(StatusConditionCode code) {
+            return code(Output.of(code));
         }
 
         /**

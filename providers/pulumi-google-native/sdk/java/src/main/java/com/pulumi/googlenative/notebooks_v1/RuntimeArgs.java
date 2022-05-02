@@ -47,9 +47,32 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Idempotent request UUID.
+     * 
+     */
+    @Import(name="requestId")
+    private @Nullable Output<String> requestId;
+
+    /**
+     * @return Idempotent request UUID.
+     * 
+     */
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
+    }
+
+    /**
+     * Required. User-defined unique ID of this Runtime.
+     * 
+     */
     @Import(name="runtimeId", required=true)
     private Output<String> runtimeId;
 
+    /**
+     * @return Required. User-defined unique ID of this Runtime.
+     * 
+     */
     public Output<String> runtimeId() {
         return this.runtimeId;
     }
@@ -90,6 +113,7 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
         this.accessConfig = $.accessConfig;
         this.location = $.location;
         this.project = $.project;
+        this.requestId = $.requestId;
         this.runtimeId = $.runtimeId;
         this.softwareConfig = $.softwareConfig;
         this.virtualMachine = $.virtualMachine;
@@ -152,11 +176,44 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestId(@Nullable Output<String> requestId) {
+            $.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        /**
+         * @param runtimeId Required. User-defined unique ID of this Runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeId(Output<String> runtimeId) {
             $.runtimeId = runtimeId;
             return this;
         }
 
+        /**
+         * @param runtimeId Required. User-defined unique ID of this Runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeId(String runtimeId) {
             return runtimeId(Output.of(runtimeId));
         }

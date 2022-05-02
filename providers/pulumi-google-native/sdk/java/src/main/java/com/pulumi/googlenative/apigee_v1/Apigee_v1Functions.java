@@ -18,6 +18,7 @@ import com.pulumi.googlenative.apigee_v1.inputs.GetDataCollectorArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetDatastoreArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetDebugSessionArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetDeveloperArgs;
+import com.pulumi.googlenative.apigee_v1.inputs.GetEndpointAttachmentArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetEnvgroupArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetEnvgroupAttachmentArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GetEnvironmentArgs;
@@ -50,6 +51,7 @@ import com.pulumi.googlenative.apigee_v1.outputs.GetDataCollectorResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetDatastoreResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetDebugSessionResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetDeveloperResult;
+import com.pulumi.googlenative.apigee_v1.outputs.GetEndpointAttachmentResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetEnvgroupAttachmentResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetEnvgroupResult;
 import com.pulumi.googlenative.apigee_v1.outputs.GetEnvironmentResult;
@@ -183,6 +185,16 @@ public final class Apigee_v1Functions {
     }
     public static CompletableFuture<GetDeveloperResult> getDeveloper(GetDeveloperArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDeveloper", TypeShape.of(GetDeveloperResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the endpoint attachment.
+     * 
+     */
+    public static CompletableFuture<GetEndpointAttachmentResult> getEndpointAttachment(GetEndpointAttachmentArgs args) {
+        return getEndpointAttachment(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEndpointAttachmentResult> getEndpointAttachment(GetEndpointAttachmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getEndpointAttachment", TypeShape.of(GetEndpointAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an environment group.

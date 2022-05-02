@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Configuration for a secret environment variable. It has the information necessary to fetch the secret value from secret manager and expose it as an environment variable. Secret value is not a part of the configuration. Secret values are only fetched when a new clone starts.
+ * Configuration for a secret environment variable. It has the information necessary to fetch the secret value from secret manager and expose it as an environment variable.
  * 
  */
 public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
@@ -65,14 +65,14 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     * Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new instances start.
      * 
      */
     @Import(name="version")
     private @Nullable Output<String> version;
 
     /**
-     * @return Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     * @return Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new instances start.
      * 
      */
     public Optional<Output<String>> version() {
@@ -170,7 +170,7 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new instances start.
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new instances start.
          * 
          * @return builder
          * 

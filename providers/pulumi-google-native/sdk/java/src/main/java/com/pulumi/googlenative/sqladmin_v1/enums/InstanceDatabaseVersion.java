@@ -95,6 +95,16 @@ import java.util.StringJoiner;
          */
         Mysql8026("MYSQL_8_0_26"),
         /**
+         * The database major version is MySQL 8.0 and the minor version is 27.
+         * 
+         */
+        Mysql8027("MYSQL_8_0_27"),
+        /**
+         * The database major version is MySQL 8.0 and the minor version is 28.
+         * 
+         */
+        Mysql8028("MYSQL_8_0_28"),
+        /**
          * The database version is PostgreSQL 13.
          * 
          */

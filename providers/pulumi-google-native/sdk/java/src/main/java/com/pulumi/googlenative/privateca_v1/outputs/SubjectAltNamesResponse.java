@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SubjectAltNamesResponse {
     /**
-     * @return Contains additional subject alternative name values.
+     * @return Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
      * 
      */
     private final List<X509ExtensionResponse> customSans;
@@ -52,7 +52,7 @@ public final class SubjectAltNamesResponse {
     }
 
     /**
-     * @return Contains additional subject alternative name values.
+     * @return Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
      * 
      */
     public List<X509ExtensionResponse> customSans() {

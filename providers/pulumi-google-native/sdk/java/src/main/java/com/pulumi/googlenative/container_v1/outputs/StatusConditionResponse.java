@@ -15,6 +15,15 @@ public final class StatusConditionResponse {
      */
     private final String canonicalCode;
     /**
+     * @return Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     * @deprecated
+     * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     */
+    @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+    private final String code;
+    /**
      * @return Human-friendly representation of the condition
      * 
      */
@@ -23,8 +32,10 @@ public final class StatusConditionResponse {
     @CustomType.Constructor
     private StatusConditionResponse(
         @CustomType.Parameter("canonicalCode") String canonicalCode,
+        @CustomType.Parameter("code") String code,
         @CustomType.Parameter("message") String message) {
         this.canonicalCode = canonicalCode;
+        this.code = code;
         this.message = message;
     }
 
@@ -34,6 +45,17 @@ public final class StatusConditionResponse {
      */
     public String canonicalCode() {
         return this.canonicalCode;
+    }
+    /**
+     * @return Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     * @deprecated
+     * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
+     * 
+     */
+    @Deprecated /* Machine-friendly representation of the condition Deprecated. Use canonical_code instead. */
+    public String code() {
+        return this.code;
     }
     /**
      * @return Human-friendly representation of the condition
@@ -53,6 +75,7 @@ public final class StatusConditionResponse {
 
     public static final class Builder {
         private String canonicalCode;
+        private String code;
         private String message;
 
         public Builder() {
@@ -62,6 +85,7 @@ public final class StatusConditionResponse {
         public Builder(StatusConditionResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.canonicalCode = defaults.canonicalCode;
+    	      this.code = defaults.code;
     	      this.message = defaults.message;
         }
 
@@ -69,11 +93,15 @@ public final class StatusConditionResponse {
             this.canonicalCode = Objects.requireNonNull(canonicalCode);
             return this;
         }
+        public Builder code(String code) {
+            this.code = Objects.requireNonNull(code);
+            return this;
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }        public StatusConditionResponse build() {
-            return new StatusConditionResponse(canonicalCode, message);
+            return new StatusConditionResponse(canonicalCode, code, message);
         }
     }
 }

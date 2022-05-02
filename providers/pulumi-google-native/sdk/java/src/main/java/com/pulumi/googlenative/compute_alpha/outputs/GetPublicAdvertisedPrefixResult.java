@@ -47,6 +47,11 @@ public final class GetPublicAdvertisedPrefixResult {
      */
     private final String name;
     /**
+     * @return Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+     * 
+     */
+    private final String pdpScope;
+    /**
      * @return The list of public delegated prefixes that exist for this public advertised prefix.
      * 
      */
@@ -81,6 +86,7 @@ public final class GetPublicAdvertisedPrefixResult {
         @CustomType.Parameter("ipCidrRange") String ipCidrRange,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pdpScope") String pdpScope,
         @CustomType.Parameter("publicDelegatedPrefixs") List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
@@ -93,6 +99,7 @@ public final class GetPublicAdvertisedPrefixResult {
         this.ipCidrRange = ipCidrRange;
         this.kind = kind;
         this.name = name;
+        this.pdpScope = pdpScope;
         this.publicDelegatedPrefixs = publicDelegatedPrefixs;
         this.selfLink = selfLink;
         this.selfLinkWithId = selfLinkWithId;
@@ -150,6 +157,13 @@ public final class GetPublicAdvertisedPrefixResult {
         return this.name;
     }
     /**
+     * @return Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
+     * 
+     */
+    public String pdpScope() {
+        return this.pdpScope;
+    }
+    /**
      * @return The list of public delegated prefixes that exist for this public advertised prefix.
      * 
      */
@@ -201,6 +215,7 @@ public final class GetPublicAdvertisedPrefixResult {
         private String ipCidrRange;
         private String kind;
         private String name;
+        private String pdpScope;
         private List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs;
         private String selfLink;
         private String selfLinkWithId;
@@ -220,6 +235,7 @@ public final class GetPublicAdvertisedPrefixResult {
     	      this.ipCidrRange = defaults.ipCidrRange;
     	      this.kind = defaults.kind;
     	      this.name = defaults.name;
+    	      this.pdpScope = defaults.pdpScope;
     	      this.publicDelegatedPrefixs = defaults.publicDelegatedPrefixs;
     	      this.selfLink = defaults.selfLink;
     	      this.selfLinkWithId = defaults.selfLinkWithId;
@@ -255,6 +271,10 @@ public final class GetPublicAdvertisedPrefixResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder pdpScope(String pdpScope) {
+            this.pdpScope = Objects.requireNonNull(pdpScope);
+            return this;
+        }
         public Builder publicDelegatedPrefixs(List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs) {
             this.publicDelegatedPrefixs = Objects.requireNonNull(publicDelegatedPrefixs);
             return this;
@@ -278,7 +298,7 @@ public final class GetPublicAdvertisedPrefixResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }        public GetPublicAdvertisedPrefixResult build() {
-            return new GetPublicAdvertisedPrefixResult(creationTimestamp, description, dnsVerificationIp, fingerprint, ipCidrRange, kind, name, publicDelegatedPrefixs, selfLink, selfLinkWithId, sharedSecret, status);
+            return new GetPublicAdvertisedPrefixResult(creationTimestamp, description, dnsVerificationIp, fingerprint, ipCidrRange, kind, name, pdpScope, publicDelegatedPrefixs, selfLink, selfLinkWithId, sharedSecret, status);
         }
     }
 }

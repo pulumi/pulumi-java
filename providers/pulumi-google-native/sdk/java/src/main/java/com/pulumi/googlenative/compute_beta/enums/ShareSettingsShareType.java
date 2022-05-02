@@ -20,6 +20,11 @@ import java.util.StringJoiner;
          */
         Local("LOCAL"),
         /**
+         * Shared-reservation is open to entire Organization
+         * 
+         */
+        Organization("ORGANIZATION"),
+        /**
          * Default value. This value is unused.
          * 
          */

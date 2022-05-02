@@ -50,14 +50,14 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
      * 
      */
     @Import(name="secondaryZone")
     private @Nullable Output<String> secondaryZone;
 
     /**
-     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
      * 
      */
     public Optional<Output<String>> secondaryZone() {
@@ -149,7 +149,7 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
          * 
          * @return builder
          * 

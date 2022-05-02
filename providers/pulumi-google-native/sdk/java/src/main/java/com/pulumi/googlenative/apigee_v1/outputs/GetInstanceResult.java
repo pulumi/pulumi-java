@@ -5,10 +5,16 @@ package com.pulumi.googlenative.apigee_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GetInstanceResult {
+    /**
+     * @return Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    private final List<String> consumerAcceptList;
     /**
      * @return Time the instance was created in milliseconds since epoch.
      * 
@@ -70,6 +76,11 @@ public final class GetInstanceResult {
      */
     private final String runtimeVersion;
     /**
+     * @return Resource name of the service attachment created for the instance in the format: `projects/*{@literal /}regions/*{@literal /}serviceAttachments/*` Apigee customers can privately forward traffic to this service attachment using the PSC endpoints.
+     * 
+     */
+    private final String serviceAttachment;
+    /**
      * @return State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
      * 
      */
@@ -77,6 +88,7 @@ public final class GetInstanceResult {
 
     @CustomType.Constructor
     private GetInstanceResult(
+        @CustomType.Parameter("consumerAcceptList") List<String> consumerAcceptList,
         @CustomType.Parameter("createdAt") String createdAt,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("diskEncryptionKeyName") String diskEncryptionKeyName,
@@ -89,7 +101,9 @@ public final class GetInstanceResult {
         @CustomType.Parameter("peeringCidrRange") String peeringCidrRange,
         @CustomType.Parameter("port") String port,
         @CustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @CustomType.Parameter("serviceAttachment") String serviceAttachment,
         @CustomType.Parameter("state") String state) {
+        this.consumerAcceptList = consumerAcceptList;
         this.createdAt = createdAt;
         this.description = description;
         this.diskEncryptionKeyName = diskEncryptionKeyName;
@@ -102,9 +116,17 @@ public final class GetInstanceResult {
         this.peeringCidrRange = peeringCidrRange;
         this.port = port;
         this.runtimeVersion = runtimeVersion;
+        this.serviceAttachment = serviceAttachment;
         this.state = state;
     }
 
+    /**
+     * @return Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    public List<String> consumerAcceptList() {
+        return this.consumerAcceptList;
+    }
     /**
      * @return Time the instance was created in milliseconds since epoch.
      * 
@@ -190,6 +212,13 @@ public final class GetInstanceResult {
         return this.runtimeVersion;
     }
     /**
+     * @return Resource name of the service attachment created for the instance in the format: `projects/*{@literal /}regions/*{@literal /}serviceAttachments/*` Apigee customers can privately forward traffic to this service attachment using the PSC endpoints.
+     * 
+     */
+    public String serviceAttachment() {
+        return this.serviceAttachment;
+    }
+    /**
      * @return State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
      * 
      */
@@ -206,6 +235,7 @@ public final class GetInstanceResult {
     }
 
     public static final class Builder {
+        private List<String> consumerAcceptList;
         private String createdAt;
         private String description;
         private String diskEncryptionKeyName;
@@ -218,6 +248,7 @@ public final class GetInstanceResult {
         private String peeringCidrRange;
         private String port;
         private String runtimeVersion;
+        private String serviceAttachment;
         private String state;
 
         public Builder() {
@@ -226,6 +257,7 @@ public final class GetInstanceResult {
 
         public Builder(GetInstanceResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.consumerAcceptList = defaults.consumerAcceptList;
     	      this.createdAt = defaults.createdAt;
     	      this.description = defaults.description;
     	      this.diskEncryptionKeyName = defaults.diskEncryptionKeyName;
@@ -238,9 +270,17 @@ public final class GetInstanceResult {
     	      this.peeringCidrRange = defaults.peeringCidrRange;
     	      this.port = defaults.port;
     	      this.runtimeVersion = defaults.runtimeVersion;
+    	      this.serviceAttachment = defaults.serviceAttachment;
     	      this.state = defaults.state;
         }
 
+        public Builder consumerAcceptList(List<String> consumerAcceptList) {
+            this.consumerAcceptList = Objects.requireNonNull(consumerAcceptList);
+            return this;
+        }
+        public Builder consumerAcceptList(String... consumerAcceptList) {
+            return consumerAcceptList(List.of(consumerAcceptList));
+        }
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
@@ -289,11 +329,15 @@ public final class GetInstanceResult {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
+        public Builder serviceAttachment(String serviceAttachment) {
+            this.serviceAttachment = Objects.requireNonNull(serviceAttachment);
+            return this;
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(createdAt, description, diskEncryptionKeyName, displayName, host, ipRange, lastModifiedAt, location, name, peeringCidrRange, port, runtimeVersion, state);
+            return new GetInstanceResult(consumerAcceptList, createdAt, description, diskEncryptionKeyName, displayName, host, ipRange, lastModifiedAt, location, name, peeringCidrRange, port, runtimeVersion, serviceAttachment, state);
         }
     }
 }

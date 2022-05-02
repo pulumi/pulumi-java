@@ -47,6 +47,34 @@ public class Schema extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * The timestamp that the revision was created.
+     * 
+     */
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
+    private Output<String> revisionCreateTime;
+
+    /**
+     * @return The timestamp that the revision was created.
+     * 
+     */
+    public Output<String> revisionCreateTime() {
+        return this.revisionCreateTime;
+    }
+    /**
+     * Immutable. The revision ID of the schema.
+     * 
+     */
+    @Export(name="revisionId", type=String.class, parameters={})
+    private Output<String> revisionId;
+
+    /**
+     * @return Immutable. The revision ID of the schema.
+     * 
+     */
+    public Output<String> revisionId() {
+        return this.revisionId;
+    }
+    /**
      * The type of the schema definition.
      * 
      */

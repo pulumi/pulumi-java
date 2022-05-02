@@ -28,9 +28,17 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
+    /**
+     * The ID of the HL7v2 store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     @Import(name="hl7V2StoreId")
     private @Nullable Output<String> hl7V2StoreId;
 
+    /**
+     * @return The ID of the HL7v2 store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     public Optional<Output<String>> hl7V2StoreId() {
         return Optional.ofNullable(this.hl7V2StoreId);
     }
@@ -181,11 +189,23 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param hl7V2StoreId The ID of the HL7v2 store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
 
+        /**
+         * @param hl7V2StoreId The ID of the HL7v2 store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             return hl7V2StoreId(Output.of(hl7V2StoreId));
         }

@@ -10,6 +10,11 @@ import java.util.Objects;
 @CustomType
 public final class GetIosAppResult {
     /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    private final String apiKeyId;
+    /**
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
@@ -47,6 +52,7 @@ public final class GetIosAppResult {
 
     @CustomType.Constructor
     private GetIosAppResult(
+        @CustomType.Parameter("apiKeyId") String apiKeyId,
         @CustomType.Parameter("appId") String appId,
         @CustomType.Parameter("appStoreId") String appStoreId,
         @CustomType.Parameter("bundleId") String bundleId,
@@ -54,6 +60,7 @@ public final class GetIosAppResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("project") String project,
         @CustomType.Parameter("teamId") String teamId) {
+        this.apiKeyId = apiKeyId;
         this.appId = appId;
         this.appStoreId = appStoreId;
         this.bundleId = bundleId;
@@ -63,6 +70,13 @@ public final class GetIosAppResult {
         this.teamId = teamId;
     }
 
+    /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    public String apiKeyId() {
+        return this.apiKeyId;
+    }
     /**
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
@@ -122,6 +136,7 @@ public final class GetIosAppResult {
     }
 
     public static final class Builder {
+        private String apiKeyId;
         private String appId;
         private String appStoreId;
         private String bundleId;
@@ -136,6 +151,7 @@ public final class GetIosAppResult {
 
         public Builder(GetIosAppResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.apiKeyId = defaults.apiKeyId;
     	      this.appId = defaults.appId;
     	      this.appStoreId = defaults.appStoreId;
     	      this.bundleId = defaults.bundleId;
@@ -145,6 +161,10 @@ public final class GetIosAppResult {
     	      this.teamId = defaults.teamId;
         }
 
+        public Builder apiKeyId(String apiKeyId) {
+            this.apiKeyId = Objects.requireNonNull(apiKeyId);
+            return this;
+        }
         public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
@@ -173,7 +193,7 @@ public final class GetIosAppResult {
             this.teamId = Objects.requireNonNull(teamId);
             return this;
         }        public GetIosAppResult build() {
-            return new GetIosAppResult(appId, appStoreId, bundleId, displayName, name, project, teamId);
+            return new GetIosAppResult(apiKeyId, appId, appStoreId, bundleId, displayName, name, project, teamId);
         }
     }
 }

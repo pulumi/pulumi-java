@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetGameServerClusterResult {
     /**
-     * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+     * @return The state of the Kubernetes cluster in preview. This will be available if view is set to FULL in the relevant list/get/preview request.
      * 
      */
     private final KubernetesClusterStateResponse clusterState;
@@ -33,7 +33,7 @@ public final class GetGameServerClusterResult {
      */
     private final String description;
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     private final String etag;
@@ -43,7 +43,7 @@ public final class GetGameServerClusterResult {
      */
     private final Map<String,String> labels;
     /**
-     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     private final String name;
@@ -74,7 +74,7 @@ public final class GetGameServerClusterResult {
     }
 
     /**
-     * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+     * @return The state of the Kubernetes cluster in preview. This will be available if view is set to FULL in the relevant list/get/preview request.
      * 
      */
     public KubernetesClusterStateResponse clusterState() {
@@ -102,7 +102,7 @@ public final class GetGameServerClusterResult {
         return this.description;
     }
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public String etag() {
@@ -116,7 +116,7 @@ public final class GetGameServerClusterResult {
         return this.labels;
     }
     /**
-     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     public String name() {

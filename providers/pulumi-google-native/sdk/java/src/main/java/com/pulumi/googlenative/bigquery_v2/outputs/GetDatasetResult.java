@@ -88,6 +88,11 @@ public final class GetDatasetResult {
      */
     private final String location;
     /**
+     * @return [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    private final String maxTimeTravelHours;
+    /**
      * @return Reserved for future use.
      * 
      */
@@ -120,6 +125,7 @@ public final class GetDatasetResult {
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
         @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxTimeTravelHours") String maxTimeTravelHours,
         @CustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("tags") List<DatasetTagsItemResponse> tags) {
@@ -138,6 +144,7 @@ public final class GetDatasetResult {
         this.labels = labels;
         this.lastModifiedTime = lastModifiedTime;
         this.location = location;
+        this.maxTimeTravelHours = maxTimeTravelHours;
         this.satisfiesPZS = satisfiesPZS;
         this.selfLink = selfLink;
         this.tags = tags;
@@ -245,6 +252,13 @@ public final class GetDatasetResult {
         return this.location;
     }
     /**
+     * @return [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    public String maxTimeTravelHours() {
+        return this.maxTimeTravelHours;
+    }
+    /**
      * @return Reserved for future use.
      * 
      */
@@ -290,6 +304,7 @@ public final class GetDatasetResult {
         private Map<String,String> labels;
         private String lastModifiedTime;
         private String location;
+        private String maxTimeTravelHours;
         private Boolean satisfiesPZS;
         private String selfLink;
         private List<DatasetTagsItemResponse> tags;
@@ -315,6 +330,7 @@ public final class GetDatasetResult {
     	      this.labels = defaults.labels;
     	      this.lastModifiedTime = defaults.lastModifiedTime;
     	      this.location = defaults.location;
+    	      this.maxTimeTravelHours = defaults.maxTimeTravelHours;
     	      this.satisfiesPZS = defaults.satisfiesPZS;
     	      this.selfLink = defaults.selfLink;
     	      this.tags = defaults.tags;
@@ -383,6 +399,10 @@ public final class GetDatasetResult {
             this.location = Objects.requireNonNull(location);
             return this;
         }
+        public Builder maxTimeTravelHours(String maxTimeTravelHours) {
+            this.maxTimeTravelHours = Objects.requireNonNull(maxTimeTravelHours);
+            return this;
+        }
         public Builder satisfiesPZS(Boolean satisfiesPZS) {
             this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
             return this;
@@ -398,7 +418,7 @@ public final class GetDatasetResult {
         public Builder tags(DatasetTagsItemResponse... tags) {
             return tags(List.of(tags));
         }        public GetDatasetResult build() {
-            return new GetDatasetResult(access, creationTime, datasetReference, defaultCollation, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, etag, friendlyName, isCaseInsensitive, kind, labels, lastModifiedTime, location, satisfiesPZS, selfLink, tags);
+            return new GetDatasetResult(access, creationTime, datasetReference, defaultCollation, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, etag, friendlyName, isCaseInsensitive, kind, labels, lastModifiedTime, location, maxTimeTravelHours, satisfiesPZS, selfLink, tags);
         }
     }
 }

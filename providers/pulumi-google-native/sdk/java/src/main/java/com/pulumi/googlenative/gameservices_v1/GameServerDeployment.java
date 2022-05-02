@@ -34,28 +34,28 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Human readable description of the game server delpoyment.
+     * Human readable description of the game server deployment.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return Human readable description of the game server delpoyment.
+     * @return Human readable description of the game server deployment.
      * 
      */
     public Output<String> description() {
         return this.description;
     }
     /**
-     * ETag of the resource.
+     * Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public Output<String> etag() {
@@ -76,14 +76,14 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     public Output<String> name() {

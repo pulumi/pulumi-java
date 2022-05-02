@@ -22,7 +22,7 @@ public final class ServiceResolverResponse {
      */
     private final String hostname;
     /**
-     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
      * 
      */
     private final List<CertificateResponse> serverCertificates;
@@ -59,7 +59,7 @@ public final class ServiceResolverResponse {
         return this.hostname;
     }
     /**
-     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica. Currently, a maximum of 10 Certificate is supported.
      * 
      */
     public List<CertificateResponse> serverCertificates() {

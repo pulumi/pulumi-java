@@ -20,14 +20,14 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
     public static final FeedArgs Empty = new FeedArgs();
 
     /**
-     * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
+     * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list of the full names for supported asset types, see [Resource name format](/asset-inventory/docs/resource-name-format).
      * 
      */
     @Import(name="assetNames")
     private @Nullable Output<List<String>> assetNames;
 
     /**
-     * @return A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
+     * @return A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list of the full names for supported asset types, see [Resource name format](/asset-inventory/docs/resource-name-format).
      * 
      */
     public Optional<Output<List<String>>> assetNames() {
@@ -35,14 +35,14 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
+     * A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` For a list of all supported asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * 
      */
     @Import(name="assetTypes")
     private @Nullable Output<List<String>> assetTypes;
 
     /**
-     * @return A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
+     * @return A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` For a list of all supported asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * 
      */
     public Optional<Output<List<String>>> assetTypes() {
@@ -187,7 +187,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list of the full names for supported asset types, see [Resource name format](/asset-inventory/docs/resource-name-format).
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list of the full names for supported asset types, see [Resource name format](/asset-inventory/docs/resource-name-format).
          * 
          * @return builder
          * 
@@ -208,7 +208,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list of the full names for supported asset types, see [Resource name format](/asset-inventory/docs/resource-name-format).
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` For a list of all supported asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
          * 
          * @return builder
          * 
@@ -229,7 +229,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` For a list of all supported asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class FeedArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `&#34;compute.googleapis.com/Disk&#34;` For a list of all supported asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
          * 
          * @return builder
          * 

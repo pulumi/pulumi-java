@@ -16,6 +16,7 @@ import javax.annotation.Nullable;
 
 /**
  * Initiates a Clone of a specific migrating VM.
+ * Auto-naming is currently not supported for this resource.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
@@ -49,6 +50,20 @@ public class CloneJob extends com.pulumi.resources.CustomResource {
      */
     public Output<String> createTime() {
         return this.createTime;
+    }
+    /**
+     * The time the clone job was ended.
+     * 
+     */
+    @Export(name="endTime", type=String.class, parameters={})
+    private Output<String> endTime;
+
+    /**
+     * @return The time the clone job was ended.
+     * 
+     */
+    public Output<String> endTime() {
+        return this.endTime;
     }
     /**
      * Provides details for the errors that led to the Clone Job&#39;s state.

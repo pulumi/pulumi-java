@@ -61,9 +61,17 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.labels);
     }
 
+    /**
+     * Required. Peering Id, unique name to identify peering.
+     * 
+     */
     @Import(name="peeringId", required=true)
     private Output<String> peeringId;
 
+    /**
+     * @return Required. Peering Id, unique name to identify peering.
+     * 
+     */
     public Output<String> peeringId() {
         return this.peeringId;
     }
@@ -166,11 +174,23 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param peeringId Required. Peering Id, unique name to identify peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringId(Output<String> peeringId) {
             $.peeringId = peeringId;
             return this;
         }
 
+        /**
+         * @param peeringId Required. Peering Id, unique name to identify peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringId(String peeringId) {
             return peeringId(Output.of(peeringId));
         }

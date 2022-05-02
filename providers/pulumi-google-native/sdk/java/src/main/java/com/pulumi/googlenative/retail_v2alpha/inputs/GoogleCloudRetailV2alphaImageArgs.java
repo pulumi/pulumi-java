@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Product thumbnail/detail image.
+ * Product image. Recommendations AI and Retail Search do not use product images to improve prediction and search results. However, product images can be returned in results, and are shown in prediction or search previews in the console.
  * 
  */
 public final class GoogleCloudRetailV2alphaImageArgs extends com.pulumi.resources.ResourceArgs {

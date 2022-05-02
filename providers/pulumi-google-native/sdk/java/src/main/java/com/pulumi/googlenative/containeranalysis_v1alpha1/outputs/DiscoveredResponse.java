@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.OperationResponse;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,6 +22,11 @@ public final class DiscoveredResponse {
      */
     private final StatusResponse analysisStatusError;
     /**
+     * @return The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    private final String archiveTime;
+    /**
      * @return Whether the resource is continuously analyzed.
      * 
      */
@@ -30,17 +36,37 @@ public final class DiscoveredResponse {
      * 
      */
     private final String cpe;
+    /**
+     * @return The last time this resource was scanned.
+     * 
+     */
+    private final String lastScanTime;
+    /**
+     * @return An operation that indicates the status of the current scan. This field is deprecated, do not use.
+     * 
+     * @deprecated
+     * Output only. An operation that indicates the status of the current scan. This field is deprecated, do not use.
+     * 
+     */
+    @Deprecated /* Output only. An operation that indicates the status of the current scan. This field is deprecated, do not use. */
+    private final OperationResponse operation;
 
     @CustomType.Constructor
     private DiscoveredResponse(
         @CustomType.Parameter("analysisStatus") String analysisStatus,
         @CustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @CustomType.Parameter("archiveTime") String archiveTime,
         @CustomType.Parameter("continuousAnalysis") String continuousAnalysis,
-        @CustomType.Parameter("cpe") String cpe) {
+        @CustomType.Parameter("cpe") String cpe,
+        @CustomType.Parameter("lastScanTime") String lastScanTime,
+        @CustomType.Parameter("operation") OperationResponse operation) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
+        this.archiveTime = archiveTime;
         this.continuousAnalysis = continuousAnalysis;
         this.cpe = cpe;
+        this.lastScanTime = lastScanTime;
+        this.operation = operation;
     }
 
     /**
@@ -58,6 +84,13 @@ public final class DiscoveredResponse {
         return this.analysisStatusError;
     }
     /**
+     * @return The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    public String archiveTime() {
+        return this.archiveTime;
+    }
+    /**
      * @return Whether the resource is continuously analyzed.
      * 
      */
@@ -71,6 +104,24 @@ public final class DiscoveredResponse {
     public String cpe() {
         return this.cpe;
     }
+    /**
+     * @return The last time this resource was scanned.
+     * 
+     */
+    public String lastScanTime() {
+        return this.lastScanTime;
+    }
+    /**
+     * @return An operation that indicates the status of the current scan. This field is deprecated, do not use.
+     * 
+     * @deprecated
+     * Output only. An operation that indicates the status of the current scan. This field is deprecated, do not use.
+     * 
+     */
+    @Deprecated /* Output only. An operation that indicates the status of the current scan. This field is deprecated, do not use. */
+    public OperationResponse operation() {
+        return this.operation;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -83,8 +134,11 @@ public final class DiscoveredResponse {
     public static final class Builder {
         private String analysisStatus;
         private StatusResponse analysisStatusError;
+        private String archiveTime;
         private String continuousAnalysis;
         private String cpe;
+        private String lastScanTime;
+        private OperationResponse operation;
 
         public Builder() {
     	      // Empty
@@ -94,8 +148,11 @@ public final class DiscoveredResponse {
     	      Objects.requireNonNull(defaults);
     	      this.analysisStatus = defaults.analysisStatus;
     	      this.analysisStatusError = defaults.analysisStatusError;
+    	      this.archiveTime = defaults.archiveTime;
     	      this.continuousAnalysis = defaults.continuousAnalysis;
     	      this.cpe = defaults.cpe;
+    	      this.lastScanTime = defaults.lastScanTime;
+    	      this.operation = defaults.operation;
         }
 
         public Builder analysisStatus(String analysisStatus) {
@@ -106,6 +163,10 @@ public final class DiscoveredResponse {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
+        public Builder archiveTime(String archiveTime) {
+            this.archiveTime = Objects.requireNonNull(archiveTime);
+            return this;
+        }
         public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
@@ -113,8 +174,16 @@ public final class DiscoveredResponse {
         public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
+        }
+        public Builder lastScanTime(String lastScanTime) {
+            this.lastScanTime = Objects.requireNonNull(lastScanTime);
+            return this;
+        }
+        public Builder operation(OperationResponse operation) {
+            this.operation = Objects.requireNonNull(operation);
+            return this;
         }        public DiscoveredResponse build() {
-            return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
+            return new DiscoveredResponse(analysisStatus, analysisStatusError, archiveTime, continuousAnalysis, cpe, lastScanTime, operation);
         }
     }
 }

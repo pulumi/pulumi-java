@@ -83,6 +83,15 @@ public final class JobConfigurationQueryResponse {
      */
     private final String parameterMode;
     /**
+     * @return [Deprecated] This property is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This property is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This property is deprecated. */
+    private final Boolean preserveNulls;
+    /**
      * @return [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
      * 
      */
@@ -152,6 +161,7 @@ public final class JobConfigurationQueryResponse {
         @CustomType.Parameter("maximumBillingTier") Integer maximumBillingTier,
         @CustomType.Parameter("maximumBytesBilled") String maximumBytesBilled,
         @CustomType.Parameter("parameterMode") String parameterMode,
+        @CustomType.Parameter("preserveNulls") Boolean preserveNulls,
         @CustomType.Parameter("priority") String priority,
         @CustomType.Parameter("query") String query,
         @CustomType.Parameter("queryParameters") List<QueryParameterResponse> queryParameters,
@@ -175,6 +185,7 @@ public final class JobConfigurationQueryResponse {
         this.maximumBillingTier = maximumBillingTier;
         this.maximumBytesBilled = maximumBytesBilled;
         this.parameterMode = parameterMode;
+        this.preserveNulls = preserveNulls;
         this.priority = priority;
         this.query = query;
         this.queryParameters = queryParameters;
@@ -271,6 +282,17 @@ public final class JobConfigurationQueryResponse {
      */
     public String parameterMode() {
         return this.parameterMode;
+    }
+    /**
+     * @return [Deprecated] This property is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This property is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This property is deprecated. */
+    public Boolean preserveNulls() {
+        return this.preserveNulls;
     }
     /**
      * @return [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
@@ -371,6 +393,7 @@ public final class JobConfigurationQueryResponse {
         private Integer maximumBillingTier;
         private String maximumBytesBilled;
         private String parameterMode;
+        private Boolean preserveNulls;
         private String priority;
         private String query;
         private List<QueryParameterResponse> queryParameters;
@@ -401,6 +424,7 @@ public final class JobConfigurationQueryResponse {
     	      this.maximumBillingTier = defaults.maximumBillingTier;
     	      this.maximumBytesBilled = defaults.maximumBytesBilled;
     	      this.parameterMode = defaults.parameterMode;
+    	      this.preserveNulls = defaults.preserveNulls;
     	      this.priority = defaults.priority;
     	      this.query = defaults.query;
     	      this.queryParameters = defaults.queryParameters;
@@ -465,6 +489,10 @@ public final class JobConfigurationQueryResponse {
             this.parameterMode = Objects.requireNonNull(parameterMode);
             return this;
         }
+        public Builder preserveNulls(Boolean preserveNulls) {
+            this.preserveNulls = Objects.requireNonNull(preserveNulls);
+            return this;
+        }
         public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
@@ -518,7 +546,7 @@ public final class JobConfigurationQueryResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }        public JobConfigurationQueryResponse build() {
-            return new JobConfigurationQueryResponse(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
+            return new JobConfigurationQueryResponse(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, preserveNulls, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }
     }
 }

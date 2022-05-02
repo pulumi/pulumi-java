@@ -5,6 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.compute_alpha.inputs.AuthenticationPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.AuthorizationConfigArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.ClientTlsSettingsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,6 +24,75 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
     public static final SecuritySettingsArgs Empty = new SecuritySettingsArgs();
 
     /**
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    @Import(name="authentication")
+    private @Nullable Output<String> authentication;
+
+    /**
+     * @return [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
+    }
+
+    /**
+     * [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+     * 
+     * @deprecated
+     * [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+     * 
+     */
+    @Deprecated /* [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal. */
+    @Import(name="authenticationPolicy")
+    private @Nullable Output<AuthenticationPolicyArgs> authenticationPolicy;
+
+    /**
+     * @return [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+     * 
+     * @deprecated
+     * [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+     * 
+     */
+    @Deprecated /* [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal. */
+    public Optional<Output<AuthenticationPolicyArgs>> authenticationPolicy() {
+        return Optional.ofNullable(this.authenticationPolicy);
+    }
+
+    /**
+     * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+     * 
+     * @deprecated
+     * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+     * 
+     */
+    @Deprecated /* [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config. */
+    @Import(name="authorizationConfig")
+    private @Nullable Output<AuthorizationConfigArgs> authorizationConfig;
+
+    /**
+     * @return [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+     * 
+     * @deprecated
+     * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+     * 
+     */
+    @Deprecated /* [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config. */
+    public Optional<Output<AuthorizationConfigArgs>> authorizationConfig() {
+        return Optional.ofNullable(this.authorizationConfig);
+    }
+
+    /**
      * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service&#39;s backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
      * 
      */
@@ -33,6 +105,29 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<String>> clientTlsPolicy() {
         return Optional.ofNullable(this.clientTlsPolicy);
+    }
+
+    /**
+     * [Deprecated] TLS Settings for the backend service.
+     * 
+     * @deprecated
+     * [Deprecated] TLS Settings for the backend service.
+     * 
+     */
+    @Deprecated /* [Deprecated] TLS Settings for the backend service. */
+    @Import(name="clientTlsSettings")
+    private @Nullable Output<ClientTlsSettingsArgs> clientTlsSettings;
+
+    /**
+     * @return [Deprecated] TLS Settings for the backend service.
+     * 
+     * @deprecated
+     * [Deprecated] TLS Settings for the backend service.
+     * 
+     */
+    @Deprecated /* [Deprecated] TLS Settings for the backend service. */
+    public Optional<Output<ClientTlsSettingsArgs>> clientTlsSettings() {
+        return Optional.ofNullable(this.clientTlsSettings);
     }
 
     /**
@@ -53,7 +148,11 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
     private SecuritySettingsArgs() {}
 
     private SecuritySettingsArgs(SecuritySettingsArgs $) {
+        this.authentication = $.authentication;
+        this.authenticationPolicy = $.authenticationPolicy;
+        this.authorizationConfig = $.authorizationConfig;
         this.clientTlsPolicy = $.clientTlsPolicy;
+        this.clientTlsSettings = $.clientTlsSettings;
         this.subjectAltNames = $.subjectAltNames;
     }
 
@@ -76,6 +175,93 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
+         * @param authentication [Deprecated] Use clientTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use clientTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+        public Builder authentication(@Nullable Output<String> authentication) {
+            $.authentication = authentication;
+            return this;
+        }
+
+        /**
+         * @param authentication [Deprecated] Use clientTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use clientTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
+        }
+
+        /**
+         * @param authenticationPolicy [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+         * 
+         */
+        @Deprecated /* [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal. */
+        public Builder authenticationPolicy(@Nullable Output<AuthenticationPolicyArgs> authenticationPolicy) {
+            $.authenticationPolicy = authenticationPolicy;
+            return this;
+        }
+
+        /**
+         * @param authenticationPolicy [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.
+         * 
+         */
+        @Deprecated /* [Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal. */
+        public Builder authenticationPolicy(AuthenticationPolicyArgs authenticationPolicy) {
+            return authenticationPolicy(Output.of(authenticationPolicy));
+        }
+
+        /**
+         * @param authorizationConfig [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+         * 
+         */
+        @Deprecated /* [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config. */
+        public Builder authorizationConfig(@Nullable Output<AuthorizationConfigArgs> authorizationConfig) {
+            $.authorizationConfig = authorizationConfig;
+            return this;
+        }
+
+        /**
+         * @param authorizationConfig [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.
+         * 
+         */
+        @Deprecated /* [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config. */
+        public Builder authorizationConfig(AuthorizationConfigArgs authorizationConfig) {
+            return authorizationConfig(Output.of(authorizationConfig));
+        }
+
+        /**
          * @param clientTlsPolicy Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service&#39;s backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
          * 
          * @return builder
@@ -94,6 +280,35 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder clientTlsPolicy(String clientTlsPolicy) {
             return clientTlsPolicy(Output.of(clientTlsPolicy));
+        }
+
+        /**
+         * @param clientTlsSettings [Deprecated] TLS Settings for the backend service.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] TLS Settings for the backend service.
+         * 
+         */
+        @Deprecated /* [Deprecated] TLS Settings for the backend service. */
+        public Builder clientTlsSettings(@Nullable Output<ClientTlsSettingsArgs> clientTlsSettings) {
+            $.clientTlsSettings = clientTlsSettings;
+            return this;
+        }
+
+        /**
+         * @param clientTlsSettings [Deprecated] TLS Settings for the backend service.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] TLS Settings for the backend service.
+         * 
+         */
+        @Deprecated /* [Deprecated] TLS Settings for the backend service. */
+        public Builder clientTlsSettings(ClientTlsSettingsArgs clientTlsSettings) {
+            return clientTlsSettings(Output.of(clientTlsSettings));
         }
 
         /**

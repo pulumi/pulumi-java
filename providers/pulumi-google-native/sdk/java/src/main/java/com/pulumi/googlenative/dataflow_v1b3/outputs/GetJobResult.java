@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataflow_v1b3.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse;
+import com.pulumi.googlenative.dataflow_v1b3.outputs.JobExecutionInfoResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.PipelineDescriptionResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.StepResponse;
@@ -47,6 +48,15 @@ public final class GetJobResult {
      * 
      */
     private final EnvironmentResponse environment;
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    private final JobExecutionInfoResponse executionInfo;
     /**
      * @return This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
      * 
@@ -141,6 +151,7 @@ public final class GetJobResult {
         @CustomType.Parameter("currentState") String currentState,
         @CustomType.Parameter("currentStateTime") String currentStateTime,
         @CustomType.Parameter("environment") EnvironmentResponse environment,
+        @CustomType.Parameter("executionInfo") JobExecutionInfoResponse executionInfo,
         @CustomType.Parameter("jobMetadata") JobMetadataResponse jobMetadata,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("location") String location,
@@ -164,6 +175,7 @@ public final class GetJobResult {
         this.currentState = currentState;
         this.currentStateTime = currentStateTime;
         this.environment = environment;
+        this.executionInfo = executionInfo;
         this.jobMetadata = jobMetadata;
         this.labels = labels;
         this.location = location;
@@ -224,6 +236,17 @@ public final class GetJobResult {
      */
     public EnvironmentResponse environment() {
         return this.environment;
+    }
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    public JobExecutionInfoResponse executionInfo() {
+        return this.executionInfo;
     }
     /**
      * @return This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
@@ -360,6 +383,7 @@ public final class GetJobResult {
         private String currentState;
         private String currentStateTime;
         private EnvironmentResponse environment;
+        private JobExecutionInfoResponse executionInfo;
         private JobMetadataResponse jobMetadata;
         private Map<String,String> labels;
         private String location;
@@ -390,6 +414,7 @@ public final class GetJobResult {
     	      this.currentState = defaults.currentState;
     	      this.currentStateTime = defaults.currentStateTime;
     	      this.environment = defaults.environment;
+    	      this.executionInfo = defaults.executionInfo;
     	      this.jobMetadata = defaults.jobMetadata;
     	      this.labels = defaults.labels;
     	      this.location = defaults.location;
@@ -431,6 +456,10 @@ public final class GetJobResult {
         }
         public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
+            return this;
+        }
+        public Builder executionInfo(JobExecutionInfoResponse executionInfo) {
+            this.executionInfo = Objects.requireNonNull(executionInfo);
             return this;
         }
         public Builder jobMetadata(JobMetadataResponse jobMetadata) {
@@ -510,7 +539,7 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetJobResult build() {
-            return new GetJobResult(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type);
+            return new GetJobResult(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, executionInfo, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type);
         }
     }
 }

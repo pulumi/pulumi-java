@@ -83,6 +83,21 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
     }
 
     /**
+     * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    @Import(name="destThreatIntelligences")
+    private @Nullable Output<List<String>> destThreatIntelligences;
+
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    public Optional<Output<List<String>>> destThreatIntelligences() {
+        return Optional.ofNullable(this.destThreatIntelligences);
+    }
+
+    /**
      * Pairs of IP protocols and ports that the rule should match.
      * 
      */
@@ -172,6 +187,21 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
         return Optional.ofNullable(this.srcSecureTags);
     }
 
+    /**
+     * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    @Import(name="srcThreatIntelligences")
+    private @Nullable Output<List<String>> srcThreatIntelligences;
+
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    public Optional<Output<List<String>>> srcThreatIntelligences() {
+        return Optional.ofNullable(this.srcThreatIntelligences);
+    }
+
     private FirewallPolicyRuleMatcherArgs() {}
 
     private FirewallPolicyRuleMatcherArgs(FirewallPolicyRuleMatcherArgs $) {
@@ -179,12 +209,14 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
         this.destFqdns = $.destFqdns;
         this.destIpRanges = $.destIpRanges;
         this.destRegionCodes = $.destRegionCodes;
+        this.destThreatIntelligences = $.destThreatIntelligences;
         this.layer4Configs = $.layer4Configs;
         this.srcAddressGroups = $.srcAddressGroups;
         this.srcFqdns = $.srcFqdns;
         this.srcIpRanges = $.srcIpRanges;
         this.srcRegionCodes = $.srcRegionCodes;
         this.srcSecureTags = $.srcSecureTags;
+        this.srcThreatIntelligences = $.srcThreatIntelligences;
     }
 
     public static Builder builder() {
@@ -327,6 +359,37 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
          */
         public Builder destRegionCodes(String... destRegionCodes) {
             return destRegionCodes(List.of(destRegionCodes));
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(@Nullable Output<List<String>> destThreatIntelligences) {
+            $.destThreatIntelligences = destThreatIntelligences;
+            return this;
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(List<String> destThreatIntelligences) {
+            return destThreatIntelligences(Output.of(destThreatIntelligences));
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(String... destThreatIntelligences) {
+            return destThreatIntelligences(List.of(destThreatIntelligences));
         }
 
         /**
@@ -513,6 +576,37 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
          */
         public Builder srcSecureTags(FirewallPolicyRuleSecureTagArgs... srcSecureTags) {
             return srcSecureTags(List.of(srcSecureTags));
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(@Nullable Output<List<String>> srcThreatIntelligences) {
+            $.srcThreatIntelligences = srcThreatIntelligences;
+            return this;
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(List<String> srcThreatIntelligences) {
+            return srcThreatIntelligences(Output.of(srcThreatIntelligences));
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(String... srcThreatIntelligences) {
+            return srcThreatIntelligences(List.of(srcThreatIntelligences));
         }
 
         public FirewallPolicyRuleMatcherArgs build() {

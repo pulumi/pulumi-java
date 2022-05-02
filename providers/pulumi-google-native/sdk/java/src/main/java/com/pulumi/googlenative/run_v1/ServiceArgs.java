@@ -7,7 +7,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import com.pulumi.googlenative.run_v1.inputs.ServiceSpecArgs;
-import com.pulumi.googlenative.run_v1.inputs.ServiceStatusArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,9 +32,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.apiVersion);
     }
 
+    /**
+     * Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+     * 
+     */
     @Import(name="dryRun")
     private @Nullable Output<String> dryRun;
 
+    /**
+     * @return Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+     * 
+     */
     public Optional<Output<String>> dryRun() {
         return Optional.ofNullable(this.dryRun);
     }
@@ -99,21 +106,6 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.spec);
     }
 
-    /**
-     * Status communicates the observed state of the Service (from the controller).
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<ServiceStatusArgs> status;
-
-    /**
-     * @return Status communicates the observed state of the Service (from the controller).
-     * 
-     */
-    public Optional<Output<ServiceStatusArgs>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
     private ServiceArgs() {}
 
     private ServiceArgs(ServiceArgs $) {
@@ -124,7 +116,6 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         this.metadata = $.metadata;
         this.project = $.project;
         this.spec = $.spec;
-        this.status = $.status;
     }
 
     public static Builder builder() {
@@ -166,11 +157,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param dryRun Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(@Nullable Output<String> dryRun) {
             $.dryRun = dryRun;
             return this;
         }
 
+        /**
+         * @param dryRun Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(String dryRun) {
             return dryRun(Output.of(dryRun));
         }
@@ -254,27 +257,6 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder spec(ServiceSpecArgs spec) {
             return spec(Output.of(spec));
-        }
-
-        /**
-         * @param status Status communicates the observed state of the Service (from the controller).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<ServiceStatusArgs> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status Status communicates the observed state of the Service (from the controller).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(ServiceStatusArgs status) {
-            return status(Output.of(status));
         }
 
         public ServiceArgs build() {

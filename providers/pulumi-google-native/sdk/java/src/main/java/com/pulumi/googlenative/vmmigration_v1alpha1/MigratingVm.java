@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vmmigration_v1alpha1.MigratingVmArgs;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.AwsSourceVmDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.CloneJobResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDefaultsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.CutoverJobResponse;
@@ -16,6 +17,7 @@ import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicationCycleResp
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicationSyncResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.SchedulePolicyResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.TargetVMDetailsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +31,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:vmmigration/v1alpha1:MigratingVm")
 public class MigratingVm extends com.pulumi.resources.CustomResource {
     /**
+     * Details of the VM from an AWS source.
+     * 
+     */
+    @Export(name="awsSourceVmDetails", type=AwsSourceVmDetailsResponse.class, parameters={})
+    private Output<AwsSourceVmDetailsResponse> awsSourceVmDetails;
+
+    /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    public Output<AwsSourceVmDetailsResponse> awsSourceVmDetails() {
+        return this.awsSourceVmDetails;
+    }
+    /**
      * Details of the target VM in Compute Engine.
      * 
      */
@@ -41,6 +57,24 @@ public class MigratingVm extends com.pulumi.resources.CustomResource {
      */
     public Output<ComputeEngineTargetDefaultsResponse> computeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults;
+    }
+    /**
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+    @Export(name="computeEngineVmDefaults", type=TargetVMDetailsResponse.class, parameters={})
+    private Output<TargetVMDetailsResponse> computeEngineVmDefaults;
+
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    public Output<TargetVMDetailsResponse> computeEngineVmDefaults() {
+        return this.computeEngineVmDefaults;
     }
     /**
      * The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
@@ -251,6 +285,24 @@ public class MigratingVm extends com.pulumi.resources.CustomResource {
      */
     public Output<String> stateTime() {
         return this.stateTime;
+    }
+    /**
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+    @Export(name="targetDefaults", type=TargetVMDetailsResponse.class, parameters={})
+    private Output<TargetVMDetailsResponse> targetDefaults;
+
+    /**
+     * @return The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    public Output<TargetVMDetailsResponse> targetDefaults() {
+        return this.targetDefaults;
     }
     /**
      * The last time the migrating VM resource was updated.

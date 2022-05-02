@@ -65,9 +65,17 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Required. The logical name of the guest policy in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     @Import(name="guestPolicyId", required=true)
     private Output<String> guestPolicyId;
 
+    /**
+     * @return Required. The logical name of the guest policy in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     public Output<String> guestPolicyId() {
         return this.guestPolicyId;
     }
@@ -234,11 +242,23 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param guestPolicyId Required. The logical name of the guest policy in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestPolicyId(Output<String> guestPolicyId) {
             $.guestPolicyId = guestPolicyId;
             return this;
         }
 
+        /**
+         * @param guestPolicyId Required. The logical name of the guest policy in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestPolicyId(String guestPolicyId) {
             return guestPolicyId(Output.of(guestPolicyId));
         }

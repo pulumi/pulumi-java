@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.container_v1beta1.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.AdvancedMachineFeaturesArgs;
+import com.pulumi.googlenative.container_v1beta1.inputs.ConfidentialNodesArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.EphemeralStorageConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.GcfsConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.LinuxNodeConfigArgs;
@@ -28,7 +29,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Parameters that describe the nodes in a cluster.
+ * Parameters that describe the nodes in a cluster. *Note:* GKE Autopilot clusters do not recognize parameters in `NodeConfig`. Use AutoprovisioningNodePoolDefaults instead.
  * 
  */
 public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
@@ -78,6 +79,21 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> bootDiskKmsKey() {
         return Optional.ofNullable(this.bootDiskKmsKey);
+    }
+
+    /**
+     * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+     * 
+     */
+    @Import(name="confidentialNodes")
+    private @Nullable Output<ConfidentialNodesArgs> confidentialNodes;
+
+    /**
+     * @return Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+     * 
+     */
+    public Optional<Output<ConfidentialNodesArgs>> confidentialNodes() {
+        return Optional.ofNullable(this.confidentialNodes);
     }
 
     /**
@@ -446,6 +462,7 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
         this.accelerators = $.accelerators;
         this.advancedMachineFeatures = $.advancedMachineFeatures;
         this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.confidentialNodes = $.confidentialNodes;
         this.diskSizeGb = $.diskSizeGb;
         this.diskType = $.diskType;
         this.ephemeralStorageConfig = $.ephemeralStorageConfig;
@@ -561,6 +578,27 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             return bootDiskKmsKey(Output.of(bootDiskKmsKey));
+        }
+
+        /**
+         * @param confidentialNodes Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder confidentialNodes(@Nullable Output<ConfidentialNodesArgs> confidentialNodes) {
+            $.confidentialNodes = confidentialNodes;
+            return this;
+        }
+
+        /**
+         * @param confidentialNodes Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder confidentialNodes(ConfidentialNodesArgs confidentialNodes) {
+            return confidentialNodes(Output.of(confidentialNodes));
         }
 
         /**

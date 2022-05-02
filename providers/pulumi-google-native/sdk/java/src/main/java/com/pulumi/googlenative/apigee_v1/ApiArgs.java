@@ -17,9 +17,17 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
+    /**
+     * Action to perform when importing an API proxy configuration bundle. Set this parameter to one of the following values: * `import` to import the API proxy configuration bundle. * `validate` to validate the API proxy configuration bundle without importing it.
+     * 
+     */
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return Action to perform when importing an API proxy configuration bundle. Set this parameter to one of the following values: * `import` to import the API proxy configuration bundle. * `validate` to validate the API proxy configuration bundle without importing it.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -69,9 +77,17 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.extensions);
     }
 
+    /**
+     * Name of the API proxy. Restrict the characters used to: A-Za-z0-9._-
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the API proxy. Restrict the characters used to: A-Za-z0-9._-
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,9 +99,17 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Ignored. All uploads are validated regardless of the value of this field. Maintained for compatibility with Apigee Edge API.
+     * 
+     */
     @Import(name="validate")
     private @Nullable Output<String> validate;
 
+    /**
+     * @return Ignored. All uploads are validated regardless of the value of this field. Maintained for compatibility with Apigee Edge API.
+     * 
+     */
     public Optional<Output<String>> validate() {
         return Optional.ofNullable(this.validate);
     }
@@ -120,11 +144,23 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action to perform when importing an API proxy configuration bundle. Set this parameter to one of the following values: * `import` to import the API proxy configuration bundle. * `validate` to validate the API proxy configuration bundle without importing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action to perform when importing an API proxy configuration bundle. Set this parameter to one of the following values: * `import` to import the API proxy configuration bundle. * `validate` to validate the API proxy configuration bundle without importing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
@@ -202,11 +238,23 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param name Name of the API proxy. Restrict the characters used to: A-Za-z0-9._-
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the API proxy. Restrict the characters used to: A-Za-z0-9._-
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -220,11 +268,23 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param validate Ignored. All uploads are validated regardless of the value of this field. Maintained for compatibility with Apigee Edge API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validate(@Nullable Output<String> validate) {
             $.validate = validate;
             return this;
         }
 
+        /**
+         * @param validate Ignored. All uploads are validated regardless of the value of this field. Maintained for compatibility with Apigee Edge API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validate(String validate) {
             return validate(Output.of(validate));
         }

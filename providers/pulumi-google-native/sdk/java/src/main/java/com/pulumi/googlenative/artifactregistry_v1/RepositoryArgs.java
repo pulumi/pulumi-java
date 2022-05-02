@@ -64,14 +64,14 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
     /**
-     * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * @return The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
     public Optional<Output<String>> kmsKeyName() {
@@ -137,9 +137,17 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * The repository id to use for this repository.
+     * 
+     */
     @Import(name="repositoryId")
     private @Nullable Output<String> repositoryId;
 
+    /**
+     * @return The repository id to use for this repository.
+     * 
+     */
     public Optional<Output<String>> repositoryId() {
         return Optional.ofNullable(this.repositoryId);
     }
@@ -257,7 +265,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
          * 
          * @return builder
          * 
@@ -268,7 +276,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
          * 
          * @return builder
          * 
@@ -358,11 +366,23 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param repositoryId The repository id to use for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
         }
 
+        /**
+         * @param repositoryId The repository id to use for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryId(String repositoryId) {
             return repositoryId(Output.of(repositoryId));
         }
