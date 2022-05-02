@@ -10,6 +10,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -48,6 +49,20 @@ public class Repository extends com.pulumi.resources.ComponentResource {
      */
     public Output<com.pulumi.aws.ecr.Repository> repository() {
         return this.repository;
+    }
+    /**
+     * The URL of the repository (in the form aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName).
+     * 
+     */
+    @Export(name="url", type=String.class, parameters={})
+    private Output<String> url;
+
+    /**
+     * @return The URL of the repository (in the form aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName).
+     * 
+     */
+    public Output<String> url() {
+        return this.url;
     }
 
     /**

@@ -18,6 +18,10 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * Provides an Application Load Balancer resource with listeners, default target group and default security group.
+ * 
+ */
 @ResourceType(type="awsx:lb:ApplicationLoadBalancer")
 public class ApplicationLoadBalancer extends com.pulumi.resources.ComponentResource {
     /**
