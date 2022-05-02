@@ -15,14 +15,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     public static final RouteArgs Empty = new RouteArgs();
 
     /**
-     * The path for the route.
+     * [Required] The path for the route.
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return The path for the route.
+     * @return [Required] The path for the route.
      * 
      */
     public Output<String> path() {
@@ -30,14 +30,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The port for the route.
+     * [Required] The port for the route.
      * 
      */
     @Import(name="port", required=true)
     private Output<Integer> port;
 
     /**
-     * @return The port for the route.
+     * @return [Required] The port for the route.
      * 
      */
     public Output<Integer> port() {
@@ -70,7 +70,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param path The path for the route.
+         * @param path [Required] The path for the route.
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param path The path for the route.
+         * @param path [Required] The path for the route.
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port for the route.
+         * @param port [Required] The port for the route.
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port for the route.
+         * @param port [Required] The port for the route.
          * 
          * @return builder
          * 

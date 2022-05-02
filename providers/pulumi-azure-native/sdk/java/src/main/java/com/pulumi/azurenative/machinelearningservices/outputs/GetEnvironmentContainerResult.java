@@ -22,7 +22,7 @@ public final class GetEnvironmentContainerResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final EnvironmentContainerResponse properties;
@@ -66,7 +66,7 @@ public final class GetEnvironmentContainerResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public EnvironmentContainerResponse properties() {

@@ -250,7 +250,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:BlobServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:BlobServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:BlobServiceProperties").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:BlobServiceProperties").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:BlobServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:BlobServiceProperties").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

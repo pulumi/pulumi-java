@@ -153,12 +153,12 @@ public class Service extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:appplatform/v20190501preview:Service").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20200701:Service").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20201101preview:Service").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210601preview:Service").build()),
                 Output.of(Alias.builder().type("azure-native:appplatform/v20210901preview:Service").build()),
-                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Service").build())
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220101preview:Service").build()),
+                Output.of(Alias.builder().type("azure-native:appplatform/v20220301preview:Service").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

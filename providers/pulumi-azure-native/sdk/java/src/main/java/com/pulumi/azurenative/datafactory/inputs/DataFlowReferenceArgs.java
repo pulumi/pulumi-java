@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.azurenative.datafactory.enums.DataFlowReferenceType;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Object;
@@ -71,13 +73,13 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-    private Output<String> type;
+    private Output<Either<String,DataFlowReferenceType>> type;
 
     /**
      * @return Data flow reference type.
      * 
      */
-    public Output<String> type() {
+    public Output<Either<String,DataFlowReferenceType>> type() {
         return this.type;
     }
 
@@ -177,7 +179,7 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder type(Output<String> type) {
+        public Builder type(Output<Either<String,DataFlowReferenceType>> type) {
             $.type = type;
             return this;
         }
@@ -188,8 +190,28 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder type(String type) {
+        public Builder type(Either<String,DataFlowReferenceType> type) {
             return type(Output.of(type));
+        }
+
+        /**
+         * @param type Data flow reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        /**
+         * @param type Data flow reference type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(DataFlowReferenceType type) {
+            return type(Either.ofRight(type));
         }
 
         public DataFlowReferenceArgs build() {

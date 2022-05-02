@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
+ * $ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup firewallPolicy /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
  * ```
  * 
  */
@@ -161,7 +161,8 @@ public class FirewallPolicyRuleCollectionGroup extends com.pulumi.resources.Cust
                 Output.of(Alias.builder().type("azure-native:network/v20201101:FirewallPolicyRuleCollectionGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:FirewallPolicyRuleCollectionGroup").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:FirewallPolicyRuleCollectionGroup").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:FirewallPolicyRuleCollectionGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

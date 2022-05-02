@@ -260,7 +260,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:MSIXPackage").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:MSIXPackage").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:MSIXPackage").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:MSIXPackage").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:MSIXPackage").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

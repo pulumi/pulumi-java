@@ -22,7 +22,7 @@ public final class GetEnvironmentSpecificationVersionResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final EnvironmentSpecificationVersionResponse properties;
@@ -66,7 +66,7 @@ public final class GetEnvironmentSpecificationVersionResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public EnvironmentSpecificationVersionResponse properties() {

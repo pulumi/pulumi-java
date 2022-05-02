@@ -6,11 +6,13 @@ package com.pulumi.azurenative.servicelinker;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.servicelinker.LinkerArgs;
 import com.pulumi.azurenative.servicelinker.outputs.SecretAuthInfoResponse;
+import com.pulumi.azurenative.servicelinker.outputs.SecretStoreResponse;
 import com.pulumi.azurenative.servicelinker.outputs.ServicePrincipalCertificateAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import com.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
+import com.pulumi.azurenative.servicelinker.outputs.VNetSolutionResponse;
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -96,6 +98,20 @@ public class Linker extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
+     * An option to store secret value in secure place
+     * 
+     */
+    @Export(name="secretStore", type=SecretStoreResponse.class, parameters={})
+    private Output</* @Nullable */ SecretStoreResponse> secretStore;
+
+    /**
+     * @return An option to store secret value in secure place
+     * 
+     */
+    public Output<Optional<SecretStoreResponse>> secretStore() {
+        return Codegen.optional(this.secretStore);
+    }
+    /**
      * The system data.
      * 
      */
@@ -137,6 +153,20 @@ public class Linker extends com.pulumi.resources.CustomResource {
     public Output<String> type() {
         return this.type;
     }
+    /**
+     * The VNet solution.
+     * 
+     */
+    @Export(name="vNetSolution", type=VNetSolutionResponse.class, parameters={})
+    private Output</* @Nullable */ VNetSolutionResponse> vNetSolution;
+
+    /**
+     * @return The VNet solution.
+     * 
+     */
+    public Output<Optional<VNetSolutionResponse>> vNetSolution() {
+        return Codegen.optional(this.vNetSolution);
+    }
 
     /**
      *
@@ -171,7 +201,9 @@ public class Linker extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:servicelinker/v20211101preview:Linker").build())
+                Output.of(Alias.builder().type("azure-native:servicelinker/v20211101preview:Linker").build()),
+                Output.of(Alias.builder().type("azure-native:servicelinker/v20220101preview:Linker").build()),
+                Output.of(Alias.builder().type("azure-native:servicelinker/v20220501:Linker").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

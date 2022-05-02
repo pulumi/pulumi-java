@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * The Collection data structure.
- * API Version: 2021-06-01.
+ * API Version: 2021-12-01.
  * 
  * ## Example Usage
  * 
@@ -209,7 +209,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:marketplace/v20210601:PrivateStoreCollection").build())
+                Output.of(Alias.builder().type("azure-native:marketplace/v20210601:PrivateStoreCollection").build()),
+                Output.of(Alias.builder().type("azure-native:marketplace/v20211201:PrivateStoreCollection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

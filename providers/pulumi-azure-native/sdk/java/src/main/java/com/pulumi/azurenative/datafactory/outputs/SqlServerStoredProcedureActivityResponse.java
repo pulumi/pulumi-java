@@ -6,13 +6,11 @@ package com.pulumi.azurenative.datafactory.outputs;
 import com.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import com.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import com.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
 import com.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -53,7 +51,7 @@ public final class SqlServerStoredProcedureActivityResponse {
      * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
-    private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+    private final @Nullable Object storedProcedureParameters;
     /**
      * @return Type of activity.
      * Expected value is &#39;SqlServerStoredProcedure&#39;.
@@ -74,7 +72,7 @@ public final class SqlServerStoredProcedureActivityResponse {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
         @CustomType.Parameter("storedProcedureName") Object storedProcedureName,
-        @CustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @CustomType.Parameter("storedProcedureParameters") @Nullable Object storedProcedureParameters,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
@@ -134,8 +132,8 @@ public final class SqlServerStoredProcedureActivityResponse {
      * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
-    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
+    public Optional<Object> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
     /**
      * @return Type of activity.
@@ -168,7 +166,7 @@ public final class SqlServerStoredProcedureActivityResponse {
         private String name;
         private @Nullable ActivityPolicyResponse policy;
         private Object storedProcedureName;
-        private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+        private @Nullable Object storedProcedureParameters;
         private String type;
         private @Nullable List<UserPropertyResponse> userProperties;
 
@@ -216,7 +214,7 @@ public final class SqlServerStoredProcedureActivityResponse {
             this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
             return this;
         }
-        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Object storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }

@@ -367,7 +367,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20201001:Cluster").build()),
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210101preview:Cluster").build()),
                 Output.of(Alias.builder().type("azure-native:azurestackhci/v20210901:Cluster").build()),
-                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:Cluster").build())
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220101:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:azurestackhci/v20220301:Cluster").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

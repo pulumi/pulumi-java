@@ -149,7 +149,8 @@ public class VirtualHubRouteTableV2 extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualHubRouteTableV2").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualHubRouteTableV2").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualHubRouteTableV2").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHubRouteTableV2").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHubRouteTableV2").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualHubRouteTableV2").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

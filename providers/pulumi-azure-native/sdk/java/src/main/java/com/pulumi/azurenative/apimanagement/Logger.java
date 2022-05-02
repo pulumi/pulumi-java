@@ -180,7 +180,8 @@ public class Logger extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Logger").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Logger").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Logger").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Logger").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Logger").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Logger").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

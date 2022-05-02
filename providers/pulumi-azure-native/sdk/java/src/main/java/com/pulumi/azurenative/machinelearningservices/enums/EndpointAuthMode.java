@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Inference endpoint authentication mode type
+     * [Required] Inference endpoint authentication mode type
      * 
      */
     @EnumType

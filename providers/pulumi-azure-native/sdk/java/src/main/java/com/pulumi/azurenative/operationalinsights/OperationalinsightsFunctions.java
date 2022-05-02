@@ -104,7 +104,7 @@ public final class OperationalinsightsFunctions {
     }
     /**
      * A Log Analytics QueryPack-Query definition.
-     * API Version: 2019-09-01-preview.
+     * API Version: 2019-09-01.
      * 
      */
     public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {
@@ -115,7 +115,7 @@ public final class OperationalinsightsFunctions {
     }
     /**
      * An Log Analytics QueryPack definition.
-     * API Version: 2019-09-01-preview.
+     * API Version: 2019-09-01.
      * 
      */
     public static CompletableFuture<GetQueryPackResult> getQueryPack(GetQueryPackArgs args) {

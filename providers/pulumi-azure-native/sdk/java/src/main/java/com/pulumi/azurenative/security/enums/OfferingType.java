@@ -16,7 +16,8 @@ import java.util.StringJoiner;
     public enum OfferingType {
         CspmMonitorAws("CspmMonitorAws"),
         DefenderForContainersAws("DefenderForContainersAws"),
-        DefenderForServersAws("DefenderForServersAws");
+        DefenderForServersAws("DefenderForServersAws"),
+        InformationProtectionAws("InformationProtectionAws");
 
         private final String value;
 

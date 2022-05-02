@@ -199,7 +199,8 @@ public class AttachedDatabaseConfiguration extends com.pulumi.resources.CustomRe
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:AttachedDatabaseConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:AttachedDatabaseConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:AttachedDatabaseConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:AttachedDatabaseConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

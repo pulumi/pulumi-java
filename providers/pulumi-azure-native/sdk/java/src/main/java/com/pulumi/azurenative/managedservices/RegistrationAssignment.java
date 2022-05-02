@@ -112,7 +112,8 @@ public class RegistrationAssignment extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190401preview:RegistrationAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190601:RegistrationAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:managedservices/v20190901:RegistrationAssignment").build()),
-                Output.of(Alias.builder().type("azure-native:managedservices/v20200201preview:RegistrationAssignment").build())
+                Output.of(Alias.builder().type("azure-native:managedservices/v20200201preview:RegistrationAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20220101preview:RegistrationAssignment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

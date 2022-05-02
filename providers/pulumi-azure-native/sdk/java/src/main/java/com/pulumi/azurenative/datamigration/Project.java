@@ -233,7 +233,9 @@ public class Project extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:datamigration/v20180419:Project").build()),
                 Output.of(Alias.builder().type("azure-native:datamigration/v20180715preview:Project").build()),
                 Output.of(Alias.builder().type("azure-native:datamigration/v20210630:Project").build()),
-                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:Project").build())
+                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:Project").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220130preview:Project").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220330preview:Project").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

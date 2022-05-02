@@ -28,7 +28,12 @@ import java.util.StringJoiner;
          * Ultra service level
          * 
          */
-        Ultra("Ultra");
+        Ultra("Ultra"),
+        /**
+         * Zone redundant storage service level
+         * 
+         */
+        StandardZRS("StandardZRS");
 
         private final String value;
 

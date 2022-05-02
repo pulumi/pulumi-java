@@ -54,7 +54,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
 
     /**
      * The type of the security offering.
-     * Expected value is &#39;DefenderForServersAWS&#39;.
+     * Expected value is &#39;DefenderForServersAws&#39;.
      * 
      */
     @Import(name="offeringType", required=true)
@@ -62,7 +62,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
 
     /**
      * @return The type of the security offering.
-     * Expected value is &#39;DefenderForServersAWS&#39;.
+     * Expected value is &#39;DefenderForServersAws&#39;.
      * 
      */
     public Output<String> offeringType() {
@@ -139,7 +139,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
 
         /**
          * @param offeringType The type of the security offering.
-         * Expected value is &#39;DefenderForServersAWS&#39;.
+         * Expected value is &#39;DefenderForServersAws&#39;.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
 
         /**
          * @param offeringType The type of the security offering.
-         * Expected value is &#39;DefenderForServersAWS&#39;.
+         * Expected value is &#39;DefenderForServersAws&#39;.
          * 
          * @return builder
          * 

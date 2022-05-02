@@ -167,7 +167,8 @@ public class AvailabilityGroupListener extends com.pulumi.resources.CustomResour
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20170301preview:AvailabilityGroupListener").build())
+                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20170301preview:AvailabilityGroupListener").build()),
+                Output.of(Alias.builder().type("azure-native:sqlvirtualmachine/v20211101preview:AvailabilityGroupListener").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

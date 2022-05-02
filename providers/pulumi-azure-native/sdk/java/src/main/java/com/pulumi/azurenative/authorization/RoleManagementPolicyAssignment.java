@@ -6,11 +6,17 @@ package com.pulumi.azurenative.authorization;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.authorization.RoleManagementPolicyAssignmentArgs;
 import com.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyApprovalRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyAuthenticationContextRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyEnablementRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyExpirationRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyNotificationRuleResponse;
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +24,7 @@ import javax.annotation.Nullable;
 
 /**
  * Role management policy
- * API Version: 2020-10-01-preview.
+ * API Version: 2020-10-01.
  * 
  * ## Example Usage
  * 
@@ -27,12 +33,26 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
+ * $ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
  * ```
  * 
  */
 @ResourceType(type="azure-native:authorization:RoleManagementPolicyAssignment")
 public class RoleManagementPolicyAssignment extends com.pulumi.resources.CustomResource {
+    /**
+     * The readonly computed rule applied to the policy.
+     * 
+     */
+    @Export(name="effectiveRules", type=List.class, parameters={Object.class})
+    private Output<List<Object>> effectiveRules;
+
+    /**
+     * @return The readonly computed rule applied to the policy.
+     * 
+     */
+    public Output<List<Object>> effectiveRules() {
+        return this.effectiveRules;
+    }
     /**
      * The role management policy name.
      * 
@@ -151,6 +171,7 @@ public class RoleManagementPolicyAssignment extends com.pulumi.resources.CustomR
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20201001:RoleManagementPolicyAssignment").build()),
                 Output.of(Alias.builder().type("azure-native:authorization/v20201001preview:RoleManagementPolicyAssignment").build())
             ))
             .build();

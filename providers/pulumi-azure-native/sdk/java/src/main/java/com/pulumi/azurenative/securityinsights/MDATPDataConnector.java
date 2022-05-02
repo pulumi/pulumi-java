@@ -163,7 +163,11 @@ public class MDATPDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:MDATPDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:MDATPDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:MDATPDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MDATPDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:MDATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:MDATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:MDATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:MDATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:MDATPDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

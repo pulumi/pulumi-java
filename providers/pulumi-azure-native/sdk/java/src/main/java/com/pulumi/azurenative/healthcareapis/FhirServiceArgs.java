@@ -9,6 +9,7 @@ import com.pulumi.azurenative.healthcareapis.inputs.FhirServiceAcrConfigurationA
 import com.pulumi.azurenative.healthcareapis.inputs.FhirServiceAuthenticationConfigurationArgs;
 import com.pulumi.azurenative.healthcareapis.inputs.FhirServiceCorsConfigurationArgs;
 import com.pulumi.azurenative.healthcareapis.inputs.FhirServiceExportConfigurationArgs;
+import com.pulumi.azurenative.healthcareapis.inputs.ResourceVersionPolicyConfigurationArgs;
 import com.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
@@ -176,6 +177,21 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Determines tracking of history for resources.
+     * 
+     */
+    @Import(name="resourceVersionPolicyConfiguration")
+    private @Nullable Output<ResourceVersionPolicyConfigurationArgs> resourceVersionPolicyConfiguration;
+
+    /**
+     * @return Determines tracking of history for resources.
+     * 
+     */
+    public Optional<Output<ResourceVersionPolicyConfigurationArgs>> resourceVersionPolicyConfiguration() {
+        return Optional.ofNullable(this.resourceVersionPolicyConfiguration);
+    }
+
+    /**
      * Resource tags.
      * 
      */
@@ -218,6 +234,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
         this.kind = $.kind;
         this.location = $.location;
         this.resourceGroupName = $.resourceGroupName;
+        this.resourceVersionPolicyConfiguration = $.resourceVersionPolicyConfiguration;
         this.tags = $.tags;
         this.workspaceName = $.workspaceName;
     }
@@ -478,6 +495,27 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceVersionPolicyConfiguration Determines tracking of history for resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceVersionPolicyConfiguration(@Nullable Output<ResourceVersionPolicyConfigurationArgs> resourceVersionPolicyConfiguration) {
+            $.resourceVersionPolicyConfiguration = resourceVersionPolicyConfiguration;
+            return this;
+        }
+
+        /**
+         * @param resourceVersionPolicyConfiguration Determines tracking of history for resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceVersionPolicyConfiguration(ResourceVersionPolicyConfigurationArgs resourceVersionPolicyConfiguration) {
+            return resourceVersionPolicyConfiguration(Output.of(resourceVersionPolicyConfiguration));
         }
 
         /**

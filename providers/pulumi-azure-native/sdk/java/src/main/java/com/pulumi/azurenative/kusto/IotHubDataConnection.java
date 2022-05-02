@@ -251,7 +251,8 @@ public class IotHubDataConnection extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:IotHubDataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:IotHubDataConnection").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:IotHubDataConnection").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:IotHubDataConnection").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:IotHubDataConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

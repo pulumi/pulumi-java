@@ -139,7 +139,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:cognitiveservices/v20170418:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:cognitiveservices/v20210430:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20211001:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20211001:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20220301:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

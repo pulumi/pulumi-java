@@ -172,7 +172,8 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:NamedValue").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:NamedValue").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:NamedValue").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NamedValue").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NamedValue").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:NamedValue").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

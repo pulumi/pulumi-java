@@ -22,7 +22,7 @@ public final class GetCodeContainerResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final CodeContainerResponse properties;
@@ -66,7 +66,7 @@ public final class GetCodeContainerResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public CodeContainerResponse properties() {

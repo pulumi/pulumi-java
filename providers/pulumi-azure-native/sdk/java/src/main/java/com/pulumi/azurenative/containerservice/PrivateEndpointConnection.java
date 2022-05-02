@@ -150,7 +150,13 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210801:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20210901:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:containerservice/v20211001:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220101:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220102preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220201:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220202preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220301:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20220302preview:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

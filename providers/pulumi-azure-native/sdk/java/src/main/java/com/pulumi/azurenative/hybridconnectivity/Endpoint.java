@@ -198,7 +198,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:hybridconnectivity/v20211006preview:Endpoint").build())
+                Output.of(Alias.builder().type("azure-native:hybridconnectivity/v20211006preview:Endpoint").build()),
+                Output.of(Alias.builder().type("azure-native:hybridconnectivity/v20220501preview:Endpoint").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

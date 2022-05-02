@@ -166,7 +166,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

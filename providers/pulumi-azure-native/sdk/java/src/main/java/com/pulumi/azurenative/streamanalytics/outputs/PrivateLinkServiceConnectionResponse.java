@@ -32,14 +32,14 @@ public final class PrivateLinkServiceConnectionResponse {
      * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
      */
-    private final @Nullable String requestMessage;
+    private final String requestMessage;
 
     @CustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
         @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
         @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
         @CustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
-        @CustomType.Parameter("requestMessage") @Nullable String requestMessage) {
+        @CustomType.Parameter("requestMessage") String requestMessage) {
         this.groupIds = groupIds;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.privateLinkServiceId = privateLinkServiceId;
@@ -71,8 +71,8 @@ public final class PrivateLinkServiceConnectionResponse {
      * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
      */
-    public Optional<String> requestMessage() {
-        return Optional.ofNullable(this.requestMessage);
+    public String requestMessage() {
+        return this.requestMessage;
     }
 
     public static Builder builder() {
@@ -87,7 +87,7 @@ public final class PrivateLinkServiceConnectionResponse {
         private @Nullable List<String> groupIds;
         private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
         private @Nullable String privateLinkServiceId;
-        private @Nullable String requestMessage;
+        private String requestMessage;
 
         public Builder() {
     	      // Empty
@@ -116,8 +116,8 @@ public final class PrivateLinkServiceConnectionResponse {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+        public Builder requestMessage(String requestMessage) {
+            this.requestMessage = Objects.requireNonNull(requestMessage);
             return this;
         }        public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(groupIds, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);

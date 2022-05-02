@@ -205,7 +205,8 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:DdosProtectionPlan").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:DdosProtectionPlan").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:DdosProtectionPlan").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:DdosProtectionPlan").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:DdosProtectionPlan").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:DdosProtectionPlan").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

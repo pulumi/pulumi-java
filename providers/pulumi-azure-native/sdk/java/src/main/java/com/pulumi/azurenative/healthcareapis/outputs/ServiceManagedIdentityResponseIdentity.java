@@ -3,31 +3,75 @@
 
 package com.pulumi.azurenative.healthcareapis.outputs;
 
+import com.pulumi.azurenative.healthcareapis.outputs.UserAssignedIdentityResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceManagedIdentityResponseIdentity {
     /**
-     * @return Type of identity being specified, currently SystemAssigned and None are allowed.
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
-    private final @Nullable String type;
-
-    @CustomType.Constructor
-    private ServiceManagedIdentityResponseIdentity(@CustomType.Parameter("type") @Nullable String type) {
-        this.type = type;
-    }
-
+    private final String principalId;
+    /**
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
+    private final String tenantId;
     /**
      * @return Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    private final String type;
+    /**
+     * @return The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * 
+     */
+    private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
+
+    @CustomType.Constructor
+    private ServiceManagedIdentityResponseIdentity(
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
+        this.principalId = principalId;
+        this.tenantId = tenantId;
+        this.type = type;
+        this.userAssignedIdentities = userAssignedIdentities;
+    }
+
+    /**
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
+    public String principalId() {
+        return this.principalId;
+    }
+    /**
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
+    public String tenantId() {
+        return this.tenantId;
+    }
+    /**
+     * @return Type of identity being specified, currently SystemAssigned and None are allowed.
+     * 
+     */
+    public String type() {
+        return this.type;
+    }
+    /**
+     * @return The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * 
+     */
+    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 
     public static Builder builder() {
@@ -39,7 +83,10 @@ public final class ServiceManagedIdentityResponseIdentity {
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private String principalId;
+        private String tenantId;
+        private String type;
+        private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -47,14 +94,29 @@ public final class ServiceManagedIdentityResponseIdentity {
 
         public Builder(ServiceManagedIdentityResponseIdentity defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.principalId = defaults.principalId;
+    	      this.tenantId = defaults.tenantId;
     	      this.type = defaults.type;
+    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(@Nullable String type) {
-            this.type = type;
+        public Builder principalId(String principalId) {
+            this.principalId = Objects.requireNonNull(principalId);
+            return this;
+        }
+        public Builder tenantId(String tenantId) {
+            this.tenantId = Objects.requireNonNull(tenantId);
+            return this;
+        }
+        public Builder type(String type) {
+            this.type = Objects.requireNonNull(type);
+            return this;
+        }
+        public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
+            this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }        public ServiceManagedIdentityResponseIdentity build() {
-            return new ServiceManagedIdentityResponseIdentity(type);
+            return new ServiceManagedIdentityResponseIdentity(principalId, tenantId, type, userAssignedIdentities);
         }
     }
 }

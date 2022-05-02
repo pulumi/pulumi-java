@@ -577,7 +577,9 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:DatabaseAccount").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:DatabaseAccount").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:DatabaseAccount").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:DatabaseAccount").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:DatabaseAccount").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

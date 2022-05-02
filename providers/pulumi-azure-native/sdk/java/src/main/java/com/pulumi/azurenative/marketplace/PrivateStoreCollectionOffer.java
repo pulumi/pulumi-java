@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 /**
  * The privateStore offer data structure.
- * API Version: 2021-06-01.
+ * API Version: 2021-12-01.
  * 
  * ## Example Usage
  * 
@@ -266,7 +266,8 @@ public class PrivateStoreCollectionOffer extends com.pulumi.resources.CustomReso
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:marketplace/v20210601:PrivateStoreCollectionOffer").build())
+                Output.of(Alias.builder().type("azure-native:marketplace/v20210601:PrivateStoreCollectionOffer").build()),
+                Output.of(Alias.builder().type("azure-native:marketplace/v20211201:PrivateStoreCollectionOffer").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

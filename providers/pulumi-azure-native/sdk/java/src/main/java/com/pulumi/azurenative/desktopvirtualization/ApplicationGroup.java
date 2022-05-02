@@ -312,7 +312,8 @@ public class ApplicationGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:ApplicationGroup").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:ApplicationGroup").build()),
                 Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:ApplicationGroup").build())
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20220210preview:ApplicationGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

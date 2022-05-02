@@ -94,14 +94,14 @@ public class OnlineDeployment extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=Either.class, parameters={K8sOnlineDeploymentResponse.class, ManagedOnlineDeploymentResponse.class})
     private Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> properties() {

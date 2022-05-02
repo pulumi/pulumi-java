@@ -233,7 +233,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRouteCircuitConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRouteCircuitConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRouteCircuitConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ExpressRouteCircuitConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

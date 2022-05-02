@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:compute:DiskAccessAPrivateEndpointConnection myPrivateEndpointConenction /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/myDiskAccess/privateEndpoinConnections/myPrivateEndpointConnectionName 
+ * $ pulumi import azure-native:compute:DiskAccessAPrivateEndpointConnection myPrivateEndpointConnectionName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/myDiskAccess/privateEndpoinConnections/myPrivateEndpointConnectionName 
  * ```
  * 
  */
@@ -140,7 +140,8 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:DiskAccessAPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20201201:DiskAccessAPrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20210401:DiskAccessAPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskAccessAPrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskAccessAPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211201:DiskAccessAPrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -145,7 +145,9 @@ public class SqlResourceSqlUserDefinedFunction extends com.pulumi.resources.Cust
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlUserDefinedFunction").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlUserDefinedFunction").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlUserDefinedFunction").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlUserDefinedFunction").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

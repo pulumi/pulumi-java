@@ -3,6 +3,8 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.azurenative.network.enums.FirewallPolicyIDPSQuerySortOrder;
+import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -38,13 +40,13 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="order")
-    private @Nullable String order;
+    private @Nullable Either<String,FirewallPolicyIDPSQuerySortOrder> order;
 
     /**
      * @return Describes if results should be in ascending/descending order
      * 
      */
-    public Optional<String> order() {
+    public Optional<Either<String,FirewallPolicyIDPSQuerySortOrder>> order() {
         return Optional.ofNullable(this.order);
     }
 
@@ -90,9 +92,29 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder order(@Nullable String order) {
+        public Builder order(@Nullable Either<String,FirewallPolicyIDPSQuerySortOrder> order) {
             $.order = order;
             return this;
+        }
+
+        /**
+         * @param order Describes if results should be in ascending/descending order
+         * 
+         * @return builder
+         * 
+         */
+        public Builder order(String order) {
+            return order(Either.ofLeft(order));
+        }
+
+        /**
+         * @param order Describes if results should be in ascending/descending order
+         * 
+         * @return builder
+         * 
+         */
+        public Builder order(FirewallPolicyIDPSQuerySortOrder order) {
+            return order(Either.ofRight(order));
         }
 
         public OrderBy build() {

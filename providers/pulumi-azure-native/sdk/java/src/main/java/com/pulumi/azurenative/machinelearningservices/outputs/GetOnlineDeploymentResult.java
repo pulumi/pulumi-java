@@ -43,7 +43,7 @@ public final class GetOnlineDeploymentResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties;
@@ -121,7 +121,7 @@ public final class GetOnlineDeploymentResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties() {

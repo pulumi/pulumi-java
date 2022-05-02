@@ -158,7 +158,8 @@ public class Cache extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Cache").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Cache").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Cache").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Cache").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Cache").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

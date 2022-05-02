@@ -117,7 +117,8 @@ public class TagByOperation extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:TagByOperation").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:TagByOperation").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:TagByOperation").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:TagByOperation").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:TagByOperation").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:TagByOperation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

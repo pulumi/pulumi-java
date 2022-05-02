@@ -162,7 +162,9 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

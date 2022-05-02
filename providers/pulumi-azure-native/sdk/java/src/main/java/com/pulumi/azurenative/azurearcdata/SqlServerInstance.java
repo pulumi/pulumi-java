@@ -156,7 +156,8 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210601preview:SqlServerInstance").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:SqlServerInstance").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210801:SqlServerInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:SqlServerInstance").build())
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:SqlServerInstance").build()),
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20220301preview:SqlServerInstance").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

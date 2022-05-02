@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security;
 
+import com.pulumi.azurenative.security.enums.StandardSupportedClouds;
 import com.pulumi.azurenative.security.inputs.StandardComponentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -139,6 +140,21 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * List of all standard supported clouds.
+     * 
+     */
+    @Import(name="supportedClouds")
+    private @Nullable Output<List<StandardSupportedClouds>> supportedClouds;
+
+    /**
+     * @return List of all standard supported clouds.
+     * 
+     */
+    public Optional<Output<List<StandardSupportedClouds>>> supportedClouds() {
+        return Optional.ofNullable(this.supportedClouds);
+    }
+
+    /**
      * A list of key value pairs that describe the resource.
      * 
      */
@@ -164,6 +180,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
         this.location = $.location;
         this.resourceGroupName = $.resourceGroupName;
         this.standardId = $.standardId;
+        this.supportedClouds = $.supportedClouds;
         this.tags = $.tags;
     }
 
@@ -361,6 +378,37 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder standardId(String standardId) {
             return standardId(Output.of(standardId));
+        }
+
+        /**
+         * @param supportedClouds List of all standard supported clouds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder supportedClouds(@Nullable Output<List<StandardSupportedClouds>> supportedClouds) {
+            $.supportedClouds = supportedClouds;
+            return this;
+        }
+
+        /**
+         * @param supportedClouds List of all standard supported clouds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder supportedClouds(List<StandardSupportedClouds> supportedClouds) {
+            return supportedClouds(Output.of(supportedClouds));
+        }
+
+        /**
+         * @param supportedClouds List of all standard supported clouds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder supportedClouds(StandardSupportedClouds... supportedClouds) {
+            return supportedClouds(List.of(supportedClouds));
         }
 
         /**

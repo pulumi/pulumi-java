@@ -113,7 +113,8 @@ public class ServerAzureADOnlyAuthentication extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerAzureADOnlyAuthentication").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerAzureADOnlyAuthentication").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerAzureADOnlyAuthentication").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerAzureADOnlyAuthentication").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerAzureADOnlyAuthentication").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

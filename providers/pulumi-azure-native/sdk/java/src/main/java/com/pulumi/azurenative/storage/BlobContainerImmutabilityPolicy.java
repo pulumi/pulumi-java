@@ -163,7 +163,8 @@ public class BlobContainerImmutabilityPolicy extends com.pulumi.resources.Custom
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:BlobContainerImmutabilityPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:BlobContainerImmutabilityPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:BlobContainerImmutabilityPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:BlobContainerImmutabilityPolicy").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:BlobContainerImmutabilityPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

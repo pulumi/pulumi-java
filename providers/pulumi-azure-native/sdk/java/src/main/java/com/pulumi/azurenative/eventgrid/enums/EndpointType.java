@@ -20,7 +20,8 @@ import java.util.StringJoiner;
         HybridConnection("HybridConnection"),
         ServiceBusQueue("ServiceBusQueue"),
         ServiceBusTopic("ServiceBusTopic"),
-        AzureFunction("AzureFunction");
+        AzureFunction("AzureFunction"),
+        PartnerDestination("PartnerDestination");
 
         private final String value;
 

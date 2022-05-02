@@ -11,6 +11,7 @@ import com.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse
 import com.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import com.pulumi.azurenative.datafactory.outputs.WebActivityAuthenticationResponse;
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,6 +51,11 @@ public final class WebActivityResponse {
      * 
      */
     private final @Nullable String description;
+    /**
+     * @return When set to true, Certificate validation will be disabled.
+     * 
+     */
+    private final @Nullable Boolean disableCertValidation;
     /**
      * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
@@ -105,6 +111,7 @@ public final class WebActivityResponse {
         @CustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
         @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
         @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disableCertValidation") @Nullable Boolean disableCertValidation,
         @CustomType.Parameter("headers") @Nullable Object headers,
         @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
         @CustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices,
@@ -120,6 +127,7 @@ public final class WebActivityResponse {
         this.datasets = datasets;
         this.dependsOn = dependsOn;
         this.description = description;
+        this.disableCertValidation = disableCertValidation;
         this.headers = headers;
         this.linkedServiceName = linkedServiceName;
         this.linkedServices = linkedServices;
@@ -172,6 +180,13 @@ public final class WebActivityResponse {
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
+    }
+    /**
+     * @return When set to true, Certificate validation will be disabled.
+     * 
+     */
+    public Optional<Boolean> disableCertValidation() {
+        return Optional.ofNullable(this.disableCertValidation);
     }
     /**
      * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
@@ -253,6 +268,7 @@ public final class WebActivityResponse {
         private @Nullable List<DatasetReferenceResponse> datasets;
         private @Nullable List<ActivityDependencyResponse> dependsOn;
         private @Nullable String description;
+        private @Nullable Boolean disableCertValidation;
         private @Nullable Object headers;
         private @Nullable LinkedServiceReferenceResponse linkedServiceName;
         private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
@@ -275,6 +291,7 @@ public final class WebActivityResponse {
     	      this.datasets = defaults.datasets;
     	      this.dependsOn = defaults.dependsOn;
     	      this.description = defaults.description;
+    	      this.disableCertValidation = defaults.disableCertValidation;
     	      this.headers = defaults.headers;
     	      this.linkedServiceName = defaults.linkedServiceName;
     	      this.linkedServices = defaults.linkedServices;
@@ -314,6 +331,10 @@ public final class WebActivityResponse {
         }
         public Builder description(@Nullable String description) {
             this.description = description;
+            return this;
+        }
+        public Builder disableCertValidation(@Nullable Boolean disableCertValidation) {
+            this.disableCertValidation = disableCertValidation;
             return this;
         }
         public Builder headers(@Nullable Object headers) {
@@ -358,7 +379,7 @@ public final class WebActivityResponse {
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }        public WebActivityResponse build() {
-            return new WebActivityResponse(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
+            return new WebActivityResponse(authentication, body, connectVia, datasets, dependsOn, description, disableCertValidation, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
         }
     }
 }

@@ -10,13 +10,19 @@ import com.pulumi.azurenative.netapp.inputs.GetBackupPolicyArgs;
 import com.pulumi.azurenative.netapp.inputs.GetPoolArgs;
 import com.pulumi.azurenative.netapp.inputs.GetSnapshotArgs;
 import com.pulumi.azurenative.netapp.inputs.GetSnapshotPolicyArgs;
+import com.pulumi.azurenative.netapp.inputs.GetSubvolumeArgs;
+import com.pulumi.azurenative.netapp.inputs.GetSubvolumeMetadataArgs;
 import com.pulumi.azurenative.netapp.inputs.GetVolumeArgs;
+import com.pulumi.azurenative.netapp.inputs.GetVolumeGroupArgs;
 import com.pulumi.azurenative.netapp.outputs.GetAccountResult;
 import com.pulumi.azurenative.netapp.outputs.GetBackupPolicyResult;
 import com.pulumi.azurenative.netapp.outputs.GetBackupResult;
 import com.pulumi.azurenative.netapp.outputs.GetPoolResult;
 import com.pulumi.azurenative.netapp.outputs.GetSnapshotPolicyResult;
 import com.pulumi.azurenative.netapp.outputs.GetSnapshotResult;
+import com.pulumi.azurenative.netapp.outputs.GetSubvolumeMetadataResult;
+import com.pulumi.azurenative.netapp.outputs.GetSubvolumeResult;
+import com.pulumi.azurenative.netapp.outputs.GetVolumeGroupResult;
 import com.pulumi.azurenative.netapp.outputs.GetVolumeResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -91,6 +97,28 @@ public final class NetappFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getSnapshotPolicy", TypeShape.of(GetSnapshotPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Subvolume Information properties
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetSubvolumeResult> getSubvolume(GetSubvolumeArgs args) {
+        return getSubvolume(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetSubvolumeResult> getSubvolume(GetSubvolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:netapp:getSubvolume", TypeShape.of(GetSubvolumeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the post subvolume and action is to get metadata of the subvolume.
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetSubvolumeMetadataResult> getSubvolumeMetadata(GetSubvolumeMetadataArgs args) {
+        return getSubvolumeMetadata(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetSubvolumeMetadataResult> getSubvolumeMetadata(GetSubvolumeMetadataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:netapp:getSubvolumeMetadata", TypeShape.of(GetSubvolumeMetadataResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Volume resource
      * API Version: 2020-12-01.
      * 
@@ -100,5 +128,16 @@ public final class NetappFunctions {
     }
     public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Volume group resource for create
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetVolumeGroupResult> getVolumeGroup(GetVolumeGroupArgs args) {
+        return getVolumeGroup(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetVolumeGroupResult> getVolumeGroup(GetVolumeGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:netapp:getVolumeGroup", TypeShape.of(GetVolumeGroupResult.class), args, Utilities.withVersion(options));
     }
 }

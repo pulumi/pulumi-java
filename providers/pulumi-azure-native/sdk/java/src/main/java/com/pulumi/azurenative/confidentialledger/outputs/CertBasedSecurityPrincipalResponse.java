@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertBasedSecurityPrincipalResponse {
     /**
-     * @return Base64 encoded public key of the user cert (.pem or .cer)
+     * @return Public key of the user cert (.pem or .cer)
      * 
      */
     private final @Nullable String cert;
@@ -31,7 +31,7 @@ public final class CertBasedSecurityPrincipalResponse {
     }
 
     /**
-     * @return Base64 encoded public key of the user cert (.pem or .cer)
+     * @return Public key of the user cert (.pem or .cer)
      * 
      */
     public Optional<String> cert() {

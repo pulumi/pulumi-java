@@ -38,6 +38,51 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * Original resource ID needed by Microsoft.Network.
+     * 
+     */
+    @Import(name="immutableResourceId")
+    private @Nullable Output<String> immutableResourceId;
+
+    /**
+     * @return Original resource ID needed by Microsoft.Network.
+     * 
+     */
+    public Optional<Output<String>> immutableResourceId() {
+        return Optional.ofNullable(this.immutableResourceId);
+    }
+
+    /**
+     * Original subscription ID needed by Microsoft.Network.
+     * 
+     */
+    @Import(name="immutableSubscriptionId")
+    private @Nullable Output<String> immutableSubscriptionId;
+
+    /**
+     * @return Original subscription ID needed by Microsoft.Network.
+     * 
+     */
+    public Optional<Output<String>> immutableSubscriptionId() {
+        return Optional.ofNullable(this.immutableSubscriptionId);
+    }
+
+    /**
+     * ARM location of the remote private endpoint.
+     * 
+     */
+    @Import(name="location")
+    private @Nullable Output<String> location;
+
+    /**
+     * @return ARM location of the remote private endpoint.
+     * 
+     */
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
+    }
+
+    /**
      * List of private link service connections that need manual approval.
      * 
      */
@@ -82,13 +127,32 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
         return Optional.ofNullable(this.privateLinkServiceProxies);
     }
 
+    /**
+     * Virtual network traffic tag.
+     * 
+     */
+    @Import(name="vnetTrafficTag")
+    private @Nullable Output<String> vnetTrafficTag;
+
+    /**
+     * @return Virtual network traffic tag.
+     * 
+     */
+    public Optional<Output<String>> vnetTrafficTag() {
+        return Optional.ofNullable(this.vnetTrafficTag);
+    }
+
     private RemotePrivateEndpointArgs() {}
 
     private RemotePrivateEndpointArgs(RemotePrivateEndpointArgs $) {
         this.id = $.id;
+        this.immutableResourceId = $.immutableResourceId;
+        this.immutableSubscriptionId = $.immutableSubscriptionId;
+        this.location = $.location;
         this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
         this.privateLinkServiceConnections = $.privateLinkServiceConnections;
         this.privateLinkServiceProxies = $.privateLinkServiceProxies;
+        this.vnetTrafficTag = $.vnetTrafficTag;
     }
 
     public static Builder builder() {
@@ -128,6 +192,69 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param immutableResourceId Original resource ID needed by Microsoft.Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder immutableResourceId(@Nullable Output<String> immutableResourceId) {
+            $.immutableResourceId = immutableResourceId;
+            return this;
+        }
+
+        /**
+         * @param immutableResourceId Original resource ID needed by Microsoft.Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder immutableResourceId(String immutableResourceId) {
+            return immutableResourceId(Output.of(immutableResourceId));
+        }
+
+        /**
+         * @param immutableSubscriptionId Original subscription ID needed by Microsoft.Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder immutableSubscriptionId(@Nullable Output<String> immutableSubscriptionId) {
+            $.immutableSubscriptionId = immutableSubscriptionId;
+            return this;
+        }
+
+        /**
+         * @param immutableSubscriptionId Original subscription ID needed by Microsoft.Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder immutableSubscriptionId(String immutableSubscriptionId) {
+            return immutableSubscriptionId(Output.of(immutableSubscriptionId));
+        }
+
+        /**
+         * @param location ARM location of the remote private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(@Nullable Output<String> location) {
+            $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location ARM location of the remote private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
 
         /**
@@ -221,6 +348,27 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
          */
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyArgs... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
+        }
+
+        /**
+         * @param vnetTrafficTag Virtual network traffic tag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnetTrafficTag(@Nullable Output<String> vnetTrafficTag) {
+            $.vnetTrafficTag = vnetTrafficTag;
+            return this;
+        }
+
+        /**
+         * @param vnetTrafficTag Virtual network traffic tag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnetTrafficTag(String vnetTrafficTag) {
+            return vnetTrafficTag(Output.of(vnetTrafficTag));
         }
 
         public RemotePrivateEndpointArgs build() {

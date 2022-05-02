@@ -235,7 +235,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:DistributedAvailabilityGroup").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:DistributedAvailabilityGroup").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:DistributedAvailabilityGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:DistributedAvailabilityGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

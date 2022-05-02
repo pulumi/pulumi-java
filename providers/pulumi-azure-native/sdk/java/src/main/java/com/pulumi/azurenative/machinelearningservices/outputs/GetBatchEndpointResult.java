@@ -41,7 +41,7 @@ public final class GetBatchEndpointResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final BatchEndpointResponse properties;
@@ -119,7 +119,7 @@ public final class GetBatchEndpointResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public BatchEndpointResponse properties() {

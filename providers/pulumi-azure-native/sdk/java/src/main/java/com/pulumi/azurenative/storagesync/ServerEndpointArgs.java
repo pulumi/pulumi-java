@@ -648,6 +648,8 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
             $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            $.tierFilesOlderThanDays = Codegen.integerProp("tierFilesOlderThanDays").output().arg($.tierFilesOlderThanDays).def(0).getNullable();
+            $.volumeFreeSpacePercent = Codegen.integerProp("volumeFreeSpacePercent").output().arg($.volumeFreeSpacePercent).def(20).getNullable();
             return $;
         }
     }

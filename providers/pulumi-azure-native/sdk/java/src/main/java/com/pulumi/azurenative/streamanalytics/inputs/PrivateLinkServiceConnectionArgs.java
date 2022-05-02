@@ -50,27 +50,11 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
         return Optional.ofNullable(this.privateLinkServiceId);
     }
 
-    /**
-     * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-     * 
-     */
-    @Import(name="requestMessage")
-    private @Nullable Output<String> requestMessage;
-
-    /**
-     * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-     * 
-     */
-    public Optional<Output<String>> requestMessage() {
-        return Optional.ofNullable(this.requestMessage);
-    }
-
     private PrivateLinkServiceConnectionArgs() {}
 
     private PrivateLinkServiceConnectionArgs(PrivateLinkServiceConnectionArgs $) {
         this.groupIds = $.groupIds;
         this.privateLinkServiceId = $.privateLinkServiceId;
-        this.requestMessage = $.requestMessage;
     }
 
     public static Builder builder() {
@@ -141,27 +125,6 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
          */
         public Builder privateLinkServiceId(String privateLinkServiceId) {
             return privateLinkServiceId(Output.of(privateLinkServiceId));
-        }
-
-        /**
-         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            $.requestMessage = requestMessage;
-            return this;
-        }
-
-        /**
-         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder requestMessage(String requestMessage) {
-            return requestMessage(Output.of(requestMessage));
         }
 
         public PrivateLinkServiceConnectionArgs build() {

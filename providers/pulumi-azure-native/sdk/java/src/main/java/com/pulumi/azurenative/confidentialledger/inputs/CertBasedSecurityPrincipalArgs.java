@@ -22,14 +22,14 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
     public static final CertBasedSecurityPrincipalArgs Empty = new CertBasedSecurityPrincipalArgs();
 
     /**
-     * Base64 encoded public key of the user cert (.pem or .cer)
+     * Public key of the user cert (.pem or .cer)
      * 
      */
     @Import(name="cert")
     private @Nullable Output<String> cert;
 
     /**
-     * @return Base64 encoded public key of the user cert (.pem or .cer)
+     * @return Public key of the user cert (.pem or .cer)
      * 
      */
     public Optional<Output<String>> cert() {
@@ -77,7 +77,7 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param cert Base64 encoded public key of the user cert (.pem or .cer)
+         * @param cert Public key of the user cert (.pem or .cer)
          * 
          * @return builder
          * 
@@ -88,7 +88,7 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param cert Base64 encoded public key of the user cert (.pem or .cer)
+         * @param cert Public key of the user cert (.pem or .cer)
          * 
          * @return builder
          * 

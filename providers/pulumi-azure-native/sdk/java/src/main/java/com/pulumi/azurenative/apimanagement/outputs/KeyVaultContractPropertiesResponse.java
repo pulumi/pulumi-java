@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultContractPropertiesResponse {
     /**
-     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * @return Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
      * 
      */
     private final @Nullable String identityClientId;
@@ -39,7 +39,7 @@ public final class KeyVaultContractPropertiesResponse {
     }
 
     /**
-     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * @return Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
      * 
      */
     public Optional<String> identityClientId() {

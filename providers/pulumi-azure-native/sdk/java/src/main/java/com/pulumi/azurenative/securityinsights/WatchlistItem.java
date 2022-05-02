@@ -269,7 +269,11 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:WatchlistItem").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:WatchlistItem").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210401:WatchlistItem").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:WatchlistItem").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:WatchlistItem").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:WatchlistItem").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:WatchlistItem").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:WatchlistItem").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:WatchlistItem").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

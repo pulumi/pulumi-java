@@ -14,7 +14,8 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum SupportedCloudEnum {
-        AWS("AWS");
+        AWS("AWS"),
+        GCP("GCP");
 
         private final String value;
 

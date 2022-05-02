@@ -4,11 +4,13 @@
 package com.pulumi.azurenative.servicelinker.outputs;
 
 import com.pulumi.azurenative.servicelinker.outputs.SecretAuthInfoResponse;
+import com.pulumi.azurenative.servicelinker.outputs.SecretStoreResponse;
 import com.pulumi.azurenative.servicelinker.outputs.ServicePrincipalCertificateAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import com.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import com.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
+import com.pulumi.azurenative.servicelinker.outputs.VNetSolutionResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
@@ -44,6 +46,11 @@ public final class GetLinkerResult {
      */
     private final String provisioningState;
     /**
+     * @return An option to store secret value in secure place
+     * 
+     */
+    private final @Nullable SecretStoreResponse secretStore;
+    /**
      * @return The system data.
      * 
      */
@@ -58,6 +65,11 @@ public final class GetLinkerResult {
      * 
      */
     private final String type;
+    /**
+     * @return The VNet solution.
+     * 
+     */
+    private final @Nullable VNetSolutionResponse vNetSolution;
 
     @CustomType.Constructor
     private GetLinkerResult(
@@ -66,17 +78,21 @@ public final class GetLinkerResult {
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("secretStore") @Nullable SecretStoreResponse secretStore,
         @CustomType.Parameter("systemData") SystemDataResponse systemData,
         @CustomType.Parameter("targetId") @Nullable String targetId,
-        @CustomType.Parameter("type") String type) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vNetSolution") @Nullable VNetSolutionResponse vNetSolution) {
         this.authInfo = authInfo;
         this.clientType = clientType;
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;
+        this.secretStore = secretStore;
         this.systemData = systemData;
         this.targetId = targetId;
         this.type = type;
+        this.vNetSolution = vNetSolution;
     }
 
     /**
@@ -115,6 +131,13 @@ public final class GetLinkerResult {
         return this.provisioningState;
     }
     /**
+     * @return An option to store secret value in secure place
+     * 
+     */
+    public Optional<SecretStoreResponse> secretStore() {
+        return Optional.ofNullable(this.secretStore);
+    }
+    /**
      * @return The system data.
      * 
      */
@@ -135,6 +158,13 @@ public final class GetLinkerResult {
     public String type() {
         return this.type;
     }
+    /**
+     * @return The VNet solution.
+     * 
+     */
+    public Optional<VNetSolutionResponse> vNetSolution() {
+        return Optional.ofNullable(this.vNetSolution);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -150,9 +180,11 @@ public final class GetLinkerResult {
         private String id;
         private String name;
         private String provisioningState;
+        private @Nullable SecretStoreResponse secretStore;
         private SystemDataResponse systemData;
         private @Nullable String targetId;
         private String type;
+        private @Nullable VNetSolutionResponse vNetSolution;
 
         public Builder() {
     	      // Empty
@@ -165,9 +197,11 @@ public final class GetLinkerResult {
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.provisioningState = defaults.provisioningState;
+    	      this.secretStore = defaults.secretStore;
     	      this.systemData = defaults.systemData;
     	      this.targetId = defaults.targetId;
     	      this.type = defaults.type;
+    	      this.vNetSolution = defaults.vNetSolution;
         }
 
         public Builder authInfo(@Nullable Object authInfo) {
@@ -190,6 +224,10 @@ public final class GetLinkerResult {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
+        public Builder secretStore(@Nullable SecretStoreResponse secretStore) {
+            this.secretStore = secretStore;
+            return this;
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
@@ -201,8 +239,12 @@ public final class GetLinkerResult {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
+        }
+        public Builder vNetSolution(@Nullable VNetSolutionResponse vNetSolution) {
+            this.vNetSolution = vNetSolution;
+            return this;
         }        public GetLinkerResult build() {
-            return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, systemData, targetId, type);
+            return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, secretStore, systemData, targetId, type, vNetSolution);
         }
     }
 }

@@ -34,14 +34,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     public static final SweepJobArgs Empty = new SweepJobArgs();
 
     /**
-     * Type of the hyperparameter sampling algorithms
+     * [Required] Type of the hyperparameter sampling algorithms
      * 
      */
     @Import(name="algorithm", required=true)
     private Output<Either<String,SamplingAlgorithm>> algorithm;
 
     /**
-     * @return Type of the hyperparameter sampling algorithms
+     * @return [Required] Type of the hyperparameter sampling algorithms
      * 
      */
     public Output<Either<String,SamplingAlgorithm>> algorithm() {
@@ -49,14 +49,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Compute binding for the job.
+     * [Required] Compute binding for the job.
      * 
      */
     @Import(name="compute", required=true)
     private Output<ComputeConfigurationArgs> compute;
 
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     public Output<ComputeConfigurationArgs> compute() {
@@ -173,14 +173,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optimization objective.
+     * [Required] Optimization objective.
      * 
      */
     @Import(name="objective", required=true)
     private Output<ObjectiveArgs> objective;
 
     /**
-     * @return Optimization objective.
+     * @return [Required] Optimization objective.
      * 
      */
     public Output<ObjectiveArgs> objective() {
@@ -220,14 +220,14 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
     @Import(name="searchSpace", required=true)
     private Output<Map<String,Object>> searchSpace;
 
     /**
-     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * @return [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
     public Output<Map<String,Object>> searchSpace() {
@@ -319,7 +319,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algorithm Type of the hyperparameter sampling algorithms
+         * @param algorithm [Required] Type of the hyperparameter sampling algorithms
          * 
          * @return builder
          * 
@@ -330,7 +330,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algorithm Type of the hyperparameter sampling algorithms
+         * @param algorithm [Required] Type of the hyperparameter sampling algorithms
          * 
          * @return builder
          * 
@@ -340,7 +340,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algorithm Type of the hyperparameter sampling algorithms
+         * @param algorithm [Required] Type of the hyperparameter sampling algorithms
          * 
          * @return builder
          * 
@@ -350,7 +350,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algorithm Type of the hyperparameter sampling algorithms
+         * @param algorithm [Required] Type of the hyperparameter sampling algorithms
          * 
          * @return builder
          * 
@@ -360,7 +360,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param compute Compute binding for the job.
+         * @param compute [Required] Compute binding for the job.
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param compute Compute binding for the job.
+         * @param compute [Required] Compute binding for the job.
          * 
          * @return builder
          * 
@@ -554,7 +554,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objective Optimization objective.
+         * @param objective [Required] Optimization objective.
          * 
          * @return builder
          * 
@@ -565,7 +565,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objective Optimization objective.
+         * @param objective [Required] Optimization objective.
          * 
          * @return builder
          * 
@@ -619,7 +619,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param searchSpace A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * @param searchSpace [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
          * 
          * @return builder
          * 
@@ -630,7 +630,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param searchSpace A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * @param searchSpace [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
          * 
          * @return builder
          * 

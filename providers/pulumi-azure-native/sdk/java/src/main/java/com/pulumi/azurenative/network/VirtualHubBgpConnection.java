@@ -172,7 +172,8 @@ public class VirtualHubBgpConnection extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualHubBgpConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualHubBgpConnection").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualHubBgpConnection").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHubBgpConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualHubBgpConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualHubBgpConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

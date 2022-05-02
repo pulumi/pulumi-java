@@ -36,6 +36,7 @@ import com.pulumi.azurenative.apimanagement.inputs.GetLoggerArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetNamedValueArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPolicyArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetPolicyFragmentArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNameArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetProductArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetProductPolicyArgs;
@@ -54,6 +55,7 @@ import com.pulumi.azurenative.apimanagement.inputs.ListGatewayKeysArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListIdentityProviderSecretsArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListNamedValueArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListOpenIdConnectProviderSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListPolicyFragmentReferencesArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListSubscriptionSecretsArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessGitSecretsArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsArgs;
@@ -88,6 +90,7 @@ import com.pulumi.azurenative.apimanagement.outputs.GetIdentityProviderResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetLoggerResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetNamedValueResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetOpenIdConnectProviderResult;
+import com.pulumi.azurenative.apimanagement.outputs.GetPolicyFragmentResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetPolicyResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetPrivateEndpointConnectionByNameResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetProductPolicyResult;
@@ -107,6 +110,7 @@ import com.pulumi.azurenative.apimanagement.outputs.ListGatewayKeysResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListIdentityProviderSecretsResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListNamedValueResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListOpenIdConnectProviderSecretsResult;
+import com.pulumi.azurenative.apimanagement.outputs.ListPolicyFragmentReferencesResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListSubscriptionSecretsResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListTenantAccessGitSecretsResult;
 import com.pulumi.azurenative.apimanagement.outputs.ListTenantAccessSecretsResult;
@@ -472,6 +476,17 @@ public final class ApimanagementFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Policy fragment contract details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPolicyFragmentResult> getPolicyFragment(GetPolicyFragmentArgs args) {
+        return getPolicyFragment(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPolicyFragmentResult> getPolicyFragment(GetPolicyFragmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPolicyFragment", TypeShape.of(GetPolicyFragmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-04-01-preview.
      * 
@@ -668,6 +683,17 @@ public final class ApimanagementFunctions {
     }
     public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(ListOpenIdConnectProviderSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listOpenIdConnectProviderSecrets", TypeShape.of(ListOpenIdConnectProviderSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A collection of resources.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListPolicyFragmentReferencesResult> listPolicyFragmentReferences(ListPolicyFragmentReferencesArgs args) {
+        return listPolicyFragmentReferences(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<ListPolicyFragmentReferencesResult> listPolicyFragmentReferences(ListPolicyFragmentReferencesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listPolicyFragmentReferences", TypeShape.of(ListPolicyFragmentReferencesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Subscription keys.

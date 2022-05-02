@@ -3,11 +3,15 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.azurenative.eventgrid.inputs.DynamicDeliveryAttributeMappingArgs;
+import com.pulumi.azurenative.eventgrid.inputs.StaticDeliveryAttributeMappingArgs;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -49,6 +53,21 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
      */
     public Optional<Output<String>> azureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
+    }
+
+    /**
+     * Delivery attribute details.
+     * 
+     */
+    @Import(name="deliveryAttributeMappings")
+    private @Nullable Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>> deliveryAttributeMappings;
+
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    public Optional<Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>>> deliveryAttributeMappings() {
+        return Optional.ofNullable(this.deliveryAttributeMappings);
     }
 
     /**
@@ -118,6 +137,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     private WebHookEventSubscriptionDestinationArgs(WebHookEventSubscriptionDestinationArgs $) {
         this.azureActiveDirectoryApplicationIdOrUri = $.azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = $.azureActiveDirectoryTenantId;
+        this.deliveryAttributeMappings = $.deliveryAttributeMappings;
         this.endpointType = $.endpointType;
         this.endpointUrl = $.endpointUrl;
         this.maxEventsPerBatch = $.maxEventsPerBatch;
@@ -182,6 +202,37 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
          */
         public Builder azureActiveDirectoryTenantId(String azureActiveDirectoryTenantId) {
             return azureActiveDirectoryTenantId(Output.of(azureActiveDirectoryTenantId));
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(@Nullable Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>> deliveryAttributeMappings) {
+            $.deliveryAttributeMappings = deliveryAttributeMappings;
+            return this;
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>> deliveryAttributeMappings) {
+            return deliveryAttributeMappings(Output.of(deliveryAttributeMappings));
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>... deliveryAttributeMappings) {
+            return deliveryAttributeMappings(List.of(deliveryAttributeMappings));
         }
 
         /**

@@ -137,7 +137,8 @@ public class GuestUsage extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20200501preview:GuestUsage").build())
+                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20200501preview:GuestUsage").build()),
+                Output.of(Alias.builder().type("azure-native:azureactivedirectory/v20210401:GuestUsage").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -17,7 +17,8 @@ import java.util.StringJoiner;
         User("User"),
         Group("Group"),
         ServicePrincipal("ServicePrincipal"),
-        ForeignGroup("ForeignGroup");
+        ForeignGroup("ForeignGroup"),
+        Device("Device");
 
         private final String value;
 

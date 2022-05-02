@@ -281,7 +281,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:hybridnetwork/v20200101preview:NetworkFunction").build()),
-                Output.of(Alias.builder().type("azure-native:hybridnetwork/v20210501:NetworkFunction").build())
+                Output.of(Alias.builder().type("azure-native:hybridnetwork/v20210501:NetworkFunction").build()),
+                Output.of(Alias.builder().type("azure-native:hybridnetwork/v20220101preview:NetworkFunction").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

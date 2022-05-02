@@ -22,7 +22,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     public static final DockerImageArgs Empty = new DockerImageArgs();
 
     /**
-     * Image name of a custom base image.
+     * [Required] Image name of a custom base image.
      * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
      */
@@ -30,7 +30,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     private Output<String> dockerImageUri;
 
     /**
-     * @return Image name of a custom base image.
+     * @return [Required] Image name of a custom base image.
      * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
      */
@@ -97,7 +97,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dockerImageUri Image name of a custom base image.
+         * @param dockerImageUri [Required] Image name of a custom base image.
          * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
          * 
          * @return builder
@@ -109,7 +109,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dockerImageUri Image name of a custom base image.
+         * @param dockerImageUri [Required] Image name of a custom base image.
          * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
          * 
          * @return builder

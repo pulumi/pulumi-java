@@ -31,14 +31,14 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     }
 
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Import(name="properties", required=true)
     private Output<com.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<com.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties() {
@@ -140,7 +140,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 

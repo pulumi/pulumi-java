@@ -202,7 +202,8 @@ public class Account extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401:Account").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Account").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210601:Account").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Account").build())
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20211001:Account").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -139,7 +139,8 @@ public class PrivateEndpointConnectionByName extends com.pulumi.resources.Custom
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:PrivateEndpointConnectionByName").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:PrivateEndpointConnectionByName").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:PrivateEndpointConnectionByName").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:PrivateEndpointConnectionByName").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * The routing intent child resource of a Virtual hub.
- * API Version: 2021-05-01.
+ * API Version: 2021-08-01.
  * 
  * ## Example Usage
  * 
@@ -137,7 +137,8 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20210501:RoutingIntent").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:RoutingIntent").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:RoutingIntent").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

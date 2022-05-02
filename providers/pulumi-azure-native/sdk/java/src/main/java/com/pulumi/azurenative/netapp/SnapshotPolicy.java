@@ -223,7 +223,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401:SnapshotPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:SnapshotPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210601:SnapshotPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210801:SnapshotPolicy").build())
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:SnapshotPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20211001:SnapshotPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -31,12 +31,12 @@ public final class CommandJobResponse {
      */
     private final @Nullable String codeId;
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     private final String command;
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     private final ComputeConfigurationResponse compute;
@@ -189,14 +189,14 @@ public final class CommandJobResponse {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     public String command() {
         return this.command;
     }
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     public ComputeConfigurationResponse compute() {

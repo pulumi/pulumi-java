@@ -412,7 +412,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210517preview:Machine").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210520:Machine").build()),
                 Output.of(Alias.builder().type("azure-native:hybridcompute/v20210610preview:Machine").build()),
-                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:Machine").build())
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:Machine").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20220310:Machine").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

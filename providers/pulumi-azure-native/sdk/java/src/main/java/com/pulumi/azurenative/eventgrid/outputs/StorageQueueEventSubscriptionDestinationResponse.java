@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,6 +19,11 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      */
     private final String endpointType;
     /**
+     * @return Storage queue message time to live in seconds.
+     * 
+     */
+    private final @Nullable Double queueMessageTimeToLiveInSeconds;
+    /**
      * @return The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
      */
@@ -31,9 +37,11 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
     @CustomType.Constructor
     private StorageQueueEventSubscriptionDestinationResponse(
         @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("queueMessageTimeToLiveInSeconds") @Nullable Double queueMessageTimeToLiveInSeconds,
         @CustomType.Parameter("queueName") @Nullable String queueName,
         @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
+        this.queueMessageTimeToLiveInSeconds = queueMessageTimeToLiveInSeconds;
         this.queueName = queueName;
         this.resourceId = resourceId;
     }
@@ -45,6 +53,13 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      */
     public String endpointType() {
         return this.endpointType;
+    }
+    /**
+     * @return Storage queue message time to live in seconds.
+     * 
+     */
+    public Optional<Double> queueMessageTimeToLiveInSeconds() {
+        return Optional.ofNullable(this.queueMessageTimeToLiveInSeconds);
     }
     /**
      * @return The name of the Storage queue under a storage account that is the destination of an event subscription.
@@ -71,6 +86,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
 
     public static final class Builder {
         private String endpointType;
+        private @Nullable Double queueMessageTimeToLiveInSeconds;
         private @Nullable String queueName;
         private @Nullable String resourceId;
 
@@ -81,12 +97,17 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
         public Builder(StorageQueueEventSubscriptionDestinationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endpointType = defaults.endpointType;
+    	      this.queueMessageTimeToLiveInSeconds = defaults.queueMessageTimeToLiveInSeconds;
     	      this.queueName = defaults.queueName;
     	      this.resourceId = defaults.resourceId;
         }
 
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
+            return this;
+        }
+        public Builder queueMessageTimeToLiveInSeconds(@Nullable Double queueMessageTimeToLiveInSeconds) {
+            this.queueMessageTimeToLiveInSeconds = queueMessageTimeToLiveInSeconds;
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
@@ -97,7 +118,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }        public StorageQueueEventSubscriptionDestinationResponse build() {
-            return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
+            return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueMessageTimeToLiveInSeconds, queueName, resourceId);
         }
     }
 }

@@ -233,7 +233,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Diagnostic").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Diagnostic").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Diagnostic").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Diagnostic").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Diagnostic").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Diagnostic").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

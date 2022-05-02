@@ -355,7 +355,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ConnectionMonitor").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ConnectionMonitor").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ConnectionMonitor").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ConnectionMonitor").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ConnectionMonitor").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ConnectionMonitor").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

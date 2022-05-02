@@ -113,7 +113,8 @@ public class ManagedInstanceAzureADOnlyAuthentication extends com.pulumi.resourc
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ManagedInstanceAzureADOnlyAuthentication").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ManagedInstanceAzureADOnlyAuthentication").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedInstanceAzureADOnlyAuthentication").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ManagedInstanceAzureADOnlyAuthentication").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

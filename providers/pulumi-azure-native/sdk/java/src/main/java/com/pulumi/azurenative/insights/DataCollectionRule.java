@@ -241,7 +241,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:insights/v20191101preview:DataCollectionRule").build()),
-                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionRule").build())
+                Output.of(Alias.builder().type("azure-native:insights/v20210401:DataCollectionRule").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20210901preview:DataCollectionRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

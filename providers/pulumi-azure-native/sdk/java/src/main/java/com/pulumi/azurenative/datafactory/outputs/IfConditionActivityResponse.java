@@ -34,6 +34,7 @@ import com.pulumi.azurenative.datafactory.outputs.HDInsightPigActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.HDInsightSparkActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.HDInsightStreamingActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.LookupActivityResponse;
+import com.pulumi.azurenative.datafactory.outputs.ScriptActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SetVariableActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SqlServerStoredProcedureActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SwitchActivityResponse;

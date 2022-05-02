@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.outputs;
 import com.pulumi.azurenative.security.outputs.CspmMonitorAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponse;
+import com.pulumi.azurenative.security.outputs.InformationProtectionAwsOfferingResponse;
 import com.pulumi.azurenative.security.outputs.SecurityConnectorPropertiesResponseOrganizationalData;
 import com.pulumi.azurenative.security.outputs.SystemDataResponse;
 import com.pulumi.core.annotations.CustomType;

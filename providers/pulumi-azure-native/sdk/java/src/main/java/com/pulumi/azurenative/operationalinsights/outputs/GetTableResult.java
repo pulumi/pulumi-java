@@ -38,7 +38,7 @@ public final class GetTableResult {
      */
     private final String name;
     /**
-     * @return The table plan.
+     * @return Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     private final @Nullable String plan;
@@ -58,7 +58,7 @@ public final class GetTableResult {
      */
     private final @Nullable ResultStatisticsResponse resultStatistics;
     /**
-     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * @return The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     private final @Nullable Integer retentionInDays;
@@ -78,7 +78,7 @@ public final class GetTableResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * @return The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     private final @Nullable Integer totalRetentionInDays;
@@ -149,7 +149,7 @@ public final class GetTableResult {
         return this.name;
     }
     /**
-     * @return The table plan.
+     * @return Instruct the system how to handle and charge the logs ingested to this table.
      * 
      */
     public Optional<String> plan() {
@@ -177,7 +177,7 @@ public final class GetTableResult {
         return Optional.ofNullable(this.resultStatistics);
     }
     /**
-     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * @return The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
      * 
      */
     public Optional<Integer> retentionInDays() {
@@ -205,7 +205,7 @@ public final class GetTableResult {
         return this.systemData;
     }
     /**
-     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * @return The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
      * 
      */
     public Optional<Integer> totalRetentionInDays() {

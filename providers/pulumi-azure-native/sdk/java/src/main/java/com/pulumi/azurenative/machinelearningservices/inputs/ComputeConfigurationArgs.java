@@ -98,14 +98,14 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * ARM resource ID of the compute resource.
+     * ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
      * 
      */
     @Import(name="target")
     private @Nullable Output<String> target;
 
     /**
-     * @return ARM resource ID of the compute resource.
+     * @return ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
      * 
      */
     public Optional<Output<String>> target() {
@@ -247,7 +247,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param target ARM resource ID of the compute resource.
+         * @param target ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param target ARM resource ID of the compute resource.
+         * @param target ARM resource ID of the Compute you are targeting. If not provided the resource will be deployed as Managed.
          * 
          * @return builder
          * 

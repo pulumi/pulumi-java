@@ -407,7 +407,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:kusto/v20200614:Cluster").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20200918:Cluster").build()),
                 Output.of(Alias.builder().type("azure-native:kusto/v20210101:Cluster").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Cluster").build())
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20220201:Cluster").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -194,7 +194,8 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20210201preview:SecurityAdminConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SecurityAdminConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SecurityAdminConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:SecurityAdminConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

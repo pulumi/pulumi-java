@@ -24,7 +24,7 @@ public final class GetJobResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final Either<CommandJobResponse,SweepJobResponse> properties;
@@ -68,7 +68,7 @@ public final class GetJobResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Either<CommandJobResponse,SweepJobResponse> properties() {

@@ -220,7 +220,9 @@ public class Order extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Order").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Order").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Order").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Order").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Order").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

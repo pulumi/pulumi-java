@@ -213,7 +213,8 @@ public class DatabaseAdvisor extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:DatabaseAdvisor").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:DatabaseAdvisor").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:DatabaseAdvisor").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:DatabaseAdvisor").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:DatabaseAdvisor").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:DatabaseAdvisor").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

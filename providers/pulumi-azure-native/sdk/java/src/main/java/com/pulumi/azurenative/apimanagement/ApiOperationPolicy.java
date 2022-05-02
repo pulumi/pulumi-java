@@ -132,7 +132,8 @@ public class ApiOperationPolicy extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiOperationPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiOperationPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiOperationPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiOperationPolicy").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiOperationPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiOperationPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

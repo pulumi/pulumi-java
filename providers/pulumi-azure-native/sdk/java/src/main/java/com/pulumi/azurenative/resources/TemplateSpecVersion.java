@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 /**
  * Template Spec Version object.
- * API Version: 2021-05-01.
+ * API Version: 2022-02-01.
  * 
  * ## Example Usage
  * 
@@ -212,7 +212,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:resources/v20190601preview:TemplateSpecVersion").build()),
                 Output.of(Alias.builder().type("azure-native:resources/v20210301preview:TemplateSpecVersion").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20210501:TemplateSpecVersion").build())
+                Output.of(Alias.builder().type("azure-native:resources/v20210501:TemplateSpecVersion").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20220201:TemplateSpecVersion").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

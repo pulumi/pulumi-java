@@ -141,7 +141,8 @@ public class AdminRule extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20210201preview:AdminRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:AdminRule").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:AdminRule").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:AdminRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -15,6 +15,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -119,6 +120,21 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * When set to true, Certificate validation will be disabled.
+     * 
+     */
+    @Import(name="disableCertValidation")
+    private @Nullable Output<Boolean> disableCertValidation;
+
+    /**
+     * @return When set to true, Certificate validation will be disabled.
+     * 
+     */
+    public Optional<Output<Boolean>> disableCertValidation() {
+        return Optional.ofNullable(this.disableCertValidation);
     }
 
     /**
@@ -267,6 +283,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
         this.datasets = $.datasets;
         this.dependsOn = $.dependsOn;
         this.description = $.description;
+        this.disableCertValidation = $.disableCertValidation;
         this.headers = $.headers;
         this.linkedServiceName = $.linkedServiceName;
         this.linkedServices = $.linkedServices;
@@ -440,6 +457,27 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param disableCertValidation When set to true, Certificate validation will be disabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder disableCertValidation(@Nullable Output<Boolean> disableCertValidation) {
+            $.disableCertValidation = disableCertValidation;
+            return this;
+        }
+
+        /**
+         * @param disableCertValidation When set to true, Certificate validation will be disabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder disableCertValidation(Boolean disableCertValidation) {
+            return disableCertValidation(Output.of(disableCertValidation));
         }
 
         /**

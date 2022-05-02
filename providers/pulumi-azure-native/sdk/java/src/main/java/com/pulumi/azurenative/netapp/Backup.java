@@ -232,7 +232,8 @@ public class Backup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401:Backup").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Backup").build()),
                 Output.of(Alias.builder().type("azure-native:netapp/v20210601:Backup").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Backup").build())
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20211001:Backup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

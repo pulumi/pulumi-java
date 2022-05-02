@@ -186,8 +186,7 @@ public class WebAppAuthSettingsV2Slot extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppAuthSettingsV2Slot").build()),
                 Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppAuthSettingsV2Slot").build()),
                 Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppAuthSettingsV2Slot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppAuthSettingsV2Slot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppAuthSettingsV2Slot").build())
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppAuthSettingsV2Slot").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -269,7 +269,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NatGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NatGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NatGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NatGateway").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NatGateway").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NatGateway").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

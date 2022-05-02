@@ -24,7 +24,7 @@ public final class TrialComponentResponse {
      */
     private final @Nullable String codeId;
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     private final String command;
@@ -88,7 +88,7 @@ public final class TrialComponentResponse {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     public String command() {

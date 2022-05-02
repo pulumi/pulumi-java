@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.outputs;
 
 import com.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
+import com.pulumi.azurenative.datafactory.outputs.ExecutePipelineActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
 import com.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import com.pulumi.core.annotations.CustomType;
@@ -44,6 +45,11 @@ public final class ExecutePipelineActivityResponse {
      */
     private final PipelineReferenceResponse pipeline;
     /**
+     * @return Execute pipeline activity policy.
+     * 
+     */
+    private final @Nullable ExecutePipelineActivityPolicyResponse policy;
+    /**
      * @return Type of activity.
      * Expected value is &#39;ExecutePipeline&#39;.
      * 
@@ -67,6 +73,7 @@ public final class ExecutePipelineActivityResponse {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
         @CustomType.Parameter("pipeline") PipelineReferenceResponse pipeline,
+        @CustomType.Parameter("policy") @Nullable ExecutePipelineActivityPolicyResponse policy,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
         @CustomType.Parameter("waitOnCompletion") @Nullable Boolean waitOnCompletion) {
@@ -75,6 +82,7 @@ public final class ExecutePipelineActivityResponse {
         this.name = name;
         this.parameters = parameters;
         this.pipeline = pipeline;
+        this.policy = policy;
         this.type = type;
         this.userProperties = userProperties;
         this.waitOnCompletion = waitOnCompletion;
@@ -116,6 +124,13 @@ public final class ExecutePipelineActivityResponse {
         return this.pipeline;
     }
     /**
+     * @return Execute pipeline activity policy.
+     * 
+     */
+    public Optional<ExecutePipelineActivityPolicyResponse> policy() {
+        return Optional.ofNullable(this.policy);
+    }
+    /**
      * @return Type of activity.
      * Expected value is &#39;ExecutePipeline&#39;.
      * 
@@ -152,6 +167,7 @@ public final class ExecutePipelineActivityResponse {
         private String name;
         private @Nullable Map<String,Object> parameters;
         private PipelineReferenceResponse pipeline;
+        private @Nullable ExecutePipelineActivityPolicyResponse policy;
         private String type;
         private @Nullable List<UserPropertyResponse> userProperties;
         private @Nullable Boolean waitOnCompletion;
@@ -167,6 +183,7 @@ public final class ExecutePipelineActivityResponse {
     	      this.name = defaults.name;
     	      this.parameters = defaults.parameters;
     	      this.pipeline = defaults.pipeline;
+    	      this.policy = defaults.policy;
     	      this.type = defaults.type;
     	      this.userProperties = defaults.userProperties;
     	      this.waitOnCompletion = defaults.waitOnCompletion;
@@ -195,6 +212,10 @@ public final class ExecutePipelineActivityResponse {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
+        public Builder policy(@Nullable ExecutePipelineActivityPolicyResponse policy) {
+            this.policy = policy;
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
@@ -210,7 +231,7 @@ public final class ExecutePipelineActivityResponse {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }        public ExecutePipelineActivityResponse build() {
-            return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);
+            return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, policy, type, userProperties, waitOnCompletion);
         }
     }
 }

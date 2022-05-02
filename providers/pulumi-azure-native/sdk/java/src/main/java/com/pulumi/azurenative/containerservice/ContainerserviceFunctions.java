@@ -7,6 +7,7 @@ import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.containerservice.inputs.GetAgentPoolArgs;
 import com.pulumi.azurenative.containerservice.inputs.GetMaintenanceConfigurationArgs;
 import com.pulumi.azurenative.containerservice.inputs.GetManagedClusterArgs;
+import com.pulumi.azurenative.containerservice.inputs.GetManagedClusterSnapshotArgs;
 import com.pulumi.azurenative.containerservice.inputs.GetOpenShiftManagedClusterArgs;
 import com.pulumi.azurenative.containerservice.inputs.GetPrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.containerservice.inputs.GetSnapshotArgs;
@@ -17,6 +18,7 @@ import com.pulumi.azurenative.containerservice.inputs.ListManagedClusterUserCred
 import com.pulumi.azurenative.containerservice.outputs.GetAgentPoolResult;
 import com.pulumi.azurenative.containerservice.outputs.GetMaintenanceConfigurationResult;
 import com.pulumi.azurenative.containerservice.outputs.GetManagedClusterResult;
+import com.pulumi.azurenative.containerservice.outputs.GetManagedClusterSnapshotResult;
 import com.pulumi.azurenative.containerservice.outputs.GetOpenShiftManagedClusterResult;
 import com.pulumi.azurenative.containerservice.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.containerservice.outputs.GetSnapshotResult;
@@ -62,6 +64,17 @@ public final class ContainerserviceFunctions {
     }
     public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A managed cluster snapshot resource.
+     * API Version: 2022-02-02-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args) {
+        return getManagedClusterSnapshot(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedClusterSnapshot", TypeShape.of(GetManagedClusterSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OpenShift Managed cluster.

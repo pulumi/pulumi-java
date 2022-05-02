@@ -160,7 +160,8 @@ public class ApiRelease extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiRelease").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiRelease").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiRelease").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiRelease").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiRelease").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

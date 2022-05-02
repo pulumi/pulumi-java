@@ -8,6 +8,8 @@ import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceAcrConfiguration
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceAuthenticationConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceCorsConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.FhirServiceExportConfigurationResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointConnectionResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.ResourceVersionPolicyConfigurationResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.annotations.CustomType;
@@ -46,6 +48,11 @@ public final class GetFhirServiceResult {
      */
     private final @Nullable String etag;
     /**
+     * @return Fhir Service event support status.
+     * 
+     */
+    private final String eventState;
+    /**
      * @return Fhir Service export configuration.
      * 
      */
@@ -76,10 +83,25 @@ public final class GetFhirServiceResult {
      */
     private final String name;
     /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    /**
      * @return The provisioning state.
      * 
      */
     private final String provisioningState;
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    private final String publicNetworkAccess;
+    /**
+     * @return Determines tracking of history for resources.
+     * 
+     */
+    private final @Nullable ResourceVersionPolicyConfigurationResponse resourceVersionPolicyConfiguration;
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
@@ -103,13 +125,17 @@ public final class GetFhirServiceResult {
         @CustomType.Parameter("authenticationConfiguration") @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
         @CustomType.Parameter("corsConfiguration") @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
         @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("eventState") String eventState,
         @CustomType.Parameter("exportConfiguration") @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
         @CustomType.Parameter("kind") @Nullable String kind,
         @CustomType.Parameter("location") @Nullable String location,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
         @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") String publicNetworkAccess,
+        @CustomType.Parameter("resourceVersionPolicyConfiguration") @Nullable ResourceVersionPolicyConfigurationResponse resourceVersionPolicyConfiguration,
         @CustomType.Parameter("systemData") SystemDataResponse systemData,
         @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
         @CustomType.Parameter("type") String type) {
@@ -118,13 +144,17 @@ public final class GetFhirServiceResult {
         this.authenticationConfiguration = authenticationConfiguration;
         this.corsConfiguration = corsConfiguration;
         this.etag = etag;
+        this.eventState = eventState;
         this.exportConfiguration = exportConfiguration;
         this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
         this.provisioningState = provisioningState;
+        this.publicNetworkAccess = publicNetworkAccess;
+        this.resourceVersionPolicyConfiguration = resourceVersionPolicyConfiguration;
         this.systemData = systemData;
         this.tags = tags;
         this.type = type;
@@ -164,6 +194,13 @@ public final class GetFhirServiceResult {
      */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
+    }
+    /**
+     * @return Fhir Service event support status.
+     * 
+     */
+    public String eventState() {
+        return this.eventState;
     }
     /**
      * @return Fhir Service export configuration.
@@ -208,11 +245,32 @@ public final class GetFhirServiceResult {
         return this.name;
     }
     /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
+        return this.privateEndpointConnections;
+    }
+    /**
      * @return The provisioning state.
      * 
      */
     public String provisioningState() {
         return this.provisioningState;
+    }
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    public String publicNetworkAccess() {
+        return this.publicNetworkAccess;
+    }
+    /**
+     * @return Determines tracking of history for resources.
+     * 
+     */
+    public Optional<ResourceVersionPolicyConfigurationResponse> resourceVersionPolicyConfiguration() {
+        return Optional.ofNullable(this.resourceVersionPolicyConfiguration);
     }
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
@@ -250,13 +308,17 @@ public final class GetFhirServiceResult {
         private @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration;
         private @Nullable FhirServiceCorsConfigurationResponse corsConfiguration;
         private @Nullable String etag;
+        private String eventState;
         private @Nullable FhirServiceExportConfigurationResponse exportConfiguration;
         private String id;
         private @Nullable ServiceManagedIdentityResponseIdentity identity;
         private @Nullable String kind;
         private @Nullable String location;
         private String name;
+        private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
         private String provisioningState;
+        private String publicNetworkAccess;
+        private @Nullable ResourceVersionPolicyConfigurationResponse resourceVersionPolicyConfiguration;
         private SystemDataResponse systemData;
         private @Nullable Map<String,String> tags;
         private String type;
@@ -272,13 +334,17 @@ public final class GetFhirServiceResult {
     	      this.authenticationConfiguration = defaults.authenticationConfiguration;
     	      this.corsConfiguration = defaults.corsConfiguration;
     	      this.etag = defaults.etag;
+    	      this.eventState = defaults.eventState;
     	      this.exportConfiguration = defaults.exportConfiguration;
     	      this.id = defaults.id;
     	      this.identity = defaults.identity;
     	      this.kind = defaults.kind;
     	      this.location = defaults.location;
     	      this.name = defaults.name;
+    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
     	      this.provisioningState = defaults.provisioningState;
+    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+    	      this.resourceVersionPolicyConfiguration = defaults.resourceVersionPolicyConfiguration;
     	      this.systemData = defaults.systemData;
     	      this.tags = defaults.tags;
     	      this.type = defaults.type;
@@ -307,6 +373,10 @@ public final class GetFhirServiceResult {
             this.etag = etag;
             return this;
         }
+        public Builder eventState(String eventState) {
+            this.eventState = Objects.requireNonNull(eventState);
+            return this;
+        }
         public Builder exportConfiguration(@Nullable FhirServiceExportConfigurationResponse exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
@@ -331,8 +401,23 @@ public final class GetFhirServiceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            return this;
+        }
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
+            return this;
+        }
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            this.publicNetworkAccess = Objects.requireNonNull(publicNetworkAccess);
+            return this;
+        }
+        public Builder resourceVersionPolicyConfiguration(@Nullable ResourceVersionPolicyConfigurationResponse resourceVersionPolicyConfiguration) {
+            this.resourceVersionPolicyConfiguration = resourceVersionPolicyConfiguration;
             return this;
         }
         public Builder systemData(SystemDataResponse systemData) {
@@ -347,7 +432,7 @@ public final class GetFhirServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetFhirServiceResult build() {
-            return new GetFhirServiceResult(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, etag, exportConfiguration, id, identity, kind, location, name, provisioningState, systemData, tags, type);
+            return new GetFhirServiceResult(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, etag, eventState, exportConfiguration, id, identity, kind, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, resourceVersionPolicyConfiguration, systemData, tags, type);
         }
     }
 }

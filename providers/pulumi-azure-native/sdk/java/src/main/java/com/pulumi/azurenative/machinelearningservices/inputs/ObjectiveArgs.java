@@ -20,14 +20,14 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
     public static final ObjectiveArgs Empty = new ObjectiveArgs();
 
     /**
-     * Defines supported metric goals for hyperparameter tuning
+     * [Required] Defines supported metric goals for hyperparameter tuning
      * 
      */
     @Import(name="goal", required=true)
     private Output<Either<String,Goal>> goal;
 
     /**
-     * @return Defines supported metric goals for hyperparameter tuning
+     * @return [Required] Defines supported metric goals for hyperparameter tuning
      * 
      */
     public Output<Either<String,Goal>> goal() {
@@ -35,14 +35,14 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Name of the metric to optimize.
+     * [Required] Name of the metric to optimize.
      * 
      */
     @Import(name="primaryMetric", required=true)
     private Output<String> primaryMetric;
 
     /**
-     * @return Name of the metric to optimize.
+     * @return [Required] Name of the metric to optimize.
      * 
      */
     public Output<String> primaryMetric() {
@@ -75,7 +75,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param goal Defines supported metric goals for hyperparameter tuning
+         * @param goal [Required] Defines supported metric goals for hyperparameter tuning
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param goal Defines supported metric goals for hyperparameter tuning
+         * @param goal [Required] Defines supported metric goals for hyperparameter tuning
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param goal Defines supported metric goals for hyperparameter tuning
+         * @param goal [Required] Defines supported metric goals for hyperparameter tuning
          * 
          * @return builder
          * 
@@ -106,7 +106,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param goal Defines supported metric goals for hyperparameter tuning
+         * @param goal [Required] Defines supported metric goals for hyperparameter tuning
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param primaryMetric Name of the metric to optimize.
+         * @param primaryMetric [Required] Name of the metric to optimize.
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param primaryMetric Name of the metric to optimize.
+         * @param primaryMetric [Required] Name of the metric to optimize.
          * 
          * @return builder
          * 

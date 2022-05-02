@@ -163,7 +163,11 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:AwsCloudTrailDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:AwsCloudTrailDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:AwsCloudTrailDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AwsCloudTrailDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:AwsCloudTrailDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

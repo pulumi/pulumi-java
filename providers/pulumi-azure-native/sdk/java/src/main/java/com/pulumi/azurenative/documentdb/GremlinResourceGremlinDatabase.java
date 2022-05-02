@@ -157,7 +157,9 @@ public class GremlinResourceGremlinDatabase extends com.pulumi.resources.CustomR
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:GremlinResourceGremlinDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:GremlinResourceGremlinDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:GremlinResourceGremlinDatabase").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GremlinResourceGremlinDatabase").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:GremlinResourceGremlinDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:GremlinResourceGremlinDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:GremlinResourceGremlinDatabase").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

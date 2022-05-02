@@ -163,7 +163,7 @@ public final class ResourcesFunctions {
     }
     /**
      * Template Spec object.
-     * API Version: 2021-05-01.
+     * API Version: 2022-02-01.
      * 
      */
     public static CompletableFuture<GetTemplateSpecResult> getTemplateSpec(GetTemplateSpecArgs args) {
@@ -174,7 +174,7 @@ public final class ResourcesFunctions {
     }
     /**
      * Template Spec Version object.
-     * API Version: 2021-05-01.
+     * API Version: 2022-02-01.
      * 
      */
     public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args) {

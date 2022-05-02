@@ -320,7 +320,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkVirtualAppliance").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkVirtualAppliance").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkVirtualAppliance").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkVirtualAppliance").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NetworkVirtualAppliance").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -125,7 +125,9 @@ public class File extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:datamigration/v20180715preview:File").build()),
                 Output.of(Alias.builder().type("azure-native:datamigration/v20210630:File").build()),
-                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:File").build())
+                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:File").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220130preview:File").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20220330preview:File").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

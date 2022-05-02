@@ -363,7 +363,8 @@ public class Job extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databox/v20201101:Job").build()),
                 Output.of(Alias.builder().type("azure-native:databox/v20210301:Job").build()),
                 Output.of(Alias.builder().type("azure-native:databox/v20210501:Job").build()),
-                Output.of(Alias.builder().type("azure-native:databox/v20210801preview:Job").build())
+                Output.of(Alias.builder().type("azure-native:databox/v20210801preview:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20211201:Job").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

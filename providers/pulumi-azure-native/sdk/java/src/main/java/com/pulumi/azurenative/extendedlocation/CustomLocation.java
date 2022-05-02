@@ -238,7 +238,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:extendedlocation/v20210315preview:CustomLocation").build()),
-                Output.of(Alias.builder().type("azure-native:extendedlocation/v20210815:CustomLocation").build())
+                Output.of(Alias.builder().type("azure-native:extendedlocation/v20210815:CustomLocation").build()),
+                Output.of(Alias.builder().type("azure-native:extendedlocation/v20210831preview:CustomLocation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

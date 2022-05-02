@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration;
 
 import com.pulumi.azurenative.Utilities;
+import com.pulumi.azurenative.datamigration.inputs.GetDatabaseMigrationsSqlDbArgs;
 import com.pulumi.azurenative.datamigration.inputs.GetFileArgs;
 import com.pulumi.azurenative.datamigration.inputs.GetProjectArgs;
 import com.pulumi.azurenative.datamigration.inputs.GetServiceArgs;
@@ -11,6 +12,7 @@ import com.pulumi.azurenative.datamigration.inputs.GetSqlMigrationServiceArgs;
 import com.pulumi.azurenative.datamigration.inputs.GetTaskArgs;
 import com.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceAuthKeysArgs;
 import com.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceMonitoringDataArgs;
+import com.pulumi.azurenative.datamigration.outputs.GetDatabaseMigrationsSqlDbResult;
 import com.pulumi.azurenative.datamigration.outputs.GetFileResult;
 import com.pulumi.azurenative.datamigration.outputs.GetProjectResult;
 import com.pulumi.azurenative.datamigration.outputs.GetServiceResult;
@@ -24,6 +26,17 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class DatamigrationFunctions {
+    /**
+     * Database Migration Resource for SQL Database.
+     * API Version: 2022-03-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetDatabaseMigrationsSqlDbResult> getDatabaseMigrationsSqlDb(GetDatabaseMigrationsSqlDbArgs args) {
+        return getDatabaseMigrationsSqlDb(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetDatabaseMigrationsSqlDbResult> getDatabaseMigrationsSqlDb(GetDatabaseMigrationsSqlDbArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datamigration:getDatabaseMigrationsSqlDb", TypeShape.of(GetDatabaseMigrationsSqlDbResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * A file resource
      * API Version: 2018-07-15-preview.

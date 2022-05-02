@@ -356,7 +356,8 @@ public class GatewayApiEntityTag extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:GatewayApiEntityTag").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:GatewayApiEntityTag").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:GatewayApiEntityTag").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayApiEntityTag").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayApiEntityTag").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:GatewayApiEntityTag").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

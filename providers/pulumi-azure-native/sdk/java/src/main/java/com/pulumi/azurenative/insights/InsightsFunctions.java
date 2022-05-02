@@ -168,7 +168,7 @@ public final class InsightsFunctions {
     }
     /**
      * Definition of ARM tracked top level resource.
-     * API Version: 2021-04-01.
+     * API Version: 2021-09-01-preview.
      * 
      */
     public static CompletableFuture<GetDataCollectionEndpointResult> getDataCollectionEndpoint(GetDataCollectionEndpointArgs args) {

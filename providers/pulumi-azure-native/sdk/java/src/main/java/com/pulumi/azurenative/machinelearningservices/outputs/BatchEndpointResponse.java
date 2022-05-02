@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BatchEndpointResponse {
     /**
-     * @return Enum to determine endpoint authentication mode.
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     private final @Nullable String authMode;
@@ -61,7 +61,7 @@ public final class BatchEndpointResponse {
     }
 
     /**
-     * @return Enum to determine endpoint authentication mode.
+     * @return [Required] Inference endpoint authentication mode type
      * 
      */
     public Optional<String> authMode() {

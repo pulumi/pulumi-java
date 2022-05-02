@@ -5,6 +5,7 @@ package com.pulumi.azurenative.healthcareapis.outputs;
 
 import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.PrivateLinkServiceConnectionStateResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -39,6 +40,11 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String provisioningState;
     /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
+    private final SystemDataResponse systemData;
+    /**
      * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
@@ -51,12 +57,14 @@ public final class GetPrivateEndpointConnectionResult {
         @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
         @CustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
         @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
         @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.type = type;
     }
 
@@ -96,6 +104,13 @@ public final class GetPrivateEndpointConnectionResult {
         return this.provisioningState;
     }
     /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
+    public SystemDataResponse systemData() {
+        return this.systemData;
+    }
+    /**
      * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
@@ -117,6 +132,7 @@ public final class GetPrivateEndpointConnectionResult {
         private @Nullable PrivateEndpointResponse privateEndpoint;
         private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
         private String provisioningState;
+        private SystemDataResponse systemData;
         private String type;
 
         public Builder() {
@@ -130,6 +146,7 @@ public final class GetPrivateEndpointConnectionResult {
     	      this.privateEndpoint = defaults.privateEndpoint;
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
     	      this.provisioningState = defaults.provisioningState;
+    	      this.systemData = defaults.systemData;
     	      this.type = defaults.type;
         }
 
@@ -153,11 +170,15 @@ public final class GetPrivateEndpointConnectionResult {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
+        public Builder systemData(SystemDataResponse systemData) {
+            this.systemData = Objects.requireNonNull(systemData);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetPrivateEndpointConnectionResult build() {
-            return new GetPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
+            return new GetPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }
     }
 }
